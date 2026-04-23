@@ -1,0 +1,1075 @@
+{
+  "batchId": "17",
+  "processedAt": "2026-04-21T20:58:00Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "300C",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 18, "max": 24 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.5 }
+      },
+      "notes": "2nd generation 300 (2011-2023). Base models use 17-18\", higher trims use 20\".",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "300C",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 18, "max": 24 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.5 }
+      },
+      "notes": "2nd generation 300 (2011-2023).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "300C",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 18, "max": 24 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.5 }
+      },
+      "notes": "2nd generation 300 (2011-2023).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "300C",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 18, "max": 24 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.5 }
+      },
+      "notes": "2nd generation 300 (2011-2023).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "300C",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 18, "max": 24 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.5 }
+      },
+      "notes": "2nd generation 300 (2011-2023).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "300C",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 18, "max": 24 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.5 }
+      },
+      "notes": "2nd generation 300 (2011-2023). First year of redesign.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "300C",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 15, "max": 24 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.5 }
+      },
+      "notes": "1st generation 300 (2005-2010). 300C typically has 20\" wheels.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "300C",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 15, "max": 24 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.5 }
+      },
+      "notes": "1st generation 300 introduction year (2005 model year sold as 2004). 300C has 20\" wheels.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 20, "max": 28 },
+        "diameter": { "min": 20, "max": 21 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "2nd gen SRT-8 (2012-2014). Factory 20x9\" or 21x9.5\" wheels. 6.4L HEMI V8.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 20, "max": 28 },
+        "diameter": { "min": 20, "max": 21 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "2nd gen SRT-8 (2012-2014). Factory 20x9\" or 21x9.5\" wheels.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 20, "max": 28 },
+        "diameter": { "min": 20, "max": 21 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "2nd gen SRT-8 (2012-2014). First year with 6.4L HEMI.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 24, "max": 28 },
+        "diameter": 20,
+        "width": 9.0
+      },
+      "notes": "1st gen SRT-8 final year (2005-2010 production). Factory 20x9\" wheels with +24mm offset. 6.1L HEMI V8.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 24, "max": 28 },
+        "diameter": 20,
+        "width": 9.0
+      },
+      "notes": "1st gen SRT-8 (2005-2010). Factory 20x9\" wheels with +24mm offset.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 24, "max": 28 },
+        "diameter": 20,
+        "width": 9.0
+      },
+      "notes": "1st gen SRT-8 (2005-2010). Factory 20x9\" wheels.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 24, "max": 28 },
+        "diameter": 20,
+        "width": 9.0
+      },
+      "notes": "1st gen SRT-8 (2005-2010). Factory 20x9\" wheels.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 24, "max": 28 },
+        "diameter": 20,
+        "width": 9.0
+      },
+      "notes": "1st gen SRT-8 (2005-2010). Factory 20x9\" wheels.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 24, "max": 28 },
+        "diameter": 20,
+        "width": 9.0
+      },
+      "notes": "1st gen SRT-8 (2005-2010). Factory 20x9\" wheels. 6.1L HEMI.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 24, "max": 28 },
+        "diameter": 20,
+        "width": 9.0
+      },
+      "notes": "1st gen SRT-8 introduction (2005-2010). Factory 20x9\" wheels.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "300C SRT-8",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.5,
+        "offset": { "min": 24, "max": 28 },
+        "diameter": 20,
+        "width": 9.0
+      },
+      "notes": "Early SRT-8 (2005 model sold as 2004). Factory 20x9\" wheels.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "300M",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "Final year of 300M (1999-2004). LH platform sedan.",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "300M",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "LH platform sedan (1999-2004).",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "300M",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "LH platform sedan (1999-2004).",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "300M",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "LH platform sedan (1999-2004).",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "300M",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "LH platform sedan (1999-2004).",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Aspen",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 78.1,
+        "offset": 35,
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 7.5, "max": 8.0 }
+      },
+      "notes": "Final year of Aspen SUV (2007-2009). Based on Dodge Durango platform.",
+      "sources": ["wheelsynergy.com", "ebay.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Aspen",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 78.1,
+        "offset": 35,
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 7.5, "max": 8.0 }
+      },
+      "notes": "Aspen SUV (2007-2009). Shares platform with Durango.",
+      "sources": ["wheelsynergy.com", "ebay.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Aspen",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 78.1,
+        "offset": 35,
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 7.5, "max": 8.0 }
+      },
+      "notes": "First year of Aspen SUV (2007-2009).",
+      "sources": ["wheelsynergy.com", "ebay.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Aspen",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 78.1,
+        "offset": 35,
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 7.5, "max": 8.0 }
+      },
+      "notes": "Note: Aspen production started 2007. This may be a pre-production or market variation.",
+      "sources": ["wheelsynergy.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Cirrus",
+      "wheelSpecs": {
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "offset": { "min": 37, "max": 41 },
+        "diameter": { "min": 14, "max": 16 },
+        "width": { "min": 6.0, "max": 6.5 }
+      },
+      "notes": "Final year of Cirrus (1995-2000). JA platform compact sedan.",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "Final year of Concorde (1998-2004). LH platform full-size sedan.",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "LH platform full-size sedan (1998-2004).",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "LH platform full-size sedan (1998-2004).",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "LH platform full-size sedan (1998-2004).",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "LH platform full-size sedan (1998-2004).",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Chrysler",
+      "model": "Grand Caravan",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Canadian market minivan (2021-present). Based on Voyager/Pacifica platform.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Chrysler",
+      "model": "Grand Caravan",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Canadian market minivan (2021-present).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Chrysler",
+      "model": "Grand Caravan",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Canadian market minivan (2021-present).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "Grand Caravan",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Canadian market minivan (2021-present).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "Grand Caravan",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Canadian market minivan (2021-present).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "Grand Caravan",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "First year of Chrysler-branded Grand Caravan in Canada (replaced Dodge Grand Caravan).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "European market minivan. RT platform (2008-2016).",
+      "sources": ["abswheels.eu"]
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "European market minivan. RT platform.",
+      "sources": ["abswheels.eu"]
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "European market minivan. RT platform.",
+      "sources": ["abswheels.eu"]
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "European market minivan. RT platform.",
+      "sources": ["abswheels.eu"]
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "European market minivan. RT platform.",
+      "sources": ["abswheels.eu"]
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "European market minivan. RT platform.",
+      "sources": ["abswheels.eu"]
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "European market minivan. RT platform.",
+      "sources": ["abswheels.eu"]
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "European market minivan. First year of RT platform.",
+      "sources": ["abswheels.eu"]
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 45 },
+        "diameter": { "min": 15, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Final year of RS platform (2001-2007). European market.",
+      "sources": ["sizewheeltire.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 45 },
+        "diameter": { "min": 15, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "RS platform (2001-2007). European market.",
+      "sources": ["sizewheeltire.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 45 },
+        "diameter": { "min": 15, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "RS platform (2001-2007). European market.",
+      "sources": ["sizewheeltire.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 45 },
+        "diameter": { "min": 15, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "RS platform (2001-2007). European market.",
+      "sources": ["sizewheeltire.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 45 },
+        "diameter": { "min": 15, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "RS platform (2001-2007). European market.",
+      "sources": ["sizewheeltire.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 45 },
+        "diameter": { "min": 15, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "RS platform (2001-2007). European market.",
+      "sources": ["sizewheeltire.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 45 },
+        "diameter": { "min": 15, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "First year RS platform. European market.",
+      "sources": ["sizewheeltire.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 45 },
+        "diameter": { "min": 15, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "GS platform (1996-2000). Final year before RS platform.",
+      "sources": ["sizewheeltire.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "LHS",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "Final year of LHS (1999-2001). LH platform luxury sedan.",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "LHS",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 34, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": 7.0
+      },
+      "notes": "LH platform luxury sedan (1999-2001).",
+      "sources": ["autofiles.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 42, "max": 50 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "2nd gen minivan (2017-present). Base 17\", higher trims 18-20\".",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 42, "max": 50 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "2nd gen minivan (2017-present).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 42, "max": 50 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "2nd gen minivan (2017-present).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 42, "max": 50 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "2nd gen minivan (2017-present).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 42, "max": 50 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "2nd gen minivan (2017-present).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 42, "max": 50 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "2nd gen minivan (2017-present). AWD available.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 42, "max": 50 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "2nd gen minivan (2017-present).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 42, "max": 50 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "2nd gen minivan (2017-present).",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 42, "max": 50 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "2nd gen minivan (2017-present). Hybrid variant available.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 42, "max": 50 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "First year of 2nd gen minivan. Replaced Town & Country.",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": 40,
+        "diameter": 17,
+        "width": 6.5
+      },
+      "notes": "Final year of Town & Country (2008-2016). Replaced by Pacifica.",
+      "sources": ["amazon.com", "hubcaphaven.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": 40,
+        "diameter": 17,
+        "width": 6.5
+      },
+      "notes": "5th gen minivan (2008-2016).",
+      "sources": ["amazon.com", "hubcaphaven.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": 40,
+        "diameter": 17,
+        "width": 6.5
+      },
+      "notes": "5th gen minivan (2008-2016).",
+      "sources": ["amazon.com", "hubcaphaven.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": 40,
+        "diameter": 17,
+        "width": 6.5
+      },
+      "notes": "5th gen minivan (2008-2016).",
+      "sources": ["amazon.com", "hubcaphaven.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": 40,
+        "diameter": 17,
+        "width": 6.5
+      },
+      "notes": "5th gen minivan (2008-2016).",
+      "sources": ["amazon.com", "hubcaphaven.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": 40,
+        "diameter": 17,
+        "width": 6.5
+      },
+      "notes": "5th gen minivan (2008-2016). Refreshed styling.",
+      "sources": ["amazon.com", "hubcaphaven.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": 40,
+        "diameter": 17,
+        "width": 6.5
+      },
+      "notes": "5th gen minivan (2008-2016).",
+      "sources": ["amazon.com", "hubcaphaven.com"]
+    }
+  ],
+  "summary": {
+    "successCount": 75,
+    "failureCount": 0,
+    "uniqueBoltPatterns": ["5x100", "5x114.3", "5x115", "5x127", "5x139.7"],
+    "modelGroups": {
+      "300C": "5x115, 71.5mm CB, 17-20\" wheels",
+      "300C_SRT8": "5x115, 71.5mm CB, 20-21\" wheels",
+      "300M": "5x114.3, 71.5mm CB, 16-17\" wheels",
+      "Aspen": "5x139.7, 78.1mm CB, 17-18\" wheels",
+      "Cirrus": "5x100, 57.1mm CB, 14-16\" wheels",
+      "Concorde": "5x114.3, 71.5mm CB, 16-17\" wheels",
+      "Grand_Caravan": "5x127, 71.5mm CB, 17-18\" wheels",
+      "Grand_Voyager": "5x127 (2008+) or 5x114.3 (pre-2008), 71.5mm CB, 15-17\" wheels",
+      "LHS": "5x114.3, 71.5mm CB, 16-17\" wheels",
+      "Pacifica": "5x127, 71.5mm CB, 17-20\" wheels",
+      "Town_and_Country": "5x127, 71.5mm CB, 17\" wheels"
+    }
+  }
+}

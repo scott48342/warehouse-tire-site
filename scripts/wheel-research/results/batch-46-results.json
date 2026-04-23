@@ -1,0 +1,1159 @@
+{
+  "batchId": "46",
+  "processedAt": "2026-04-21T21:15:00.000Z",
+  "totalVehicles": 75,
+  "successCount": 75,
+  "failureCount": 0,
+  "results": [
+    {
+      "year": 2010,
+      "make": "mini",
+      "model": "countryman",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 46},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2015,
+      "make": "mini",
+      "model": "roadster",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 5.5, "offset": 45},
+          {"diameter": 16, "width": 6.5, "offset": 48},
+          {"diameter": 17, "width": 7, "offset": 48}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2014,
+      "make": "mini",
+      "model": "roadster",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 5.5, "offset": 45},
+          {"diameter": 16, "width": 6.5, "offset": 48},
+          {"diameter": 17, "width": 7, "offset": 48}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "mini",
+      "model": "roadster",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 5.5, "offset": 45},
+          {"diameter": 16, "width": 6.5, "offset": 48},
+          {"diameter": 17, "width": 7, "offset": 48}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2012,
+      "make": "mini",
+      "model": "roadster",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 5.5, "offset": 45},
+          {"diameter": 16, "width": 6.5, "offset": 48},
+          {"diameter": 17, "width": 7, "offset": 48}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "3000-gt",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 46},
+          {"diameter": 17, "width": 8, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "3000-gt",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 46},
+          {"diameter": 17, "width": 8, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "aspire",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "aspire",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "aspire",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "aspire",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "chariot-grandis",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "chariot-grandis",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "chariot-grandis",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "chariot-grandis",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "debonair",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2026,
+      "make": "mitsubishi",
+      "model": "destinator",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 7, "offset": 38}
+        ],
+        "source": "inferred from Xforce platform",
+        "notes": "New model 2025-2026, based on Xforce platform with shared specifications"
+      }
+    },
+    {
+      "year": 2025,
+      "make": "mitsubishi",
+      "model": "destinator",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 7, "offset": 38}
+        ],
+        "source": "inferred from Xforce platform",
+        "notes": "New model 2025-2026, based on Xforce platform with shared specifications"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "eclipse-spider",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 17, "width": 7, "offset": 46}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Eclipse Spyder (convertible) shares specs with Eclipse coupe"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "eclipse-spider",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 17, "width": 7, "offset": 46}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Eclipse Spyder (convertible) shares specs with Eclipse coupe"
+      }
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "eclipse-spider",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 17, "width": 7, "offset": 46}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Eclipse Spyder (convertible) shares specs with Eclipse coupe"
+      }
+    },
+    {
+      "year": 2022,
+      "make": "mitsubishi",
+      "model": "express",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 50}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Australian domestic market van"
+      }
+    },
+    {
+      "year": 2021,
+      "make": "mitsubishi",
+      "model": "express",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 50}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Australian domestic market van"
+      }
+    },
+    {
+      "year": 2020,
+      "make": "mitsubishi",
+      "model": "express",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 50}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Australian domestic market van"
+      }
+    },
+    {
+      "year": 2014,
+      "make": "mitsubishi",
+      "model": "galant",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 46},
+          {"diameter": 17, "width": 6.5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "galant",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 46},
+          {"diameter": 17, "width": 6.5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "gto",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 46},
+          {"diameter": 18, "width": 9, "offset": 56}
+        ],
+        "source": "tirewheelguide.com",
+        "notes": "GTO is the JDM name for 3000GT"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "i",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 4, "offset": 35, "position": "front"},
+          {"diameter": 15, "width": 5, "offset": 35, "position": "rear"}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Staggered setup front/rear"
+      }
+    },
+    {
+      "year": 2012,
+      "make": "mitsubishi",
+      "model": "i",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 4, "offset": 35, "position": "front"},
+          {"diameter": 15, "width": 5, "offset": 35, "position": "rear"}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Staggered setup front/rear"
+      }
+    },
+    {
+      "year": 2011,
+      "make": "mitsubishi",
+      "model": "i",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 4, "offset": 35, "position": "front"},
+          {"diameter": 15, "width": 5, "offset": 35, "position": "rear"}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Staggered setup front/rear"
+      }
+    },
+    {
+      "year": 2010,
+      "make": "mitsubishi",
+      "model": "i",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 4, "offset": 35, "position": "front"},
+          {"diameter": 15, "width": 5, "offset": 35, "position": "rear"}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Staggered setup front/rear"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "i",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 4, "offset": 35, "position": "front"},
+          {"diameter": 15, "width": 5, "offset": 35, "position": "rear"}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Staggered setup front/rear"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "i",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 4, "offset": 35, "position": "front"},
+          {"diameter": 15, "width": 5, "offset": 35, "position": "rear"}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Staggered setup front/rear"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "i",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 4, "offset": 35, "position": "front"},
+          {"diameter": 15, "width": 5, "offset": 35, "position": "rear"}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Staggered setup front/rear"
+      }
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "i",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 4, "offset": 35, "position": "front"},
+          {"diameter": 15, "width": 5, "offset": 35, "position": "rear"}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Staggered setup front/rear"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "i",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 4, "offset": 35, "position": "front"},
+          {"diameter": 15, "width": 5, "offset": 35, "position": "rear"}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Staggered setup front/rear"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "l400",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 40},
+          {"diameter": 15, "width": 6, "offset": 40}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Also known as Delica Space Gear. Some AWD variants use 6x139.7"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "l400",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 40},
+          {"diameter": 15, "width": 6, "offset": 40}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Also known as Delica Space Gear. Some AWD variants use 6x139.7"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 5, "offset": 46},
+          {"diameter": 14, "width": 5.5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 5, "offset": 46},
+          {"diameter": 14, "width": 5.5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2017,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8.5, "offset": 38},
+          {"diameter": 18, "width": 8.5, "offset": 38}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Evo X Final Edition"
+      }
+    },
+    {
+      "year": 2016,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8.5, "offset": 38},
+          {"diameter": 18, "width": 8.5, "offset": 38}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Evo X"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 38},
+          {"diameter": 18, "width": 8, "offset": 38}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Evo IX"
+      }
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 17, "width": 7.5, "offset": 38}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Evo VII"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 17, "width": 7.5, "offset": 38}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Evo VI/VII"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 46},
+          {"diameter": 17, "width": 7.5, "offset": 38}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Evo VI"
+      }
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "legnum",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 56},
+          {"diameter": 15, "width": 6.5, "offset": 51}
+        ],
+        "source": "avtoreference.com",
+        "notes": "JDM wagon variant of Galant"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "legnum",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 56},
+          {"diameter": 15, "width": 6.5, "offset": 51}
+        ],
+        "source": "avtoreference.com",
+        "notes": "JDM wagon variant of Galant"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "legnum",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 56},
+          {"diameter": 15, "width": 6.5, "offset": 51}
+        ],
+        "source": "avtoreference.com",
+        "notes": "JDM wagon variant of Galant"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "magna",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Australian domestic market"
+      }
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "magna",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Australian domestic market"
+      }
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "magna",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Australian domestic market"
+      }
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "magna",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Australian domestic market"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "magna",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Australian domestic market"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "magna",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6, "offset": 46}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Australian domestic market"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "maven",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5, "offset": 45}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Southeast Asian market compact"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "maven",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5, "offset": 45}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Southeast Asian market compact"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "maven",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5, "offset": 45}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Southeast Asian market compact"
+      }
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "maven",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5, "offset": 45}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Southeast Asian market compact"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "maven",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5, "offset": 45}
+        ],
+        "source": "avtoreference.com",
+        "notes": "Southeast Asian market compact"
+      }
+    },
+    {
+      "year": 2026,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 4.5, "offset": 46},
+          {"diameter": 15, "width": 5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2025,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 4.5, "offset": 46},
+          {"diameter": 15, "width": 5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2024,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 4.5, "offset": 46},
+          {"diameter": 15, "width": 5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2023,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 4.5, "offset": 46},
+          {"diameter": 15, "width": 5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2022,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 4.5, "offset": 46},
+          {"diameter": 15, "width": 5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2021,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 4.5, "offset": 46},
+          {"diameter": 15, "width": 5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2020,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 4.5, "offset": 46},
+          {"diameter": 15, "width": 5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2019,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 4.5, "offset": 46},
+          {"diameter": 15, "width": 5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    },
+    {
+      "year": 2018,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 4.5, "offset": 46},
+          {"diameter": 15, "width": 5, "offset": 46}
+        ],
+        "source": "avtoreference.com"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1789 @@
+[
+  {
+    "id": "f2c55d23-11f3-4aeb-842b-7c6891003c74",
+    "year": 2009,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "833bec1c-a023-4422-ad7d-003ef54464bc",
+    "year": 2009,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "79cccaff-e858-47d1-b9f4-d6984997fcdd",
+    "year": 2009,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "33e3cfd1-50b6-494d-8f49-6b8651b67121",
+    "year": 2009,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b4c98934-1a4f-4c32-bfe5-e9f8e97385a4",
+    "year": 2009,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a33f1993-f663-43ae-ae9d-49731a54ceb8",
+    "year": 2010,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "223eb67d-e046-400f-a82c-41426a3f48e5",
+    "year": 2010,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3179ef9a-3e11-40a0-af05-767412cf0718",
+    "year": 2010,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "57d2b875-62cf-444c-811c-56227e30759f",
+    "year": 2010,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "046e5e2a-30e0-4523-b8e5-742256784c7e",
+    "year": 2010,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "41c7f3ee-5cec-494d-8bf3-0ae505ec5eec",
+    "year": 2010,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7e387aa4-1a1e-4fed-871e-fe2a1ad58548",
+    "year": 2011,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d13c6dfc-b073-446d-9a9f-9194512935f8",
+    "year": 2011,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "aff2b6b6-8e65-4e2a-8fdc-68be81d91aa3",
+    "year": 2011,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7b46e93b-3632-4d9f-b8bf-f106dee58daa",
+    "year": 2011,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d9074d31-af42-405d-b2ff-4cd44171d2cc",
+    "year": 2011,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a5d11297-a895-47af-a944-964aa3d82524",
+    "year": 2011,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c209dc87-c580-4131-981f-63de749f7c07",
+    "year": 2012,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "292fd1aa-23de-4773-b7d0-1ebec0bc68d4",
+    "year": 2012,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e2ecab3f-17b6-466d-bb8c-50b3fcb52f6b",
+    "year": 2012,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b63932e1-3c68-4a1d-b631-98a0c36e972e",
+    "year": 2012,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "274738bd-f910-4715-8786-6171a9a4f0f9",
+    "year": 2012,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "debfc315-e735-404c-8b45-391b9e341828",
+    "year": 2012,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fd59f202-ff83-43f2-8e87-cbca8e08aac1",
+    "year": 2013,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b91cd014-20c5-4627-9847-e33b2d342c8f",
+    "year": 2013,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "d6793d18-b951-4395-a406-0e257a62669b",
+    "year": 2013,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5a4a941f-eb2a-4b1b-ae84-8b996deb8205",
+    "year": 2013,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e23075e7-da0a-46b3-9366-0562cdb33d45",
+    "year": 2013,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5a3a4fbb-1f06-4136-abac-8c65a9223ae2",
+    "year": 2013,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "35c4e510-e888-4ce6-b60a-779a6623351a",
+    "year": 2014,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b6ff6d9c-1c52-4deb-ba34-a36c855264af",
+    "year": 2014,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "485d38c3-2466-43c7-a56e-bc6fbfdb62c5",
+    "year": 2014,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "53b106f4-2b7a-4691-be09-f13e15d1f018",
+    "year": 2014,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b9e96f18-7899-4528-8121-766492ed67d3",
+    "year": 2014,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cabe7731-70f3-4077-9072-3691a2371364",
+    "year": 2014,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "eea1a529-4a93-4188-a67d-daf24b96ed2d",
+    "year": 2015,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f586c9e0-3069-4a8f-9473-b00c52444526",
+    "year": 2015,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "23529907-086c-454c-8cdf-cfaf360a05f2",
+    "year": 2015,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6026cb5d-2658-4c62-a5b9-5e9921843c38",
+    "year": 2015,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cd7f7819-5851-441f-93de-d762ddd1abfc",
+    "year": 2015,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e39da3c9-29ea-4af3-b50e-abe63854a3c4",
+    "year": 2015,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d41e9f06-d522-45a2-bc50-b22bca9bdaad",
+    "year": 2016,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0a58f28a-9e01-4141-a06a-ccc0f3f078a2",
+    "year": 2016,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "be53c69a-2558-4ae3-9d1d-c29046771155",
+    "year": 2016,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c47fe879-903b-47ad-83e4-677f02e7e734",
+    "year": 2016,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1a4fe075-82ba-450f-b0f8-02ee8382c01f",
+    "year": 2016,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1f71d2c7-f52a-4d0f-98fa-8e0e75b341e2",
+    "year": 2016,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4ddb3b0e-76d9-4544-8086-99f5d8abf4b4",
+    "year": 2017,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2aa08d88-7b21-4d8c-87dc-b7fe903b7771",
+    "year": 2017,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "11f1c44b-9e56-4ad0-a4d8-554edc7aaace",
+    "year": 2017,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "751f42e7-4b6e-4b51-9f91-ef20e8ab328b",
+    "year": 2017,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "de8787d4-7aaf-424a-9b78-5995711ecc7e",
+    "year": 2017,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "311e8ecf-b51d-4932-8fe8-4550742edcc8",
+    "year": 2017,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "59146653-9039-4a7c-8b3c-bee9372d848c",
+    "year": 2018,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d03fdb7f-ed30-4e8c-a40b-4450af04dc1b",
+    "year": 2018,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4683c648-53f0-4c9b-b811-31f5b3958363",
+    "year": 2018,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5b70facf-7c78-41e6-8e43-e96007c9ab85",
+    "year": 2018,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6f84d5bc-7f5e-41f3-a0ef-3dfca5f955ac",
+    "year": 2018,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d409d282-df3d-4bca-bfab-a4acd078f112",
+    "year": 2018,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "80063435-cdd4-4141-831c-1986cb1a7676",
+    "year": 2019,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7eb96533-7730-40f7-ae82-7902032fb72b",
+    "year": 2019,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fd05bf8a-bca6-4566-9f49-3f39ada0d453",
+    "year": 2019,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4d66bab2-0737-4a58-8f0d-3e5f4ab60f1f",
+    "year": 2019,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "97db0698-8856-441d-80c5-9c55a43e2cfe",
+    "year": 2019,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2bb8ec47-18fd-4d40-9528-77e0ce0987f2",
+    "year": 2019,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d1dc30b7-2e53-4a5f-8772-5b9968a05c45",
+    "year": 2020,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "aa32dcfd-aebe-4703-ad59-ca07491917e9",
+    "year": 2020,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c60a2ce0-4bff-4461-a077-b547b3180492",
+    "year": 2020,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9afbe290-15ec-45ad-9ced-7bcfebb0b072",
+    "year": 2020,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "NISMO",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "12a2b394-da15-4995-85fc-6502e4703744",
+    "year": 2020,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "97130f8f-d7a7-4401-942d-61821e993f06",
+    "year": 2020,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4e468d3b-d0a9-4182-8bdc-cba411cc274c",
+    "year": 2021,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ff37217a-15a7-4507-8f5a-3bf4368d2b51",
+    "year": 2021,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Black Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b81a7891-17c6-4ff2-a134-32db68614264",
+    "year": 2021,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "Track Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "436a6115-1ec9-4994-8b4e-12c543828e13",
+    "year": 2021,
+    "make": "nissan",
+    "model": "gt-r",
+    "trim": "T-Spec",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "66.1",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  }
+]

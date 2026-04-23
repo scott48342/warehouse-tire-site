@@ -1,0 +1,2048 @@
+[
+  {
+    "id": "fb004b0f-2964-4446-b9bd-8346e183b505",
+    "year": 2022,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "82e4cd3e-e241-44e6-91d7-72a93282589f",
+    "year": 2022,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Premium",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "51579626-2722-406e-b5a6-ef0284864dd6",
+    "year": 2022,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Special Edition",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "74b4994f-cd43-48a8-962d-141ed85531c2",
+    "year": 2023,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Premium",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "496a1b2b-da26-4a81-a287-7e2005cfe7cc",
+    "year": 2023,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Premium",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d9e0e4f9-39a9-4979-a1df-6f2ee6f32898",
+    "year": 2023,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fcd4056b-02a8-45be-9f2c-8e96b4b01194",
+    "year": 2023,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Special Edition",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "08717466-7063-4001-bc62-117a883d9550",
+    "year": 2024,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Premium",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cd54142c-af2d-4dc4-822d-c04b973a3cf7",
+    "year": 2024,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Special Edition",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b0c2ad5a-72dd-4b7e-b520-e87cdc3cfa19",
+    "year": 2024,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b554fc46-f72a-47eb-a3a7-9f15b6e6466e",
+    "year": 2024,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Premium",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "f1e4423e-2473-4f63-9271-afcf26cfd07e",
+    "year": 2025,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3902cd4c-6619-40f5-9a7b-10aaadc298e1",
+    "year": 2025,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Special Edition",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "44a69bdd-313b-4a3a-bf74-c1d97a6d64e6",
+    "year": 2025,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Premium",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "04852ad8-9e05-4706-a635-8bc31869c257",
+    "year": 2026,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "966c8792-0844-4ae2-ab01-cc28508af46b",
+    "year": 2026,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Premium",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "25948493-0568-4ff6-bedb-23e9a03e1b83",
+    "year": 2026,
+    "make": "toyota",
+    "model": "gr86",
+    "trim": "Special Edition",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/45ZR17",
+      "215/40ZR18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d379a764-8ea9-45b9-aee2-3dd6de5c6632",
+    "year": 2000,
+    "make": "toyota",
+    "model": "grand-hiace",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 29,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 30,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "457b8d80-0e83-42c9-ad9f-43a8943dc9ef",
+    "year": 2001,
+    "make": "toyota",
+    "model": "grand-hiace",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 29,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 30,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "61f421d9-2a07-4575-ac44-039148597948",
+    "year": 2002,
+    "make": "toyota",
+    "model": "grand-hiace",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 29,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 30,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "e7b412cd-b814-4e87-ba8a-c810323c6dbb",
+    "year": 2024,
+    "make": "toyota",
+    "model": "grand-highlander",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 40,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8963a7c2-17ab-4d7e-9fef-4133ac3675c3",
+    "year": 2025,
+    "make": "toyota",
+    "model": "grand-highlander",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 40,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "cfd09a31-f6ee-4106-83ba-ec71954f4c9d",
+    "year": 2026,
+    "make": "toyota",
+    "model": "grand-highlander",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 40,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/65R18",
+      "255/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ed9d4db5-68e3-4a69-b2a8-7d5f14342ac7",
+    "year": 2012,
+    "make": "toyota",
+    "model": "gt-86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 48,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17",
+      "215/40R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "2da5b3d8-de22-4e1a-aa45-c7e6c5fd3b37",
+    "year": 2013,
+    "make": "toyota",
+    "model": "gt-86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 48,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17",
+      "215/40R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "db24700a-f17b-4b68-b592-83b01100ad02",
+    "year": 2014,
+    "make": "toyota",
+    "model": "gt-86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 48,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17",
+      "215/40R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "feb11efb-6bee-4f1f-a845-c12d0a8d2ee3",
+    "year": 2015,
+    "make": "toyota",
+    "model": "gt-86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 48,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17",
+      "215/40R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "b9433987-0f94-4f7d-b3a7-b17023e350d7",
+    "year": 2016,
+    "make": "toyota",
+    "model": "gt-86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 48,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17",
+      "215/40R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "41ee0342-a230-4ef6-ac8d-ac923cd91ea5",
+    "year": 2017,
+    "make": "toyota",
+    "model": "gt-86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 48,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17",
+      "215/40R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "1cc5e7f0-18dd-4671-a5a0-818a5fc0bd7e",
+    "year": 2018,
+    "make": "toyota",
+    "model": "gt-86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 48,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17",
+      "215/40R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "6546485b-4474-4e08-a62e-2bd86b234391",
+    "year": 2019,
+    "make": "toyota",
+    "model": "gt-86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 48,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17",
+      "215/40R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "6afc9481-3266-4472-b14c-484a4028a420",
+    "year": 2020,
+    "make": "toyota",
+    "model": "gt-86",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 48,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 48,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 48,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17",
+      "215/40R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "de83b980-c8d6-4865-8e0a-5fcf49348ab3",
+    "year": 2010,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/65R17",
+      "245/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "c21d6ed2-5d48-455f-bfb4-9a8c86607d87",
+    "year": 2011,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/65R17",
+      "245/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "dd510a89-2a20-4e63-8ec6-44ecd9712b1a",
+    "year": 2012,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/65R17",
+      "245/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "89dddd06-9a11-4e8c-8d5c-2b61c6099cb5",
+    "year": 2013,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/65R17",
+      "245/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "12e77930-9f31-4b63-82fb-783d83c0dadb",
+    "year": 2014,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "2.7 VVT-i",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "57e7bc36-91f0-436f-8100-8675152a5614",
+    "year": 2015,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "2.7 VVT-i",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "1f241b62-8938-4bf3-9c7e-a0669924a574",
+    "year": 2016,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "2.7 VVT-i",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "ad26f7a7-a056-4d6f-82ff-4473437a4b1a",
+    "year": 2017,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "2.7 VVT-i",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "245/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "ed3bedff-b9db-468c-90c6-4613234dc83f",
+    "year": 2018,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "2.7 VVT-i",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "245/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "dd255df0-5446-4991-be99-42c352c83fc1",
+    "year": 2019,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "2.7 VVT-i",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "245/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "e5a53fa5-1d4e-4a2f-ba05-454c78a6e117",
+    "year": 2020,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20"
+    ],
+    "source": "manufacturer_spec"
+  },
+  {
+    "id": "5cf834a5-bc02-4a3e-a47a-509cb18d5461",
+    "year": 2021,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20"
+    ],
+    "source": "manufacturer_spec"
+  },
+  {
+    "id": "1270c4de-0a99-4d0d-8bee-9d69e5ce978f",
+    "year": 2022,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20"
+    ],
+    "source": "manufacturer_spec"
+  },
+  {
+    "id": "0d81e244-19c0-43ef-8ad9-a8e0103d0531",
+    "year": 2023,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20"
+    ],
+    "source": "manufacturer_spec"
+  },
+  {
+    "id": "7a93c1ac-bdb7-4490-8e73-2e28bf6afd70",
+    "year": 2024,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20"
+    ],
+    "source": "manufacturer_spec"
+  },
+  {
+    "id": "17566c33-2300-4f96-8f5b-9358ee8e4e36",
+    "year": 2025,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20"
+    ],
+    "source": "manufacturer_spec"
+  },
+  {
+    "id": "88538a66-f200-47b0-850a-386237a4c625",
+    "year": 2026,
+    "make": "toyota",
+    "model": "highlander",
+    "trim": "L, LE, XLE, Limited, Platinum",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20"
+    ],
+    "source": "reviewed_from_2025_ADJACENT_YEAR"
+  },
+  {
+    "id": "225c2703-c233-4f0a-b59d-e7ad10b2eb50",
+    "year": 2000,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "16x8",
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/70R16",
+      "275/65R17",
+      "275/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "8a143fbf-12ab-4ecd-90ec-c774d86cc5d1",
+    "year": 2001,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "16x8",
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/70R16",
+      "275/65R17",
+      "275/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "c9934d9e-bed5-451a-b039-211204589cb8",
+    "year": 2002,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "16x8",
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/70R16",
+      "275/65R17",
+      "275/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "508d855b-ebae-4e8f-bdb3-c218a366f8e4",
+    "year": 2003,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "16x8",
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/70R16",
+      "275/65R17",
+      "275/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "c92d3683-0b3e-469a-8d6c-47542e6c4f9c",
+    "year": 2004,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "16x8",
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/70R16",
+      "275/65R17",
+      "275/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "4f250a7e-cba6-40f2-8c11-59f337ce1f50",
+    "year": 2005,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "16x8",
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/70R16",
+      "275/65R17",
+      "275/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "b61b6ae3-fed5-410c-bf0d-6a9cb665641e",
+    "year": 2006,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "16x8",
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/70R16",
+      "275/65R17",
+      "275/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "826793d7-86a9-4a11-921c-0e63ae16d922",
+    "year": 2007,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "16x8",
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/70R16",
+      "275/65R17",
+      "275/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "5dc281b7-6d34-4e20-a60e-367cf9411100",
+    "year": 2008,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/65R17",
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "38f5e1f5-ccc4-4550-91bb-3d5db5c5a0f2",
+    "year": 2009,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/65R17",
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "c70ee6ec-3a93-4213-929b-5fa6680e770d",
+    "year": 2010,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/65R17",
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "c0c09c93-cec0-4540-a7e5-7a221d49849f",
+    "year": 2011,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/65R17",
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "4e08418e-3c14-4ac2-8fcc-74f7514ccafb",
+    "year": 2012,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/65R17",
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "19fe922f-db0f-45a1-8765-bb48abf89895",
+    "year": 2013,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/65R17",
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "34e7232b-ae9c-4842-a2ef-3b02bc3ae364",
+    "year": 2014,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/65R17",
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "324cad35-6c3c-4d6a-aee7-e16f905bf33d",
+    "year": 2015,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "17x8",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "275/65R17",
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "a7cf68f9-e857-4b8c-969e-66def2becb7d",
+    "year": 2016,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "5.7 VVT-i",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/60R18",
+      "285/55R19",
+      "285/50ZR20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "c53b2e8e-daf3-4e1c-ab34-ab0e4e59745e",
+    "year": 2017,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "5.7 VVT-i",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/60R18",
+      "285/55R19",
+      "285/50ZR20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "50c7925c-295a-4bfc-91da-019c0b0cf030",
+    "year": 2018,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "60de1f21-c28c-4d3a-9b8f-b68ff1f2aa99",
+    "year": 2019,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "8b76e173-993d-4b12-9877-34604d3b7eeb",
+    "year": 2020,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "5.7 VVT-i",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/60R18",
+      "285/55R19",
+      "285/50ZR20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "a5d0ab3a-875e-4cb6-89d5-8ece3992324e",
+    "year": 2021,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "5.7 VVT-i",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/60R18",
+      "285/55R19",
+      "285/50ZR20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "5b7bcfb4-8bb5-49ca-b8c0-b18938305b88",
+    "year": 2022,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "285/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "c31afa3d-77c4-4873-ac45-d05368c0914d",
+    "year": 2023,
+    "make": "toyota",
+    "model": "land-cruiser",
+    "trim": "2.4 T",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 70,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R18",
+      "245/70R18",
+      "265/60R20",
+      "265/65R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "671baf04-a347-495c-a421-537350c5c2b3",
+    "year": 2000,
+    "make": "toyota",
+    "model": "mr2",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "08c7c628-ceb5-4be9-bf19-590330ca89c0",
+    "year": 2000,
+    "make": "toyota",
+    "model": "mr2-roadster",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  }
+]

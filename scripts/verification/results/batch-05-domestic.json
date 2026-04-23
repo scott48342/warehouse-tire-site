@@ -1,0 +1,1655 @@
+{
+  "batch": "batch-05-domestic",
+  "verifiedAt": "2026-04-23T00:49:00Z",
+  "totalVehicles": 75,
+  "validVehicles": 63,
+  "invalidVehicles": 12,
+  "summary": {
+    "invalidYearsUS": [
+      "Chevrolet Spark 2005-2012: NOT SOLD in US market until 2013",
+      "Chevrolet Spark 2023: DISCONTINUED after 2022 model year",
+      "Chevrolet Silverado 2026: Future year - unverified",
+      "Chevrolet Silverado 2500 HD 2026: Future year - unverified",
+      "Chevrolet Silverado 3500 HD 2026: Future year - unverified"
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "VALID",
+      "boltPattern": "5x127",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "Base/LS/LT",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "wheel-sizes.com"],
+      "notes": "Express 1500 discontinued after 2014"
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "VALID",
+      "boltPattern": "5x127",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "Base/LS/LT",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "wheel-sizes.com"],
+      "notes": "Express 1500 discontinued after 2014"
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "VALID",
+      "boltPattern": "5x127",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "Base/LS/LT",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "AWD",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "wheel-sizes.com"],
+      "notes": "Last year for Express 1500"
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT/LS",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "LT/LTZ",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "265/65R18"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/55R20"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "265/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "thedriveradviser.com"],
+      "notes": "K2XX platform start (2014-2018)"
+    },
+    {
+      "year": 2015,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT/LS",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "LT/LTZ",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "265/65R18"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/55R20"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "265/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "thedriveradviser.com"],
+      "notes": "K2XX platform"
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT/LS",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "LT/LTZ",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "265/65R18"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/55R20"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "265/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "thedriveradviser.com"],
+      "notes": "K2XX platform"
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT/LS",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "LT/LTZ",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "265/65R18"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/55R20"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "265/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "thedriveradviser.com"],
+      "notes": "K2XX platform"
+    },
+    {
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT/LS",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "LT/LTZ",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "265/65R18"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/55R20"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "265/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "thedriveradviser.com"],
+      "notes": "Last year K2XX platform"
+    },
+    {
+      "year": 2019,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "Custom/LT",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "RST/LTZ",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "22x9",
+          "oemTireSize": "275/50R22"
+        },
+        {
+          "name": "Trail Boss",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "275/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "chevrolet.com"],
+      "notes": "T1XX platform start (2019+)"
+    },
+    {
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "Custom/LT",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "RST/LTZ",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "22x9",
+          "oemTireSize": "275/50R22"
+        },
+        {
+          "name": "Trail Boss",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "275/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "chevrolet.com"],
+      "notes": "T1XX platform"
+    },
+    {
+      "year": 2021,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "Custom/LT",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "RST/LTZ",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "22x9",
+          "oemTireSize": "275/50R22"
+        },
+        {
+          "name": "Trail Boss",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "275/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "chevrolet.com"],
+      "notes": "T1XX platform"
+    },
+    {
+      "year": 2022,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "Custom/LT",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "RST/LTZ",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "22x9",
+          "oemTireSize": "275/50R22"
+        },
+        {
+          "name": "ZR2",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "275/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "chevrolet.com"],
+      "notes": "ZR2 trim added this year"
+    },
+    {
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "Custom/LT",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "RST/LTZ",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "22x9",
+          "oemTireSize": "275/50R22"
+        },
+        {
+          "name": "ZR2",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "275/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "chevrolet.com"],
+      "notes": "T1XX platform"
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "Custom/LT",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "RST/LTZ",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "22x9",
+          "oemTireSize": "275/50R22"
+        },
+        {
+          "name": "ZR2",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "275/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "chevrolet.com"],
+      "notes": "T1XX platform"
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "255/70R17"
+        },
+        {
+          "name": "Custom/LT",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "RST/LTZ",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/60R20"
+        },
+        {
+          "name": "High Country",
+          "oemWheelSize": "22x9",
+          "oemTireSize": "275/50R22"
+        },
+        {
+          "name": "ZR2",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "275/65R18"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com", "chevrolet.com"],
+      "notes": "Current model year, specs may update"
+    },
+    {
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "INVALID",
+      "reason": "FUTURE_YEAR",
+      "confidence": "none",
+      "sources": [],
+      "notes": "2026 model year not yet released - cannot verify fitment data"
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT/LS",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "245/70R17"
+        },
+        {
+          "name": "LT/LTZ",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "265/65R18"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "265/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "thedriveradviser.com"],
+      "notes": "GMT900 platform (2007-2013)"
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "WT/LS",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "245/70R17"
+        },
+        {
+          "name": "LT/LTZ",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "265/65R18"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "265/65R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "thedriveradviser.com"],
+      "notes": "Last year GMT900 platform"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Silverado 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "Base/LS/LT",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "8-lug HD truck, GMT800 platform"
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Silverado 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "Base/LS/LT",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "8-lug HD truck"
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Silverado 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "Base/LS/LT",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "8-lug HD truck"
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Silverado 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "Base/LS/LT",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "8-lug HD truck"
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Silverado 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "Base/LS/LT",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "8-lug HD truck"
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Silverado 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "Base/LS/LT",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "8-lug HD truck"
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Silverado 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "Base/LS/LT",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "Last year GMT800 platform"
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        },
+        {
+          "name": "LT/LTZ (17\")",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "GMT900 platform start"
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        },
+        {
+          "name": "LT/LTZ (17\")",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "GMT900 platform"
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        },
+        {
+          "name": "LT/LTZ (17\")",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "GMT900 platform"
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.6,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        },
+        {
+          "name": "LT/LTZ (17\")",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "Last year 8x165.1 bolt pattern"
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT245/75R17"
+        },
+        {
+          "name": "LT/LTZ (18\")",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "BOLT PATTERN CHANGED to 8x180 starting 2011"
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT245/75R17"
+        },
+        {
+          "name": "LT/LTZ (18\")",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "8x180 bolt pattern"
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT245/75R17"
+        },
+        {
+          "name": "LT/LTZ (18\")",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "8x180 bolt pattern"
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT245/75R17"
+        },
+        {
+          "name": "LT/LTZ (18\")",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "8x180 bolt pattern"
+    },
+    {
+      "year": 2015,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT245/75R17"
+        },
+        {
+          "name": "LT/LTZ/High Country",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "K2XX HD platform"
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT245/75R17"
+        },
+        {
+          "name": "LT/LTZ/High Country",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "K2XX HD platform"
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT245/75R17"
+        },
+        {
+          "name": "LT/LTZ/High Country",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "K2XX HD platform"
+    },
+    {
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "WT/LT/LTZ",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT245/75R17"
+        },
+        {
+          "name": "LT/LTZ/High Country",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com", "hulkoffsets.com"],
+      "notes": "K2XX HD platform"
+    },
+    {
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "status": "INVALID",
+      "reason": "FUTURE_YEAR",
+      "confidence": "none",
+      "sources": [],
+      "notes": "2026 model year not yet released - cannot verify fitment data"
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "LT225/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "SRW and DRW configurations"
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "LT225/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "SRW and DRW configurations"
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "LT225/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "SRW and DRW configurations"
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "LT245/75R16"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "LT225/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "SRW and DRW configurations"
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "GMT900 HD platform"
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "GMT900 HD platform"
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "GMT900 HD platform"
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "Last year 8x165.1 bolt pattern"
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "hubBoreSRW": 124.1,
+      "hubBoreDRW": 124.1,
+      "boltPatternDRW": "8x210",
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17",
+          "boltPattern": "8x180"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17",
+          "boltPattern": "8x210"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "SRW changed to 8x180, DRW changed to 8x210"
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "boltPatternDRW": "8x210",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17",
+          "boltPattern": "8x180"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17",
+          "boltPattern": "8x210"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "SRW: 8x180, DRW: 8x210"
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "boltPatternDRW": "8x210",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17",
+          "boltPattern": "8x180"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17",
+          "boltPattern": "8x210"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "SRW: 8x180, DRW: 8x210"
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "boltPatternDRW": "8x210",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "LT265/70R17",
+          "boltPattern": "8x180"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17",
+          "boltPattern": "8x210"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "SRW: 8x180, DRW: 8x210"
+    },
+    {
+      "year": 2015,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "boltPatternDRW": "8x210",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18",
+          "boltPattern": "8x180"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17",
+          "boltPattern": "8x210"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "K2XX HD platform"
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "boltPatternDRW": "8x210",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18",
+          "boltPattern": "8x180"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17",
+          "boltPattern": "8x210"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "K2XX HD platform"
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "boltPatternDRW": "8x210",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18",
+          "boltPattern": "8x180"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17",
+          "boltPattern": "8x210"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "K2XX HD platform"
+    },
+    {
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "VALID",
+      "boltPattern": "8x180",
+      "boltPatternDRW": "8x210",
+      "hubBore": 124.1,
+      "trims": [
+        {
+          "name": "SRW",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "LT265/70R18",
+          "boltPattern": "8x180"
+        },
+        {
+          "name": "DRW",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "LT235/80R17",
+          "boltPattern": "8x210"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "gmtnation.com"],
+      "notes": "K2XX HD platform"
+    },
+    {
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "status": "INVALID",
+      "reason": "FUTURE_YEAR",
+      "confidence": "none",
+      "sources": [],
+      "notes": "2026 model year not yet released - cannot verify fitment data"
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Spark",
+      "status": "INVALID",
+      "reason": "NOT_SOLD_IN_US",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com", "caranddriver.com"],
+      "notes": "Chevrolet Spark was NOT sold in USA until 2013 model year. 2005-2012 years are INVALID for US market."
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Spark",
+      "status": "INVALID",
+      "reason": "NOT_SOLD_IN_US",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com", "caranddriver.com"],
+      "notes": "Chevrolet Spark was NOT sold in USA until 2013 model year. 2005-2012 years are INVALID for US market."
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Spark",
+      "status": "INVALID",
+      "reason": "NOT_SOLD_IN_US",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com", "caranddriver.com"],
+      "notes": "Chevrolet Spark was NOT sold in USA until 2013 model year. 2005-2012 years are INVALID for US market."
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Spark",
+      "status": "INVALID",
+      "reason": "NOT_SOLD_IN_US",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com", "caranddriver.com"],
+      "notes": "Chevrolet Spark was NOT sold in USA until 2013 model year. 2005-2012 years are INVALID for US market."
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Spark",
+      "status": "INVALID",
+      "reason": "NOT_SOLD_IN_US",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com", "caranddriver.com"],
+      "notes": "Chevrolet Spark was NOT sold in USA until 2013 model year. 2005-2012 years are INVALID for US market."
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Spark",
+      "status": "INVALID",
+      "reason": "NOT_SOLD_IN_US",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com", "caranddriver.com"],
+      "notes": "Chevrolet Spark was NOT sold in USA until 2013 model year. 2005-2012 years are INVALID for US market."
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Spark",
+      "status": "INVALID",
+      "reason": "NOT_SOLD_IN_US",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com", "caranddriver.com"],
+      "notes": "Chevrolet Spark was NOT sold in USA until 2013 model year. 2005-2012 years are INVALID for US market."
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Spark",
+      "status": "INVALID",
+      "reason": "NOT_SOLD_IN_US",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com", "caranddriver.com"],
+      "notes": "Chevrolet Spark was NOT sold in USA until 2013 model year. 2005-2012 years are INVALID for US market."
+    },
+    {
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "Spark",
+      "status": "INVALID",
+      "reason": "DISCONTINUED",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "wikipedia.org", "motor1.com"],
+      "notes": "Chevrolet Spark was DISCONTINUED after 2022 model year. Production ended August 2022. No 2023 model exists."
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "LS/LT",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "265/70R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "factorywheelreplacement.com"],
+      "notes": "GMT800 platform (2000-2006)"
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "LS/LT",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "LT (17\")",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "265/70R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "factorywheelreplacement.com"],
+      "notes": "GMT800 platform"
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "LS/LT",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "LT (17\")",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "factorywheelreplacement.com"],
+      "notes": "GMT800 platform"
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "LS/LT",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "LT (17\")",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "factorywheelreplacement.com"],
+      "notes": "GMT800 platform"
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "LS/LT",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "factorywheelreplacement.com"],
+      "notes": "GMT800 platform"
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "LS/LT",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "factorywheelreplacement.com"],
+      "notes": "GMT800 platform"
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {
+          "name": "LS/LT",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        },
+        {
+          "name": "Z71",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "factorywheelreplacement.com"],
+      "notes": "Last year GMT800 platform for Suburban 1500"
+    }
+  ]
+}

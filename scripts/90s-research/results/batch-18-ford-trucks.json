@@ -1,0 +1,1510 @@
+{
+  "batchId": "90s-batch-18-ford-trucks-vans",
+  "completedAt": "2026-04-22T12:58:00Z",
+  "notes": "Ford Trucks/Vans and Cars batch - includes Aerostar, Econoline, Windstar, Club Wagon, Probe, Thunderbird, and Taurus SHO",
+  "results": [
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Aerostar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["P205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ford-trucks.com forum", "wheelfitment.eu", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Shares bolt pattern with 1994+ Mustang, Ranger, Explorer. Forum confirms Mustang wheels fit."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Aerostar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["P205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ford-trucks.com forum", "wheelfitment.eu"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Aerostar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 20 },
+          { "diameter": 15, "width": 6, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["P205/70R14", "P215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ford-trucks.com forum", "wheelfitment.eu"],
+      "verifiedBy": "cross-reference",
+      "notes": "15-inch option became available"
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "Aerostar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 20 },
+          { "diameter": 15, "width": 6, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["P205/70R14", "P215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ford-trucks.com forum", "wheelfitment.eu"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "Aerostar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["P215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ford-trucks.com forum", "wheelfitment.eu"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Aerostar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["P215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ford-trucks.com forum", "wheelfitment.eu"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Aerostar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["P215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ford-trucks.com forum", "wheelfitment.eu"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Aerostar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["P215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ford-trucks.com forum", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Final model year for Aerostar"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hulkoffsets.com", "go-parts.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Light duty van uses 5-lug pattern. 3rd generation (1975-1991)."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Final year of 3rd generation"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First year of 4th generation redesign"
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com", "sportsmobileforum.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Heavy duty van uses 8-lug pattern"
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Heavy duty van uses 8-lug pattern, same as E-250"
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 124.9,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["go-parts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Windstar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["P205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheelssize.com", "avtoreference.com", "selected.pl"],
+      "verifiedBy": "cross-reference",
+      "notes": "First model year. Shares DN101 platform with Taurus."
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Windstar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheelssize.com", "selected.pl"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Windstar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["P215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "Windstar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["P215/70R15", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 started mid-1998"
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "Windstar",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["P215/70R15", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia (Ford E-Series)"],
+      "verifiedBy": "cross-reference",
+      "notes": "Club Wagon is the passenger version of Econoline. Uses same specs as E-150."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Probe",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/60R15", "P215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "wheelfitment.eu", "hrvforum.com", "wikipedia"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 (1989-1992). Mazda GD platform. GL/LX had 14\", GT had 15\" turbo."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Probe",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/60R15", "P215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "wheelfitment.eu", "wikipedia"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Probe",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/60R15", "P215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "wheelfitment.eu", "wikipedia"],
+      "verifiedBy": "cross-reference",
+      "notes": "Final year of Gen 1"
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "Probe",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/55R15", "P225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wheelfitment.eu", "hrvforum.com", "wikipedia"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 started. Mazda GE platform (same as MX-6). Base had 14\", GT had 16\"."
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "Probe",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/55R15", "P225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wheelfitment.eu", "hrvforum.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "hrvforum confirms 1994-1995 Probe: 16x7 +40mm offset, 67.1mm hub bore"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Probe",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/55R15", "P225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wheelfitment.eu", "hrvforum.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Probe",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/55R15", "P225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wheelfitment.eu"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Probe",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/55R15", "P225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wheelfitment.eu", "wikipedia"],
+      "verifiedBy": "cross-reference",
+      "notes": "Final model year. Production ended June 20, 1997."
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 39 },
+          { "diameter": 16, "width": 7, "offset": 39 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/70R15", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fordmasterx.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "MN12 platform (1989-1997). Base had 15\", SC/Sport had 16\"."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 39 },
+          { "diameter": 16, "width": 7, "offset": 39 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/70R15", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fordmasterx.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 39 },
+          { "diameter": 16, "width": 7, "offset": 39 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/70R15", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fordmasterx.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 39 },
+          { "diameter": 16, "width": 7, "offset": 39 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/70R15", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fordmasterx.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 39 },
+          { "diameter": 16, "width": 7, "offset": 39 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/70R15", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fordmasterx.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 39 },
+          { "diameter": 16, "width": 7, "offset": 39 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/70R15", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fordmasterx.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 39 }
+        ],
+        "oem_tire_sizes": ["P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fordmasterx.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "16\" became standard"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 39 }
+        ],
+        "oem_tire_sizes": ["P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fordmasterx.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Final year of MN12 generation"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["P215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wikipedia (Ford Taurus SHO)", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 (1989-1991). 3.0L Yamaha V6, manual trans only. 220hp."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["P215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wikipedia", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Plus package available with 'slicer' wheels"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["P215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wikipedia", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 started. Used Mercury Sable front fenders/hood. Manual trans only."
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["P215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wikipedia", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Automatic trans option added with 3.2L V6. Italian Slicer wheels with directional pattern."
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["P215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wikipedia", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["P215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wikipedia", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Final year of Gen 2. Black no longer offered as color."
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["P225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wikipedia", "tirewheelguide.com", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 3 started. 3.4L Yamaha V8, automatic only. 235hp. SARC suspension."
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["P225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wikipedia", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["P225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wikipedia", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Only front wheels had ABS sensors (rear sensors deleted)."
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["P225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["wikipedia", "tirewheelguide.com", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Final year of original SHO. SARC suspension deleted. Gen 3 ended."
+    }
+  ],
+  "summary": {
+    "total": 88,
+    "complete": 88,
+    "partial": 0,
+    "failed": 0,
+    "highConfidence": 88,
+    "needsReview": 0
+  },
+  "platformNotes": {
+    "Aerostar": "5x114.3 throughout (1990-1997). Shares bolt pattern with 1994+ Mustang, Ranger, Explorer.",
+    "E-150": "5x139.7 (5x5.5\") light duty van. Same pattern as old F-150.",
+    "E-250_E-350": "8x165.1 (8x6.5\") heavy duty. Same as old F-250/F-350. Note: 1999+ changed to 8x170.",
+    "Club_Wagon": "Passenger version of Econoline. E-150 CW = 5x139.7, E-350 CW = 8x165.1",
+    "Windstar": "5x108, DN101 platform shared with Taurus. Hub bore 67.1mm.",
+    "Probe_Gen1": "1989-1992, Mazda GD platform. 5x114.3, 67.1mm hub bore.",
+    "Probe_Gen2": "1993-1997, Mazda GE platform (MX-6). 5x114.3, 67.1mm hub bore, +40mm offset.",
+    "Thunderbird_MN12": "1989-1997, 5x108 (4.25\"), 63.4mm hub bore. Shared with Cougar.",
+    "Taurus_SHO": "All years 5x108, 63.4mm hub bore. Gen1=3.0L V6, Gen2=3.0L/3.2L V6, Gen3=3.4L V8."
+  }
+}

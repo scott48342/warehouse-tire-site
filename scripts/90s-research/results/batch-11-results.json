@@ -1,0 +1,1259 @@
+{
+  "batchId": "90s-batch-11",
+  "completedAt": "2026-04-22T12:45:00.000Z",
+  "researchNotes": "Lexus/Infiniti batch. Critical findings: ES250 (1990-91) uses 5x100 bolt pattern, different from ES300. GS300 US debut was 1993. SC300/SC400 debut 1992. LX450 only 1996-1997. RX300 debut 1999. Infiniti hub bore is 66.1mm (not 60.1 like Lexus).",
+  "results": [
+    {
+      "year": 1992,
+      "make": "Lexus",
+      "model": "LS400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com", "redline360.com", "stockwheels.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 LS400 (UCF10). 15\" wheels for 1990-1992."
+    },
+    {
+      "year": 1993,
+      "make": "Lexus",
+      "model": "LS400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com", "tire-size.net"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 LS400 (UCF20) facelift started 1993. Upgraded to 16\" wheels."
+    },
+    {
+      "year": 1994,
+      "make": "Lexus",
+      "model": "LS400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 LS400 (UCF20)."
+    },
+    {
+      "year": 1995,
+      "make": "Lexus",
+      "model": "LS400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 LS400 (UCF20)."
+    },
+    {
+      "year": 1996,
+      "make": "Lexus",
+      "model": "LS400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 LS400 (UCF20)."
+    },
+    {
+      "year": 1997,
+      "make": "Lexus",
+      "model": "LS400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 LS400 (UCF20) pre-facelift."
+    },
+    {
+      "year": 1998,
+      "make": "Lexus",
+      "model": "LS400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 LS400 (UCF20) facelift."
+    },
+    {
+      "year": 1999,
+      "make": "Lexus",
+      "model": "LS400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "goodyear.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 LS400 (UCF20) final year."
+    },
+    {
+      "year": 1990,
+      "make": "Lexus",
+      "model": "ES300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ ES300 DID NOT EXIST IN 1990. This was the ES250 (5x100 bolt pattern, NOT 5x114.3). ES300 debut was 1992. If adding ES250: bolt_pattern=5x100, hub_bore=54.1, tire=195/60R15."
+    },
+    {
+      "year": 1991,
+      "make": "Lexus",
+      "model": "ES300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ ES300 DID NOT EXIST IN 1991. This was the ES250 (5x100 bolt pattern, NOT 5x114.3). ES300 debut was 1992. If adding ES250: bolt_pattern=5x100, hub_bore=54.1, tire=195/60R15."
+    },
+    {
+      "year": 1992,
+      "make": "Lexus",
+      "model": "ES300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "amazon.com", "lexusownersclub.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 ES300 (XV10). First year of ES300 nameplate in US."
+    },
+    {
+      "year": 1993,
+      "make": "Lexus",
+      "model": "ES300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "lexusownersclub.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 ES300 (XV10)."
+    },
+    {
+      "year": 1994,
+      "make": "Lexus",
+      "model": "ES300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "lexusownersclub.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 ES300 (XV10)."
+    },
+    {
+      "year": 1995,
+      "make": "Lexus",
+      "model": "ES300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "lexusownersclub.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 ES300 (XV10)."
+    },
+    {
+      "year": 1996,
+      "make": "Lexus",
+      "model": "ES300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "ahgautoservice.com", "goodyear.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 ES300 (XV10) final year."
+    },
+    {
+      "year": 1997,
+      "make": "Lexus",
+      "model": "ES300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 3 ES300 (XV20). Same 15\" wheel spec as XV10."
+    },
+    {
+      "year": 1998,
+      "make": "Lexus",
+      "model": "ES300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 3 ES300 (XV20)."
+    },
+    {
+      "year": 1999,
+      "make": "Lexus",
+      "model": "ES300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 3 ES300 (XV20)."
+    },
+    {
+      "year": 1990,
+      "make": "Lexus",
+      "model": "GS300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "lexusownersclub.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ GS300 DID NOT EXIST IN 1990. US debut was 1993 (S140 chassis)."
+    },
+    {
+      "year": 1991,
+      "make": "Lexus",
+      "model": "GS300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "lexusownersclub.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ GS300 DID NOT EXIST IN 1991. US debut was 1993 (S140 chassis)."
+    },
+    {
+      "year": 1992,
+      "make": "Lexus",
+      "model": "GS300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "lexusownersclub.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ GS300 DID NOT EXIST IN 1992. US debut was 1993 (S140 chassis)."
+    },
+    {
+      "year": 1993,
+      "make": "Lexus",
+      "model": "GS300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "lexusownersclub.com", "tire-size.net"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 GS300 (S140). First year in US market."
+    },
+    {
+      "year": 1994,
+      "make": "Lexus",
+      "model": "GS300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "lexusownersclub.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 GS300 (S140)."
+    },
+    {
+      "year": 1995,
+      "make": "Lexus",
+      "model": "GS300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "lexusownersclub.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 GS300 (S140)."
+    },
+    {
+      "year": 1996,
+      "make": "Lexus",
+      "model": "GS300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "lexusownersclub.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 GS300 (S140)."
+    },
+    {
+      "year": 1997,
+      "make": "Lexus",
+      "model": "GS300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "lexusownersclub.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 GS300 (S140) final year."
+    },
+    {
+      "year": 1998,
+      "make": "Lexus",
+      "model": "GS300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16", "225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelfitment.eu"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 GS300 (S160). Two tire size options available."
+    },
+    {
+      "year": 1999,
+      "make": "Lexus",
+      "model": "GS300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16", "225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 2 GS300 (S160)."
+    },
+    {
+      "year": 1990,
+      "make": "Lexus",
+      "model": "SC300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ SC300 DID NOT EXIST IN 1990. US debut was 1992 (Z30 chassis)."
+    },
+    {
+      "year": 1991,
+      "make": "Lexus",
+      "model": "SC300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ SC300 DID NOT EXIST IN 1991. US debut was 1992 (Z30 chassis)."
+    },
+    {
+      "year": 1992,
+      "make": "Lexus",
+      "model": "SC300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com", "redline360.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC300 (Z30). First year. 15\" wheels on SC300, 16\" on SC400."
+    },
+    {
+      "year": 1993,
+      "make": "Lexus",
+      "model": "SC300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC300 (Z30). 15\" wheels."
+    },
+    {
+      "year": 1994,
+      "make": "Lexus",
+      "model": "SC300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC300 (Z30). Last year with 15\" wheels."
+    },
+    {
+      "year": 1995,
+      "make": "Lexus",
+      "model": "SC300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC300 (Z30). Upgraded to 16\" wheels."
+    },
+    {
+      "year": 1996,
+      "make": "Lexus",
+      "model": "SC300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC300 (Z30)."
+    },
+    {
+      "year": 1997,
+      "make": "Lexus",
+      "model": "SC300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "go-parts.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC300 (Z30)."
+    },
+    {
+      "year": 1998,
+      "make": "Lexus",
+      "model": "SC300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC300 (Z30)."
+    },
+    {
+      "year": 1999,
+      "make": "Lexus",
+      "model": "SC300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC300 (Z30)."
+    },
+    {
+      "year": 1990,
+      "make": "Lexus",
+      "model": "SC400",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ SC400 DID NOT EXIST IN 1990. US debut was 1992 (Z30 chassis)."
+    },
+    {
+      "year": 1991,
+      "make": "Lexus",
+      "model": "SC400",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ SC400 DID NOT EXIST IN 1991. US debut was 1992 (Z30 chassis)."
+    },
+    {
+      "year": 1992,
+      "make": "Lexus",
+      "model": "SC400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com", "redline360.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC400 (Z30). First year. SC400 came with 16\" wheels from start (unlike SC300)."
+    },
+    {
+      "year": 1993,
+      "make": "Lexus",
+      "model": "SC400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC400 (Z30)."
+    },
+    {
+      "year": 1994,
+      "make": "Lexus",
+      "model": "SC400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC400 (Z30)."
+    },
+    {
+      "year": 1995,
+      "make": "Lexus",
+      "model": "SC400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC400 (Z30)."
+    },
+    {
+      "year": 1996,
+      "make": "Lexus",
+      "model": "SC400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC400 (Z30)."
+    },
+    {
+      "year": 1997,
+      "make": "Lexus",
+      "model": "SC400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "finishlinewheels.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC400 (Z30)."
+    },
+    {
+      "year": 1998,
+      "make": "Lexus",
+      "model": "SC400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC400 (Z30)."
+    },
+    {
+      "year": 1999,
+      "make": "Lexus",
+      "model": "SC400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 SC400 (Z30)."
+    },
+    {
+      "year": 1990,
+      "make": "Lexus",
+      "model": "LX450",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ LX450 DID NOT EXIST IN 1990. LX450 was only sold 1996-1997, then became LX470 in 1998."
+    },
+    {
+      "year": 1991,
+      "make": "Lexus",
+      "model": "LX450",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ LX450 DID NOT EXIST IN 1991. LX450 was only sold 1996-1997."
+    },
+    {
+      "year": 1992,
+      "make": "Lexus",
+      "model": "LX450",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ LX450 DID NOT EXIST IN 1992. LX450 was only sold 1996-1997."
+    },
+    {
+      "year": 1993,
+      "make": "Lexus",
+      "model": "LX450",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ LX450 DID NOT EXIST IN 1993. LX450 was only sold 1996-1997."
+    },
+    {
+      "year": 1994,
+      "make": "Lexus",
+      "model": "LX450",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ LX450 DID NOT EXIST IN 1994. LX450 was only sold 1996-1997."
+    },
+    {
+      "year": 1995,
+      "make": "Lexus",
+      "model": "LX450",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ LX450 DID NOT EXIST IN 1995. LX450 was only sold 1996-1997."
+    },
+    {
+      "year": 1996,
+      "make": "Lexus",
+      "model": "LX450",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 8, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["275/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "allusedrims.com", "wheelsmartrims.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "LX450 (FZJ80). Based on Land Cruiser 80 series. 6-lug pattern. First year."
+    },
+    {
+      "year": 1997,
+      "make": "Lexus",
+      "model": "LX450",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 8, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["275/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "allusedrims.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "LX450 (FZJ80) final year. Replaced by LX470 in 1998."
+    },
+    {
+      "year": 1998,
+      "make": "Lexus",
+      "model": "LX450",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ LX450 DID NOT EXIST IN 1998. Replaced by LX470 (5x150 bolt pattern)."
+    },
+    {
+      "year": 1999,
+      "make": "Lexus",
+      "model": "LX450",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ LX450 DID NOT EXIST IN 1999. Replaced by LX470."
+    },
+    {
+      "year": 1990,
+      "make": "Lexus",
+      "model": "RX300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ RX300 DID NOT EXIST IN 1990. US debut was 1999 (XU10 chassis)."
+    },
+    {
+      "year": 1991,
+      "make": "Lexus",
+      "model": "RX300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ RX300 DID NOT EXIST IN 1991. US debut was 1999."
+    },
+    {
+      "year": 1992,
+      "make": "Lexus",
+      "model": "RX300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ RX300 DID NOT EXIST IN 1992. US debut was 1999."
+    },
+    {
+      "year": 1993,
+      "make": "Lexus",
+      "model": "RX300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ RX300 DID NOT EXIST IN 1993. US debut was 1999."
+    },
+    {
+      "year": 1994,
+      "make": "Lexus",
+      "model": "RX300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ RX300 DID NOT EXIST IN 1994. US debut was 1999."
+    },
+    {
+      "year": 1995,
+      "make": "Lexus",
+      "model": "RX300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ RX300 DID NOT EXIST IN 1995. US debut was 1999."
+    },
+    {
+      "year": 1996,
+      "make": "Lexus",
+      "model": "RX300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ RX300 DID NOT EXIST IN 1996. US debut was 1999."
+    },
+    {
+      "year": 1997,
+      "make": "Lexus",
+      "model": "RX300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "clublexus.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ RX300 DID NOT EXIST IN 1997. US debut was 1999."
+    },
+    {
+      "year": 1998,
+      "make": "Lexus",
+      "model": "RX300",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "redline360.com"],
+      "verifiedBy": "historical-records",
+      "notes": "⚠️ RX300 DID NOT EXIST IN 1998. US debut was 1999. (Note: H&R lists 1998-2002 but this is likely a range for fitment, not production years)."
+    },
+    {
+      "year": 1999,
+      "make": "Lexus",
+      "model": "RX300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["225/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "redline360.com", "clublexus.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 RX300 (XU10). First year of RX series. First luxury crossover SUV."
+    },
+    {
+      "year": 1990,
+      "make": "Infiniti",
+      "model": "Q45",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "roadkillcustoms.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 Q45 (G50). First year. Note: Infiniti hub bore is 66.1mm, not 60.1mm like Lexus."
+    },
+    {
+      "year": 1991,
+      "make": "Infiniti",
+      "model": "Q45",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 Q45 (G50)."
+    },
+    {
+      "year": 1992,
+      "make": "Infiniti",
+      "model": "Q45",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 Q45 (G50)."
+    },
+    {
+      "year": 1993,
+      "make": "Infiniti",
+      "model": "Q45",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 Q45 (G50) facelift."
+    },
+    {
+      "year": 1994,
+      "make": "Infiniti",
+      "model": "Q45",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 Q45 (G50) facelift."
+    },
+    {
+      "year": 1995,
+      "make": "Infiniti",
+      "model": "Q45",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 Q45 (G50) facelift."
+    },
+    {
+      "year": 1996,
+      "make": "Infiniti",
+      "model": "Q45",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Gen 1 Q45 (G50) final year."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 39,
+    "partial": 0,
+    "failed": 36,
+    "highConfidence": 39,
+    "needsReview": 0
+  },
+  "criticalFindings": [
+    {
+      "issue": "ES250 vs ES300 bolt pattern difference",
+      "details": "ES250 (1990-1991) uses 5x100 bolt pattern. ES300 (1992+) uses 5x114.3. These are NOT interchangeable. Database should list ES250 separately if needed.",
+      "impact": "high"
+    },
+    {
+      "issue": "Many vehicles in batch don't exist in listed years",
+      "details": "36 of 75 vehicle/year combinations did not exist: ES300 1990-1991, GS300 1990-1992, SC300/SC400 1990-1991, LX450 1990-1995/1998-1999, RX300 1990-1998.",
+      "impact": "high"
+    },
+    {
+      "issue": "Infiniti hub bore differs from Lexus",
+      "details": "Infiniti Q45 uses 66.1mm hub bore (Nissan standard). Lexus uses 60.1mm (Toyota standard). Hub-centric rings required for wheel swaps.",
+      "impact": "medium"
+    },
+    {
+      "issue": "LX450 uses 6-lug pattern",
+      "details": "LX450 (1996-1997 only) uses 6x139.7 bolt pattern with 106mm hub bore. This is different from all other Lexus passenger cars.",
+      "impact": "medium"
+    },
+    {
+      "issue": "SC300 wheel size changed mid-generation",
+      "details": "SC300 had 15\" wheels 1992-1994, then upgraded to 16\" in 1995. SC400 had 16\" wheels throughout.",
+      "impact": "low"
+    }
+  ]
+}

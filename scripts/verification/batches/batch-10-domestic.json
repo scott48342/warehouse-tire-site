@@ -1,0 +1,382 @@
+{
+  "batch": "batch-10-domestic",
+  "group": "domestic",
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "flex"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "flex"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "flex"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "flex"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "focus"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "focus"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "focus"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "focus"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "focus"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "fusion"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "fusion"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "fusion"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "fusion"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "gt"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "gt"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "gt"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "gt"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "gt"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "gt"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "gt"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "gt"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "maverick"
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "maverick"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "mustang-mach-1"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "mustang-mach-1"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang-mach-1"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang-mach-1"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang-mach-1"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang-mach-1"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang-mach-1"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "mustang-shelby-gt350"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "mustang-shelby-gt350"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "mustang-shelby-gt350"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang-shelby-gt350"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang-shelby-gt350"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang-shelby-gt350"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang-shelby-gt500"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "sportka"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "sportka"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "sportka"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "sportka"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "sportka"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "sportka"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "streetka"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "streetka"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "streetka"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "streetka"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "taurus"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "taurus"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "taurus"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "taurus"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "taurus"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "taurus"
+    }
+  ]
+}

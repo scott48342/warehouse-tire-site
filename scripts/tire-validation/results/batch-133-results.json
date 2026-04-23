@@ -1,0 +1,1183 @@
+{
+  "batchId": "133",
+  "validatedAt": "2026-04-21T22:37:00.000Z",
+  "vehicleCount": 75,
+  "summary": {
+    "modelsValidated": ["Ram 2500", "Ram 3500", "Ram C-V", "Ram ProMaster 1500", "Ram ProMaster Rapid"],
+    "yearRange": "2000-2026",
+    "sources": ["tiresize.com", "sizemytires.com", "autopadre.com"]
+  },
+  "vehicles": [
+    {
+      "year": 2005,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST 4x2": "LT245/70R17",
+        "ST 4x4": "LT245/70R17",
+        "SLT 4x2": "LT265/70R17",
+        "SLT 4x4": "LT265/70R17",
+        "Laramie 4x2": "LT265/70R17",
+        "Laramie 4x4": "LT265/70R17"
+      },
+      "recommendedSizes": ["LT245/70R17", "LT265/70R17"],
+      "issues": ["LT275/70R18 not OEM for 2005 - 18\" wheels not factory option"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2005,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "ST 4x2": "LT245/70R17",
+        "ST 4x4": "LT245/70R17",
+        "SLT 4x2": "LT265/70R17",
+        "SLT 4x4": "LT265/70R17",
+        "Laramie 4x2": "LT265/70R17",
+        "Laramie 4x4": "LT265/70R17"
+      },
+      "recommendedSizes": ["LT245/70R17", "LT265/70R17"],
+      "issues": ["LT275/70R18 and LT285/60R20 not OEM - 18\" and 20\" wheels not factory for 2005"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2004,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "ST 4x2": "LT245/70R17",
+        "ST 4x4": "LT245/70R17",
+        "SLT 4x2": "LT265/70R17",
+        "SLT 4x4": "LT265/70R17",
+        "Laramie 4x2": "LT265/70R17",
+        "Laramie 4x4": "LT265/70R17"
+      },
+      "recommendedSizes": ["LT245/70R17", "LT265/70R17"],
+      "issues": ["LT275/70R18 and LT285/60R20 not OEM - 18\" and 20\" wheels not factory for 2004"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2004,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST 4x2": "LT245/70R17",
+        "ST 4x4": "LT245/70R17",
+        "SLT 4x2": "LT265/70R17",
+        "SLT 4x4": "LT265/70R17",
+        "Laramie 4x2": "LT265/70R17",
+        "Laramie 4x4": "LT265/70R17"
+      },
+      "recommendedSizes": ["LT245/70R17", "LT265/70R17"],
+      "issues": ["LT275/70R18 not OEM - 18\" wheels not factory for 2004"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2003,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST 4x2": "LT245/70R17",
+        "ST 4x4": "LT245/70R17",
+        "SLT 4x2": "LT265/70R17",
+        "SLT 4x4": "LT265/70R17",
+        "Laramie 4x2": "LT265/70R17",
+        "Laramie 4x4": "LT265/70R17"
+      },
+      "recommendedSizes": ["LT245/70R17", "LT265/70R17"],
+      "issues": ["LT275/70R18 not OEM - 18\" wheels not factory for 2003"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2003,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "ST 4x2": "LT245/70R17",
+        "ST 4x4": "LT245/70R17",
+        "SLT 4x2": "LT265/70R17",
+        "SLT 4x4": "LT265/70R17",
+        "Laramie 4x2": "LT265/70R17",
+        "Laramie 4x4": "LT265/70R17"
+      },
+      "recommendedSizes": ["LT245/70R17", "LT265/70R17"],
+      "issues": ["LT275/70R18 and LT285/60R20 not OEM - 18\" and 20\" wheels not factory for 2003"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2002,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "4x2": "LT245/75R16",
+        "4x4": "LT245/75R16",
+        "4x2 (optional)": "LT265/75R16",
+        "4x4 (optional)": "LT265/75R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16"],
+      "issues": ["2002 had 16\" wheels only - all listed sizes incorrect"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2002,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+      "validatedOemSizes": {
+        "4x2": "LT245/75R16",
+        "4x4": "LT245/75R16",
+        "4x2 (optional)": "LT265/75R16",
+        "4x4 (optional)": "LT265/75R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16"],
+      "issues": ["LT225/75R16 not standard OEM - base was LT245/75R16"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2001,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+      "validatedOemSizes": {
+        "4x2": "LT245/75R16",
+        "4x4": "LT245/75R16",
+        "4x2 (optional)": "LT265/75R16",
+        "4x4 (optional)": "LT265/75R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16"],
+      "issues": ["LT225/75R16 not standard OEM - base was LT245/75R16"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2001,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "4x2": "LT245/75R16",
+        "4x4": "LT245/75R16",
+        "4x2 (optional)": "LT265/75R16",
+        "4x4 (optional)": "LT265/75R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16"],
+      "issues": ["2001 had 16\" wheels only - all listed sizes incorrect"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2000,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "4x2": "LT245/75R16",
+        "4x4": "LT245/75R16",
+        "4x2 (optional)": "LT265/75R16",
+        "4x4 (optional)": "LT265/75R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16"],
+      "issues": ["2000 had 16\" wheels only - all listed sizes incorrect"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2000,
+      "make": "ram",
+      "model": "2500",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+      "validatedOemSizes": {
+        "4x2": "LT245/75R16",
+        "4x4": "LT245/75R16",
+        "4x2 (optional)": "LT265/75R16",
+        "4x4 (optional)": "LT265/75R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16"],
+      "issues": ["LT225/75R16 not standard OEM - base was LT245/75R16"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2026,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": "LT275/70R18",
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "Limited Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "Tradesman DRW": "LT235/80R17",
+        "Big Horn DRW": "LT235/80R17",
+        "Laramie DRW": "LT235/80R17",
+        "Limited DRW": "LT235/80R17",
+        "Limited Longhorn DRW": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for 2026 - 17\" only on DRW with different size"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2025,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": "LT275/70R18",
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "Limited Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for 2025 - 17\" only on DRW with different size"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": "LT275/70R18",
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "Limited Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for 2024 - 17\" only on DRW with different size"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2023,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": "LT275/70R18",
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "Limited Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for 2023"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2022,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": "LT275/70R18",
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "Limited Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for 2022"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2021,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": "LT275/70R18",
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "Limited Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for 2021"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2020,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "Lone Star SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for 2020"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2019,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "Lone Star SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for 2019"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2018,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "SLT SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "Lone Star SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW; LT275/65R20 should be LT285/60R20"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2018,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "SLT SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW 2018"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2017,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "SLT SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW 2017"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2017,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "SLT SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW; LT275/65R20 should be LT285/60R20"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2016,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "SLT SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW 2016"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2016,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "SLT SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Limited SRW": "LT285/60R20",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW; LT275/65R20 should be LT285/60R20"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2015,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "SLT SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie Limited SRW": "LT285/60R20",
+        "Laramie Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW; LT275/65R20 should be LT285/60R20"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2015,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "SLT SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie Limited SRW": "LT285/60R20",
+        "Laramie Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW 2015"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2014,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "SLT SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie Limited SRW": "LT285/60R20",
+        "Laramie Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW; LT275/65R20 should be LT285/60R20"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2014,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": ["LT275/70R18", "LT285/60R20"],
+        "SLT SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie SRW": ["LT275/70R18", "LT285/60R20"],
+        "Laramie Limited SRW": "LT285/60R20",
+        "Laramie Longhorn SRW": ["LT275/70R18", "LT285/60R20"],
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT285/60R20", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW 2014"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2013,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": "LT275/70R18",
+        "SLT SRW": "LT275/70R18",
+        "Laramie SRW": "LT275/70R18",
+        "Laramie Longhorn SRW": "LT275/70R18",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM for SRW; LT275/65R20 not confirmed OEM for 2013"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2013,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Tradesman SRW": "LT275/70R18",
+        "Big Horn SRW": "LT275/70R18",
+        "SLT SRW": "LT275/70R18",
+        "Laramie SRW": "LT275/70R18",
+        "Laramie Longhorn SRW": "LT275/70R18",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT275/70R18", "LT235/80R17"],
+      "issues": ["LT245/70R17 not OEM; LT285/60R20 not confirmed OEM for 2013"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2012,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "Laramie Longhorn SRW": "LT265/70R17",
+        "Outdoorsman SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["2012 SRW used 265/70R17 not 245/70R17; 18\" and 20\" not factory"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2012,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "Laramie Longhorn SRW": "LT265/70R17",
+        "Outdoorsman SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["2012 SRW used 265/70R17 not 245/70R17; 18\" and 20\" not factory"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2011,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Big Horn SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "Laramie Longhorn SRW": "LT265/70R17",
+        "Outdoorsman SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["2011 SRW used 265/70R17 not 245/70R17; 18\" and 20\" not factory"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2011,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Big Horn SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "Laramie Longhorn SRW": "LT265/70R17",
+        "Outdoorsman SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["2011 SRW used 265/70R17 not 245/70R17; 18\" and 20\" not factory"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2010,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["2010 used 265/70R17; 18\" and 20\" not factory"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2010,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["LT245/70R17 is base size; LT275/70R18 not factory for 2010"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2009,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["LT245/70R17 may be base; LT275/70R18 not factory for 2009"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2008,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["LT275/70R18 not factory for 2008"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2007,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["LT275/70R18 not factory for 2007"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2006,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["LT275/70R18 not factory for 2006"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2005,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["LT275/70R18 not factory for 2005"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2005,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["18\" and 20\" wheels not factory for 2005"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2004,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["18\" and 20\" wheels not factory for 2004"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2004,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["LT275/70R18 not factory for 2004"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2003,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["18\" and 20\" wheels not factory for 2003"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2003,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedOemSizes": {
+        "ST SRW": "LT265/70R17",
+        "SLT SRW": "LT265/70R17",
+        "Laramie SRW": "LT265/70R17",
+        "All DRW trims": "LT235/80R17"
+      },
+      "recommendedSizes": ["LT265/70R17", "LT235/80R17"],
+      "issues": ["LT275/70R18 not factory for 2003"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2002,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+      "validatedOemSizes": {
+        "Base 4x2": "LT245/75R16",
+        "Base 4x4": "LT245/75R16",
+        "Optional": "LT265/75R16",
+        "DRW": "LT215/85R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16", "LT215/85R16"],
+      "issues": ["LT225/75R16 may be light duty only, verify"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2002,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Base 4x2": "LT245/75R16",
+        "Base 4x4": "LT245/75R16",
+        "Optional": "LT265/75R16",
+        "DRW": "LT215/85R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16", "LT215/85R16"],
+      "issues": ["2002 had 16\" wheels only - all listed sizes incorrect"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2001,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Base 4x2": "LT245/75R16",
+        "Base 4x4": "LT245/75R16",
+        "Optional": "LT265/75R16",
+        "DRW": "LT215/85R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16", "LT215/85R16"],
+      "issues": ["2001 had 16\" wheels only - all listed sizes incorrect"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2001,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+      "validatedOemSizes": {
+        "Base 4x2": "LT245/75R16",
+        "Base 4x4": "LT245/75R16",
+        "Optional": "LT265/75R16",
+        "DRW": "LT215/85R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16", "LT215/85R16"],
+      "issues": ["LT225/75R16 may be light duty only, verify"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2000,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+      "validatedOemSizes": {
+        "Base 4x2": "LT245/75R16",
+        "Base 4x4": "LT245/75R16",
+        "Optional": "LT265/75R16",
+        "DRW": "LT215/85R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16", "LT215/85R16"],
+      "issues": ["LT225/75R16 may be light duty only, verify"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2000,
+      "make": "ram",
+      "model": "3500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedOemSizes": {
+        "Base 4x2": "LT245/75R16",
+        "Base 4x4": "LT245/75R16",
+        "Optional": "LT265/75R16",
+        "DRW": "LT215/85R16"
+      },
+      "recommendedSizes": ["LT245/75R16", "LT265/75R16", "LT215/85R16"],
+      "issues": ["2000 had 16\" wheels only - all listed sizes incorrect"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2018,
+      "make": "ram",
+      "model": "c-v",
+      "currentTireSizes": [],
+      "validatedOemSizes": {
+        "Tradesman": "225/65R17"
+      },
+      "recommendedSizes": ["225/65R17"],
+      "issues": ["No sizes in database - add OEM size"],
+      "status": "missing_data"
+    },
+    {
+      "year": 2017,
+      "make": "ram",
+      "model": "c-v",
+      "currentTireSizes": [],
+      "validatedOemSizes": {
+        "Tradesman": "225/65R17"
+      },
+      "recommendedSizes": ["225/65R17"],
+      "issues": ["No sizes in database - add OEM size"],
+      "status": "missing_data"
+    },
+    {
+      "year": 2016,
+      "make": "ram",
+      "model": "c-v",
+      "currentTireSizes": [],
+      "validatedOemSizes": {
+        "Tradesman": "225/65R17"
+      },
+      "recommendedSizes": ["225/65R17"],
+      "issues": ["No sizes in database - add OEM size"],
+      "status": "missing_data"
+    },
+    {
+      "year": 2015,
+      "make": "ram",
+      "model": "c-v",
+      "currentTireSizes": [],
+      "validatedOemSizes": {
+        "Tradesman": "225/65R17"
+      },
+      "recommendedSizes": ["225/65R17"],
+      "issues": ["No sizes in database - add OEM size"],
+      "status": "missing_data"
+    },
+    {
+      "year": 2014,
+      "make": "ram",
+      "model": "c-v",
+      "currentTireSizes": [],
+      "validatedOemSizes": {
+        "Tradesman": "225/65R17"
+      },
+      "recommendedSizes": ["225/65R17"],
+      "issues": ["No sizes in database - add OEM size"],
+      "status": "missing_data"
+    },
+    {
+      "year": 2013,
+      "make": "ram",
+      "model": "c-v",
+      "currentTireSizes": [],
+      "validatedOemSizes": {
+        "Tradesman": "225/65R16"
+      },
+      "recommendedSizes": ["225/65R16"],
+      "issues": ["No sizes in database - add OEM size"],
+      "status": "missing_data"
+    },
+    {
+      "year": 2026,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM - verify if optional"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2025,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM - verify if optional"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2023,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2022,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT215/75R16", "LT225/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2021,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2020,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2019,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2018,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2017,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2016,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2015,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2014,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["LT215/75R16 not standard OEM"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2013,
+      "make": "ram",
+      "model": "promaster-1500",
+      "currentTireSizes": ["LT225/75R16", "LT215/75R16"],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["ProMaster 1500 production started 2014 - verify year"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2025,
+      "make": "ram",
+      "model": "promaster-rapid",
+      "currentTireSizes": [],
+      "validatedOemSizes": {
+        "All trims": "LT225/75R16C"
+      },
+      "recommendedSizes": ["LT225/75R16"],
+      "issues": ["No sizes in database - add OEM size"],
+      "status": "missing_data"
+    }
+  ],
+  "statusSummary": {
+    "valid": 0,
+    "needs_correction": 42,
+    "needs_review": 26,
+    "missing_data": 7
+  },
+  "keyFindings": {
+    "ram2500": {
+      "2000-2002": "16\" wheels only: LT245/75R16 (base), LT265/75R16 (optional)",
+      "2003-2005": "17\" wheels: LT245/70R17 (ST), LT265/70R17 (SLT/Laramie)",
+      "note": "18\" and 20\" wheels NOT factory options for 2000-2005 model years"
+    },
+    "ram3500": {
+      "2000-2002": "16\" wheels only: LT245/75R16 (SRW), LT215/85R16 (DRW)",
+      "2003-2010": "17\" wheels: LT265/70R17 (SRW), LT235/80R17 (DRW)",
+      "2011-2018": "17\" standard: LT265/70R17 (SRW), LT235/80R17 (DRW), 18\"/20\" optional on higher trims starting ~2013",
+      "2019-2026": "18\" standard SRW: LT275/70R18, 20\" optional: LT285/60R20, DRW: LT235/80R17",
+      "note": "The listed LT245/70R17 is NOT correct for most 3500 models - should be LT265/70R17"
+    },
+    "ramCV": {
+      "2013": "225/65R16",
+      "2014-2018": "225/65R17",
+      "note": "Cargo van based on Dodge Grand Caravan platform"
+    },
+    "promaster1500": {
+      "all_years": "LT225/75R16C is standard OEM size",
+      "note": "LT215/75R16 may not be factory option - verify source"
+    },
+    "promasterRapid": {
+      "all_years": "LT225/75R16C - same as standard ProMaster",
+      "note": "Compact commercial van"
+    }
+  }
+}

@@ -1,0 +1,1130 @@
+{
+  "batchId": "129",
+  "processedAt": "2026-04-21T22:35:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R17", "235/50R17", "225/45R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": {
+        "Base/Enthusiast (17\")": { "front": "225/50R17", "rear": "235/50R17" },
+        "Touring (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "Track (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "NISMO (19\")": { "front": "245/40R19", "rear": "275/35R19" },
+        "Grand Touring (18\")": { "front": "225/45R18", "rear": "245/45R18" }
+      },
+      "isStaggered": true,
+      "status": "VALIDATED",
+      "notes": "350Z has staggered fitment across all trims. 2007 introduced NISMO trim with 19\" wheels."
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R17", "235/50R17", "225/45R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": {
+        "Base/Enthusiast (17\")": { "front": "225/50R17", "rear": "235/50R17" },
+        "Touring (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "Track (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "Grand Touring (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "Performance (17\")": { "front": "225/50R17", "rear": "235/50R17" }
+      },
+      "isStaggered": true,
+      "status": "VALIDATED",
+      "notes": "350Z (Z33) has staggered fitment. 19\" sizes may be for aftermarket/special editions."
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R17", "235/50R17", "225/45R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": {
+        "Base/Enthusiast (17\")": { "front": "225/50R17", "rear": "235/50R17" },
+        "Touring (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "Track (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "35th Anniversary (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "Performance (17\")": { "front": "225/50R17", "rear": "235/50R17" }
+      },
+      "isStaggered": true,
+      "status": "VALIDATED",
+      "notes": "350Z has staggered fitment. 19\" sizes are likely aftermarket optional."
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R17", "235/50R17", "225/45R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": {
+        "Base/Enthusiast (17\")": { "front": "225/50R17", "rear": "235/50R17" },
+        "Touring (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "Track (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "Performance (17\")": { "front": "225/50R17", "rear": "235/50R17" }
+      },
+      "isStaggered": true,
+      "status": "VALIDATED",
+      "notes": "19\" sizes may be aftermarket. OEM sizes are 17\" and 18\" staggered."
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R17", "235/50R17", "225/45R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": {
+        "Base/Enthusiast (17\")": { "front": "225/50R17", "rear": "235/50R17" },
+        "Touring (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "Track (18\")": { "front": "225/45R18", "rear": "245/45R18" },
+        "Performance (17\")": { "front": "225/50R17", "rear": "235/50R17" }
+      },
+      "isStaggered": true,
+      "status": "VALIDATED",
+      "notes": "First year of Z33. 19\" sizes may be aftermarket."
+    },
+    {
+      "year": 2004,
+      "make": "oldsmobile",
+      "model": "alero",
+      "currentTireSizes": ["P215/60R15", "P215/55R16"],
+      "validatedTireSizes": {
+        "GX Coupe/Sedan": ["205/65R15", "215/60R15"],
+        "GL Coupe/Sedan": ["205/65R15", "215/60R15", "225/50R16"],
+        "GLS Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current has 215/55R16 but OEM shows 225/50R16. Also missing 205/65R15 option."
+    },
+    {
+      "year": 2003,
+      "make": "oldsmobile",
+      "model": "alero",
+      "currentTireSizes": ["P215/60R15", "P215/55R16"],
+      "validatedTireSizes": {
+        "GX Coupe/Sedan": ["215/60R15"],
+        "GL Coupe/Sedan": ["215/60R15", "225/50R16"],
+        "GLS Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "OEM 16\" size is 225/50R16, not 215/55R16."
+    },
+    {
+      "year": 2002,
+      "make": "oldsmobile",
+      "model": "alero",
+      "currentTireSizes": ["P215/60R15", "P215/55R16"],
+      "validatedTireSizes": {
+        "GX Coupe/Sedan": ["215/60R15"],
+        "GL Coupe/Sedan": ["215/60R15", "225/50R16"],
+        "GLS Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "OEM 16\" size is 225/50R16, not 215/55R16."
+    },
+    {
+      "year": 2001,
+      "make": "oldsmobile",
+      "model": "alero",
+      "currentTireSizes": ["P215/60R15", "P215/55R16"],
+      "validatedTireSizes": {
+        "GX Coupe/Sedan": ["215/60R15"],
+        "GL Coupe/Sedan": ["215/60R15", "225/50R16"],
+        "GLS Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "OEM 16\" size is 225/50R16, not 215/55R16."
+    },
+    {
+      "year": 2000,
+      "make": "oldsmobile",
+      "model": "alero",
+      "currentTireSizes": ["P215/60R15", "P215/55R16"],
+      "validatedTireSizes": {
+        "GX Coupe/Sedan": ["215/60R15"],
+        "GL Coupe/Sedan": ["215/60R15", "225/50R16"],
+        "GLS Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "OEM 16\" size is 225/50R16, not 215/55R16."
+    },
+    {
+      "year": 2004,
+      "make": "oldsmobile",
+      "model": "bravada",
+      "currentTireSizes": ["P245/65R17", "P255/55R18"],
+      "validatedTireSizes": {
+        "2WD": ["245/65R17"],
+        "4WD": ["245/65R17", "255/60R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 255/55R18 but OEM is 255/60R17. No 18\" OEM option found."
+    },
+    {
+      "year": 2003,
+      "make": "oldsmobile",
+      "model": "bravada",
+      "currentTireSizes": ["P245/65R17", "P255/55R18"],
+      "validatedTireSizes": {
+        "2WD": ["245/65R17"],
+        "4WD": ["245/65R17", "255/60R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 255/55R18 but OEM is 255/60R17. No 18\" OEM option found."
+    },
+    {
+      "year": 2002,
+      "make": "oldsmobile",
+      "model": "bravada",
+      "currentTireSizes": ["P245/65R17", "P255/55R18"],
+      "validatedTireSizes": {
+        "2WD": ["245/65R17"],
+        "4WD": ["255/60R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 255/55R18 but OEM is 255/60R17. No 18\" OEM option found."
+    },
+    {
+      "year": 2001,
+      "make": "oldsmobile",
+      "model": "bravada",
+      "currentTireSizes": ["P235/70R16"],
+      "validatedTireSizes": {
+        "Base Model": ["235/70R15"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 235/70R16 but 2001 OEM is actually 235/70R15."
+    },
+    {
+      "year": 2000,
+      "make": "oldsmobile",
+      "model": "bravada",
+      "currentTireSizes": ["P235/70R16"],
+      "validatedTireSizes": {
+        "Base Model": ["235/70R15"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 235/70R16 but 2000 OEM is actually 235/70R15."
+    },
+    {
+      "year": 2002,
+      "make": "oldsmobile",
+      "model": "intrigue",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "GL": ["225/60R16"],
+        "GLS": ["225/60R16"],
+        "GX": ["225/60R16"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 225/55R17 but OEM only has 225/60R16. No 17\" OEM option found."
+    },
+    {
+      "year": 2001,
+      "make": "oldsmobile",
+      "model": "intrigue",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "GL": ["225/60R16"],
+        "GLS": ["225/60R16"],
+        "GX": ["225/60R16"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 225/55R17 but OEM only has 225/60R16. No 17\" OEM option found."
+    },
+    {
+      "year": 2000,
+      "make": "oldsmobile",
+      "model": "intrigue",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "GL": ["225/60R16"],
+        "GLS": ["225/60R16"],
+        "GX": ["225/60R16"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 225/55R17 but OEM only has 225/60R16. No 17\" OEM option found."
+    },
+    {
+      "year": 2002,
+      "make": "plymouth",
+      "model": "prowler",
+      "currentTireSizes": ["225/45R17", "295/40R20"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "225/45R17", "rear": "295/40R20" }
+      },
+      "isStaggered": true,
+      "status": "VALIDATED",
+      "notes": "Prowler is staggered with 17\" front and 20\" rear. Note: Prowler was sold as Chrysler in 2001-2002."
+    },
+    {
+      "year": 2001,
+      "make": "plymouth",
+      "model": "prowler",
+      "currentTireSizes": ["225/45R17", "295/40R20"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "225/45R17", "rear": "295/40R20" }
+      },
+      "isStaggered": true,
+      "status": "VALIDATED",
+      "notes": "Prowler is staggered with 17\" front and 20\" rear."
+    },
+    {
+      "year": 2000,
+      "make": "plymouth",
+      "model": "prowler",
+      "currentTireSizes": ["225/45R17", "295/40R20"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "225/45R17", "rear": "295/40R20" }
+      },
+      "isStaggered": true,
+      "status": "VALIDATED",
+      "notes": "Prowler is staggered with 17\" front and 20\" rear."
+    },
+    {
+      "year": 2000,
+      "make": "plymouth",
+      "model": "voyager",
+      "currentTireSizes": ["205/70R15", "215/65R16", "215/70R15"],
+      "validatedTireSizes": {
+        "14\" OE Option": ["205/75R14"],
+        "Base Model": ["215/65R15"],
+        "SE": ["215/65R15"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 205/70R15 and 215/70R15 but OEM is 215/65R15 and 205/75R14. Also 215/65R16 should be 215/65R15."
+    },
+    {
+      "year": 2021,
+      "make": "polestar",
+      "model": "polestar-1",
+      "currentTireSizes": ["275/30R21", "295/30R21"],
+      "validatedTireSizes": {
+        "Base": { "front": "275/30R21", "rear": "295/30R21" }
+      },
+      "isStaggered": true,
+      "status": "VALIDATED",
+      "notes": "Polestar 1 is staggered with 21\" wheels."
+    },
+    {
+      "year": 2020,
+      "make": "polestar",
+      "model": "polestar-1",
+      "currentTireSizes": ["275/30R21", "295/30R21"],
+      "validatedTireSizes": {
+        "Base": { "front": "275/30R21", "rear": "295/30R21" }
+      },
+      "isStaggered": true,
+      "status": "VALIDATED",
+      "notes": "Polestar 1 is staggered with 21\" wheels."
+    },
+    {
+      "year": 2026,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": ["245/45R19", "245/40R20"],
+      "validatedTireSizes": {
+        "Base": ["245/45R19", "245/40R20"],
+        "Performance": ["245/40R20"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Square setup (same front/rear). Base has 19\" or 20\" options; Performance is 20\" only."
+    },
+    {
+      "year": 2025,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": ["245/45R19", "245/40R20"],
+      "validatedTireSizes": {
+        "Base": ["245/45R19", "245/40R20"],
+        "Performance": ["245/40R20"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Square setup. Base has 19\" or 20\" options; Performance is 20\" only."
+    },
+    {
+      "year": 2024,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": ["245/45R19", "245/40R20"],
+      "validatedTireSizes": {
+        "Base": ["245/45R19", "245/40R20"],
+        "Performance": ["245/40R20"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Square setup. Base has 19\" or 20\" options; Performance is 20\" only."
+    },
+    {
+      "year": 2023,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": ["245/45R19", "245/40R20"],
+      "validatedTireSizes": {
+        "Base": ["245/45R19", "245/40R20"],
+        "Performance": ["245/40R20"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Square setup. Base has 19\" or 20\" options; Performance is 20\" only."
+    },
+    {
+      "year": 2022,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": ["245/45R19", "245/40R20"],
+      "validatedTireSizes": {
+        "Base": ["245/45R19", "245/40R20"],
+        "Performance": ["245/40R20"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Square setup. Base has 19\" or 20\" options; Performance is 20\" only."
+    },
+    {
+      "year": 2021,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": ["245/45R19", "245/40R20"],
+      "validatedTireSizes": {
+        "Base": ["245/45R19", "245/40R20"],
+        "Performance": ["245/40R20"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Square setup. Base has 19\" or 20\" options; Performance is 20\" only."
+    },
+    {
+      "year": 2020,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": ["245/45ZR19", "245/40ZR20"],
+      "validatedTireSizes": {
+        "Base": ["245/45R19", "245/40R20"],
+        "Performance": ["245/40R20"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "ZR designation is equivalent to R. Data is correct."
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": ["P225/60R16", "P235/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "SE": ["225/60R16"],
+        "SLE": ["235/55R17"],
+        "GXP": ["235/50R18"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 245/45R18 but GXP OEM is 235/50R18."
+    },
+    {
+      "year": 2004,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": ["P225/60R16", "P235/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "SE": ["225/60R16"],
+        "SLE": ["235/55R17"],
+        "GXP": ["235/50R18"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "Current shows 245/45R18 but GXP OEM is 235/50R18."
+    },
+    {
+      "year": 2003,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": ["P225/60R16", "P235/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "SE": ["225/60R16"],
+        "SLE": ["235/55R17"],
+        "GXP": ["235/50R18"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "GXP introduced in 2004; 2003 may not have GXP option. Should be 225/60R16 and 235/55R17 only."
+    },
+    {
+      "year": 2002,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": ["P225/60R16", "P235/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "SE": ["225/60R16"],
+        "SLE": ["235/55R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "No GXP trim in 2002. 245/45R18 should be removed for this year."
+    },
+    {
+      "year": 2001,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": ["P225/60R16", "P235/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "SE": ["225/60R16"],
+        "SLE": ["235/55R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "No GXP trim in 2001. 245/45R18 should be removed for this year."
+    },
+    {
+      "year": 2000,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": ["P225/60R16", "P235/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "SE": ["225/60R16"],
+        "SLE": ["235/55R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "No GXP trim in 2000. 245/45R18 should be removed for this year."
+    },
+    {
+      "year": 2002,
+      "make": "pontiac",
+      "model": "firebird",
+      "currentTireSizes": ["P235/55R16", "P245/50ZR16", "P275/40ZR17", "P305/35ZR17"],
+      "validatedTireSizes": {
+        "Base Model": ["235/55R16"],
+        "Convertible": ["235/55R16"],
+        "Formula": ["245/50R16"],
+        "Trans Am": ["245/50R16"],
+        "Trans Am WS6": ["275/40R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "305/35R17 not found as OEM. WS6 uses 275/40R17 square. 275/40R17 is correct."
+    },
+    {
+      "year": 2001,
+      "make": "pontiac",
+      "model": "firebird",
+      "currentTireSizes": ["P235/55R16", "P245/50ZR16", "P275/40ZR17", "P305/35ZR17"],
+      "validatedTireSizes": {
+        "Base Model": ["235/55R16"],
+        "Convertible": ["235/55R16"],
+        "Formula": ["245/50R16"],
+        "Trans Am": ["245/50R16"],
+        "Trans Am WS6": ["275/40R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "305/35R17 not found as OEM for Firebird. WS6 uses 275/40R17."
+    },
+    {
+      "year": 2000,
+      "make": "pontiac",
+      "model": "firebird",
+      "currentTireSizes": ["P235/55R16", "P245/50ZR16", "P275/40ZR17", "P305/35ZR17"],
+      "validatedTireSizes": {
+        "Base Model": ["235/55R16"],
+        "Convertible": ["235/55R16"],
+        "Formula": ["245/50R16"],
+        "Trans Am": ["245/50R16"],
+        "Trans Am WS6": ["275/40R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "305/35R17 not found as OEM for Firebird. WS6 uses 275/40R17."
+    },
+    {
+      "year": 2010,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": ["P215/60R16", "P225/50R17", "P225/45R18"],
+      "validatedTireSizes": {
+        "Sedan": ["215/55R17", "225/50R17"],
+        "GT Sedan": ["225/50R17", "225/50R18"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "2010 G6 uses 215/55R17 not 215/60R16. Also shows 225/50R18 not 225/45R18."
+    },
+    {
+      "year": 2009,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": ["P215/60R16", "P225/50R17", "P225/45R18"],
+      "validatedTireSizes": {
+        "Sedan": ["215/55R17", "225/50R17"],
+        "Coupe": ["215/55R17", "225/50R17"],
+        "GT Coupe/Sedan": ["225/50R17", "225/50R18"],
+        "GT Convertible": ["225/50R18"],
+        "GXP Coupe/Sedan": ["225/50R18"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "2009 G6 uses 215/55R17 not 215/60R16. 18\" size is 225/50R18 not 225/45R18."
+    },
+    {
+      "year": 2008,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": ["P215/60R16", "P225/50R17", "P225/45R18"],
+      "validatedTireSizes": {
+        "Sedan": ["215/60R16", "225/50R17"],
+        "GT Coupe": ["225/50R17"],
+        "GT Coupe Sport Package": ["225/50R18"],
+        "GT Sedan": ["225/50R17", "225/50R18"],
+        "GT Convertible": ["225/50R18"],
+        "GXP Coupe/Sedan": ["225/50R18"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "18\" size is 225/50R18 not 225/45R18."
+    },
+    {
+      "year": 2007,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": ["P215/60R16", "P225/50R17", "P225/45R18"],
+      "validatedTireSizes": {
+        "Sedan": ["215/60R16", "225/50R17"],
+        "GT Coupe/Sedan": ["225/50R17", "225/50R18"],
+        "GT Convertible": ["225/50R18"],
+        "GTP Coupe/Sedan": ["225/50R18"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "18\" size is 225/50R18 not 225/45R18."
+    },
+    {
+      "year": 2006,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": ["P215/60R16", "P225/50R17", "P225/45R18"],
+      "validatedTireSizes": {
+        "Sedan": ["215/60R16"],
+        "GT Coupe/Sedan": ["225/50R17", "225/50R18"],
+        "GT Convertible": ["225/50R18"],
+        "GTP Coupe/Sedan/Convertible": ["225/50R18"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "18\" size is 225/50R18 not 225/45R18."
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": ["P215/60R16", "P225/50R17", "P225/45R18"],
+      "validatedTireSizes": {
+        "Sedan": ["215/60R16"],
+        "GT Sedan": ["225/50R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "2005 is first year; no 18\" option OEM. Only 215/60R16 and 225/50R17."
+    },
+    {
+      "year": 2009,
+      "make": "pontiac",
+      "model": "g8",
+      "currentTireSizes": ["P245/45R18", "P245/40R19"],
+      "validatedTireSizes": {
+        "Base Model": ["245/45R18"],
+        "GT": ["245/45R18", "245/40R19"],
+        "GXP": ["245/40R19"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct. G8 has square setup."
+    },
+    {
+      "year": 2008,
+      "make": "pontiac",
+      "model": "g8",
+      "currentTireSizes": ["P245/45R18", "P245/40R19"],
+      "validatedTireSizes": {
+        "Base Model": ["245/45R18"],
+        "GT": ["245/45R18", "245/40R19"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct. G8 has square setup. GXP not available until 2009."
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": ["P215/60R15", "P225/50R16"],
+      "validatedTireSizes": {
+        "SE Coupe/Sedan": ["215/60R15", "225/50R16"],
+        "GT Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct."
+    },
+    {
+      "year": 2004,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": ["P215/60R15", "P225/50R16"],
+      "validatedTireSizes": {
+        "SE Coupe/Sedan": ["215/60R15", "225/50R16"],
+        "GT Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct."
+    },
+    {
+      "year": 2003,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": ["P215/60R15", "P225/50R16"],
+      "validatedTireSizes": {
+        "SE Coupe/Sedan": ["215/60R15", "225/50R16"],
+        "GT Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct."
+    },
+    {
+      "year": 2002,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": ["P215/60R15", "P225/50R16"],
+      "validatedTireSizes": {
+        "SE Coupe/Sedan": ["215/60R15", "225/50R16"],
+        "GT Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct."
+    },
+    {
+      "year": 2001,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": ["P215/60R15", "P225/50R16"],
+      "validatedTireSizes": {
+        "SE Coupe/Sedan": ["215/60R15", "225/50R16"],
+        "GT Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct."
+    },
+    {
+      "year": 2000,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": ["P215/60R15", "P225/50R16"],
+      "validatedTireSizes": {
+        "SE Coupe/Sedan": ["215/60R15", "225/50R16"],
+        "GT Coupe/Sedan": ["225/50R16"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct."
+    },
+    {
+      "year": 2008,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": ["225/60R16", "225/55R17"],
+        "GT": ["225/55R17"],
+        "GXP": { "front": "255/45R18", "rear": "225/50R18" }
+      },
+      "isStaggered": true,
+      "status": "ISSUE_FOUND",
+      "notes": "GXP is staggered with 255/45R18 front, 225/50R18 rear. Current shows 245/45R18 which is incorrect."
+    },
+    {
+      "year": 2007,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": ["225/60R16", "225/55R17"],
+        "GT": ["225/55R17"],
+        "GXP": { "front": "255/45R18", "rear": "225/50R18" }
+      },
+      "isStaggered": true,
+      "status": "ISSUE_FOUND",
+      "notes": "GXP is staggered with 255/45R18 front, 225/50R18 rear."
+    },
+    {
+      "year": 2006,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": ["225/60R16"],
+        "GT": ["225/55R17"],
+        "GXP": { "front": "255/45R18", "rear": "225/50R18" }
+      },
+      "isStaggered": true,
+      "status": "ISSUE_FOUND",
+      "notes": "GXP is staggered with 255/45R18 front, 225/50R18 rear."
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": ["225/60R16"],
+        "GT": ["225/60R16"],
+        "GTP": ["225/55R17"],
+        "GXP": { "front": "255/45R18", "rear": "225/50R18" }
+      },
+      "isStaggered": true,
+      "status": "ISSUE_FOUND",
+      "notes": "GXP is staggered with 255/45R18 front, 225/50R18 rear."
+    },
+    {
+      "year": 2004,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P245/45R18"],
+      "validatedTireSizes": {
+        "GT1": ["225/60R16"],
+        "GT2": ["225/60R16"],
+        "GTP": ["225/55R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "No GXP in 2004. 245/45R18 should be removed for this year."
+    },
+    {
+      "year": 2003,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "GT": ["225/60R16"],
+        "GTP": ["225/60R16"],
+        "SE": ["205/70R15", "225/60R16"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "2003 GT and GTP use 225/60R16. SE has 205/70R15 option. 225/55R17 not found for this year."
+    },
+    {
+      "year": 2002,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "GT Coupe/Sedan": ["225/60R16"],
+        "GTP Coupe/Sedan": ["225/60R16"],
+        "SE": ["205/70R15", "225/60R16"],
+        "40th Anniversary": ["225/60R16"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "225/55R17 not found as OEM for 2002. Max is 225/60R16."
+    },
+    {
+      "year": 2001,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "GT Coupe/Sedan": ["225/60R16"],
+        "GTP Coupe/Sedan": ["225/60R16"],
+        "SE": ["205/70R15"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "225/55R17 not found as OEM for 2001. Max is 225/60R16."
+    },
+    {
+      "year": 2000,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "GT Coupe/Sedan": ["225/60R16"],
+        "GTP Coupe/Sedan": ["225/60R16"],
+        "GTX": ["235/55R17"],
+        "SE": ["205/70R15"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "GTX uses 235/55R17 not 225/55R17."
+    },
+    {
+      "year": 2006,
+      "make": "pontiac",
+      "model": "gto",
+      "currentTireSizes": ["P245/45ZR17", "P245/40ZR18"],
+      "validatedTireSizes": {
+        "Base Model": ["245/45R17", "235/40R18"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "18\" OEM is 235/40R18 not 245/40R18."
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "gto",
+      "currentTireSizes": ["P245/45ZR17", "P245/40ZR18"],
+      "validatedTireSizes": {
+        "Base Model": ["245/45R17", "235/40R18"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "18\" OEM is 235/40R18 not 245/40R18."
+    },
+    {
+      "year": 2004,
+      "make": "pontiac",
+      "model": "gto",
+      "currentTireSizes": ["P245/45ZR17", "P245/40ZR18"],
+      "validatedTireSizes": {
+        "Base Model": ["245/45R17"]
+      },
+      "isStaggered": false,
+      "status": "ISSUE_FOUND",
+      "notes": "2004 GTO only came with 17\" wheels. 18\" was added as option in 2005-2006."
+    },
+    {
+      "year": 2010,
+      "make": "pontiac",
+      "model": "solstice",
+      "currentTireSizes": ["P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": ["245/45R18"],
+        "GXP": ["245/45R18"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct. Solstice uses 245/45R18 across all trims."
+    },
+    {
+      "year": 2009,
+      "make": "pontiac",
+      "model": "solstice",
+      "currentTireSizes": ["P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": ["245/45R18"],
+        "Club Sport Package": ["245/45R18"],
+        "GXP": ["245/45R18"],
+        "Coupe Base Model": ["245/45R18"],
+        "Coupe GXP": ["245/45R18"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct."
+    },
+    {
+      "year": 2008,
+      "make": "pontiac",
+      "model": "solstice",
+      "currentTireSizes": ["P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": ["245/45R18"],
+        "Club Sport Package": ["245/45R18"],
+        "GXP": ["245/45R18"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct."
+    },
+    {
+      "year": 2007,
+      "make": "pontiac",
+      "model": "solstice",
+      "currentTireSizes": ["P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": ["245/45R18"],
+        "Club Sport Package": ["245/45R18"],
+        "GXP": ["245/45R18"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct."
+    },
+    {
+      "year": 2006,
+      "make": "pontiac",
+      "model": "solstice",
+      "currentTireSizes": ["P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": ["245/45R18"],
+        "Club Sport Package": ["245/45R18"]
+      },
+      "isStaggered": false,
+      "status": "VALIDATED",
+      "notes": "Data is correct. First year of Solstice."
+    },
+    {
+      "year": 2025,
+      "make": "porsche",
+      "model": "718",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Boxster (18\")": { "front": "235/45R18", "rear": "265/45R18" },
+        "Boxster (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Boxster (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Boxster S/GTS (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Boxster S/GTS (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman (18\")": { "front": "235/45R18", "rear": "265/45R18" },
+        "Cayman (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Cayman (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman S/GTS (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Cayman S/GTS (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman GT4/Spyder (20\")": { "front": "245/35R20", "rear": "295/30R20" }
+      },
+      "isStaggered": true,
+      "status": "DATA_MISSING",
+      "notes": "No current data in DB. 718 Boxster/Cayman has staggered fitment with multiple wheel size options."
+    },
+    {
+      "year": 2024,
+      "make": "porsche",
+      "model": "718",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Boxster (18\")": { "front": "235/45R18", "rear": "265/45R18" },
+        "Boxster (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Boxster (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Boxster S/GTS (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Boxster S/GTS (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman (18\")": { "front": "235/45R18", "rear": "265/45R18" },
+        "Cayman (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Cayman (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman S/GTS (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Cayman S/GTS (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman GT4/Spyder (20\")": { "front": "245/35R20", "rear": "295/30R20" }
+      },
+      "isStaggered": true,
+      "status": "DATA_MISSING",
+      "notes": "No current data in DB. 718 Boxster/Cayman has staggered fitment."
+    },
+    {
+      "year": 2023,
+      "make": "porsche",
+      "model": "718",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Boxster (18\")": { "front": "235/45R18", "rear": "265/45R18" },
+        "Boxster (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Boxster (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Boxster S/GTS (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Boxster S/GTS (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman (18\")": { "front": "235/45R18", "rear": "265/45R18" },
+        "Cayman (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Cayman (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman S/GTS (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Cayman S/GTS (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman GT4/Spyder (20\")": { "front": "245/35R20", "rear": "295/30R20" }
+      },
+      "isStaggered": true,
+      "status": "DATA_MISSING",
+      "notes": "No current data in DB. 718 Boxster/Cayman has staggered fitment."
+    },
+    {
+      "year": 2022,
+      "make": "porsche",
+      "model": "718",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Boxster (18\")": { "front": "235/45R18", "rear": "265/45R18" },
+        "Boxster (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Boxster (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Boxster S/GTS (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Boxster S/GTS (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman (18\")": { "front": "235/45R18", "rear": "265/45R18" },
+        "Cayman (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Cayman (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman S/GTS (19\")": { "front": "235/40R19", "rear": "265/40R19" },
+        "Cayman S/GTS (20\")": { "front": "235/35R20", "rear": "265/35R20" },
+        "Cayman GT4/GT4 RS/Spyder (20\")": { "front": "245/35R20", "rear": "295/30R20" }
+      },
+      "isStaggered": true,
+      "status": "DATA_MISSING",
+      "notes": "No current data in DB. 718 Boxster/Cayman has staggered fitment."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 26,
+    "issuesFound": 45,
+    "dataMissing": 4,
+    "staggeredVehicles": [
+      "Nissan Z (350Z) - all years",
+      "Plymouth Prowler - all years",
+      "Polestar Polestar 1 - all years",
+      "Pontiac Grand Prix GXP - 2005-2008",
+      "Porsche 718 - all years"
+    ],
+    "criticalIssues": [
+      {
+        "vehicle": "Oldsmobile Bravada 2000-2001",
+        "issue": "Wrong wheel size: shows R16 but OEM is R15"
+      },
+      {
+        "vehicle": "Oldsmobile Alero 2000-2004",
+        "issue": "Wrong 16\" tire size: shows 215/55R16, OEM is 225/50R16"
+      },
+      {
+        "vehicle": "Oldsmobile Bravada 2002-2004",
+        "issue": "Wrong 18\" tire: shows 255/55R18, OEM is 255/60R17"
+      },
+      {
+        "vehicle": "Oldsmobile Intrigue 2000-2002",
+        "issue": "Non-existent 17\" option: shows 225/55R17, no 17\" OEM"
+      },
+      {
+        "vehicle": "Plymouth Voyager 2000",
+        "issue": "Multiple incorrect sizes, should be 215/65R15 and 205/75R14"
+      },
+      {
+        "vehicle": "Pontiac GTO 2004",
+        "issue": "Shows 18\" option but 2004 only had 17\" wheels"
+      },
+      {
+        "vehicle": "Pontiac GTO 2005-2006",
+        "issue": "18\" size is 235/40R18, not 245/40R18"
+      },
+      {
+        "vehicle": "Pontiac Grand Prix GXP 2005-2008",
+        "issue": "Staggered setup not captured: 255/45R18 front, 225/50R18 rear"
+      },
+      {
+        "vehicle": "Pontiac Firebird 2000-2002",
+        "issue": "305/35R17 not found as OEM size"
+      },
+      {
+        "vehicle": "Pontiac G6 2005-2010",
+        "issue": "18\" size is 225/50R18, not 225/45R18"
+      },
+      {
+        "vehicle": "Porsche 718 2022-2025",
+        "issue": "No tire data in database"
+      }
+    ]
+  }
+}

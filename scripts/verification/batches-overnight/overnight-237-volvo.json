@@ -1,0 +1,2546 @@
+[
+  {
+    "id": "fef97b1e-9a5d-426c-b21e-c586f34a9835",
+    "year": 2017,
+    "make": "volvo",
+    "model": "v90",
+    "trim": "D3",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44.5,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "255/40R19",
+      "255/35ZR20",
+      "245/35ZR21"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "176f2b2a-cf09-4c2a-b840-c62956d99425",
+    "year": 2020,
+    "make": "volvo",
+    "model": "v90",
+    "trim": "T5",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44.5,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45ZR18",
+      "255/40ZR19",
+      "255/35ZR20",
+      "225/55R17",
+      "245/35ZR21"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "76fffb62-3de3-4ca3-997e-e8d100e02ea5",
+    "year": 2022,
+    "make": "volvo",
+    "model": "v90",
+    "trim": "B4 MHEV",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44.5,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "255/35ZR20",
+      "245/35ZR21",
+      "245/40R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "17df6882-b119-47c7-aec5-93296fd80824",
+    "year": 2023,
+    "make": "volvo",
+    "model": "v90",
+    "trim": "B4 MHEV",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44.5,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "255/35ZR20",
+      "245/35ZR21",
+      "245/40R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "d026dcef-b304-4b7e-80eb-46606b5d965f",
+    "year": 2019,
+    "make": "volvo",
+    "model": "xc40",
+    "trim": "T4",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R17",
+      "235/55R18",
+      "235/50R19",
+      "245/45R20",
+      "245/40R21"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "35067ca8-1614-4e5e-b702-ab4c6491aab1",
+    "year": 2020,
+    "make": "volvo",
+    "model": "xc40",
+    "trim": "Single Motor",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 8.5,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 58.5,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R19",
+      "255/45R19",
+      "235/45R20",
+      "255/40R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "b7756493-1ff2-49d0-97d6-ada8e5501d13",
+    "year": 2021,
+    "make": "volvo",
+    "model": "xc40",
+    "trim": "Single Motor",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 8.5,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 58.5,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R19",
+      "255/45R19",
+      "235/45R20",
+      "255/40R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "c2b2f581-154c-4b6f-bdc0-b4730bc94ebf",
+    "year": 2022,
+    "make": "volvo",
+    "model": "xc40",
+    "trim": "B4 MHEV",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R17",
+      "235/55R18",
+      "235/50R19",
+      "245/45R20",
+      "245/40R21"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "9d0e93db-6e38-4ae3-8c9d-685196ffea3a",
+    "year": 2010,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "22a43e75-6e58-4f0d-8b87-17f46892068a",
+    "year": 2011,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "0f11a781-edcf-4482-a747-f3fed8406c6b",
+    "year": 2012,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20",
+      "255/45ZR20",
+      "275/40R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "f0316bf4-16f0-479b-a3cd-5915aeffc1e4",
+    "year": 2013,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "b83e86ff-85ab-4e43-9d92-21d644530718",
+    "year": 2014,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20",
+      "255/50R19"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "a01d04c9-992b-4a21-b4dc-8fcb310b52c5",
+    "year": 2015,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20",
+      "255/50R19"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "011deedb-5683-4de9-b53f-d7cc5cfc16d9",
+    "year": 2016,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "42b3095e-7f5d-4b1e-994b-2c43c5e940a7",
+    "year": 2017,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20",
+      "255/50R19"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "f4081795-679e-43ce-aec4-2eec2c60cb0f",
+    "year": 2018,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 52.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49.5,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20",
+      "255/40R21",
+      "265/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "ecb49846-afbc-47e9-b8bd-82ae9cf59536",
+    "year": 2019,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "b446c3fb-f36d-4dee-81b3-7a9044622fdb",
+    "year": 2020,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "1e62929c-3b6a-4522-92ed-fe17c63b79a2",
+    "year": 2021,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "234d22e0-3bcf-41b1-bbee-df4f5cf20023",
+    "year": 2022,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "2e3c266d-d762-4501-a0ef-2c157e8190ed",
+    "year": 2023,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "cf262be4-8e27-42cd-8b5b-5262b345c1bb",
+    "year": 2024,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 52.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49.5,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20",
+      "235/60R17",
+      "255/40R21",
+      "265/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "05e6e0a4-390a-4c73-8e86-9b1772def5dc",
+    "year": 2025,
+    "make": "volvo",
+    "model": "xc60",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.5,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 52.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49.5,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20",
+      "235/60R17",
+      "255/40R21",
+      "265/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "a868feea-79b0-4598-ad29-8852dddca95d",
+    "year": 2003,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "f012418c-0870-4c15-ab0c-3bd8cd263178",
+    "year": 2004,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "5e7e123e-d782-48ef-8c9d-747740072572",
+    "year": 2005,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "4aeea939-97d4-445f-87e3-3f9c9dd36c3b",
+    "year": 2006,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "53322d02-eeee-4b41-bf40-1531d0c54cfa",
+    "year": 2007,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "9a38ad8a-287f-48fd-868d-9c03e30406c8",
+    "year": 2008,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "9d366165-7b84-4221-9896-11da431125e8",
+    "year": 2009,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "b94a97d7-2015-48f3-b99f-e060010ff816",
+    "year": 2010,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 49,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "89041641-bdd1-4ac9-9b88-292c205cb5f1",
+    "year": 2011,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 49,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "ef62f007-31d3-43a7-a2d5-c6f469cf4f93",
+    "year": 2012,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "baf15f11-2d5b-44b8-a808-175b1a593c7b",
+    "year": 2013,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "31e7b9ac-9cc4-457d-bdcf-fb5b73ef9a62",
+    "year": 2014,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "7d83fb7f-3341-472b-b46c-b64a22c4bc62",
+    "year": 2016,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42.5,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R20",
+      "275/40R21",
+      "275/35ZR22",
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "a28e41e1-472c-4cdd-827c-c9964c76f74b",
+    "year": 2017,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "08d56242-2d7b-4c2a-b3ac-5d6b2ac40b26",
+    "year": 2018,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "1d9cb5f2-6c0b-419b-8f71-4d48ac3ab02a",
+    "year": 2019,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R20",
+      "275/40R21",
+      "235/60R18",
+      "235/55R19",
+      "275/35ZR22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "0a58aee5-b234-4761-b6ce-83bc4c6993e8",
+    "year": 2020,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "bec3af13-b206-4490-8159-74e486de8410",
+    "year": 2021,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R20",
+      "275/40R21",
+      "235/60R18",
+      "235/55R19",
+      "275/35ZR22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "4891d60f-0fc1-4e94-b59a-37e62d1ce738",
+    "year": 2022,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "12c2c8f1-0094-41fd-8adf-e356eca7862c",
+    "year": 2023,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "06fb3ff0-1242-4911-98ad-25e620091c17",
+    "year": 2024,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38.5,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R20",
+      "275/40R21",
+      "235/60R18",
+      "275/35R22",
+      "235/55R19"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "6a1669a9-dbff-4386-97ea-9c9f00d66313",
+    "year": 2025,
+    "make": "volvo",
+    "model": "xc90",
+    "trim": "Momentum, R-Design, Inscription, Polestar Engineered",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "api_import"
+  }
+]

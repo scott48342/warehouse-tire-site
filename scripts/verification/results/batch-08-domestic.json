@@ -1,0 +1,1887 @@
+{
+  "batch": "batch-08-domestic",
+  "verifiedAt": "2026-04-23T00:50:00Z",
+  "verifiedBy": "subagent:verify-us-08",
+  "vehicleCount": 75,
+  "summary": {
+    "valid": 70,
+    "invalid": 2,
+    "flagged": 3,
+    "notes": "2 invalid model years (2000 Ford Escape, 2026 Ford Bronco Sport). 3 flagged (E-350 2015-2019 cutaway chassis only)."
+  },
+  "invalidModelYears": [
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Escape",
+      "reason": "No 2000 model year exists. Ford Escape debuted in 2001 for the 2001 model year.",
+      "sources": ["wikipedia.org/wiki/Ford_Escape", "automobile.fandom.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "Bronco Sport",
+      "reason": "Future/speculative model year. Bronco Sport started 2021, 2026 not yet confirmed.",
+      "sources": ["wikipedia.org/wiki/Ford_Bronco_Sport"]
+    }
+  ],
+  "flaggedVehicles": [
+    {
+      "years": [2015, 2016, 2017, 2018, 2019],
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "flag": "COMMERCIAL_ONLY",
+      "reason": "E-Series passenger/cargo vans discontinued after 2014. 2015+ are cutaway chassis only for commercial upfitting.",
+      "sources": ["wikipedia.org/wiki/Ford_E-Series"]
+    }
+  ],
+  "vehicles": [
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "generation": "Gen 3 (ZB I)",
+      "boltPattern": "6x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {
+          "name": "SRT-10 Coupe",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "275/35ZR18",
+          "oemTireSizeRear": "345/30ZR19"
+        },
+        {
+          "name": "SRT-10 Roadster",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "275/35ZR18",
+          "oemTireSizeRear": "345/30ZR19"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["revzerors.com", "viperclub.org", "autopadre.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "generation": "Gen 4 (ZB II)",
+      "boltPattern": "6x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {
+          "name": "SRT-10",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "275/35ZR18",
+          "oemTireSizeRear": "345/30ZR19"
+        },
+        {
+          "name": "SRT-10 ACR",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "275/35ZR18",
+          "oemTireSizeRear": "345/30ZR19"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["revzerors.com", "caranddriver.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "generation": "Gen 4 (ZB II)",
+      "boltPattern": "6x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {
+          "name": "SRT-10",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "275/35ZR18",
+          "oemTireSizeRear": "345/30ZR19"
+        },
+        {
+          "name": "SRT-10 ACR",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "275/35ZR18",
+          "oemTireSizeRear": "345/30ZR19"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["revzerors.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "generation": "Gen 4 (ZB II)",
+      "boltPattern": "6x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {
+          "name": "SRT-10",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "275/35ZR18",
+          "oemTireSizeRear": "345/30ZR19"
+        },
+        {
+          "name": "SRT-10 ACR",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "275/35ZR18",
+          "oemTireSizeRear": "345/30ZR19"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["revzerors.com", "autopadre.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "generation": "Gen 5 (VX I)",
+      "boltPattern": "6x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {
+          "name": "SRT",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "GTS",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["revzerors.com", "autopadre.com"],
+      "notes": "Gen 5 has ABS/stability control - sensitive to tire diameter differences"
+    },
+    {
+      "year": 2014,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "generation": "Gen 5 (VX I)",
+      "boltPattern": "6x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {
+          "name": "SRT",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "GTS",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "TA",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["revzerors.com", "autopadre.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "generation": "Gen 5 (VX I)",
+      "boltPattern": "6x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {
+          "name": "SRT",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "GT",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "GTS",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "TA 2.0",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "revzerors.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "generation": "Gen 5 (VX I)",
+      "boltPattern": "6x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {
+          "name": "SRT",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "GT",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "GTS",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "ACR",
+          "oemWheelSizeFront": "19x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/25ZR19",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "TA 2.0",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "revzerors.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "generation": "Gen 5 (VX I) - Final Year",
+      "boltPattern": "6x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {
+          "name": "SRT",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "GTS",
+          "oemWheelSizeFront": "18x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/30ZR18",
+          "oemTireSizeRear": "355/30ZR19"
+        },
+        {
+          "name": "ACR",
+          "oemWheelSizeFront": "19x10",
+          "oemWheelSizeRear": "19x13",
+          "oemTireSizeFront": "295/25ZR19",
+          "oemTireSizeRear": "355/30ZR19"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["revzerors.com", "wikipedia.org/wiki/Dodge_Viper"],
+      "notes": "Final year of Viper production"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Bronco Sport",
+      "status": "valid",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Big Bend",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Outer Banks",
+          "oemWheelSize": "18x7.5",
+          "oemTireSize": "225/60R18"
+        },
+        {
+          "name": "Badlands",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "medium",
+      "sources": ["extremeterrain.com", "supremesuspensions.com"],
+      "notes": "2025 specs based on 2021-2024 platform continuation"
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "Bronco Sport",
+      "status": "invalid",
+      "reason": "Future/speculative model year - not yet confirmed for production",
+      "confidence": "low"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "S",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "Police Interceptor",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tiresize.com", "reddit.com/r/CrownVictoria"]
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "S",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "Police Interceptor",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX Sport",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/55R17"
+        },
+        {
+          "name": "S",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "Police Interceptor",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX Sport",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/55R17"
+        },
+        {
+          "name": "S",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "Police Interceptor",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX Sport",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/55R17"
+        },
+        {
+          "name": "S",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "Police Interceptor",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX Sport",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/55R17"
+        },
+        {
+          "name": "S",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "Police Interceptor",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX Sport",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/55R17"
+        },
+        {
+          "name": "Police Interceptor",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/55R17"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/60R16"
+        },
+        {
+          "name": "LX Sport",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/55R17"
+        },
+        {
+          "name": "Police Interceptor",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/55R17"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "5x139.7",
+      "hubBore": 87.1,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "Club Wagon XL",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "5-lug configuration for 2000-2006"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "5x139.7",
+      "hubBore": 87.1,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "Club Wagon XL",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "5x139.7",
+      "hubBore": 87.1,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "Club Wagon XL",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "5x139.7",
+      "hubBore": 87.1,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "Club Wagon XL",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "5x139.7",
+      "hubBore": 87.1,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "Club Wagon XL",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "5x139.7",
+      "hubBore": 87.1,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "Club Wagon XL",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "5x139.7",
+      "hubBore": 87.1,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Last year of 5-lug E-150"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Changed to 8-lug in 2007"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Ford_E-Series"],
+      "notes": "Final year of E-150 production"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "E-250 always used 8-lug pattern"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Ford_E-Series"],
+      "notes": "Final year of E-250 cargo van"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cargo Van",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        },
+        {
+          "name": "XL Wagon",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "245/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Ford_E-Series"],
+      "notes": "Final year of E-350 passenger/cargo van"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "flagged",
+      "flag": "COMMERCIAL_ONLY",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cutaway",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "225/75R16"
+        },
+        {
+          "name": "Stripped Chassis",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "225/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "medium",
+      "sources": ["wikipedia.org/wiki/Ford_E-Series", "grokipedia.com"],
+      "notes": "Cutaway chassis only - no retail passenger/cargo van after 2014"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "flagged",
+      "flag": "COMMERCIAL_ONLY",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cutaway",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "225/75R16"
+        },
+        {
+          "name": "Stripped Chassis",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "225/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "medium",
+      "sources": ["wikipedia.org/wiki/Ford_E-Series"],
+      "notes": "Cutaway chassis only"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "flagged",
+      "flag": "COMMERCIAL_ONLY",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cutaway",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "225/75R16"
+        },
+        {
+          "name": "Stripped Chassis",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "225/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "medium",
+      "sources": ["wikipedia.org/wiki/Ford_E-Series"],
+      "notes": "Cutaway chassis only"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "flagged",
+      "flag": "COMMERCIAL_ONLY",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cutaway",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "225/75R16"
+        },
+        {
+          "name": "Stripped Chassis",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "225/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "medium",
+      "sources": ["wikipedia.org/wiki/Ford_E-Series"],
+      "notes": "Cutaway chassis only"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "E-350 Econoline",
+      "status": "flagged",
+      "flag": "COMMERCIAL_ONLY",
+      "boltPattern": "8x165.1",
+      "hubBore": 124.9,
+      "trims": [
+        {
+          "name": "Cutaway",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "225/75R16"
+        },
+        {
+          "name": "Stripped Chassis",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "225/75R16"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "medium",
+      "sources": ["wikipedia.org/wiki/Ford_E-Series"],
+      "notes": "Cutaway chassis only"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Escape",
+      "status": "invalid",
+      "reason": "No 2000 model year exists. Ford Escape debuted in April 2000 as 2001 model year.",
+      "sources": ["wikipedia.org/wiki/Ford_Escape", "automobile.fandom.com", "premierclearance.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Escape",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {
+          "name": "XLS",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "225/70R15"
+        },
+        {
+          "name": "XLT",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "225/70R15"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["autoevolution.com", "wikipedia.org/wiki/Ford_Escape"],
+      "notes": "First model year of Ford Escape"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Escort ZX2",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "14x5.5",
+          "oemTireSize": "185/60R14"
+        },
+        {
+          "name": "Hot",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/55R15"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "ZX2 uses 4x100mm (based on Mazda B platform), different from standard Escort 4x108mm"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Escort ZX2",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "14x5.5",
+          "oemTireSize": "185/60R14"
+        },
+        {
+          "name": "Hot",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/55R15"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Escort ZX2",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "14x5.5",
+          "oemTireSize": "185/60R14"
+        },
+        {
+          "name": "Hot",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/55R15"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Escort ZX2",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "14x5.5",
+          "oemTireSize": "185/60R14"
+        },
+        {
+          "name": "Hot",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/55R15"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Final year of Escort ZX2 production"
+    }
+  ]
+}

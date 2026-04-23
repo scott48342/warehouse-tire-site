@@ -1,0 +1,996 @@
+{
+  "batchId": "138",
+  "processedAt": "2026-04-21T22:40:00.000Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["235/45R17"],
+      "trims": [
+        {"trim": "WRX", "tireSize": "235/45R17"},
+        {"trim": "WRX Limited", "tireSize": "235/45R17"},
+        {"trim": "WRX Premium", "tireSize": "235/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "Last year as Impreza WRX before becoming standalone WRX"
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["235/45R17"],
+      "trims": [
+        {"trim": "WRX", "tireSize": "235/45R17"},
+        {"trim": "WRX Limited", "tireSize": "235/45R17"},
+        {"trim": "WRX Premium", "tireSize": "235/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": null
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["225/45R17"],
+      "trims": [
+        {"trim": "WRX", "tireSize": "225/45R17"},
+        {"trim": "WRX Limited", "tireSize": "225/45R17"},
+        {"trim": "WRX Premium", "tireSize": "225/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": null
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["225/45R17"],
+      "trims": [
+        {"trim": "WRX", "tireSize": "225/45R17"},
+        {"trim": "WRX Premium", "tireSize": "225/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": null
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["205/50R17"],
+      "trims": [
+        {"trim": "WRX 5 Door", "tireSize": "205/50R17"},
+        {"trim": "WRX Sedan", "tireSize": "205/50R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "Redesigned wide-body generation"
+    },
+    {
+      "year": 2007,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["215/45R17"],
+      "trims": [
+        {"trim": "WRX Wagon", "tireSize": "215/45R17"},
+        {"trim": "WRX TR Sedan", "tireSize": "215/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": null
+    },
+    {
+      "year": 2006,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["215/45R17"],
+      "trims": [
+        {"trim": "WRX Sedan", "tireSize": "215/45R17"},
+        {"trim": "WRX TR Sedan", "tireSize": "215/45R17"},
+        {"trim": "WRX Wagon", "tireSize": "215/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": null
+    },
+    {
+      "year": 2005,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["205/55R16"],
+      "trims": [
+        {"trim": "WRX Sedan", "tireSize": "205/55R16"},
+        {"trim": "WRX Wagon", "tireSize": "205/55R16"}
+      ],
+      "wheelSizes": ["16"],
+      "notes": null
+    },
+    {
+      "year": 2004,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": [
+        {"trim": "WRX Sedan", "tireSizes": ["205/55R16", "215/45R17"]},
+        {"trim": "WRX Wagon", "tireSizes": ["205/55R16", "215/45R17"]}
+      ],
+      "wheelSizes": ["16", "17"],
+      "notes": "Optional 17-inch wheel package"
+    },
+    {
+      "year": 2003,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": [
+        {"trim": "WRX Sedan", "tireSizes": ["205/55R16", "215/45R17"]},
+        {"trim": "WRX Wagon", "tireSizes": ["205/55R16", "215/45R17"]}
+      ],
+      "wheelSizes": ["16", "17"],
+      "notes": "Optional 17-inch wheel package"
+    },
+    {
+      "year": 2002,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": [
+        {"trim": "WRX Sedan", "tireSizes": ["205/55R16", "215/45R17"]},
+        {"trim": "WRX Wagon", "tireSizes": ["205/55R16", "215/45R17"]}
+      ],
+      "wheelSizes": ["16", "17"],
+      "notes": "First year WRX sold in US market"
+    },
+    {
+      "year": 2001,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": [
+        {"trim": "WRX", "tireSizes": ["205/55R16", "215/45R17"]}
+      ],
+      "wheelSizes": ["16", "17"],
+      "notes": "JDM market only - not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": [
+        {"trim": "WRX", "tireSizes": ["205/55R16", "215/45R17"]}
+      ],
+      "wheelSizes": ["16", "17"],
+      "notes": "JDM market only - not sold in US"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["245/40R18"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "245/40R18"},
+        {"trim": "WRX STI Limited", "tireSize": "245/40R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": "Last year as Impreza WRX STI"
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["245/40R18"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "245/40R18"},
+        {"trim": "WRX STI Limited", "tireSize": "245/40R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": null
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["245/40R18"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "245/40R18"},
+        {"trim": "WRX STI Limited", "tireSize": "245/40R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": null
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["245/40R18"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "245/40R18"},
+        {"trim": "WRX STI Limited", "tireSize": "245/40R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": null
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["245/40R18"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "245/40R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": null
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["245/40R18"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "245/40R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": null
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["235/45R17", "245/40R18"],
+      "trims": [
+        {"trim": "WRX STI", "tireSizes": ["235/45R17", "245/40R18"]}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "First year of new wide-body design"
+    },
+    {
+      "year": 2007,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["225/45R17"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "225/45R17"},
+        {"trim": "WRX STI Limited", "tireSize": "225/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "Last year of hawkeye generation"
+    },
+    {
+      "year": 2006,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["225/45R17"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "225/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "Hawkeye facelift"
+    },
+    {
+      "year": 2005,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["225/45R17"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "225/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": null
+    },
+    {
+      "year": 2004,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["225/45R17"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "225/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "First year STI sold in US market"
+    },
+    {
+      "year": 2003,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["225/45R17"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "225/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "JDM market only - not sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["225/45R17"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "225/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "JDM market only - not sold in US"
+    },
+    {
+      "year": 2001,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["225/45R17"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "225/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "JDM market only - not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "tireSizes": ["225/45R17"],
+      "trims": [
+        {"trim": "WRX STI", "tireSize": "225/45R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "JDM market only - not sold in US"
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Impreza XV",
+      "tireSizes": ["225/55R17"],
+      "trims": [
+        {"trim": "XV", "tireSize": "225/55R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "JDM market - predecessor to Crosstrek"
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza XV",
+      "tireSizes": ["225/55R17"],
+      "trims": [
+        {"trim": "XV", "tireSize": "225/55R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "JDM market only"
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Impreza XV",
+      "tireSizes": ["225/55R17"],
+      "trims": [
+        {"trim": "XV", "tireSize": "225/55R17"}
+      ],
+      "wheelSizes": ["17"],
+      "notes": "JDM market only"
+    },
+    {
+      "year": 2026,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/55R17"},
+        {"trim": "Premium", "tireSize": "225/55R17"},
+        {"trim": "Sport", "tireSize": "225/50R18"},
+        {"trim": "Limited", "tireSize": "225/50R18"},
+        {"trim": "Touring XT", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "Projected/pre-production specs"
+    },
+    {
+      "year": 2025,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/55R17"},
+        {"trim": "Premium", "tireSize": "225/55R17"},
+        {"trim": "Sport", "tireSize": "225/50R18"},
+        {"trim": "Limited", "tireSize": "225/50R18"},
+        {"trim": "Touring XT", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2024,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/55R17"},
+        {"trim": "Premium", "tireSize": "225/55R17"},
+        {"trim": "Sport", "tireSize": "225/50R18"},
+        {"trim": "Limited", "tireSize": "225/50R18"},
+        {"trim": "Touring XT", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2023,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/55R17"},
+        {"trim": "Premium", "tireSize": "225/55R17"},
+        {"trim": "Sport", "tireSize": "225/50R18"},
+        {"trim": "Limited", "tireSize": "225/50R18"},
+        {"trim": "Touring XT", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2022,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/55R17"},
+        {"trim": "Premium", "tireSize": "225/55R17"},
+        {"trim": "Sport", "tireSize": "225/50R18"},
+        {"trim": "Limited", "tireSize": "225/50R18"},
+        {"trim": "Limited XT", "tireSize": "225/50R18"},
+        {"trim": "Touring XT", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2021,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/55R17"},
+        {"trim": "Premium", "tireSize": "225/55R17"},
+        {"trim": "Sport", "tireSize": "225/50R18"},
+        {"trim": "Limited", "tireSize": "225/50R18"},
+        {"trim": "Limited XT", "tireSize": "225/50R18"},
+        {"trim": "Touring XT", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2020,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/55R17"},
+        {"trim": "Premium", "tireSize": "225/55R17"},
+        {"trim": "Sport", "tireSize": "225/50R18"},
+        {"trim": "Limited", "tireSize": "225/50R18"},
+        {"trim": "Limited XT", "tireSize": "225/50R18"},
+        {"trim": "Touring XT", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "All-new 7th generation"
+    },
+    {
+      "year": 2019,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "225/55R17"},
+        {"trim": "2.5i Premium", "tireSize": "225/55R17"},
+        {"trim": "2.5i Sport", "tireSize": "225/50R18"},
+        {"trim": "2.5i Limited", "tireSize": "225/50R18"},
+        {"trim": "3.6R Limited", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "Last year of 6th generation"
+    },
+    {
+      "year": 2018,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "225/55R17"},
+        {"trim": "2.5i Premium", "tireSize": "225/55R17"},
+        {"trim": "2.5i Sport", "tireSize": "225/50R18"},
+        {"trim": "2.5i Limited", "tireSize": "225/50R18"},
+        {"trim": "3.6R Limited", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2017,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "225/55R17"},
+        {"trim": "2.5i Premium", "tireSize": "225/55R17"},
+        {"trim": "2.5i Sport", "tireSize": "225/50R18"},
+        {"trim": "2.5i Limited", "tireSize": "225/50R18"},
+        {"trim": "3.6R Limited", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2016,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "225/55R17"},
+        {"trim": "2.5i Premium", "tireSize": "225/55R17"},
+        {"trim": "2.5i Limited", "tireSize": "225/50R18"},
+        {"trim": "3.6R Limited", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2015,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "225/55R17"},
+        {"trim": "2.5i Premium", "tireSize": "225/55R17"},
+        {"trim": "2.5i Limited", "tireSize": "225/50R18"},
+        {"trim": "3.6R Limited", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "All-new 6th generation"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/60R16", "215/50R17", "225/50R17", "225/45R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "205/60R16"},
+        {"trim": "2.5i Premium", "tireSize": "215/50R17"},
+        {"trim": "2.5i Limited", "tireSize": "215/50R17"},
+        {"trim": "2.5i Sport", "tireSize": "225/45R18"},
+        {"trim": "3.6R", "tireSize": "225/50R17"},
+        {"trim": "3.6R Limited", "tireSize": "225/50R17"}
+      ],
+      "wheelSizes": ["16", "17", "18"],
+      "notes": "Last year of 5th generation"
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/60R16", "215/50R17", "225/50R17"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "205/60R16"},
+        {"trim": "2.5i Premium", "tireSize": "215/50R17"},
+        {"trim": "2.5i Limited", "tireSize": "215/50R17"},
+        {"trim": "3.6R", "tireSize": "225/50R17"},
+        {"trim": "3.6R Limited", "tireSize": "225/50R17"}
+      ],
+      "wheelSizes": ["16", "17"],
+      "notes": null
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/60R16", "215/50R17", "225/50R17"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "205/60R16"},
+        {"trim": "2.5i Premium", "tireSize": "215/50R17"},
+        {"trim": "2.5i Limited", "tireSize": "215/50R17"},
+        {"trim": "3.6R", "tireSize": "225/50R17"},
+        {"trim": "3.6R Limited", "tireSize": "225/50R17"}
+      ],
+      "wheelSizes": ["16", "17"],
+      "notes": null
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/60R16", "215/50R17", "225/50R17", "225/45R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "205/60R16"},
+        {"trim": "2.5i Premium", "tireSize": "215/50R17"},
+        {"trim": "2.5i Limited", "tireSize": "215/50R17"},
+        {"trim": "2.5GT", "tireSize": "225/45R18"},
+        {"trim": "3.6R", "tireSize": "225/50R17"},
+        {"trim": "3.6R Limited", "tireSize": "225/50R17"},
+        {"trim": "3.6R Premium", "tireSize": "225/50R17"}
+      ],
+      "wheelSizes": ["16", "17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/60R16", "215/50R17", "225/50R17", "225/45R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "205/60R16"},
+        {"trim": "2.5i Premium", "tireSize": "215/50R17"},
+        {"trim": "2.5i Limited", "tireSize": "215/50R17"},
+        {"trim": "2.5GT", "tireSize": "225/45R18"},
+        {"trim": "3.6R", "tireSize": "225/50R17"},
+        {"trim": "3.6R Limited", "tireSize": "225/50R17"}
+      ],
+      "wheelSizes": ["16", "17", "18"],
+      "notes": "All-new 5th generation"
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/50R17", "215/45R17", "215/45R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "205/50R17"},
+        {"trim": "2.5i Limited", "tireSize": "205/50R17"},
+        {"trim": "2.5i Special Edition", "tireSize": "205/50R17"},
+        {"trim": "2.5 GT Limited", "tireSize": "215/45R17"},
+        {"trim": "2.5 GT spec.B", "tireSize": "215/45R18"},
+        {"trim": "3.0R", "tireSize": "215/45R17"},
+        {"trim": "3.0R Limited", "tireSize": "215/45R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "Last year of 4th generation"
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/50R17", "215/45R17", "215/45R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "205/50R17"},
+        {"trim": "2.5i Limited", "tireSize": "205/50R17"},
+        {"trim": "2.5 GT Limited", "tireSize": "215/45R17"},
+        {"trim": "2.5 GT spec.B", "tireSize": "215/45R18"},
+        {"trim": "3.0R", "tireSize": "215/45R17"},
+        {"trim": "3.0R Limited", "tireSize": "215/45R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2007,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/50R17", "215/45R17", "215/45R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "205/50R17"},
+        {"trim": "2.5i Limited", "tireSize": "205/50R17"},
+        {"trim": "2.5 GT Limited", "tireSize": "215/45R17"},
+        {"trim": "2.5 GT spec.B", "tireSize": "215/45R18"},
+        {"trim": "3.0R", "tireSize": "215/45R17"},
+        {"trim": "3.0R Limited", "tireSize": "215/45R18"}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2006,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/55R16", "205/50R17", "215/45R17", "215/45R18"],
+      "trims": [
+        {"trim": "2.5i", "tireSize": "205/55R16"},
+        {"trim": "2.5i Limited", "tireSize": "205/50R17"},
+        {"trim": "2.5 GT", "tireSize": "215/45R17"},
+        {"trim": "2.5 GT Limited", "tireSize": "215/45R17"},
+        {"trim": "2.5 GT spec.B", "tireSize": "215/45R18"}
+      ],
+      "wheelSizes": ["16", "17", "18"],
+      "notes": null
+    },
+    {
+      "year": 2005,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/55R16", "215/45R17", "215/45R18"],
+      "trims": [
+        {"trim": "Sedan 2.5i", "tireSize": "205/55R16"},
+        {"trim": "Sedan 2.5i Limited", "tireSize": "205/55R16"},
+        {"trim": "Sedan 2.5 GT", "tireSize": "215/45R17"},
+        {"trim": "Sedan 2.5 GT Limited", "tireSize": "215/45R17"},
+        {"trim": "Sedan 2.5 GT spec.B", "tireSize": "215/45R18"},
+        {"trim": "Wagon 2.5i", "tireSize": "205/55R16"},
+        {"trim": "Wagon 2.5i Limited", "tireSize": "205/55R16"},
+        {"trim": "Wagon 2.5 GT", "tireSize": "215/45R17"},
+        {"trim": "Wagon 2.5 GT Limited", "tireSize": "215/45R17"}
+      ],
+      "wheelSizes": ["16", "17", "18"],
+      "notes": "All-new 4th generation"
+    },
+    {
+      "year": 2004,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/60R15", "205/55R16"],
+      "trims": [
+        {"trim": "L Sedan", "tireSize": "205/60R15"},
+        {"trim": "L Wagon", "tireSize": "205/60R15"},
+        {"trim": "GT Limited", "tireSize": "205/55R16"},
+        {"trim": "GT Sedan", "tireSize": "205/55R16"},
+        {"trim": "GT Wagon", "tireSize": "205/55R16"}
+      ],
+      "wheelSizes": ["15", "16"],
+      "notes": "Last year of 3rd generation"
+    },
+    {
+      "year": 2003,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/60R15", "205/55R16"],
+      "trims": [
+        {"trim": "L Sedan", "tireSize": "205/60R15"},
+        {"trim": "L Wagon", "tireSize": "205/60R15"},
+        {"trim": "GT Limited", "tireSize": "205/55R16"},
+        {"trim": "GT Sedan", "tireSize": "205/55R16"},
+        {"trim": "GT Wagon", "tireSize": "205/55R16"}
+      ],
+      "wheelSizes": ["15", "16"],
+      "notes": null
+    },
+    {
+      "year": 2002,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/60R15", "205/55R16"],
+      "trims": [
+        {"trim": "L Sedan", "tireSize": "205/60R15"},
+        {"trim": "L Wagon", "tireSize": "205/60R15"},
+        {"trim": "GT Limited", "tireSize": "205/55R16"},
+        {"trim": "GT Sedan", "tireSize": "205/55R16"},
+        {"trim": "GT Wagon", "tireSize": "205/55R16"}
+      ],
+      "wheelSizes": ["15", "16"],
+      "notes": null
+    },
+    {
+      "year": 2001,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["205/60R15", "205/55R16"],
+      "trims": [
+        {"trim": "L Sedan", "tireSize": "205/60R15"},
+        {"trim": "L Wagon", "tireSize": "205/60R15"},
+        {"trim": "GT Limited", "tireSize": "205/55R16"},
+        {"trim": "GT Sedan", "tireSize": "205/55R16"},
+        {"trim": "GT Wagon", "tireSize": "205/55R16"}
+      ],
+      "wheelSizes": ["15", "16"],
+      "notes": null
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "Legacy",
+      "tireSizes": ["185/70R14", "205/60R15", "205/55R16"],
+      "trims": [
+        {"trim": "Brighton", "tireSize": "185/70R14"},
+        {"trim": "L Sedan", "tireSize": "205/60R15"},
+        {"trim": "L Wagon", "tireSize": "205/60R15"},
+        {"trim": "GT Limited", "tireSize": "205/55R16"},
+        {"trim": "GT Sedan", "tireSize": "205/55R16"},
+        {"trim": "GT Wagon", "tireSize": "205/55R16"}
+      ],
+      "wheelSizes": ["14", "15", "16"],
+      "notes": null
+    },
+    {
+      "year": 2020,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["225/45R18", "225/50R18"],
+      "trims": [
+        {"trim": "B4", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2019,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["225/45R18", "225/50R18"],
+      "trims": [
+        {"trim": "B4", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2018,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["225/45R18", "225/50R18"],
+      "trims": [
+        {"trim": "B4", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2017,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["225/45R18", "225/50R18"],
+      "trims": [
+        {"trim": "B4", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2016,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["225/45R18", "225/50R18"],
+      "trims": [
+        {"trim": "B4", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2015,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["225/45R18", "225/50R18"],
+      "trims": [
+        {"trim": "B4", "tireSize": "225/50R18"}
+      ],
+      "wheelSizes": ["18"],
+      "notes": "JDM market sedan - new generation"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["215/50R17", "225/45R18"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["215/50R17", "225/45R18"]}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["215/50R17", "225/45R18"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["215/50R17", "225/45R18"]}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["215/50R17", "225/45R18"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["215/50R17", "225/45R18"]}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["215/50R17", "225/45R18"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["215/50R17", "225/45R18"]}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["215/50R17", "225/45R18"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["215/50R17", "225/45R18"]}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "JDM market sedan - 5th gen"
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["205/50R17", "215/45R17", "215/45R18"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["205/50R17", "215/45R17", "215/45R18"]}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["205/50R17", "215/45R17", "215/45R18"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["205/50R17", "215/45R17", "215/45R18"]}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2007,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["205/50R17", "215/45R17", "215/45R18"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["205/50R17", "215/45R17", "215/45R18"]}
+      ],
+      "wheelSizes": ["17", "18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2006,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["205/55R16", "205/50R17", "215/45R17", "215/45R18"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["205/55R16", "205/50R17", "215/45R17", "215/45R18"]}
+      ],
+      "wheelSizes": ["16", "17", "18"],
+      "notes": "JDM market sedan"
+    },
+    {
+      "year": 2005,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["205/55R16", "215/45R17", "215/45R18"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["205/55R16", "215/45R17", "215/45R18"]}
+      ],
+      "wheelSizes": ["16", "17", "18"],
+      "notes": "JDM market sedan - 4th gen"
+    },
+    {
+      "year": 2004,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "tireSizes": ["205/60R15", "205/55R16"],
+      "trims": [
+        {"trim": "B4", "tireSizes": ["205/60R15", "205/55R16"]}
+      ],
+      "wheelSizes": ["15", "16"],
+      "notes": "JDM market sedan - last year of 3rd gen"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validatedVehicles": 75,
+    "uniqueTireSizes": [
+      "185/70R14", "195/60R15", "205/55R16", "205/50R17", "205/60R15",
+      "205/60R16", "215/45R17", "215/45R18", "215/50R17", "225/45R17",
+      "225/45R18", "225/50R17", "225/50R18", "225/55R17", "235/45R17",
+      "245/40R18"
+    ],
+    "jdmModels": [
+      "Impreza WRX (2000-2001)",
+      "Impreza WRX STI (2000-2003)",
+      "Impreza XV (2010-2012)",
+      "Legacy B4 (2004-2020)"
+    ],
+    "corrections": {
+      "2019 Legacy": "Removed incorrect 245/50R17 and 245/45R18 - these sizes don't exist for Legacy. Standard sizes: 225/55R17, 225/50R18",
+      "2014 Legacy": "Removed incorrect 215/45ZR18 and 235/35ZR19 - these were aftermarket sizes. OEM: 205/60R16, 215/50R17, 225/45R18, 225/50R17",
+      "2012 Legacy": "Removed incorrect 215/45ZR18, 235/35ZR19, 225/45ZR18 - aftermarket sizes"
+    }
+  }
+}

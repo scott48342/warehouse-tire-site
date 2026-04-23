@@ -1,0 +1,543 @@
+{
+  "batchId": 29,
+  "processedAt": "2026-04-21T23:52:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "usMarket": 18,
+    "notUS": 32,
+    "withSpecs": 18
+  },
+  "vehicles": [
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "s2000",
+      "isStaggered": true,
+      "tires": {
+        "front": "205/55R16",
+        "rear": "225/50R16"
+      },
+      "wheels": {
+        "front": { "diameter": 16, "width": 6.5 },
+        "rear": { "diameter": 16, "width": 7.5 }
+      },
+      "boltPattern": "5x114.3",
+      "notes": "Base Model. Staggered setup."
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "s2000",
+      "isStaggered": true,
+      "tires": {
+        "front": "215/45R17",
+        "rear": "245/40R17"
+      },
+      "wheels": {
+        "front": { "diameter": 17, "width": 7 },
+        "rear": { "diameter": 17, "width": 8.5 }
+      },
+      "boltPattern": "5x114.3",
+      "notes": "Base Model. Switched to 17\" wheels in 2004."
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "s2000",
+      "isStaggered": true,
+      "tires": {
+        "front": "215/45R17",
+        "rear": "245/40R17"
+      },
+      "wheels": {
+        "front": { "diameter": 17, "width": 7 },
+        "rear": { "diameter": 17, "width": 8.5 }
+      },
+      "boltPattern": "5x114.3",
+      "notes": "Base Model."
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "s2000",
+      "isStaggered": true,
+      "tires": {
+        "front": "215/45R17",
+        "rear": "245/40R17"
+      },
+      "wheels": {
+        "front": { "diameter": 17, "width": 7 },
+        "rear": { "diameter": 17, "width": 8.5 }
+      },
+      "boltPattern": "5x114.3",
+      "notes": "Base Model."
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "s2000",
+      "isStaggered": true,
+      "tires": {
+        "front": "215/45R17",
+        "rear": "245/40R17"
+      },
+      "wheels": {
+        "front": { "diameter": 17, "width": 7 },
+        "rear": { "diameter": 17, "width": 8.5 }
+      },
+      "boltPattern": "5x114.3",
+      "notes": "Base Model."
+    },
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "s2000",
+      "isStaggered": true,
+      "tires": {
+        "front": "215/45R17",
+        "rear": "245/40R17"
+      },
+      "wheels": {
+        "front": { "diameter": 17, "width": 7 },
+        "rear": { "diameter": 17, "width": 8.5 }
+      },
+      "boltPattern": "5x114.3",
+      "notes": "Base Model. CR trim has 255/40R17 rear."
+    },
+    {
+      "year": 2009,
+      "make": "honda",
+      "model": "s2000",
+      "isStaggered": true,
+      "tires": {
+        "front": "215/45R17",
+        "rear": "245/40R17"
+      },
+      "wheels": {
+        "front": { "diameter": 17, "width": 7 },
+        "rear": { "diameter": 17, "width": 8.5 }
+      },
+      "boltPattern": "5x114.3",
+      "notes": "Base Model. CR trim has 255/40R17 rear. Final year of production."
+    },
+    {
+      "year": 2000,
+      "make": "honda",
+      "model": "saber",
+      "notUS": true,
+      "reason": "JDM only - Japanese equivalent of Acura TL"
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "saber",
+      "notUS": true,
+      "reason": "JDM only - Japanese equivalent of Acura TL"
+    },
+    {
+      "year": 2002,
+      "make": "honda",
+      "model": "saber",
+      "notUS": true,
+      "reason": "JDM only - Japanese equivalent of Acura TL"
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "saber",
+      "notUS": true,
+      "reason": "JDM only - Japanese equivalent of Acura TL"
+    },
+    {
+      "year": 2000,
+      "make": "honda",
+      "model": "z",
+      "notUS": true,
+      "reason": "JDM kei car - never sold in US market"
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "z",
+      "notUS": true,
+      "reason": "JDM kei car - never sold in US market"
+    },
+    {
+      "year": 2002,
+      "make": "honda",
+      "model": "z",
+      "notUS": true,
+      "reason": "JDM kei car - never sold in US market"
+    },
+    {
+      "year": 2000,
+      "make": "hyundai",
+      "model": "amica",
+      "notUS": true,
+      "reason": "Europe/Korea only - sold as Hyundai Atos in other markets"
+    },
+    {
+      "year": 2001,
+      "make": "hyundai",
+      "model": "amica",
+      "notUS": true,
+      "reason": "Europe/Korea only - sold as Hyundai Atos in other markets"
+    },
+    {
+      "year": 2002,
+      "make": "hyundai",
+      "model": "amica",
+      "notUS": true,
+      "reason": "Europe/Korea only - sold as Hyundai Atos in other markets"
+    },
+    {
+      "year": 2003,
+      "make": "hyundai",
+      "model": "amica",
+      "notUS": true,
+      "reason": "Europe/Korea only - sold as Hyundai Atos in other markets"
+    },
+    {
+      "year": 2004,
+      "make": "hyundai",
+      "model": "amica",
+      "notUS": true,
+      "reason": "Europe/Korea only - sold as Hyundai Atos in other markets"
+    },
+    {
+      "year": 2005,
+      "make": "hyundai",
+      "model": "amica",
+      "notUS": true,
+      "reason": "Europe/Korea only - sold as Hyundai Atos in other markets"
+    },
+    {
+      "year": 2006,
+      "make": "hyundai",
+      "model": "amica",
+      "notUS": true,
+      "reason": "Europe/Korea only - sold as Hyundai Atos in other markets"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "amica",
+      "notUS": true,
+      "reason": "Europe/Korea only - sold as Hyundai Atos in other markets"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "amica",
+      "notUS": true,
+      "reason": "Europe/Korea only - sold as Hyundai Atos in other markets"
+    },
+    {
+      "year": 2014,
+      "make": "hyundai",
+      "model": "aslan",
+      "notUS": true,
+      "reason": "Korea domestic market only"
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "aslan",
+      "notUS": true,
+      "reason": "Korea domestic market only"
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "aslan",
+      "notUS": true,
+      "reason": "Korea domestic market only"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "aslan",
+      "notUS": true,
+      "reason": "Korea domestic market only"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "aslan",
+      "notUS": true,
+      "reason": "Korea domestic market only"
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "custo",
+      "notUS": true,
+      "reason": "China market only - minivan not sold in US"
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "custo",
+      "notUS": true,
+      "reason": "China market only - minivan not sold in US"
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "custo",
+      "notUS": true,
+      "reason": "China market only - minivan not sold in US"
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "custo",
+      "notUS": true,
+      "reason": "China market only - minivan not sold in US"
+    },
+    {
+      "year": 2025,
+      "make": "hyundai",
+      "model": "custo",
+      "notUS": true,
+      "reason": "China market only - minivan not sold in US"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "elantra-ev",
+      "notUS": true,
+      "reason": "Korea market only - electric variant not imported to US"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "elantra-ev",
+      "notUS": true,
+      "reason": "Korea market only - electric variant not imported to US"
+    },
+    {
+      "year": 2013,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "isStaggered": false,
+      "tires": {
+        "front": "205/55R16",
+        "rear": "205/55R16"
+      },
+      "wheels": {
+        "diameter": 16,
+        "width": 6.5
+      },
+      "boltPattern": "5x114.3",
+      "notes": "US market hatchback variant. Shown as GT trim under Elantra on tiresize.com."
+    },
+    {
+      "year": 2014,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "isStaggered": false,
+      "tires": {
+        "front": "205/55R16",
+        "rear": "205/55R16"
+      },
+      "wheels": {
+        "diameter": 16,
+        "width": 6.5
+      },
+      "boltPattern": "5x114.3",
+      "notes": "US market hatchback variant."
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "isStaggered": false,
+      "tires": {
+        "front": "205/55R16",
+        "rear": "205/55R16"
+      },
+      "wheels": {
+        "diameter": 16,
+        "width": 6.5
+      },
+      "boltPattern": "5x114.3",
+      "notes": "US market hatchback variant."
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "isStaggered": false,
+      "tires": {
+        "front": "205/55R16",
+        "rear": "205/55R16"
+      },
+      "wheels": {
+        "diameter": 16,
+        "width": 6.5
+      },
+      "boltPattern": "5x114.3",
+      "notes": "US market hatchback variant."
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "isStaggered": false,
+      "tires": {
+        "front": "205/55R16",
+        "rear": "205/55R16"
+      },
+      "wheels": {
+        "diameter": 16,
+        "width": 6.5
+      },
+      "boltPattern": "5x114.3",
+      "notes": "US market hatchback variant."
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "isStaggered": false,
+      "tires": {
+        "front": "225/40R18",
+        "rear": "225/40R18"
+      },
+      "wheels": {
+        "diameter": 18,
+        "width": 7.5
+      },
+      "boltPattern": "5x114.3",
+      "notes": "US market hatchback variant. New generation with larger wheels."
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "isStaggered": false,
+      "tires": {
+        "front": "225/40R18",
+        "rear": "225/40R18"
+      },
+      "wheels": {
+        "diameter": 18,
+        "width": 7.5
+      },
+      "boltPattern": "5x114.3",
+      "notes": "US market hatchback variant."
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "isStaggered": false,
+      "tires": {
+        "front": "225/40R18",
+        "rear": "225/40R18"
+      },
+      "wheels": {
+        "diameter": 18,
+        "width": 7.5
+      },
+      "boltPattern": "5x114.3",
+      "notes": "US market hatchback variant. Final year before discontinuation."
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "encino",
+      "notUS": true,
+      "reason": "China market name for Kona - use 'kona' for US market"
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "encino",
+      "notUS": true,
+      "reason": "China market name for Kona - use 'kona' for US market"
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "encino",
+      "notUS": true,
+      "reason": "China market name for Kona - use 'kona' for US market"
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "encino",
+      "notUS": true,
+      "reason": "China market name for Kona - use 'kona' for US market"
+    },
+    {
+      "year": 2006,
+      "make": "hyundai",
+      "model": "entourage",
+      "isStaggered": false,
+      "tires": {
+        "front": "225/70R16",
+        "rear": "225/70R16"
+      },
+      "wheels": {
+        "diameter": 16,
+        "width": 6.5
+      },
+      "boltPattern": "5x114.3",
+      "notes": "US market minivan. GLS trim. Limited/SE use 235/60R17."
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "entourage",
+      "isStaggered": false,
+      "trims": [
+        {
+          "trim": "GLS",
+          "tires": { "front": "225/70R16", "rear": "225/70R16" },
+          "wheels": { "diameter": 16, "width": 6.5 }
+        },
+        {
+          "trim": "Limited",
+          "tires": { "front": "235/60R17", "rear": "235/60R17" },
+          "wheels": { "diameter": 17, "width": 7 }
+        },
+        {
+          "trim": "SE",
+          "tires": { "front": "235/60R17", "rear": "235/60R17" },
+          "wheels": { "diameter": 17, "width": 7 }
+        }
+      ],
+      "boltPattern": "5x114.3",
+      "notes": "US market minivan. Multiple trim levels with different wheel sizes."
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "entourage",
+      "isStaggered": false,
+      "trims": [
+        {
+          "trim": "GLS",
+          "tires": { "front": "225/70R16", "rear": "225/70R16" },
+          "wheels": { "diameter": 16, "width": 6.5 }
+        },
+        {
+          "trim": "Limited",
+          "tires": { "front": "235/60R17", "rear": "235/60R17" },
+          "wheels": { "diameter": 17, "width": 7 }
+        },
+        {
+          "trim": "SE",
+          "tires": { "front": "235/60R17", "rear": "235/60R17" },
+          "wheels": { "diameter": 17, "width": 7 }
+        }
+      ],
+      "boltPattern": "5x114.3",
+      "notes": "US market minivan. Final year of production."
+    }
+  ]
+}

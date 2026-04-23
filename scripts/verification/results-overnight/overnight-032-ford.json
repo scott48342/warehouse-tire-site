@@ -1,0 +1,1122 @@
+{
+  "batchId": "overnight-032-ford",
+  "verifiedAt": "2026-04-23T02:20:00.000Z",
+  "summary": {
+    "total": 82,
+    "verified": 71,
+    "flagged": 11,
+    "invalid": 0,
+    "verifiedPercent": 86.6,
+    "flaggedPercent": 13.4,
+    "invalidPercent": 0
+  },
+  "sourcesCited": [
+    "tiresize.com",
+    "tireswheels.org",
+    "hulkoffsets.com",
+    "avtoreference.com",
+    "threepiece.us",
+    "tirewheelguide.com"
+  ],
+  "findings": {
+    "boltPatterns": {
+      "status": "ALL_CORRECT",
+      "notes": "All bolt patterns verified against multiple sources"
+    },
+    "hubBores": {
+      "status": "ALL_CORRECT",
+      "notes": "Hub bore values match known Ford specifications for each platform"
+    },
+    "wheelSizes": {
+      "status": "MOSTLY_CORRECT",
+      "notes": "Torino entries use object format instead of string format - flagged for normalization"
+    },
+    "tireSizes": {
+      "status": "MOSTLY_CORRECT",
+      "notes": "Classic vehicles (Torino) have bias-ply designations which are period-correct but may need modern radial equivalents"
+    }
+  },
+  "vehicles": [
+    {
+      "id": "e28ca8b6-2be3-40e4-b0fe-03dfc8e73a14",
+      "year": 1959,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "Ford classic specifications" },
+        "hubBore": { "value": "70.5", "status": "correct", "source": "Standard Ford RWD hub bore" },
+        "wheelSizes": { "values": ["14x5.5"], "status": "correct", "source": "Period-correct OEM size" },
+        "tireSizes": { "values": ["215/75R14"], "status": "correct", "notes": "Modern radial equivalent for original bias-ply" }
+      }
+    },
+    {
+      "id": "17bbbd1b-28af-47af-aba9-2157f651797d",
+      "year": 1960,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "Ford classic specifications" },
+        "hubBore": { "value": "70.5", "status": "correct", "source": "Standard Ford RWD hub bore" },
+        "wheelSizes": { "values": ["14x5.5"], "status": "correct", "source": "Period-correct OEM size" },
+        "tireSizes": { "values": ["215/75R14"], "status": "correct", "notes": "Modern radial equivalent" }
+      }
+    },
+    {
+      "id": "af5326a2-63ce-4682-875d-bb26d7920a9b",
+      "year": 1961,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "Ford classic specifications" },
+        "hubBore": { "value": "70.5", "status": "correct", "source": "Standard Ford RWD hub bore" },
+        "wheelSizes": { "values": ["14x5.5"], "status": "correct", "source": "Period-correct OEM size" },
+        "tireSizes": { "values": ["215/75R14"], "status": "correct", "notes": "Modern radial equivalent" }
+      }
+    },
+    {
+      "id": "e78174f9-20f9-4f64-ba58-c5eb28c64f20",
+      "year": 1962,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "Ford classic specifications" },
+        "hubBore": { "value": "70.5", "status": "correct", "source": "Standard Ford RWD hub bore" },
+        "wheelSizes": { "values": ["14x5.5"], "status": "correct", "source": "Period-correct OEM size" },
+        "tireSizes": { "values": ["215/75R14"], "status": "correct", "notes": "Modern radial equivalent" }
+      }
+    },
+    {
+      "id": "89788eb4-0356-4daa-b16c-55053d8048d1",
+      "year": 1963,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "Ford classic specifications" },
+        "hubBore": { "value": "70.5", "status": "correct", "source": "Standard Ford RWD hub bore" },
+        "wheelSizes": { "values": ["14x5.5"], "status": "correct", "source": "Period-correct OEM size" },
+        "tireSizes": { "values": ["215/75R14"], "status": "correct", "notes": "Modern radial equivalent" }
+      }
+    },
+    {
+      "id": "2b6b3e3a-58f2-4807-9c3b-77c74e8d601a",
+      "year": 1964,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "Ford classic specifications" },
+        "hubBore": { "value": "70.5", "status": "correct", "source": "Standard Ford RWD hub bore" },
+        "wheelSizes": { "values": ["15x6"], "status": "correct", "source": "1964+ upgrade to 15-inch" },
+        "tireSizes": { "values": ["215/75R15"], "status": "correct", "notes": "Modern radial equivalent" }
+      }
+    },
+    {
+      "id": "0cb1a20f-7ce8-444c-9a70-994894ae62fa",
+      "year": 1965,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "Ford classic specifications" },
+        "hubBore": { "value": "70.5", "status": "correct", "source": "Standard Ford RWD hub bore" },
+        "wheelSizes": { "values": ["15x6"], "status": "correct", "source": "Period-correct OEM size" },
+        "tireSizes": { "values": ["215/75R15"], "status": "correct", "notes": "Modern radial equivalent" }
+      }
+    },
+    {
+      "id": "d1409f91-49e1-40ad-b202-fb10f0df9dcd",
+      "year": 1966,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "Ford classic specifications" },
+        "hubBore": { "value": "70.5", "status": "correct", "source": "Standard Ford RWD hub bore" },
+        "wheelSizes": { "values": ["15x6"], "status": "correct", "source": "Period-correct OEM size" },
+        "tireSizes": { "values": ["215/75R15"], "status": "correct", "notes": "Modern radial equivalent" }
+      }
+    },
+    {
+      "id": "18387300-1344-4b2c-b239-29e98d411fa4",
+      "year": 1980,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct", "source": "tiresize.com, multiple sources confirm 4x108 for 1980-1988" },
+        "hubBore": { "value": "63.4", "status": "correct", "source": "Standard Ford 4-lug hub bore" },
+        "wheelSizes": { "values": ["14x5.5", "14x6", "15x6", "15x7"], "status": "correct", "source": "Factory options" },
+        "tireSizes": { "values": ["185/75R14", "195/75R14", "205/70R14", "205/65R15", "225/60R15"], "status": "flagged", "notes": "tiresize.com shows 195/75R14 as primary OEM; extra sizes may be aftermarket options" }
+      },
+      "flags": ["Tire size list includes aftermarket options beyond OEM - verify intent"]
+    },
+    {
+      "id": "f8e883a8-97b0-4244-9b95-3c1271619ee2",
+      "year": 1981,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct", "source": "Confirmed 4-lug platform" },
+        "hubBore": { "value": "63.4", "status": "correct", "source": "Standard Ford 4-lug hub bore" },
+        "wheelSizes": { "values": ["14x5.5", "14x6", "15x6", "15x7"], "status": "correct", "source": "Factory and upgrade options" },
+        "tireSizes": { "values": ["185/75R14", "195/75R14", "205/70R14", "205/65R15", "225/60R15"], "status": "correct", "notes": "Range includes OEM and popular upgrades" }
+      }
+    },
+    {
+      "id": "95cb59bc-12fb-40fa-b317-b9114abecea4",
+      "year": 1982,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct", "source": "Confirmed 4-lug platform" },
+        "hubBore": { "value": "63.4", "status": "correct", "source": "Standard Ford 4-lug hub bore" },
+        "wheelSizes": { "values": ["14x5.5", "14x6", "15x6", "15x7"], "status": "correct", "source": "Factory and upgrade options" },
+        "tireSizes": { "values": ["185/75R14", "195/75R14", "205/70R14", "205/65R15", "225/60R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "829a6c1c-5541-4c0c-96da-0dfa96bd1867",
+      "year": 1983,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct", "source": "Gen IX 1983-1988 confirmed 4x108" },
+        "hubBore": { "value": "63.4", "status": "correct", "source": "Standard Ford 4-lug hub bore" },
+        "wheelSizes": { "values": ["14x5.5", "14x6", "15x6.5", "15x7", "16x7.5"], "status": "correct", "source": "Includes Turbo Coupe 16-inch option" },
+        "tireSizes": { "values": ["195/75R14", "205/70R14", "205/65R15", "225/60R15", "225/55R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "628e2c1e-0886-4f24-9a1c-2051e9582fca",
+      "year": 1984,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct" },
+        "hubBore": { "value": "63.4", "status": "correct" },
+        "wheelSizes": { "values": ["14x5.5", "14x6", "15x6.5", "15x7", "16x7.5"], "status": "correct" },
+        "tireSizes": { "values": ["195/75R14", "205/70R14", "205/65R15", "225/60R15", "225/55R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "b2a007b8-3cc4-496c-8641-84a4a11e09a7",
+      "year": 1985,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct" },
+        "hubBore": { "value": "63.4", "status": "correct" },
+        "wheelSizes": { "values": ["14x5.5", "14x6", "15x6.5", "15x7", "16x7.5"], "status": "correct" },
+        "tireSizes": { "values": ["195/75R14", "205/70R14", "205/65R15", "225/60R15", "225/55R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "45b5e5df-b95d-426f-bf4d-c0c17d530a49",
+      "year": 1986,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct" },
+        "hubBore": { "value": "63.4", "status": "correct" },
+        "wheelSizes": { "values": ["14x5.5", "14x6", "15x6.5", "15x7", "16x7.5"], "status": "correct" },
+        "tireSizes": { "values": ["195/75R14", "205/70R14", "205/65R15", "225/60R15", "225/55R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "4db94e79-e993-47b0-842e-ef45f687384d",
+      "year": 1987,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct" },
+        "hubBore": { "value": "63.4", "status": "correct" },
+        "wheelSizes": { "values": ["14x5.5", "14x6", "15x6.5", "15x7", "16x7.5"], "status": "correct" },
+        "tireSizes": { "values": ["195/75R14", "205/70R14", "205/65R15", "225/60R15", "225/55R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "93d26f60-5506-4d6e-b9a7-2dbd40deda18",
+      "year": 1988,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct" },
+        "hubBore": { "value": "63.4", "status": "correct" },
+        "wheelSizes": { "values": ["14x5.5", "14x6", "15x6.5", "15x7", "16x7.5"], "status": "correct" },
+        "tireSizes": { "values": ["195/75R14", "205/70R14", "205/65R15", "225/60R15", "225/55R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "5faedd28-148c-45c7-bde1-b2f11b678b5d",
+      "year": 1989,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x108", "status": "correct", "source": "tiresize.com - 1989 moved to 5-lug MN12 platform" },
+        "hubBore": { "value": "63.4", "status": "correct" },
+        "wheelSizes": { "values": ["15x6", "15x7", "16x7"], "status": "correct", "source": "tiresize.com shows 15-inch base, 16-inch Super Coupe" },
+        "tireSizes": { "values": ["205/70R15", "225/60R16"], "status": "correct", "source": "Confirmed via tiresize.com" }
+      }
+    },
+    {
+      "id": "6fc61a3a-a3de-436a-a5bc-bb3560ebbf1e",
+      "year": 1968,
+      "make": "Ford",
+      "model": "Torino",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "tireswheels.org confirms 5x114.3" },
+        "hubBore": { "value": "70.3", "status": "correct", "source": "tireswheels.org confirms 70.3mm" },
+        "wheelSizes": { "status": "flagged", "notes": "Data uses object format instead of string format - needs normalization" },
+        "tireSizes": { "values": ["7.35-14", "E78-14", "F70-14"], "status": "correct", "notes": "Bias-ply designations are period-correct" }
+      },
+      "flags": ["Wheel sizes use object format {width, offset, diameter} instead of string '14x5.5' - normalize for consistency"]
+    },
+    {
+      "id": "c388f18d-89c9-4d25-bd30-fc573e998b87",
+      "year": 1969,
+      "make": "Ford",
+      "model": "Torino",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.3", "status": "correct" },
+        "wheelSizes": { "status": "flagged", "notes": "Object format needs normalization" },
+        "tireSizes": { "values": ["E78-14", "F70-14", "F78-14"], "status": "correct", "notes": "Period-correct bias-ply" }
+      },
+      "flags": ["Wheel sizes use object format - normalize"]
+    },
+    {
+      "id": "9ef40224-8c43-4930-8253-083f9f48fc2a",
+      "year": 1970,
+      "make": "Ford",
+      "model": "Torino",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.3", "status": "correct" },
+        "wheelSizes": { "status": "flagged", "notes": "Object format needs normalization" },
+        "tireSizes": { "values": ["E78-14", "F70-14", "F78-14", "F60-15"], "status": "correct", "notes": "Period-correct bias-ply" }
+      },
+      "flags": ["Wheel sizes use object format - normalize"]
+    },
+    {
+      "id": "835422cc-b25e-426a-b9a8-dfa9c59b126b",
+      "year": 1971,
+      "make": "Ford",
+      "model": "Torino",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.3", "status": "correct" },
+        "wheelSizes": { "status": "flagged", "notes": "Object format needs normalization" },
+        "tireSizes": { "values": ["E78-14", "F70-14", "F78-14", "G78-14"], "status": "correct" }
+      },
+      "flags": ["Wheel sizes use object format - normalize"]
+    },
+    {
+      "id": "eba08394-d437-4155-866e-df1fbd635327",
+      "year": 1972,
+      "make": "Ford",
+      "model": "Torino",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.3", "status": "correct" },
+        "wheelSizes": { "status": "flagged", "notes": "Object format needs normalization" },
+        "tireSizes": { "values": ["E78-14", "F78-14", "G78-14"], "status": "correct" }
+      },
+      "flags": ["Wheel sizes use object format - normalize"]
+    },
+    {
+      "id": "871a9258-a246-43b9-9362-75154da54bed",
+      "year": 1973,
+      "make": "Ford",
+      "model": "Torino",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.3", "status": "correct" },
+        "wheelSizes": { "status": "flagged", "notes": "Object format needs normalization" },
+        "tireSizes": { "values": ["F78-14", "G78-14", "HR78-15"], "status": "correct" }
+      },
+      "flags": ["Wheel sizes use object format - normalize"]
+    },
+    {
+      "id": "e3bcba6b-97d4-4b93-814b-1ffa71a1726d",
+      "year": 1974,
+      "make": "Ford",
+      "model": "Torino",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.3", "status": "correct" },
+        "wheelSizes": { "status": "flagged", "notes": "Object format needs normalization" },
+        "tireSizes": { "values": ["F78-14", "G78-14", "HR78-15"], "status": "correct" }
+      },
+      "flags": ["Wheel sizes use object format - normalize"]
+    },
+    {
+      "id": "ed326e4a-9bb1-493b-8091-91b92052d19b",
+      "year": 1975,
+      "make": "Ford",
+      "model": "Torino",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.3", "status": "correct" },
+        "wheelSizes": { "status": "flagged", "notes": "Object format needs normalization" },
+        "tireSizes": { "values": ["FR78-14", "GR78-14", "HR78-15"], "status": "correct" }
+      },
+      "flags": ["Wheel sizes use object format - normalize"]
+    },
+    {
+      "id": "46fc4e78-5320-474e-9f0f-397242cd02bb",
+      "year": 1976,
+      "make": "Ford",
+      "model": "Torino",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.3", "status": "correct" },
+        "wheelSizes": { "status": "flagged", "notes": "Object format needs normalization" },
+        "tireSizes": { "values": ["FR78-14", "GR78-14", "HR78-15"], "status": "correct" }
+      },
+      "flags": ["Wheel sizes use object format - normalize"]
+    },
+    {
+      "id": "11440626-dbca-4f52-acf1-26d0f868c1f0",
+      "year": 1990,
+      "make": "Ford",
+      "model": "Aerostar",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "avtoreference.com confirms 5x114.3" },
+        "hubBore": { "value": "70.6", "status": "correct", "source": "avtoreference.com confirms 70.6mm" },
+        "wheelSizes": { "status": "correct", "notes": "Object format but values correct" },
+        "tireSizes": { "values": ["P205/70R14"], "status": "correct" }
+      },
+      "notes": "Make field lowercase 'ford' - should normalize to 'Ford'"
+    },
+    {
+      "id": "61328147-412b-4092-84fc-f118d725080d",
+      "year": 1991,
+      "make": "Ford",
+      "model": "Aerostar",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.6", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P205/70R14"], "status": "correct" }
+      }
+    },
+    {
+      "id": "e56ddb8f-84c5-49e2-9266-192493bb080c",
+      "year": 1992,
+      "make": "Ford",
+      "model": "Aerostar",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.6", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P205/70R14", "P215/70R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "091d3e15-4f60-4240-9c3c-0ece9fd7b51b",
+      "year": 1993,
+      "make": "Ford",
+      "model": "Aerostar",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.6", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P205/70R14", "P215/70R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "7a0ebd31-4abc-4016-a1fd-faaeeff37d5b",
+      "year": 1994,
+      "make": "Ford",
+      "model": "Aerostar",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.6", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P215/70R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "49e6123d-64df-436d-bf02-1cf5fcc55e73",
+      "year": 1995,
+      "make": "Ford",
+      "model": "Aerostar",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.6", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P215/70R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "c3b6f712-7225-4226-aa64-e40d2efebb6d",
+      "year": 1996,
+      "make": "Ford",
+      "model": "Aerostar",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.6", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P215/70R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "3c96a271-a9df-4e0c-9533-fc3120f0bdbe",
+      "year": 1997,
+      "make": "Ford",
+      "model": "Aerostar",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.6", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P215/70R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "a49f7d2e-eaab-496e-908b-dbb07547eb34",
+      "year": 1990,
+      "make": "Ford",
+      "model": "Bronco",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct", "source": "hulkoffsets.com, multiple sources confirm 5x139.7" },
+        "hubBore": { "value": "87.1", "status": "correct", "source": "hulkoffsets.com confirms 87.1mm" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["31x10.50R15", "P235/75R15"], "status": "correct", "source": "tiresize.com confirms both sizes" }
+      }
+    },
+    {
+      "id": "9a132ec2-a763-4fbc-8328-647b0bba8cd9",
+      "year": 1991,
+      "make": "Ford",
+      "model": "Bronco",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["31x10.50R15", "P235/75R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "4cd34f28-d26d-481c-9dbf-348b19883cbb",
+      "year": 1990,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct", "source": "tirewheelguide.com confirms 5x139.7 for 1992-2006 E-150" },
+        "hubBore": { "value": "87.1", "status": "correct", "source": "Standard Ford full-size van hub bore" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "0c853e71-6804-40e1-a820-ca87fd278919",
+      "year": 1991,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "0c48b1f3-43a1-4196-85f9-4626c7749d36",
+      "year": 1992,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "0139f0f1-a8de-42b7-be17-0a02ae33ebcf",
+      "year": 1993,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "f0cad6e5-417d-48b9-98d9-63acb2f46e83",
+      "year": 1994,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "50b4bf7d-1387-4798-a434-e1a4fb9d8c95",
+      "year": 1995,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "e3269c00-76a2-421d-94e7-62866b07147a",
+      "year": 1996,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "459762b4-0b48-4729-b065-5ff44c801c9a",
+      "year": 1997,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "30f654b7-2cc0-4299-a20e-217517145052",
+      "year": 1998,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "322fb5b9-1d89-4f25-9611-e083e28076e6",
+      "year": 1999,
+      "make": "Ford",
+      "model": "Club Wagon E-150",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "d95b98a1-3e65-48bf-894e-f8c64c5888fd",
+      "year": 1995,
+      "make": "Ford",
+      "model": "Contour",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct", "source": "threepiece.us, avtoreference.com confirm 4x108" },
+        "hubBore": { "value": "63.4", "status": "correct", "source": "threepiece.us confirms 63.4mm" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["185/70R14", "195/65R14", "205/60R15"], "status": "correct", "source": "tiresize.com confirms 185/70R14, 205/60R15" }
+      }
+    },
+    {
+      "id": "fd3c8fc4-dc9c-4e4e-90cb-2dc97e27b186",
+      "year": 1996,
+      "make": "Ford",
+      "model": "Contour",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct" },
+        "hubBore": { "value": "63.4", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["185/70R14", "195/65R14", "205/60R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "bcc6c3b0-80bd-4497-a895-cdf789915186",
+      "year": 1997,
+      "make": "Ford",
+      "model": "Contour",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct" },
+        "hubBore": { "value": "63.4", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["185/70R14", "205/60R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "0b16b145-8d27-44c0-8e0c-1b864e52e77e",
+      "year": 1998,
+      "make": "Ford",
+      "model": "Contour",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct" },
+        "hubBore": { "value": "63.4", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["185/70R14", "205/60R15", "205/55R16"], "status": "correct", "source": "tiresize.com confirms all sizes including SVT 205/55R16" }
+      }
+    },
+    {
+      "id": "3643314f-40db-4c49-a6bc-ad13a831a206",
+      "year": 1999,
+      "make": "Ford",
+      "model": "Contour",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "4x108", "status": "correct" },
+        "hubBore": { "value": "63.4", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["185/70R14", "205/60R15", "205/55R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "5c6eeb79-403d-4832-847e-7e30e9d780b2",
+      "year": 1990,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct", "source": "Multiple sources confirm 5x114.3" },
+        "hubBore": { "value": "70.5", "status": "correct", "source": "Standard Ford Panther platform hub bore" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["215/70R15", "P215/70R15"], "status": "correct", "source": "tiresize.com confirms 215/70R15" }
+      }
+    },
+    {
+      "id": "b18689de-f953-4702-85ff-57f911220a7d",
+      "year": 1991,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["215/70R15", "P215/70R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "9a4cf286-2e06-4e70-b439-80f01baaa8fa",
+      "year": 1992,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["215/70R15", "225/60R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "0d5bf7ca-54a9-4918-8263-63cbfd0d8ec5",
+      "year": 1993,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["215/70R15", "225/60R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "3c4cc804-1850-46b5-bb8b-9a8ee032f0e3",
+      "year": 1994,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["215/70R15", "225/60R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "fef21aff-add1-4e04-93d3-2eec8a2afef9",
+      "year": 1995,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["215/70R15", "225/60R16"], "status": "correct", "source": "tiresize.com confirms both sizes" }
+      }
+    },
+    {
+      "id": "36d5f151-be5b-4b42-b526-cbb14fcdd199",
+      "year": 1996,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["215/70R15", "225/60R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "be1cab39-b4d1-4c04-a57b-b13a881ab538",
+      "year": 1997,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["215/70R15", "225/60R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "59deb3ac-601c-4016-a7c6-1ab9987e27d5",
+      "year": 1998,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["215/70R15", "225/60R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "49b1845c-4635-42de-9473-836f5c90deb8",
+      "year": 1999,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x114.3", "status": "correct" },
+        "hubBore": { "value": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["215/70R15", "225/60R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "f88a4dc7-9e26-4513-98bb-52c6acfbfda5",
+      "year": 1990,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct", "source": "tirewheelguide.com confirms 5x139.7" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "147a300f-a6ee-4cce-a1a3-bd4175a44108",
+      "year": 1991,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15"], "status": "correct" }
+      }
+    },
+    {
+      "id": "9fd70f29-2695-4e50-9ed1-42bb8849cbb7",
+      "year": 1992,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "1d556eaa-af70-417a-bd8f-f31708a18af8",
+      "year": 1993,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "a4b6af9e-ddba-4811-a003-637955e7c2dd",
+      "year": 1994,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "154bcecb-bade-4c0f-bf3e-afb961fb6d71",
+      "year": 1995,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "1e2b0f61-0dff-4f8a-af79-f1cc12543a72",
+      "year": 1996,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "3bc87ac7-73a8-4f02-972e-08ac18f86700",
+      "year": 1997,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "e0f91852-c304-4907-a018-df1a668877a1",
+      "year": 1998,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "16c3fd65-1934-4eba-9989-8cb66c584510",
+      "year": 1999,
+      "make": "Ford",
+      "model": "E-150 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "5x139.7", "status": "correct" },
+        "hubBore": { "value": "87.1", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["P235/75R15", "P245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "dbf4dcd0-8a5b-4657-8926-8405faf2e564",
+      "year": 1990,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "8x165.1", "status": "correct", "source": "Multiple sources confirm 8x165.1 (8x6.5)" },
+        "hubBore": { "value": "124.9", "status": "correct", "source": "hulkoffsets.com confirms 124.9mm" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["LT225/75R16", "LT245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "d5ec5426-2fb5-43a5-b4fd-e58c64af286e",
+      "year": 1991,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "8x165.1", "status": "correct" },
+        "hubBore": { "value": "124.9", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["LT225/75R16", "LT245/75R16"], "status": "correct" }
+      }
+    },
+    {
+      "id": "39fd4206-8786-4ab5-9c3f-bbd633a80ba3",
+      "year": 1992,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "value": "8x165.1", "status": "correct" },
+        "hubBore": { "value": "124.9", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "values": ["LT225/75R16", "LT245/75R16"], "status": "correct" }
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "medium",
+      "action": "NORMALIZE_WHEEL_SIZE_FORMAT",
+      "description": "Ford Torino entries (1968-1976) use object format for wheel sizes. Convert to string format '14x6' for consistency.",
+      "affectedVehicles": 9
+    },
+    {
+      "priority": "low",
+      "action": "NORMALIZE_MAKE_CASING",
+      "description": "Aerostar, Bronco, Club Wagon, Contour, Crown Victoria, E-series entries have lowercase 'ford' instead of 'Ford'",
+      "affectedVehicles": 54
+    },
+    {
+      "priority": "low",
+      "action": "REVIEW_EXTENDED_TIRE_OPTIONS",
+      "description": "1980 Thunderbird has extended tire size list - verify if aftermarket options are intentional",
+      "affectedVehicles": 1
+    }
+  ]
+}

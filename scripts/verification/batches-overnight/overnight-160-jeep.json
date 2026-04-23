@@ -1,0 +1,1899 @@
+[
+  {
+    "id": "7dd22017-fa23-4516-8240-ca1b66d99237",
+    "year": 2025,
+    "make": "jeep",
+    "model": "gladiator",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44.45,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "245/75R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44.45,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "255/70R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 37.17,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "LT285/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44.45,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "LT255/75R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 44.45,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R17",
+      "255/70R17",
+      "LT255/75R17",
+      "255/70R18",
+      "LT285/65R18",
+      "275/55R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ba1aa762-727b-4407-9bfe-b13a46dd8052",
+    "year": 2026,
+    "make": "jeep",
+    "model": "gladiator",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44.45,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "245/75R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44.45,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "255/70R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 37.17,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "LT285/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44.45,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "LT255/75R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 44.45,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R17",
+      "255/70R17",
+      "LT255/75R17",
+      "255/70R18",
+      "LT285/65R18",
+      "275/55R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c537855e-1e3c-45c0-b3e7-560eb92f666d",
+    "year": 2000,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "1de03892-7a33-4d7b-bd3f-9c3923669f33",
+    "year": 2000,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo, Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x7",
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/75R16",
+      "235/65R17"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "120a2696-cb3e-4c3c-a545-68205f64e3bf",
+    "year": 2000,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "999b2c53-aa7d-42f4-9ec5-76a87bb101b0",
+    "year": 2000,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "af4e264a-95d4-43f8-a2e7-2b732503a7aa",
+    "year": 2001,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo, Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x7",
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/75R16",
+      "235/65R17"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "b6b8965d-3d53-439a-b525-407b8d609727",
+    "year": 2001,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "80ed7da3-e45c-4891-ae3d-a89351df7bcd",
+    "year": 2001,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "19662b03-26c0-46f4-ab6d-acb94e4c318b",
+    "year": 2001,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2e01259e-9f25-42e6-a788-0db4bea8e4ac",
+    "year": 2002,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ab232cf7-fb8c-444c-819b-3e0507cc4bea",
+    "year": 2002,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3ce0dfc5-55f8-49f5-abcd-cf3d726216ec",
+    "year": 2002,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bba4b4e6-1de5-439e-8676-e46b58878990",
+    "year": 2002,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50.8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50.8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.8,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.8,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R16",
+      "225/75R16",
+      "235/65R17",
+      "245/65R17",
+      "245/60R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "1501fe16-a5fc-4133-86df-ee7a66ec4ae9",
+    "year": 2002,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2664889c-2bcd-4b7e-b8cd-fdfd6f6f70cc",
+    "year": 2003,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e615de5f-31e0-4928-9a95-35a1fc7d14d7",
+    "year": 2003,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d6ba69f7-4ae5-48ee-b1b1-0964e2419d58",
+    "year": 2003,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo, Limited, Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x7",
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/75R16",
+      "245/65R17"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "a1da881d-2b3a-4028-acff-242ebcec6592",
+    "year": 2003,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7634a19a-c5f1-4821-8101-a2ab016cc63b",
+    "year": 2003,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8f51c948-77ae-4df0-9976-988bfb199613",
+    "year": 2004,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "30f158fe-2e7c-457f-a09f-10f6ded853e5",
+    "year": 2004,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c1de44db-c4dc-45f8-8777-834b1c55093b",
+    "year": 2004,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3ee62081-473f-446a-bc7e-9d217a742c82",
+    "year": 2004,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4ca53264-b89d-44a8-8e55-dae7b24cd8fc",
+    "year": 2004,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo, Limited, Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x7",
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/75R16",
+      "245/65R17"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "f223fa27-6e79-4b56-a8cc-ea5782654722",
+    "year": 2005,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/65R17",
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "dd9c32d3-98a1-45c5-b702-df31809b1f9b",
+    "year": 2005,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland, SRT8",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x8",
+      "20x9"
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "efc280ea-af22-48c6-add8-f09647797b31",
+    "year": 2005,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "52effbf6-1cf6-4452-bec7-45a533e6da56",
+    "year": 2005,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3b5488e2-c484-449f-8685-7c519acedc83",
+    "year": 2005,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo, Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "1cc0813d-eda2-4a42-80b6-54103d5e2112",
+    "year": 2005,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6aa7cbcb-446a-42b6-99bb-c253cf9c3475",
+    "year": 2006,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland, SRT8",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x8",
+      "20x9"
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "2cc2d762-4a94-4cd3-b519-7b4c6a88db73",
+    "year": 2006,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo, Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "b1b49f5b-8297-4b10-86c4-4a2d5d73e875",
+    "year": 2006,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "98ac3430-d43b-48a2-8559-4b7f2f76802e",
+    "year": 2006,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/65R17",
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "427cd9f2-ef51-4a7f-a430-4c068df8b4a9",
+    "year": 2006,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "741912c8-5006-46ce-989d-d13f49513ebc",
+    "year": 2006,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "940d7aac-130b-4dd8-a1ca-7ee73386ffb2",
+    "year": 2006,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fc3a3baa-ede0-42a9-945e-15039fe94740",
+    "year": 2007,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/65R17",
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "90e2bc9e-abd1-41e0-a55d-4dfb12b21a7a",
+    "year": 2007,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland, SRT8",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x8",
+      "20x9"
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "c4407651-0f23-4425-ba48-fa25184fcc22",
+    "year": 2007,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "616ddc95-82ec-4f33-9352-f83e0599f161",
+    "year": 2007,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo, Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "ddb98686-78ad-483d-94b6-1542d5c81902",
+    "year": 2007,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bdd03284-30e2-4fc9-9ae5-68f16bb53b96",
+    "year": 2007,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cadabe9d-6055-453c-83d8-60cda23b2494",
+    "year": 2007,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "85fc4cee-2567-45fd-889d-871b3709c72d",
+    "year": 2008,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo, Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "f4ad0ca4-528e-453a-8cec-d6f6144bd3a4",
+    "year": 2008,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5a6a4110-d9de-4b01-9bc8-b4c69cb3c18b",
+    "year": 2008,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4cbc4833-4345-4f71-8870-8edf6d7982a8",
+    "year": 2008,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland, SRT8",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x8",
+      "20x9"
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "dbca4b40-3fec-4f45-9281-1732edbe0d08",
+    "year": 2008,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e490cdb7-218a-43b8-b312-941f8fff3a8b",
+    "year": 2008,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fc791657-dd24-4d21-a03f-e9abc31d920c",
+    "year": 2008,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/65R17",
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "19a14585-b612-426d-86eb-40e309d319ac",
+    "year": 2009,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/65R17",
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "1f21426a-d369-41b8-adaa-9d19f010f7f5",
+    "year": 2009,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c643a38d-967b-49d2-a32c-c6acefd5d8a7",
+    "year": 2009,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo, Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "77949506-9807-4569-838c-fe8d4aeeed6b",
+    "year": 2009,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ff262fc0-4908-4574-bd88-59902bed772f",
+    "year": 2009,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland, SRT8",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x8",
+      "20x9"
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "5ecca53d-39fc-476a-b91f-44c64a67dd7c",
+    "year": 2009,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "085605f4-6e98-4daf-9617-1ba8b379a278",
+    "year": 2009,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "be798856-f2ef-4bb3-94ad-82416aa69283",
+    "year": 2010,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "81eec337-47a7-4a61-9f07-4435166b6473",
+    "year": 2010,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "3.0 CRD",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/65R17",
+      "245/60R18",
+      "245/55R19",
+      "245/50R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "16483d14-d19b-44d2-9f51-b76ca6c3b2be",
+    "year": 2010,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "af043f64-de88-4d99-b0c9-bdac569fdbb1",
+    "year": 2010,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b66a0739-6801-463a-bdbf-ca026ba40c67",
+    "year": 2010,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "245/65R17",
+      "255/55R18",
+      "265/50R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "34a02368-3fb0-46c4-80c5-72250c2537bf",
+    "year": 2010,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "436d4edd-e83b-4803-b773-f651ed91b54d",
+    "year": 2011,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "245/70R17",
+      "265/50R20",
+      "265/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "40d5ab44-c8b7-4430-80e4-00fc1b0803ce",
+    "year": 2011,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Summit",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "78581c22-cd46-4c84-b9a6-b62022943b4b",
+    "year": 2011,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a85a25d0-9226-4e57-a511-8a698b95fc99",
+    "year": 2011,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Altitude",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "22ab397c-2bd0-4e92-8ae5-226cbf15a3ed",
+    "year": 2011,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Overland",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "02c5e6d8-3a71-4272-ace0-9ee11234e5e8",
+    "year": 2011,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1b367903-66f7-4618-916e-a6378ae24c73",
+    "year": 2011,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "af00e545-2873-4a1f-bbd2-ce7483f24d92",
+    "year": 2012,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Altitude",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "699e00b3-74a5-44d5-8cc8-1979b3e40164",
+    "year": 2012,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Laredo",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "009f4b2b-c10c-436e-84a4-ffa5195e51aa",
+    "year": 2012,
+    "make": "jeep",
+    "model": "grand-cherokee",
+    "trim": "Limited",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "265/50R20"
+    ],
+    "source": "generation_inherit"
+  }
+]

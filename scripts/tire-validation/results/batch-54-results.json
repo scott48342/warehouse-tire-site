@@ -1,0 +1,1120 @@
+{
+  "batchId": "54",
+  "processedAt": "2026-04-21T22:01:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16"],
+      "validatedTireSizes": ["185/60R15", "195/60R15", "195/50R16", "205/40R17"],
+      "trims": [
+        {"trim": "Sedan S", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE EcoBoost", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE Appearance", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "Sedan Titanium", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "Hatchback SE", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback SE Appearance", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "Hatchback Titanium", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "ST", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "status": "VALID",
+      "notes": "Current sizes match OEM specs. ST trim uses 205/40R17."
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16"],
+      "validatedTireSizes": ["185/60R15", "195/60R15", "195/50R16", "205/40R17"],
+      "trims": [
+        {"trim": "Sedan S", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE EcoBoost Fuel Economy", "tireSize": "195/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan Titanium", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "Hatchback SE", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback SE EcoBoost Fuel Economy", "tireSize": "195/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback Titanium", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "ST", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": ["205/40R17"],
+      "trims": [
+        {"trim": "ST", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "status": "VALID",
+      "notes": "ST trim only record - 205/40R17 is correct."
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": ["205/40R17"],
+      "trims": [
+        {"trim": "ST", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "status": "VALID",
+      "notes": "ST trim only record - 205/40R17 is correct."
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16"],
+      "validatedTireSizes": ["185/65R15", "195/60R15", "195/50R16", "205/40R17"],
+      "trims": [
+        {"trim": "Sedan S", "tireSize": "185/65R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE", "tireSize": "185/65R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE Fuel Economy", "tireSize": "195/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan Titanium", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "Hatchback SE", "tireSize": "185/65R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback SE Fuel Economy", "tireSize": "195/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback Titanium", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "ST", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current shows 185/60R15 but OEM is 185/65R15 for 2014 model year."
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16"],
+      "validatedTireSizes": ["185/60R15", "195/60R15", "195/50R16"],
+      "trims": [
+        {"trim": "Hatchback S", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback SE", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback SE Fuel Economy", "tireSize": "195/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback Titanium", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "Sedan S", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE Fuel Economy", "tireSize": "195/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan Titanium", "tireSize": "195/50R16", "wheelSize": "16x6"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["195/50R16", "205/40R17"],
+      "validatedTireSizes": ["195/50R16", "205/40R17"],
+      "trims": [
+        {"trim": "Titanium", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "ST (introduced late 2013)", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "status": "VALID",
+      "notes": "Fiesta ST introduced in late 2013 with 205/40R17."
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16"],
+      "validatedTireSizes": ["185/60R15", "195/60R15", "195/50R16"],
+      "trims": [
+        {"trim": "Hatchback S", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback SE", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback SE Fuel Economy", "tireSize": "195/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback SES", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "Sedan S", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE Fuel Economy", "tireSize": "195/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SEL", "tireSize": "195/50R16", "wheelSize": "16x6"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["195/50R16", "205/40R17"],
+      "validatedTireSizes": ["195/50R16"],
+      "trims": [
+        {"trim": "SES/SEL", "tireSize": "195/50R16", "wheelSize": "16x6"}
+      ],
+      "status": "MISMATCH",
+      "notes": "205/40R17 not OEM for 2012 US Fiesta - ST not available until 2014. 205/40R17 may be aftermarket or European spec."
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16"],
+      "validatedTireSizes": ["185/60R15", "195/60R15", "195/50R16"],
+      "trims": [
+        {"trim": "Hatchback SE", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback SE Fuel Economy", "tireSize": "195/60R15", "wheelSize": "15x6"},
+        {"trim": "Hatchback SES", "tireSize": "195/50R16", "wheelSize": "16x6"},
+        {"trim": "Sedan S", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE", "tireSize": "185/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SE Fuel Economy", "tireSize": "195/60R15", "wheelSize": "15x6"},
+        {"trim": "Sedan SEL", "tireSize": "195/50R16", "wheelSize": "16x6"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["195/50R16", "205/40R17"],
+      "validatedTireSizes": ["195/50R16"],
+      "trims": [
+        {"trim": "SES/SEL", "tireSize": "195/50R16", "wheelSize": "16x6"}
+      ],
+      "status": "MISMATCH",
+      "notes": "205/40R17 not OEM for 2011 US Fiesta - ST not available until 2014. May be European spec or aftermarket."
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["175/65R14", "185/55R15", "195/45R16", "205/45R17"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Titanium (Europe)", "tireSize": "195/45R16", "wheelSize": "16x6.5"},
+        {"trim": "Sport/ST (Europe)", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "2010 Fiesta was European model only (not sold in US until 2011). Sizes are European spec - 185/60R15 not standard OEM."
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["175/65R14", "185/55R15", "195/45R16", "205/45R17"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Titanium (Europe)", "tireSize": "195/45R16", "wheelSize": "16x6.5"},
+        {"trim": "Sport (Europe)", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "European market only. 185/60R15 not standard - likely 185/55R15."
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["175/65R14", "185/55R15", "195/45R16", "205/45R17"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Titanium (Europe)", "tireSize": "195/45R16", "wheelSize": "16x6.5"},
+        {"trim": "Sport (Europe)", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "European market only (Mk6 Fiesta). 185/60R15 not standard - likely 185/55R15."
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["175/65R14", "185/55R15", "195/45R16", "205/40R17"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Ghia (Europe)", "tireSize": "195/45R16", "wheelSize": "16x6.5"},
+        {"trim": "ST (Europe)", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "European market (Mk5). 205/45R17 should be 205/40R17 for ST."
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["175/65R14", "185/55R15", "195/45R16", "205/40R17"],
+      "trims": [
+        {"trim": "LX/Finesse (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Ghia (Europe)", "tireSize": "195/45R16", "wheelSize": "16x6.5"},
+        {"trim": "ST (Europe)", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "European market. Sizes need verification."
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["175/65R14", "185/55R15", "195/45R16", "205/40R17"],
+      "trims": [
+        {"trim": "LX/Finesse (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Ghia (Europe)", "tireSize": "195/45R16", "wheelSize": "16x6.5"},
+        {"trim": "ST (Europe)", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "European market."
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["175/65R14", "185/55R15", "195/45R16", "205/40R17"],
+      "trims": [
+        {"trim": "LX/Finesse (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Ghia (Europe)", "tireSize": "195/45R16", "wheelSize": "16x6.5"},
+        {"trim": "ST150 (Europe)", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "European market Mk5 Fiesta."
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["175/65R14", "185/55R15", "195/45R16"],
+      "trims": [
+        {"trim": "Finesse (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "LX (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Ghia (Europe)", "tireSize": "195/45R16", "wheelSize": "16x6.5"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "European Mk5. 205/45R17 not standard OEM - ST150 not released until 2004."
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["165/70R13", "175/65R14", "185/55R15", "195/45R16"],
+      "trims": [
+        {"trim": "Finesse (Europe)", "tireSize": "165/70R13", "wheelSize": "13x5"},
+        {"trim": "LX (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Ghia (Europe)", "tireSize": "195/45R16", "wheelSize": "16x6.5"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "European market Mk5 launched mid-2002. 205/45R17 not standard."
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["165/70R13", "175/65R14", "185/55R15", "195/50R15"],
+      "trims": [
+        {"trim": "Flight/Finesse (Europe)", "tireSize": "165/70R13", "wheelSize": "13x5"},
+        {"trim": "LX/Freestyle (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Zetec S (Europe)", "tireSize": "195/50R15", "wheelSize": "15x6.5"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "European Mk4 Fiesta. 195/50R16 and 205/45R17 not standard OEM."
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": ["165/70R13", "175/65R14", "185/55R15", "195/50R15"],
+      "trims": [
+        {"trim": "Flight (Europe)", "tireSize": "165/70R13", "wheelSize": "13x5"},
+        {"trim": "LX (Europe)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "Zetec (Europe)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "Zetec S (Europe)", "tireSize": "195/50R15", "wheelSize": "15x6.5"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "European Mk4 Fiesta. Current sizes don't match OEM specs."
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Fiesta Active",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "status": "DISCONTINUED",
+      "notes": "Fiesta Active discontinued after 2023. No 2024 model produced."
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Fiesta Active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Active (Europe)", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Active X (Europe)", "tireSize": "205/40R18", "wheelSize": "18x7"}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "European market crossover variant. Standard 17\" wheels with optional 18\"."
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Fiesta Active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Active (Europe)", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Active X (Europe)", "tireSize": "205/40R18", "wheelSize": "18x7"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Fiesta Active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Active (Europe)", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Active X (Europe)", "tireSize": "205/40R18", "wheelSize": "18x7"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Fiesta Active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Active (Europe)", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Active X (Europe)", "tireSize": "205/40R18", "wheelSize": "18x7"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Fiesta Active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Active (Europe)", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Active X (Europe)", "tireSize": "205/40R18", "wheelSize": "18x7"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Fiesta Active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Active (Europe)", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Active X (Europe)", "tireSize": "205/40R18", "wheelSize": "18x7"}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "First year of Fiesta Active. European market crossover variant."
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Fiesta Classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "trims": [
+        {"trim": "LXi (India)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "EXi (India)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "SXi (India)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "CLXi (India)", "tireSize": "175/65R14", "wheelSize": "14x5.5"}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Indian market variant based on Mk4 Fiesta. Single tire size across all trims."
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Fiesta Classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "trims": [
+        {"trim": "LXi (India)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "EXi (India)", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "SXi (India)", "tireSize": "175/65R14", "wheelSize": "14x5.5"}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Indian market variant."
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Fiesta Ikon",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R14", "185/55R15"],
+      "trims": [
+        {"trim": "Ambiente (Mexico)", "tireSize": "185/60R14", "wheelSize": "14x5.5"},
+        {"trim": "Trend (Mexico)", "tireSize": "185/55R15", "wheelSize": "15x6"},
+        {"trim": "SES (Mexico)", "tireSize": "185/55R15", "wheelSize": "15x6"}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Latin American market variant (Mexico, South America)."
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Fiesta Ikon",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R14", "185/55R15"],
+      "trims": [
+        {"trim": "Ambiente (Mexico)", "tireSize": "185/60R14", "wheelSize": "14x5.5"},
+        {"trim": "Trend (Mexico)", "tireSize": "185/55R15", "wheelSize": "15x6"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Fiesta Ikon",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R13", "185/60R14", "185/55R15"],
+      "trims": [
+        {"trim": "Base (Mexico)", "tireSize": "175/70R13", "wheelSize": "13x5"},
+        {"trim": "Ambiente (Mexico)", "tireSize": "185/60R14", "wheelSize": "14x5.5"},
+        {"trim": "Trend (Mexico)", "tireSize": "185/55R15", "wheelSize": "15x6"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Fiesta Ikon",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R13", "185/60R14", "185/55R15"],
+      "trims": [
+        {"trim": "Base (Mexico)", "tireSize": "175/70R13", "wheelSize": "13x5"},
+        {"trim": "Ambiente (Mexico)", "tireSize": "185/60R14", "wheelSize": "14x5.5"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Fiesta Ikon",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R13", "185/60R14"],
+      "trims": [
+        {"trim": "Base (Mexico)", "tireSize": "175/70R13", "wheelSize": "13x5"},
+        {"trim": "Ambiente (Mexico)", "tireSize": "185/60R14", "wheelSize": "14x5.5"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Fiesta Ikon",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R13", "185/60R14"],
+      "trims": [
+        {"trim": "Base (Mexico)", "tireSize": "175/70R13", "wheelSize": "13x5"},
+        {"trim": "Ambiente (Mexico)", "tireSize": "185/60R14", "wheelSize": "14x5.5"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Fiesta Ikon",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R13", "185/60R14"],
+      "trims": [
+        {"trim": "Base (Mexico)", "tireSize": "175/70R13", "wheelSize": "13x5"},
+        {"trim": "Ambiente (Mexico)", "tireSize": "185/60R14", "wheelSize": "14x5.5"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Fiesta Ikon",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R13", "185/60R14"],
+      "trims": [
+        {"trim": "Base (Mexico)", "tireSize": "175/70R13", "wheelSize": "13x5"},
+        {"trim": "Ambiente (Mexico)", "tireSize": "185/60R14", "wheelSize": "14x5.5"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Fiesta Ikon",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R13", "185/60R14"],
+      "trims": [
+        {"trim": "Base (Mexico)", "tireSize": "175/70R13", "wheelSize": "13x5"},
+        {"trim": "Ambiente (Mexico)", "tireSize": "185/60R14", "wheelSize": "14x5.5"}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "First generation Fiesta Ikon for Latin American market."
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Five Hundred",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": [
+        {"trim": "SEL", "tireSize": "215/60R17", "wheelSize": "17x7"},
+        {"trim": "SEL (18\" wheels)", "tireSize": "225/55R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "225/55R18", "wheelSize": "18x7.5"}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Final year before rebrand to Taurus. SEL could have 17\" or 18\" wheels."
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Five Hundred",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": [
+        {"trim": "SE", "tireSize": "215/60R17", "wheelSize": "17x7"},
+        {"trim": "SEL", "tireSize": "215/60R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "225/55R18", "wheelSize": "18x7.5"}
+      ],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Five Hundred",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": [
+        {"trim": "SE", "tireSize": "215/60R17", "wheelSize": "17x7"},
+        {"trim": "SEL", "tireSize": "215/60R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "225/55R18", "wheelSize": "18x7.5"}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "First year of Five Hundred. Based on Volvo P2 platform."
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "SEL (20\" wheels)", "tireSize": "255/45R20", "wheelSize": "20x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Limited (20\" wheels)", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current shows 255/50R19 and 265/45R20 - validated OEM is 235/55R19 (not 255/50R19) and 255/45R20 (not 265/45R20). Final year of Flex production."
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Limited (20\" wheels)", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "status": "MISMATCH",
+      "notes": "255/50R19 and 265/45R20 not standard OEM."
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Limited (20\" wheels)", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Limited (20\" wheels)", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Limited (20\" wheels)", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Limited (20\" wheels)", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Limited (20\" wheels)", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SE (18\" wheels)", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Titanium", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Titanium (20\" wheels)", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SE (18\" wheels)", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Titanium", "tireSize": "235/55R19", "wheelSize": "19x8"}
+      ],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SE (18\" wheels)", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"}
+      ],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": ["235/60R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R17", "wheelSize": "17x7.5"},
+        {"trim": "SE (18\" wheels)", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x8"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x8"},
+        {"trim": "Limited (20\" wheels)", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "status": "MISMATCH",
+      "notes": "First year of Flex. 255/50R19 and 265/45R20 not standard OEM sizes."
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Flex",
+      "currentTireSizes": ["235/60R18", "255/50R19", "265/45R20"],
+      "validatedTireSizes": [],
+      "trims": [],
+      "status": "INVALID_YEAR",
+      "notes": "Flex was not produced until 2009 model year. This appears to be an error in the database."
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["205/55R16", "215/50R17", "235/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/50R17", "235/40R18"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "205/60R16", "wheelSize": "16x6.5"},
+        {"trim": "Active (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST-Line (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Titanium (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST (Europe)", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Focus discontinued in US after 2018. European only. 205/55R16 should be 205/60R16."
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["205/55R16", "215/50R17", "235/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/50R17", "235/40R18"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "205/60R16", "wheelSize": "16x6.5"},
+        {"trim": "Active (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST-Line (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Titanium (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST (Europe)", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "MISMATCH",
+      "notes": "European market only."
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["205/60R16", "215/50R17", "235/40ZR18", "235/45R17"],
+      "validatedTireSizes": ["205/60R16", "215/50R17", "235/45R17", "235/40R18"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "205/60R16", "wheelSize": "16x6.5"},
+        {"trim": "Active (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST-Line (Europe)", "tireSize": "235/45R17", "wheelSize": "17x7.5"},
+        {"trim": "Titanium (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST (Europe)", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "VALID",
+      "notes": "235/40ZR18 is correct (Z-rated for ST)."
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["205/55R16", "215/50R17", "235/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/50R17", "235/40R18"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "205/60R16", "wheelSize": "16x6.5"},
+        {"trim": "Active (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST-Line (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Titanium (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST (Europe)", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "MISMATCH",
+      "notes": "205/55R16 should be 205/60R16."
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["205/55R16", "215/50R17", "235/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/50R17", "235/40R18"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "205/60R16", "wheelSize": "16x6.5"},
+        {"trim": "Active (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST-Line (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Titanium (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST (Europe)", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["205/60R16", "195/65R16", "215/50R17", "235/45R17"],
+      "validatedTireSizes": ["195/65R16", "205/60R16", "215/50R17", "235/45R17", "235/40R18"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "195/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Trend (Europe)", "tireSize": "205/60R16", "wheelSize": "16x6.5"},
+        {"trim": "Active (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST-Line (Europe)", "tireSize": "235/45R17", "wheelSize": "17x7.5"},
+        {"trim": "ST (Europe)", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "VALID",
+      "notes": "European market Mk4 Focus."
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["205/55R16", "215/50R17", "235/40R18"],
+      "validatedTireSizes": ["195/65R16", "205/60R16", "215/50R17", "235/45R17", "235/40R18"],
+      "trims": [
+        {"trim": "Style (Europe)", "tireSize": "195/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Trend (Europe)", "tireSize": "205/60R16", "wheelSize": "16x6.5"},
+        {"trim": "Active (Europe)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST-Line (Europe)", "tireSize": "235/45R17", "wheelSize": "17x7.5"},
+        {"trim": "ST (Europe)", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "MISMATCH",
+      "notes": "205/55R16 should be 205/60R16. New Mk4 Focus launched in Europe."
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["215/55R16"],
+      "validatedTireSizes": ["195/65R15", "215/55R16", "215/50R17", "235/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "S", "tireSize": "195/65R15", "wheelSize": "15x6"},
+        {"trim": "SE", "tireSize": "215/55R16", "wheelSize": "16x7"},
+        {"trim": "SE (17\" wheels)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "SEL", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Titanium", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "ST", "tireSize": "235/40R18", "wheelSize": "18x8"},
+        {"trim": "RS", "tireSize": "235/35R19", "wheelSize": "19x8"}
+      ],
+      "status": "VALID",
+      "notes": "215/55R16 is valid for SE trim. Last year of Focus in US market."
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["195/65R15"],
+      "validatedTireSizes": ["195/65R15"],
+      "trims": [
+        {"trim": "S", "tireSize": "195/65R15", "wheelSize": "15x6"}
+      ],
+      "status": "VALID",
+      "notes": "Base S trim uses 195/65R15."
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["235/40R18"],
+      "validatedTireSizes": ["235/40R18"],
+      "trims": [
+        {"trim": "ST", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "VALID",
+      "notes": "ST trim uses 235/40R18."
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["215/50R17", "235/40R18"],
+      "validatedTireSizes": ["215/50R17", "235/40R18"],
+      "trims": [
+        {"trim": "SEL", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Titanium", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Titanium (18\" wheels)", "tireSize": "235/40R18", "wheelSize": "18x8"},
+        {"trim": "ST", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["215/50R17", "235/40R18"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "225/50R17", "235/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "5-Door SE", "tireSize": "215/55R16", "wheelSize": "16x7"},
+        {"trim": "5-Door SE (17\" wheels)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "5-Door SEL", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "5-Door Titanium", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Sedan SE", "tireSize": "215/55R16", "wheelSize": "16x7"},
+        {"trim": "Sedan SEL", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Sedan Titanium", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Electric", "tireSize": "225/50R17", "wheelSize": "17x7"},
+        {"trim": "ST", "tireSize": "235/40R18", "wheelSize": "18x8"},
+        {"trim": "RS", "tireSize": "235/35R19", "wheelSize": "19x8"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["195/65R15"],
+      "validatedTireSizes": ["195/65R15"],
+      "trims": [
+        {"trim": "S (if available)", "tireSize": "195/65R15", "wheelSize": "15x6"}
+      ],
+      "status": "NEEDS_REVIEW",
+      "notes": "195/65R15 was available on base S trim in some configurations."
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["215/55R16"],
+      "validatedTireSizes": ["215/55R16"],
+      "trims": [
+        {"trim": "SE (base wheels)", "tireSize": "215/55R16", "wheelSize": "16x7"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["235/40R18"],
+      "validatedTireSizes": ["235/40R18"],
+      "trims": [
+        {"trim": "ST", "tireSize": "235/40R18", "wheelSize": "18x8"},
+        {"trim": "Titanium (18\" wheels)", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["215/55R16"],
+      "validatedTireSizes": ["195/65R15", "215/55R16", "215/50R17", "225/50R17", "235/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Sedan S", "tireSize": "195/65R15", "wheelSize": "15x6"},
+        {"trim": "5-Door SE", "tireSize": "215/55R16", "wheelSize": "16x7"},
+        {"trim": "Sedan SE", "tireSize": "215/55R16", "wheelSize": "16x7"},
+        {"trim": "SE (17\" wheels)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "SEL/Titanium", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Electric", "tireSize": "225/50R17", "wheelSize": "17x7"},
+        {"trim": "ST", "tireSize": "235/40R18", "wheelSize": "18x8"},
+        {"trim": "RS", "tireSize": "235/35R19", "wheelSize": "19x8"}
+      ],
+      "status": "VALID",
+      "notes": "215/55R16 is correct for SE with base 16\" wheels."
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["235/40R18"],
+      "validatedTireSizes": ["235/40R18"],
+      "trims": [
+        {"trim": "ST", "tireSize": "235/40R18", "wheelSize": "18x8"},
+        {"trim": "Titanium (18\" wheels)", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["195/65R15"],
+      "validatedTireSizes": ["195/65R15"],
+      "trims": [
+        {"trim": "Sedan S", "tireSize": "195/65R15", "wheelSize": "15x6"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["215/50R17", "235/40R18"],
+      "validatedTireSizes": ["215/50R17", "235/40R18"],
+      "trims": [
+        {"trim": "SE (Sport Pkg)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "SEL", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Titanium", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Titanium (18\" wheels)", "tireSize": "235/40R18", "wheelSize": "18x8"},
+        {"trim": "ST", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Focus",
+      "currentTireSizes": ["235/40R18"],
+      "validatedTireSizes": ["195/65R15", "215/55R16", "215/50R17", "225/50R17", "235/40R18"],
+      "trims": [
+        {"trim": "Sedan S", "tireSize": "195/65R15", "wheelSize": "15x6"},
+        {"trim": "5-Door SE", "tireSize": "215/55R16", "wheelSize": "16x7"},
+        {"trim": "5-Door SE (Appearance)", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "5-Door Titanium", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Sedan SE", "tireSize": "215/55R16", "wheelSize": "16x7"},
+        {"trim": "Sedan Titanium", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Electric", "tireSize": "225/50R17", "wheelSize": "17x7"},
+        {"trim": "ST", "tireSize": "235/40R18", "wheelSize": "18x8"}
+      ],
+      "status": "VALID",
+      "notes": "235/40R18 is correct for ST trim."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 28,
+    "mismatch": 17,
+    "needsReview": 11,
+    "missingData": 17,
+    "invalidYear": 1,
+    "discontinued": 1
+  },
+  "recommendations": [
+    {
+      "issue": "Ford Flex tire sizes",
+      "action": "Update 255/50R19 to 235/55R19 and 265/45R20 to 255/45R20 across all Flex years",
+      "affectedVehicles": 12
+    },
+    {
+      "issue": "European Fiesta (2000-2010) sizes",
+      "action": "Review and update to European market OEM specs. 185/60R15 not standard - likely 185/55R15",
+      "affectedVehicles": 11
+    },
+    {
+      "issue": "European Focus (2019+) sizes",
+      "action": "Update 205/55R16 to 205/60R16 for European market Focus",
+      "affectedVehicles": 6
+    },
+    {
+      "issue": "2014 Ford Fiesta base size",
+      "action": "Update 185/60R15 to 185/65R15 for 2014 model year",
+      "affectedVehicles": 1
+    },
+    {
+      "issue": "2008 Ford Flex",
+      "action": "Remove from database - Flex not produced until 2009",
+      "affectedVehicles": 1
+    },
+    {
+      "issue": "Regional market variants",
+      "action": "Consider flagging Fiesta Active, Fiesta Classic, Fiesta Ikon as regional-only models",
+      "affectedVehicles": 17
+    }
+  ]
+}

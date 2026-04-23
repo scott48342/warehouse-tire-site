@@ -1,0 +1,1128 @@
+{
+  "batchId": "23",
+  "processedAt": "2026-04-21T21:47:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "rendezvous",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "CX 2WD": ["215/70R16"],
+        "CX 4WD": ["215/70R16"],
+        "CXL 2WD": ["225/60R17"],
+        "CXL 4WD": ["225/60R17"],
+        "Ultra 2WD": ["225/60R17"],
+        "Ultra 4WD": ["225/60R17"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "buick",
+      "model": "rendezvous",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "CX 2WD": ["215/70R16"],
+        "CX 4WD": ["215/70R16"],
+        "CXL 2WD": ["215/70R16"],
+        "CXL 4WD": ["215/70R16"],
+        "Ultra 4WD": ["225/60R17"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "buick",
+      "model": "rendezvous",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "CX 2WD": ["215/70R16"],
+        "CX 4WD": ["215/70R16"],
+        "CXL 2WD": ["215/70R16"],
+        "CXL 4WD": ["215/70R16"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "buick",
+      "model": "rendezvous",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "CX 2WD": ["215/70R16"],
+        "CX 4WD": ["215/70R16"],
+        "CXL 4WD": ["215/70R16"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "buick",
+      "model": "rendezvous",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "CX": ["215/70R16"],
+        "CXL": ["215/70R16"]
+      },
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2001 was first model year; limited data available"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "royaum",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "none",
+      "confidence": "none",
+      "notes": "INVALID MODEL - 'royaum' does not exist. Possibly meant 'Rainier' (2004-2007 SUV)"
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "royaum",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "none",
+      "confidence": "none",
+      "notes": "INVALID MODEL - 'royaum' does not exist. Possibly meant 'Rainier' (2004-2007 SUV)"
+    },
+    {
+      "year": 2004,
+      "make": "buick",
+      "model": "royaum",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "none",
+      "confidence": "none",
+      "notes": "INVALID MODEL - 'royaum' does not exist. Possibly meant 'Rainier' (2004-2007 SUV)"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "terraza",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17"],
+      "trims": {
+        "CX 2WD": ["225/60R17"],
+        "CXL 2WD": ["225/60R17"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "terraza",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17"],
+      "trims": {
+        "CX": ["225/60R17"],
+        "CXL": ["225/60R17"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "terraza",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17"],
+      "trims": {
+        "CX": ["225/60R17"],
+        "CXL": ["225/60R17"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "15T": ["225/50R17"],
+        "20T": ["235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "China-market vehicle (2016-2022). US Verano ended 2017. Remove 215/60R16 - not OEM for this model year."
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "15T": ["225/50R17"],
+        "20T": ["235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "China-market vehicle. Remove 215/60R16 - not OEM."
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "15T": ["225/50R17"],
+        "20T": ["235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "China-market vehicle. Remove 215/60R16 - not OEM."
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "15T": ["225/50R17"],
+        "20T": ["235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "China-market vehicle. Remove 215/60R16 - not OEM."
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "15T": ["225/50R17"],
+        "20T": ["235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "China-market vehicle only (US ended 2017). Remove 215/60R16 - not OEM."
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "Base Model": ["225/50R17"],
+        "Sport Touring": ["235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final US model year. Remove 215/60R16 - not OEM."
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "Base Model": ["225/50R17"],
+        "Convenience": ["235/45R18"],
+        "Premium": ["235/45R18"],
+        "Sport Touring": ["235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Remove 215/60R16 - not OEM."
+    },
+    {
+      "year": 2015,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "Base Model": ["225/50R17"],
+        "Convenience": ["235/45R18"],
+        "Premium": ["235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Remove 215/60R16 - not OEM."
+    },
+    {
+      "year": 2014,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "Base Model": ["225/50R17"],
+        "Convenience": ["235/45R18"],
+        "Premium": ["235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Remove 215/60R16 - not OEM."
+    },
+    {
+      "year": 2013,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "Base Model": ["225/50R17", "235/45R18"],
+        "Premium": ["235/45R18"],
+        "Turbo": ["235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Remove 215/60R16 - not OEM."
+    },
+    {
+      "year": 2012,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "Base Model": ["225/50R17", "235/45R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First model year. Remove 215/60R16 - not OEM."
+    },
+    {
+      "year": 2011,
+      "make": "buick",
+      "model": "verano",
+      "currentTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "none",
+      "confidence": "none",
+      "notes": "INVALID YEAR - Buick Verano production started in 2012. 2011 Verano does not exist."
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "verano-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "GS": ["225/50R17", "235/45R18"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China-market only. GS is performance variant of Verano."
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "verano-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "GS": ["225/50R17", "235/45R18"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China-market only."
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "verano-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "GS": ["225/50R17", "235/45R18"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China-market only."
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "verano-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "GS": ["225/50R17", "235/45R18"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China-market only."
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "verano-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "GS": ["225/50R17", "235/45R18"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China-market only."
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "verano-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "GS": ["225/50R17", "235/45R18"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China-market only."
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "verano-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R17", "235/45R18"],
+      "trims": {
+        "GS": ["225/50R17", "235/45R18"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China-market only. First year for GS variant."
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "verano-pro-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/50R17"],
+      "trims": {
+        "Pro GS": ["215/55R17", "225/50R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "low",
+      "notes": "China-market only. Compact sedan with 1.5L turbo."
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "verano-pro-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/50R17"],
+      "trims": {
+        "Pro GS": ["215/55R17", "225/50R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "low",
+      "notes": "China-market only."
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "verano-pro-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/50R17"],
+      "trims": {
+        "Pro GS": ["215/55R17", "225/50R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "low",
+      "notes": "China-market only."
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "verano-pro-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/50R17"],
+      "trims": {
+        "Pro GS": ["215/55R17", "225/50R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "low",
+      "notes": "China-market only."
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "verano-pro-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/50R17"],
+      "trims": {
+        "Pro GS": ["215/55R17", "225/50R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "low",
+      "notes": "China-market only. First year for Verano Pro GS."
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "ats",
+      "currentTireSizes": ["225/45R17", "235/40R18", "245/35R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "trims": {
+        "Coupe 2.0L Turbo Luxury": ["225/40R18", "255/35R18"],
+        "Coupe 2.0L Turbo Standard": ["225/40R18", "255/35R18"],
+        "Sedan 2.0L Turbo Luxury": ["225/45R17", "225/40R18"],
+        "Sedan 2.0L Turbo Standard": ["225/45R17"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year for ATS. Some trims have staggered setup. 245/35R19 is NOT OEM - remove. 235/40R18 should be 225/40R18."
+    },
+    {
+      "year": 2018,
+      "make": "cadillac",
+      "model": "ats",
+      "currentTireSizes": ["225/45R17", "235/40R18", "245/35R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "trims": {
+        "Coupe 2.0L Turbo Luxury": ["225/40R18", "255/35R18"],
+        "Coupe 2.0L Turbo Standard": ["225/40R18", "255/35R18"],
+        "Coupe 3.6L Premium Luxury": ["225/40R18", "255/35R18"],
+        "Coupe 3.6L Premium Performance": ["225/40R18", "255/35R18"],
+        "Sedan 2.0L Turbo Luxury": ["225/45R17", "225/40R18"],
+        "Sedan 2.0L Turbo Standard": ["225/45R17"],
+        "Sedan 3.6L Premium Luxury": ["225/45R17", "225/40R18"],
+        "Sedan 3.6L Premium Performance": ["225/45R17", "225/40R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Coupe trims typically staggered. 245/35R19 and 235/40R18 NOT OEM - correct to validated sizes."
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "ats",
+      "currentTireSizes": ["225/45R17", "235/40R18", "245/35R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "trims": {
+        "Coupe 2.0L Turbo Luxury": ["225/40R18", "255/35R18"],
+        "Coupe 2.0L Turbo Standard": ["225/40R18", "255/35R18"],
+        "Coupe 3.6L Premium Luxury": ["225/40R18", "255/35R18"],
+        "Coupe 3.6L Premium Performance": ["225/40R18", "255/35R18"],
+        "Sedan 2.0L Turbo Luxury": ["225/45R17", "225/40R18"],
+        "Sedan 2.0L Turbo Standard": ["225/45R17"],
+        "Sedan 3.6L Premium Luxury": ["225/45R17", "225/40R18"],
+        "Sedan 3.6L Premium Performance": ["225/45R17", "225/40R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "245/35R19 and 235/40R18 NOT OEM - correct to validated sizes."
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "ats",
+      "currentTireSizes": ["225/45R17", "235/40R18", "245/35R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "trims": {
+        "Coupe 2.0L Turbo Luxury": ["225/40R18", "255/35R18"],
+        "Coupe 2.0L Turbo Performance": ["225/40R18", "255/35R18"],
+        "Coupe 2.0L Turbo Premium": ["225/40R18", "255/35R18"],
+        "Coupe 2.0L Turbo Standard": ["225/40R18", "255/35R18"],
+        "Coupe 3.6L Luxury": ["225/40R18", "255/35R18"],
+        "Coupe 3.6L Performance": ["225/40R18", "255/35R18"],
+        "Coupe 3.6L Premium": ["225/40R18", "255/35R18"],
+        "Sedan 2.0L Turbo Luxury": ["225/45R17", "225/40R18"],
+        "Sedan 2.0L Turbo Performance": ["225/45R17", "225/40R18"],
+        "Sedan 2.0L Turbo Premium AWD": ["225/40R18"],
+        "Sedan 2.0L Turbo Premium RWD": ["225/40R18", "255/35R18"],
+        "Sedan 2.0L Turbo Standard": ["225/45R17"],
+        "Sedan 2.5L Luxury": ["225/45R17"],
+        "Sedan 2.5L Standard": ["225/45R17"],
+        "Sedan 3.6L Luxury": ["225/45R17", "225/40R18"],
+        "Sedan 3.6L Performance": ["225/45R17", "225/40R18"],
+        "Sedan 3.6L Premium AWD": ["225/45R17", "225/40R18"],
+        "Sedan 3.6L Premium RWD": ["225/40R18", "255/35R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "245/35R19 and 235/40R18 NOT OEM - correct to validated sizes."
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "ats",
+      "currentTireSizes": ["225/45R17", "235/40R18", "245/35R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "trims": {
+        "Coupe 2.0L Turbo": ["225/40R18", "255/35R18"],
+        "Coupe 3.6L": ["225/40R18", "255/35R18"],
+        "Sedan 2.0L Turbo": ["225/45R17", "225/40R18"],
+        "Sedan 2.5L": ["225/45R17"],
+        "Sedan 3.6L": ["225/45R17", "225/40R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "245/35R19 and 235/40R18 NOT OEM."
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "ats",
+      "currentTireSizes": ["225/45R17", "235/40R18", "245/35R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "trims": {
+        "2.0L Turbo Luxury": ["225/45R17", "225/40R18"],
+        "2.0L Turbo Performance": ["225/45R17", "225/40R18"],
+        "2.0L Turbo Premium AWD": ["225/40R18"],
+        "2.0L Turbo Premium RWD": ["225/40R18", "255/35R18"],
+        "2.0L Turbo Standard": ["225/45R17"],
+        "2.5L Luxury": ["225/45R17"],
+        "2.5L Standard": ["225/45R17"],
+        "3.6L Luxury": ["225/45R17", "225/40R18"],
+        "3.6L Performance": ["225/45R17", "225/40R18"],
+        "3.6L Premium AWD": ["225/45R17", "225/40R18"],
+        "3.6L Premium RWD": ["225/40R18", "255/35R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "245/35R19 and 235/40R18 NOT OEM."
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "ats",
+      "currentTireSizes": ["225/45R17", "235/40R18", "245/35R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "trims": {
+        "2.0L Turbo Luxury": ["225/45R17", "225/40R18"],
+        "2.0L Turbo Performance": ["225/45R17", "225/40R18"],
+        "2.0L Turbo Premium AWD": ["225/40R18"],
+        "2.0L Turbo Premium RWD": ["225/40R18", "255/35R18"],
+        "2.0L Turbo Standard": ["225/45R17"],
+        "2.5L Luxury": ["225/45R17"],
+        "2.5L Standard": ["225/45R17"],
+        "3.6L Luxury": ["225/45R17", "225/40R18"],
+        "3.6L Performance": ["225/45R17", "225/40R18"],
+        "3.6L Premium AWD": ["225/45R17", "225/40R18"],
+        "3.6L Premium RWD": ["225/40R18", "255/35R18"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First model year. 245/35R19 and 235/40R18 NOT OEM."
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "ats-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/35ZR18", "275/35ZR18"],
+      "trims": {
+        "V Coupe": { "front": "255/35ZR18", "rear": "275/35ZR18" },
+        "V Sedan": { "front": "255/35ZR18", "rear": "275/35ZR18" }
+      },
+      "isStaggered": true,
+      "source": "caranddriver.com, tiresize.com",
+      "confidence": "high",
+      "notes": "Final year for ATS-V. Staggered setup standard."
+    },
+    {
+      "year": 2018,
+      "make": "cadillac",
+      "model": "ats-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/35ZR18", "275/35ZR18"],
+      "trims": {
+        "V Coupe": { "front": "255/35ZR18", "rear": "275/35ZR18" },
+        "V Sedan": { "front": "255/35ZR18", "rear": "275/35ZR18" }
+      },
+      "isStaggered": true,
+      "source": "caranddriver.com, tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "ats-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/35ZR18", "275/35ZR18"],
+      "trims": {
+        "V Coupe": { "front": "255/35ZR18", "rear": "275/35ZR18" },
+        "V Sedan": { "front": "255/35ZR18", "rear": "275/35ZR18" }
+      },
+      "isStaggered": true,
+      "source": "caranddriver.com, tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "ats-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/35ZR18", "275/35ZR18"],
+      "trims": {
+        "V Coupe": { "front": "255/35ZR18", "rear": "275/35ZR18" },
+        "V Sedan": { "front": "255/35ZR18", "rear": "275/35ZR18" }
+      },
+      "isStaggered": true,
+      "source": "caranddriver.com, tiresize.com",
+      "confidence": "high",
+      "notes": "First year for ATS-V."
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "bls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "225/45R17", "235/40R18"],
+      "trims": {
+        "2.0T": ["215/55R16", "225/45R17"],
+        "2.8 V6": ["225/45R17", "235/40R18"],
+        "1.9D": ["215/55R16", "225/45R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "European market only (based on Saab 9-3 platform). Final year."
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "bls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "225/45R17", "235/40R18"],
+      "trims": {
+        "2.0T": ["215/55R16", "225/45R17"],
+        "2.8 V6": ["225/45R17", "235/40R18"],
+        "1.9D": ["215/55R16", "225/45R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "European market only."
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "bls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "225/45R17", "235/40R18"],
+      "trims": {
+        "2.0T": ["215/55R16", "225/45R17"],
+        "2.8 V6": ["225/45R17", "235/40R18"],
+        "1.9D": ["215/55R16", "225/45R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "European market only."
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "bls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "225/45R17", "235/40R18"],
+      "trims": {
+        "2.0T": ["215/55R16", "225/45R17"],
+        "2.8 V6": ["225/45R17", "235/40R18"],
+        "1.9D": ["215/55R16", "225/45R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "European market only."
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "bls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "225/45R17", "235/40R18"],
+      "trims": {
+        "2.0T": ["215/55R16", "225/45R17"],
+        "2.8 V6": ["225/45R17", "235/40R18"],
+        "1.9D": ["215/55R16", "225/45R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "European market only."
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "bls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "225/45R17"],
+      "trims": {
+        "2.0T": ["215/55R16", "225/45R17"],
+        "1.9D": ["215/55R16", "225/45R17"]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "European market only. First year."
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "celestiq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/35R22", "275/30R23"],
+      "trims": {
+        "Base": ["275/35R22", "275/30R23"]
+      },
+      "source": "truecar.com, motortrend.com",
+      "confidence": "medium",
+      "notes": "Ultra-luxury EV sedan. 22-inch and 23-inch wheel options."
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "celestiq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/35R22", "275/30R23"],
+      "trims": {
+        "Base": ["275/35R22", "275/30R23"]
+      },
+      "source": "truecar.com, motortrend.com",
+      "confidence": "medium",
+      "notes": "First model year for US market."
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "celestiq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/35R22", "275/30R23"],
+      "trims": {
+        "Base": ["275/35R22", "275/30R23"]
+      },
+      "source": "truecar.com, motortrend.com",
+      "confidence": "medium",
+      "notes": "Early production/show car year."
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "ct4",
+      "currentTireSizes": ["235/40R18", "225/45R17", "235/35R19", "235/40ZR18", "265/35ZR18", "235/35ZR19", "265/30ZR19"],
+      "validatedTireSizes": ["225/45R17", "235/40R18", "235/35R19"],
+      "trims": {
+        "Luxury": ["225/45R17", "235/35R19"],
+        "Premium Luxury": ["235/40R18", "235/35R19"],
+        "Sport": ["235/40R18", "235/35R19"],
+        "V": ["235/40R18", "235/35R19"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Remove 265/35ZR18, 265/30ZR19, 235/40ZR18, 235/35ZR19 - those are CT4-V Blackwing sizes, not standard CT4."
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "ct4",
+      "currentTireSizes": ["235/40R18", "225/45R17", "235/35R19", "235/40ZR18", "265/35ZR18", "235/35ZR19", "265/30ZR19"],
+      "validatedTireSizes": ["225/45R17", "235/40R18", "235/35R19"],
+      "trims": {
+        "Luxury": ["225/45R17", "235/35R19"],
+        "Premium Luxury": ["235/40R18", "235/35R19"],
+        "Sport": ["235/40R18", "235/35R19"],
+        "V": ["235/40R18", "235/35R19"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Remove 265/35ZR18, 265/30ZR19, 235/40ZR18, 235/35ZR19 - CT4-V Blackwing sizes."
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "ct4",
+      "currentTireSizes": ["235/40R18", "225/45R17", "235/35R19", "235/40ZR18", "265/35ZR18", "235/35ZR19", "265/30ZR19"],
+      "validatedTireSizes": ["225/45R17", "235/40R18", "235/35R19"],
+      "trims": {
+        "Luxury": ["225/45R17", "235/35R19"],
+        "Premium Luxury": ["235/40R18", "235/35R19"],
+        "Sport": ["235/40R18", "235/35R19"],
+        "V": ["235/40R18", "235/35R19"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Remove 265/35ZR18, 265/30ZR19, 235/40ZR18, 235/35ZR19 - CT4-V Blackwing sizes."
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "ct4",
+      "currentTireSizes": ["225/50R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["225/45R17", "235/40R18", "235/35R19"],
+      "trims": {
+        "Luxury": ["225/45R17", "235/35R19"],
+        "Premium Luxury": ["235/40R18", "235/35R19"],
+        "Sport": ["235/40R18", "235/35R19"],
+        "V": ["235/40R18", "235/35R19"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Current sizes are WRONG. Correct to validated sizes: 225/50R17→225/45R17, 235/45R18→235/40R18, 245/40R19→235/35R19."
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "ct4",
+      "currentTireSizes": ["225/50R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["225/45R17", "235/40R18", "235/35R19"],
+      "trims": {
+        "Luxury": ["225/45R17", "235/35R19"],
+        "Premium Luxury": ["235/40R18", "235/35R19"],
+        "Sport": ["235/40R18", "235/35R19"],
+        "V": ["235/40R18", "235/35R19"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Current sizes are WRONG. Correct to validated sizes."
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "ct4",
+      "currentTireSizes": ["225/50R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["225/45R17", "235/40R18", "235/35R19"],
+      "trims": {
+        "Luxury": ["225/45R17"],
+        "Premium Luxury": ["235/40R18"],
+        "Sport": ["235/40R18"],
+        "V": ["235/40R18", "235/35R19"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Current sizes are WRONG. Correct to validated sizes."
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "ct4",
+      "currentTireSizes": ["235/40R18", "225/45R17", "235/35R19", "235/40ZR18", "265/35ZR18", "235/35ZR19", "265/30ZR19"],
+      "validatedTireSizes": ["225/45R17", "235/40R18", "235/35R19"],
+      "trims": {
+        "Luxury": ["225/45R17"],
+        "Premium Luxury": ["235/40R18"],
+        "Sport": ["235/40R18"],
+        "V": ["235/40R18", "235/35R19"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First model year. Remove 265/35ZR18, 265/30ZR19, 235/40ZR18, 235/35ZR19 - CT4-V Blackwing sizes."
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/40R18", "235/35R19", "255/35R18", "275/35R18"],
+      "trims": {
+        "V": ["235/40R18", "235/35R19"],
+        "V Blackwing": { "front": "255/35R18", "rear": "275/35R18" }
+      },
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "V Blackwing has staggered setup."
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/40R18", "235/35R19", "255/35R18", "275/35R18"],
+      "trims": {
+        "V": ["235/40R18", "235/35R19"],
+        "V Blackwing": { "front": "255/35R18", "rear": "275/35R18" }
+      },
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/40R18", "235/35R19", "255/35R18", "275/35R18"],
+      "trims": {
+        "V": ["235/40R18", "235/35R19"],
+        "V Blackwing": { "front": "255/35R18", "rear": "275/35R18" }
+      },
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/40R18", "235/35R19", "255/35R18", "275/35R18"],
+      "trims": {
+        "V": ["235/40R18", "235/35R19"],
+        "V Blackwing": { "front": "255/35R18", "rear": "275/35R18" }
+      },
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/40R18", "235/35R19", "255/35R18", "275/35R18"],
+      "trims": {
+        "V": ["235/40R18", "235/35R19"],
+        "V Blackwing": { "front": "255/35R18", "rear": "275/35R18" }
+      },
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First year for V Blackwing."
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/40R18", "235/35R19"],
+      "trims": {
+        "V": ["235/40R18", "235/35R19"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "No Blackwing available this year."
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/40R18", "235/35R19"],
+      "trims": {
+        "V": ["235/40R18", "235/35R19"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First model year for CT4-V."
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "ct5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "trims": {
+        "Premium Luxury": ["245/45R18", "245/40R19", "255/35R20"],
+        "Sport": ["245/40R19", "255/35R20"],
+        "V": ["245/40R19", "255/35R20"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "ct5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "trims": {
+        "Premium Luxury": ["245/45R18", "245/40R19", "255/35R20"],
+        "Sport": ["245/40R19", "255/35R20"],
+        "V": ["245/40R19", "255/35R20"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "ct5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "trims": {
+        "Luxury": ["245/45R18", "255/35R20"],
+        "Premium Luxury": ["245/45R18", "245/40R19", "255/35R20"],
+        "Sport": ["245/40R19", "255/35R20"],
+        "V": ["245/40R19", "255/35R20"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "ct5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "trims": {
+        "Luxury": ["245/45R18", "255/35R20"],
+        "Premium Luxury": ["245/45R18", "245/40R19", "255/35R20"],
+        "Sport": ["245/40R19", "255/35R20"],
+        "V": ["245/40R19", "255/35R20"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "ct5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "trims": {
+        "Luxury": ["245/45R18", "255/35R20"],
+        "Premium Luxury": ["245/45R18", "245/40R19", "255/35R20"],
+        "Sport": ["245/40R19", "255/35R20"],
+        "V": ["245/40R19", "255/35R20"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "ct5",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/40ZR19", "255/35ZR20"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "trims": {
+        "Luxury": ["245/45R18", "255/35R20"],
+        "Premium Luxury": ["245/45R18", "245/40R19", "255/35R20"],
+        "Sport": ["245/40R19", "255/35R20"],
+        "V": ["245/40R19", "255/35R20"]
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Remove Z-rated duplicates (245/40ZR19, 255/35ZR20) - same sizes as standard. Keep 245/40R19 and 255/35R20."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 69,
+    "invalidModels": 3,
+    "invalidYears": 1,
+    "chinaOnlyModels": 19,
+    "staggeredSetups": 14,
+    "corrections": {
+      "buickVerano": "Remove 215/60R16 from all years - not OEM",
+      "cadillacATS": "Replace 235/40R18 with 225/40R18, remove 245/35R19 - not OEM",
+      "cadillacCT4_2021_2023": "Current sizes wrong - correct to 225/45R17, 235/40R18, 235/35R19",
+      "buickRoyaum": "Invalid model name - does not exist (possibly meant Rainier)"
+    }
+  }
+}

@@ -1,0 +1,1500 @@
+{
+  "batchId": "90",
+  "processedAt": "2026-04-21T22:17:00.000Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2015,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "460",
+          "oemTireSizes": ["265/60R18"]
+        }
+      ],
+      "recommendedSizes": ["265/60R18"],
+      "notes": "Single tire size for all trims"
+    },
+    {
+      "year": 2014,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "460",
+          "oemTireSizes": ["265/60R18"]
+        }
+      ],
+      "recommendedSizes": ["265/60R18"],
+      "notes": "Single tire size for all trims"
+    },
+    {
+      "year": 2013,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "460",
+          "oemTireSizes": ["265/60R18"]
+        }
+      ],
+      "recommendedSizes": ["265/60R18"],
+      "notes": "Single tire size for all trims"
+    },
+    {
+      "year": 2012,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "460",
+          "oemTireSizes": ["265/60R18"]
+        }
+      ],
+      "recommendedSizes": ["265/60R18"],
+      "notes": "Single tire size for all trims"
+    },
+    {
+      "year": 2011,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "460",
+          "oemTireSizes": ["265/60R18"]
+        }
+      ],
+      "recommendedSizes": ["265/60R18"],
+      "notes": "Single tire size for all trims"
+    },
+    {
+      "year": 2010,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "460",
+          "oemTireSizes": ["265/60R18"]
+        }
+      ],
+      "recommendedSizes": ["265/60R18"],
+      "notes": "First year of GX 460 (2nd generation)"
+    },
+    {
+      "year": 2009,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "470",
+          "oemTireSizes": ["265/65R17"]
+        }
+      ],
+      "recommendedSizes": ["265/65R17"],
+      "notes": "Last year of GX 470 (1st generation)"
+    },
+    {
+      "year": 2008,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "470",
+          "oemTireSizes": ["265/65R17"]
+        }
+      ],
+      "recommendedSizes": ["265/65R17"],
+      "notes": "Single tire size for all trims"
+    },
+    {
+      "year": 2007,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "470",
+          "oemTireSizes": ["265/65R17"]
+        }
+      ],
+      "recommendedSizes": ["265/65R17"],
+      "notes": "Single tire size for all trims"
+    },
+    {
+      "year": 2006,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "470",
+          "oemTireSizes": ["265/65R17"]
+        }
+      ],
+      "recommendedSizes": ["265/65R17"],
+      "notes": "Single tire size for all trims"
+    },
+    {
+      "year": 2005,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "470",
+          "oemTireSizes": ["265/65R17"]
+        }
+      ],
+      "recommendedSizes": ["265/65R17"],
+      "notes": "Single tire size for all trims"
+    },
+    {
+      "year": 2004,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "470",
+          "oemTireSizes": ["265/65R17"]
+        }
+      ],
+      "recommendedSizes": ["265/65R17"],
+      "notes": "Single tire size for all trims"
+    },
+    {
+      "year": 2003,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [
+        {
+          "trim": "470",
+          "oemTireSizes": ["265/65R17"]
+        }
+      ],
+      "recommendedSizes": ["265/65R17"],
+      "notes": "First year of GX 470"
+    },
+    {
+      "year": 2002,
+      "make": "Lexus",
+      "model": "GX",
+      "trims": [],
+      "recommendedSizes": [],
+      "notes": "GX not produced in 2002 in North America. First year was 2003 for GX 470."
+    },
+    {
+      "year": 2026,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300/350 Base",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["235/35R19", "265/30R19"],
+          "isStaggered": true,
+          "frontSize": "235/35R19",
+          "rearSize": "265/30R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R18", "255/35R18", "235/35R19", "265/30R19"],
+      "notes": "Staggered fitments available on F Sport trims"
+    },
+    {
+      "year": 2025,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300/350 Base",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["235/35R19", "265/30R19"],
+          "isStaggered": true,
+          "frontSize": "235/35R19",
+          "rearSize": "265/30R19"
+        },
+        {
+          "trim": "500 F Sport Performance",
+          "oemTireSizes": ["235/40R19", "265/35R19"],
+          "isStaggered": true,
+          "frontSize": "235/40R19",
+          "rearSize": "265/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R18", "255/35R18", "235/35R19", "265/30R19", "235/40R19", "265/35R19"],
+      "notes": "Staggered fitments. IS 500 has larger sizes."
+    },
+    {
+      "year": 2024,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300/350 Base",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["235/35R19", "265/30R19"],
+          "isStaggered": true,
+          "frontSize": "235/35R19",
+          "rearSize": "265/30R19"
+        },
+        {
+          "trim": "500 F Sport Performance",
+          "oemTireSizes": ["235/40R19", "265/35R19"],
+          "isStaggered": true,
+          "frontSize": "235/40R19",
+          "rearSize": "265/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R18", "255/35R18", "235/35R19", "265/30R19", "235/40R19", "265/35R19"],
+      "notes": "Staggered fitments. IS 500 has larger sizes."
+    },
+    {
+      "year": 2023,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300/350 Base",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["235/40R19", "265/35R19"],
+          "isStaggered": true,
+          "frontSize": "235/40R19",
+          "rearSize": "265/35R19"
+        },
+        {
+          "trim": "500 F Sport Performance",
+          "oemTireSizes": ["235/40R19", "265/35R19"],
+          "isStaggered": true,
+          "frontSize": "235/40R19",
+          "rearSize": "265/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R18", "255/35R18", "235/40R19", "265/35R19"],
+      "notes": "Staggered fitments on all trims"
+    },
+    {
+      "year": 2022,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300/350 Base",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["235/40R19", "265/35R19"],
+          "isStaggered": true,
+          "frontSize": "235/40R19",
+          "rearSize": "265/35R19"
+        },
+        {
+          "trim": "500 F Sport Performance",
+          "oemTireSizes": ["235/40R19", "265/35R19"],
+          "isStaggered": true,
+          "frontSize": "235/40R19",
+          "rearSize": "265/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R18", "255/35R18", "235/40R19", "265/35R19"],
+      "notes": "First year of IS 500"
+    },
+    {
+      "year": 2021,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300/350 Base",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["235/40R19", "265/35R19"],
+          "isStaggered": true,
+          "frontSize": "235/40R19",
+          "rearSize": "265/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R18", "255/35R18", "235/40R19", "265/35R19"],
+      "notes": "Refreshed 3rd generation. All staggered fitments."
+    },
+    {
+      "year": 2020,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300 Base",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "300/350 F Sport",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Base has square setup, F Sport has staggered"
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300 Base",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "300/350 F Sport",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Base has square setup, F Sport has staggered"
+    },
+    {
+      "year": 2018,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300 Base",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Base has square setup, F Sport has staggered"
+    },
+    {
+      "year": 2017,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "200t/300 Base",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Base has square setup, F Sport has staggered"
+    },
+    {
+      "year": 2016,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "200t/300 Base",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Base has square setup, F Sport has staggered"
+    },
+    {
+      "year": 2015,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "250 Base",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Base has square setup, F Sport has staggered"
+    },
+    {
+      "year": 2014,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "250 Base",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 F Sport",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "First year of 3rd generation IS"
+    },
+    {
+      "year": 2013,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "250 AWD",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "250 RWD",
+          "oemTireSizes": ["225/45R17", "245/45R17"],
+          "isStaggered": true,
+          "frontSize": "225/45R17",
+          "rearSize": "245/45R17"
+        },
+        {
+          "trim": "250 RWD 18in",
+          "oemTireSizes": ["225/40R18", "255/40R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/40R18"
+        },
+        {
+          "trim": "350",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "245/45R17", "225/40R18", "255/40R18", "255/35R18"],
+      "notes": "Last year of 2nd generation. Multiple staggered options."
+    },
+    {
+      "year": 2012,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "250 AWD",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "250 RWD",
+          "oemTireSizes": ["225/45R17", "245/45R17"],
+          "isStaggered": true,
+          "frontSize": "225/45R17",
+          "rearSize": "245/45R17"
+        },
+        {
+          "trim": "350",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "245/45R17", "225/40R18", "255/35R18"],
+      "notes": "Staggered options on RWD models"
+    },
+    {
+      "year": 2011,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "250 AWD",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "250 RWD",
+          "oemTireSizes": ["225/45R17", "245/45R17"],
+          "isStaggered": true,
+          "frontSize": "225/45R17",
+          "rearSize": "245/45R17"
+        },
+        {
+          "trim": "350",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "245/45R17", "225/40R18", "255/35R18"],
+      "notes": "Staggered options on RWD models"
+    },
+    {
+      "year": 2010,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "250 AWD",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "250 RWD",
+          "oemTireSizes": ["225/45R17", "245/45R17"],
+          "isStaggered": true,
+          "frontSize": "225/45R17",
+          "rearSize": "245/45R17"
+        },
+        {
+          "trim": "350",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "245/45R17", "225/40R18", "255/35R18"],
+      "notes": "Staggered options on RWD models"
+    },
+    {
+      "year": 2009,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "250 AWD",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "250 RWD",
+          "oemTireSizes": ["225/45R17", "245/45R17"],
+          "isStaggered": true,
+          "frontSize": "225/45R17",
+          "rearSize": "245/45R17"
+        },
+        {
+          "trim": "250 RWD 18in",
+          "oemTireSizes": ["225/40R18", "255/40R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/40R18"
+        },
+        {
+          "trim": "350",
+          "oemTireSizes": ["225/45R17", "245/45R17"],
+          "isStaggered": true,
+          "frontSize": "225/45R17",
+          "rearSize": "245/45R17"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "245/45R17", "225/40R18", "255/40R18"],
+      "notes": "Multiple staggered options"
+    },
+    {
+      "year": 2008,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "250 AWD",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "250 RWD",
+          "oemTireSizes": ["225/45R17", "245/45R17"],
+          "isStaggered": true,
+          "frontSize": "225/45R17",
+          "rearSize": "245/45R17"
+        },
+        {
+          "trim": "350",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "245/45R17", "225/40R18", "255/35R18"],
+      "notes": "Staggered options on RWD models"
+    },
+    {
+      "year": 2007,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "250 AWD",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "250 RWD",
+          "oemTireSizes": ["225/45R17", "245/45R17"],
+          "isStaggered": true,
+          "frontSize": "225/45R17",
+          "rearSize": "245/45R17"
+        },
+        {
+          "trim": "350",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "245/45R17", "225/40R18", "255/35R18"],
+      "notes": "Staggered options on RWD models"
+    },
+    {
+      "year": 2006,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "250 AWD",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "250 RWD",
+          "oemTireSizes": ["225/45R17", "245/45R17"],
+          "isStaggered": true,
+          "frontSize": "225/45R17",
+          "rearSize": "245/45R17"
+        },
+        {
+          "trim": "250 RWD 18in",
+          "oemTireSizes": ["225/40R18", "255/40R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/40R18"
+        },
+        {
+          "trim": "350",
+          "oemTireSizes": ["225/45R17", "245/45R17"],
+          "isStaggered": true,
+          "frontSize": "225/45R17",
+          "rearSize": "245/45R17"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "245/45R17", "225/40R18", "255/40R18"],
+      "notes": "First year of 2nd generation IS"
+    },
+    {
+      "year": 2005,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300 Base",
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "trim": "300 SportCross",
+          "oemTireSizes": ["215/45R17"]
+        }
+      ],
+      "recommendedSizes": ["205/55R16", "215/45R17"],
+      "notes": "Last year of 1st generation IS 300"
+    },
+    {
+      "year": 2004,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300 Base",
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "trim": "300 SportCross",
+          "oemTireSizes": ["215/45R17"]
+        }
+      ],
+      "recommendedSizes": ["205/55R16", "215/45R17"],
+      "notes": "IS 300 available as sedan and SportCross wagon"
+    },
+    {
+      "year": 2003,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300 Base",
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "trim": "300 SportCross",
+          "oemTireSizes": ["215/45R17"]
+        }
+      ],
+      "recommendedSizes": ["205/55R16", "215/45R17"],
+      "notes": "IS 300 available as sedan and SportCross wagon"
+    },
+    {
+      "year": 2002,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300 Base",
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "trim": "300 SportCross",
+          "oemTireSizes": ["215/45R17"]
+        }
+      ],
+      "recommendedSizes": ["205/55R16", "215/45R17"],
+      "notes": "IS 300 available as sedan and SportCross wagon"
+    },
+    {
+      "year": 2001,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300 Base",
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "trim": "300 SportCross",
+          "oemTireSizes": ["215/45R17"]
+        }
+      ],
+      "recommendedSizes": ["205/55R16", "215/45R17"],
+      "notes": "First year of IS 300 in North America"
+    },
+    {
+      "year": 2000,
+      "make": "Lexus",
+      "model": "IS",
+      "trims": [
+        {
+          "trim": "300",
+          "oemTireSizes": ["205/55R16"]
+        }
+      ],
+      "recommendedSizes": ["205/55R16"],
+      "notes": "IS 300 introduced late 2000 for 2001 model year. Limited 2000 MY production."
+    },
+    {
+      "year": 2015,
+      "make": "Lexus",
+      "model": "IS-C",
+      "trims": [
+        {
+          "trim": "250 C",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 C",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Last year of IS Convertible"
+    },
+    {
+      "year": 2014,
+      "make": "Lexus",
+      "model": "IS-C",
+      "trims": [
+        {
+          "trim": "250 C",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 C",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Hardtop convertible"
+    },
+    {
+      "year": 2013,
+      "make": "Lexus",
+      "model": "IS-C",
+      "trims": [
+        {
+          "trim": "250 C",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 C",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Hardtop convertible"
+    },
+    {
+      "year": 2012,
+      "make": "Lexus",
+      "model": "IS-C",
+      "trims": [
+        {
+          "trim": "250 C",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 C",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Hardtop convertible"
+    },
+    {
+      "year": 2011,
+      "make": "Lexus",
+      "model": "IS-C",
+      "trims": [
+        {
+          "trim": "250 C",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 C",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Hardtop convertible"
+    },
+    {
+      "year": 2010,
+      "make": "Lexus",
+      "model": "IS-C",
+      "trims": [
+        {
+          "trim": "250 C",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 C",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "Hardtop convertible"
+    },
+    {
+      "year": 2009,
+      "make": "Lexus",
+      "model": "IS-C",
+      "trims": [
+        {
+          "trim": "250 C",
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "trim": "350 C",
+          "oemTireSizes": ["225/40R18", "255/35R18"],
+          "isStaggered": true,
+          "frontSize": "225/40R18",
+          "rearSize": "255/35R18"
+        }
+      ],
+      "recommendedSizes": ["225/45R17", "225/40R18", "255/35R18"],
+      "notes": "First year of IS Convertible"
+    },
+    {
+      "year": 2014,
+      "make": "Lexus",
+      "model": "IS-F",
+      "trims": [
+        {
+          "trim": "IS F",
+          "oemTireSizes": ["225/40R19", "255/35R19"],
+          "isStaggered": true,
+          "frontSize": "225/40R19",
+          "rearSize": "255/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R19", "255/35R19"],
+      "notes": "Last year of IS F. V8 performance sedan."
+    },
+    {
+      "year": 2013,
+      "make": "Lexus",
+      "model": "IS-F",
+      "trims": [
+        {
+          "trim": "IS F",
+          "oemTireSizes": ["225/40R19", "255/35R19"],
+          "isStaggered": true,
+          "frontSize": "225/40R19",
+          "rearSize": "255/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R19", "255/35R19"],
+      "notes": "V8 performance sedan with staggered 19in wheels"
+    },
+    {
+      "year": 2012,
+      "make": "Lexus",
+      "model": "IS-F",
+      "trims": [
+        {
+          "trim": "IS F",
+          "oemTireSizes": ["225/40R19", "255/35R19"],
+          "isStaggered": true,
+          "frontSize": "225/40R19",
+          "rearSize": "255/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R19", "255/35R19"],
+      "notes": "V8 performance sedan with staggered 19in wheels"
+    },
+    {
+      "year": 2011,
+      "make": "Lexus",
+      "model": "IS-F",
+      "trims": [
+        {
+          "trim": "IS F",
+          "oemTireSizes": ["225/40R19", "255/35R19"],
+          "isStaggered": true,
+          "frontSize": "225/40R19",
+          "rearSize": "255/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R19", "255/35R19"],
+      "notes": "V8 performance sedan with staggered 19in wheels"
+    },
+    {
+      "year": 2010,
+      "make": "Lexus",
+      "model": "IS-F",
+      "trims": [
+        {
+          "trim": "IS F",
+          "oemTireSizes": ["225/40R19", "255/35R19"],
+          "isStaggered": true,
+          "frontSize": "225/40R19",
+          "rearSize": "255/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R19", "255/35R19"],
+      "notes": "V8 performance sedan with staggered 19in wheels"
+    },
+    {
+      "year": 2009,
+      "make": "Lexus",
+      "model": "IS-F",
+      "trims": [
+        {
+          "trim": "IS F",
+          "oemTireSizes": ["225/40R19", "255/35R19"],
+          "isStaggered": true,
+          "frontSize": "225/40R19",
+          "rearSize": "255/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R19", "255/35R19"],
+      "notes": "V8 performance sedan with staggered 19in wheels"
+    },
+    {
+      "year": 2008,
+      "make": "Lexus",
+      "model": "IS-F",
+      "trims": [
+        {
+          "trim": "IS F",
+          "oemTireSizes": ["225/40R19", "255/35R19"],
+          "isStaggered": true,
+          "frontSize": "225/40R19",
+          "rearSize": "255/35R19"
+        }
+      ],
+      "recommendedSizes": ["225/40R19", "255/35R19"],
+      "notes": "First year of IS F. 5.0L V8 416hp."
+    },
+    {
+      "year": 2007,
+      "make": "Lexus",
+      "model": "IS-F",
+      "trims": [],
+      "recommendedSizes": [],
+      "notes": "IS F not produced until 2008 model year"
+    },
+    {
+      "year": 2026,
+      "make": "Lexus",
+      "model": "LBX",
+      "trims": [
+        {
+          "trim": "Base",
+          "oemTireSizes": ["215/55R18"]
+        },
+        {
+          "trim": "Premium",
+          "oemTireSizes": ["225/50R18"]
+        }
+      ],
+      "recommendedSizes": ["215/55R18", "225/50R18"],
+      "notes": "Subcompact luxury crossover. Not available in US."
+    },
+    {
+      "year": 2025,
+      "make": "Lexus",
+      "model": "LBX",
+      "trims": [
+        {
+          "trim": "Base",
+          "oemTireSizes": ["215/55R18"]
+        },
+        {
+          "trim": "Premium",
+          "oemTireSizes": ["225/50R18"]
+        }
+      ],
+      "recommendedSizes": ["215/55R18", "225/50R18"],
+      "notes": "Subcompact luxury crossover. Not available in US."
+    },
+    {
+      "year": 2024,
+      "make": "Lexus",
+      "model": "LBX",
+      "trims": [
+        {
+          "trim": "Base",
+          "oemTireSizes": ["215/55R18"]
+        },
+        {
+          "trim": "Premium",
+          "oemTireSizes": ["225/50R18"]
+        }
+      ],
+      "recommendedSizes": ["215/55R18", "225/50R18"],
+      "notes": "Subcompact luxury crossover. Not available in US."
+    },
+    {
+      "year": 2023,
+      "make": "Lexus",
+      "model": "LBX",
+      "trims": [
+        {
+          "trim": "Base",
+          "oemTireSizes": ["215/55R18"]
+        }
+      ],
+      "recommendedSizes": ["215/55R18"],
+      "notes": "First year of LBX. Not available in US."
+    },
+    {
+      "year": 2026,
+      "make": "Lexus",
+      "model": "LC",
+      "trims": [
+        {
+          "trim": "500/500h 20in",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500/500h 21in",
+          "oemTireSizes": ["245/40R21", "275/35R21"],
+          "isStaggered": true,
+          "frontSize": "245/40R21",
+          "rearSize": "275/35R21"
+        }
+      ],
+      "recommendedSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "notes": "Staggered fitment on all LC models"
+    },
+    {
+      "year": 2025,
+      "make": "Lexus",
+      "model": "LC",
+      "trims": [
+        {
+          "trim": "500/500h 20in",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500/500h 21in",
+          "oemTireSizes": ["245/40R21", "275/35R21"],
+          "isStaggered": true,
+          "frontSize": "245/40R21",
+          "rearSize": "275/35R21"
+        }
+      ],
+      "recommendedSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "notes": "Staggered fitment on all LC models"
+    },
+    {
+      "year": 2024,
+      "make": "Lexus",
+      "model": "LC",
+      "trims": [
+        {
+          "trim": "500/500h 20in",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500/500h 21in",
+          "oemTireSizes": ["245/40R21", "275/35R21"],
+          "isStaggered": true,
+          "frontSize": "245/40R21",
+          "rearSize": "275/35R21"
+        }
+      ],
+      "recommendedSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "notes": "Staggered fitment on all LC models"
+    },
+    {
+      "year": 2023,
+      "make": "Lexus",
+      "model": "LC",
+      "trims": [
+        {
+          "trim": "500/500h 20in",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500/500h 21in",
+          "oemTireSizes": ["245/40R21", "275/35R21"],
+          "isStaggered": true,
+          "frontSize": "245/40R21",
+          "rearSize": "275/35R21"
+        }
+      ],
+      "recommendedSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "notes": "Staggered fitment on all LC models"
+    },
+    {
+      "year": 2022,
+      "make": "Lexus",
+      "model": "LC",
+      "trims": [
+        {
+          "trim": "500/500h 20in",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500/500h 21in",
+          "oemTireSizes": ["245/40R21", "275/35R21"],
+          "isStaggered": true,
+          "frontSize": "245/40R21",
+          "rearSize": "275/35R21"
+        }
+      ],
+      "recommendedSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "notes": "Staggered fitment on all LC models"
+    },
+    {
+      "year": 2021,
+      "make": "Lexus",
+      "model": "LC",
+      "trims": [
+        {
+          "trim": "500/500h 20in",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500/500h 21in",
+          "oemTireSizes": ["245/40R21", "275/35R21"],
+          "isStaggered": true,
+          "frontSize": "245/40R21",
+          "rearSize": "275/35R21"
+        }
+      ],
+      "recommendedSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "notes": "Staggered fitment on all LC models"
+    },
+    {
+      "year": 2020,
+      "make": "Lexus",
+      "model": "LC",
+      "trims": [
+        {
+          "trim": "500/500h 20in",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500/500h 21in",
+          "oemTireSizes": ["245/40R21", "275/35R21"],
+          "isStaggered": true,
+          "frontSize": "245/40R21",
+          "rearSize": "275/35R21"
+        }
+      ],
+      "recommendedSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "notes": "Staggered fitment on all LC models"
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "LC",
+      "trims": [
+        {
+          "trim": "500/500h 20in",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500/500h 21in",
+          "oemTireSizes": ["245/40R21", "275/35R21"],
+          "isStaggered": true,
+          "frontSize": "245/40R21",
+          "rearSize": "275/35R21"
+        }
+      ],
+      "recommendedSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "notes": "Staggered fitment on all LC models"
+    },
+    {
+      "year": 2018,
+      "make": "Lexus",
+      "model": "LC",
+      "trims": [
+        {
+          "trim": "500/500h 20in",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500/500h 21in",
+          "oemTireSizes": ["245/40R21", "275/35R21"],
+          "isStaggered": true,
+          "frontSize": "245/40R21",
+          "rearSize": "275/35R21"
+        }
+      ],
+      "recommendedSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "notes": "First year of LC. Grand tourer with staggered fitment."
+    },
+    {
+      "year": 2017,
+      "make": "Lexus",
+      "model": "LC",
+      "trims": [
+        {
+          "trim": "500/500h 20in",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500/500h 21in",
+          "oemTireSizes": ["245/40R21", "275/35R21"],
+          "isStaggered": true,
+          "frontSize": "245/40R21",
+          "rearSize": "275/35R21"
+        }
+      ],
+      "recommendedSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "notes": "LC launched late 2017 for 2018 MY. Some early 2017 production."
+    },
+    {
+      "year": 2026,
+      "make": "Lexus",
+      "model": "LS",
+      "trims": [
+        {
+          "trim": "500",
+          "oemTireSizes": ["245/50R19", "245/45R20"]
+        },
+        {
+          "trim": "500h",
+          "oemTireSizes": ["245/50R19", "245/45R20"]
+        }
+      ],
+      "recommendedSizes": ["245/50R19", "245/45R20"],
+      "notes": "Flagship luxury sedan. Square fitment."
+    },
+    {
+      "year": 2025,
+      "make": "Lexus",
+      "model": "LS",
+      "trims": [
+        {
+          "trim": "500",
+          "oemTireSizes": ["245/50R19", "245/45R20"]
+        },
+        {
+          "trim": "500 F Sport",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500h",
+          "oemTireSizes": ["245/50R19", "245/45R20"]
+        }
+      ],
+      "recommendedSizes": ["245/50R19", "245/45R20", "275/40R20"],
+      "notes": "F Sport has staggered 20in setup"
+    },
+    {
+      "year": 2024,
+      "make": "Lexus",
+      "model": "LS",
+      "trims": [
+        {
+          "trim": "500",
+          "oemTireSizes": ["245/50R19", "245/45R20"]
+        },
+        {
+          "trim": "500 F Sport",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500h",
+          "oemTireSizes": ["245/50R19", "245/45R20"]
+        }
+      ],
+      "recommendedSizes": ["245/50R19", "245/45R20", "275/40R20"],
+      "notes": "F Sport has staggered 20in setup"
+    },
+    {
+      "year": 2023,
+      "make": "Lexus",
+      "model": "LS",
+      "trims": [
+        {
+          "trim": "500",
+          "oemTireSizes": ["245/50R19", "245/45R20"]
+        },
+        {
+          "trim": "500 F Sport",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500h",
+          "oemTireSizes": ["245/50R19", "245/45R20"]
+        }
+      ],
+      "recommendedSizes": ["245/50R19", "245/45R20", "275/40R20"],
+      "notes": "F Sport has staggered 20in setup"
+    },
+    {
+      "year": 2022,
+      "make": "Lexus",
+      "model": "LS",
+      "trims": [
+        {
+          "trim": "500",
+          "oemTireSizes": ["245/50R19", "245/45R20"]
+        },
+        {
+          "trim": "500 F Sport",
+          "oemTireSizes": ["245/45R20", "275/40R20"],
+          "isStaggered": true,
+          "frontSize": "245/45R20",
+          "rearSize": "275/40R20"
+        },
+        {
+          "trim": "500h",
+          "oemTireSizes": ["245/50R19", "245/45R20"]
+        }
+      ],
+      "recommendedSizes": ["245/50R19", "245/45R20", "275/40R20"],
+      "notes": "F Sport has staggered 20in setup"
+    }
+  ],
+  "summary": {
+    "totalProcessed": 75,
+    "vehiclesWithData": 74,
+    "vehiclesWithoutData": 1,
+    "staggeredFitments": 45,
+    "squareFitments": 29,
+    "noData": ["2002 Lexus GX (not produced)", "2007 Lexus IS-F (not produced)"]
+  }
+}

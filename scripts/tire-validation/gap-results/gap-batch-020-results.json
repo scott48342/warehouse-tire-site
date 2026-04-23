@@ -1,0 +1,547 @@
+{
+  "batchId": 20,
+  "processedAt": "2026-04-21T23:50:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "found": 41,
+    "notUS": 9,
+    "notFound": 0
+  },
+  "vehicles": [
+    {
+      "year": 2018,
+      "make": "dodge",
+      "model": "vision",
+      "notUS": true,
+      "notes": "Dodge Vision does not exist in the US market. Not found on tiresize.com."
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "bronco-sport",
+      "trims": [
+        { "name": "Badlands", "tireSizes": ["225/65R17", "235/65R17"] },
+        { "name": "Base", "tireSizes": ["225/65R17"] },
+        { "name": "Big Bend", "tireSizes": ["225/65R17", "225/60R18"] },
+        { "name": "First Edition", "tireSizes": ["235/65R17"] },
+        { "name": "Outer Banks", "tireSizes": ["225/65R17", "225/60R18"] }
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "bronco-sport",
+      "trims": [
+        { "name": "Badlands", "tireSizes": ["225/65R17", "235/65R17"] },
+        { "name": "Base", "tireSizes": ["225/65R17"] },
+        { "name": "Big Bend", "tireSizes": ["225/65R17", "225/60R18"] },
+        { "name": "Outer Banks", "tireSizes": ["225/65R17", "225/60R18"] }
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "bronco-sport",
+      "trims": [
+        { "name": "Badlands", "tireSizes": ["225/65R17", "235/65R17"] },
+        { "name": "Base", "tireSizes": ["225/65R17"] },
+        { "name": "Big Bend", "tireSizes": ["225/65R17", "225/60R18"] },
+        { "name": "Heritage", "tireSizes": ["225/65R17"] },
+        { "name": "Heritage Limited", "tireSizes": ["235/65R17"] },
+        { "name": "Outer Banks", "tireSizes": ["225/65R17", "225/60R18"] }
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "bronco-sport",
+      "trims": [
+        { "name": "Badlands", "tireSizes": ["225/65R17", "235/65R17"] },
+        { "name": "Big Bend", "tireSizes": ["225/65R17", "225/60R18"] },
+        { "name": "Free Wheeling", "tireSizes": ["225/65R17"] },
+        { "name": "Heritage", "tireSizes": ["225/65R17"] },
+        { "name": "Outer Banks", "tireSizes": ["225/65R17", "225/60R18"] }
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "bronco-sport",
+      "trims": [
+        { "name": "Badlands", "tireSizes": ["225/65R17", "235/65R17"] },
+        { "name": "Big Bend", "tireSizes": ["225/65R17"] },
+        { "name": "Free Wheeling", "tireSizes": ["225/65R17"] },
+        { "name": "Heritage", "tireSizes": ["225/65R17"] },
+        { "name": "Outer Banks", "tireSizes": ["235/65R17", "225/60R18"] }
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "bronco-sport",
+      "trims": [
+        { "name": "Badlands", "tireSizes": ["225/65R17", "235/65R17"] },
+        { "name": "Big Bend", "tireSizes": ["225/65R17", "225/60R18"] },
+        { "name": "Heritage", "tireSizes": ["225/65R17"] },
+        { "name": "Outer Banks", "tireSizes": ["235/65R17", "225/60R18"] }
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "classic",
+      "notUS": true,
+      "notes": "Ford Classic is not a US vehicle. Sold in markets like India/Mexico as a budget sedan based on older Fiesta platform."
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "classic",
+      "notUS": true,
+      "notes": "Ford Classic is not a US vehicle. Sold in markets like India/Mexico as a budget sedan based on older Fiesta platform."
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "classic",
+      "notUS": true,
+      "notes": "Ford Classic is not a US vehicle. Sold in markets like India/Mexico as a budget sedan based on older Fiesta platform."
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "classic",
+      "notUS": true,
+      "notes": "Ford Classic is not a US vehicle. Sold in markets like India/Mexico as a budget sedan based on older Fiesta platform."
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "contour",
+      "trims": [
+        { "name": "LX", "tireSizes": ["185/70R14", "195/65R14"] },
+        { "name": "SE", "tireSizes": ["205/60R15"] },
+        { "name": "SVT", "tireSizes": ["215/50R16"] }
+      ],
+      "wheelSizes": [14, 15, 16]
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "cougar",
+      "notUS": true,
+      "notes": "Ford Cougar was sold in Europe only. The US market had Mercury Cougar (different vehicle under Mercury brand)."
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "cougar",
+      "notUS": true,
+      "notes": "Ford Cougar was sold in Europe only. The US market had Mercury Cougar (different vehicle under Mercury brand)."
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "cougar",
+      "notUS": true,
+      "notes": "Ford Cougar was sold in Europe only. The US market had Mercury Cougar (different vehicle under Mercury brand)."
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "cougar",
+      "notUS": true,
+      "notes": "Ford Cougar does not exist after 2002 in any market. Mercury Cougar ended in 2002 in the US."
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "cougar",
+      "notUS": true,
+      "notes": "Ford Cougar does not exist after 2002 in any market. Mercury Cougar ended in 2002 in the US."
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["225/60R16"] },
+        { "name": "LX", "tireSizes": ["225/60R16"] },
+        { "name": "Police Interceptor", "tireSizes": ["225/60R16"] },
+        { "name": "S", "tireSizes": ["225/60R16"] }
+      ],
+      "wheelSizes": [16]
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["225/60R16"] },
+        { "name": "LX", "tireSizes": ["225/60R16"] },
+        { "name": "Police Interceptor", "tireSizes": ["225/60R16"] },
+        { "name": "S", "tireSizes": ["225/60R16"] }
+      ],
+      "wheelSizes": [16]
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["225/60R16"] },
+        { "name": "LX", "tireSizes": ["225/60R16"] },
+        { "name": "LX Sport", "tireSizes": ["235/55R17"] },
+        { "name": "Police Interceptor", "tireSizes": ["225/60R16"] },
+        { "name": "S", "tireSizes": ["225/60R16"] }
+      ],
+      "wheelSizes": [16, 17]
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["225/60R16"] },
+        { "name": "LX", "tireSizes": ["225/60R16"] },
+        { "name": "LX Sport", "tireSizes": ["235/55R17"] },
+        { "name": "Police Interceptor", "tireSizes": ["225/60R16"] },
+        { "name": "S", "tireSizes": ["225/60R16"] }
+      ],
+      "wheelSizes": [16, 17]
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["225/60R16"] },
+        { "name": "LX", "tireSizes": ["225/60R16"] },
+        { "name": "LX Sport", "tireSizes": ["235/55R17"] },
+        { "name": "Police Interceptor", "tireSizes": ["225/60R16"] },
+        { "name": "S", "tireSizes": ["225/60R16"] }
+      ],
+      "wheelSizes": [16, 17]
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["225/60R16"] },
+        { "name": "LX", "tireSizes": ["225/60R16"] },
+        { "name": "LX Sport", "tireSizes": ["235/55R17"] },
+        { "name": "Police Interceptor", "tireSizes": ["225/60R16"] },
+        { "name": "S", "tireSizes": ["225/60R16"] }
+      ],
+      "wheelSizes": [16, 17]
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["225/60R16"] },
+        { "name": "LX", "tireSizes": ["225/60R16"] },
+        { "name": "LX Sport", "tireSizes": ["235/55R17"] },
+        { "name": "Police Interceptor", "tireSizes": ["225/60R16"] }
+      ],
+      "wheelSizes": [16, 17]
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["225/60R16"] },
+        { "name": "LX", "tireSizes": ["225/60R16"] },
+        { "name": "LX Sport", "tireSizes": ["235/55R17"] },
+        { "name": "Police Interceptor", "tireSizes": ["225/60R16"] }
+      ],
+      "wheelSizes": [16, 17]
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["225/60R16"] },
+        { "name": "LX", "tireSizes": ["225/60R16"] },
+        { "name": "LX Sport", "tireSizes": ["235/55R17"] },
+        { "name": "Police Interceptor", "tireSizes": ["235/55R17"] }
+      ],
+      "wheelSizes": [16, 17]
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["235/55R17"] },
+        { "name": "LX", "tireSizes": ["235/55R17"] },
+        { "name": "Police Interceptor", "tireSizes": ["235/55R17"] }
+      ],
+      "wheelSizes": [17]
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["235/55R17"] },
+        { "name": "LX", "tireSizes": ["235/55R17"] },
+        { "name": "Police Interceptor", "tireSizes": ["235/55R17"] }
+      ],
+      "wheelSizes": [17]
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "crown-victoria",
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["235/55R17"] },
+        { "name": "LX", "tireSizes": ["235/55R17"] },
+        { "name": "Police Interceptor", "tireSizes": ["235/55R17"] }
+      ],
+      "wheelSizes": [17]
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "Base Model (E150)", "tireSizes": ["225/75R15", "235/75R15"] }
+      ],
+      "wheelSizes": [15],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "Base Model (E150)", "tireSizes": ["225/75R15", "235/75R15"] }
+      ],
+      "wheelSizes": [15],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "Base Model (E150)", "tireSizes": ["225/75R15", "235/75R15"] }
+      ],
+      "wheelSizes": [15],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["235/70R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["235/70R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["235/70R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["235/70R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["235/70R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["225/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["225/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["225/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["225/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["225/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["225/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant. Note: 2013 is gap year in tiresize data."
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E150", "tireSizes": ["225/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E150 variant"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E250", "tireSizes": ["225/75R16", "245/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E250 variant"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E250", "tireSizes": ["225/75R16", "245/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E250 variant"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E250", "tireSizes": ["225/75R16", "245/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E250 variant"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E250", "tireSizes": ["225/75R16", "245/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E250 variant"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E250", "tireSizes": ["225/75R16", "245/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E250 variant"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "correctModel": "econoline",
+      "trims": [
+        { "name": "E250", "tireSizes": ["225/75R16", "245/75R16"] }
+      ],
+      "wheelSizes": [16],
+      "notes": "Listed on tiresize.com as 'Ford Econoline' with E250 variant"
+    }
+  ]
+}

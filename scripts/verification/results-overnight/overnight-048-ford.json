@@ -1,0 +1,1128 @@
+{
+  "batchId": "overnight-048-ford",
+  "verificationDate": "2026-04-23T02:30:00.000Z",
+  "summary": {
+    "total": 76,
+    "verified": 13,
+    "flagged": 14,
+    "invalid": 49,
+    "verifiedPercent": 17.1,
+    "flaggedPercent": 18.4,
+    "invalidPercent": 64.5
+  },
+  "criticalIssues": [
+    {
+      "issue": "1964 Mustang Shelby trims are historically impossible",
+      "detail": "Shelby GT350 production began in 1965, GT500 in 1967. All 1964 Shelby entries are invalid.",
+      "affectedCount": 4
+    },
+    {
+      "issue": "1964-1966 Shelby GT500 entries invalid",
+      "detail": "The Shelby GT500 was not produced until 1967. Entries for 1964-1966 GT500 are historically impossible.",
+      "affectedCount": 3
+    },
+    {
+      "issue": "Modern tire sizes on classic Mustangs with 13-15\" wheels",
+      "detail": "Many 1964-1978 Mustang entries show modern radial tires (215/60R17, 235/50R18, etc.) for vehicles with factory 13-15\" wheels. These are clearly inherited from wrong generation data.",
+      "affectedCount": 42
+    },
+    {
+      "issue": "Conflicting bolt patterns within same year classic Mustangs",
+      "detail": "1965-1967 Mustangs show both 4x108 and 5x114.3 bolt patterns. Base cars used 4x108; 5x114.3 wasn't introduced until 1969 for big-block cars.",
+      "affectedCount": 8
+    }
+  ],
+  "sources": [
+    "tiresize.com - 2018 Ford Fusion, 2022 Ford Maverick tire sizes",
+    "Wikipedia - Shelby Mustang production history (GT350: 1965, GT500: 1967)",
+    "hulkoffsets.com - Ford Mustang bolt pattern history by generation",
+    "Manufacturer historical records for classic Mustang specifications"
+  ],
+  "vehicles": [
+    {
+      "id": "fa283379-01bf-40ac-90a3-c9911281e142",
+      "year": 2017,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "S",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["16x7"], "expected": ["16x6.5-7"], "match": true },
+        "tireSizes": { "current": ["215/60R16"], "expected": ["215/60R16", "235/50R17"], "match": true }
+      },
+      "notes": "Specs match tiresize.com for 2017 Fusion S trim"
+    },
+    {
+      "id": "046e03b0-77b2-42f3-84d2-079b89c00e33",
+      "year": 2018,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "S",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["16x7"], "expected": ["16x6.5-7"], "match": true },
+        "tireSizes": { "current": ["215/60R16"], "expected": ["215/60R16", "235/50R17"], "match": true }
+      },
+      "notes": "Verified against tiresize.com - 2018 Fusion S uses 215/60R16 or 235/50R17"
+    },
+    {
+      "id": "631a1942-e692-41b1-95bd-91bedbd05eac",
+      "year": 2018,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "Titanium/Sport",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["18x8", "19x8.5"], "expected": ["18x8", "19x8.5"], "match": true },
+        "tireSizes": { "current": ["235/45R18", "235/40R19"], "expected": ["235/45R18", "235/40R19"], "match": true }
+      },
+      "notes": "Titanium uses 235/45R18 or 235/40R19; Sport uses 235/40R19. Verified."
+    },
+    {
+      "id": "e0a3bb56-0c09-4c1d-9173-a987ecefc53e",
+      "year": 2018,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "SE",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["17x7.5"], "expected": ["17x7-7.5"], "match": true },
+        "tireSizes": { "current": ["235/50R17"], "expected": ["235/50R17", "235/45R18"], "match": true }
+      },
+      "notes": "2018 Fusion SE uses 235/50R17 or 235/45R18. Verified."
+    },
+    {
+      "id": "bead72aa-deff-48de-a37d-44a1851173d4",
+      "year": 2019,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "SE",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["17x7.5"], "expected": ["17x7-7.5"], "match": true },
+        "tireSizes": { "current": ["235/50R17"], "expected": ["235/50R17"], "match": true }
+      },
+      "notes": "Specs consistent with 2018 model year."
+    },
+    {
+      "id": "d29c06b0-a8e0-455d-9045-326220996b3c",
+      "year": 2019,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "Titanium/Sport",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["18x8", "19x8.5"], "expected": ["18x8", "19x8.5"], "match": true },
+        "tireSizes": { "current": ["235/45R18", "235/40R19"], "expected": ["235/45R18", "235/40R19"], "match": true }
+      },
+      "notes": "Verified."
+    },
+    {
+      "id": "6af6451c-3657-4160-b04e-1bc0dfe0bcff",
+      "year": 2019,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "S",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["16x7"], "expected": ["16x6.5-7"], "match": true },
+        "tireSizes": { "current": ["215/60R16"], "expected": ["215/60R16"], "match": true }
+      },
+      "notes": "Verified."
+    },
+    {
+      "id": "7fe03f4e-c60f-48ae-b4e0-e294508719c8",
+      "year": 2020,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "S",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["16x7"], "expected": ["16x6.5-7"], "match": true },
+        "tireSizes": { "current": ["215/60R16"], "expected": ["215/60R16"], "match": true }
+      },
+      "notes": "Verified."
+    },
+    {
+      "id": "acf959af-bfe1-4c94-9340-52ae96a0d19e",
+      "year": 2020,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "SE",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["17x7.5"], "expected": ["17x7-7.5"], "match": true },
+        "tireSizes": { "current": ["235/50R17"], "expected": ["235/50R17"], "match": true }
+      },
+      "notes": "Verified."
+    },
+    {
+      "id": "08d8578a-2120-4e44-aa81-6dc88b23c60f",
+      "year": 2020,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "Titanium/Sport",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["18x8", "19x8.5"], "expected": ["18x8", "19x8.5"], "match": true },
+        "tireSizes": { "current": ["235/45R18", "235/40R19"], "expected": ["235/45R18", "235/40R19"], "match": true }
+      },
+      "notes": "Verified."
+    },
+    {
+      "id": "ceb3cabc-79c0-4fdd-9dbf-85629e73917f",
+      "year": 2021,
+      "make": "ford",
+      "model": "fusion",
+      "trim": "1.5 EcoBoost",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["16x6.5", "17x7.5", "18x8", "19x8"], "note": "Mix of stock and aftermarket sizes" },
+        "tireSizes": { "current": ["215/60R16", "235/50R17", "235/45R18", "235/40R19"], "note": "All sizes valid for Fusion" }
+      },
+      "notes": "Trim name unusual (1.5 EcoBoost) - typically named S/SE/Titanium. Data otherwise correct but trim naming flagged."
+    },
+    {
+      "id": "4500accc-5a9e-4725-aeb2-2f281ec8832b",
+      "year": 2021,
+      "make": "ford",
+      "model": "maverick",
+      "trim": "2.0 EcoBoost",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["17x7", "18x7", "19x7.5"], "note": "Duplicate entries in data" },
+        "tireSizes": { "current": ["225/65R17", "225/60R18", "235/65R17", "235/60R18", "235/55R19", "225/55R19", "245/50R19"], "expected": ["225/65R17", "235/65R17", "225/60R18"], "issue": "19\" sizes not OEM for 2021-2022 Maverick" }
+      },
+      "notes": "OEM sizes are 17\"-18\" only. 19\" sizes appear to be aftermarket. Trim naming (2.0 EcoBoost) should be XL/XLT/Lariat. Data has duplicate wheel size entries."
+    },
+    {
+      "id": "b42d1545-af27-4b8f-b4a8-1a88e43e139f",
+      "year": 2022,
+      "make": "ford",
+      "model": "maverick",
+      "trim": "2.0 EcoBoost",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x108", "expected": "5x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["17x7", "18x7", "19x7.5"], "note": "Duplicate entries in data" },
+        "tireSizes": { "current": ["225/65R17", "225/60R18", "235/65R17", "235/60R18", "235/55R19", "225/55R19", "245/50R19"], "expected": ["225/65R17", "235/65R17", "225/60R18"], "issue": "19\" sizes not verified as OEM" }
+      },
+      "notes": "Same issues as 2021. OEM trims are XL/XLT/Lariat, not '2.0 EcoBoost'. 19\" options may be aftermarket."
+    },
+    {
+      "id": "35780507-fc68-45d6-acfc-b7a5abc6d2e2",
+      "year": 1964,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "4x108", "expected": "4x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["14x5.5"], "expected": ["14x5", "14x5.5"], "match": true },
+        "tireSizes": { "current": ["215/60R17", "235/50R18", "245/45R19", "255/45R18", "285/40R18", "255/40R19", "285/35R19"], "expected": ["6.50-14", "6.95-14"], "match": false }
+      },
+      "notes": "CRITICAL: Tire sizes are for modern 17-19\" wheels but vehicle has 14\" wheels. Inherited from wrong generation. Original tires were bias-ply 6.50-14 or 6.95-14."
+    },
+    {
+      "id": "55b8c93d-1e27-4c09-bd2b-7928aeaf0b87",
+      "year": 1964,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "The Shelby GT350 was not produced until 1965. The 1964 Mustang never had a Shelby variant."
+      },
+      "notes": "INVALID: Shelby GT350 production began in 1965. This trim did not exist for the 1964 model year."
+    },
+    {
+      "id": "e2977df1-2a52-4791-a475-a5db4cb62e16",
+      "year": 1964,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "The Shelby GT500 was not produced until 1967. The 1964 Mustang never had a Shelby variant."
+      },
+      "notes": "INVALID: Shelby GT500 production began in 1967. This trim did not exist for the 1964 model year."
+    },
+    {
+      "id": "27489f60-98ca-4283-b1da-8818a53e2506",
+      "year": 1964,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "4x108", "expected": "4x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["14x5"], "expected": ["14x5"], "match": true },
+        "tireSizes": { "current": ["215/60R17", "235/50R18", "etc."], "expected": ["6.50-14", "6.95-14"], "match": false }
+      },
+      "notes": "Tire sizes are wrong - modern sizes for 17-19\" wheels on a car with 14\" wheels."
+    },
+    {
+      "id": "3dd1dd1a-6e76-46ea-9e12-a212ee804411",
+      "year": 1965,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "4x108", "expected": "4x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["14x5.5"], "expected": ["14x5", "14x5.5"], "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "expected": ["6.50-14", "6.95-14", "7.35-14"], "match": false }
+      },
+      "notes": "Tire sizes are wrong - modern sizes inherited from wrong generation."
+    },
+    {
+      "id": "30f0525f-7fee-4d14-a362-af9449331b05",
+      "year": 1965,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "4x108", "match": false },
+        "hubBore": { "current": "61.5", "expected": "63.4", "match": false },
+        "wheelSizes": { "current": ["14x5"], "expected": ["14x5"], "match": true },
+        "tireSizes": { "current": ["6.50-13", "6.50-14", "6.95-14"], "note": "Bias-ply sizes are period-correct format" }
+      },
+      "notes": "BOLT PATTERN WRONG: 1965 Mustang used 4x108, not 5x114.3. The 5-lug pattern wasn't used until 1969. Hub bore also questionable."
+    },
+    {
+      "id": "d3880a56-54c6-4f85-8d42-8a8cc39024b3",
+      "year": 1965,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "The Shelby GT500 was not produced until 1967."
+      },
+      "notes": "INVALID: Shelby GT500 did not exist in 1965. Only GT350 was available starting 1965."
+    },
+    {
+      "id": "5693cd02-63ef-4bcd-af62-968ffc20ccae",
+      "year": 1965,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "4x108", "expected": "4x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["15x6"], "expected": ["15x5.5-6"], "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "expected": ["Blue Dot Goodyear racing tires, F70-15"], "match": false }
+      },
+      "notes": "Trim exists (first year). Bolt pattern/hub bore correct. Tire sizes are wrong - modern sizes for a car with 15\" wheels."
+    },
+    {
+      "id": "172dd467-679a-4b85-b25c-6aa739eb4405",
+      "year": 1966,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "expected": "4x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["14x5.5"], "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "expected": ["6.95-14", "7.35-14"], "match": false }
+      },
+      "notes": "Tire sizes completely wrong - modern 17-19\" sizes on 14\" wheel car."
+    },
+    {
+      "id": "f9469ec5-87c7-4058-ace6-2c3935f469d0",
+      "year": 1966,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "expected": "4x108", "match": true },
+        "wheelSizes": { "current": ["15x6"], "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid (2nd year of GT350). Tire sizes wrong - modern sizes."
+    },
+    {
+      "id": "9dfe7456-d6ee-47b9-a441-07c6f833ffc3",
+      "year": 1966,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "note": "Source shows 5x114.3 but this conflicts with known 4x108 for 1966" },
+        "hubBore": { "current": "61.5", "expected": "63.4" },
+        "wheelSizes": { "current": ["14x5"], "match": true },
+        "tireSizes": { "current": ["6.95-14", "7.35-14"], "match": true }
+      },
+      "notes": "Tire sizes are period-correct bias-ply format. Bolt pattern data conflicts with historical records (should be 4x108 for 1966)."
+    },
+    {
+      "id": "c2e07e8d-26f6-4e2f-9fd2-02f886afdc08",
+      "year": 1966,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "Shelby GT500 production began in 1967, not 1966."
+      },
+      "notes": "INVALID: Shelby GT500 did not exist in 1966."
+    },
+    {
+      "id": "c63515c6-b9c2-4a26-97a7-c5f45a0aace3",
+      "year": 1967,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "expected": "4x108", "match": true },
+        "hubBore": { "current": "63.4", "match": true },
+        "wheelSizes": { "current": ["15x6"], "expected": ["15x6-7"], "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim is valid (first year GT500). Tire sizes wrong - modern sizes for 15\" wheel car."
+    },
+    {
+      "id": "944a729c-a7a0-43d9-b70c-666725d34cb6",
+      "year": 1967,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x114.3", "note": "1967 Shelbys may have used 5-lug" },
+        "hubBore": { "current": "61.5" },
+        "wheelSizes": { "current": ["14x5", "14x6"], "match": true },
+        "tireSizes": { "current": ["6.95-14", "7.35-14", "E70-14", "F70-14"], "match": true }
+      },
+      "notes": "Period-correct tire sizes. Some 1967 Shelbys did use 5x114.3 per 80s-research-batch source."
+    },
+    {
+      "id": "29dc0237-f459-4ef9-9a73-2b32fb515625",
+      "year": 1967,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "expected": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong - modern sizes for 14\" wheel car."
+    },
+    {
+      "id": "be5e822e-c592-4606-8899-d4315023bca9",
+      "year": 1967,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "59923716-da33-48f2-94e1-ba8dc5401436",
+      "year": 1968,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong - modern sizes."
+    },
+    {
+      "id": "91502fd6-ff7f-47f4-88d0-e0c809fbfd81",
+      "year": 1968,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "69d434b3-f17f-4ca2-98f0-695b68fbbe53",
+      "year": 1968,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "ba1e20b8-a0ce-449d-b04a-bf8483b19d4b",
+      "year": 1968,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "note": "1968 GT500s used larger 5-lug pattern" },
+        "hubBore": { "current": "61.5" },
+        "wheelSizes": { "current": ["14x5", "14x6"], "match": true },
+        "tireSizes": { "current": ["C78-14", "E78-14", "E70-14", "F70-14"], "match": true }
+      },
+      "notes": "Period-correct tire sizes. Trim valid."
+    },
+    {
+      "id": "010e884f-de76-4f6a-aa66-683539dc24c8",
+      "year": 1969,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x114.3", "match": true },
+        "hubBore": { "current": "70.5", "expected": "70.5", "match": true },
+        "wheelSizes": { "current": ["14x6"], "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Bolt pattern correct (1969 switched to 5x114.3). Tire sizes wrong - modern sizes for 14\" car."
+    },
+    {
+      "id": "07fc1a68-3384-4ee0-8f2a-a04dbd8ba532",
+      "year": 1969,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "hubBore": { "current": "61.5" },
+        "wheelSizes": { "current": ["14x5", "14x6", "15x7"], "match": true },
+        "tireSizes": { "current": ["C78-14", "E78-14", "E70-14", "F70-14", "F60-15"], "match": true }
+      },
+      "notes": "Period-correct data from 80s-research-batch."
+    },
+    {
+      "id": "55e21242-a3e8-42f3-8ae6-6c12bf450439",
+      "year": 1969,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "hubBore": { "current": "70.5", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong - modern sizes."
+    },
+    {
+      "id": "5e794134-61f0-4b1c-9c38-c03d570b2d48",
+      "year": 1969,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Boss 302",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "hubBore": { "current": "70.5", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "5395ac08-7928-4d65-90e5-bdd814a7d4cd",
+      "year": 1969,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "fd9e1df0-0560-4e00-884e-13c22a10eba0",
+      "year": 1969,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "a2014f33-c625-4c70-94a3-43dc3b13abf0",
+      "year": 1969,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Boss 429",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid (rare - only 859 made). Tire sizes wrong."
+    },
+    {
+      "id": "4794210a-0727-4b46-ad78-d8ac2d5468ba",
+      "year": 1970,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid (final year Shelby GT350). Tire sizes wrong."
+    },
+    {
+      "id": "44b518e3-1220-4120-8b04-87a41d6c4df6",
+      "year": 1970,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Boss 429",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "1511cab2-d543-4d80-af21-700f2098b414",
+      "year": 1970,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid (final year Shelby GT500). Tire sizes wrong."
+    },
+    {
+      "id": "aa702e61-a05c-4c5f-b158-65764f71b414",
+      "year": 1970,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Boss 302",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid (final year Boss 302). Tire sizes wrong."
+    },
+    {
+      "id": "73f5e379-bcad-4ca3-bff0-97b6d9e4adb2",
+      "year": 1970,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "hubBore": { "current": "61.5" },
+        "wheelSizes": { "current": ["14x5", "14x6", "14x7", "15x7"], "match": true },
+        "tireSizes": { "current": ["E78-14", "E70-14", "F70-14", "F60-15"], "match": true }
+      },
+      "notes": "Period-correct data from 80s-research-batch."
+    },
+    {
+      "id": "6c7546c1-6851-4ef5-98b9-fb0ea7109bbf",
+      "year": 1970,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "a7e26bce-64dd-4766-8906-64ade75fa8dc",
+      "year": 1970,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "fd8b30dd-f68a-4e66-8ed5-d3001a8912eb",
+      "year": 1971,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "hubBore": { "current": "61.5" },
+        "wheelSizes": { "current": ["14x6", "14x7", "15x7"], "match": true },
+        "tireSizes": { "current": ["E78-14", "E70-14", "F70-14", "F60-15"], "match": true }
+      },
+      "notes": "Period-correct data."
+    },
+    {
+      "id": "45d05670-32a1-40bc-bb6e-e976cbfd1593",
+      "year": 1971,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Boss 351",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "cb04cf42-b204-4814-89f5-a1a97f2027c0",
+      "year": 1971,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "4c8071bd-6fd4-41e4-8c22-a5d3b82bb7ed",
+      "year": 1971,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Grande",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "dad60e92-43b0-453b-80c2-eff044b6bf0c",
+      "year": 1972,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "28a5b4ad-1bcf-4ea9-b849-0992c245f9b3",
+      "year": 1972,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Grande",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "7c27a8e5-61f8-432e-8f75-b6dff122fff6",
+      "year": 1972,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "hubBore": { "current": "61.5" },
+        "wheelSizes": { "current": ["14x6", "14x7", "15x7"], "match": true },
+        "tireSizes": { "current": ["E78-14", "E70-14", "F70-14", "F60-15"], "match": true }
+      },
+      "notes": "Period-correct data."
+    },
+    {
+      "id": "4e9ec09f-4216-45fa-9dbe-1b0842f5d423",
+      "year": 1972,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Boss 351",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "Boss 351 was only produced in 1971, not 1972."
+      },
+      "notes": "INVALID: Boss 351 was a 1971-only model. No Boss variants were produced for 1972."
+    },
+    {
+      "id": "f49a5964-6f4c-44b5-a147-4dee69ae5ccf",
+      "year": 1973,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Grande",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "ac62deb0-ea5e-41c8-a432-334c70811972",
+      "year": 1973,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "e777fbfa-b95c-4055-af00-9acc5a8e7d79",
+      "year": 1973,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Boss 351",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "Boss 351 was only produced in 1971."
+      },
+      "notes": "INVALID: Boss 351 was a 1971-only model."
+    },
+    {
+      "id": "7c41f0c1-b883-426f-aa7c-e58ef85947a3",
+      "year": 1973,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "match": true },
+        "hubBore": { "current": "61.5" },
+        "wheelSizes": { "current": ["14x5.5", "14x7"], "match": true },
+        "tireSizes": { "current": ["E78-14", "E70-14", "F70-14", "GR78-14"], "match": true }
+      },
+      "notes": "Period-correct data. Last year of first-gen Mustang."
+    },
+    {
+      "id": "080e1040-07f5-46bc-9e80-f05b89598f63",
+      "year": 1974,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "expected": "4x108", "match": true },
+        "hubBore": { "current": "63.4", "expected": "63.4", "match": true },
+        "wheelSizes": { "current": ["13x5.5"], "expected": ["13x5", "13x5.5"], "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "expected": ["BR70-13", "CR70-13"], "match": false }
+      },
+      "notes": "Mustang II correct bolt pattern/hub bore. Tire sizes WRONG - modern sizes for 13\" wheel car."
+    },
+    {
+      "id": "d95037fd-9fc7-48bd-8ef3-ad6c9b8cd860",
+      "year": 1974,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Ghia",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "284f92f2-d050-42e7-9660-83e4e0444e55",
+      "year": 1974,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "0465ed1e-5faa-4bee-bb2b-660a089f721a",
+      "year": 1974,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "King Cobra",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "King Cobra was only produced in 1978."
+      },
+      "notes": "INVALID: King Cobra was a 1978-only special edition."
+    },
+    {
+      "id": "17f1ec6d-096f-4f9e-8b68-4a8ede366a96",
+      "year": 1974,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra II",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "Cobra II was produced 1976-1978, not 1974."
+      },
+      "notes": "INVALID: Cobra II was introduced in 1976, not 1974."
+    },
+    {
+      "id": "0718abe9-1fed-4aff-be5e-c79371ddd6cd",
+      "year": 1975,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra II",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "Cobra II was produced 1976-1978, not 1975."
+      },
+      "notes": "INVALID: Cobra II was introduced in 1976."
+    },
+    {
+      "id": "461e935b-7492-41c5-aa19-e636fa3602ab",
+      "year": 1975,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "13896aa5-a391-4640-a837-d62a4afce139",
+      "year": 1975,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Ghia",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "601e26e9-4eb0-4dd7-aeb2-850534102888",
+      "year": 1975,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "191aff79-35b7-47ca-bb6b-37f28c4f1961",
+      "year": 1975,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "King Cobra",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "King Cobra was only produced in 1978."
+      },
+      "notes": "INVALID: King Cobra was a 1978-only model."
+    },
+    {
+      "id": "2507411e-1f95-4d3a-aae7-25abaf116ff3",
+      "year": 1976,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "King Cobra",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "King Cobra was only produced in 1978."
+      },
+      "notes": "INVALID: King Cobra was a 1978-only model."
+    },
+    {
+      "id": "f4f92d92-f462-4b77-9d36-e467f40da543",
+      "year": 1976,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "Mach 1 was discontinued after 1978 Mustang II. Check if 1976 had Mach 1."
+      },
+      "notes": "Mach 1 existed 1974-1978 in Mustang II. Tire sizes still wrong."
+    },
+    {
+      "id": "de52288f-70cc-480e-b75d-39871992873c",
+      "year": 1976,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra II",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid (first year Cobra II). Tire sizes wrong."
+    },
+    {
+      "id": "7ccb6db0-e609-4a56-ae75-1d443c3c5de8",
+      "year": 1976,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Tire sizes wrong."
+    },
+    {
+      "id": "34987761-5146-41ea-b555-72d41fe0c712",
+      "year": 1976,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Ghia",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "match": true },
+        "tireSizes": { "current": ["215/60R17", "etc."], "match": false }
+      },
+      "notes": "Trim valid. Tire sizes wrong."
+    },
+    {
+      "id": "7139573b-14bc-46e9-b36d-b36335b71d64",
+      "year": 1977,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "King Cobra",
+      "status": "invalid",
+      "findings": {
+        "historicalAccuracy": false,
+        "reason": "King Cobra was only produced in 1978."
+      },
+      "notes": "INVALID: King Cobra was a 1978-only model."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "critical",
+      "action": "Delete 1964 Shelby entries",
+      "detail": "Remove all 1964 Mustang Shelby GT350 and GT500 entries - these vehicles did not exist historically."
+    },
+    {
+      "priority": "critical",
+      "action": "Delete pre-1967 GT500 entries",
+      "detail": "Remove 1965-1966 Shelby GT500 entries - GT500 production began in 1967."
+    },
+    {
+      "priority": "critical",
+      "action": "Fix classic Mustang tire sizes",
+      "detail": "All 'generation_inherit' source entries have wrong tire sizes. Modern 17-19\" tire sizes are assigned to cars with 13-15\" wheels. Need to populate with period-correct bias-ply sizes (e.g., E78-14, F70-14, 6.95-14)."
+    },
+    {
+      "priority": "high",
+      "action": "Fix bolt pattern inconsistencies",
+      "detail": "1964-1968 Mustangs should use 4x108. 5x114.3 wasn't standard until 1969+. Review entries showing 5x114.3 for pre-1969 base models."
+    },
+    {
+      "priority": "high",
+      "action": "Delete King Cobra for 1974-1977",
+      "detail": "King Cobra was 1978-only. Remove entries for 1974, 1975, 1976, 1977."
+    },
+    {
+      "priority": "high",
+      "action": "Delete Cobra II for 1974-1975",
+      "detail": "Cobra II was introduced in 1976. Remove 1974 and 1975 entries."
+    },
+    {
+      "priority": "high",
+      "action": "Delete Boss 351 for 1972-1973",
+      "detail": "Boss 351 was 1971-only. Remove 1972 and 1973 entries."
+    },
+    {
+      "priority": "medium",
+      "action": "Standardize Maverick trim names",
+      "detail": "Change '2.0 EcoBoost' to proper trim names (XL, XLT, Lariat)."
+    },
+    {
+      "priority": "medium",
+      "action": "Standardize Fusion trim names",
+      "detail": "Change '1.5 EcoBoost' to proper trim names (S, SE, SEL, Titanium)."
+    }
+  ]
+}

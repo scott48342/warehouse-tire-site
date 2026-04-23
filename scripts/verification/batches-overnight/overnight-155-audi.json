@@ -1,0 +1,1898 @@
+[
+  {
+    "id": "12cafacd-01e2-4a77-8b9d-bf3951201b36",
+    "year": 2022,
+    "make": "audi",
+    "model": "rs5",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 26,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "255/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "1de9bc72-189e-4f71-b71a-63a9242ad6f3",
+    "year": 2023,
+    "make": "audi",
+    "model": "rs5",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 26,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "255/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "69bf6a8d-df3b-45e4-ba03-b5e70a250aba",
+    "year": 2024,
+    "make": "audi",
+    "model": "rs5",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 26,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 26,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "255/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "83833311-3e1b-403a-8fac-6aa5ef654213",
+    "year": 2025,
+    "make": "audi",
+    "model": "rs5",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 26,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 26,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "255/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "0b792243-de72-456b-a90e-3e4e803e9a61",
+    "year": 2002,
+    "make": "audi",
+    "model": "rs6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 45,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 35,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "d7376372-d814-4a74-9392-806ab130e489",
+    "year": 2025,
+    "make": "audi",
+    "model": "rs6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/35R21",
+      "285/30R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "6dd27193-f507-4050-ad70-03c77e2fe7e2",
+    "year": 2026,
+    "make": "audi",
+    "model": "rs6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/35R21",
+      "285/30R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "dceaa269-b990-412c-b9e5-e0419258daf1",
+    "year": 2019,
+    "make": "audi",
+    "model": "rs7",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 35,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 25,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "275/35R21",
+      "285/30R22"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "c87dd723-480c-4036-8ca5-a0c62dda584c",
+    "year": 2020,
+    "make": "audi",
+    "model": "rs7",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/35R21",
+      "285/30R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a7185987-b9dd-4b1d-807c-0d517f1d0267",
+    "year": 2025,
+    "make": "audi",
+    "model": "rs7",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/35R21",
+      "285/30R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "71c4306b-c2b0-4477-9358-0e37e0999cd3",
+    "year": 2026,
+    "make": "audi",
+    "model": "rs7",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/35R21",
+      "285/30R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "76f4e761-ff3d-4108-8b9a-156de5ee53b4",
+    "year": 2021,
+    "make": "audi",
+    "model": "s3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18",
+      "235/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a4bdeb19-e35a-4fdd-82cf-427d54834ceb",
+    "year": 2025,
+    "make": "audi",
+    "model": "s3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18",
+      "235/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9297b335-e40b-40a0-ac0a-ab2c10217954",
+    "year": 2026,
+    "make": "audi",
+    "model": "s3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18",
+      "235/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "159d79d9-fcd8-4bda-b86d-c102e7148da2",
+    "year": 2000,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fdf02a34-3719-4a20-9899-231220aaa134",
+    "year": 2000,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "235/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "70e7f9a1-0400-4928-93a4-6e6a8fccfc89",
+    "year": 2001,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "235/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "59201b54-aeac-4dd1-9879-e21b9805aab5",
+    "year": 2001,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "062b83d2-c976-4e1c-b4bb-def5c829b5c2",
+    "year": 2002,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "235/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c1f05eed-73e2-466e-93b2-0a5564c222d3",
+    "year": 2002,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8bffd202-6335-4aac-97c4-bd4a56bbc513",
+    "year": 2003,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Avant, Sedan",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 32,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "luxury-gap-fill [web_research]"
+  },
+  {
+    "id": "adb41686-9465-43b1-8b86-dcb4925ce67b",
+    "year": 2004,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ba677b5e-6711-4886-ba81-59a77d54f3d4",
+    "year": 2004,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8a7b94a1-0ac5-40c5-b816-d617557d4032",
+    "year": 2005,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "df854231-bfec-4e97-9ff1-10eb20a17510",
+    "year": 2005,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "0a11db2e-b36d-4fd8-beea-7586bab33586",
+    "year": 2006,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "37285c45-fea6-4138-96de-4c38cd3a1273",
+    "year": 2006,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "90301727-dc69-4ef0-9092-a51fc7ffa897",
+    "year": 2007,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "13c84552-cedf-4ae7-8362-da3f4cb8a35e",
+    "year": 2007,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "adcb78bb-ab18-4c75-8b20-f23888c75e75",
+    "year": 2008,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b5c36ba2-bde0-4940-8bec-517c8728e6dc",
+    "year": 2008,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "3711204c-8a2e-46fe-8f63-7dfb78b31fbd",
+    "year": 2009,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Premium, Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 43,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 43,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "luxury-gap-fill [web_research]"
+  },
+  {
+    "id": "a9bdc2fd-395c-4580-9657-a0956b3f416d",
+    "year": 2010,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7884d925-c57b-4ad3-9485-13a4e8bea09c",
+    "year": 2010,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ddd74b85-2099-45c1-99d6-86bfe94fc874",
+    "year": 2010,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ad5f3b3a-40a9-4801-955e-d3f6288a9c07",
+    "year": 2011,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3479f664-3ec0-42c9-98ee-40c84e1afbae",
+    "year": 2011,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ab345b9c-da64-40c2-bed6-7b9fc2b554fb",
+    "year": 2011,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2e56890b-1d98-4f1e-9377-265b34875dac",
+    "year": 2012,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "89ab103f-5b5b-4256-8173-89e6c629e75a",
+    "year": 2012,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cf5624eb-0b73-4e73-ad45-9b0c9592db3c",
+    "year": 2012,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4bf5365b-acc6-46c0-97b8-6207363f0dca",
+    "year": 2013,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8065750b-a197-4d69-ace9-b8bd30b1bdb1",
+    "year": 2013,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a33304b4-670a-40dc-ad03-98b23747de2c",
+    "year": 2013,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b8e2c0cd-48c9-49a2-af09-6548e1acd802",
+    "year": 2014,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "0472bf53-5326-4046-9ac5-2752eef7d760",
+    "year": 2014,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "de71456f-8f84-4653-8378-80290eee2a7e",
+    "year": 2014,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0df0426e-6a2c-495e-a4d9-75adf03d2ecb",
+    "year": 2015,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "345c1582-57b8-493c-aea4-a29d851ba37b",
+    "year": 2015,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "418bc0ae-06ea-437b-9dcb-63bbc0b0ff22",
+    "year": 2015,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e8536854-4a62-4c4b-915a-f1755368dd98",
+    "year": 2016,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a4e10352-eede-4a9e-b392-f568ec8947e5",
+    "year": 2016,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "aaafc1d1-c6cf-4fc4-a548-136da86bde59",
+    "year": 2016,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e172f57b-a391-4f12-86b2-8ab303bc3dbc",
+    "year": 2017,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Premium Plus, Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 40,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 40,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "luxury-gap-fill [web_research]"
+  },
+  {
+    "id": "45ad6675-bb3a-47ba-b899-c939b07f218b",
+    "year": 2018,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "18aa7b35-021e-4ab6-9913-8dfcf513fffe",
+    "year": 2018,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f62d6241-2662-4b5a-b5a3-089e6a21b3b4",
+    "year": 2018,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "32c461d8-22b7-4d39-a0db-183eeda41a42",
+    "year": 2018,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fdf1b9ad-3af4-4233-8a76-81efa6509aa2",
+    "year": 2019,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "d899bb41-dad2-4669-b641-8e54d825c096",
+    "year": 2019,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b73b7709-915b-4d0e-88b5-d5d4ba693503",
+    "year": 2019,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c3b2071b-8108-4b1c-87ba-e598416294ba",
+    "year": 2019,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "eea17a9e-6358-4d98-9509-725511c8660f",
+    "year": 2020,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "20aba611-534b-438b-9e3f-bf6e9b087250",
+    "year": 2020,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fe80118c-01e5-4740-9e21-2e07adff342c",
+    "year": 2020,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a5c114cf-8075-4571-adba-bebd687439bf",
+    "year": 2020,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6d53f25f-b1e9-46b4-b4b9-e606b339dbbb",
+    "year": 2021,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1d55c0f2-e9d6-4e63-8fbb-0daa91aaaea4",
+    "year": 2021,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7caa3a15-a26c-4243-b9b5-fffcccbb7939",
+    "year": 2021,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "eb0e2962-16e9-45a5-afa1-611aa03e8caa",
+    "year": 2021,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9b4b6e9f-b38d-4db7-a8b9-78a665e3d937",
+    "year": 2022,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b1a6f924-535a-42cb-81a2-e9188b7a5fd1",
+    "year": 2022,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "476e0fd8-f284-41e2-81b7-f6249f4c313a",
+    "year": 2022,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0a8cebfc-10f3-496a-bf1e-60fe66e99519",
+    "year": 2022,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1ec81593-391c-4fb1-b338-72b9b562eb0e",
+    "year": 2023,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "source": "cache-import"
+  }
+]

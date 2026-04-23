@@ -1,0 +1,806 @@
+{
+  "batchId": "141",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2010,
+      "make": "suzuki",
+      "model": "sx4",
+      "currentTireSizes": [
+        "205/60R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "suzuki",
+      "model": "sx4",
+      "currentTireSizes": [
+        "205/60R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "suzuki",
+      "model": "sx4",
+      "currentTireSizes": [
+        "205/60R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "suzuki",
+      "model": "sx4",
+      "currentTireSizes": [
+        "205/60R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "tesla",
+      "model": "cybertruck",
+      "currentTireSizes": [
+        "285/65R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "tesla",
+      "model": "cybertruck",
+      "currentTireSizes": [
+        "285/65R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "tesla",
+      "model": "cybertruck",
+      "currentTireSizes": [
+        "285/65R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "tesla",
+      "model": "cybertruck",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45R18",
+        "235/40R19",
+        "235/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45R18",
+        "235/40R19",
+        "235/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45R18",
+        "235/40R19",
+        "235/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45R18",
+        "235/40R19",
+        "235/35R20",
+        "275/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45ZR18",
+        "235/40ZR19",
+        "235/35ZR20",
+        "245/35ZR20",
+        "275/30ZR20",
+        "285/30ZR20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45R18",
+        "235/40R19",
+        "235/35R20",
+        "275/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/40ZR19",
+        "235/45ZR18",
+        "275/35ZR19",
+        "235/35ZR20",
+        "245/35ZR20",
+        "275/30ZR20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/40ZR19",
+        "235/45ZR18",
+        "275/35ZR19",
+        "235/35ZR20",
+        "245/35ZR20",
+        "275/30ZR20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45R18",
+        "235/40R19",
+        "235/35R20",
+        "275/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45R18",
+        "235/40R19",
+        "235/35R20",
+        "275/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/40ZR19",
+        "235/45ZR18",
+        "275/35ZR19",
+        "235/35ZR20",
+        "245/35ZR20",
+        "275/30ZR20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45R18",
+        "235/40R19",
+        "235/35R20",
+        "275/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45R18",
+        "235/40R19",
+        "235/35R20",
+        "275/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/45R18",
+        "235/40R19",
+        "235/35R20",
+        "275/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "tesla",
+      "model": "model-3",
+      "currentTireSizes": [
+        "235/40ZR19",
+        "235/45ZR18",
+        "275/35ZR19",
+        "235/35ZR20",
+        "245/35ZR20",
+        "275/30ZR20"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "255/35R21",
+        "265/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "255/35R21",
+        "265/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "255/35R21",
+        "265/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "255/45ZR19",
+        "285/40ZR19",
+        "265/35ZR21",
+        "295/30ZR21",
+        "255/40ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "255/35R21",
+        "265/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "255/35R21",
+        "265/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "255/45ZR19",
+        "285/40ZR19",
+        "265/35ZR21",
+        "295/30ZR21",
+        "255/40ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "255/35R21",
+        "265/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45ZR19",
+        "245/35ZR21",
+        "245/40ZR20",
+        "265/35ZR21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45ZR19",
+        "245/35ZR21",
+        "245/40ZR20",
+        "265/35ZR21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/35R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/35R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/35R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/35R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45ZR19",
+        "245/35ZR21",
+        "245/40ZR20",
+        "265/35ZR21"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/35R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45ZR19",
+        "245/40ZR20",
+        "245/35ZR21",
+        "265/35ZR21"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/35R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/35R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45ZR19",
+        "245/40ZR20",
+        "245/35ZR21",
+        "265/35ZR21"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/35R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "tesla",
+      "model": "model-s",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/35R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/35ZR22",
+        "285/35ZR22",
+        "265/45ZR20",
+        "275/45ZR20",
+        "265/40ZR21",
+        "275/40ZR21",
+        "285/30ZR22",
+        "305/30ZR22"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/35ZR22",
+        "285/35ZR22",
+        "265/45ZR20",
+        "275/45ZR20",
+        "265/40ZR21",
+        "275/40ZR21",
+        "285/30ZR22",
+        "305/30ZR22"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "275/45R20",
+        "265/50R19",
+        "265/40R21",
+        "275/40R21",
+        "265/35ZR22",
+        "285/35ZR22",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/35ZR22",
+        "285/35ZR22",
+        "265/45R20",
+        "275/45R20",
+        "265/45ZR20",
+        "275/45ZR20",
+        "285/30ZR22",
+        "305/30ZR22"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "tesla",
+      "model": "model-x",
+      "currentTireSizes": [
+        "265/45R20",
+        "265/35R22",
+        "285/35R22"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "tesla",
+      "model": "model-y",
+      "currentTireSizes": [
+        "255/45R19",
+        "255/40R20",
+        "255/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "tesla",
+      "model": "model-y",
+      "currentTireSizes": [
+        "255/45R19",
+        "255/40R20",
+        "255/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "tesla",
+      "model": "model-y",
+      "currentTireSizes": [
+        "255/45R19",
+        "255/40R20",
+        "255/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "tesla",
+      "model": "model-y",
+      "currentTireSizes": [
+        "255/45ZR19",
+        "255/40ZR20",
+        "255/35ZR21",
+        "275/35ZR21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "tesla",
+      "model": "model-y",
+      "currentTireSizes": [
+        "255/45R19",
+        "255/40R20",
+        "255/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "tesla",
+      "model": "model-y",
+      "currentTireSizes": [
+        "255/45ZR19",
+        "255/40ZR20",
+        "255/35ZR21",
+        "275/35ZR21"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "tesla",
+      "model": "model-y",
+      "currentTireSizes": [
+        "255/45R19",
+        "255/40R20",
+        "255/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "tesla",
+      "model": "model-y",
+      "currentTireSizes": [
+        "255/45ZR19",
+        "255/40ZR20",
+        "255/35ZR21",
+        "275/35ZR21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "tesla",
+      "model": "model-y",
+      "currentTireSizes": [
+        "255/45R19",
+        "255/40R20",
+        "255/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "tesla",
+      "model": "model-y",
+      "currentTireSizes": [
+        "255/45R19",
+        "255/40R20",
+        "255/35R21",
+        "275/35R21"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2014,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2013,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": []
+    }
+  ]
+}

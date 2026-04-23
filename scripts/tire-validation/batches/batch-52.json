@@ -1,0 +1,980 @@
+{
+  "batchId": "52",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "f-150",
+      "currentTireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "f-150",
+      "currentTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "265/60R18",
+        "275/65R18",
+        "275/55R20",
+        "LT245/75R16",
+        "LT245/70R17"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "f-150",
+      "currentTireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "f-150",
+      "currentTireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "f-150",
+      "currentTireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "f-150",
+      "currentTireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT265/70R17",
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT245/75R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT265/70R17",
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT245/75R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT265/70R17",
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT245/75R17"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT265/70R17",
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT245/75R17"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT265/70R17",
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT245/75R17"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT265/70R17",
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT245/75R17"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "f-250",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "275/65R20",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT285/75R18"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT275/70R18",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT275/65R18",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/70R18"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT275/65R18",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/70R18"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT275/65R18",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/70R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT275/65R18",
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/70R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT245/75R17"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT245/75R17"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT245/75R17"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": [
+        "275/70R18",
+        "LT275/65R20",
+        "LT275/70R18",
+        "LT275/65R18",
+        "LT285/70R17",
+        "LT245/75R17",
+        "LT265/70R17"
+      ]
+    }
+  ]
+}

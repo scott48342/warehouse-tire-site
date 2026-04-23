@@ -1,0 +1,18 @@
+{
+  "batch": "01-trifive",
+  "description": "Tri-Five Chevrolet (1955-1957) - Show car royalty",
+  "vehicles": [
+    {"year": 1955, "make": "Chevrolet", "model": "Bel Air"},
+    {"year": 1955, "make": "Chevrolet", "model": "210"},
+    {"year": 1955, "make": "Chevrolet", "model": "150"},
+    {"year": 1955, "make": "Chevrolet", "model": "Nomad"},
+    {"year": 1956, "make": "Chevrolet", "model": "Bel Air"},
+    {"year": 1956, "make": "Chevrolet", "model": "210"},
+    {"year": 1956, "make": "Chevrolet", "model": "150"},
+    {"year": 1956, "make": "Chevrolet", "model": "Nomad"},
+    {"year": 1957, "make": "Chevrolet", "model": "Bel Air"},
+    {"year": 1957, "make": "Chevrolet", "model": "210"},
+    {"year": 1957, "make": "Chevrolet", "model": "150"},
+    {"year": 1957, "make": "Chevrolet", "model": "Nomad"}
+  ]
+}

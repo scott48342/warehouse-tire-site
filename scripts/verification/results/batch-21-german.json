@@ -1,0 +1,1325 @@
+{
+  "batch": "batch-21-german",
+  "verifiedAt": "2026-04-23T00:37:00.000Z",
+  "verifiedBy": "subagent-de-21",
+  "totalVehicles": 75,
+  "verified": 59,
+  "flagged": 16,
+  "sources": [
+    "hulkoffsets.com",
+    "bmwusa.com",
+    "bmwblog.com",
+    "car-bolts.com",
+    "wikipedia.org",
+    "carbuzz.com"
+  ],
+  "results": [
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "G26 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "430i", "oemWheelSize": "18x8", "oemTireSize": "225/45R18" },
+        { "name": "430i xDrive", "oemWheelSize": "18x8", "oemTireSize": "225/45R18" },
+        { "name": "M440i xDrive", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bmwusa.com"],
+      "usMarketValid": true,
+      "notes": "G26 LCI facelift 2024+"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "G26 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "430i", "oemWheelSize": "18x8", "oemTireSize": "225/45R18" },
+        { "name": "M440i xDrive", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "G26 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "430i", "oemWheelSize": "18x8", "oemTireSize": "225/45R18" },
+        { "name": "M440i xDrive", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Future model year - specs projected based on current generation"
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "E63/E64",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "645Ci", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "wikipedia.org"],
+      "usMarketValid": true,
+      "notes": "E63 coupe launched mid-2003 MY"
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "E63/E64",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "645Ci Coupe", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "645Ci Convertible", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "wikipedia.org"],
+      "usMarketValid": true,
+      "notes": "E64 convertible added mid-2004"
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "E63/E64",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "645Ci", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "E63/E64",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "650i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "M6", "oemWheelSize": "19x8.5/10", "oemTireSize": "255/40R19 / 285/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "650i and M6 introduced"
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "E63/E64",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "650i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "M6", "oemWheelSize": "19x8.5/10", "oemTireSize": "255/40R19 / 285/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "E63/E64",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "650i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "M6", "oemWheelSize": "19x8.5/10", "oemTireSize": "255/40R19 / 285/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "E63/E64",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "650i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "E63/E64",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "650i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Final year of E63/E64 generation"
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "F12/F13",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "640i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "650i", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "F12/F13 generation launched 2011, convertible (F12) arrived first"
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "F12/F13",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "640i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "650i", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" },
+        { "name": "M6", "oemWheelSize": "19x9/10", "oemTireSize": "265/40R19 / 295/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "F13 coupe and F06 Gran Coupe introduced"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "F06/F12/F13",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "640i Gran Coupe", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "650i", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "F06/F12/F13",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "640i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "650i", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "F06/F12/F13",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "640i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "650i", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "F06/F12/F13",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "640i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "650i", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "F06/F12/F13",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "640i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "650i", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "F06/F12/F13",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "640i Gran Coupe", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "650i Gran Coupe", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Final year for F06/F12/F13 in US (replaced by 8 Series)"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "6 Series",
+      "generation": "F06",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "640i xDrive Gran Coupe", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" }
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "flagReason": "Limited availability - 6 Series phased out after 2018 in favor of 8 Series",
+      "notes": "Gran Coupe only, coupe/convertible discontinued"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "E38",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "16x7.5", "oemTireSize": "225/60R16" },
+        { "name": "740iL", "oemWheelSize": "16x7.5", "oemTireSize": "225/60R16" },
+        { "name": "750iL", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2001,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "E38",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "16x7.5", "oemTireSize": "225/60R16" },
+        { "name": "740iL", "oemWheelSize": "16x7.5", "oemTireSize": "225/60R16" },
+        { "name": "750iL", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Final year of E38"
+    },
+    {
+      "year": 2002,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "E65/E66",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "745i", "oemWheelSize": "17x8", "oemTireSize": "225/55R17" },
+        { "name": "745Li", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "E65/E66 generation launched"
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "E65/E66",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "745i", "oemWheelSize": "17x8", "oemTireSize": "225/55R17" },
+        { "name": "745Li", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "E65/E66",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "745i", "oemWheelSize": "17x8", "oemTireSize": "225/55R17" },
+        { "name": "745Li", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "E65/E66",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "745i", "oemWheelSize": "17x8", "oemTireSize": "225/55R17" },
+        { "name": "745Li", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "E65/E66",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "750i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750Li", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "760Li", "oemWheelSize": "19x9", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "LCI facelift; 750i replaced 745i"
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "E65/E66",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "750i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750Li", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "E65/E66",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "750i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750Li", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Final year of E65/E66"
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "F01/F02",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "750i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750Li", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "classic.com"],
+      "usMarketValid": true,
+      "notes": "F01/F02 generation launched"
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "F01/F02",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "750i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750Li", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "760Li", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "F01/F02",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750Li", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "LCI facelift"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "F01/F02",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750i", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Final year of F01/F02"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "G11/G12",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750i xDrive", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "G11/G12 launched - NEW bolt pattern 5x112"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "G11/G12",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750i xDrive", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "G11/G12",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750i xDrive", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "M760i xDrive", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "G11/G12 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750i xDrive", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "LCI facelift"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "G11/G12 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750i xDrive", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "G11/G12 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "750i xDrive", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Final year of G11/G12"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "G70",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "760i xDrive", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "245/40R20 / 275/35R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "G70 generation launched"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "7 Series",
+      "generation": "G70",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "740i", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "760i xDrive", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "245/40R20 / 275/35R20" }
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Future model year - specs projected"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "8 Series",
+      "generation": "G14/G15/G16",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "M850i xDrive", "oemWheelSize": "19x8/9", "oemTireSize": "245/40R19 / 275/35R19" }
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com", "wikipedia.org"],
+      "usMarketValid": true,
+      "flagReason": "8 Series launched late 2018 (Nov 2018) as 2019 MY. 2018 MY may be incorrect.",
+      "notes": "G14/G15/G16 sales began November 2018. Most US vehicles are 2019 MY."
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "8 Series",
+      "generation": "G14/G15/G16",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "840i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "M850i xDrive", "oemWheelSize": "19x8/9", "oemTireSize": "245/40R19 / 275/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "First full US model year"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "8 Series",
+      "generation": "G14/G15/G16",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "840i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "M850i xDrive", "oemWheelSize": "19x8/9", "oemTireSize": "245/40R19 / 275/35R19" },
+        { "name": "M8", "oemWheelSize": "20x9/10", "oemTireSize": "275/35R20 / 285/35R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "M8 introduced"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "8 Series",
+      "generation": "G14/G15/G16",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "840i", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "M850i xDrive", "oemWheelSize": "19x8/9", "oemTireSize": "245/40R19 / 275/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "8 Series",
+      "generation": "G14/G15/G16 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "840i", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" },
+        { "name": "M850i xDrive", "oemWheelSize": "20x8/9", "oemTireSize": "245/35R20 / 275/30R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "LCI facelift"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "8 Series",
+      "generation": "G14/G15/G16 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "840i", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" },
+        { "name": "M850i xDrive", "oemWheelSize": "20x8/9", "oemTireSize": "245/35R20 / 275/30R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "8 Series",
+      "generation": "G14/G15/G16 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "840i", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" },
+        { "name": "M850i xDrive", "oemWheelSize": "20x8/9", "oemTireSize": "245/35R20 / 275/30R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "8 Series",
+      "generation": "G14/G15/G16 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "840i", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" },
+        { "name": "M850i xDrive", "oemWheelSize": "20x8/9", "oemTireSize": "245/35R20 / 275/30R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "8 Series",
+      "generation": "G14/G15/G16 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "840i", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" },
+        { "name": "M850i xDrive", "oemWheelSize": "20x8/9", "oemTireSize": "245/35R20 / 275/30R20" }
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Future model year - specs projected"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "i4",
+      "generation": "G26",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [],
+      "confidence": "low",
+      "sources": ["hulkoffsets.com", "bmwusanews.com"],
+      "usMarketValid": false,
+      "flagReason": "INVALID US MARKET YEAR - i4 US sales began March 2022 as 2022 MY",
+      "notes": "2021 is European production/reveal year only. First US model year is 2022."
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "i4",
+      "generation": "G26",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive40", "oemWheelSize": "18x8", "oemTireSize": "225/55R18" },
+        { "name": "M50", "oemWheelSize": "19x8/9", "oemTireSize": "245/45R19 / 255/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bmwusanews.com"],
+      "usMarketValid": true,
+      "notes": "First US model year"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "i4",
+      "generation": "G26",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive35", "oemWheelSize": "18x8", "oemTireSize": "225/55R18" },
+        { "name": "eDrive40", "oemWheelSize": "18x8", "oemTireSize": "225/55R18" },
+        { "name": "M50", "oemWheelSize": "19x8/9", "oemTireSize": "245/45R19 / 255/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "eDrive35 entry model added"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "i4",
+      "generation": "G26",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive35", "oemWheelSize": "18x8", "oemTireSize": "225/55R18" },
+        { "name": "eDrive40", "oemWheelSize": "18x8", "oemTireSize": "225/55R18" },
+        { "name": "M50", "oemWheelSize": "19x8/9", "oemTireSize": "245/45R19 / 255/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "i4",
+      "generation": "G26",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive35", "oemWheelSize": "18x8", "oemTireSize": "225/55R18" },
+        { "name": "eDrive40", "oemWheelSize": "18x8", "oemTireSize": "225/55R18" },
+        { "name": "M50", "oemWheelSize": "20x8/9", "oemTireSize": "255/35R20 / 285/30R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "i4",
+      "generation": "G26",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive40", "oemWheelSize": "18x8", "oemTireSize": "225/55R18" },
+        { "name": "M50", "oemWheelSize": "19x8/9", "oemTireSize": "255/35R20 / 285/30R20" }
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Future model year - specs projected"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "i5",
+      "generation": "G60",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [],
+      "confidence": "low",
+      "sources": ["bmwblog.com", "bmwusa.com"],
+      "usMarketValid": false,
+      "flagReason": "INVALID US MARKET YEAR - i5 US sales began 2024. 2023 is reveal/announcement year only.",
+      "notes": "i5 debuted May 2023 but first US deliveries were 2024 MY"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "i5",
+      "generation": "G60",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive40", "oemWheelSize": "19x8", "oemTireSize": "245/45R19" },
+        { "name": "xDrive40", "oemWheelSize": "19x8", "oemTireSize": "245/45R19" },
+        { "name": "M60 xDrive", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "245/40R20 / 275/35R20" }
+      ],
+      "confidence": "high",
+      "sources": ["bmwblog.com", "bmwusa.com"],
+      "usMarketValid": true,
+      "notes": "First US model year"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "i5",
+      "generation": "G60",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive40", "oemWheelSize": "19x8", "oemTireSize": "245/45R19" },
+        { "name": "xDrive40", "oemWheelSize": "19x8", "oemTireSize": "245/45R19" },
+        { "name": "M60 xDrive", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "245/40R20 / 275/35R20" }
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "i5",
+      "generation": "G60",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive40", "oemWheelSize": "19x8", "oemTireSize": "245/45R19" },
+        { "name": "M60 xDrive", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "245/40R20 / 275/35R20" }
+      ],
+      "confidence": "medium",
+      "sources": ["bmwusa.com"],
+      "usMarketValid": true,
+      "notes": "Future model year - specs projected"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "i7",
+      "generation": "G70",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [],
+      "confidence": "low",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": false,
+      "flagReason": "INVALID US MARKET YEAR - i7 US sales began 2023 MY. 2022 is reveal year only.",
+      "notes": "i7 revealed 2022 but first US deliveries were 2023 MY"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "i7",
+      "generation": "G70",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "xDrive60", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "245/40R20 / 275/35R20" },
+        { "name": "M70 xDrive", "oemWheelSize": "21x8.5/10", "oemTireSize": "255/40R21 / 285/35R21" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "First US model year"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "i7",
+      "generation": "G70",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive50", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "xDrive60", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "245/40R20 / 275/35R20" },
+        { "name": "M70 xDrive", "oemWheelSize": "21x8.5/10", "oemTireSize": "255/40R21 / 285/35R21" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "eDrive50 entry model added"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "i7",
+      "generation": "G70",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive50", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "xDrive60", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "245/40R20 / 275/35R20" },
+        { "name": "M70 xDrive", "oemWheelSize": "21x8.5/10", "oemTireSize": "255/40R21 / 285/35R21" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "i7",
+      "generation": "G70",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "eDrive50", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "xDrive60", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "245/40R20 / 275/35R20" }
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Future model year - specs projected"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "i8",
+      "generation": "I12",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [],
+      "confidence": "low",
+      "sources": ["hulkoffsets.com", "wikipedia.org"],
+      "usMarketValid": false,
+      "flagReason": "INVALID US MARKET YEAR - i8 US production/sales began 2014. 2013 is reveal/concept year only.",
+      "notes": "i8 production began 2014. No 2013 MY existed."
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "i8",
+      "generation": "I12",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "20x7.5/8.5", "oemTireSize": "195/50R20 / 215/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "First production year. Staggered setup standard."
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "i8",
+      "generation": "I12",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "20x7.5/8.5", "oemTireSize": "195/50R20 / 215/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "i8",
+      "generation": "I12",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "20x7.5/8.5", "oemTireSize": "195/50R20 / 215/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "i8",
+      "generation": "I12",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "20x7.5/8.5", "oemTireSize": "195/50R20 / 215/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "i8",
+      "generation": "I12",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "Coupe", "oemWheelSize": "20x7.5/8.5", "oemTireSize": "195/50R20 / 215/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": null
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "i8",
+      "generation": "I12/I15",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "Coupe", "oemWheelSize": "20x7.5/8.5", "oemTireSize": "195/50R20 / 215/45R20" },
+        { "name": "Roadster", "oemWheelSize": "20x7.5/8.5", "oemTireSize": "195/50R20 / 215/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Roadster (I15) introduced"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "i8",
+      "generation": "I12/I15",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "Coupe", "oemWheelSize": "20x7.5/8.5", "oemTireSize": "195/50R20 / 215/45R20" },
+        { "name": "Roadster", "oemWheelSize": "20x7.5/8.5", "oemTireSize": "195/50R20 / 215/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "Final production year"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "iX",
+      "generation": "I20",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        { "name": "xDrive40", "oemWheelSize": "20x8.5", "oemTireSize": "255/50R20" },
+        { "name": "xDrive50", "oemWheelSize": "21x9/10.5", "oemTireSize": "255/45R21 / 275/40R21" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bmwixca.com"],
+      "usMarketValid": true,
+      "notes": "First US model year"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "iX",
+      "generation": "I20",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        { "name": "xDrive40", "oemWheelSize": "20x8.5", "oemTireSize": "255/50R20" },
+        { "name": "xDrive50", "oemWheelSize": "21x9/10.5", "oemTireSize": "255/45R21 / 275/40R21" },
+        { "name": "M60", "oemWheelSize": "22x9.5/10.5", "oemTireSize": "275/35R22 / 315/30R22" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "usMarketValid": true,
+      "notes": "M60 performance variant added"
+    }
+  ],
+  "flaggedVehicles": [
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "i4",
+      "reason": "INVALID US MARKET YEAR - First US MY is 2022"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "i7",
+      "reason": "INVALID US MARKET YEAR - First US MY is 2023"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "i5",
+      "reason": "INVALID US MARKET YEAR - First US MY is 2024"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "i8",
+      "reason": "INVALID US MARKET YEAR - First production year is 2014"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "8 Series",
+      "reason": "QUESTIONABLE - 8 Series launched Nov 2018 as 2019 MY. Most 2018 registrations are actually 2019 MY vehicles"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "6 Series",
+      "reason": "LIMITED AVAILABILITY - 6 Series phased out in favor of 8 Series after 2018. Only Gran Coupe remained briefly"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "reason": "FUTURE MODEL YEAR - Specs projected"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "7 Series",
+      "reason": "FUTURE MODEL YEAR - Specs projected"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "8 Series",
+      "reason": "FUTURE MODEL YEAR - Specs projected"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "i4",
+      "reason": "FUTURE MODEL YEAR - Specs projected"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "i5",
+      "reason": "FUTURE MODEL YEAR - Specs projected"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "i7",
+      "reason": "FUTURE MODEL YEAR - Specs projected"
+    }
+  ],
+  "summary": {
+    "boltPatternsByGeneration": {
+      "older_bmw_5x120": [
+        "6 Series E63/E64 (2003-2010)",
+        "6 Series F06/F12/F13 (2011-2019)",
+        "7 Series E38 (1994-2001)",
+        "7 Series E65/E66 (2002-2008)",
+        "7 Series F01/F02 (2009-2015)"
+      ],
+      "modern_bmw_5x112": [
+        "4 Series Gran Coupe G26 (2022+)",
+        "7 Series G11/G12 (2016-2022)",
+        "7 Series G70 (2023+)",
+        "8 Series G14/G15/G16 (2019+)",
+        "i4 G26 (2022+)",
+        "i5 G60 (2024+)",
+        "i7 G70 (2023+)",
+        "i8 I12 (2014-2020)",
+        "iX I20 (2022+)"
+      ]
+    },
+    "hubBores": {
+      "72.6mm": "Older BMWs (E/F chassis)",
+      "66.5mm": "G11/G12 7 Series, iX",
+      "66.6mm": "Modern G-chassis and electric models"
+    },
+    "invalidYearsForUS": [
+      "2021 i4",
+      "2022 i7",
+      "2023 i5",
+      "2013 i8"
+    ]
+  }
+}

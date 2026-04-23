@@ -1,0 +1,807 @@
+{
+  "batchId": "17",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "m8",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "m8",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "m8",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "m8",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "m8",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "m8",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "m8",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "m8",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/50ZR18",
+        "225/55ZR17",
+        "225/45ZR19",
+        "205/60R17",
+        "225/55R17",
+        "225/50R18",
+        "225/40ZR20",
+        "205/55R18"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55ZR17",
+        "225/50ZR18",
+        "225/45ZR19",
+        "205/60R17",
+        "225/55R17",
+        "225/50R18"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": [
+        "225/50R17",
+        "225/45R18",
+        "255/40R18",
+        "225/40ZR19",
+        "255/35ZR19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "x1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "x2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "x2",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x2",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "x2",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "x2",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "x2",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "x2",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "x2",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "x2",
+      "currentTireSizes": [
+        "225/55R17",
+        "225/50R18",
+        "245/45R19",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "x2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "265/40R20",
+        "245/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "255/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "265/40R20",
+        "245/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "255/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "265/40R20",
+        "245/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "255/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "265/40R20",
+        "245/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "265/40R20",
+        "245/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "255/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "255/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "265/40R20",
+        "245/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "255/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "265/40R20",
+        "245/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "255/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "265/40R20",
+        "245/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "265/40R20",
+        "245/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R18",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "255/40R21",
+        "265/35R21"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/65R17",
+        "245/50R18",
+        "255/50R18",
+        "245/45R19",
+        "255/45R19",
+        "245/40R20",
+        "275/35R20",
+        "245/55R17",
+        "225/60R17",
+        "245/45ZR19",
+        "275/40ZR19",
+        "245/40ZR20",
+        "275/35ZR20",
+        "245/35ZR21",
+        "275/30ZR21"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R17",
+        "245/55R18",
+        "245/50R19",
+        "245/45R19",
+        "275/40R19",
+        "245/50R18",
+        "245/55R17",
+        "245/45ZR19",
+        "275/40ZR19",
+        "245/40ZR20",
+        "275/35ZR20",
+        "245/35ZR21",
+        "275/30ZR21"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R17",
+        "245/55R18",
+        "245/50R19",
+        "245/45R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/65R17",
+        "245/50R18",
+        "255/50R18",
+        "245/45R19",
+        "255/45R19",
+        "245/40R20",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R17",
+        "245/55R18",
+        "245/50R19",
+        "245/45R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/65R17",
+        "245/50R18",
+        "255/50R18",
+        "245/45R19",
+        "255/45R19",
+        "245/40R20",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/65R17",
+        "245/50R18",
+        "255/50R18",
+        "245/45R19",
+        "255/45R19",
+        "245/40R20",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R17",
+        "245/55R18",
+        "245/50R19",
+        "245/45R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R17",
+        "245/55R18",
+        "245/50R19",
+        "245/45R19",
+        "275/40R19",
+        "245/55R17",
+        "245/50R18",
+        "245/40ZR20",
+        "275/35ZR20",
+        "245/45ZR19",
+        "275/40ZR19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/65R17",
+        "245/50R18",
+        "255/50R18",
+        "245/45R19",
+        "255/45R19",
+        "245/40R20",
+        "275/35R20",
+        "245/55R17",
+        "225/60R17",
+        "245/40ZR20",
+        "275/35ZR20",
+        "245/45ZR19",
+        "275/40ZR19"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R17",
+        "245/55R18",
+        "245/50R19",
+        "245/45R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/65R17",
+        "245/50R18",
+        "255/50R18",
+        "245/45R19",
+        "255/45R19",
+        "245/40R20",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/65R17",
+        "245/50R18",
+        "255/50R18",
+        "245/45R19",
+        "255/45R19",
+        "245/40R20",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "x3",
+      "currentTireSizes": [
+        "225/60R17",
+        "245/55R18",
+        "245/50R19",
+        "245/45R19",
+        "275/40R19"
+      ]
+    }
+  ]
+}

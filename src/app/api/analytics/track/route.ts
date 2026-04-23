@@ -1,115 +1,108 @@
 /**
- * Analytics Tracking Endpoint
- * Called client-side to record page views
+ * Analytics Tracking API
+ * 
+ * POST /api/analytics/track
+ * Captures client-side analytics events for server-side aggregation
+ * 
+ * Used by exit intent and other components for conversion tracking
+ * 
+ * @created 2026-04-23
  */
 
-import { NextRequest, NextResponse } from "next/server";
-import { trackPageView, shouldTrack } from "@/lib/analytics/track";
-import { cookies } from "next/headers";
-import { isInternalIP } from "@/lib/testData";
+import { NextResponse } from "next/server";
+import { headers } from "next/headers";
 
-const SESSION_COOKIE = "_wtd_sid";
-const SESSION_MAX_AGE = 60 * 30; // 30 minutes
+export const runtime = "nodejs";
 
-function generateSessionId(): string {
-  return crypto.randomUUID().replace(/-/g, "");
-}
+// In-memory buffer for recent events (for debugging)
+// In production, you'd send these to a proper analytics service
+const recentEvents: Array<{
+  event: string;
+  data: any;
+  timestamp: number;
+  ip: string;
+}> = [];
 
-export async function POST(request: NextRequest) {
+const MAX_RECENT_EVENTS = 100;
+
+/**
+ * POST /api/analytics/track
+ * 
+ * Body:
+ * - event: string (required)
+ * - data: object (optional)
+ * - timestamp: number (optional)
+ */
+export async function POST(req: Request) {
   try {
-    const body = await request.json();
-    const { path, referrer } = body;
-
-    // Validate path
-    if (!path || typeof path !== "string") {
-      return NextResponse.json({ error: "Invalid path" }, { status: 400 });
-    }
-
-    // Check if we should track this path
-    if (!shouldTrack(path)) {
-      return NextResponse.json({ tracked: false, reason: "excluded" });
-    }
-
-    // Get IP address from headers
-    const forwardedFor = request.headers.get("x-forwarded-for");
-    const ipAddress = forwardedFor?.split(",")[0]?.trim() || 
-                      request.headers.get("x-real-ip") || 
-                      null;
-
-    // Skip tracking for internal IPs (owner testing)
-    if (ipAddress && isInternalIP(ipAddress)) {
-      return NextResponse.json({ tracked: false, reason: "internal_ip" });
-    }
-
-    // Get or create session
-    const cookieStore = await cookies();
-    let sessionId = cookieStore.get(SESSION_COOKIE)?.value;
-    const isNewSession = !sessionId;
-
-    if (!sessionId) {
-      sessionId = generateSessionId();
-    }
-
-    // Get metadata from headers
-    const userAgent = request.headers.get("user-agent");
-    const country = request.headers.get("x-vercel-ip-country");
-    const city = request.headers.get("x-vercel-ip-city");
-    const region = request.headers.get("x-vercel-ip-country-region");
-    const fullUrl = request.headers.get("referer") || `https://shop.warehousetiredirect.com${path}`;
+    const body = await req.text();
+    let parsed;
     
-    // Get hostname from request (for multi-site tracking)
-    const hostname = request.headers.get("host") || request.headers.get("x-forwarded-host") || null;
+    try {
+      parsed = JSON.parse(body);
+    } catch {
+      // Accept empty/malformed beacon requests gracefully
+      return new Response(null, { status: 204 });
+    }
 
-    // Track the page view
-    const result = await trackPageView({
-      sessionId,
-      path,
-      fullUrl,
-      referrer: referrer || request.headers.get("referer"),
-      userAgent,
-      country,
-      city,
-      region,
-      isNewSession,
-      hostname,
+    const { event, data = {}, timestamp = Date.now() } = parsed;
+
+    if (!event) {
+      return new Response(null, { status: 204 });
+    }
+
+    // Get IP for deduplication
+    const headersList = await headers();
+    const ip = headersList.get("x-forwarded-for")?.split(",")[0] || 
+               headersList.get("x-real-ip") || 
+               "unknown";
+
+    // Store in memory buffer
+    recentEvents.unshift({
+      event,
+      data,
+      timestamp,
+      ip,
     });
 
-    // Set/refresh session cookie
-    const response = NextResponse.json({
-      tracked: result.success,
-      isBot: result.isBot,
-      isNewSession,
-    });
+    // Trim buffer
+    while (recentEvents.length > MAX_RECENT_EVENTS) {
+      recentEvents.pop();
+    }
 
-    response.cookies.set(SESSION_COOKIE, sessionId, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: SESSION_MAX_AGE,
-      path: "/",
-    });
+    // Log exit intent events for visibility
+    if (event.startsWith("exit_capture")) {
+      console.log(`[Analytics] ${event}`, {
+        ...data,
+        timestamp: new Date(timestamp).toISOString(),
+      });
+    }
 
-    return response;
-  } catch (error) {
-    console.error("[Analytics API] Error:", error);
-    return NextResponse.json({ error: "Tracking failed" }, { status: 500 });
+    // Return 204 No Content (standard for beacon)
+    return new Response(null, { status: 204 });
+  } catch (err) {
+    console.error("[analytics/track] Error:", err);
+    return new Response(null, { status: 204 });
   }
 }
 
-// Also support GET for simple beacon-style tracking
-export async function GET(request: NextRequest) {
-  const path = request.nextUrl.searchParams.get("p");
-  if (!path) {
-    return NextResponse.json({ error: "Missing path" }, { status: 400 });
+/**
+ * GET /api/analytics/track
+ * Get recent events (for debugging/admin)
+ */
+export async function GET(req: Request) {
+  const url = new URL(req.url);
+  const eventFilter = url.searchParams.get("event");
+  const limit = parseInt(url.searchParams.get("limit") || "50", 10);
+
+  let events = recentEvents;
+  
+  if (eventFilter) {
+    events = events.filter(e => e.event.includes(eventFilter));
   }
 
-  // Reuse POST logic
-  const fakeBody = JSON.stringify({ path });
-  const fakeRequest = new NextRequest(request.url, {
-    method: "POST",
-    body: fakeBody,
-    headers: request.headers,
+  return NextResponse.json({
+    events: events.slice(0, limit),
+    total: events.length,
   });
-
-  return POST(fakeRequest);
 }

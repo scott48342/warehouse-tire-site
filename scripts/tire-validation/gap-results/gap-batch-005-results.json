@@ -1,0 +1,759 @@
+{
+  "batchId": 5,
+  "processedAt": "2026-04-21T23:45:00.000Z",
+  "source": "tiresize.com, sizemytires.com, tirewheelguide.com",
+  "results": [
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "i8",
+      "wheelSizes": [20],
+      "tireSizes": {
+        "front": "215/45R20",
+        "rear": "245/40R20"
+      },
+      "isStaggered": true,
+      "notes": "Staggered setup standard on all i8 models"
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "i8",
+      "wheelSizes": [20],
+      "tireSizes": {
+        "front": "215/45R20",
+        "rear": "245/40R20"
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "i8",
+      "wheelSizes": [20],
+      "tireSizes": {
+        "front": "215/45R20",
+        "rear": "245/40R20"
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "i8",
+      "wheelSizes": [20],
+      "tireSizes": {
+        "front": "215/45R20",
+        "rear": "245/40R20"
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "i8",
+      "wheelSizes": [20],
+      "tireSizes": {
+        "front": "215/45R20",
+        "rear": "245/40R20"
+      },
+      "isStaggered": true,
+      "notes": "Last model year includes Coupe and Roadster variants"
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "i8",
+      "wheelSizes": [20],
+      "tireSizes": {
+        "front": "215/45R20",
+        "rear": "245/40R20"
+      },
+      "isStaggered": true,
+      "notes": "Final model year - includes Ultimate Sophisto Edition"
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "ix",
+      "notUS": true,
+      "notes": "BMW iX was not available in US market in 2021 - US sales began in 2022"
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "ix",
+      "wheelSizes": [20, 21, 22],
+      "tireSizes": {
+        "20": "235/60R20",
+        "21": "255/50R21",
+        "22": "275/40R22"
+      },
+      "isStaggered": false,
+      "notes": "Non-staggered setup, multiple wheel options"
+    },
+    {
+      "year": 2000,
+      "make": "bmw",
+      "model": "m-coupe",
+      "wheelSizes": [17],
+      "tireSizes": {
+        "front": "225/45R17",
+        "rear": "245/40R17"
+      },
+      "wheelWidths": {
+        "front": "7.5",
+        "rear": "9"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "centerBore": 72.6
+    },
+    {
+      "year": 2001,
+      "make": "bmw",
+      "model": "m-coupe",
+      "wheelSizes": [17],
+      "tireSizes": {
+        "front": "225/45R17",
+        "rear": "245/40R17"
+      },
+      "wheelWidths": {
+        "front": "7.5",
+        "rear": "9"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "centerBore": 72.6
+    },
+    {
+      "year": 2002,
+      "make": "bmw",
+      "model": "m-coupe",
+      "wheelSizes": [17],
+      "tireSizes": {
+        "front": "225/45R17",
+        "rear": "245/40R17"
+      },
+      "wheelWidths": {
+        "front": "7.5",
+        "rear": "9"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "centerBore": 72.6
+    },
+    {
+      "year": 2003,
+      "make": "bmw",
+      "model": "m-coupe",
+      "wheelSizes": [17],
+      "tireSizes": {
+        "front": "225/45R17",
+        "rear": "245/40R17"
+      },
+      "wheelWidths": {
+        "front": "7.5",
+        "rear": "9"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "centerBore": 72.6,
+      "notes": "Final production year"
+    },
+    {
+      "year": 2000,
+      "make": "bmw",
+      "model": "m-roadster",
+      "wheelSizes": [17],
+      "tireSizes": {
+        "front": "225/45R17",
+        "rear": "245/40R17"
+      },
+      "wheelWidths": {
+        "front": "7.5",
+        "rear": "9"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "centerBore": 72.6
+    },
+    {
+      "year": 2001,
+      "make": "bmw",
+      "model": "m-roadster",
+      "wheelSizes": [17],
+      "tireSizes": {
+        "front": "225/45R17",
+        "rear": "245/40R17"
+      },
+      "wheelWidths": {
+        "front": "7.5",
+        "rear": "9"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "centerBore": 72.6
+    },
+    {
+      "year": 2002,
+      "make": "bmw",
+      "model": "m-roadster",
+      "wheelSizes": [17],
+      "tireSizes": {
+        "front": "225/45R17",
+        "rear": "245/40R17"
+      },
+      "wheelWidths": {
+        "front": "7.5",
+        "rear": "9"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "centerBore": 72.6
+    },
+    {
+      "year": 2003,
+      "make": "bmw",
+      "model": "m-roadster",
+      "wheelSizes": [17],
+      "tireSizes": {
+        "front": "225/45R17",
+        "rear": "245/40R17"
+      },
+      "wheelWidths": {
+        "front": "7.5",
+        "rear": "9"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "centerBore": 72.6,
+      "notes": "Final production year"
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "m2",
+      "notUS": true,
+      "notes": "BMW M2 was not available until 2016 model year"
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "m2",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "245/35R19",
+        "rear": "265/35R19"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "notes": "F87 generation"
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "m2",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "245/35R19",
+        "rear": "265/35R19"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120"
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "m2",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "245/35R19",
+        "rear": "265/35R19"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120"
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "m2",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "245/35R19",
+        "rear": "265/35R19"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "notes": "M2 Competition introduced"
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "m2",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "245/35R19",
+        "rear": "265/35R19"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "notes": "M2 CS limited edition available"
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "m2",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "245/35R19",
+        "rear": "265/35R19"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x120",
+      "notes": "Final year of F87 generation"
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "m2",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "front": "275/35R19",
+        "rear": "285/30R20"
+      },
+      "wheelWidths": {
+        "front": "9.5",
+        "rear": "10.5"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "notes": "G87 generation - mixed wheel diameters (19 front/20 rear)"
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "m2",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "front": "275/35R19",
+        "rear": "285/30R20"
+      },
+      "wheelWidths": {
+        "front": "9.5",
+        "rear": "10.5"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "notes": "G87 generation"
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "m2",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "front": "275/35R19",
+        "rear": "285/30R20"
+      },
+      "wheelWidths": {
+        "front": "9.5",
+        "rear": "10.5"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "notes": "G87 generation"
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "m2",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "front": "275/35R19",
+        "rear": "285/30R20"
+      },
+      "wheelWidths": {
+        "front": "9.5",
+        "rear": "10.5"
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "notes": "G87 generation - projected specs based on current model"
+    },
+    {
+      "year": 2005,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "255/40R19",
+        "rear": "285/35R19"
+      },
+      "isStaggered": true,
+      "notes": "E63/E64 generation"
+    },
+    {
+      "year": 2006,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "255/40R19",
+        "rear": "285/35R19"
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2007,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "255/40R19",
+        "rear": "285/35R19"
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2008,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "255/40R19",
+        "rear": "285/35R19"
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "255/40R19",
+        "rear": "285/35R19"
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19],
+      "tireSizes": {
+        "front": "255/40R19",
+        "rear": "285/35R19"
+      },
+      "isStaggered": true,
+      "notes": "Final year of E63/E64 generation"
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "295/35R19"
+        },
+        "20": {
+          "front": "265/35R20",
+          "rear": "295/30R20"
+        }
+      },
+      "isStaggered": true,
+      "notes": "F12/F13 generation - new platform"
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "295/35R19"
+        },
+        "20": {
+          "front": "265/35R20",
+          "rear": "295/30R20"
+        }
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "295/35R19"
+        },
+        "20": {
+          "front": "265/35R20",
+          "rear": "295/30R20"
+        }
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "295/35R19"
+        },
+        "20": {
+          "front": "265/35R20",
+          "rear": "295/30R20"
+        }
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "295/35R19"
+        },
+        "20": {
+          "front": "265/35R20",
+          "rear": "295/30R20"
+        }
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "295/35R19"
+        },
+        "20": {
+          "front": "265/35R20",
+          "rear": "295/30R20"
+        }
+      },
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "m6",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "295/35R19"
+        },
+        "20": {
+          "front": "265/35R20",
+          "rear": "295/30R20"
+        }
+      },
+      "isStaggered": true,
+      "notes": "Final model year for M6"
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "m8",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "285/40R19"
+        },
+        "20": {
+          "front": "275/35R20",
+          "rear": "285/35R20"
+        }
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "notes": "F91/F92/F93 generation debut"
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "m8",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "285/40R19"
+        },
+        "20": {
+          "front": "275/35R20",
+          "rear": "285/35R20"
+        }
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "m8",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "285/40R19"
+        },
+        "20": {
+          "front": "275/35R20",
+          "rear": "285/35R20"
+        }
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "m8",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "285/40R19"
+        },
+        "20": {
+          "front": "275/35R20",
+          "rear": "285/35R20"
+        }
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "m8",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "285/40R19"
+        },
+        "20": {
+          "front": "275/35R20",
+          "rear": "285/35R20"
+        }
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "m8",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "285/40R19"
+        },
+        "20": {
+          "front": "275/35R20",
+          "rear": "285/35R20"
+        }
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "m8",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "285/40R19"
+        },
+        "20": {
+          "front": "275/35R20",
+          "rear": "285/35R20"
+        }
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "notes": "Projected specs based on current model"
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "m8",
+      "wheelSizes": [19, 20],
+      "tireSizes": {
+        "19": {
+          "front": "265/40R19",
+          "rear": "285/40R19"
+        },
+        "20": {
+          "front": "275/35R20",
+          "rear": "285/35R20"
+        }
+      },
+      "isStaggered": true,
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "notes": "Projected specs based on current model"
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "x1",
+      "notUS": true,
+      "notes": "BMW X1 E84 was not sold in US market until 2013 model year. International only 2009-2012."
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "x1",
+      "notUS": true,
+      "notes": "BMW X1 E84 was not sold in US market until 2013 model year. International only 2009-2012."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "specsFound": 46,
+    "notUSMarket": 4,
+    "staggeredVehicles": 44,
+    "notUSList": [
+      "2021 BMW iX (US sales began 2022)",
+      "2015 BMW M2 (M2 not released until 2016)",
+      "2009 BMW X1 (US sales began 2013)",
+      "2010 BMW X1 (US sales began 2013)"
+    ]
+  }
+}

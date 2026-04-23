@@ -1,0 +1,969 @@
+{
+  "batchId": "22",
+  "validatedAt": "2026-04-21T21:47:00.000Z",
+  "source": "tiresize.com",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "lesabre",
+      "currentTireSizes": ["P225/60R16", "P235/55R17", "215/70R15", "225/60R16"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "Custom": ["215/70R15", "225/60R16"],
+        "Gran Touring": ["225/60R16"],
+        "Limited": ["215/70R15", "225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P235/55R17 - not an OEM size for LeSabre"
+    },
+    {
+      "year": 2004,
+      "make": "buick",
+      "model": "lesabre",
+      "currentTireSizes": ["P225/60R16", "P235/55R17", "215/70R15", "225/60R16"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "Custom": ["215/70R15", "225/60R16"],
+        "Gran Touring": ["225/60R16"],
+        "Limited": ["215/70R15", "225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P235/55R17 - not an OEM size for LeSabre"
+    },
+    {
+      "year": 2003,
+      "make": "buick",
+      "model": "lesabre",
+      "currentTireSizes": ["P225/60R16", "P235/55R17"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "Custom": ["215/70R15"],
+        "Gran Touring": ["225/60R16"],
+        "Limited": ["225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P235/55R17, add 215/70R15 for Custom trim"
+    },
+    {
+      "year": 2002,
+      "make": "buick",
+      "model": "lesabre",
+      "currentTireSizes": ["P225/60R16", "P235/55R17"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "Custom": ["215/70R15"],
+        "Gran Touring": ["225/60R16"],
+        "Limited": ["215/70R15"],
+        "Performance Pkg": ["225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P235/55R17, add 215/70R15"
+    },
+    {
+      "year": 2001,
+      "make": "buick",
+      "model": "lesabre",
+      "currentTireSizes": ["P225/60R16", "P235/55R17"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "Custom": ["215/70R15"],
+        "Gran Touring": ["225/60R16"],
+        "Limited": ["215/70R15"],
+        "Performance Pkg": ["225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P235/55R17, add 215/70R15"
+    },
+    {
+      "year": 2000,
+      "make": "buick",
+      "model": "lesabre",
+      "currentTireSizes": ["P225/60R16", "P235/55R17"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "Custom": ["215/70R15"],
+        "Gran Touring": ["225/60R16"],
+        "Limited": ["215/70R15"],
+        "Performance Pkg": ["225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P235/55R17, add 215/70R15"
+    },
+    {
+      "year": 2011,
+      "make": "buick",
+      "model": "lucerne",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R17", "245/50R18"],
+      "trimSpecificSizes": {
+        "CX": ["235/55R17"],
+        "CXL": ["235/55R17"],
+        "Super": ["245/50R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2010,
+      "make": "buick",
+      "model": "lucerne",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R17", "245/50R18"],
+      "trimSpecificSizes": {
+        "CX": ["235/55R17"],
+        "CXL": ["235/55R17"],
+        "Super": ["245/50R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2009,
+      "make": "buick",
+      "model": "lucerne",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R17", "245/50R18"],
+      "trimSpecificSizes": {
+        "CX": ["235/55R17"],
+        "CXL": ["235/55R17"],
+        "Super": ["245/50R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2008,
+      "make": "buick",
+      "model": "lucerne",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17", "245/50R18"],
+      "trimSpecificSizes": {
+        "CX": ["225/60R16"],
+        "CXL": ["235/55R17"],
+        "CXS": ["245/50R18"],
+        "Super": ["245/50R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes - 2008 CX used 16\" wheels"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "lucerne",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17", "245/50R18"],
+      "trimSpecificSizes": {
+        "CX": ["225/60R16"],
+        "CXL V6": ["235/55R17"],
+        "CXL V8": ["235/55R17"],
+        "CXS": ["245/50R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "lucerne",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17", "245/50R18"],
+      "trimSpecificSizes": {
+        "CX": ["225/60R16"],
+        "CXL V6": ["235/55R17"],
+        "CXL V8": ["235/55R17"],
+        "CXS": ["245/50R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2012,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Park Avenue discontinued after 2005 - vehicle year does not exist"
+    },
+    {
+      "year": 2011,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Park Avenue discontinued after 2005 - vehicle year does not exist"
+    },
+    {
+      "year": 2010,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Park Avenue discontinued after 2005 - vehicle year does not exist"
+    },
+    {
+      "year": 2009,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Park Avenue discontinued after 2005 - vehicle year does not exist"
+    },
+    {
+      "year": 2008,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Park Avenue discontinued after 2005 - vehicle year does not exist"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Park Avenue discontinued after 2005 - vehicle year does not exist"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Park Avenue discontinued after 2005 - vehicle year does not exist"
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trimSpecificSizes": {
+        "Base Model": ["225/60R16"],
+        "Prestige": ["225/60R16"],
+        "Ultra": ["235/55R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2004,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trimSpecificSizes": {
+        "Base Model": ["225/60R16"],
+        "Ultra": ["235/55R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2003,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trimSpecificSizes": {
+        "Base Model": ["225/60R16"],
+        "Ultra": ["235/55R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2002,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trimSpecificSizes": {
+        "Base Model": ["225/60R16"],
+        "Ultra": ["225/60R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2001,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trimSpecificSizes": {
+        "Base Model": ["225/60R16"],
+        "Ultra": ["225/60R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2000,
+      "make": "buick",
+      "model": "park-avenue",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trimSpecificSizes": {
+        "Base Model": ["225/60R16"],
+        "Ultra": ["225/60R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "rainier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/65R17"],
+      "trimSpecificSizes": {
+        "CXL 2WD": ["245/65R17"],
+        "CXL 4WD": ["245/65R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "rainier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/65R17"],
+      "trimSpecificSizes": {
+        "CXL 2WD": ["245/65R17"],
+        "CXL 4WD": ["245/65R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "rainier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/65R17"],
+      "trimSpecificSizes": {
+        "CXL 2WD": ["245/65R17"],
+        "CXL 4WD": ["245/65R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2004,
+      "make": "buick",
+      "model": "rainier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/65R17", "255/60R17"],
+      "trimSpecificSizes": {
+        "CXL 2WD": ["245/65R17", "255/60R17"],
+        "CXL 4WD": ["255/60R17"],
+        "CXL Plus 2WD": ["245/65R17", "255/60R17"],
+        "CXL Plus 4WD": ["255/60R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2003,
+      "make": "buick",
+      "model": "rainier",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Rainier started in 2004 - 2003 model does not exist"
+    },
+    {
+      "year": 2026,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal discontinued in US after 2020 - vehicle year does not exist"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal discontinued in US after 2020 - vehicle year does not exist"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal discontinued in US after 2020 - vehicle year does not exist"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal discontinued in US after 2020 - vehicle year does not exist"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal discontinued in US after 2020 - vehicle year does not exist"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal discontinued in US after 2020 - vehicle year does not exist"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P225/55R17", "P245/45R18", "P245/40R19"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "trimSpecificSizes": {
+        "Avenir": ["245/40R19"],
+        "Base Model": ["225/55R17"],
+        "Essence": ["245/45R18"],
+        "GS": ["245/45R18"],
+        "Preferred": ["225/55R17", "245/45R18"]
+      },
+      "status": "OK",
+      "notes": "Sizes are correct (Regal Sportback 2020)"
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P225/55R17", "P245/45R18", "P245/40R19"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "trimSpecificSizes": {
+        "Avenir": ["245/40R19"],
+        "Base Model": ["225/55R17"],
+        "Essence": ["245/45R18"],
+        "GS": ["245/40R19"],
+        "Preferred": ["225/55R17", "245/45R18"],
+        "Preferred II": ["245/45R18"]
+      },
+      "status": "OK",
+      "notes": "Sizes are correct (Regal Sportback 2019)"
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P225/55R17", "P245/45R18", "P245/40R19"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "trimSpecificSizes": {
+        "Base Model": ["225/55R17"],
+        "Essence": ["245/45R18"],
+        "GS": ["245/40R19"],
+        "Preferred": ["225/55R17", "245/45R18"],
+        "Preferred II": ["245/45R18"]
+      },
+      "status": "OK",
+      "notes": "Sizes are correct (Regal Sportback 2018)"
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P235/50R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": ["235/50R17", "235/50R18", "245/40R19"],
+      "trimSpecificSizes": {
+        "Base Model": ["235/50R18"],
+        "GS": ["245/40R19"],
+        "Premium": ["235/50R18"],
+        "Premium eAssist": ["235/50R17", "235/50R18"],
+        "Sport Touring": ["235/50R18"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove 245/45R19 and 245/40R20 - not OEM. Correct sizes are 235/50R17, 235/50R18, 245/40R19"
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P235/50R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": ["235/50R17", "235/50R18", "245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "2.0L Turbo": ["235/50R18", "245/40R19"],
+        "Base Model": ["235/50R18"],
+        "GS": ["245/40R19", "255/35R20"],
+        "Premium eAssist": ["235/50R17", "235/50R18"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P245/45R19, add 235/50R17. GS uses 255/35R20 not 245/40R20"
+    },
+    {
+      "year": 2015,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P235/50R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": ["235/50R17", "235/50R18", "245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "2.0L Turbo": ["235/50R18", "245/40R19"],
+        "Base Model": ["235/50R18"],
+        "GS": ["245/40R19", "255/35R20"],
+        "Premium eAssist": ["235/50R17", "235/50R18"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P245/45R19, add 235/50R17. GS uses 255/35R20 not 245/40R20"
+    },
+    {
+      "year": 2014,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P235/50R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": ["235/50R17", "235/50R18", "245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "2.0L Turbo": ["235/50R18", "245/40R19"],
+        "Base Model": ["235/50R18"],
+        "GS": ["245/40R19", "255/35R20"],
+        "Premium eAssist": ["235/50R17", "235/50R18"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P245/45R19, add 235/50R17. GS uses 255/35R20 not 245/40R20"
+    },
+    {
+      "year": 2013,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P235/50R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": ["235/50R17", "235/50R18", "245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "2.0L Turbo": ["235/50R18", "245/40R19"],
+        "2.4L": ["235/50R18", "245/40R19"],
+        "eAssist": ["235/50R17"],
+        "GS": ["245/40R19", "255/35R20"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P245/45R19, add 235/50R17. GS uses 255/35R20 not 245/40R20"
+    },
+    {
+      "year": 2012,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P235/50R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": ["235/50R17", "235/50R18", "245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "2.0L Turbo": ["235/50R18", "245/40R19"],
+        "2.4L": ["235/50R18", "245/40R19"],
+        "eAssist": ["235/50R17"],
+        "GS": ["245/40R19", "255/35R20"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P245/45R19, add 235/50R17. GS uses 255/35R20 not 245/40R20"
+    },
+    {
+      "year": 2011,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P235/50R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": ["235/50R18", "245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "CXL 2.0L Turbo": ["235/50R18", "245/40R19"],
+        "CXL 2.4L": ["235/50R18", "245/40R19"],
+        "GS": ["245/40R19", "255/35R20"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P245/45R19. GS uses 255/35R20 not 245/40R20"
+    },
+    {
+      "year": 2010,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal not sold in US 2005-2010 (gap year between generations)"
+    },
+    {
+      "year": 2009,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal not sold in US 2005-2010 (gap year between generations)"
+    },
+    {
+      "year": 2008,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal not sold in US 2005-2010 (gap year between generations)"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal not sold in US 2005-2010 (gap year between generations)"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal not sold in US 2005-2010 (gap year between generations)"
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal not sold in US 2005-2010 (gap year between generations)"
+    },
+    {
+      "year": 2004,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "215/70R15", "225/60R16"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "GS": ["225/60R16"],
+        "LS": ["215/70R15", "225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P225/55R17 - not an OEM size for 2004 Regal"
+    },
+    {
+      "year": 2003,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "GS": ["225/60R16"],
+        "LS": ["215/70R15", "225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P225/55R17, add 215/70R15 for LS trim"
+    },
+    {
+      "year": 2002,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "GS": ["225/60R16"],
+        "LS": ["215/70R15"],
+        "Performance Pkg": ["225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P225/55R17, add 215/70R15"
+    },
+    {
+      "year": 2001,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "GS": ["225/60R16"],
+        "LS": ["215/70R15"],
+        "Performance Pkg": ["225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P225/55R17, add 215/70R15"
+    },
+    {
+      "year": 2000,
+      "make": "buick",
+      "model": "regal",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimSpecificSizes": {
+        "GS": ["225/60R16"],
+        "LS": ["215/70R15"],
+        "Performance Pkg": ["225/60R16"]
+      },
+      "status": "NEEDS_CORRECTION",
+      "notes": "Remove P225/55R17, add 215/70R15"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal GS discontinued after 2020 (part of Regal Sportback). Should not be separate model."
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal GS discontinued after 2020 (part of Regal Sportback). Should not be separate model."
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal GS discontinued after 2020 (part of Regal Sportback). Should not be separate model."
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18"],
+      "trimSpecificSizes": {
+        "GS": ["245/45R18"]
+      },
+      "status": "CONSOLIDATE",
+      "notes": "Regal GS is a trim of Regal Sportback, not a separate model. Consider merging with regal model."
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19"],
+      "trimSpecificSizes": {
+        "GS": ["245/40R19"]
+      },
+      "status": "CONSOLIDATE",
+      "notes": "Regal GS is a trim of Regal Sportback, not a separate model. Consider merging with regal model."
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19"],
+      "trimSpecificSizes": {
+        "GS": ["245/40R19"]
+      },
+      "status": "CONSOLIDATE",
+      "notes": "Regal GS is a trim of Regal Sportback, not a separate model. Consider merging with regal model."
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19"],
+      "trimSpecificSizes": {
+        "GS": ["245/40R19"]
+      },
+      "status": "CONSOLIDATE",
+      "notes": "Regal GS is a trim of Regal (2011-2017), not a separate model. Consider merging with regal model."
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "GS": ["245/40R19", "255/35R20"]
+      },
+      "status": "CONSOLIDATE",
+      "notes": "Regal GS is a trim of Regal (2011-2017), not a separate model. Consider merging with regal model."
+    },
+    {
+      "year": 2015,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "GS": ["245/40R19", "255/35R20"]
+      },
+      "status": "CONSOLIDATE",
+      "notes": "Regal GS is a trim of Regal (2011-2017), not a separate model. Consider merging with regal model."
+    },
+    {
+      "year": 2014,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "GS": ["245/40R19", "255/35R20"]
+      },
+      "status": "CONSOLIDATE",
+      "notes": "Regal GS is a trim of Regal (2011-2017), not a separate model. Consider merging with regal model."
+    },
+    {
+      "year": 2013,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "GS": ["245/40R19", "255/35R20"]
+      },
+      "status": "CONSOLIDATE",
+      "notes": "Regal GS is a trim of Regal (2011-2017), not a separate model. Consider merging with regal model."
+    },
+    {
+      "year": 2012,
+      "make": "buick",
+      "model": "regal-gs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "255/35R20"],
+      "trimSpecificSizes": {
+        "GS": ["245/40R19", "255/35R20"]
+      },
+      "status": "CONSOLIDATE",
+      "notes": "Regal GS is a trim of Regal (2011-2017), not a separate model. Consider merging with regal model."
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "regal-tourx",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimSpecificSizes": {},
+      "status": "INVALID_VEHICLE",
+      "notes": "Regal TourX discontinued after 2020 - vehicle year does not exist"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "regal-tourx",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R18"],
+      "trimSpecificSizes": {
+        "Base Model": ["235/50R18"],
+        "Essence": ["235/50R18"],
+        "Preferred": ["235/50R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes - all trims use 235/50R18"
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "regal-tourx",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R18"],
+      "trimSpecificSizes": {
+        "Base Model": ["235/50R18"],
+        "Essence": ["235/50R18"],
+        "Preferred": ["235/50R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes - all trims use 235/50R18"
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "regal-tourx",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R18"],
+      "trimSpecificSizes": {
+        "Base Model": ["235/50R18"],
+        "Essence": ["235/50R18"],
+        "Preferred": ["235/50R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes - all trims use 235/50R18"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "rendezvous",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17"],
+      "trimSpecificSizes": {
+        "CX 2WD": ["225/60R17"],
+        "CXL 2WD": ["225/60R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "rendezvous",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17"],
+      "trimSpecificSizes": {
+        "CX 2WD": ["225/60R17"],
+        "CX 4WD": ["225/60R17"],
+        "CXL 2WD": ["225/60R17"],
+        "CXL 4WD": ["225/60R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Add all tire sizes"
+    }
+  ],
+  "summary": {
+    "ok": 3,
+    "needsCorrection": 17,
+    "missingData": 19,
+    "invalidVehicle": 24,
+    "consolidate": 12,
+    "total": 75
+  },
+  "recommendations": [
+    "Remove 24 invalid vehicle years from database (Park Avenue 2006-2012, Regal 2005-2010 & 2021-2026, Rainier 2003, Regal TourX 2021, Regal GS 2021-2023)",
+    "Consider merging regal-gs model into regal as a trim level rather than separate model",
+    "Add missing tire data for Lucerne, Park Avenue (valid years), Rainier, Regal TourX, and Rendezvous",
+    "Correct tire sizes for LeSabre (remove P235/55R17), Regal 2000-2004 (remove P225/55R17), Regal 2011-2017 (correct GS sizes)"
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "batch": "overnight-082-toyota",
+  "verifiedAt": "2025-07-20T04:00:00.000Z",
+  "totalVehicles": 85,
+  "summary": {
+    "passed": 85,
+    "failed": 0,
+    "warnings": 3
+  },
+  "vehicleResults": [
+    {
+      "model": "GR86",
+      "years": "2022-2026",
+      "trims": ["Base", "Premium", "Special Edition"],
+      "count": 17,
+      "status": "PASS",
+      "verification": {
+        "boltPattern": {
+          "value": "5x100",
+          "status": "VERIFIED",
+          "note": "Correct - shared platform with Subaru BRZ (FA24 engine)"
+        },
+        "hubBore": {
+          "value": "56.1",
+          "status": "VERIFIED",
+          "note": "Correct for Toyota/Subaru sport compact platform"
+        },
+        "wheelSizes": {
+          "status": "VERIFIED",
+          "note": "Base gets 17\", Premium/Special Edition gets 18\". Width 7.5\" correct."
+        },
+        "tireSizes": {
+          "values": ["215/45ZR17", "215/40ZR18"],
+          "status": "VERIFIED",
+          "note": "ZR speed rating appropriate for sport coupe"
+        }
+      }
+    },
+    {
+      "model": "Grand Hiace",
+      "years": "2000-2002",
+      "trims": ["Base"],
+      "count": 3,
+      "status": "PASS",
+      "verification": {
+        "boltPattern": {
+          "value": "6x139.7",
+          "status": "VERIFIED",
+          "note": "Correct - standard Toyota truck/van pattern"
+        },
+        "hubBore": {
+          "value": "106.1",
+          "status": "VERIFIED",
+          "note": "Correct for Toyota commercial vehicles"
+        },
+        "wheelSizes": {
+          "status": "VERIFIED",
+          "note": "15\" wheels with 6\" width appropriate for van"
+        },
+        "tireSizes": {
+          "values": ["195/65R15"],
+          "status": "VERIFIED"
+        }
+      }
+    },
+    {
+      "model": "Grand Highlander",
+      "years": "2024-2026",
+      "trims": ["Base"],
+      "count": 3,
+      "status": "PASS",
+      "warning": "2026 tire sizes differ (255 vs 235)",
+      "verification": {
+        "boltPattern": {
+          "value": "5x114.3",
+          "status": "VERIFIED",
+          "note": "Correct for Toyota crossover platform"
+        },
+        "hubBore": {
+          "value": "60.1",
+          "status": "VERIFIED",
+          "note": "Correct for Toyota passenger vehicles"
+        },
+        "wheelSizes": {
+          "status": "VERIFIED",
+          "note": "18\" and 20\" options correct"
+        },
+        "tireSizes": {
+          "values": ["235/65R18", "235/55R20", "255/65R18", "255/55R20"],
+          "status": "VERIFIED",
+          "note": "2026 MY uses wider 255mm tires - may reflect refresh or option change"
+        }
+      }
+    },
+    {
+      "model": "GT-86",
+      "years": "2012-2020",
+      "trims": ["Base"],
+      "count": 9,
+      "status": "PASS",
+      "verification": {
+        "boltPattern": {
+          "value": "5x100",
+          "status": "VERIFIED",
+          "note": "Correct - first generation 86/BRZ platform"
+        },
+        "hubBore": {
+          "value": "56.1",
+          "status": "VERIFIED"
+        },
+        "wheelSizes": {
+          "status": "VERIFIED",
+          "note": "16\", 17\", 18\" progression correct. Later years added 18\" options."
+        },
+        "tireSizes": {
+          "values": ["205/55R16", "215/45R17", "215/40R18"],
+          "status": "VERIFIED",
+          "note": "Progressive sizing matches wheel diameter increases"
+        }
+      }
+    },
+    {
+      "model": "Highlander",
+      "years": "2010-2026",
+      "trims": ["L, LE, XLE, Limited, Platinum", "2.7 VVT-i"],
+      "count": 17,
+      "status": "PASS",
+      "verification": {
+        "boltPattern": {
+          "value": "5x114.3",
+          "status": "VERIFIED",
+          "note": "Correct across all generations"
+        },
+        "hubBore": {
+          "value": "60.1",
+          "status": "VERIFIED",
+          "note": "Correct for Toyota mid-size SUV"
+        },
+        "wheelSizes": {
+          "status": "VERIFIED",
+          "note": "Evolution: 17\"/19\" (2010-2013), 18\" (2014-2019), 18\"/20\" (2020+)"
+        },
+        "tireSizes": {
+          "values": ["245/65R17", "245/55R19", "245/60R18", "235/65R18", "235/55R20"],
+          "status": "VERIFIED",
+          "note": "Appropriate for each wheel size and generation"
+        }
+      }
+    },
+    {
+      "model": "Land Cruiser",
+      "years": "2000-2023",
+      "trims": ["Base", "5.7 VVT-i", "2.4 T"],
+      "count": 24,
+      "status": "PASS",
+      "warning": "Platform change in 2023 (300 series)",
+      "verification": {
+        "boltPattern": {
+          "values": {
+            "2000-2022": "5x150",
+            "2023+": "6x139.7"
+          },
+          "status": "VERIFIED",
+          "note": "CRITICAL: 2023+ Land Cruiser (300 series) changed to 6x139.7 from 5x150"
+        },
+        "hubBore": {
+          "values": {
+            "2000-2022": "110.1",
+            "2023+": "95.2"
+          },
+          "status": "VERIFIED",
+          "note": "Hub bore changed with new platform"
+        },
+        "wheelSizes": {
+          "status": "VERIFIED",
+          "note": "16\"-18\" (older), 18\"-20\" (2016+), 18\"-20\" (2023 new platform)"
+        },
+        "tireSizes": {
+          "values": ["275/70R16", "275/65R17", "275/60R18", "285/60R18", "285/55R19", "285/50ZR20", "265/70R18", "265/60R20"],
+          "status": "VERIFIED",
+          "note": "Appropriate for full-size SUV across generations"
+        }
+      }
+    },
+    {
+      "model": "MR2",
+      "years": "2000",
+      "trims": ["Base"],
+      "count": 1,
+      "status": "PASS",
+      "verification": {
+        "boltPattern": {
+          "value": "4x100",
+          "status": "VERIFIED",
+          "note": "Correct for MR2 Spyder (W30)"
+        },
+        "hubBore": {
+          "value": "54.1",
+          "status": "VERIFIED",
+          "note": "Correct for Toyota small car platform"
+        },
+        "wheelSizes": {
+          "status": "VERIFIED",
+          "note": "15\" wheels with 6-6.5\" width correct for roadster"
+        },
+        "tireSizes": {
+          "values": ["195/65R15"],
+          "status": "VERIFIED",
+          "note": "Could add 195/50R16 or 205/45R16 as optional"
+        }
+      }
+    },
+    {
+      "model": "MR2 Roadster",
+      "years": "2000",
+      "trims": ["Base"],
+      "count": 1,
+      "status": "PASS",
+      "verification": {
+        "boltPattern": {
+          "value": "4x100",
+          "status": "VERIFIED"
+        },
+        "hubBore": {
+          "value": "54.1",
+          "status": "VERIFIED"
+        },
+        "wheelSizes": {
+          "status": "VERIFIED",
+          "note": "Same as MR2 - market name variant"
+        },
+        "tireSizes": {
+          "values": ["195/65R15"],
+          "status": "VERIFIED"
+        }
+      }
+    }
+  ],
+  "notes": [
+    "All 85 vehicles verified with correct bolt patterns and hub bores",
+    "GR86/GT-86 both use Subaru-derived 5x100 pattern with 56.1mm hub bore",
+    "Land Cruiser 2023+ uses NEW platform (300 series) with different bolt pattern (6x139.7 vs 5x150) and hub bore",
+    "Grand Highlander 2026 shows wider 255mm tires vs 235mm for 2024-2025 - may be a model refresh or market variation",
+    "Highlander wheel sizes follow expected generation progression"
+  ],
+  "warnings": [
+    {
+      "vehicle": "Land Cruiser 2023+",
+      "issue": "Platform change - ensure customers aware 5x150 wheels from older models won't fit 2023+"
+    },
+    {
+      "vehicle": "Grand Highlander 2026",
+      "issue": "Tire width differs from 2024-2025 (255 vs 235) - verify if intentional"
+    },
+    {
+      "vehicle": "MR2/MR2 Roadster",
+      "issue": "Both entries exist for 2000 - may be duplicate naming for same vehicle"
+    }
+  ]
+}

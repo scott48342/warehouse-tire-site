@@ -1,0 +1,551 @@
+{
+  "batchId": 54,
+  "researchedAt": "2026-04-21T23:59:00Z",
+  "source": "tiresize.com",
+  "vehicles": [
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "Found as 2014 Subaru Impreza WRX STI - part of Impreza lineup until 2014",
+      "tireSizes": ["245/40R18"],
+      "wheelDiameters": [18],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2010,
+      "make": "subaru",
+      "model": "impreza-xv",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Impreza XV not sold in US. US market has XV Crosstrek starting 2013."
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "impreza-xv",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Impreza XV not sold in US. US market has XV Crosstrek starting 2013."
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "impreza-xv",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Impreza XV not sold in US. US market has XV Crosstrek starting 2013."
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "liberty",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Liberty is Australian market name. US equivalent is Subaru Legacy."
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "liberty",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Liberty is Australian market name. US equivalent is Subaru Legacy."
+    },
+    {
+      "year": 2010,
+      "make": "subaru",
+      "model": "pleo-custom",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Pleo Custom is JDM Kei car. Never sold in US market."
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "pleo-custom",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Pleo Custom is JDM Kei car. Never sold in US market."
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "pleo-custom",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Pleo Custom is JDM Kei car. Never sold in US market."
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "pleo-custom",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Pleo Custom is JDM Kei car. Never sold in US market."
+    },
+    {
+      "year": 2000,
+      "make": "subaru",
+      "model": "pleo-nesta",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Pleo Nesta is JDM Kei car. Never sold in US market."
+    },
+    {
+      "year": 2001,
+      "make": "subaru",
+      "model": "pleo-nesta",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Pleo Nesta is JDM Kei car. Never sold in US market."
+    },
+    {
+      "year": 2002,
+      "make": "subaru",
+      "model": "pleo-nesta",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Pleo Nesta is JDM Kei car. Never sold in US market."
+    },
+    {
+      "year": 2003,
+      "make": "subaru",
+      "model": "pleo-nesta",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Pleo Nesta is JDM Kei car. Never sold in US market."
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "solterra",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2024 Subaru Solterra - EV crossover",
+      "trims": {
+        "Premium": { "tireSizes": ["235/60R18"], "wheelDiameters": [18] },
+        "Limited": { "tireSizes": ["235/50R20"], "wheelDiameters": [20] },
+        "Touring": { "tireSizes": ["235/50R20"], "wheelDiameters": [20] }
+      },
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2025,
+      "make": "subaru",
+      "model": "solterra",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2025 Subaru Solterra - EV crossover",
+      "trims": {
+        "Premium": { "tireSizes": ["235/60R18"], "wheelDiameters": [18] },
+        "Limited": { "tireSizes": ["235/50R20"], "wheelDiameters": [20] },
+        "Touring": { "tireSizes": ["235/50R20"], "wheelDiameters": [20] },
+        "Touring Onyx Edition": { "tireSizes": ["235/50R20"], "wheelDiameters": [20] }
+      },
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2026,
+      "make": "subaru",
+      "model": "solterra",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2026 Subaru Solterra - EV crossover. Listed on tiresize.com",
+      "trims": {
+        "Premium": { "tireSizes": ["235/60R18"], "wheelDiameters": [18] },
+        "Limited": { "tireSizes": ["235/50R20"], "wheelDiameters": [20] },
+        "Limited XT": { "tireSizes": ["235/50R20"], "wheelDiameters": [20] },
+        "Touring XT": { "tireSizes": ["235/50R20"], "wheelDiameters": [20] }
+      },
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2014 WRX STI was under Impreza lineup. See impreza-wrx-sti entry. Recommend merging.",
+      "tireSizes": ["245/40R18"],
+      "wheelDiameters": [18],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2015+ WRX is separate model from Impreza. STI is a trim of WRX.",
+      "tireSizes": ["245/40R18"],
+      "wheelDiameters": [18],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2016 Subaru WRX STI trim",
+      "tireSizes": ["245/40R18"],
+      "wheelDiameters": [18],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2017 Subaru WRX STI trim",
+      "tireSizes": ["245/40R18"],
+      "wheelDiameters": [18],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2018 Subaru WRX STI trim",
+      "tireSizes": ["245/40R18"],
+      "wheelDiameters": [18],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2019 Subaru WRX STI trim",
+      "tireSizes": ["245/40R18"],
+      "wheelDiameters": [18],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2020 Subaru WRX STI trim",
+      "tireSizes": ["245/40R18"],
+      "wheelDiameters": [18],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "missingWheels": true,
+      "missingTires": false,
+      "found": true,
+      "notes": "2021 Subaru WRX STI trim - LAST YEAR of STI. Discontinued after 2021.",
+      "tireSizes": ["245/40R18"],
+      "wheelDiameters": [18],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2023,
+      "make": "tesla",
+      "model": "cybertruck",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "US market vehicle but not yet in tiresize.com database. New model released late 2023."
+    },
+    {
+      "year": 2006,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 1) not in tiresize.com listings. Limited production US vehicle."
+    },
+    {
+      "year": 2007,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 1) not in tiresize.com listings. Limited production US vehicle."
+    },
+    {
+      "year": 2008,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 1) - page exists but no data. Limited production US vehicle."
+    },
+    {
+      "year": 2009,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 1) not in tiresize.com listings. Limited production US vehicle."
+    },
+    {
+      "year": 2010,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 1) not in tiresize.com listings. Limited production US vehicle."
+    },
+    {
+      "year": 2011,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 1) not in tiresize.com listings. Limited production US vehicle."
+    },
+    {
+      "year": 2012,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 1) not in tiresize.com listings. Limited production US vehicle."
+    },
+    {
+      "year": 2013,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 1) not in tiresize.com listings. Limited production US vehicle."
+    },
+    {
+      "year": 2014,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 1) not in tiresize.com listings. Limited production US vehicle."
+    },
+    {
+      "year": 2025,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 2) - announced but not yet released. Not in tiresize.com."
+    },
+    {
+      "year": 2026,
+      "make": "tesla",
+      "model": "roadster",
+      "missingWheels": true,
+      "missingTires": true,
+      "found": false,
+      "notes": "Tesla Roadster (gen 2) - announced but not yet released. Not in tiresize.com."
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "bz",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Toyota bZ (without '4X') is unclear/international naming. US market has bZ4X. Mark as not US."
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "bz4x",
+      "missingWheels": false,
+      "missingTires": true,
+      "found": true,
+      "notes": "Toyota bZ4X - US market EV. First model year. Page returns 404 but 2023 exists.",
+      "tireSizes": ["235/60R18", "235/50R20"],
+      "wheelDiameters": [18, 20],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "bz4x",
+      "missingWheels": false,
+      "missingTires": true,
+      "found": true,
+      "notes": "Toyota bZ4X - US market EV",
+      "tireSizes": ["235/60R18", "235/50R20"],
+      "wheelDiameters": [18, 20],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "bz4x",
+      "missingWheels": false,
+      "missingTires": true,
+      "found": true,
+      "notes": "Toyota bZ4X - US market EV",
+      "tireSizes": ["235/60R18", "235/50R20"],
+      "wheelDiameters": [18, 20],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "bz4x",
+      "missingWheels": false,
+      "missingTires": true,
+      "found": true,
+      "notes": "Toyota bZ4X - US market EV",
+      "tireSizes": ["235/60R18", "235/50R20"],
+      "wheelDiameters": [18, 20],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "bz4x",
+      "missingWheels": false,
+      "missingTires": true,
+      "found": true,
+      "notes": "Toyota bZ4X - US market EV",
+      "tireSizes": ["235/60R18", "235/50R20"],
+      "wheelDiameters": [18, 20],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "camry-gracia",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Camry Gracia is JDM wagon variant. Never sold in US market."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "camry-gracia",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "notes": "Camry Gracia is JDM wagon variant. Never sold in US market."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "celica",
+      "missingWheels": false,
+      "missingTires": true,
+      "found": true,
+      "notes": "2000 Toyota Celica - US market sports car",
+      "trims": {
+        "GT": { "tireSizes": ["195/60R15"], "wheelDiameters": [15] },
+        "GTS": { "tireSizes": ["205/50R16", "205/55R16"], "wheelDiameters": [16] }
+      },
+      "boltPattern": "5x100"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "celica",
+      "missingWheels": false,
+      "missingTires": true,
+      "found": true,
+      "notes": "2001 Toyota Celica - US market sports car",
+      "trims": {
+        "GT": { "tireSizes": ["195/60R15"], "wheelDiameters": [15] },
+        "GTS": { "tireSizes": ["205/50R16"], "wheelDiameters": [16] }
+      },
+      "boltPattern": "5x100"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "celica",
+      "missingWheels": false,
+      "missingTires": true,
+      "found": true,
+      "notes": "2002 Toyota Celica - US market sports car",
+      "trims": {
+        "GT": { "tireSizes": ["195/60R15"], "wheelDiameters": [15] },
+        "GTS": { "tireSizes": ["205/50R16"], "wheelDiameters": [16] }
+      },
+      "boltPattern": "5x100"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "celica",
+      "missingWheels": false,
+      "missingTires": true,
+      "found": true,
+      "notes": "2003 Toyota Celica - US market sports car",
+      "trims": {
+        "GT": { "tireSizes": ["195/60R15"], "wheelDiameters": [15] },
+        "GTS": { "tireSizes": ["205/50R16"], "wheelDiameters": [16] }
+      },
+      "boltPattern": "5x100"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "celica",
+      "missingWheels": false,
+      "missingTires": true,
+      "found": true,
+      "notes": "2004 Toyota Celica - US market sports car",
+      "trims": {
+        "GT": { "tireSizes": ["195/60R15"], "wheelDiameters": [15] },
+        "GTS": { "tireSizes": ["205/50R16"], "wheelDiameters": [16] }
+      },
+      "boltPattern": "5x100"
+    }
+  ],
+  "summary": {
+    "total": 50,
+    "foundWithSpecs": 21,
+    "notUS": 15,
+    "notFoundButUSMarket": 14,
+    "notes": "Non-US vehicles marked with notUS: true. Tesla Roadster/Cybertruck are US market but not in tiresize.com database. Subaru WRX STI was part of Impreza lineup 2004-2014, then became separate WRX model 2015-2021 (discontinued)."
+  }
+}

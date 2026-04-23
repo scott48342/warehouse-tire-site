@@ -1,0 +1,1672 @@
+{
+  "batchId": "77",
+  "processedAt": "2026-04-21T22:15:00Z",
+  "vehicleCount": 75,
+  "source": "tiresize.com",
+  "results": [
+    {
+      "year": 2024,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "P300 Coupe/Convertible",
+          "tireSizes": ["245/45ZR18 (F)", "275/40ZR18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "P450 Coupe/Convertible",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "P450 R-Dynamic",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "F-Type R",
+          "tireSizes": ["265/35ZR20 (F)", "305/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45ZR18", "275/40ZR18", "245/40ZR19", "275/35ZR19", "255/35ZR20", "295/30ZR20", "265/35ZR20", "305/30ZR20"],
+      "currentTireSizesMatch": true,
+      "notes": "Sports car with rear-biased staggered setup on all trims"
+    },
+    {
+      "year": 2023,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "P300",
+          "tireSizes": ["245/45ZR18 (F)", "275/40ZR18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "P450/R-Dynamic",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "F-Type R",
+          "tireSizes": ["265/35ZR20 (F)", "305/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45ZR18", "275/40ZR18", "255/35ZR20", "295/30ZR20", "265/35ZR20", "305/30ZR20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 255/40R19, 255/35R20 but missing staggered rear sizes"
+    },
+    {
+      "year": 2022,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "P300",
+          "tireSizes": ["245/45ZR18 (F)", "275/40ZR18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "P450/R-Dynamic",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "F-Type R",
+          "tireSizes": ["265/35ZR20 (F)", "305/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45ZR18", "275/40ZR18", "255/35ZR20", "295/30ZR20", "265/35ZR20", "305/30ZR20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 255/40R19 - needs staggered rear sizes added"
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "Base/P300",
+          "tireSizes": ["245/45ZR18 (F)", "275/40ZR18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "P380/R-Dynamic",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "F-Type R",
+          "tireSizes": ["265/35ZR20 (F)", "305/30ZR20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "SVR",
+          "tireSizes": ["265/35ZR20 (F)", "305/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45ZR18", "275/40ZR18", "245/40ZR19", "275/35ZR19", "255/35ZR20", "295/30ZR20", "265/35ZR20", "305/30ZR20"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage in DB"
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "Base/Checkered Flag",
+          "tireSizes": ["245/45ZR18 (F)", "275/40ZR18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "R-Dynamic",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "F-Type R",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "SVR",
+          "tireSizes": ["265/35ZR20 (F)", "305/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45ZR18", "275/40ZR18", "245/40ZR19", "275/35ZR19", "255/35ZR20", "295/30ZR20", "265/35ZR20", "305/30ZR20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows only 255/40R19, 255/35R20 - missing staggered setup data"
+    },
+    {
+      "year": 2019,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["245/45R18 (F)", "275/40R18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "R-Dynamic",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "F-Type R",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "SVR",
+          "tireSizes": ["265/35ZR20 (F)", "305/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "275/40R18", "245/40ZR19", "275/35ZR19", "255/35ZR20", "295/30ZR20", "265/35ZR20", "305/30ZR20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows non-staggered sizes - all F-Type are staggered"
+    },
+    {
+      "year": 2018,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "Base Coupe/Convertible",
+          "tireSizes": ["245/45ZR18 (F)", "275/40ZR18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "400 Sport",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "R-Dynamic",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "F-Type R",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "SVR",
+          "tireSizes": ["265/35ZR20 (F)", "305/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45ZR18", "275/40ZR18", "245/40ZR19", "275/35ZR19", "255/35ZR20", "295/30ZR20", "265/35ZR20", "305/30ZR20"],
+      "currentTireSizesMatch": true,
+      "notes": "Good staggered coverage in DB"
+    },
+    {
+      "year": 2017,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "Base/Premium",
+          "tireSizes": ["245/45R18 (F)", "275/40R18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "R-Dynamic/S",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "F-Type R",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "SVR",
+          "tireSizes": ["265/35ZR20 (F)", "305/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "275/40R18", "245/40ZR19", "275/35ZR19", "255/35ZR20", "295/30ZR20", "265/35ZR20", "305/30ZR20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows only 245/45R18, 255/40R19 - missing full staggered data"
+    },
+    {
+      "year": 2016,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["245/45R18 (F)", "275/40R18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "S/British Design Edition",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "F-Type R",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "SVR",
+          "tireSizes": ["265/35ZR20 (F)", "305/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "275/40R18", "245/40ZR19", "275/35ZR19", "255/35ZR20", "295/30ZR20", "265/35ZR20", "305/30ZR20"],
+      "currentTireSizesMatch": true,
+      "notes": "Good staggered coverage in DB"
+    },
+    {
+      "year": 2015,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["245/45R18 (F)", "275/40R18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "F-Type R",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "275/40R18", "245/40ZR19", "275/35ZR19", "255/35ZR20", "295/30ZR20"],
+      "currentTireSizesMatch": true,
+      "notes": "Good staggered coverage in DB"
+    },
+    {
+      "year": 2014,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["245/45R18 (F)", "275/40R18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "V8 S",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "275/40R18", "245/40ZR19", "275/35ZR19", "255/35ZR20", "295/30ZR20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows only 245/45R18, 255/40R19 - missing proper staggered rears"
+    },
+    {
+      "year": 2013,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["245/45R18 (F)", "275/40R18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["255/40R19 (F)", "295/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "275/40R18", "255/40R19", "295/35R19"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage"
+    },
+    {
+      "year": 2012,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["245/45ZR18 (F)", "275/40ZR18 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["245/40ZR19 (F)", "275/35ZR19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "V8 S",
+          "tireSizes": ["255/35ZR20 (F)", "295/30ZR20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45ZR18", "275/40ZR18", "245/40ZR19", "275/35ZR19", "255/35ZR20", "295/30ZR20"],
+      "currentTireSizesMatch": true,
+      "notes": "F-Type launched in 2013 in US - 2012 may be UK market only"
+    },
+    {
+      "year": 2025,
+      "make": "Jaguar",
+      "model": "I-PACE",
+      "trims": [
+        {
+          "trim": "HSE",
+          "tireSizes": ["245/50R20", "255/40R22"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/50R20", "255/40R22"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 265/40R22 - should be 255/40R22"
+    },
+    {
+      "year": 2024,
+      "make": "Jaguar",
+      "model": "I-PACE",
+      "trims": [
+        {
+          "trim": "HSE",
+          "tireSizes": ["245/50R20", "255/40R22"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/50R20", "255/40R22"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 265/40R22 - should be 255/40R22"
+    },
+    {
+      "year": 2023,
+      "make": "Jaguar",
+      "model": "I-PACE",
+      "trims": [
+        {
+          "trim": "S/SE/HSE",
+          "tireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage. DB has 235/60R19 which is not standard"
+    },
+    {
+      "year": 2022,
+      "make": "Jaguar",
+      "model": "I-PACE",
+      "trims": [
+        {
+          "trim": "HSE (2022 only HSE trim)",
+          "tireSizes": ["245/50R20", "255/40R22"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/50R20", "255/40R22"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 235/65R18, 235/60R19 - 2022 only came with 20/22 wheel options"
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "I-PACE",
+      "trims": [
+        {
+          "trim": "S",
+          "tireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+          "isStaggered": false
+        },
+        {
+          "trim": "SE",
+          "tireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+          "isStaggered": false
+        },
+        {
+          "trim": "HSE",
+          "tireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage"
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "I-PACE",
+      "trims": [
+        {
+          "trim": "S/SE/HSE",
+          "tireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage"
+    },
+    {
+      "year": 2019,
+      "make": "Jaguar",
+      "model": "I-PACE",
+      "trims": [
+        {
+          "trim": "S/SE",
+          "tireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+          "isStaggered": false
+        },
+        {
+          "trim": "HSE",
+          "tireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+          "isStaggered": false
+        },
+        {
+          "trim": "First Edition",
+          "tireSizes": ["245/50R20", "255/40R22"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["235/65R18", "245/50R20", "255/40R22"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage"
+    },
+    {
+      "year": 2018,
+      "make": "Jaguar",
+      "model": "I-PACE",
+      "trims": [
+        {
+          "trim": "Launch Edition (pre-prod)",
+          "tireSizes": ["245/50R20", "265/40R22"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/50R20", "265/40R22"],
+      "currentTireSizesMatch": true,
+      "notes": "2018 was limited availability - 2019 was full launch year"
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "trims": [
+        {
+          "trim": "3.0",
+          "tireSizes": ["235/50R17", "245/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "4.2",
+          "tireSizes": ["235/50R17", "245/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "R",
+          "tireSizes": ["245/40R18 (F)", "275/35R18 (R)", "245/35R19 (F)", "275/30R19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "VDP",
+          "tireSizes": ["235/50R17"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["235/50R17", "245/40R18", "275/35R18", "245/35R19", "275/30R19"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "trims": [
+        {
+          "trim": "3.0",
+          "tireSizes": ["235/50R17", "245/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "4.2",
+          "tireSizes": ["235/50R17", "245/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "R",
+          "tireSizes": ["245/40R18 (F)", "275/35R18 (R)", "245/35R19 (F)", "275/30R19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "VDP",
+          "tireSizes": ["235/50R17"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["235/50R17", "245/40R18", "275/35R18", "245/35R19", "275/30R19"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "trims": [
+        {
+          "trim": "3.0",
+          "tireSizes": ["235/50R17", "245/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "4.2",
+          "tireSizes": ["235/50R17", "245/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "4.2 VDP Edition",
+          "tireSizes": ["235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "R",
+          "tireSizes": ["245/40R18 (F)", "275/35R18 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["235/50R17", "245/40R18", "275/35R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "trims": [
+        {
+          "trim": "V6",
+          "tireSizes": ["235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "V6 Sport Package",
+          "tireSizes": ["245/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "V8",
+          "tireSizes": ["235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "V8 Sport Package",
+          "tireSizes": ["245/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "R",
+          "tireSizes": ["245/40R18 (F)", "275/35R18 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["235/50R17", "245/40R18", "275/35R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "trims": [
+        {
+          "trim": "V6",
+          "tireSizes": ["225/55R16", "235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "V8",
+          "tireSizes": ["235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "R",
+          "tireSizes": ["245/40R18 (F)", "275/35R18 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/55R16", "235/50R17", "245/40R18", "275/35R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "trims": [
+        {
+          "trim": "V6",
+          "tireSizes": ["225/55R16", "235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "V8",
+          "tireSizes": ["225/55R16", "235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "R",
+          "tireSizes": ["245/40R18 (F)", "275/35R18 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/55R16", "235/50R17", "245/40R18", "275/35R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "trims": [
+        {
+          "trim": "V6",
+          "tireSizes": ["225/55R16", "235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "V8",
+          "tireSizes": ["225/55R16", "235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "R",
+          "tireSizes": ["245/40R18 (F)", "275/35R18 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/55R16", "235/50R17", "245/40R18", "275/35R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2001,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "trims": [
+        {
+          "trim": "V6",
+          "tireSizes": ["225/55R16", "235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "V8",
+          "tireSizes": ["225/55R16", "235/50R17"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["225/55R16", "235/50R17"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "trims": [
+        {
+          "trim": "V6",
+          "tireSizes": ["225/55R16", "235/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "V8",
+          "tireSizes": ["225/55R16", "235/50R17"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["225/55R16", "235/50R17"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2009,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "trims": [
+        {
+          "trim": "3.0 (Final Year)",
+          "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - X-Type ended in 2008 in US (2009 UK only)"
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "trims": [
+        {
+          "trim": "3.0 Sedan",
+          "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 V6 Wagon",
+          "tireSizes": ["225/45R17", "225/40R18"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "trims": [
+        {
+          "trim": "3.0 Sedan",
+          "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 V6 Wagon",
+          "tireSizes": ["225/45R17", "225/40R18"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "trims": [
+        {
+          "trim": "3.0 Sedan",
+          "tireSizes": ["205/55R16", "225/45R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 Sport",
+          "tireSizes": ["225/45R17", "225/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 V6 Wagon",
+          "tireSizes": ["225/45R17", "225/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 VDP Edition",
+          "tireSizes": ["225/45R17", "225/40R18"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "trims": [
+        {
+          "trim": "2.5 V6 Sedan",
+          "tireSizes": ["205/55R16"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 V6 Sedan",
+          "tireSizes": ["225/45R17", "225/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 V6 Wagon",
+          "tireSizes": ["225/45R17", "225/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 VDP Edition",
+          "tireSizes": ["225/45R17"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "trims": [
+        {
+          "trim": "2.5 V6",
+          "tireSizes": ["205/55R16"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 V6",
+          "tireSizes": ["225/45R17", "225/40R18"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "trims": [
+        {
+          "trim": "2.5 V6",
+          "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 V6",
+          "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population"
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "trims": [
+        {
+          "trim": "2.5 V6",
+          "tireSizes": ["205/55R16"],
+          "isStaggered": false
+        },
+        {
+          "trim": "2.5 V6 Sport",
+          "tireSizes": ["225/45R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 V6",
+          "tireSizes": ["205/55R16", "225/45R17"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["205/55R16", "225/45R17"],
+      "currentTireSizesMatch": false,
+      "notes": "DB has no tire sizes - needs population. First year of X-Type"
+    },
+    {
+      "year": 2001,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "trims": [],
+      "allTireSizes": [],
+      "currentTireSizesMatch": false,
+      "notes": "X-Type launched in 2002 - no 2001 model exists. Remove from DB"
+    },
+    {
+      "year": 2025,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "300 Sport",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)", "235/35R20 (F)", "265/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19", "235/35R20", "265/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 205/60R16 which is not available on 2025 XE. XE discontinued after 2024 in many markets"
+    },
+    {
+      "year": 2024,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "300 Sport",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)", "235/35R20 (F)", "265/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19", "235/35R20", "265/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 205/60R16, 225/50R17 - these are older generation sizes not available 2024"
+    },
+    {
+      "year": 2023,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "300 Sport",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)", "235/35R20 (F)", "265/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19", "235/35R20", "265/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows outdated 205/60R16, 225/50R17 - 2023 only came with 18-20 inch wheels"
+    },
+    {
+      "year": 2022,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "300 Sport",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)", "235/35R20 (F)", "265/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19", "235/35R20", "265/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows outdated sizes"
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "P250/P300",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "300 Sport",
+          "tireSizes": ["235/35R20 (F)", "265/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19", "235/35R20", "265/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows outdated sizes including 205/60R16"
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "S",
+          "tireSizes": ["225/45R18", "225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "R-Dynamic S",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)", "235/35R20 (F)", "265/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "235/35R20", "265/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows only 225/45R18, 235/40R19, 245/35R20 - missing staggered sizes"
+    },
+    {
+      "year": 2019,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["225/50R17", "225/45R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Premium/Prestige/R-Sport",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["225/40R19 (F)", "255/35R19 (R)", "235/35R20 (F)", "265/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/50R17", "225/45R18", "225/40R19", "255/35R19", "235/35R20", "265/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows only 225/45R18, 235/40R19, 245/35R20 - missing staggered sizes"
+    },
+    {
+      "year": 2018,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["225/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Premium/Prestige/R-Sport",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["225/40R19 (F)", "255/35R19 (R)", "235/35R20 (F)", "265/30R20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "Portfolio",
+          "tireSizes": ["225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/50R17", "225/45R18", "225/40R19", "255/35R19", "235/35R20", "265/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows only 225/45R18, 235/40R19 - missing staggered sizes"
+    },
+    {
+      "year": 2017,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["225/50R17"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Premium/Prestige/R-Sport",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/50R17", "225/45R18", "225/40R19", "255/35R19"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 225/45R18, 235/40R19 - close but missing staggered rear sizes"
+    },
+    {
+      "year": 2016,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "Premium/Prestige/R-Sport",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "currentTireSizesMatch": false,
+      "notes": "XE launched 2016 in US. DB shows 225/45R18, 235/40R19"
+    },
+    {
+      "year": 2015,
+      "make": "Jaguar",
+      "model": "XE",
+      "trims": [
+        {
+          "trim": "UK Launch (not US)",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "currentTireSizesMatch": false,
+      "notes": "2015 XE was UK/Europe only - US sales began 2016. Consider removing 2015 from US DB"
+    },
+    {
+      "year": 2025,
+      "make": "Jaguar",
+      "model": "XEL",
+      "trims": [
+        {
+          "trim": "China-only long wheelbase",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "currentTireSizesMatch": false,
+      "notes": "XEL is China-market only vehicle - not sold in US. Consider removing from US database"
+    },
+    {
+      "year": 2024,
+      "make": "Jaguar",
+      "model": "XEL",
+      "trims": [
+        {
+          "trim": "China-only",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "currentTireSizesMatch": false,
+      "notes": "XEL China-market only"
+    },
+    {
+      "year": 2023,
+      "make": "Jaguar",
+      "model": "XEL",
+      "trims": [
+        {
+          "trim": "China-only",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "currentTireSizesMatch": false,
+      "notes": "XEL China-market only"
+    },
+    {
+      "year": 2022,
+      "make": "Jaguar",
+      "model": "XEL",
+      "trims": [
+        {
+          "trim": "China-only",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "currentTireSizesMatch": false,
+      "notes": "XEL China-market only"
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "XEL",
+      "trims": [
+        {
+          "trim": "China-only",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "currentTireSizesMatch": false,
+      "notes": "XEL China-market only"
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "XEL",
+      "trims": [
+        {
+          "trim": "China-only",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "currentTireSizesMatch": false,
+      "notes": "XEL China-market only"
+    },
+    {
+      "year": 2019,
+      "make": "Jaguar",
+      "model": "XEL",
+      "trims": [
+        {
+          "trim": "China-only",
+          "tireSizes": ["225/45R18", "225/40R19 (F)", "255/35R19 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "currentTireSizesMatch": false,
+      "notes": "XEL China-market only - first year"
+    },
+    {
+      "year": 2025,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "R-Dynamic SE",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/40R19", "255/35R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 225/55R17, 275/35R20 - 225/55R17 not available 2025"
+    },
+    {
+      "year": 2024,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "R-Dynamic SE",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/40R19", "255/35R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows extra staggered ZR sizes - verify with OEM spec"
+    },
+    {
+      "year": 2023,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "S",
+          "tireSizes": ["245/45R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "SE/R-Dynamic SE",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 225/55R17, 275/35R20 - check if valid options"
+    },
+    {
+      "year": 2022,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "S",
+          "tireSizes": ["245/45R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "SE/R-Dynamic SE",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage though DB also has ZR variants"
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "S",
+          "tireSizes": ["245/45R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "SE/R-Dynamic SE",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 225/55R17, 275/35R20 but these may be non-US options"
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "Premium",
+          "tireSizes": ["245/45R18", "245/40R19"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Prestige/Checkered Flag",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Sportbrake S",
+          "tireSizes": ["255/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 225/55R17, 275/35R20 - verify if valid"
+    },
+    {
+      "year": 2019,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "Premium",
+          "tireSizes": ["245/45R18", "245/40R19"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Prestige/Portfolio/300 Sport",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["255/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 225/55R17, 275/35R20"
+    },
+    {
+      "year": 2018,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "Base/Premium",
+          "tireSizes": ["245/45R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Prestige/R-Sport/Portfolio",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Sportbrake First Edition/S",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage"
+    },
+    {
+      "year": 2017,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "Base/Premium",
+          "tireSizes": ["245/45R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Prestige/R-Sport",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["255/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 225/55R17, 275/35R20 - 225/55R17 was likely phased out"
+    },
+    {
+      "year": 2016,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "Base/Premium",
+          "tireSizes": ["245/45R18"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Prestige/R-Sport",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "S",
+          "tireSizes": ["255/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "currentTireSizesMatch": true,
+      "notes": "2016 was redesign year (X260 platform). Good coverage"
+    },
+    {
+      "year": 2015,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "2.0T Premium",
+          "tireSizes": ["245/45R18", "245/40R19"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 Portfolio/Sport",
+          "tireSizes": ["245/40R19", "255/35R20 (F)", "285/30R20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "Supercharged",
+          "tireSizes": ["255/35R20 (F)", "285/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20", "285/30R20"],
+      "currentTireSizesMatch": true,
+      "notes": "Last year of X250 platform. Supercharged has staggered setup"
+    },
+    {
+      "year": 2014,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "2.0T/3.0",
+          "tireSizes": ["245/45R18", "245/40R19"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 AWD",
+          "tireSizes": ["245/40R19", "255/35R20 (F)", "285/30R20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "Supercharged",
+          "tireSizes": ["255/35R20 (F)", "285/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20", "285/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 255/40R19, 275/35R20 - should show staggered setup"
+    },
+    {
+      "year": 2013,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "3.0",
+          "tireSizes": ["245/45R18", "245/40R19"],
+          "isStaggered": false
+        },
+        {
+          "trim": "3.0 AWD",
+          "tireSizes": ["245/40R19", "255/35R20 (F)", "285/30R20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "Supercharged",
+          "tireSizes": ["255/35R20 (F)", "285/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20", "285/30R20"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage with staggered options"
+    },
+    {
+      "year": 2012,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "Base/Portfolio",
+          "tireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Supercharged",
+          "tireSizes": ["255/35R20 (F)", "285/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20", "285/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 255/40R19, 275/35R20 but Supercharged has different staggered setup"
+    },
+    {
+      "year": 2011,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "Base/Premium",
+          "tireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Supercharged",
+          "tireSizes": ["255/35R20 (F)", "285/30R20 (R)"],
+          "isStaggered": true
+        },
+        {
+          "trim": "XFR",
+          "tireSizes": ["265/30R21 (F)", "295/25R21 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20", "285/30R20", "265/30R21", "295/25R21"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage including XFR 21-inch staggered"
+    },
+    {
+      "year": 2010,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Premium",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Supercharged",
+          "tireSizes": ["255/35R20 (F)", "285/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20", "285/30R20"],
+      "currentTireSizesMatch": true,
+      "notes": "Good coverage"
+    },
+    {
+      "year": 2009,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "Luxury",
+          "tireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Premium Luxury",
+          "tireSizes": ["245/40R19", "255/35R20"],
+          "isStaggered": false
+        },
+        {
+          "trim": "Supercharged",
+          "tireSizes": ["255/35R20 (F)", "285/30R20 (R)"],
+          "isStaggered": true
+        }
+      ],
+      "allTireSizes": ["245/45R18", "245/40R19", "255/35R20", "285/30R20"],
+      "currentTireSizesMatch": false,
+      "notes": "DB shows 255/40R19, 275/35R20 - close but not exact"
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "XF",
+      "trims": [
+        {
+          "trim": "Base",
+          "tireSizes": ["225/55R17", "255/45R18", "275/35R20"],
+          "isStaggered": false
+        }
+      ],
+      "allTireSizes": ["225/55R17", "255/45R18", "275/35R20"],
+      "currentTireSizesMatch": true,
+      "notes": "First year of XF (X250 platform). Different sizes than later years"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "vehiclesWithCorrectData": 23,
+    "vehiclesNeedingUpdate": 52,
+    "staggeredSetupVehicles": 42,
+    "recommendations": [
+      "F-Type: All years have staggered front/rear - ensure DB captures both F and R sizes",
+      "I-PACE: 2022+ only comes with 20/22 inch wheels - remove 18/19 inch options for those years",
+      "S-Type: All years have empty tire data - needs full population",
+      "X-Type: All years have empty tire data - needs full population. Note: 2001 and 2009 may not be valid US years",
+      "XE: Has staggered rear options (255/35R19, 265/30R20) on higher trims - current DB shows non-staggered only",
+      "XEL: China-market only vehicle - consider removing from US database entirely",
+      "XF: Pre-2016 Supercharged and XFR models have staggered setups - verify DB captures both front and rear sizes"
+    ]
+  }
+}

@@ -1,0 +1,2366 @@
+[
+  {
+    "id": "3b4f0460-963e-4598-a517-f120a4b4d090",
+    "year": 2022,
+    "make": "acura",
+    "model": "mdx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "73542305-c7a1-4a85-b283-108bfe797465",
+    "year": 2023,
+    "make": "acura",
+    "model": "mdx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "257d5e50-47b6-47e8-b898-7e7f2998b0a3",
+    "year": 2024,
+    "make": "acura",
+    "model": "mdx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a3722a72-4048-4e6e-b119-51c9ad426948",
+    "year": 2025,
+    "make": "acura",
+    "model": "mdx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a9ef2b6a-6a85-4504-9594-5ceb43d3aa08",
+    "year": 2026,
+    "make": "acura",
+    "model": "mdx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "dea8a3b3-1ccf-4a11-9e37-dc719374b235",
+    "year": 2023,
+    "make": "acura",
+    "model": "nsx",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 43,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 11,
+        "offset": 36,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/45R17",
+      "245/40R17",
+      "245/40R19",
+      "265/35R19",
+      "305/30R19",
+      "305/35R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "f36badf1-2a2c-4969-8246-6313c6191ffc",
+    "year": 2006,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "aa7b34b9-25c0-47e3-bcdf-82c4944ee159",
+    "year": 2007,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "10972c4b-1d7d-4eff-956b-6f5c4eb0471d",
+    "year": 2008,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "14903ff3-87b5-4e5f-a69b-974a68987568",
+    "year": 2009,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "02308abd-15a8-414b-99b3-8147e74d18ea",
+    "year": 2010,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "0f5a23d7-f554-400f-91e6-1a2b40f3a525",
+    "year": 2011,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8fdcd050-b666-45fd-9022-a78ccf5f1666",
+    "year": 2012,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "50580736-7bef-4da0-941b-ec6340e5a205",
+    "year": 2013,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a5432537-83a2-4488-981d-24455604dcd8",
+    "year": 2014,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "01103153-07b1-42fd-ae03-5f8bc2531ecf",
+    "year": 2015,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5255bdeb-6610-4829-98e0-249156de8313",
+    "year": 2016,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a436c875-10fe-40b4-8f68-649752e6a59a",
+    "year": 2017,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8dde0eea-d9f0-49ed-88e1-6781acb26825",
+    "year": 2018,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "db3483b4-46a1-49b9-a0cf-34858a83f678",
+    "year": 2019,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "04090d00-f8d5-4c37-9b5e-0cc86b17d2a1",
+    "year": 2020,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2b76ff3f-9795-47cf-99f4-d09b33606430",
+    "year": 2021,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5b64ffec-b93c-4a66-8016-5e40854ca526",
+    "year": 2022,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "3bf75294-c1ec-4765-af13-b34543bdf2c3",
+    "year": 2023,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e07d725f-65ce-47c1-8361-7fcb62e66929",
+    "year": 2024,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "30550291-ca7e-410e-8c44-458547a1cd30",
+    "year": 2025,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c4e09a47-5be1-4644-beb7-5707e6358b13",
+    "year": 2026,
+    "make": "acura",
+    "model": "rdx",
+    "trim": "Base, Technology, A-Spec, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "50684f2f-8beb-4537-8e9e-c05ec057ceb7",
+    "year": 2013,
+    "make": "acura",
+    "model": "rl",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 55,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/50R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "87f87250-f54b-4159-8e2b-9a69bd196d88",
+    "year": 1999,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "330f41a4-9460-46ad-b58b-f9c4d521f982",
+    "year": 2000,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "9084f4c4-1aff-4bdc-aa4e-cfe837b4689d",
+    "year": 2001,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8fba1011-a87f-4532-b80f-f9cfaf409dd2",
+    "year": 2002,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "1507d3cd-072e-46db-b923-cf4bc95f0b13",
+    "year": 2003,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "09a91821-dc76-4b90-a6e4-0b0569575546",
+    "year": 2004,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "371bcf1d-e912-45da-a4f4-3a8a762ae407",
+    "year": 2005,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e50c10da-be62-4800-827f-3a2881d2770d",
+    "year": 2006,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "9e117cec-57fa-4ccd-b198-f61324857d40",
+    "year": 2007,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8775388f-3e26-433b-ba1d-05f3c19808f8",
+    "year": 2008,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "df059265-d596-4ce3-8048-9c54952e1320",
+    "year": 2009,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "861671e0-b6e1-4868-8433-a7f36ba7ae9b",
+    "year": 2010,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "9f6bf452-c018-4354-8999-f9b9be891668",
+    "year": 2011,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ad139313-678f-4809-bf49-b3ab9e9eacec",
+    "year": 2012,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "85c348a4-e0f3-4df6-8e91-348d4692f88b",
+    "year": 2013,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "09e6128f-4e0f-419a-ba64-1f1d565d332b",
+    "year": 2014,
+    "make": "acura",
+    "model": "tl",
+    "trim": "Base, Technology, SH-AWD, Advance",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e5ce7629-2a6c-4d65-ae97-50e7206b3e86",
+    "year": 2014,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "225/50R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "df07614e-a597-4e23-bc5b-59b40467a98d",
+    "year": 2015,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "245/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e343d870-24fb-4953-823c-dafa924c1fb5",
+    "year": 2016,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "245/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "200b7670-7528-49be-a635-12f2251f6aa3",
+    "year": 2017,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "245/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e04df925-a98b-4fc7-be50-749761045c2b",
+    "year": 2018,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "245/45ZR18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "3ac522db-c05b-4a59-9101-fdd06284c4e6",
+    "year": 2019,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "245/45ZR18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e544c4ea-fca7-410f-8cb3-a008853ff4c7",
+    "year": 2020,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "245/45ZR18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6b69e839-cd2d-4945-918a-42be3d98aa71",
+    "year": 2021,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/40R19",
+      "255/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6029cd48-e94e-4cd5-b3f9-4ccc520eb120",
+    "year": 2022,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/40R19",
+      "255/35R20",
+      "255/40ZR19",
+      "255/35ZR20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b75d2110-05a8-4387-96ff-b71cab0ced8d",
+    "year": 2023,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/40R19",
+      "255/35R20",
+      "255/40ZR19",
+      "255/35ZR20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "80d5b161-8b9c-4668-ace6-d120c8072a28",
+    "year": 2024,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/40R19",
+      "255/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e050313d-e714-4354-8d20-1554757c8f1a",
+    "year": 2025,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/40R19",
+      "255/35R20",
+      "255/40ZR19",
+      "255/35ZR20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ea73e2b1-fe39-41e1-bbb3-2d548a3a46a1",
+    "year": 2026,
+    "make": "acura",
+    "model": "tlx",
+    "trim": "Base, Technology, A-Spec, Advance, Type S",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/40R19",
+      "255/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7419aeda-b6ac-48c3-9279-e64a57c17857",
+    "year": 2003,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 55,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "5eda1051-49a8-4be1-8378-a9832247bb20",
+    "year": 2004,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "d24acc82-9ee9-41f5-99b4-1fb337447df0",
+    "year": 2005,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c2e8d462-9fff-44a7-91e6-973a63cdc1fe",
+    "year": 2006,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "627f28a6-8715-4856-b044-c34b37da396c",
+    "year": 2007,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "541ca819-eaa4-4013-8eaa-2637e76cc70a",
+    "year": 2008,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e9615de5-0214-4a3a-b52d-7eb184c661ce",
+    "year": 2009,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4d54e9c5-9081-4f4c-b454-754a699bccba",
+    "year": 2010,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "33a521ec-8ce6-402d-b5b8-506fc370bdc9",
+    "year": 2011,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c8f40765-02ad-4fe9-9fb3-458f4ed735d5",
+    "year": 2012,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "51d768e8-5e68-43fa-a9e3-902c26f06514",
+    "year": 2013,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2ea89f4c-5fbd-4021-b06a-42b625a25fe3",
+    "year": 2014,
+    "make": "acura",
+    "model": "tsx",
+    "trim": "Base, Technology, Special Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "d24cf20a-135a-44aa-9951-210512395987",
+    "year": 2009,
+    "make": "acura",
+    "model": "zdx",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "255/50R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "id": "2d40256c-2205-4f1b-9a2d-eab417a7f6c5",
+    "year": 2022,
+    "make": "lucid",
+    "model": "air",
+    "trim": "EV",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 37,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR19",
+      "245/40ZR20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "87ddf7b0-aded-4a8b-a7f5-9554ba6dddb4",
+    "year": 2023,
+    "make": "lucid",
+    "model": "air",
+    "trim": "Sapphire",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "9Jx21"
+    ],
+    "verifiedTireSizes": [
+      "265/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "4aa8d543-3736-482e-a978-f049cc371d78",
+    "year": 2023,
+    "make": "lucid",
+    "model": "air",
+    "trim": "Grand Touring",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "8.5Jx20",
+      "9Jx21"
+    ],
+    "verifiedTireSizes": [
+      "245/40ZR20",
+      "245/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "ce49a1f3-411b-4378-a848-a61450c836c7",
+    "year": 2023,
+    "make": "lucid",
+    "model": "air",
+    "trim": "Pure",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "8Jx19",
+      "8.5Jx20"
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR19",
+      "245/40ZR20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "e164bee3-c06a-431b-b1d1-6269877fdd13",
+    "year": 2023,
+    "make": "lucid",
+    "model": "air",
+    "trim": "Touring",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "8Jx19",
+      "8.5Jx20",
+      "9Jx21"
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR19",
+      "245/40ZR20",
+      "245/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "a29d10cb-bd10-4fa6-8faa-49262ba7f9af",
+    "year": 2024,
+    "make": "lucid",
+    "model": "air",
+    "trim": "Pure",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "8Jx19",
+      "8.5Jx20"
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR19",
+      "245/40ZR20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f5acd668-fe19-445d-9882-fc26b8ac780a",
+    "year": 2024,
+    "make": "lucid",
+    "model": "air",
+    "trim": "Sapphire",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "9Jx21"
+    ],
+    "verifiedTireSizes": [
+      "265/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "9dadf5d7-ad20-42a3-9f88-9273ef7a56b2",
+    "year": 2024,
+    "make": "lucid",
+    "model": "air",
+    "trim": "Grand Touring",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "8.5Jx20",
+      "9Jx21"
+    ],
+    "verifiedTireSizes": [
+      "245/40ZR20",
+      "245/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "9e64551f-e428-4cbc-b22d-4aaa8d757aa0",
+    "year": 2024,
+    "make": "lucid",
+    "model": "air",
+    "trim": "Touring",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "8Jx19",
+      "8.5Jx20",
+      "9Jx21"
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR19",
+      "245/40ZR20",
+      "245/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d100bb47-5e44-4dd9-a3f3-e1312d1241b0",
+    "year": 2024,
+    "make": "lucid",
+    "model": "gravity",
+    "trim": "Touring",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "9Jx21",
+      "9.5Jx22"
+    ],
+    "verifiedTireSizes": [
+      "265/45R21",
+      "275/40R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "ffd5e323-4daa-4d75-9934-bcf9c79faebf",
+    "year": 2024,
+    "make": "lucid",
+    "model": "gravity",
+    "trim": "Grand Touring",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "9.5Jx22"
+    ],
+    "verifiedTireSizes": [
+      "275/40R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  }
+]

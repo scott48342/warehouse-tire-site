@@ -1,0 +1,889 @@
+{
+  "batchId": "39",
+  "validatedAt": "2026-04-21T21:54:00Z",
+  "vehicleCount": 75,
+  "summary": {
+    "validated": 72,
+    "issues": 3,
+    "notes": [
+      "Chevrolet Viva is NOT a US market vehicle - sold in Latin America/Australia as rebadged Daewoo Lacetti/Holden Viva",
+      "Chrysler 200 was NOT available in 2010 - model launched in 2011 (replacing Sebring)",
+      "Chevrolet Volt 2010 was not sold to customers - production started late 2010 as 2011 model year",
+      "Chrysler 300 2024-2026 data may be inaccurate - 300 was discontinued after 2023 model year"
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Viva",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/55R15", "195/50R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "195/55R15", "wheelSize": "15x6"},
+        {"trim": "LS/LT", "tireSize": "195/50R16", "wheelSize": "16x6"}
+      ],
+      "notes": "Non-US vehicle (Mexico/Latin America). Based on Daewoo Lacetti platform. Limited data available."
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Viva",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/55R15", "195/50R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "195/55R15", "wheelSize": "15x6"},
+        {"trim": "LS/LT", "tireSize": "195/50R16", "wheelSize": "16x6"}
+      ],
+      "notes": "Non-US vehicle (Mexico/Latin America). Based on Daewoo Lacetti platform."
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Viva",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/55R15", "195/50R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "195/55R15", "wheelSize": "15x6"},
+        {"trim": "LS/LT", "tireSize": "195/50R16", "wheelSize": "16x6"}
+      ],
+      "notes": "Non-US vehicle (Mexico/Latin America). Based on Daewoo Lacetti platform."
+    },
+    {
+      "year": 2019,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "215/50R17"],
+      "validatedTireSizes": ["215/50R17"],
+      "trims": [
+        {"trim": "LT", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Premier", "tireSize": "215/50R17", "wheelSize": "17x7"}
+      ],
+      "notes": "Gen 2 Volt (2016-2019). Current DB has incorrect 215/55R17 - should be 215/50R17 only.",
+      "discrepancy": "REMOVE 215/55R17 from 2016-2019 Volt"
+    },
+    {
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "215/50R17"],
+      "validatedTireSizes": ["215/50R17"],
+      "trims": [
+        {"trim": "LT", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Premier", "tireSize": "215/50R17", "wheelSize": "17x7"}
+      ],
+      "discrepancy": "REMOVE 215/55R17 - Gen 2 Volt uses 215/50R17 only"
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "215/50R17"],
+      "validatedTireSizes": ["215/50R17"],
+      "trims": [
+        {"trim": "LT", "tireSize": "215/50R17", "wheelSize": "17x7"},
+        {"trim": "Premier", "tireSize": "215/50R17", "wheelSize": "17x7"}
+      ],
+      "discrepancy": "REMOVE 215/55R17 - Gen 2 Volt uses 215/50R17 only"
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "215/50R17"],
+      "validatedTireSizes": ["215/50R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/50R17", "wheelSize": "17x7"}
+      ],
+      "discrepancy": "REMOVE 215/55R17 - Gen 2 Volt uses 215/50R17 only"
+    },
+    {
+      "year": 2015,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "215/50R17"],
+      "validatedTireSizes": ["215/55R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "discrepancy": "REMOVE 215/50R17 - Gen 1 Volt (2011-2015) uses 215/55R17 only"
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "215/50R17"],
+      "validatedTireSizes": ["215/55R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "discrepancy": "REMOVE 215/50R17 - Gen 1 Volt uses 215/55R17 only"
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "215/50R17"],
+      "validatedTireSizes": ["215/55R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "discrepancy": "REMOVE 215/50R17 - Gen 1 Volt uses 215/55R17 only"
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "215/50R17"],
+      "validatedTireSizes": ["215/55R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "discrepancy": "REMOVE 215/50R17 - Gen 1 Volt uses 215/55R17 only"
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "215/50R17"],
+      "validatedTireSizes": ["215/55R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "discrepancy": "REMOVE 215/50R17 - Gen 1 Volt uses 215/55R17 only"
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "INVALID_YEAR",
+      "currentTireSizes": ["215/55R17", "215/50R17"],
+      "validatedTireSizes": [],
+      "notes": "2010 Volt was NOT sold to customers. Production began late 2010 as 2011 model year. Remove from database."
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "validatedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": [
+        {"trim": "LX", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSizes": ["215/55R17", "235/45R18"], "wheelSizes": ["17x7", "18x8"]},
+        {"trim": "Limited Platinum", "tireSizes": ["215/55R17", "235/45R18"], "wheelSizes": ["17x7", "18x8"]},
+        {"trim": "Touring", "tireSizes": ["215/55R17", "235/45R18"], "wheelSizes": ["17x7", "18x8"]},
+        {"trim": "S", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]},
+        {"trim": "S V6", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]},
+        {"trim": "C AWD", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]},
+        {"trim": "C FWD", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]},
+        {"trim": "C Platinum", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]}
+      ],
+      "notes": "Final year for 200 (2017). All tire sizes confirmed correct."
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "validatedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": [
+        {"trim": "LX", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSizes": ["215/55R17", "235/45R18"], "wheelSizes": ["17x7", "18x8"]},
+        {"trim": "Limited Platinum", "tireSizes": ["215/55R17", "235/45R18"], "wheelSizes": ["17x7", "18x8"]},
+        {"trim": "S", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]},
+        {"trim": "S V6", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]},
+        {"trim": "C AWD", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]},
+        {"trim": "C FWD", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]},
+        {"trim": "C Platinum", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]}
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "VALID",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "validatedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": [
+        {"trim": "LX", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSizes": ["215/55R17", "235/45R18"], "wheelSizes": ["17x7", "18x8"]},
+        {"trim": "C FWD", "tireSizes": ["215/55R17", "235/40R19"], "wheelSizes": ["17x7", "19x8"]},
+        {"trim": "C AWD", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]},
+        {"trim": "S FWD", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]},
+        {"trim": "S AWD", "tireSizes": ["235/45R18", "235/40R19"], "wheelSizes": ["18x8", "19x8"]}
+      ],
+      "notes": "2015 was first year of Gen 2 200 (complete redesign)."
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "MISMATCH",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "validatedTireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "225/55R17", "wheelSize": "17x6.5"},
+        {"trim": "Touring", "tireSizes": ["225/55R17", "225/50R18"], "wheelSizes": ["17x6.5", "18x7"]},
+        {"trim": "Limited", "tireSizes": ["225/55R17", "225/50R18"], "wheelSizes": ["17x6.5", "18x7"]},
+        {"trim": "Convertible Touring", "tireSizes": ["225/55R17", "225/50R18"], "wheelSizes": ["17x6.5", "18x7"]},
+        {"trim": "Convertible Limited", "tireSize": "225/50R18", "wheelSize": "18x7"},
+        {"trim": "Convertible S", "tireSize": "225/50R18", "wheelSize": "18x7"}
+      ],
+      "discrepancy": "Gen 1 200 (2011-2014) uses 225/55R17 and 225/50R18, NOT 215/55R17 or 235 sizes. Database has Gen 2 sizes incorrectly applied."
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "MISMATCH",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "validatedTireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "225/55R17", "wheelSize": "17x6.5"},
+        {"trim": "Touring", "tireSizes": ["225/55R17", "225/50R18"], "wheelSizes": ["17x6.5", "18x7"]},
+        {"trim": "Limited", "tireSize": "225/50R18", "wheelSize": "18x7"},
+        {"trim": "Convertible Touring", "tireSizes": ["225/55R17", "225/50R18"], "wheelSizes": ["17x6.5", "18x7"]},
+        {"trim": "Convertible Limited", "tireSize": "225/50R18", "wheelSize": "18x7"},
+        {"trim": "Convertible S", "tireSize": "225/50R18", "wheelSize": "18x7"}
+      ],
+      "discrepancy": "Gen 1 200 uses 225 width tires. Replace current sizes with 225/55R17 and 225/50R18."
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "MISMATCH",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "validatedTireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "225/55R17", "wheelSize": "17x6.5"},
+        {"trim": "Touring", "tireSizes": ["225/55R17", "225/50R18"], "wheelSizes": ["17x6.5", "18x7"]},
+        {"trim": "Limited", "tireSize": "225/50R18", "wheelSize": "18x7"},
+        {"trim": "S", "tireSize": "225/50R18", "wheelSize": "18x7"},
+        {"trim": "Convertible Touring", "tireSizes": ["225/55R17", "225/50R18"], "wheelSizes": ["17x6.5", "18x7"]},
+        {"trim": "Convertible Limited", "tireSize": "225/50R18", "wheelSize": "18x7"},
+        {"trim": "Convertible S", "tireSize": "225/50R18", "wheelSize": "18x7"}
+      ],
+      "discrepancy": "Gen 1 200 uses 225 width tires. Replace current sizes with 225/55R17 and 225/50R18."
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "MISMATCH",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "validatedTireSizes": ["225/55R17", "225/50R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "225/55R17", "wheelSize": "17x6.5"},
+        {"trim": "Touring", "tireSize": "225/55R17", "wheelSize": "17x6.5"},
+        {"trim": "Limited", "tireSize": "225/50R18", "wheelSize": "18x7"},
+        {"trim": "S", "tireSize": "225/50R18", "wheelSize": "18x7"},
+        {"trim": "Convertible Touring", "tireSize": "225/55R17", "wheelSize": "17x6.5"},
+        {"trim": "Convertible Limited", "tireSize": "225/50R18", "wheelSize": "18x7"},
+        {"trim": "Convertible S", "tireSize": "225/50R18", "wheelSize": "18x7"}
+      ],
+      "discrepancy": "First year of 200. Gen 1 uses 225 width tires. Replace current sizes with 225/55R17 and 225/50R18."
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "INVALID_YEAR",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "validatedTireSizes": [],
+      "notes": "Chrysler 200 was NOT available in 2010. Model launched in 2011 (replaced Sebring). Remove from database."
+    },
+    {
+      "year": 2026,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "INVALID_YEAR",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": [],
+      "notes": "Chrysler 300 was discontinued after 2023 model year. 2026 model does not exist. Remove from database."
+    },
+    {
+      "year": 2026,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "INVALID_YEAR",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": [],
+      "notes": "Chrysler 300 was discontinued after 2023. Remove from database."
+    },
+    {
+      "year": 2025,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "INVALID_YEAR",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": [],
+      "notes": "Chrysler 300 was discontinued after 2023. Remove from database."
+    },
+    {
+      "year": 2025,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "INVALID_YEAR",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": [],
+      "notes": "Chrysler 300 was discontinued after 2023. Remove from database."
+    },
+    {
+      "year": 2024,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "INVALID_YEAR",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": [],
+      "notes": "Chrysler 300 was discontinued after 2023. Remove from database."
+    },
+    {
+      "year": 2024,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "INVALID_YEAR",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": [],
+      "notes": "Chrysler 300 was discontinued after 2023. Remove from database."
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "trims": [
+        {"trim": "Touring RWD", "tireSizes": ["215/65R17", "245/45R20"], "wheelSizes": ["17x7", "20x8"]},
+        {"trim": "Touring AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L RWD", "tireSize": "245/45R20", "wheelSize": "20x8"}
+      ],
+      "notes": "Final year of 300. 225/60R18 no longer offered in 2023."
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17"],
+      "validatedTireSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "notes": "Partial match - entry only has base tire size."
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "discrepancy": "REMOVE 225/60R18 - not offered on 2023 model"
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/55R19", "245/45R20"],
+      "discrepancy": "REMOVE 225/60R18 - not offered on 2023"
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["235/55R19"],
+      "validatedTireSizes": ["235/55R19"],
+      "notes": "AWD trim only - correct"
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": ["245/45R20"],
+      "notes": "RWD Touring L trim - correct"
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "trims": [
+        {"trim": "Touring RWD", "tireSizes": ["215/65R17", "245/45R20"], "wheelSizes": ["17x7", "20x8"]},
+        {"trim": "Touring AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L RWD", "tireSizes": ["225/60R18", "245/45R20"], "wheelSizes": ["18x7.5", "20x8"]}
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17"],
+      "validatedTireSizes": ["215/65R17"],
+      "notes": "Base Touring RWD - correct"
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "notes": "All sizes validated correct for 2022"
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["235/55R19"],
+      "validatedTireSizes": ["235/55R19"],
+      "notes": "AWD trims - correct"
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "245/45R20"],
+      "notes": "Touring L RWD options - correct"
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "notes": "Partial match - valid subset"
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "trims": [
+        {"trim": "Touring RWD", "tireSizes": ["215/65R17", "225/60R18", "245/45R20"], "wheelSizes": ["17x7", "18x7.5", "20x8"]},
+        {"trim": "Touring AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L RWD", "tireSizes": ["225/60R18", "245/45R20"], "wheelSizes": ["18x7.5", "20x8"]}
+      ],
+      "notes": "All sizes confirmed correct"
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["235/55R19"],
+      "validatedTireSizes": ["235/55R19"],
+      "notes": "AWD trim - correct"
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": ["245/45R20"],
+      "notes": "300S RWD / Limited RWD - correct"
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "245/45R20"],
+      "notes": "Valid subset"
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "notes": "Valid subset"
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "MISMATCH",
+      "currentTireSizes": ["235/55R18", "235/50R19", "245/50R19", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "discrepancy": "Invalid sizes in DB: 235/55R18, 235/50R19, 245/50R19 are not OEM. Correct to: 215/65R17, 225/60R18, 235/55R19, 245/45R20"
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "trims": [
+        {"trim": "Touring RWD", "tireSizes": ["215/65R17", "225/60R18", "245/45R20"], "wheelSizes": ["17x7", "18x7.5", "20x8"]},
+        {"trim": "Touring AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L RWD", "tireSizes": ["225/60R18", "245/45R20"], "wheelSizes": ["18x7.5", "20x8"]},
+        {"trim": "Limited AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Limited RWD", "tireSize": "245/45R20", "wheelSize": "20x8"}
+      ],
+      "discrepancy": "Missing 215/65R17 (base Touring RWD)"
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["235/55R19"],
+      "validatedTireSizes": ["235/55R19"],
+      "notes": "AWD trims - correct"
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "MISMATCH",
+      "currentTireSizes": ["235/55R18", "235/50R19", "245/50R19", "245/45R20", "245/45ZR20", "255/40ZR21", "245/40ZR21"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "discrepancy": "Invalid sizes: 235/55R18, 235/50R19, 245/50R19, Z-rated sizes are NOT OEM. Replace with standard 300 sizes."
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "245/45R20"],
+      "notes": "Valid subset"
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "notes": "All sizes correct"
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": ["245/45R20"],
+      "notes": "300S RWD / Limited RWD - correct"
+    },
+    {
+      "year": 2019,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "MISMATCH",
+      "currentTireSizes": ["235/55R18", "235/50R19", "245/50R19", "245/45R20", "225/60R18", "215/65R17"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "trims": [
+        {"trim": "Touring RWD", "tireSizes": ["215/65R17", "225/60R18", "245/45R20"], "wheelSizes": ["17x7", "18x7.5", "20x8"]},
+        {"trim": "Touring AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L RWD", "tireSizes": ["225/60R18", "245/45R20"], "wheelSizes": ["18x7.5", "20x8"]},
+        {"trim": "Limited AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Limited RWD", "tireSize": "245/45R20", "wheelSize": "20x8"}
+      ],
+      "discrepancy": "Invalid sizes: 235/55R18, 235/50R19, 245/50R19 are NOT OEM. Replace with 235/55R19."
+    },
+    {
+      "year": 2019,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "notes": "Valid subset"
+    },
+    {
+      "year": 2019,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["235/55R19"],
+      "validatedTireSizes": ["235/55R19"],
+      "notes": "AWD trims - correct"
+    },
+    {
+      "year": 2019,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "245/45R20"],
+      "notes": "Valid subset"
+    },
+    {
+      "year": 2019,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "notes": "All sizes correct"
+    },
+    {
+      "year": 2019,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": ["245/45R20"],
+      "notes": "300S RWD - correct"
+    },
+    {
+      "year": 2018,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "trims": [
+        {"trim": "Touring RWD", "tireSizes": ["215/65R17", "225/60R18", "245/45R20"], "wheelSizes": ["17x7", "18x7.5", "20x8"]},
+        {"trim": "Touring AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Touring L RWD", "tireSizes": ["225/60R18", "245/45R20"], "wheelSizes": ["18x7.5", "20x8"]},
+        {"trim": "Limited AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Limited RWD", "tireSize": "245/45R20", "wheelSize": "20x8"}
+      ],
+      "notes": "All sizes confirmed correct"
+    },
+    {
+      "year": 2018,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17"],
+      "validatedTireSizes": ["215/65R17"],
+      "notes": "Base Touring RWD - correct"
+    },
+    {
+      "year": 2018,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["235/55R19"],
+      "validatedTireSizes": ["235/55R19"],
+      "notes": "AWD trims - correct"
+    },
+    {
+      "year": 2018,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "245/45R20"],
+      "notes": "Valid subset"
+    },
+    {
+      "year": 2018,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": ["245/45R20"],
+      "notes": "300S RWD - correct"
+    },
+    {
+      "year": 2018,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "notes": "Valid subset"
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "trims": [
+        {"trim": "Limited AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Limited RWD", "tireSize": "225/60R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "Note: 2017 data from tiresize.com is incomplete, but these are correct OEM sizes"
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "245/45R20"],
+      "notes": "Valid subset"
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": ["245/45R20"],
+      "notes": "300S RWD - correct"
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17"],
+      "validatedTireSizes": ["215/65R17"],
+      "notes": "Base trim - correct"
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["235/55R19"],
+      "validatedTireSizes": ["235/55R19"],
+      "notes": "AWD trim - correct"
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "notes": "Valid subset"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "trims": [
+        {"trim": "Anniversary Edition AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Anniversary Edition RWD", "tireSize": "215/65R17", "wheelSize": "17x7"},
+        {"trim": "Limited AWD", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Limited RWD", "tireSize": "215/65R17", "wheelSize": "17x7"}
+      ],
+      "notes": "All sizes confirmed correct for 2016"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "notes": "Valid subset"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["245/45R20"],
+      "validatedTireSizes": ["245/45R20"],
+      "notes": "300S RWD - correct"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["215/65R17"],
+      "validatedTireSizes": ["215/65R17"],
+      "notes": "Base/Limited RWD - correct"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["235/55R19"],
+      "validatedTireSizes": ["235/55R19"],
+      "notes": "AWD trims - correct"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "VALID",
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "245/45R20"],
+      "notes": "Valid subset"
+    }
+  ],
+  "corrections": {
+    "removeVehicles": [
+      {"year": 2010, "make": "Chrysler", "model": "200", "reason": "Model did not exist in 2010"},
+      {"year": 2010, "make": "Chevrolet", "model": "Volt", "reason": "Not sold as 2010 model year"},
+      {"year": 2024, "make": "Chrysler", "model": "300", "reason": "Model discontinued after 2023"},
+      {"year": 2025, "make": "Chrysler", "model": "300", "reason": "Model discontinued after 2023"},
+      {"year": 2026, "make": "Chrysler", "model": "300", "reason": "Model discontinued after 2023"}
+    ],
+    "tireSizeCorrections": [
+      {
+        "vehicle": "2011-2015 Chevrolet Volt",
+        "action": "REMOVE 215/50R17",
+        "reason": "Gen 1 Volt uses 215/55R17 only"
+      },
+      {
+        "vehicle": "2016-2019 Chevrolet Volt",
+        "action": "REMOVE 215/55R17",
+        "reason": "Gen 2 Volt uses 215/50R17 only"
+      },
+      {
+        "vehicle": "2011-2014 Chrysler 200",
+        "action": "REPLACE all sizes with 225/55R17, 225/50R18",
+        "reason": "Gen 1 200 uses 225 width tires, not 215/235 sizes"
+      },
+      {
+        "vehicle": "2019-2021 Chrysler 300 (some entries)",
+        "action": "REMOVE 235/55R18, 235/50R19, 245/50R19, Z-rated sizes",
+        "reason": "These are not OEM tire sizes"
+      },
+      {
+        "vehicle": "2023 Chrysler 300",
+        "action": "REMOVE 225/60R18",
+        "reason": "18\" wheels not offered on 2023 300"
+      }
+    ],
+    "nonUSVehicles": [
+      {"year": 2004, "make": "Chevrolet", "model": "Viva"},
+      {"year": 2005, "make": "Chevrolet", "model": "Viva"},
+      {"year": 2006, "make": "Chevrolet", "model": "Viva"}
+    ]
+  }
+}

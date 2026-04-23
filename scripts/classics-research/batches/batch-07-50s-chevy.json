@@ -1,0 +1,25 @@
+{
+  "batch": "07-50s-chevy",
+  "description": "Early Chevrolet (1950-1954) and Corvette",
+  "vehicles": [
+    {"year": 1950, "make": "Chevrolet", "model": "Deluxe"},
+    {"year": 1951, "make": "Chevrolet", "model": "Deluxe"},
+    {"year": 1952, "make": "Chevrolet", "model": "Deluxe"},
+    {"year": 1953, "make": "Chevrolet", "model": "Bel Air"},
+    {"year": 1954, "make": "Chevrolet", "model": "Bel Air"},
+    {"year": 1953, "make": "Chevrolet", "model": "210"},
+    {"year": 1954, "make": "Chevrolet", "model": "210"},
+    {"year": 1953, "make": "Chevrolet", "model": "150"},
+    {"year": 1954, "make": "Chevrolet", "model": "150"},
+    {"year": 1953, "make": "Chevrolet", "model": "Corvette"},
+    {"year": 1954, "make": "Chevrolet", "model": "Corvette"},
+    {"year": 1955, "make": "Chevrolet", "model": "Corvette"},
+    {"year": 1956, "make": "Chevrolet", "model": "Corvette"},
+    {"year": 1957, "make": "Chevrolet", "model": "Corvette"},
+    {"year": 1958, "make": "Chevrolet", "model": "Corvette"},
+    {"year": 1959, "make": "Chevrolet", "model": "Corvette"},
+    {"year": 1960, "make": "Chevrolet", "model": "Corvette"},
+    {"year": 1961, "make": "Chevrolet", "model": "Corvette"},
+    {"year": 1962, "make": "Chevrolet", "model": "Corvette"}
+  ]
+}

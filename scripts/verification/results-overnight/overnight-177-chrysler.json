@@ -1,0 +1,2511 @@
+﻿[
+    {
+        "year":  2020,
+        "make":  "chrysler",
+        "id":  "d4cbec19-e552-499b-85fa-32cf2b2b2ade",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  24,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "235/55R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  24,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "235/50R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  24,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "245/50R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  24,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  20,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  24,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R18",
+                                  "235/50R19",
+                                  "245/50R19",
+                                  "245/45R20",
+                                  "245/45ZR20",
+                                  "255/40ZR21",
+                                  "245/40ZR21"
+                              ],
+        "trim":  "Limited",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "chrysler",
+        "id":  "08b26164-5c1b-4964-ad53-ba58ae36a628",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C Platinum",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "chrysler",
+        "id":  "ee629465-e2ea-4367-8abe-31fb77b535bb",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "225/60R18"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C RWD",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "chrysler",
+        "id":  "08190e64-d6e5-475a-99e1-03000fdd308b",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "225/60R18"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C RWD",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "chrysler",
+        "id":  "f67f4dd2-b5d7-441a-89ad-1e13bc0fc8d7",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/45R20"
+                              ],
+        "trim":  "300S",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "chrysler",
+        "id":  "66d92616-3b4e-4165-b244-6765eea3b382",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C John Varvatos",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "chrysler",
+        "id":  "cd1ad32e-7c58-46a8-ba70-161dbd954b77",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  24,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "235/55R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  24,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "235/50R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  24,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "245/50R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  24,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R18",
+                                  "235/50R19",
+                                  "245/50R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Limited",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "chrysler",
+        "id":  "8f3f503a-6a08-4f01-91a8-0a28c26fc52a",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C Platinum",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "chrysler",
+        "id":  "091c7d92-e8d3-41c9-8d9f-6ef3ed4f470b",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19,
+                                       "tireSize":  "235/55R19"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R19"
+                              ],
+        "trim":  "300C AWD",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "chrysler",
+        "id":  "0037a488-367a-437b-b5a3-feaa2fa5e438",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C Base",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "chrysler",
+        "id":  "2d9fe9d3-b3a0-43c2-a793-3cd5e64fc90c",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "chrysler",
+        "id":  "c2fa96ac-cff3-42ab-a3aa-40c63a9e5106",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "chrysler",
+        "id":  "db906cdb-237b-491d-877f-a53a8a5566ec",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring L",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "chrysler",
+        "id":  "edd2dc55-710c-4812-80e7-26c30e717e03",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "chrysler",
+        "id":  "8e68e481-5098-4684-847c-2aa2de492a9f",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "225/60R18"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C RWD",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "chrysler",
+        "id":  "e263161c-84cb-4542-8436-aab0f4349793",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19,
+                                       "tireSize":  "235/55R19"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R19"
+                              ],
+        "trim":  "300C AWD",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "chrysler",
+        "id":  "9b18f0e8-344f-42eb-b849-57c853c79245",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C Platinum",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "chrysler",
+        "id":  "ffd4a76d-2dca-49f4-8f02-28ed272b5d7c",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C Base",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "chrysler",
+        "id":  "662dc1ca-7308-4fc1-b6d3-2b5866aed1df",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "chrysler",
+        "id":  "08a08239-1895-4031-a343-8f745bb7503f",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/45R20"
+                              ],
+        "trim":  "300S",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "chrysler",
+        "id":  "692ddb8b-5b0a-4a0d-9a31-74ce120dc530",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring L",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "chrysler",
+        "id":  "144d19a5-d917-4569-98ad-381d0167ef32",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C John Varvatos",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "chrysler",
+        "id":  "ea08a53e-1496-49e1-a8ce-291bf8a26021",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "215/65R17"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17"
+                              ],
+        "trim":  "Limited",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "chrysler",
+        "id":  "8ab20a5a-945e-4119-95b4-5788643bcdea",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "225/60R18"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C RWD",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "chrysler",
+        "id":  "c8e3205e-8ac5-4f2c-8693-dd5ab638126a",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19,
+                                       "tireSize":  "235/55R19"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R19"
+                              ],
+        "trim":  "300C AWD",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "chrysler",
+        "id":  "ea33a635-8c13-43ae-bc5c-1bf37d74fca4",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C John Varvatos",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "chrysler",
+        "id":  "edb02297-6e08-4edb-93a6-b0ae0cfbf852",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring L",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "chrysler",
+        "id":  "3307643b-b49f-4051-a085-e3f668e49279",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "chrysler",
+        "id":  "4eb3a036-2692-4c5c-bc3c-044b68fdc1ef",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "215/65R17"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17"
+                              ],
+        "trim":  "Limited",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "chrysler",
+        "id":  "fa9597ea-842d-4175-875b-629b1aad1d21",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/45R20"
+                              ],
+        "trim":  "300S",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "chrysler",
+        "id":  "e286c8ef-6dad-4087-bcf2-adb8832304d3",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "chrysler",
+        "id":  "65bf4536-dcea-476c-b10e-4bfdcdd40715",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C Platinum",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "chrysler",
+        "id":  "326b95f7-edeb-4b0b-83fc-f40fb10e5f9e",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C Base",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "chrysler",
+        "id":  "5ba597b8-40d2-4ffd-a584-afc974d07810",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "chrysler",
+        "id":  "fd74aa43-9206-4d18-a348-ce4e6e4ad842",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "chrysler",
+        "id":  "a7c3a348-32b0-4988-b23a-725433ce2d43",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/45R20"
+                              ],
+        "trim":  "300S",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "chrysler",
+        "id":  "36926234-37bc-49e3-946c-8d591e41ad0c",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "chrysler",
+        "id":  "3279b33d-9156-43dc-ba67-85e8e01faf6d",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring L",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "chrysler",
+        "id":  "d4ba6e62-307c-40c0-a5ee-71d0bf22ca12",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "chrysler",
+        "id":  "02ae350a-3662-42ce-bb5e-5861b92aac32",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/45R20"
+                              ],
+        "trim":  "300S",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "chrysler",
+        "id":  "deeb1e4e-9920-43d9-a458-69cc3bf83050",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring L",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "chrysler",
+        "id":  "042b6933-83fc-4a79-a681-656e27000a0e",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "chrysler",
+        "id":  "b6d181dc-4a26-4f01-8545-bf5d2b219762",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "chrysler",
+        "id":  "e3447bc8-0b17-4dc5-bb65-2e5fb37f7459",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring L",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "chrysler",
+        "id":  "9941d33a-2f16-4706-be5e-7ad9e1f3c393",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/45R20"
+                              ],
+        "trim":  "300S",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "chrysler",
+        "id":  "066b7f38-1a00-4bed-8a7e-1510e8b624d2",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "chrysler",
+        "id":  "8e391fcf-d809-433d-9238-9d11330e83ae",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "300C",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "chrysler",
+        "id":  "09476d4e-c3d7-4749-8aee-006afa237ac7",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R17",
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Touring",
+        "reason":  "chrysler 300 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1999,
+        "make":  "chrysler",
+        "id":  "8e8edd3e-fef0-479d-89f2-d6e13f98695b",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  42,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "width":  7,
+                                       "offset":  43,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R16",
+                                  "225/55R17"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300M specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300M",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "chrysler",
+        "id":  "c4a32207-95cd-4d86-b9c9-177eb8aa58c3",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "225/60R18"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20"
+                              ],
+        "trim":  "RWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "chrysler",
+        "id":  "40bbc6b9-7c60-4503-8a96-60f1f3a2e1ff",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "SRT8",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "chrysler",
+        "id":  "ce164f1f-91d5-4904-9f2e-d65e2a133107",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7,
+                                       "offset":  22,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  24,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20",
+                                  "255/45R20",
+                                  "215/65R17",
+                                  "235/55R19",
+                                  "245/45ZR20"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "chrysler",
+        "id":  "dc8068b5-ae8e-4dbc-86aa-3552cd01b806",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19,
+                                       "tireSize":  "235/55R19"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R19"
+                              ],
+        "trim":  "AWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "chrysler",
+        "id":  "ec26229d-0068-4792-a61d-a75329785b7c",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "chrysler",
+        "id":  "198054c9-f78e-46e2-aab4-7e9f23b82bdc",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19,
+                                       "tireSize":  "235/55R19"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R19"
+                              ],
+        "trim":  "AWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "chrysler",
+        "id":  "d4b255ff-b446-455b-b816-81fe31d6fbca",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "SRT8",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "chrysler",
+        "id":  "d9198862-b019-407c-86c2-69c7a03a39d9",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "225/60R18"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20"
+                              ],
+        "trim":  "RWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "chrysler",
+        "id":  "2525003f-eef2-40cd-bac4-026da333a0c6",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "chrysler",
+        "id":  "663ca0fe-fbac-40a3-84df-b8edd16b0b76",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "225/60R18"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20"
+                              ],
+        "trim":  "RWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "chrysler",
+        "id":  "da9af213-65cd-4be9-a176-dbe21b55f9e8",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "SRT8",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "chrysler",
+        "id":  "1f61aa15-e766-4bef-9a85-9abef4b026b1",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19,
+                                       "tireSize":  "235/55R19"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R19"
+                              ],
+        "trim":  "AWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "chrysler",
+        "id":  "0bc20b4c-32ff-4c80-8652-55371aeaa6d8",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "SRT8",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "chrysler",
+        "id":  "4746bb51-32a9-4874-a9f3-562f23d91ad5",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19,
+                                       "tireSize":  "235/55R19"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R19"
+                              ],
+        "trim":  "AWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "chrysler",
+        "id":  "1717eb0c-1f2c-4147-8f68-5202022d7305",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   "18x7.5",
+                                   "20x8"
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20"
+                              ],
+        "trim":  "RWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "chrysler",
+        "id":  "f3e34a24-418f-4604-b59a-cd91cbd8663a",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "SRT8",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "chrysler",
+        "id":  "049d2ab1-539b-43bc-9fe5-ba38a65f7962",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19,
+                                       "tireSize":  "235/55R19"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R19"
+                              ],
+        "trim":  "AWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "chrysler",
+        "id":  "44d5220b-5f7a-4b4d-8763-3912525b6170",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "225/60R18"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20"
+                              ],
+        "trim":  "RWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "chrysler",
+        "id":  "668c2c86-d9fa-45f0-8586-52efd3053868",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "chrysler",
+        "id":  "1ff8a06a-4622-4d35-a666-5ae1ecb89e24",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19,
+                                       "tireSize":  "235/55R19"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R19"
+                              ],
+        "trim":  "AWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "chrysler",
+        "id":  "c899f25c-e582-4c75-92eb-1723a3c782ba",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  24,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "225/60R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  25.5,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45ZR20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  20,
+                                       "isStock":  false,
+                                       "diameter":  21,
+                                       "tireSize":  "245/40ZR21"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  20,
+                                       "isStock":  false,
+                                       "diameter":  22,
+                                       "tireSize":  "255/35ZR22"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7,
+                                       "offset":  22,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  24,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  20,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45ZR20",
+                                  "245/40ZR21",
+                                  "255/35ZR22",
+                                  "215/65R17",
+                                  "235/55R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "chrysler",
+        "id":  "1faf6925-a411-4049-8bc5-b16f91de2f3e",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "235/55R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "SRT8",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "chrysler",
+        "id":  "d3d9a496-34ff-4d09-b5cd-39604c29f471",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "225/60R18"
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "245/45R20"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/45R20"
+                              ],
+        "trim":  "RWD",
+        "reason":  "chrysler 300c specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "300c",
+        "verifiedBoltPattern":  "5x115",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1995,
+        "make":  "chrysler",
+        "id":  "cc4e8715-f5bb-4702-87a1-0d58fd2050a1",
+        "verifiedHubBore":  "57.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  6,
+                                       "offset":  40,
+                                       "diameter":  14
+                                   },
+                                   {
+                                       "width":  6,
+                                       "offset":  40,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "P195/70R14",
+                                  "P205/60R15"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler Cirrus specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "Cirrus",
+        "verifiedBoltPattern":  "5x100",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1996,
+        "make":  "chrysler",
+        "id":  "c005aaa2-b7c8-4e5f-91c2-138d6a038836",
+        "verifiedHubBore":  "57.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  6,
+                                       "offset":  40,
+                                       "diameter":  14
+                                   },
+                                   {
+                                       "width":  6,
+                                       "offset":  40,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "P195/70R14",
+                                  "P205/60R15"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler Cirrus specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "Cirrus",
+        "verifiedBoltPattern":  "5x100",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1997,
+        "make":  "chrysler",
+        "id":  "91b1483b-1ae1-4766-b11e-54a96f3a4bd8",
+        "verifiedHubBore":  "57.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  6,
+                                       "offset":  40,
+                                       "diameter":  14
+                                   },
+                                   {
+                                       "width":  6,
+                                       "offset":  40,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "width":  6.5,
+                                       "offset":  40,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "P195/70R14",
+                                  "P205/60R15",
+                                  "P205/55R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "chrysler Cirrus specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "Cirrus",
+        "verifiedBoltPattern":  "5x100",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    }
+]

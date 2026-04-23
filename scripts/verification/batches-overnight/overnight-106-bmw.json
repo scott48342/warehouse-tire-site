@@ -1,0 +1,213 @@
+[
+  {
+    "id": "e1676e1c-21d5-440d-8a58-39ac14110657",
+    "year": 2025,
+    "make": "bmw",
+    "model": "x6-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "offset": 40,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 11,
+        "offset": 35,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "2cf43410-7110-49b6-9910-33c85d08b567",
+    "year": 2026,
+    "make": "bmw",
+    "model": "x6-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "offset": 40,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 11,
+        "offset": 35,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "dc70593d-6264-498e-95b6-bc284c409b67",
+    "year": 2024,
+    "make": "bmw",
+    "model": "x7",
+    "trim": "M60i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 36,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 36,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 23
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "285/45ZR21",
+      "275/40ZR22",
+      "315/35ZR22",
+      "285/45R21",
+      "275/35ZR23",
+      "315/30ZR23"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "9a955a26-5a76-47b7-b30d-977f6e8e170c",
+    "year": 2002,
+    "make": "bmw",
+    "model": "z4",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 47,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 35,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "ac5920b6-736b-4f4a-b67a-78fb160fb849",
+    "year": 2017,
+    "make": "bmw",
+    "model": "z4",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 30,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 35,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "59bf9b50-6058-4d62-8418-e343e0fb67a5",
+    "year": 2018,
+    "make": "bmw",
+    "model": "z4",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 30,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 35,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  }
+]

@@ -1,0 +1,1046 @@
+{
+  "batch": "batch-02-domestic",
+  "verifiedAt": "2026-04-23T00:50:00.000Z",
+  "totalVehicles": 75,
+  "validVehicles": 44,
+  "invalidVehicles": 31,
+  "summary": {
+    "invalidYears": [
+      {"make": "Buick", "model": "LaCrosse", "years": [2024, 2025, 2026], "reason": "Discontinued in US after 2019 model year"},
+      {"make": "Buick", "model": "Regal", "years": [2005, 2006, 2007, 2008, 2009, 2010], "reason": "Gap years - no US production between 4th gen (ended 2004) and 5th gen (started 2011)"},
+      {"make": "Buick", "model": "Regal", "years": [2021, 2022, 2023, 2024, 2025, 2026], "reason": "Discontinued in US after 2020 model year"},
+      {"make": "Buick", "model": "Verano", "years": [2011], "reason": "US sales started with 2012 model year"},
+      {"make": "Buick", "model": "Verano", "years": [2018, 2019, 2020, 2021, 2022], "reason": "Discontinued in US after 2017 model year"}
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2019",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "consumerreports.org", "cars.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2019",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "consumerreports.org", "cars.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2019",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "consumerreports.org", "cars.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Buick",
+      "model": "Lucerne",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX", "oemWheelSize": "16x7", "oemTireSize": "225/60R16"},
+        {"name": "CXL V6", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "CXL V8", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "CXS", "oemWheelSize": "18x7.5", "oemTireSize": "245/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "avtoreference.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Buick",
+      "model": "Lucerne",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX", "oemWheelSize": "16x7", "oemTireSize": "225/60R16"},
+        {"name": "CXL V6", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "CXL V8", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "CXS", "oemWheelSize": "18x7.5", "oemTireSize": "245/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "avtoreference.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Buick",
+      "model": "Lucerne",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX", "oemWheelSize": "16x7", "oemTireSize": "225/60R16"},
+        {"name": "CXL", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "CXS", "oemWheelSize": "18x7.5", "oemTireSize": "245/50R18"},
+        {"name": "Super", "oemWheelSize": "18x7.5", "oemTireSize": "245/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Buick",
+      "model": "Lucerne",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "CXL", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "Super", "oemWheelSize": "18x7.5", "oemTireSize": "245/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Buick",
+      "model": "Lucerne",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "CXL", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "Super", "oemWheelSize": "18x7.5", "oemTireSize": "245/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Buick",
+      "model": "Lucerne",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "CXL", "oemWheelSize": "17x7", "oemTireSize": "235/55R17"},
+        {"name": "Super", "oemWheelSize": "18x7.5", "oemTireSize": "245/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Buick",
+      "model": "Rainier",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "CXL 2WD", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "CXL 4WD", "oemWheelSize": "17x7", "oemTireSize": "255/60R17"},
+        {"name": "CXL Plus 2WD", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "CXL Plus 4WD", "oemWheelSize": "17x7", "oemTireSize": "255/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "size-tire.com", "sparetire.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Buick",
+      "model": "Rainier",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "CXL 2WD", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "CXL 4WD", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "size-tire.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Buick",
+      "model": "Rainier",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "CXL 2WD", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "CXL 4WD", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "size-tire.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Buick",
+      "model": "Rainier",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "CXL 2WD", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "CXL 4WD", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "size-tire.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "15x6", "oemTireSize": "215/70R15"},
+        {"name": "GS", "oemWheelSize": "16x6.5", "oemTireSize": "225/60R16"},
+        {"name": "Performance Pkg", "oemWheelSize": "16x6.5", "oemTireSize": "225/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "15x6", "oemTireSize": "215/70R15"},
+        {"name": "GS", "oemWheelSize": "16x6.5", "oemTireSize": "225/60R16"},
+        {"name": "Performance Pkg", "oemWheelSize": "16x6.5", "oemTireSize": "225/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - gap between 4th gen (ended 2004) and 5th gen (started 2011)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com", "cars.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - gap between 4th gen (ended 2004) and 5th gen (started 2011)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com", "cars.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - gap between 4th gen (ended 2004) and 5th gen (started 2011)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com", "cars.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - gap between 4th gen (ended 2004) and 5th gen (started 2011)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com", "cars.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - gap between 4th gen (ended 2004) and 5th gen (started 2011)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com", "cars.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - gap between 4th gen (ended 2004) and 5th gen (started 2011)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com", "cars.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "notes": "5th gen uses Opel Insignia platform with 5x120 bolt pattern",
+      "trims": [
+        {"name": "CXL 2.4L", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "CXL 2.0L Turbo", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "GS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "thedriveradviser.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "2.4L", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "2.0L Turbo", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "eAssist", "oemWheelSize": "17x7", "oemTireSize": "235/50R17"},
+        {"name": "GS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "2.4L", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "2.0L Turbo", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "eAssist", "oemWheelSize": "17x7", "oemTireSize": "235/50R17"},
+        {"name": "GS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "2.0L Turbo", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Premium eAssist", "oemWheelSize": "17x7", "oemTireSize": "235/50R17"},
+        {"name": "GS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "2.0L Turbo", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Premium eAssist", "oemWheelSize": "17x7", "oemTireSize": "235/50R17"},
+        {"name": "GS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "2.0L Turbo", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Premium eAssist", "oemWheelSize": "17x7", "oemTireSize": "235/50R17"},
+        {"name": "GS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Sport Touring", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "GS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "notes": "6th gen Regal Sportback switched to 5x115 bolt pattern",
+      "trims": [
+        {"name": "Preferred", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Preferred II", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Essence", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "GS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "medium",
+      "sources": ["thedriveradviser.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Preferred", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Preferred II", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Essence", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "GS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "medium",
+      "sources": ["thedriveradviser.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "notes": "Final year for Regal in US market",
+      "trims": [
+        {"name": "Preferred", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Essence", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "GS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "medium",
+      "sources": ["thedriveradviser.com", "carsdirect.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2020",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "cars.com", "carsdirect.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2020",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "cars.com", "carsdirect.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2020",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "cars.com", "carsdirect.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2020",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "cars.com", "carsdirect.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2020",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "cars.com", "carsdirect.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2020",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "cars.com", "carsdirect.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX 2WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "CX 4WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "CXL 4WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "sparetire.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX 2WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "CX 4WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "CXL 2WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "CXL 4WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX 2WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "CX 4WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "CXL 2WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "CXL 4WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "Ultra 4WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX 2WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "CX 4WD", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "CXL 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CXL 4WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "Ultra", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CX 4WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CXL 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CXL 4WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CXL 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Buick",
+      "model": "Terraza",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CX AWD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CXL 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CXL AWD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Buick",
+      "model": "Terraza",
+      "status": "VALID",
+      "boltPattern": "6x115",
+      "hubBore": 70.3,
+      "notes": "Bolt pattern changed to 6x115 for 2006+",
+      "trims": [
+        {"name": "CX 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CX AWD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CXL 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CXL AWD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com", "tirewheelguide.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Buick",
+      "model": "Terraza",
+      "status": "VALID",
+      "boltPattern": "6x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "CX 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "CXL 2WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com", "tirewheelguide.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "INVALID",
+      "reason": "Not sold in US market - US sales began with 2012 model year",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "usatoday.com", "fortune.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "225/50R17"},
+        {"name": "Leather", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "allusedrims.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "225/50R17"},
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Turbo", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "225/50R17"},
+        {"name": "Convenience", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "225/50R17"},
+        {"name": "Convenience", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "225/50R17"},
+        {"name": "Convenience", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Sport Touring", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "notes": "Final year for Verano in US market",
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "225/50R17"},
+        {"name": "Sport Touring", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2017",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "usatoday.com", "motorbiscuit.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2017",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "usatoday.com", "motorbiscuit.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2017",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "usatoday.com", "motorbiscuit.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2017",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "usatoday.com", "motorbiscuit.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Verano",
+      "status": "INVALID",
+      "reason": "Not sold in US market - discontinued after 2017",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "usatoday.com", "motorbiscuit.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Cadillac",
+      "model": "ATS",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "2.5L Standard", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "2.0L Turbo Luxury", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "2.0L Turbo Performance", "oemWheelSize": "18x8", "oemTireSize": "225/40R18"},
+        {"name": "2.0L Turbo Premium RWD", "oemWheelSize": "18x8/18x8.5", "oemTireSize": "225/40R18/255/35R18", "staggered": true},
+        {"name": "3.6L Performance", "oemWheelSize": "18x8", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "cadillacforums.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Cadillac",
+      "model": "ATS",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "2.5L Standard", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "2.0L Turbo Luxury", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "2.0L Turbo Performance", "oemWheelSize": "18x8", "oemTireSize": "225/40R18"},
+        {"name": "Premium RWD", "oemWheelSize": "18x8/18x8.5", "oemTireSize": "225/40R18/255/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Cadillac",
+      "model": "ATS",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Sedan 2.5L Standard", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "Sedan 2.0L Turbo", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "Coupe 2.0L Turbo", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "3.6L Premium", "oemWheelSize": "18x8", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "ATS",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Sedan 2.5L Standard", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "Sedan 2.0L Turbo", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "Coupe 2.0L Turbo", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "3.6L Premium", "oemWheelSize": "18x8", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "ATS",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Sedan 2.0L Turbo Standard", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "Sedan 2.0L Turbo Luxury", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "Coupe 2.0L Turbo", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "3.6L Premium Performance", "oemWheelSize": "18x8", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "ATS",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Sedan 2.0L Turbo Standard", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "Sedan 2.0L Turbo Luxury", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "Coupe 2.0L Turbo", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "3.6L Premium Performance", "oemWheelSize": "18x8", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "ATS",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "notes": "Final year for ATS - coupe only",
+      "trims": [
+        {"name": "Coupe 2.0L Turbo Standard", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "Coupe 2.0L Turbo Luxury", "oemWheelSize": "17x8", "oemTireSize": "225/45R17"},
+        {"name": "Coupe 3.6L Premium Performance", "oemWheelSize": "18x8", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "ATS-V",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "staggered": true,
+      "trims": [
+        {"name": "Sedan", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18/275/35R18", "staggered": true},
+        {"name": "Coupe", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18/275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ats-v.org", "apexwheels.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "ATS-V",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "staggered": true,
+      "trims": [
+        {"name": "Sedan", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18/275/35R18", "staggered": true},
+        {"name": "Coupe", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18/275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "ATS-V",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "staggered": true,
+      "trims": [
+        {"name": "Sedan", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18/275/35R18", "staggered": true},
+        {"name": "Coupe", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18/275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "ATS-V",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "staggered": true,
+      "notes": "Final year - coupe only",
+      "trims": [
+        {"name": "Coupe", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18/275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "Celestiq",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "notes": "Ultra-luxury EV sedan on GM Ultium platform. 23-inch wheels standard. Limited production, hand-built.",
+      "trims": [
+        {"name": "Base", "oemWheelSize": "23x9", "oemTireSize": "275/35R23"}
+      ],
+      "confidence": "medium",
+      "sources": ["caranddriver.com", "gmauthority.com", "wikipedia.org"]
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "Celestiq",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "notes": "Ultra-luxury EV sedan. 23-inch wheels standard.",
+      "trims": [
+        {"name": "Base", "oemWheelSize": "23x9", "oemTireSize": "275/35R23"}
+      ],
+      "confidence": "medium",
+      "sources": ["caranddriver.com", "gmauthority.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "Celestiq",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "notes": "Ultra-luxury EV sedan. 23-inch wheels standard.",
+      "trims": [
+        {"name": "Base", "oemWheelSize": "23x9", "oemTireSize": "275/35R23"}
+      ],
+      "confidence": "medium",
+      "sources": ["caranddriver.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Cadillac",
+      "model": "CT4",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17"},
+        {"name": "Premium Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/40R18"},
+        {"name": "Sport", "oemWheelSize": "18x8", "oemTireSize": "235/40R18"},
+        {"name": "V", "oemWheelSize": "18x8.5", "oemTireSize": "235/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "detroitwheelandtire.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "CT4",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17"},
+        {"name": "Premium Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/40R18"},
+        {"name": "Sport", "oemWheelSize": "18x8", "oemTireSize": "235/40R18"},
+        {"name": "V", "oemWheelSize": "18x8.5", "oemTireSize": "235/40R18"},
+        {"name": "V Blackwing", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18/275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "CT4",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17"},
+        {"name": "Premium Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/40R18"},
+        {"name": "Sport", "oemWheelSize": "18x8", "oemTireSize": "235/40R18"},
+        {"name": "V", "oemWheelSize": "18x8.5", "oemTireSize": "235/40R18"},
+        {"name": "V Blackwing", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18/275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    }
+  ]
+}

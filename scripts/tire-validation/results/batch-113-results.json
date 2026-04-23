@@ -1,0 +1,2038 @@
+{
+  "batchId": "113",
+  "validatedAt": "2026-04-21T22:26:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio AMG",
+      "trims": [
+        {
+          "name": "S63 AMG Cabriolet",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S65 AMG Cabriolet",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio AMG",
+      "trims": [
+        {
+          "name": "S63 AMG Cabriolet",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S65 AMG Cabriolet",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio AMG",
+      "trims": [
+        {
+          "name": "S63 AMG Cabriolet",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S65 AMG Cabriolet",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio AMG",
+      "trims": [
+        {
+          "name": "S63 AMG 4MATIC Cabriolet",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S65 AMG Cabriolet",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio AMG",
+      "trims": [
+        {
+          "name": "S63 AMG 4MATIC Cabriolet",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "S-Class Coupe",
+      "trims": [
+        {
+          "name": "S560 4MATIC Coupe (Base 19\")",
+          "tires": {
+            "front": "245/45R19",
+            "rear": "275/40R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S560 4MATIC Coupe (Optional 20\")",
+          "tires": {
+            "front": "245/40R20",
+            "rear": "275/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21"],
+      "validation": "MISMATCH",
+      "notes": "Current data appears incorrect. Should be 19\" base or 20\" optional staggered setup."
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "S-Class Coupe",
+      "trims": [
+        {
+          "name": "S560 4MATIC Coupe (Base 19\")",
+          "tires": {
+            "front": "245/45R19",
+            "rear": "275/40R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S560 4MATIC Coupe (Optional 20\")",
+          "tires": {
+            "front": "245/40R20",
+            "rear": "275/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "S-Class Coupe",
+      "trims": [
+        {
+          "name": "S560 4MATIC Coupe (Base 19\")",
+          "tires": {
+            "front": "245/45R19",
+            "rear": "275/40R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S560 4MATIC Coupe (Optional 20\")",
+          "tires": {
+            "front": "245/40R20",
+            "rear": "275/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "S-Class Coupe",
+      "trims": [
+        {
+          "name": "S560 4MATIC Coupe (Base 19\")",
+          "tires": {
+            "front": "245/45R19",
+            "rear": "275/40R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S560 4MATIC Coupe (Optional 20\")",
+          "tires": {
+            "front": "245/40R20",
+            "rear": "275/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "S-Class Coupe",
+      "trims": [
+        {
+          "name": "S550 Coupe (Base 19\")",
+          "tires": {
+            "front": "245/45R19",
+            "rear": "275/40R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S550 Coupe (Optional 20\")",
+          "tires": {
+            "front": "245/40R20",
+            "rear": "275/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "S-Class Coupe",
+      "trims": [
+        {
+          "name": "S550 Coupe (Base 19\")",
+          "tires": {
+            "front": "245/45R19",
+            "rear": "275/40R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S550 Coupe (Optional 20\")",
+          "tires": {
+            "front": "245/40R20",
+            "rear": "275/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "S-Class Coupe",
+      "trims": [
+        {
+          "name": "S550 Coupe (Base 19\")",
+          "tires": {
+            "front": "245/45R19",
+            "rear": "275/40R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S550 Coupe (Optional 20\")",
+          "tires": {
+            "front": "245/40R20",
+            "rear": "275/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "S-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "S63 AMG Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "S-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "S63 AMG Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "S-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "S63 AMG Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S65 AMG Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "S-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "S63 AMG Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S65 AMG Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "S-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "S63 AMG 4MATIC Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S65 AMG Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "S-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "S63 AMG 4MATIC Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "S65 AMG Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "S-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "S63 AMG 4MATIC Coupe",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "S-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "S63 AMG 4MATIC",
+          "tires": {
+            "front": "255/40R20",
+            "rear": "285/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R20", "285/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL450 Roadster",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 Roadster",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "MISMATCH",
+      "notes": "Current sizes don't match OEM specs. SL450/SL550 use 255/35R19 front, 285/30R19 rear."
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL450 Roadster",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 Roadster",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL450 Roadster",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 Roadster (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 Roadster (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL450 Roadster (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL450 Roadster (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 Roadster (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 Roadster (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL550 (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL550 (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL550 (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL550 (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL550 (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL550 (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL550 (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL550 (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL600",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL550",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL600",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL550",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL600",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL550",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL600",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL500",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL600",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL500",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL600",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL500",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SL600",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL500",
+          "tires": {
+            "all": "255/45R17"
+          },
+          "isStaggered": false
+        }
+      ],
+      "recommendedTireSizes": ["255/45R17"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "MISMATCH",
+      "notes": "2003 SL500 used square 255/45R17 setup, not staggered."
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL500",
+          "tires": {
+            "all": "255/45R17"
+          },
+          "isStaggered": false
+        },
+        {
+          "name": "SL600",
+          "tires": {
+            "all": "245/45R17"
+          },
+          "isStaggered": false
+        }
+      ],
+      "recommendedTireSizes": ["255/45R17", "245/45R17"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL500",
+          "tires": {
+            "all": "245/45R17"
+          },
+          "isStaggered": false
+        },
+        {
+          "name": "SL600",
+          "tires": {
+            "all": "245/45R17"
+          },
+          "isStaggered": false
+        }
+      ],
+      "recommendedTireSizes": ["245/45R17"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "SL-Class",
+      "trims": [
+        {
+          "name": "SL500",
+          "tires": {
+            "all": "245/45R17"
+          },
+          "isStaggered": false
+        },
+        {
+          "name": "SL600",
+          "tires": {
+            "all": "245/45R17"
+          },
+          "isStaggered": false
+        }
+      ],
+      "recommendedTireSizes": ["245/45R17"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL43 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL55 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["265/40R20", "295/35R20"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL43 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL55 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["265/40R20", "295/35R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "MISMATCH",
+      "notes": "New generation AMG SL (2022+) uses 265/40R20 front, 295/35R20 rear. Current sizes are outdated."
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL43 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL55 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["265/40R20", "295/35R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL43 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL55 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["265/40R20", "295/35R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL55 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 Roadster",
+          "tires": {
+            "front": "265/40R20",
+            "rear": "295/35R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["265/40R20", "295/35R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63 (Base 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 (Optional 19/20\" mixed)",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19", "285/30R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63 (Base 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 (Optional 19/20\" mixed)",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19", "285/30R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63 (Base 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 (Optional 19/20\" mixed)",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19", "285/30R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63 (Base 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 (Optional 19/20\" mixed)",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19", "285/30R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63 (Base 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 (Optional 19/20\" mixed)",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19", "285/30R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63 (Base 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 (Optional 19/20\" mixed)",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19", "285/30R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63 (Base 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63 (Optional 19/20\" mixed)",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19", "285/30R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65 Black Series",
+          "tires": {
+            "front": "265/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19", "265/35R19", "285/30R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL63",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65 Black Series",
+          "tires": {
+            "front": "265/35R19",
+            "rear": "285/30R20"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19", "265/35R19", "285/30R20"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL55",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL63",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL55 (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL55 (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL55 (Base 18\")",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL55 (Optional 19\")",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL55",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "AMG SL65",
+          "tires": {
+            "front": "255/35R19",
+            "rear": "285/30R19"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL55",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL55",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SL55",
+          "tires": {
+            "front": "255/40R18",
+            "rear": "285/35R18"
+          },
+          "isStaggered": true,
+          "notes": "SL55 AMG introduced mid-2002"
+        }
+      ],
+      "recommendedTireSizes": ["255/40R18", "285/35R18"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes",
+      "model": "SL-Class AMG",
+      "trims": [
+        {
+          "name": "SL500 (AMG Package)",
+          "tires": {
+            "all": "245/45R17"
+          },
+          "isStaggered": false,
+          "notes": "No dedicated AMG SL model in 2001, only AMG packages"
+        }
+      ],
+      "recommendedTireSizes": ["245/45R17"],
+      "currentTireSizes": ["255/40R18", "275/35R19", "285/30R20", "295/30R20"],
+      "validation": "MISMATCH"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "SLC-Class",
+      "trims": [
+        {
+          "name": "SLC300 (Base 17\")",
+          "tires": {
+            "front": "225/45R17",
+            "rear": "245/40R17"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 (Optional 18\")",
+          "tires": {
+            "front": "225/40R18",
+            "rear": "245/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "currentTireSizes": ["225/45R17", "245/40R18", "255/35R18"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "245/40R18 not OEM size. Should be 245/35R18 rear on 18\" wheels."
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "SLC-Class",
+      "trims": [
+        {
+          "name": "SLC300 Standard (Base 17\")",
+          "tires": {
+            "front": "225/45R17",
+            "rear": "245/40R17"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 Standard (Optional 18\")",
+          "tires": {
+            "front": "225/40R18",
+            "rear": "245/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 Sport (Base 17\")",
+          "tires": {
+            "front": "225/45R17",
+            "rear": "245/40R17"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 Sport (Optional 18\")",
+          "tires": {
+            "front": "225/40R18",
+            "rear": "245/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "currentTireSizes": ["225/45R17", "245/40R18", "255/35R18"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "SLC-Class",
+      "trims": [
+        {
+          "name": "SLC300 Standard (Base 17\")",
+          "tires": {
+            "front": "225/45R17",
+            "rear": "245/40R17"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 Standard (Optional 18\")",
+          "tires": {
+            "front": "225/40R18",
+            "rear": "245/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 Sport (Base 17\")",
+          "tires": {
+            "front": "225/45R17",
+            "rear": "245/40R17"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 Sport (Optional 18\")",
+          "tires": {
+            "front": "225/40R18",
+            "rear": "245/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "currentTireSizes": ["225/45R17", "245/40R18", "255/35R18"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "SLC-Class",
+      "trims": [
+        {
+          "name": "SLC300 Standard (Base 17\")",
+          "tires": {
+            "front": "225/45R17",
+            "rear": "245/40R17"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 Standard (Optional 18\")",
+          "tires": {
+            "front": "225/40R18",
+            "rear": "245/35R18"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 Sport (Base 17\")",
+          "tires": {
+            "front": "225/45R17",
+            "rear": "245/40R17"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 Sport (Optional 18\")",
+          "tires": {
+            "front": "225/40R18",
+            "rear": "245/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "currentTireSizes": ["225/45R17", "245/40R18", "255/35R18"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "SLC-Class",
+      "trims": [
+        {
+          "name": "SLC300 (Base 17\")",
+          "tires": {
+            "front": "225/45R17",
+            "rear": "245/40R17"
+          },
+          "isStaggered": true
+        },
+        {
+          "name": "SLC300 (Optional 18\")",
+          "tires": {
+            "front": "225/40R18",
+            "rear": "245/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "currentTireSizes": ["225/45R17", "245/40R18", "255/35R18"],
+      "validation": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "SLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SLC43",
+          "tires": {
+            "front": "235/40R18",
+            "rear": "255/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["235/40R18", "255/35R18"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "SLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SLC43",
+          "tires": {
+            "front": "235/40R18",
+            "rear": "255/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["235/40R18", "255/35R18"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "SLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SLC43",
+          "tires": {
+            "front": "235/40R18",
+            "rear": "255/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["235/40R18", "255/35R18"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "SLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SLC43",
+          "tires": {
+            "front": "235/40R18",
+            "rear": "255/35R18"
+          },
+          "isStaggered": true
+        }
+      ],
+      "recommendedTireSizes": ["235/40R18", "255/35R18"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "SLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG SLC43",
+          "tires": {
+            "front": "235/40R18",
+            "rear": "255/35R18"
+          },
+          "isStaggered": true,
+          "notes": "SLC43 AMG introduced in 2016"
+        }
+      ],
+      "recommendedTireSizes": ["235/40R18", "255/35R18"],
+      "currentTireSizes": [],
+      "validation": "NEEDS_UPDATE"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "needsUpdate": 18,
+    "mismatch": 17,
+    "partialMatch": 37,
+    "valid": 3,
+    "keyFindings": [
+      "S-Class Cabrio AMG (2016-2020): All 5 vehicles missing tire data - should be 255/40R20 front, 285/35R20 rear",
+      "S-Class Coupe AMG (2014-2021): All 8 vehicles missing tire data - should be 255/40R20 front, 285/35R20 rear",
+      "S-Class Coupe (2015-2021): 7 vehicles have incorrect tire sizes - current shows 255/45R18 but should be 245/45R19 or 245/40R20 staggered",
+      "SLC-Class AMG (2016-2020): All 5 vehicles missing tire data - should be 235/40R18 front, 255/35R18 rear",
+      "New gen AMG SL (2022-2026): Current data shows old sizes - should be 265/40R20 front, 295/35R20 rear",
+      "SL-Class 2000-2003: Currently showing staggered 18\"/19\"/20\" but should be square 245/45R17 or 255/45R17",
+      "SLC-Class: Current 245/40R18 should be 245/35R18 on 18\" wheels"
+    ]
+  }
+}

@@ -1,0 +1,1696 @@
+[
+  {
+    "id": "acdc21c8-a3ce-4e79-9d2a-2f4279b49a12",
+    "year": 1997,
+    "make": "gmc",
+    "model": "Sierra 1500",
+    "trim": "SL",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a47bb63b-4c6b-4c4c-b5d2-e71638bf166a",
+    "year": 1997,
+    "make": "gmc",
+    "model": "Sierra 1500",
+    "trim": "SLE",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cc48b855-d610-43b6-85ba-061b042ae5da",
+    "year": 1998,
+    "make": "gmc",
+    "model": "Sierra 1500",
+    "trim": "SL",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e36b01da-debd-4dd6-bf88-5c70a7d1b4c7",
+    "year": 1998,
+    "make": "gmc",
+    "model": "Sierra 1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "6.5Jx15",
+      "7Jx15",
+      "7Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "482a60d9-4137-4d1f-93d0-06f0d4e0b69b",
+    "year": 1998,
+    "make": "gmc",
+    "model": "Sierra 1500",
+    "trim": "SLT",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fa8c8ff2-8ebf-469b-b804-d28ff72ada3d",
+    "year": 1998,
+    "make": "gmc",
+    "model": "Sierra 1500",
+    "trim": "SLE",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5c432208-ecee-4287-926f-21d465c73202",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sierra 1500",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17",
+      "8Jx17",
+      "8Jx18",
+      "8.5Jx20"
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "265/65R17",
+      "265/65R18",
+      "275/55R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "18755502-7169-48b3-80ae-aa24d36dcae2",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sierra 1500",
+    "trim": "SLE",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "944b3efa-4fa6-4752-bb7f-ad4e118116fd",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sierra 1500",
+    "trim": "SLT",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9dae1b49-1932-4cbd-88f1-d242a66e441e",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sierra 1500",
+    "trim": "SL",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a2ae94b3-b44f-47ac-8e03-b1e69b974459",
+    "year": 1990,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bbf3453d-2a95-4084-947c-b77d87928b15",
+    "year": 1990,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9940234c-1e3e-4095-9d5b-9797465d2393",
+    "year": 1990,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c6debaa8-fe43-46fd-9be9-45e6a40b7c5f",
+    "year": 1990,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7a383b6c-07cd-4f3e-9d07-8ee72644ae61",
+    "year": 1991,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "29cb40d6-b046-42d4-a938-ebf0ae14c749",
+    "year": 1991,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0b0ffa5d-5eae-437e-babe-569f316247e5",
+    "year": 1991,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "96ad20e9-57f0-4732-896a-b461184e8a2a",
+    "year": 1991,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5bf9d51c-4359-4c69-a19f-30613c0b6ae8",
+    "year": 1992,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1e16d008-4ae2-4841-8df1-a7056f072002",
+    "year": 1992,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f69c8720-d705-4446-b9f4-184c98c0b0d5",
+    "year": 1992,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "385730c9-cdb9-41a5-b953-e64214144952",
+    "year": 1992,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3e80bd3f-6583-4395-add0-b6084706c408",
+    "year": 1993,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9f037ba4-87b7-41d5-9e9e-73d821cbc494",
+    "year": 1993,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f67f2ce1-0b5f-40b7-bfd1-c60784a61293",
+    "year": 1993,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4c98647f-d3dc-4b99-ba25-bbb554fecaca",
+    "year": 1993,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "59b67d3d-4b8e-4dca-b4e5-51f0aaf1bb30",
+    "year": 1994,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "97a0c82c-9c4f-4ce3-baa1-164c9807a969",
+    "year": 1994,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0d547b5b-d597-46ec-9457-f216b841a746",
+    "year": 1994,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8d7db075-e13e-4414-a16f-79d11d540583",
+    "year": 1994,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "601a99dc-bb38-4a89-ac3b-373a202925d6",
+    "year": 1995,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "aca8b841-7aa4-47e0-88f8-bc82dd390ef6",
+    "year": 1995,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "927f3ad0-6516-4eec-853f-ec4272e99369",
+    "year": 1995,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3b67090a-f710-4c7a-a27b-abfb1529455c",
+    "year": 1995,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b0c8778d-d45c-4cda-989b-fc03d10d3050",
+    "year": 1996,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "730bea40-958e-4a37-a466-876430378e04",
+    "year": 1996,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ce076c48-72c2-42e3-a640-6d08eaaaf250",
+    "year": 1996,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7b8eeca1-6c56-4e74-94be-8142c376a741",
+    "year": 1996,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "860121c2-7ba2-447e-a230-3165306c7024",
+    "year": 1997,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "90049467-7da3-49f4-86fe-3f479cb5a9fd",
+    "year": 1997,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "058f5965-659b-420a-b1f0-9b88661b4c7a",
+    "year": 1997,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c3e7e866-9b07-419d-8f3b-44260bc31666",
+    "year": 1997,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0ba76c7b-a315-43f5-8f81-9173a6e133ce",
+    "year": 1998,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "74779189-c241-4ccd-980e-c60745f5bf82",
+    "year": 1998,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "675e1afb-d0be-4046-9adc-7b2ff445dbf3",
+    "year": 1998,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4d4e6cf2-e052-44dd-ac5f-616be3b49df2",
+    "year": 1998,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1061c6f1-67ae-4ffa-9980-b108d24512bb",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "2bcc6edc-99b6-4df4-ac54-0d52acb4565a",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "06f43ca9-9b6a-40ec-92ae-22a7fd5fd705",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sierra 2500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "21819ba8-1e1e-4ac0-8d66-5a1d6c61d14f",
+    "year": 1990,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      "7.5Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "c030653e-49e5-4417-a682-3f00394fe86a",
+    "year": 1991,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      "7.5Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "0f5564df-62c1-437a-a959-1cb2d0efcc15",
+    "year": 1992,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      "7.5Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "524b45e1-c758-4c1d-8d48-4886906eb496",
+    "year": 1993,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      "7.5Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "ae1346a7-6fc5-4763-8f79-e93e3b174841",
+    "year": 1994,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      "7.5Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "9547b479-8c87-42d1-ad62-fd541012e0a4",
+    "year": 1995,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      "7.5Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "ca9a72ea-b624-4fdc-b594-08309d99a346",
+    "year": 1996,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      "7.5Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "fdbc8458-b8e7-459f-9dce-b9dc4d0963d5",
+    "year": 1997,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      "7.5Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "48e6c413-1330-49e5-9ebd-748d3e5b1818",
+    "year": 1998,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      "7.5Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "458265f9-f113-4257-8996-c50f6f5ef2cf",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "754f8832-70f0-420b-8d4c-a90026f2c6eb",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "a8b58fe1-788a-4628-af19-a467f594e8d0",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sierra 3500 HD",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "ffc0895b-09c7-43c2-9990-1678bd2d67b5",
+    "year": 1990,
+    "make": "gmc",
+    "model": "Sonoma",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 35,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 35,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "205/75R14",
+      "205/75R15",
+      "235/75R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "70db14d2-2623-484d-aeed-ef9d09f76d98",
+    "year": 1991,
+    "make": "gmc",
+    "model": "Sonoma",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 35,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 35,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "205/75R14",
+      "205/75R15",
+      "235/75R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "43d09318-46f8-455b-9364-bb0ee94bec92",
+    "year": 1992,
+    "make": "gmc",
+    "model": "Sonoma",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 35,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 35,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "205/75R14",
+      "205/75R15",
+      "235/75R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "5ff612b7-9a5c-4fc8-bbd5-32cab227c86f",
+    "year": 1993,
+    "make": "gmc",
+    "model": "Sonoma",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 35,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 35,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "205/75R14",
+      "205/75R15",
+      "235/75R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "d98572c5-e9bb-42c3-9d0f-37320ebc16c4",
+    "year": 1994,
+    "make": "gmc",
+    "model": "Sonoma",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 35,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/75R15",
+      "235/75R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "30517c85-def6-4b00-94e1-4b854d2a1532",
+    "year": 1995,
+    "make": "gmc",
+    "model": "Sonoma",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 35,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/75R15",
+      "215/65R15",
+      "235/75R15",
+      "31X10.50R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "c46ff632-a3c3-4478-a637-e3fb132ef8e3",
+    "year": 1996,
+    "make": "gmc",
+    "model": "Sonoma",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/75R15",
+      "235/70R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "bebed1d8-a7ec-42a0-882f-be4de1314caf",
+    "year": 1997,
+    "make": "gmc",
+    "model": "Sonoma",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/75R15",
+      "235/70R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "a2523217-07dc-40b3-b1ed-a84fcab1c945",
+    "year": 1998,
+    "make": "gmc",
+    "model": "Sonoma",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/75R15",
+      "235/70R15",
+      "235/60R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "52fc62c9-0b85-4bd4-8d73-399e2c40d047",
+    "year": 1999,
+    "make": "gmc",
+    "model": "Sonoma",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/75R15",
+      "235/70R15",
+      "235/60R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "8504f91b-16a2-436f-952a-72b19cc0f8f0",
+    "year": 1990,
+    "make": "gmc",
+    "model": "Suburban",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "235/75R15",
+      "245/75R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "d5b5ca3e-3800-42a4-b1ac-5021753e76fc",
+    "year": 1991,
+    "make": "gmc",
+    "model": "Suburban",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "235/75R15",
+      "245/75R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "09918eb0-c59e-4a1b-aca1-00b73964a4d6",
+    "year": 1992,
+    "make": "gmc",
+    "model": "Suburban",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 28,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "d553a62b-a908-4961-bbbd-6dc71ca90b08",
+    "year": 1993,
+    "make": "gmc",
+    "model": "Suburban",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 28,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  }
+]

@@ -1,0 +1,1132 @@
+{
+  "batchId": "99",
+  "processedAt": "2026-04-21T22:22:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "mazdaspeed-axela",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/45R18", "wheelSize": "18x7"}
+      ],
+      "source": "web_search",
+      "notes": "Mazdaspeed Axela is JDM version of Mazdaspeed3. Single trim with 18-inch wheels."
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "mazdaspeed-axela",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/45R18", "wheelSize": "18x7"}
+      ],
+      "source": "web_search",
+      "notes": "Mazdaspeed Axela is JDM version of Mazdaspeed3. Single trim with 18-inch wheels."
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "millenia",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "215/55R16", "wheelSize": "16x6.5"},
+        {"trim": "S", "tireSize": "215/50R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Final year of Millenia production. S trim gets larger 17-inch wheels."
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "millenia",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "215/55R16", "wheelSize": "16x6.5"},
+        {"trim": "S", "tireSize": "215/50R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "S trim gets larger 17-inch wheels."
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "millenia",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "215/55R16", "wheelSize": "16x6.5"},
+        {"trim": "S", "tireSize": "215/50R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "S trim with Miller Cycle engine gets 17-inch wheels."
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "millenia",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "215/55R16", "wheelSize": "16x6.5"},
+        {"trim": "S", "tireSize": "215/50R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Facelift year. S trim gets 17-inch wheels."
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "mx-3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "205/55R15"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "185/65R14", "wheelSize": "14x5.5"},
+        {"trim": "GS", "tireSize": "205/55R15", "wheelSize": "15x6"}
+      ],
+      "source": "tiresize.com",
+      "notes": "MX-3 production ended 1996 in North America; 2000 may be international market. Using closest available data from 1996 model year."
+    },
+    {
+      "year": 2025,
+      "make": "mazda",
+      "model": "mx-30",
+      "currentTireSizes": ["215/55R18"],
+      "validatedTireSizes": ["215/55R18"],
+      "trims": [
+        {"trim": "All Trims", "tireSize": "215/55R18", "wheelSize": "18x7"}
+      ],
+      "source": "autopadre.com",
+      "notes": "Electric crossover. Single tire size across all trims."
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "mx-30",
+      "currentTireSizes": ["215/55R18"],
+      "validatedTireSizes": ["215/55R18"],
+      "trims": [
+        {"trim": "All Trims", "tireSize": "215/55R18", "wheelSize": "18x7"}
+      ],
+      "source": "autopadre.com",
+      "notes": "Electric crossover. Single tire size across all trims."
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "mx-30",
+      "currentTireSizes": ["215/55R18"],
+      "validatedTireSizes": ["215/55R18"],
+      "trims": [
+        {"trim": "EV", "tireSize": "215/55R18", "wheelSize": "18x7"},
+        {"trim": "EV Premium Plus", "tireSize": "215/55R18", "wheelSize": "18x7"}
+      ],
+      "source": "autopadre.com",
+      "notes": "Electric crossover. Single tire size across all trims."
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "mx-30",
+      "currentTireSizes": ["215/55R18"],
+      "validatedTireSizes": ["215/55R18"],
+      "trims": [
+        {"trim": "EV", "tireSize": "215/55R18", "wheelSize": "18x7"},
+        {"trim": "EV Premium Plus", "tireSize": "215/55R18", "wheelSize": "18x7"}
+      ],
+      "source": "autopadre.com",
+      "notes": "First US model year. Single tire size across all trims."
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "mx-30",
+      "currentTireSizes": ["215/55R18"],
+      "validatedTireSizes": ["215/55R18"],
+      "trims": [
+        {"trim": "All Trims", "tireSize": "215/55R18", "wheelSize": "18x7"}
+      ],
+      "source": "web_search",
+      "notes": "Single tire size across all trims."
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "mx-30",
+      "currentTireSizes": ["215/55R18"],
+      "validatedTireSizes": ["215/55R18"],
+      "trims": [
+        {"trim": "All Trims", "tireSize": "215/55R18", "wheelSize": "18x7"}
+      ],
+      "source": "web_search",
+      "notes": "Initial global launch year. Single tire size."
+    },
+    {
+      "year": 2026,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "MX-5 is international designation. Same as MX-5 Miata in US."
+    },
+    {
+      "year": 2025,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "35th Anniversary", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "35th Anniversary special edition available. Same tire sizes as MX-5 Miata."
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Same tire sizes as MX-5 Miata. ND generation."
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation. Same tire sizes as MX-5 Miata."
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation. Same tire sizes as MX-5 Miata."
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation."
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation."
+    },
+    {
+      "year": 2019,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation. Power increase mid-cycle."
+    },
+    {
+      "year": 2018,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation."
+    },
+    {
+      "year": 2017,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation. First year for RF (Retractable Fastback)."
+    },
+    {
+      "year": 2016,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "First year of ND generation."
+    },
+    {
+      "year": 2015,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "25th Anniversary", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Final NC generation year. 25th Anniversary special edition."
+    },
+    {
+      "year": 2014,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2013,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2012,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2011,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2010,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2009,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2008,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Special Edition", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club Spec", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Sport", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "First year of NC generation."
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["185/60R14", "195/50R15", "205/45R16", "205/40R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "185/60R14", "wheelSize": "14x5.5"},
+        {"trim": "Base Model (option)", "tireSize": "195/50R15", "wheelSize": "15x6"},
+        {"trim": "LS", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "Mazdaspeed", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Final NB generation year. Mazdaspeed version available."
+    },
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["205/45R16", "205/40R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "LS", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "Mazdaspeed", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NB generation. Mazdaspeed version introduced."
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R15", "205/45R16"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "195/50R15", "wheelSize": "15x6"},
+        {"trim": "Base Model (option)", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "LS", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "Shinsen", "tireSize": "205/45R16", "wheelSize": "16x6.5"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NB generation."
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R15", "205/45R16"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "195/50R15", "wheelSize": "15x6"},
+        {"trim": "Base Model (option)", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "LS", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "205/45R16", "wheelSize": "16x6.5"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NB generation."
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["195/50R15", "205/45R16"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "195/50R15", "wheelSize": "15x6"},
+        {"trim": "Base Model (option)", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "LS", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "205/45R16", "wheelSize": "16x6.5"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NB generation."
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "mx-5",
+      "currentTireSizes": ["195/50R16", "205/45R17"],
+      "validatedTireSizes": ["185/60R14", "195/50R15"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "185/60R14", "wheelSize": "14x5.5"},
+        {"trim": "Base Model (option)", "tireSize": "195/50R15", "wheelSize": "15x6"},
+        {"trim": "LS", "tireSize": "195/50R15", "wheelSize": "15x6"},
+        {"trim": "SE", "tireSize": "195/50R15", "wheelSize": "15x6"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NB generation."
+    },
+    {
+      "year": 2026,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation. Current tire sizes validated."
+    },
+    {
+      "year": 2025,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "35th Anniversary", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation. 35th Anniversary edition."
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation."
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation."
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation."
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45ZR17", "205/40ZR18"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Database has ZR-rated sizes listed; standard sizes are 195/50R16 and 205/45R17. 205/40ZR18 may be aftermarket."
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation."
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation."
+    },
+    {
+      "year": 2019,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation. Power increase refresh."
+    },
+    {
+      "year": 2018,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "ND generation."
+    },
+    {
+      "year": 2017,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "RF Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "First year RF (Retractable Fastback) available."
+    },
+    {
+      "year": 2016,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "195/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "First year ND generation."
+    },
+    {
+      "year": 2015,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "25th Anniversary Edition", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Final NC generation year. 25th Anniversary special edition."
+    },
+    {
+      "year": 2015,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["195/50R16"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "25th Anniversary Edition", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry - same year. Current size 195/50R16 should be 205/50R16 for NC."
+    },
+    {
+      "year": 2014,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["195/50R16"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation. Current database size differs from OEM."
+    },
+    {
+      "year": 2014,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry - same year. 205/45R17 is valid for Club/GT."
+    },
+    {
+      "year": 2013,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2013,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["195/50R16"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry. Current 195/50R16 is incorrect - NC uses 205/50R16."
+    },
+    {
+      "year": 2012,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2012,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["195/50R16"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry. Current 195/50R16 is incorrect - NC uses 205/50R16."
+    },
+    {
+      "year": 2011,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["195/50R16"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation. Current 195/50R16 is incorrect - NC uses 205/50R16."
+    },
+    {
+      "year": 2011,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry. 205/45R17 is correct for Touring/GT."
+    },
+    {
+      "year": 2010,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2010,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["195/50R16"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry. Current 195/50R16 is incorrect - NC uses 205/50R16."
+    },
+    {
+      "year": 2009,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation."
+    },
+    {
+      "year": 2009,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["195/50R16"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry. Current 195/50R16 is incorrect - NC uses 205/50R16."
+    },
+    {
+      "year": 2008,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["195/50R16"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Special Edition", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation. Current 195/50R16 is incorrect - NC uses 205/50R16."
+    },
+    {
+      "year": 2008,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Special Edition", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry. 205/45R17 is valid for upper trims."
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["195/50R16"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NC generation. Current 195/50R16 is incorrect - NC uses 205/50R16."
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "SV", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry. 205/45R17 is valid for upper trims."
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/45R17"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club Spec", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Sport", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "First year NC generation."
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["195/50R16"],
+      "validatedTireSizes": ["205/50R16", "205/45R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Club Spec", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Touring", "tireSize": "205/50R16", "wheelSize": "16x6.5"},
+        {"trim": "Sport", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "205/45R17", "wheelSize": "17x7"},
+        {"trim": "Grand Touring", "tireSize": "205/45R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry. Current 195/50R16 is incorrect - NC uses 205/50R16."
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["185/60R14", "195/50R15", "205/45R16"],
+      "validatedTireSizes": ["205/45R16", "205/40R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "LS", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "Mazdaspeed", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Final NB generation year. Current sizes include older options no longer standard."
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": ["205/45R16", "205/40R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "LS", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "Mazdaspeed", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Duplicate entry. 205/40R17 is correct for Mazdaspeed trim."
+    },
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": ["205/45R16", "205/40R17"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "LS", "tireSize": "205/45R16", "wheelSize": "16x6.5"},
+        {"trim": "Mazdaspeed", "tireSize": "205/40R17", "wheelSize": "17x7"}
+      ],
+      "source": "tiresize.com",
+      "notes": "NB generation. Mazdaspeed version introduced."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "uniqueModels": 5,
+    "modelsValidated": {
+      "mazdaspeed-axela": "215/45R18 (2006-2007)",
+      "millenia": "215/55R16 (Base), 215/50R17 (S) (2000-2003)",
+      "mx-3": "185/65R14 (Base), 205/55R15 (GS)",
+      "mx-30": "215/55R18 (all trims, 2020-2025)",
+      "mx-5": "195/50R16 or 205/50R16 (Sport), 205/45R17 (Club/GT) - varies by generation",
+      "mx-5-miata": "195/50R16 or 205/50R16 (Sport), 205/45R17 (Club/GT) - varies by generation"
+    },
+    "issues": [
+      "2000 MX-3 may not exist in US market (production ended 1996)",
+      "Many MX-5/MX-5 Miata entries show 195/50R16 but NC generation (2006-2015) uses 205/50R16",
+      "Some duplicate entries exist for same year/model with different tire sizes"
+    ]
+  }
+}

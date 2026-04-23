@@ -1,0 +1,2280 @@
+[
+  {
+    "id": "9c7cd112-43c8-41ae-bf35-234228368db3",
+    "year": 1996,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Grand Sport",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ce053ea4-011f-49bb-afc9-60c897deb353",
+    "year": 1996,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ede64770-ab05-4bff-8c34-daf57ed5a276",
+    "year": 1996,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "9e849701-7d0a-48d1-b1f4-0a12a6702d3f",
+    "year": 1997,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8.5Jx17",
+      "9.5Jx18"
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "2e021db6-67aa-4e0f-86c3-42e59116d563",
+    "year": 1997,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "5c330590-3f54-4442-8df9-407927c201d4",
+    "year": 1998,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "d5d86b1e-f214-4227-b3c1-e666edfd9bd1",
+    "year": 1998,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8.5Jx17",
+      "9.5Jx18"
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "b5109a78-05de-4725-9261-668c795f5be5",
+    "year": 1999,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8.5Jx17",
+      "9.5Jx18"
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "a10066de-9382-4bc9-91f8-a1d73f79b8a3",
+    "year": 1999,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "44f3ac05-709a-42cf-970c-9dbb3044a674",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "598a7ba8-fccd-42df-b481-7ef4aecf0910",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "generation_template [filled from 2000 corvette]"
+  },
+  {
+    "id": "a79c6a8c-c30a-4353-b54b-42430d72b50d",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "80624c7f-0967-444d-8cbb-ef3323118384",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 10.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P265/40ZR17",
+      "P295/35ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "33f1b4bb-e6bc-4c53-b89f-6118b467f95f",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "generation_template [filled from 2001 corvette]"
+  },
+  {
+    "id": "0394bb5f-81fe-418f-b596-6184728ac998",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 10.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P265/40ZR17",
+      "P295/35ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "4307d9dc-1469-4e36-b3f3-bb9ca1fb3439",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "d9ab8576-834f-491d-84ea-13784eb4e2df",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "generation_template [filled from 2002 corvette]"
+  },
+  {
+    "id": "02c9bf71-cc63-4fdc-913f-e1a5681b701f",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 10.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "generation_template [filled from 2003 corvette]"
+  },
+  {
+    "id": "2c33b21a-aecc-4483-913c-169814d3afd6",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 10.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P265/40ZR17",
+      "P295/35ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "d0ac5b89-c42c-4856-bc50-ae97f897b768",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "d4b9e3a5-a059-41b3-97f5-9dde708c8ee4",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 10.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P265/40ZR17",
+      "P295/35ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "c80f0df1-10e5-4bcb-965e-21119bd794b5",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "cleanup_corvette_c5"
+  },
+  {
+    "id": "5317d994-bcbd-4a9c-8303-5316fca48c70",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 10.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "P245/45ZR17",
+      "P275/40ZR18"
+    ],
+    "source": "generation_template [filled from 2004 corvette]"
+  },
+  {
+    "id": "4fb9c199-d9d9-4680-ade6-782ad7355179",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "6c6d4ecd-8233-417a-8c5c-a6e8f89c4a93",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "0206de9e-558d-45a0-89f8-e23322f3b06a",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 79,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19",
+      "P335/25ZR20",
+      "245/40ZR18",
+      "285/35ZR19"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "fa31933c-b4a7-4b5b-a9f9-32df3fc6d008",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19",
+      "P335/25ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "d3501b07-8739-4dc6-8c50-1f00c57ae9c4",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "21bcdfb0-6744-40aa-9f18-f130cea63a51",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "580c4952-a934-449f-8100-026685ea99a6",
+    "year": 2007,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "4acdc175-f153-4250-a038-34c3285a0e4f",
+    "year": 2007,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "9ffd965f-6843-4521-bf26-e98ca285987d",
+    "year": 2007,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19",
+      "P335/25ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "2395151e-0ebd-4854-8089-215fa4c66fa0",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "af96181e-7c2f-462a-a998-27139feb348d",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19",
+      "P335/25ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "6bfed0f9-7dc7-4e90-a4e7-ef9882bbc38f",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "58176c1c-1352-4f33-a407-74830f3f173c",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19",
+      "P335/25ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "fcbc7ef9-dd7c-43c3-b9ca-280de21285f5",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "67343abc-dcae-448b-94c1-8cab76a5dd15",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "79506960-7200-4306-a4a0-3b706ff729e4",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "d577d70c-4e32-4d77-bf9e-3d021ce5463e",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Grand Sport",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "4e35a4a3-8211-4722-a3fe-f582367d8dc7",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "75e1258c-a2ed-4c9d-96c8-eafe2c8ffc09",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "23749815-9299-4244-94e0-912de494e9c6",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "c5e613f0-a93e-4c37-8c49-b8c56c86c175",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19",
+      "P335/25ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "5b4b6afd-b7b0-49d7-9882-a1d123cbf5f1",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "f4a14afc-191f-4557-ba4b-3b068957db5b",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Grand Sport",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "a5449a85-a435-4862-8102-211d00c83e4b",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "e55e2884-ba15-4e83-9fea-47e2a02e56f4",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "0d055e27-461d-481d-bdd4-909f57916c8b",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 79,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19",
+      "P335/25ZR20",
+      "245/40ZR18",
+      "285/35ZR19",
+      "275/35ZR18",
+      "325/30ZR19",
+      "285/30R19",
+      "335/25R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "435eca8b-1e25-4d08-9283-9f8e45874004",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "1254e9cc-6b51-420d-8db4-ce3cdad17d20",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "f74b33ff-94a6-466f-a828-0264a122b2e6",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "0e18a1a2-ba54-4619-91cc-2c5dd108e4f0",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Grand Sport",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "76831158-2f40-413a-bd16-240d4cc8ef8a",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 79,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19",
+      "P335/25ZR20",
+      "245/40ZR18",
+      "285/35ZR19",
+      "275/35ZR18",
+      "325/30ZR19",
+      "285/30R19",
+      "335/25R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "2f0a90df-bef6-41ad-8034-974a97a04adc",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 79,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19",
+      "P335/25ZR20",
+      "245/40ZR18",
+      "285/35ZR19",
+      "275/35ZR18",
+      "325/30ZR19",
+      "285/30R19",
+      "335/25R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "1e5d8673-a348-4f3c-b3ad-03c1be968304",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "b4915155-0cf4-4ec8-af3b-dc9c0f09e95a",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "ff9f8435-a2f9-4f19-83ce-7bd392def40b",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Grand Sport",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "b5830ef4-1d49-47ef-b434-c06897a768dd",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P285/35ZR19",
+      "P325/30ZR19"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "fa891ba8-9c8c-4c1b-be3c-165e6a5974d0",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "4ee3233f-660b-4c30-8b9d-ce555022f18b",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Grand Sport",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/35ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20"
+    ],
+    "source": "fix_cross_gen_contamination"
+  },
+  {
+    "id": "04aff649-ba7e-470b-b619-d8f24aab248b",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Stingray Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/35ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20"
+    ],
+    "source": "fix_cross_gen_contamination"
+  },
+  {
+    "id": "c7d1969d-051b-4d91-8f40-5004a2ed6849",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Stingray",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/35ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20"
+    ],
+    "source": "fix_cross_gen_contamination"
+  },
+  {
+    "id": "6d1eca2f-7beb-467d-a4db-dbf8f7be0e9c",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/35ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20"
+    ],
+    "source": "fix_cross_gen_contamination"
+  },
+  {
+    "id": "19d55314-a395-47bc-8ace-35634542908a",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20",
+      "245/35ZR19",
+      "285/30ZR20",
+      "245/40ZR18",
+      "285/35ZR19",
+      "285/30ZR19",
+      "335/25ZR20"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "a52b7004-f22f-469f-b0a7-4a6d6630ee1a",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Stingray",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20",
+      "245/35ZR19",
+      "285/30ZR20",
+      "245/40ZR18",
+      "285/35ZR19",
+      "285/30ZR19",
+      "335/25ZR20"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "dda85ee4-9d71-4024-8970-67c61263384a",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Stingray Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20",
+      "245/35ZR19",
+      "285/30ZR20",
+      "245/40ZR18",
+      "285/35ZR19",
+      "285/30ZR19",
+      "335/25ZR20"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "047235d8-2018-4748-86c5-39aca0a90991",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 79,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 56,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 79,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20",
+      "245/35ZR19",
+      "285/30ZR20",
+      "245/40ZR18",
+      "285/35ZR19",
+      "285/30ZR19",
+      "335/25ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "838a10de-7a45-46a8-a356-dde59664e97e",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Grand Sport",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20",
+      "245/35ZR19",
+      "285/30ZR20",
+      "245/40ZR18",
+      "285/35ZR19",
+      "285/30ZR19",
+      "335/25ZR20"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "e1a1b56c-8b26-48f2-88fc-ab05e8b9fe37",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Grand Sport",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "aaff9bc7-75b7-4b5a-ab3d-65e32eefa862",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "db806027-332e-4545-aec3-030f228594dd",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z06",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 12,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "f7316a06-2061-4b56-83cd-f317d7928b0a",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Stingray",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "8668c70f-622e-4a76-84a6-d73236da57d9",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Stingray Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "ca7add3c-dbc5-4559-8c63-58ecd790c7db",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "P245/40ZR18"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "P335/25ZR20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 79,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 56,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 79,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P245/40ZR18",
+      "P245/35ZR19",
+      "P285/30ZR19",
+      "P285/30ZR20",
+      "P335/25ZR20",
+      "245/35ZR19",
+      "285/30ZR20",
+      "245/40ZR18",
+      "285/35ZR19",
+      "285/30ZR19",
+      "335/25ZR20"
+    ],
+    "source": "generation_template"
+  }
+]

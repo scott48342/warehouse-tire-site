@@ -1,0 +1,1180 @@
+{
+  "batchId": "27",
+  "validatedAt": "2026-04-21T21:49:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "2WD": { "tires": ["245/75R16"] },
+          "4WD": { "tires": ["245/75R16"] }
+        },
+        "allSizes": ["245/75R16"]
+      },
+      "source": "tiresize.com, goodyear.com",
+      "notes": "HD truck, single tire size across all trims"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "2WD": { "tires": ["245/75R16"] },
+          "4WD": { "tires": ["245/75R16"] }
+        },
+        "allSizes": ["245/75R16"]
+      },
+      "source": "tiresize.com, goodyear.com",
+      "notes": "HD truck, single tire size across all trims. LT-metric available: LT245/75R16/E"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["185/60R14"], "wheels": ["14x5.5"] },
+          "LT": { "tires": ["185/55R15"], "wheels": ["15x6"] }
+        },
+        "allSizes": ["185/60R14", "185/55R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "Aveo U-VA is hatchback variant of Aveo"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["185/60R14"], "wheels": ["14x5.5"] },
+          "LT": { "tires": ["185/55R15"], "wheels": ["15x6"] }
+        },
+        "allSizes": ["185/60R14", "185/55R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "Aveo U-VA is hatchback variant of Aveo"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["185/60R14"], "wheels": ["14x5.5"] },
+          "LT": { "tires": ["185/55R15"], "wheels": ["15x6"] }
+        },
+        "allSizes": ["185/60R14", "185/55R15"]
+      },
+      "source": "tiresize.com, simpletire.com",
+      "notes": "Aveo U-VA is hatchback variant of Aveo"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["185/60R14"], "wheels": ["14x5.5"] },
+          "LT": { "tires": ["185/55R15", "195/55R15"], "wheels": ["15x6"] }
+        },
+        "allSizes": ["185/60R14", "185/55R15", "195/55R15"]
+      },
+      "source": "tiresize.com, tireswheels.org",
+      "notes": "Aveo U-VA is hatchback variant of Aveo"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["185/60R14"], "wheels": ["14x5.5"] },
+          "LT": { "tires": ["185/55R15"], "wheels": ["15x6"] }
+        },
+        "allSizes": ["185/60R14", "185/55R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "Aveo U-VA is hatchback variant of Aveo"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["185/60R14"], "wheels": ["14x5.5"] },
+          "LT": { "tires": ["185/55R15"], "wheels": ["15x6"] }
+        },
+        "allSizes": ["185/60R14", "185/55R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "Aveo U-VA is hatchback variant of Aveo"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["185/60R14"], "wheels": ["14x5.5"] },
+          "LT": { "tires": ["185/55R15"], "wheels": ["15x6"] },
+          "Special Value": { "tires": ["185/60R14"], "wheels": ["14x5.5"] }
+        },
+        "allSizes": ["185/60R14", "185/55R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "Aveo U-VA is hatchback variant of Aveo"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/55R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com, mavis.com",
+      "notes": "2026 Blazer crossover - no Premier trim listed for 2026"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/55R20", "265/45R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "2025 Blazer crossover"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/55R18", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data shows 235/55R18 not valid - should be 235/65R18"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R18", "235/55R20", "265/45R21", "235/60R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "235/60R19 not standard OEM - remove from current data"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["265/40R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "265/40R21 is invalid - correct size is 265/45R21"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["265/40R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "265/40R21 is invalid - correct size is 265/45R21"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/55R18", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "235/55R18 and 255/45R20 not valid OEM sizes"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["265/40R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "265/40R21 is invalid - correct size is 265/45R21"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/55R18", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "235/55R18 and 255/45R20 not valid OEM sizes"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/55R18", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "L": { "tires": ["235/65R18"], "wheels": ["18x7.5"] },
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "235/55R18 and 255/45R20 not valid OEM sizes"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["265/40R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "L": { "tires": ["235/65R18"], "wheels": ["18x7.5"] },
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "265/40R21 is invalid - correct size is 265/45R21"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R18", "235/55R20", "265/45R21", "235/60R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "L": { "tires": ["235/65R18"], "wheels": ["18x7.5"] },
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com, simpletire.com",
+      "notes": "235/60R19 not standard OEM - remove from current data"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/55R18", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "L": { "tires": ["235/65R18"], "wheels": ["18x7.5"] },
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "235/55R18 and 255/45R20 not valid OEM sizes"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["265/40R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "L": { "tires": ["235/65R18"], "wheels": ["18x7.5"] },
+          "LT": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "265/40R21 is invalid - correct size is 265/45R21"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R18", "235/55R20", "265/45R21", "235/60R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "Base Model": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "L": { "tires": ["235/65R18"], "wheels": ["18x7.5"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com, simpletire.com",
+      "notes": "235/60R19 not standard OEM - remove from current data"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["265/40R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "Base Model": { "tires": ["235/65R18", "235/55R20"], "wheels": ["18x7.5", "20x8"] },
+          "L": { "tires": ["235/65R18"], "wheels": ["18x7.5"] },
+          "Premier": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] },
+          "RS": { "tires": ["235/55R20", "265/45R21"], "wheels": ["20x8", "21x8.5"] }
+        },
+        "allSizes": ["235/65R18", "235/55R20", "265/45R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "265/40R21 is invalid - correct size is 265/45R21"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {},
+        "allSizes": []
+      },
+      "source": "tiresize.com",
+      "notes": "NO 2011 BLAZER EXISTS - Blazer discontinued 2005, reintroduced 2019. Current data is incorrect. May be TrailBlazer confusion."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {},
+        "allSizes": []
+      },
+      "source": "tiresize.com",
+      "notes": "NO 2010 BLAZER EXISTS - Blazer discontinued 2005, reintroduced 2019. Current data is incorrect."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {},
+        "allSizes": []
+      },
+      "source": "tiresize.com",
+      "notes": "NO 2009 BLAZER EXISTS - Blazer discontinued 2005, reintroduced 2019. Current data is incorrect."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["225/75R15", "235/70R16", "235/75R15"],
+      "validatedTireSizes": {
+        "trims": {},
+        "allSizes": []
+      },
+      "source": "tiresize.com",
+      "notes": "NO 2008 BLAZER EXISTS - Blazer discontinued 2005, reintroduced 2019. Current data is incorrect. TrailBlazer 2008 uses 245/65R17, 245/60R18."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {},
+        "allSizes": []
+      },
+      "source": "tiresize.com",
+      "notes": "NO 2007 BLAZER EXISTS - Blazer discontinued 2005, reintroduced 2019. Current data is incorrect."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {},
+        "allSizes": []
+      },
+      "source": "tiresize.com",
+      "notes": "NO 2006 BLAZER EXISTS - Blazer discontinued 2005, reintroduced 2019. Current data is incorrect."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "2WD 2dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "4WD 2dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "ZR2": { "tires": ["265/75R15"], "wheels": ["15x7"] }
+        },
+        "allSizes": ["235/70R15", "235/75R15", "265/75R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "S10 Blazer final year. Current data is WRONG - sizes like 235/65R17, 255/55R20 never existed on this vehicle."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "2WD 2dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "2WD 4dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "4WD 2dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "4WD 4dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "ZR2": { "tires": ["265/75R15"], "wheels": ["15x7"] }
+        },
+        "allSizes": ["235/70R15", "235/75R15", "265/75R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "S10 Blazer. Current data is WRONG - sizes like 235/65R17, 255/55R20 never existed on this vehicle."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "2WD 2dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "2WD 4dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "4WD 2dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "4WD 4dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "ZR2": { "tires": ["31X10.50R15"], "wheels": ["15x8"] }
+        },
+        "allSizes": ["235/70R15", "235/75R15", "31X10.50R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "S10 Blazer. Current data is WRONG."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "2WD 2dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "2WD 4dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "4WD 2dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "4WD 4dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "ZR2": { "tires": ["31X10.50R15"], "wheels": ["15x8"] }
+        },
+        "allSizes": ["235/70R15", "235/75R15", "31X10.50R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "S10 Blazer. Current data is WRONG."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "2WD 2dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "2WD 4dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "4WD 2dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "4WD 4dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "ZR2": { "tires": ["31X10.50R15"], "wheels": ["15x8"] }
+        },
+        "allSizes": ["235/70R15", "235/75R15", "31X10.50R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "S10 Blazer. Current data is WRONG."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedTireSizes": {
+        "trims": {
+          "2WD 2dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "2WD 4dr": { "tires": ["235/70R15"], "wheels": ["15x7"] },
+          "4WD 2dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "4WD 4dr": { "tires": ["235/70R15", "235/75R15"], "wheels": ["15x7"] },
+          "ZR2": { "tires": ["31X10.50R15"], "wheels": ["15x8"] }
+        },
+        "allSizes": ["235/70R15", "235/75R15", "31X10.50R15"]
+      },
+      "source": "tiresize.com",
+      "notes": "S10 Blazer. Current data is WRONG."
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x7"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x7"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT - Bolt EUV uses single tire size across all trims"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x7"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x7"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x7"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x7"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x7"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x7"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x7"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x7"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT - First model year for Bolt EUV"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["205/55R17", "215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "1LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "2LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "205/55R17 is invalid - only 215/50R17 is OEM"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["205/55R17", "215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "1LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "2LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "205/55R17 is invalid - only 215/50R17 is OEM"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "1LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "2LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["215/50R17", "215/45R18"],
+      "validatedTireSizes": {
+        "trims": {
+          "1LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "2LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "215/45R18 not standard OEM - aftermarket option only"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "1LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "2LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["215/50R17", "215/45R18"],
+      "validatedTireSizes": {
+        "trims": {
+          "1LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "2LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "215/45R18 not standard OEM"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["215/50R17", "215/45R18"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "215/45R18 not standard OEM"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": ["215/50R17"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["215/50R17"], "wheels": ["17x6.5"] },
+          "Premier": { "tires": ["215/50R17"], "wheels": ["17x6.5"] }
+        },
+        "allSizes": ["215/50R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT - First model year for Bolt EV"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "c2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "Standard": { "tires": ["225/75R16", "245/75R16"], "wheels": ["16x6.5"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16"]
+      },
+      "source": "sizemytires.com, tirewheelguide.com",
+      "notes": "HD 3/4 ton truck. LT-metric: LT225/75R16/D, LT245/75R16/E"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "c3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "SRW": { "tires": ["245/75R16", "265/75R16"], "wheels": ["16x6.5"] },
+          "DRW": { "tires": ["225/75R16"], "wheels": ["16x6"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16", "265/75R16"]
+      },
+      "source": "wheel-size.com",
+      "notes": "1-ton HD truck. DRW uses dual rear wheels."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "c3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "SRW": { "tires": ["245/75R16", "265/75R16"], "wheels": ["16x6.5"] },
+          "DRW": { "tires": ["225/75R16"], "wheels": ["16x6"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16", "265/75R16"]
+      },
+      "source": "wheel-size.com",
+      "notes": "1-ton HD truck"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "c3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "SRW": { "tires": ["245/75R16", "265/75R16"], "wheels": ["16x6.5"] },
+          "DRW": { "tires": ["225/75R16"], "wheels": ["16x6"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16", "265/75R16"]
+      },
+      "source": "wheel-size.com",
+      "notes": "1-ton HD truck"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "c3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "SRW": { "tires": ["245/75R16", "265/75R16"], "wheels": ["16x6.5"] },
+          "DRW": { "tires": ["225/75R16"], "wheels": ["16x6"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16", "265/75R16"]
+      },
+      "source": "wheel-size.com",
+      "notes": "1-ton HD truck"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "c3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "trims": {
+          "SRW": { "tires": ["245/75R16", "265/75R16"], "wheels": ["16x6.5"] },
+          "DRW": { "tires": ["225/75R16"], "wheels": ["16x6"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16", "265/75R16"]
+      },
+      "source": "wheel-size.com",
+      "notes": "1-ton HD truck"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["305/30R19", "325/30R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "ZL1 1LE Extreme Track Package": { "tires": ["305/30R19", "325/30R19"], "wheels": ["19x10", "19x11"], "staggered": true }
+        },
+        "allSizes": ["305/30R19", "325/30R19"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT - ZL1 1LE Extreme Track Package staggered setup"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["245/50R18", "245/40R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["245/50R18", "245/40R20"], "wheels": ["18x8.5", "20x8.5"] }
+        },
+        "allSizes": ["245/50R18", "245/40R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT - LT trim options"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["245/50R18"],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["245/50R18"], "wheels": ["18x8.5"] }
+        },
+        "allSizes": ["245/50R18"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT - LS base trim"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["285/30R20", "305/30R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "ZL1": { "tires": ["285/30R20", "305/30R20"], "wheels": ["20x10", "20x11"], "staggered": true },
+          "SS 1LE Track Package": { "tires": ["285/30R20", "305/30R20"], "wheels": ["20x10", "20x11"], "staggered": true }
+        },
+        "allSizes": ["285/30R20", "305/30R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT - ZL1 and SS 1LE staggered setup"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["245/40R20", "275/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "SS": { "tires": ["245/40R20", "275/35R20"], "wheels": ["20x8.5", "20x9.5"], "staggered": true }
+        },
+        "allSizes": ["245/40R20", "275/35R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT - SS staggered setup"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["245/40R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT RS Package": { "tires": ["245/40R20"], "wheels": ["20x8.5"] },
+          "LT1": { "tires": ["245/40R20"], "wheels": ["20x8.5"] }
+        },
+        "allSizes": ["245/40R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT - LT RS and LT1 use square setup"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["P245/50R18", "P245/40R19", "P275/35R19", "P245/40R20", "P275/35R20", "P285/30R20", "P305/30R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["245/50R18"], "wheels": ["18x8.5"] },
+          "LT": { "tires": ["245/50R18", "245/40R20"], "wheels": ["18x8.5", "20x8.5"] },
+          "LT RS Package": { "tires": ["245/40R20"], "wheels": ["20x8.5"] },
+          "LT1": { "tires": ["245/40R20"], "wheels": ["20x8.5"] },
+          "SS": { "tires": ["245/40R20", "275/35R20"], "wheels": ["20x8.5", "20x9.5"], "staggered": true },
+          "SS 1LE Track Package": { "tires": ["285/30R20", "305/30R20"], "wheels": ["20x10", "20x11"], "staggered": true },
+          "ZL1": { "tires": ["285/30R20", "305/30R20"], "wheels": ["20x10", "20x11"], "staggered": true },
+          "ZL1 1LE Extreme Track Package": { "tires": ["305/30R19", "325/30R19"], "wheels": ["19x10", "19x11"], "staggered": true }
+        },
+        "allSizes": ["245/50R18", "245/40R20", "275/35R20", "285/30R20", "305/30R20", "305/30R19", "325/30R19"]
+      },
+      "source": "tiresize.com",
+      "notes": "P245/40R19 and P275/35R19 not valid for 2024 - only 18, 20, 19 (ZL1 1LE) wheel sizes"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["285/30R20", "305/30R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "ZL1": { "tires": ["285/30R20", "305/30R20"], "wheels": ["20x10", "20x11"], "staggered": true },
+          "SS 1LE Track Package": { "tires": ["285/30R20", "305/30R20"], "wheels": ["20x10", "20x11"], "staggered": true }
+        },
+        "allSizes": ["285/30R20", "305/30R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["305/30R19", "325/30R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "ZL1 1LE Extreme Track Package": { "tires": ["305/30R19", "325/30R19"], "wheels": ["19x10", "19x11"], "staggered": true }
+        },
+        "allSizes": ["305/30R19", "325/30R19"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["P245/50R18", "P245/40R19", "P275/35R19", "P245/40R20", "P275/35R20", "P285/30R20", "P305/30R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["245/50R18"], "wheels": ["18x8.5"] },
+          "LT": { "tires": ["245/50R18", "245/40R20"], "wheels": ["18x8.5", "20x8.5"] },
+          "LT RS Package": { "tires": ["245/40R20"], "wheels": ["20x8.5"] },
+          "LT1": { "tires": ["245/40R20"], "wheels": ["20x8.5"] },
+          "SS": { "tires": ["245/40R20", "275/35R20"], "wheels": ["20x8.5", "20x9.5"], "staggered": true },
+          "SS 1LE Track Package": { "tires": ["285/30R20", "305/30R20"], "wheels": ["20x10", "20x11"], "staggered": true },
+          "ZL1": { "tires": ["285/30R20", "305/30R20"], "wheels": ["20x10", "20x11"], "staggered": true },
+          "ZL1 1LE Extreme Track Package": { "tires": ["305/30R19", "325/30R19"], "wheels": ["19x10", "19x11"], "staggered": true }
+        },
+        "allSizes": ["245/50R18", "245/40R20", "275/35R20", "285/30R20", "305/30R20", "305/30R19", "325/30R19"]
+      },
+      "source": "tiresize.com",
+      "notes": "P245/40R19 and P275/35R19 not valid for 2023"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["245/50R18"],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["245/50R18"], "wheels": ["18x8.5"] }
+        },
+        "allSizes": ["245/50R18"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["245/40R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT RS Package": { "tires": ["245/40R20"], "wheels": ["20x8.5"] },
+          "LT1": { "tires": ["245/40R20"], "wheels": ["20x8.5"] }
+        },
+        "allSizes": ["245/40R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["245/40R20", "275/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "SS": { "tires": ["245/40R20", "275/35R20"], "wheels": ["20x8.5", "20x9.5"], "staggered": true }
+        },
+        "allSizes": ["245/40R20", "275/35R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT - SS staggered"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["245/50R18", "245/40R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LT": { "tires": ["245/50R18", "245/40R20"], "wheels": ["18x8.5", "20x8.5"] }
+        },
+        "allSizes": ["245/50R18", "245/40R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": ["245/40R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "LS": { "tires": ["245/50R18"], "wheels": ["18x8.5"] },
+          "LT": { "tires": ["245/50R18", "245/40R20"], "wheels": ["18x8.5", "20x8.5"] },
+          "LT 1LE Track Package": { "tires": ["245/40R20", "275/35R20"], "wheels": ["20x8.5", "20x9.5"], "staggered": true },
+          "LT RS Package": { "tires": ["245/40R20"], "wheels": ["20x8.5"] },
+          "LT1": { "tires": ["245/40R20"], "wheels": ["20x8.5"] },
+          "SS": { "tires": ["245/40R20", "275/35R20"], "wheels": ["20x8.5", "20x9.5"], "staggered": true },
+          "SS 1LE Track Package": { "tires": ["285/30R20", "305/30R20"], "wheels": ["20x10", "20x11"], "staggered": true },
+          "ZL1": { "tires": ["285/30R20", "305/30R20"], "wheels": ["20x10", "20x11"], "staggered": true },
+          "ZL1 1LE Extreme Track Package": { "tires": ["305/30R19", "325/30R19"], "wheels": ["19x10", "19x11"], "staggered": true }
+        },
+        "allSizes": ["245/50R18", "245/40R20", "275/35R20", "285/30R20", "305/30R20", "305/30R19", "325/30R19"]
+      },
+      "source": "tiresize.com",
+      "notes": "CORRECT for LT RS/LT1 trims"
+    }
+  ],
+  "summary": {
+    "totalValidated": 75,
+    "issuesFound": {
+      "invalidSizes": 22,
+      "missingData": 9,
+      "nonExistentVehicles": 6,
+      "correct": 38
+    },
+    "criticalIssues": [
+      "2006-2011 Blazer entries are INVALID - model did not exist those years",
+      "2000-2005 Blazer entries have completely wrong tire sizes (modern crossover sizes on S10 Blazer)",
+      "Multiple Blazer EV entries show 265/40R21 when correct is 265/45R21",
+      "235/55R18 and 255/45R20 appear in Blazer data but are not OEM sizes",
+      "235/60R19 listed for some Blazers but not an OEM option",
+      "205/55R17 listed for Bolt EV but only 215/50R17 is OEM"
+    ]
+  }
+}

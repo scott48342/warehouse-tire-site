@@ -1,0 +1,1837 @@
+[
+  {
+    "id": "13f32825-002b-4c21-87d5-b6aa4cec18e2",
+    "year": 2012,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9490ce5b-7b82-4025-a3b5-7a6501e80267",
+    "year": 2012,
+    "make": "ram",
+    "model": "1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fcdb5dd4-dfed-431a-9bca-fb2497e2ea1c",
+    "year": 2012,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Limited",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5744a6d2-b6cd-4958-b429-e11d8ec88b3f",
+    "year": 2012,
+    "make": "ram",
+    "model": "1500",
+    "trim": "5.7 HEMI",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 0,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "305/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit_2018"
+  },
+  {
+    "id": "cb4ad1d5-7620-4638-8d53-a837191f1f5a",
+    "year": 2012,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f8282dfc-8323-4b21-bc17-669cc24d3afc",
+    "year": 2012,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6f572391-7fbe-4a9a-9d63-74388efc2844",
+    "year": 2012,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "merge_consolidation"
+  },
+  {
+    "id": "6e168bb0-5cab-4ae7-8659-10d2a93110d6",
+    "year": 2012,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Rebel",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e1d195f4-c4f3-4b58-a99b-af5d50bde5fc",
+    "year": 2012,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3ef9249d-3529-4708-8afc-606acd053477",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "merge_consolidation"
+  },
+  {
+    "id": "033bdfea-a01e-439c-b297-1fd1c0725663",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "000d1147-9428-418a-9807-8ccca7903c71",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Rebel",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8f4f3c6a-a1b6-448d-82cd-21faa50afe87",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9d978eee-3013-40c0-9572-6d7019e793c9",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "43a779d1-157b-4cfd-8570-302c499f8c5a",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8cdc166c-c6a9-4384-a81b-e2299f040131",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "58f05824-ca68-44ba-a8a2-e69874b5955e",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0d91699a-b0e8-4e4a-a20c-1f34a7202db3",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Express",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b54c2620-b695-47a9-bef7-acb65c63d29d",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dacbe269-8081-4c7b-9949-397781393ea9",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9c684778-44b5-47fc-90b1-76517d1ba60c",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "5.7 HEMI",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 0,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "305/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "inherited_from_2015_SAME_GENERATION"
+  },
+  {
+    "id": "808c5d39-a7c5-43f9-9ec7-5e98c087ef97",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Limited",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "304e65f5-24b5-40dd-8ca1-7ef7f0c1bdb0",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Limited",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "45fe9fcc-013b-49c5-b425-9070ba61ba4e",
+    "year": 2013,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e084417e-e803-4536-8d07-194119e10e36",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "5.7 HEMI",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 0,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "305/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "inherited_from_2015_SAME_GENERATION"
+  },
+  {
+    "id": "c0e1cd56-133c-4a90-a275-c10c005f5ab8",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f54de1f5-e000-42ec-a027-1fd6ed600a3d",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Express",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "99552e38-9c80-4331-9552-ed0aafa265cb",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f98ce27d-afa5-4a4b-9dd5-3fd4d76f2e6e",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2b52b2fa-954f-4974-9162-ed88e13803ef",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7e7daddd-fefc-4f8f-b7d2-18222e7af6dd",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "24e13f19-5c22-460c-9642-515ee76d68fe",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Rebel",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cf8105c0-7b1a-434c-a1de-21e5bd8ae8db",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Limited",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7413fa46-48d4-418b-8adb-7829b0ef2c6d",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e9a6b356-c37d-456e-b532-904c7216aff7",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "96f1a551-fe63-4cbc-a374-957d079b7a81",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f16811ef-cbb2-4583-9b41-d583ba2033c1",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "merge_consolidation"
+  },
+  {
+    "id": "5c74ea0b-53ad-455c-9650-e99007d25c2b",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Limited",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fc6e614a-cbb7-4a42-aa80-498b6cd26751",
+    "year": 2014,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e3e57768-9446-4180-8d94-acb2da258bf1",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Rebel",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "347f881d-c4bf-47ec-86cd-0d94f5d84b3d",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "39e49cf9-8931-4c4e-a0ac-1e43357f5e2e",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Express",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "df02f1c8-5b7f-4c37-8e47-1395ab934927",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5f0ebaff-2227-4b94-8c0a-aedb883873d9",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ced6412e-a647-4174-af55-cc7db426444a",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b8f3eb01-f5a1-4bcb-a941-846c6fda2697",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e9f2145c-195d-4d1b-b593-3bed1c669f45",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2b5e7382-8f5b-4a78-8d45-38d019ab0725",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Limited",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0c83d327-03cd-49dd-b82e-7c9966501b7a",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Rebel",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "aee1fac2-f5e2-4f55-a801-2204ec75d8f7",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Limited",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9c5c51df-ba53-4300-849c-12c9b49e9278",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "merge_consolidation"
+  },
+  {
+    "id": "b12e0c63-b1fd-4465-8ab1-8045498e4261",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "5.7 HEMI",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 0,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "305/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "wheelsize"
+  },
+  {
+    "id": "cd6bea83-8cde-418c-8e44-882f5a72caf0",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "247b6d1c-1159-4d63-b1cd-b99fbf43036a",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8ada4455-080f-4a76-be7d-9e4dc60ecd40",
+    "year": 2015,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "aab1ce91-e40a-4ee1-8b34-e2cb44e1980c",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "5.7 HEMI",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 19.05,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 0,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "305/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "inherited_from_2015_SAME_GENERATION"
+  },
+  {
+    "id": "b5cf879e-2bef-4c31-b3d4-d47113da5536",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cc194649-1632-4a26-bf57-e16c5b21bef1",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6e6c69d2-54f6-425e-a0a1-5a68bfce9f70",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "merge_consolidation"
+  },
+  {
+    "id": "df9b43f1-2fee-4625-83b0-53e2fac6c4e5",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c0e1dc6f-de77-4588-aaa1-3f9f28d69745",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Express",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7842e0dd-15cb-4d13-92de-4b6092d4f4e8",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "53624d55-ea21-42a7-bf33-f6f3f8189545",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "aebc2683-60ce-4774-917e-7033e528dba3",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8063ac43-78eb-455e-9cdb-cc9fe59aabc7",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c99a9a4e-4f54-4dce-a74e-265ac933ad20",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Rebel",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4a18647e-8f19-487e-8550-9ab210fe00dd",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Rebel",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6be5095d-6a7a-4aac-9d6e-4a9a5f01d90d",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Limited",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a9a655de-647c-4a41-bf5b-858154a11a57",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Limited",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7c2e663b-ec3c-47a7-b2b3-1d95f982a791",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4fb3c199-2dba-4119-9237-c8fa3ba8db9f",
+    "year": 2016,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "facc4c99-39dc-41e9-8757-bc85245100e4",
+    "year": 2017,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Limited",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1a721a05-7920-4167-a9c1-5a017b154173",
+    "year": 2017,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Express",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fb972b2c-0a4e-4300-b161-217488955df7",
+    "year": 2017,
+    "make": "ram",
+    "model": "1500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "063edc91-01dd-40e8-8443-34a11f038ad1",
+    "year": 2017,
+    "make": "ram",
+    "model": "1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/45R22",
+      "275/60R20",
+      "305/45R22"
+    ],
+    "source": "generation_inherit"
+  }
+]

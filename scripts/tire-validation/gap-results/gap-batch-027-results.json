@@ -1,0 +1,502 @@
+{
+  "batchId": 27,
+  "processedAt": "2026-04-21T23:53:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 50,
+    "usVehicles": 21,
+    "nonUsVehicles": 29,
+    "uniqueModels": 7
+  },
+  "vehicles": [
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "displayName": "GMC Yukon XL 2500",
+      "tireSize": "245/75R16",
+      "wheelSize": "16x7",
+      "boltPattern": "8x165.1",
+      "hubBore": 121.3,
+      "offset": 57,
+      "lugNuts": "M14x1.5",
+      "notes": "3/4 ton full-size SUV"
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "displayName": "GMC Yukon XL 2500",
+      "tireSize": "245/75R16",
+      "wheelSize": "16x7",
+      "boltPattern": "8x165.1",
+      "hubBore": 121.3,
+      "offset": 57,
+      "lugNuts": "M14x1.5",
+      "notes": "3/4 ton full-size SUV"
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "displayName": "GMC Yukon XL 2500",
+      "tireSize": "245/75R16",
+      "wheelSize": "16x7",
+      "boltPattern": "8x165.1",
+      "hubBore": 121.3,
+      "offset": 57,
+      "lugNuts": "M14x1.5",
+      "notes": "3/4 ton full-size SUV"
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "displayName": "GMC Yukon XL 2500",
+      "tireSize": "245/75R16",
+      "wheelSize": "16x7",
+      "boltPattern": "8x165.1",
+      "hubBore": 121.3,
+      "offset": 57,
+      "lugNuts": "M14x1.5",
+      "notes": "3/4 ton full-size SUV"
+    },
+    {
+      "year": 2011,
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "displayName": "GMC Yukon XL 2500",
+      "tireSize": "245/75R16",
+      "wheelSize": "16x7",
+      "boltPattern": "8x165.1",
+      "hubBore": 121.3,
+      "offset": 57,
+      "lugNuts": "M14x1.5",
+      "notes": "3/4 ton full-size SUV"
+    },
+    {
+      "year": 2012,
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "displayName": "GMC Yukon XL 2500",
+      "tireSize": "245/75R16",
+      "wheelSize": "16x7",
+      "boltPattern": "8x165.1",
+      "hubBore": 121.3,
+      "offset": 57,
+      "lugNuts": "M14x1.5",
+      "notes": "3/4 ton full-size SUV"
+    },
+    {
+      "year": 2013,
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "displayName": "GMC Yukon XL 2500",
+      "tireSize": "245/75R16",
+      "wheelSize": "16x7",
+      "boltPattern": "8x165.1",
+      "hubBore": 121.3,
+      "offset": 57,
+      "lugNuts": "M14x1.5",
+      "notes": "3/4 ton full-size SUV, last year of production"
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "displayName": "Honda Accord Crosstour",
+      "tireSize": "225/65R17",
+      "alternateTireSize": "225/60R18",
+      "wheelSize": "17x7",
+      "alternateWheelSize": "18x7",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 55,
+      "lugNuts": "M12x1.5",
+      "notes": "Sold as Accord Crosstour 2010-2011, then just Crosstour 2012+"
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "displayName": "Honda Accord Crosstour",
+      "tireSize": "225/65R17",
+      "alternateTireSize": "225/60R18",
+      "wheelSize": "17x7",
+      "alternateWheelSize": "18x7",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 55,
+      "lugNuts": "M12x1.5",
+      "notes": "Sold as Accord Crosstour 2010-2011, then just Crosstour 2012+"
+    },
+    {
+      "year": 2012,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "displayName": "Honda Crosstour",
+      "tireSize": "225/65R17",
+      "alternateTireSize": "225/60R18",
+      "wheelSize": "17x7",
+      "alternateWheelSize": "18x7",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 55,
+      "lugNuts": "M12x1.5",
+      "notes": "Became standalone model in 2012"
+    },
+    {
+      "year": 2013,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "displayName": "Honda Crosstour",
+      "tireSize": "225/65R17",
+      "alternateTireSize": "225/60R18",
+      "wheelSize": "17x7",
+      "alternateWheelSize": "18x7",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 55,
+      "lugNuts": "M12x1.5"
+    },
+    {
+      "year": 2014,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "displayName": "Honda Crosstour",
+      "tireSize": "225/65R17",
+      "alternateTireSize": "225/60R18",
+      "wheelSize": "17x7",
+      "alternateWheelSize": "18x7",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 55,
+      "lugNuts": "M12x1.5"
+    },
+    {
+      "year": 2000,
+      "make": "honda",
+      "model": "domani",
+      "notUS": true,
+      "reason": "Japan-only model, never sold in US market"
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "domani",
+      "notUS": true,
+      "reason": "Japan-only model, never sold in US market"
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "e",
+      "notUS": true,
+      "reason": "Europe/Japan-only electric vehicle, never sold in US market"
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "e",
+      "notUS": true,
+      "reason": "Europe/Japan-only electric vehicle, never sold in US market"
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "e",
+      "notUS": true,
+      "reason": "Europe/Japan-only electric vehicle, never sold in US market"
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "e",
+      "notUS": true,
+      "reason": "Europe/Japan-only electric vehicle, never sold in US market"
+    },
+    {
+      "year": 2024,
+      "make": "honda",
+      "model": "e",
+      "notUS": true,
+      "reason": "Europe/Japan-only electric vehicle, never sold in US market"
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "element",
+      "displayName": "Honda Element",
+      "tireSize": "215/70R16",
+      "wheelSize": "16x6.5",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 45,
+      "lugNuts": "M12x1.5",
+      "notes": "First year of production"
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "element",
+      "displayName": "Honda Element",
+      "tireSize": "215/70R16",
+      "wheelSize": "16x6.5",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 45,
+      "lugNuts": "M12x1.5"
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "element",
+      "displayName": "Honda Element",
+      "tireSize": "215/70R16",
+      "wheelSize": "16x6.5",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 45,
+      "lugNuts": "M12x1.5"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "element",
+      "displayName": "Honda Element",
+      "tireSize": "215/70R16",
+      "wheelSize": "16x6.5",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 45,
+      "lugNuts": "M12x1.5"
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "element",
+      "displayName": "Honda Element",
+      "tireSize": "215/70R16",
+      "alternateTireSize": "225/55R18",
+      "wheelSize": "16x6.5",
+      "alternateWheelSize": "18x7",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 45,
+      "lugNuts": "M12x1.5",
+      "notes": "SC trim has 18\" wheels with 225/55R18"
+    },
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "element",
+      "displayName": "Honda Element",
+      "tireSize": "215/70R16",
+      "alternateTireSize": "225/55R18",
+      "wheelSize": "16x6.5",
+      "alternateWheelSize": "18x7",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 45,
+      "lugNuts": "M12x1.5",
+      "notes": "SC trim has 18\" wheels with 225/55R18"
+    },
+    {
+      "year": 2009,
+      "make": "honda",
+      "model": "element",
+      "displayName": "Honda Element",
+      "tireSize": "215/70R16",
+      "alternateTireSize": "225/55R18",
+      "wheelSize": "16x6.5",
+      "alternateWheelSize": "18x7",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 45,
+      "lugNuts": "M12x1.5",
+      "notes": "SC trim has 18\" wheels with 225/55R18"
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "element",
+      "displayName": "Honda Element",
+      "tireSize": "215/70R16",
+      "alternateTireSize": "225/55R18",
+      "wheelSize": "16x6.5",
+      "alternateWheelSize": "18x7",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 45,
+      "lugNuts": "M12x1.5",
+      "notes": "SC trim has 18\" wheels with 225/55R18"
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "element",
+      "displayName": "Honda Element",
+      "tireSize": "215/70R16",
+      "wheelSize": "16x6.5",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "offset": 45,
+      "lugNuts": "M12x1.5",
+      "notes": "Final year of production"
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "fit",
+      "notUS": true,
+      "reason": "US Honda Fit started in 2007. 2001-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2002,
+      "make": "honda",
+      "model": "fit",
+      "notUS": true,
+      "reason": "US Honda Fit started in 2007. 2001-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "fit",
+      "notUS": true,
+      "reason": "US Honda Fit started in 2007. 2001-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "fit",
+      "notUS": true,
+      "reason": "US Honda Fit started in 2007. 2001-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "fit",
+      "notUS": true,
+      "reason": "US Honda Fit started in 2007. 2001-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "fit",
+      "notUS": true,
+      "reason": "US Honda Fit started in 2007. 2001-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "fit",
+      "notUS": true,
+      "reason": "US Honda Fit discontinued after 2020. 2022+ are Japan/international only"
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "fit",
+      "notUS": true,
+      "reason": "US Honda Fit discontinued after 2020. 2022+ are Japan/international only"
+    },
+    {
+      "year": 2025,
+      "make": "honda",
+      "model": "fit",
+      "notUS": true,
+      "reason": "US Honda Fit discontinued after 2020. 2022+ are Japan/international only"
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "fr-v",
+      "notUS": true,
+      "reason": "Europe/Asia-only model, never sold in US market (sold as Honda Edix in Japan)"
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "fr-v",
+      "notUS": true,
+      "reason": "Europe/Asia-only model, never sold in US market (sold as Honda Edix in Japan)"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "fr-v",
+      "notUS": true,
+      "reason": "Europe/Asia-only model, never sold in US market (sold as Honda Edix in Japan)"
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "fr-v",
+      "notUS": true,
+      "reason": "Europe/Asia-only model, never sold in US market (sold as Honda Edix in Japan)"
+    },
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "fr-v",
+      "notUS": true,
+      "reason": "Europe/Asia-only model, never sold in US market (sold as Honda Edix in Japan)"
+    },
+    {
+      "year": 2009,
+      "make": "honda",
+      "model": "fr-v",
+      "notUS": true,
+      "reason": "Europe/Asia-only model, never sold in US market (sold as Honda Edix in Japan)"
+    },
+    {
+      "year": 2000,
+      "make": "honda",
+      "model": "hr-v",
+      "notUS": true,
+      "reason": "US Honda HR-V started in 2016. 2000-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "hr-v",
+      "notUS": true,
+      "reason": "US Honda HR-V started in 2016. 2000-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2002,
+      "make": "honda",
+      "model": "hr-v",
+      "notUS": true,
+      "reason": "US Honda HR-V started in 2016. 2000-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "hr-v",
+      "notUS": true,
+      "reason": "US Honda HR-V started in 2016. 2000-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "hr-v",
+      "notUS": true,
+      "reason": "US Honda HR-V started in 2016. 2000-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "hr-v",
+      "notUS": true,
+      "reason": "US Honda HR-V started in 2016. 2000-2006 were Japan/Europe only (first gen)"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "hr-v",
+      "notUS": true,
+      "reason": "US Honda HR-V started in 2016. 2000-2006 were Japan/Europe only (first gen)"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "batchId": 35,
+  "processedAt": "2026-04-21T23:54:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "usVehicles": 21,
+    "notUS": 29,
+    "withSpecs": 21
+  },
+  "vehicles": [
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "rio5",
+      "notUS": false,
+      "notes": "US: Listed as 'Rio 5 Hatchback' on tiresize.com",
+      "tires": ["195/55R15"],
+      "wheels": { "diameter": 15, "boltPattern": "4x100" }
+    },
+    {
+      "year": 2007,
+      "make": "kia",
+      "model": "rio5",
+      "notUS": false,
+      "notes": "US: Listed as 'Rio 5 Hatchback' on tiresize.com",
+      "tires": ["195/55R15", "205/45R16"],
+      "wheels": { "diameter": [15, 16], "boltPattern": "4x100" }
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "rio5",
+      "notUS": false,
+      "notes": "US: Listed as 'Rio 5 Hatchback' on tiresize.com",
+      "tires": ["185/65R14", "195/55R15", "205/45R16"],
+      "wheels": { "diameter": [14, 15, 16], "boltPattern": "4x100" }
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "rio5",
+      "notUS": false,
+      "notes": "US: Listed as 'Rio 5 Hatchback' on tiresize.com",
+      "tires": ["185/65R14", "195/55R15", "205/45R16"],
+      "wheels": { "diameter": [14, 15, 16], "boltPattern": "4x100" }
+    },
+    {
+      "year": 2010,
+      "make": "kia",
+      "model": "rio5",
+      "notUS": false,
+      "notes": "US: Listed as 'Rio 5 Hatchback' on tiresize.com",
+      "tires": ["185/65R14", "195/55R15", "205/45R16"],
+      "wheels": { "diameter": [14, 15, 16], "boltPattern": "4x100" }
+    },
+    {
+      "year": 2011,
+      "make": "kia",
+      "model": "rio5",
+      "notUS": false,
+      "notes": "US: Listed as 'Rio 5 Hatchback' on tiresize.com",
+      "tires": ["185/65R14", "195/55R15", "205/45R16"],
+      "wheels": { "diameter": [14, 15, 16], "boltPattern": "4x100" }
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "sedona",
+      "notUS": true,
+      "notes": "US Sedona starts 2002 on tiresize.com. 2000 model year not available in US."
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "sedona",
+      "notUS": true,
+      "notes": "US Sedona starts 2002 on tiresize.com. 2001 model year not available in US."
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "seltos",
+      "notUS": true,
+      "notes": "US Seltos starts 2021 on tiresize.com. 2020 model year not available in US."
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "seltos",
+      "notUS": false,
+      "notes": "US vehicle",
+      "tires": ["215/55R17", "235/45R18"],
+      "wheels": { "diameter": [17, 18], "boltPattern": "5x114.3" }
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "seltos",
+      "notUS": false,
+      "notes": "US vehicle",
+      "tires": ["215/55R17", "235/45R18"],
+      "wheels": { "diameter": [17, 18], "boltPattern": "5x114.3" }
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "seltos",
+      "notUS": false,
+      "notes": "US vehicle",
+      "tires": ["215/55R17", "235/45R18"],
+      "wheels": { "diameter": [17, 18], "boltPattern": "5x114.3" }
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "soul",
+      "notUS": true,
+      "notes": "US Soul starts 2010 on tiresize.com. 2008 model year not available in US."
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "soul",
+      "notUS": true,
+      "notes": "US Soul starts 2010 on tiresize.com. 2009 model year not available in US."
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "spectra-wing",
+      "notUS": true,
+      "notes": "Spectra-Wing model name not used in US. US had 'Spectra' sedan/hatchback."
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "spectra-wing",
+      "notUS": true,
+      "notes": "Spectra-Wing model name not used in US. US had 'Spectra' sedan/hatchback."
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "spectra-wing",
+      "notUS": true,
+      "notes": "Spectra-Wing model name not used in US. US had 'Spectra' sedan/hatchback."
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "spectra-wing",
+      "notUS": true,
+      "notes": "Spectra-Wing model name not used in US. US had 'Spectra' sedan/hatchback."
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "spectra5",
+      "notUS": false,
+      "notes": "US: Listed as 'Spectra 5' trim on tiresize.com",
+      "tires": ["195/60R15", "205/50R16"],
+      "wheels": { "diameter": [15, 16], "boltPattern": "4x114.3" }
+    },
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "spectra5",
+      "notUS": false,
+      "notes": "US: Listed as 'Spectra 5' trim on tiresize.com",
+      "tires": ["205/50R16"],
+      "wheels": { "diameter": 16, "boltPattern": "4x114.3" }
+    },
+    {
+      "year": 2007,
+      "make": "kia",
+      "model": "spectra5",
+      "notUS": false,
+      "notes": "US: Listed as 'Spectra 5 SX' trim on tiresize.com",
+      "tires": ["205/50R16"],
+      "wheels": { "diameter": 16, "boltPattern": "4x114.3" }
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "spectra5",
+      "notUS": false,
+      "notes": "US: Listed as 'Spectra 5 SX' trim on tiresize.com",
+      "tires": ["205/50R16"],
+      "wheels": { "diameter": 16, "boltPattern": "4x114.3" }
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "spectra5",
+      "notUS": false,
+      "notes": "US: Listed as 'Spectra 5 SX' trim on tiresize.com",
+      "tires": ["205/50R16"],
+      "wheels": { "diameter": 16, "boltPattern": "4x114.3" }
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "tonic",
+      "notUS": true,
+      "notes": "Kia Stonic/Tonic not sold in US market. Available in Europe/Korea."
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "tonic",
+      "notUS": true,
+      "notes": "Kia Stonic/Tonic not sold in US market. Available in Europe/Korea."
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "tonic",
+      "notUS": true,
+      "notes": "Kia Stonic/Tonic not sold in US market. Available in Europe/Korea."
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "tonic",
+      "notUS": true,
+      "notes": "Kia Stonic/Tonic not sold in US market. Available in Europe/Korea."
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "vigato",
+      "notUS": true,
+      "notes": "Kia Vigato not sold in US market."
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "visto",
+      "notUS": true,
+      "notes": "Kia Visto (kei car) not sold in US market. Sold in Asia."
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "visto",
+      "notUS": true,
+      "notes": "Kia Visto (kei car) not sold in US market. Sold in Asia."
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "visto",
+      "notUS": true,
+      "notes": "Kia Visto (kei car) not sold in US market. Sold in Asia."
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "visto",
+      "notUS": true,
+      "notes": "Kia Visto (kei car) not sold in US market. Sold in Asia."
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "visto",
+      "notUS": true,
+      "notes": "Kia Visto (kei car) not sold in US market. Sold in Asia."
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "x-trek",
+      "notUS": true,
+      "notes": "Kia X-Trek not sold in US market."
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "x-trek",
+      "notUS": true,
+      "notes": "Kia X-Trek not sold in US market."
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "x-trek",
+      "notUS": true,
+      "notes": "Kia X-Trek not sold in US market."
+    },
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "x-trek",
+      "notUS": true,
+      "notes": "Kia X-Trek not sold in US market."
+    },
+    {
+      "year": 2000,
+      "make": "land-rover",
+      "model": "discovery-2",
+      "notUS": false,
+      "notes": "US: Listed as 'Discovery Series II' on tiresize.com",
+      "tires": ["255/65R16", "255/55R18"],
+      "wheels": { "diameter": [16, 18], "boltPattern": "5x120" }
+    },
+    {
+      "year": 2001,
+      "make": "land-rover",
+      "model": "discovery-2",
+      "notUS": false,
+      "notes": "US: Listed as 'Discovery Series II' on tiresize.com",
+      "tires": ["255/65R16", "255/55R18"],
+      "wheels": { "diameter": [16, 18], "boltPattern": "5x120" }
+    },
+    {
+      "year": 2002,
+      "make": "land-rover",
+      "model": "discovery-2",
+      "notUS": false,
+      "notes": "US: Listed as 'Discovery Series II' on tiresize.com",
+      "tires": ["255/65R16", "255/55R18"],
+      "wheels": { "diameter": [16, 18], "boltPattern": "5x120" }
+    },
+    {
+      "year": 2003,
+      "make": "land-rover",
+      "model": "discovery-2",
+      "notUS": false,
+      "notes": "US: Listed as 'Discovery 4.6' trims on tiresize.com",
+      "tires": ["255/65R16", "255/55R18"],
+      "wheels": { "diameter": [16, 18], "boltPattern": "5x120" }
+    },
+    {
+      "year": 2004,
+      "make": "land-rover",
+      "model": "discovery-2",
+      "notUS": false,
+      "notes": "US: Listed as 'Discovery 4.6' trims on tiresize.com",
+      "tires": ["255/65R16", "255/55R18"],
+      "wheels": { "diameter": [16, 18], "boltPattern": "5x120" }
+    },
+    {
+      "year": 2004,
+      "make": "land-rover",
+      "model": "discovery-3",
+      "notUS": true,
+      "notes": "Discovery-3 model name not used in US. US model is 'LR3' (2005-2009). 2004 not available."
+    },
+    {
+      "year": 2005,
+      "make": "land-rover",
+      "model": "discovery-3",
+      "notUS": true,
+      "notes": "Discovery-3 model name not used in US. US equivalent is 'LR3'. Recommend mapping to LR3.",
+      "usEquivalent": { "model": "LR3", "tires": ["235/70R17", "255/60R18", "255/55R19"] }
+    },
+    {
+      "year": 2006,
+      "make": "land-rover",
+      "model": "discovery-3",
+      "notUS": true,
+      "notes": "Discovery-3 model name not used in US. US equivalent is 'LR3'. Recommend mapping to LR3.",
+      "usEquivalent": { "model": "LR3", "tires": ["255/60R18", "255/55R19"] }
+    },
+    {
+      "year": 2007,
+      "make": "land-rover",
+      "model": "discovery-3",
+      "notUS": true,
+      "notes": "Discovery-3 model name not used in US. US equivalent is 'LR3'. Recommend mapping to LR3.",
+      "usEquivalent": { "model": "LR3", "tires": ["255/60R18", "255/55R19"] }
+    },
+    {
+      "year": 2008,
+      "make": "land-rover",
+      "model": "discovery-3",
+      "notUS": true,
+      "notes": "Discovery-3 model name not used in US. US equivalent is 'LR3'. Recommend mapping to LR3.",
+      "usEquivalent": { "model": "LR3", "tires": ["255/60R18", "255/55R19"] }
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "discovery-3",
+      "notUS": true,
+      "notes": "Discovery-3 model name not used in US. US equivalent is 'LR3'. Recommend mapping to LR3.",
+      "usEquivalent": { "model": "LR3", "tires": ["255/60R18", "255/55R19"] }
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "discovery-4",
+      "notUS": true,
+      "notes": "Discovery-4 model name not used in US. US model is 'LR4' (2010-2016). 2009 not available."
+    },
+    {
+      "year": 2010,
+      "make": "land-rover",
+      "model": "discovery-4",
+      "notUS": true,
+      "notes": "Discovery-4 model name not used in US. US equivalent is 'LR4'. Recommend mapping to LR4.",
+      "usEquivalent": { "model": "LR4", "tires": ["255/55R19"] }
+    }
+  ]
+}

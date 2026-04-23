@@ -1,0 +1,1004 @@
+{
+  "batch": "batch-42-japanese",
+  "verifiedAt": "2026-04-23T00:28:00.000Z",
+  "verifiedBy": "subagent:verify-jp-42",
+  "summary": {
+    "totalInBatch": 75,
+    "valid": 36,
+    "invalid": 39,
+    "flaggedModels": [
+      "mr2 (2000) - should be mr2-spyder",
+      "mr2-roadster (all years) - UK name, not sold in US",
+      "mr2-spyder 2006 - discontinued after 2005 in US",
+      "prius 2000 - not sold in US until 2001",
+      "prius-plug-in 2016-2026 - name changed to prius-prime in 2017",
+      "prius-v 2011 - MY2012 was first US model, sold starting late 2011",
+      "prius-v 2018-2021 - discontinued after MY2017 in US"
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "Limited", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "tirewheelguide.com", "toyota.com"],
+      "notes": "2nd generation Mirai (2021+) uses 5x120 bolt pattern"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "Limited", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "tirewheelguide.com", "toyota.com"],
+      "notes": "2nd generation Mirai"
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "Limited", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "toyota.com"],
+      "notes": "2nd generation Mirai continues"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "toyota.com"],
+      "notes": "2026 confirmed - standard 19-inch black wheels for MY2026"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "MR2",
+      "status": "invalid",
+      "reason": "DUPLICATE - 'MR2' was sold as 'MR2 Spyder' in US market. Merge with mr2-spyder.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "caranddriver.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "MR2 Roadster",
+      "status": "invalid",
+      "reason": "WRONG MARKET - 'MR2 Roadster' is UK/European name. US market name is 'MR2 Spyder'.",
+      "confidence": "high",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "MR2 Roadster",
+      "status": "invalid",
+      "reason": "WRONG MARKET - 'MR2 Roadster' is UK/European name. US market name is 'MR2 Spyder'.",
+      "confidence": "high",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "MR2 Roadster",
+      "status": "invalid",
+      "reason": "WRONG MARKET - 'MR2 Roadster' is UK/European name. US market name is 'MR2 Spyder'.",
+      "confidence": "high",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "MR2 Roadster",
+      "status": "invalid",
+      "reason": "WRONG MARKET - 'MR2 Roadster' is UK/European name. US market name is 'MR2 Spyder'.",
+      "confidence": "high",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "MR2 Roadster",
+      "status": "invalid",
+      "reason": "WRONG MARKET - 'MR2 Roadster' is UK/European name. US market name is 'MR2 Spyder'.",
+      "confidence": "high",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "MR2 Roadster",
+      "status": "invalid",
+      "reason": "WRONG MARKET - 'MR2 Roadster' is UK/European name. US market name is 'MR2 Spyder'.",
+      "confidence": "high",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "MR2 Roadster",
+      "status": "invalid",
+      "reason": "MODEL YEAR INVALID + WRONG MARKET - MR2 discontinued after 2005 in US. 'Roadster' is UK name.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "MR2 Roadster",
+      "status": "invalid",
+      "reason": "MODEL YEAR INVALID + WRONG MARKET - MR2 discontinued after 2005 in US. 'Roadster' is UK name.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "MR2 Spyder",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6 front / 16x7 rear", "oemTireSize": "185/55R15 front / 215/45R16 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "3rd gen MR2, staggered wheel/tire setup"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "MR2 Spyder",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6 front / 16x7 rear", "oemTireSize": "185/55R15 front / 215/45R16 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "No changes from 2000 MY"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "MR2 Spyder",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6 front / 16x7 rear", "oemTireSize": "185/55R15 front / 215/45R16 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "SMT (Sequential Manual Transmission) option added"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "MR2 Spyder",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6 front / 16x7 rear", "oemTireSize": "185/55R15 front / 215/45R16 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tflcar.com"],
+      "notes": "Facelift year, 6-speed manual added"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "MR2 Spyder",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6 front / 16x7 rear", "oemTireSize": "185/55R15 front / 215/45R16 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tflcar.com"],
+      "notes": "LSD added as option"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "MR2 Spyder",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6 front / 16x7 rear", "oemTireSize": "185/55R15 front / 215/45R16 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "Final model year in US"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "MR2 Spyder",
+      "status": "invalid",
+      "reason": "MODEL YEAR INVALID - MR2 Spyder discontinued in US after 2005 model year",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Prius",
+      "status": "invalid",
+      "reason": "MODEL YEAR INVALID - Prius not sold in US until 2001 (2000 was Japan-only)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "toyota.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Prius",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota.com"],
+      "notes": "First year Prius sold in US (NHW11)"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Prius",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "1st gen continued"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Prius",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of 1st gen in US (2nd gen XW20 launched mid-2003)"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6", "oemTireSize": "195/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["go-parts.com", "toyota.com pressroom"],
+      "notes": "First Prius PHEV, based on 3rd gen Prius"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6", "oemTireSize": "195/65R15"},
+        {"name": "Advanced", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["go-parts.com"],
+      "notes": "Based on 3rd gen Prius"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6", "oemTireSize": "195/65R15"},
+        {"name": "Advanced", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["go-parts.com"],
+      "notes": "Based on 3rd gen Prius"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6", "oemTireSize": "195/65R15"},
+        {"name": "Advanced", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["go-parts.com", "encycarpedia.com"],
+      "notes": "Final year of 1st gen Prius Plug-in"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME INVALID - No 2016 'Prius Plug-in' in US. Gap year before Prius Prime launched in 2017.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "toyota.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME INVALID - 2017+ PHEV is called 'Prius Prime', not 'Prius Plug-in'",
+      "suggestedModel": "Prius Prime",
+      "confidence": "high",
+      "sources": ["toyota.com", "caranddriver.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME INVALID - 2017+ PHEV is called 'Prius Prime', not 'Prius Plug-in'",
+      "suggestedModel": "Prius Prime",
+      "confidence": "high",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME INVALID - 2017+ PHEV is called 'Prius Prime', not 'Prius Plug-in'",
+      "suggestedModel": "Prius Prime",
+      "confidence": "high",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME INVALID - 2017+ PHEV is called 'Prius Prime', not 'Prius Plug-in'",
+      "suggestedModel": "Prius Prime",
+      "confidence": "high",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME INVALID - 2017+ PHEV is called 'Prius Prime', not 'Prius Plug-in'",
+      "suggestedModel": "Prius Prime",
+      "confidence": "high",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME INVALID - 2017+ PHEV is called 'Prius Prime', not 'Prius Plug-in'",
+      "suggestedModel": "Prius Prime",
+      "confidence": "high",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME INVALID - 2017-2024 PHEV is called 'Prius Prime'. 2025+ reverts to 'Prius PHEV'.",
+      "suggestedModel": "Prius Prime",
+      "confidence": "high",
+      "sources": ["toyota.com", "motortrend.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME INVALID - 2017-2024 PHEV is called 'Prius Prime'",
+      "suggestedModel": "Prius Prime",
+      "confidence": "high",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME CHANGED - 2025+ is officially 'Prius PHEV' (not 'Prius Plug-in' or 'Prius Prime')",
+      "suggestedModel": "Prius PHEV",
+      "confidence": "high",
+      "sources": ["motortrend.com", "cars.usnews.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "status": "invalid",
+      "reason": "MODEL NAME CHANGED - 2025+ is officially 'Prius PHEV'",
+      "suggestedModel": "Prius PHEV",
+      "confidence": "high",
+      "sources": ["motortrend.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Prius Prime",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Plus", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "Premium", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "Advanced", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "toyota.com"],
+      "notes": "First year of Prius Prime (2nd gen PHEV)"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Prius Prime",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Plus", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "Premium", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "Advanced", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Based on 4th gen Prius"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Prius Prime",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Plus", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "Premium", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "Advanced", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Based on 4th gen Prius"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Prius Prime",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "XLE", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "Limited", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Trim names changed to LE/XLE/Limited"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Prius Prime",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "XLE", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "Limited", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Based on 4th gen Prius"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Prius Prime",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "XLE", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"},
+        {"name": "Limited", "oemWheelSize": "15x6.5", "oemTireSize": "195/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of 4th gen Prius Prime"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Prius Prime",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "17x6.5", "oemTireSize": "195/50R19"},
+        {"name": "XSE", "oemWheelSize": "19x7.5", "oemTireSize": "195/50R19"},
+        {"name": "XSE Premium", "oemWheelSize": "19x7.5", "oemTireSize": "195/50R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "reddit.com/r/PriusPrime"],
+      "notes": "All-new 5th gen. BOLT PATTERN CHANGED to 5x114.3"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Prius Prime",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "17x6.5", "oemTireSize": "195/50R19"},
+        {"name": "XSE", "oemWheelSize": "19x7.5", "oemTireSize": "195/50R19"},
+        {"name": "XSE Premium", "oemWheelSize": "19x7.5", "oemTireSize": "195/50R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"],
+      "notes": "Final year of 'Prius Prime' name. 2025+ renamed to 'Prius PHEV'"
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "invalid",
+      "reason": "MODEL YEAR INVALID - Prius V launched as 2012 model year in US (sold starting Oct 2011)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "greencarreports.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Two", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Three", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Five", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota.com"],
+      "notes": "First year Prius V in US"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Two", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Three", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Five", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Two", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Three", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Five", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Two", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Three", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Five", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Facelift year"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Two", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Three", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Five", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Two", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Three", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "Five", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota.com"],
+      "notes": "Final year in US market"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "invalid",
+      "reason": "MODEL YEAR INVALID - Prius V discontinued in US after 2017 model year",
+      "confidence": "high",
+      "sources": ["toyota.com", "greencarreports.com", "wikipedia.org"]
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "invalid",
+      "reason": "MODEL YEAR INVALID - Prius V discontinued in US after 2017 model year",
+      "confidence": "high",
+      "sources": ["toyota.com", "greencarreports.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "invalid",
+      "reason": "MODEL YEAR INVALID - Prius V discontinued in US after 2017 (continued in Japan until 2021)",
+      "confidence": "high",
+      "sources": ["toyota.com", "wikipedia.org"]
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Prius V",
+      "status": "invalid",
+      "reason": "MODEL YEAR INVALID - Prius V discontinued in US after 2017 (Japan production ended March 2021)",
+      "confidence": "high",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2nd gen (XA20)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "L", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2nd gen (XA20)"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "L", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2nd gen (XA20)"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "L", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2nd gen (XA20)"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "L", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2nd gen (XA20)"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "L", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of 2nd gen (XA20). 3rd gen launched same year."
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "225/65R17"},
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "3rd gen (XA30)"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "225/65R17"},
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "3rd gen (XA30)"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "225/65R17"},
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "3rd gen (XA30)"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "225/65R17"},
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "3rd gen (XA30) facelift"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "17x7", "oemTireSize": "225/65R17"},
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "225/65R17"},
+        {"name": "XLE Premium", "oemWheelSize": "19x7.5", "oemTireSize": "235/55R19"},
+        {"name": "Adventure", "oemWheelSize": "19x7.5", "oemTireSize": "235/55R19"},
+        {"name": "TRD Off-Road", "oemWheelSize": "18x7", "oemTireSize": "225/60R18"},
+        {"name": "Limited", "oemWheelSize": "19x7.5", "oemTireSize": "235/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com"],
+      "notes": "5th gen (XA50) continues"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "1st gen - first year"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "1st gen"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "1st gen"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "1st gen"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "1st gen - tire size updated on SR5"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "1st gen"
+    }
+  ]
+}

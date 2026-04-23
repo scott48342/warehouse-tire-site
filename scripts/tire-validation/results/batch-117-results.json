@@ -1,0 +1,1044 @@
+{
+  "batchId": "117",
+  "processedAt": "2026-04-21T22:30:00.000Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2005,
+      "make": "Mercury",
+      "model": "Mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["235/70R16", "245/65R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "235/70R16", "wheelSize": "16"},
+        {"trim": "Luxury", "tireSize": "245/65R17", "wheelSize": "17"},
+        {"trim": "Premier", "tireSize": "245/65R17", "wheelSize": "17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current data has 235/65R17 and 245/60R18 - should be 245/65R17. No 18\" option confirmed for 2005."
+    },
+    {
+      "year": 2004,
+      "make": "Mercury",
+      "model": "Mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["235/70R16", "245/65R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "235/70R16", "wheelSize": "16"},
+        {"trim": "Convenience", "tireSize": "235/70R16", "wheelSize": "16"},
+        {"trim": "Luxury", "tireSize": "245/65R17", "wheelSize": "17"},
+        {"trim": "Premier", "tireSize": "245/65R17", "wheelSize": "17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current data has incorrect 235/65R17 and 245/60R18. Correct: 235/70R16 base, 245/65R17 upper trims."
+    },
+    {
+      "year": 2003,
+      "make": "Mercury",
+      "model": "Mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "245/70R16", "wheelSize": "16"},
+        {"trim": "Luxury", "tireSize": "245/65R17", "wheelSize": "17"},
+        {"trim": "Premier", "tireSize": "245/65R17", "wheelSize": "17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2003 uses 245/70R16 base (not 235). Current data incorrect."
+    },
+    {
+      "year": 2002,
+      "make": "Mercury",
+      "model": "Mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["245/70R16", "245/65R17"], "wheelSizes": ["16", "17"]},
+        {"trim": "4WD", "tireSizes": ["245/70R16", "245/65R17"], "wheelSizes": ["16", "17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "2002 redesign uses 245-width tires. Current data has wrong sizes."
+    },
+    {
+      "year": 2001,
+      "make": "Mercury",
+      "model": "Mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["225/70R15", "235/75R15"],
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["225/70R15", "235/75R15"], "wheelSizes": ["15"]},
+        {"trim": "4WD", "tireSize": "235/75R15", "wheelSize": "15"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2001 is first-gen with 15\" wheels only. Current data completely wrong (shows 16/17/18)."
+    },
+    {
+      "year": 2000,
+      "make": "Mercury",
+      "model": "Mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["225/70R15", "235/75R15"],
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["225/70R15", "235/75R15"], "wheelSizes": ["15"]},
+        {"trim": "4WD", "tireSize": "235/75R15", "wheelSize": "15"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2000 is first-gen with 15\" wheels only. Current data completely wrong."
+    },
+    {
+      "year": 2009,
+      "make": "Mercury",
+      "model": "Sable",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": [
+        {"trim": "AWD", "tireSize": "215/60R17", "wheelSize": "17"},
+        {"trim": "FWD", "tireSize": "215/60R17", "wheelSize": "17"},
+        {"trim": "Premier AWD", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "Premier FWD", "tireSize": "225/55R18", "wheelSize": "18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2008-2009 Sable is a completely different car (Ford Five Hundred rebrand). Uses 17\"/18\" wheels, not 16\"."
+    },
+    {
+      "year": 2008,
+      "make": "Mercury",
+      "model": "Sable",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": [
+        {"trim": "AWD", "tireSize": "215/60R17", "wheelSize": "17"},
+        {"trim": "FWD", "tireSize": "215/60R17", "wheelSize": "17"},
+        {"trim": "Premier AWD", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "Premier FWD", "tireSize": "225/55R18", "wheelSize": "18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2008-2009 Sable is rebadged Five Hundred. 17\"/18\" wheels standard."
+    },
+    {
+      "year": 2005,
+      "make": "Mercury",
+      "model": "Sable",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": [
+        {"trim": "GS Sedan", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Sedan", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Wagon", "tireSize": "215/60R16", "wheelSize": "16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2005 Sable (old gen) only uses 16\" wheels. Remove 215/55R17."
+    },
+    {
+      "year": 2004,
+      "make": "Mercury",
+      "model": "Sable",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": [
+        {"trim": "GS", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Premium", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Premium Wagon", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Wagon", "tireSize": "215/60R16", "wheelSize": "16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2004 Sable only uses 16\" wheels with 215/60R16. Remove 215/55R17."
+    },
+    {
+      "year": 2003,
+      "make": "Mercury",
+      "model": "Sable",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": [
+        {"trim": "GS", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Premium", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Premium Wagon", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Wagon", "tireSize": "215/60R16", "wheelSize": "16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "16\" only. Remove 17\" option."
+    },
+    {
+      "year": 2002,
+      "make": "Mercury",
+      "model": "Sable",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": [
+        {"trim": "GS", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Premium", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Premium Wagon", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Wagon", "tireSize": "215/60R16", "wheelSize": "16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "16\" only. Remove 17\" option."
+    },
+    {
+      "year": 2001,
+      "make": "Mercury",
+      "model": "Sable",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": [
+        {"trim": "GS", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Premium", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Premium Wagon", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Wagon", "tireSize": "215/60R16", "wheelSize": "16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "16\" only. Remove 17\" option."
+    },
+    {
+      "year": 2000,
+      "make": "Mercury",
+      "model": "Sable",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": ["205/60R16", "215/60R16"],
+      "trims": [
+        {"trim": "GS", "tireSize": "205/60R16", "wheelSize": "16"},
+        {"trim": "LS", "tireSize": "205/60R16", "wheelSize": "16"},
+        {"trim": "LS Premium", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "LS Premium Wagon", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Wagon", "tireSize": "215/60R16", "wheelSize": "16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2000 has both 205/60R16 (base) and 215/60R16 (premium). Remove 17\" option."
+    },
+    {
+      "year": 2026,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18"], "wheelSizes": ["17", "18"]},
+        {"trim": "Cooper S ALL4", "tireSizes": ["225/45R17", "225/40R18"], "wheelSizes": ["17", "18"]},
+        {"trim": "John Cooper Works ALL4", "tireSizes": ["225/40R18", "235/35R19"], "wheelSizes": ["18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Gen 2 Clubman (2016+) doesn't have 16\" or 205-width tires. Current data appears to be old gen."
+    },
+    {
+      "year": 2025,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18"], "wheelSizes": ["17", "18"]},
+        {"trim": "Cooper S ALL4", "tireSizes": ["225/45R17", "225/40R18"], "wheelSizes": ["17", "18"]},
+        {"trim": "John Cooper Works ALL4", "tireSizes": ["225/40R18", "235/35R19"], "wheelSizes": ["18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Gen 2 Clubman. Correct sizes are 225-width on 17-19\" wheels."
+    },
+    {
+      "year": 2024,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18"], "wheelSizes": ["17", "18"]},
+        {"trim": "Cooper S ALL4", "tireSizes": ["225/45R17", "225/40R18"], "wheelSizes": ["17", "18"]},
+        {"trim": "John Cooper Works ALL4", "tireSizes": ["225/40R18", "235/35R19"], "wheelSizes": ["18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current data incorrect. Needs update to match Gen 2 specifications."
+    },
+    {
+      "year": 2023,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18"], "wheelSizes": ["17", "18"]},
+        {"trim": "John Cooper Works ALL4", "tireSizes": ["225/40R18", "235/35R19"], "wheelSizes": ["18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Gen 2 Clubman"
+    },
+    {
+      "year": 2022,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18"], "wheelSizes": ["17", "18"]},
+        {"trim": "John Cooper Works ALL4", "tireSizes": ["225/40R18", "235/35R19"], "wheelSizes": ["18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Gen 2 Clubman"
+    },
+    {
+      "year": 2021,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18"], "wheelSizes": ["17", "18"]},
+        {"trim": "John Cooper Works ALL4", "tireSizes": ["225/40R18", "235/35R19"], "wheelSizes": ["18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Gen 2 Clubman"
+    },
+    {
+      "year": 2020,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["205/55R16", "225/45R17", "225/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18", "235/35R19"], "wheelSizes": ["17", "18", "19"]},
+        {"trim": "John Cooper Works ALL4", "tireSizes": ["225/40R18", "235/35R19"], "wheelSizes": ["18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "2020 Clubman base has 205/55R16 (not 205/60R16). Width correct but aspect ratio off."
+    },
+    {
+      "year": 2019,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["205/55R16", "225/45R17", "225/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18", "235/35R19"], "wheelSizes": ["17", "18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Aspect ratios incorrect"
+    },
+    {
+      "year": 2018,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["205/55R16", "225/45R17", "225/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18", "235/35R19"], "wheelSizes": ["17", "18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Aspect ratios incorrect"
+    },
+    {
+      "year": 2017,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["205/55R16", "225/45R17", "225/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18", "235/35R19"], "wheelSizes": ["17", "18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Aspect ratios incorrect"
+    },
+    {
+      "year": 2016,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["205/55R16", "225/45R17", "225/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["225/45R17", "225/40R18", "235/35R19"], "wheelSizes": ["17", "18", "19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "First year Gen 2. Aspect ratios off."
+    },
+    {
+      "year": 2015,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["195/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "John Cooper Works", "tireSize": "205/45R17", "wheelSize": "17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Last year Gen 1. Missing 15\" base option, wrong aspect ratios on 17/18."
+    },
+    {
+      "year": 2014,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Missing 175/65R15 base option"
+    },
+    {
+      "year": 2013,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Missing 175/65R15 base option"
+    },
+    {
+      "year": 2012,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["195/55R16", "205/45R17", "205/40R18", "175/60R16", "205/40ZR18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Has incorrect 175/60R16 and duplicate 205/40ZR18. Should be 175/65R15."
+    },
+    {
+      "year": 2011,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Missing 175/65R15"
+    },
+    {
+      "year": 2010,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Missing 175/65R15"
+    },
+    {
+      "year": 2009,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Missing 175/65R15"
+    },
+    {
+      "year": 2008,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": ["195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "First year. Missing 175/65R15"
+    },
+    {
+      "year": 2007,
+      "make": "MINI",
+      "model": "Clubman",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "status": "INVALID_YEAR",
+      "notes": "MINI Clubman did not exist in 2007. First model year was 2008."
+    },
+    {
+      "year": 2025,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB. Add: 175/65R15, 195/55R16, 205/45R17, 205/40R18"
+    },
+    {
+      "year": 2024,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "John Cooper Works", "tireSizes": ["205/45R17", "205/40R18"], "wheelSizes": ["17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB. Add validated sizes."
+    },
+    {
+      "year": 2023,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2022,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2021,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2020,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "John Cooper Works", "tireSizes": ["205/45R17", "205/40R18"], "wheelSizes": ["17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2019,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2018,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2017,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB. Gen 3 starts 2016."
+    },
+    {
+      "year": 2016,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB. First year Gen 3."
+    },
+    {
+      "year": 2015,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB. Last year Gen 2."
+    },
+    {
+      "year": 2014,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2013,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2012,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2011,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2010,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "John Cooper Works", "tireSize": "205/45R17", "wheelSize": "17"}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2009,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB. First year Gen 2."
+    },
+    {
+      "year": 2008,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["195/55R16", "205/45R17"], "wheelSizes": ["16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB. Last year Gen 1."
+    },
+    {
+      "year": 2007,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["195/55R16", "205/45R17"], "wheelSizes": ["16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2006,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["195/55R16", "205/45R17"], "wheelSizes": ["16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB"
+    },
+    {
+      "year": 2005,
+      "make": "MINI",
+      "model": "Convertible",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Cooper", "tireSizes": ["195/55R16", "205/45R17"], "wheelSizes": ["16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Empty in DB. First year Convertible."
+    },
+    {
+      "year": 2026,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop 2 Door", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Hardtop 4 Door", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not OEM - remove or verify if aftermarket option."
+    },
+    {
+      "year": 2025,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop 2 Door", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Hardtop 4 Door", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not confirmed OEM"
+    },
+    {
+      "year": 2024,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Convertible", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Hardtop 2 Door", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Hardtop 4 Door", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S Hardtop", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "Cooper S Convertible", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "John Cooper Works", "tireSizes": ["205/45R17", "205/40R18"], "wheelSizes": ["17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 questionable"
+    },
+    {
+      "year": 2023,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not OEM"
+    },
+    {
+      "year": 2022,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not OEM"
+    },
+    {
+      "year": 2021,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not OEM"
+    },
+    {
+      "year": 2020,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop 2 Door", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Hardtop 4 Door", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "SE (Electric)", "tireSizes": ["195/55R16", "205/45R17"], "wheelSizes": ["16", "17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not OEM"
+    },
+    {
+      "year": 2019,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not OEM"
+    },
+    {
+      "year": 2018,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18", "175/60R16", "195/55ZR16", "185/50R17", "205/45ZR17", "205/40ZR18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Many extra sizes not OEM. Clean up: remove 175/60R16, 195/55ZR16, 185/50R17, 205/45ZR17, 205/40ZR18, 225/35R18"
+    },
+    {
+      "year": 2017,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not OEM"
+    },
+    {
+      "year": 2016,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not OEM"
+    },
+    {
+      "year": 2015,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop 2 Door", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Hardtop 4 Door", "tireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["15", "16", "17", "18"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "John Cooper Works", "tireSize": "205/45R17", "wheelSize": "17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not OEM"
+    },
+    {
+      "year": 2014,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "225/35R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/35R18 not OEM"
+    },
+    {
+      "year": 2013,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18", "175/60R16", "205/40ZR18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Remove 175/60R16 and 205/40ZR18 (duplicates/typos)"
+    },
+    {
+      "year": 2012,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MATCH",
+      "notes": "Data correct"
+    },
+    {
+      "year": 2011,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MATCH",
+      "notes": "Data correct"
+    },
+    {
+      "year": 2010,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Clubman", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Convertible", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "John Cooper Works", "tireSize": "205/45R17", "wheelSize": "17"}
+      ],
+      "status": "MATCH",
+      "notes": "Data correct"
+    },
+    {
+      "year": 2009,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16", "205/45R17"], "wheelSizes": ["15", "16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MATCH",
+      "notes": "Data correct"
+    },
+    {
+      "year": 2008,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Clubman", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Convertible", "tireSizes": ["195/55R16", "205/45R17"], "wheelSizes": ["16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]},
+        {"trim": "John Cooper Works", "tireSize": "205/45R17", "wheelSize": "17"}
+      ],
+      "status": "MATCH",
+      "notes": "Data correct"
+    },
+    {
+      "year": 2007,
+      "make": "MINI",
+      "model": "Cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "validatedTireSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"],
+      "trims": [
+        {"trim": "Hardtop", "tireSizes": ["175/65R15", "195/55R16"], "wheelSizes": ["15", "16"]},
+        {"trim": "Convertible", "tireSizes": ["195/55R16", "205/45R17"], "wheelSizes": ["16", "17"]},
+        {"trim": "Cooper S", "tireSizes": ["195/55R16", "205/45R17", "205/40R18"], "wheelSizes": ["16", "17", "18"]}
+      ],
+      "status": "MATCH",
+      "notes": "Data correct"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "match": 7,
+    "partialMatch": 6,
+    "mismatch": 40,
+    "missingData": 21,
+    "invalidYear": 1
+  },
+  "recommendations": [
+    "Mercury Mountaineer 2000-2001: Change to 15\" sizes (225/70R15, 235/75R15). Current 16/17/18\" data is wrong.",
+    "Mercury Mountaineer 2002-2005: Use 245/70R16, 245/65R17 (not 235 width).",
+    "Mercury Sable 2000-2005: Remove 215/55R17 - these years only have 16\" wheels.",
+    "Mercury Sable 2008-2009: Change to 215/60R17, 225/55R18 - completely different generation.",
+    "MINI Clubman 2008-2015 (Gen 1): Add 175/65R15 base option.",
+    "MINI Clubman 2016-2026 (Gen 2): Update aspect ratios - use 55R16, 45R17, 40R18, 35R19.",
+    "MINI Convertible ALL YEARS: Add tire data - currently empty.",
+    "MINI Cooper ALL YEARS: Remove 225/35R18 - not a confirmed OEM size."
+  ]
+}

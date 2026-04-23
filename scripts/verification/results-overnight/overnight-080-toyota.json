@@ -1,0 +1,154 @@
+{
+  "batchId": "overnight-080-toyota",
+  "verifiedAt": "2025-07-22T05:30:00Z",
+  "totalVehicles": 68,
+  "summary": {
+    "passed": 62,
+    "failed": 2,
+    "warnings": 6
+  },
+  "vehicleGroups": [
+    {
+      "model": "Toyota Camry",
+      "years": "2020-2026",
+      "generation": "8th/9th gen (XV70/XV80)",
+      "vehicleCount": 60,
+      "status": "PASS",
+      "verification": {
+        "boltPattern": {
+          "current": "5x114.3",
+          "expected": "5x114.3",
+          "status": "CORRECT"
+        },
+        "hubBore": {
+          "current": "60.1",
+          "expected": "60.1",
+          "status": "CORRECT"
+        },
+        "wheelSizes": {
+          "current": ["16x6.5", "17x7", "17x7.5", "18x8", "19x8", "19x8.5"],
+          "expected": ["16x6.5", "17x7", "17x7.5", "18x8", "19x8"],
+          "status": "CORRECT",
+          "notes": "19x8.5 correctly marked as aftermarket"
+        },
+        "tireSizes": {
+          "current": ["205/65R16", "215/55R17", "235/45R18", "235/40R19", "235/40ZR19"],
+          "expected": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+          "status": "CORRECT"
+        }
+      },
+      "notes": "All Camry trims verified. Both 8th gen (2018-2023) and 9th gen (2024+) share same bolt pattern and hub bore."
+    },
+    {
+      "model": "Toyota Celica",
+      "years": "2000-2005",
+      "generation": "7th gen (T230)",
+      "vehicleCount": 6,
+      "status": "WARNING",
+      "verification": {
+        "boltPattern": {
+          "current": "5x100",
+          "expected": "5x100",
+          "status": "CORRECT"
+        },
+        "hubBore": {
+          "current": "54.1",
+          "expected": "54.1",
+          "status": "CORRECT"
+        },
+        "wheelSizes": {
+          "current": ["15x6.5", "16x6.5", "17x7"],
+          "expected": ["15x6.5", "16x6.5", "17x7"],
+          "status": "CORRECT"
+        },
+        "tireSizes": {
+          "current": ["195/65R15"],
+          "expected": ["195/65R15", "205/50R16", "205/55R16", "215/45R17"],
+          "status": "INCOMPLETE",
+          "missingTireSizes": ["205/50R16", "205/55R16", "215/45R17"]
+        }
+      },
+      "notes": "Tire sizes incomplete - only base trim sizes included. GT and GT-S trims came with larger tires.",
+      "recommendedFix": "Add tire sizes: 205/50R16 (GT), 205/55R16 (common upgrade), 215/45R17 (optional)"
+    },
+    {
+      "model": "Toyota Corolla",
+      "years": "2000-2001",
+      "generation": "E110 (8th gen)",
+      "vehicleCount": 2,
+      "status": "FAIL",
+      "verification": {
+        "boltPattern": {
+          "current": "5x114.3",
+          "expected": "4x100",
+          "status": "INCORRECT",
+          "severity": "CRITICAL"
+        },
+        "hubBore": {
+          "current": "60.1",
+          "expected": "54.1",
+          "status": "INCORRECT",
+          "severity": "CRITICAL"
+        },
+        "wheelSizes": {
+          "current": ["15x6", "16x6.5", "17x7", "18x7.5"],
+          "expected": ["14x5.5", "15x6"],
+          "status": "INCORRECT",
+          "severity": "HIGH",
+          "notes": "2000-2001 Corolla maxed at 14-15 inch wheels"
+        },
+        "tireSizes": {
+          "current": ["175/65R14", "185/65R14"],
+          "expected": ["175/65R14", "185/65R14", "185/65R15", "195/65R15"],
+          "status": "PARTIALLY_CORRECT"
+        },
+        "trims": {
+          "current": "L, LE, SE, XLE, XSE",
+          "expected": "CE, LE, S, VE",
+          "status": "INCORRECT",
+          "notes": "Modern trim names incorrectly applied to 2000-2001 model years"
+        }
+      },
+      "notes": "CRITICAL: Data appears to be incorrectly seeded from modern Corolla specs. 2000-2001 E110 Corolla used 4x100 bolt pattern with 54.1mm hub bore.",
+      "requiredFixes": [
+        {
+          "field": "boltPattern",
+          "from": "5x114.3",
+          "to": "4x100"
+        },
+        {
+          "field": "hubBore",
+          "from": "60.1",
+          "to": "54.1"
+        },
+        {
+          "field": "wheelSizes",
+          "action": "Replace with correct sizes for E110 generation",
+          "correctSizes": [
+            {"diameter": 14, "width": 5.5, "offset": 45},
+            {"diameter": 15, "width": 6, "offset": 45}
+          ]
+        },
+        {
+          "field": "trim",
+          "action": "Replace modern trim names with period-correct: CE, LE, S, VE"
+        }
+      ],
+      "affectedIds": [
+        "c1d60b82-1f2e-49c2-ac38-eb434aafc1ab",
+        "b05da5ba-73de-42e1-9e00-c3c8898ec28c"
+      ]
+    }
+  ],
+  "dataQualityNotes": [
+    "Camry data is consistent and accurate across all years/trims",
+    "Celica data has correct core specs but incomplete tire options",
+    "Corolla 2000-2001 data is critically incorrect - appears to use modern generation specs"
+  ],
+  "recommendations": [
+    "URGENT: Fix 2000-2001 Corolla bolt pattern from 5x114.3 to 4x100",
+    "URGENT: Fix 2000-2001 Corolla hub bore from 60.1 to 54.1",
+    "Update Celica tire sizes to include GT/GT-S variants",
+    "Review other early 2000s Toyota models for similar bolt pattern errors"
+  ]
+}

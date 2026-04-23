@@ -1,0 +1,3102 @@
+﻿[
+    {
+        "year":  2015,
+        "make":  "lexus",
+        "id":  "66f86b28-e68f-4995-bcc4-b6ca48ef4fee",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/45R17",
+                                  "225/40R18",
+                                  "235/40R18",
+                                  "255/35R18"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "lexus",
+        "id":  "67d84c1a-97c1-4fae-84e7-2fbf67f41171",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/45R17",
+                                  "225/40R18",
+                                  "235/40R18",
+                                  "255/35R18"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2017,
+        "make":  "lexus",
+        "id":  "de8d370b-75d0-4072-b538-d9ddac7dd003",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/45R17",
+                                  "225/40R18",
+                                  "235/40R18",
+                                  "255/35R18"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "lexus",
+        "id":  "534e786b-7f2e-4f29-944a-e610ea17da55",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  45,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  8.5,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  8.5,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/45R17",
+                                  "225/40R18",
+                                  "235/40R18",
+                                  "255/35R18",
+                                  "225/45ZR17",
+                                  "225/40ZR18",
+                                  "255/35ZR18",
+                                  "225/35ZR19",
+                                  "255/30ZR19"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "lexus",
+        "id":  "f3f3874b-203b-4fe4-bc67-15a2586f74c5",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  45,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  8.5,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  8.5,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/45R17",
+                                  "225/40R18",
+                                  "235/40R18",
+                                  "255/35R18",
+                                  "225/45ZR17",
+                                  "225/40ZR18",
+                                  "255/35ZR18",
+                                  "225/35ZR19",
+                                  "255/30ZR19"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "lexus",
+        "id":  "3b5e2b45-f86b-4d19-be3e-4534e0b1dfef",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/45R17",
+                                  "225/40R18",
+                                  "235/40R18",
+                                  "255/35R18"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "lexus",
+        "id":  "cf120326-4370-4252-bc01-620a5dc973f8",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/40R18",
+                                  "255/35R18",
+                                  "235/35R19",
+                                  "265/30R19",
+                                  "235/45ZR18",
+                                  "235/45R18",
+                                  "235/40ZR19",
+                                  "235/40R19",
+                                  "265/35ZR19",
+                                  "265/35R19"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "lexus",
+        "id":  "29f25c67-24cb-44c6-8a42-521ee8527b17",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/40R18",
+                                  "255/35R18",
+                                  "235/35R19",
+                                  "265/30R19",
+                                  "235/45ZR18",
+                                  "235/45R18",
+                                  "235/40ZR19",
+                                  "235/40R19",
+                                  "265/35ZR19",
+                                  "265/35R19"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "lexus",
+        "id":  "ac177279-2903-413e-a568-04c1c06d4f57",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/40R18",
+                                  "255/35R18",
+                                  "235/35R19",
+                                  "265/30R19",
+                                  "235/45ZR18",
+                                  "235/45R18",
+                                  "235/40ZR19",
+                                  "235/40R19",
+                                  "265/35ZR19",
+                                  "265/35R19"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "lexus",
+        "id":  "b5c7fc4f-4b5d-4197-a9ce-e242f2ea1c17",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/40R18",
+                                  "255/35R18",
+                                  "235/35R19",
+                                  "265/30R19"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "lexus",
+        "id":  "4f866103-57c0-4741-8f51-a492e9952f87",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/40R18",
+                                  "255/35R18",
+                                  "235/35R19",
+                                  "265/30R19"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "lexus",
+        "id":  "e6fe6f9d-b2c8-47aa-95fd-4c669eb68e2d",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/40R18",
+                                  "255/35R18",
+                                  "235/35R19",
+                                  "265/30R19"
+                              ],
+        "trim":  "IS 300, IS 350, IS 500, F Sport",
+        "reason":  "lexus is specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "is",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2017,
+        "make":  "lexus",
+        "id":  "56d36e6e-5d91-44f6-9db8-3d38ba6cb92b",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/45ZR20",
+                                  "275/40ZR20",
+                                  "245/40ZR21",
+                                  "275/35ZR21"
+                              ],
+        "trim":  "LC500",
+        "reason":  "lexus lc specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lc",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "lexus",
+        "id":  "df1792c4-e1f0-4880-bfce-58874a987467",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/45ZR20",
+                                  "275/40ZR20",
+                                  "245/40ZR21",
+                                  "275/35ZR21"
+                              ],
+        "trim":  "LC500",
+        "reason":  "lexus lc specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lc",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "lexus",
+        "id":  "2a1c0a70-9735-45a6-b671-491390cdfff7",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  25,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/45ZR20",
+                                  "275/40ZR20",
+                                  "245/40ZR21",
+                                  "275/35ZR21"
+                              ],
+        "trim":  "LC500",
+        "reason":  "lexus lc specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lc",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1990,
+        "make":  "lexus",
+        "id":  "fe78e2ff-d78c-4551-ba62-123485ec78b7",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R15",
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1991,
+        "make":  "lexus",
+        "id":  "4b94714b-4007-49f2-9ddd-20128b72ae39",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R15",
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1992,
+        "make":  "lexus",
+        "id":  "e51be58d-d866-46f3-8596-173fdb64c844",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R15",
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1993,
+        "make":  "lexus",
+        "id":  "941e93ab-243c-45af-8c19-777acd78a458",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R15",
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1994,
+        "make":  "lexus",
+        "id":  "a8b776e5-10ef-4121-a9a2-5943393ba7ba",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R15",
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1995,
+        "make":  "lexus",
+        "id":  "549902cd-3f7a-4926-b7ca-42d162ed7cd5",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1996,
+        "make":  "lexus",
+        "id":  "832bf2bc-892f-4c75-9d82-353019ed3e0c",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1997,
+        "make":  "lexus",
+        "id":  "a8ba01ed-adc0-4fbc-855f-1cbe58580793",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1998,
+        "make":  "lexus",
+        "id":  "eac79107-1e32-4000-a34d-9ff0f882a7bd",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1999,
+        "make":  "lexus",
+        "id":  "35166e72-4c7c-46a8-ae9d-8f8ed1b65a22",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2000,
+        "make":  "lexus",
+        "id":  "8edd6f37-fb11-4e9f-9625-5e6bf599bc80",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R16"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2001,
+        "make":  "lexus",
+        "id":  "6a7a8c49-3c3d-4b19-9e67-afd1705d8d57",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/55R17",
+                                  "245/45R18"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2002,
+        "make":  "lexus",
+        "id":  "77d5cba7-0075-4b97-a03a-b5685ea19fd2",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/55R17",
+                                  "245/45R18"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2003,
+        "make":  "lexus",
+        "id":  "0af56f30-a8c7-4139-b31f-f97e7c32f29c",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/55R17",
+                                  "245/45R18"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2004,
+        "make":  "lexus",
+        "id":  "da8399c5-24da-427c-bdb0-f675ce423178",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/55R17",
+                                  "245/45R18"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "lexus",
+        "id":  "bc44fdb4-e9af-43b6-bf7b-7249eb94197f",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/55R17",
+                                  "245/45R18"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "lexus",
+        "id":  "0182df28-46c2-4753-8acd-ed7bac6ddf1b",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/55R17",
+                                  "245/45R18"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "lexus",
+        "id":  "00e7446c-e67f-447b-b317-3d08d749af58",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "lexus",
+        "id":  "de6b2045-690e-4195-8bee-ba06460c0976",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "lexus",
+        "id":  "9c261393-ffa9-4705-abb3-dad520b72bd2",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "lexus",
+        "id":  "b3ed90bb-ad2f-42d5-a25f-52226f0df362",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19",
+                                  "235/50ZR18",
+                                  "245/45ZR19",
+                                  "245/40ZR20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "lexus",
+        "id":  "a02d8aad-577e-4601-8271-cc197ca99f9c",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "lexus",
+        "id":  "0f5b2338-0189-425a-b93e-1649c5501190",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "lexus",
+        "id":  "e31a65d4-f048-49f6-b21b-c49188baae0e",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "lexus",
+        "id":  "a9fc1621-db2d-4ec4-bcb6-709dbaff0d61",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "lexus",
+        "id":  "cc406a2a-ce1d-44cb-98b8-1a7b6191550b",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "lexus",
+        "id":  "502bda3f-51b4-4e97-a536-193a1ec5de0d",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2017,
+        "make":  "lexus",
+        "id":  "e80142d4-76ea-4bdc-adfc-1367003d291b",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  30,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/50R18",
+                                  "245/45R19",
+                                  "235/50ZR18",
+                                  "245/45ZR19",
+                                  "235/40ZR20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "lexus",
+        "id":  "08650609-36c0-4078-b6cf-f7aca2b61f25",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/50R19",
+                                  "245/45R20",
+                                  "245/50ZR19",
+                                  "245/45ZR20",
+                                  "275/40ZR20",
+                                  "275/40R20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "lexus",
+        "id":  "07dfae7c-1bf0-4d81-a28c-e731a7a6749d",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/50R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "lexus",
+        "id":  "4adedda5-eff0-4075-8cd6-c8a3a9a112b0",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/50R19",
+                                  "245/45R20",
+                                  "245/50ZR19",
+                                  "245/45ZR20",
+                                  "275/40ZR20",
+                                  "275/40R20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "lexus",
+        "id":  "efe63bdf-df4b-4882-b758-79c5d28c941f",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/50R19",
+                                  "245/45R20",
+                                  "245/50ZR19",
+                                  "245/45ZR20",
+                                  "275/40ZR20",
+                                  "275/40R20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "lexus",
+        "id":  "d0d3a6a7-cef2-4a9d-aa48-6023e1b5e446",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/50R19",
+                                  "245/45R20",
+                                  "245/50ZR19",
+                                  "245/45ZR20",
+                                  "275/40ZR20",
+                                  "275/40R20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "lexus",
+        "id":  "4f21764d-1de0-4aa6-8a09-8a0b297d4fe5",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/50R19",
+                                  "245/45R20",
+                                  "245/50ZR19",
+                                  "245/45ZR20",
+                                  "275/40ZR20",
+                                  "275/40R20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "lexus",
+        "id":  "194ff817-42c4-4039-a812-e5d8ee75efc0",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/50R19",
+                                  "245/45R20",
+                                  "245/50ZR19",
+                                  "245/45ZR20",
+                                  "275/40ZR20",
+                                  "275/40R20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "lexus",
+        "id":  "15553082-2233-4c64-9b53-530571db4c4b",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/50R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "lexus",
+        "id":  "8774abbf-f192-47ea-9b9b-f0bd96495c77",
+        "verifiedHubBore":  "60.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/50R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "LS 500, LS 500h, F Sport",
+        "reason":  "lexus ls specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "ls",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1996,
+        "make":  "lexus",
+        "id":  "4d88719b-133c-4d92-a345-fa6b157ac9cb",
+        "verifiedHubBore":  "106.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/70R16"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "6x139.7",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1997,
+        "make":  "lexus",
+        "id":  "57b2056c-8c2d-4bf0-a12e-60bcab7d3b0b",
+        "verifiedHubBore":  "106.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/70R16"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "6x139.7",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1998,
+        "make":  "lexus",
+        "id":  "04efffc5-91cf-4e91-8ca8-b8755135def1",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/60R17",
+                                  "275/60R18"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  1999,
+        "make":  "lexus",
+        "id":  "2f306247-2213-481f-8894-1da391032c59",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/60R17",
+                                  "275/60R18"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2000,
+        "make":  "lexus",
+        "id":  "68dffa3d-7cb3-46cd-9f3b-a26352c1235b",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/70R16"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2001,
+        "make":  "lexus",
+        "id":  "c68b8358-1cb0-422a-85c2-17f72f2c9c92",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/70R16"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2002,
+        "make":  "lexus",
+        "id":  "3c6a89b3-2a00-45cd-adad-ed378dfaccd7",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/70R16"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2003,
+        "make":  "lexus",
+        "id":  "8a2c7c83-7882-4a70-9ed5-ad6c86496769",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/70R16"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2004,
+        "make":  "lexus",
+        "id":  "e1b340d0-4ea2-43bd-94bd-1c882abdd5e4",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/70R16"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "lexus",
+        "id":  "bc78e100-c1e0-4c0e-a7a8-0249480a2d5e",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/70R16"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "lexus",
+        "id":  "fc6f6b96-4db2-42d8-9079-6b29a91ef4be",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/70R16"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "lexus",
+        "id":  "92192709-a08c-4a24-9ece-4168aaa4df88",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/70R16"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "lexus",
+        "id":  "3d6fea17-10ac-47a5-bd64-6c9a6659d66d",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "lexus",
+        "id":  "8e21e21c-f5a2-47a2-a33a-ffc1307a709d",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "lexus",
+        "id":  "7422778d-2f2a-4906-8787-075d6851defd",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  9,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  22
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  54,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21",
+                                  "285/55R19",
+                                  "285/45ZR22",
+                                  "275/50R21"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "lexus",
+        "id":  "c567ad97-395d-416b-8827-c647fdc99805",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "lexus",
+        "id":  "9ac5e842-b83d-488c-ad97-fb525c457575",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  9,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  22
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  54,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21",
+                                  "285/55R19",
+                                  "285/45ZR22",
+                                  "275/50R21"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "lexus",
+        "id":  "9f28983f-f225-406b-8146-8ca8a3705796",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  9,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  22
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  54,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21",
+                                  "285/55R19",
+                                  "285/45ZR22",
+                                  "275/50R21"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "lexus",
+        "id":  "e03b5b33-1d3c-457d-b2ae-b02d41b9ff3a",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  60,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  9,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  22
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  54,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21",
+                                  "285/55R19",
+                                  "285/45ZR22",
+                                  "275/50R21"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "lexus",
+        "id":  "5511e243-56aa-427d-ad59-50189665f592",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "lexus",
+        "id":  "58b24dcb-6e3a-410e-b988-a2f14cce0084",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2017,
+        "make":  "lexus",
+        "id":  "074ecc69-a03c-4e76-94b9-6a39083bd0cb",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  54,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  9,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  22
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21",
+                                  "275/50R21",
+                                  "285/45R22"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "lexus",
+        "id":  "80fe13b2-9a76-4c34-8f1c-07190d16b684",
+        "verifiedHubBore":  "110.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/60R18",
+                                  "285/50R20",
+                                  "285/45R21"
+                              ],
+        "trim":  "LX 570, LX 600, F Sport, Ultra Luxury",
+        "reason":  "lexus lx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "lx",
+        "verifiedBoltPattern":  "5x150",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    }
+]

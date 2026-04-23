@@ -1,0 +1,702 @@
+{
+  "batch": "batch-12-domestic",
+  "verifiedAt": "2026-04-27T21:45:00Z",
+  "summary": {
+    "total": 60,
+    "valid": 37,
+    "invalidModelYears": 7,
+    "incorrectMake": 15,
+    "flaggedRare": 1,
+    "notes": "7 invalid model years (non-existent), 15 pre-2010 Ram trucks should be Dodge, 1 rare edge case (2010 Solstice)"
+  },
+  "invalidEntries": [
+    {
+      "year": 2020,
+      "make": "lincoln",
+      "model": "mkc",
+      "reason": "INVALID_MODEL_YEAR",
+      "notes": "Lincoln MKC was produced 2015-2019. Replaced by Lincoln Corsair for 2020."
+    },
+    {
+      "year": 2009,
+      "make": "lincoln",
+      "model": "mkt",
+      "reason": "INVALID_MODEL_YEAR",
+      "notes": "Lincoln MKT production began with 2010 model year. 2009 does not exist."
+    },
+    {
+      "year": 2006,
+      "make": "lincoln",
+      "model": "mkx",
+      "reason": "INVALID_MODEL_YEAR",
+      "notes": "Lincoln MKX first gen started 2007. 2006 does not exist in US market."
+    },
+    {
+      "year": 2010,
+      "make": "pontiac",
+      "model": "solstice",
+      "reason": "RARE_EDGE_CASE",
+      "notes": "Only 12 GXP coupes built Jan 2010 before shutdown. Most sources list 2006-2009. Consider removing or flagging as ultra-rare."
+    },
+    {
+      "year": 2000,
+      "make": "ram",
+      "model": "1500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 1500'."
+    },
+    {
+      "year": 2001,
+      "make": "ram",
+      "model": "1500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 1500'."
+    },
+    {
+      "year": 2002,
+      "make": "ram",
+      "model": "1500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 1500'."
+    },
+    {
+      "year": 2003,
+      "make": "ram",
+      "model": "1500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 1500'."
+    },
+    {
+      "year": 2004,
+      "make": "ram",
+      "model": "1500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 1500'."
+    },
+    {
+      "year": 2005,
+      "make": "ram",
+      "model": "1500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 1500'."
+    },
+    {
+      "year": 2006,
+      "make": "ram",
+      "model": "1500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 1500'."
+    },
+    {
+      "year": 2007,
+      "make": "ram",
+      "model": "1500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 1500'."
+    },
+    {
+      "year": 2008,
+      "make": "ram",
+      "model": "1500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 1500'."
+    },
+    {
+      "year": 2000,
+      "make": "ram",
+      "model": "2500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 2500'."
+    },
+    {
+      "year": 2001,
+      "make": "ram",
+      "model": "2500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 2500'."
+    },
+    {
+      "year": 2002,
+      "make": "ram",
+      "model": "2500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 2500'."
+    },
+    {
+      "year": 2000,
+      "make": "ram",
+      "model": "3500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 3500'."
+    },
+    {
+      "year": 2001,
+      "make": "ram",
+      "model": "3500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 3500'."
+    },
+    {
+      "year": 2002,
+      "make": "ram",
+      "model": "3500",
+      "reason": "INCORRECT_MAKE",
+      "notes": "RAM brand started 2010. This should be 'Dodge' make, model 'Ram 3500'."
+    },
+    {
+      "year": 2025,
+      "make": "ram",
+      "model": "1500-trx",
+      "reason": "INVALID_MODEL_YEAR",
+      "notes": "Ram 1500 TRX discontinued after 2024 due to emissions. 2025 does not exist."
+    },
+    {
+      "year": 2016,
+      "make": "ram",
+      "model": "c-v",
+      "reason": "INVALID_MODEL_YEAR",
+      "notes": "Ram C/V Tradesman produced 2012-2015 only. Replaced by ProMaster City."
+    },
+    {
+      "year": 2017,
+      "make": "ram",
+      "model": "c-v",
+      "reason": "INVALID_MODEL_YEAR",
+      "notes": "Ram C/V Tradesman produced 2012-2015 only. Replaced by ProMaster City."
+    },
+    {
+      "year": 2018,
+      "make": "ram",
+      "model": "c-v",
+      "reason": "INVALID_MODEL_YEAR",
+      "notes": "Ram C/V Tradesman produced 2012-2015 only. Replaced by ProMaster City."
+    }
+  ],
+  "verifiedVehicles": [
+    {
+      "year": 2019,
+      "make": "Lincoln",
+      "model": "MKC",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "Reserve", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "ebay (OEM parts)"]
+    },
+    {
+      "year": 2010,
+      "make": "Lincoln",
+      "model": "MKT",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/55R18"},
+        {"name": "EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["autotk.com", "amazon (hub-centric rings)"]
+    },
+    {
+      "year": 2011,
+      "make": "Lincoln",
+      "model": "MKT",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/55R18"},
+        {"name": "EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Lincoln",
+      "model": "MKT",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/55R18"},
+        {"name": "EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Lincoln",
+      "model": "MKT",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/55R18"},
+        {"name": "EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Lincoln",
+      "model": "MKT",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/55R18"},
+        {"name": "EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Lincoln",
+      "model": "MKT",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/55R18"},
+        {"name": "EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Lincoln",
+      "model": "MKT",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/55R18"},
+        {"name": "EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Lincoln",
+      "model": "MKT",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/55R18"},
+        {"name": "EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Lincoln",
+      "model": "MKT",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/55R18"},
+        {"name": "EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Lincoln",
+      "model": "MKT",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/55R18"},
+        {"name": "EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Oldsmobile",
+      "model": "Alero",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "GX", "oemWheelSize": "15x6", "oemTireSize": "215/60R15"},
+        {"name": "GL/GLS", "oemWheelSize": "16x6.5", "oemTireSize": "215/55R16"}
+      ],
+      "confidence": "high",
+      "sources": ["avtoreference.com", "multiple sources"]
+    },
+    {
+      "year": 2001,
+      "make": "Oldsmobile",
+      "model": "Alero",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "GX", "oemWheelSize": "15x6", "oemTireSize": "215/60R15"},
+        {"name": "GL/GLS", "oemWheelSize": "16x6.5", "oemTireSize": "215/55R16"}
+      ],
+      "confidence": "high",
+      "sources": ["avtoreference.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Oldsmobile",
+      "model": "Alero",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "GX", "oemWheelSize": "15x6", "oemTireSize": "215/60R15"},
+        {"name": "GL/GLS", "oemWheelSize": "16x6.5", "oemTireSize": "215/55R16"}
+      ],
+      "confidence": "high",
+      "sources": ["avtoreference.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Oldsmobile",
+      "model": "Alero",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "GX", "oemWheelSize": "15x6", "oemTireSize": "215/60R15"},
+        {"name": "GL/GLS", "oemWheelSize": "16x6.5", "oemTireSize": "215/55R16"}
+      ],
+      "confidence": "high",
+      "sources": ["avtoreference.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Oldsmobile",
+      "model": "Alero",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "GX", "oemWheelSize": "15x6", "oemTireSize": "215/60R15"},
+        {"name": "GL/GLS", "oemWheelSize": "16x6.5", "oemTireSize": "215/55R16"}
+      ],
+      "confidence": "high",
+      "sources": ["avtoreference.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "225/60R16"},
+        {"name": "GT/GTP", "oemWheelSize": "17x6.5", "oemTireSize": "225/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["grandprixforums.com", "roadkillcustoms.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Pontiac",
+      "model": "GTO",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x8", "oemTireSize": "245/45ZR17"}
+      ],
+      "confidence": "high",
+      "sources": ["markquitterracing.com", "multiple sources"],
+      "notes": "Australian Holden Monaro rebadged. Uses GM Zeta platform pattern."
+    },
+    {
+      "year": 2005,
+      "make": "Pontiac",
+      "model": "GTO",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x8", "oemTireSize": "245/45ZR17"},
+        {"name": "Base (18\")", "oemWheelSize": "18x8", "oemTireSize": "245/40ZR18"}
+      ],
+      "confidence": "high",
+      "sources": ["markquitterracing.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Pontiac",
+      "model": "GTO",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x8", "oemTireSize": "245/45ZR17"},
+        {"name": "Base (18\")", "oemWheelSize": "18x8", "oemTireSize": "245/40ZR18"}
+      ],
+      "confidence": "high",
+      "sources": ["markquitterracing.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Pontiac",
+      "model": "Solstice",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "multiple sources"]
+    },
+    {
+      "year": 2007,
+      "make": "Pontiac",
+      "model": "Solstice",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "GXP", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Pontiac",
+      "model": "Solstice",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "GXP", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Pontiac",
+      "model": "Solstice",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "GXP", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "GXP Coupe", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "barrett-jackson.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "boltPattern": "5x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Tradesman", "oemWheelSize": "17x7", "oemTireSize": "265/70R17"},
+        {"name": "Express", "oemWheelSize": "20x9", "oemTireSize": "275/60R20"}
+      ],
+      "confidence": "high",
+      "sources": ["ebay OEM wheels", "ramforum.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "boltPattern": "5x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Tradesman", "oemWheelSize": "17x7", "oemTireSize": "265/70R17"},
+        {"name": "Express", "oemWheelSize": "20x9", "oemTireSize": "275/60R20"}
+      ],
+      "confidence": "high",
+      "sources": ["ebay OEM wheels"]
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "boltPattern": "5x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Tradesman", "oemWheelSize": "17x7", "oemTireSize": "265/70R17"},
+        {"name": "Express", "oemWheelSize": "20x9", "oemTireSize": "275/60R20"},
+        {"name": "Warlock", "oemWheelSize": "20x9", "oemTireSize": "275/60R20"}
+      ],
+      "confidence": "high",
+      "sources": ["ebay OEM wheels"]
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "boltPattern": "5x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Tradesman", "oemWheelSize": "17x7", "oemTireSize": "265/70R17"},
+        {"name": "Warlock", "oemWheelSize": "20x9", "oemTireSize": "275/60R20"}
+      ],
+      "confidence": "high",
+      "sources": ["ebay OEM wheels"]
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "boltPattern": "5x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Tradesman", "oemWheelSize": "17x7", "oemTireSize": "265/70R17"},
+        {"name": "Warlock", "oemWheelSize": "20x9", "oemTireSize": "275/60R20"}
+      ],
+      "confidence": "high",
+      "sources": ["ram.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "boltPattern": "5x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Tradesman", "oemWheelSize": "17x7", "oemTireSize": "265/70R17"},
+        {"name": "Warlock", "oemWheelSize": "20x9", "oemTireSize": "275/60R20"}
+      ],
+      "confidence": "high",
+      "sources": ["ram.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "1500 TRX",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "TRX", "oemWheelSize": "18x9", "oemTireSize": "325/65R18"}
+      ],
+      "confidence": "high",
+      "sources": ["ram-trx.com", "multiple sources"],
+      "notes": "Beadlock-capable 18\" wheels standard. 702hp supercharged 6.2L HEMI."
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "1500 TRX",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "TRX", "oemWheelSize": "18x9", "oemTireSize": "325/65R18"}
+      ],
+      "confidence": "high",
+      "sources": ["ram-trx.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "1500 TRX",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "TRX", "oemWheelSize": "18x9", "oemTireSize": "325/65R18"}
+      ],
+      "confidence": "high",
+      "sources": ["ram-trx.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "1500 TRX",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "TRX Final Edition", "oemWheelSize": "18x9", "oemTireSize": "325/65R18"}
+      ],
+      "confidence": "high",
+      "sources": ["stellantis media", "edmunds.com"],
+      "notes": "Final model year. Discontinued due to emissions regulations."
+    },
+    {
+      "year": 2013,
+      "make": "Ram",
+      "model": "C/V",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Tradesman", "oemWheelSize": "17x6.5", "oemTireSize": "225/65R17"}
+      ],
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Cargo van based on Chrysler minivan platform."
+    },
+    {
+      "year": 2014,
+      "make": "Ram",
+      "model": "C/V",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Tradesman", "oemWheelSize": "17x6.5", "oemTireSize": "225/65R17"}
+      ],
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Ram",
+      "model": "C/V",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Tradesman", "oemWheelSize": "17x6.5", "oemTireSize": "225/65R17"}
+      ],
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com", "jdpower.com"],
+      "notes": "Final model year. Replaced by ProMaster City."
+    }
+  ],
+  "corrections": {
+    "makeCorrections": [
+      {
+        "incorrect": {"make": "ram", "years": "2000-2008"},
+        "correct": {"make": "Dodge", "model": "Ram 1500"},
+        "reason": "Ram brand did not exist until 2010. These should be listed under Dodge."
+      },
+      {
+        "incorrect": {"make": "ram", "model": "2500", "years": "2000-2002"},
+        "correct": {"make": "Dodge", "model": "Ram 2500"},
+        "reason": "Ram brand did not exist until 2010."
+      },
+      {
+        "incorrect": {"make": "ram", "model": "3500", "years": "2000-2002"},
+        "correct": {"make": "Dodge", "model": "Ram 3500"},
+        "reason": "Ram brand did not exist until 2010."
+      }
+    ],
+    "modelYearCorrections": [
+      {
+        "vehicle": "Lincoln MKC 2020",
+        "action": "REMOVE",
+        "correctModel": "Lincoln Corsair 2020"
+      },
+      {
+        "vehicle": "Lincoln MKT 2009",
+        "action": "REMOVE",
+        "reason": "Model did not exist. First year was 2010."
+      },
+      {
+        "vehicle": "Lincoln MKX 2006",
+        "action": "REMOVE",
+        "reason": "Model did not exist. First year was 2007."
+      },
+      {
+        "vehicle": "Ram 1500 TRX 2025",
+        "action": "REMOVE",
+        "reason": "Model discontinued after 2024."
+      },
+      {
+        "vehicle": "Ram C/V 2016-2018",
+        "action": "REMOVE",
+        "reason": "Model discontinued after 2015."
+      }
+    ]
+  }
+}

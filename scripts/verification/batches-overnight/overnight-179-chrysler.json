@@ -1,0 +1,1673 @@
+[
+  {
+    "id": "05220bb4-97b0-4eae-908b-7727907fded9",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "Limited/Pinnacle",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "235/50R20"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "4f9bdaf8-ebfd-47f2-8798-d6a7cdd421e2",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "ecb8324d-c510-4163-8d9e-2a0bdd688ee9",
+    "year": 2020,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "3.6H",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50.8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.8,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50.8,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "245/55R19",
+      "245/50R20",
+      "245/60R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "fea3ec08-f60c-4399-a5e3-a5e579fd4df2",
+    "year": 2020,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "Limited/Pinnacle",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "235/50R20"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "c95b8da6-99b8-4b1f-8bc6-87f313247f1f",
+    "year": 2020,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "97faaa95-7d7b-4cd9-b33b-94b0a7999968",
+    "year": 2021,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "9d4b5256-61a7-4db5-a48f-5c5d0479602f",
+    "year": 2021,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "Limited/Pinnacle",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "235/50R20"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "3b5d75fd-2680-4a0e-98d3-b208d3dae473",
+    "year": 2022,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "72ed4357-e9ef-46f3-ad12-a2dc6a093ae7",
+    "year": 2022,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "Limited/Pinnacle",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "235/50R20"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "607575e2-f3a8-4255-bfb9-e7163c70b24d",
+    "year": 2023,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "c45539fa-3001-483f-8a17-e03d5dcc2ca0",
+    "year": 2023,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "Limited/Pinnacle",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "235/50R20"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "a268db0d-f869-4595-af05-2662e2ab5d0f",
+    "year": 2024,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "01c42446-ba2d-4a38-a864-15ea1d0127f0",
+    "year": 2024,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "Limited/Pinnacle",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "235/50R20"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "427144d1-6b20-4223-8c8e-1f48f43625b1",
+    "year": 2025,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "Limited/Pinnacle",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "235/50R20"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "d5c2a61e-948e-4ec8-83cf-eb3e9a003c3c",
+    "year": 2025,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "7be84eac-e455-4338-b48b-480b6b48ae79",
+    "year": 2026,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "Limited/Pinnacle",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "18x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "235/50R20"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "29cc61b4-b9c1-40f3-aa3e-3db5591f9cfe",
+    "year": 2026,
+    "make": "chrysler",
+    "model": "pacifica",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "02d00a14-d95d-4bd2-9e1a-00176cfdb4fb",
+    "year": 2000,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9994ab9b-94e4-4d66-93e9-df19a677c0e5",
+    "year": 2001,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ca217e86-6ab5-4d69-a795-84d196b43d08",
+    "year": 2002,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "504b0482-9ee7-4757-b1cd-1168aa566dfb",
+    "year": 2003,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8d70fa4d-5d24-4144-9585-9b373db254be",
+    "year": 2004,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e727792e-e7ac-435d-83ed-13ebc8c216b2",
+    "year": 2005,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a6b3d19e-5f7c-43a3-afe7-a326d714c9e5",
+    "year": 2006,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "13017783-9a4a-4f7c-a0e5-bff6e8063d91",
+    "year": 2007,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "7c971866-11d6-42e3-a064-20c0c258a79d",
+    "year": 2008,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "37404764-c579-48bd-9b31-363694269ec1",
+    "year": 2009,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "28a12091-f08b-4507-b625-5130d1a06738",
+    "year": 2010,
+    "make": "chrysler",
+    "model": "pt-cruiser",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "205/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f26d43a3-b26e-4eca-8629-cb5e0815e022",
+    "year": 2000,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "4889fdd1-b44a-4ffd-bc0d-e237d64359fa",
+    "year": 2000,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "fae98980-33a0-4ef4-b0e4-1d4d483b9247",
+    "year": 2001,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "1cb31693-4460-4614-8677-3068e98758eb",
+    "year": 2001,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "6f862231-9b9f-404a-88b9-0fd93f448840",
+    "year": 2002,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "c1c77467-56e8-4654-a2f5-f2db6b602c8c",
+    "year": 2002,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "6f38ddc8-0c76-49d5-8381-f98fc31f2348",
+    "year": 2003,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "76b8c3e2-89d7-45e7-8579-bd3c5781d488",
+    "year": 2003,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "1d446953-96e9-4005-8d4e-78e0a2ca19d3",
+    "year": 2004,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "32aa4f85-0069-4a96-a874-2f2b3af0a789",
+    "year": 2004,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "b10d1b6f-1387-4b9e-8acb-77a8c9b893a6",
+    "year": 2005,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "09f0526b-58c6-4202-bcd7-a5e054fbeec9",
+    "year": 2005,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "9b3c2a59-7766-4730-995f-c200e6cd2990",
+    "year": 2005,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/70R15",
+      "215/60R17",
+      "225/55R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "4023e106-a667-468b-ada6-c44ba039dc54",
+    "year": 2006,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "7bf51c1d-df06-4fad-8e2a-8eb1317aa9a3",
+    "year": 2006,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "c620839c-39fd-41ec-a6f4-837db41fe13e",
+    "year": 2007,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "3d939963-f843-4373-a000-5816024d80d9",
+    "year": 2007,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "86760b42-1765-4737-ba43-e10262d64f38",
+    "year": 2008,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "31b389c4-3b50-4b07-9e11-ab04c3a37b8b",
+    "year": 2008,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "31f742a8-da2d-4431-b944-8d76307420ee",
+    "year": 2009,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "b5f5b740-92e5-4ab9-b16f-6271593115cb",
+    "year": 2009,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "c2b0ef7d-bc96-4714-85ae-f47ee2ad598a",
+    "year": 2010,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "dd226508-5611-4a30-92c5-937a555e7daf",
+    "year": 2010,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "cd046192-e72c-4bcb-9c3c-02cf14b81fe8",
+    "year": 2011,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "68797821-5dce-45ca-8c78-0ee0255f7ae9",
+    "year": 2011,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "f5957b33-47c8-431d-8490-d4894c6de62f",
+    "year": 2012,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "cb9d644a-474a-4679-bc57-234c1170d1ff",
+    "year": 2012,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "ff1a90a4-7cc2-4ac4-9da6-6423e9c49eb8",
+    "year": 2013,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "6094a708-ff97-41a1-bb05-344eb6501ea7",
+    "year": 2013,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "8bdd843b-b6e8-47fa-8fbd-02b4a26df3e7",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "90e6b3b7-f011-4284-9190-9e6151d73641",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "46808722-cdc6-4bd4-8133-85bb85f0070f",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "d7a62b41-fb41-4234-96bd-034f1f855d22",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "fcaf4e51-57ae-4d31-8574-d6c60557cfa3",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "LX/Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "16x6.5",
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "4c95ec78-e430-4a09-89b9-d5f8f34393a0",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "town-and-country",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      "17x6.5"
+    ],
+    "currentTireSizes": [
+      "225/65R17"
+    ],
+    "source": "batch6-minivans-evs"
+  },
+  {
+    "id": "ddad290d-7b08-41df-a3a6-63563f715556",
+    "year": 2000,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9e348d7c-c43c-4c79-8d88-f8b28e95cec5",
+    "year": 2001,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d56532e9-42f7-4f98-8bdc-5da04c83490c",
+    "year": 2002,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8b51486b-902a-464a-9a4a-c6114aef6f8d",
+    "year": 2003,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "adebc3ff-f3d9-4bb4-8c24-bd6733b6303a",
+    "year": 2004,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "44739ad7-7873-4f43-b120-eb00e4fb7a3d",
+    "year": 2005,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9d369a37-9ba9-4349-834b-21636e48bd5c",
+    "year": 2006,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "37b4b6c7-e575-43ba-951d-9a6983c04d92",
+    "year": 2007,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d98202de-bacb-4801-bca0-02bf0973c703",
+    "year": 2008,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4ca2dd9d-5dbb-4093-89ca-36af99714e57",
+    "year": 2009,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "5866d2f8-a8db-48f3-b2ac-add1f117fa38",
+    "year": 2010,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1ebd9d87-995a-4eb1-a6d1-15315cfdef93",
+    "year": 2011,
+    "make": "chrysler",
+    "model": "town-country",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  }
+]

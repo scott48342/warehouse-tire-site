@@ -1,0 +1,1085 @@
+{
+  "batchId": "108",
+  "processedAt": "2026-04-21T22:25:00Z",
+  "source": "tiresize.com, tirewheelguide.com",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "gl-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["295/40R21", "285/40R22"],
+      "trims": {
+        "GL 63 AMG": {
+          "tireSizes": ["295/40R21", "285/40R22"],
+          "wheelSizes": ["21x10", "22x10.5"],
+          "notes": "V8 5.5L 550hp performance SUV"
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing tire sizes for GL 63 AMG"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 2 (H247) uses different sizes than Gen 1. 215/60R17 is NOT valid for this generation."
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 2 (H247) uses different sizes than Gen 1"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 2 (H247) uses different sizes than Gen 1"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 2 (H247) uses different sizes than Gen 1"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 2 (H247) uses different sizes than Gen 1"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 2 (H247) starts in 2021 with new sizes. NO 2020 model year exists."
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "NO 2020 GLA-Class produced. Gen 1 ended 2019, Gen 2 started 2021."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/50R18", "235/45R19"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/50R18", "235/45R19"],
+          "wheelSizes": ["18\"", "19\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/50R18", "235/45R19"],
+          "wheelSizes": ["18\"", "19\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 1 (X156) does NOT have 215/60R17. Remove that size."
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/50R18", "235/45R19"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/50R18", "235/45R19"],
+          "wheelSizes": ["18\"", "19\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/50R18", "235/45R19"],
+          "wheelSizes": ["18\"", "19\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 1 (X156). Remove 215/60R17."
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/50R18", "235/45R19"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/50R18", "235/45R19"],
+          "wheelSizes": ["18\"", "19\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/50R18", "235/45R19"],
+          "wheelSizes": ["18\"", "19\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 1 (X156). Remove 215/60R17."
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/50R18", "235/45R19"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/50R18", "235/45R19"],
+          "wheelSizes": ["18\"", "19\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/50R18", "235/45R19"],
+          "wheelSizes": ["18\"", "19\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 1 (X156). Remove 215/60R17."
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/50R18", "235/45R19"],
+      "trims": {
+        "GLA 250": {
+          "tireSizes": ["235/50R18", "235/45R19"],
+          "wheelSizes": ["18\"", "19\""]
+        },
+        "GLA 250 4MATIC": {
+          "tireSizes": ["235/50R18", "235/45R19"],
+          "wheelSizes": ["18\"", "19\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 1 (X156) first year. Remove 215/60R17."
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "NO 2014 GLA-Class in US market. Production started 2015 MY."
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "gla-class",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "NO 2013 GLA-Class. Model didn't exist yet."
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLA 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        },
+        "AMG GLA 45 S 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "235/50R18 is wrong. Gen 2 AMG uses 19\"/20\"/21\" wheels, not 18\"."
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLA 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        },
+        "AMG GLA 45 S 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "235/50R18 is wrong. Gen 2 AMG uses 19\"/20\"/21\" wheels."
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLA 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        },
+        "AMG GLA 45 S 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "235/50R18 is wrong. Gen 2 AMG uses 19\"/20\"/21\" wheels."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLA 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        },
+        "AMG GLA 45 S 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "235/50R18 is wrong. Gen 2 AMG uses 19\"/20\"/21\" wheels."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLA 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        },
+        "AMG GLA 45 S 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "235/50R18 is wrong. Gen 2 AMG uses 19\"/20\"/21\" wheels."
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLA 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        },
+        "AMG GLA 45 S 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 2 AMG first year. 235/50R18 is wrong."
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "NO 2020 GLA AMG. Gen 1 ended 2019, Gen 2 started 2021."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/45R19", "235/40R20"],
+      "trims": {
+        "AMG GLA 45 4MATIC": {
+          "tireSizes": ["235/45R19", "235/40R20"],
+          "wheelSizes": ["19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 1 (X156) GLA45 AMG only. Different sizes than Gen 2."
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/45R19", "235/40R20"],
+      "trims": {
+        "AMG GLA 45 4MATIC": {
+          "tireSizes": ["235/45R19", "235/40R20"],
+          "wheelSizes": ["19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 1 (X156) GLA45 AMG only."
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/45R19", "235/40R20"],
+      "trims": {
+        "AMG GLA 45 4MATIC": {
+          "tireSizes": ["235/45R19", "235/40R20"],
+          "wheelSizes": ["19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 1 (X156) GLA45 AMG only."
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/45R19", "235/40R20"],
+      "trims": {
+        "AMG GLA 45 4MATIC": {
+          "tireSizes": ["235/45R19", "235/40R20"],
+          "wheelSizes": ["19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 1 (X156) GLA45 AMG only."
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": ["235/45R19", "235/40R20"],
+      "trims": {
+        "AMG GLA 45 4MATIC": {
+          "tireSizes": ["235/45R19", "235/40R20"],
+          "wheelSizes": ["19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Gen 1 (X156) GLA45 AMG first year."
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "currentTireSizes": ["235/50R18", "255/40R20"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "NO 2014 GLA AMG in US market."
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glb-class",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLB 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLB 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing 235/45R20 option"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "glb-class",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLB 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLB 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing 235/45R20 option"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "glb-class",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLB 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLB 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing 235/45R20 option"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "glb-class",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLB 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLB 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing 235/45R20 option"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "glb-class",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLB 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLB 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing 235/45R20 option"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glb-class",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLB 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLB 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing 235/45R20 option"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glb-class",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "trims": {
+        "GLB 250": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLB 250 4MATIC": {
+          "tireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "First year GLB. Added missing 235/45R20 option."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glb-class",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "NO 2019 GLB-Class. Model launched in 2020."
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLB 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing tire sizes for GLB 35 AMG"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLB 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing tire sizes for GLB 35 AMG"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLB 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing tire sizes for GLB 35 AMG"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLB 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing tire sizes for GLB 35 AMG"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLB 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "Added missing tire sizes for GLB 35 AMG"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "trims": {
+        "AMG GLB 35 4MATIC": {
+          "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+          "wheelSizes": ["19\"", "20\"", "21\""]
+        }
+      },
+      "status": "UPDATED",
+      "notes": "First year GLB AMG. Added missing tire sizes."
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "NO 2020 GLB AMG. AMG version launched 2021."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "NO 2019 GLB AMG. Model didn't exist yet."
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "255/50R19", "255/45R20", "275/40R20", "255/40R21", "275/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC Coupe": {
+          "tireSizes": ["235/55R19", "255/45R20", "285/40R20"],
+          "wheelSizes": ["19\"", "20\""],
+          "isStaggered": true,
+          "staggeredSizes": {
+            "front": "255/45R20",
+            "rear": "285/40R20"
+          }
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "255/50R19, 275/40R20, 255/40R21, 275/35R21 are AMG sizes, not GLC 300. Keep only base model sizes."
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/65R17", "235/55R19", "255/45R20", "255/40R21", "285/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "235/65R17 is old gen. 255/40R21, 285/35R21 are AMG sizes."
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "255/50R19", "255/45R20", "275/40R20", "255/40R21", "275/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Remove AMG-only sizes from base GLC"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/65R17", "235/55R19", "255/45R20", "255/40R21", "285/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "New gen (X254) starts 2023. 235/65R17 is old gen."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/50R19", "255/45R20", "275/40R20", "255/40R21", "275/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Last year of old gen (X253). Staggered/AMG sizes should be separate model."
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/50R19", "255/45R20", "275/40R20", "255/40R21", "275/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Old gen (X253). Remove AMG-only sizes."
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/50R19", "255/45R20", "275/40R20", "255/40R21", "275/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Old gen (X253). Remove AMG-only sizes."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/50R19", "255/45R20", "275/40R20", "255/40R21", "275/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Old gen (X253). Remove AMG-only sizes."
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/50R19", "255/45R20", "275/40R20", "255/40R21", "275/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "Old gen (X253). Remove AMG-only sizes."
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20", "255/40R21", "285/35R21", "265/40R21", "295/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC SUV Sport": {
+          "tireSizes": ["235/55R19", "255/45R20"],
+          "wheelSizes": ["19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "265/40R21, 295/35R21 are GLC63 AMG sizes - wrong model."
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "glc",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/50R19", "255/45R20", "275/40R20", "255/40R21", "275/35R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "GLC 300": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        },
+        "GLC 300 4MATIC": {
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "wheelSizes": ["18\"", "19\"", "20\""]
+        }
+      },
+      "status": "CORRECTED",
+      "notes": "First year GLC (X253). Remove AMG-only sizes."
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "DUPLICATE_MODEL",
+      "notes": "This is a duplicate of 'glc' model. Merge into 'glc'."
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "glc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "DUPLICATE_MODEL",
+      "notes": "This is a duplicate of 'glc' model. Merge into 'glc'."
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "glc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "DUPLICATE_MODEL",
+      "notes": "This is a duplicate of 'glc' model. Merge into 'glc'."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "glc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "DUPLICATE_MODEL",
+      "notes": "This is a duplicate of 'glc' model. Merge into 'glc'."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "glc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "DUPLICATE_MODEL",
+      "notes": "This is a duplicate of 'glc' model. Merge into 'glc'."
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "DUPLICATE_MODEL",
+      "notes": "This is a duplicate of 'glc' model. Merge into 'glc'."
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "DUPLICATE_MODEL",
+      "notes": "This is a duplicate of 'glc' model. Merge into 'glc'."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "DUPLICATE_MODEL",
+      "notes": "This is a duplicate of 'glc' model. Merge into 'glc'."
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "glc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "DUPLICATE_MODEL",
+      "notes": "This is a duplicate of 'glc' model. Merge into 'glc'."
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "glc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "DUPLICATE_MODEL",
+      "notes": "This is a duplicate of 'glc' model. Merge into 'glc'."
+    }
+  ],
+  "summary": {
+    "totalProcessed": 75,
+    "statusCounts": {
+      "UPDATED": 15,
+      "CORRECTED": 34,
+      "INVALID_YEAR": 7,
+      "DUPLICATE_MODEL": 10,
+      "VERIFIED": 0
+    },
+    "keyFindings": [
+      "GLA-Class Gen 2 (2021+) uses 235/55R18, 235/50R19, 235/45R20 - NOT 215/60R17",
+      "GLA-Class Gen 1 (2015-2019) uses 235/50R18, 235/45R19 - NO 215/60R17",
+      "NO 2020 GLA model year exists (gap between Gen 1 and Gen 2)",
+      "NO 2013-2014 GLA-Class in US market",
+      "GLA AMG Gen 2 (2021+) uses 235/50R19, 255/40R20, 255/35R21 - NOT 235/50R18",
+      "GLA AMG Gen 1 (2015-2019) uses 235/45R19, 235/40R20",
+      "GLB-Class missing 235/45R20 option for 20\" wheels",
+      "GLB AMG (GLB 35) was completely missing tire data - now populated",
+      "NO 2019 GLB-Class exists - model launched 2020",
+      "GLC model has AMG sizes mixed in - should be separate model entries",
+      "'glc-class' is duplicate of 'glc' - recommend merging",
+      "2013 GL-Class AMG (GL 63) uses 295/40R21 or 285/40R22"
+    ],
+    "recommendedActions": [
+      "Remove 215/60R17 from ALL GLA-Class entries",
+      "Update GLA-Class Gen 2 (2021-2026) to use 235/55R18, 235/50R19, 235/45R20",
+      "Update GLA-Class Gen 1 (2015-2019) to use 235/50R18, 235/45R19 only",
+      "Delete 2020 GLA-Class entries (invalid year)",
+      "Delete 2013-2014 GLA-Class entries (invalid years)",
+      "Update GLA AMG Gen 2 (2021+) to use 235/50R19, 255/40R20, 255/35R21",
+      "Update GLA AMG Gen 1 (2015-2019) to use 235/45R19, 235/40R20",
+      "Add 235/45R20 to all GLB-Class entries",
+      "Populate GLB AMG (2021-2026) with 235/50R19, 255/40R20, 255/35R21",
+      "Delete 2019 GLB-Class and GLB AMG entries (invalid years)",
+      "Create separate GLC AMG model entries for GLC 43 and GLC 63 staggered fitments",
+      "Merge 'glc-class' model into 'glc' or delete duplicate"
+    ]
+  }
+}

@@ -1,0 +1,1248 @@
+{
+  "batchId": "03",
+  "processedAt": "2026-04-21T20:55:00.000Z",
+  "results": [
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "q3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 43},
+          {"diameter": 18, "width": 7, "offset": 43},
+          {"diameter": 19, "width": 7, "offset": 43},
+          {"diameter": 20, "width": 8.5, "offset": 38}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "autorimshop.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "q3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 43},
+          {"diameter": 18, "width": 7, "offset": 43},
+          {"diameter": 19, "width": 7, "offset": 43}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "autorimshop.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "q3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 43},
+          {"diameter": 18, "width": 7, "offset": 43}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tire-size.net",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "q3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 33},
+          {"diameter": 17, "width": 7, "offset": 43},
+          {"diameter": 18, "width": 7, "offset": 43}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tire-size.net",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "q3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 33},
+          {"diameter": 17, "width": 7, "offset": 43},
+          {"diameter": 18, "width": 7, "offset": 43}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tire-size.net",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "q5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 39},
+          {"diameter": 19, "width": 8, "offset": 39},
+          {"diameter": 20, "width": 8.5, "offset": 33}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "audizine.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q5-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 40},
+          {"diameter": 20, "width": 8.5, "offset": 40},
+          {"diameter": 21, "width": 9, "offset": 40}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "q5-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 40},
+          {"diameter": 20, "width": 8.5, "offset": 40},
+          {"diameter": 21, "width": 9, "offset": 40}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "q5-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 40},
+          {"diameter": 20, "width": 8.5, "offset": 40},
+          {"diameter": 21, "width": 9, "offset": 40}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 40},
+          {"diameter": 19, "width": 8.5, "offset": 40},
+          {"diameter": 20, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China market model"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 40},
+          {"diameter": 19, "width": 8.5, "offset": 40},
+          {"diameter": 20, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China market model"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "q6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 40},
+          {"diameter": 19, "width": 8.5, "offset": 40},
+          {"diameter": 20, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China market model"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "q6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 40},
+          {"diameter": 19, "width": 8.5, "offset": 40},
+          {"diameter": 20, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China market model"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q6-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 48},
+          {"diameter": 20, "width": 9, "offset": 48},
+          {"diameter": 21, "width": 9.5, "offset": 48}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q6l-sportback-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 48},
+          {"diameter": 20, "width": 9, "offset": 48},
+          {"diameter": 21, "width": 9.5, "offset": 48}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "China market extended wheelbase model"
+    },
+    {
+      "year": 2006,
+      "make": "audi",
+      "model": "q7",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 53},
+          {"diameter": 19, "width": 8.5, "offset": 55},
+          {"diameter": 20, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Early Q7 used 5x130 bolt pattern"
+    },
+    {
+      "year": 2005,
+      "make": "audi",
+      "model": "q7",
+      "specs": {
+        "wheelSizes": [],
+        "boltPattern": null,
+        "centerBore": null,
+        "isStaggered": false
+      },
+      "source": null,
+      "confidence": "low",
+      "notes": "Q7 production began in 2006 - 2005 model does not exist"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "q8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 20},
+          {"diameter": 21, "width": 9.5, "offset": 26},
+          {"diameter": 22, "width": 10, "offset": 21}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "autorimshop.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 20},
+          {"diameter": 21, "width": 9.5, "offset": 26},
+          {"diameter": 22, "width": 10, "offset": 21}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "autorimshop.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 20},
+          {"diameter": 21, "width": 9.5, "offset": 26},
+          {"diameter": 22, "width": 10, "offset": 21}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "autorimshop.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "q8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 20},
+          {"diameter": 21, "width": 9.5, "offset": 26},
+          {"diameter": 22, "width": 10, "offset": 21}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "autorimshop.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "q8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 20},
+          {"diameter": 21, "width": 9.5, "offset": 26},
+          {"diameter": 22, "width": 10, "offset": 21}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "autorimshop.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "q8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 20},
+          {"diameter": 21, "width": 9.5, "offset": 26},
+          {"diameter": 22, "width": 10, "offset": 21}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "autorimshop.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "q8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 20},
+          {"diameter": 21, "width": 9.5, "offset": 26},
+          {"diameter": 22, "width": 10, "offset": 21}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "autorimshop.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q8-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 32},
+          {"diameter": 21, "width": 10, "offset": 40},
+          {"diameter": 22, "width": 10, "offset": 32}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q8-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 32},
+          {"diameter": 21, "width": 10, "offset": 40},
+          {"diameter": 22, "width": 10, "offset": 32}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "q8-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 32},
+          {"diameter": 21, "width": 10, "offset": 40},
+          {"diameter": 22, "width": 10, "offset": 32}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q8-sportback-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 32},
+          {"diameter": 21, "width": 10, "offset": 40},
+          {"diameter": 22, "width": 10, "offset": 32}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q8-sportback-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 32},
+          {"diameter": 21, "width": 10, "offset": 40},
+          {"diameter": 22, "width": 10, "offset": 32}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "q8-sportback-e-tron",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 32},
+          {"diameter": 21, "width": 10, "offset": 40},
+          {"diameter": 22, "width": 10, "offset": 32}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "rs3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 53}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "rs3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 53}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "rs3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 53}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "rs3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 49}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "rs3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 49}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "rs3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 49}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "rs3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 49}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 26},
+          {"diameter": 21, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 26},
+          {"diameter": 21, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 9, "offset": 26},
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 9, "offset": 26},
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 9, "offset": 26},
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 9, "offset": 26},
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 9, "offset": 26},
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 9, "offset": 26},
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 9, "offset": 26},
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "rs5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 9, "offset": 26},
+          {"diameter": 20, "width": 9, "offset": 26}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9.5, "offset": 25},
+          {"diameter": 22, "width": 10, "offset": 25}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "lifetimeoemaudiparts.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9.5, "offset": 25}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "lifetimeoemaudiparts.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9.5, "offset": 25}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "lifetimeoemaudiparts.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9.5, "offset": 25}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "lifetimeoemaudiparts.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9.5, "offset": 25}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "lifetimeoemaudiparts.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 35},
+          {"diameter": 21, "width": 9.5, "offset": 25}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 35},
+          {"diameter": 21, "width": 9.5, "offset": 25}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 45},
+          {"diameter": 19, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 45},
+          {"diameter": 19, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "audi",
+      "model": "rs6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 45},
+          {"diameter": 19, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "rs7",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9, "offset": 35},
+          {"diameter": 22, "width": 10, "offset": 25}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "sizewheeltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "rs7",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "sizewheeltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "rs7",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "sizewheeltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "rs7",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "sizewheeltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "rs7",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "sizewheeltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "rs7",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 35},
+          {"diameter": 21, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "sizewheeltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "rs7",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 35},
+          {"diameter": 21, "width": 9, "offset": 35}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": false
+      },
+      "source": "sizewheeltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 51},
+          {"diameter": 19, "width": 8, "offset": 49}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "lltek.com",
+      "confidence": "high"
+    }
+  ],
+  "stats": {
+    "total": 75,
+    "complete": 73,
+    "partial": 1,
+    "failed": 1
+  },
+  "notes": {
+    "sources": [
+      "autorimshop.com - OEM rim specifications",
+      "apexwheels.com - Aftermarket fitment guides with OEM specs",
+      "wheel-size.com - Reference only (not scraped directly)",
+      "hulkoffsets.com - EV fitment guides",
+      "sizewheeltire.com - Wheel specifications database",
+      "lifetimeoemaudiparts.com - OEM wheel listings",
+      "audizine.com - Enthusiast forums with verified specs",
+      "tire-size.net - Fitment data"
+    ],
+    "commonPatterns": {
+      "audiSmallPlatform": "Q3, A3, S3, RS3 use 5x112 with 57.1mm center bore",
+      "audiLargePlatform": "Q5, Q7, Q8, RS5, RS6, RS7 use 5x112 with 66.5-66.6mm center bore",
+      "etronModels": "Electric models typically follow the same bolt pattern with higher offsets"
+    },
+    "failedVehicles": [
+      {
+        "year": 2005,
+        "make": "audi",
+        "model": "q7",
+        "reason": "Q7 production started in 2006 - 2005 model year does not exist"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1582 @@
+{
+  "batch": "batch-15-european",
+  "verificationDate": "2026-04-23",
+  "totalVehicles": 72,
+  "verified": 44,
+  "flagged": 28,
+  "results": [
+    {
+      "year": 2021,
+      "make": "Volvo",
+      "model": "C40",
+      "status": "flagged",
+      "flagReason": "QUESTIONABLE_YEAR - First C40 Recharge deliveries were Q4 2021. Earliest full model year was 2022.",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Recharge",
+          "oemTireSizes": ["235/50R19 (F)", "255/45R19 (R)"]
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com", "caranddriver.com", "electrive.com"],
+      "notes": "C40 Recharge production started Oct 2021, first US deliveries Q4 2021. May exist as limited early deliveries."
+    },
+    {
+      "year": 2022,
+      "make": "Volvo",
+      "model": "C40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Recharge",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)", "235/45R20 (F) / 255/40R20 (R)"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "volvo.com"],
+      "notes": "Staggered tire setup (wider rear)"
+    },
+    {
+      "year": 2023,
+      "make": "Volvo",
+      "model": "C40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Recharge",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)"]
+        },
+        {
+          "name": "Recharge Plus",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)", "235/45R20 (F) / 255/40R20 (R)"]
+        },
+        {
+          "name": "Recharge Ultimate",
+          "oemTireSizes": ["235/45R20 (F) / 255/40R20 (R)"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Staggered tire setup"
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "C40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Recharge",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)"]
+        },
+        {
+          "name": "Recharge Plus",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)", "235/45R20 (F) / 255/40R20 (R)"]
+        },
+        {
+          "name": "Recharge Ultimate",
+          "oemTireSizes": ["235/45R20 (F) / 255/40R20 (R)"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "2024 is final model year for C40 Recharge in US (renamed EC40 for 2026)"
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "C40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Recharge",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)"]
+        },
+        {
+          "name": "Recharge Plus",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)", "235/45R20 (F) / 255/40R20 (R)"]
+        },
+        {
+          "name": "Recharge Ultimate",
+          "oemTireSizes": ["235/45R20 (F) / 255/40R20 (R)"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Staggered tire setup"
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "EC40",
+      "status": "flagged",
+      "flagReason": "INVALID_YEAR - EC40 name starts 2026. Vehicle was called C40 Recharge in 2024.",
+      "boltPattern": null,
+      "hubBore": null,
+      "confidence": "low",
+      "sources": ["caranddriver.com", "motorauthority.com"],
+      "notes": "EC40 is renamed C40 Recharge starting 2026 model year. No EC40 existed in 2024."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "EC40",
+      "status": "flagged",
+      "flagReason": "INVALID_YEAR - EC40 name starts 2026. There was no 2025 EC40 (only C40 Recharge or skipped year).",
+      "boltPattern": null,
+      "hubBore": null,
+      "confidence": "low",
+      "sources": ["caranddriver.com", "insideevs.com"],
+      "notes": "C40 Recharge takes a break 2025, returns as EC40 for 2026."
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "EC40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)", "235/45R20 (F) / 255/40R20 (R)"]
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["caranddriver.com"],
+      "notes": "EC40 is renamed C40 Recharge. Same platform/specs as C40."
+    },
+    {
+      "year": 2023,
+      "make": "Volvo",
+      "model": "EX30",
+      "status": "flagged",
+      "flagReason": "INVALID_YEAR - EX30 first US deliveries were 2025. No 2023 or 2024 model year in US.",
+      "boltPattern": null,
+      "hubBore": null,
+      "confidence": "low",
+      "sources": ["electrek.co", "wikipedia.org"],
+      "notes": "EX30 revealed June 2023, but US deliveries delayed. First US model year is 2025."
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "EX30",
+      "status": "flagged",
+      "flagReason": "INVALID_YEAR - EX30 delayed in US until 2025. No 2024 model year.",
+      "boltPattern": null,
+      "hubBore": null,
+      "confidence": "low",
+      "sources": ["volvoevforum.com", "motortrend.com"],
+      "notes": "US EX30 production moved to Belgium, delayed until 2025."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "EX30",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Plus",
+          "oemTireSizes": ["245/45R19"]
+        },
+        {
+          "name": "Ultra",
+          "oemTireSizes": ["245/45R19"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "First US model year"
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "EX30",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Plus",
+          "oemTireSizes": ["245/45R19"]
+        },
+        {
+          "name": "Plus Twin Motor",
+          "oemTireSizes": ["245/45R19"]
+        },
+        {
+          "name": "Ultra",
+          "oemTireSizes": ["245/45R19"]
+        },
+        {
+          "name": "Ultra Twin Motor",
+          "oemTireSizes": ["245/45R19"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "Last US model year per reports (discontinued after 2026 due to tariffs)"
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "EX40",
+      "status": "flagged",
+      "flagReason": "INVALID_YEAR - EX40 name starts 2025. Vehicle was called XC40 Recharge in 2024.",
+      "boltPattern": null,
+      "hubBore": null,
+      "confidence": "low",
+      "sources": ["caranddriver.com", "wikipedia.org"],
+      "notes": "XC40 Recharge renamed to EX40 starting 2025 model year."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "EX40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Core",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)"]
+        },
+        {
+          "name": "Core Twin Motor",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)"]
+        },
+        {
+          "name": "Plus",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)", "235/45R20 (F) / 255/40R20 (R)"]
+        },
+        {
+          "name": "Ultra",
+          "oemTireSizes": ["235/45R20 (F) / 255/40R20 (R)"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Renamed XC40 Recharge. Staggered tire setup."
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "EX40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Plus",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)", "235/45R20 (F) / 255/40R20 (R)"]
+        },
+        {
+          "name": "Plus Twin Motor",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)", "235/45R20 (F) / 255/40R20 (R)"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Staggered tire setup"
+    },
+    {
+      "year": 2023,
+      "make": "Volvo",
+      "model": "EX90",
+      "status": "flagged",
+      "flagReason": "INVALID_YEAR - EX90 production started May 2024, first deliveries Q4 2024. First model year is 2025.",
+      "boltPattern": null,
+      "hubBore": null,
+      "confidence": "low",
+      "sources": ["wikipedia.org", "caranddriver.com"],
+      "notes": "EX90 revealed Nov 2022 but production didn't start until May 2024."
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "EX90",
+      "status": "flagged",
+      "flagReason": "QUESTIONABLE_YEAR - EX90 deliveries started Q4 2024. May be 2025 model year vehicles.",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Twin Performance Plus",
+          "oemTireSizes": ["255/50R20", "265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com"],
+      "notes": "First deliveries were 2025 MY. Verify if 2024 MY exists."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "EX90",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Twin Performance Plus",
+          "oemTireSizes": ["255/50R20", "265/45R21", "265/40R22"]
+        },
+        {
+          "name": "Twin Performance Ultra",
+          "oemTireSizes": ["265/45R21", "265/40R22"]
+        },
+        {
+          "name": "Twin Plus",
+          "oemTireSizes": ["255/50R20", "265/45R21", "265/40R22"]
+        },
+        {
+          "name": "Twin Ultra",
+          "oemTireSizes": ["265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "First confirmed US model year"
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "EX90",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Various",
+          "oemTireSizes": ["255/50R20", "265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"],
+      "notes": "2026 gets 800V architecture upgrade"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["195/60R15"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "notes": "First generation S40. Different bolt pattern from 2005+ models."
+    },
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["195/60R15"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "notes": "First generation S40"
+    },
+    {
+      "year": 2002,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["195/60R15"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "notes": "First generation S40"
+    },
+    {
+      "year": 2003,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["195/60R15", "215/50R16"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "notes": "First generation S40"
+    },
+    {
+      "year": 2004,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["195/60R15", "215/50R16"]
+        },
+        {
+          "name": "LSE",
+          "oemTireSizes": ["215/50R16"]
+        },
+        {
+          "name": "2.4i (2004.5)",
+          "oemTireSizes": ["205/55R16", "205/50R17"],
+          "boltPattern": "5x108",
+          "hubBore": 63.4
+        },
+        {
+          "name": "T5 (2004.5)",
+          "oemTireSizes": ["205/55R16", "205/50R17"],
+          "boltPattern": "5x108",
+          "hubBore": 63.4
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "notes": "Transition year: Early 2004 is first gen (4x114.3), late 2004 (2004.5) is second gen (5x108)"
+    },
+    {
+      "year": 2005,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 AWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 FWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ipdusa.com (P1 chassis)"],
+      "notes": "Second generation S40 (P1 platform)"
+    },
+    {
+      "year": 2006,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 AWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 FWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S40"
+    },
+    {
+      "year": 2007,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 AWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 FWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S40"
+    },
+    {
+      "year": 2008,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 AWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 FWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S40"
+    },
+    {
+      "year": 2009,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/50R17"]
+        },
+        {
+          "name": "T5 AWD",
+          "oemTireSizes": ["205/50R17"]
+        },
+        {
+          "name": "T5 FWD",
+          "oemTireSizes": ["205/50R17", "215/45R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S40"
+    },
+    {
+      "year": 2010,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/50R17"]
+        },
+        {
+          "name": "T5 R-Design AWD",
+          "oemTireSizes": ["205/50R17"]
+        },
+        {
+          "name": "T5 R-Design FWD",
+          "oemTireSizes": ["205/50R17", "215/45R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S40"
+    },
+    {
+      "year": 2011,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/50R17"]
+        },
+        {
+          "name": "T5 R-Design AWD",
+          "oemTireSizes": ["205/50R17"]
+        },
+        {
+          "name": "T5 R-Design FWD",
+          "oemTireSizes": ["205/50R17", "215/45R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last model year for S40 in US"
+    },
+    {
+      "year": 2012,
+      "make": "Volvo",
+      "model": "S40",
+      "status": "flagged",
+      "flagReason": "INVALID_YEAR - S40 was discontinued FOR 2012. Last US model year was 2011.",
+      "boltPattern": null,
+      "hubBore": null,
+      "confidence": "low",
+      "sources": ["autoweek.com", "cars.com", "wikipedia.org"],
+      "notes": "Volvo discontinued S40 (and V50) for 2012 model year in US."
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "S70",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 65.1,
+      "trims": [
+        {
+          "name": "AWD",
+          "oemTireSizes": ["195/65R15"]
+        },
+        {
+          "name": "Base",
+          "oemTireSizes": ["195/60R15"]
+        },
+        {
+          "name": "GLT",
+          "oemTireSizes": ["195/60R15"]
+        },
+        {
+          "name": "T5",
+          "oemTireSizes": ["205/50R16", "205/55R16"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ipdusa.com"],
+      "notes": "Last year for S70. Replaced by S60."
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 65.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["215/55R16"]
+        },
+        {
+          "name": "T6",
+          "oemTireSizes": ["225/55R16", "225/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ipdusa.com"],
+      "notes": "First generation S80"
+    },
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 65.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["215/55R16"]
+        },
+        {
+          "name": "T6",
+          "oemTireSizes": ["225/55R16", "225/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First generation S80"
+    },
+    {
+      "year": 2002,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 65.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["215/55R16", "225/50R17"]
+        },
+        {
+          "name": "T6",
+          "oemTireSizes": ["225/55R16", "225/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First generation S80"
+    },
+    {
+      "year": 2003,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 65.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["215/55R16", "225/50R17"]
+        },
+        {
+          "name": "T6",
+          "oemTireSizes": ["225/55R16", "225/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First generation S80"
+    },
+    {
+      "year": 2004,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 65.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemTireSizes": ["215/55R16", "225/50R17"]
+        },
+        {
+          "name": "T6",
+          "oemTireSizes": ["225/50R17", "235/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First generation S80"
+    },
+    {
+      "year": 2005,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 65.1,
+      "trims": [
+        {
+          "name": "2.5T AWD",
+          "oemTireSizes": ["215/55R16", "235/45R17"]
+        },
+        {
+          "name": "2.5T FWD",
+          "oemTireSizes": ["215/55R16", "235/45R17"]
+        },
+        {
+          "name": "T6",
+          "oemTireSizes": ["225/50R17", "235/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First generation S80"
+    },
+    {
+      "year": 2006,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 65.1,
+      "trims": [
+        {
+          "name": "2.5T AWD",
+          "oemTireSizes": ["225/50R17", "235/40R18"]
+        },
+        {
+          "name": "2.5T FWD",
+          "oemTireSizes": ["225/50R17", "235/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of first generation S80"
+    },
+    {
+      "year": 2007,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "3.2",
+          "oemTireSizes": ["225/50R17", "245/40R18"]
+        },
+        {
+          "name": "V8",
+          "oemTireSizes": ["245/45R17", "245/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "redline360.com"],
+      "notes": "Second generation S80 (P3 platform). Hub bore changed to 63.3mm."
+    },
+    {
+      "year": 2008,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "3.2",
+          "oemTireSizes": ["225/50R17", "245/40R18"]
+        },
+        {
+          "name": "T6",
+          "oemTireSizes": ["225/50R17", "245/40R18"]
+        },
+        {
+          "name": "V8",
+          "oemTireSizes": ["245/45R17", "245/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S80"
+    },
+    {
+      "year": 2009,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "3.2",
+          "oemTireSizes": ["225/50R17", "245/40R18"]
+        },
+        {
+          "name": "T6 AWD",
+          "oemTireSizes": ["225/50R17", "245/45R17", "245/40R18"]
+        },
+        {
+          "name": "V8 AWD",
+          "oemTireSizes": ["245/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S80"
+    },
+    {
+      "year": 2010,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "3.2",
+          "oemTireSizes": ["225/50R17", "245/40R18"]
+        },
+        {
+          "name": "T6 AWD",
+          "oemTireSizes": ["245/40R18"]
+        },
+        {
+          "name": "V8 AWD",
+          "oemTireSizes": ["245/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S80"
+    },
+    {
+      "year": 2011,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "3.2",
+          "oemTireSizes": ["225/50R17", "245/40R18"]
+        },
+        {
+          "name": "T6 AWD",
+          "oemTireSizes": ["245/40R18"]
+        },
+        {
+          "name": "V8 AWD",
+          "oemTireSizes": ["245/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S80"
+    },
+    {
+      "year": 2012,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "3.2",
+          "oemTireSizes": ["225/50R17", "245/40R18"]
+        },
+        {
+          "name": "T6 AWD",
+          "oemTireSizes": ["245/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S80"
+    },
+    {
+      "year": 2013,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "3.2",
+          "oemTireSizes": ["225/50R17", "245/40R18"]
+        },
+        {
+          "name": "T6 AWD",
+          "oemTireSizes": ["245/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S80"
+    },
+    {
+      "year": 2014,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "3.2",
+          "oemTireSizes": ["225/50R17", "245/40R18"]
+        },
+        {
+          "name": "T6 AWD",
+          "oemTireSizes": ["245/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S80"
+    },
+    {
+      "year": 2015,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "T5",
+          "oemTireSizes": ["225/50R17", "245/40R18"]
+        },
+        {
+          "name": "T6 AWD",
+          "oemTireSizes": ["245/40R18"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation S80"
+    },
+    {
+      "year": 2016,
+      "make": "Volvo",
+      "model": "S80",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.3,
+      "trims": [
+        {
+          "name": "T5",
+          "oemTireSizes": ["235/40R18"]
+        },
+        {
+          "name": "T5 19 Inch",
+          "oemTireSizes": ["235/40R19"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last model year for S80. Replaced by S90."
+    },
+    {
+      "year": 2016,
+      "make": "Volvo",
+      "model": "S90",
+      "status": "flagged",
+      "flagReason": "INVALID_YEAR - S90 first US model year was 2017. 2016 was only reveal year.",
+      "boltPattern": null,
+      "hubBore": null,
+      "confidence": "low",
+      "sources": ["wikipedia.org", "cars.com", "volvocars.com"],
+      "notes": "S90 unveiled early 2016 but first model year was 2017."
+    },
+    {
+      "year": 2004,
+      "make": "Volvo",
+      "model": "V50",
+      "status": "flagged",
+      "flagReason": "QUESTIONABLE_YEAR - V50 debuted as 2004.5/2005 model. Verify if true 2004 MY exists.",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com"],
+      "notes": "V50 debuted late 2004 as 2005 model year. Some may be registered as 2004."
+    },
+    {
+      "year": 2005,
+      "make": "Volvo",
+      "model": "V50",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 AWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 FWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ipdusa.com"],
+      "notes": "P1 platform wagon"
+    },
+    {
+      "year": 2006,
+      "make": "Volvo",
+      "model": "V50",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 AWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 FWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "P1 platform wagon"
+    },
+    {
+      "year": 2007,
+      "make": "Volvo",
+      "model": "V50",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 AWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 FWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "P1 platform wagon"
+    },
+    {
+      "year": 2008,
+      "make": "Volvo",
+      "model": "V50",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 AWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        },
+        {
+          "name": "T5 FWD",
+          "oemTireSizes": ["205/55R16", "205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "P1 platform wagon"
+    },
+    {
+      "year": 2009,
+      "make": "Volvo",
+      "model": "V50",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/50R17"]
+        },
+        {
+          "name": "T5 AWD R-Design",
+          "oemTireSizes": ["205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "P1 platform wagon"
+    },
+    {
+      "year": 2010,
+      "make": "Volvo",
+      "model": "V50",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "2.4i",
+          "oemTireSizes": ["205/50R17"]
+        },
+        {
+          "name": "T5 R-Design",
+          "oemTireSizes": ["205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "P1 platform wagon"
+    },
+    {
+      "year": 2011,
+      "make": "Volvo",
+      "model": "V50",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "T5",
+          "oemTireSizes": ["205/50R17"]
+        },
+        {
+          "name": "T5 R-Design",
+          "oemTireSizes": ["205/50R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ipdusa.com"],
+      "notes": "Last US model year for V50"
+    },
+    {
+      "year": 2012,
+      "make": "Volvo",
+      "model": "V50",
+      "status": "flagged",
+      "flagReason": "INVALID_YEAR - V50 was discontinued FOR 2012. Last US model year was 2011.",
+      "boltPattern": null,
+      "hubBore": null,
+      "confidence": "low",
+      "sources": ["autoweek.com", "cars.com", "wikipedia.org"],
+      "notes": "V50 discontinued along with S40 for 2012 model year in US."
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "V60",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Various",
+          "oemTireSizes": ["235/45R18", "235/40R19"]
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["carsguide.com.au"],
+      "notes": "V60 continues for 2026"
+    },
+    {
+      "year": 2018,
+      "make": "Volvo",
+      "model": "V90",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "T5 Inscription",
+          "oemTireSizes": ["255/40R19", "255/35R20"]
+        },
+        {
+          "name": "T5 R-Design",
+          "oemTireSizes": ["255/40R19", "255/35R20"]
+        },
+        {
+          "name": "T6 Inscription",
+          "oemTireSizes": ["255/40R19", "255/35R20"]
+        },
+        {
+          "name": "T6 R-Design",
+          "oemTireSizes": ["255/40R19", "255/35R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Current generation V90"
+    },
+    {
+      "year": 2019,
+      "make": "Volvo",
+      "model": "V90",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "T5/T6 Inscription",
+          "oemTireSizes": ["255/40R19", "255/35R20"]
+        },
+        {
+          "name": "T5/T6 R-Design",
+          "oemTireSizes": ["255/40R19", "255/35R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Current generation V90"
+    },
+    {
+      "year": 2021,
+      "make": "Volvo",
+      "model": "V90",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "T5/T6 Inscription",
+          "oemTireSizes": ["255/40R19", "255/35R20"]
+        },
+        {
+          "name": "T5/T6 R-Design",
+          "oemTireSizes": ["255/40R19", "255/35R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wikipedia.org"],
+      "notes": "Last US model year for V90 sedan"
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "V90",
+      "status": "flagged",
+      "flagReason": "QUESTIONABLE_YEAR - V90 sedan discontinued in US after 2021. V90 Cross Country continued. Clarify which model.",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Cross Country (if V90 CC)",
+          "oemTireSizes": ["235/50R19", "255/40R20"]
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["wikipedia.org", "swedespeed.com"],
+      "notes": "V90 sedan ended 2021 in US. V90 Cross Country continued until 2025."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "V90",
+      "status": "flagged",
+      "flagReason": "QUESTIONABLE_YEAR - V90 sedan not sold in US. If V90 Cross Country, 2025 was last year globally.",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "Cross Country (if V90 CC)",
+          "oemTireSizes": ["235/50R19", "255/40R20"]
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["wikipedia.org", "usatoday.com", "kbb.com"],
+      "notes": "V90/V90 CC discontinued globally in 2025."
+    },
+    {
+      "year": 2023,
+      "make": "Volvo",
+      "model": "XC40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "B4 Core",
+          "oemTireSizes": ["235/55R18"]
+        },
+        {
+          "name": "B4/B5 Plus",
+          "oemTireSizes": ["235/55R18", "235/50R19", "245/45R20"]
+        },
+        {
+          "name": "B4/B5 Ultimate",
+          "oemTireSizes": ["235/50R19", "245/45R20"]
+        },
+        {
+          "name": "Recharge (EV)",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)", "235/45R20 (F) / 255/40R20 (R)"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Both ICE and Recharge versions available"
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "XC40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "B5 Core",
+          "oemTireSizes": ["235/55R18", "235/50R19"]
+        },
+        {
+          "name": "B5 Plus",
+          "oemTireSizes": ["235/50R19", "245/45R20", "245/40R21"]
+        },
+        {
+          "name": "B5 Ultimate",
+          "oemTireSizes": ["245/45R20", "245/40R21"]
+        },
+        {
+          "name": "Recharge (EV)",
+          "oemTireSizes": ["235/50R19 (F) / 255/45R19 (R)", "235/45R20 (F) / 255/40R20 (R)"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year for XC40 Recharge name (renamed EX40 for 2025)"
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "XC40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "B5 Core",
+          "oemTireSizes": ["235/55R18", "235/50R19", "245/40R21"]
+        },
+        {
+          "name": "B5 Plus",
+          "oemTireSizes": ["235/50R19", "245/45R20", "245/40R21"]
+        },
+        {
+          "name": "B5 Ultra",
+          "oemTireSizes": ["245/45R20", "245/40R21"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "ICE version only (EV version now called EX40)"
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "XC40",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "B4/B5 Core",
+          "oemTireSizes": ["235/55R18", "235/50R19"]
+        },
+        {
+          "name": "B4/B5 Plus",
+          "oemTireSizes": ["235/50R19", "245/45R20"]
+        },
+        {
+          "name": "B4/B5 Ultra",
+          "oemTireSizes": ["245/45R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "ICE version only"
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "XC60",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "B5 Core",
+          "oemTireSizes": ["235/60R18", "235/55R19"]
+        },
+        {
+          "name": "B5 Plus",
+          "oemTireSizes": ["235/55R19", "255/45R20"]
+        },
+        {
+          "name": "B5 Ultra",
+          "oemTireSizes": ["255/45R20", "255/40R21", "265/35R22"]
+        },
+        {
+          "name": "T8 Polestar",
+          "oemTireSizes": ["255/40R21", "265/35R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com (2025 data)"],
+      "notes": "Projected from 2025 specs"
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "XC90",
+      "status": "verified",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "B5/B6 Core",
+          "oemTireSizes": ["275/45R20", "275/40R21"]
+        },
+        {
+          "name": "B5/B6 Plus/Ultra",
+          "oemTireSizes": ["275/40R21", "275/35R22"]
+        },
+        {
+          "name": "T8 Core/Plus/Ultra",
+          "oemTireSizes": ["275/45R20", "275/40R21"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com (2025 data)"],
+      "notes": "Projected from 2025 specs"
+    }
+  ],
+  "summary": {
+    "boltPatternGroups": {
+      "4x114.3": "First gen S40 (2000-2004), First gen V40 (2000-2004)",
+      "5x108": "All other modern Volvos"
+    },
+    "hubBoreGroups": {
+      "67.1mm": "First gen S40/V40 (2000-2004)",
+      "65.1mm": "Pre-2007 P2 platform (S60, V70, XC70, S80 1999-2006, S70, C70)",
+      "63.3-63.4mm": "2007+ P3/SPA platform (all modern Volvos)"
+    },
+    "invalidYears": [
+      "S40 2012 (discontinued FOR 2012)",
+      "V50 2012 (discontinued FOR 2012)",
+      "S90 2016 (first year was 2017)",
+      "EX30 2023-2024 (first US year 2025)",
+      "EX90 2023 (first year 2024/2025)",
+      "EC40 2024-2025 (name starts 2026)",
+      "EX40 2024 (name starts 2025)"
+    ],
+    "questionableYears": [
+      "C40 2021 (late Q4 deliveries only)",
+      "V50 2004 (debuted late 2004 as 2005 MY)",
+      "V90 2024-2025 (sedan ended 2021, Cross Country continued)"
+    ]
+  }
+}

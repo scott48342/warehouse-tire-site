@@ -1,0 +1,2436 @@
+[
+  {
+    "id": "3dd3b609-4e03-4429-84f4-ca91ad136362",
+    "year": 2004,
+    "make": "audi",
+    "model": "a6",
+    "trim": "2.7T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "79515010-6eac-47fe-b2b0-83c075f29fab",
+    "year": 2005,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "553b4efb-4087-48af-bff6-db7c86ac8be1",
+    "year": 2005,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "55d0fecb-a822-4af0-b557-588184f4072e",
+    "year": 2005,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "612a3000-919b-4cf3-a99c-ba88b4be04de",
+    "year": 2006,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5b9cd8e2-7f9d-4082-aad6-dc04c1215ad5",
+    "year": 2006,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b38a3c86-1ca1-4d0d-bade-9c28c0989b50",
+    "year": 2006,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a5972bb7-d4a6-4c53-89b7-df07c68419cd",
+    "year": 2007,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "13877db5-7875-48be-8cf6-8483ce6e2f97",
+    "year": 2007,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fccc9fca-5b66-4952-9868-4c357bac932a",
+    "year": 2007,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7da5af9d-16c6-4130-bc9f-85ce1260e6fb",
+    "year": 2008,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c3ece2b3-e820-4d71-a039-b3a53fe7b32b",
+    "year": 2008,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a1cb0df8-7b40-46f9-9d66-3ce96ec13fdd",
+    "year": 2008,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ab9f4c26-8b40-4640-8f70-d5496a9d0fbe",
+    "year": 2009,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "afc1c75e-fe7f-4e3a-83c9-f736255272b3",
+    "year": 2009,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e0ab1172-3c93-4fcd-acfa-689318338a6c",
+    "year": 2009,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e3d26a21-103a-4b0c-8a95-a512767b8087",
+    "year": 2010,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8978c498-795a-4fdf-a3c6-01908b756ddc",
+    "year": 2010,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "eb7a551d-fc64-4d86-80bf-f3816b8f0623",
+    "year": 2010,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f77a85ea-a5ce-40ae-8bb3-8c691d08dcc7",
+    "year": 2011,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "eb85c37f-5fa3-40aa-b116-4618b9ac4df5",
+    "year": 2011,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2f7736fa-571e-4352-8825-7b9cffc03a2f",
+    "year": 2011,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8fec34be-12cc-46ad-92e3-5c45b4243f7e",
+    "year": 2012,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0 TDi",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "255/35ZR20",
+      "245/40R19"
+    ],
+    "source": "reviewed_from_2013_ADJACENT_YEAR"
+  },
+  {
+    "id": "5104fc17-77be-4ff0-b71c-eb552f26a24e",
+    "year": 2012,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "255/40R19",
+      "255/35R20",
+      "265/35R20",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ff258aba-ac7e-4b8e-89af-f9d302a67ff2",
+    "year": 2012,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9e4a1026-338e-4797-b287-7b69c36d3391",
+    "year": 2012,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a6403b4f-9a5f-477a-a8c8-4f0a07c208f3",
+    "year": 2012,
+    "make": "audi",
+    "model": "a6",
+    "trim": "2.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f17973f8-75f9-46cc-bbd5-1fe59c865ae6",
+    "year": 2013,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "277fbb51-2e44-4222-b416-5ac4a26b063c",
+    "year": 2013,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8bc34211-b42d-44a7-9030-b0714466100f",
+    "year": 2013,
+    "make": "audi",
+    "model": "a6",
+    "trim": "2.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b70190a3-addc-4b73-9044-f5a179b8e262",
+    "year": 2013,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0 TDi",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "255/35ZR20",
+      "245/40R19"
+    ],
+    "source": "wheelsize"
+  },
+  {
+    "id": "14fc0947-9bdb-422b-9911-c237e0411fab",
+    "year": 2013,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "255/40R19",
+      "255/35R20",
+      "265/35R20",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "0f073d05-f841-4989-9320-99e78d277acf",
+    "year": 2014,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "255/40R19",
+      "255/35R20",
+      "265/35R20",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "fc50c348-c195-44d7-b2c8-1ee358f1a65c",
+    "year": 2014,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0 TDi",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "255/35ZR20",
+      "245/40R19"
+    ],
+    "source": "reviewed_from_2013_ADJACENT_YEAR"
+  },
+  {
+    "id": "2d1172e3-8f2c-493c-8c86-acd5dfb8b0cb",
+    "year": 2014,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9b250fa2-5f8f-48e2-a5c0-7d0024074715",
+    "year": 2014,
+    "make": "audi",
+    "model": "a6",
+    "trim": "2.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4a1ba2e5-4e4e-45cb-b292-c7a7cdbf7348",
+    "year": 2014,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c3a36bfe-bab4-4421-b1ba-2af1d2f3c91a",
+    "year": 2015,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f067740f-4881-4742-97af-6a788729581b",
+    "year": 2015,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "03f3f0fd-795e-47a6-8369-525f58e9c11b",
+    "year": 2015,
+    "make": "audi",
+    "model": "a6",
+    "trim": "2.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "09275e16-1e65-46fb-82e9-ec49278f53d7",
+    "year": 2015,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "255/40R19",
+      "255/35R20",
+      "265/35R20",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "bd29b47f-ff86-488f-901a-c10e28524aa8",
+    "year": 2016,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0c390419-8180-459c-b346-68df380f871a",
+    "year": 2016,
+    "make": "audi",
+    "model": "a6",
+    "trim": "2.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7c963f4e-44b6-4950-93d0-b85c651da7ff",
+    "year": 2016,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bfdf6faf-5417-42bf-9bd6-91f0b484c1cd",
+    "year": 2016,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "255/40R19",
+      "255/35R20",
+      "265/35R20",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "bc3fba47-4185-4b11-9e58-b4899538423b",
+    "year": 2017,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1c21ab6c-7d0c-4484-ac15-d206e556e8eb",
+    "year": 2017,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3d135d92-adcc-4bca-b55f-6f8497a7c44c",
+    "year": 2017,
+    "make": "audi",
+    "model": "a6",
+    "trim": "2.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7a2efb24-88a6-455e-9310-a714051bfe32",
+    "year": 2017,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "255/40R19",
+      "255/35R20",
+      "265/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6a8321ad-a1a4-4b09-ab8d-a44a11135cd0",
+    "year": 2018,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "43becb05-0857-49ae-9165-8cdff07fcfb8",
+    "year": 2018,
+    "make": "audi",
+    "model": "a6",
+    "trim": "3.0T Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7f83e4e4-b369-4128-a263-47ffa7d8b9db",
+    "year": 2018,
+    "make": "audi",
+    "model": "a6",
+    "trim": "2.0T",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "62696483-4b14-4012-b007-69e1ebf3cb42",
+    "year": 2018,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "255/40R19",
+      "255/35R20",
+      "265/35R20",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "fd82a734-d7c0-466a-8347-f8f3bf522975",
+    "year": 2019,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8d9ac1a0-3634-45ce-bfcf-fb84920dbcb5",
+    "year": 2019,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "255/40R19"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "255/35ZR20"
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "22f93d04-71b9-4503-82d9-c02e0a534343",
+    "year": 2019,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "490c8162-bac1-4487-b728-00bc49fd0783",
+    "year": 2019,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/35R19",
+      "265/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3e69867b-af18-4743-ad07-fdd1a4a89e7a",
+    "year": 2020,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21",
+      "245/45ZR19",
+      "225/60ZR17",
+      "225/55ZR18",
+      "255/40ZR20",
+      "255/35ZR21",
+      "225/60R17"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "41b05bee-72d4-4bf1-a82c-abf41914c4db",
+    "year": 2020,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21",
+      "245/45ZR19",
+      "225/60ZR17",
+      "225/55ZR18",
+      "255/40ZR20",
+      "255/35ZR21",
+      "225/60R17"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "8bc46203-e06d-45dc-843f-429fbb16f2b1",
+    "year": 2020,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21",
+      "245/45ZR19",
+      "225/60ZR17",
+      "225/55ZR18",
+      "255/40ZR20",
+      "255/35ZR21",
+      "225/60R17"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "daf05def-23e8-4655-934a-5540c2124c7f",
+    "year": 2020,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 36,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 39,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21",
+      "245/45ZR19",
+      "225/60ZR17",
+      "225/55ZR18",
+      "255/40ZR20",
+      "255/35ZR21",
+      "225/60R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "9853a4cf-177d-42ed-ad4d-4b4ce95babcd",
+    "year": 2021,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 36,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 39,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21",
+      "245/45ZR19",
+      "225/60ZR17",
+      "225/55ZR18",
+      "255/40ZR20",
+      "255/35ZR21",
+      "225/60R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "0699fd8b-9bfc-481c-9751-5287f0263ddd",
+    "year": 2021,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21",
+      "245/45ZR19",
+      "225/60ZR17",
+      "225/55ZR18",
+      "255/40ZR20",
+      "255/35ZR21",
+      "225/60R17"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "43c7bee0-65b4-44cc-be88-a322735aa26b",
+    "year": 2021,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21",
+      "245/45ZR19",
+      "225/60ZR17",
+      "225/55ZR18",
+      "255/40ZR20",
+      "255/35ZR21",
+      "225/60R17"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "946a6787-641c-4dd2-9615-6ac1adf1c521",
+    "year": 2021,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21",
+      "245/45ZR19",
+      "225/60ZR17",
+      "225/55ZR18",
+      "255/40ZR20",
+      "255/35ZR21",
+      "225/60R17"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "dc5e645d-ba17-46ab-bb52-784b1741c753",
+    "year": 2022,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "54abdb63-58dc-4c93-841b-0fd76e1f52b5",
+    "year": 2022,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "13c83308-59a1-4aa3-bbe1-d6d15f911d14",
+    "year": 2022,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "2293acea-b5d8-4679-8b86-a1a274093772",
+    "year": 2022,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "cda4828f-21cf-4596-9dc8-f2d924a702e7",
+    "year": 2023,
+    "make": "audi",
+    "model": "a6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "159d2d5f-c21b-425c-bf8b-300b287db984",
+    "year": 2023,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "b0bb2768-e90c-45b9-8406-01eea067103d",
+    "year": 2023,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "967d7259-1611-4f7b-81aa-a91a23de92eb",
+    "year": 2023,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "2d821fa2-1861-494e-a8b4-ca8fd9768c32",
+    "year": 2024,
+    "make": "audi",
+    "model": "a6",
+    "trim": "45 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "cd11f0cf-f25f-4b44-97ee-efdbcdc4b343",
+    "year": 2024,
+    "make": "audi",
+    "model": "a6",
+    "trim": "55 TFSI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "255/40R20",
+      "255/35R21",
+      "265/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  }
+]

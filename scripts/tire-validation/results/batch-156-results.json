@@ -1,0 +1,807 @@
+{
+  "batchId": "156",
+  "make": "Volkswagen",
+  "validatedAt": "2026-04-21T23:00:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 32,
+    "discrepancies": 18,
+    "notFoundOnSource": 25,
+    "matchedExactly": 14
+  },
+  "findings": {
+    "criticalDiscrepancies": [
+      {
+        "model": "id.4",
+        "years": "2021-2026",
+        "issue": "Missing staggered front tire sizes",
+        "currentSizes": ["235/55R19", "255/50R20", "255/45R21"],
+        "oemSizes": {
+          "Pro (19in)": { "front": "235/55R19", "rear": "255/50R19" },
+          "Pro S (20in)": { "front": "235/50R20", "rear": "255/45R20" }
+        },
+        "recommendation": "Add 235/50R20 for Pro S front; verify 255/50R20 vs 255/50R19 diameter"
+      },
+      {
+        "model": "jetta",
+        "years": "2019-2026",
+        "issue": "Modern Jetta trims use different sizes than batch",
+        "currentSizes": ["205/55R16", "225/45R17", "225/40R18"],
+        "oemSizes": {
+          "S": "205/60R16",
+          "SE/SEL/Sport": "205/55R17",
+          "GLI": "225/45R18"
+        },
+        "recommendation": "Update to include 205/60R16, 205/55R17; GLI is 225/45R18 not 225/40R18"
+      },
+      {
+        "model": "jetta",
+        "years": "2010",
+        "issue": "Missing 225/40R18 option",
+        "currentSizes": ["195/65R15", "205/55R16", "225/45R17"],
+        "oemSizes": ["205/55R16", "225/45R17", "225/40R18"],
+        "recommendation": "Add 225/40R18; remove 195/65R15 (not OEM for 2010)"
+      }
+    ],
+    "modelNotFoundOnTireSizeCom": [
+      {
+        "model": "id-4",
+        "year": 2020,
+        "reason": "VW ID.4 production started 2021; 2020 model year does not exist",
+        "recommendation": "Remove from database or correct to 2021+"
+      },
+      {
+        "model": "id-4-crozz",
+        "years": "2021-2025",
+        "reason": "China-market variant (FAW-Volkswagen); not sold in US",
+        "recommendation": "Flag as non-US market vehicle or remove"
+      },
+      {
+        "model": "id-unyx",
+        "years": "2024-2026",
+        "reason": "China-market only electric SUV; not sold in US",
+        "recommendation": "Flag as non-US market vehicle or remove"
+      },
+      {
+        "model": "jetta-city",
+        "years": "2007-2009",
+        "reason": "Canada-only variant based on MK4 Jetta",
+        "tireSizesLikely": ["195/65R15", "205/55R16"],
+        "recommendation": "Flag as Canada-market or use MK4 Jetta sizes"
+      },
+      {
+        "model": "jetta-king",
+        "years": "2004-2009",
+        "reason": "China-market sedan (extended Jetta MK4)",
+        "recommendation": "Flag as non-US market vehicle"
+      },
+      {
+        "model": "jetta-pioneer",
+        "years": "2010-2012",
+        "reason": "China-market variant",
+        "recommendation": "Flag as non-US market vehicle"
+      },
+      {
+        "model": "jetta-sportwagen",
+        "years": "2010-2014",
+        "reason": "Listed under Jetta on tiresize.com (not separate model)",
+        "oemSizes": ["205/55R16", "225/45R17", "225/40R18"],
+        "recommendation": "Use standard Jetta sizes from same year, or merge into Jetta"
+      },
+      {
+        "model": "passat",
+        "year": 2026,
+        "reason": "US Passat discontinued after 2022; 2026 may be non-US variant",
+        "recommendation": "Verify market; if US, likely invalid model year"
+      }
+    ],
+    "validatedCorrect": [
+      {
+        "model": "jetta",
+        "year": 2005,
+        "currentSizes": ["195/65R15", "205/55R16", "225/45R17"],
+        "status": "MOSTLY_CORRECT",
+        "note": "Missing 225/40R18 for GLI trim"
+      },
+      {
+        "model": "jetta",
+        "years": "2015-2018",
+        "currentSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+        "status": "CORRECT",
+        "note": "Matches OEM sizes across trims"
+      },
+      {
+        "model": "jetta-gli",
+        "years": "2012-2018",
+        "currentSizes": ["225/45R17", "225/40R18"],
+        "status": "CORRECT",
+        "note": "Matches GLI OEM options"
+      }
+    ]
+  },
+  "vehicleResults": [
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "id-4",
+      "status": "INVALID_MODEL_YEAR",
+      "currentTireSizes": ["235/55R19", "255/45R20", "255/40R21"],
+      "oemTireSizes": null,
+      "discrepancy": "ID.4 production began 2021"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "id.4",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["235/55R19", "255/50R20", "255/45R21"],
+      "oemTireSizes": {
+        "Pro": ["235/55R19", "255/50R19"],
+        "Pro S": ["235/50R20", "255/45R20"],
+        "AWD Pro S": ["235/50R21", "255/45R21"]
+      },
+      "discrepancy": "Missing front staggered sizes; verify 19/20/21 inch rear aspect ratios"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "id.4",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["235/55R19", "255/50R20", "255/45R21"],
+      "oemTireSizes": ["235/55R19", "255/50R19", "235/50R20", "255/45R20", "255/45R21"],
+      "discrepancy": "Same as 2021"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "id.4",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["235/55R19", "255/50R20", "255/45R21"],
+      "oemTireSizes": ["235/55R19", "255/50R19", "235/50R20", "255/45R20", "255/45R21"],
+      "discrepancy": "Same as 2021"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "id.4",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["235/55R19", "255/50R20", "255/45R21"],
+      "oemTireSizes": ["235/55R19", "255/50R19", "235/50R20", "255/45R20", "255/45R21"],
+      "discrepancy": "Same as 2021"
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "id.4",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["235/55R19", "255/50R20", "255/45R21"],
+      "oemTireSizes": ["235/55R19", "255/50R19", "235/50R20", "255/45R20", "255/45R21"],
+      "discrepancy": "Same as 2021"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "id.4",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["235/55R19", "255/50R20", "255/45R21"],
+      "oemTireSizes": ["235/55R19", "255/50R19", "235/50R20", "255/45R20", "255/45R21"],
+      "discrepancy": "Same as 2021"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "id-4-crozz",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-market only vehicle"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "id-4-crozz",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-market only vehicle"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "id-4-crozz",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-market only vehicle"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "id-4-crozz",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-market only vehicle"
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "id-4-crozz",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-market only vehicle"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "id-unyx",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-market only vehicle"
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "id-unyx",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-market only vehicle"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "id-unyx",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-market only vehicle"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "205/60R16", "205/55R17", "225/50R17", "225/45R18"],
+      "oemTireSizes": ["205/60R16", "205/55R17", "225/45R18"],
+      "discrepancy": "Batch has extra sizes not OEM: 205/55R16, 225/45R17, 225/40R18, 225/50R17"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["205/60R16", "205/55R17", "225/45R18"],
+      "discrepancy": "All sizes wrong; replace with 205/60R16, 205/55R17, 225/45R18"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["205/60R16", "205/55R17", "225/45R18"],
+      "discrepancy": "Same as 2023"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["205/60R16", "205/55R17", "225/45R18"],
+      "discrepancy": "Same as 2023"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "205/60R16", "205/55R17", "225/50R17", "225/45R18"],
+      "oemTireSizes": ["205/60R16", "205/55R17", "225/45R18"],
+      "discrepancy": "Same as 2024 - extra non-OEM sizes"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["205/60R16", "205/55R17", "225/45R18"],
+      "discrepancy": "7th gen (2019+) uses different sizes than 6th gen"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "CORRECT",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18", "205/60R16", "205/55R17", "225/50R17", "225/45R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "CORRECT",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": "195/65R15 not confirmed for 2017"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "CORRECT",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "CORRECT",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18", "205/50R17", "215/50R17", "215/40ZR18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18", "205/50R17"],
+      "discrepancy": "215/50R17, 215/40ZR18 not confirmed OEM"
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "CORRECT",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18", "205/50R17", "215/50R17", "215/40ZR18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": "Extra sizes: 205/50R17, 215/50R17, 215/40ZR18"
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "CORRECT",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "CORRECT",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "CORRECT",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": "Missing 225/40R18; has 195/65R15 not OEM for 2010"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": null,
+      "discrepancy": "Likely correct for MK5 generation"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": null,
+      "discrepancy": "Likely correct for MK5 generation"
+    },
+    {
+      "year": 2007,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": null,
+      "discrepancy": "Likely correct for MK5 generation"
+    },
+    {
+      "year": 2006,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": null,
+      "discrepancy": "Likely correct for MK5 generation"
+    },
+    {
+      "year": 2005,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": "Missing 225/40R18 for GLI trim"
+    },
+    {
+      "year": 2004,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": null,
+      "discrepancy": "MK4 generation - likely correct"
+    },
+    {
+      "year": 2003,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": null,
+      "discrepancy": "MK4 generation - likely correct"
+    },
+    {
+      "year": 2002,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": null,
+      "discrepancy": "MK4 generation - likely correct"
+    },
+    {
+      "year": 2001,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": null,
+      "discrepancy": "MK4 generation - likely correct"
+    },
+    {
+      "year": 2000,
+      "make": "volkswagen",
+      "model": "jetta",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": null,
+      "discrepancy": "MK4 generation - likely correct"
+    },
+    {
+      "year": 2007,
+      "make": "volkswagen",
+      "model": "jetta-city",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "Canada-only model"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "jetta-city",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "Canada-only model"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "jetta-city",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "Canada-only model"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "CORRECT",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "CORRECT",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R18"],
+      "discrepancy": "2024 GLI shows only 225/45R18 on tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R18"],
+      "discrepancy": "2022-2024 GLI changed to 225/45R18"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "DISCREPANCY",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R18"],
+      "discrepancy": "2022 GLI is 225/45R18 only"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": null,
+      "discrepancy": "Likely 225/45R18 like 2022+"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": null,
+      "discrepancy": "7th gen GLI - verify tire size"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "NEEDS_VERIFICATION",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": null,
+      "discrepancy": "7th gen GLI start year"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "CORRECT",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "CORRECT",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/40R18"],
+      "discrepancy": "225/45R17 may be aftermarket option"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "CORRECT",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "CORRECT",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "CORRECT",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "CORRECT",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "jetta-gli",
+      "status": "CORRECT",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": ["225/45R17", "225/40R18"],
+      "discrepancy": null
+    },
+    {
+      "year": 2004,
+      "make": "volkswagen",
+      "model": "jetta-king",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-only model"
+    },
+    {
+      "year": 2005,
+      "make": "volkswagen",
+      "model": "jetta-king",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-only model"
+    },
+    {
+      "year": 2006,
+      "make": "volkswagen",
+      "model": "jetta-king",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-only model"
+    },
+    {
+      "year": 2007,
+      "make": "volkswagen",
+      "model": "jetta-king",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-only model"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "jetta-king",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-only model"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "jetta-king",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-only model"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "jetta-pioneer",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-only model"
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "jetta-pioneer",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-only model"
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "jetta-pioneer",
+      "status": "NOT_US_MARKET",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "discrepancy": "China-only model"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "jetta-sportwagen",
+      "status": "NEEDS_DATA",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": "Empty sizes - should use Jetta Sportwagen OEM sizes"
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "jetta-sportwagen",
+      "status": "NEEDS_DATA",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": "Empty sizes - should use Jetta Sportwagen OEM sizes"
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "jetta-sportwagen",
+      "status": "NEEDS_DATA",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": "Empty sizes - should use Jetta Sportwagen OEM sizes"
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "jetta-sportwagen",
+      "status": "NEEDS_DATA",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": "Empty sizes - should use Jetta Sportwagen OEM sizes"
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "jetta-sportwagen",
+      "status": "NEEDS_DATA",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "discrepancy": "Empty sizes - should use Jetta Sportwagen OEM sizes"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "passat",
+      "status": "INVALID_MODEL_YEAR",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "oemTireSizes": null,
+      "discrepancy": "US Passat discontinued after 2022"
+    }
+  ],
+  "recommendations": {
+    "immediateActions": [
+      "Update Jetta 2019-2026 to use 205/60R16, 205/55R17, 225/45R18",
+      "Add staggered front sizes for ID.4: 235/50R20 (Pro S) and 235/55R19 (Pro)",
+      "Populate Jetta SportWagen 2010-2014 with 205/55R16, 225/45R17, 225/40R18",
+      "Update Jetta GLI 2019-2024 to 225/45R18"
+    ],
+    "dataCleanup": [
+      "Remove or flag id-4-crozz (China market)",
+      "Remove or flag id-unyx (China market)",
+      "Remove or flag jetta-city (Canada market)",
+      "Remove or flag jetta-king (China market)",
+      "Remove or flag jetta-pioneer (China market)",
+      "Verify Passat 2026 - may be non-US market"
+    ],
+    "furtherVerification": [
+      "Confirm 2020 id-4 model year validity",
+      "Verify older Jetta years (2000-2009) against additional sources",
+      "Check if 215/50R17 and 215/40ZR18 are valid OEM for any Jetta trim"
+    ]
+  }
+}

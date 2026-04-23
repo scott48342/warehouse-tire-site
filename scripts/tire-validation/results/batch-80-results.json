@@ -1,0 +1,591 @@
+{
+  "batchId": "80",
+  "processedAt": "2026-04-21T22:11:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo", "tireSizes": ["245/70R17"] },
+        { "trim": "Laredo X Package", "tireSizes": ["265/60R18"] },
+        { "trim": "Limited", "tireSizes": ["265/60R18", "265/50R20"] },
+        { "trim": "Overland", "tireSizes": ["265/50R20", "265/60R18"] }
+      ],
+      "allTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo", "tireSizes": ["245/65R17"] },
+        { "trim": "Limited", "tireSizes": ["245/65R17", "245/60R18"] },
+        { "trim": "SRT8", "tireSizes": ["255/45R20", "285/40R20"], "isStaggered": true, "note": "Front: 255/45R20, Rear: 285/40R20" }
+      ],
+      "allTireSizes": ["245/65R17", "245/60R18", "255/45R20", "285/40R20"],
+      "currentTireSizes": ["245/65R17", "245/60R18", "245/55R19", "245/50R20"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 245/55R19 and 245/50R20 which don't match OEM. OEM has SRT8 staggered 255/45R20/285/40R20"]
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo", "tireSizes": ["245/65R17"] },
+        { "trim": "Limited", "tireSizes": ["245/65R17", "245/60R18"] },
+        { "trim": "Overland", "tireSizes": ["245/65R17", "245/60R18"] },
+        { "trim": "SRT8", "tireSizes": ["255/45R20", "285/40R20"], "isStaggered": true, "note": "Front: 255/45R20, Rear: 285/40R20" }
+      ],
+      "allTireSizes": ["245/65R17", "245/60R18", "255/45R20", "285/40R20"],
+      "currentTireSizes": ["235/65R17", "245/60R18"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 235/65R17 - should be 245/65R17. Missing SRT8 staggered sizes."]
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo", "tireSizes": ["245/65R17"] },
+        { "trim": "Limited", "tireSizes": ["245/65R17", "245/60R18"] },
+        { "trim": "Overland", "tireSizes": ["245/65R17", "245/60R18"] },
+        { "trim": "SRT8", "tireSizes": ["255/45R20", "285/40R20"], "isStaggered": true, "note": "Front: 255/45R20, Rear: 285/40R20" }
+      ],
+      "allTireSizes": ["245/65R17", "245/60R18", "255/45R20", "285/40R20"],
+      "currentTireSizes": ["235/65R17", "245/65R17", "255/55R18", "265/50R20"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 235/65R17, 255/55R18, 265/50R20 - not matching OEM. Missing SRT8 staggered sizes."]
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo", "tireSizes": ["245/65R17"] },
+        { "trim": "Limited", "tireSizes": ["245/65R17"] },
+        { "trim": "Overland", "tireSizes": ["245/65R17"] },
+        { "trim": "Rocky Mountain", "tireSizes": ["245/65R17"] },
+        { "trim": "SRT8", "tireSizes": ["255/45R20", "285/40R20"], "isStaggered": true, "note": "Front: 255/45R20, Rear: 285/40R20" }
+      ],
+      "allTireSizes": ["245/65R17", "255/45R20", "285/40R20"],
+      "currentTireSizes": ["235/65R17", "245/65R17", "255/55R18", "265/50R20"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 235/65R17, 255/55R18, 265/50R20 - not OEM. Missing SRT8 staggered sizes."]
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo", "tireSizes": ["235/65R17", "245/65R17"] },
+        { "trim": "Limited", "tireSizes": ["235/65R17", "245/65R17"] },
+        { "trim": "Overland", "tireSizes": ["235/65R17", "245/65R17"] },
+        { "trim": "SRT8", "tireSizes": ["255/45R20", "285/40R20"], "isStaggered": true, "note": "Front: 255/45R20, Rear: 285/40R20" }
+      ],
+      "allTireSizes": ["235/65R17", "245/65R17", "255/45R20", "285/40R20"],
+      "currentTireSizes": ["235/65R17", "245/65R17", "255/55R18", "265/50R20"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 255/55R18, 265/50R20 - not OEM. Missing SRT8 staggered sizes."]
+    },
+    {
+      "year": 2005,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo", "tireSizes": ["235/65R17", "245/65R17"] },
+        { "trim": "Limited", "tireSizes": ["235/65R17", "245/65R17"] },
+        { "trim": "Rocky Mountain", "tireSizes": ["245/65R17"] }
+      ],
+      "allTireSizes": ["235/65R17", "245/65R17"],
+      "currentTireSizes": ["235/65R17", "245/65R17", "255/55R18", "265/50R20"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 255/55R18, 265/50R20 - not OEM sizes for 2005"]
+    },
+    {
+      "year": 2004,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo Freedom", "tireSizes": ["235/65R17"] },
+        { "trim": "Laredo Standard Model", "tireSizes": ["225/75R16", "245/70R16"] },
+        { "trim": "Limited", "tireSizes": ["235/65R17"] },
+        { "trim": "Overland", "tireSizes": ["235/65R17"] },
+        { "trim": "Special Edition", "tireSizes": ["225/75R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "245/70R16", "235/65R17"],
+      "currentTireSizes": ["225/70R16", "235/65R17", "245/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 225/70R16, 245/65R17 - OEM is 225/75R16, 245/70R16"]
+    },
+    {
+      "year": 2003,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo Standard Model", "tireSizes": ["225/75R16", "245/70R16"] },
+        { "trim": "Laredo Up Country", "tireSizes": ["235/65R17"] },
+        { "trim": "Limited Standard Model", "tireSizes": ["235/65R17"] },
+        { "trim": "Limited Up Country", "tireSizes": ["235/65R17"] },
+        { "trim": "Overland", "tireSizes": ["235/65R17"] }
+      ],
+      "allTireSizes": ["225/75R16", "245/70R16", "235/65R17"],
+      "currentTireSizes": ["225/70R16", "235/65R17", "245/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 225/70R16, 245/65R17 - OEM is 225/75R16, 245/70R16"]
+    },
+    {
+      "year": 2002,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo Standard Model", "tireSizes": ["225/75R16", "245/70R16"] },
+        { "trim": "Laredo Up Country", "tireSizes": ["235/65R17"] },
+        { "trim": "Limited Standard Model", "tireSizes": ["235/65R17"] },
+        { "trim": "Limited Up Country", "tireSizes": ["235/65R17"] },
+        { "trim": "Overland", "tireSizes": ["235/65R17"] },
+        { "trim": "Sport", "tireSizes": ["225/75R16", "245/70R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "245/70R16", "235/65R17"],
+      "currentTireSizes": ["245/70R16", "225/75R16", "235/65R17", "245/65R17", "245/60R18"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 245/65R17, 245/60R18 - not OEM"]
+    },
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo", "tireSizes": ["225/75R16", "245/70R16"] },
+        { "trim": "Limited", "tireSizes": ["235/65R17"] }
+      ],
+      "allTireSizes": ["225/75R16", "245/70R16", "235/65R17"],
+      "currentTireSizes": ["225/70R16", "235/65R17", "245/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 225/70R16, 245/65R17 - OEM is 225/75R16, 245/70R16"]
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trims": [
+        { "trim": "Laredo", "tireSizes": ["225/75R16", "245/70R16"] },
+        { "trim": "Limited", "tireSizes": ["245/70R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "245/70R16"],
+      "currentTireSizes": ["225/70R16", "235/65R17", "245/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Current DB has 225/70R16, 235/65R17, 245/65R17 - OEM is 225/75R16, 245/70R16"]
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["285/45R22"] },
+        { "trim": "Obsidian", "tireSizes": ["285/45R22"] },
+        { "trim": "Series III", "tireSizes": ["285/45R22"] },
+        { "trim": "Series III Obsidian", "tireSizes": ["285/45R22"] }
+      ],
+      "allTireSizes": ["285/45R22"],
+      "currentTireSizes": ["285/45R22"],
+      "status": "VALID"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["275/55R20"] },
+        { "trim": "Obsidian", "tireSizes": ["285/45R22"] },
+        { "trim": "Series II", "tireSizes": ["285/45R22"] },
+        { "trim": "Series III", "tireSizes": ["285/45R22"] }
+      ],
+      "allTireSizes": ["275/55R20", "285/45R22"],
+      "currentTireSizes": ["285/45R22"],
+      "status": "MISMATCH",
+      "issues": ["Missing 275/55R20 (Base Model)"]
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["275/55R20"] },
+        { "trim": "Obsidian", "tireSizes": ["285/45R22"] },
+        { "trim": "Series II", "tireSizes": ["285/45R22"] },
+        { "trim": "Series III", "tireSizes": ["285/45R22"] }
+      ],
+      "allTireSizes": ["275/55R20", "285/45R22"],
+      "currentTireSizes": ["285/45R22"],
+      "status": "MISMATCH",
+      "issues": ["Missing 275/55R20 (Base Model)"]
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "trims": [
+        { "trim": "Series I", "tireSizes": ["275/55R20"] },
+        { "trim": "Obsidian", "tireSizes": ["285/45R22"] },
+        { "trim": "Series II", "tireSizes": ["285/45R22"] },
+        { "trim": "Series III", "tireSizes": ["285/45R22"] }
+      ],
+      "allTireSizes": ["275/55R20", "285/45R22"],
+      "currentTireSizes": ["285/45R22"],
+      "status": "MISMATCH",
+      "issues": ["Missing 275/55R20 (Series I)"]
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "trims": [],
+      "allTireSizes": [],
+      "currentTireSizes": [],
+      "status": "NO_DATA",
+      "issues": ["2021 Grand Wagoneer not found - 2022 was first model year of modern Grand Wagoneer"]
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [],
+      "allTireSizes": [],
+      "currentTireSizes": [],
+      "status": "NO_DATA",
+      "issues": ["Jeep Liberty discontinued after 2012 model year"]
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [],
+      "allTireSizes": [],
+      "currentTireSizes": [],
+      "status": "NO_DATA",
+      "issues": ["Jeep Liberty discontinued after 2012 model year"]
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "Arctic", "tireSizes": ["235/70R16"] },
+        { "trim": "Limited", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Limited Jet", "tireSizes": ["245/50R20"] },
+        { "trim": "Sport", "tireSizes": ["225/75R16", "235/70R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "235/70R16", "235/65R17", "235/60R18", "245/50R20"],
+      "currentTireSizes": ["235/65R17", "245/60R18"],
+      "status": "MISMATCH",
+      "issues": ["Missing 225/75R16, 235/70R16 (Sport), 235/60R18 -> should be 235/60R18, 245/50R20 (Limited Jet)"]
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Renegade", "tireSizes": ["235/70R16"] },
+        { "trim": "Sport", "tireSizes": ["225/75R16", "235/70R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "235/70R16", "235/65R17", "235/60R18"],
+      "currentTireSizes": ["235/65R17", "245/60R18"],
+      "status": "MISMATCH",
+      "issues": ["Current has 245/60R18 - OEM is 235/60R18. Missing 225/75R16, 235/70R16 (Sport/Renegade)"]
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Renegade", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Sport", "tireSizes": ["225/75R16", "235/70R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "235/70R16", "235/65R17", "235/60R18"],
+      "currentTireSizes": ["225/75R16", "235/70R16", "235/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Missing 235/60R18 (Limited/Renegade)"]
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Sport", "tireSizes": ["225/75R16", "235/70R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "235/70R16", "235/65R17", "235/60R18"],
+      "currentTireSizes": ["225/75R16", "235/70R16", "235/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Missing 235/60R18 (Limited)"]
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Sport", "tireSizes": ["225/75R16", "235/70R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "235/70R16", "235/65R17", "235/60R18"],
+      "currentTireSizes": ["225/75R16", "235/70R16", "235/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Missing 235/60R18 (Limited)"]
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "Latitude", "tireSizes": ["225/75R16", "235/70R16"] },
+        { "trim": "Limited", "tireSizes": ["235/65R17"] },
+        { "trim": "Sport", "tireSizes": ["225/75R16", "235/70R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "235/70R16", "235/65R17"],
+      "currentTireSizes": ["235/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Missing 225/75R16, 235/70R16 (Sport/Latitude)"]
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "65th Anniversary", "tireSizes": ["225/75R16", "235/70R16"] },
+        { "trim": "Limited 2wd", "tireSizes": ["235/65R17"] },
+        { "trim": "Limited 4wd 2.8L Diesel", "tireSizes": ["225/75R16"] },
+        { "trim": "Limited 4wd 3.7L V6", "tireSizes": ["235/65R17"] },
+        { "trim": "Renegade", "tireSizes": ["225/75R16", "235/70R16"] },
+        { "trim": "Sport", "tireSizes": ["225/75R16", "235/70R16"] },
+        { "trim": "Sport 4wd 2.8L Diesel", "tireSizes": ["225/75R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "235/70R16", "235/65R17"],
+      "currentTireSizes": ["215/75R16", "225/75R16", "235/70R16", "235/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Current has 215/75R16 - not OEM for 2006"]
+    },
+    {
+      "year": 2005,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "Limited 2wd", "tireSizes": ["235/65R17"] },
+        { "trim": "Limited 4wd 2.8L Diesel", "tireSizes": ["225/75R16"] },
+        { "trim": "Limited 4wd 3.7L V6", "tireSizes": ["235/65R17"] },
+        { "trim": "Renegade", "tireSizes": ["225/75R16", "235/70R16"] },
+        { "trim": "Rocky Mountain", "tireSizes": ["225/75R16"] },
+        { "trim": "Sport", "tireSizes": ["225/75R16", "235/70R16"] },
+        { "trim": "Sport 4wd 2.8L Diesel", "tireSizes": ["225/75R16"] }
+      ],
+      "allTireSizes": ["225/75R16", "235/70R16", "235/65R17"],
+      "currentTireSizes": ["235/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Missing 225/75R16, 235/70R16 (Sport/Renegade/Rocky Mountain)"]
+    },
+    {
+      "year": 2004,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["235/70R16", "235/65R17"] },
+        { "trim": "Renegade", "tireSizes": ["235/70R16"] },
+        { "trim": "Sport", "tireSizes": ["215/75R16", "235/70R16"] }
+      ],
+      "allTireSizes": ["215/75R16", "235/70R16", "235/65R17"],
+      "currentTireSizes": ["215/75R16", "225/75R16", "235/70R16", "235/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Current has 225/75R16 - not OEM for 2004"]
+    },
+    {
+      "year": 2003,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["235/70R16"] },
+        { "trim": "Renegade", "tireSizes": ["235/70R16"] },
+        { "trim": "Sport", "tireSizes": ["215/75R16", "235/70R16"] }
+      ],
+      "allTireSizes": ["215/75R16", "235/70R16"],
+      "currentTireSizes": ["215/75R16", "225/75R16", "235/70R16", "235/65R17", "245/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Current has 225/75R16, 235/65R17, 245/65R17 - not OEM for 2003"]
+    },
+    {
+      "year": 2002,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["235/70R16"] },
+        { "trim": "Renegade", "tireSizes": ["235/70R16"] },
+        { "trim": "Sport", "tireSizes": ["215/75R16", "235/70R16"] }
+      ],
+      "allTireSizes": ["215/75R16", "235/70R16"],
+      "currentTireSizes": ["215/75R16", "225/75R16", "235/70R16", "235/65R17"],
+      "status": "MISMATCH",
+      "issues": ["Current has 225/75R16, 235/65R17 - not OEM for 2002"]
+    },
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Liberty",
+      "trims": [],
+      "allTireSizes": [],
+      "currentTireSizes": [],
+      "status": "NO_DATA",
+      "issues": ["Jeep Liberty started in 2002 model year"]
+    },
+    {
+      "year": 2017,
+      "make": "Jeep",
+      "model": "Patriot",
+      "trims": [
+        { "trim": "75th Anniversary Edition", "tireSizes": ["215/65R17"] },
+        { "trim": "High Altitude", "tireSizes": ["215/60R17"] },
+        { "trim": "Latitude", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Sport", "tireSizes": ["205/70R16", "215/65R17"] },
+        { "trim": "Sport SE", "tireSizes": ["215/65R17"] }
+      ],
+      "allTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "issues": ["No tire sizes in current DB. OEM: 205/70R16, 215/60R17, 215/65R17"]
+    },
+    {
+      "year": 2016,
+      "make": "Jeep",
+      "model": "Patriot",
+      "trims": [
+        { "trim": "75th Anniversary", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "High Altitude", "tireSizes": ["215/60R17"] },
+        { "trim": "Latitude", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Limited", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Sport", "tireSizes": ["205/70R16", "215/65R17"] }
+      ],
+      "allTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "issues": ["No tire sizes in current DB. OEM: 205/70R16, 215/60R17, 215/65R17"]
+    },
+    {
+      "year": 2015,
+      "make": "Jeep",
+      "model": "Patriot",
+      "trims": [
+        { "trim": "Altitude", "tireSizes": ["215/60R17"] },
+        { "trim": "High Altitude", "tireSizes": ["215/60R17"] },
+        { "trim": "Latitude", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Limited", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Sport", "tireSizes": ["205/70R16", "215/65R17"] }
+      ],
+      "allTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "issues": ["No tire sizes in current DB. OEM: 205/70R16, 215/60R17, 215/65R17"]
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Patriot",
+      "trims": [
+        { "trim": "Latitude", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Limited", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Sport", "tireSizes": ["205/70R16", "215/65R17"] }
+      ],
+      "allTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "issues": ["No tire sizes in current DB. OEM: 205/70R16, 215/60R17, 215/65R17"]
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Patriot",
+      "trims": [
+        { "trim": "Latitude", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Limited", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Sport", "tireSizes": ["205/70R16", "215/65R17"] }
+      ],
+      "allTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "issues": ["No tire sizes in current DB. OEM: 205/70R16, 215/60R17, 215/65R17"]
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Patriot",
+      "trims": [
+        { "trim": "Latitude", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Limited", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Sport", "tireSizes": ["205/70R16", "215/65R17"] }
+      ],
+      "allTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "issues": ["No tire sizes in current DB. OEM: 205/70R16, 215/60R17, 215/65R17"]
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Patriot",
+      "trims": [
+        { "trim": "Latitude", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Latitude X", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Sport", "tireSizes": ["205/70R16", "215/65R17"] }
+      ],
+      "allTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "issues": ["No tire sizes in current DB. OEM: 205/70R16, 215/60R17, 215/65R17"]
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Patriot",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Sport", "tireSizes": ["205/70R16", "215/65R17"] }
+      ],
+      "allTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "issues": ["No tire sizes in current DB. OEM: 205/70R16, 215/60R17, 215/65R17"]
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Patriot",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["215/60R17", "215/65R17"] },
+        { "trim": "Sport", "tireSizes": ["205/70R16", "215/65R17"] }
+      ],
+      "allTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "issues": ["No tire sizes in current DB. OEM: 205/70R16, 215/60R17, 215/65R17"]
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 2,
+    "mismatch": 28,
+    "missingInDb": 9,
+    "noData": 4,
+    "notes": [
+      "Grand Cherokee WK (2005-2010) had SRT8 with staggered fitment - F: 255/45R20, R: 285/40R20",
+      "Grand Cherokee WK2 (2011+) uses different tire sizes from earlier WK generation",
+      "Grand Wagoneer modern (2022+) - base models use 275/55R20, higher trims use 285/45R22",
+      "Liberty was discontinued after 2012 model year",
+      "Liberty 2001 did not exist - started 2002",
+      "Patriot 2007-2017 all missing tire data in current DB"
+    ]
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "batchId": "153",
+  "validationDate": "2026-04-21T22:58:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "vehiclesWithTireSizes": 33,
+    "vehiclesWithEmptySizes": 42,
+    "validated": 20,
+    "discrepancies": 11,
+    "matches": 4,
+    "notFoundOnSource": 5,
+    "invalidYears": 2
+  },
+  "discrepancies": [
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "oemTireSizes": ["225/60R18", "225/55R19"],
+      "trims": {
+        "LE": "225/60R18",
+        "Limited": "225/55R19",
+        "Nightshade Edition": "225/55R19",
+        "XLE": "225/55R19"
+      },
+      "severity": "HIGH",
+      "notes": "Complete mismatch. Batch has R17/R21 sizes but OEM only has R18/R19. 225/65R17 and 255/45R21 are completely wrong."
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "oemTireSizes": ["225/60R18", "225/55R19"],
+      "trims": {
+        "LE": "225/60R18",
+        "Limited": "225/55R19",
+        "XLE": "225/55R19"
+      },
+      "severity": "HIGH",
+      "notes": "Same issue as 2023 Venza. Batch has wrong sizes."
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "oemTireSizes": [],
+      "severity": "CRITICAL",
+      "notes": "INVALID YEAR - 2020 Toyota Venza does not exist. Gen 1 Venza discontinued in 2015, Gen 2 started in 2021. This vehicle year should be removed."
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["245/55R19", "245/50R20"],
+      "oemTireSizes": [],
+      "severity": "CRITICAL",
+      "notes": "INVALID YEAR - 2016 Toyota Venza does not exist. Venza was discontinued after 2015 and not reintroduced until 2021."
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "oemTireSizes": ["245/55R19", "245/50R20"],
+      "trims": {
+        "LE": "245/55R19",
+        "LE V6": "245/50R20",
+        "Limited": "245/50R20",
+        "XLE": "245/55R19",
+        "XLE V6": "245/50R20"
+      },
+      "severity": "HIGH",
+      "notes": "225/65R17 and 255/45R21 are wrong. Gen 1 Venza only had 19\" and 20\" wheels."
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "oemTireSizes": ["245/55R19", "245/50R20"],
+      "trims": {
+        "LE": "245/55R19",
+        "LE V6": "245/50R20",
+        "Limited": "245/50R20",
+        "XLE": "245/55R19",
+        "XLE V6": "245/50R20"
+      },
+      "severity": "HIGH",
+      "notes": "Same issue as 2015. Wrong tire sizes."
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "oemTireSizes": ["245/55R19", "245/50R20"],
+      "trims": {
+        "LE": "245/55R19",
+        "LE V6": "245/50R20",
+        "Limited": "245/50R20",
+        "XLE": "245/55R19",
+        "XLE V6": "245/50R20"
+      },
+      "severity": "HIGH",
+      "notes": "Same issue as 2015. Wrong tire sizes."
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["175/65R15", "185/60R16"],
+      "oemTireSizes": ["185/65R15", "185/60R16"],
+      "trims": {
+        "L": "185/65R15",
+        "LE": "185/60R16",
+        "LE Hatchback": "185/60R16",
+        "XLE": "185/60R16",
+        "XLE Hatchback": "185/60R16"
+      },
+      "severity": "MEDIUM",
+      "notes": "Batch has 175/65R15 but OEM for L trim is 185/65R15 (different width)."
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["175/65R15", "185/60R16"],
+      "oemTireSizes": ["185/65R15", "185/60R16"],
+      "trims": {
+        "L": "185/65R15",
+        "LE": "185/60R16",
+        "XLE": "185/60R16"
+      },
+      "severity": "MEDIUM",
+      "notes": "Same as 2020 - 175/65R15 should be 185/65R15."
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["175/65R15", "185/60R16"],
+      "oemTireSizes": ["175/65R15", "195/50R16"],
+      "trims": {
+        "3-Door L": "175/65R15",
+        "3-Door LE": "175/65R15",
+        "5-Door L": "175/65R15",
+        "5-Door LE": "175/65R15",
+        "5-Door SE": "195/50R16"
+      },
+      "severity": "MEDIUM",
+      "notes": "Batch has 185/60R16 but SE trim uses 195/50R16. Missing SE size."
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["175/65R15", "185/60R16"],
+      "oemTireSizes": ["175/65R14", "185/60R15"],
+      "trims": {
+        "Liftback 3-Door": ["175/65R14", "185/60R15"],
+        "Liftback 5-Door": ["175/65R14", "185/60R15"],
+        "Liftback S 3-Door": "185/60R15",
+        "Liftback S 5-Door": "185/60R15",
+        "Sedan": ["175/65R14", "185/60R15"],
+        "Sedan S": "185/60R15"
+      },
+      "severity": "HIGH",
+      "notes": "Batch has wrong wheel sizes. OEM is R14/R15, not R15/R16."
+    }
+  ],
+  "matches": [
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["225/60R18", "225/55R19"],
+      "oemTireSizes": ["225/60R18", "225/55R19"],
+      "status": "MATCH",
+      "notes": "Correct tire sizes for all trims."
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["245/55R19", "245/50R20"],
+      "oemTireSizes": ["245/55R19", "245/50R20"],
+      "status": "MATCH",
+      "notes": "Correct tire sizes for Gen 1 Venza."
+    }
+  ],
+  "notFoundOnSource": [
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "notes": "tiresize.com has minimal data for 2009-2011 Venza. Could not verify."
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "notes": "tiresize.com has minimal data. Could not verify."
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "venza",
+      "batchTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "notes": "tiresize.com has minimal data. Could not verify."
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["175/65R15", "185/60R16"],
+      "notes": "tiresize.com has minimal data for this year."
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["175/65R14", "175/65R15"],
+      "notes": "404 on tiresize.com - Yaris may not have been sold in US this year."
+    }
+  ],
+  "futureYears": [
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["185/60R15", "185/60R16", "205/45R17"],
+      "notes": "Future year (2026). Also note: Toyota Yaris was discontinued in US after 2020."
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["185/60R15", "185/60R16", "205/45R17"],
+      "notes": "Future year. Yaris discontinued in US."
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["185/60R15", "185/60R16", "205/45R17"],
+      "notes": "Yaris discontinued in US after 2020."
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["185/60R15", "185/60R16", "205/45R17"],
+      "notes": "Yaris discontinued in US after 2020."
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["185/60R15", "185/60R16", "205/45R17"],
+      "notes": "Yaris discontinued in US after 2020."
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "yaris",
+      "batchTireSizes": ["185/60R15", "185/60R16", "205/45R17"],
+      "notes": "Yaris discontinued in US after 2020."
+    }
+  ],
+  "jdmModelsSkipped": [
+    {
+      "model": "vienta",
+      "years": [2000],
+      "notes": "JDM/international model - not sold in US"
+    },
+    {
+      "model": "vios-fs",
+      "years": [2017, 2018, 2019, 2020, 2021, 2022],
+      "notes": "Asian market model - not sold in US"
+    },
+    {
+      "model": "vista",
+      "years": [2000, 2001, 2002, 2003],
+      "notes": "JDM model - not sold in US"
+    },
+    {
+      "model": "vista-ardeo",
+      "years": [2000, 2001, 2002, 2003],
+      "notes": "JDM model - not sold in US"
+    },
+    {
+      "model": "will-vi",
+      "years": [2000, 2001],
+      "notes": "JDM model - not sold in US"
+    },
+    {
+      "model": "will-vs",
+      "years": [2001, 2002, 2003, 2004],
+      "notes": "JDM model - not sold in US"
+    },
+    {
+      "model": "windom",
+      "years": [2000, 2001, 2002, 2003, 2004, 2005, 2006],
+      "notes": "JDM model (sold as Lexus ES in US)"
+    },
+    {
+      "model": "xa",
+      "years": [2004, 2005, 2006, 2007],
+      "notes": "Sold as Scion xA in US, not Toyota"
+    },
+    {
+      "model": "yaris-heykers",
+      "years": [2017, 2018],
+      "notes": "International market variant"
+    },
+    {
+      "model": "yaris-r",
+      "years": [2019, 2020],
+      "notes": "International market variant"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "action": "Remove invalid year vehicles",
+      "vehicles": ["2016 Venza", "2020 Venza"],
+      "reason": "These model years do not exist. Venza was discontinued 2015, reintroduced 2021."
+    },
+    {
+      "priority": "CRITICAL", 
+      "action": "Fix 2023/2021 Venza tire sizes",
+      "correctSizes": ["225/60R18", "225/55R19"],
+      "wrongSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "reason": "Current sizes are completely incorrect for Gen 2 Venza."
+    },
+    {
+      "priority": "HIGH",
+      "action": "Fix 2013-2015 Venza tire sizes",
+      "correctSizes": ["245/55R19", "245/50R20"],
+      "wrongSizes": ["225/65R17", "255/45R21"],
+      "reason": "Gen 1 Venza (2009-2015) only had 19\" and 20\" wheel options."
+    },
+    {
+      "priority": "HIGH",
+      "action": "Fix 2007-2010 Yaris tire sizes",
+      "issue": "Wheel diameters off by 1 inch",
+      "reason": "Batch has R15/R16 but OEM was R14/R15 for this generation."
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Update 2019-2020 Yaris base trim size",
+      "correctSize": "185/65R15",
+      "wrongSize": "175/65R15",
+      "reason": "Base L trim uses 185 width, not 175."
+    },
+    {
+      "priority": "LOW",
+      "action": "Review 2021+ Yaris entries",
+      "reason": "Toyota Yaris discontinued in US after 2020 model year. These may be international market vehicles or should be flagged as non-US."
+    },
+    {
+      "priority": "LOW",
+      "action": "Consider removing JDM models",
+      "models": ["vienta", "vios-fs", "vista", "vista-ardeo", "will-vi", "will-vs", "windom", "xa", "yaris-heykers", "yaris-r"],
+      "reason": "These models were never sold in the US market. If only serving US customers, these create noise in the database."
+    }
+  ]
+}

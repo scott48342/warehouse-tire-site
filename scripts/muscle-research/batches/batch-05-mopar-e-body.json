@@ -1,0 +1,24 @@
+{
+  "batchId": "muscle-mopar-e-body",
+  "description": "Mopar E-body: Challenger, Barracuda, 'Cuda - VERIFY EXISTING",
+  "vehicles": [
+    { "year": 1970, "make": "Dodge", "model": "Challenger" },
+    { "year": 1971, "make": "Dodge", "model": "Challenger" },
+    { "year": 1972, "make": "Dodge", "model": "Challenger" },
+    { "year": 1973, "make": "Dodge", "model": "Challenger" },
+    { "year": 1974, "make": "Dodge", "model": "Challenger" },
+    { "year": 1964, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1965, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1966, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1967, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1968, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1969, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1970, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1971, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1972, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1973, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1974, "make": "Plymouth", "model": "Barracuda" },
+    { "year": 1970, "make": "Plymouth", "model": "Cuda" },
+    { "year": 1971, "make": "Plymouth", "model": "Cuda" }
+  ]
+}

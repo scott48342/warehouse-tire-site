@@ -1,0 +1,464 @@
+{
+  "batchId": 15,
+  "researchedAt": "2026-04-21T23:48:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "found": 34,
+    "notUS": 16
+  },
+  "results": [
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "245/75R17", "265/70R18", "265/60R20", "235/80R17"],
+      "wheelDiameters": [17, 18, 20],
+      "notes": "Includes 1500, 2500 HD, and 3500 HD trims"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "245/75R17", "265/70R18", "265/60R20", "235/80R17"],
+      "wheelDiameters": [17, 18, 20],
+      "notes": "Includes 1500, 2500 HD, and 3500 HD trims"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "245/75R17", "265/70R18", "265/60R20", "235/80R17"],
+      "wheelDiameters": [17, 18, 20],
+      "notes": "Includes 1500, 2500 HD, and 3500 HD trims"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "245/75R17", "265/70R18", "265/60R20", "235/80R17"],
+      "wheelDiameters": [17, 18, 20],
+      "notes": "Includes 1500, 2500 HD, and 3500 HD trims"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22", "245/75R17", "265/70R18", "265/60R20", "235/80R17"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Includes 1500, 2500 HD, and 3500 HD trims. 2018 added 22\" option."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22", "245/75R17", "265/70R18", "265/60R20", "235/80R17"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Includes 1500, 1500 LD, 2500 HD, and 3500 HD trims"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22", "245/75R17", "275/70R18", "275/65R20", "235/80R17"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Includes 1500, 2500 HD, and 3500 HD trims"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22", "265/60R20", "245/75R17", "275/70R18", "275/65R20", "235/80R17"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Includes 1500, 2500 HD, and 3500 HD trims"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22", "265/60R20", "275/70R18", "245/75R17", "275/65R20", "235/80R17"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Includes 1500, 1500 LTD (Limited), 2500 HD, 3500 HD, and ZR2 trims"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22", "265/60R20", "275/70R18", "245/75R17", "275/65R20", "235/80R17"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Includes 1500, 2500 HD, 3500 HD, and ZR2 trims"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22", "265/60R20", "275/70R18", "245/75R17", "275/65R20", "265/60R22", "305/70R18", "235/80R17", "235/80R18"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Includes 1500, 2500 HD, 2500 HD ZR2, 3500 HD, and ZR2 trims"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22", "265/60R20", "275/70R18", "245/75R17", "275/65R20", "265/60R22", "305/70R18", "235/80R17", "235/80R18"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Includes 1500, 2500 HD, 2500 HD ZR2, 3500 HD, and ZR2 trims"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22", "265/60R20", "275/70R18", "245/75R17", "275/65R20", "265/60R22", "305/70R18", "235/80R17", "235/80R18"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Includes 1500, 2500 HD, 2500 HD ZR2, 3500 HD, and ZR2 trims"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-1500-classic",
+      "found": true,
+      "tireSizes": ["245/70R17", "265/70R17", "275/55R20", "235/75R16", "245/75R16"],
+      "wheelDiameters": [16, 17, 20],
+      "notes": "Classic C1500 and K1500 variants including Crew, Extended, and Regular cabs"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-1500-hd",
+      "found": true,
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "notes": "1500HD 2wd and 4wd variants"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-1500-hd",
+      "found": true,
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "notes": "1500HD 2wd and 4wd variants"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-1500-hd",
+      "found": true,
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "notes": "C1500HD Crew and K1500HD Crew variants"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-1500-hd",
+      "found": true,
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "notes": "C1500 HD and K1500 HD Crew Cab variants"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-1500-hd",
+      "found": true,
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "notes": "C1500 HD and K1500 HD Crew Cab variants"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-1500-hd-classic",
+      "found": true,
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "notes": "Classic C1500 HD and K1500 HD variants"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-1500-ld",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Listed under main 2018 Silverado data - LD not specifically broken out for 2018"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "silverado-1500-ld",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "1500 LD 2wd and 4wd Double Cab variants"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "silverado-1500-limited",
+      "found": true,
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "Listed as '1500 LTD' on tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-2500-hd",
+      "found": true,
+      "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20", "265/60R22", "305/70R18"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "notes": "2500 HD Custom, LT, LTZ, WT, High Country, and ZR2 trims"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-2500-hd-classic",
+      "found": true,
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "notes": "Classic C2500 HD and K2500 HD variants"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-3500-classic",
+      "found": true,
+      "tireSizes": ["265/75R16", "265/70R17", "215/85R16"],
+      "wheelDiameters": [16, 17],
+      "notes": "Classic C3500 and K3500 variants including Dually"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "found": true,
+      "tireSizes": ["275/70R18", "275/65R20", "235/80R17", "235/80R18"],
+      "wheelDiameters": [17, 18, 20],
+      "notes": "3500 HD single rear wheel and Dually variants"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "sonora",
+      "found": false,
+      "notUS": true,
+      "notes": "Mexico-market only vehicle. Not available in US. 404 on tiresize.com."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "sonora",
+      "found": false,
+      "notUS": true,
+      "notes": "Mexico-market only vehicle. Not available in US. 404 on tiresize.com."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "sonora",
+      "found": false,
+      "notUS": true,
+      "notes": "Mexico-market only vehicle. Not available in US. 404 on tiresize.com."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "sonora",
+      "found": false,
+      "notUS": true,
+      "notes": "Mexico-market only vehicle. Not available in US. 404 on tiresize.com."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "sonora",
+      "found": false,
+      "notUS": true,
+      "notes": "Mexico-market only vehicle. Not available in US. 404 on tiresize.com."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "sonora",
+      "found": false,
+      "notUS": true,
+      "notes": "Mexico-market only vehicle. Not available in US. 404 on tiresize.com."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "sonora",
+      "found": false,
+      "notUS": true,
+      "notes": "Mexico-market only vehicle. Not available in US. 404 on tiresize.com."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "spark-activ",
+      "found": true,
+      "tireSizes": ["185/55R15"],
+      "wheelDiameters": [15],
+      "notes": "Listed as ACTIV trim under main Spark page for 2017"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "spark-activ",
+      "found": true,
+      "tireSizes": ["185/55R15"],
+      "wheelDiameters": [15],
+      "notes": "Listed as ACTIV trim under main Spark page"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "spark-activ",
+      "found": true,
+      "tireSizes": ["185/55R15"],
+      "wheelDiameters": [15],
+      "notes": "Listed as ACTIV trim under main Spark page"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "spark-activ",
+      "found": true,
+      "tireSizes": ["185/55R15"],
+      "wheelDiameters": [15],
+      "notes": "Listed as ACTIV trim under main Spark page"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "spark-activ",
+      "found": true,
+      "tireSizes": ["185/55R15"],
+      "wheelDiameters": [15],
+      "notes": "Listed as ACTIV trim under main Spark page"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "spark-classic",
+      "found": false,
+      "notUS": true,
+      "notes": "South American market variant. Not listed on tiresize.com for US market."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "spark-classic",
+      "found": false,
+      "notUS": true,
+      "notes": "South American market variant. Not listed on tiresize.com for US market."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "spark-ev",
+      "found": true,
+      "tireSizes": ["185/55R15", "195/55R15"],
+      "wheelDiameters": [15],
+      "isStaggered": true,
+      "frontTireSize": "185/55R15",
+      "rearTireSize": "195/55R15",
+      "notes": "Staggered tire setup - different front/rear sizes"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "spark-ev",
+      "found": true,
+      "tireSizes": ["185/55R15", "195/55R15"],
+      "wheelDiameters": [15],
+      "isStaggered": true,
+      "frontTireSize": "185/55R15",
+      "rearTireSize": "195/55R15",
+      "notes": "Staggered tire setup - different front/rear sizes"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "spark-ev",
+      "found": true,
+      "tireSizes": ["185/55R15", "195/55R15"],
+      "wheelDiameters": [15],
+      "isStaggered": true,
+      "frontTireSize": "185/55R15",
+      "rearTireSize": "195/55R15",
+      "notes": "Staggered tire setup - different front/rear sizes"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "spark-gt-activ",
+      "found": false,
+      "notUS": true,
+      "notes": "Latin American market variant (Colombia). Not available in US."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "spark-gt-activ",
+      "found": false,
+      "notUS": true,
+      "notes": "Latin American market variant (Colombia). Not available in US."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "spark-gt-activ",
+      "found": false,
+      "notUS": true,
+      "notes": "Latin American market variant (Colombia). Not available in US."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "ss",
+      "found": true,
+      "tireSizes": ["245/40R19", "275/35R19"],
+      "wheelDiameters": [19],
+      "isStaggered": true,
+      "frontTireSize": "245/40R19",
+      "rearTireSize": "275/35R19",
+      "notes": "Performance sedan with staggered setup. Base Model and Sports Sedan trims."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "ss",
+      "found": true,
+      "tireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "wheelDiameters": [19, 20],
+      "isStaggered": true,
+      "notes": "Performance sedan with staggered setup. Two size options: 19\" and 20\" wheels."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "ss",
+      "found": true,
+      "tireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "wheelDiameters": [19, 20],
+      "isStaggered": true,
+      "notes": "Performance sedan with staggered setup. Two size options: 19\" and 20\" wheels."
+    }
+  ]
+}

@@ -1,0 +1,716 @@
+{
+  "batchId": "44",
+  "processedAt": "2026-04-21T21:55:00Z",
+  "source": "tiresize.com, lionharttires.com",
+  "vehicleCount": 75,
+  "uniqueVehicles": 2,
+  "summary": {
+    "dodgeChallenger": "2008-2021 (14 years)",
+    "dodgeCharger": "2021-2026 (6 years)"
+  },
+  "oemTireSizesByTrim": {
+    "dodge": {
+      "challenger": {
+        "2008": {
+          "trims": {
+            "SRT8": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x9"],
+              "notes": "Limited production first year"
+            }
+          },
+          "allSizes": ["245/45R20"]
+        },
+        "2009": {
+          "trims": {
+            "SE": {
+              "tireSizes": ["215/65R17", "225/60R18"],
+              "wheelSizes": ["17x7", "18x7.5"]
+            },
+            "R/T": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SRT8": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x9"]
+            },
+            "SRT8 Staggered": {
+              "tireSizes": ["245/45R20", "255/45R20"],
+              "wheelSizes": ["20x9", "20x9.5"],
+              "isStaggered": true,
+              "front": "245/45R20",
+              "rear": "255/45R20"
+            }
+          },
+          "allSizes": ["215/65R17", "225/60R18", "235/55R18", "245/45R20", "255/45R20"]
+        },
+        "2010": {
+          "trims": {
+            "SE": {
+              "tireSizes": ["215/65R17", "225/60R18"],
+              "wheelSizes": ["17x7", "18x7.5"]
+            },
+            "R/T": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SRT8": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x9"]
+            },
+            "SRT8 Staggered": {
+              "tireSizes": ["245/45R20", "255/45R20"],
+              "wheelSizes": ["20x9", "20x9.5"],
+              "isStaggered": true,
+              "front": "245/45R20",
+              "rear": "255/45R20"
+            }
+          },
+          "allSizes": ["215/65R17", "225/60R18", "235/55R18", "245/45R20", "255/45R20"]
+        },
+        "2011": {
+          "trims": {
+            "SE": {
+              "tireSizes": ["215/65R17", "235/55R18"],
+              "wheelSizes": ["17x7", "18x7.5"]
+            },
+            "SXT": {
+              "tireSizes": ["235/55R18", "235/50R19", "245/45R20"],
+              "wheelSizes": ["18x7.5", "19x7.5", "20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SRT8": {
+              "tireSizes": ["245/45R20", "255/45R20"],
+              "wheelSizes": ["20x9"]
+            }
+          },
+          "allSizes": ["215/65R17", "235/55R18", "235/50R19", "245/45R20", "255/45R20"]
+        },
+        "2012": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["235/55R18", "235/50R19", "245/45R20"],
+              "wheelSizes": ["18x7.5", "19x7.5", "20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SRT8": {
+              "tireSizes": ["245/45R20", "255/45R20"],
+              "wheelSizes": ["20x9"]
+            }
+          },
+          "allSizes": ["235/55R18", "235/50R19", "245/45R20", "255/45R20"]
+        },
+        "2013": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["235/55R18", "235/50R19", "245/45R20"],
+              "wheelSizes": ["18x7.5", "19x7.5", "20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SRT8": {
+              "tireSizes": ["245/45R20", "255/45R20"],
+              "wheelSizes": ["20x9"]
+            }
+          },
+          "allSizes": ["235/55R18", "235/50R19", "245/45R20", "255/45R20"]
+        },
+        "2014": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["235/55R18", "235/50R19", "245/45R20"],
+              "wheelSizes": ["18x7.5", "19x7.5", "20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SRT": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x9"]
+            }
+          },
+          "allSizes": ["235/55R18", "235/50R19", "245/45R20", "275/40R20"]
+        },
+        "2015": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SXT Plus": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T Plus": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T Scat Pack": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "SRT 392": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "SRT Hellcat": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            }
+          },
+          "allSizes": ["235/55R18", "245/45R20", "275/40R20"]
+        },
+        "2016": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SXT Plus": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T Plus": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T Scat Pack": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "SRT 392": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "SRT Hellcat": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            }
+          },
+          "allSizes": ["235/55R18", "245/45R20", "275/40R20"]
+        },
+        "2017": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SXT Plus": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "GT": {
+              "tireSizes": ["235/55R19"],
+              "wheelSizes": ["19x7.5"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T Plus": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T Scat Pack": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "T/A 392": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "SRT 392": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "SRT Hellcat": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            }
+          },
+          "allSizes": ["235/55R18", "235/55R19", "245/45R20", "275/40R20"]
+        },
+        "2018": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SXT Plus": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "GT AWD": {
+              "tireSizes": ["235/55R19"],
+              "wheelSizes": ["19x7.5"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T Plus": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T Plus Shaker": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T Shaker": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "T/A": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "T/A Plus": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "T/A 392": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "392 HEMI Scat Pack Shaker": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "R/T Scat Pack": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "SRT 392": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "SRT Hellcat": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "SRT Hellcat Widebody": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Demon": {
+              "tireSizes": ["315/40R18"],
+              "wheelSizes": ["18x11"],
+              "notes": "Drag-oriented setup"
+            }
+          },
+          "allSizes": ["235/55R18", "235/55R19", "245/45R20", "275/40R20", "305/35R20", "315/40R18"]
+        },
+        "2019": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SXT AWD": {
+              "tireSizes": ["235/55R19", "245/45R20"],
+              "wheelSizes": ["19x7.5", "20x8"]
+            },
+            "GT": {
+              "tireSizes": ["235/55R19"],
+              "wheelSizes": ["19x7.5"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T Scat Pack": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "R/T Scat Pack Widebody": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "SRT Hellcat Redeye": {
+              "tireSizes": ["275/40R20", "305/35R20"],
+              "wheelSizes": ["20x9.5", "20x11"]
+            },
+            "SRT Hellcat Widebody": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            }
+          },
+          "allSizes": ["235/55R18", "235/55R19", "245/45R20", "275/40R20", "305/35R20"]
+        },
+        "2020": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SXT AWD": {
+              "tireSizes": ["235/55R19", "245/45R20"],
+              "wheelSizes": ["19x7.5", "20x8"]
+            },
+            "GT RWD": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "GT AWD": {
+              "tireSizes": ["235/55R19"],
+              "wheelSizes": ["19x7.5"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "R/T Scat Pack": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "R/T Scat Pack Widebody": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "SRT Hellcat Widebody": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat Redeye Widebody": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Super Stock": {
+              "tireSizes": ["315/40R18"],
+              "wheelSizes": ["18x11"],
+              "notes": "Drag-oriented setup"
+            }
+          },
+          "allSizes": ["235/55R18", "235/55R19", "245/45R20", "275/40R20", "305/35R20", "315/40R18"]
+        },
+        "2021": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["235/55R18", "245/45R20"],
+              "wheelSizes": ["18x7.5", "20x8"]
+            },
+            "SXT AWD": {
+              "tireSizes": ["235/55R19", "245/45R20"],
+              "wheelSizes": ["19x7.5", "20x8"]
+            },
+            "GT": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "R/T Scat Pack": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "R/T Scat Pack Wide Body": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "SRT Hellcat Redeye": {
+              "tireSizes": ["275/40R20"],
+              "wheelSizes": ["20x9.5"]
+            },
+            "SRT Hellcat Wide Body": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat Redeye Wide Body": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Super Stock": {
+              "tireSizes": ["315/40R18"],
+              "wheelSizes": ["18x11"],
+              "notes": "Drag-oriented setup"
+            }
+          },
+          "allSizes": ["235/55R18", "235/55R19", "245/45R20", "275/40R20", "305/35R20", "315/40R18"]
+        }
+      },
+      "charger": {
+        "2021": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["215/65R17", "245/45R20"],
+              "wheelSizes": ["17x7", "20x8"]
+            },
+            "SXT AWD": {
+              "tireSizes": ["235/55R19", "245/45R20"],
+              "wheelSizes": ["19x7.5", "20x8"]
+            },
+            "GT": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "Scat Pack": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "Scat Pack Wide Body": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat Wide Body": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat Redeye Wide Body": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            }
+          },
+          "allSizes": ["215/65R17", "235/55R19", "245/45R20", "275/40R20", "305/35R20"]
+        },
+        "2022": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["215/65R17"],
+              "wheelSizes": ["17x7"]
+            },
+            "SXT AWD": {
+              "tireSizes": ["235/55R19", "245/45R20"],
+              "wheelSizes": ["19x7.5", "20x8"]
+            },
+            "GT": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "Scat Pack": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "Scat Pack Wide Body": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat Wide Body": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat Redeye Wide Body": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Jailbreak": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            }
+          },
+          "allSizes": ["215/65R17", "235/55R19", "245/45R20", "275/40R20", "305/35R20"]
+        },
+        "2023": {
+          "trims": {
+            "SXT": {
+              "tireSizes": ["215/65R17"],
+              "wheelSizes": ["17x7"]
+            },
+            "SXT AWD": {
+              "tireSizes": ["235/55R19", "245/45R20"],
+              "wheelSizes": ["19x7.5", "20x8"]
+            },
+            "GT": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "Scat Pack": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "Scat Pack Wide Body": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat Redeye Jailbreak": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat Wide Body Jailbreak": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            }
+          },
+          "allSizes": ["215/65R17", "235/55R19", "245/45R20", "275/40R20", "305/35R20"]
+        },
+        "2024": {
+          "notes": "Final year of LD platform (gas-powered Charger)",
+          "trims": {
+            "SXT": {
+              "tireSizes": ["215/65R17"],
+              "wheelSizes": ["17x7"]
+            },
+            "SXT AWD": {
+              "tireSizes": ["235/55R19", "245/45R20"],
+              "wheelSizes": ["19x7.5", "20x8"]
+            },
+            "GT": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "R/T": {
+              "tireSizes": ["245/45R20"],
+              "wheelSizes": ["20x8"]
+            },
+            "Scat Pack": {
+              "tireSizes": ["245/45R20", "275/40R20"],
+              "wheelSizes": ["20x8", "20x9.5"]
+            },
+            "Scat Pack Widebody": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat Widebody": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "SRT Hellcat Redeye Widebody": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            }
+          },
+          "allSizes": ["215/65R17", "235/55R19", "245/45R20", "275/40R20", "305/35R20"]
+        },
+        "2025": {
+          "notes": "New Daytona platform (includes EV options)",
+          "trims": {
+            "Daytona R/T": {
+              "tireSizes": ["245/55R18", "255/45R20", "275/40R20"],
+              "wheelSizes": ["18x8", "20x9", "20x9.5"]
+            },
+            "Daytona Scat Pack": {
+              "tireSizes": ["305/35R20", "325/35R20"],
+              "wheelSizes": ["20x11"],
+              "isStaggered": true,
+              "front": "305/35R20",
+              "rear": "325/35R20"
+            },
+            "Daytona Scat Pack Track Package": {
+              "tireSizes": ["305/35R20", "325/35R20"],
+              "wheelSizes": ["20x11"],
+              "isStaggered": true,
+              "front": "305/35R20",
+              "rear": "325/35R20"
+            }
+          },
+          "allSizes": ["245/55R18", "255/45R20", "275/40R20", "305/35R20", "325/35R20"]
+        },
+        "2026": {
+          "notes": "New Daytona platform continuation",
+          "trims": {
+            "Daytona Scat Pack": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "Daytona Scat Pack Plus": {
+              "tireSizes": ["305/35R20"],
+              "wheelSizes": ["20x11"]
+            },
+            "Daytona Track Package": {
+              "tireSizes": ["305/35R20", "325/35R20"],
+              "wheelSizes": ["20x11"],
+              "isStaggered": true,
+              "front": "305/35R20",
+              "rear": "325/35R20"
+            },
+            "Scat Pack": {
+              "tireSizes": ["275/40R20", "305/35R20"],
+              "wheelSizes": ["20x9.5", "20x11"]
+            },
+            "Scat Pack Plus": {
+              "tireSizes": ["275/40R20", "305/35R20"],
+              "wheelSizes": ["20x9.5", "20x11"]
+            }
+          },
+          "allSizes": ["275/40R20", "305/35R20", "325/35R20"]
+        }
+      }
+    }
+  },
+  "validationNotes": {
+    "challenger": {
+      "baseTrims": "SXT, SE get 17-18 inch wheels with 215/65R17 or 235/55R18",
+      "rtTrims": "R/T trims get 20 inch wheels with 245/45R20",
+      "scatPack": "Scat Pack gets 245/45R20 or optional 275/40R20",
+      "hellcat": "Hellcat gets 275/40R20; Widebody gets 305/35R20",
+      "specialEditions": "Demon/Super Stock use 315/40R18 (drag setup)",
+      "awdOptions": "AWD trims (GT AWD, SXT AWD) use 235/55R19",
+      "staggeredSetups": "Some SRT8 and performance trims offer staggered 245/255 or 305/325 configs"
+    },
+    "charger": {
+      "baseTrims": "SXT RWD gets 215/65R17; SXT AWD gets 235/55R19",
+      "gtAndRt": "GT and R/T get 245/45R20",
+      "scatPack": "Scat Pack gets 245/45R20 or 275/40R20",
+      "widebody": "Widebody trims (Scat Pack WB, Hellcat WB) get 305/35R20",
+      "newPlatform": "2025+ Daytona platform uses different sizing: R/T gets 245/55R18-275/40R20, Scat Pack gets 305/35R20",
+      "staggeredSetups": "2025+ Scat Pack Track Package uses staggered F 305/R 325"
+    }
+  },
+  "consolidatedSizes": {
+    "challenger_all_years": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R18",
+      "235/55R19",
+      "235/50R19",
+      "245/45R20",
+      "255/45R20",
+      "275/40R20",
+      "305/35R20",
+      "315/40R18"
+    ],
+    "charger_all_years": [
+      "215/65R17",
+      "235/55R19",
+      "245/45R20",
+      "245/55R18",
+      "255/45R20",
+      "275/40R20",
+      "305/35R20",
+      "325/35R20"
+    ]
+  }
+}

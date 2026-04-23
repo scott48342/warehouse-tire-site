@@ -1,0 +1,4293 @@
+﻿[
+    {
+        "id":  "222e34a3-b1d3-40f1-af44-502e37d24bf4",
+        "year":  1990,
+        "make":  "Chevrolet",
+        "model":  "Astro",
+        "status":  "invalid",
+        "reason":  "CRITICAL ERROR: Batch file shows bolt pattern 6x139.7 but Chevrolet Astro (1985-2002) uses 5x127 (5x5\"). Only AWD Astros 2003-2005 used 6x139.7. This is WRONG BOLT PATTERN. Hub bore 78.3mm confirmed. Tire sizes P215/70R15, P215/75R15 confirmed.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.3",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "15x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/75R15",
+                                  "205/75R15",
+                                  "215/70R15",
+                                  "215/75R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/astro/1990/",
+                        "tirewheelguide.com/sizes/chevrolet/astro/"
+                    ]
+    },
+    {
+        "id":  "ae7cf8ce-9297-44ac-ab62-392547600020",
+        "year":  1991,
+        "make":  "Chevrolet",
+        "model":  "Astro",
+        "status":  "invalid",
+        "reason":  "CRITICAL ERROR: Batch file shows 6x139.7 but Astro (1985-2002) uses 5x127. WRONG BOLT PATTERN.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.3",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "15x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/75R15",
+                                  "215/70R15",
+                                  "215/75R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/astro/"
+                    ]
+    },
+    {
+        "id":  "c81d5086-bdec-4c98-9a1d-f642627a1493",
+        "year":  1992,
+        "make":  "Chevrolet",
+        "model":  "Astro",
+        "status":  "invalid",
+        "reason":  "CRITICAL ERROR: Batch file shows 6x139.7 but Astro (1985-2002) uses 5x127. WRONG BOLT PATTERN.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.3",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "15x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/75R15",
+                                  "215/70R15",
+                                  "215/75R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/astro/"
+                    ]
+    },
+    {
+        "id":  "5121a366-ac2f-4a18-b677-dcd1b178bece",
+        "year":  1993,
+        "make":  "Chevrolet",
+        "model":  "Astro",
+        "status":  "invalid",
+        "reason":  "CRITICAL ERROR: Batch file shows 6x139.7 but Astro (1985-2002) uses 5x127. WRONG BOLT PATTERN.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.3",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "15x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/75R15",
+                                  "215/70R15",
+                                  "215/75R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/astro/"
+                    ]
+    },
+    {
+        "id":  "e4238450-25a5-4569-af48-88d33e62c550",
+        "year":  1994,
+        "make":  "Chevrolet",
+        "model":  "Astro",
+        "status":  "invalid",
+        "reason":  "CRITICAL ERROR: Batch file shows 6x139.7 but Astro (1985-2002) uses 5x127. WRONG BOLT PATTERN.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.3",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "15x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/75R15",
+                                  "215/70R15",
+                                  "215/75R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/astro/"
+                    ]
+    },
+    {
+        "id":  "fef26b13-a2ed-4fd4-a4b5-e2df2e68d35d",
+        "year":  1995,
+        "make":  "Chevrolet",
+        "model":  "Astro",
+        "status":  "invalid",
+        "reason":  "CRITICAL ERROR: Batch file shows 6x139.7 but Astro uses 5x127. Second generation Astro (1995-2005) still uses 5x127. Hub bore 78.1mm confirmed.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "15x6.5",
+                                   "15x7",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/70R15",
+                                  "215/75R15",
+                                  "225/70R15",
+                                  "235/65R15",
+                                  "245/60R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/astro/1995/"
+                    ]
+    },
+    {
+        "id":  "06504b0a-095d-42e7-94b2-228df54331eb",
+        "year":  1996,
+        "make":  "Chevrolet",
+        "model":  "Astro",
+        "status":  "invalid",
+        "reason":  "CRITICAL ERROR: Batch file shows 6x139.7 but Astro uses 5x127. WRONG BOLT PATTERN.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "15x6.5",
+                                   "15x7",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/70R15",
+                                  "215/75R15",
+                                  "225/70R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/astro/1996/"
+                    ]
+    },
+    {
+        "id":  "a5eb01f7-e646-4f42-a8a0-aab42fe2b54e",
+        "year":  1997,
+        "make":  "Chevrolet",
+        "model":  "Astro",
+        "status":  "invalid",
+        "reason":  "CRITICAL ERROR: Batch file shows 6x139.7 but Astro uses 5x127. WRONG BOLT PATTERN.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "15x6.5",
+                                   "15x7",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/70R15",
+                                  "215/75R15",
+                                  "225/70R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/astro/1997/"
+                    ]
+    },
+    {
+        "id":  "5f93a3ca-97a1-42b8-974e-741a312cb731",
+        "year":  1998,
+        "make":  "Chevrolet",
+        "model":  "Astro",
+        "status":  "invalid",
+        "reason":  "CRITICAL ERROR: Batch file shows 6x139.7 but Astro uses 5x127. WRONG BOLT PATTERN.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "15x6.5",
+                                   "15x7",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/70R15",
+                                  "215/75R15",
+                                  "225/70R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/astro/1998/"
+                    ]
+    },
+    {
+        "id":  "14d7008e-e26b-41ac-98e9-f4e2221db6d0",
+        "year":  1999,
+        "make":  "Chevrolet",
+        "model":  "Astro",
+        "status":  "invalid",
+        "reason":  "CRITICAL ERROR: Batch file shows 6x139.7 but Astro uses 5x127. WRONG BOLT PATTERN.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "15x6.5",
+                                   "15x7",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/70R15",
+                                  "215/75R15",
+                                  "225/70R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/astro/1999/"
+                    ]
+    },
+    {
+        "id":  "d7e37941-6f07-4a71-9e7d-e56ee46e8d69",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "S10",
+        "status":  "invalid",
+        "reason":  "INCORRECT BOLT PATTERN: Batch shows 6x139.7 for \u00272WD\u0027 S10 but this is WRONG. The Chevrolet S10 (all variants) used 5x120.65 (5x4.75\") bolt pattern from 1982-2004. 6x139.7 was used by full-size trucks (C/K series), not S10. Hub bore 78.1 is also incorrect - S10 uses 70.3mm.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "15x7 ET6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/75R14",
+                                  "205/75R15",
+                                  "215/65R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tiresize.com",
+                        "chevroletforum.com",
+                        "stocktonwheel.com"
+                    ]
+    },
+    {
+        "id":  "c4daf36a-9e56-4216-93b0-d150cc3ae9eb",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "S10",
+        "status":  "invalid",
+        "reason":  "INCORRECT BOLT PATTERN: Batch shows 6x139.7 for \u00272WD\u0027 S10 but S10 used 5x120.65 (5x4.75\"). 6x139.7 was for full-size trucks. Hub bore should be 70.3mm not 78.1mm.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "15x7 ET6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/75R14",
+                                  "205/75R15",
+                                  "215/65R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tiresize.com",
+                        "chevroletforum.com",
+                        "stocktonwheel.com"
+                    ]
+    },
+    {
+        "id":  "55bc4382-4609-4ffb-8c89-71cc1f4f4222",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "S10",
+        "status":  "invalid",
+        "reason":  "INCORRECT BOLT PATTERN: Batch shows 6x139.7 for \u00272WD\u0027 S10 but S10 used 5x120.65 (5x4.75\"). Hub bore should be 70.3mm not 78.1mm.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "15x7 ET6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/75R14",
+                                  "205/75R15",
+                                  "215/65R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tiresize.com",
+                        "chevroletforum.com",
+                        "stocktonwheel.com"
+                    ]
+    },
+    {
+        "id":  "6c0d8bf7-f0cd-43df-8885-0a93f83f9e03",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "S10",
+        "status":  "invalid",
+        "reason":  "INCORRECT BOLT PATTERN: Batch shows 6x139.7 for \u00272WD\u0027 S10 but S10 used 5x120.65 (5x4.75\"). Hub bore should be 70.3mm not 78.1mm.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "15x7 ET6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/75R14",
+                                  "205/75R15",
+                                  "215/65R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tiresize.com",
+                        "chevroletforum.com",
+                        "stocktonwheel.com"
+                    ]
+    },
+    {
+        "id":  "b2a2f4ac-7487-4295-bcfd-4e234bcdea7a",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "S10 Blazer",
+        "status":  "invalid",
+        "reason":  "INCORRECT BOLT PATTERN: Batch shows 6x139.7 for \u00272WD\u0027 S10 Blazer but this is WRONG. S10 Blazer used 5x120.65 (5x4.75\") bolt pattern, same as S10 pickup. 6x139.7 was for full-size K-Blazer/Suburban. Hub bore should be 70.3mm not 78.1mm. Tire size P215/75R15 and P235/75R15 are correct for 4wd variant per tiresize.com.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "15x7 ET6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tiresize.com",
+                        "chevroletforum.com",
+                        "stocktonwheel.com"
+                    ]
+    },
+    {
+        "id":  "d448a2f4-0f85-4a83-ab45-9dca274d96f9",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "S10 Blazer",
+        "status":  "invalid",
+        "reason":  "INCORRECT BOLT PATTERN: Batch shows 6x139.7 for \u00272WD\u0027 S10 Blazer but S10 Blazer used 5x120.65 (5x4.75\"). Hub bore should be 70.3mm not 78.1mm. Tire sizes P215/75R15 and P235/75R15 are correct per tiresize.com.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "15x7 ET6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tiresize.com",
+                        "chevroletforum.com",
+                        "cartiresize.com"
+                    ]
+    },
+    {
+        "id":  "df531037-f3f3-4d33-a238-bfc1cab72ed5",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "S10 Blazer",
+        "status":  "invalid",
+        "reason":  "INCORRECT BOLT PATTERN: Batch shows 6x139.7 for \u00272WD\u0027 S10 Blazer but S10 Blazer used 5x120.65 (5x4.75\"). Hub bore should be 70.3mm not 78.1mm. Tire sizes P215/75R15 and P235/75R15 are correct per tiresize.com.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "15x7 ET6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tiresize.com",
+                        "chevroletforum.com"
+                    ]
+    },
+    {
+        "id":  "73dde793-5ef9-4e9c-9665-a0c596d76dfd",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "S10 Blazer",
+        "status":  "invalid",
+        "reason":  "Wrong bolt pattern (6x139.7 listed, should be 5x120.65), wrong hub bore (78.1 listed, should be 70.3mm). S10 Blazer used 5-lug pattern for all years (1983-1994) regardless of 2WD/4WD.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  50,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/75R15",
+                                  "205/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/s10-blazer/1993/",
+                        "vehiclefixation.com/chevy/chevy-s10-bolt-pattern/"
+                    ]
+    },
+    {
+        "id":  "a45f6b42-2204-4c3e-9fc6-a55f4b7d78f5",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado\u0027 was not a model name until 1999 - it was a trim level on C/K trucks. This should be \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD). Also, 16-inch wheels were not standard on C1500 in 1990 - only 15-inch.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "c4bc1c1b-a917-4446-b2fd-cf55f74379ad",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado\u0027 was not a model name until 1999 - it was a trim level on C/K trucks. This should be \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD). Also, 16-inch wheels were not standard on C1500 in 1991 - only 15-inch.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "81d95754-a2a0-4010-87f5-00099e37efc9",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado\u0027 was not a model name until 1999 - it was a trim level on C/K trucks. This should be \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD). Also, 16-inch wheels were not standard on C1500 in 1992 - only 15-inch.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "49223a9d-550d-4a40-8f1f-2bb34902b0bc",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado\u0027 was not a model name until 1999 - it was a trim level on C/K trucks. This should be \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD). Also, 16-inch wheels were not standard on C1500 in 1993 - only 15-inch.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "89a287a3-17f4-42f0-81c3-929ef23bef4a",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado\u0027 was not a model name until 1999 - it was a trim level on C/K trucks. This should be \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD). Also, 16-inch wheels were not standard on C1500 in 1994 - only 15-inch.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "03136083-27c7-4bf1-a0e1-d1a5751a5199",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado\u0027 was not a model name until 1999 - it was a trim level on C/K trucks. This should be \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD). Also, 16-inch wheels were not standard on C1500 in 1995 - only 15-inch.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "f81e0d9d-a3f2-462e-857c-def44530383f",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado\u0027 was not a model name until 1999 - it was a trim level on C/K trucks. This should be \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD). Also, 16-inch wheels were not standard on C1500 in 1996 - only 15-inch.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "a5e660f2-719b-4824-a8bf-28199d96d68e",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado\u0027 was not a model name until 1999 - it was a trim level on C/K trucks. This should be \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD). Also, 16-inch wheels were not standard on C1500 in 1997 - only 15-inch.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "3cb86d35-05e9-47be-84b4-6b86348ee4cd",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado\u0027 was not a model name until 1999 - it was a trim level on C/K trucks. This should be \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD). Also, 16-inch wheels were not standard on C1500 in 1998 - only 15-inch.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "a26e47ad-dde1-478b-8209-efa76061e0d1",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. Before 1999, trucks were \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD) with \u0027Silverado\u0027 as a trim level. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "7325ea18-1158-4f58-9981-e06120fcce7f",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. Before 1999, trucks were \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD) with \u0027Silverado\u0027 as a trim level. The correct model name should be \u0027K1500\u0027 for Z71 trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "265/75R16"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/K1500/"
+                    ]
+    },
+    {
+        "id":  "7357f42f-04ed-4ba0-bea4-7825f37457de",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. Before 1999, trucks were \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD) with \u0027Silverado\u0027 as a trim level. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "33d9483c-77c0-47cd-b4d7-f2fed229d4c5",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The \u0027WT\u0027 (Work Truck) trim was not used until the GMT800 generation (1999+). Before 1999, trucks were \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD).",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "759f5aa3-28ab-4391-9e32-50aec2449cdd",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Cheyenne\u0027 was a valid trim level on C/K trucks. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Cheyenne trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "6a6748de-607d-4428-b195-dadbde141af9",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Scottsdale\u0027 was a valid trim level on C/K trucks but was being phased out around 1990. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "5a19195b-27a4-4856-b21d-6c30cf25451b",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. Before 1999, trucks were \u0027C1500\u0027 (2WD) or \u0027K1500\u0027 (4WD) with \u0027Silverado\u0027 as a trim level.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "bfd50a5b-180f-4706-a42a-329b9edc5379",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Scottsdale\u0027 trim was largely phased out by 1991. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "35fec5a1-9147-47c4-824b-ecb3ced801e7",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027WT\u0027 trim did not exist until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "a87ed5c8-8a8a-407a-9dc4-0e8ae1c1eedd",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Cheyenne\u0027 was a valid trim level. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Cheyenne trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "c2ddfbc7-7a84-49e4-a64d-1a4f33b7c205",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "09f279ca-ea3b-45aa-a3d0-cf7d3fed3e76",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027K1500\u0027 with Z71 package (4WD).",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "265/75R16"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/K1500/"
+                    ]
+    },
+    {
+        "id":  "5793c2f3-6af0-42b4-bcd6-2c0903e34a60",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Cheyenne trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "8626ca7e-1c25-4d18-bb25-8bd725b95725",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027K1500\u0027 with Z71 package (4WD).",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "265/75R16"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/K1500/"
+                    ]
+    },
+    {
+        "id":  "f9d49f72-a047-435b-8fdf-324d81e31cae",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Scottsdale\u0027 trim was discontinued by 1992. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "c5654531-2aa0-4360-813e-911255f09f6f",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "8ab5e9ca-b4c8-4185-8414-42a61b366586",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027WT\u0027 trim did not exist until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "72c4c92b-4cab-4ffe-b971-2c3f5f6267e7",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Silverado trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "12146e6d-c097-43d4-a49e-318cf89e59cd",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "63518662-8caf-4b16-883b-cfeb0fe348b5",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027WT\u0027 trim did not exist until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "809260f8-ebab-4083-93a1-94c772eb19b9",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Cheyenne\u0027 was a valid trim level. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Cheyenne trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "9f525564-29b5-4a0f-a181-310aa508c7b8",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Scottsdale\u0027 trim was discontinued before 1993. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "08339b10-9894-4082-995d-e1586e7b3de1",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Silverado trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "632080a7-735b-4cb5-8e20-7a4fb28598b7",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027K1500\u0027 with Z71 package (4WD).",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "265/75R16"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/K1500/"
+                    ]
+    },
+    {
+        "id":  "6b475fb5-3bf0-467d-ba58-2369375b676b",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Silverado trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "16929b99-286d-4a81-baf0-f1b3fa995708",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027K1500\u0027 with Z71 package (4WD).",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "265/75R16"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/K1500/"
+                    ]
+    },
+    {
+        "id":  "4d89c377-5e7e-4b8e-8182-296ad9a6d6ac",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "1732950f-ef7c-4396-9363-4be4b2bde077",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027WT\u0027 trim did not exist until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "d2165844-eb84-4eff-b401-8a99fdd66801",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Cheyenne\u0027 was a valid trim level. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Cheyenne trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "63d4a604-cc2e-4d81-b065-7da3d3e01e4b",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Scottsdale\u0027 trim was discontinued before 1994. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "5ea21f71-86f0-4cc9-9abb-6cdc4a662d72",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Scottsdale\u0027 trim was discontinued. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "60cbc5e0-03c2-4f56-a39a-d60c70636fec",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027K1500\u0027 with Z71 package (4WD).",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "265/75R16"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/K1500/"
+                    ]
+    },
+    {
+        "id":  "c5dd3d31-f9d0-4c35-998c-c21df88d0a24",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "2668fdd4-369d-4bbf-874a-08a14258a3ff",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027WT\u0027 trim did not exist until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "b553d8f9-a581-465b-8a81-46831a572b66",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Cheyenne\u0027 was a valid trim level. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Cheyenne trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "206abdc8-94dc-4c20-9cc4-06dd228233f5",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Silverado trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "ac1886be-4650-4aec-8c6d-1635ca7eb68e",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Scottsdale\u0027 trim was discontinued. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "3d559e3c-db33-492e-aaf5-796003f82fcf",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027K1500\u0027 with Z71 package (4WD).",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "265/75R16"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/K1500/"
+                    ]
+    },
+    {
+        "id":  "5869e1ed-5032-42fe-a702-3158402385c5",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "815407bd-fb16-4f79-93dd-69992a06873e",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027WT\u0027 trim did not exist until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "8c52eeeb-3612-4739-9bd2-1b1c034f2b8a",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Cheyenne\u0027 was a valid trim level. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Cheyenne trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "7dddc8d7-26fb-4468-8653-de1bb29f0071",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Silverado trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "b2d8c4b6-4b1e-43bd-989c-f07b075cd0b3",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027K1500\u0027 with Z71 package (4WD).",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "265/75R16"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/K1500/"
+                    ]
+    },
+    {
+        "id":  "25db16e2-e71a-4c29-87d6-8fdd433c8ec7",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "607f64df-9d79-4db2-b6ad-211de8c3034e",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027WT\u0027 trim did not exist until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "f76ccfc9-c56a-4bef-91cc-0054f098df78",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Cheyenne\u0027 was a valid trim level. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Cheyenne trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "cbc37b8e-b48c-479a-8ffa-d173d40d66ab",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Scottsdale\u0027 trim was discontinued. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "b1e43ae9-4e68-4b4e-a0a7-9eccd81b2bf4",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Silverado trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "58bbf8ea-5457-4368-97ea-b84f5f212f2f",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Silverado trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "2c753625-ff07-456e-849d-870f0ee2453a",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Scottsdale\u0027 trim was discontinued. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "da3b59e3-d16d-4190-97c4-e573fce61a43",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027Cheyenne\u0027 was a valid trim level. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027 with Cheyenne trim.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "ea4290cf-b1ea-46d7-9a8a-2dd375a21e28",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "e450e3ce-9a66-4da7-b7ab-943ad73ee1e0",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. The correct model name should be \u0027K1500\u0027 with Z71 package (4WD).",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "265/75R16"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/K1500/"
+                    ]
+    },
+    {
+        "id":  "4c99cde3-a005-4e91-9050-bc416471bfa7",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 1500",
+        "status":  "invalid",
+        "reason":  "\u0027Silverado 1500\u0027 was not a model name until 1999. \u0027WT\u0027 trim did not exist until 1999. The correct model name should be \u0027C1500\u0027 or \u0027K1500\u0027.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  6,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "Wikipedia Chevrolet Silverado",
+                        "Wikipedia Chevrolet C/K",
+                        "tiresize.com/tires/Chevrolet/C1500/"
+                    ]
+    },
+    {
+        "id":  "acf99274-548a-4539-b649-2fa0956d4572",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. Per Wikipedia and JD Power: \u0027Introduced in 2001, the Chevrolet Silverado 2500HD replaced the C/K pickup truck-based 2500 model.\u0027 In 1990, GM sold the C/K 2500 (GMT400 platform), not \u0027Silverado 2500 HD\u0027. This entry should be removed or renamed to \u0027C/K 2500\u0027.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)",
+                        "JD Power - Silverado 2500HD History"
+                    ]
+    },
+    {
+        "id":  "84d5dcd3-5c06-4ae3-a20e-d1d7215fcdf6",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1990, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "1e530841-e5b7-477a-865d-2fb52cee8207",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1990, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "76cb25d4-1b3c-4ed3-b82f-06df83156e98",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1990, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "79d1ef01-1a5c-4695-8fe4-28e0d2f7cf81",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1990, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "93b8ed16-e296-49cf-850a-c02d4a45952c",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1991, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "758d655b-378f-43c0-a7a6-a553ac9d666e",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1991, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "c674c69f-54f8-4918-af2f-96775039d270",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1991, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "e6098a9f-ae13-4c72-b644-3267dd154999",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1991, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "74ef080e-44e8-48fa-8af2-db7708d2b267",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1991, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "3163ef80-a2cd-405b-b436-6629d98d1c55",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1992, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "56fe2bf9-71b5-4ada-9ce1-72d4d6dc7608",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1992, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "0d10859c-2590-48a7-aba7-38be1292ef4f",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1992, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "09d7df4c-08e7-4ee6-9291-ae1fbf0a312c",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1992, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "5e5b7412-e71e-4d45-aa92-b4506201018b",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1992, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "e692109d-c1db-4135-8fd8-50b8b55ecaaa",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1993, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "8226f6ea-5757-4ba6-95e9-335072960695",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1993, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "ca593092-f5a1-4b6d-b2ad-18f185c7b046",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1993, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "239298e0-b2a7-43f2-8b29-ef30ae060246",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1993, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "319b08fb-cf15-468e-864c-a5eced23a61a",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1993, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "8ae8869b-de73-4e9e-896f-4407b5a9a0a0",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1994, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "c337df0b-16f6-4b58-9d71-48f42c2febb9",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1994, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "d5b2dbb4-3417-4ff8-a806-a706a1fa9961",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1994, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "a35bd728-3cf2-43dc-9817-cea562b30e71",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1994, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "4a617005-6665-4a7f-9ca1-f39a71e617fe",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1994, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "d8e62733-9899-4b4f-b2f7-7a3362aad6de",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1995, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "f330147d-5818-4c20-9df7-f46527c90f8d",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1995, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "9182fb53-0329-4ad8-bb60-f6715d92dee1",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1995, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "0516bdef-1aeb-4284-9b4c-965bf0f18cbc",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1995, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "8a81b817-b1c8-4b7c-b212-93652569d9bb",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1995, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "c9ac8d21-d0c7-4ce6-a422-19e372df0197",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1996, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "8fdb2b90-116d-46b0-a748-5ba695e3bd1d",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1996, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "f167610a-53a4-4781-ae4d-3d0799c9187b",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1996, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "85631aac-1616-4460-bb1e-b9b9d424d9ad",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1996, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "a378b34f-832f-48f5-9e63-fa1269bd8221",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1996, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "79ee4666-e9bc-4469-acf3-3f1c0ebd3977",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1997, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "c31f1af7-2058-4bdb-b903-3c85b661d8b2",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1997, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "ed541054-73b0-4fd5-b6f7-6ff6abf5113a",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1997, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "e7c75a3e-6103-41a0-99ac-d07be812c68f",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1997, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "08120e05-530c-4524-8127-70e80693d587",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1997, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "ee24679b-3ece-4b73-896d-0beacb9e8bf6",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1998, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "2d21bcaf-7665-4b0c-aace-18a15282df15",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1998, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "6fdb3b43-1a18-4877-a7dd-90c7f5a25afc",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1998, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "7beb096a-489b-4eb7-87dd-7eae89408f69",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1998, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "65e27977-df00-4563-962b-8574e683dfcf",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1998, this would have been the C/K 2500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "f8615e4a-54e5-44c4-8cda-f94cee2c3b2d",
+        "year":  1999,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001. In 1999, Chevy introduced the Silverado name but only for 1500 and light-duty 2500 models. The 2500HD designation started in 2001.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "9de71cf6-39e3-4bc8-b1f0-b45ca36e1ff7",
+        "year":  1999,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "1226034e-9366-426b-9862-c3b952328fd9",
+        "year":  1999,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "9c496283-2737-49b5-92ab-c1c69607b771",
+        "year":  1999,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "5c181a57-08d8-45de-ba5c-22d1fb30fbe9",
+        "year":  1999,
+        "make":  "chevrolet",
+        "model":  "Silverado 2500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 2500 HD\u0027 did not exist until 2001.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "dd3e53f3-b91b-4441-a37a-988da9ba2937",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "Silverado 3500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 3500 HD\u0027 did not exist until 2001. Per Wikipedia: \u0027A 3500 model was added later for 2001, with the introduction of the HD moniker.\u0027 In 1990, GM sold the C/K 3500 (GMT400 platform).",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "1a64801a-c96b-4c43-9f87-aefeef07df9e",
+        "year":  1991,
+        "make":  "chevrolet",
+        "model":  "Silverado 3500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 3500 HD\u0027 did not exist until 2001. In 1991, this would have been the C/K 3500.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "c3dd1aaa-1af7-463a-8f71-57f0912b526e",
+        "year":  1992,
+        "make":  "chevrolet",
+        "model":  "Silverado 3500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 3500 HD\u0027 did not exist until 2001. In 1992, this would have been the C/K 3500.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "a72cc8eb-5400-4ad3-910f-87f57c717402",
+        "year":  1993,
+        "make":  "chevrolet",
+        "model":  "Silverado 3500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 3500 HD\u0027 did not exist until 2001. In 1993, this would have been the C/K 3500.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "3015fa74-78ba-4297-9ccf-1514edb1384c",
+        "year":  1994,
+        "make":  "chevrolet",
+        "model":  "Silverado 3500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 3500 HD\u0027 did not exist until 2001. In 1994, this would have been the C/K 3500.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "e42ef7a6-f6e5-4ff1-bc17-ee55e91d9d78",
+        "year":  1995,
+        "make":  "chevrolet",
+        "model":  "Silverado 3500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 3500 HD\u0027 did not exist until 2001. In 1995, this would have been the C/K 3500.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "cb6083d4-b36c-48d5-9f8a-9ebf2e228848",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "Silverado 3500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 3500 HD\u0027 did not exist until 2001. In 1996, this would have been the C/K 3500.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "519cbfba-3f28-4216-83a6-16fee40c37fa",
+        "year":  1997,
+        "make":  "chevrolet",
+        "model":  "Silverado 3500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 3500 HD\u0027 did not exist until 2001. In 1997, this would have been the C/K 3500.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "afa117dd-efc4-4dfd-83be-e73de0cc3353",
+        "year":  1998,
+        "make":  "chevrolet",
+        "model":  "Silverado 3500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 3500 HD\u0027 did not exist until 2001. In 1998, this would have been the C/K 3500.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "e92f66a0-9f1a-49e2-af8f-7a7cb0eefc5d",
+        "year":  1999,
+        "make":  "chevrolet",
+        "model":  "Silverado 3500 HD",
+        "status":  "invalid",
+        "reason":  "INVALID MODEL NAME: The \u0027Silverado 3500 HD\u0027 did not exist until 2001. In 1999, the heavy-duty trucks were still C/K 3500 on the GMT400 platform.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Silverado (first generation)"
+                    ]
+    },
+    {
+        "id":  "7c313f23-50fb-47b3-bc5e-73bc3dbf4c67",
+        "year":  2006,
+        "make":  "chevrolet",
+        "model":  "aveo-u-va",
+        "status":  "invalid",
+        "reason":  "Model name \u0027Aveo U-VA\u0027 not sold in US market. US received \u0027Aveo\u0027 sedan and \u0027Aveo5\u0027 hatchback. U-VA was India/international market variant only.",
+        "verifiedBoltPattern":  "4x100",
+        "verifiedHubBore":  "56.6",
+        "verifiedWheelSizes":  [
+                                   "14x5.5",
+                                   "15x6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "185/60R14",
+                                  "185/55R15"
+                              ],
+        "sources":  [
+                        "tiresize.com/tires/Chevrolet/Aveo/",
+                        "Wikipedia Chevrolet Aveo (T200)"
+                    ]
+    },
+    {
+        "id":  "7ea71685-b830-48af-83e1-b2334f28d3e6",
+        "year":  2007,
+        "make":  "chevrolet",
+        "model":  "aveo-u-va",
+        "status":  "invalid",
+        "reason":  "Model name \u0027Aveo U-VA\u0027 not sold in US market. US received \u0027Aveo\u0027 sedan and \u0027Aveo5\u0027 hatchback. U-VA was India/international market variant only.",
+        "verifiedBoltPattern":  "4x100",
+        "verifiedHubBore":  "56.6",
+        "verifiedWheelSizes":  [
+                                   "14x5.5",
+                                   "15x6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "185/60R14",
+                                  "185/55R15"
+                              ],
+        "sources":  [
+                        "tiresize.com/tires/Chevrolet/Aveo/",
+                        "Wikipedia Chevrolet Aveo (T200)"
+                    ]
+    },
+    {
+        "id":  "81c31c53-e200-4348-b1a3-5fc79242e98e",
+        "year":  2008,
+        "make":  "chevrolet",
+        "model":  "aveo-u-va",
+        "status":  "invalid",
+        "reason":  "Model name \u0027Aveo U-VA\u0027 not sold in US market. US received \u0027Aveo\u0027 sedan and \u0027Aveo5\u0027 hatchback. U-VA was India/international market variant only.",
+        "verifiedBoltPattern":  "4x100",
+        "verifiedHubBore":  "56.6",
+        "verifiedWheelSizes":  [
+                                   "14x5.5",
+                                   "15x6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "185/60R14",
+                                  "185/55R15"
+                              ],
+        "sources":  [
+                        "tiresize.com/tires/Chevrolet/Aveo/",
+                        "Wikipedia Chevrolet Aveo (T200)"
+                    ]
+    },
+    {
+        "id":  "0cbe8c37-c5c9-4211-bcbe-8d29089efda3",
+        "year":  2009,
+        "make":  "chevrolet",
+        "model":  "aveo-u-va",
+        "status":  "invalid",
+        "reason":  "Model name \u0027Aveo U-VA\u0027 not sold in US market. US received \u0027Aveo\u0027 sedan and \u0027Aveo5\u0027 hatchback. U-VA was India/international market variant only.",
+        "verifiedBoltPattern":  "4x100",
+        "verifiedHubBore":  "56.6",
+        "verifiedWheelSizes":  [
+                                   "14x5.5",
+                                   "15x6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "185/60R14",
+                                  "185/55R15"
+                              ],
+        "sources":  [
+                        "tiresize.com/tires/Chevrolet/Aveo/",
+                        "Wikipedia Chevrolet Aveo (T200)"
+                    ]
+    },
+    {
+        "id":  "6bd7f694-aa55-4f73-b94e-e2bb25a0bfb7",
+        "year":  2010,
+        "make":  "chevrolet",
+        "model":  "aveo-u-va",
+        "status":  "invalid",
+        "reason":  "Model name \u0027Aveo U-VA\u0027 not sold in US market. US received \u0027Aveo\u0027 sedan and \u0027Aveo5\u0027 hatchback. U-VA was India/international market variant only.",
+        "verifiedBoltPattern":  "4x100",
+        "verifiedHubBore":  "56.6",
+        "verifiedWheelSizes":  [
+                                   "14x5.5",
+                                   "15x6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "185/60R14",
+                                  "185/55R15"
+                              ],
+        "sources":  [
+                        "tiresize.com/tires/Chevrolet/Aveo/",
+                        "Wikipedia Chevrolet Aveo (T200)"
+                    ]
+    },
+    {
+        "id":  "691f5999-636c-49f0-bc2c-08ae8ea152fb",
+        "year":  2011,
+        "make":  "chevrolet",
+        "model":  "aveo-u-va",
+        "status":  "invalid",
+        "reason":  "Model name \u0027Aveo U-VA\u0027 not sold in US market. US received \u0027Aveo\u0027 sedan and \u0027Aveo5\u0027 hatchback. U-VA was India/international market variant only.",
+        "verifiedBoltPattern":  "4x100",
+        "verifiedHubBore":  "56.6",
+        "verifiedWheelSizes":  [
+                                   "14x5.5",
+                                   "15x6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "185/60R14",
+                                  "185/55R15"
+                              ],
+        "sources":  [
+                        "tiresize.com/tires/Chevrolet/Aveo/",
+                        "Wikipedia Chevrolet Aveo (T200)"
+                    ]
+    },
+    {
+        "id":  "b551eb8b-12e1-4ef8-9726-3a5ad272f3f8",
+        "year":  2012,
+        "make":  "chevrolet",
+        "model":  "aveo-u-va",
+        "status":  "invalid",
+        "reason":  "Model name \u0027Aveo U-VA\u0027 not sold in US market. 2012 was also final year for Aveo before Sonic replacement. U-VA was India/international market variant only.",
+        "verifiedBoltPattern":  "4x100",
+        "verifiedHubBore":  "56.6",
+        "verifiedWheelSizes":  [
+                                   "14x5.5",
+                                   "15x6"
+                               ],
+        "verifiedTireSizes":  [
+                                  "185/60R14",
+                                  "185/55R15"
+                              ],
+        "sources":  [
+                        "tiresize.com/tires/Chevrolet/Aveo/",
+                        "Wikipedia Chevrolet Aveo (T200)"
+                    ]
+    },
+    {
+        "id":  "218b0eaa-ca1c-40ff-9fa2-1de8650f0293",
+        "year":  2006,
+        "make":  "chevrolet",
+        "model":  "blazer",
+        "status":  "invalid",
+        "reason":  "Chevrolet Blazer was NOT produced from 2006-2018. Production ended 2005, revived 2019. This year does not exist.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "cars.com/research/chevrolet-blazer/",
+                        "CNET brief history of Chevy Blazer",
+                        "jdpower.com/cars/history/chevrolet/blazer"
+                    ]
+    },
+    {
+        "id":  "b1b5d72c-611c-4b06-abf4-16cb3b2b3e48",
+        "year":  2007,
+        "make":  "chevrolet",
+        "model":  "blazer",
+        "status":  "invalid",
+        "reason":  "Chevrolet Blazer was NOT produced from 2006-2018. Production ended 2005, revived 2019. This year does not exist.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "cars.com/research/chevrolet-blazer/",
+                        "CNET brief history of Chevy Blazer",
+                        "jdpower.com/cars/history/chevrolet/blazer"
+                    ]
+    },
+    {
+        "id":  "28273488-bc83-40d6-8b17-1d10fd068fab",
+        "year":  2008,
+        "make":  "chevrolet",
+        "model":  "blazer",
+        "status":  "invalid",
+        "reason":  "Chevrolet Blazer was NOT produced from 2006-2018. Production ended 2005, revived 2019. This year does not exist.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "cars.com/research/chevrolet-blazer/",
+                        "CNET brief history of Chevy Blazer",
+                        "jdpower.com/cars/history/chevrolet/blazer"
+                    ]
+    },
+    {
+        "id":  "ce00a58c-d747-46ed-93aa-01f0f89f7578",
+        "year":  2009,
+        "make":  "chevrolet",
+        "model":  "blazer",
+        "status":  "invalid",
+        "reason":  "Chevrolet Blazer was NOT produced from 2006-2018. Production ended 2005, revived 2019. This year does not exist.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "cars.com/research/chevrolet-blazer/",
+                        "CNET brief history of Chevy Blazer",
+                        "jdpower.com/cars/history/chevrolet/blazer"
+                    ]
+    },
+    {
+        "id":  "014fd183-f33a-4a8e-ac09-4e0a0d1ff347",
+        "year":  2010,
+        "make":  "chevrolet",
+        "model":  "blazer",
+        "status":  "invalid",
+        "reason":  "Chevrolet Blazer was NOT produced from 2006-2018. Production ended 2005, revived 2019. This year does not exist.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "cars.com/research/chevrolet-blazer/",
+                        "CNET brief history of Chevy Blazer",
+                        "jdpower.com/cars/history/chevrolet/blazer"
+                    ]
+    },
+    {
+        "id":  "27687064-31fa-44f4-a1e5-bceea547febc",
+        "year":  2011,
+        "make":  "chevrolet",
+        "model":  "blazer",
+        "status":  "invalid",
+        "reason":  "Chevrolet Blazer was NOT produced from 2006-2018. Production ended 2005, revived 2019. This year does not exist.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "cars.com/research/chevrolet-blazer/",
+                        "CNET brief history of Chevy Blazer",
+                        "jdpower.com/cars/history/chevrolet/blazer"
+                    ]
+    },
+    {
+        "id":  "74da8923-c2b9-4317-8c91-22fae6cd6e2b",
+        "year":  2024,
+        "make":  "chevrolet",
+        "model":  "bolt-euv",
+        "status":  "invalid",
+        "reason":  "No 2024 Bolt EUV exists. Production ended December 20, 2023. New generation expected 2026.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia Chevrolet Bolt EUV",
+                        "MotorTrend",
+                        "freep.com GM Bolt selldown article"
+                    ]
+    },
+    {
+        "id":  "52805ac8-7bf7-412a-9a9b-feaff75ed2ae",
+        "year":  2025,
+        "make":  "chevrolet",
+        "model":  "bolt-euv",
+        "status":  "invalid",
+        "reason":  "No 2025 Bolt EUV exists. Production ended December 2023. New generation expected 2026.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia Chevrolet Bolt EUV",
+                        "MotorTrend",
+                        "greencarreports.com"
+                    ]
+    },
+    {
+        "id":  "280470a2-f5db-4e45-88bc-0bbe1ceab2fb",
+        "year":  2024,
+        "make":  "chevrolet",
+        "model":  "bolt-ev",
+        "status":  "invalid",
+        "reason":  "Production ended Dec 2023. Entry shows WRONG bolt pattern (5x120 vs correct 5x105) and hub bore (67.1 vs 56.6). No 2024 production occurred.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia Chevrolet Bolt EUV",
+                        "MotorTrend",
+                        "freep.com GM Bolt selldown article"
+                    ]
+    },
+    {
+        "id":  "b4eaf540-aea1-48a8-b651-a77df39ad567",
+        "year":  2025,
+        "make":  "chevrolet",
+        "model":  "bolt-ev",
+        "status":  "invalid",
+        "reason":  "No 2025 Bolt EV exists. Production ended December 2023. New generation expected to begin production late 2025 for 2026 model year.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia Chevrolet Bolt EUV",
+                        "MotorTrend",
+                        "Reddit r/BoltEV"
+                    ]
+    },
+    {
+        "id":  "695a2abc-78d9-4455-894b-7e5f7274668b",
+        "year":  1981,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "LT",
+        "status":  "invalid",
+        "reason":  "1981 Camaro LT does not exist - the LT was replaced by the Berlinetta in 1979 and was not available in 1981. Tire sizes 285/30R20, 305/30R20 are also WRONG. Suggest removing or renaming to Berlinetta.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  14
+                                   },
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "P205/75R14",
+                                  "P225/70R15"
+                              ],
+        "sources":  [
+                        "Wikipedia 2nd gen Camaro"
+                    ]
+    },
+    {
+        "id":  "ee58903c-bbf6-4f0f-a338-350bdb52515b",
+        "year":  1985,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "LT",
+        "status":  "invalid",
+        "reason":  "1985 Camaro LT does not exist - trim options were Sport Coupe, Berlinetta, Z28, and IROC-Z. Tire sizes 285/30R20, 305/30R20 are also WRONG. Suggest removing this entry or mapping to correct trim.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R15",
+                                  "235/60R15"
+                              ],
+        "sources":  [
+                        "Wikipedia 3rd gen Camaro"
+                    ]
+    },
+    {
+        "id":  "c982097e-d76b-4ae9-89a4-07983e7a99d0",
+        "year":  1986,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "LT",
+        "status":  "invalid",
+        "reason":  "1986 Camaro LT does not exist - trim options were Sport Coupe, Berlinetta (final year), Z28, and IROC-Z. LT was not introduced until 1987. Tire sizes 285/30R20, 305/30R20 are also WRONG.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R15",
+                                  "235/60R15"
+                              ],
+        "sources":  [
+                        "Wikipedia 3rd gen Camaro"
+                    ]
+    },
+    {
+        "id":  "6eb00d43-de4a-43e6-ab59-11f098c5c383",
+        "year":  1988,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "LT",
+        "status":  "invalid",
+        "reason":  "1988 Camaro LT does not exist - the LT was dropped after 1987. Lineup was Base Coupe and IROC-Z only in 1988. Tire sizes 285/30R20, 305/30R20 are also WRONG.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R15",
+                                  "235/60R15"
+                              ],
+        "sources":  [
+                        "Wikipedia 3rd gen Camaro"
+                    ]
+    },
+    {
+        "id":  "0c08048e-3c5e-4384-8c03-f2c43d080fa3",
+        "year":  1989,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "LT",
+        "status":  "invalid",
+        "reason":  "1989 Camaro LT does not exist - trim options were RS and IROC-Z. LT was discontinued after 1987. Tire sizes 285/30R20, 305/30R20 are also WRONG.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R15",
+                                  "235/60R15"
+                              ],
+        "sources":  [
+                        "Wikipedia 3rd gen Camaro"
+                    ]
+    },
+    {
+        "id":  "37c669fc-1590-4852-90a4-93cf440ae302",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "LT",
+        "status":  "invalid",
+        "reason":  "1990 Camaro LT does not exist - trim options were RS and Z28. LT was not available in 3rd gen after 1987. Tire sizes 285/30R20, 305/30R20 are also WRONG.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R15",
+                                  "235/55R16"
+                              ],
+        "sources":  [
+                        "Wikipedia 3rd gen Camaro",
+                        "tiresize.com"
+                    ]
+    },
+    {
+        "id":  "78466d3a-d3f5-4829-993e-9c7e1828ed08",
+        "year":  1990,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "IROC-Z",
+        "status":  "invalid",
+        "reason":  "1990 Camaro IROC-Z does not exist - the IROC name was dropped after 1989 when the IROC licensing deal ended. Model returned to Z28 name. Tire sizes 285/30R20, 305/30R20 are also WRONG.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  16,
+                                       "offset":  0
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/55R16",
+                                  "245/50ZR16"
+                              ],
+        "sources":  [
+                        "Wikipedia 3rd gen Camaro"
+                    ]
+    },
+    {
+        "id":  "168371b6-d1e3-4e63-bc44-44848cf666e0",
+        "year":  2010,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "1LE",
+        "status":  "invalid",
+        "reason":  "1LE package did NOT exist in 2010. 1LE was introduced in 2013. This trim/year combination is invalid.",
+        "verifiedBoltPattern":  "5x120",
+        "verifiedHubBore":  "66.9",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia",
+                        "roadandtrack.com"
+                    ]
+    },
+    {
+        "id":  "d0d7b5dc-8830-4661-bf98-5e965a269972",
+        "year":  2010,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "ZL1",
+        "status":  "invalid",
+        "reason":  "ZL1 did NOT exist in 2010. ZL1 was introduced in 2012. This trim/year combination is invalid.",
+        "verifiedBoltPattern":  "5x120",
+        "verifiedHubBore":  "66.9",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia",
+                        "caranddriver.com"
+                    ]
+    },
+    {
+        "id":  "fc8df078-652c-4104-a9de-51fd283f739c",
+        "year":  2011,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "1LE",
+        "status":  "invalid",
+        "reason":  "1LE package did NOT exist in 2011. 1LE was introduced in 2013. This trim/year combination is invalid.",
+        "verifiedBoltPattern":  "5x120",
+        "verifiedHubBore":  "66.9",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia",
+                        "roadandtrack.com"
+                    ]
+    },
+    {
+        "id":  "d267b8b8-4746-4d33-a291-011406f23636",
+        "year":  2011,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "ZL1",
+        "status":  "invalid",
+        "reason":  "ZL1 did NOT exist in 2011. ZL1 was introduced in 2012. This trim/year combination is invalid.",
+        "verifiedBoltPattern":  "5x120",
+        "verifiedHubBore":  "66.9",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia",
+                        "caranddriver.com"
+                    ]
+    },
+    {
+        "id":  "b44c95f8-1737-4d56-a918-783b04fac691",
+        "year":  2012,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "1LE",
+        "status":  "invalid",
+        "reason":  "1LE package did NOT exist in 2012. 1LE was introduced in 2013. This trim/year combination is invalid.",
+        "verifiedBoltPattern":  "5x120",
+        "verifiedHubBore":  "66.9",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia",
+                        "roadandtrack.com"
+                    ]
+    },
+    {
+        "id":  "4f11a922-0c02-4368-9a3b-15f260e02386",
+        "year":  2016,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "ZL1",
+        "status":  "invalid",
+        "reason":  "6th gen ZL1 did NOT exist in 2016. 6th gen ZL1 was introduced in 2017 model year. This trim/year combination is invalid.",
+        "verifiedBoltPattern":  "5x120",
+        "verifiedHubBore":  "66.9",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia",
+                        "caranddriver.com"
+                    ]
+    },
+    {
+        "id":  "e91b86e9-a6d8-4b6b-9417-11e18213e42f",
+        "year":  2016,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "ZL1 1LE Extreme Track",
+        "status":  "invalid",
+        "reason":  "ZL1 1LE did NOT exist in 2016. 6th gen ZL1 was introduced in 2017 and ZL1 1LE in 2018. This trim/year combination is invalid.",
+        "verifiedBoltPattern":  "5x120",
+        "verifiedHubBore":  "66.9",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia",
+                        "caranddriver.com"
+                    ]
+    },
+    {
+        "id":  "087c0b67-baf5-49c0-9922-3299656f29b3",
+        "year":  2017,
+        "make":  "chevrolet",
+        "model":  "camaro",
+        "trim":  "ZL1 1LE Extreme Track",
+        "status":  "invalid",
+        "reason":  "ZL1 1LE did NOT exist in 2017. ZL1 1LE was introduced in 2018 model year. This trim/year combination is invalid.",
+        "verifiedBoltPattern":  "5x120",
+        "verifiedHubBore":  "66.9",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia",
+                        "caranddriver.com"
+                    ]
+    },
+    {
+        "id":  "d1ec2584-6c64-4bb9-8acc-b94b78921d85",
+        "year":  2009,
+        "make":  "chevrolet",
+        "model":  "caprice",
+        "status":  "invalid",
+        "reason":  "2009 Chevrolet Caprice was NOT available in the US market. The Caprice PPV (Police Patrol Vehicle) was not introduced to the US until Fall 2010 as a 2011 model year. 2009 Caprices were only sold in the Middle East (Saudi Arabia, UAE). This entry should be REMOVED from US fitment database.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Caprice",
+                        "GM Authority - Caprice PPV announcement Oct 2009",
+                        "Wikipedia - Holden Caprice (WM)"
+                    ]
+    },
+    {
+        "id":  "5f646adb-8d1f-4bac-9dd9-bf3810254177",
+        "year":  1964,
+        "make":  "chevrolet",
+        "model":  "chevelle",
+        "trim":  "SS 396",
+        "status":  "invalid",
+        "reason":  "1964 Chevelle SS 396 DID NOT EXIST. The 396 engine was not available until mid-1965 (Z-16 package). 1964 SS only had 283 or 327 V8 options. This trim should be removed or renamed.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Chevelle",
+                        "tiresize.com"
+                    ]
+    },
+    {
+        "id":  "0cf4dde6-5849-4960-acad-40d4151469a1",
+        "year":  1968,
+        "make":  "chevrolet",
+        "model":  "chevelle",
+        "trim":  "SS 454",
+        "status":  "invalid",
+        "reason":  "1968 SS 454 DID NOT EXIST. The 454 engine was not introduced until 1970. 1968 only had 396 as big-block option.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Chevelle"
+                    ]
+    },
+    {
+        "id":  "cfb3a276-011e-48f0-8213-5526bfb96458",
+        "year":  1969,
+        "make":  "chevrolet",
+        "model":  "chevelle",
+        "trim":  "SS 454",
+        "status":  "invalid",
+        "reason":  "1969 SS 454 DID NOT EXIST. The 454 engine was not introduced until 1970.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Chevelle"
+                    ]
+    },
+    {
+        "id":  "2bf3ac95-9094-40dc-b3c9-0676c19b3493",
+        "year":  2023,
+        "make":  "chevrolet",
+        "model":  "colorado",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Both bolt pattern AND hub bore are WRONG. Data shows 6x120/67.1mm but 3rd gen (2023+) uses 6x139.7/78.1mm - completely different platform.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "17x8",
+                                   "18x8.5",
+                                   "20x9"
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/65R17",
+                                  "265/65R17",
+                                  "265/60R18",
+                                  "275/55R20"
+                              ],
+        "sources":  [
+                        "coloradofans.com forum",
+                        "customwheeloffset.com",
+                        "bonoss.com",
+                        "orionmotortech.com"
+                    ]
+    },
+    {
+        "id":  "83e5ec9f-4f37-4608-b586-5f1591602d97",
+        "year":  2024,
+        "make":  "chevrolet",
+        "model":  "colorado",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Both bolt pattern AND hub bore are WRONG. Data shows 6x120/67.1mm but 3rd gen uses 6x139.7/78.1mm.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "17x8",
+                                   "18x8.5",
+                                   "20x9",
+                                   "22x9"
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/65R17",
+                                  "265/65R17",
+                                  "265/60R18",
+                                  "275/55R20"
+                              ],
+        "sources":  [
+                        "coloradofans.com forum",
+                        "customwheeloffset.com",
+                        "bonoss.com",
+                        "gmauthority.com"
+                    ]
+    },
+    {
+        "id":  "ff139a79-1fea-4d81-a4bc-b42c104a7bf2",
+        "year":  2025,
+        "make":  "chevrolet",
+        "model":  "colorado",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Both bolt pattern AND hub bore are WRONG. Data shows 6x120/67.1mm but 3rd gen uses 6x139.7/78.1mm.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "17x8",
+                                   "18x8.5",
+                                   "20x9",
+                                   "22x9"
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/65R17",
+                                  "265/65R17",
+                                  "265/60R18",
+                                  "275/55R20"
+                              ],
+        "sources":  [
+                        "coloradofans.com forum",
+                        "customwheeloffset.com",
+                        "bonoss.com"
+                    ]
+    },
+    {
+        "id":  "e1931e2a-2f87-4b5a-8d2a-3b2e25725565",
+        "year":  2026,
+        "make":  "chevrolet",
+        "model":  "colorado",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Both bolt pattern AND hub bore are WRONG. Data shows 6x120/67.1mm but 3rd gen uses 6x139.7/78.1mm.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "17x8",
+                                   "18x8.5",
+                                   "20x9",
+                                   "22x9"
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/65R17",
+                                  "265/65R17",
+                                  "265/60R18",
+                                  "275/55R20",
+                                  "275/60R20"
+                              ],
+        "sources":  [
+                        "coloradofans.com forum",
+                        "customwheeloffset.com",
+                        "bonoss.com"
+                    ]
+    },
+    {
+        "id":  "2b72de81-3bda-4d7a-af55-996b9c503108",
+        "year":  1994,
+        "make":  "Chevrolet",
+        "model":  "Corvette",
+        "trim":  "Z52",
+        "status":  "invalid",
+        "reason":  "Z52 was discontinued after 1992. Not available in 1994.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia C4 Corvette"
+                    ]
+    },
+    {
+        "id":  "a2c17bf9-e021-46ef-814b-7454cf53a43a",
+        "year":  1995,
+        "make":  "Chevrolet",
+        "model":  "Corvette",
+        "trim":  "Z52",
+        "status":  "invalid",
+        "reason":  "Z52 was discontinued after 1992. Not available in 1995.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia C4 Corvette"
+                    ]
+    },
+    {
+        "id":  "ce053ea4-011f-49bb-afc9-60c897deb353",
+        "year":  1996,
+        "make":  "chevrolet",
+        "model":  "corvette",
+        "trim":  "Z52",
+        "status":  "invalid",
+        "reason":  "Z52 trim DOES NOT EXIST for 1996 Corvette. 1996 trims were: Base, Collector Edition, Grand Sport only. Remove this vehicle.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "corvsport.com/1996-c4-corvette/",
+                        "ecklerscorvette.com/corvette/c4-specs"
+                    ]
+    },
+    {
+        "id":  "6c6d4ecd-8233-417a-8c5c-a6e8f89c4a93",
+        "year":  2005,
+        "make":  "chevrolet",
+        "model":  "corvette",
+        "trim":  "Z06",
+        "status":  "invalid",
+        "reason":  "2005 Z06 DOES NOT EXIST. C6 Z06 started in 2006 model year. First Z06s were built late 2005 but sold as 2006 models. Remove this vehicle.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Corvette (C6)",
+                        "corvetteforum.com/forums/c6-corvette-zr1-and-z06/"
+                    ]
+    },
+    {
+        "id":  "4ee3233f-660b-4c30-8b9d-ce555022f18b",
+        "year":  2014,
+        "make":  "chevrolet",
+        "model":  "corvette",
+        "trim":  "Grand Sport",
+        "status":  "invalid",
+        "reason":  "C7 Grand Sport DID NOT EXIST in 2014. Grand Sport for C7 started in 2017. Remove this vehicle.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Corvette (C7)"
+                    ]
+    },
+    {
+        "id":  "6d1eca2f-7beb-467d-a4db-dbf8f7be0e9c",
+        "year":  2014,
+        "make":  "chevrolet",
+        "model":  "corvette",
+        "trim":  "Z06",
+        "status":  "invalid",
+        "reason":  "C7 Z06 DID NOT EXIST in 2014. C7 Z06 started in 2015 model year. Remove this vehicle.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Corvette (C7)"
+                    ]
+    },
+    {
+        "id":  "838a10de-7a45-46a8-a356-dde59664e97e",
+        "year":  2015,
+        "make":  "chevrolet",
+        "model":  "corvette",
+        "trim":  "Grand Sport",
+        "status":  "invalid",
+        "reason":  "C7 Grand Sport DID NOT EXIST in 2015. Grand Sport for C7 started in 2017. Remove this vehicle.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Corvette (C7)"
+                    ]
+    },
+    {
+        "id":  "e1a1b56c-8b26-48f2-88fc-ab05e8b9fe37",
+        "year":  2016,
+        "make":  "chevrolet",
+        "model":  "corvette",
+        "trim":  "Grand Sport",
+        "status":  "invalid",
+        "reason":  "C7 Grand Sport DID NOT EXIST in 2016. Grand Sport for C7 started in 2017. Remove this vehicle.",
+        "verifiedBoltPattern":  "5x120.65",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "Wikipedia - Chevrolet Corvette (C7)"
+                    ]
+    },
+    {
+        "id":  "337b2a75-75d9-4b66-9ce9-6ef5c5ba65d6",
+        "year":  2004,
+        "make":  "chevrolet",
+        "model":  "equinox",
+        "trim":  "Base",
+        "status":  "invalid",
+        "reason":  "2004 Chevrolet Equinox DOES NOT EXIST. The Equinox was introduced for the 2005 model year. This vehicle entry should be removed.",
+        "verifiedBoltPattern":  null,
+        "verifiedHubBore":  null,
+        "verifiedWheelSizes":  null,
+        "verifiedTireSizes":  null,
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/equinox/",
+                        "Wikipedia Chevrolet Equinox"
+                    ]
+    },
+    {
+        "id":  "d7f58ef7-bceb-46a3-9595-374423202341",
+        "year":  2018,
+        "make":  "chevrolet",
+        "model":  "equinox",
+        "trim":  "LS, LT, RS, Premier",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Batch shows 5x112 bolt pattern and 66.5mm hub bore - BOTH WRONG. Verified: 5x115 bolt pattern, 70.3mm hub bore.",
+        "verifiedBoltPattern":  "5x115",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "17x7",
+                                   "18x7",
+                                   "19x7.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "225/60R18",
+                                  "235/50R19"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/equinox/2018/"
+                    ]
+    },
+    {
+        "id":  "6aee7707-fa35-434c-91cd-a307d2e405d5",
+        "year":  2019,
+        "make":  "chevrolet",
+        "model":  "equinox",
+        "trim":  "LS, LT, RS, Premier",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Batch shows 5x112 bolt pattern and 66.5mm hub bore - BOTH WRONG. Verified: 5x115 bolt pattern, 70.3mm hub bore.",
+        "verifiedBoltPattern":  "5x115",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "17x7",
+                                   "18x7",
+                                   "19x7.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "225/60R18",
+                                  "235/50R19"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/equinox/2018/"
+                    ]
+    },
+    {
+        "id":  "6eef0e8d-a601-4816-bdff-6c97c74e0036",
+        "year":  2020,
+        "make":  "chevrolet",
+        "model":  "equinox",
+        "trim":  "LS, LT, RS, Premier",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Batch shows 5x112 bolt pattern and 66.5mm hub bore - BOTH WRONG. Verified: 5x115 bolt pattern, 70.3mm hub bore.",
+        "verifiedBoltPattern":  "5x115",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "17x7",
+                                   "18x7",
+                                   "19x7.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "225/60R18",
+                                  "235/50R19"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/equinox/2018/"
+                    ]
+    },
+    {
+        "id":  "eb1228ba-40c2-47f5-b17d-c8c789645ce7",
+        "year":  2021,
+        "make":  "chevrolet",
+        "model":  "equinox",
+        "trim":  "LS, LT, RS, Premier",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Batch shows 5x112 bolt pattern and 66.5mm hub bore - BOTH WRONG. Verified: 5x115 bolt pattern, 70.3mm hub bore.",
+        "verifiedBoltPattern":  "5x115",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "17x7",
+                                   "18x7",
+                                   "19x7.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "225/60R18",
+                                  "235/50R19"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/equinox/2018/"
+                    ]
+    },
+    {
+        "id":  "df69e7c4-dcdc-4796-b4ee-b4a8a2604052",
+        "year":  2022,
+        "make":  "chevrolet",
+        "model":  "equinox",
+        "trim":  "LS, LT, RS, Premier",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Batch shows 5x112 bolt pattern and 66.5mm hub bore - BOTH WRONG. Verified: 5x115 bolt pattern, 70.3mm hub bore.",
+        "verifiedBoltPattern":  "5x115",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "17x7",
+                                   "18x7",
+                                   "19x7.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "225/60R18",
+                                  "235/50R19"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/equinox/2018/"
+                    ]
+    },
+    {
+        "id":  "cd159b69-9340-4701-b804-e2ec967ee36c",
+        "year":  2023,
+        "make":  "chevrolet",
+        "model":  "equinox",
+        "trim":  "LS, LT, RS, Premier",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Batch shows 5x112 bolt pattern and 66.5mm hub bore - BOTH WRONG. Verified: 5x115 bolt pattern, 70.3mm hub bore.",
+        "verifiedBoltPattern":  "5x115",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "17x7",
+                                   "18x7",
+                                   "19x7.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "225/60R18",
+                                  "235/50R19"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/equinox/2018/"
+                    ]
+    },
+    {
+        "id":  "6135cdd6-47f0-44b9-a903-2eade7afb5d0",
+        "year":  2024,
+        "make":  "chevrolet",
+        "model":  "equinox",
+        "trim":  "LS, LT, RS, Premier",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Batch shows 5x112 bolt pattern and 66.5mm hub bore - BOTH WRONG. Verified: 5x115 bolt pattern, 70.3mm hub bore.",
+        "verifiedBoltPattern":  "5x115",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "17x7",
+                                   "18x7",
+                                   "19x7.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "225/60R18",
+                                  "235/50R19"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/equinox/2018/",
+                        "opplehouse.com/chevrolet-equinox-bolt-pattern-explained/"
+                    ]
+    },
+    {
+        "id":  "10abd21d-a59c-4dbe-a99b-55fce1155546",
+        "year":  2025,
+        "make":  "chevrolet",
+        "model":  "equinox",
+        "trim":  "LS, LT, RS, Premier",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Batch shows 5x112 bolt pattern and 66.5mm hub bore - BOTH WRONG. Verified: 5x115 bolt pattern, 70.3mm hub bore.",
+        "verifiedBoltPattern":  "5x115",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "17x7",
+                                   "18x7",
+                                   "19x7.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "225/60R18",
+                                  "235/50R19"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/equinox/2018/"
+                    ]
+    },
+    {
+        "id":  "7abd4992-c470-45d1-8216-ccc26c3d5ff4",
+        "year":  2026,
+        "make":  "chevrolet",
+        "model":  "equinox",
+        "trim":  "LS, LT, RS, Premier",
+        "status":  "invalid",
+        "reason":  "CRITICAL: Batch shows 5x112 bolt pattern and 66.5mm hub bore - BOTH WRONG. Verified: 5x115 bolt pattern, 70.3mm hub bore.",
+        "verifiedBoltPattern":  "5x115",
+        "verifiedHubBore":  "70.3",
+        "verifiedWheelSizes":  [
+                                   "17x7",
+                                   "18x7",
+                                   "19x7.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "225/60R18",
+                                  "235/50R19"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/equinox/2018/"
+                    ]
+    },
+    {
+        "id":  "1a92737a-207d-4527-81f2-e568812ea06c",
+        "year":  2000,
+        "make":  "chevrolet",
+        "model":  "express-1500",
+        "trim":  "Base",
+        "status":  "invalid",
+        "reason":  "CRITICAL: ALL specs wrong. Batch shows 5x120/67.1mm - Actual: 5x127 bolt pattern, 78.1mm hub bore, 15-inch wheels with 215/75R15 or 235/75R15 tires.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "15x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/express-1500/2000/",
+                        "hulkoffsets.com/blogs/news/chevrolet-express-wheel-fitment"
+                    ]
+    },
+    {
+        "id":  "712368d9-1284-4b94-a0ec-5ffea6a07237",
+        "year":  2001,
+        "make":  "chevrolet",
+        "model":  "express-1500",
+        "trim":  "Base",
+        "status":  "invalid",
+        "reason":  "CRITICAL: ALL specs wrong. Batch shows 5x120/67.1mm - Actual: 5x127 bolt pattern, 78.1mm hub bore, 15-inch wheels.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "15x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/express-1500/2000/",
+                        "hulkoffsets.com/blogs/news/chevrolet-express-wheel-fitment"
+                    ]
+    },
+    {
+        "id":  "3ad6f9a2-6fbd-4ec4-9420-b646a653ad99",
+        "year":  2002,
+        "make":  "chevrolet",
+        "model":  "express-1500",
+        "trim":  "Base",
+        "status":  "invalid",
+        "reason":  "CRITICAL: ALL specs wrong. Batch shows 5x120/67.1mm - Actual: 5x127 bolt pattern, 78.1mm hub bore, 15-inch wheels.",
+        "verifiedBoltPattern":  "5x127",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "15x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "235/75R15"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/express-1500/2000/",
+                        "hulkoffsets.com/blogs/news/chevrolet-express-wheel-fitment"
+                    ]
+    },
+    {
+        "id":  "8ef5bf8f-01fc-4c16-a840-8652e5210839",
+        "year":  2003,
+        "make":  "chevrolet",
+        "model":  "express-1500",
+        "trim":  "Base",
+        "status":  "invalid",
+        "reason":  "CRITICAL: ALL specs wrong. Batch shows 5x120/67.1mm - Actual: 6x139.7 bolt pattern, 78.1mm hub bore, 16-inch wheels with 235/75R16 tires. 2003 was new generation.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5",
+                                   "16x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/75R16"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/express-1500/2003/"
+                    ]
+    },
+    {
+        "id":  "c10a2921-fe48-45e5-87cd-4ce06d5cf320",
+        "year":  2004,
+        "make":  "chevrolet",
+        "model":  "express-1500",
+        "trim":  "Base",
+        "status":  "invalid",
+        "reason":  "CRITICAL: ALL specs wrong. Batch shows 5x120/67.1mm - Actual: 6x139.7 bolt pattern, 78.1mm hub bore, 16-inch wheels.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5",
+                                   "16x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/75R16"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/express-1500/2003/"
+                    ]
+    },
+    {
+        "id":  "852d9239-408e-4691-bcc4-34c4c1993117",
+        "year":  2005,
+        "make":  "chevrolet",
+        "model":  "express-1500",
+        "trim":  "Base",
+        "status":  "invalid",
+        "reason":  "CRITICAL: ALL specs wrong. Batch shows 5x120/67.1mm - Actual: 6x139.7 bolt pattern, 78.1mm hub bore, 16-inch wheels.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5",
+                                   "16x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/75R16"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/express-1500/2003/"
+                    ]
+    },
+    {
+        "id":  "aed182b1-b7a7-42ec-8387-783dd8aefaa4",
+        "year":  2006,
+        "make":  "chevrolet",
+        "model":  "express-1500",
+        "trim":  "Base",
+        "status":  "invalid",
+        "reason":  "CRITICAL: ALL specs wrong. Batch shows 5x120/67.1mm - Actual: 6x139.7 bolt pattern, 78.1mm hub bore, 16-inch wheels.",
+        "verifiedBoltPattern":  "6x139.7",
+        "verifiedHubBore":  "78.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5",
+                                   "16x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/75R16"
+                              ],
+        "sources":  [
+                        "tirewheelguide.com/sizes/chevrolet/express-1500/2003/"
+                    ]
+    }
+]

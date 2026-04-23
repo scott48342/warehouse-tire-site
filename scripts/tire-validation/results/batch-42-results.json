@@ -1,0 +1,1094 @@
+{
+  "batchId": "42",
+  "processedAt": "2026-04-21T21:55:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2019,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/65R17"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "245/50R20"],
+      "trimData": [
+        {"trim": "L", "tires": ["235/65R17"]},
+        {"trim": "LX", "tires": ["235/65R17"]},
+        {"trim": "Hybrid Limited", "tires": ["235/65R17", "235/60R18"]},
+        {"trim": "Hybrid Touring L", "tires": ["235/65R17", "235/60R18"]},
+        {"trim": "Hybrid Touring Plus", "tires": ["235/65R17", "235/60R18"]},
+        {"trim": "Touring L", "tires": ["235/65R17", "235/60R18", "245/50R20"]},
+        {"trim": "Touring L Plus", "tires": ["235/65R17", "235/60R18", "245/50R20"]},
+        {"trim": "Touring Plus", "tires": ["235/65R17", "235/60R18", "245/50R20"]},
+        {"trim": "Limited", "tires": ["235/60R18", "245/50R20"]}
+      ],
+      "status": "VALID",
+      "notes": "Current size 235/65R17 matches base/L/LX trims"
+    },
+    {
+      "year": 2018,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/55R18", "235/50R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "245/50R20"],
+      "trimData": [
+        {"trim": "L", "tires": ["235/65R17"]},
+        {"trim": "LX", "tires": ["235/65R17"]},
+        {"trim": "Hybrid Limited", "tires": ["235/65R17", "235/60R18"]},
+        {"trim": "Hybrid Touring L", "tires": ["235/65R17", "235/60R18"]},
+        {"trim": "Hybrid Touring Plus", "tires": ["235/65R17", "235/60R18"]},
+        {"trim": "Touring L", "tires": ["235/65R17", "235/60R18", "245/50R20"]},
+        {"trim": "Touring L Plus", "tires": ["235/65R17", "235/60R18", "245/50R20"]},
+        {"trim": "Touring Plus", "tires": ["235/65R17", "235/60R18", "245/50R20"]},
+        {"trim": "Limited", "tires": ["235/60R18", "245/50R20"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current sizes 235/55R18 and 235/50R20 don't match OEM. OEM sizes are 235/60R18 and 245/50R20"
+    },
+    {
+      "year": 2018,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/65R17"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "245/50R20"],
+      "trimData": [
+        {"trim": "L", "tires": ["235/65R17"]},
+        {"trim": "LX", "tires": ["235/65R17"]},
+        {"trim": "Touring L", "tires": ["235/65R17", "235/60R18", "245/50R20"]}
+      ],
+      "status": "VALID",
+      "notes": "Current size 235/65R17 matches base trims"
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/65R17"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "245/50R20"],
+      "trimData": [
+        {"trim": "LX", "tires": ["235/65R17"]},
+        {"trim": "Touring", "tires": ["235/65R17"]},
+        {"trim": "Touring Hybrid", "tires": ["235/65R17"]},
+        {"trim": "Limited Hybrid", "tires": ["235/65R17", "235/60R18"]},
+        {"trim": "Touring-L", "tires": ["235/65R17", "235/60R18"]},
+        {"trim": "Touring-L Plus", "tires": ["235/65R17", "235/60R18"]},
+        {"trim": "Limited", "tires": ["235/60R18", "245/50R20"]}
+      ],
+      "status": "VALID",
+      "notes": "Current size 235/65R17 matches base/LX/Touring trims"
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/55R18", "235/50R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "245/50R20"],
+      "trimData": [
+        {"trim": "Limited", "tires": ["235/60R18", "245/50R20"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current sizes 235/55R18 and 235/50R20 don't match OEM. Should be 235/60R18 and 245/50R20"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/50R20"],
+      "validatedTireSizes": ["235/65R17", "235/55R19"],
+      "trimData": [
+        {"trim": "Standard Model", "tires": ["235/65R17"]},
+        {"trim": "Touring", "tires": ["235/65R17", "235/55R19"]},
+        {"trim": "Limited", "tires": ["235/55R19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "2016 is first-gen Pacifica (crossover SUV, not minivan). 235/60R18 and 245/50R20 not OEM for this year"
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/50R20"],
+      "validatedTireSizes": ["235/65R17", "235/55R19"],
+      "trimData": [
+        {"trim": "LX", "tires": ["235/65R17"]},
+        {"trim": "Touring", "tires": ["235/65R17", "235/55R19"]},
+        {"trim": "Limited", "tires": ["235/55R19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "First-gen Pacifica. 235/60R18 and 245/50R20 are not OEM for 2008"
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/50R20"],
+      "validatedTireSizes": ["235/65R17", "235/55R19"],
+      "trimData": [
+        {"trim": "Standard Model", "tires": ["235/65R17"]},
+        {"trim": "Touring", "tires": ["235/65R17", "235/55R19"]},
+        {"trim": "Limited", "tires": ["235/55R19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "First-gen Pacifica. 235/60R18 and 245/50R20 are not OEM for 2007"
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/50R20"],
+      "validatedTireSizes": ["235/65R17", "235/55R19"],
+      "trimData": [
+        {"trim": "Standard Model", "tires": ["235/65R17"]},
+        {"trim": "Touring", "tires": ["235/65R17", "235/55R19"]},
+        {"trim": "Limited", "tires": ["235/55R19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "First-gen Pacifica. 235/60R18 and 245/50R20 are not OEM for 2006"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/50R20"],
+      "validatedTireSizes": ["235/65R17", "235/55R19"],
+      "trimData": [
+        {"trim": "Standard Model", "tires": ["235/65R17"]},
+        {"trim": "Touring", "tires": ["235/65R17", "235/55R19"]},
+        {"trim": "Limited", "tires": ["235/55R19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "First-gen Pacifica. 235/60R18 and 245/50R20 are not OEM for 2005"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/50R20"],
+      "validatedTireSizes": ["235/65R17", "235/55R19"],
+      "trimData": [
+        {"trim": "Standard Model", "tires": ["235/65R17"]},
+        {"trim": "Touring", "tires": ["235/65R17", "235/55R19"]},
+        {"trim": "Limited", "tires": ["235/55R19"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "First-gen Pacifica. 235/60R18 and 245/50R20 are not OEM for 2004"
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/55R16"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["205/55R16"]},
+        {"trim": "LX", "tires": ["205/55R16"]},
+        {"trim": "Touring", "tires": ["205/55R16"]},
+        {"trim": "Limited", "tires": ["205/55R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "2010 PT Cruiser only came with 205/55R16. 195/65R15 and 205/50R17 not OEM for 2010"
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["195/65R15"]},
+        {"trim": "LX", "tires": ["195/65R15"]},
+        {"trim": "Touring", "tires": ["205/55R16"]},
+        {"trim": "Limited", "tires": ["205/50R17"]}
+      ],
+      "status": "VALID",
+      "notes": "All sizes match different trim levels"
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Touring", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Limited", "tires": ["205/55R16"]},
+        {"trim": "GT", "tires": ["205/50R17"]},
+        {"trim": "Convertible GT", "tires": ["205/50R17"]}
+      ],
+      "status": "VALID",
+      "notes": "All sizes match different trim levels"
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Touring", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Limited", "tires": ["205/55R16"]},
+        {"trim": "GT", "tires": ["205/50R17"]},
+        {"trim": "Pacific Coast Highway", "tires": ["205/50R17"]}
+      ],
+      "status": "VALID",
+      "notes": "All sizes match different trim levels"
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Touring", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Limited", "tires": ["205/55R16"]},
+        {"trim": "GT", "tires": ["205/50R17"]},
+        {"trim": "Street Cruiser", "tires": ["205/50R17"]}
+      ],
+      "status": "VALID",
+      "notes": "All sizes match different trim levels"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Touring", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Limited", "tires": ["205/55R16"]},
+        {"trim": "GT", "tires": ["205/50R17"]}
+      ],
+      "status": "VALID",
+      "notes": "All sizes match different trim levels"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Touring", "tires": ["205/55R16"]},
+        {"trim": "Limited", "tires": ["205/55R16"]},
+        {"trim": "GT", "tires": ["205/50R17"]}
+      ],
+      "status": "VALID",
+      "notes": "All sizes match different trim levels"
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Touring", "tires": ["205/55R16"]},
+        {"trim": "Limited", "tires": ["205/55R16"]},
+        {"trim": "GT", "tires": ["205/50R17"]}
+      ],
+      "status": "VALID",
+      "notes": "All sizes match different trim levels"
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Touring", "tires": ["205/55R16"]},
+        {"trim": "Limited", "tires": ["205/55R16"]},
+        {"trim": "Dream", "tires": ["205/55R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "205/50R17 not OEM for 2002 (no GT trim until 2003)"
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Touring", "tires": ["205/55R16"]},
+        {"trim": "Limited", "tires": ["205/55R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "205/50R17 not OEM for 2001 (no GT trim until 2003)"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["195/65R15", "205/55R16"]},
+        {"trim": "Limited", "tires": ["205/55R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "2000 was first year, no GT trim. 205/50R17 not OEM"
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/55R18"],
+      "trimData": [
+        {"trim": "Sedan Touring", "tires": ["215/65R16"]},
+        {"trim": "Convertible LX", "tires": ["215/65R16", "215/60R17"]},
+        {"trim": "Sedan Limited", "tires": ["215/60R17", "215/55R18"]},
+        {"trim": "Convertible Touring", "tires": ["215/60R17", "215/55R18"]},
+        {"trim": "Convertible Limited", "tires": ["215/55R18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current sizes don't match OEM. 205/65R15, 215/55R17, 225/45R18 are not OEM"
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/55R18"],
+      "trimData": [
+        {"trim": "Sedan LX", "tires": ["215/65R16"]},
+        {"trim": "Convertible LX", "tires": ["215/65R16", "215/60R17"]},
+        {"trim": "Sedan Limited", "tires": ["215/60R17", "215/55R18"]},
+        {"trim": "Sedan Touring", "tires": ["215/60R17", "215/55R18"]},
+        {"trim": "Convertible Limited", "tires": ["215/55R18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current sizes don't match OEM. Correct sizes are 215/65R16, 215/60R17, 215/55R18"
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/55R18"],
+      "trimData": [
+        {"trim": "Sedan Base Model", "tires": ["215/65R16"]},
+        {"trim": "Convertible Base Model", "tires": ["215/65R16", "215/60R17"]},
+        {"trim": "Sedan Limited", "tires": ["215/60R17", "215/55R18"]},
+        {"trim": "Sedan Touring", "tires": ["215/60R17", "215/55R18"]},
+        {"trim": "Convertible Limited", "tires": ["215/55R18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current sizes don't match OEM. 2007+ redesign uses 215/65R16, 215/60R17, 215/55R18"
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/55R18"],
+      "trimData": [
+        {"trim": "Sedan Base Model", "tires": ["215/65R16"]},
+        {"trim": "Sedan Limited", "tires": ["215/60R17", "215/55R18"]},
+        {"trim": "Sedan Touring", "tires": ["215/60R17", "215/55R18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "2007+ Sebring redesign. Current sizes don't match OEM"
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["205/65R15", "205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "Convertible Base Model", "tires": ["205/65R15", "205/60R16"]},
+        {"trim": "Sedan Base Model", "tires": ["205/60R16"]},
+        {"trim": "Convertible GTC", "tires": ["205/60R16"]},
+        {"trim": "Convertible Limited", "tires": ["205/60R16"]},
+        {"trim": "Sedan TSI", "tires": ["215/50R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/55R17 and 225/45R18 are not OEM for 2006"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["205/65R15", "205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "Convertible", "tires": ["205/65R15"]},
+        {"trim": "Sedan", "tires": ["205/65R15"]},
+        {"trim": "Coupe", "tires": ["205/60R16"]},
+        {"trim": "GTC Convertible", "tires": ["205/60R16"]},
+        {"trim": "Limited Coupe", "tires": ["215/50R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/55R17 and 225/45R18 are not OEM for 2005"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["205/65R15", "205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "LX Convertible", "tires": ["205/65R15", "205/60R16"]},
+        {"trim": "LX Sedan", "tires": ["205/65R15", "205/60R16"]},
+        {"trim": "Coupe", "tires": ["205/60R16"]},
+        {"trim": "Limited Coupe", "tires": ["215/50R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/55R17 and 225/45R18 are not OEM for 2004"
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["205/65R15", "205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "LX Convertible", "tires": ["205/65R15", "205/60R16"]},
+        {"trim": "LX Sedan", "tires": ["205/65R15", "205/60R16"]},
+        {"trim": "LX Coupe", "tires": ["205/60R16"]},
+        {"trim": "LXi Coupe", "tires": ["215/50R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/55R17 and 225/45R18 are not OEM for 2003"
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["205/65R15", "205/55R16", "205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "LX Sedan", "tires": ["205/65R15"]},
+        {"trim": "LX Convertible", "tires": ["205/65R15", "205/60R16"]},
+        {"trim": "LX Coupe", "tires": ["205/55R16"]},
+        {"trim": "LXi Coupe", "tires": ["215/50R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/55R17 and 225/45R18 are not OEM for 2002"
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["205/65R15", "205/55R16", "205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "LX Sedan", "tires": ["205/65R15"]},
+        {"trim": "LX Convertible", "tires": ["205/65R15", "205/60R16"]},
+        {"trim": "LX Coupe", "tires": ["205/55R16"]},
+        {"trim": "LXi Coupe", "tires": ["215/50R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/55R17 and 225/45R18 are not OEM for 2001"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "currentTireSizes": ["205/65R15", "215/55R17", "225/45R18"],
+      "validatedTireSizes": ["195/70R14", "205/65R15", "205/55R16", "215/55R16", "215/50R17"],
+      "trimData": [
+        {"trim": "LX Coupe", "tires": ["195/70R14", "205/55R16"]},
+        {"trim": "JX Convertible", "tires": ["205/65R15"]},
+        {"trim": "JXi Convertible", "tires": ["215/55R16"]},
+        {"trim": "LX V6 Coupe", "tires": ["205/55R16"]},
+        {"trim": "LXi Coupe", "tires": ["215/50R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/55R17 and 225/45R18 are not OEM for 2000"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "LX", "tires": ["225/65R17"]},
+        {"trim": "Touring", "tires": ["225/65R17"]},
+        {"trim": "Touring-L", "tires": ["225/65R17"]},
+        {"trim": "S", "tires": ["225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]},
+        {"trim": "Limited Platinum", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/65R16 is not OEM for 2016. All trims use 225/65R17"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Correct size for 2016"
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Correct size for 2015"
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/65R16 is not OEM for 2015. All trims use 225/65R17"
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "30th Anniversary Edition", "tires": ["225/65R17"]},
+        {"trim": "Touring", "tires": ["225/65R17"]},
+        {"trim": "Touring-L", "tires": ["225/65R17"]},
+        {"trim": "S", "tires": ["225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/65R16 is not OEM for 2014. All trims use 225/65R17"
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Correct size for 2014"
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "Touring", "tires": ["225/65R17"]},
+        {"trim": "Touring-L", "tires": ["225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/65R16 is not OEM for 2013. All trims use 225/65R17"
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Correct size for 2013"
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "Touring", "tires": ["225/65R16"]},
+        {"trim": "Touring-L", "tires": ["225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "225/65R17 matches Touring-L and Limited"
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "Touring", "tires": ["225/65R16"]},
+        {"trim": "Touring-L", "tires": ["225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/65R16 should be 225/65R16 for Touring"
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "Touring", "tires": ["225/65R16"]},
+        {"trim": "Touring-L", "tires": ["225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/65R16 should be 225/65R16"
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "Touring-L", "tires": ["225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Correct for upper trims"
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "LX", "tires": ["225/65R16"]},
+        {"trim": "Touring", "tires": ["225/65R16", "225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/65R16 should be 225/65R16"
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "Touring", "tires": ["225/65R16", "225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Correct for Touring/Limited"
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "Limited", "tires": ["225/65R17"]},
+        {"trim": "Touring", "tires": ["225/65R16", "225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Correct for Limited/Touring"
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "LX", "tires": ["225/65R16"]},
+        {"trim": "Cargo", "tires": ["225/65R16"]},
+        {"trim": "Touring", "tires": ["225/65R16", "225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/65R16 should be 225/65R16"
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "LX", "tires": ["225/65R16"]},
+        {"trim": "Cargo", "tires": ["225/65R16"]},
+        {"trim": "Touring", "tires": ["225/65R16", "225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/65R16 should be 225/65R16"
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "Touring", "tires": ["225/65R16", "225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Correct for Touring/Limited"
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "LX", "tires": ["215/70R15"]},
+        {"trim": "Base Model", "tires": ["215/70R15", "215/65R16"]},
+        {"trim": "Touring", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2007. Pre-2008 redesign used different sizes"
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["215/70R15", "215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2007 (pre-redesign)"
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "LX", "tires": ["215/70R15"]},
+        {"trim": "Base Model", "tires": ["215/70R15", "215/65R16"]},
+        {"trim": "Touring", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2006"
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "Touring", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2006"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "215/70R15", "215/60R17", "225/55R18"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["215/70R15"]},
+        {"trim": "LX", "tires": ["215/70R15"]},
+        {"trim": "Touring", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "215/60R17 and 225/55R18 are not OEM for 2005"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["215/70R15", "215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2005"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "Touring", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2005"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["215/70R15"]},
+        {"trim": "LX", "tires": ["215/70R15"]},
+        {"trim": "EX", "tires": ["215/65R16"]},
+        {"trim": "Touring", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2004"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["215/70R15", "215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2004"
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "Base Model", "tires": ["215/70R15"]},
+        {"trim": "LX", "tires": ["215/70R15", "215/65R16"]},
+        {"trim": "EX", "tires": ["215/65R16"]},
+        {"trim": "LXI", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2003"
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "EX", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2003"
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "LX", "tires": ["215/70R15"]},
+        {"trim": "EX", "tires": ["215/70R15", "215/65R16"]},
+        {"trim": "LXi", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2002"
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "LXi", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2002"
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "LX", "tires": ["215/70R15"]},
+        {"trim": "EX", "tires": ["215/70R15", "215/65R16"]},
+        {"trim": "LXi", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2001"
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["215/70R15", "215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2001"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["215/65R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "LX", "tires": ["215/70R15"]},
+        {"trim": "AWD", "tires": ["215/65R16"]},
+        {"trim": "LXi", "tires": ["215/65R16"]},
+        {"trim": "Limited", "tires": ["215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2000"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Town and Country",
+      "currentTireSizes": ["225/65R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["215/70R15", "215/65R16"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R17 not OEM for 2000"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "Town Country",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R16 not OEM for 2016 Town & Country. All use 225/65R17. Also note model spelling variant."
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "Town Country",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R16 not OEM for 2015. All use 225/65R17"
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "Town Country",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R16 not OEM for 2014. All use 225/65R17"
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "Town Country",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "All Trims", "tires": ["225/65R17"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "225/65R16 not OEM for 2013. All use 225/65R17"
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "Town Country",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "Touring", "tires": ["225/65R16"]},
+        {"trim": "Touring-L", "tires": ["225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Both sizes are OEM for different trims"
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "Town Country",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "Touring", "tires": ["225/65R16"]},
+        {"trim": "Touring-L", "tires": ["225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Both sizes are OEM for different trims"
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "Town Country",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trimData": [
+        {"trim": "LX", "tires": ["225/65R16"]},
+        {"trim": "Touring", "tires": ["225/65R16", "225/65R17"]},
+        {"trim": "Limited", "tires": ["225/65R17"]}
+      ],
+      "status": "VALID",
+      "notes": "Both sizes are OEM for different trims"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "valid": 22,
+    "mismatch": 53,
+    "commonIssues": [
+      "First-gen Pacifica (2004-2008) has different tire sizes than 2017+ minivan Pacifica",
+      "Town & Country pre-2008 uses 215/65R16 or 215/70R15, not 225/65R17",
+      "Town & Country 2008-2012 uses 225/65R16 base, 225/65R17 upper trims",
+      "Town & Country 2013-2016 uses only 225/65R17 across all trims",
+      "Sebring has major redesign in 2007 with different tire sizes",
+      "PT Cruiser GT (205/50R17) didn't exist until 2003",
+      "2010 PT Cruiser only came with 205/55R16 (no 15\" or 17\" options)"
+    ]
+  }
+}

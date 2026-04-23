@@ -1,0 +1,1514 @@
+﻿[
+    {
+        "year":  2018,
+        "make":  "subaru",
+        "id":  "38623c39-5c68-4f67-aa59-fd1a2016000e",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX STI",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "subaru",
+        "id":  "e3fbd875-7676-4c08-be90-cf768b4ce971",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "subaru",
+        "id":  "5d900087-ec38-46fc-8058-5458402c6b7a",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX STI Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "subaru",
+        "id":  "1d5ce377-49a9-4861-9bf4-f5570dc284b9",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "subaru",
+        "id":  "f3d55837-36ea-4aad-a79c-6dbfea762a2d",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Premium",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "subaru",
+        "id":  "20d547b8-86d7-431b-a5d8-2374c59ae985",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  55,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  55,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  55,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18",
+                                  "245/35R19",
+                                  "235/45ZR17",
+                                  "245/40ZR18",
+                                  "245/35ZR19"
+                              ],
+        "trim":  "Base, Premium, Limited, GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "subaru",
+        "id":  "b7d1b8d3-bbcf-46bb-9db3-85c98e6f6856",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Premium",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "subaru",
+        "id":  "d447676d-240d-48cf-a44a-dbba5db56d23",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "subaru",
+        "id":  "213d6b78-ccd1-4b68-b4df-296a4e5d2e94",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX STI",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "subaru",
+        "id":  "6de856d2-d3d1-4dfa-a03b-f4407f2c401b",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX STI Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "subaru",
+        "id":  "01482bfe-3e42-408c-968c-aa2c3b48f241",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "subaru",
+        "id":  "b38bb47f-d829-4f42-892f-e6bb5828bf96",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "subaru",
+        "id":  "a60bcea6-455b-432d-be14-8362baf846e1",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18",
+                                  "245/35R19"
+                              ],
+        "trim":  "Base, Premium, Limited, GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "subaru",
+        "id":  "023270fb-7603-4435-92cc-b5b0a7546aa0",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Premium",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "subaru",
+        "id":  "ea7ae2bd-baf2-4778-bc56-9a342e6d9e6f",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "subaru",
+        "id":  "ec5f00c7-622e-43d9-ba5b-3d588955c12b",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX STI Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "subaru",
+        "id":  "2d2a5726-d48c-4801-8307-88d16dd14b94",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX STI",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "subaru",
+        "id":  "bde399a4-9ec1-456f-9676-6cd184d4ec89",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "subaru",
+        "id":  "7050dd7c-33dc-42fb-b90c-ab45c0786622",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX STI",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "subaru",
+        "id":  "b6544f0f-efe3-483d-b10f-956c05a830e6",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18",
+                                  "245/35R19"
+                              ],
+        "trim":  "Base, Premium, Limited, GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "subaru",
+        "id":  "40a7ff41-acd7-4983-9159-8666cfbd478b",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX STI Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "subaru",
+        "id":  "99a2353e-32fb-4e18-8e6c-cb9913aa1ad5",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Premium",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "subaru",
+        "id":  "f2ba838c-1458-4956-acc8-e1fbac6feb75",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "subaru",
+        "id":  "a678fed7-9837-46e3-8c64-6336e91a9324",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "subaru",
+        "id":  "8c7b5a02-3d44-4187-8d86-e88af6a29419",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "Base, Premium, Limited, GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "subaru",
+        "id":  "5e0d2318-5265-4a9c-b378-8219865c8e40",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "subaru",
+        "id":  "19c93a0c-a72c-4832-a6dd-8b09e92b37be",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "subaru",
+        "id":  "01607ff3-7763-41af-b454-ebc35e1020ee",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Premium",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "subaru",
+        "id":  "c5b9f924-9e26-4da0-b0f1-ee9b1b6d5571",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "subaru",
+        "id":  "6129628a-ee90-4fa5-8018-93fe0a4cd805",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "subaru",
+        "id":  "1844a421-1e68-47d1-a1b2-16f174a58c4d",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Premium",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "subaru",
+        "id":  "8cab937a-d8fe-4aa5-b302-e3ee5c3b1a15",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "Base, Premium, Limited, GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "subaru",
+        "id":  "425e2ad8-8600-4251-a6e5-ca6fccff2c95",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "subaru",
+        "id":  "cacf69e9-28eb-4658-b239-19a9a58fd4a4",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Premium",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "subaru",
+        "id":  "4408e49d-eabd-4b10-aa7b-9e36f6160159",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  55,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  55,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  55,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18",
+                                  "235/45ZR17",
+                                  "245/40ZR18",
+                                  "245/35ZR19"
+                              ],
+        "trim":  "Base, Premium, Limited, GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "subaru",
+        "id":  "eb663aff-ea40-42a4-81a4-7cf9ba27874a",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "subaru",
+        "id":  "2e1d24af-c64c-452d-95fc-01879ef7a3a3",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "subaru",
+        "id":  "eca09ec2-a6bb-450e-8022-f4141496ce94",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "subaru",
+        "id":  "da60f243-7b56-48b0-a4ab-73122a233e15",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "Base, Premium, Limited, GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "subaru",
+        "id":  "5d7c48ec-99bc-4b84-a223-2dfc9e05846e",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "subaru",
+        "id":  "5b0d8f92-352f-4294-a3b1-f9cfb955d81a",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Premium",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "subaru",
+        "id":  "b807836f-0dd5-4977-b467-921702edee36",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "subaru",
+        "id":  "6e8d1799-9cfd-4ae3-ac9d-60b8d9cd94f5",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "subaru",
+        "id":  "b4bf6171-0eb5-4901-bd7f-e010ffcd6ca2",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "subaru",
+        "id":  "c3ba1b0c-a4ee-49c3-9dbf-77695ca8d1a4",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Limited",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "subaru",
+        "id":  "57af9a12-73ae-4a52-9980-da9323e277da",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "Base, Premium, Limited, GT",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "subaru",
+        "id":  "163d8f4c-2a12-4ef3-a020-c996689208c6",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX Premium",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "subaru",
+        "id":  "9fa82d35-eb39-4d5e-918f-f5b837055fd1",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/45R17",
+                                  "245/40R18"
+                              ],
+        "trim":  "WRX",
+        "reason":  "subaru wrx specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "subaru",
+        "id":  "31c345ac-d6e6-411f-9b84-cf3d8b94be72",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "245/40R18",
+                                  "245/35R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "subaru wrx-sti specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx-sti",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "subaru",
+        "id":  "bd0ada6e-0c81-4ddf-80bf-80e5a0159b4b",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "245/40R18",
+                                  "245/35R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "subaru wrx-sti specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx-sti",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "subaru",
+        "id":  "fad40523-707a-4bed-b889-ab900c414bc2",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "245/40R18",
+                                  "245/35R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "subaru wrx-sti specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx-sti",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2017,
+        "make":  "subaru",
+        "id":  "1b2625ea-09c9-4d73-8c68-2891ebed7312",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "245/40R18",
+                                  "245/35R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "subaru wrx-sti specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx-sti",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "subaru",
+        "id":  "7bdb3e61-de8d-475e-abe0-b958266992a6",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "245/40R18",
+                                  "245/35R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "subaru wrx-sti specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx-sti",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "subaru",
+        "id":  "ac1778d9-66a2-4e03-a5fc-bb7e1b9c30d1",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "245/40R18",
+                                  "245/35R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "subaru wrx-sti specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx-sti",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "subaru",
+        "id":  "c2695848-7222-4569-b22b-45c69173cc0a",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "245/40R18",
+                                  "245/35R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "subaru wrx-sti specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx-sti",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "subaru",
+        "id":  "f28a5359-cd99-446f-b3ff-3d2d0a693d79",
+        "verifiedHubBore":  "56.1",
+        "verifiedWheelSizes":  "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "245/40R18",
+                                  "245/35R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "subaru wrx-sti specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrx-sti",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    }
+]

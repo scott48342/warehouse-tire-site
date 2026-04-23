@@ -1,0 +1,780 @@
+{
+  "batchId": "13",
+  "processedAt": "2026-04-21T21:43:00.000Z",
+  "results": [
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "320i Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "320i Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "330i Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "330i Luxury", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "330i M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "330i M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18", "rearTireSize": "255/40R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "340i M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "340i M Sport (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "320i Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "328i Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "328i Luxury", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18", "rearTireSize": "255/40R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "335i M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "340i M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "320i Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "328i Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "328i Luxury", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i Sport Line", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18", "rearTireSize": "255/40R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "335i Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "335i M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "328i GT Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/55R17"},
+        {"trim": "328i GT M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/50R18"},
+        {"trim": "328i GT M Sport (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/45R19", "rearTireSize": "255/40R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "320i Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "328i Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "328i Luxury", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i Modern", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i Sport Line", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18", "rearTireSize": "255/40R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "335i Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "335i M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "328i GT Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/55R17"},
+        {"trim": "328i GT M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/50R18"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "320i Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 31}, "tireSize": "205/60R16"},
+        {"trim": "328i Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "328i Luxury", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "328i M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18", "rearTireSize": "255/40R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "335i Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "335i M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "ActiveHybrid 3", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "328i Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 31}, "tireSize": "205/60R16"},
+        {"trim": "328i Luxury", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "328i Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "335i Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/45R17"},
+        {"trim": "335i Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "335i M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "328i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 31}, "tireSize": "205/55R16"},
+        {"trim": "328i Sedan Sport", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "328i Sedan M Sport (staggered)", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17", "rearTireSize": "245/40R17", "rearWheelSize": {"diameter": 17, "width": 8.5, "offset": 37}},
+        {"trim": "328i Coupe Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "328i Coupe M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "335i Sedan Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "335i Sedan M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "335is Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18"},
+        {"trim": "335is M Sport (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 37}, "tireSize": "225/35R19", "rearTireSize": "255/30R19", "rearWheelSize": {"diameter": 19, "width": 9, "offset": 39}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "328i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 31}, "tireSize": "205/55R16"},
+        {"trim": "328i Sedan Sport", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "328i Coupe Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "328i Coupe M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "335i Sedan Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "335i Sedan M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "328i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 31}, "tireSize": "205/55R16"},
+        {"trim": "328i Sedan Sport", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "328i Coupe M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "335i Sedan Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "335i Sedan M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "328i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 31}, "tireSize": "205/55R16"},
+        {"trim": "328i Sedan Sport (staggered)", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17", "rearTireSize": "255/40R17", "rearWheelSize": {"diameter": 17, "width": 8.5, "offset": 37}},
+        {"trim": "328i Coupe Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "328i Coupe Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "335i Coupe Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "335i Coupe Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "328i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 31}, "tireSize": "205/55R16"},
+        {"trim": "328i Sedan Sport", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "328i Coupe Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "335i Coupe Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "335i Coupe Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "325i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 31}, "tireSize": "205/55R16"},
+        {"trim": "325i Sedan Sport", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "330i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 31}, "tireSize": "205/55R16"},
+        {"trim": "330i Sedan Sport", "wheelSize": {"diameter": 17, "width": 8, "offset": 34}, "tireSize": "225/45R17"},
+        {"trim": "330i Coupe M Sport (staggered)", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/40R18", "rearTireSize": "255/35R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "325i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "325i Sedan Sport", "wheelSize": {"diameter": 17, "width": 7, "offset": 47}, "tireSize": "225/45R17"},
+        {"trim": "330i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "330i Sedan Sport", "wheelSize": {"diameter": 17, "width": 7, "offset": 47}, "tireSize": "225/45R17"},
+        {"trim": "330i Coupe Performance (staggered)", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 47}, "tireSize": "225/45R17", "rearTireSize": "245/40R17", "rearWheelSize": {"diameter": 17, "width": 8.5, "offset": 50}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "325i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "325i Sedan Sport", "wheelSize": {"diameter": 17, "width": 7, "offset": 47}, "tireSize": "225/45R17"},
+        {"trim": "330i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "330i Sedan Sport", "wheelSize": {"diameter": 17, "width": 7, "offset": 47}, "tireSize": "225/45R17"},
+        {"trim": "330i Coupe Performance (staggered)", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 47}, "tireSize": "225/45R17", "rearTireSize": "245/40R17", "rearWheelSize": {"diameter": 17, "width": 8.5, "offset": 50}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "325i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "325i Sedan Sport", "wheelSize": {"diameter": 17, "width": 7, "offset": 47}, "tireSize": "225/45R17"},
+        {"trim": "330i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "330i Sedan Sport", "wheelSize": {"diameter": 17, "width": 7, "offset": 47}, "tireSize": "225/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "325i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "325i Sedan Sport", "wheelSize": {"diameter": 17, "width": 7, "offset": 47}, "tireSize": "225/45R17"},
+        {"trim": "330i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "330i Sedan Sport", "wheelSize": {"diameter": 17, "width": 7, "offset": 47}, "tireSize": "225/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "325i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "325i Sedan Sport", "wheelSize": {"diameter": 17, "width": 7, "offset": 47}, "tireSize": "225/45R17"},
+        {"trim": "330i Sedan Base", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "330i Sedan Sport", "wheelSize": {"diameter": 17, "width": 7, "offset": 47}, "tireSize": "225/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "3-Series",
+      "trims": [
+        {"trim": "323i Sedan Base", "wheelSize": {"diameter": 15, "width": 7, "offset": 47}, "tireSize": "205/60R15"},
+        {"trim": "323i Sedan Sport", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "205/55R16"},
+        {"trim": "328i Sedan Base", "wheelSize": {"diameter": 15, "width": 7, "offset": 47}, "tireSize": "205/60R15"},
+        {"trim": "328i Sedan Sport", "wheelSize": {"diameter": 16, "width": 7, "offset": 47}, "tireSize": "225/50R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "430i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18"},
+        {"trim": "430i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19"},
+        {"trim": "430i Coupe M Sport (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 43}},
+        {"trim": "M440i Coupe", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19"},
+        {"trim": "M440i Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 43}},
+        {"trim": "M440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/40R19", "rearTireSize": "255/40R19", "rearWheelSize": {"diameter": 19, "width": 9, "offset": 44}},
+        {"trim": "M440i Gran Coupe (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "245/35R20", "rearTireSize": "255/35R20", "rearWheelSize": {"diameter": 20, "width": 9, "offset": 44}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "430i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18"},
+        {"trim": "430i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19"},
+        {"trim": "M440i Coupe", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19"},
+        {"trim": "M440i Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 43}},
+        {"trim": "M440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/40R19", "rearTireSize": "255/40R19", "rearWheelSize": {"diameter": 19, "width": 9, "offset": 44}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "430i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18"},
+        {"trim": "430i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19"},
+        {"trim": "M440i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18"},
+        {"trim": "M440i Coupe (staggered 18)", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18", "rearTireSize": "255/40R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "M440i Coupe (staggered 19)", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 43}},
+        {"trim": "M440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "M440i Gran Coupe (staggered 19)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/40R19", "rearTireSize": "255/40R19", "rearWheelSize": {"diameter": 19, "width": 9, "offset": 44}},
+        {"trim": "M440i Gran Coupe (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "245/35R20", "rearTireSize": "255/35R20", "rearWheelSize": {"diameter": 20, "width": 9, "offset": 44}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "430i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18"},
+        {"trim": "430i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19"},
+        {"trim": "M440i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18"},
+        {"trim": "M440i Coupe (staggered 19)", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 43}},
+        {"trim": "M440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "M440i Gran Coupe (staggered 19)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/40R19", "rearTireSize": "255/40R19", "rearWheelSize": {"diameter": 19, "width": 9, "offset": 44}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "430i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18"},
+        {"trim": "430i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19"},
+        {"trim": "M440i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18"},
+        {"trim": "M440i Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 43}},
+        {"trim": "M440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "430i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18"},
+        {"trim": "430i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19"},
+        {"trim": "M440i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18"},
+        {"trim": "M440i Coupe (staggered 18)", "wheelSize": {"diameter": 18, "width": 8, "offset": 26}, "tireSize": "225/45R18", "rearTireSize": "255/40R18", "rearWheelSize": {"diameter": 18, "width": 8.5, "offset": 47}},
+        {"trim": "M440i Coupe (staggered 19)", "wheelSize": {"diameter": 19, "width": 8, "offset": 26}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 43}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "430i Coupe Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "430i Coupe M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "430i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "440i Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "430i Coupe Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "430i Coupe M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "440i Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "430i Coupe Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "430i Coupe M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "440i Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "430i Coupe Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "430i Coupe M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "430i Gran Coupe Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "430i Gran Coupe M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "440i Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "428i Coupe Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "428i Coupe M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "435i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "435i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "435i Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "428i Coupe Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "428i Coupe M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "435i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "435i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "435i Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "428i Coupe Base", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "428i Coupe M Sport", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "435i Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "435i Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "435i Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "4-Series",
+      "trims": [
+        {"trim": "435i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "435i M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "255/35R19"},
+        {"trim": "435i M Sport (staggered 20)", "wheelSize": {"diameter": 20, "width": 8, "offset": 36}, "tireSize": "225/35R20", "rearTireSize": "255/30R20", "rearWheelSize": {"diameter": 20, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "430i Gran Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "225/45R18"},
+        {"trim": "430i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "225/40R19"},
+        {"trim": "M440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/40R19", "rearTireSize": "255/40R19", "rearWheelSize": {"diameter": 19, "width": 9, "offset": 44}},
+        {"trim": "M440i Gran Coupe (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "245/35R20", "rearTireSize": "255/35R20", "rearWheelSize": {"diameter": 20, "width": 9, "offset": 44}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "430i Gran Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "225/45R18"},
+        {"trim": "430i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "225/40R19"},
+        {"trim": "M440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/40R19", "rearTireSize": "255/40R19", "rearWheelSize": {"diameter": 19, "width": 9, "offset": 44}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "430i Gran Coupe Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "225/45R18"},
+        {"trim": "430i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "225/40R19"},
+        {"trim": "M440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "M440i Gran Coupe (staggered 19)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/40R19", "rearTireSize": "255/40R19", "rearWheelSize": {"diameter": 19, "width": 9, "offset": 44}},
+        {"trim": "M440i Gran Coupe (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "245/35R20", "rearTireSize": "255/35R20", "rearWheelSize": {"diameter": 20, "width": 9, "offset": 44}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "430i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "225/45R18"},
+        {"trim": "M440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "M440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/40R19", "rearTireSize": "255/40R19", "rearWheelSize": {"diameter": 19, "width": 9, "offset": 44}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "430i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "225/45R18"},
+        {"trim": "M440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "M440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/40R19", "rearTireSize": "255/40R19", "rearWheelSize": {"diameter": 19, "width": 9, "offset": 44}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "430i Gran Coupe", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "430i Gran Coupe", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "430i Gran Coupe", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "430i Gran Coupe", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "430i Gran Coupe", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "440i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "440i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "440i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "428i Gran Coupe", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "435i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "435i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "435i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "428i Gran Coupe", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "435i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "435i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"},
+        {"trim": "435i Gran Coupe (staggered)", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19", "rearTireSize": "255/35R19", "rearWheelSize": {"diameter": 19, "width": 8.5, "offset": 47}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "428i Gran Coupe", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 37}, "tireSize": "225/50R17"},
+        {"trim": "435i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"},
+        {"trim": "435i Gran Coupe M Sport", "wheelSize": {"diameter": 19, "width": 8, "offset": 36}, "tireSize": "225/40R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "4-Series Gran Coupe",
+      "trims": [
+        {"trim": "Note: 4-Series Gran Coupe not yet released", "wheelSize": {"diameter": 18, "width": 8, "offset": 34}, "tireSize": "225/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "estimated",
+      "confidence": "low"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i Base", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "530i M Sport", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "530i M Sport (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20", "rearTireSize": "275/35R20", "rearWheelSize": {"diameter": 20, "width": 9.5, "offset": 43}},
+        {"trim": "540i xDrive Base", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "540i xDrive M Sport", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20"},
+        {"trim": "540i xDrive M Sport (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20", "rearTireSize": "275/35R20", "rearWheelSize": {"diameter": 20, "width": 9.5, "offset": 43}},
+        {"trim": "540i xDrive M Sport (staggered 21)", "wheelSize": {"diameter": 21, "width": 8.5, "offset": 25}, "tireSize": "245/35R21", "rearTireSize": "275/30R21", "rearWheelSize": {"diameter": 21, "width": 9.5, "offset": 43}},
+        {"trim": "M550i xDrive", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "M550i xDrive (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20", "rearTireSize": "275/35R20", "rearWheelSize": {"diameter": 20, "width": 9.5, "offset": 43}},
+        {"trim": "M550i xDrive (staggered 21)", "wheelSize": {"diameter": 21, "width": 9, "offset": 25}, "tireSize": "255/35R21", "rearTireSize": "285/30R21", "rearWheelSize": {"diameter": 21, "width": 10, "offset": 43}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i Base", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "530i M Sport (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20", "rearTireSize": "275/35R20", "rearWheelSize": {"diameter": 20, "width": 9.5, "offset": 43}},
+        {"trim": "530i M Sport (staggered 21)", "wheelSize": {"diameter": 21, "width": 8.5, "offset": 25}, "tireSize": "245/35R21", "rearTireSize": "275/30R21", "rearWheelSize": {"diameter": 21, "width": 9.5, "offset": 43}},
+        {"trim": "540i xDrive Base", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "540i xDrive M Sport (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20", "rearTireSize": "275/35R20", "rearWheelSize": {"diameter": 20, "width": 9.5, "offset": 43}},
+        {"trim": "540i xDrive M Sport (staggered 21)", "wheelSize": {"diameter": 21, "width": 8.5, "offset": 25}, "tireSize": "245/35R21", "rearTireSize": "275/30R21", "rearWheelSize": {"diameter": 21, "width": 9.5, "offset": 43}},
+        {"trim": "M550i xDrive", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R18"},
+        {"trim": "M550i xDrive (staggered 20)", "wheelSize": {"diameter": 20, "width": 9, "offset": 25}, "tireSize": "275/35R20", "rearTireSize": "285/35R20", "rearWheelSize": {"diameter": 20, "width": 10, "offset": 43}},
+        {"trim": "M550i xDrive (staggered 21)", "wheelSize": {"diameter": 21, "width": 9, "offset": 25}, "tireSize": "275/35R21", "rearTireSize": "285/30R21", "rearWheelSize": {"diameter": 21, "width": 10, "offset": 43}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i Base", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "530i M Sport (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20", "rearTireSize": "275/35R20", "rearWheelSize": {"diameter": 20, "width": 9.5, "offset": 43}},
+        {"trim": "530i M Sport (staggered 21)", "wheelSize": {"diameter": 21, "width": 8.5, "offset": 25}, "tireSize": "245/35R21", "rearTireSize": "275/30R21", "rearWheelSize": {"diameter": 21, "width": 9.5, "offset": 43}},
+        {"trim": "540i xDrive Base", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "540i xDrive M Sport (staggered 20)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20", "rearTireSize": "275/35R20", "rearWheelSize": {"diameter": 20, "width": 9.5, "offset": 43}},
+        {"trim": "540i xDrive M Sport (staggered 21)", "wheelSize": {"diameter": 21, "width": 8.5, "offset": 25}, "tireSize": "245/35R21", "rearTireSize": "275/30R21", "rearWheelSize": {"diameter": 21, "width": 9.5, "offset": 43}},
+        {"trim": "i5 eDrive40", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "i5 M60 xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20"},
+        {"trim": "i5 M60 xDrive (staggered 21)", "wheelSize": {"diameter": 21, "width": 8.5, "offset": 25}, "tireSize": "245/35R21", "rearTireSize": "275/30R21", "rearWheelSize": {"diameter": 21, "width": 9.5, "offset": 43}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "uniqueVehiclesByYearMakeModel": 50,
+    "totalTrims": 312,
+    "staggeredSetups": 40,
+    "sources": ["tiresize.com"],
+    "notes": [
+      "BMW 3-Series (2000-2005 E46): Base 205/55R16 or 205/60R15, Sport 225/45R17",
+      "BMW 3-Series (2006-2011 E90): Base 205/55R16, Sport has staggered options 225/40R18F/255/35R18R",
+      "BMW 3-Series (2012-2018 F30): Base 225/50R17, M Sport has staggered options 225/45R18F/255/40R18R or 225/40R19F/255/35R19R",
+      "BMW 4-Series (2014-2020 F32): Base 225/50R17, M Sport 225/45R18 or staggered 225/40R19F/255/35R19R",
+      "BMW 4-Series (2021-2026 G22): Base 225/45R18, M Sport has staggered options",
+      "BMW 4-Series Gran Coupe: Similar specs to 4-Series Coupe, same platform",
+      "BMW 5-Series (2024-2026 G60): Base 245/45R19, M Sport has staggered 20/21 inch options"
+    ]
+  }
+}

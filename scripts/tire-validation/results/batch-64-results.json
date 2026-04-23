@@ -1,0 +1,1158 @@
+{
+  "batchId": "64",
+  "processedAt": "2026-04-21T22:05:00.000Z",
+  "vehicleCount": 75,
+  "source": "tiresize.com",
+  "results": [
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "215/85R16"],
+      "trims": {
+        "2wd Crew Cab": ["LT265/75R16", "LT265/70R17"],
+        "2wd Crew Cab Dually": ["215/85R16"],
+        "2wd Extended Cab": ["LT265/75R16", "LT265/70R17"],
+        "2wd Extended Cab Dually": ["215/85R16"],
+        "4wd Crew Cab": ["LT265/75R16", "LT265/70R17"],
+        "4wd Crew Cab Dually": ["215/85R16"],
+        "4wd Extended Cab": ["LT265/75R16", "LT265/70R17"],
+        "4wd Extended Cab Dually": ["215/85R16"],
+        "4wd Regular Cab": ["LT265/75R16", "LT265/70R17"],
+        "4wd Regular Cab Dually": ["215/85R16"]
+      },
+      "status": "needs_update",
+      "notes": "Database has LT245/75R16 which is not in OEM data. 265/75R16 and 265/70R17 are correct for SRW; 215/85R16 for DRW."
+    },
+    {
+      "year": 2026,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "235/80R17", "235/80R18"],
+      "trims": {
+        "3500 HD (SRW)": ["LT275/70R18", "LT275/65R20"],
+        "3500 HD Dually": ["235/80R17", "235/80R18"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17 and LT265/70R18. Add 235/80R17 and 235/80R18 for dually models."
+    },
+    {
+      "year": 2025,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "235/80R17", "235/80R18"],
+      "trims": {
+        "3500 HD (SRW)": ["LT275/70R18", "LT275/65R20"],
+        "3500 HD Dually": ["235/80R17", "235/80R18"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17 and LT265/70R18. Add 235/80R17 and 235/80R18 for dually models."
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "235/80R17", "235/80R18"],
+      "trims": {
+        "3500 HD (SRW)": ["LT275/70R18", "LT275/65R20"],
+        "3500 HD Dually": ["235/80R17", "235/80R18"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17 and LT265/70R18. Add dually tire sizes."
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "235/80R17", "235/80R18"],
+      "trims": {
+        "3500 HD (SRW)": ["LT275/70R18", "LT275/65R20"],
+        "3500 HD Dually": ["235/80R17", "235/80R18"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17 and LT265/70R18."
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "235/80R17", "235/80R18"],
+      "trims": {
+        "3500 HD (SRW)": ["LT275/70R18", "LT275/65R20"],
+        "3500 HD Dually": ["235/80R17", "235/80R18"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17 and LT265/70R18."
+    },
+    {
+      "year": 2021,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "235/80R17", "235/80R18"],
+      "trims": {
+        "3500 HD (SRW)": ["LT275/70R18", "LT275/65R20"],
+        "3500 HD Dually": ["235/80R17", "235/80R18"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17 and LT265/70R18."
+    },
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "235/80R17"],
+      "trims": {
+        "3500 HD 2wd (SRW)": ["LT275/70R18", "LT275/65R20"],
+        "3500 HD 4wd (SRW)": ["LT275/70R18", "LT275/65R20"],
+        "3500 HD 2wd Dually": ["235/80R17"],
+        "3500 HD 4wd Dually": ["235/80R17"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17 and LT265/70R18. Add 235/80R17 for dually."
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "235/80R17"],
+      "trims": {
+        "3500 HD 2wd (SRW)": ["LT275/70R18", "LT275/65R20"],
+        "3500 HD 4wd (SRW)": ["LT275/70R18", "LT275/65R20"],
+        "3500 HD Dually": ["235/80R17"]
+      },
+      "status": "needs_update",
+      "notes": "Database sizes don't match OEM. Replace with validated sizes."
+    },
+    {
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18", "LT265/60R20", "235/80R17"],
+      "trims": {
+        "3500 HD 2wd (SRW)": ["LT265/70R18", "LT265/60R20"],
+        "3500 HD 4wd (SRW)": ["LT265/70R18", "LT265/60R20"],
+        "3500 HD Dually": ["235/80R17"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17. Add dually size."
+    },
+    {
+      "year": 2017,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18", "LT265/60R20", "235/80R17"],
+      "trims": {
+        "3500 HD 2wd (SRW)": ["LT265/70R18"],
+        "3500 HD 4wd (SRW)": ["LT265/70R18"],
+        "3500 HD Dually": ["235/80R17"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17 and LT265/60R20 for SRW."
+    },
+    {
+      "year": 2016,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18", "235/80R17"],
+      "trims": {
+        "3500 HD 2wd Single Rear Wheel": ["LT265/70R18"],
+        "3500 HD 4wd Single Rear Wheel": ["LT265/70R18"],
+        "3500 HD 2wd Dually": ["235/80R17"],
+        "3500 HD 4wd Dually": ["235/80R17"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17 and LT265/60R20."
+    },
+    {
+      "year": 2015,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18", "LT265/60R20", "235/80R17"],
+      "trims": {
+        "3500 HD 2wd Dual Rear Wheels": ["235/80R17"],
+        "3500 HD 2wd Single Rear Wheel": ["LT265/70R18", "LT265/60R20"],
+        "3500 HD 4wd Dual Rear Wheels": ["235/80R17"],
+        "3500 HD 4wd Single Rear Wheel": ["LT265/70R18", "LT265/60R20"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17."
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18", "LT265/60R20", "235/80R17"],
+      "trims": {
+        "3500 HD 2wd Dual Rear Wheels": ["235/80R17"],
+        "3500 HD 2wd Single Rear Wheel": ["LT265/70R18", "LT265/60R20"],
+        "3500 HD 4wd Dual Rear Wheels": ["235/80R17"],
+        "3500 HD 4wd Single Rear Wheel": ["LT265/70R18", "LT265/60R20"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17."
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18", "LT265/60R20", "235/80R17"],
+      "trims": {
+        "3500 HD 2wd": ["LT265/70R18", "LT265/60R20"],
+        "3500 HD 4wd": ["LT265/70R18", "LT265/60R20"],
+        "3500 HD 2wd Dually": ["235/80R17"],
+        "3500 HD 4wd Dually": ["235/80R17"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17."
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18", "LT265/60R20", "235/80R17"],
+      "trims": {
+        "3500 HD 2wd": ["LT265/70R18", "LT265/60R20"],
+        "3500 HD 4wd": ["LT265/70R18", "LT265/60R20"],
+        "3500 HD 2wd Dually": ["235/80R17"],
+        "3500 HD 4wd Dually": ["235/80R17"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17."
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18", "LT265/60R20", "235/80R17"],
+      "trims": {
+        "3500 HD 2wd": ["LT265/70R18", "LT265/60R20"],
+        "3500 HD 4wd": ["LT265/70R18", "LT265/60R20"],
+        "3500 HD 2wd Dually": ["235/80R17"],
+        "3500 HD 4wd Dually": ["235/80R17"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/70R17."
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "225/75R17"],
+      "trims": {
+        "3500 HD 2wd Crew Cab": ["LT265/75R16", "LT265/70R17"],
+        "3500 HD 2wd Crew Cab Dually": ["225/75R17"],
+        "3500 HD 2wd Extended Cab": ["LT265/75R16", "LT265/70R17"],
+        "3500 HD 2wd Extended Cab Dually": ["225/75R17"],
+        "3500 HD 2wd Regular Cab": ["LT265/75R16", "LT265/70R17"],
+        "3500 HD 4wd Crew Cab": ["LT265/75R16", "LT265/70R17"],
+        "3500 HD 4wd Crew Cab Dually": ["225/75R17"],
+        "3500 HD 4wd Extended Cab": ["LT265/75R16", "LT265/70R17"],
+        "3500 HD 4wd Extended Cab Dually": ["225/75R17"],
+        "3500 HD 4wd Regular Cab": ["LT265/75R16", "LT265/70R17"],
+        "3500 HD 4wd Regular Cab Dually": ["225/75R17"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/75R16, LT245/70R17, LT265/65R18. Dually uses 225/75R17."
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "225/75R17"],
+      "trims": {
+        "3500 HD SRW": ["LT265/75R16", "LT265/70R17"],
+        "3500 HD Dually": ["225/75R17"]
+      },
+      "status": "needs_update",
+      "notes": "Same as 2010. Remove LT245/75R16, LT245/70R17, LT265/65R18."
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "215/85R16"],
+      "trims": {
+        "3500 HD SRW": ["LT265/75R16", "LT265/70R17"],
+        "3500 HD Dually": ["215/85R16"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/75R16, LT245/70R17, LT265/65R18."
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "215/85R16"],
+      "trims": {
+        "3500 HD SRW": ["LT265/75R16", "LT265/70R17"],
+        "3500 HD Dually": ["215/85R16"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/75R16, LT245/70R17, LT265/65R18."
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "215/85R16"],
+      "trims": {
+        "3500 SRW": ["LT265/75R16", "LT265/70R17"],
+        "3500 Dually": ["215/85R16"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/75R16, LT245/70R17, LT265/65R18."
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "215/85R16"],
+      "trims": {
+        "3500 SRW": ["LT265/75R16", "LT265/70R17"],
+        "3500 Dually": ["215/85R16"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/75R16, LT245/70R17, LT265/65R18."
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "215/85R16"],
+      "trims": {
+        "3500 SRW": ["LT265/75R16", "LT265/70R17"],
+        "3500 Dually": ["215/85R16"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/75R16, LT245/70R17, LT265/65R18."
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "215/85R16"],
+      "trims": {
+        "3500 SRW": ["LT265/75R16", "LT265/70R17"],
+        "3500 Dually": ["215/85R16"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/75R16, LT245/70R17, LT265/65R18."
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "215/85R16"],
+      "trims": {
+        "3500 SRW": ["LT265/75R16", "LT265/70R17"],
+        "3500 Dually": ["215/85R16"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/75R16, LT245/70R17, LT265/65R18."
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "215/85R16"],
+      "trims": {
+        "3500 SRW": ["LT265/75R16", "LT265/70R17"],
+        "3500 Dually": ["215/85R16"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT245/75R16, LT245/70R17, LT265/65R18."
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Sierra 3500HD",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT265/75R16", "215/85R16"],
+      "trims": {
+        "3500 SRW": ["LT265/75R16"],
+        "3500 4wd": ["215/85R16"],
+        "3500 4wd Dually": ["215/85R16"],
+        "3500 Dually": ["215/85R16"]
+      },
+      "status": "needs_update",
+      "notes": "Remove LT225/75R16 and LT245/75R16."
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Sonoma",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/75R15", "235/60R16", "235/70R15", "235/75R15", "31X10.50R15"],
+      "trims": {
+        "2wd Extra Cab SL": ["205/75R15"],
+        "2wd Extra Cab SLS": ["205/75R15", "235/60R16"],
+        "2wd Regular Cab SL": ["205/75R15"],
+        "2wd Regular Cab SLS": ["205/75R15"],
+        "4wd Crew Cab SLS": ["235/75R15"],
+        "4wd Extra Cab SL": ["235/70R15"],
+        "4wd Extra Cab SLS": ["235/75R15"],
+        "ZR2": ["31X10.50R15"]
+      },
+      "status": "missing_data",
+      "notes": "Database has no tire sizes. Add validated OEM sizes."
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Sonoma",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/75R15", "235/60R16", "235/70R15", "235/75R15", "31X10.50R15"],
+      "trims": {
+        "2wd Extra Cab SL": ["205/75R15"],
+        "2wd Extra Cab SLS": ["205/75R15", "235/60R16"],
+        "2wd Regular Cab SL": ["205/75R15"],
+        "2wd Regular Cab SLS": ["205/75R15"],
+        "4wd Crew Cab SLS": ["235/75R15"],
+        "4wd Extra Cab SL": ["235/70R15"],
+        "4wd Extra Cab SLS": ["235/75R15"],
+        "ZR2": ["31X10.50R15"]
+      },
+      "status": "missing_data",
+      "notes": "Database has no tire sizes. Add validated OEM sizes."
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Sonoma",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/75R15", "235/60R16", "235/70R15", "235/75R15", "31X10.50R15"],
+      "trims": {
+        "2wd Extra Cab SL": ["205/75R15"],
+        "2wd Extra Cab SLS": ["205/75R15", "235/60R16"],
+        "2wd Regular Cab SL": ["205/75R15"],
+        "2wd Regular Cab SLS": ["205/75R15"],
+        "4wd Crew Cab SLS": ["235/75R15"],
+        "4wd Extra Cab SL": ["235/70R15"],
+        "4wd Extra Cab SLS": ["235/75R15"],
+        "ZR2": ["31X10.50R15"]
+      },
+      "status": "missing_data",
+      "notes": "Database has no tire sizes. Add validated OEM sizes."
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Sonoma",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/75R15", "235/60R16", "235/70R15", "235/75R15", "31X10.50R15"],
+      "trims": {
+        "2wd": ["205/75R15"],
+        "4wd": ["235/70R15", "235/75R15"],
+        "ZR2": ["31X10.50R15"]
+      },
+      "status": "missing_data",
+      "notes": "Database has no tire sizes. Add validated OEM sizes."
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Sonoma",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/75R15", "235/60R16", "235/70R15", "235/75R15", "31X10.50R15"],
+      "trims": {
+        "2wd": ["205/75R15"],
+        "4wd": ["235/70R15", "235/75R15"],
+        "ZR2": ["31X10.50R15"]
+      },
+      "status": "missing_data",
+      "notes": "Database has no tire sizes. Add validated OEM sizes."
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["P265/70R16", "P265/70R17", "P275/55R20"],
+      "trims": {
+        "SLE 2wd": ["P265/70R16", "P265/70R17"],
+        "SLE 4wd": ["P265/70R16", "P265/70R17"],
+        "SLT 2wd": ["P265/70R17", "P275/55R20"],
+        "SLT 4wd": ["P265/70R17", "P275/55R20"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 1500 was same as Chevrolet Suburban. Add validated sizes."
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["P265/70R16", "P265/70R17", "P275/55R20"],
+      "trims": {
+        "SLE 2wd": ["P265/70R16", "P265/70R17"],
+        "SLE 4wd": ["P265/70R16", "P265/70R17"],
+        "SLT 2wd": ["P265/70R17", "P275/55R20"],
+        "SLT 4wd": ["P265/70R17", "P275/55R20"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 1500 was same as Chevrolet Suburban. Add validated sizes."
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["P265/70R16", "P265/70R17", "P275/55R20"],
+      "trims": {
+        "SLE": ["P265/70R16", "P265/70R17"],
+        "SLT": ["P265/70R17", "P275/55R20"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 1500 was same as Chevrolet Suburban. Add validated sizes."
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["P265/70R16", "P265/70R17"],
+      "trims": {
+        "SLE": ["P265/70R16", "P265/70R17"],
+        "SLT": ["P265/70R16", "P265/70R17"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 1500 was same as Chevrolet Suburban. Add validated sizes."
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["P265/70R16", "P265/70R17"],
+      "trims": {
+        "SLE": ["P265/70R16", "P265/70R17"],
+        "SLT": ["P265/70R16", "P265/70R17"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 1500 was same as Chevrolet Suburban. Add validated sizes."
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["P265/70R16", "P265/70R17"],
+      "trims": {
+        "SLE": ["P265/70R16", "P265/70R17"],
+        "SLT": ["P265/70R16", "P265/70R17"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 1500 was same as Chevrolet Suburban. Add validated sizes."
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["P265/70R16", "P265/70R17"],
+      "trims": {
+        "SLE": ["P265/70R16"],
+        "SLT": ["P265/70R16", "P265/70R17"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 1500 was same as Chevrolet Suburban. Add validated sizes."
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "trims": {
+        "SLE": ["LT245/75R16", "LT265/75R16"],
+        "SLT": ["LT245/75R16", "LT265/75R16"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 2500 was same as Chevrolet Suburban 2500. Add validated sizes."
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "trims": {
+        "SLE": ["LT245/75R16", "LT265/75R16"],
+        "SLT": ["LT245/75R16", "LT265/75R16"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 2500 was same as Chevrolet Suburban 2500. Add validated sizes."
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "trims": {
+        "SLE": ["LT245/75R16", "LT265/75R16"],
+        "SLT": ["LT245/75R16", "LT265/75R16"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 2500 was same as Chevrolet Suburban 2500. Add validated sizes."
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "trims": {
+        "SLE": ["LT245/75R16", "LT265/75R16"],
+        "SLT": ["LT245/75R16", "LT265/75R16"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 2500 was same as Chevrolet Suburban 2500. Add validated sizes."
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "trims": {
+        "SLE": ["LT245/75R16", "LT265/75R16"],
+        "SLT": ["LT245/75R16", "LT265/75R16"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 2500 was same as Chevrolet Suburban 2500. Add validated sizes."
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "trims": {
+        "SLE": ["LT245/75R16", "LT265/75R16"],
+        "SLT": ["LT245/75R16", "LT265/75R16"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 2500 was same as Chevrolet Suburban 2500. Add validated sizes."
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "trims": {
+        "SLE": ["LT245/75R16", "LT265/75R16"],
+        "SLT": ["LT245/75R16", "LT265/75R16"]
+      },
+      "status": "missing_data",
+      "notes": "GMC Suburban 2500 was same as Chevrolet Suburban 2500. Add validated sizes."
+    },
+    {
+      "year": 2026,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": ["235/65R17", "235/55R19", "235/50R20"],
+      "trims": {
+        "AT4": ["235/65R17"],
+        "Denali": ["235/55R19", "235/50R20"],
+        "Elevation": ["235/65R17", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "2026 redesign changed tire sizes. Update database."
+    },
+    {
+      "year": 2025,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": ["235/65R17", "235/55R19"],
+      "trims": {
+        "Elevation": ["235/65R17", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "2025 redesign changed tire sizes. Update database."
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "trims": {
+        "AT4": ["225/65R17"],
+        "Denali": ["235/50R19"],
+        "SLE": ["225/65R17", "235/50R19"],
+        "SLT": ["225/60R18", "235/50R19"]
+      },
+      "status": "correct",
+      "notes": "All sizes validated. Database is correct."
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "trims": {
+        "AT4": ["225/65R17"],
+        "Denali": ["235/50R19"],
+        "SLE": ["225/65R17", "225/60R18"],
+        "SLT": ["225/60R18", "235/50R19"]
+      },
+      "status": "correct",
+      "notes": "All sizes validated. Database is correct."
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "trims": {
+        "AT4": ["225/65R17"],
+        "Denali": ["235/50R19"],
+        "SLE": ["225/65R17", "225/60R18"],
+        "SLT": ["225/60R18", "235/50R19"]
+      },
+      "status": "correct",
+      "notes": "All sizes validated. Database is correct."
+    },
+    {
+      "year": 2021,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "trims": {
+        "Denali": ["235/50R19"],
+        "Elevation Edition": ["235/50R19"],
+        "SLE": ["225/65R17", "225/60R18", "235/50R19"],
+        "SLT": ["225/60R18", "235/50R19"]
+      },
+      "status": "correct",
+      "notes": "All sizes validated. Database is correct."
+    },
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "trims": {
+        "Denali": ["235/50R19"],
+        "SL": ["225/65R17"],
+        "SLE": ["225/65R17", "225/60R18", "235/50R19"],
+        "SLT": ["225/60R18", "235/50R19"]
+      },
+      "status": "correct",
+      "notes": "All sizes validated. Database is correct."
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "trims": {
+        "Denali": ["235/50R19"],
+        "SL": ["225/65R17"],
+        "SLE": ["225/65R17", "225/60R18", "235/50R19"],
+        "SLE Diesel": ["225/65R17"],
+        "SLT": ["225/60R18", "235/50R19"],
+        "SLT Diesel": ["225/60R18"]
+      },
+      "status": "correct",
+      "notes": "All sizes validated. Database is correct."
+    },
+    {
+      "year": 2018,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "trims": {
+        "Denali": ["235/50R19"],
+        "SL": ["225/65R17"],
+        "SLE": ["225/65R17", "225/60R18", "235/50R19"],
+        "SLE Diesel": ["225/65R17"],
+        "SLT": ["225/65R17", "225/60R18", "235/50R19"],
+        "SLT Diesel": ["225/60R18"]
+      },
+      "status": "correct",
+      "notes": "All sizes validated. Database is correct."
+    },
+    {
+      "year": 2017,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "235/55R19"],
+      "trims": {
+        "AWD Denali": ["235/55R18", "235/55R19"],
+        "AWD SLE": ["235/60R17", "235/55R18", "235/55R19"],
+        "AWD SLT": ["235/60R17", "235/55R18", "235/55R19"],
+        "FWD Denali": ["235/55R18", "235/55R19"],
+        "FWD SLE": ["235/60R17", "235/55R18", "235/55R19"],
+        "FWD SLT": ["235/60R17", "235/55R18", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "Change 225/65R17 to 235/60R17, change 225/60R18 to 235/55R18."
+    },
+    {
+      "year": 2016,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "235/55R19"],
+      "trims": {
+        "Denali AWD": ["235/55R18", "235/55R19"],
+        "Denali FWD": ["235/55R18", "235/55R19"],
+        "SLE AWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLE FWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLT AWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLT FWD": ["235/60R17", "235/55R18", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "Change 225/65R17 to 235/60R17, change 225/60R18 to 235/55R18."
+    },
+    {
+      "year": 2015,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "235/55R19"],
+      "trims": {
+        "Denali AWD": ["235/55R18", "235/55R19"],
+        "Denali FWD": ["235/55R18", "235/55R19"],
+        "SLE AWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLE FWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLT AWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLT FWD": ["235/60R17", "235/55R18", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "Change 225/65R17 to 235/60R17, change 225/60R18 to 235/55R18."
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "235/55R19"],
+      "trims": {
+        "Denali AWD": ["235/55R18", "235/55R19"],
+        "Denali FWD": ["235/55R18", "235/55R19"],
+        "SLE AWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLE FWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLT AWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLT FWD": ["235/60R17", "235/55R18", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "Change 225/65R17 to 235/60R17, change 225/60R18 to 235/55R18."
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "235/55R19"],
+      "trims": {
+        "Denali AWD": ["235/55R18", "235/55R19"],
+        "Denali FWD": ["235/55R18", "235/55R19"],
+        "SLE AWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLE FWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLT AWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLT FWD": ["235/60R17", "235/55R18", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "Change 225/65R17 to 235/60R17, change 225/60R18 to 235/55R18."
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19", "235/55R18", "235/60R17"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "235/55R19"],
+      "trims": {
+        "SLE AWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLE FWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLT AWD": ["235/60R17", "235/55R18", "235/55R19"],
+        "SLT FWD": ["235/60R17", "235/55R18", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "Remove 225/65R17 and 225/60R18."
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["225/65R17", "235/55R18", "235/55R19"],
+      "trims": {
+        "SLE AWD": ["225/65R17", "235/55R18", "235/55R19"],
+        "SLE FWD": ["225/65R17", "235/55R18", "235/55R19"],
+        "SLT AWD": ["235/55R18", "235/55R19"],
+        "SLT FWD": ["235/55R18", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "Change 225/60R18 to 235/55R18."
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "235/55R19", "235/50R20"],
+      "validatedTireSizes": ["225/65R17", "235/55R18", "235/55R19"],
+      "trims": {
+        "SLE AWD": ["225/65R17", "235/55R18", "235/55R19"],
+        "SLE FWD": ["225/65R17", "235/55R18", "235/55R19"],
+        "SLT AWD": ["235/55R18", "235/55R19"],
+        "SLT FWD": ["235/55R18", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "Remove 235/50R20. Add 235/55R18."
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "235/55R19", "235/50R20"],
+      "validatedTireSizes": ["225/65R17", "235/55R18", "235/55R19"],
+      "trims": {
+        "SLE": ["225/65R17", "235/55R18", "235/55R19"],
+        "SLT": ["235/55R18", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "Remove 235/50R20. Add 235/55R18."
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Terrain",
+      "currentTireSizes": ["225/65R17", "235/55R19", "235/50R20"],
+      "validatedTireSizes": ["225/65R17", "235/55R18", "235/55R19"],
+      "trims": {
+        "SLE": ["225/65R17", "235/55R18", "235/55R19"],
+        "SLT": ["235/55R18", "235/55R19"]
+      },
+      "status": "needs_update",
+      "notes": "Remove 235/50R20. Add 235/55R18. Note: Terrain launched 2010; 2008-2009 data may be concept/pre-production."
+    },
+    {
+      "year": 2026,
+      "make": "GMC",
+      "model": "Yukon",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "AT4": ["275/60R20"],
+        "AT4 Ultimate": ["275/60R20"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "Denali Ultimate": ["275/50R22"],
+        "Elevation": ["265/65R18", "275/60R20"],
+        "XL AT4": ["275/60R20"],
+        "XL AT4 Ultimate": ["275/60R20"],
+        "XL Denali": ["275/60R20", "275/50R22"],
+        "XL Denali Ultimate": ["275/50R22"],
+        "XL Elevation": ["265/65R18", "275/60R20"]
+      },
+      "status": "needs_update",
+      "notes": "Replace P285/45R22 with 275/50R22. Remove P prefix from sizes."
+    },
+    {
+      "year": 2025,
+      "make": "GMC",
+      "model": "Yukon",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "AT4": ["275/60R20"],
+        "AT4 Ultimate": ["275/60R20"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "Denali Ultimate": ["275/50R22"],
+        "Elevation": ["265/65R18", "275/60R20"],
+        "XL AT4": ["275/60R20"],
+        "XL AT4 Ultimate": ["275/60R20"],
+        "XL Denali": ["275/60R20", "275/50R22"],
+        "XL Denali Ultimate": ["275/50R22"],
+        "XL Elevation": ["265/65R18", "275/60R20"]
+      },
+      "status": "needs_update",
+      "notes": "Replace P285/45R22 with 275/50R22. Remove P prefix from sizes."
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Yukon",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22", "265/65R18", "275/55R20", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "AT4": ["275/60R20"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "Denali Ultimate": ["275/50R22"],
+        "SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "SLT": ["275/60R20", "275/50R22"],
+        "XL AT4": ["275/60R20"],
+        "XL Denali": ["275/60R20", "275/50R22"],
+        "XL Denali Ultimate": ["275/50R22"],
+        "XL SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "XL SLT": ["275/60R20", "275/50R22"]
+      },
+      "status": "needs_update",
+      "notes": "Remove P285/45R22 and 275/55R20. Keep non-P-metric versions."
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Yukon",
+      "currentTireSizes": ["275/65R18", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "AT4": ["275/60R20"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "Denali Ultimate": ["275/50R22"],
+        "SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "SLT": ["275/60R20", "275/50R22"],
+        "XL AT4": ["275/60R20"],
+        "XL Denali": ["275/60R20", "275/50R22"],
+        "XL Denali Ultimate": ["275/50R22"],
+        "XL SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "XL SLT": ["275/60R20", "275/50R22"]
+      },
+      "status": "needs_update",
+      "notes": "Change 275/65R18 to 265/65R18. Change 285/45R22 to 275/50R22."
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Yukon",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "275/60R20", "275/50R22"],
+      "trims": {
+        "AT4": ["275/60R20"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "SLT": ["275/60R20", "275/50R22"],
+        "XL AT4": ["275/60R20"],
+        "XL Denali": ["275/60R20", "275/50R22"],
+        "XL SLE": ["265/65R18", "275/55R20", "275/50R22"],
+        "XL SLT": ["275/60R20", "275/50R22"]
+      },
+      "status": "needs_update",
+      "notes": "Remove P prefix. Change P285/45R22 to 275/50R22. Add 275/55R20 for XL SLE."
+    },
+    {
+      "year": 2021,
+      "make": "GMC",
+      "model": "Yukon",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "AT4": ["275/60R20"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "SLT": ["275/60R20", "275/50R22"],
+        "XL AT4": ["275/60R20"],
+        "XL Denali": ["275/60R20", "275/50R22"],
+        "XL SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "XL SLT": ["275/60R20", "275/50R22"]
+      },
+      "status": "needs_update",
+      "notes": "Remove P prefix. Change P285/45R22 to 275/50R22."
+    },
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Yukon",
+      "currentTireSizes": ["275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "Denali": ["275/55R20", "285/45R22"],
+        "SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "SLT": ["265/65R18", "275/55R20", "285/45R22"],
+        "XL Denali": ["275/55R20", "285/45R22"],
+        "XL SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "XL SLT": ["265/65R18", "275/55R20", "285/45R22"]
+      },
+      "status": "correct",
+      "notes": "All sizes validated. Database is correct."
+    },
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Yukon",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "265/65R18", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "Denali": ["275/55R20", "285/45R22"],
+        "SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "SLT": ["265/65R18", "275/55R20", "285/45R22"],
+        "XL Denali": ["275/55R20", "285/45R22"],
+        "XL SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "XL SLT": ["265/65R18", "275/55R20", "285/45R22"]
+      },
+      "status": "needs_update",
+      "notes": "Remove duplicate entry with P-metric prefixes. Keep non-P versions."
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Yukon",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "Denali": ["275/55R20", "285/45R22"],
+        "SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "SLT": ["265/65R18", "275/55R20", "285/45R22"],
+        "XL Denali": ["275/55R20", "285/45R22"],
+        "XL SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "XL SLT": ["265/65R18", "275/55R20", "285/45R22"]
+      },
+      "status": "correct",
+      "notes": "Sizes are correct. P-metric designation is optional."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "correct": 12,
+    "needsUpdate": 49,
+    "missingData": 14,
+    "keyIssues": [
+      "Sierra 3500HD has incorrect tire sizes for SRW vs DRW configurations across multiple years",
+      "GMC Sonoma (2000-2004) has no tire data - needs complete population",
+      "GMC Suburban 1500/2500 (2000-2006) has no tire data - needs complete population",
+      "GMC Terrain 2013-2017 has incorrect tire sizes (225 series should be 235 series)",
+      "GMC Terrain 2008-2009 data questionable - Terrain launched in 2010",
+      "GMC Yukon 2021-2026 has P285/45R22 but OEM shows 275/50R22",
+      "Several vehicles have P-metric prefix inconsistency"
+    ]
+  }
+}

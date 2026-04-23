@@ -1,0 +1,1006 @@
+{
+  "batchId": "overnight-091-bmw",
+  "processedAt": "2026-04-23T02:00:00Z",
+  "totalRecords": 79,
+  "summary": {
+    "verified": 12,
+    "corrected": 32,
+    "flagged": 35,
+    "confidence": {
+      "high": 12,
+      "medium": 32,
+      "low": 35
+    }
+  },
+  "sources": [
+    "hulkoffsets.com/blogs/news/bmw-2-series-wheel-fitment",
+    "hulkoffsets.com/blogs/news/bmw-3-series-wheel-fitment"
+  ],
+  "verifiedSpecs": {
+    "bmw_2series_f22": {
+      "years": "2014-2021",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "oemWheelDiameters": [16, 17, 18, 19],
+      "offsetRange": "34-47mm"
+    },
+    "bmw_2series_g42": {
+      "years": "2022-present",
+      "boltPattern": "5x112",
+      "hubBore": "66.6",
+      "oemWheelDiameters": [17, 18, 19],
+      "offsetRange": "25-45mm"
+    },
+    "bmw_3series_e30": {
+      "years": "1982-1994",
+      "boltPattern": "4x100",
+      "hubBore": "57.1",
+      "oemWheelDiameters": [14, 15, 16],
+      "offsetRange": "15-25mm",
+      "note": "E30 M3 uses 5x120"
+    },
+    "bmw_3series_e36": {
+      "years": "1990-2000",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "oemWheelDiameters": [15, 16, 17],
+      "offsetRange": "35-47mm"
+    }
+  },
+  "results": [
+    {
+      "id": "18f16a62-02c7-473b-99d3-be9926d99bb7",
+      "year": 2013,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "FLAGGED",
+      "reason": "INVALID_YEAR - BMW 2-Series F22 production started 2014, not 2013",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "d03faa86-8849-4834-9fe6-6c93c058758b",
+      "year": 2014,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6",
+        "tireSizes": ["225/45R17", "225/40R18", "245/35R19", "255/30R20"]
+      },
+      "correctedData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6",
+        "tireSizes": ["205/55R16", "225/45R17", "225/40R18", "225/35R19"]
+      },
+      "changes": ["Removed 255/30R20 (not OEM for 2014)", "Added 205/55R16 base size"],
+      "confidence": "high"
+    },
+    {
+      "id": "31fdbcde-742d-4b1d-993f-79459f0d4352",
+      "year": 2015,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "8232c236-99c9-4494-8f1a-dbd310361918",
+      "year": 2016,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "7848a737-69da-4982-a7f5-14574ee3de5a",
+      "year": 2017,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "f3bfb3f4-0d8b-443f-82f9-9d46204bb9e9",
+      "year": 2018,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "e21e64ba-8994-4b72-a687-61a84d4fcf75",
+      "year": 2019,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "36b4321d-a14c-4085-a838-6ecb3f3d3dea",
+      "year": 2020,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "47070467-9fd8-418b-8a0d-b3d81d9902aa",
+      "year": 2021,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "8cb366f8-07e8-4019-8777-a09d3724cab1",
+      "year": 2022,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6"
+      },
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "reason": "G42 generation started 2022 with new bolt pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "05ff5867-4604-455c-8950-bbad4ceffd4f",
+      "year": 2023,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6"
+      },
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "reason": "G42 generation uses 5x112",
+      "confidence": "high"
+    },
+    {
+      "id": "cbf7a0e5-1e5e-4949-aea0-081bb57cb55b",
+      "year": 2024,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6"
+      },
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "reason": "G42 generation uses 5x112",
+      "confidence": "high"
+    },
+    {
+      "id": "1aa381b3-45b8-42b6-b436-0005436e8296",
+      "year": 2025,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6"
+      },
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "reason": "G42 generation uses 5x112",
+      "confidence": "high"
+    },
+    {
+      "id": "84384a90-51f1-41b7-99eb-ade24296c0a6",
+      "year": 2026,
+      "make": "BMW",
+      "model": "2-Series",
+      "status": "VERIFIED",
+      "boltPattern": "5x112",
+      "hubBore": "66.6",
+      "confidence": "high"
+    },
+    {
+      "id": "d62ba262-4753-482d-858a-27b9f78de053",
+      "year": 1990,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006 (E90 generation). 1990 is E30/early E36.",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "80d21db0-da4a-455c-8f1f-acb0b3974b9b",
+      "year": 1990,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "ee0e4bf2-bd7a-4916-88f1-ecbc42e382eb",
+      "year": 1990,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "325is",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "4x100",
+        "hubBore": "56.1",
+        "tireSizes": ["205/60R16", "225/50R17", "225/45R18", "255/40R18", "225/40R19", "255/35R19"]
+      },
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": "57.1",
+        "tireSizes": ["195/65R14", "205/60R15", "205/55R16"]
+      },
+      "changes": ["Hub bore corrected from 56.1 to 57.1mm", "Tire sizes corrected to E30 appropriate sizes"],
+      "confidence": "medium",
+      "note": "325is existed 1987-1991 on E30 platform"
+    },
+    {
+      "id": "64b43de9-2511-45c0-85f2-addec46c6dff",
+      "year": 1990,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "FLAGGED",
+      "reason": "CONFLICTING_DATA - Shows 5x120 bolt pattern but 1990 E30 should be 4x100. May be transitional E36 year.",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6"
+      },
+      "suggestedAction": "Verify if E30 (4x100, 57.1) or early E36 (5x120, 72.6)",
+      "confidence": "low"
+    },
+    {
+      "id": "32daef62-976c-48ae-9fa7-4635306f725a",
+      "year": 1990,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "4x100",
+        "hubBore": "57.1"
+      },
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": "57.1"
+      },
+      "changes": ["Hub bore confirmed correct"],
+      "confidence": "high",
+      "note": "E30 specs verified"
+    },
+    {
+      "id": "8aac1d80-5a65-492b-848c-a32ab0948bb2",
+      "year": 1991,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "325is",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "4x100",
+        "hubBore": "56.1"
+      },
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": "57.1"
+      },
+      "changes": ["Hub bore corrected from 56.1 to 57.1mm"],
+      "confidence": "high"
+    },
+    {
+      "id": "ae6900fa-fd2a-4c86-bf33-98c5c5a3815f",
+      "year": 1991,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "VERIFIED",
+      "boltPattern": "4x100",
+      "hubBore": "57.1",
+      "confidence": "high",
+      "note": "E30 final year, specs correct"
+    },
+    {
+      "id": "f8b75a32-784f-49ef-a54c-c30a0084d452",
+      "year": 1991,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "58f3d991-ed5f-4a1c-8871-61bdc693d88f",
+      "year": 1991,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "f20f1b78-be2a-474c-bbf6-c88d6958af50",
+      "year": 1991,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "FLAGGED",
+      "reason": "CONFLICTING_DATA - Shows 5x120 but 1991 base 3-series should be E30 with 4x100",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6"
+      },
+      "suggestedAction": "Delete duplicate or verify if actually 1992+ E36",
+      "confidence": "low"
+    },
+    {
+      "id": "7c41e641-6260-42e5-a18d-9ecf02bc1f8d",
+      "year": 1992,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "399ce22f-2666-4884-ad7d-b5e34d3690fd",
+      "year": 1992,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high",
+      "note": "E36 generation started 1992, specs correct"
+    },
+    {
+      "id": "771fbad0-797b-408e-9df9-7bdc85079c35",
+      "year": 1992,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "219e339b-8e30-4651-b415-aaf7dbd82709",
+      "year": 1992,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate and invalid trim",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "5507c331-b4b3-4659-b086-bf53f88e6004",
+      "year": 1992,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "FLAGGED",
+      "reason": "DUPLICATE - Same YMM as 399ce22f with different wheel specs",
+      "suggestedAction": "Merge or delete duplicate",
+      "confidence": "medium"
+    },
+    {
+      "id": "ced0ce96-7e78-4ed9-bc52-deb8378515e4",
+      "year": 1993,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "fc8f786e-3c46-40ef-a15a-b66a32295a09",
+      "year": 1993,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6",
+        "tireSizes": ["195/65R15", "205/60R15", "205/55R16", "225/50R16", "235/45R17"]
+      },
+      "correctedData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6",
+        "tireSizes": ["185/65R15", "205/60R15", "205/55R16", "225/45R17"]
+      },
+      "changes": ["Tire sizes adjusted to E36 OEM sizes"],
+      "confidence": "high"
+    },
+    {
+      "id": "4431ba0c-d335-457a-bea9-767563d49b3c",
+      "year": 1993,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "99469ccf-f645-4781-a7a5-bc0e5eec9979",
+      "year": 1993,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate invalid trim",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "1f626ad8-4f2b-4bd8-a2a8-cf9b1f92c37b",
+      "year": 1993,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "e858c532-f7e0-49eb-93c7-d1bd388c4346",
+      "year": 1994,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "aaa0b21a-0feb-46f1-9cfb-ae0f23b86ff5",
+      "year": 1994,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate invalid trim",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "dd498e3b-3f5d-41bc-8c9d-61253beb87d9",
+      "year": 1994,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate invalid trim",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "9e664547-ca53-438e-9e82-844e5f963aa5",
+      "year": 1994,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6"
+      },
+      "correctedData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6"
+      },
+      "changes": ["Specs verified for E36"],
+      "confidence": "high"
+    },
+    {
+      "id": "0e635f2e-5dc0-4df2-8d38-ac584a19db72",
+      "year": 1994,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "3c878e73-e074-4c39-92cf-c04ac36b3cc6",
+      "year": 1995,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "c1ca2722-d563-48e1-aa19-faf94d67801e",
+      "year": 1995,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "15755329-3b78-4bcb-ad64-e35fe4e8899c",
+      "year": 1995,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate invalid trim",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "2514beb7-12db-4c79-ab02-05032b036ca3",
+      "year": 1995,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate invalid trim",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "48ac0e66-0185-4fb3-86d2-64c97afaef91",
+      "year": 1995,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "FLAGGED",
+      "reason": "DUPLICATE - Same YMM as c1ca2722",
+      "action": "MERGE_OR_DELETE",
+      "confidence": "medium"
+    },
+    {
+      "id": "6fe4d69b-87e0-43bb-8326-0617467c6df9",
+      "year": 1996,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "83a7f543-109d-487a-8520-7581098cf5f1",
+      "year": 1996,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "a29fb24c-c6e1-411c-888d-e81d4b37749b",
+      "year": 1996,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate invalid trim",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "0e8951ac-f5ef-4628-b6fa-338969c4dc13",
+      "year": 1996,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate invalid trim",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "eb76f8d0-be68-4da7-99e2-067a1fdd434d",
+      "year": 1996,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "FLAGGED",
+      "reason": "DUPLICATE - Same YMM as 6fe4d69b",
+      "action": "MERGE_OR_DELETE",
+      "confidence": "medium"
+    },
+    {
+      "id": "b5c9464f-bd73-4205-ae72-da99fc0a7014",
+      "year": 1997,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "1d297745-6137-427f-a1ca-8757699888cc",
+      "year": 1997,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - But specs are E36 correct",
+      "action": "RETRIM_TO_BASE",
+      "confidence": "medium"
+    },
+    {
+      "id": "3871d276-c854-43f7-9f10-10226876e057",
+      "year": 1997,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "FLAGGED",
+      "reason": "DUPLICATE - Multiple Base entries for 1997",
+      "action": "MERGE_OR_DELETE",
+      "confidence": "medium"
+    },
+    {
+      "id": "62e0da23-c31e-4924-a6fd-2096398e626a",
+      "year": 1997,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "08e0bc67-eb7b-4956-b7b9-ff5ac2170073",
+      "year": 1997,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "f6cd44fb-b11d-4720-ab44-b06b47120c44",
+      "year": 1998,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "FLAGGED",
+      "reason": "DUPLICATE - Multiple Base entries for 1998",
+      "action": "MERGE_OR_DELETE",
+      "confidence": "medium"
+    },
+    {
+      "id": "41ad3c40-f665-47b3-849a-45f6e7ad1754",
+      "year": 1998,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "16be6fa7-f1c3-4d7d-b165-9279d577d221",
+      "year": 1998,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "5dbc9d71-a2f7-4323-88b6-9ee9320252b5",
+      "year": 1998,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "91893227-d9f9-49ea-8eef-cea6c193eec0",
+      "year": 1998,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "816b5cf9-77fa-4c95-b5a9-56c614dbb9ca",
+      "year": 1999,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": "72.6",
+      "confidence": "high"
+    },
+    {
+      "id": "b4c7a514-b444-4f34-973d-4c2a3525c94f",
+      "year": 1999,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "Base",
+      "status": "FLAGGED",
+      "reason": "DUPLICATE - Multiple Base entries for 1999",
+      "action": "MERGE_OR_DELETE",
+      "confidence": "medium"
+    },
+    {
+      "id": "2c544979-b5ba-4d01-9f27-90e2a9d9fbf0",
+      "year": 1999,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "dde401e6-b9df-497a-9e0e-b320f0d68824",
+      "year": 1999,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "b89794d6-c34e-40dc-9d45-e59f72ca1d73",
+      "year": 1999,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "4c140f40-d1d3-4a2d-8237-36ac6b24fa11",
+      "year": 1999,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "10d6dedd-a112-4e9c-b37f-d1d63a59a4ef",
+      "year": 1999,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "9fff4df9-7612-493a-971e-c9f99385fd87",
+      "year": 1999,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "55480a95-79ed-4766-96a1-b28b3105410c",
+      "year": 1999,
+      "make": "BMW",
+      "model": "3 Series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - But specs look E36 correct",
+      "action": "RETRIM_TO_BASE",
+      "confidence": "medium"
+    },
+    {
+      "id": "c3a5cc57-a74a-4d05-8ed1-dbc0cf3bb0c4",
+      "year": 1982,
+      "make": "BMW",
+      "model": "3-series",
+      "trim": "325is",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM_FOR_YEAR - 325is didn't exist until 1987. 1982 had 316, 318i, 320i, 323i",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "bcf1a1ca-a075-45f5-aa26-b8d8eb5cb0fd",
+      "year": 1982,
+      "make": "BMW",
+      "model": "3-series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "5c2f135f-0f8b-4dd8-9be9-a211ac0bad84",
+      "year": 1982,
+      "make": "BMW",
+      "model": "3-series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - Duplicate",
+      "action": "DELETE",
+      "confidence": "high"
+    },
+    {
+      "id": "bc5216ad-2366-4afe-a7d4-7e9c1aa06dea",
+      "year": 1982,
+      "make": "BMW",
+      "model": "3-series",
+      "trim": "Base",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6"
+      },
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": "57.1"
+      },
+      "reason": "1982 is E30 generation with 4x100 bolt pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "fbb41a3a-de78-4a1b-b463-1802af49d31d",
+      "year": 1983,
+      "make": "BMW",
+      "model": "3-series",
+      "trim": "Base",
+      "status": "CORRECTED",
+      "originalData": {
+        "boltPattern": "5x120",
+        "hubBore": "72.6"
+      },
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": "57.1"
+      },
+      "reason": "1983 is E30 generation with 4x100 bolt pattern",
+      "confidence": "high"
+    },
+    {
+      "id": "f3b58582-f649-4c88-91e5-0cde80fabf3e",
+      "year": 1983,
+      "make": "BMW",
+      "model": "3-series",
+      "trim": "330i xDrive",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM - 330i xDrive didn't exist until 2006",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    },
+    {
+      "id": "4d680771-3598-4816-94ef-357527005350",
+      "year": 1983,
+      "make": "BMW",
+      "model": "3-series",
+      "trim": "325is",
+      "status": "FLAGGED",
+      "reason": "INVALID_TRIM_FOR_YEAR - 325is didn't exist until 1987",
+      "action": "DELETE_OR_RETRIM",
+      "confidence": "high"
+    }
+  ],
+  "analysisNotes": [
+    "CRITICAL: Many records have '330i xDrive' trim which didn't exist until 2006 E90 generation",
+    "CRITICAL: Multiple duplicate records for same Year/Make/Model/Trim combinations",
+    "CRITICAL: Some 1982-1991 records incorrectly show 5x120 bolt pattern (should be 4x100 for E30)",
+    "WARNING: Hub bore 56.1mm is incorrect for E30 - should be 57.1mm",
+    "WARNING: Tire sizes in many records don't match wheel diameters (e.g., 17\"+ tires on 14-15\" wheel specs)",
+    "INFO: 2022+ 2-Series should be G42 platform with 5x112/66.6mm, not 5x120/72.6mm",
+    "INFO: BMW 2-Series production started 2014, not 2013"
+  ],
+  "recommendedActions": [
+    {
+      "action": "DELETE_INVALID_TRIMS",
+      "count": 35,
+      "description": "Remove all records with '330i xDrive' trim from pre-2006 years"
+    },
+    {
+      "action": "CORRECT_BOLT_PATTERNS",
+      "count": 8,
+      "description": "Fix E30 (1982-1991) records showing 5x120 to 4x100"
+    },
+    {
+      "action": "CORRECT_HUB_BORES",
+      "count": 4,
+      "description": "Fix hub bore from 56.1 to 57.1 for E30 records"
+    },
+    {
+      "action": "UPDATE_G42_SPECS",
+      "count": 4,
+      "description": "Update 2022-2025 2-Series to 5x112/66.6mm"
+    },
+    {
+      "action": "DELETE_2013_2SERIES",
+      "count": 1,
+      "description": "Remove invalid 2013 2-Series (production started 2014)"
+    },
+    {
+      "action": "DEDUPE_BASE_TRIMS",
+      "count": 12,
+      "description": "Merge duplicate Base trim records for same YMM"
+    }
+  ]
+}

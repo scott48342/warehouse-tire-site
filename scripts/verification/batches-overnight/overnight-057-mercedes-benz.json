@@ -1,0 +1,2847 @@
+[
+  {
+    "id": "3e8c8cf2-c595-4c77-a339-c3fc25256f90",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "225/35R20",
+      "255/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a2aa231a-4807-4721-a44b-5a234766d632",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "C 300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "fdd14fca-d787-4da2-a5d7-02c5c904fb84",
+    "year": 2024,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "AMG C 43 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d67671f8-a0b8-48d5-a065-e99cd936036d",
+    "year": 2024,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "C 300 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "8c70d404-3cc6-4784-a985-17e51f51bde6",
+    "year": 2024,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "C 300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "371a461e-6d50-4e07-80b4-5901cbfdb18e",
+    "year": 2024,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "225/35R20",
+      "255/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "007dcd43-5b5e-4234-93bf-391929ddae24",
+    "year": 2024,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "AMG C 63 S E Performance",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "722d0940-cb0b-48ed-a242-b38bfb0ab134",
+    "year": 2025,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "225/35R20",
+      "255/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2c7fec3e-dd92-4980-8520-325bbb14fc25",
+    "year": 2025,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "AMG C 43 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "66ddb3d6-ae28-4aa4-87d9-230c1c52b9c2",
+    "year": 2025,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "C 300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "afb99fb7-7c72-43f0-9100-e64b991c4019",
+    "year": 2025,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "AMG C 63 S E Performance",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d96ba947-e54f-4fb8-9398-475970ba19ce",
+    "year": 2025,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "C 300 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ece295bd-71e1-4142-8c8f-1788f3f063da",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "C63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 19
+      },
+      {
+        "width": 10,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "225/35R20",
+      "255/30R20"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "0b48014a-49ac-47f1-ab5d-fc2174d315aa",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "C300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "225/35R20",
+      "255/30R20"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "b59477e6-cb2d-41aa-a546-3c307d22ff74",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "225/35R20",
+      "255/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "fcbe26a7-ed88-4bd4-a614-4126351b9e92",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "c-class",
+    "trim": "C43 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "225/45R18",
+      "245/40R18",
+      "225/40R19",
+      "255/35R19",
+      "225/35R20",
+      "255/30R20"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "ef6fdad8-24ab-4c92-abf6-b0b979cd2c42",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c53e8f81-0879-4390-87be-7f18a07c8bba",
+    "year": 2009,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8606ceba-2bf7-4442-9865-af0fd1db7e9e",
+    "year": 2010,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d04b22f6-b925-4c65-b92c-790818b5ac0e",
+    "year": 2011,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "38abecca-afc8-4d32-90f7-95a0fa52ee05",
+    "year": 2012,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f7764d51-0ebe-415c-a07c-9de8a11c3581",
+    "year": 2013,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f3734a7a-2f88-46cf-80aa-e45a8eee428a",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b5580903-2f77-446a-ad77-cd40ea52ede0",
+    "year": 2015,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4e15b832-b963-4b94-a723-cacacc1b692e",
+    "year": 2016,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b9ee8a20-8cc5-4de8-9edc-0df7a9f62ac9",
+    "year": 2017,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "50f6e13b-9d27-4c96-bd98-104dfaa9dcd6",
+    "year": 2018,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "5e77f1e0-8570-4b2b-93b6-d93ab38cafc9",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "fb70f13d-b93d-4d6d-96d4-3bced81bbe40",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "5b0a0776-580f-45c0-9887-ce9f810964ae",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a86ac4b7-9bf8-4b73-88ec-458997768e39",
+    "year": 2022,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "6fc019b3-943b-455c-9ac3-6b089728f9af",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "04e28a67-4bf0-47b5-8220-d76a475b9a13",
+    "year": 2024,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "0568f72c-3071-4a81-bb07-72b07fc51bae",
+    "year": 2025,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e57977b7-f513-41c8-89a1-0d43aa8e6eb4",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "c-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/40R18",
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "909244eb-e6ce-404f-8bef-01fa9796817d",
+    "year": 2000,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b3ff39e0-774f-4989-aaf0-e56e9a7ab11a",
+    "year": 2001,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "fa9e71af-b931-4912-9d63-a72eb6c95ef2",
+    "year": 2002,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8837d5e2-8c0c-4697-ad02-5bb077f4a23e",
+    "year": 2003,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "568e9d5e-5400-4c03-9f9c-c1fc8406f4cb",
+    "year": 2004,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "58b133d8-1533-4b74-b3a1-77eee82c74f7",
+    "year": 2005,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "12b4a88b-99c3-437f-9f74-871549e02b80",
+    "year": 2006,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c61f979d-697e-4530-8915-c50dfea7a16f",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f9fc24bb-7b3f-4e12-942e-c85fec20bc21",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "564d31e6-da3f-43ae-8035-325fc527534a",
+    "year": 2009,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "0b10830a-cd7d-4a5c-a489-973f74a429d3",
+    "year": 2010,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b1ef2ef7-6d8a-4f48-bede-a615119cc284",
+    "year": 2011,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9d9b3094-ec67-4176-907f-7d609346c1f9",
+    "year": 2012,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d8483e28-f387-4e71-bbda-ef8801cb624f",
+    "year": 2013,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f15f3f72-e1e9-4c2d-b463-5c398094e632",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "cl-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/45R18",
+      "275/40R19",
+      "275/35R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "77904f9d-3868-4733-998b-681868d62642",
+    "year": 2001,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "0e6b2ad9-86fb-4176-8e46-a58015fed309",
+    "year": 2002,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "64192b26-b19a-40d8-b6a4-8850631ec94b",
+    "year": 2003,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "3a29a46d-0066-4e04-b55a-8d376f6933e2",
+    "year": 2004,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f0d2da66-5eb2-489d-8a29-76aef6a88d9a",
+    "year": 2005,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a86b2a46-5d01-46ae-9cf0-ce3ccd95ecbc",
+    "year": 2006,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b6d21ac8-dd1c-403f-a700-082db74d17e7",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1e7db6bb-2041-416b-8efb-2a63ba97bfe1",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a8ce85d1-12f8-4853-8eb3-d50628b916a2",
+    "year": 2009,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b8508de1-0cca-4547-af74-2433a466c202",
+    "year": 2010,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "72296b76-bb0e-4faa-9205-e1db2ba7ceaa",
+    "year": 2011,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "579a2c4d-74f1-47d9-b930-c6f4b17cc054",
+    "year": 2012,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "856f0c21-10a3-4fb8-85e5-b5f71393c5db",
+    "year": 2013,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8242a045-5849-42b6-a311-a1db5e78317f",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "cl-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/40R19",
+      "275/35R20",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "716555ff-c65b-47a8-bfd0-1e69dde3f13d",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "AMG CLA 45 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "44463a17-fef3-416a-b908-219ec48dae24",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "CLA 250",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "34c41243-683b-439a-af37-40f50d99227b",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "CLA 250 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b4a5b5fb-762d-41f1-a9c8-e22fc5e20896",
+    "year": 2015,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "AMG CLA 45 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6563681a-edc9-4b04-9d26-8551dd0d1df2",
+    "year": 2015,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "CLA 250",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "086f2170-1689-49c3-b2c5-405021d7cc13",
+    "year": 2015,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "CLA 250 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "68800105-a0d9-4b9a-84d1-824f9be7ac9a",
+    "year": 2016,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "AMG CLA 45 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "217bffb6-442e-4cec-9163-59a7a8d35372",
+    "year": 2016,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "CLA 250",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "68234433-9865-4ae0-bdea-5789ec635ed3",
+    "year": 2016,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "CLA 250 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e7d38c33-a0e2-4808-ad35-dfb0732ef47d",
+    "year": 2017,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "CLA 250",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6359d903-a699-4407-8504-6cca3d7b6967",
+    "year": 2017,
+    "make": "mercedes",
+    "model": "cla",
+    "trim": "AMG CLA 45 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "235/35R19",
+      "255/30R19"
+    ],
+    "source": "generation-baseline"
+  }
+]

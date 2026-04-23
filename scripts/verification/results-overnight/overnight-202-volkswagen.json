@@ -1,0 +1,2088 @@
+[
+  {
+    "id": "cb9d4ee2-334c-45c5-a33e-2b24c8746949",
+    "year": 2020,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4c73b07c-427c-4a8f-baa1-3daf72350658",
+    "year": 2021,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "acca7669-47a5-4f27-9979-eb8ffa8f28c9",
+    "year": 2022,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "235/50R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8ba8578b-c1d0-4f99-995b-6d02a287b3ca",
+    "year": 2008,
+    "make": "volkswagen",
+    "model": "r32",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 48.5,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 51,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 42,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2672c4e5-4f26-44b1-9510-01cd4b71b884",
+    "year": 2006,
+    "make": "volkswagen",
+    "model": "rabbit",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 47,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 50,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 50,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 50,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a31b9123-b27f-43fd-9932-c4ff86ea1abe",
+    "year": 2007,
+    "make": "volkswagen",
+    "model": "rabbit",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 47,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 50,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 50,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 50,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "213d632c-51b0-4434-883d-d68a6fe98579",
+    "year": 2008,
+    "make": "volkswagen",
+    "model": "rabbit",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 47,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 50,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 50,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 50,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "afe5d26d-dd3b-42b3-bdb5-f84595feef83",
+    "year": 2009,
+    "make": "volkswagen",
+    "model": "rabbit",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 47,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 50,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 50,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 50,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a841c5c9-40e0-4b02-a6c9-d4af89059234",
+    "year": 2008,
+    "make": "volkswagen",
+    "model": "routan",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f2b8396f-b668-40c5-b6de-3f1b043830db",
+    "year": 2009,
+    "make": "volkswagen",
+    "model": "routan",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "808a6c8f-2992-40dc-bee1-1bfc767edb14",
+    "year": 2010,
+    "make": "volkswagen",
+    "model": "routan",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2de6b2de-4480-4a80-85d0-a8ff7a422c37",
+    "year": 2011,
+    "make": "volkswagen",
+    "model": "routan",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ccdb502a-580c-4491-96f1-006fa87516dc",
+    "year": 2012,
+    "make": "volkswagen",
+    "model": "routan",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "5eb914e4-775a-4b0d-ab01-ae46c97d0672",
+    "year": 2013,
+    "make": "volkswagen",
+    "model": "routan",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "dc7be3c7-ac92-4c42-9420-8f60caed76b6",
+    "year": 2014,
+    "make": "volkswagen",
+    "model": "routan",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "52804ba8-27d8-4f08-b1dd-0fc62fcc54e6",
+    "year": 2022,
+    "make": "volkswagen",
+    "model": "taos",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "215/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "374b6c19-2407-4aae-ab18-5191e5f4e598",
+    "year": 2023,
+    "make": "volkswagen",
+    "model": "taos",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "215/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e1ab0b54-f6f2-4816-acbe-167d331b9a5f",
+    "year": 2024,
+    "make": "volkswagen",
+    "model": "taos",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "215/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b5297ee4-69f3-40b0-b8fc-7899752403af",
+    "year": 2025,
+    "make": "volkswagen",
+    "model": "taos",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "215/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ba74be09-8d3d-414f-bdbc-e6345fadb8e3",
+    "year": 2026,
+    "make": "volkswagen",
+    "model": "taos",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "215/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "af75612d-00f5-4b12-8b1a-eaf805649b5e",
+    "year": 2009,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R16",
+      "235/55R17",
+      "235/50R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f17cc67c-70e4-414d-be63-98e0aba54d23",
+    "year": 2010,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R16",
+      "235/55R17",
+      "235/50R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2fa9fd22-814f-435c-aaa7-f01114b7b6fc",
+    "year": 2011,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R16",
+      "235/55R17",
+      "235/50R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8de7e043-6321-41b6-adf2-904caef7d662",
+    "year": 2012,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R16",
+      "235/55R17",
+      "235/50R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "443a55c1-c6ea-480f-8840-1979a8301243",
+    "year": 2013,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 33,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R16",
+      "235/55R17",
+      "235/50R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c92974a8-c7a7-450f-bffe-a381bd4267fb",
+    "year": 2014,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 33,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R16",
+      "235/55R17",
+      "235/50R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "df75869f-7344-4cfd-8a10-62264fc1c0f4",
+    "year": 2015,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R16",
+      "235/55R17",
+      "235/50R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8999b626-bcf2-424f-8b3d-285377eb673c",
+    "year": 2016,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 33,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R16",
+      "235/55R17",
+      "235/50R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "588a57e2-4c5c-4e0e-a244-14e936a55e42",
+    "year": 2017,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 33,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R16",
+      "235/55R17",
+      "235/50R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4376c292-ce60-4340-928f-aebb27af6c3e",
+    "year": 2018,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 41,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "255/45R19",
+      "255/40R20",
+      "235/50R19",
+      "235/45R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "57d2f858-69f5-467c-b957-ac30888b0dca",
+    "year": 2019,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 41,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "255/45R19",
+      "255/40R20",
+      "235/50R19",
+      "235/45R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c52147de-0242-4b50-965b-5ea6a4f48efe",
+    "year": 2020,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 41,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "255/45R19",
+      "255/40R20",
+      "235/50R19",
+      "235/45R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "7dbd087f-b869-4664-bf7e-50a77f7fd3e3",
+    "year": 2021,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "255/45R19",
+      "255/40R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "bee6b6fb-c12c-471b-a560-829532a69605",
+    "year": 2022,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 41,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "255/45R19",
+      "255/40R20",
+      "235/50R19",
+      "235/45R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "41d16e75-20ec-4177-9f8a-b76cc7a1492c",
+    "year": 2023,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "255/45R19",
+      "255/40R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "820918bd-e722-45e3-aa39-7e5b45928b76",
+    "year": 2024,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "255/45R19",
+      "255/40R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f38c2366-8042-4f15-9f25-e6c684a5cbf5",
+    "year": 2025,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "255/45R19",
+      "255/40R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "560e1257-cc70-47b4-b61c-4cfc431d336a",
+    "year": 2026,
+    "make": "volkswagen",
+    "model": "tiguan",
+    "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "255/45R19",
+      "255/40R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8b4344e2-4341-4a9b-9cf7-11525e365f97",
+    "year": 2004,
+    "make": "volkswagen",
+    "model": "touareg",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "285/40R20",
+      "285/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d68a7a3c-d116-46f3-a7b3-aed20e974f7c",
+    "year": 2005,
+    "make": "volkswagen",
+    "model": "touareg",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "285/40R20",
+      "285/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8ff8ad73-6fff-4691-9090-7ff80eb4b236",
+    "year": 2006,
+    "make": "volkswagen",
+    "model": "touareg",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "285/40R20",
+      "285/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  }
+]

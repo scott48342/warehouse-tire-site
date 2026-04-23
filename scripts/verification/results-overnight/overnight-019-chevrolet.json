@@ -1,0 +1,1162 @@
+{
+  "batchId": "overnight-019-chevrolet",
+  "verifiedAt": "2026-04-23T02:12:00.000Z",
+  "summary": {
+    "total": 72,
+    "verified": 31,
+    "flagged": 14,
+    "invalid": 27
+  },
+  "criticalIssues": [
+    {
+      "issue": "2014-2026 Silverado (generic) has wrong bolt pattern and hub bore",
+      "details": "Batch shows 5x120 bolt pattern with 67.1mm hub bore. Correct specs: 6x139.7 bolt pattern, 78.1mm hub bore. The 5x120/67.1mm is Camaro/Malibu pattern, not Silverado.",
+      "affectedVehicles": 14,
+      "severity": "CRITICAL"
+    },
+    {
+      "issue": "1985-1988 Nova has completely wrong fitment data",
+      "details": "These years were NUMMI-built Toyota Corolla-based FWD cars with 4x100 bolt pattern. Batch shows RWD GM specs (5x120.65, 70.3mm hub bore). Also, trims like 'SS', 'Rally', 'Custom' did not exist for NUMMI Nova.",
+      "affectedVehicles": 12,
+      "severity": "CRITICAL"
+    },
+    {
+      "issue": "1988-1989 Silverado-1500 model name is anachronistic",
+      "details": "The 'Silverado 1500' model name didn't exist until 1999. Pre-1999 trucks were C/K series (C1500, K1500). 'Silverado' was a trim level, not model name.",
+      "affectedVehicles": 12,
+      "severity": "MODERATE"
+    }
+  ],
+  "sources": [
+    "tirewheelguide.com",
+    "Wikipedia (Chevrolet Chevy II / Nova, Chevrolet Silverado)",
+    "wheel-sizes.com",
+    "BB Wheels (1985-1988 Nova 4x100 confirmation)"
+  ],
+  "vehicles": [
+    {
+      "id": "824e1ac9-bcc7-4bbe-9a5e-4ba47433294c",
+      "year": 1977,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Rally",
+      "status": "flagged",
+      "issues": [
+        "Rally was an appearance package, wheel size 7x15 may be aftermarket/optional",
+        "Tire sizes listed are reasonable for 15\" wheels"
+      ],
+      "correctSpecs": {
+        "boltPattern": "5x120.65",
+        "hubBore": "70.3",
+        "notes": "RWD X-body platform, bolt pattern correct"
+      }
+    },
+    {
+      "id": "8e837773-a6d5-4b1b-8b6e-5e59b0ba5db7",
+      "year": 1978,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Concours",
+      "status": "flagged",
+      "issues": [
+        "Tire sizes include obsolete bias-ply designations (F70-14, G70-14, etc.) mixed with modern radials",
+        "Should only list modern metric tire equivalents for e-commerce"
+      ],
+      "correctSpecs": {
+        "boltPattern": "5x120.65",
+        "hubBore": "70.3",
+        "wheelSizes": [{"width": 6, "diameter": 14}],
+        "tireSizes": ["195/75R14", "205/75R14", "215/70R14", "225/70R14"]
+      }
+    },
+    {
+      "id": "1e3d5f16-8173-437e-a2a0-7b30f28e091d",
+      "year": 1978,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Rally",
+      "status": "flagged",
+      "issues": [
+        "Rally wheel size may be optional/aftermarket upgrade"
+      ],
+      "correctSpecs": {
+        "boltPattern": "5x120.65",
+        "hubBore": "70.3"
+      }
+    },
+    {
+      "id": "cd58267a-dfad-4861-a6df-821878b5bbee",
+      "year": 1978,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs match tirewheelguide.com: 5x120.65, 14x6.5 ET0, 195/75R14",
+      "correctSpecs": {
+        "boltPattern": "5x120.65",
+        "hubBore": "70.3",
+        "wheelSizes": [{"width": 6, "offset": 0, "diameter": 14}, {"width": 6.5, "offset": 0, "diameter": 14}],
+        "tireSizes": ["195/75R14"]
+      }
+    },
+    {
+      "id": "f3ad9aee-0e4c-452e-805a-03599edb2288",
+      "year": 1978,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Custom",
+      "status": "flagged",
+      "issues": [
+        "Tire sizes include obsolete bias-ply designations"
+      ],
+      "correctSpecs": {
+        "boltPattern": "5x120.65",
+        "hubBore": "70.3"
+      }
+    },
+    {
+      "id": "a380a632-327f-4822-8c98-9619b5f1fb73",
+      "year": 1979,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Last year of RWD Nova. Specs correct for X-body platform.",
+      "correctSpecs": {
+        "boltPattern": "5x120.65",
+        "hubBore": "70.3"
+      }
+    },
+    {
+      "id": "9589c36a-67a0-4fdb-a3d1-5b7f0cd3511f",
+      "year": 1979,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Custom",
+      "status": "flagged",
+      "issues": [
+        "Tire sizes include obsolete bias-ply designations"
+      ],
+      "correctSpecs": {
+        "boltPattern": "5x120.65",
+        "hubBore": "70.3"
+      }
+    },
+    {
+      "id": "4d577b55-cfd0-4be2-9316-d56d0f584e08",
+      "year": 1979,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Rally",
+      "status": "flagged",
+      "issues": [
+        "Rally package wheel size may be optional"
+      ],
+      "correctSpecs": {
+        "boltPattern": "5x120.65",
+        "hubBore": "70.3"
+      }
+    },
+    {
+      "id": "40d0fad4-caa0-458b-bb67-e96a60e1bdcf",
+      "year": 1979,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Concours",
+      "status": "flagged",
+      "issues": [
+        "Tire sizes include obsolete bias-ply designations"
+      ],
+      "correctSpecs": {
+        "boltPattern": "5x120.65",
+        "hubBore": "70.3"
+      }
+    },
+    {
+      "id": "806beacb-b9f3-46d1-8e27-848d72313812",
+      "year": 1985,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "SS",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: 1985 Nova was NUMMI-built Toyota Corolla with 4x100 bolt pattern, NOT 5x120.65",
+        "CRITICAL: No SS trim existed for 1985-1988 Nova",
+        "CRITICAL: Wrong hub bore - should be ~54.3mm (Toyota), not 70.3mm (GM)",
+        "1985-1988 Nova was FWD, not RWD"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1",
+        "wheelSizes": [{"width": 5.5, "diameter": 13}],
+        "tireSizes": ["175/70R13", "185/70R13"],
+        "notes": "Based on Toyota AE82 Corolla Sprinter platform"
+      }
+    },
+    {
+      "id": "48c303d5-5719-485f-a8d5-6718db51ca7c",
+      "year": 1985,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern - should be 4x100 (Toyota Corolla base)",
+        "CRITICAL: Wrong hub bore - should be ~54.1mm",
+        "Tire sizes completely wrong for NUMMI Nova"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1",
+        "tireSizes": ["175/70R13", "185/70R13"]
+      }
+    },
+    {
+      "id": "eccec15f-0049-4c23-9320-9952d1c2bf52",
+      "year": 1985,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Custom",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: 'Custom' trim did not exist for 1985-1988 Nova",
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1"
+      }
+    },
+    {
+      "id": "982b733c-d2b6-471b-80cc-cacd0517d2d4",
+      "year": 1986,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "SS",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: No SS trim for NUMMI Nova",
+        "CRITICAL: Wrong bolt pattern (4x100, not 5x120.65)"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1"
+      }
+    },
+    {
+      "id": "197bef1e-eda2-4b33-8420-d36bd7aeefd6",
+      "year": 1986,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore for NUMMI Nova"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1"
+      }
+    },
+    {
+      "id": "c430f778-d9fe-4400-9f43-29ea7ec18407",
+      "year": 1986,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Custom",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: 'Custom' trim did not exist for NUMMI Nova",
+        "CRITICAL: Wrong bolt pattern"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1"
+      }
+    },
+    {
+      "id": "ce52def9-2bc4-4ea7-8d36-268afa0c4cce",
+      "year": 1987,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "SS",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: No SS trim for NUMMI Nova",
+        "CRITICAL: Wrong bolt pattern"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1"
+      }
+    },
+    {
+      "id": "2f2247cd-ca85-40be-a1bb-6a77ca88d477",
+      "year": 1987,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Custom",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: 'Custom' trim did not exist",
+        "CRITICAL: Wrong bolt pattern"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1"
+      }
+    },
+    {
+      "id": "80110ea2-d4fb-4f94-886d-5b7651ecc275",
+      "year": 1987,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern for NUMMI Nova"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1"
+      }
+    },
+    {
+      "id": "33a6ae9e-d518-4ad0-8a87-0a6f2ab6bd14",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "SS",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: No SS trim for NUMMI Nova (last year)",
+        "CRITICAL: Wrong bolt pattern"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1"
+      }
+    },
+    {
+      "id": "d7e298bf-2a5d-41bd-a076-8cd29223ae61",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern for NUMMI Nova"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1"
+      }
+    },
+    {
+      "id": "827b6eff-2b8e-4661-a777-2a836163d51b",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "nova",
+      "trim": "Custom",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: 'Custom' trim did not exist",
+        "CRITICAL: Wrong bolt pattern"
+      ],
+      "correctSpecs": {
+        "boltPattern": "4x100",
+        "hubBore": "54.1"
+      }
+    },
+    {
+      "id": "f0926947-129a-451a-ab96-8812dca1046e",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern - shows 5x120, should be 6x139.7",
+        "CRITICAL: Wrong hub bore - shows 67.1mm, should be 78.1mm",
+        "5x120/67.1mm is Camaro/Malibu pattern, not Silverado"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1",
+        "wheelSizes": [{"diameter": 17}, {"diameter": 18}, {"diameter": 20}, {"diameter": 22}],
+        "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"]
+      }
+    },
+    {
+      "id": "f47f9ade-f1ef-4559-83a3-04dca16a1735",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern (5x120 vs 6x139.7)",
+        "CRITICAL: Wrong hub bore (67.1mm vs 78.1mm)"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "c28ed3fe-a962-4c4c-bfb4-5b3fa171d350",
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "4896b26a-b6e8-492c-8220-18ba153defbe",
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "d3bb1a79-6d45-4f90-9f38-5b5746e30bff",
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "49f89842-90fe-4b83-90f7-c1c439a467b1",
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "fccd9a45-4bf1-494d-b177-3521f2adf04c",
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "96f71724-d09f-4cfa-a110-82154241e319",
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "92bc15b9-4460-4293-accb-79bef206c9f3",
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "a5afef7d-05b5-4222-a1a9-6ee2373ebc90",
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "514f11ab-21e3-467c-8e19-5305c4fd4f42",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "58aa52cc-50f0-4bdf-b100-ede427aca680",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "575195c4-d862-4aad-aea9-27688349dace",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "CRITICAL: Wrong bolt pattern and hub bore"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "43ed4f08-400a-4753-a9ee-cbd118ec9b13",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Scottsdale",
+      "status": "flagged",
+      "issues": [
+        "Model name 'Silverado-1500' didn't exist until 1999 - should be C1500 or K1500",
+        "Scottsdale was a valid trim level for C/K trucks",
+        "Wheel size 7x15 reasonable for economy trim"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1",
+        "modelShouldBe": "C1500 or K1500"
+      }
+    },
+    {
+      "id": "51fa1973-b19e-416c-ad9e-645661f3bbab",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic - should be C1500/K1500",
+        "WT (Work Truck) is a modern trim name, may not have existed in 1988"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "d251f99d-b590-4917-9152-76f22694bae0",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic - should be C1500/K1500"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "a59235ea-db75-41a1-8384-1addc31f7337",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Cheyenne",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic - should be C1500/K1500",
+        "Cheyenne was valid trim level"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "993863d7-0114-4a88-9563-2663aebcc247",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Silverado",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic - 'Silverado' was a trim level in 1988, not a model"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "a7659da4-c9ae-4aec-9bb5-34fba0199928",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic",
+        "Z71 was off-road package, valid for K1500 4WD"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "5c9860e2-4b27-4ac1-96d9-ac9dd7b82705",
+      "year": 1989,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Silverado",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "698eef8d-f316-49c9-8613-f8d8441df3fb",
+      "year": 1989,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "178f6d7d-0c35-41f8-8897-29902ccc8282",
+      "year": 1989,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "6b8a93fb-00f8-4301-8eec-8e6722d7df5b",
+      "year": 1989,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic",
+        "WT trim may be anachronistic for 1989"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "ff33db76-8b2c-45d6-bb16-d9a466800265",
+      "year": 1989,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Scottsdale",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "ac53a454-7536-47b6-9fad-532515953ce3",
+      "year": 1989,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Cheyenne",
+      "status": "flagged",
+      "issues": [
+        "Model name anachronistic"
+      ],
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "28df8dbf-eee8-4596-b2a1-d6d38e7833f6",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Model name correct (1999+). Bolt pattern 6x139.7 and hub bore 78.1mm verified against tirewheelguide.com",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "27103e3b-100d-432c-b565-d2155fae70d3",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "c19c6549-fb41-47c4-a74d-fb22caf7df85",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "84813767-b112-462f-8d84-a1bd8ec38151",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "ef9df01b-6827-4a44-b10b-5b9138ed45ef",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "48dee67d-0ca9-4f85-b6e9-a30bf2e1d1d0",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "2068dabc-8abe-40d7-9f26-3ba0085e9dbd",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "e86fe39b-2348-4c20-b062-245fc73538b5",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "4b956345-82e9-4f89-8577-304f38954229",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "72c0e9b1-1104-49fa-b317-bc426f831242",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "ec4a44ac-a92f-46a6-8972-8903ea77da2e",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "3d2ec08f-a568-440a-8d17-1e404e1d0423",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "7fc0a2ac-ba76-40e9-b729-79b8223896f8",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "c065c7aa-b4a6-4861-8aa6-a473a65b5af8",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "c27a042b-b99a-4aaa-8e33-d649eba248c1",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "e7d0489c-fec9-4778-9e00-db0bb80b2af6",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "4d0903de-8aea-4a93-92bc-acb286886c8e",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "c8beca32-c7f6-4a5e-aa30-847727070abe",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "8b81c0b4-8f77-4dea-ac81-993fd5cadfc7",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "SS",
+      "status": "verified",
+      "notes": "SS trim with 8x20 wheels verified - performance variant",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "b02695df-355d-4270-a272-a73834882bc1",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "c1574bf9-7f5f-4873-8347-0047a6ff66e1",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "74f423a8-e3d2-40ed-af70-8a228f8a3abc",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "SS",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "fd38ccfc-42a2-4c83-a84f-36c9f3307ab6",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "3646bad4-a3b0-438d-b239-368f1d774710",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "69250766-973d-41a9-b3f4-d8f3f5bfdae5",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "715a327e-5af5-4303-84b3-a0c13af9fcd2",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "14d95b62-e9e7-4bbe-8ddc-496b390224a7",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "988c55e5-f91f-4ec3-bbe2-855fe48db1b5",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    },
+    {
+      "id": "14c7ecc2-7b40-4278-b239-66c753201d9d",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "notes": "Specs verified",
+      "correctSpecs": {
+        "boltPattern": "6x139.7",
+        "hubBore": "78.1"
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "action": "DELETE or CORRECT 2014-2026 Silverado (generic model) entries",
+      "details": "These have completely wrong bolt pattern (5x120 vs 6x139.7) and hub bore (67.1 vs 78.1). This would cause customers to order incompatible wheels.",
+      "affectedCount": 14
+    },
+    {
+      "priority": "CRITICAL", 
+      "action": "DELETE 1985-1988 Nova entries",
+      "details": "These have wrong platform specs (should be 4x100 Toyota Corolla). The trims listed (SS, Custom, Rally) did not exist for NUMMI Nova. Consider removing entirely or researching correct NUMMI Nova specs.",
+      "affectedCount": 12
+    },
+    {
+      "priority": "MODERATE",
+      "action": "Consider renaming 1988-1989 Silverado-1500 to C1500/K1500",
+      "details": "Model name is anachronistic but fitment specs are correct. May confuse customers searching for classic trucks.",
+      "affectedCount": 12
+    },
+    {
+      "priority": "LOW",
+      "action": "Remove bias-ply tire designations from 1977-1979 Nova",
+      "details": "Obsolete tire formats like F70-14, G70-14 are not available for purchase. Replace with modern metric equivalents only.",
+      "affectedCount": 6
+    }
+  ]
+}

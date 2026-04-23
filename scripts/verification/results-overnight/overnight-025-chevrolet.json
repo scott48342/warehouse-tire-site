@@ -1,0 +1,1229 @@
+{
+  "batchId": "overnight-025-chevrolet",
+  "verifiedAt": "2026-04-23T02:15:00Z",
+  "summary": {
+    "totalVehicles": 79,
+    "verified": 43,
+    "flagged": 18,
+    "invalid": 18,
+    "verifiedPercentage": 54.4,
+    "flaggedPercentage": 22.8,
+    "invalidPercentage": 22.8
+  },
+  "criticalFindings": [
+    {
+      "issue": "WRONG_BOLT_PATTERN_5x120",
+      "severity": "critical",
+      "count": 17,
+      "description": "5x120 with 67.1mm hub bore is a BMW bolt pattern, NOT GM truck. Silverado 3500 should use 8x165.1 (pre-2011) or 8x180 (2011+).",
+      "affectedVehicles": "2001-2004, 2007-2018 silverado-3500 Base (catalog-gap-fill), 2026 silverado-3500-hd Base"
+    },
+    {
+      "issue": "INVALID_MODEL_YEAR",
+      "severity": "critical",
+      "count": 2,
+      "description": "1988-1989 Silverado 3500HD did not exist. The 'Silverado' model name started in 1999. Pre-1999 trucks were 'C/K 3500' with Silverado trim level.",
+      "affectedVehicles": "1988-1989 silverado-3500hd"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "18eca8ab-18fc-4127-b928-292bda240d36",
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "WT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct", "notes": "17\", 18\", 20\", 22\" all valid OEM/plus sizes" },
+        "tireSizes": { "status": "correct", "notes": "LT245/70R17, LT265/70R18, LT275/70R18, LT275/65R20 all valid" }
+      },
+      "source": "GM official specs, tiresize.com, tirewheelguide.com"
+    },
+    {
+      "id": "a7db1300-a444-4315-a28c-c7f971cb9bd2",
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "2d12c695-1d5d-4afa-9042-91860db303ae",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "Custom",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "5decc705-5185-4441-9314-491bfe9b9108",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "ZR2",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "incomplete", "notes": "Only 1 wheel size listed (8x18), missing offsets. ZR2 comes with 18\" Goodyear Wrangler Territory MT as standard." },
+        "tireSizes": { "status": "mismatch", "notes": "Lists LT245/70R17 but ZR2 is typically 18\"-only. Should be LT275/70R18 or LT285/60R18." }
+      },
+      "issues": ["incomplete_wheel_data", "tire_size_mismatch"],
+      "source": "GM official ZR2 specs"
+    },
+    {
+      "id": "04a83c15-9dec-4307-a60b-b3a27a5ec48a",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "LTZ",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "incomplete", "notes": "Only 1 wheel size (8x18), missing 17\", 20\" options and offsets" },
+        "tireSizes": { "status": "partial", "notes": "Missing some OEM options" }
+      },
+      "issues": ["incomplete_wheel_data"],
+      "source": "GM official specs"
+    },
+    {
+      "id": "37a9184a-a084-4f08-a1a0-9a71f662d46b",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "LT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "6ca269ca-81fe-4139-881c-344f8ebbf7f5",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "65296bf7-ed3b-4d77-9b6f-d65c037a3599",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "WT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "21a12383-3fd0-4f38-aa72-d7982bda0c46",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "High Country",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "a9c7302f-6b94-4b99-8330-7bcb46518896",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "Custom",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "5e9a5a1a-1710-488d-90e3-f89dbbbde987",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "WT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "fc1583cb-7339-4566-b4e6-9adf06089e9f",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "LT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "69a4916f-4649-40c0-b56f-7ce300042391",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "a13ab6df-95da-425b-b957-324992f72841",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "LTZ",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "incomplete", "notes": "Only 1 wheel size (8x18), missing 17\", 20\" options" },
+        "tireSizes": { "status": "partial" }
+      },
+      "issues": ["incomplete_wheel_data"],
+      "source": "GM official specs"
+    },
+    {
+      "id": "4aa1dfd1-b819-43f0-9fee-825bf10683a7",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "ZR2",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "incomplete", "notes": "Only 1 wheel size (8x18), missing offsets" },
+        "tireSizes": { "status": "mismatch", "notes": "ZR2 uses 18\" MT tires, 17\" listed incorrectly" }
+      },
+      "issues": ["incomplete_wheel_data", "tire_size_mismatch"],
+      "source": "GM official ZR2 specs"
+    },
+    {
+      "id": "5428c007-8c38-43fb-a7e9-f36f2f5c71cb",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "High Country",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs"
+    },
+    {
+      "id": "81ee7eba-17ef-4f00-a76a-2007ea55a1a0",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "ZR2",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "incomplete", "notes": "Only 1 wheel size (8x18), missing offsets" },
+        "tireSizes": { "status": "mismatch" }
+      },
+      "issues": ["incomplete_wheel_data", "tire_size_mismatch"],
+      "source": "GM official specs (projected)"
+    },
+    {
+      "id": "f9860dd1-7a03-46f8-8224-f10ec25d1c17",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "LTZ",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "incomplete" },
+        "tireSizes": { "status": "partial" }
+      },
+      "issues": ["incomplete_wheel_data"],
+      "source": "GM official specs (projected)"
+    },
+    {
+      "id": "3426d533-51de-481e-b069-d5657a6a3e5d",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "Custom",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs (projected)"
+    },
+    {
+      "id": "32409c80-d2a3-48e2-9e2c-098a76bea21e",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs (projected)"
+    },
+    {
+      "id": "207e21f1-0309-4818-8eb6-c7eb70244de2",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "High Country",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs (projected)"
+    },
+    {
+      "id": "c41969be-de04-43d9-a378-2f5d94045b85",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "WT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs (projected)"
+    },
+    {
+      "id": "1c67b836-cad4-4c3e-8692-cb024df44fb1",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "LT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM official specs (projected)"
+    },
+    {
+      "id": "c6293f23-91c3-419f-8b81-0bb43d585184",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "67.1", "expected": "116.7", "match": false },
+        "wheelSizes": { "status": "wrong", "notes": "Listed sizes don't match GM HD specs for 2001" },
+        "tireSizes": { "status": "needs_review" }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": {
+        "boltPattern": "8x165.1",
+        "hubBore": "116.7",
+        "notes": "2001 Silverado 3500 uses 8x165.1 (8x6.5) bolt pattern with 116.7mm hub bore"
+      },
+      "source": "performanceplustire.com, mtnviewchevy.com, GM specs"
+    },
+    {
+      "id": "afb488cc-02ad-42d0-b79d-7418fe35ba91",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "67.1", "expected": "116.7", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x165.1", "hubBore": "116.7" },
+      "source": "GM specs"
+    },
+    {
+      "id": "b2d98d0b-c05f-453b-b098-2f938fa517bf",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "67.1", "expected": "116.7", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x165.1", "hubBore": "116.7" },
+      "source": "GM specs"
+    },
+    {
+      "id": "91e389d4-4f30-436f-b561-e125b5f55fa5",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "67.1", "expected": "116.7", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x165.1", "hubBore": "116.7" },
+      "source": "GM specs"
+    },
+    {
+      "id": "b61b3848-4e83-4ef0-afc5-f4974acba6d4",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs, template:gm_hd_gen1_1999_2006"
+    },
+    {
+      "id": "c9eb710e-00c3-40c8-9012-e08b2cbbc8fd",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "LS",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "4c222f0b-7e06-4e67-aabf-e9a9c4f60bce",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "LT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "814aed28-7e4a-41a9-b4d7-d2a3608ecbc0",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "LT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "9183df30-7870-4173-810e-f3e6bd02c618",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "9962f537-ea69-468b-8080-136d569de210",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "LS",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "823bb1af-9982-43d7-b0bb-8cd8b76b47b0",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "67.1", "expected": "116.7", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x165.1", "hubBore": "116.7" },
+      "source": "GM specs"
+    },
+    {
+      "id": "df7b43f1-6009-476b-96dd-2cf9792f0a76",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "67.1", "expected": "116.7", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x165.1", "hubBore": "116.7" },
+      "source": "GM specs"
+    },
+    {
+      "id": "5656d187-9558-4911-9c55-2547db932351",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "67.1", "expected": "116.7", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x165.1", "hubBore": "116.7" },
+      "source": "GM specs"
+    },
+    {
+      "id": "398ef3b9-0a05-44e0-87ad-3f9da318a40c",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "67.1", "expected": "116.7", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x165.1", "hubBore": "116.7" },
+      "source": "GM specs"
+    },
+    {
+      "id": "d9a404e3-b04b-425f-8e41-26bed80f04ad",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x180", "match": false },
+        "hubBore": { "current": "67.1", "expected": "124.1", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x180", "hubBore": "124.1", "notes": "2011+ switched to 8x180" },
+      "source": "GM specs"
+    },
+    {
+      "id": "01c90b8f-72ee-4fa1-a51f-6c6aea35b69c",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x180", "match": false },
+        "hubBore": { "current": "67.1", "expected": "124.1", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x180", "hubBore": "124.1" },
+      "source": "GM specs"
+    },
+    {
+      "id": "78f17e0b-7ba0-452c-8a32-deda1faf69b5",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x180", "match": false },
+        "hubBore": { "current": "67.1", "expected": "124.1", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x180", "hubBore": "124.1" },
+      "source": "GM specs"
+    },
+    {
+      "id": "220dd75b-c8da-44a8-81a8-66430591a87a",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x180", "match": false },
+        "hubBore": { "current": "67.1", "expected": "124.1", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x180", "hubBore": "124.1" },
+      "source": "GM specs"
+    },
+    {
+      "id": "c94b97e5-de80-4bb7-a58f-52e908d58ac2",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x180", "match": false },
+        "hubBore": { "current": "67.1", "expected": "124.1", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x180", "hubBore": "124.1" },
+      "source": "GM specs"
+    },
+    {
+      "id": "e10f3fa5-6f35-4251-b6dd-45b9d8c2b655",
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x180", "match": false },
+        "hubBore": { "current": "67.1", "expected": "124.1", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x180", "hubBore": "124.1" },
+      "source": "GM specs"
+    },
+    {
+      "id": "c803d428-9293-49ff-a57c-5e45b73196ad",
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x180", "match": false },
+        "hubBore": { "current": "67.1", "expected": "124.1", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x180", "hubBore": "124.1" },
+      "source": "GM specs"
+    },
+    {
+      "id": "6ff21b21-a65a-4da1-8397-b786fc9e1318",
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x180", "match": false },
+        "hubBore": { "current": "67.1", "expected": "124.1", "match": false }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern"],
+      "correction": { "boltPattern": "8x180", "hubBore": "124.1" },
+      "source": "GM specs"
+    },
+    {
+      "id": "ea24213f-51f1-42c5-bbbb-b8756ac89c25",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs, template:gm_hd_gen2_2007_2010"
+    },
+    {
+      "id": "2e952530-b8a5-4cae-bc81-b89bb5f878c5",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Work Truck",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "3156b1db-836a-4932-b353-fcaeee526b0f",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "LT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "9b391c68-ac16-4d2e-9764-751c0831e01b",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "ea360df6-741e-46bb-ac38-de18d8ce46b6",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "d267c55e-c8b8-4cf7-8298-38a705a7eb84",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "64f95537-5a9b-482d-9fd4-3ac7cc44798b",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs, template:gm_hd_gen3_2011_2019"
+    },
+    {
+      "id": "b0ad1103-d63d-48de-9843-12b00a4d73f3",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "27e1f873-ac46-4d86-b83a-13b00b55e028",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "d62c43bf-351a-490c-b9f0-bb1583b3e4db",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "e72b15d2-ff5f-4c1f-af37-c04e1e6c4fad",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "19d70efd-bf5a-4da3-a456-4486591317fd",
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "74fefbd1-1545-4ea3-84d1-f4ea33b36acf",
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "2fa478c8-5238-48f5-8d26-a4051368662e",
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "f201fc05-e4da-40fb-b72e-c3dc077c0d56",
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "24121845-3d87-4140-aac9-1296b0ac93f7",
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs, template:gm_hd_gen4_2020_plus"
+    },
+    {
+      "id": "96408d40-0644-4bb2-8550-f04af12d99d4",
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "81a6914d-d15e-4868-83b4-c0f4aaa2f61c",
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "23d87f68-2162-42a2-afd5-081cd966f19a",
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "4177b0dc-578a-41f8-8320-7e750f169763",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "ec9e2f4a-b2ca-41bb-add4-c159d86735ac",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x180", "expected": "8x180", "match": true },
+        "hubBore": { "current": "124.1", "expected": "124.1", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "source": "GM specs"
+    },
+    {
+      "id": "68e9f61f-91aa-496a-917b-6a57abf0bb0c",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "trim": "Base",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "5x120", "expected": "8x180", "match": false },
+        "hubBore": { "current": "67.1", "expected": "124.1", "match": false },
+        "wheelSizes": { "status": "malformed", "notes": "wheelSizes is a JSON string instead of array" }
+      },
+      "issues": ["wrong_bolt_pattern", "wrong_hub_bore", "5x120_is_bmw_pattern", "malformed_wheel_data"],
+      "correction": { "boltPattern": "8x180", "hubBore": "124.1" },
+      "source": "GM specs (projected from current gen)"
+    },
+    {
+      "id": "63d6ba89-e3e7-420f-a4f2-4660840052b1",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "needs_review", "notes": "Format '7.5Jx16' not standard" }
+      },
+      "issues": ["questionable_model_designation", "nonstandard_wheel_format"],
+      "notes": "The 'Silverado 3500HD' designation did not exist in 1988. This was likely a C/K 3500 with Silverado trim. Model name should be reviewed. Specs appear plausible for C3500.",
+      "source": "Wikipedia C/K 4th gen history"
+    },
+    {
+      "id": "f65629e9-5bd3-4d38-b424-cfcd9c33ddcd",
+      "year": 1989,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "needs_review", "notes": "Format '7.5Jx16' not standard" }
+      },
+      "issues": ["questionable_model_designation", "nonstandard_wheel_format"],
+      "notes": "The 'Silverado 3500HD' designation did not exist in 1989. This was likely a C/K 3500 with Silverado trim. Model name should be reviewed.",
+      "source": "Wikipedia C/K 4th gen history"
+    },
+    {
+      "id": "7aea877d-7e84-45e4-af55-8ca538bf7bfb",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "issues": ["model_designation_unclear"],
+      "notes": "In 2000 this would be 'Silverado 3500' not 'Silverado 3500HD'. HD designation started 2001/2007. Specs are correct.",
+      "source": "GM specs"
+    },
+    {
+      "id": "62832796-bec6-430f-bec1-4f7da81f2774",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "issues": ["model_designation_unclear"],
+      "notes": "In 2001 this would be 'Silverado 3500' - HD branding came later. Specs are correct.",
+      "source": "GM specs"
+    },
+    {
+      "id": "b5d7fa66-7890-49aa-804c-cc24dfb07eb8",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "issues": ["model_designation_unclear"],
+      "notes": "Specs are correct, model designation may need review.",
+      "source": "GM specs"
+    },
+    {
+      "id": "8d1406f6-af1f-4075-bd76-f1abbc9c2cd0",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "issues": ["model_designation_unclear"],
+      "source": "GM specs"
+    },
+    {
+      "id": "33352bf8-8677-45c6-ad03-4b7c72c1fbae",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "issues": ["model_designation_unclear"],
+      "source": "GM specs"
+    },
+    {
+      "id": "cefcd4b0-a4ed-44c4-9f40-54f261705503",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "116.7", "expected": "116.7", "match": true },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "issues": ["model_designation_unclear"],
+      "source": "GM specs"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "critical",
+      "action": "DELETE_OR_FIX",
+      "description": "Remove or fix all 'silverado-3500' entries with 5x120 bolt pattern (catalog-gap-fill source). This is completely wrong data - 5x120 is a BMW pattern.",
+      "affectedIds": [
+        "c6293f23-91c3-419f-8b81-0bb43d585184",
+        "afb488cc-02ad-42d0-b79d-7418fe35ba91",
+        "b2d98d0b-c05f-453b-b098-2f938fa517bf",
+        "91e389d4-4f30-436f-b561-e125b5f55fa5",
+        "823bb1af-9982-43d7-b0bb-8cd8b76b47b0",
+        "df7b43f1-6009-476b-96dd-2cf9792f0a76",
+        "5656d187-9558-4911-9c55-2547db932351",
+        "398ef3b9-0a05-44e0-87ad-3f9da318a40c",
+        "d9a404e3-b04b-425f-8e41-26bed80f04ad",
+        "01c90b8f-72ee-4fa1-a51f-6c6aea35b69c",
+        "78f17e0b-7ba0-452c-8a32-deda1faf69b5",
+        "220dd75b-c8da-44a8-81a8-66430591a87a",
+        "c94b97e5-de80-4bb7-a58f-52e908d58ac2",
+        "e10f3fa5-6f35-4251-b6dd-45b9d8c2b655",
+        "c803d428-9293-49ff-a57c-5e45b73196ad",
+        "6ff21b21-a65a-4da1-8397-b786fc9e1318",
+        "68e9f61f-91aa-496a-917b-6a57abf0bb0c"
+      ]
+    },
+    {
+      "priority": "high",
+      "action": "REVIEW_CATALOG_GAP_FILL",
+      "description": "The 'catalog-gap-fill' source is producing invalid data with BMW bolt patterns. Review and fix the gap-fill algorithm."
+    },
+    {
+      "priority": "medium",
+      "action": "NORMALIZE_MODEL_NAMES",
+      "description": "Standardize 'silverado-3500' vs 'silverado-3500-hd' vs 'silverado-3500hd' naming. Consider merging duplicates."
+    },
+    {
+      "priority": "medium",
+      "action": "COMPLETE_ZR2_LTZ_DATA",
+      "description": "ZR2 and LTZ trims have incomplete wheel data (missing sizes, offsets). Pull from GM configurator or dealer docs."
+    }
+  ],
+  "sourcesUsed": [
+    "GM official specifications",
+    "performanceplustire.com (8x180 bolt pattern guide)",
+    "mtnviewchevy.com (Silverado lug pattern guide)",
+    "wheel-sizes.com (hub bore confirmation)",
+    "Wikipedia (C/K truck history, Silverado naming)",
+    "TOOLS.md HD Truck Bolt Pattern reference"
+  ]
+}

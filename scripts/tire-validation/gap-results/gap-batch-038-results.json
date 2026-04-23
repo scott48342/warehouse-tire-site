@@ -1,0 +1,393 @@
+{
+  "batchId": 38,
+  "processedAt": "2026-04-21T23:55:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "usVehicles": 24,
+    "nonUsVehicles": 19,
+    "modelYearErrors": 7
+  },
+  "vehicles": [
+    {
+      "year": 2024,
+      "make": "lexus",
+      "model": "tx",
+      "tireSizes": ["255/55R20", "255/45R22"],
+      "trims": ["350", "500h F Sport", "500h+"],
+      "wheelDiameters": [20, 22]
+    },
+    {
+      "year": 2025,
+      "make": "lexus",
+      "model": "tx",
+      "tireSizes": ["255/55R20", "255/45R22"],
+      "trims": ["350", "350 F Sport", "500h F Sport", "550h+"],
+      "wheelDiameters": [20, 22]
+    },
+    {
+      "year": 2026,
+      "make": "lexus",
+      "model": "tx",
+      "tireSizes": ["255/55R20", "255/45R22"],
+      "trims": ["350", "350 F Sport", "500h F Sport", "550h+"],
+      "wheelDiameters": [20, 22]
+    },
+    {
+      "year": 2002,
+      "make": "lincoln",
+      "model": "aviator",
+      "notUS": false,
+      "modelYearError": true,
+      "notes": "Lincoln Aviator production started 2003, not 2002. First gen was 2003-2005."
+    },
+    {
+      "year": 2002,
+      "make": "lincoln",
+      "model": "blackwood",
+      "tireSizes": ["275/55R18"],
+      "trims": ["Base Model"],
+      "wheelDiameters": [18]
+    },
+    {
+      "year": 2003,
+      "make": "lincoln",
+      "model": "blackwood",
+      "notUS": false,
+      "modelYearError": true,
+      "notes": "Lincoln Blackwood was 2002 only - single model year vehicle. No 2003 model exists."
+    },
+    {
+      "year": 2026,
+      "make": "lincoln",
+      "model": "corsair",
+      "tireSizes": ["225/60R18", "225/55R19", "245/45R20"],
+      "trims": ["Grand Touring", "Premiere", "Reserve"],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2005,
+      "make": "lincoln",
+      "model": "mark-lt",
+      "notUS": false,
+      "modelYearError": true,
+      "notes": "Lincoln Mark LT production started 2006, not 2005."
+    },
+    {
+      "year": 2006,
+      "make": "lincoln",
+      "model": "mark-lt",
+      "tireSizes": ["265/60R18", "275/65R18", "275/55R20"],
+      "trims": ["4x2", "4x4"],
+      "wheelDiameters": [18, 20]
+    },
+    {
+      "year": 2007,
+      "make": "lincoln",
+      "model": "mark-lt",
+      "tireSizes": ["265/60R18", "275/65R18", "275/55R20"],
+      "trims": ["4x2", "4x4"],
+      "wheelDiameters": [18, 20]
+    },
+    {
+      "year": 2008,
+      "make": "lincoln",
+      "model": "mark-lt",
+      "tireSizes": ["265/60R18", "275/65R18", "275/55R20"],
+      "trims": ["4x2", "4x4"],
+      "wheelDiameters": [18, 20]
+    },
+    {
+      "year": 2010,
+      "make": "lincoln",
+      "model": "mark-lt",
+      "notUS": true,
+      "notes": "Lincoln Mark LT 2010-2014 was sold only in Mexico after US production ended in 2008."
+    },
+    {
+      "year": 2011,
+      "make": "lincoln",
+      "model": "mark-lt",
+      "notUS": true,
+      "notes": "Lincoln Mark LT 2010-2014 was sold only in Mexico after US production ended in 2008."
+    },
+    {
+      "year": 2012,
+      "make": "lincoln",
+      "model": "mark-lt",
+      "notUS": true,
+      "notes": "Lincoln Mark LT 2010-2014 was sold only in Mexico after US production ended in 2008."
+    },
+    {
+      "year": 2013,
+      "make": "lincoln",
+      "model": "mark-lt",
+      "notUS": true,
+      "notes": "Lincoln Mark LT 2010-2014 was sold only in Mexico after US production ended in 2008."
+    },
+    {
+      "year": 2014,
+      "make": "lincoln",
+      "model": "mark-lt",
+      "notUS": true,
+      "notes": "Lincoln Mark LT 2010-2014 was sold only in Mexico after US production ended in 2008."
+    },
+    {
+      "year": 2008,
+      "make": "lincoln",
+      "model": "mks",
+      "notUS": false,
+      "modelYearError": true,
+      "notes": "Lincoln MKS production started 2009, not 2008."
+    },
+    {
+      "year": 2009,
+      "make": "lincoln",
+      "model": "mks",
+      "tireSizes": ["235/55R18", "255/45R19"],
+      "trims": ["AWD", "FWD"],
+      "wheelDiameters": [18, 19]
+    },
+    {
+      "year": 2010,
+      "make": "lincoln",
+      "model": "mks",
+      "tireSizes": ["235/55R18", "255/45R19", "245/45R20"],
+      "trims": ["AWD 3.5L V6 EcoBoost", "AWD 3.7L V6", "FWD"],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2011,
+      "make": "lincoln",
+      "model": "mks",
+      "tireSizes": ["235/55R18", "255/45R19", "245/45R20"],
+      "trims": ["AWD 3.5L V6 EcoBoost", "AWD 3.7L V6", "FWD"],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2012,
+      "make": "lincoln",
+      "model": "mks",
+      "tireSizes": ["235/55R18", "255/45R19", "245/45R20"],
+      "trims": ["AWD 3.5L V6 EcoBoost", "AWD 3.7L V6", "FWD"],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2013,
+      "make": "lincoln",
+      "model": "mks",
+      "tireSizes": ["235/55R18", "255/45R19", "245/45R20"],
+      "trims": ["3.5L V6 EcoBoost", "3.7L V6 AWD", "3.7L V6 FWD"],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2014,
+      "make": "lincoln",
+      "model": "mks",
+      "tireSizes": ["255/45R19", "245/45R20"],
+      "trims": ["3.5L V6 EcoBoost", "3.7L V6 AWD", "3.7L V6 FWD"],
+      "wheelDiameters": [19, 20]
+    },
+    {
+      "year": 2015,
+      "make": "lincoln",
+      "model": "mks",
+      "tireSizes": ["255/45R19", "245/45R20"],
+      "trims": ["3.5L V6 Ecoboost", "3.7L V6 AWD", "3.7L V6 FWD"],
+      "wheelDiameters": [19, 20]
+    },
+    {
+      "year": 2016,
+      "make": "lincoln",
+      "model": "mks",
+      "tireSizes": ["255/45R19", "245/45R20"],
+      "trims": ["3.5L V6 Ecoboost", "3.7L V6 AWD", "3.7L V6 FWD"],
+      "wheelDiameters": [19, 20]
+    },
+    {
+      "year": 2026,
+      "make": "lincoln",
+      "model": "nautilus",
+      "tireSizes": ["255/60R19", "255/55R20", "255/50R21", "255/45R22"],
+      "trims": ["Black Label", "Premiere", "Reserve"],
+      "wheelDiameters": [19, 20, 21, 22]
+    },
+    {
+      "year": 2022,
+      "make": "lincoln",
+      "model": "z-zephyr",
+      "notUS": true,
+      "notes": "Lincoln Zephyr (2022+) is sold exclusively in China market. Different from 2006 US Zephyr."
+    },
+    {
+      "year": 2023,
+      "make": "lincoln",
+      "model": "z-zephyr",
+      "notUS": true,
+      "notes": "Lincoln Zephyr (2022+) is sold exclusively in China market. Different from 2006 US Zephyr."
+    },
+    {
+      "year": 2024,
+      "make": "lincoln",
+      "model": "z-zephyr",
+      "notUS": true,
+      "notes": "Lincoln Zephyr (2022+) is sold exclusively in China market. Different from 2006 US Zephyr."
+    },
+    {
+      "year": 2025,
+      "make": "lincoln",
+      "model": "z-zephyr",
+      "notUS": true,
+      "notes": "Lincoln Zephyr (2022+) is sold exclusively in China market. Different from 2006 US Zephyr."
+    },
+    {
+      "year": 2006,
+      "make": "lincoln",
+      "model": "zephyr",
+      "tireSizes": ["225/50R17"],
+      "trims": ["Base Model"],
+      "wheelDiameters": [17],
+      "notes": "2006 was the only model year for US Lincoln Zephyr. Renamed to MKZ for 2007+."
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "121",
+      "notUS": true,
+      "notes": "Mazda 121 was sold in Europe, Australia, and other markets - never available in the US."
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "121",
+      "notUS": true,
+      "notes": "Mazda 121 was sold in Europe, Australia, and other markets - never available in the US."
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "121",
+      "notUS": true,
+      "notes": "Mazda 121 was sold in Europe, Australia, and other markets - never available in the US."
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "626",
+      "tireSizes": ["205/60R15", "205/55R16"],
+      "trims": ["ES", "ES V6", "LX", "LX V6"],
+      "wheelDiameters": [15, 16]
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "626",
+      "tireSizes": ["205/60R15", "205/55R16"],
+      "trims": ["ES", "ES V6", "LX", "LX V6"],
+      "wheelDiameters": [15, 16],
+      "notes": "Same specs as 2000 model year"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "626",
+      "tireSizes": ["205/60R15", "205/55R16"],
+      "trims": ["ES", "ES V6", "LX", "LX V6"],
+      "wheelDiameters": [15, 16],
+      "notes": "Final model year for Mazda 626 in US"
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "allegro",
+      "notUS": true,
+      "notes": "Mazda Allegro was sold in Latin America (Colombia, Venezuela, Ecuador) - rebadged Ford Escort/Laser. Never sold in US."
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "allegro",
+      "notUS": true,
+      "notes": "Mazda Allegro was sold in Latin America - never sold in US."
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "allegro",
+      "notUS": true,
+      "notes": "Mazda Allegro was sold in Latin America - never sold in US."
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "allegro",
+      "notUS": true,
+      "notes": "Mazda Allegro was sold in Latin America - never sold in US."
+    },
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "allegro",
+      "notUS": true,
+      "notes": "Mazda Allegro was sold in Latin America - never sold in US."
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "allegro",
+      "notUS": true,
+      "notes": "Mazda Allegro was sold in Latin America - never sold in US."
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "allegro",
+      "notUS": true,
+      "notes": "Mazda Allegro was sold in Latin America - never sold in US."
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "allegro",
+      "notUS": true,
+      "notes": "Mazda Allegro was sold in Latin America - never sold in US."
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "cx-30-ev",
+      "notUS": true,
+      "notes": "Mazda CX-30 EV is a China-only electric version of the CX-30. Regular CX-30 (gas) is sold in US."
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "cx-30-ev",
+      "notUS": true,
+      "notes": "Mazda CX-30 EV is a China-only electric version of the CX-30. Regular CX-30 (gas) is sold in US."
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "cx-30-ev",
+      "notUS": true,
+      "notes": "Mazda CX-30 EV is a China-only electric version of the CX-30. Regular CX-30 (gas) is sold in US."
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "cx-30-ev",
+      "notUS": true,
+      "notes": "Mazda CX-30 EV is a China-only electric version of the CX-30. Regular CX-30 (gas) is sold in US."
+    },
+    {
+      "year": 2026,
+      "make": "mazda",
+      "model": "cx-50",
+      "tireSizes": ["225/65R17", "225/60R18", "245/45R20", "225/55R19"],
+      "trims": ["2.5 S Meridian Edition", "2.5 S Preferred", "2.5 S Premium", "2.5 S Select", "2.5 Turbo", "2.5 Turbo Meridian Edition", "2.5 Turbo Premium Plus", "Hybrid Preferred", "Hybrid Premium", "Hybrid Premium Plus"],
+      "wheelDiameters": [17, 18, 19, 20],
+      "missingTires": false
+    }
+  ]
+}

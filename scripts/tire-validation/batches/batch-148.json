@@ -1,0 +1,508 @@
+{
+  "batchId": "148",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": [
+        "275/70R16",
+        "275/65R17",
+        "275/60R18"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": [
+        "275/70R16",
+        "275/65R17",
+        "275/60R18"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": [
+        "275/70R16",
+        "275/65R17",
+        "275/60R18"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "lite-ace-noah",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "lite-ace-noah",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "majesty",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "majesty",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "majesty",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "majesty",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "majesty",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "majesty",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "majesty",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mark-ii-qualis",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mark-ii-qualis",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mark-ii-qualis",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mega-cruiser",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mega-cruiser",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "mirai",
+      "currentTireSizes": [
+        "235/55R19",
+        "245/45R20"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "mr-s",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr-s",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr-s",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr-s",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr-s",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr-s",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr-s",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr-s",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "nav1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "nav1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "nav1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "nav1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "nav1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "nav1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "nav1",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "origin",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "origin",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "picnic",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "picnic",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "picnic",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "picnic",
+      "currentTireSizes": []
+    }
+  ]
+}

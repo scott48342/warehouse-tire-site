@@ -1,0 +1,1434 @@
+{
+  "batch": "batch-14-european",
+  "verifiedAt": "2026-04-23T00:22:00Z",
+  "verifiedBy": "subagent-verify-euro-14",
+  "summary": {
+    "totalVehicles": 75,
+    "verified": 43,
+    "invalid": 27,
+    "futureYears": 5
+  },
+  "notes": "This batch contains Land Rover and Maserati vehicles. Many entries have invalid model years - original Defender was not sold in US (new gen started 2020), and Maserati GranTurismo was discontinued 2019 (new gen 2024).",
+  "vehicles": [
+    {
+      "year": 2001,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender (1983-2016) was NEVER sold in US market. New Defender started 2020 MY.",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "Original Defender not sold in US market",
+      "confidence": "high",
+      "sources": ["Wikipedia", "tirewheelguide.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "INVALID",
+      "reason": "New Defender (L663) started 2020 MY in US. No 2019 model exists.",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Defender",
+      "status": "FUTURE_YEAR",
+      "reason": "Future model year - specs not yet confirmed",
+      "confidence": "low",
+      "sources": []
+    },
+    {
+      "year": 2005,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE (4.0i V6)",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["255/60R18"]
+        },
+        {
+          "name": "HSE (4.4i V8)",
+          "oemWheelSizes": ["19x8", "20x8.5"],
+          "oemTireSizes": ["255/55R19", "255/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "edmunds.com"],
+      "notes": "Sold as LR3 in US market (2005-2009)"
+    },
+    {
+      "year": 2006,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE (4.0i V6)",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["255/60R18"]
+        },
+        {
+          "name": "HSE (4.4i V8)",
+          "oemWheelSizes": ["19x8", "20x8.5"],
+          "oemTireSizes": ["255/55R19", "255/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Sold as LR3 in US market"
+    },
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["255/60R18"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8", "20x8.5"],
+          "oemTireSizes": ["255/55R19", "255/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Sold as LR3 in US market"
+    },
+    {
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["255/60R18"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8", "20x8.5"],
+          "oemTireSizes": ["255/55R19", "255/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Sold as LR3 in US market"
+    },
+    {
+      "year": 2009,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["255/60R18"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8", "20x8.5"],
+          "oemTireSizes": ["255/55R19", "255/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of LR3 in US market"
+    },
+    {
+      "year": 2010,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "LR4",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["255/55R19"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Sold as LR4 in US market (2010-2016). First year of 4th gen Discovery."
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "LR4",
+          "oemWheelSizes": ["19x8", "20x8.5"],
+          "oemTireSizes": ["255/55R19", "255/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Sold as LR4 in US market"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "INVALID",
+      "reason": "Discovery Sport started 2015 MY in US market. No 2014 model exists.",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["235/60R18"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["235/55R19"]
+        },
+        {
+          "name": "HSE Luxury",
+          "oemWheelSizes": ["20x8", "20x8.5"],
+          "oemTireSizes": ["235/50R20", "245/45R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["235/60R18"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["235/55R19"]
+        },
+        {
+          "name": "HSE Luxury",
+          "oemWheelSizes": ["20x8"],
+          "oemTireSizes": ["235/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["235/60R18"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["235/55R19"]
+        },
+        {
+          "name": "HSE Luxury",
+          "oemWheelSizes": ["20x8"],
+          "oemTireSizes": ["235/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["235/60R18"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["235/55R19"]
+        },
+        {
+          "name": "HSE Luxury",
+          "oemWheelSizes": ["20x8"],
+          "oemTireSizes": ["235/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["235/60R18"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["235/55R19"]
+        },
+        {
+          "name": "HSE Luxury",
+          "oemWheelSizes": ["20x8"],
+          "oemTireSizes": ["235/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "S",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["235/60R18"]
+        },
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["235/55R19"]
+        },
+        {
+          "name": "R-Dynamic HSE",
+          "oemWheelSizes": ["20x8"],
+          "oemTireSizes": ["235/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"],
+      "notes": "2020 was facelift year with new trims"
+    },
+    {
+      "year": 2021,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "S",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["235/60R18"]
+        },
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["235/55R19"]
+        },
+        {
+          "name": "R-Dynamic HSE",
+          "oemWheelSizes": ["20x8"],
+          "oemTireSizes": ["235/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "S",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["235/60R18"]
+        },
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["235/55R19"]
+        },
+        {
+          "name": "R-Dynamic HSE",
+          "oemWheelSizes": ["20x8"],
+          "oemTireSizes": ["235/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "S",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["235/60R18"]
+        },
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["235/55R19"]
+        },
+        {
+          "name": "R-Dynamic HSE",
+          "oemWheelSizes": ["20x8"],
+          "oemTireSizes": ["235/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "S",
+          "oemWheelSizes": ["18x8"],
+          "oemTireSizes": ["235/60R18"]
+        },
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x8"],
+          "oemTireSizes": ["235/55R19"]
+        },
+        {
+          "name": "R-Dynamic HSE",
+          "oemWheelSizes": ["20x8"],
+          "oemTireSizes": ["235/50R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "FUTURE_YEAR",
+      "reason": "Future model year - specs likely same as 2024 but not confirmed",
+      "confidence": "low",
+      "sources": []
+    },
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "status": "FUTURE_YEAR",
+      "reason": "Future model year",
+      "confidence": "low",
+      "sources": []
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "status": "INVALID",
+      "reason": "Range Rover Evoque started 2012 MY in US market. No 2011 model exists.",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "status": "FUTURE_YEAR",
+      "reason": "Future model year",
+      "confidence": "low",
+      "sources": []
+    },
+    {
+      "year": 2005,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "INVALID",
+      "reason": "Range Rover Sport started 2006 MY in US market. No 2005 model exists.",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "HSE (4.4i V8)",
+          "oemWheelSizes": ["18x8", "19x9"],
+          "oemTireSizes": ["255/55R18", "255/50R19"]
+        },
+        {
+          "name": "Supercharged (4.2SC V8)",
+          "oemWheelSizes": ["19x9", "20x9.5"],
+          "oemTireSizes": ["255/50R19", "275/40R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["18x8", "19x9"],
+          "oemTireSizes": ["255/55R18", "255/50R19"]
+        },
+        {
+          "name": "Supercharged",
+          "oemWheelSizes": ["19x9", "20x9.5"],
+          "oemTireSizes": ["255/50R19", "275/40R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["18x8", "19x9"],
+          "oemTireSizes": ["255/55R18", "255/50R19"]
+        },
+        {
+          "name": "Supercharged",
+          "oemWheelSizes": ["19x9", "20x9.5"],
+          "oemTireSizes": ["255/50R19", "275/40R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["18x8", "19x9"],
+          "oemTireSizes": ["255/55R18", "255/50R19"]
+        },
+        {
+          "name": "Supercharged",
+          "oemWheelSizes": ["19x9", "20x9.5"],
+          "oemTireSizes": ["255/50R19", "275/40R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8", "20x9"],
+          "oemTireSizes": ["255/55R19", "275/45R20"]
+        },
+        {
+          "name": "Supercharged",
+          "oemWheelSizes": ["20x9.5"],
+          "oemTireSizes": ["275/40R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "L320 Facelift started 2010"
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8", "20x9"],
+          "oemTireSizes": ["255/55R19", "275/45R20"]
+        },
+        {
+          "name": "Supercharged",
+          "oemWheelSizes": ["20x9.5"],
+          "oemTireSizes": ["275/40R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8", "20x9"],
+          "oemTireSizes": ["255/55R19", "275/45R20"]
+        },
+        {
+          "name": "Supercharged",
+          "oemWheelSizes": ["20x9.5"],
+          "oemTireSizes": ["275/40R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["19x8", "20x9"],
+          "oemTireSizes": ["255/55R19", "275/45R20"]
+        },
+        {
+          "name": "Supercharged",
+          "oemWheelSizes": ["20x9.5"],
+          "oemTireSizes": ["275/40R20"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of L320 generation"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x7.5"],
+          "oemTireSizes": ["235/65R19"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["20x8.5"],
+          "oemTireSizes": ["255/55R20"]
+        },
+        {
+          "name": "Supercharged",
+          "oemWheelSizes": ["21x9.5", "22x9.5"],
+          "oemTireSizes": ["275/45R21", "275/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "L494 second generation started 2014"
+    },
+    {
+      "year": 2015,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x7.5"],
+          "oemTireSizes": ["235/65R19"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["20x8.5"],
+          "oemTireSizes": ["255/55R20"]
+        },
+        {
+          "name": "Supercharged",
+          "oemWheelSizes": ["21x9.5", "22x9.5"],
+          "oemTireSizes": ["275/45R21", "275/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x7.5"],
+          "oemTireSizes": ["235/65R19"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["20x8.5"],
+          "oemTireSizes": ["255/55R20"]
+        },
+        {
+          "name": "SVR",
+          "oemWheelSizes": ["21x9.5", "22x9.5"],
+          "oemTireSizes": ["275/45R21", "275/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x7.5"],
+          "oemTireSizes": ["235/65R19"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["20x8.5"],
+          "oemTireSizes": ["255/55R20"]
+        },
+        {
+          "name": "SVR",
+          "oemWheelSizes": ["21x9.5", "22x9.5"],
+          "oemTireSizes": ["275/45R21", "275/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x7.5"],
+          "oemTireSizes": ["235/65R19"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["20x8.5"],
+          "oemTireSizes": ["255/55R20"]
+        },
+        {
+          "name": "SVR",
+          "oemWheelSizes": ["21x9.5", "22x9.5"],
+          "oemTireSizes": ["275/45R21", "275/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "L494 Facelift started 2018"
+    },
+    {
+      "year": 2019,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x7.5"],
+          "oemTireSizes": ["235/65R19"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["20x8.5"],
+          "oemTireSizes": ["255/55R20"]
+        },
+        {
+          "name": "SVR",
+          "oemWheelSizes": ["21x9.5", "22x9.5"],
+          "oemTireSizes": ["275/45R21", "275/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x7.5"],
+          "oemTireSizes": ["235/65R19"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["20x8.5"],
+          "oemTireSizes": ["255/55R20"]
+        },
+        {
+          "name": "SVR",
+          "oemWheelSizes": ["21x9.5", "22x9.5"],
+          "oemTireSizes": ["275/45R21", "275/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x7.5"],
+          "oemTireSizes": ["235/65R19"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["20x8.5"],
+          "oemTireSizes": ["255/55R20"]
+        },
+        {
+          "name": "SVR",
+          "oemWheelSizes": ["21x9.5", "22x9.5"],
+          "oemTireSizes": ["275/45R21", "275/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["19x7.5"],
+          "oemTireSizes": ["235/65R19"]
+        },
+        {
+          "name": "HSE",
+          "oemWheelSizes": ["20x8.5"],
+          "oemTireSizes": ["255/55R20"]
+        },
+        {
+          "name": "SVR",
+          "oemWheelSizes": ["21x9.5", "22x9.5"],
+          "oemTireSizes": ["275/45R21", "275/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of L494, third gen L461 also started mid-2022"
+    },
+    {
+      "year": 2023,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["21x8.5"],
+          "oemTireSizes": ["275/45R21"]
+        },
+        {
+          "name": "HSE Dynamic",
+          "oemWheelSizes": ["22x9.5"],
+          "oemTireSizes": ["275/40R22"]
+        },
+        {
+          "name": "First Edition",
+          "oemWheelSizes": ["23x9.5"],
+          "oemTireSizes": ["285/40R23"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "bonoss.com"],
+      "notes": "L461 third generation. Larger wheel sizes standard."
+    },
+    {
+      "year": 2024,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "VERIFIED",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSizes": ["21x8.5"],
+          "oemTireSizes": ["275/45R21"]
+        },
+        {
+          "name": "Dynamic SE",
+          "oemWheelSizes": ["22x9.5"],
+          "oemTireSizes": ["275/40R22"]
+        },
+        {
+          "name": "SV",
+          "oemWheelSizes": ["23x9.5"],
+          "oemTireSizes": ["285/40R23"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "bonoss.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "FUTURE_YEAR",
+      "reason": "Future model year - specs likely same as 2024",
+      "confidence": "low",
+      "sources": []
+    },
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "status": "FUTURE_YEAR",
+      "reason": "Future model year",
+      "confidence": "low",
+      "sources": []
+    },
+    {
+      "year": 2017,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "P250",
+          "oemWheelSizes": ["18x7.5", "19x8.5", "20x8.5"],
+          "oemTireSizes": ["235/65R18", "255/55R19", "255/50R20"]
+        },
+        {
+          "name": "P380",
+          "oemWheelSizes": ["21x8.5", "22x9"],
+          "oemTireSizes": ["265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Some 2017 production; most US sales were 2018 MY"
+    },
+    {
+      "year": 2018,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "P250 S",
+          "oemWheelSizes": ["18x7.5", "19x8.5"],
+          "oemTireSizes": ["235/65R18", "255/55R19"]
+        },
+        {
+          "name": "P250 R-Dynamic SE",
+          "oemWheelSizes": ["20x8.5", "21x8.5"],
+          "oemTireSizes": ["255/50R20", "265/45R21"]
+        },
+        {
+          "name": "P380 R-Dynamic HSE",
+          "oemWheelSizes": ["21x8.5", "22x9"],
+          "oemTireSizes": ["265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com", "motortrend.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "P250",
+          "oemWheelSizes": ["18x7.5", "19x8.5", "20x8.5"],
+          "oemTireSizes": ["235/65R18", "255/55R19", "255/50R20"]
+        },
+        {
+          "name": "P380",
+          "oemWheelSizes": ["21x8.5", "22x9"],
+          "oemTireSizes": ["265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "P250",
+          "oemWheelSizes": ["18x7.5", "19x8.5", "20x8.5"],
+          "oemTireSizes": ["235/65R18", "255/55R19", "255/50R20"]
+        },
+        {
+          "name": "P400",
+          "oemWheelSizes": ["21x8.5", "22x9"],
+          "oemTireSizes": ["265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "P250",
+          "oemWheelSizes": ["18x7.5", "19x8.5", "20x8.5"],
+          "oemTireSizes": ["235/65R18", "255/55R19", "255/50R20"]
+        },
+        {
+          "name": "P400",
+          "oemWheelSizes": ["21x8.5", "22x9"],
+          "oemTireSizes": ["265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "P250",
+          "oemWheelSizes": ["18x7.5", "19x8.5", "20x8.5"],
+          "oemTireSizes": ["235/65R18", "255/55R19", "255/50R20"]
+        },
+        {
+          "name": "P400",
+          "oemWheelSizes": ["21x8.5", "22x9"],
+          "oemTireSizes": ["265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "P250",
+          "oemWheelSizes": ["19x8.5", "20x8.5"],
+          "oemTireSizes": ["255/55R19", "255/50R20"]
+        },
+        {
+          "name": "P400",
+          "oemWheelSizes": ["21x8.5", "22x9"],
+          "oemTireSizes": ["265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "status": "VERIFIED",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {
+          "name": "P250",
+          "oemWheelSizes": ["19x8.5", "20x8.5"],
+          "oemTireSizes": ["255/55R19", "255/50R20"]
+        },
+        {
+          "name": "P400",
+          "oemWheelSizes": ["21x8.5", "22x9"],
+          "oemTireSizes": ["265/45R21", "265/40R22"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "status": "FUTURE_YEAR",
+      "reason": "Future model year",
+      "confidence": "low",
+      "sources": []
+    },
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "status": "FUTURE_YEAR",
+      "reason": "Future model year",
+      "confidence": "low",
+      "sources": []
+    },
+    {
+      "year": 2020,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "status": "INVALID",
+      "reason": "Maserati GranTurismo was DISCONTINUED in December 2019. Production gap 2020-2023. New generation started 2024.",
+      "confidence": "high",
+      "sources": ["Wikipedia", "autoevolution.com", "cars.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "status": "INVALID",
+      "reason": "Maserati GranTurismo was not produced from 2020-2023",
+      "confidence": "high",
+      "sources": ["Wikipedia", "autoevolution.com", "cars.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "status": "INVALID",
+      "reason": "Maserati GranTurismo was not produced from 2020-2023",
+      "confidence": "high",
+      "sources": ["Wikipedia", "autoevolution.com", "cars.com"]
+    }
+  ],
+  "landRoverFitmentSummary": {
+    "defenderL663": {
+      "years": "2020-present",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "oemTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "notes": "New generation Defender. Original Defender (1983-2016) was not sold in US."
+    },
+    "discoveryLR3": {
+      "years": "2005-2009",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "oemTireSizes": ["255/60R18", "255/55R19", "255/50R20"],
+      "notes": "Sold as LR3 in US market"
+    },
+    "discoverySport": {
+      "years": "2015-present",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "oemTireSizes": ["235/60R18", "235/55R19", "235/50R20"],
+      "notes": "Started 2015 MY in US. No 2014 model."
+    },
+    "rangeRoverEvoque": {
+      "years": "2012-present",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "oemTireSizes": ["225/65R17", "235/60R18", "235/55R19", "245/45R20"],
+      "notes": "Started 2012 MY in US. No 2011 model."
+    },
+    "rangeRoverSportL320": {
+      "years": "2006-2013",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "oemTireSizes": ["255/55R18", "255/50R19", "275/40R20"],
+      "notes": "First generation. Started 2006 MY, no 2005."
+    },
+    "rangeRoverSportL494": {
+      "years": "2014-2022",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "oemTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "notes": "Second generation with facelift in 2018"
+    },
+    "rangeRoverSportL461": {
+      "years": "2023-present",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "oemTireSizes": ["275/45R21", "275/40R22", "285/40R23"],
+      "notes": "Third generation. Larger standard wheels."
+    },
+    "rangeRoverVelar": {
+      "years": "2018-present",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "oemTireSizes": ["235/65R18", "255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "notes": "Some 2017 production but most US 2018 MY"
+    }
+  }
+}

@@ -1,0 +1,4163 @@
+[
+  {
+    "id": "1a678ea6-6aba-4513-9b86-ef9fddb17117",
+    "year": 2023,
+    "make": "porsche",
+    "model": "boxster",
+    "trim": "Base, S, GTS, Spyder",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R17",
+      "255/40R17",
+      "235/40R18",
+      "265/40R18",
+      "235/35R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "bf7855d1-5d52-4867-a47f-bdd12d990713",
+    "year": 2024,
+    "make": "porsche",
+    "model": "boxster",
+    "trim": "Base, S, GTS, Spyder",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R17",
+      "255/40R17",
+      "235/40R18",
+      "265/40R18",
+      "235/35R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "853e31fd-f720-4fba-92d9-c8009cab0c5d",
+    "year": 2025,
+    "make": "porsche",
+    "model": "boxster",
+    "trim": "Base, S, GTS, Spyder",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R17",
+      "255/40R17",
+      "235/40R18",
+      "265/40R18",
+      "235/35R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "16298630-aee7-44c7-b4ef-d8100c9de518",
+    "year": 2026,
+    "make": "porsche",
+    "model": "boxster",
+    "trim": "Base, S, GTS, Spyder",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R17",
+      "255/40R17",
+      "235/40R18",
+      "265/40R18",
+      "235/35R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "80c94fdb-d8f5-480e-a4ec-84613db53ed3",
+    "year": 2002,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 53,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 57,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 60,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 50,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "275/45R20",
+      "285/40R21",
+      "315/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "259240b8-ba9e-43a9-a04a-d6273c7ee551",
+    "year": 2003,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "235/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/35R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "275/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "1532da8a-95ca-438a-b93a-caf3b20c65ba",
+    "year": 2004,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "235/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/35R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "275/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0936ee91-bbaa-4713-a45d-54fa2b34d5ff",
+    "year": 2005,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "235/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/35R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "275/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "39a89c0c-453c-4e5c-90ee-723ec61c7327",
+    "year": 2006,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "235/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/35R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "275/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a2b1b3de-4d84-49b0-9e02-c40b08e5b423",
+    "year": 2007,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "235/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/35R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "275/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e17ed54f-909b-44bc-bae1-0162d0737c63",
+    "year": 2008,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "235/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/35R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "275/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b257dc1f-f63a-40f9-bbf6-9aa830afd429",
+    "year": 2009,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "235/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/35R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "275/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "49dab399-bf12-4f91-beed-ce690100adf8",
+    "year": 2010,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "235/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/35R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "275/45R19",
+      "275/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "48e791df-1382-448a-bd94-da84b43527a7",
+    "year": 2011,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "255/55R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "265/50R19",
+      "275/45R20",
+      "295/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "76820b26-535b-474c-9a55-08c3bcdad47a",
+    "year": 2012,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "255/55R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "265/50R19",
+      "275/45R20",
+      "295/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "12bf502a-41ea-4f61-9f91-b1e524086e9a",
+    "year": 2013,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "255/55R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "265/50R19",
+      "275/45R20",
+      "295/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e263523e-a1fa-4c3c-b5f2-6a32041bb927",
+    "year": 2014,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "255/55R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 53,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 57,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 10,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 47,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "265/50R19",
+      "275/45R20",
+      "295/40R20",
+      "295/35R21",
+      "255/55ZR18",
+      "265/50ZR19",
+      "275/45ZR20",
+      "295/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f7a283f9-de25-4e3b-b36c-5a3507b085bc",
+    "year": 2015,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "255/55R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "265/50R19",
+      "275/45R20",
+      "295/40R20",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "16a5224e-f07a-4a8e-ae2b-e1d377c7ab27",
+    "year": 2016,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "255/55R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 53,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 57,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 10,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 47,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "265/50R19",
+      "275/45R20",
+      "295/40R20",
+      "295/35R21",
+      "255/55ZR18",
+      "265/50ZR19",
+      "275/45ZR20",
+      "295/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "26f86e9e-16d3-4214-9e33-f16f8200bddd",
+    "year": 2017,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "255/55R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 53,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 59,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 57,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 10,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 47,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "265/50R19",
+      "275/45R20",
+      "295/40R20",
+      "295/35R21",
+      "255/55ZR18",
+      "265/50ZR19",
+      "275/45ZR20",
+      "295/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "76e1fa47-af88-4efe-8f9f-11afb8b3dcea",
+    "year": 2018,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "255/55R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 54,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 64,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 46,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 61,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "265/50R19",
+      "275/45R20",
+      "295/40R20",
+      "295/35R21",
+      "255/55ZR19",
+      "275/50ZR19",
+      "275/45ZR20",
+      "305/40ZR20",
+      "285/40ZR21",
+      "315/35ZR21",
+      "255/55R19",
+      "275/50R19",
+      "305/40R20",
+      "275/40R21",
+      "305/35R21",
+      "285/35ZR22",
+      "315/30ZR22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d97353a0-3630-4550-a4e5-e9469c22efb6",
+    "year": 2019,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "335/30R22"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "285/40R21",
+      "305/35R21",
+      "285/35R22",
+      "335/30R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "de339359-8724-49c4-8f45-5b2a302c9777",
+    "year": 2020,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "335/30R22"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "285/40R21",
+      "305/35R21",
+      "285/35R22",
+      "335/30R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d6194c2f-f718-443a-8883-58296a140083",
+    "year": 2021,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "335/30R22"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "285/40R21",
+      "305/35R21",
+      "285/35R22",
+      "335/30R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "c609376d-8574-4e19-8a00-9c9969da06fa",
+    "year": 2022,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "335/30R22"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 64,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 46,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 58,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 61,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "285/40R21",
+      "305/35R21",
+      "285/35R22",
+      "335/30R22",
+      "255/55ZR19",
+      "275/50ZR19",
+      "275/45ZR20",
+      "305/40ZR20",
+      "285/40ZR21",
+      "315/35ZR21",
+      "275/50R19",
+      "305/40R20",
+      "275/40R21",
+      "285/35ZR22",
+      "315/30ZR22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f65ecb6f-a1a8-44c4-8330-b7a96a311414",
+    "year": 2023,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "335/30R22"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 64,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 46,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 58,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 61,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "285/40R21",
+      "305/35R21",
+      "285/35R22",
+      "335/30R22",
+      "255/55ZR19",
+      "275/50ZR19",
+      "275/45ZR20",
+      "305/40ZR20",
+      "285/40ZR21",
+      "315/35ZR21",
+      "275/50R19",
+      "305/40R20",
+      "275/40R21",
+      "285/35ZR22",
+      "315/30ZR22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "1bbd2a43-7489-4585-94ba-a595cc9122f5",
+    "year": 2024,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "335/30R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 64,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 46,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 58,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 61,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "285/40R21",
+      "305/35R21",
+      "285/35R22",
+      "335/30R22",
+      "255/55ZR20",
+      "295/45ZR20",
+      "285/45ZR21",
+      "315/40ZR21",
+      "285/40ZR22",
+      "315/35ZR22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d84aa4de-a337-4a44-8233-be829f78a550",
+    "year": 2025,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "335/30R22"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "285/40R21",
+      "305/35R21",
+      "285/35R22",
+      "335/30R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f25fb025-82cb-4700-9950-bba278f3fe62",
+    "year": 2026,
+    "make": "porsche",
+    "model": "cayenne",
+    "trim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 13,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "335/30R22"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "285/40R21",
+      "305/35R21",
+      "285/35R22",
+      "335/30R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "ea82e235-ddeb-4f20-a758-c027b5f19622",
+    "year": 2005,
+    "make": "porsche",
+    "model": "cayman",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/40R18",
+      "265/40R18",
+      "235/35R19",
+      "275/35R19",
+      "245/35R20",
+      "295/30R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "1b0fcb86-d93a-41e6-a867-161ef7ff5e20",
+    "year": 2014,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "2.0 Macan",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60ZR18",
+      "255/55ZR18",
+      "235/60R18",
+      "255/55R18",
+      "235/55ZR19",
+      "255/50ZR19",
+      "265/45ZR20",
+      "295/40ZR20",
+      "265/40ZR21",
+      "295/35ZR21",
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f5f3f59d-960d-4b6a-b7eb-ab2e5c1c3ff7",
+    "year": 2015,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/60R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "898c7529-392c-4486-9410-8302b4774832",
+    "year": 2016,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/60R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21",
+      "235/60ZR18",
+      "255/55ZR18",
+      "255/55R18",
+      "235/55ZR19",
+      "255/50ZR19",
+      "265/45ZR20",
+      "295/40ZR20",
+      "265/40ZR21",
+      "295/35ZR21",
+      "255/55R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "890b9fa1-bbb4-48e2-b69e-ad102a357e3b",
+    "year": 2017,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/60R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21",
+      "235/60ZR18",
+      "255/55ZR18",
+      "255/55R18",
+      "235/55ZR19",
+      "255/50ZR19",
+      "265/45ZR20",
+      "295/40ZR20",
+      "265/40ZR21",
+      "295/35ZR21",
+      "255/55R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ea999c10-d78e-4fa3-95bc-c5639c7600bb",
+    "year": 2018,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/60R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e4d65a85-02df-4dc1-8362-fa7d1cb7849e",
+    "year": 2019,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/60R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e63ccd4f-726f-49c9-9b57-566eeb7d9d13",
+    "year": 2020,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/60R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "96cdb8b8-a34f-45da-a72a-9e61d8e3899f",
+    "year": 2021,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/60R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21",
+      "235/60ZR18",
+      "255/55ZR18",
+      "255/55R18",
+      "235/55ZR19",
+      "255/50ZR19",
+      "265/45ZR20",
+      "295/40ZR20",
+      "265/40ZR21",
+      "295/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "76f52de5-de8d-47e1-8cbf-c6c79c8e71fe",
+    "year": 2022,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/60R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21",
+      "265/45ZR20",
+      "295/40ZR20",
+      "235/55ZR19",
+      "255/50ZR19",
+      "265/40ZR21",
+      "295/35ZR21",
+      "235/60ZR18",
+      "255/55ZR18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "fe80bd63-b791-4c2a-8807-47652964e380",
+    "year": 2023,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/60R18"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "295/40R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21",
+      "265/45ZR20",
+      "295/40ZR20",
+      "235/55ZR19",
+      "255/50ZR19",
+      "265/40ZR21",
+      "295/35ZR21",
+      "235/60ZR18",
+      "255/55ZR18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e3d3a154-ac34-465e-b9a2-440f01c5c11c",
+    "year": 2024,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "295/40R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 19,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 21,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21",
+      "265/35R22",
+      "295/30R22",
+      "265/45ZR20",
+      "295/40ZR20",
+      "235/55ZR19",
+      "255/50ZR19",
+      "265/40ZR21",
+      "295/35ZR21",
+      "235/60ZR18",
+      "255/55ZR18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3904b0c4-716a-4e8d-ab4c-ca044910f8f7",
+    "year": 2025,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "295/40R20"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21",
+      "265/35R22",
+      "295/30R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0cb5fd95-062d-4778-a170-f4c82296b39f",
+    "year": 2026,
+    "make": "porsche",
+    "model": "macan",
+    "trim": "Base, S, GTS, Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": "66.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "255/55R19"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "295/40R20"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21",
+      "265/35R22",
+      "295/30R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a91889f3-3b65-4249-9502-b860777c0a60",
+    "year": 2010,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "315/30R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "265/45R19",
+      "265/45R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c0884215-0432-4e92-99eb-be73e0421714",
+    "year": 2011,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "315/30R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "265/45R19",
+      "265/45R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d0e998a1-4f69-4c3c-a5e5-98a2085bd2a6",
+    "year": 2012,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "315/30R21"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 59,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 61,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 68,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 63,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "265/45R19",
+      "265/45R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "245/50ZR18",
+      "275/45ZR18",
+      "275/45R18",
+      "255/45ZR19",
+      "285/40ZR19",
+      "255/40ZR20",
+      "295/35ZR20",
+      "255/45R19",
+      "285/40R19",
+      "255/40R20",
+      "285/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "008378bd-b30d-4e0c-842f-1dab707c7479",
+    "year": 2013,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "315/30R21"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 59,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 61,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 68,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 63,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "265/45R19",
+      "265/45R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "275/45R18",
+      "255/45ZR19",
+      "285/40ZR19",
+      "255/40ZR20",
+      "295/35ZR20",
+      "255/45R19",
+      "285/40R19",
+      "245/50ZR18",
+      "255/40R20",
+      "285/35R20",
+      "275/45ZR18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2c2f06f7-cf80-499a-b388-de606a860d75",
+    "year": 2014,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "315/30R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "265/45R19",
+      "265/45R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b40c6bb6-08c0-4672-a575-d05b82ff6955",
+    "year": 2015,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "315/30R21"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 59,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 61,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 68,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 63,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "265/45R19",
+      "265/45R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "245/50ZR18",
+      "275/45ZR18",
+      "275/45R18",
+      "255/45ZR19",
+      "285/40ZR19",
+      "255/40ZR20",
+      "295/35ZR20",
+      "255/45R19",
+      "285/40R19",
+      "255/40R20",
+      "285/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e990b6ee-539b-421a-a121-26ca4ef053d1",
+    "year": 2016,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21,
+        "tireSize": "315/30R21"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 64,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 62,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 68,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 69,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "265/45R19",
+      "265/45R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "265/45ZR19",
+      "295/40ZR19",
+      "295/40R19",
+      "275/40ZR20",
+      "315/35ZR20",
+      "275/35ZR21",
+      "315/30ZR21",
+      "275/40R20",
+      "315/35R20",
+      "265/30ZR22",
+      "315/25ZR22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "778e4165-0b80-43bb-a811-a0639eb8a930",
+    "year": 2017,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "265/45R19"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "315/30R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R19",
+      "275/40R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "285/30R22",
+      "315/25R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "3f8620d1-84ef-4eef-8ed7-c95587d5d238",
+    "year": 2018,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "265/45R19"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "315/30R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R19",
+      "275/40R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "285/30R22",
+      "315/25R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "22500ad3-aa74-4186-b6df-2e5c70fd5154",
+    "year": 2019,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "265/45R19"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "315/30R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R19",
+      "275/40R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "285/30R22",
+      "315/25R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d85566ed-563f-4198-91e3-6a646a539b77",
+    "year": 2020,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "265/45R19"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "315/30R21"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 64,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 62,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 68,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 69,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R19",
+      "275/40R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "285/30R22",
+      "315/25R22",
+      "265/45ZR19",
+      "295/40ZR19",
+      "275/40ZR20",
+      "315/35ZR20",
+      "275/35ZR21",
+      "315/30ZR21",
+      "295/40R19",
+      "315/35R20",
+      "265/30ZR22",
+      "315/25ZR22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "94f7b02c-50e3-4d70-be72-fa0a590b77bd",
+    "year": 2021,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "265/45R19"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "315/30R21"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 64,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 62,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 68,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 69,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R19",
+      "275/40R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "285/30R22",
+      "315/25R22",
+      "265/45ZR19",
+      "295/40ZR19",
+      "275/40ZR20",
+      "315/35ZR20",
+      "275/35ZR21",
+      "315/30ZR21",
+      "295/40R19",
+      "315/35R20",
+      "265/30ZR22",
+      "315/25ZR22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d58fd4f3-cc61-4b89-b9be-216012217605",
+    "year": 2022,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "265/45R19"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "315/30R21"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 64,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 62,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 68,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 69,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 71,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 65,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R19",
+      "275/40R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "285/30R22",
+      "315/25R22",
+      "265/45ZR19",
+      "295/40ZR19",
+      "275/40ZR20",
+      "315/35ZR20",
+      "275/35ZR21",
+      "315/30ZR21",
+      "295/40R19",
+      "315/35R20",
+      "265/30ZR22",
+      "315/25ZR22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d545c817-d7af-4b98-91e6-9d60180d6d4f",
+    "year": 2023,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "265/45R19"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "315/30R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R19",
+      "275/40R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "285/30R22",
+      "315/25R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "8d2d02a0-8cdd-4b8f-aac1-cf34900963a3",
+    "year": 2024,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "265/45R19"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "315/30R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R19",
+      "275/40R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "285/30R22",
+      "315/25R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "a72917c9-495f-49e6-8651-d8a43c99efc7",
+    "year": 2025,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "265/45R19"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "315/30R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R19",
+      "275/40R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "285/30R22",
+      "315/25R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "1ef596ed-2ffb-459d-9d3a-3dae906bb231",
+    "year": 2026,
+    "make": "porsche",
+    "model": "panamera",
+    "trim": "Base, 4, 4S, GTS, Turbo, Turbo S",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x112 to 5x130; Hub bore corrected from 66.5 to 71.6",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "265/45R19"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "315/30R21"
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R19",
+      "275/40R20",
+      "295/35R20",
+      "275/35R21",
+      "315/30R21",
+      "285/30R22",
+      "315/25R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "dbdcd74e-4764-40c4-bd32-0064d2a1eadf",
+    "year": 2020,
+    "make": "porsche",
+    "model": "taycan",
+    "trim": "Taycan 4",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 54,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 66,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55ZR19",
+      "275/45ZR19",
+      "245/45ZR20",
+      "285/40ZR20",
+      "265/35ZR21",
+      "305/30ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f23286c4-5eb4-4151-9ec0-2f8eb2b676fa",
+    "year": 2021,
+    "make": "porsche",
+    "model": "taycan",
+    "trim": "Taycan 4",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 54,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 66,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55ZR19",
+      "275/45ZR19",
+      "245/45ZR20",
+      "285/40ZR20",
+      "265/35ZR21",
+      "305/30ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a4add9df-bf88-4d99-8db2-10a9801712d8",
+    "year": 2022,
+    "make": "porsche",
+    "model": "taycan",
+    "trim": "Taycan 4",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 54,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 66,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55ZR19",
+      "275/45ZR19",
+      "245/45ZR20",
+      "285/40ZR20",
+      "265/35ZR21",
+      "305/30ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8174c37c-f0ef-41f2-a20f-70654db8c89b",
+    "year": 2023,
+    "make": "porsche",
+    "model": "taycan",
+    "trim": "Taycan 4",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 54,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 66,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55ZR19",
+      "275/45ZR19",
+      "245/45ZR20",
+      "285/40ZR20",
+      "265/35ZR21",
+      "305/30ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4fda30a5-fbaa-466f-99c4-c43372ee86cf",
+    "year": 2024,
+    "make": "porsche",
+    "model": "taycan",
+    "trim": "Taycan 4",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x130",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 54,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 54,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 66,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R19",
+      "275/45ZR19",
+      "245/45ZR20",
+      "285/40ZR20",
+      "265/35ZR21",
+      "305/30ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  }
+]

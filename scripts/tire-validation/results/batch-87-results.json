@@ -1,0 +1,1100 @@
+{
+  "batchId": "87",
+  "processedAt": "2026-04-21T22:15:00Z",
+  "source": "tiresize.com, roverparts.com, sizemytires.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "SE": { "tireSizes": ["255/60R18"] }
+      },
+      "notes": "2005-2009 Discovery = LR3 in US market. 275/45R20 not OEM - appears aftermarket.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "SE V6": { "tireSizes": ["255/60R18"] },
+        "SE V8": { "tireSizes": ["255/60R18"] }
+      },
+      "notes": "275/45R20 not OEM - appears aftermarket.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2006,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "Base Model": { "tireSizes": ["255/60R18"] },
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "SE": { "tireSizes": ["255/60R18"] }
+      },
+      "notes": "275/45R20 not OEM - appears aftermarket.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2005,
+      "make": "Land Rover",
+      "model": "Discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["235/70R17", "255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/60R18", "255/55R19"] },
+        "SE": { "tireSizes": ["235/70R17", "255/60R18"] }
+      },
+      "notes": "275/45R20 not OEM - appears aftermarket. 235/70R17 was base option.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2004,
+      "make": "Land Rover",
+      "model": "Discovery-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": {
+        "4.6 HSE": { "tireSizes": ["255/55R18"] },
+        "4.6 S": { "tireSizes": ["255/65R16", "255/55R18"] },
+        "4.6 SE": { "tireSizes": ["255/55R18"] }
+      },
+      "notes": "Discovery Series II final year. Stock suspension: 255/55R18 or 255/65R16.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2003,
+      "make": "Land Rover",
+      "model": "Discovery-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": {
+        "4.6 HSE": { "tireSizes": ["255/55R18"] },
+        "4.6 S": { "tireSizes": ["255/65R16", "255/55R18"] },
+        "4.6 SE": { "tireSizes": ["255/55R18"] }
+      },
+      "notes": "Discovery Series II.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2002,
+      "make": "Land Rover",
+      "model": "Discovery-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": {
+        "Series II": { "tireSizes": ["255/65R16", "255/55R18"] },
+        "Series II SD": { "tireSizes": ["255/65R16", "255/55R18"] },
+        "Series II SE": { "tireSizes": ["255/65R16", "255/55R18"] }
+      },
+      "notes": "Discovery Series II.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2001,
+      "make": "Land Rover",
+      "model": "Discovery-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": {
+        "Series II": { "tireSizes": ["255/65R16", "255/55R18"] },
+        "Series II LE": { "tireSizes": ["255/65R16", "255/55R18"] },
+        "Series II SD": { "tireSizes": ["255/65R16", "255/55R18"] },
+        "Series II SE": { "tireSizes": ["255/65R16", "255/55R18"] }
+      },
+      "notes": "Discovery Series II.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2000,
+      "make": "Land Rover",
+      "model": "Discovery-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": {
+        "Series II": { "tireSizes": ["255/65R16", "255/55R18"] }
+      },
+      "notes": "Discovery Series II.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2009,
+      "make": "Land Rover",
+      "model": "Discovery-3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "SE": { "tireSizes": ["255/60R18"] }
+      },
+      "notes": "Discovery 3 = LR3 in US. Same specs apply.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "Discovery-3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "SE V6": { "tireSizes": ["255/60R18"] },
+        "SE V8": { "tireSizes": ["255/60R18"] }
+      },
+      "notes": "Discovery 3 = LR3 in US.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "Discovery-3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "SE V6": { "tireSizes": ["255/60R18"] },
+        "SE V8": { "tireSizes": ["255/60R18"] }
+      },
+      "notes": "Discovery 3 = LR3 in US.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2006,
+      "make": "Land Rover",
+      "model": "Discovery-3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "Base Model": { "tireSizes": ["255/60R18"] },
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "SE": { "tireSizes": ["255/60R18"] }
+      },
+      "notes": "Discovery 3 = LR3 in US.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2005,
+      "make": "Land Rover",
+      "model": "Discovery-3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/70R17", "255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/60R18", "255/55R19"] },
+        "SE": { "tireSizes": ["235/70R17", "255/60R18"] }
+      },
+      "notes": "Discovery 3 first year = LR3 in US.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2004,
+      "make": "Land Rover",
+      "model": "Discovery-3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/70R17", "255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/60R18", "255/55R19"] },
+        "SE": { "tireSizes": ["235/70R17", "255/60R18"] }
+      },
+      "notes": "Discovery 3 early production (late 2004). Same as 2005 MY.",
+      "status": "VALIDATED",
+      "confidence": "MEDIUM"
+    },
+    {
+      "year": 2016,
+      "make": "Land Rover",
+      "model": "Discovery-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "HSE Luxury": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "SE": { "tireSizes": ["255/60R18", "255/55R19"] }
+      },
+      "notes": "Discovery 4 = LR4 in US market (2010-2016). Final year.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2015,
+      "make": "Land Rover",
+      "model": "Discovery-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "HSE Luxury": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "SE": { "tireSizes": ["255/60R18", "255/55R19"] }
+      },
+      "notes": "Discovery 4 = LR4 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "Discovery-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "HSE Luxury": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "SE": { "tireSizes": ["255/60R18", "255/55R19"] }
+      },
+      "notes": "Discovery 4 = LR4 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2013,
+      "make": "Land Rover",
+      "model": "Discovery-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "HSE LUX": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "SE": { "tireSizes": ["255/60R18", "255/55R19"] }
+      },
+      "notes": "Discovery 4 = LR4 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2012,
+      "make": "Land Rover",
+      "model": "Discovery-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "HSE LUX": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "SE": { "tireSizes": ["255/60R18", "255/55R19"] }
+      },
+      "notes": "Discovery 4 = LR4 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "Discovery-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "HSE LUX": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "SE": { "tireSizes": ["255/60R18", "255/55R19"] }
+      },
+      "notes": "Discovery 4 = LR4 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2010,
+      "make": "Land Rover",
+      "model": "Discovery-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "HSE LUX": { "tireSizes": ["255/55R19", "275/45R20"] },
+        "SE": { "tireSizes": ["255/60R18", "255/55R19"] }
+      },
+      "notes": "Discovery 4 first year = LR4 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2009,
+      "make": "Land Rover",
+      "model": "Discovery-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "SE": { "tireSizes": ["255/60R18"] }
+      },
+      "notes": "Discovery 4 likely not available in 2009 - this is Discovery 3/LR3 year. Carried over D3 specs.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "MEDIUM"
+    },
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": {
+        "Dynamic SE": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "Gemini": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "S": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "Tempest": { "tireSizes": ["285/40R22"] }
+      },
+      "notes": "Discovery 5th gen (L462). Current model year.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2025,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": {
+        "Dynamic SE": { "tireSizes": ["275/45R21", "285/40R22"] },
+        "Metropolitan Edition": { "tireSizes": ["275/45R21", "285/40R22"] },
+        "S": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] }
+      },
+      "notes": "Discovery 5th gen (L462).",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2024,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": {
+        "Dynamic SE": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "Metropolitan Edition": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "S": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] }
+      },
+      "notes": "Discovery 5th gen (L462).",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2023,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": {
+        "R-Dynamic HSE": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "R-Dynamic S": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "S": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] }
+      },
+      "notes": "Discovery 5th gen (L462).",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2022,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": {
+        "R-Dynamic HSE": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "R-Dynamic S": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "S": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] }
+      },
+      "notes": "Discovery 5th gen (L462).",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2021,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": {
+        "R-Dynamic HSE": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "R-Dynamic S": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "S": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] }
+      },
+      "notes": "Discovery 5th gen (L462) facelift.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R20", "275/45R21"] },
+        "HSE Luxury": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "SE": { "tireSizes": ["255/60R19", "255/55R20", "275/45R21"] }
+      },
+      "notes": "Discovery 5th gen (L462).",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2019,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "HSE Luxury": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "SE": { "tireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"] }
+      },
+      "notes": "Discovery 5th gen (L462).",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2018,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "HSE Luxury": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "SE": { "tireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"] }
+      },
+      "notes": "Discovery 5th gen (L462).",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2017,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "trims": {
+        "First Edition": { "tireSizes": ["275/45R21", "285/40R22"] },
+        "HSE": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "HSE Luxury": { "tireSizes": ["255/55R20", "275/45R21", "285/40R22"] },
+        "SE": { "tireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"] }
+      },
+      "notes": "Discovery 5th gen (L462) first year.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2016,
+      "make": "Land Rover",
+      "model": "Discovery-5",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "Discovery 5 did not exist in 2016. 2016 was Discovery 4/LR4 final year. Discovery 5 started 2017.",
+      "status": "INVALID_YEAR",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "235/50R20"],
+      "trims": {
+        "Landmark": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20"] }
+      },
+      "notes": "Current sizes correct except 245/45R20 should be 235/50R20. 21-inch is also available (245/45R21).",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2025,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"],
+      "trims": {
+        "Dynamic SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] }
+      },
+      "notes": "245/45R20 in current DB appears incorrect - should be 235/50R20 or 245/45R21.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2024,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"],
+      "trims": {
+        "Dynamic S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] }
+      },
+      "notes": "245/45R20 in current DB appears incorrect.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2023,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"],
+      "trims": {
+        "R-Dynamic S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "R-Dynamic SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] }
+      },
+      "notes": "245/45R20 in current DB appears incorrect.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2022,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"],
+      "trims": {
+        "R-Dynamic S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "R-Dynamic SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] }
+      },
+      "notes": "245/45R20 in current DB appears incorrect.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2021,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"],
+      "trims": {
+        "R-Dynamic S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "R-Dynamic SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] }
+      },
+      "notes": "245/45R20 in current DB appears incorrect.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"],
+      "trims": {
+        "Base": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "R-Dynamic HSE": { "tireSizes": ["235/55R19", "235/50R20", "245/45R21"] },
+        "R-Dynamic S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "R-Dynamic SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] }
+      },
+      "notes": "2020 refresh. 245/45R20 in current DB appears incorrect.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2019,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "HSE Luxury": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Landmark Edition": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] }
+      },
+      "notes": "Pre-refresh model. Current sizes are CORRECT.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2018,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "HSE Luxury": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] }
+      },
+      "notes": "Current sizes are CORRECT.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2017,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "HSE Luxury": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Current sizes are CORRECT.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2016,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "HSE Luxury": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Current sizes are CORRECT.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2015,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "HSE Luxury": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Discovery Sport first year. Current sizes are CORRECT.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "currentTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "Discovery Sport did not exist in 2014. First production was late 2014 as 2015 MY.",
+      "status": "INVALID_YEAR",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "Freelander",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "Freelander (gen 1) was not sold in US after 2005. 2007 would be Freelander 2/LR2.",
+      "status": "INVALID_YEAR",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2006,
+      "make": "Land Rover",
+      "model": "Freelander",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "Freelander (gen 1) was not sold in US after 2005. Freelander 2 started late 2006.",
+      "status": "INVALID_YEAR",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2005,
+      "make": "Land Rover",
+      "model": "Freelander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "225/55R17", "235/50R18"],
+      "trims": {
+        "SE AWD": { "tireSizes": ["215/65R16", "235/50R18"] },
+        "SE3 AWD": { "tireSizes": ["225/55R17", "235/50R18"] }
+      },
+      "notes": "Final year for Freelander gen 1 in US.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2004,
+      "make": "Land Rover",
+      "model": "Freelander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "225/55R17", "235/50R18"],
+      "trims": {
+        "HSE AWD": { "tireSizes": ["225/55R17", "235/50R18"] },
+        "SE AWD": { "tireSizes": ["215/65R16"] },
+        "SE3 AWD": { "tireSizes": ["225/55R17", "235/50R18"] }
+      },
+      "notes": "Freelander gen 1.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2003,
+      "make": "Land Rover",
+      "model": "Freelander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "225/55R17"],
+      "trims": {
+        "HSE AWD": { "tireSizes": ["225/55R17"] },
+        "S AWD": { "tireSizes": ["215/65R16"] },
+        "SE AWD": { "tireSizes": ["225/55R17"] }
+      },
+      "notes": "Freelander gen 1.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2002,
+      "make": "Land Rover",
+      "model": "Freelander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "225/55R17"],
+      "trims": {
+        "HSE AWD": { "tireSizes": ["225/55R17"] },
+        "S AWD": { "tireSizes": ["215/65R16"] },
+        "SE AWD": { "tireSizes": ["225/55R17"] }
+      },
+      "notes": "Freelander gen 1 first full US year.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2001,
+      "make": "Land Rover",
+      "model": "Freelander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "225/55R17"],
+      "trims": {
+        "S AWD": { "tireSizes": ["215/65R16"] },
+        "SE AWD": { "tireSizes": ["225/55R17"] }
+      },
+      "notes": "Freelander gen 1 early US introduction.",
+      "status": "VALIDATED",
+      "confidence": "MEDIUM"
+    },
+    {
+      "year": 2000,
+      "make": "Land Rover",
+      "model": "Freelander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "225/55R17"],
+      "trims": {
+        "S": { "tireSizes": ["215/65R16"] },
+        "SE": { "tireSizes": ["225/55R17"] }
+      },
+      "notes": "Freelander gen 1 may not have been sold in US in 2000 (US intro was 2002). International market specs.",
+      "status": "NEEDS_REVIEW",
+      "confidence": "MEDIUM"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "Freelander-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "All": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Freelander 2 final year. Same as LR2 in US market. International model.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2013,
+      "make": "Land Rover",
+      "model": "Freelander-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "All": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Freelander 2 = LR2 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2012,
+      "make": "Land Rover",
+      "model": "Freelander-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "All": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Freelander 2 = LR2 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "Freelander-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "All": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Freelander 2 = LR2 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2010,
+      "make": "Land Rover",
+      "model": "Freelander-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "All": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Freelander 2 = LR2 in US market. Facelift year.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2009,
+      "make": "Land Rover",
+      "model": "Freelander-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "All": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Freelander 2 = LR2 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "Freelander-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "All": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Freelander 2 = LR2 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "Freelander-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "All": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Freelander 2 first year = LR2 in US market.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2006,
+      "make": "Land Rover",
+      "model": "Freelander-2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "All": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Freelander 2 launched late 2006 in some markets.",
+      "status": "VALIDATED",
+      "confidence": "MEDIUM"
+    },
+    {
+      "year": 2015,
+      "make": "Land Rover",
+      "model": "LR2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "Base": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "HSE LUX": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "LR2 final year in US.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "LR2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "Base": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "HSE LUX": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "LR2 = Freelander 2 in international markets.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2013,
+      "make": "Land Rover",
+      "model": "LR2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "Note: tiresize.com missing 2013 data, used adjacent years.",
+      "status": "VALIDATED",
+      "confidence": "MEDIUM"
+    },
+    {
+      "year": 2012,
+      "make": "Land Rover",
+      "model": "LR2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "Base Model": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "HSE LUX": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "LR2 = Freelander 2.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "LR2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "Base Model": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "HSE LUX": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "LR2 = Freelander 2.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2010,
+      "make": "Land Rover",
+      "model": "LR2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "LR2 facelift year.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2009,
+      "make": "Land Rover",
+      "model": "LR2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "LR2 = Freelander 2.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "LR2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "LR2 first year in US.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "LR2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["235/60R18", "235/55R19"] },
+        "SE": { "tireSizes": ["235/60R18", "235/55R19"] }
+      },
+      "notes": "LR2 introduced late 2007 as 2008 MY. Early adopter may have 2007 plates.",
+      "status": "VALIDATED",
+      "confidence": "MEDIUM"
+    },
+    {
+      "year": 2009,
+      "make": "Land Rover",
+      "model": "LR3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "SE": { "tireSizes": ["255/60R18"] }
+      },
+      "notes": "LR3 final year. Replaced by LR4/Discovery 4 for 2010.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    },
+    {
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "LR3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "SE V6": { "tireSizes": ["255/60R18"] },
+        "SE V8": { "tireSizes": ["255/60R18"] }
+      },
+      "notes": "LR3 = Discovery 3.",
+      "status": "VALIDATED",
+      "confidence": "HIGH"
+    }
+  ],
+  "summary": {
+    "validated": 51,
+    "needsReview": 14,
+    "invalidYear": 4,
+    "total": 75,
+    "keyFindings": [
+      "Discovery (2005-2008) currently has 275/45R20 listed which is NOT OEM - should be removed",
+      "Discovery Sport (2020-2026) has 245/45R20 listed but should be 235/50R20 or 245/45R21",
+      "Discovery-5 did not exist before 2017 - 2016 entry is invalid",
+      "Discovery Sport did not exist before 2015 - 2014 entry is invalid",
+      "Freelander gen1 US sales ended 2005 - 2006-2007 entries are invalid",
+      "LR2 = Freelander 2, LR3 = Discovery 3, LR4 = Discovery 4 (US vs international naming)",
+      "All Discovery 2 entries (2000-2004) had no tire sizes - now validated with 255/65R16, 255/55R18"
+    ]
+  }
+}

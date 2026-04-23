@@ -1,0 +1,736 @@
+{
+  "batchId": "48",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "viper",
+      "currentTireSizes": [
+        "275/35R18",
+        "345/30R19"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "viper",
+      "currentTireSizes": [
+        "275/35R18",
+        "345/30R19"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "viper",
+      "currentTireSizes": [
+        "275/35R18",
+        "345/30R19"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "viper",
+      "currentTireSizes": [
+        "275/35R18",
+        "345/30R19"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "viper",
+      "currentTireSizes": [
+        "275/35R18",
+        "345/30R19"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "viper",
+      "currentTireSizes": [
+        "275/35R18",
+        "345/30R19"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "viper",
+      "currentTireSizes": [
+        "275/35R18",
+        "345/30R19"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "viper",
+      "currentTireSizes": [
+        "275/35R18",
+        "345/30R19"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "viper",
+      "currentTireSizes": [
+        "275/35R18",
+        "345/30R19"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "viper",
+      "currentTireSizes": [
+        "275/35R18",
+        "345/30R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "dodge",
+      "model": "vision",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "dodge",
+      "model": "vision",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "dodge",
+      "model": "vision",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "dodge",
+      "model": "vision",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "ferrari",
+      "model": "488",
+      "currentTireSizes": [
+        "245/35ZR20",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ferrari",
+      "model": "488",
+      "currentTireSizes": [
+        "245/35ZR20",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "ferrari",
+      "model": "488",
+      "currentTireSizes": [
+        "245/35ZR20",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "ferrari",
+      "model": "488",
+      "currentTireSizes": [
+        "245/35ZR20",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "ferrari",
+      "model": "488",
+      "currentTireSizes": [
+        "245/35ZR20",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ferrari",
+      "model": "f8",
+      "currentTireSizes": [
+        "245/35ZR20",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ferrari",
+      "model": "f8",
+      "currentTireSizes": [
+        "245/35ZR20",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ferrari",
+      "model": "f8",
+      "currentTireSizes": [
+        "245/35ZR20",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ferrari",
+      "model": "f8",
+      "currentTireSizes": [
+        "245/35ZR20",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ferrari",
+      "model": "f8",
+      "currentTireSizes": [
+        "245/35ZR20",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ferrari",
+      "model": "portofino",
+      "currentTireSizes": [
+        "245/40ZR19",
+        "285/35ZR19",
+        "245/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ferrari",
+      "model": "portofino",
+      "currentTireSizes": [
+        "245/40ZR19",
+        "285/35ZR19",
+        "245/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ferrari",
+      "model": "portofino",
+      "currentTireSizes": [
+        "245/40ZR19",
+        "285/35ZR19",
+        "245/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ferrari",
+      "model": "portofino",
+      "currentTireSizes": [
+        "245/40ZR19",
+        "285/35ZR19",
+        "245/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ferrari",
+      "model": "portofino",
+      "currentTireSizes": [
+        "245/40ZR19",
+        "285/35ZR19",
+        "245/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ferrari",
+      "model": "portofino",
+      "currentTireSizes": [
+        "245/40ZR19",
+        "285/35ZR19",
+        "245/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "ferrari",
+      "model": "roma",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "ferrari",
+      "model": "roma",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "ferrari",
+      "model": "roma",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ferrari",
+      "model": "roma",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ferrari",
+      "model": "roma",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ferrari",
+      "model": "roma",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ferrari",
+      "model": "roma",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "285/35ZR20"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "ferrari",
+      "model": "sf90",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "315/30ZR20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "ferrari",
+      "model": "sf90",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "315/30ZR20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "ferrari",
+      "model": "sf90",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "315/30ZR20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ferrari",
+      "model": "sf90",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "315/30ZR20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ferrari",
+      "model": "sf90",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "315/30ZR20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ferrari",
+      "model": "sf90",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "315/30ZR20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ferrari",
+      "model": "sf90",
+      "currentTireSizes": [
+        "255/35ZR20",
+        "315/30ZR20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "fiat",
+      "model": "124-spider",
+      "currentTireSizes": [
+        "205/40R17"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "fiat",
+      "model": "124-spider",
+      "currentTireSizes": [
+        "205/40R17"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "fiat",
+      "model": "124-spider",
+      "currentTireSizes": [
+        "205/40R17"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "fiat",
+      "model": "124-spider",
+      "currentTireSizes": [
+        "205/40R17"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "fiat",
+      "model": "124-spider",
+      "currentTireSizes": [
+        "205/45R17",
+        "195/50R16"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/55R16",
+        "205/45R17"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/55R16",
+        "205/45R17"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/55R16",
+        "205/45R17"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/55R16",
+        "205/45R17"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/55R16",
+        "205/45R17"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/45R16",
+        "205/40ZR17"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/45R16",
+        "205/40R17",
+        "205/40ZR17"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/45R16",
+        "205/40R17"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/45R16",
+        "205/40R17",
+        "205/40ZR17"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/45R16",
+        "205/40R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/45R16",
+        "205/40R17",
+        "205/40ZR17"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/45R16",
+        "205/40R17"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/45R16",
+        "205/40R17"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "fiat",
+      "model": "500",
+      "currentTireSizes": [
+        "195/45R16",
+        "205/40R17",
+        "205/40ZR17"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "fiat",
+      "model": "500x",
+      "currentTireSizes": [
+        "215/60R16",
+        "215/55R17",
+        "215/60R17",
+        "215/55R18",
+        "225/45R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "fiat",
+      "model": "500x",
+      "currentTireSizes": [
+        "215/60R16",
+        "215/55R17",
+        "215/60R17",
+        "215/55R18",
+        "225/45R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "fiat",
+      "model": "500x",
+      "currentTireSizes": [
+        "215/60R16",
+        "215/55R17",
+        "215/60R17",
+        "215/55R18",
+        "225/45R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "fiat",
+      "model": "500x",
+      "currentTireSizes": [
+        "215/60R16",
+        "215/55R17",
+        "215/60R17",
+        "215/55R18",
+        "225/45R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "fiat",
+      "model": "500x",
+      "currentTireSizes": [
+        "215/60R16",
+        "215/55R17",
+        "215/60R17",
+        "215/55R18",
+        "225/45R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "fiat",
+      "model": "500x",
+      "currentTireSizes": [
+        "215/60R16",
+        "215/55R17",
+        "215/60R17",
+        "215/55R18",
+        "225/45R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "fiat",
+      "model": "500x",
+      "currentTireSizes": [
+        "215/60R16",
+        "215/55R17",
+        "215/60R17",
+        "215/55R18",
+        "225/45R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "fiat",
+      "model": "500x",
+      "currentTireSizes": [
+        "215/60R16",
+        "215/55R17",
+        "215/60R17",
+        "215/55R18",
+        "225/45R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "fiat",
+      "model": "500x",
+      "currentTireSizes": [
+        "215/60R16",
+        "215/55R17",
+        "215/60R17",
+        "215/55R18",
+        "225/45R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "fiat",
+      "model": "500x",
+      "currentTireSizes": [
+        "215/60R16",
+        "215/55R17",
+        "215/60R17",
+        "215/55R18",
+        "225/45R18",
+        "225/45R19"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "bronco",
+      "currentTireSizes": [
+        "255/75R17",
+        "275/65R18",
+        "285/65R18",
+        "285/70R17",
+        "LT285/70R17",
+        "315/70R17",
+        "LT315/70R17",
+        "LT265/70R17",
+        "255/70R18"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "bronco",
+      "currentTireSizes": [
+        "255/75R17",
+        "275/65R18",
+        "285/65R18",
+        "285/70R17",
+        "LT285/70R17",
+        "315/70R17",
+        "LT315/70R17",
+        "LT265/70R17",
+        "255/70R18"
+      ]
+    }
+  ]
+}

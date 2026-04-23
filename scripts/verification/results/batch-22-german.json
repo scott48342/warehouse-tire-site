@@ -1,0 +1,1130 @@
+{
+  "batch": "batch-22-german",
+  "verifiedAt": "2026-04-23T00:37:00Z",
+  "protocol": "RE-VERIFICATION",
+  "vehicleCount": 75,
+  "validCount": 71,
+  "invalidCount": 4,
+  "summary": {
+    "invalidModelYears": [
+      {"year": 2026, "make": "bmw", "model": "ix", "reason": "BMW iX discontinued in US market after 2025"},
+      {"year": 2003, "make": "bmw", "model": "m-coupe", "reason": "Z3 M Coupe production ended May 2002 (1998-2002 only)"},
+      {"year": 2003, "make": "bmw", "model": "m-roadster", "reason": "Z3 M Roadster production ended May 2002 (1998-2002 only)"}
+    ],
+    "boltPatternChanges": [
+      {"model": "m2", "change": "F87 (2016-2021): 5x120/72.56mm → G87 (2023+): 5x112/66.6mm"},
+      {"model": "m3", "change": "E46/E90/F80: 5x120/72.56mm → G80 (2021+): 5x112/66.6mm"},
+      {"model": "m4", "change": "F82/F83 (2014-2020): 5x120/72.56mm → G82/G83 (2021+): 5x112/66.6mm"},
+      {"model": "x1", "change": "E84 (2013-2015): 5x120/72.56mm → F48/U11 (2016+): 5x112/66.6mm"}
+    ],
+    "notes": [
+      "BMW M2 correctly skips 2022 (production gap between F87 and G87)",
+      "All G-chassis BMW models (2021+) use 5x112 bolt pattern with 66.6mm hub bore",
+      "All E/F-chassis BMW models use 5x120 bolt pattern with 72.56mm hub bore"
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "iX",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive40", "oemWheelSize": "20x8.5", "oemTireSize": "255/50R20"},
+        {"name": "xDrive50", "oemWheelSize": "21x9", "oemTireSize": "255/45R21"},
+        {"name": "xDrive50 Sport", "oemWheelSize": "22x9.5", "oemTireSize": "275/35R22", "rearWheelSize": "22x10.5", "rearTireSize": "315/30R22"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "hulkoffsets.com"],
+      "notes": "Electric SUV, G-chassis platform"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "iX",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive40", "oemWheelSize": "20x8.5", "oemTireSize": "255/50R20"},
+        {"name": "xDrive50", "oemWheelSize": "21x9", "oemTireSize": "255/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "hulkoffsets.com"],
+      "notes": "Final model year for US market"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "iX",
+      "valid": false,
+      "invalidReason": "BMW iX DISCONTINUED in US market after 2025 model year",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "bmwusa.com"],
+      "notes": "Confirmed discontinued for America - continues in other markets"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "M Coupe",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M Coupe", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17", "rearWheelSize": "17x9", "rearTireSize": "245/40R17"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "automobile-catalog.com", "hulkoffsets.com"],
+      "notes": "Z3 M Coupe with S52 engine (US spec), staggered setup"
+    },
+    {
+      "year": 2001,
+      "make": "BMW",
+      "model": "M Coupe",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M Coupe S54", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17", "rearWheelSize": "17x9", "rearTireSize": "245/40R17"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "mroadsterbuyersguide.com"],
+      "notes": "Z3 M Coupe upgraded to S54 engine mid-2001, staggered setup"
+    },
+    {
+      "year": 2002,
+      "make": "BMW",
+      "model": "M Coupe",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M Coupe S54", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17", "rearWheelSize": "17x9", "rearTireSize": "245/40R17"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "sportscarmarket.com"],
+      "notes": "Final year of Z3 M Coupe production (ended May 2002), staggered setup"
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "M Coupe",
+      "valid": false,
+      "invalidReason": "NO 2003 MODEL EXISTS - Z3 M Coupe production ended May 2002",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "supercarnostalgia.com"],
+      "notes": "Z3 M Coupe was produced 1998-2002 only. 678 S54 units built for US total."
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "M Roadster",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M Roadster", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17", "rearWheelSize": "17x9", "rearTireSize": "245/40R17"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "mroadsterbuyersguide.com"],
+      "notes": "Z3 M Roadster with S52 engine (US spec), staggered setup"
+    },
+    {
+      "year": 2001,
+      "make": "BMW",
+      "model": "M Roadster",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M Roadster S54", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17", "rearWheelSize": "17x9", "rearTireSize": "245/40R17"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "mroadsterbuyersguide.com"],
+      "notes": "Z3 M Roadster upgraded to S54 engine mid-2001, staggered setup"
+    },
+    {
+      "year": 2002,
+      "make": "BMW",
+      "model": "M Roadster",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M Roadster S54", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17", "rearWheelSize": "17x9", "rearTireSize": "245/40R17"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "mroadsterbuyersguide.com"],
+      "notes": "Final year of Z3 M Roadster production (ended May 2002), staggered setup"
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "M Roadster",
+      "valid": false,
+      "invalidReason": "NO 2003 MODEL EXISTS - Z3 M Roadster production ended May 2002",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "supercarnostalgia.com"],
+      "notes": "Z3 M Roadster was produced 1998-2002 only"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "M2",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M2", "oemWheelSize": "19x9", "oemTireSize": "245/35R19", "rearWheelSize": "19x10", "rearTireSize": "265/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "hulkoffsets.com"],
+      "notes": "F87 first generation M2, staggered setup"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "M2",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M2", "oemWheelSize": "19x9", "oemTireSize": "245/35R19", "rearWheelSize": "19x10", "rearTireSize": "265/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "F87 M2, staggered setup"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "M2",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M2", "oemWheelSize": "19x9", "oemTireSize": "245/35R19", "rearWheelSize": "19x10", "rearTireSize": "265/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "threepiece.us"],
+      "notes": "F87 M2, staggered setup"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "M2",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M2 Competition", "oemWheelSize": "19x9", "oemTireSize": "245/35R19", "rearWheelSize": "19x10", "rearTireSize": "265/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bmwusa.com"],
+      "notes": "F87 M2 Competition with S55 engine, staggered setup"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "M2",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M2 Competition", "oemWheelSize": "19x9", "oemTireSize": "245/35R19", "rearWheelSize": "19x10", "rearTireSize": "265/35R19"},
+        {"name": "M2 CS", "oemWheelSize": "19x9", "oemTireSize": "245/35R19", "rearWheelSize": "19x10", "rearTireSize": "265/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bmwusa.com"],
+      "notes": "F87 M2 Competition and M2 CS (limited), staggered setup"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "M2",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M2 Competition", "oemWheelSize": "19x9", "oemTireSize": "245/35R19", "rearWheelSize": "19x10", "rearTireSize": "265/35R19"},
+        {"name": "M2 CS", "oemWheelSize": "19x9", "oemTireSize": "245/35R19", "rearWheelSize": "19x10", "rearTireSize": "265/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bmwblog.com"],
+      "notes": "Final year of F87, staggered setup. Production ended summer 2021."
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "M2",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M2", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "19x10.5", "rearTireSize": "285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "bmwblog.com"],
+      "notes": "G87 second generation M2, G-chassis with new bolt pattern, staggered setup"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "M2",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M2", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "19x10.5", "rearTireSize": "285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "hulkoffsets.com"],
+      "notes": "G87 M2, staggered setup"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "M2",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M2", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "19x10.5", "rearTireSize": "285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "hulkoffsets.com"],
+      "notes": "G87 M2, staggered setup"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "M2",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M2", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "19x10.5", "rearTireSize": "285/30R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["bmwusa.com"],
+      "notes": "G87 M2 continues for 2026, staggered setup"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "M3",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M3", "oemWheelSize": "18x8", "oemTireSize": "225/45R18", "rearWheelSize": "18x9", "rearTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E46 M3, staggered setup"
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "M3",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M3", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18", "rearWheelSize": "18x9.5", "rearTireSize": "265/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E90/E92/E93 M3, staggered setup"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "M3",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M3", "oemWheelSize": "18x9", "oemTireSize": "255/40R18", "rearWheelSize": "18x10", "rearTireSize": "275/35R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "F80 M3 (sedan), staggered setup"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "M3",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M3", "oemWheelSize": "18x9", "oemTireSize": "255/40R18", "rearWheelSize": "18x10", "rearTireSize": "275/35R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Final year F80 M3, staggered setup"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9", "oemTireSize": "255/40R18", "rearWheelSize": "18x10", "rearTireSize": "275/35R18"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "F82 M4 first year, staggered setup"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9", "oemTireSize": "255/40R18", "rearWheelSize": "18x10", "rearTireSize": "275/35R18"},
+        {"name": "M4 GTS", "oemWheelSize": "19x9.5", "oemTireSize": "265/35R19", "rearWheelSize": "19x10.5", "rearTireSize": "285/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "F82/F83 M4, staggered setup"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9", "oemTireSize": "255/40R18", "rearWheelSize": "18x10", "rearTireSize": "275/35R18"},
+        {"name": "M4 GTS", "oemWheelSize": "19x9.5", "oemTireSize": "265/35R19", "rearWheelSize": "19x10.5", "rearTireSize": "285/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "F82/F83 M4, staggered setup"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9", "oemTireSize": "255/40R18", "rearWheelSize": "18x10", "rearTireSize": "275/35R18"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "F82/F83 M4, staggered setup"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9", "oemTireSize": "255/40R18", "rearWheelSize": "18x10", "rearTireSize": "275/35R18"},
+        {"name": "M4 CS", "oemWheelSize": "19x9.5", "oemTireSize": "265/35R19", "rearWheelSize": "19x10.5", "rearTireSize": "285/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "F82/F83 M4 with CS variant, staggered setup"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9", "oemTireSize": "255/40R18", "rearWheelSize": "18x10", "rearTireSize": "275/35R18"},
+        {"name": "M4 CS", "oemWheelSize": "19x9.5", "oemTireSize": "265/35R19", "rearWheelSize": "19x10.5", "rearTireSize": "285/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "F82/F83 M4, staggered setup"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9", "oemTireSize": "255/40R18", "rearWheelSize": "18x10", "rearTireSize": "275/35R18"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "Final year F82/F83 M4, staggered setup"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9.5", "oemTireSize": "275/40R18", "rearWheelSize": "19x10.5", "rearTireSize": "285/35R19"},
+        {"name": "M4 Competition", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "20x10.5", "rearTireSize": "285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "bmw-m.com", "tirewheelguide.com"],
+      "notes": "G82/G83 M4 first year, new G-chassis, staggered setup"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9.5", "oemTireSize": "275/40R18", "rearWheelSize": "19x10.5", "rearTireSize": "285/35R19"},
+        {"name": "M4 Competition", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "20x10.5", "rearTireSize": "285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "G82/G83 M4, staggered setup"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9.5", "oemTireSize": "275/40R18", "rearWheelSize": "19x10.5", "rearTireSize": "285/35R19"},
+        {"name": "M4 Competition", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "20x10.5", "rearTireSize": "285/30R20"},
+        {"name": "M4 CSL", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "20x11", "rearTireSize": "295/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "G82/G83 M4 with CSL variant, staggered setup"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9.5", "oemTireSize": "275/40R18", "rearWheelSize": "19x10.5", "rearTireSize": "285/35R19"},
+        {"name": "M4 Competition", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "20x10.5", "rearTireSize": "285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "G82/G83 M4, staggered setup"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9.5", "oemTireSize": "275/40R18", "rearWheelSize": "19x10.5", "rearTireSize": "285/35R19"},
+        {"name": "M4 Competition", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "20x10.5", "rearTireSize": "285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "G82/G83 M4, staggered setup"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "M4",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M4", "oemWheelSize": "18x9.5", "oemTireSize": "275/40R18", "rearWheelSize": "19x10.5", "rearTireSize": "285/35R19"},
+        {"name": "M4 Competition", "oemWheelSize": "19x9.5", "oemTireSize": "275/35R19", "rearWheelSize": "20x10.5", "rearTireSize": "285/30R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "notes": "G82/G83 M4 continues, staggered setup"
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "M5",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M5", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "E60 M5 first year (V10), staggered setup"
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "M5",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M5", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "selected.pl"],
+      "notes": "F10 M5 first year, staggered setup"
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "E63/E64 M6 first year, staggered setup"
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "E63/E64 M6, staggered setup"
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "E63/E64 M6, staggered setup"
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "E63/E64 M6, staggered setup"
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "E63/E64 M6, staggered setup"
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19", "rearWheelSize": "19x9.5", "rearTireSize": "285/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "Final year E63/E64 M6, staggered setup"
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "F06/F12/F13 M6 first year, staggered setup"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Gran Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "F06/F12/F13 M6, Gran Coupe added, staggered setup"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Gran Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "F06/F12/F13 M6, staggered setup"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Gran Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "F06/F12/F13 M6, staggered setup"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Gran Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "F06/F12/F13 M6, staggered setup"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Convertible", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"},
+        {"name": "M6 Gran Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "F06/F12/F13 M6, staggered setup"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "M6",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "M6 Gran Coupe", "oemWheelSize": "19x9", "oemTireSize": "265/35R19", "rearWheelSize": "19x10", "rearTireSize": "295/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "notes": "Final year F06 M6 Gran Coupe only (Coupe/Convertible ended), staggered setup"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "M8",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M8 Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"},
+        {"name": "M8 Competition Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10.5", "rearTireSize": "305/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "wheel-size.co.uk"],
+      "notes": "G14/G15/G16 M8 first year, G-chassis, staggered setup"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "M8",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M8 Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"},
+        {"name": "M8 Competition Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10.5", "rearTireSize": "305/30R20"},
+        {"name": "M8 Gran Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "wheel-size.co.uk"],
+      "notes": "G14/G15/G16 M8, Gran Coupe added, staggered setup"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "M8",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M8 Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"},
+        {"name": "M8 Competition Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10.5", "rearTireSize": "305/30R20"},
+        {"name": "M8 Gran Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "G14/G15/G16 M8, staggered setup"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "M8",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M8 Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"},
+        {"name": "M8 Competition Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10.5", "rearTireSize": "305/30R20"},
+        {"name": "M8 Gran Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "G14/G15/G16 M8, staggered setup"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "M8",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M8 Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"},
+        {"name": "M8 Competition Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10.5", "rearTireSize": "305/30R20"},
+        {"name": "M8 Gran Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "G14/G15/G16 M8, staggered setup"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "M8",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M8 Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"},
+        {"name": "M8 Competition Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10.5", "rearTireSize": "305/30R20"},
+        {"name": "M8 Gran Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "G14/G15/G16 M8, staggered setup"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "M8",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M8 Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"},
+        {"name": "M8 Competition Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10.5", "rearTireSize": "305/30R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "notes": "G14/G15/G16 M8 continues, staggered setup"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "M8",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "M8 Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10", "rearTireSize": "285/35R20"},
+        {"name": "M8 Competition Coupe", "oemWheelSize": "20x9", "oemTireSize": "275/35R20", "rearWheelSize": "20x10.5", "rearTireSize": "305/30R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "notes": "G14/G15/G16 M8 continues, staggered setup"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "xDrive35i", "oemWheelSize": "18x8", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "carbuzz.com"],
+      "notes": "E84 X1 first year in US market (facelift model)"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x120",
+      "hubBore": 72.56,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "xDrive35i", "oemWheelSize": "18x8", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org"],
+      "notes": "Final year E84 X1"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/50R18"},
+        {"name": "xDrive28i Sport", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "hulkoffsets.com"],
+      "notes": "F48 X1 first year - NEW BOLT PATTERN (UKL2 platform)"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/50R18"},
+        {"name": "xDrive28i Sport", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "F48 X1"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/50R18"},
+        {"name": "xDrive28i Sport", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "F48 X1"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/50R18"},
+        {"name": "xDrive28i Sport", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "F48 X1 facelift"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/50R18"},
+        {"name": "xDrive28i M Sport", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "F48 X1 facelift"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/50R18"},
+        {"name": "xDrive28i M Sport", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "F48 X1"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"},
+        {"name": "xDrive28i M Sport", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"},
+        {"name": "M35i", "oemWheelSize": "20x8", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "hulkoffsets.com"],
+      "notes": "U11 X1 third generation (launched Oct 2022 for 2023 MY)"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"},
+        {"name": "xDrive28i M Sport", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"},
+        {"name": "M35i", "oemWheelSize": "20x8", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "U11 X1"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"},
+        {"name": "xDrive28i M Sport", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"},
+        {"name": "M35i", "oemWheelSize": "20x8", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "U11 X1"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X1",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"},
+        {"name": "xDrive28i M Sport", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"},
+        {"name": "M35i", "oemWheelSize": "20x8", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "notes": "U11 X1 continues"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "X2",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"},
+        {"name": "xDrive28i M Sport X", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "F39 X2 first year"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X2",
+      "valid": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"},
+        {"name": "xDrive28i M Sport X", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"},
+        {"name": "M35i", "oemWheelSize": "19x8", "oemTireSize": "235/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "F39 X2, M35i added"
+    }
+  ]
+}

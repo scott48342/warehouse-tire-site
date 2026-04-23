@@ -1,0 +1,734 @@
+{
+  "batchId": "66",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "accord",
+      "currentTireSizes": [
+        "205/65R16",
+        "225/50R17",
+        "225/45R18",
+        "215/60R16",
+        "235/45R18",
+        "245/40ZR19"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "accord",
+      "currentTireSizes": [
+        "205/60R16",
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "accord",
+      "currentTireSizes": [
+        "205/60R16",
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "accord",
+      "currentTireSizes": [
+        "205/60R16",
+        "215/50R17",
+        "205/65R15",
+        "195/65R15",
+        "215/60R16",
+        "215/45ZR18"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "accord",
+      "currentTireSizes": [
+        "205/60R16",
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "accord",
+      "currentTireSizes": [
+        "205/60R16",
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "honda",
+      "model": "accord",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "accord",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "honda",
+      "model": "accord",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2013,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2012,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "235/45R17",
+        "235/40R18",
+        "265/30R19"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "235/45R17",
+        "235/40R18",
+        "265/30R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "235/45R17",
+        "235/40R18",
+        "265/30R19",
+        "235/40ZR18"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "235/45R17",
+        "235/40R18",
+        "265/30R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "235/45R17",
+        "235/40R18",
+        "265/30R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "215/50R17",
+        "235/45R17",
+        "235/40R18",
+        "245/30R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "215/50R17",
+        "235/45R17",
+        "235/40R18",
+        "245/30R20",
+        "235/40ZR18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/50R17",
+        "235/40ZR18",
+        "215/55R16"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "215/50R17",
+        "235/45R17",
+        "235/40R18",
+        "245/30R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/50R17",
+        "235/40ZR18",
+        "215/55R16"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "215/50R17",
+        "235/45R17",
+        "235/40R18",
+        "245/30R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "215/50R17",
+        "235/45R17",
+        "235/40R18",
+        "245/30R20",
+        "235/40ZR18"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "215/55R16",
+        "215/50R17",
+        "235/45R17",
+        "235/40R18",
+        "245/30R20",
+        "235/40ZR18"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18",
+        "195/65R15",
+        "205/50R17"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18",
+        "195/65R15",
+        "205/50R17"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18",
+        "195/65R15",
+        "205/50R17"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "195/65R15",
+        "205/50R17"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "195/65R15",
+        "205/50R17"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "185/70R14",
+        "195/60R15",
+        "205/55R16"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "185/70R14",
+        "195/60R15",
+        "205/55R16"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "185/70R14",
+        "195/60R15",
+        "205/55R16"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "185/70R14",
+        "195/60R15",
+        "205/55R16"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "185/70R14",
+        "195/60R15",
+        "205/55R16"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "honda",
+      "model": "civic",
+      "currentTireSizes": [
+        "185/65R14",
+        "195/55R15",
+        "195/60R15"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "clarity",
+      "currentTireSizes": [
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "clarity",
+      "currentTireSizes": [
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "clarity",
+      "currentTireSizes": [
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "honda",
+      "model": "clarity",
+      "currentTireSizes": [
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "clarity",
+      "currentTireSizes": [
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "clarity",
+      "currentTireSizes": [
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "235/55ZR19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R18"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R18"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R18"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R18"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R18"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R18"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R18"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R18"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R18"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R18"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "215/65R16",
+        "225/60R17"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "215/65R16",
+        "225/60R17"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "215/65R16",
+        "225/60R17"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "215/65R16",
+        "225/60R17"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "215/65R16",
+        "225/60R17"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "cr-v",
+      "currentTireSizes": [
+        "205/70R15",
+        "215/65R16"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1325 @@
+{
+  "batchId": "90s-batch-04",
+  "completedAt": "2026-04-22T12:45:00.000Z",
+  "results": [
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "Miata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "konigwheels.com"],
+      "notes": "NA generation. Miata and MX-5 are the same vehicle."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "Miata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "konigwheels.com"],
+      "notes": "NA generation."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "Miata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "konigwheels.com"],
+      "notes": "NA generation. LE trim also available with same wheel specs."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "Miata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "konigwheels.com"],
+      "notes": "NA generation. M and R Package trims available."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "Miata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "konigwheels.com"],
+      "notes": "NA generation. M trim introduced with 15\" wheels."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "Miata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "konigwheels.com"],
+      "notes": "NA generation. Base has 14\", M trim has 15\"."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "Miata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "konigwheels.com"],
+      "notes": "Last year of NA generation."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "Miata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "konigwheels.com"],
+      "notes": "First year NB generation, but same bolt pattern/hub bore as NA."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "Miata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "konigwheels.com"],
+      "notes": "NB generation. 10th Anniversary and Sport Pkg have 15\" wheels."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "konigwheels.com"],
+      "notes": "MX-5 and Miata are the same vehicle. NA generation first year."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "duplicate",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Same vehicle as Miata - duplicate entry."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "duplicate",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Same vehicle as Miata - duplicate entry."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "duplicate",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Same vehicle as Miata - duplicate entry."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "duplicate",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Same vehicle as Miata - duplicate entry."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "duplicate",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Same vehicle as Miata - duplicate entry."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "duplicate",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Same vehicle as Miata - duplicate entry."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "duplicate",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Same vehicle as Miata - duplicate entry."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "duplicate",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Same vehicle as Miata - duplicate entry."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "duplicate",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Same vehicle as Miata - duplicate entry."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "626",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheellugpattern.com", "tiresize.com"],
+      "notes": "GD/GV generation (1987-1992). Base has 14\", sport trims have 15\"."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "626",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheellugpattern.com", "tiresize.com"],
+      "notes": "GD/GV generation."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "626",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheellugpattern.com", "tiresize.com"],
+      "notes": "Last year of GD/GV generation."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "626",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheellugpattern.com"],
+      "notes": "First year GE generation (1993-1997). Same bolt pattern as previous gen."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "626",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheellugpattern.com"],
+      "notes": "GE generation."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "626",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheellugpattern.com"],
+      "notes": "GE generation."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "626",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheellugpattern.com"],
+      "notes": "GE generation."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "626",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheellugpattern.com"],
+      "notes": "Last year GE generation."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "626",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheellugpattern.com", "wheelsynergy.com"],
+      "notes": "First year GF generation (1998-2002). 14\" wheels dropped."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "626",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheellugpattern.com", "wheelsynergy.com"],
+      "notes": "GF generation."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "Protege",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clubprotege.com", "wheellugpattern.com"],
+      "notes": "BG generation (1990-1994). DX has 13\", LX has 14\", 4WD has 14\"."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "Protege",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clubprotege.com", "wheellugpattern.com"],
+      "notes": "BG generation."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "Protege",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clubprotege.com", "wheellugpattern.com"],
+      "notes": "BG generation."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "Protege",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clubprotege.com", "wheellugpattern.com"],
+      "notes": "BG generation."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "Protege",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clubprotege.com", "wheellugpattern.com"],
+      "notes": "Last year BG generation."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "Protege",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clubprotege.com", "wheellugpattern.com"],
+      "notes": "BA generation (1995-1998). 4WD trim discontinued."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "Protege",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clubprotege.com", "wheellugpattern.com"],
+      "notes": "BA generation."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "Protege",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clubprotege.com", "wheellugpattern.com"],
+      "notes": "BA generation."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "Protege",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clubprotege.com", "wheellugpattern.com"],
+      "notes": "Last year BA generation."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "Protege",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/65R14", "195/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "clubprotege.com", "wheellugpattern.com"],
+      "notes": "First year BJ generation (1999-2003). 13\" wheels discontinued. ES trim gets 15\"."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "RX-7",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 59.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 37 },
+          { "diameter": 16, "width": 7, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "rx7club.com"],
+      "notes": "FC generation (2nd gen, 1986-1992). GXL has 15\", Turbo/GTU have 16\"."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "RX-7",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 59.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 37 },
+          { "diameter": 16, "width": 7, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "rx7club.com"],
+      "notes": "FC generation."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "RX-7",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 59.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 37 },
+          { "diameter": 16, "width": 7, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "rx7club.com"],
+      "notes": "Last year FC generation in US market."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "RX-7",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 8, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "rx7club.com"],
+      "notes": "FD generation (3rd gen). First year in US. Hub bore changed from 59.6 to 67.1mm."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "RX-7",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 8, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "rx7club.com"],
+      "notes": "FD generation."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "RX-7",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 8, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "rx7club.com"],
+      "notes": "FD generation. Last year sold in US market."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "RX-7",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "RX-7 FD was not sold in US market after 1995. JDM only 1996-2002."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "RX-7",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "RX-7 FD was not sold in US market after 1995. JDM only 1996-2002."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "RX-7",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "RX-7 FD was not sold in US market after 1995. JDM only 1996-2002."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "RX-7",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "RX-7 FD was not sold in US market after 1995. JDM only 1996-2002."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "MPV",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/70R14", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "roadkillcustoms.com"],
+      "notes": "LV generation (1989-1999). First gen minivan."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "MPV",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "LV generation."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "MPV",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "LV generation."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "MPV",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "LV generation."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "MPV",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "LV generation. 14\" wheels discontinued."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "MPV",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "LV generation."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "MPV",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "LV generation. 4WD model has 215/70R15."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "MPV",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "225/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "LV generation. 4WD model has 225/70R15."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "MPV",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "225/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "LV generation. Last year of first gen."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "MPV",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "No 1999 model year in US (skipped). Data is placeholder if exists elsewhere."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "B2300",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "B2300 did not exist in 1990. Rebadged Ford Ranger B-series started in 1994."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "B2300",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "B2300 did not exist in 1991. Rebadged Ford Ranger B-series started in 1994."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "B2300",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "B2300 did not exist in 1992. Rebadged Ford Ranger B-series started in 1994."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "B2300",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "B2300 did not exist in 1993. Rebadged Ford Ranger B-series started in 1994."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "B2300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 14, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "215/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com", "hubcaphaven.com"],
+      "notes": "First year of rebadged Ford Ranger. Uses 1/2-RH lug studs (not metric)."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "B2300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "215/70R14", "215/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Rebadged Ford Ranger. 4WD model has 15\" wheels."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "B2300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "215/70R14", "215/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Rebadged Ford Ranger."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "B2300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "215/70R14", "215/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Rebadged Ford Ranger."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "B2300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/70R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Rebadged Ford Ranger. 1998-2000 gap in tiresize.com data, specs based on 1997/2001 continuity."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "B2300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/70R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Rebadged Ford Ranger. 1998-2000 gap in tiresize.com data, specs based on continuity."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "B3000",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "B3000 did not exist in 1990. Rebadged Ford Ranger B-series started in 1994."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "B3000",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "B3000 did not exist in 1991. Rebadged Ford Ranger B-series started in 1994."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "B3000",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "B3000 did not exist in 1992. Rebadged Ford Ranger B-series started in 1994."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "B3000",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "tiresize.com"],
+      "notes": "B3000 did not exist in 1993. Rebadged Ford Ranger B-series started in 1994."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "B3000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 14, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "215/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "First year of rebadged Ford Ranger with 3.0L V6."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "B3000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 14, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "215/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheellugpattern.com"],
+      "notes": "Rebadged Ford Ranger with 3.0L V6."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 53,
+    "duplicate": 9,
+    "dne": 13,
+    "partial": 0,
+    "failed": 0,
+    "highConfidence": 71,
+    "mediumConfidence": 4,
+    "needsReview": 0
+  },
+  "notes": [
+    "MX-5 and Miata are the same vehicle - 9 entries marked as duplicates",
+    "RX-7 FD not sold in US after 1995 - 4 entries marked DNE (1996-1999)",
+    "B2300/B3000 started in 1994 (rebadged Ford Ranger) - 8 entries marked DNE (1990-1993)",
+    "1999 MPV may have been skipped as model year in US market",
+    "B2300/B3000 use 1/2-RH SAE lug studs, not M12x1.5 metric",
+    "RX-7 hub bore changed from 59.6mm (FC gen) to 67.1mm (FD gen) in 1993"
+  ]
+}

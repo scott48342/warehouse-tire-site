@@ -1,0 +1,2464 @@
+[
+  {
+    "id": "cc2568b6-d060-4a12-ac3a-2cc46507521e",
+    "year": 2020,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "235/40ZR19"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "f0745fc3-25cd-4a33-bf46-a71e7e8cbb6b",
+    "year": 2020,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE Nightshade",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "235/40ZR19"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "c34ec096-54d9-4e60-8aea-758bf22ae32d",
+    "year": 2020,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "235/40ZR19"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "5f54854b-17d5-4bc3-aa25-cadd0b2bc647",
+    "year": 2021,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "766e3c67-85f9-4418-828a-4f25b570cc06",
+    "year": 2021,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "9197e074-696f-4bec-9816-d98c436724b9",
+    "year": 2021,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16,
+        "tireSize": "205/65R16"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/55R17"
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "235/45R18",
+      "215/55R17"
+    ],
+    "source": "reviewed_from_2020_ADJACENT_YEAR"
+  },
+  {
+    "id": "0f384641-191d-41fe-a8ab-e1c1a92aa269",
+    "year": 2021,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE Nightshade",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "66d9be2e-1216-4fff-b166-b3449b97ee74",
+    "year": 2021,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "da2ae835-c790-42b2-a843-41dadbb12131",
+    "year": 2021,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "9b420598-3a94-44e2-81a9-4266e7725037",
+    "year": 2021,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "5ce126cb-aec0-4e98-9f3a-469b00d658bf",
+    "year": 2021,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "TRD",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d5650dd0-949d-40b1-8653-1a63a7b58330",
+    "year": 2021,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d98a0b98-94d8-4c62-927c-3a0d466c9a6b",
+    "year": 2021,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "446a7c2d-84af-4b9f-823a-1d9add1d551c",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE Nightshade",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "62fa78c5-38ac-4dac-b595-cf06dd722884",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d857c93f-e601-4e5a-9b2b-2eb6f1d3d791",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "5691fc02-c842-474c-be88-8e7c393e230b",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "06f30e57-4d5a-4f63-96e6-6263388bf712",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "841a5ac2-b23a-4490-b481-acc84751bb08",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "bea0eec5-471d-45aa-a040-73420d5098e5",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "e086fb94-fd80-4aed-9391-8bb17899ac30",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "TRD",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "ae9d4906-a079-4843-a780-4a899798dde3",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "286ae2e2-3afe-4432-be21-25146bf7245f",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "e193d835-bb1c-4995-8adb-9e9880c073b1",
+    "year": 2022,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "2.5 VVT-i",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/55R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "235/40R19"
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "wheelsize"
+  },
+  {
+    "id": "114607c0-a5ac-4e74-9131-18648983a404",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "979d4bbc-11ed-47dd-8dfd-e819af42144d",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "52de406e-c242-4e02-b82c-4f8c86d0b933",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "7c279adf-e5f0-4372-b699-5665a92dd3cd",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "b3cbab8d-55f5-4120-9485-86d3a5e43669",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE Nightshade",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "74fc0508-9bea-427f-83a2-e7a9d0ff92f8",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "61c0a383-1617-41d5-8616-14c4f78848e0",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "6c1f95aa-68df-4686-93be-adc695fc6ef7",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "2.5 VVT-i",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/55R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "235/40R19"
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "reviewed_from_2022_ADJACENT_YEAR"
+  },
+  {
+    "id": "231b8d1e-9984-4145-8dd9-50e30549b823",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "8800cfa0-df0f-4735-855d-67d14537aa48",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "TRD",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "4f26e51e-2c12-47e0-bca9-127463ca3acf",
+    "year": 2023,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "ba154e6d-4dcc-44fb-9bd1-2128993b2cae",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "2f48e0bb-67fd-4a44-ab50-13dacc19b301",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "fad697d6-e479-43cf-83a6-4fb47302fa4d",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Standard",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/55R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "235/40R19"
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "wheelsize"
+  },
+  {
+    "id": "df5bf6ef-e38c-4b14-92bd-64ca4cadd9ea",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "f11bba90-c3d2-4423-87d7-d1ce02d90aa1",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "e58218be-6781-437e-8df8-20b5f6c44afd",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "ffe45df4-1d91-4d83-a3f4-943de8c66b14",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "c516cda2-42c1-46fd-9799-006ee236c1ef",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "TRD",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "a5beb629-0aa3-47fe-a8d2-6e1dfdc8e1de",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "72e6c3ae-6e9d-41c3-8216-aa1cd4fac8f6",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "9ad911d3-72ac-4a03-b017-32f28589589c",
+    "year": 2024,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE Nightshade",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "b1dc02a5-9e66-401b-adf3-8d28fdaa533a",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "da33fb95-fd8c-4c99-9132-8d4fe5e0a6f5",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "3f8a1ff6-e6da-43bf-addc-6727aba54ed4",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "TRD",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "19689d13-719f-4ea7-9f4d-b05f9c75975d",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Standard",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/55R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/45R18"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "235/40R19"
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "reviewed_from_2024_ADJACENT_YEAR"
+  },
+  {
+    "id": "6485394c-ac84-47b8-92a4-3794f2af38c0",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "96aecbdd-5fb9-44eb-9e30-ac7eebfd7cdb",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "a4210b40-564d-4dcb-859b-45c4ad14ddb7",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "df0d53de-fdad-4e6f-81cc-c0c9e0f0f111",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "8b72b53a-8731-4000-b881-ff2d1aea6683",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE Nightshade",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "3fb201ec-e691-4b35-b70f-2d6a8aae49de",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "f0b0985a-e648-4316-8ae1-f6ac3a3cf204",
+    "year": 2025,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "5ba4c219-966c-4882-a69f-702a8f25ae99",
+    "year": 2026,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "2e2e8f32-8c46-423e-8b64-b9ab20e361b3",
+    "year": 2026,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "49a4aec2-9156-432b-acc2-d3043bcd5cba",
+    "year": 2026,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "3ebc9c99-54bd-4bcd-8ffc-70ba96e53400",
+    "year": 2026,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "facfcf32-3259-4e56-a9e3-8b0b975ae3d4",
+    "year": 2026,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "bd5c819f-ee6c-464c-a649-7b91d6000432",
+    "year": 2026,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "TRD",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "cf814a78-5d7a-448c-8d18-bc4c08b9a697",
+    "year": 2026,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "Hybrid XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "aeef2d58-64a7-4636-b06c-435e3b525efc",
+    "year": 2026,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "8405b442-7a28-4096-bb3e-d9876f9c3873",
+    "year": 2026,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "SE Nightshade",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "3bf94084-39fc-42d8-9eda-491fae239a31",
+    "year": 2026,
+    "make": "toyota",
+    "model": "camry",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8",
+      "19x8",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "205/65R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "c69defcf-4a8e-4d3e-8381-72a1f83b59e0",
+    "year": 2000,
+    "make": "toyota",
+    "model": "celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 39,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "e553bf2b-9e07-46d6-86eb-68b8ad6aa490",
+    "year": 2001,
+    "make": "toyota",
+    "model": "celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 39,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "5f36f746-a44e-496e-8f30-6654665dcca4",
+    "year": 2002,
+    "make": "toyota",
+    "model": "celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 39,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "ac46daca-43d3-4896-8263-cc76c4f405df",
+    "year": 2003,
+    "make": "toyota",
+    "model": "celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 39,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "d0d5a8f0-4dc4-4f29-b8a6-056b13503ac6",
+    "year": 2004,
+    "make": "toyota",
+    "model": "celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 39,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "44b9f0b5-56ae-438c-a266-bc61dcbd6449",
+    "year": 2005,
+    "make": "toyota",
+    "model": "celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 39,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 39,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "c1d60b82-1f2e-49c2-ac38-eb434aafc1ab",
+    "year": 2000,
+    "make": "toyota",
+    "model": "corolla",
+    "trim": "L, LE, SE, XLE, XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "185/65R14"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "b05da5ba-73de-42e1-9e00-c3c8898ec28c",
+    "year": 2001,
+    "make": "toyota",
+    "model": "corolla",
+    "trim": "L, LE, SE, XLE, XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "185/65R14"
+    ],
+    "source": "manual_seed_spec"
+  }
+]

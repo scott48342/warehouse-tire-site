@@ -1,0 +1,2278 @@
+{
+  "batch": "batch-07-domestic",
+  "verifiedAt": "2026-04-23T00:50:00Z",
+  "verifier": "subagent:verify-us-07",
+  "totalVehicles": 75,
+  "validCount": 70,
+  "invalidCount": 5,
+  "summary": {
+    "invalidModelYears": [
+      {
+        "year": 2000,
+        "make": "chrysler",
+        "model": "pt-cruiser",
+        "reason": "PT Cruiser production started February 2000 for 2001 model year. No 2000 MY exists.",
+        "validYears": "2001-2010"
+      },
+      {
+        "year": 2016,
+        "make": "chrysler",
+        "model": "pacifica",
+        "reason": "First-gen Pacifica ended 2008, second-gen started 2017. No 2016 MY exists.",
+        "validYears": "2004-2008, 2017+"
+      },
+      {
+        "year": 2006,
+        "make": "dodge",
+        "model": "caliber",
+        "reason": "Caliber production started 2006 for 2007 model year. No 2006 MY exists.",
+        "validYears": "2007-2012"
+      },
+      {
+        "year": 2005,
+        "make": "dodge",
+        "model": "charger",
+        "reason": "Modern Charger (LX platform) started 2006 model year. No 2005 MY for sedan.",
+        "validYears": "2006+"
+      },
+      {
+        "year": 2012,
+        "make": "dodge",
+        "model": "dart",
+        "reason": "Modern Dart (PF) started 2013 model year. 2012 were only pre-production pilot cars.",
+        "validYears": "2013-2016"
+      }
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Coupe",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "crossfireforum.org", "Wikipedia"],
+      "notes": "Mercedes SLK platform. Hub bore matches Mercedes spec (66.6mm)."
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Coupe Base",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Coupe Limited",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Coupe SRT-6",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Roadster Base",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Roadster Limited",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Roadster SRT-6",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "crossfireforum.org"],
+      "notes": "SRT-6 added supercharged engine. All trims staggered."
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Coupe Base",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Coupe Limited",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Roadster Base",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Roadster Limited",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "Wikipedia"],
+      "notes": "SRT-6 discontinued. Limited US imports this year."
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Coupe Base",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Coupe Limited",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Roadster Base",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Roadster Limited",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last full production year. Production ended Dec 2007."
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Coupe",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        },
+        {
+          "name": "Roadster",
+          "frontWheelSize": "18x7.5",
+          "rearWheelSize": "19x9",
+          "frontTireSize": "225/40R18",
+          "rearTireSize": "255/35R19"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com", "Wikipedia"],
+      "notes": "Final model year. Very limited production - mostly leftover 2007 builds sold as 2008."
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        },
+        {
+          "name": "AWD",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "edmunds.com"],
+      "notes": "First-gen Pacifica crossover. Shares platform with Dodge Caravan."
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Four trim levels added this year."
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "3.8L V6 engine discontinued."
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "jdpower.com"],
+      "notes": "Side curtain airbags, ESC now standard."
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com"],
+      "notes": "Final year for first-gen Pacifica. LX trim added."
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "status": "invalid",
+      "reason": "No 2016 model year exists. First-gen ended 2008, second-gen started 2017.",
+      "confidence": "high",
+      "sources": ["Wikipedia", "jdpower.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "invalid",
+      "reason": "Production started Feb 2000 for 2001 model year. No 2000 MY exists in US market.",
+      "confidence": "high",
+      "sources": ["Wikipedia", "automotivehistory.org"]
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "Wikipedia"],
+      "notes": "First model year. Extremely popular at launch."
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "GT Turbo",
+          "oemWheelSize": "17x6",
+          "oemTireSize": "205/50R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Turbo GT trim added with 215hp."
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "GT Turbo",
+          "oemWheelSize": "17x6",
+          "oemTireSize": "205/50R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "GT Turbo",
+          "oemWheelSize": "17x6",
+          "oemTireSize": "205/50R17"
+        },
+        {
+          "name": "Convertible Touring",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Convertible GT",
+          "oemWheelSize": "17x6",
+          "oemTireSize": "205/50R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Convertible variant introduced."
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "GT Turbo",
+          "oemWheelSize": "17x6",
+          "oemTireSize": "205/50R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Mid-cycle refresh with updated styling."
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "GT Turbo",
+          "oemWheelSize": "17x6",
+          "oemTireSize": "205/50R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year for turbo engine."
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Turbo and convertible discontinued."
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Classic",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "Wikipedia"],
+      "notes": "Final model year. Only Classic trim available."
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan LX",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Sedan LXi",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Convertible JX",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Convertible JXi",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Coupe LX",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["quora.com", "bbwheelsonline.com"],
+      "notes": "End of second generation. Coupe uses 5x114.3, sedan/convertible use 5x100."
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "boltPatternCoupe": "5x114.3",
+      "hubBoreCoupe": 67.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan LX",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Sedan LXi",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Convertible LX",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Convertible LXi",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Coupe LX",
+          "boltPattern": "5x114.3",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["sebringclub.net", "quora.com"],
+      "notes": "Third generation. Coupe on Mitsubishi Eclipse platform (5x114.3), sedan/convertible on JR platform (5x100)."
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "boltPatternCoupe": "5x114.3",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan LX",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Sedan LXi",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Convertible LX",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Coupe LX",
+          "boltPattern": "5x114.3",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["sebringclub.net"]
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "boltPatternCoupe": "5x114.3",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan LX",
+          "oemWheelSize": "15x6",
+          "oemTireSize": "195/65R15"
+        },
+        {
+          "name": "Sedan LXi",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Convertible LX",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Coupe LX",
+          "boltPattern": "5x114.3",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["sebringclub.net"]
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "boltPatternCoupe": "5x114.3",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Convertible",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Coupe",
+          "boltPattern": "5x114.3",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["sebringclub.net"]
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "boltPatternCoupe": "5x114.3",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Convertible",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Coupe",
+          "boltPattern": "5x114.3",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["sebringclub.net"]
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "boltPatternCoupe": "5x114.3",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Convertible",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Coupe",
+          "boltPattern": "5x114.3",
+          "oemWheelSize": "16x6",
+          "oemTireSize": "205/55R16"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["sebringclub.net"],
+      "notes": "Last year for Coupe."
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "215/55R17"
+        },
+        {
+          "name": "Convertible",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "215/55R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"],
+      "notes": "Fourth generation. All models now 5x114.3. Complete redesign."
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan LX",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "215/55R17"
+        },
+        {
+          "name": "Sedan Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "215/55R17"
+        },
+        {
+          "name": "Sedan Limited",
+          "oemWheelSize": "18x7",
+          "oemTireSize": "225/50R18"
+        },
+        {
+          "name": "Convertible Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "215/55R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan LX",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "215/55R17"
+        },
+        {
+          "name": "Sedan Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "215/55R17"
+        },
+        {
+          "name": "Sedan Limited",
+          "oemWheelSize": "18x7",
+          "oemTireSize": "225/50R18"
+        },
+        {
+          "name": "Convertible Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "215/55R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "215/55R17"
+        },
+        {
+          "name": "Convertible",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "215/55R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"],
+      "notes": "Final model year. Replaced by Chrysler 200."
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "15x6.5",
+          "oemTireSize": "215/70R15"
+        },
+        {
+          "name": "LXi",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "AWD",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": "Third generation end. 2001 was fourth gen redesign."
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "15x6.5",
+          "oemTireSize": "215/70R15"
+        },
+        {
+          "name": "LXi",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "EX",
+          "oemWheelSize": "15x6.5",
+          "oemTireSize": "215/70R15"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tireswheels.org"],
+      "notes": "Fourth generation on RS platform."
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "15x6.5",
+          "oemTireSize": "215/70R15"
+        },
+        {
+          "name": "LXi",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "EX",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "15x6.5",
+          "oemTireSize": "215/70R15"
+        },
+        {
+          "name": "LXi",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "EX",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "15x6.5",
+          "oemTireSize": "215/70R15"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "15x6.5",
+          "oemTireSize": "215/70R15"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Stow 'n Go seating introduced."
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "15x6.5",
+          "oemTireSize": "215/70R15"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "15x6.5",
+          "oemTireSize": "215/70R15"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "215/65R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of fourth gen."
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/65R16"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": "Fifth generation. Bolt pattern changed to 5x127."
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/65R16"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/65R16"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/65R16"
+        },
+        {
+          "name": "Touring-L",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Touring",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/65R16"
+        },
+        {
+          "name": "Touring-L",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Touring-L",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Touring-L",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "S",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "S",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "LX",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Touring",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Touring-L",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "Wikipedia"],
+      "notes": "Final model year. Replaced by Chrysler Pacifica minivan in 2017."
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/70R16"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "R/T",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "dodgeforum.com", "Wikipedia"],
+      "notes": "First model year for Journey."
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/70R16"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "R/T",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "dodgeforum.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Express",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Mainstreet",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Crew",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        },
+        {
+          "name": "R/T",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Facelift with new front end and 3.6L Pentastar V6."
+    },
+    {
+      "year": 2012,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Crew",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        },
+        {
+          "name": "R/T",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Crew",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        },
+        {
+          "name": "R/T",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Crossroad",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        },
+        {
+          "name": "R/T",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Crossroad",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        },
+        {
+          "name": "R/T",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Crossroad",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        },
+        {
+          "name": "R/T",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Crossroad",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        },
+        {
+          "name": "GT",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Crossroad",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        },
+        {
+          "name": "GT",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Crossroad",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        },
+        {
+          "name": "GT",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Dodge",
+      "model": "Journey",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 71.6,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE Value",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        },
+        {
+          "name": "Crossroad",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "225/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "Wikipedia"],
+      "notes": "Final model year for Journey."
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Caliber",
+      "status": "invalid",
+      "reason": "Caliber production started 2006 for 2007 model year. No 2006 MY exists.",
+      "confidence": "high",
+      "sources": ["Wikipedia", "jdpower.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Charger",
+      "status": "invalid",
+      "reason": "Modern Charger (LX platform) started 2006 model year. 2005 Charger sedan does not exist.",
+      "confidence": "high",
+      "sources": ["Wikipedia", "cars.com", "carbuzz.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Dodge",
+      "model": "Dart",
+      "status": "invalid",
+      "reason": "Modern Dart (PF platform) started 2013 model year. 2012 were only pre-production pilot vehicles.",
+      "confidence": "high",
+      "sources": ["Wikipedia", "dodge-dart.org"]
+    },
+    {
+      "year": 2013,
+      "make": "Dodge",
+      "model": "Dart",
+      "status": "valid",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Rallye",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        },
+        {
+          "name": "GT",
+          "oemWheelSize": "18x7.5",
+          "oemTireSize": "225/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "dodge-dart.org"],
+      "notes": "First model year for modern Dart. Alfa Romeo Giulietta platform."
+    },
+    {
+      "year": 2014,
+      "make": "Dodge",
+      "model": "Dart",
+      "status": "valid",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        },
+        {
+          "name": "GT",
+          "oemWheelSize": "18x7.5",
+          "oemTireSize": "225/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "dodge-dart.org"]
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Dart",
+      "status": "valid",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        },
+        {
+          "name": "GT",
+          "oemWheelSize": "18x7.5",
+          "oemTireSize": "225/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "dodge-dart.org"]
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Dart",
+      "status": "valid",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "SE",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "SXT",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "205/55R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        },
+        {
+          "name": "GT",
+          "oemWheelSize": "18x7.5",
+          "oemTireSize": "225/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "dodge-dart.org"],
+      "notes": "Final model year for Dart. Discontinued due to poor sales."
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "RT/10",
+          "frontWheelSize": "17x10",
+          "rearWheelSize": "17x13",
+          "frontTireSize": "275/40R17",
+          "rearTireSize": "335/35R17"
+        },
+        {
+          "name": "GTS",
+          "frontWheelSize": "17x10",
+          "rearWheelSize": "17x13",
+          "frontTireSize": "275/40R17",
+          "rearTireSize": "335/35R17"
+        },
+        {
+          "name": "ACR",
+          "frontWheelSize": "17x10",
+          "rearWheelSize": "17x13",
+          "frontTireSize": "275/40R17",
+          "rearTireSize": "335/35R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["allpar.com", "Wikipedia"],
+      "notes": "Second generation (SR II). Note: DodgeForum says 6x114.3 - needs verification."
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "RT/10",
+          "frontWheelSize": "17x10",
+          "rearWheelSize": "17x13",
+          "frontTireSize": "275/40R17",
+          "rearTireSize": "335/35R17"
+        },
+        {
+          "name": "GTS",
+          "frontWheelSize": "17x10",
+          "rearWheelSize": "17x13",
+          "frontTireSize": "275/40R17",
+          "rearTireSize": "335/35R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["allpar.com", "Wikipedia"],
+      "notes": "ABS added as standard this year."
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "RT/10",
+          "frontWheelSize": "17x10",
+          "rearWheelSize": "17x13",
+          "frontTireSize": "275/40R17",
+          "rearTireSize": "335/35R17"
+        },
+        {
+          "name": "GTS",
+          "frontWheelSize": "17x10",
+          "rearWheelSize": "17x13",
+          "frontTireSize": "275/40R17",
+          "rearTireSize": "335/35R17"
+        },
+        {
+          "name": "GTS Final Edition",
+          "frontWheelSize": "17x10",
+          "rearWheelSize": "17x13",
+          "frontTireSize": "275/40R17",
+          "rearTireSize": "335/35R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["allpar.com", "Wikipedia"],
+      "notes": "Last year of second generation. Final Edition models produced."
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "SRT-10 Roadster",
+          "frontWheelSize": "18x10",
+          "rearWheelSize": "19x13",
+          "frontTireSize": "275/35R18",
+          "rearTireSize": "345/30R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["Wikipedia", "carbuzz.com"],
+      "notes": "Third generation (ZB). Renamed to SRT-10. Complete redesign."
+    },
+    {
+      "year": 2004,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "SRT-10 Roadster",
+          "frontWheelSize": "18x10",
+          "rearWheelSize": "19x13",
+          "frontTireSize": "275/35R18",
+          "rearTireSize": "345/30R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["Wikipedia"]
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.6,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "SRT-10 Roadster",
+          "frontWheelSize": "18x10",
+          "rearWheelSize": "19x13",
+          "frontTireSize": "275/35R18",
+          "rearTireSize": "345/30R19"
+        },
+        {
+          "name": "SRT-10 Coupe",
+          "frontWheelSize": "18x10",
+          "rearWheelSize": "19x13",
+          "frontTireSize": "275/35R18",
+          "rearTireSize": "345/30R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["Wikipedia"],
+      "notes": "Coupe variant added."
+    }
+  ]
+}

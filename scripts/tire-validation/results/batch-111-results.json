@@ -1,0 +1,1039 @@
+{
+  "batchId": "111",
+  "processedAt": "2026-04-21T22:27:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/55R19", "275/55R19", "275/50R20", "295/40R21"],
+      "trims": {
+        "GLS 350d 4MATIC": ["265/60R18", "265/55R19", "275/55R19", "275/50R20", "295/40R21"],
+        "GLS 400 4MATIC": ["265/60R18", "265/55R19", "275/55R19", "275/50R20", "295/40R21"],
+        "GLS 500 4MATIC": ["265/60R18", "265/55R19", "275/55R19", "275/50R20", "295/40R21"]
+      },
+      "source": "cartiresize.net",
+      "notes": "GLS-Class X166 launched late 2015 as GL-Class facelift"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R21", "315/45R21", "285/45R22", "325/40R22", "285/40R23", "325/35R23"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": { "front": "275/50R21", "rear": "315/45R21", "staggered": true },
+        "GLS 63 AMG (22-inch)": { "front": "285/45R22", "rear": "325/40R22", "staggered": true },
+        "GLS 63 AMG (23-inch)": { "front": "285/40R23", "rear": "325/35R23", "staggered": true }
+      },
+      "source": "tiresize.com",
+      "notes": "X167 generation - staggered fitment"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R21", "315/45R21", "285/45R22", "325/40R22", "285/40R23", "325/35R23"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": { "front": "275/50R21", "rear": "315/45R21", "staggered": true },
+        "GLS 63 AMG (22-inch)": { "front": "285/45R22", "rear": "325/40R22", "staggered": true },
+        "GLS 63 AMG (23-inch)": { "front": "285/40R23", "rear": "325/35R23", "staggered": true }
+      },
+      "source": "tiresize.com",
+      "notes": "X167 generation - staggered fitment"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R21", "315/45R21", "285/45R22", "325/40R22", "285/40R23", "325/35R23"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": { "front": "275/50R21", "rear": "315/45R21", "staggered": true },
+        "GLS 63 AMG (22-inch)": { "front": "285/45R22", "rear": "325/40R22", "staggered": true },
+        "GLS 63 AMG (23-inch)": { "front": "285/40R23", "rear": "325/35R23", "staggered": true }
+      },
+      "source": "tiresize.com",
+      "notes": "X167 generation - staggered fitment"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R21", "315/45R21", "285/45R22", "325/40R22", "285/40R23", "325/35R23"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": { "front": "275/50R21", "rear": "315/45R21", "staggered": true },
+        "GLS 63 AMG (22-inch)": { "front": "285/45R22", "rear": "325/40R22", "staggered": true },
+        "GLS 63 AMG (23-inch)": { "front": "285/40R23", "rear": "325/35R23", "staggered": true }
+      },
+      "source": "tiresize.com",
+      "notes": "X167 generation - staggered fitment"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R21", "315/45R21", "285/45R22", "325/40R22", "285/40R23", "325/35R23"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": { "front": "275/50R21", "rear": "315/45R21", "staggered": true },
+        "GLS 63 AMG (22-inch)": { "front": "285/45R22", "rear": "325/40R22", "staggered": true },
+        "GLS 63 AMG (23-inch)": { "front": "285/40R23", "rear": "325/35R23", "staggered": true }
+      },
+      "source": "tiresize.com",
+      "notes": "X167 generation - staggered fitment"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R21", "315/45R21", "285/45R22", "325/40R22", "285/40R23", "325/35R23"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": { "front": "275/50R21", "rear": "315/45R21", "staggered": true },
+        "GLS 63 AMG (22-inch)": { "front": "285/45R22", "rear": "325/40R22", "staggered": true },
+        "GLS 63 AMG (23-inch)": { "front": "285/40R23", "rear": "325/35R23", "staggered": true }
+      },
+      "source": "tiresize.com",
+      "notes": "X167 generation first year - staggered fitment"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "TRANSITIONAL YEAR - No GLS 63 AMG produced in 2020. X166 ended 2019, X167 started 2021"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["295/40R21", "285/40R22"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": ["295/40R21"],
+        "GLS 63 AMG (22-inch)": ["285/40R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "X166 generation - square fitment"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["295/40R21", "285/40R22"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": ["295/40R21"],
+        "GLS 63 AMG (22-inch)": ["285/40R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "X166 generation - square fitment"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["295/40R21", "285/40R22"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": ["295/40R21"],
+        "GLS 63 AMG (22-inch)": ["285/40R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "X166 generation - square fitment"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["295/40R21", "285/40R22"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": ["295/40R21"],
+        "GLS 63 AMG (22-inch)": ["285/40R22"]
+      },
+      "source": "cartiresize.net",
+      "notes": "X166 generation - extrapolated from 2017"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["295/40R21", "285/40R22"],
+      "trims": {
+        "GLS 63 AMG (21-inch)": ["295/40R21"],
+        "GLS 63 AMG (22-inch)": ["285/40R22"]
+      },
+      "source": "cartiresize.net",
+      "notes": "X166 generation - launch year"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": {
+        "ML350 Base": ["255/50R19", "265/45R20"],
+        "ML350 BlueTEC": ["255/50R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "W166 generation. Current sizes include incorrect 255/55R18 (not OEM for 2015) and 295/35R21 (AMG only)",
+      "corrections": {
+        "remove": ["255/55R18", "295/35R21"],
+        "add": ["255/50R19"]
+      }
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": {
+        "ML350 Base": ["255/50R19", "265/45R20"],
+        "ML350 BlueTEC": ["255/50R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "W166 generation. Current sizes incorrect",
+      "corrections": {
+        "remove": ["255/55R18", "295/35R21"],
+        "add": ["255/50R19"]
+      }
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": {
+        "ML350 Base": ["255/50R19", "265/45R20"],
+        "ML350 BlueTEC": ["255/50R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "W166 generation. Current sizes incorrect",
+      "corrections": {
+        "remove": ["255/55R18", "295/35R21"],
+        "add": ["255/50R19"]
+      }
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": {
+        "ML350 Base": ["255/50R19", "265/45R20"],
+        "ML350 BlueTEC": ["255/50R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "W166 generation first year. Current sizes incorrect",
+      "corrections": {
+        "remove": ["255/55R18", "295/35R21"],
+        "add": ["255/50R19"]
+      }
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": {
+        "ML350 4MATIC": ["255/50R19", "265/45R20"],
+        "ML350 BlueTEC": ["255/50R19", "265/45R20"],
+        "ML350 RWD": ["255/50R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "W164 generation final year",
+      "corrections": {
+        "remove": ["255/55R18", "295/35R21"],
+        "add": ["255/50R19"]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": {
+        "ML350 4MATIC": ["255/50R19", "265/45R20"],
+        "ML350 BlueTEC": ["255/50R19", "265/45R20"],
+        "ML350 RWD": ["255/50R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "W164 generation",
+      "corrections": {
+        "remove": ["255/55R18", "295/35R21"],
+        "add": ["255/50R19"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": {
+        "ML350 Base": ["255/50R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "W164 generation",
+      "corrections": {
+        "remove": ["255/55R18", "295/35R21"],
+        "add": ["255/50R19"]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": {
+        "ML350 Base": ["255/50R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "W164 generation",
+      "corrections": {
+        "remove": ["255/55R18", "295/35R21"],
+        "add": ["255/50R19"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["235/65R17", "255/55R18", "255/50R19", "265/45R20"],
+      "trims": {
+        "ML350 Base": ["235/65R17", "255/55R18"],
+        "ML350 Sport": ["255/50R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "W164 generation - 255/55R18 is valid for this year",
+      "corrections": {
+        "remove": ["295/35R21"],
+        "add": ["235/65R17", "255/50R19"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["235/65R17", "255/55R18", "255/50R19", "265/45R20"],
+      "trims": {
+        "ML350 Base": ["235/65R17", "255/55R18"],
+        "ML350 Sport": ["255/50R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "W164 generation first year",
+      "corrections": {
+        "remove": ["295/35R21"],
+        "add": ["235/65R17", "255/50R19"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/60R17", "275/55R17"],
+      "trims": {
+        "ML350 Base": ["255/60R17", "275/55R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "W163 generation final year. Current sizes are completely wrong for this generation",
+      "corrections": {
+        "remove": ["255/55R18", "265/45R20", "295/35R21"],
+        "add": ["255/60R17", "275/55R17"]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/60R17", "275/55R17"],
+      "trims": {
+        "ML350 Base": ["255/60R17", "275/55R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "W163 generation. Current sizes wrong",
+      "corrections": {
+        "remove": ["255/55R18", "265/45R20", "295/35R21"],
+        "add": ["255/60R17", "275/55R17"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/60R17", "275/55R17"],
+      "trims": {
+        "ML320 Base": ["255/60R17", "275/55R17"],
+        "ML320 Sport": ["275/55R17"],
+        "ML350 Base": ["255/60R17", "275/55R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "W163 generation",
+      "corrections": {
+        "remove": ["255/55R18", "265/45R20", "295/35R21"],
+        "add": ["255/60R17", "275/55R17"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/60R17", "275/55R17"],
+      "trims": {
+        "ML320 Base": ["255/60R17"],
+        "ML320 Sport": ["275/55R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "W163 generation",
+      "corrections": {
+        "remove": ["255/55R18", "265/45R20", "295/35R21"],
+        "add": ["255/60R17", "275/55R17"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/65R16", "275/55R17"],
+      "trims": {
+        "ML320 Base": ["255/65R16"],
+        "ML320 Sport": ["275/55R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "W163 generation",
+      "corrections": {
+        "remove": ["255/55R18", "265/45R20", "295/35R21"],
+        "add": ["255/65R16", "275/55R17"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "m-class",
+      "currentTireSizes": ["255/55R18", "265/45R20", "295/35R21"],
+      "validatedTireSizes": ["255/65R16", "275/55R17"],
+      "trims": {
+        "ML320 Base": ["255/65R16", "275/55R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "W163 generation",
+      "corrections": {
+        "remove": ["255/55R18", "265/45R20", "295/35R21"],
+        "add": ["255/65R16", "275/55R17"]
+      }
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["265/45R20", "295/35R21"],
+      "trims": {
+        "ML63 AMG (20-inch)": ["265/45R20"],
+        "ML63 AMG (21-inch)": ["295/35R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "295/35R22 is NOT a factory size for ML63 AMG",
+      "corrections": {
+        "remove": ["295/35R22"]
+      }
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["265/45R20", "295/35R21"],
+      "trims": {
+        "ML63 AMG (20-inch)": ["265/45R20"],
+        "ML63 AMG (21-inch)": ["295/35R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "295/35R22 NOT factory",
+      "corrections": {
+        "remove": ["295/35R22"]
+      }
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["295/40R20", "295/35R21"],
+      "trims": {
+        "ML63 AMG (20-inch)": ["295/40R20"],
+        "ML63 AMG (21-inch)": ["295/35R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "265/45R20 and 295/35R22 are NOT correct for 2013",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R22"],
+        "add": ["295/40R20"]
+      }
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["295/40R20", "295/35R21"],
+      "trims": {
+        "ML63 AMG (20-inch)": ["295/40R20"],
+        "ML63 AMG (21-inch)": ["295/35R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "W166 generation first year. 265/45R20 and 295/35R22 NOT factory",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R22"],
+        "add": ["295/40R20"]
+      }
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["295/40R20", "295/35R21"],
+      "trims": {
+        "ML63 AMG (20-inch)": ["295/40R20"],
+        "ML63 AMG (21-inch)": ["295/35R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "W164 generation final year",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R22"],
+        "add": ["295/40R20"]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["295/40R20", "295/35R21"],
+      "trims": {
+        "ML63 AMG (20-inch)": ["295/40R20"],
+        "ML63 AMG (21-inch)": ["295/35R21"]
+      },
+      "source": "tiresize.com",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R22"],
+        "add": ["295/40R20"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["295/40R20", "295/35R21"],
+      "trims": {
+        "ML63 AMG (20-inch)": ["295/40R20"],
+        "ML63 AMG (21-inch)": ["295/35R21"]
+      },
+      "source": "tiresize.com",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R22"],
+        "add": ["295/40R20"]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["295/40R20"],
+      "trims": {
+        "ML63 AMG": ["295/40R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "21-inch option not available until 2009",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R21", "295/35R22"],
+        "add": ["295/40R20"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["295/40R20"],
+      "trims": {
+        "ML63 AMG": ["295/40R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "ML63 AMG first year. Only 20-inch available",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R21", "295/35R22"],
+        "add": ["295/40R20"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO ML63 AMG in 2006. ML55 AMG was discontinued 2003. No M-Class AMG this year"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO M-Class AMG in 2005. Gap year between ML55 (ended 2003) and ML63 (started 2007)"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO M-Class AMG in 2004. Gap year between ML55 (ended 2003) and ML63 (started 2007)"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["285/50R18"],
+      "trims": {
+        "ML55 AMG": ["285/50R18"]
+      },
+      "source": "tiresize.com",
+      "notes": "ML55 AMG final year. W163 generation",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R21", "295/35R22"],
+        "add": ["285/50R18"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["285/50R18"],
+      "trims": {
+        "ML55 AMG": ["285/50R18"]
+      },
+      "source": "tiresize.com",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R21", "295/35R22"],
+        "add": ["285/50R18"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["285/50R18"],
+      "trims": {
+        "ML55 AMG": ["285/50R18"]
+      },
+      "source": "tiresize.com",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R21", "295/35R22"],
+        "add": ["285/50R18"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "m-class-amg",
+      "currentTireSizes": ["265/45R20", "295/35R21", "295/35R22"],
+      "validatedTireSizes": ["285/50R18"],
+      "trims": {
+        "ML55 AMG": ["285/50R18"]
+      },
+      "source": "tiresize.com",
+      "notes": "ML55 AMG first year",
+      "corrections": {
+        "remove": ["265/45R20", "295/35R21", "295/35R22"],
+        "add": ["285/50R18"]
+      }
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo Activity": ["225/55R17"],
+        "Marco Polo Horizon": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list",
+      "notes": "V-Class based camper van. Primarily European market"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Marco Polo": ["225/55R17", "235/55R17"]
+      },
+      "source": "wheel-size.com list",
+      "notes": "Marco Polo launch year based on V-Class W447"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "metris",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17", "235/60R16"],
+      "trims": {
+        "Metris Cargo": ["225/55R17", "235/55R17"],
+        "Metris Passenger": ["225/55R17", "235/55R17"]
+      },
+      "source": "tiresize.com, metrisforum.com",
+      "notes": "Metris final year. 235/55R17 became standard in later years"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "metris",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17", "235/60R16"],
+      "trims": {
+        "Metris Cargo": ["225/55R17", "235/55R17"],
+        "Metris Passenger": ["225/55R17", "235/55R17"]
+      },
+      "source": "tiresize.com, metrisforum.com"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "metris",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17", "235/60R16"],
+      "trims": {
+        "Metris Cargo": ["225/55R17", "235/55R17"],
+        "Metris Passenger": ["225/55R17", "235/55R17"]
+      },
+      "source": "tiresize.com, metrisforum.com"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "metris",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17", "235/60R16"],
+      "trims": {
+        "Metris Cargo": ["225/55R17", "235/55R17"],
+        "Metris Passenger": ["225/55R17", "235/55R17"]
+      },
+      "source": "tiresize.com, metrisforum.com"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "metris",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "235/55R17"],
+      "trims": {
+        "Metris Cargo": ["225/55R17"],
+        "Metris Passenger": ["225/55R17"]
+      },
+      "source": "tiresize.com, metrisforum.com",
+      "notes": "235/55R17 became option starting around 2019"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "metris",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17"],
+      "trims": {
+        "Metris Cargo": ["225/55R17"],
+        "Metris Passenger": ["225/55R17"]
+      },
+      "source": "tiresize.com, metrisforum.com"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "metris",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17"],
+      "trims": {
+        "Metris Cargo": ["225/55R17"],
+        "Metris Passenger": ["225/55R17"]
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "metris",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17"],
+      "trims": {
+        "Metris Cargo": ["225/55R17"],
+        "Metris Passenger": ["225/55R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "Metris launch year in US market"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "r-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO R-Class AMG in 2015. R63 AMG only produced 2007-2008"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "r-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO R-Class AMG in 2014. R63 AMG only produced 2007-2008"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "r-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO R-Class AMG in 2013. R63 AMG only produced 2007-2008"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "r-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO R-Class AMG in 2012. R63 AMG only produced 2007-2008"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "r-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO R-Class AMG in 2011. R63 AMG only produced 2007-2008"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "r-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO R-Class AMG in 2010. R63 AMG only produced 2007-2008"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "r-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO R-Class AMG in 2009. R63 AMG only produced 2007-2008"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "r-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/45R20"],
+      "trims": {
+        "R63 AMG": ["265/45R20"]
+      },
+      "source": "tiresize.com, goodyear.com",
+      "notes": "R63 AMG final year"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "r-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/45R20"],
+      "trims": {
+        "R63 AMG": ["265/45R20"]
+      },
+      "source": "tiresize.com, goodyear.com, caranddriver.com",
+      "notes": "R63 AMG first and primary year"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "r-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "NO R-Class AMG in 2006. R63 AMG introduced in 2007"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "vehiclesWithData": 63,
+    "vehiclesNoData": 12,
+    "noDataReasons": {
+      "modelNotProduced": ["2020 GLS-Class AMG (gap year)", "2004-2006 M-Class AMG", "2006, 2009-2015 R-Class AMG"]
+    },
+    "majorCorrectionsNeeded": {
+      "m-class": "Current sizes (255/55R18, 265/45R20, 295/35R21) are from late W166 gen only. W163 (2000-2005) needs 255/65R16, 255/60R17, 275/55R17. W164 (2006-2011) needs 235/65R17, 255/55R18, 255/50R19, 265/45R20",
+      "m-class-amg": "Current sizes are ML63 only (2007+). ML55 AMG (2000-2003) used 285/50R18. No AMG 2004-2006. ML63 started 2007 with 295/40R20"
+    }
+  }
+}

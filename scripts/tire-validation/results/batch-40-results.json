@@ -1,0 +1,880 @@
+{
+  "batchId": "40",
+  "validatedAt": "2026-04-21T21:54:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "uniqueYearMakeModels": 22,
+    "validationNotes": [
+      "Chrysler 300 LX-platform started 2005 model year - 2004 entry is likely data error or refers to 300M",
+      "300C is a trim of the 300 from 2011+ but was separate model 2005-2010",
+      "SRT8 Performance Tires option had staggered setup (245/45R20 front, 255/45R20 rear)",
+      "19-inch wheels (235/55R19) standard on AWD trims 2011+",
+      "20-inch wheels (245/45R20) standard on performance/RWD sport trims"
+    ]
+  },
+  "validatedTireSizes": {
+    "chrysler": {
+      "300": {
+        "2015": {
+          "trims": [
+            {"trim": "Limited RWD", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Limited AWD", "tireSize": "235/55R19", "wheelSize": 19}
+          ],
+          "allValidSizes": ["215/65R17", "235/55R19"],
+          "notes": "Base Limited RWD gets 17\", Limited AWD gets 19\". 300S and 300C trims exist separately with 19\"/20\" wheels."
+        },
+        "2014": {
+          "trims": [
+            {"trim": "RWD (Base)", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "Luxury Edition AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "Luxury Edition RWD", "tireSize": "245/45R20", "wheelSize": 20},
+            {"trim": "SRT8", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["215/65R17", "235/55R19", "245/45R20"],
+          "notes": "SRT8 available this year"
+        },
+        "2013": {
+          "trims": [
+            {"trim": "RWD (Base)", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "Luxury Series AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "Luxury Series RWD", "tireSize": "245/45R20", "wheelSize": 20},
+            {"trim": "SRT8", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["215/65R17", "235/55R19", "245/45R20"],
+          "notes": "Last year of first refresh SRT8"
+        },
+        "2012": {
+          "trims": [
+            {"trim": "Base Model", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Limited", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]},
+            {"trim": "SRT8", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["215/65R17", "225/60R18", "245/45R20"],
+          "notes": "Limited has wheel package options (18\" or 20\")"
+        },
+        "2011": {
+          "trims": [
+            {"trim": "Base Model", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Touring", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Limited", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]}
+          ],
+          "allValidSizes": ["215/65R17", "225/60R18", "245/45R20"],
+          "notes": "Second generation starts 2011. Limited has 18\" or optional 20\" wheels."
+        },
+        "2010": {
+          "trims": [
+            {"trim": "Touring RWD", "tireSize": ["215/65R17", "225/60R18"], "wheelSize": [17, 18]},
+            {"trim": "Touring AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Touring Executive Series", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Touring Signature", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Limited RWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Limited AWD", "tireSize": "225/60R18", "wheelSize": 18}
+          ],
+          "allValidSizes": ["215/65R17", "225/60R18"],
+          "notes": "Last year of first generation. No 19\" or 20\" on base 300, only on 300C."
+        },
+        "2009": {
+          "trims": [
+            {"trim": "LX", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Signature Series", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Touring RWD", "tireSize": ["215/65R17", "225/60R18"], "wheelSize": [17, 18]},
+            {"trim": "Touring AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Touring Executive Series", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Limited RWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Limited AWD", "tireSize": "225/60R18", "wheelSize": 18}
+          ],
+          "allValidSizes": ["215/65R17", "225/60R18"],
+          "notes": "Max OEM wheel size 18\" for base 300. 300C has larger options."
+        },
+        "2008": {
+          "trims": [
+            {"trim": "LX", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Great American Package", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Touring RWD", "tireSize": ["215/65R17", "225/60R18"], "wheelSize": [17, 18]},
+            {"trim": "Touring AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Touring Executive Series", "tireSize": ["215/65R17", "225/60R18"], "wheelSize": [17, 18]},
+            {"trim": "Heritage Edition", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Signature Series Value Pkg", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Limited RWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Limited AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "DUB Edition", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["215/65R17", "225/60R18", "245/45R20"],
+          "notes": "DUB Edition is special 20\" wheel package"
+        },
+        "2007": {
+          "trims": [
+            {"trim": "Base Model", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Touring RWD", "tireSize": ["215/65R17", "225/60R18"], "wheelSize": [17, 18]},
+            {"trim": "Touring AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Limited RWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Limited AWD", "tireSize": "225/60R18", "wheelSize": 18}
+          ],
+          "allValidSizes": ["215/65R17", "225/60R18"],
+          "notes": "Standard 17\" or 18\" depending on trim"
+        },
+        "2006": {
+          "trims": [
+            {"trim": "Base Model", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Signature", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Touring RWD", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Touring AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Limited RWD", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Limited AWD", "tireSize": "225/60R18", "wheelSize": 18}
+          ],
+          "allValidSizes": ["215/65R17", "225/60R18"],
+          "notes": "AWD trims get 18\" wheels, RWD trims standard with 17\""
+        },
+        "2005": {
+          "trims": [
+            {"trim": "Base Model", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Touring RWD", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Touring AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Limited RWD", "tireSize": "215/65R17", "wheelSize": 17},
+            {"trim": "Limited AWD", "tireSize": "225/60R18", "wheelSize": 18}
+          ],
+          "allValidSizes": ["215/65R17", "225/60R18"],
+          "notes": "First year of LX platform 300. AWD trims get 18\" standard."
+        },
+        "2004": {
+          "trims": [],
+          "allValidSizes": [],
+          "notes": "ERROR: No 2004 Chrysler 300 exists. The LX-platform 300 started in 2005. This may be a 300M (different vehicle with 225/55R17 or 245/45R18).",
+          "dataIssue": true
+        }
+      },
+      "300c": {
+        "2021": {
+          "trims": [],
+          "allValidSizes": ["245/45R20"],
+          "notes": "300C trim discontinued after 2020 per tiresize.com records. May be combined with 300 or limited availability.",
+          "dataIssue": true
+        },
+        "2020": {
+          "trims": [
+            {"trim": "RWD", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["245/45R20"],
+          "notes": "RWD only, 20\" wheels standard"
+        },
+        "2019": {
+          "trims": [
+            {"trim": "RWD", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["245/45R20"],
+          "notes": "RWD only, 20\" wheels standard"
+        },
+        "2018": {
+          "trims": [
+            {"trim": "RWD", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["245/45R20"],
+          "notes": "RWD only, 20\" wheels standard"
+        },
+        "2017": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]},
+            {"trim": "Platinum AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "Platinum RWD", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["225/60R18", "235/55R19", "245/45R20"],
+          "notes": "Multiple wheel options. Platinum gets 20\" RWD or 19\" AWD."
+        },
+        "2016": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]},
+            {"trim": "Platinum AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "Platinum RWD", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["225/60R18", "235/55R19", "245/45R20"],
+          "notes": "Same setup as 2017"
+        },
+        "2015": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]},
+            {"trim": "Platinum AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "Platinum RWD", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["225/60R18", "235/55R19", "245/45R20"],
+          "notes": "Platinum sub-trim available"
+        },
+        "2014": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]}
+          ],
+          "allValidSizes": ["225/60R18", "235/55R19", "245/45R20"],
+          "notes": "Standard 300C without Platinum sub-trim options"
+        },
+        "2013": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]}
+          ],
+          "allValidSizes": ["225/60R18", "235/55R19", "245/45R20"],
+          "notes": "Second gen 300C"
+        },
+        "2012": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]}
+          ],
+          "allValidSizes": ["225/60R18", "235/55R19", "245/45R20"],
+          "notes": "Second gen 300C"
+        },
+        "2011": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]}
+          ],
+          "allValidSizes": ["225/60R18", "235/55R19", "245/45R20"],
+          "notes": "First year of second gen. SRT8 moved to separate 300 SRT model."
+        },
+        "2010": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]},
+            {"trim": "SRT8", "tireSize": "245/45R20", "wheelSize": 20},
+            {"trim": "SRT8 Performance Tires", "tireSize": {"front": "245/45R20", "rear": "255/45R20"}, "wheelSize": 20, "staggered": true}
+          ],
+          "allValidSizes": ["225/60R18", "245/45R20", "255/45R20"],
+          "notes": "SRT8 Performance Tires is staggered setup (245/255). Standard 300C is 18\" or 20\"."
+        },
+        "2009": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]},
+            {"trim": "SRT8", "tireSize": "245/45R20", "wheelSize": 20},
+            {"trim": "SRT8 Performance Tires", "tireSize": {"front": "245/45R20", "rear": "255/45R20"}, "wheelSize": 20, "staggered": true}
+          ],
+          "allValidSizes": ["225/60R18", "245/45R20", "255/45R20"],
+          "notes": "SRT8 Performance Tires is staggered"
+        },
+        "2008": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "Executive Series", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]},
+            {"trim": "SRT Design", "tireSize": "245/45R20", "wheelSize": 20},
+            {"trim": "SRT8", "tireSize": "245/45R20", "wheelSize": 20},
+            {"trim": "SRT8 Performance Tires", "tireSize": {"front": "245/45R20", "rear": "255/45R20"}, "wheelSize": 20, "staggered": true}
+          ],
+          "allValidSizes": ["225/60R18", "245/45R20", "255/45R20"],
+          "notes": "SRT Design is appearance package without SRT8 engine"
+        },
+        "2007": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "RWD", "tireSize": ["225/60R18", "245/45R20"], "wheelSize": [18, 20]},
+            {"trim": "SRT-8", "tireSize": "245/45R20", "wheelSize": 20},
+            {"trim": "SRT-8 Performance Tires", "tireSize": {"front": "245/45R20", "rear": "255/45R20"}, "wheelSize": 20, "staggered": true}
+          ],
+          "allValidSizes": ["225/60R18", "245/45R20", "255/45R20"],
+          "notes": "SRT-8 with hyphen naming convention"
+        },
+        "2006": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "RWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "SRT-8", "tireSize": "245/45R20", "wheelSize": 20},
+            {"trim": "SRT-8 Performance Tires", "tireSize": {"front": "245/45R20", "rear": "255/45R20"}, "wheelSize": 20, "staggered": true}
+          ],
+          "allValidSizes": ["225/60R18", "245/45R20", "255/45R20"],
+          "notes": "Standard 300C uses 18\", SRT-8 uses 20\""
+        },
+        "2005": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "RWD", "tireSize": "225/60R18", "wheelSize": 18},
+            {"trim": "SRT-8", "tireSize": {"front": "245/45R20", "rear": "255/45R20"}, "wheelSize": 20, "staggered": true}
+          ],
+          "allValidSizes": ["225/60R18", "245/45R20", "255/45R20"],
+          "notes": "First year 300C. SRT-8 had staggered setup from factory."
+        }
+      },
+      "300s": {
+        "note": "300S is a sport trim of the 300, available 2012-2023",
+        "2012-2020": {
+          "trims": [
+            {"trim": "AWD", "tireSize": "235/55R19", "wheelSize": 19},
+            {"trim": "RWD", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["235/55R19", "245/45R20"],
+          "notes": "Consistent sizing 2012-2020. AWD gets 19\", RWD gets 20\"."
+        },
+        "2021-2023": {
+          "trims": [
+            {"trim": "V6", "tireSize": "245/45R20", "wheelSize": 20},
+            {"trim": "V8", "tireSize": "245/45R20", "wheelSize": 20}
+          ],
+          "allValidSizes": ["245/45R20"],
+          "notes": "RWD only with 20\" wheels. V6 and V8 engine options."
+        }
+      }
+    }
+  },
+  "vehicleValidation": [
+    {
+      "vehicle": {"year": 2015, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19"],
+      "status": "MISMATCH",
+      "notes": "225/60R18 and 245/45R20 are 300C sizes, not base 300. Base 300 for 2015 uses 17\" or 19\"."
+    },
+    {
+      "vehicle": {"year": 2015, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "235/55R19"],
+      "status": "VALID",
+      "notes": "Limited RWD trim"
+    },
+    {
+      "vehicle": {"year": 2015, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 valid for 300 AWD. 225/60R18 and 245/45R20 are 300C sizes."
+    },
+    {
+      "vehicle": {"year": 2015, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["215/65R17", "235/55R19"],
+      "status": "VALID",
+      "notes": "Limited AWD trim"
+    },
+    {
+      "vehicle": {"year": 2015, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19"],
+      "status": "MISMATCH",
+      "notes": "245/45R20 is 300C/300S size, not base 300"
+    },
+    {
+      "vehicle": {"year": 2015, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19"],
+      "status": "PARTIAL",
+      "notes": "Includes valid sizes plus 300C sizes. May be combining all 300 family trims."
+    },
+    {
+      "vehicle": {"year": 2014, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "VALID",
+      "notes": "Base RWD trim"
+    },
+    {
+      "vehicle": {"year": 2014, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 and 245/45R20 valid. 225/60R18 is 300C size."
+    },
+    {
+      "vehicle": {"year": 2014, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "VALID",
+      "notes": "Luxury Edition RWD or SRT8 trim"
+    },
+    {
+      "vehicle": {"year": 2014, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "225/60R18 is 300C size, not available on base 300"
+    },
+    {
+      "vehicle": {"year": 2014, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "245/45R20 valid. 225/60R18 is 300C size."
+    },
+    {
+      "vehicle": {"year": 2014, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "VALID",
+      "notes": "AWD or Luxury Edition AWD trim"
+    },
+    {
+      "vehicle": {"year": 2013, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 and 245/45R20 valid. 225/60R18 is 300C size."
+    },
+    {
+      "vehicle": {"year": 2013, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "VALID",
+      "notes": "AWD trim"
+    },
+    {
+      "vehicle": {"year": 2013, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "225/60R18 invalid for base 300"
+    },
+    {
+      "vehicle": {"year": 2013, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "VALID",
+      "notes": "Luxury Series RWD or SRT8"
+    },
+    {
+      "vehicle": {"year": 2013, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "VALID",
+      "notes": "Base RWD trim"
+    },
+    {
+      "vehicle": {"year": 2013, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validOemSizes": ["215/65R17", "235/55R19", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "245/45R20 valid. 225/60R18 is 300C size."
+    },
+    {
+      "vehicle": {"year": 2012, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 is 300C AWD or 300S AWD size, not base 300"
+    },
+    {
+      "vehicle": {"year": 2012, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "VALID",
+      "notes": "Limited trim options"
+    },
+    {
+      "vehicle": {"year": 2012, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "MISMATCH",
+      "notes": "235/55R19 is 300C AWD or 300S AWD size, not base 300"
+    },
+    {
+      "vehicle": {"year": 2012, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "VALID",
+      "notes": "Limited or SRT8 trim"
+    },
+    {
+      "vehicle": {"year": 2012, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "VALID",
+      "notes": "Base Model trim"
+    },
+    {
+      "vehicle": {"year": 2012, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 is 300C/300S AWD size"
+    },
+    {
+      "vehicle": {"year": 2011, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 is 300C AWD size"
+    },
+    {
+      "vehicle": {"year": 2011, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "VALID",
+      "notes": "Base Model or Touring trim"
+    },
+    {
+      "vehicle": {"year": 2011, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "MISMATCH",
+      "notes": "235/55R19 is 300C AWD size, not base 300"
+    },
+    {
+      "vehicle": {"year": 2011, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "VALID",
+      "notes": "Limited trim options"
+    },
+    {
+      "vehicle": {"year": 2011, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 is 300C AWD size"
+    },
+    {
+      "vehicle": {"year": 2011, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "VALID",
+      "notes": "Limited trim with 20\" option"
+    },
+    {
+      "vehicle": {"year": 2010, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "PARTIAL",
+      "notes": "Base 300 in 2010 maxed at 18\". 235/55R19 and 245/45R20 are 300C sizes."
+    },
+    {
+      "vehicle": {"year": 2010, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "VALID",
+      "notes": "Touring RWD base option"
+    },
+    {
+      "vehicle": {"year": 2009, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "VALID",
+      "notes": "LX or Signature Series trim"
+    },
+    {
+      "vehicle": {"year": 2009, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 is 300C size, not available on base 300 in 2009"
+    },
+    {
+      "vehicle": {"year": 2009, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 and 245/45R20 are 300C sizes"
+    },
+    {
+      "vehicle": {"year": 2008, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 not OEM for 2008. 245/45R20 only on DUB Edition."
+    },
+    {
+      "vehicle": {"year": 2008, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "225/60R18", "245/45R20"],
+      "status": "VALID",
+      "notes": "LX or Great American Package"
+    },
+    {
+      "vehicle": {"year": 2007, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 not OEM for base 300"
+    },
+    {
+      "vehicle": {"year": 2007, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 and 245/45R20 are 300C sizes"
+    },
+    {
+      "vehicle": {"year": 2007, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "VALID",
+      "notes": "Base Model"
+    },
+    {
+      "vehicle": {"year": 2006, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 is 300C size"
+    },
+    {
+      "vehicle": {"year": 2006, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 and 245/45R20 are 300C sizes"
+    },
+    {
+      "vehicle": {"year": 2006, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "VALID",
+      "notes": "Base, Signature, Touring RWD, or Limited RWD"
+    },
+    {
+      "vehicle": {"year": 2005, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "VALID",
+      "notes": "Base, Touring RWD, or Limited RWD"
+    },
+    {
+      "vehicle": {"year": 2005, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["215/65R17", "225/60R18"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 and 245/45R20 are 300C sizes"
+    },
+    {
+      "vehicle": {"year": 2004, "make": "chrysler", "model": "300"},
+      "currentTireSizes": ["215/65R17", "235/55R18", "245/45R19", "245/45R20"],
+      "validOemSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "No 2004 Chrysler 300 exists. LX platform started 2005. May be 300M (225/55R17, 245/45R18)."
+    },
+    {
+      "vehicle": {"year": 2021, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "300C may have been discontinued or merged with 300 lineup. Data missing."
+    },
+    {
+      "vehicle": {"year": 2020, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "Missing tire data - should be 245/45R20"
+    },
+    {
+      "vehicle": {"year": 2019, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "Missing tire data - should be 245/45R20"
+    },
+    {
+      "vehicle": {"year": 2018, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "Missing tire data - should be 245/45R20"
+    },
+    {
+      "vehicle": {"year": 2017, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "Missing tire data"
+    },
+    {
+      "vehicle": {"year": 2016, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "Missing tire data"
+    },
+    {
+      "vehicle": {"year": 2015, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "Missing tire data"
+    },
+    {
+      "vehicle": {"year": 2014, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "Missing tire data"
+    },
+    {
+      "vehicle": {"year": 2013, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "Missing tire data"
+    },
+    {
+      "vehicle": {"year": 2012, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "Missing tire data"
+    },
+    {
+      "vehicle": {"year": 2011, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": [],
+      "validOemSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "status": "NEEDS_DATA",
+      "notes": "Missing tire data"
+    },
+    {
+      "vehicle": {"year": 2010, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "245/45ZR20", "245/40ZR21", "255/35ZR22", "215/65R17", "235/55R19"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "PARTIAL",
+      "notes": "21\" and 22\" are aftermarket. 215/65R17 is base 300 size. 235/55R19 not OEM for 2010 300C."
+    },
+    {
+      "vehicle": {"year": 2010, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "VALID",
+      "notes": "Standard 300C sizes"
+    },
+    {
+      "vehicle": {"year": 2010, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 not OEM for 2010 300C (that's 2011+ 300C AWD)"
+    },
+    {
+      "vehicle": {"year": 2010, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "MISMATCH",
+      "notes": "235/55R19 is 2011+ 300C AWD size, not 2010"
+    },
+    {
+      "vehicle": {"year": 2009, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "VALID",
+      "notes": "Standard 300C or SRT8 sizes"
+    },
+    {
+      "vehicle": {"year": 2009, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 not OEM for 2009"
+    },
+    {
+      "vehicle": {"year": 2009, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "MISMATCH",
+      "notes": "235/55R19 not OEM for 2009 300C"
+    },
+    {
+      "vehicle": {"year": 2008, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 not OEM"
+    },
+    {
+      "vehicle": {"year": 2008, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "VALID",
+      "notes": "Standard or SRT8"
+    },
+    {
+      "vehicle": {"year": 2008, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "MISMATCH",
+      "notes": "235/55R19 not OEM for 2008"
+    },
+    {
+      "vehicle": {"year": 2007, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 not OEM"
+    },
+    {
+      "vehicle": {"year": 2007, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "MISMATCH",
+      "notes": "235/55R19 not OEM for 2007"
+    },
+    {
+      "vehicle": {"year": 2007, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "VALID",
+      "notes": "Standard or SRT-8"
+    },
+    {
+      "vehicle": {"year": 2006, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "VALID",
+      "notes": "Standard or SRT-8"
+    },
+    {
+      "vehicle": {"year": 2006, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 not OEM"
+    },
+    {
+      "vehicle": {"year": 2006, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "MISMATCH",
+      "notes": "235/55R19 not OEM for 2006"
+    },
+    {
+      "vehicle": {"year": 2005, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["235/55R19"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "MISMATCH",
+      "notes": "235/55R19 not OEM for 2005 300C"
+    },
+    {
+      "vehicle": {"year": 2005, "make": "chrysler", "model": "300c"},
+      "currentTireSizes": ["225/60R18", "235/55R19", "245/45R20"],
+      "validOemSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "status": "PARTIAL",
+      "notes": "235/55R19 not OEM"
+    }
+  ],
+  "recommendations": {
+    "dataCorrections": [
+      {
+        "issue": "2004 Chrysler 300 does not exist",
+        "action": "Remove vehicle or change to 2005, or change model to 300M",
+        "severity": "HIGH"
+      },
+      {
+        "issue": "235/55R19 listed for 2005-2010 300C but not OEM",
+        "action": "235/55R19 became OEM for 300C AWD starting 2011. Remove from pre-2011 300C entries.",
+        "severity": "MEDIUM"
+      },
+      {
+        "issue": "Base 300 and 300C tire sizes mixed in same entries",
+        "action": "Separate base 300 from 300C trim data or note that larger sizes require 300C/300S trim",
+        "severity": "LOW"
+      },
+      {
+        "issue": "300C 2011-2021 entries missing tire data",
+        "action": "Populate with validated OEM sizes: AWD=235/55R19, RWD=225/60R18 or 245/45R20",
+        "severity": "HIGH"
+      }
+    ],
+    "validSizesByGeneration": {
+      "firstGen_2005-2010_base300": ["215/65R17", "225/60R18"],
+      "firstGen_2005-2010_300C": ["225/60R18", "245/45R20", "255/45R20"],
+      "secondGen_2011-2015_base300": ["215/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "secondGen_2011-2023_300C": ["225/60R18", "235/55R19", "245/45R20"],
+      "secondGen_2012-2023_300S": ["235/55R19", "245/45R20"]
+    }
+  }
+}

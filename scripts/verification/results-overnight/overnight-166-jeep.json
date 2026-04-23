@@ -1,0 +1,241 @@
+﻿[
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "587367ca-8908-476e-812c-9775175881e3",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/75R17",
+                                  "255/70R17",
+                                  "LT285/70R17",
+                                  "255/70R18",
+                                  "LT285/65R18",
+                                  "275/55R20"
+                              ],
+        "trim":  "Rubicon 392",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "aee66fd3-e5f6-4c35-b613-69a51b958ea5",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/75R17",
+                                  "255/70R17",
+                                  "LT285/70R17",
+                                  "255/70R18",
+                                  "LT285/65R18",
+                                  "275/55R20"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "63809925-839a-46a4-94b6-64364d343d55",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/75R17",
+                                  "255/70R17",
+                                  "LT285/70R17",
+                                  "255/70R18",
+                                  "LT285/65R18",
+                                  "275/55R20"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "4be3c904-429c-4773-9eec-54a204212a63",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/75R17",
+                                  "255/70R17",
+                                  "LT285/70R17",
+                                  "255/70R18",
+                                  "LT285/65R18",
+                                  "275/55R20"
+                              ],
+        "trim":  "Willys",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "5af0323e-7aa9-41e6-8350-2420b3ee106e",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/75R17",
+                                  "255/70R17",
+                                  "LT285/70R17",
+                                  "255/70R18",
+                                  "LT285/65R18",
+                                  "275/55R20"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "561d4cf8-3bf6-4bb3-9f96-94ae6ecbe254",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "LT255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  20,
+                                       "tireSize":  "275/55R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  37.17,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "LT285/70R17"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/75R17",
+                                  "255/70R17",
+                                  "LT285/70R17",
+                                  "255/70R18",
+                                  "LT285/65R18",
+                                  "275/55R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "6cd03083-81d7-4b33-b7c1-a7fb68392b4e",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/75R17",
+                                  "255/70R17",
+                                  "LT285/70R17",
+                                  "255/70R18",
+                                  "LT285/65R18",
+                                  "275/55R20"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    }
+]

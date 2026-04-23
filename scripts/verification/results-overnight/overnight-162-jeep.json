@@ -1,0 +1,2448 @@
+﻿[
+    {
+        "year":  2020,
+        "make":  "jeep",
+        "id":  "3bb84dcb-3ab8-43ea-b43b-eb00933c6e18",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  56.4,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  56.4,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "3.0 EcoDiesel",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "3e066b67-13b4-4619-b473-ca59e97f4a58",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  10,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Trackhawk",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "6d08ec42-6515-40d1-ab58-242b9105c9c0",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  56.4,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  56.4,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  56.4,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  55,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "245/70R17",
+                                  "265/50R20",
+                                  "265/55R19"
+                              ],
+        "trim":  "3.6 Pentastar",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "167c24a0-2636-4c0d-8128-57da16dd10b8",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Laredo",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "bc68ae28-263f-4742-9c61-ddbe045a2550",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "de0eed7e-55d7-4222-92c8-7b0ca19f0fb5",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "8b195d9f-6b7a-41d5-a646-6fedc6c57a70",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Trailhawk",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "22dea74a-5040-4f48-b657-0443c3202d11",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  10,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "SRT",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "2e7574c6-6865-4997-a428-1389dffe0ab2",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Overland",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "458555e5-eaaa-433a-b05e-7be4fbe77c78",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Limited",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "04c115eb-7119-4e3c-beb3-7c7d14d7eb42",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Altitude",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "a01dc186-34a6-47c9-8b84-1c4ede8d9584",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  9,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "265/50R20",
+                                  "265/55R19",
+                                  "275/45R21"
+                              ],
+        "trim":  "2.0 T4 PHEV",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "9e223419-76b4-40d2-ad9c-c62be3bcf265",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "265/50R20",
+                                  "265/45R21"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "f5e0e98a-fdf7-4a19-a911-3dd2593d8b0a",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Trailhawk",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "cbddeb5a-b166-4c80-87cd-aaec7f05cf15",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Altitude",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "5de2a247-4a3e-46eb-9a29-1193e7713cfb",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Limited",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "6d2f50f5-6410-4ab0-9583-2d0d120c9cb2",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Overland",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "4c80d06a-cce7-4c46-9c45-591c8c291ab9",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "4xe",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "49d890c3-0b7c-490d-a9f4-39c8f798c4aa",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit Reserve",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "a599dc7c-6080-416d-8601-60023c689ff7",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "8973a2d9-c443-4cb2-bd67-72f69ebcd615",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Laredo",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "ec98c250-2f34-4fd5-bf4b-7e672957ec29",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Laredo",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "e8f8132f-77eb-4cbc-8f7d-3201385e3277",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Altitude",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "34c45fed-4425-4b43-a39b-6c277b999d64",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Limited",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "9857dc7c-d358-4229-87b6-49408f67b093",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Overland",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "dd4a739f-9b68-4fbb-b867-faebb2e9c340",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "d8fb0354-e7c9-484a-8e6b-057e8d9eb1ef",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit Reserve",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "2fc1d6ca-3284-42ba-bc32-87c2428d0a9e",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Trailhawk",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "d15ed6aa-0f60-4810-8dce-4228c81ada60",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "4xe",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "f1888469-398f-4d14-926e-7067ca35dfbf",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "265/50R20",
+                                  "265/45R21"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "6946eb76-33a6-440b-b959-490c02810b01",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  9,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "265/50R20",
+                                  "265/55R19",
+                                  "275/45R21"
+                              ],
+        "trim":  "2.0 T4 PHEV",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "60cb65f2-ebf9-4e5f-a997-bcf9a1a67763",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "265/50R20",
+                                  "265/45R21"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "bc4ae7f1-7920-40f9-8ba4-6ea5bae4270b",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "4xe",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "da1fcd37-074a-4749-9758-cce651cf7aae",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Trailhawk",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "43fce895-6c08-4bb6-aad7-86c2ea81233e",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit Reserve",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "bb35ea48-0908-4ea3-938c-7fdd0fad5424",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "d1a10e90-91d1-4788-bc01-7117de6e5600",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Overland",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "5ae17aec-2b7d-44d7-a0b6-6dffb97070cd",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Limited",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "53d559ca-a44c-424b-b30c-61c54182b293",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Altitude",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "c4e7b2db-2c89-4b54-b67b-3e880278575b",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Laredo",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "45842be6-7817-4917-b3ec-7e9316425ea9",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  9,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "265/50R20",
+                                  "265/55R19",
+                                  "275/45R21"
+                              ],
+        "trim":  "2.0 T4 PHEV",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "6f0fd023-3552-45eb-b27b-bb2d6460dbf0",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  9,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "265/50R20",
+                                  "265/55R19",
+                                  "275/45R21"
+                              ],
+        "trim":  "2.0 T4 PHEV",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "0150a0e6-30dd-426b-ba3b-114faf8eccd4",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "cb8030d9-7014-4258-8864-1b27c6ab7827",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit Reserve",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "2ad8615c-54c1-450d-9658-2246b1a66a8b",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Trailhawk",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "8ef2d29d-4d9a-40e9-bb75-57599d2036e4",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "4xe",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "d4626b81-dca6-4b2e-ab89-ebdf3120f9b0",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "265/50R20",
+                                  "265/45R21"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "52979d4e-d9ef-4769-9a4c-c5e3174b310f",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Altitude",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "0cc58878-5a52-403f-9090-3628738ab5d0",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Laredo",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "de405218-5cb9-470f-8abf-18682d76fb81",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Limited",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "af109dae-7cf2-4d19-a20d-b39e38031ca1",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Overland",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "42533f62-0f81-47fd-b800-acb1f04423a3",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "c5535994-9de4-4ffe-bd16-75a579f35d93",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "4xe",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "300daba3-9a56-4ae9-bcf3-1b1769c7da41",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Trailhawk",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "2a0ca6c5-05da-4687-aa7b-f9fccffe1d65",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8.5,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Summit Reserve",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "6f39cb17-203a-415f-b5f9-8e3126a5a400",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Overland",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "be22484c-5dde-4035-87bd-6360301b1b4a",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Limited",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "50918fb9-75e1-4215-a1cd-d77457dddb8a",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Altitude",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "38724347-5d5b-4b63-993a-1f3ea34d1492",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "245/70R17",
+                                  "265/60R18",
+                                  "265/50R20"
+                              ],
+        "trim":  "Laredo",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "jeep",
+        "id":  "9f47603c-160c-4bcb-b92b-f34dd8dea388",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/60R18",
+                                  "265/50R20",
+                                  "265/45R21"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep grand-cherokee specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-cherokee",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "5f4ea2c6-7584-4c27-8009-e3f48b7b7321",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  "[{\"diameter\":22,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "285/45R22"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep grand-wagoneer specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-wagoneer",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "05a01dde-df66-40db-a3de-9d80097e4730",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  "[{\"diameter\":22,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "285/45R22"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep grand-wagoneer specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-wagoneer",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "e560cad5-7afc-4108-bdf9-8b9be24cd062",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  "[{\"diameter\":22,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "285/45R22"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep grand-wagoneer specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-wagoneer",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "jeep",
+        "id":  "14426912-0f55-41f6-8647-bef80ae53c03",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  "[{\"diameter\":22,\"position\":\"both\"}]",
+        "verifiedTireSizes":  [
+                                  "285/45R22"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep grand-wagoneer specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "grand-wagoneer",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2003,
+        "make":  "jeep",
+        "id":  "ea2dd79c-49d1-47e8-be06-f3250f212867",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   "16x7",
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R16",
+                                  "225/75R16",
+                                  "235/70R16",
+                                  "235/65R17",
+                                  "245/65R17"
+                              ],
+        "trim":  "Sport, Limited",
+        "reason":  "jeep liberty specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "liberty",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "jeep",
+        "id":  "c120e187-aa83-458d-bcf1-0c7489853dfa",
+        "verifiedHubBore":  "65.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R16",
+                                  "215/60R17",
+                                  "225/55R17",
+                                  "225/55R18",
+                                  "235/45R19"
+                              ],
+        "trim":  "Sport, Latitude, Trailhawk, Limited",
+        "reason":  "jeep renegade specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "renegade",
+        "verifiedBoltPattern":  "5x110",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "jeep",
+        "id":  "457b35f4-d64a-4e8e-a743-e2b6cce59757",
+        "verifiedHubBore":  "65.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R16",
+                                  "215/60R17",
+                                  "225/55R17",
+                                  "225/55R18",
+                                  "235/45R19"
+                              ],
+        "trim":  "Sport, Latitude, Trailhawk, Limited",
+        "reason":  "jeep renegade specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "renegade",
+        "verifiedBoltPattern":  "5x110",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2017,
+        "make":  "jeep",
+        "id":  "3d18768b-39f3-4872-83a3-17b6e9078ae4",
+        "verifiedHubBore":  "65.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R16",
+                                  "215/60R17",
+                                  "225/55R17",
+                                  "225/55R18",
+                                  "235/45R19"
+                              ],
+        "trim":  "Sport, Latitude, Trailhawk, Limited",
+        "reason":  "jeep renegade specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "renegade",
+        "verifiedBoltPattern":  "5x110",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "jeep",
+        "id":  "0eeada7a-7c82-4201-8f49-4133bc663a07",
+        "verifiedHubBore":  "65.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R16",
+                                  "215/60R17",
+                                  "225/55R17",
+                                  "225/55R18",
+                                  "235/45R19"
+                              ],
+        "trim":  "Sport, Latitude, Trailhawk, Limited",
+        "reason":  "jeep renegade specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "renegade",
+        "verifiedBoltPattern":  "5x110",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "jeep",
+        "id":  "b94b87bb-19b4-4fda-9325-3f0dbd3fe80d",
+        "verifiedHubBore":  "65.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  6.5,
+                                       "offset":  40,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R16",
+                                  "215/60R17",
+                                  "225/55R17",
+                                  "225/55R18",
+                                  "235/45R19",
+                                  "215/65R17",
+                                  "225/60R17",
+                                  "235/55R17"
+                              ],
+        "trim":  "Sport, Latitude, Trailhawk, Limited",
+        "reason":  "jeep renegade specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "renegade",
+        "verifiedBoltPattern":  "5x110",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "jeep",
+        "id":  "79fe71ab-519f-494b-b9c6-b3af5fdccde2",
+        "verifiedHubBore":  "65.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R16",
+                                  "215/60R17",
+                                  "225/55R17",
+                                  "225/55R18",
+                                  "235/45R19"
+                              ],
+        "trim":  "Sport, Latitude, Trailhawk, Limited",
+        "reason":  "jeep renegade specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "renegade",
+        "verifiedBoltPattern":  "5x110",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "jeep",
+        "id":  "8ee31b9a-aabb-46e6-bad3-e5b3dc6a38b4",
+        "verifiedHubBore":  "65.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R16",
+                                  "215/60R17",
+                                  "225/55R17",
+                                  "225/55R18",
+                                  "235/45R19"
+                              ],
+        "trim":  "Sport, Latitude, Trailhawk, Limited",
+        "reason":  "jeep renegade specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "renegade",
+        "verifiedBoltPattern":  "5x110",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "jeep",
+        "id":  "32a3f8b1-8f19-45ca-9ca9-ff33a33afd91",
+        "verifiedHubBore":  "65.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R16",
+                                  "215/60R17",
+                                  "225/55R17",
+                                  "225/55R18",
+                                  "235/45R19"
+                              ],
+        "trim":  "Sport, Latitude, Trailhawk, Limited",
+        "reason":  "jeep renegade specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "renegade",
+        "verifiedBoltPattern":  "5x110",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "jeep",
+        "id":  "6603f0e4-5b76-4a78-8977-b5458ca25cc8",
+        "verifiedHubBore":  "65.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R16",
+                                  "215/60R17",
+                                  "225/55R17",
+                                  "225/55R18",
+                                  "235/45R19"
+                              ],
+        "trim":  "Sport, Latitude, Trailhawk, Limited",
+        "reason":  "jeep renegade specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "renegade",
+        "verifiedBoltPattern":  "5x110",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "jeep",
+        "id":  "378e79b6-cadc-44c2-a54e-97fe093a926f",
+        "verifiedHubBore":  "65.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/65R16",
+                                  "215/60R17",
+                                  "225/55R17",
+                                  "225/55R18",
+                                  "235/45R19"
+                              ],
+        "trim":  "Sport, Latitude, Trailhawk, Limited",
+        "reason":  "jeep renegade specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "renegade",
+        "verifiedBoltPattern":  "5x110",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    }
+]

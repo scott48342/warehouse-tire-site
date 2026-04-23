@@ -1,0 +1,813 @@
+{
+  "batch": "overnight-078-toyota",
+  "verifiedAt": "2025-07-26T04:30:00Z",
+  "summary": {
+    "total": 85,
+    "verified": 82,
+    "issues": 3,
+    "issueRate": "3.5%"
+  },
+  "issues": [
+    {
+      "id": "28250ceb-dc73-4aff-93ca-6d373ad44141",
+      "year": 2026,
+      "make": "toyota",
+      "model": "bz4x",
+      "trim": "Base",
+      "issueType": "tire_size_mismatch",
+      "severity": "medium",
+      "details": "Listed tire size 225/45R18 is incorrect. OEM sizes are 235/60R18 (18-inch) or 235/50R20 (20-inch)",
+      "currentValue": ["225/45R18"],
+      "expectedValue": ["235/60R18", "235/50R20"],
+      "recommendation": "Update tire sizes to match OEM specifications"
+    },
+    {
+      "id": "97c2a761-f888-44b9-9fde-e03809027dc5",
+      "year": 2016,
+      "make": "toyota",
+      "model": "c-hr",
+      "trim": "Base",
+      "issueType": "market_availability",
+      "severity": "low",
+      "details": "Toyota C-HR was not sold in North America until 2018 model year. 2016 C-HR only available in Japan/Europe.",
+      "recommendation": "Flag as non-US market or remove if US-only database"
+    },
+    {
+      "id": "138dfb81-472b-42f6-a3bc-3aba8567996b",
+      "year": 2017,
+      "make": "toyota",
+      "model": "c-hr",
+      "trim": "Base",
+      "issueType": "market_availability",
+      "severity": "low",
+      "details": "Toyota C-HR was not sold in North America until 2018 model year. 2017 C-HR only available in Japan/Europe.",
+      "recommendation": "Flag as non-US market or remove if US-only database"
+    }
+  ],
+  "verified": [
+    {
+      "id": "8eda036d-6544-4027-9b4c-4cdd99011132",
+      "year": 2018,
+      "make": "toyota",
+      "model": "c-hr",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "notes": "Specs confirmed for US market C-HR"
+    },
+    {
+      "id": "6b831b46-2ab8-4266-92ef-75c8b7d8092a",
+      "year": 2019,
+      "make": "toyota",
+      "model": "c-hr",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "f5f59360-6452-4098-aa12-32916b25c7cd",
+      "year": 2020,
+      "make": "toyota",
+      "model": "c-hr",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "cdbbdc2f-9d01-4c40-a50c-b9fc491d3a3d",
+      "year": 2021,
+      "make": "toyota",
+      "model": "c-hr",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "4431bc1a-2fdf-4e9a-8323-8a74b6a34103",
+      "year": 2022,
+      "make": "toyota",
+      "model": "c-hr",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "8e4aa324-b80c-45a0-b91a-9d072018beab",
+      "year": 2023,
+      "make": "toyota",
+      "model": "c-hr",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "feb7f699-3aa2-4017-89e7-a0d6cae41bed",
+      "year": 2024,
+      "make": "toyota",
+      "model": "c-hr",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "ad824288-8bda-42e5-9998-736cd9f3fb41",
+      "year": 2025,
+      "make": "toyota",
+      "model": "c-hr",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "19decfc2-c58f-4112-9719-b281bf56fa63",
+      "year": 1992,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "notes": "XV10 generation - specs confirmed"
+    },
+    {
+      "id": "150aa2cf-3e8c-43ec-8532-400c59036645",
+      "year": 1992,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "9355b8b1-a504-4e1c-be5e-a9b7031ef412",
+      "year": 1992,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "DX",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "8077e2d3-b4b8-450a-9fd1-a2a45fc1eb6b",
+      "year": 1992,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "b9bf1206-e2a5-442a-bdea-209cf8acf15b",
+      "year": 1993,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "DX",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "2f30aa6e-4135-42ce-a873-f1c92df93a6c",
+      "year": 1993,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "5d303e8d-022b-4eba-b50f-0e36b01e74b2",
+      "year": 1993,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "6e3f7879-2919-4181-8a7f-96ae9f649386",
+      "year": 1993,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "740c06ef-f92c-4d38-8a69-2c77f7451f1f",
+      "year": 1994,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "4e34a1df-84ed-4936-93fb-99aabb5652cb",
+      "year": 1994,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "f9be6eca-4ed2-44ac-968b-98a3df17e5d3",
+      "year": 1994,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "5430ed09-7ba3-4bc0-a746-a679160b08ac",
+      "year": 1994,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "DX",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "b3c68ab4-a3f5-492c-a0c5-b147884abaa1",
+      "year": 1995,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "1c66d01a-fbc8-491d-96cf-49e30e58a08d",
+      "year": 1995,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "DX",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "ad048832-9ec6-42d9-8e60-a14b1aec2f70",
+      "year": 1995,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "b812e87b-8684-46dc-8fcc-3c6951c4b20f",
+      "year": 1995,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "43b7a899-7f8b-41f6-974d-6e5a78699d3f",
+      "year": 1996,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "84303b39-a58f-4344-bfe1-8d3db99312d7",
+      "year": 1996,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "78097acc-ce26-4070-9c4a-828c4b8227fa",
+      "year": 1996,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "6033fce3-f6ac-400d-8c28-8c624b13f028",
+      "year": 1996,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "DX",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "197cc1c1-0ce1-43d0-94f6-fc49eee8c614",
+      "year": 1997,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "notes": "XV20 generation - specs confirmed"
+    },
+    {
+      "id": "19da5bea-9a24-4800-bb15-5d766f3de757",
+      "year": 1997,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "CE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "1903cabd-11fb-4dae-b3df-9ba2f629e011",
+      "year": 1997,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "295e00c2-18f2-4db6-95f0-3da104f85032",
+      "year": 1998,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "8bb04c4d-4354-45a1-b0e8-037b48e7401a",
+      "year": 1998,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "CE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "7ef934b2-dd5d-436a-a451-8fcdb2ced8d8",
+      "year": 1998,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "0f6368db-99a7-4c0c-bd1b-78287987896a",
+      "year": 1999,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "CE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "c097bbdf-0b5d-4888-9ab6-b502349c30ee",
+      "year": 1999,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "8f1a2f5e-0cde-4599-a80b-ee9d0a5bd0ed",
+      "year": 1999,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "6470650e-4eea-462b-8b65-a70d8763ea18",
+      "year": 2000,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "CE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "d8b4c3a1-75e1-4e02-87b1-b1d8494a7b00",
+      "year": 2000,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "a895a62c-c905-4640-b620-16910ec2ac90",
+      "year": 2000,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "e2ab5001-7e06-410d-b420-c39e8ebcf29c",
+      "year": 2001,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "CE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "74535574-5c3d-4ead-91f5-5527a442c9a1",
+      "year": 2001,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "6c63b723-f702-49fc-abd3-7409e003fb99",
+      "year": 2001,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "879d336c-b119-41b9-a5c8-56826b00c468",
+      "year": 2002,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "notes": "XV30 generation - specs confirmed"
+    },
+    {
+      "id": "a2a9dcb7-6890-4212-a15f-af502fdb05e5",
+      "year": 2002,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "9c01b73e-f25c-42e7-84a6-786294b3a354",
+      "year": 2002,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "23f1ecab-b4e0-4441-a798-8769efd800eb",
+      "year": 2003,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "f75eb950-8b0c-494f-9443-560da3a76230",
+      "year": 2003,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "efc94319-641d-489b-b6cf-d5c09717fbd9",
+      "year": 2003,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "a6b7110c-5858-40dd-8253-00047bb973ed",
+      "year": 2004,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "78d8a6b0-a776-404b-884f-fa9525363107",
+      "year": 2004,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "9393305f-e897-4717-9f28-d6821c2c2878",
+      "year": 2004,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "4d0bdb22-2c71-47c6-b16f-dc6e62579712",
+      "year": 2005,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "4ee0d66a-8200-4922-831c-395e0163b3fc",
+      "year": 2005,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "dca0e66f-aba9-41ef-8b60-c4ac284f75f7",
+      "year": 2005,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "8fa49141-acfc-4d57-b766-3d9045895c8a",
+      "year": 2006,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "7a00eaef-9ba3-4297-b59d-21944fe13498",
+      "year": 2006,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "b8c919f7-cd5c-44fd-867d-1bda418af3d4",
+      "year": 2006,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "22c0e43c-9953-40f1-a924-9911330afc96",
+      "year": 2007,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "notes": "XV40 generation - specs confirmed"
+    },
+    {
+      "id": "def49629-6608-4b18-ba36-020b971e4843",
+      "year": 2007,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "Hybrid",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "64779b48-d9cc-4512-94ad-603754149297",
+      "year": 2007,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "5eabcb2f-8f88-4692-bc39-5f35115e9c9a",
+      "year": 2007,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "96f198d0-55e7-4730-9c95-ac0c150084ce",
+      "year": 2008,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "Hybrid",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "6a977966-d91b-4e45-b6f1-4fdf813d2a3e",
+      "year": 2008,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "097102f2-e375-4081-83e8-4bb34fb5eed8",
+      "year": 2008,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "bd894718-42ac-4e24-9809-e014a4bb4811",
+      "year": 2008,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "eb2c4b15-2b56-46e4-b2b4-d275641da9b5",
+      "year": 2009,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "LE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "0b91a2b9-c3ea-4df1-8c03-42885f75c177",
+      "year": 2009,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "cbad6d5f-6961-4b61-b916-d299472bd691",
+      "year": 2009,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "Hybrid",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "b9ce379d-4954-4205-bae1-58c19dd005d3",
+      "year": 2009,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "310629ca-2049-4cae-8e99-cddbb012d8de",
+      "year": 2010,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "XLE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    },
+    {
+      "id": "5a75febb-6da8-4ab4-bbf2-78c1b828b429",
+      "year": 2010,
+      "make": "toyota",
+      "model": "camry",
+      "trim": "SE",
+      "status": "verified",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1"
+    }
+  ],
+  "generationNotes": {
+    "camry_xv10_1992_1996": {
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "wheels": "14-15 inch",
+      "status": "verified"
+    },
+    "camry_xv20_1997_2001": {
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "wheels": "15-16 inch",
+      "status": "verified"
+    },
+    "camry_xv30_2002_2006": {
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "wheels": "15-17 inch",
+      "status": "verified"
+    },
+    "camry_xv40_2007_2011": {
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "wheels": "16-18 inch",
+      "status": "verified"
+    },
+    "chr_2018_present": {
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "wheels": "17-19 inch",
+      "status": "verified"
+    },
+    "bz4x_2023_present": {
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "wheels": "18-20 inch",
+      "oem_tires": ["235/60R18", "235/50R20"],
+      "status": "needs_tire_size_correction"
+    }
+  }
+}

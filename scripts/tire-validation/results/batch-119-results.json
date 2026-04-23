@@ -1,0 +1,1036 @@
+{
+  "batchId": "119",
+  "processedAt": "2026-04-21T22:30:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2020,
+      "make": "mitsubishi",
+      "model": "express",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16C"],
+      "trims": {
+        "GLX": { "tireSize": "215/65R16C", "wheelSize": "16x6" },
+        "GLX+": { "tireSize": "215/65R16C", "wheelSize": "16x6" }
+      },
+      "notes": "Australian/international market commercial van (rebadged Renault Trafic). C = commercial load rating.",
+      "source": "tiresize.com, wheel-size.com"
+    },
+    {
+      "year": 2014,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "NOT SOLD - Galant discontinued in US after 2012. JDM/international market only if available.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "NOT SOLD - Galant discontinued in US after 2012. JDM/international market only if available.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "235/45R18"],
+      "trims": {
+        "ES": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "SE": { "tireSize": "235/45R18", "wheelSize": "18" }
+      },
+      "notes": "Current sizes include 215/55R17 which was NOT OEM for 2012. Only 16\" and 18\" were available.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "235/45R18"],
+      "trims": {
+        "ES": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "SE": { "tireSize": "235/45R18", "wheelSize": "18" }
+      },
+      "notes": "Current sizes include 215/55R17 which was NOT OEM for 2011. Only ES (16\") and SE (18\") trims.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "235/45R18"],
+      "trims": {
+        "ES": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "SE": { "tireSize": "235/45R18", "wheelSize": "18" }
+      },
+      "notes": "Current sizes include 215/55R17 which was NOT OEM for 2010. Only ES (16\") and SE (18\") trims.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "ES": { "tireSize": ["215/60R16", "215/55R17"], "wheelSize": ["16", "17"] },
+        "Ralliart": { "tireSize": "235/45R18", "wheelSize": "18" },
+        "Sport Edition": { "tireSize": ["215/60R16", "215/55R17", "235/45R18"], "wheelSize": ["16", "17", "18"] },
+        "Sport V6": { "tireSize": ["215/55R17", "235/45R18"], "wheelSize": ["17", "18"] }
+      },
+      "notes": "VALIDATED - All three sizes correct. 2009 had multiple trim levels with different wheel options.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "235/45R18"],
+      "trims": {
+        "DE": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "Ralliart": { "tireSize": "235/45R18", "wheelSize": "18" }
+      },
+      "notes": "2008 did NOT have 215/55R17 as OEM option. Only 16\" and 18\" wheels.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "DE": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "GTS": { "tireSize": "215/55R17", "wheelSize": "17" },
+        "SE": { "tireSize": "215/55R17", "wheelSize": "17" },
+        "Ralliart": { "tireSize": "235/45R18", "wheelSize": "18" }
+      },
+      "notes": "VALIDATED - All three sizes correct for 2007 trim levels.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trims": {
+        "DE": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "LS": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "GTS": { "tireSize": "215/55R17", "wheelSize": "17" },
+        "SE": { "tireSize": "215/55R17", "wheelSize": "17" }
+      },
+      "notes": "2006 did NOT have 235/45R18 as OEM - Ralliart was 2007+.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trims": {
+        "DE": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "LS": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "SE": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "GTS": { "tireSize": "215/55R17", "wheelSize": "17" }
+      },
+      "notes": "2005 did NOT have 235/45R18 as OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trims": {
+        "DE": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "LS": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "GTS": { "tireSize": "215/55R17", "wheelSize": "17" }
+      },
+      "notes": "2004 did NOT have 235/45R18 as OEM. New 9th gen started this year.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["205/65R15", "215/55R16", "215/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trims": {
+        "DE": { "tireSize": "195/65R15", "wheelSize": "15" },
+        "ES 4cyl": { "tireSize": ["195/65R15", "205/55R16"], "wheelSize": ["15", "16"] },
+        "ES V6": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "GTZ": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "LS 4cyl": { "tireSize": "195/65R15", "wheelSize": "15" },
+        "LS V6": { "tireSize": "205/55R16", "wheelSize": "16" }
+      },
+      "notes": "Current sizes INCORRECT. Correct sizes are 195/65R15 and 205/55R16 (not 205/65R15, 215/55R16, 215/50R17).",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["205/65R15", "215/55R16", "215/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trims": {
+        "DE": { "tireSize": "195/65R15", "wheelSize": "15" },
+        "ES 4cyl": { "tireSize": ["195/65R15", "205/55R16"], "wheelSize": ["15", "16"] },
+        "ES V6": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "GTZ": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "LS 4cyl": { "tireSize": "195/65R15", "wheelSize": "15" },
+        "LS V6": { "tireSize": "205/55R16", "wheelSize": "16" }
+      },
+      "notes": "Current sizes INCORRECT. Correct sizes are 195/65R15 and 205/55R16.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["205/65R15", "215/55R16", "215/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trims": {
+        "DE": { "tireSize": "195/65R15", "wheelSize": "15" },
+        "ES 4cyl": { "tireSize": "195/65R15", "wheelSize": "15" },
+        "ES V6": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "GTZ": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "LS 4cyl": { "tireSize": "195/65R15", "wheelSize": "15" },
+        "LS V6": { "tireSize": "205/55R16", "wheelSize": "16" }
+      },
+      "notes": "Current sizes INCORRECT. Correct sizes are 195/65R15 and 205/55R16.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "galant",
+      "currentTireSizes": ["205/65R15", "215/55R16", "215/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trims": {
+        "DE": { "tireSize": "195/65R15", "wheelSize": "15" },
+        "ES 4cyl": { "tireSize": "195/65R15", "wheelSize": "15" },
+        "ES V6": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "GTZ": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "LS 4cyl": { "tireSize": "195/65R15", "wheelSize": "15" },
+        "LS V6": { "tireSize": "205/55R16", "wheelSize": "16" }
+      },
+      "notes": "Current sizes INCORRECT. Correct sizes are 195/65R15 and 205/55R16.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "gto",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "Base": { "tireSize": "225/55R16", "wheelSize": "16" },
+        "SL": { "tireSize": "245/45R17", "wheelSize": "17" },
+        "VR4": { "tireSize": "245/40R18", "wheelSize": "18" }
+      },
+      "notes": "GTO is JDM name for 3000GT. 1999 US 3000GT specs applied. VR4 used 245/40R18 from 1995+.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "i",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["145/65R15", "175/60R15"],
+      "trims": {
+        "ES": { "tireSize": { "front": "145/65R15", "rear": "175/60R15" }, "wheelSize": { "front": "15x4", "rear": "15x5" } },
+        "SE": { "tireSize": { "front": "145/65R15", "rear": "175/60R15" }, "wheelSize": { "front": "15x4", "rear": "15x5" } }
+      },
+      "notes": "i-MiEV has staggered front/rear tire setup. Different sizes front and rear.",
+      "isStaggered": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mitsubishi",
+      "model": "i",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["145/65R15", "175/60R15"],
+      "trims": {
+        "ES": { "tireSize": { "front": "145/65R15", "rear": "175/60R15" }, "wheelSize": { "front": "15x4", "rear": "15x5" } },
+        "SE": { "tireSize": { "front": "145/65R15", "rear": "175/60R15" }, "wheelSize": { "front": "15x4", "rear": "15x5" } }
+      },
+      "notes": "i-MiEV has staggered front/rear tire setup.",
+      "isStaggered": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mitsubishi",
+      "model": "i",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["145/65R15", "175/55R15"],
+      "trims": {
+        "ES": { "tireSize": { "front": "145/65R15", "rear": "175/55R15" }, "wheelSize": { "front": "15x4", "rear": "15x5" } },
+        "SE": { "tireSize": { "front": "145/65R15", "rear": "175/55R15" }, "wheelSize": { "front": "15x4", "rear": "15x5" } }
+      },
+      "notes": "i-MiEV has staggered front/rear tire setup. 2011 used 175/55R15 rear (changed to 175/60R15 in 2012+).",
+      "isStaggered": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mitsubishi",
+      "model": "i",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["145/65R15", "175/55R15"],
+      "trims": {
+        "ES": { "tireSize": { "front": "145/65R15", "rear": "175/55R15" }, "wheelSize": { "front": "15x4", "rear": "15x5" } },
+        "SE": { "tireSize": { "front": "145/65R15", "rear": "175/55R15" }, "wheelSize": { "front": "15x4", "rear": "15x5" } }
+      },
+      "notes": "i-MiEV has staggered front/rear tire setup.",
+      "isStaggered": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "i",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["145/65R15"],
+      "trims": {},
+      "notes": "JDM market only - i-MiEV launched in Japan July 2009. US sales started 2011.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "i",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["145/65R15"],
+      "trims": {},
+      "notes": "JDM market only - pre-MiEV 'i' kei car sold in Japan with 145/65R15 tires.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "i",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["145/65R15"],
+      "trims": {},
+      "notes": "JDM market only - 'i' kei car launched in Japan January 2006.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "i",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["145/65R15"],
+      "trims": {},
+      "notes": "JDM market only - 'i' kei car with 145/65R15 tires.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "i",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "NOT SOLD - Mitsubishi 'i' launched January 2006.",
+      "source": "N/A"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "l400",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R15", "225/65R15", "225/60R16", "225/80R15", "235/70R16"],
+      "trims": {
+        "2.4i": { "tireSize": ["215/65R15", "225/60R16"], "wheelSize": ["15", "16"] },
+        "2.8D": { "tireSize": ["225/80R15", "235/70R16"], "wheelSize": ["15", "16"] }
+      },
+      "notes": "L400 is Delica Space Gear. Multiple tire sizes depending on engine and trim. JDM/international market.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "l400",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R15", "225/65R15", "225/60R16", "225/80R15", "235/70R16"],
+      "trims": {
+        "2.4i": { "tireSize": ["215/65R15", "225/60R16"], "wheelSize": ["15", "16"] },
+        "2.8D": { "tireSize": ["225/80R15", "235/70R16"], "wheelSize": ["15", "16"] }
+      },
+      "notes": "L400 is Delica Space Gear. Multiple tire sizes depending on engine and trim.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2017,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["205/60R16", "215/45R17", "215/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/45R18"],
+      "trims": {
+        "ES 2.0": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "ES 2.4": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "ES 2.4 AWC": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "LE 2.0": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "SE": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "SE 2.4 AWC": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "SEL": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "SEL 2.4 AWC": { "tireSize": "215/45R18", "wheelSize": "18" }
+      },
+      "notes": "Current has 215/45R17 and 215/40R18 - INCORRECT. OEM is 205/60R16 (base) or 215/45R18 (sport). No 17\" option in 2017.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["205/60R16", "215/45R17", "215/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/45R18"],
+      "trims": {
+        "DE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "SE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "SEL": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "GT": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "GTS": { "tireSize": "215/45R18", "wheelSize": "18" }
+      },
+      "notes": "215/45R17 and 215/40R18 are NOT OEM for 2016 Lancer.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["205/60R16", "215/45R17", "215/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/45R18"],
+      "trims": {
+        "DE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "SE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "GT": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "Ralliart": { "tireSize": "215/45R18", "wheelSize": "18" }
+      },
+      "notes": "215/45R17 and 215/40R18 are NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["205/60R16", "215/45R17", "215/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/45R18"],
+      "trims": {
+        "ES": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "SE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "GT": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "Ralliart": { "tireSize": "215/45R18", "wheelSize": "18" }
+      },
+      "notes": "215/45R17 and 215/40R18 are NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["205/60R16", "215/45R17", "215/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/45R18"],
+      "trims": {
+        "DE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "SE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "GT": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "Ralliart": { "tireSize": "215/45R18", "wheelSize": "18" }
+      },
+      "notes": "215/45R17 and 215/40R18 are NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["205/60R16", "215/45R17", "215/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/45R18"],
+      "trims": {
+        "DE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "SE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "GT": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "Ralliart": { "tireSize": "215/45R18", "wheelSize": "18" }
+      },
+      "notes": "215/45R17 and 215/40R18 are NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["205/60R16", "215/45R17", "215/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/45R18"],
+      "trims": {
+        "DE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "GTS": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "Ralliart": { "tireSize": "215/45R18", "wheelSize": "18" }
+      },
+      "notes": "215/45R17 and 215/40R18 are NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["205/60R16", "215/45R17", "215/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/45R18"],
+      "trims": {
+        "DE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "GTS": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "Ralliart": { "tireSize": "215/45R18", "wheelSize": "18" }
+      },
+      "notes": "215/45R17 and 215/40R18 are NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["205/60R16", "215/45R17", "215/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/45R18"],
+      "trims": {
+        "DE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "GTS": { "tireSize": "215/45R18", "wheelSize": "18" },
+        "Ralliart": { "tireSize": "215/45R18", "wheelSize": "18" }
+      },
+      "notes": "215/45R17 and 215/40R18 are NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["205/60R16", "215/45R17", "215/40R18"],
+      "validatedTireSizes": ["205/60R16", "215/45R18"],
+      "trims": {
+        "DE": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "ES": { "tireSize": "205/60R16", "wheelSize": "16" },
+        "GTS": { "tireSize": "215/45R18", "wheelSize": "18" }
+      },
+      "notes": "New generation Lancer. 215/45R17 and 215/40R18 are NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/60R15", "205/50R16"],
+      "validatedTireSizes": ["195/60R15"],
+      "trims": {
+        "ES Sedan": { "tireSize": "195/60R15", "wheelSize": "15" }
+      },
+      "notes": "2007 was transition year - only ES sedan available. Current sizes are from 2002-2006 generation.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/60R15", "205/50R16"],
+      "validatedTireSizes": ["195/60R15", "205/50R16"],
+      "trims": {
+        "ES Sedan": { "tireSize": "195/60R15", "wheelSize": "15" },
+        "OZ Rally Sedan": { "tireSize": "195/60R15", "wheelSize": "15" },
+        "Ralliart Sedan": { "tireSize": "205/50R16", "wheelSize": "16" }
+      },
+      "notes": "185/65R14 and 205/60R15 are NOT OEM for 2006. ES dropped to 195/60R15 in 2006.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/60R15", "205/50R16"],
+      "validatedTireSizes": ["185/65R14", "195/60R15", "205/50R16"],
+      "trims": {
+        "ES Sedan": { "tireSize": "185/65R14", "wheelSize": "14" },
+        "OZ Rally Sedan": { "tireSize": "195/60R15", "wheelSize": "15" },
+        "Ralliart Sedan": { "tireSize": "205/50R16", "wheelSize": "16" }
+      },
+      "notes": "205/60R15 is NOT OEM for 2005 Lancer.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/60R15", "205/50R16"],
+      "validatedTireSizes": ["185/65R14", "195/60R15", "205/50R16"],
+      "trims": {
+        "ES Sedan": { "tireSize": "185/65R14", "wheelSize": "14" },
+        "LS Sedan": { "tireSize": "195/60R15", "wheelSize": "15" },
+        "OZ Rally Sedan": { "tireSize": "195/60R15", "wheelSize": "15" },
+        "Ralliart Sedan": { "tireSize": "205/50R16", "wheelSize": "16" }
+      },
+      "notes": "205/60R15 is NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/60R15", "205/50R16"],
+      "validatedTireSizes": ["185/65R14", "195/60R15"],
+      "trims": {
+        "ES": { "tireSize": "185/65R14", "wheelSize": "14" },
+        "LS": { "tireSize": "195/60R15", "wheelSize": "15" },
+        "OZ Rally": { "tireSize": "195/60R15", "wheelSize": "15" }
+      },
+      "notes": "205/60R15 and 205/50R16 are NOT OEM for base 2003 Lancer (Evo separate).",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/60R15", "205/50R16"],
+      "validatedTireSizes": ["185/65R14", "195/60R15"],
+      "trims": {
+        "ES": { "tireSize": "185/65R14", "wheelSize": "14" },
+        "LS": { "tireSize": "195/60R15", "wheelSize": "15" },
+        "OZ Rally": { "tireSize": "195/60R15", "wheelSize": "15" }
+      },
+      "notes": "205/60R15 and 205/50R16 are NOT OEM for 2002 Lancer.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "195/60R15"],
+      "trims": {},
+      "notes": "JDM market only for 2001 (US Lancer started 2002). Common sizes 185/65R14, 195/60R15.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "195/60R15"],
+      "trims": {},
+      "notes": "JDM market only (US Lancer started 2002). Common sizes 185/65R14, 195/60R15.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "NOT SOLD - Lancer Evolution discontinued after 2015 Final Edition.",
+      "source": "N/A"
+    },
+    {
+      "year": 2016,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "NOT SOLD - Lancer Evolution discontinued after 2015 Final Edition.",
+      "source": "N/A"
+    },
+    {
+      "year": 2015,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["245/40R18"],
+      "validatedTireSizes": ["245/40R18"],
+      "trims": {
+        "GSR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "MR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "Final Edition": { "tireSize": "245/40R18", "wheelSize": "18x8.5" }
+      },
+      "notes": "VALIDATED - 245/40R18 is correct for all Evo X trims. Final year of production.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["245/40R18"],
+      "validatedTireSizes": ["245/40R18"],
+      "trims": {
+        "GSR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "MR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" }
+      },
+      "notes": "VALIDATED - 245/40R18 is correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["245/40R18"],
+      "validatedTireSizes": ["245/40R18"],
+      "trims": {
+        "GSR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "MR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" }
+      },
+      "notes": "VALIDATED - 245/40R18 is correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["245/40R18"],
+      "validatedTireSizes": ["245/40R18"],
+      "trims": {
+        "GSR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "MR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" }
+      },
+      "notes": "VALIDATED - 245/40R18 is correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["245/40R18"],
+      "validatedTireSizes": ["245/40R18"],
+      "trims": {
+        "GSR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "MR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" }
+      },
+      "notes": "VALIDATED - 245/40R18 is correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["245/40R18"],
+      "validatedTireSizes": ["245/40R18"],
+      "trims": {
+        "GSR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "MR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "MR Touring": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "SE": { "tireSize": "245/40R18", "wheelSize": "18x8.5" }
+      },
+      "notes": "VALIDATED - 245/40R18 is correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["245/40R18"],
+      "validatedTireSizes": ["245/40R18"],
+      "trims": {
+        "GSR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "MR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "RS": { "tireSize": "245/40R18", "wheelSize": "18x8.5" }
+      },
+      "notes": "VALIDATED - 245/40R18 is correct. Evo X generation.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["245/40R18"],
+      "validatedTireSizes": ["245/40R18"],
+      "trims": {
+        "GSR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" },
+        "MR": { "tireSize": "245/40R18", "wheelSize": "18x8.5" }
+      },
+      "notes": "VALIDATED - 245/40R18 is correct. First year of Evo X.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "NOT SOLD - Gap year between Evo IX (2006) and Evo X (2008). No US sales.",
+      "source": "N/A"
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "validatedTireSizes": ["235/45R17"],
+      "trims": {
+        "Evolution IX": { "tireSize": "235/45R17", "wheelSize": "17x8" },
+        "Evolution MR": { "tireSize": "235/45R17", "wheelSize": "17x8" },
+        "Evolution RS": { "tireSize": "235/45R17", "wheelSize": "17x8" },
+        "Evolution SE": { "tireSize": "235/45R17", "wheelSize": "17x8" }
+      },
+      "notes": "245/40R18 is NOT OEM for Evo IX. Standard was 235/45R17 on 17\" Enkei wheels.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["235/45R17"],
+      "validatedTireSizes": ["235/45R17"],
+      "trims": {
+        "Evolution": { "tireSize": "235/45R17", "wheelSize": "17x8" },
+        "Evolution MR": { "tireSize": "235/45R17", "wheelSize": "17x8" },
+        "Evolution RS": { "tireSize": "235/45R17", "wheelSize": "17x8" }
+      },
+      "notes": "VALIDATED - 235/45R17 is correct for Evo VIII.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["235/45R17"],
+      "validatedTireSizes": ["235/45R17"],
+      "trims": {
+        "Evolution": { "tireSize": "235/45R17", "wheelSize": "17x8" },
+        "Evolution RS": { "tireSize": "235/45R17", "wheelSize": "17x8" }
+      },
+      "notes": "VALIDATED - 235/45R17 is correct for Evo VIII.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": ["235/45R17"],
+      "validatedTireSizes": ["235/45R17"],
+      "trims": {
+        "Evolution": { "tireSize": "235/45R17", "wheelSize": "17x8" }
+      },
+      "notes": "VALIDATED - 235/45R17 is correct. First US Evo VIII.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R17"],
+      "trims": {},
+      "notes": "JDM market only - Evo VII. US sales started 2003 with Evo VIII.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R17"],
+      "trims": {},
+      "notes": "JDM market only - Evo VII.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R17"],
+      "trims": {},
+      "notes": "JDM market only - Evo VI. Used 225/45R17 tires.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "legnum",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/60R15", "205/55R16", "225/50R16", "225/45R17"],
+      "trims": {
+        "ST": { "tireSize": "195/60R15", "wheelSize": "15" },
+        "Super ST": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "VR4": { "tireSize": "225/45R17", "wheelSize": "17" }
+      },
+      "notes": "JDM station wagon variant of Galant. VR4 trim had 225/45R17.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "legnum",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/60R15", "205/55R16", "225/50R16", "225/45R17"],
+      "trims": {
+        "ST": { "tireSize": "195/60R15", "wheelSize": "15" },
+        "Super ST": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "VR4": { "tireSize": "225/45R17", "wheelSize": "17" }
+      },
+      "notes": "JDM market only.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "legnum",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/60R15", "205/55R16", "225/50R16", "225/45R17"],
+      "trims": {
+        "Base": { "tireSize": "185/70R14", "wheelSize": "14" },
+        "ST": { "tireSize": "195/60R15", "wheelSize": "15" },
+        "Super ST": { "tireSize": "205/55R16", "wheelSize": "16" },
+        "VR4 Type V": { "tireSize": "225/45R17", "wheelSize": "17" }
+      },
+      "notes": "JDM market only.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "magna",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R16", "215/55R17", "225/50R17", "235/45R17"],
+      "trims": {
+        "Executive": { "tireSize": "205/65R15", "wheelSize": "15" },
+        "Advance": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "Sports": { "tireSize": "215/55R17", "wheelSize": "17" },
+        "VR-X": { "tireSize": "235/45R17", "wheelSize": "17" }
+      },
+      "notes": "Australian market sedan. Final year of production.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "magna",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R16", "215/55R17", "225/50R17", "235/45R17"],
+      "trims": {
+        "Executive": { "tireSize": "205/65R15", "wheelSize": "15" },
+        "Advance": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "Sports": { "tireSize": "215/55R17", "wheelSize": "17" },
+        "VR-X": { "tireSize": "235/45R17", "wheelSize": "17" }
+      },
+      "notes": "Australian market sedan.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "magna",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R16", "215/55R17", "225/50R17", "235/45R17"],
+      "trims": {
+        "Executive": { "tireSize": "205/65R15", "wheelSize": "15" },
+        "Advance": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "Sports": { "tireSize": "215/55R17", "wheelSize": "17" },
+        "VR-X": { "tireSize": "235/45R17", "wheelSize": "17" }
+      },
+      "notes": "Australian market sedan. TJ/TW series.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "magna",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R16", "215/55R17", "225/50R17", "235/45R17"],
+      "trims": {
+        "Executive": { "tireSize": "205/65R15", "wheelSize": "15" },
+        "Advance": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "Sports": { "tireSize": "215/55R17", "wheelSize": "17" }
+      },
+      "notes": "Australian market sedan.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "magna",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "trims": {
+        "Executive": { "tireSize": "205/65R15", "wheelSize": "15" },
+        "Advance": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "Sports": { "tireSize": "215/55R17", "wheelSize": "17" }
+      },
+      "notes": "Australian market sedan. TJ series.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "magna",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "trims": {
+        "Executive": { "tireSize": "205/65R15", "wheelSize": "15" },
+        "Advance": { "tireSize": "215/60R16", "wheelSize": "16" },
+        "Sports": { "tireSize": "215/55R17", "wheelSize": "17" }
+      },
+      "notes": "Australian market sedan. TH/TJ series.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "maven",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16"],
+      "trims": {},
+      "notes": "Regional market vehicle (Korea/Taiwan). Limited data available. Estimated 205/55R16 based on wheel-size.com.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "maven",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16"],
+      "trims": {},
+      "notes": "Regional market vehicle (Korea/Taiwan). Limited data available.",
+      "source": "wheel-size.com"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 45,
+    "needsCorrection": 22,
+    "notSold": 8,
+    "issues": [
+      "2013-2014 Galant: Not sold in US (discontinued 2012)",
+      "2016-2017 Lancer Evolution: Not sold (discontinued 2015)",
+      "2007 Lancer Evolution: Gap year, no US sales",
+      "2000-2003 Galant: Current sizes incorrect (should be 195/65R15, 205/55R16)",
+      "2008-2012 Galant: 215/55R17 not OEM for all years",
+      "2004-2006 Galant: 235/45R18 not OEM (Ralliart started 2007)",
+      "2006 Lancer Evolution: 245/40R18 not OEM (Evo IX used 235/45R17)",
+      "2008-2017 Lancer: 215/45R17 and 215/40R18 not OEM",
+      "Mitsubishi i (all years): Staggered setup - different front/rear sizes",
+      "L400/Delica, Legnum, Magna, Maven: International/regional markets only"
+    ]
+  }
+}

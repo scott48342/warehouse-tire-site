@@ -1,0 +1,842 @@
+{
+  "batchId": "37",
+  "processedAt": "2026-04-21T21:53:00Z",
+  "source": "tiresize.com, fitmentguide.co.uk, web research",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": {
+        "2500 2WD": { "tires": ["LT245/75R16"], "wheels": ["16x6.5"] },
+        "2500 4WD": { "tires": ["LT245/75R16"], "wheels": ["16x6.5"] }
+      },
+      "status": "MISMATCH",
+      "notes": "Current DB has 1500 sizes. 2500 uses LT-rated 245/75R16."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": {
+        "2500 2WD": { "tires": ["LT245/75R16"], "wheels": ["16x6.5"] },
+        "2500 4WD": { "tires": ["LT245/75R16"], "wheels": ["16x6.5"] }
+      },
+      "status": "MISMATCH",
+      "notes": "Current DB has 1500 sizes. 2500 uses LT-rated 245/75R16."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": {
+        "2500 2WD": { "tires": ["LT245/75R16"], "wheels": ["16x6.5"] },
+        "2500 4WD": { "tires": ["LT245/75R16"], "wheels": ["16x6.5"] }
+      },
+      "status": "MISMATCH",
+      "notes": "Current DB has 1500 sizes. 2500 uses LT-rated 245/75R16."
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "t-series",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_CONSUMER",
+      "notes": "Commercial medium-duty truck (Class 4-6). Latin America/international market. Tire sizes vary by GVWR configuration. Not suitable for consumer retail."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "t-series",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_CONSUMER",
+      "notes": "Commercial medium-duty truck. Not suitable for consumer retail."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "t-series",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_CONSUMER",
+      "notes": "Commercial medium-duty truck. Not suitable for consumer retail."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "t-series",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_CONSUMER",
+      "notes": "Commercial medium-duty truck. Not suitable for consumer retail."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "t-series",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_CONSUMER",
+      "notes": "Commercial medium-duty truck. Not suitable for consumer retail."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "t-series",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_CONSUMER",
+      "notes": "Commercial medium-duty truck. Not suitable for consumer retail."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "t-series",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_CONSUMER",
+      "notes": "Commercial medium-duty truck. Not suitable for consumer retail."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "t-series",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_CONSUMER",
+      "notes": "Commercial medium-duty truck. Not suitable for consumer retail."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R15", "205/55R16", "215/45R17"],
+      "trims": {
+        "1.6 SX": { "tires": ["205/60R15"], "wheels": ["15x6"] },
+        "2.0 CDX": { "tires": ["205/55R16", "215/45R17"], "wheels": ["16x6.5", "17x7"] }
+      },
+      "status": "INTERNATIONAL",
+      "notes": "European/UK market only (rebadged Daewoo Rezzo). Not sold in North America. PCD: 4x114.3."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R15", "205/55R16", "215/45R17"],
+      "trims": {
+        "1.6 SX": { "tires": ["205/60R15"], "wheels": ["15x6"] },
+        "2.0 CDX": { "tires": ["205/55R16", "215/45R17"], "wheels": ["16x6.5", "17x7"] }
+      },
+      "status": "INTERNATIONAL",
+      "notes": "European/UK market only. Not sold in North America."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R15", "205/55R16", "215/45R17"],
+      "trims": {
+        "1.6 SX": { "tires": ["205/60R15"], "wheels": ["15x6"] },
+        "2.0 CDX": { "tires": ["205/55R16", "215/45R17"], "wheels": ["16x6.5", "17x7"] }
+      },
+      "status": "INTERNATIONAL",
+      "notes": "European/UK market only. Not sold in North America."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R15", "205/55R16", "215/45R17"],
+      "trims": {
+        "1.6 SX": { "tires": ["205/60R15"], "wheels": ["15x6"] },
+        "2.0 CDX": { "tires": ["205/55R16", "215/45R17"], "wheels": ["16x6.5", "17x7"] }
+      },
+      "status": "INTERNATIONAL",
+      "notes": "European/UK market only. Not sold in North America."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R15", "205/55R16", "215/45R17"],
+      "trims": {
+        "1.6 SX": { "tires": ["205/60R15"], "wheels": ["15x6"] },
+        "2.0 CDX": { "tires": ["205/55R16", "215/45R17"], "wheels": ["16x6.5", "17x7"] }
+      },
+      "status": "INTERNATIONAL",
+      "notes": "European/UK market only. Not sold in North America."
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22", "275/60R20", "265/65R18", "275/50R22", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22", "285/40R24"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "Premier": { "tires": ["275/60R20", "275/50R22"], "wheels": ["20x9", "22x9"] },
+        "RST": { "tires": ["275/60R20", "275/50R22", "285/40R24"], "wheels": ["20x9", "22x9", "24x10"] },
+        "Z71": { "tires": ["275/60R20"], "wheels": ["20x9"] },
+        "High Country": { "tires": ["275/50R22", "285/40R24"], "wheels": ["22x9", "24x10"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 275/55R20 (older gen). Add 285/40R24 for RST/High Country."
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22", "275/60R20", "265/65R18", "275/50R22", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22", "285/40R24"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "Premier": { "tires": ["275/60R20", "275/50R22"], "wheels": ["20x9", "22x9"] },
+        "RST": { "tires": ["275/60R20", "275/50R22", "285/40R24"], "wheels": ["20x9", "22x9", "24x10"] },
+        "Z71": { "tires": ["275/60R20"], "wheels": ["20x9"] },
+        "High Country": { "tires": ["275/50R22", "285/40R24"], "wheels": ["22x9", "24x10"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 275/55R20 (pre-2021). Add 285/40R24 for RST/High Country."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22", "275/60R20", "265/65R18", "275/50R22", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "Premier": { "tires": ["275/60R20", "275/50R22"], "wheels": ["20x9", "22x9"] },
+        "RST": { "tires": ["275/60R20", "275/50R22"], "wheels": ["20x9", "22x9"] },
+        "Z71": { "tires": ["275/60R20"], "wheels": ["20x9"] },
+        "High Country": { "tires": ["275/50R22"], "wheels": ["22x9"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 275/55R20, 285/45R22 (not OEM for 2021+ gen)."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22", "275/60R20", "265/65R18", "275/50R22", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "Premier": { "tires": ["275/60R20", "275/50R22"], "wheels": ["20x9", "22x9"] },
+        "RST": { "tires": ["275/60R20", "275/50R22"], "wheels": ["20x9", "22x9"] },
+        "Z71": { "tires": ["275/60R20"], "wheels": ["20x9"] },
+        "High Country": { "tires": ["275/50R22"], "wheels": ["22x9"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 275/55R20, 285/45R22 (pre-2021 gen sizes)."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22", "275/60R20", "265/65R18", "275/50R22", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "Premier": { "tires": ["275/60R20", "275/50R22"], "wheels": ["20x9", "22x9"] },
+        "RST": { "tires": ["275/60R20", "275/50R22"], "wheels": ["20x9", "22x9"] },
+        "Z71": { "tires": ["275/60R20"], "wheels": ["20x9"] },
+        "High Country": { "tires": ["275/50R22"], "wheels": ["22x9"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 275/55R20, 285/45R22. These are pre-2021 gen sizes."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22", "275/60R20", "265/65R18", "275/50R22", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/60R20", "275/50R22"], "wheels": ["18x8", "20x9", "22x9"] },
+        "Premier": { "tires": ["275/60R20", "275/50R22"], "wheels": ["20x9", "22x9"] },
+        "RST": { "tires": ["275/60R20", "275/50R22"], "wheels": ["20x9", "22x9"] },
+        "Z71": { "tires": ["275/60R20"], "wheels": ["20x9"] },
+        "High Country": { "tires": ["275/50R22"], "wheels": ["22x9"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "2021 is new gen. Remove 275/55R20, 285/45R22."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "Premier": { "tires": ["275/55R20", "285/45R22"], "wheels": ["20x9", "22x9"] }
+      },
+      "status": "VALID",
+      "notes": "Final year of previous generation. Sizes correct."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "Premier": { "tires": ["275/55R20", "285/45R22"], "wheels": ["20x9", "22x9"] }
+      },
+      "status": "VALID",
+      "notes": "Sizes correct for 2015-2020 generation."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "Premier": { "tires": ["275/55R20", "285/45R22"], "wheels": ["20x9", "22x9"] }
+      },
+      "status": "VALID",
+      "notes": "Sizes correct."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "Premier": { "tires": ["275/55R20", "285/45R22"], "wheels": ["20x9", "22x9"] }
+      },
+      "status": "VALID",
+      "notes": "Sizes correct."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "285/45R22"], "wheels": ["18x8.5", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "LTZ": { "tires": ["275/55R20", "285/45R22"], "wheels": ["20x9", "22x9"] }
+      },
+      "status": "VALID",
+      "notes": "Sizes correct."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "LT": { "tires": ["265/65R18", "275/55R20", "285/45R22"], "wheels": ["18x8.5", "20x9", "22x9"] },
+        "LTZ": { "tires": ["275/55R20", "285/45R22"], "wheels": ["20x9", "22x9"] }
+      },
+      "status": "VALID",
+      "notes": "First year of K2 generation. Sizes correct."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "265/70R17", "275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tires": ["265/70R17", "275/55R20", "285/45R22"], "wheels": ["17x7.5", "20x9", "22x9"] },
+        "LT": { "tires": ["265/70R17", "265/65R18", "275/55R20", "285/45R22"], "wheels": ["17x7.5", "18x8.5", "20x9", "22x9"] },
+        "LT Z71": { "tires": ["265/65R18", "275/55R20"], "wheels": ["18x8.5", "20x9"] },
+        "LTZ": { "tires": ["275/55R20", "285/45R22"], "wheels": ["20x9", "22x9"] }
+      },
+      "status": "VALID",
+      "notes": "Final year GMT900 gen. Sizes correct."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "265/70R17", "275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "Hybrid": { "tires": ["265/65R18"], "wheels": ["18x8"] },
+        "LS": { "tires": ["265/70R17"], "wheels": ["17x7.5"] },
+        "LT": { "tires": ["265/70R17", "265/65R18", "275/55R20"], "wheels": ["17x7.5", "18x8.5", "20x9"] },
+        "LT Z71": { "tires": ["265/65R18", "275/55R20"], "wheels": ["18x8.5", "20x9"] },
+        "LTZ": { "tires": ["275/55R20"], "wheels": ["20x9"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 285/45R22 - aftermarket only for this year."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "265/70R17", "275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "Hybrid": { "tires": ["265/65R18"], "wheels": ["18x8"] },
+        "LS": { "tires": ["265/70R17"], "wheels": ["17x7.5"] },
+        "LT": { "tires": ["265/70R17", "265/65R18", "275/55R20"], "wheels": ["17x7.5", "18x8.5", "20x9"] },
+        "LT Z71": { "tires": ["265/65R18", "275/55R20"], "wheels": ["18x8.5", "20x9"] },
+        "LTZ": { "tires": ["275/55R20"], "wheels": ["20x9"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 285/45R22 - aftermarket only."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "265/70R17", "275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "Hybrid": { "tires": ["265/65R18"], "wheels": ["18x8"] },
+        "LT": { "tires": ["265/70R17", "265/65R18", "275/55R20"], "wheels": ["17x7.5", "18x8.5", "20x9"] },
+        "LT Z71": { "tires": ["265/65R18", "275/55R20"], "wheels": ["18x8.5", "20x9"] },
+        "LTZ": { "tires": ["275/55R20"], "wheels": ["20x9"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 285/45R22 - not OEM."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "265/70R17", "275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "Hybrid": { "tires": ["265/65R18"], "wheels": ["18x8"] },
+        "LS": { "tires": ["265/70R17"], "wheels": ["17x7.5"] },
+        "LT": { "tires": ["265/70R17", "265/65R18", "275/55R20"], "wheels": ["17x7.5", "18x8.5", "20x9"] },
+        "LT Z71": { "tires": ["265/65R18", "275/55R20"], "wheels": ["18x8.5", "20x9"] },
+        "LTZ": { "tires": ["275/55R20"], "wheels": ["20x9"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 285/45R22 - not OEM."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "Hybrid": { "tires": ["265/65R18"], "wheels": ["18x8"] },
+        "LS": { "tires": ["265/70R17"], "wheels": ["17x7.5"] },
+        "LT": { "tires": ["265/70R17", "265/65R18", "275/55R20"], "wheels": ["17x7.5", "18x8.5", "20x9"] },
+        "LTZ": { "tires": ["275/55R20"], "wheels": ["20x9"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 285/45R22 - not OEM."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "Base": { "tires": ["265/70R17", "275/55R20"], "wheels": ["17x7.5", "20x8.5"] },
+        "Hybrid": { "tires": ["265/65R18", "275/55R20"], "wheels": ["18x8", "20x8.5"] }
+      },
+      "status": "VALID",
+      "notes": "First year GMT900 gen. Sizes correct."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "Base": { "tires": ["265/70R17", "275/55R20"], "wheels": ["17x7.5", "20x8.5"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove P265/65R18 - not standard for 2007."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "2WD": { "tires": ["265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] },
+        "4WD": { "tires": ["265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Final year GMT800 gen. Remove 265/65R17, 275/55R20 - not OEM."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "2WD": { "tires": ["265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] },
+        "4WD": { "tires": ["265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 265/65R17, 275/55R20 - not OEM."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "2WD": { "tires": ["265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] },
+        "4WD": { "tires": ["265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 265/65R17, 275/55R20 - not OEM."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["265/70R16", "265/75R16", "265/70R17"],
+      "trims": {
+        "2WD": { "tires": ["265/75R16", "265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] },
+        "4WD": { "tires": ["265/70R16", "245/75R16", "265/75R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Add 265/75R16, 245/75R16. Remove 275/55R20."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/70R17"],
+      "trims": {
+        "2WD": { "tires": ["245/75R16", "265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] },
+        "4WD": { "tires": ["245/75R16", "265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Add 245/75R16. Remove 265/65R17, 275/55R20."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/70R17"],
+      "trims": {
+        "2WD New": { "tires": ["245/75R16", "265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] },
+        "4WD New": { "tires": ["245/75R16", "265/70R16", "265/70R17"], "wheels": ["16x7", "17x7.5"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Add 245/75R16. Remove 265/65R17, 275/55R20."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/75R16"],
+      "trims": {
+        "2WD New": { "tires": ["245/75R16", "265/70R16"], "wheels": ["16x7"] },
+        "4WD New": { "tires": ["265/70R16"], "wheels": ["16x7"] },
+        "4WD Z71 New": { "tires": ["265/75R16"], "wheels": ["16x7"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Transitional year. Add 245/75R16, 265/75R16. Remove 265/65R17, 275/55R20."
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/45R18"],
+      "trims": {
+        "RS": { "tires": ["215/55R17", "225/45R18"], "wheels": ["17x7", "18x7.5"] }
+      },
+      "status": "INTERNATIONAL",
+      "notes": "Latin America market only (Brazil, Argentina, Mexico). Not sold in USA/Canada. PCD: 5x105."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/45R18"],
+      "trims": {
+        "RS": { "tires": ["215/55R17", "225/45R18"], "wheels": ["17x7", "18x7.5"] }
+      },
+      "status": "INTERNATIONAL",
+      "notes": "Latin America market only. Not sold in USA/Canada."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/45R18"],
+      "trims": {
+        "RS": { "tires": ["215/55R17", "225/45R18"], "wheels": ["17x7", "18x7.5"] }
+      },
+      "status": "INTERNATIONAL",
+      "notes": "Latin America market only. Not sold in USA/Canada."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/45R18"],
+      "trims": {
+        "RS": { "tires": ["215/55R17", "225/45R18"], "wheels": ["17x7", "18x7.5"] }
+      },
+      "status": "INTERNATIONAL",
+      "notes": "Latin America market only. Not sold in USA/Canada."
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["225/55R18", "225/45R19"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trims": {
+        "LS": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "LT": { "tires": ["225/60R17", "225/55R18"], "wheels": ["17x7", "18x7.5"] },
+        "ACTIV": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "RS": { "tires": ["245/45R19"], "wheels": ["19x8"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Replace 225/45R19 with 245/45R19 for RS. Add 225/60R17."
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["225/55R18", "225/45R19", "225/60R17", "215/65R16", "215/55R17"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trims": {
+        "LS": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "LT": { "tires": ["225/60R17", "225/55R18"], "wheels": ["17x7", "18x7.5"] },
+        "ACTIV": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "RS": { "tires": ["245/45R19"], "wheels": ["19x8"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 215/65R16 (2021-2022 L trim only), 215/55R17. RS uses 245/45R19."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "225/45R19"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trims": {
+        "LS": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "LT": { "tires": ["225/60R17", "225/55R18"], "wheels": ["17x7", "18x7.5"] },
+        "ACTIV": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "RS": { "tires": ["245/45R19"], "wheels": ["19x8"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 215/55R17. Change 225/45R19 to 245/45R19 for RS."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "225/45R19"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "LS": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "LT": { "tires": ["225/60R17", "225/55R18"], "wheels": ["17x7", "18x7.5"] },
+        "ACTIV": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "RS": { "tires": ["225/55R18"], "wheels": ["18x7.5"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Remove 215/55R17, 225/45R19. RS used 225/55R18 in 2023."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "225/45R19"],
+      "validatedTireSizes": ["215/65R16", "225/60R17", "225/55R18"],
+      "trims": {
+        "L": { "tires": ["215/65R16"], "wheels": ["16x6.5"] },
+        "LS": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "LT": { "tires": ["225/60R17", "225/55R18"], "wheels": ["17x7", "18x7.5"] },
+        "ACTIV": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "RS": { "tires": ["225/55R18"], "wheels": ["18x7.5"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Add 215/65R16 for L trim. Remove 215/55R17, 225/45R19."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "225/45R19"],
+      "validatedTireSizes": ["215/65R16", "225/60R17", "225/55R18"],
+      "trims": {
+        "L": { "tires": ["215/65R16"], "wheels": ["16x6.5"] },
+        "LS": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "LT": { "tires": ["225/60R17", "225/55R18"], "wheels": ["17x7", "18x7.5"] },
+        "ACTIV": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "RS": { "tires": ["225/55R18"], "wheels": ["18x7.5"] }
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "First year of US Trailblazer. Add 215/65R16 for L trim. Remove 215/55R17, 225/45R19."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["225/60R17", "215/65R16", "225/55R18"],
+      "validatedTireSizes": ["215/65R16", "225/60R17", "225/55R18"],
+      "trims": {
+        "L": { "tires": ["215/65R16"], "wheels": ["16x6.5"] },
+        "LS": { "tires": ["225/60R17"], "wheels": ["17x7"] },
+        "LT": { "tires": ["225/60R17", "225/55R18"], "wheels": ["17x7", "18x7.5"] }
+      },
+      "status": "VALID",
+      "notes": "International market 2020 Trailblazer. Sizes look correct."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/70R16", "265/60R18"],
+      "trims": {
+        "LTZ": { "tires": ["245/70R16", "265/60R18"], "wheels": ["16x7", "18x7.5"] }
+      },
+      "status": "MISMATCH",
+      "notes": "International market (Thailand/Brazil). Wrong tire sizes in DB. Should be 245/70R16 or 265/60R18."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/70R16", "265/60R18"],
+      "trims": {
+        "LTZ": { "tires": ["245/70R16", "265/60R18"], "wheels": ["16x7", "18x7.5"] }
+      },
+      "status": "MISMATCH",
+      "notes": "International market. Wrong tire sizes in DB."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/70R16", "265/60R18"],
+      "trims": {
+        "LTZ": { "tires": ["245/70R16", "265/60R18"], "wheels": ["16x7", "18x7.5"] }
+      },
+      "status": "MISMATCH",
+      "notes": "International market. Wrong tire sizes in DB."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/70R16", "265/60R18"],
+      "trims": {
+        "LTZ": { "tires": ["245/70R16", "265/60R18"], "wheels": ["16x7", "18x7.5"] }
+      },
+      "status": "MISMATCH",
+      "notes": "International market (RG gen Brazil/LatAm). Wrong tire sizes."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/70R16", "265/60R18"],
+      "trims": {
+        "LTZ": { "tires": ["245/70R16", "265/60R18"], "wheels": ["16x7", "18x7.5"] }
+      },
+      "status": "MISMATCH",
+      "notes": "International market (RG gen). Wrong tire sizes."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["245/70R16", "265/60R18"],
+      "validatedTireSizes": ["245/70R16", "265/60R18"],
+      "trims": {
+        "LTZ": { "tires": ["245/70R16", "265/60R18"], "wheels": ["16x7", "18x7.5"] }
+      },
+      "status": "VALID",
+      "notes": "International market. Sizes correct."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/70R16", "265/60R18"],
+      "trims": {
+        "LTZ": { "tires": ["245/70R16", "265/60R18"], "wheels": ["16x7", "18x7.5"] }
+      },
+      "status": "MISMATCH",
+      "notes": "International market (RG gen first year). Wrong tire sizes in DB."
+    }
+  ],
+  "summary": {
+    "valid": 11,
+    "partialMatch": 29,
+    "mismatch": 9,
+    "international": 14,
+    "notConsumer": 8,
+    "needsRemoval": ["t-series", "tacuma", "tracker-rs"],
+    "needsCorrection": ["suburban-2500 2000-2002", "trailblazer 2013-2019"],
+    "recommendations": [
+      "Consider removing international-only vehicles (Tacuma, Tracker RS, T-Series) from US retail site",
+      "Suburban 2500 needs LT245/75R16 instead of 1500 sizes",
+      "Tahoe 2021+ generation uses 275/60R20 (not 275/55R20) and 275/50R22",
+      "Trailblazer 2013-2019 are different vehicles than 2021+ US model - separate them or remove international versions",
+      "Add 285/40R24 option for 2025-2026 Tahoe RST and High Country"
+    ]
+  }
+}

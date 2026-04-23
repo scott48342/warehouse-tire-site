@@ -1,0 +1,996 @@
+{
+  "batch": "batch-04-domestic",
+  "verifiedAt": "2026-04-23T00:50:00Z",
+  "totalVehicles": 75,
+  "validCount": 43,
+  "invalidCount": 32,
+  "summary": {
+    "invalidModelYears": [
+      "2006-2011 Chevrolet Blazer (gap between S-10 Blazer and new crossover)",
+      "2024-2025 Chevrolet Bolt EV (production ended Dec 2023)",
+      "2021-2025 Chevrolet Bolt EUV (production ended Dec 2023, no 2024-2025 exist)",
+      "2006-2012 Chevrolet Aveo U-VA (non-US market designation)",
+      "2011-2017 Chevrolet Caprice (PPV only, never sold retail)",
+      "2004 Chevrolet Equinox (first model year was 2005)"
+    ],
+    "notes": "Bolt EV/EUV production ended December 2023. New Bolt returns in 2027. Caprice 2011-2017 was PPV (Police Patrol Vehicle) only - never sold to retail customers. Aveo U-VA was sold in other markets; US had Aveo (sedan) and Aveo5 (hatchback)."
+  },
+  "vehicles": [
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "XTS",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "Luxury", "oemWheelSize": "19x8", "oemTireSize": "245/45R19" },
+        { "name": "Platinum", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Premium Luxury", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "V-Sport Platinum", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Astro",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "15x7", "oemTireSize": "215/75R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Astro",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "15x7", "oemTireSize": "215/75R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Astro",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "15x7", "oemTireSize": "215/75R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Astro",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Astro",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Astro",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Final model year for Astro"
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Avalanche",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" },
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "265/65R18" },
+        { "name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Avalanche",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" },
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "265/65R18" },
+        { "name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Avalanche",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" },
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "265/65R18" },
+        { "name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Avalanche",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" },
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "265/65R18" },
+        { "name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Avalanche",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" },
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "265/65R18" },
+        { "name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Avalanche",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" },
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "265/65R18" },
+        { "name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Avalanche",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" },
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "265/65R18" },
+        { "name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "factorywheelreplacement.com"],
+      "notes": "Final model year for Avalanche"
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Avalanche 1500",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x7", "oemTireSize": "265/70R16" },
+        { "name": "Z71", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Avalanche 1500",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "16x7", "oemTireSize": "265/70R16" },
+        { "name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" },
+        { "name": "Z71", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Avalanche 1500",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "16x7", "oemTireSize": "265/70R16" },
+        { "name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" },
+        { "name": "Z71", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "factorywheelreplacement.com"],
+      "notes": "Final model year for Avalanche 1500"
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Avalanche 2500",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.8,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "265/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["factorywheelreplacement.com", "hulkoffsets.com"],
+      "notes": "8-lug HD variant"
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Avalanche 2500",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.8,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "265/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["factorywheelreplacement.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Avalanche 2500",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.8,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "265/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["factorywheelreplacement.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Avalanche 2500",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.8,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "265/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["factorywheelreplacement.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Avalanche 2500",
+      "status": "valid",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.8,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "265/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["factorywheelreplacement.com", "hulkoffsets.com"],
+      "notes": "Final model year for Avalanche 2500"
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Aveo U-VA",
+      "status": "invalid",
+      "reason": "Non-US market designation. In US market sold as 'Aveo' (sedan) or 'Aveo5' (hatchback starting 2007). U-VA designation was for South Korean and other international markets.",
+      "suggestedModel": "Aveo",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Aveo U-VA",
+      "status": "invalid",
+      "reason": "Non-US market designation. US version was 'Aveo5' for hatchback.",
+      "suggestedModel": "Aveo5",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Aveo U-VA",
+      "status": "invalid",
+      "reason": "Non-US market designation. US version was 'Aveo5' for hatchback.",
+      "suggestedModel": "Aveo5",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Aveo U-VA",
+      "status": "invalid",
+      "reason": "Non-US market designation. US version was 'Aveo5' for hatchback.",
+      "suggestedModel": "Aveo5",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Aveo U-VA",
+      "status": "invalid",
+      "reason": "Non-US market designation. US version was 'Aveo5' for hatchback.",
+      "suggestedModel": "Aveo5",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Aveo U-VA",
+      "status": "invalid",
+      "reason": "Non-US market designation. US version was 'Aveo5' for hatchback. Aveo replaced by Sonic in 2012.",
+      "suggestedModel": "Aveo5",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Aveo U-VA",
+      "status": "invalid",
+      "reason": "Aveo was discontinued in US after 2011, replaced by Sonic. U-VA never sold in US.",
+      "suggestedModel": "Sonic",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120.65",
+      "hubBore": 70.3,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "15x7", "oemTireSize": "235/70R15" },
+        { "name": "LT", "oemWheelSize": "15x7", "oemTireSize": "235/70R15" },
+        { "name": "TrailBlazer", "oemWheelSize": "16x7", "oemTireSize": "235/65R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "tiresize.com"],
+      "notes": "S-10 Blazer generation"
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120.65",
+      "hubBore": 70.3,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "15x7", "oemTireSize": "235/70R15" },
+        { "name": "LT", "oemWheelSize": "16x7", "oemTireSize": "235/65R16" },
+        { "name": "Xtreme", "oemWheelSize": "16x7", "oemTireSize": "235/65R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "tiresize.com"],
+      "notes": "S-10 Blazer generation"
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120.65",
+      "hubBore": 70.3,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "15x7", "oemTireSize": "235/70R15" },
+        { "name": "LT", "oemWheelSize": "16x7", "oemTireSize": "235/65R16" },
+        { "name": "Xtreme", "oemWheelSize": "16x7", "oemTireSize": "235/65R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "tiresize.com"],
+      "notes": "S-10 Blazer generation"
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120.65",
+      "hubBore": 70.3,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "15x7", "oemTireSize": "235/70R15" },
+        { "name": "LT", "oemWheelSize": "16x7", "oemTireSize": "235/65R16" },
+        { "name": "Xtreme", "oemWheelSize": "16x7", "oemTireSize": "235/65R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "tiresize.com"],
+      "notes": "S-10 Blazer generation"
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120.65",
+      "hubBore": 70.3,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "15x7", "oemTireSize": "235/70R15" },
+        { "name": "LT", "oemWheelSize": "16x7", "oemTireSize": "235/65R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "tiresize.com"],
+      "notes": "Final retail model year for S-10 Blazer"
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120.65",
+      "hubBore": 70.3,
+      "trims": [
+        { "name": "LS", "oemWheelSize": "15x7", "oemTireSize": "235/70R15" }
+      ],
+      "confidence": "medium",
+      "sources": ["wikipedia.org"],
+      "notes": "Fleet sales only - retail ended 2004"
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "invalid",
+      "reason": "Chevrolet Blazer was not sold in US from 2006-2018. S-10 Blazer ended 2005, new crossover Blazer started 2019.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "caranddriver.com", "motortrend.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "invalid",
+      "reason": "Chevrolet Blazer was not sold in US from 2006-2018. Gap between S-10 Blazer and new crossover.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "caranddriver.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "invalid",
+      "reason": "Chevrolet Blazer was not sold in US from 2006-2018. Gap between S-10 Blazer and new crossover.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "caranddriver.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "invalid",
+      "reason": "Chevrolet Blazer was not sold in US from 2006-2018. Gap between S-10 Blazer and new crossover.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "caranddriver.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "invalid",
+      "reason": "Chevrolet Blazer was not sold in US from 2006-2018. Gap between S-10 Blazer and new crossover.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "caranddriver.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        { "name": "L", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "Base", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "Premier", "oemWheelSize": "20x8", "oemTireSize": "235/55R20" },
+        { "name": "RS", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "sizemytires.com"],
+      "notes": "New crossover Blazer generation (C1 platform)"
+    },
+    {
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        { "name": "L", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "Premier", "oemWheelSize": "20x8", "oemTireSize": "235/55R20" },
+        { "name": "RS", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "sizemytires.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        { "name": "L", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "Premier", "oemWheelSize": "20x8", "oemTireSize": "235/55R20" },
+        { "name": "RS", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "sizemytires.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "Premier", "oemWheelSize": "20x8", "oemTireSize": "235/55R20" },
+        { "name": "RS", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "sizemytires.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "Premier", "oemWheelSize": "20x8", "oemTireSize": "235/55R20" },
+        { "name": "RS", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "sizemytires.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "Premier", "oemWheelSize": "20x8", "oemTireSize": "235/55R20" },
+        { "name": "RS", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "gmauthority.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "Premier", "oemWheelSize": "20x8", "oemTireSize": "235/55R20" },
+        { "name": "RS", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21" }
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        { "name": "LT", "oemWheelSize": "18x8", "oemTireSize": "235/65R18" },
+        { "name": "Premier", "oemWheelSize": "20x8", "oemTireSize": "235/55R20" },
+        { "name": "RS", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21" }
+      ],
+      "confidence": "medium",
+      "sources": ["gmauthority.com"],
+      "notes": "GM reversed discontinuation plans - 2026 model confirmed"
+    },
+    {
+      "year": 2021,
+      "make": "Chevrolet",
+      "model": "Bolt EUV",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "trims": [
+        { "name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/50R17" },
+        { "name": "Premier", "oemWheelSize": "17x7", "oemTireSize": "215/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["chevybolt.org", "wikipedia.org"]
+    },
+    {
+      "year": 2022,
+      "make": "Chevrolet",
+      "model": "Bolt EUV",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "trims": [
+        { "name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/50R17" },
+        { "name": "Premier", "oemWheelSize": "17x7", "oemTireSize": "215/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["chevybolt.org", "wikipedia.org"]
+    },
+    {
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "Bolt EUV",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "trims": [
+        { "name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/50R17" },
+        { "name": "Premier", "oemWheelSize": "17x7", "oemTireSize": "215/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["chevybolt.org", "wikipedia.org"],
+      "notes": "Final model year - production ended December 2023"
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Bolt EUV",
+      "status": "invalid",
+      "reason": "Bolt EUV production ended December 2023. No 2024 model year exists.",
+      "confidence": "high",
+      "sources": ["gmauthority.com", "wikipedia.org"]
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "Bolt EUV",
+      "status": "invalid",
+      "reason": "Bolt EUV production ended December 2023. No 2025 model year exists. New Bolt returns 2027.",
+      "confidence": "high",
+      "sources": ["gmauthority.com", "wikipedia.org"]
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Bolt EV",
+      "status": "invalid",
+      "reason": "Bolt EV production ended December 2023. No 2024 model year exists.",
+      "confidence": "high",
+      "sources": ["gmauthority.com", "wikipedia.org", "motortrend.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "Bolt EV",
+      "status": "invalid",
+      "reason": "Bolt EV production ended December 2023. No 2025 model year exists. New Bolt returns in late 2025/early 2026 as 2027 model.",
+      "confidence": "high",
+      "sources": ["gmauthority.com", "wikipedia.org", "motortrend.com", "chevrolet.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "status": "invalid",
+      "reason": "Chevrolet Caprice PPV (2011-2017) was Police Patrol Vehicle ONLY. Never sold to retail customers in US.",
+      "vehicleType": "fleet/police-only",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "policecarwebsite.net", "motogallery.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "status": "invalid",
+      "reason": "PPV (Police Patrol Vehicle) only - never sold retail",
+      "vehicleType": "fleet/police-only",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "policecarwebsite.net"]
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "status": "invalid",
+      "reason": "PPV (Police Patrol Vehicle) only - never sold retail",
+      "vehicleType": "fleet/police-only",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "policecarwebsite.net"]
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "status": "invalid",
+      "reason": "PPV (Police Patrol Vehicle) only - never sold retail",
+      "vehicleType": "fleet/police-only",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "policecarwebsite.net"]
+    },
+    {
+      "year": 2015,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "status": "invalid",
+      "reason": "PPV (Police Patrol Vehicle) only - never sold retail",
+      "vehicleType": "fleet/police-only",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "policecarwebsite.net"]
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "status": "invalid",
+      "reason": "PPV (Police Patrol Vehicle) only - never sold retail",
+      "vehicleType": "fleet/police-only",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "policecarwebsite.net"]
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "status": "invalid",
+      "reason": "PPV (Police Patrol Vehicle) only - never sold retail. Final year of Caprice PPV.",
+      "vehicleType": "fleet/police-only",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "policecarwebsite.net"]
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "status": "invalid",
+      "reason": "Chevrolet Equinox first model year was 2005, not 2004. Introduced in 2004 FOR the 2005 model year.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com", "carbuzz.com", "autoevolution.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Second generation started 2003"
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LT", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LT", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LT", "oemWheelSize": "17x8.5", "oemTireSize": "265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LT", "oemWheelSize": "17x8.5", "oemTireSize": "265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LT", "oemWheelSize": "17x8.5", "oemTireSize": "265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "valid",
+      "boltPattern": "5x127",
+      "hubBore": 78.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "245/75R16" },
+        { "name": "LT", "oemWheelSize": "17x8.5", "oemTireSize": "265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    }
+  ]
+}

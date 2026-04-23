@@ -1,0 +1,1077 @@
+{
+  "batch": "batch-09-domestic",
+  "verifiedAt": "2025-07-18T12:00:00Z",
+  "verifiedBy": "subagent:verify-us-09",
+  "totalVehicles": 75,
+  "validVehicles": 46,
+  "invalidVehicles": 29,
+  "summary": {
+    "fordExcursion": "2000-2005 ALL VALID (6 vehicles)",
+    "fordExplorerSportTrac": "2001-2005, 2007-2010 ALL VALID (9 vehicles)",
+    "fordF450SuperDuty": "2000-2026 ALL VALID (27 vehicles)",
+    "fordFiesta": "ONLY 2011-2019 valid for US market (9 valid, 16 INVALID)",
+    "fordFlex": "2009-2015 in batch - 2008 INVALID (7 valid, 1 INVALID)"
+  },
+  "invalidModelYears": [
+    {
+      "make": "ford",
+      "model": "fiesta",
+      "invalidYears": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2020, 2021, 2022, 2023, 2024],
+      "reason": "Ford Fiesta was only sold in the US market from 2011-2019. Earlier years (2000-2010) and later years (2020-2024) were NOT available in America.",
+      "sources": ["cars.com", "usnews.com/cars-trucks", "caranddriver.com"]
+    },
+    {
+      "make": "ford",
+      "model": "flex",
+      "invalidYears": [2008],
+      "reason": "Ford Flex first model year was 2009. Production began in 2008 but as 2009 models. No 2008 model year exists.",
+      "sources": ["wikipedia.org/wiki/Ford_Flex", "jdpower.com", "autoevolution.com"]
+    }
+  ],
+  "vehicles": [
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Excursion",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XLT 2WD", "oemWheelSize": "16x7", "oemTireSize": "LT265/75R16" },
+        { "name": "XLT 4WD", "oemWheelSize": "16x7", "oemTireSize": "LT265/75R16" },
+        { "name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "LT265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autoevolution.com", "ford-trucks.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Excursion",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XLT 2WD", "oemWheelSize": "16x7", "oemTireSize": "LT265/75R16" },
+        { "name": "XLT 4WD", "oemWheelSize": "16x7", "oemTireSize": "LT265/75R16" },
+        { "name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "LT265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autoevolution.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Excursion",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "LT265/75R16" },
+        { "name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "LT265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autoevolution.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Excursion",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "LT265/75R16" },
+        { "name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "LT265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "1010tires.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Excursion",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "LT265/75R16" },
+        { "name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "LT265/70R17" },
+        { "name": "Eddie Bauer", "oemWheelSize": "17x7.5", "oemTireSize": "LT265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autoevolution.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Excursion",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "LT265/75R16" },
+        { "name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "LT265/70R17" },
+        { "name": "Eddie Bauer", "oemWheelSize": "17x7.5", "oemTireSize": "LT265/70R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autoevolution.com"],
+      "notes": "Final model year for Excursion"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "15x7", "oemTireSize": "235/75R15" },
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "235/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wikipedia.org"],
+      "notes": "First generation, first model year"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "15x7", "oemTireSize": "235/75R15" },
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "235/70R16" },
+        { "name": "Premium", "oemWheelSize": "16x7", "oemTireSize": "255/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "XLS", "oemWheelSize": "15x7", "oemTireSize": "235/75R15" },
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "235/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "XLS", "oemWheelSize": "15x7", "oemTireSize": "235/75R15" },
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "235/70R16" },
+        { "name": "Adrenalin", "oemWheelSize": "17x8", "oemTireSize": "245/65R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "XLS", "oemWheelSize": "15x7", "oemTireSize": "235/75R15" },
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "235/70R16" },
+        { "name": "Adrenalin", "oemWheelSize": "17x8", "oemTireSize": "245/65R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Last year of first generation"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "235/70R16" },
+        { "name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "235/65R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wikipedia.org"],
+      "notes": "Second generation debut, no 2006 model year"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "235/70R16" },
+        { "name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "235/65R18" },
+        { "name": "Adrenalin", "oemWheelSize": "20x8.5", "oemTireSize": "255/50R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "firestonecompleteautocare.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "235/70R16" },
+        { "name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "235/65R18" },
+        { "name": "Adrenalin", "oemWheelSize": "20x8.5", "oemTireSize": "255/50R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "XLT", "oemWheelSize": "16x7", "oemTireSize": "235/70R16" },
+        { "name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "235/65R18" },
+        { "name": "Adrenalin", "oemWheelSize": "20x8.5", "oemTireSize": "255/50R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "motortrend.com"],
+      "notes": "Final model year for Explorer Sport Trac"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com", "performanceplustire.com"],
+      "notes": "Commercial chassis cab, 19.5\" wheels standard"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com", "performanceplustire.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com", "carbuzz.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"],
+      "notes": "New generation Super Duty launched"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"],
+      "notes": "All-new aluminum body Super Duty"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Limited DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Limited DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["fordmasterx.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Limited DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["ford.com", "fordmasterx.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Limited DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["ford.com", "fordmasterx.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Limited DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["ford.com", "carbuzz.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Limited DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["ford.com", "carbuzz.com"],
+      "notes": "Refreshed Super Duty launched"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Limited DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["ford.com", "carbuzz.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "high",
+      "sources": ["ford.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "status": "valid",
+      "boltPattern": "8x170",
+      "hubBore": 124.9,
+      "trims": [
+        { "name": "XL DRW", "oemWheelSize": "19.5x6", "oemTireSize": "LT245/70R19.5" },
+        { "name": "Lariat DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" },
+        { "name": "Platinum DRW", "oemWheelSize": "20x8", "oemTireSize": "LT275/65R20" }
+      ],
+      "confidence": "medium",
+      "sources": ["ford.com", "bowenscarff.com"],
+      "notes": "Current model year as confirmed on ford.com"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com", "caranddriver.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was only available in America from 2011-2019",
+      "confidence": "high",
+      "sources": ["cars.com", "usnews.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "valid",
+      "boltPattern": "4x108",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "S Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Hatchback", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SES Hatchback", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fordfiesta.org"],
+      "notes": "First year of US market Fiesta (Mk6)"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "valid",
+      "boltPattern": "4x108",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "S Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Hatchback", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SES Hatchback", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fordfiesta.org"]
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "valid",
+      "boltPattern": "4x108",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "S Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "Titanium Hatchback", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fordfiesta.org"]
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "valid",
+      "boltPattern": "4x108",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "S Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "Titanium Hatchback", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" },
+        { "name": "ST", "oemWheelSize": "17x7", "oemTireSize": "205/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fiestastforum.com"],
+      "notes": "First year of Fiesta ST in US"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "valid",
+      "boltPattern": "4x108",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "S Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "Titanium Hatchback", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" },
+        { "name": "ST", "oemWheelSize": "17x7", "oemTireSize": "205/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fiestastforum.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "valid",
+      "boltPattern": "4x108",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "S Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "Titanium Hatchback", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" },
+        { "name": "ST", "oemWheelSize": "17x7", "oemTireSize": "205/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fiestastforum.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "valid",
+      "boltPattern": "4x108",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "S Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "Titanium Hatchback", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" },
+        { "name": "ST", "oemWheelSize": "17x7", "oemTireSize": "205/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fiestastforum.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "valid",
+      "boltPattern": "4x108",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "S Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "Titanium Hatchback", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" },
+        { "name": "ST", "oemWheelSize": "17x7", "oemTireSize": "205/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fiestastforum.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "valid",
+      "boltPattern": "4x108",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "S Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "SE Sedan", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "ST-Line Hatchback", "oemWheelSize": "17x7", "oemTireSize": "205/40R17" },
+        { "name": "ST", "oemWheelSize": "17x7", "oemTireSize": "205/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "Final model year for US market Fiesta"
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was discontinued in America after 2019",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "usnews.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was discontinued in America after 2019",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "usnews.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was discontinued in America after 2019",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "usnews.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was discontinued in America after 2019 (discontinued globally in 2023)",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "wikipedia.org"]
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Fiesta",
+      "status": "invalid",
+      "reason": "NOT SOLD IN US MARKET - Ford Fiesta was discontinued in America after 2019 and globally in 2023",
+      "confidence": "high",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "invalid",
+      "reason": "NO 2008 MODEL YEAR EXISTS - Ford Flex debuted as a 2009 model year (production started 2008, but sold as 2009 models)",
+      "confidence": "high",
+      "sources": ["wikipedia.org/wiki/Ford_Flex", "jdpower.com", "autoevolution.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "SE FWD", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17" },
+        { "name": "SEL FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "SEL AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "Limited FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "Limited AWD", "oemWheelSize": "19x8", "oemTireSize": "235/55R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "jdpower.com", "fordflex.net"],
+      "notes": "First model year for Ford Flex"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "SE FWD", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17" },
+        { "name": "SEL FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "SEL AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "Limited AWD", "oemWheelSize": "19x8", "oemTireSize": "235/55R19" },
+        { "name": "Limited EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fordflex.net"]
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "SE FWD", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17" },
+        { "name": "SEL FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "SEL AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "Limited AWD", "oemWheelSize": "19x8", "oemTireSize": "235/55R19" },
+        { "name": "Limited EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fordflex.net"]
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "SE FWD", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17" },
+        { "name": "SEL FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "SEL AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "Limited AWD", "oemWheelSize": "19x8", "oemTireSize": "235/55R19" },
+        { "name": "Limited EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fordflex.net"]
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "SE FWD", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17" },
+        { "name": "SEL FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "SEL AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "Limited AWD", "oemWheelSize": "19x8", "oemTireSize": "235/55R19" },
+        { "name": "Limited EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fordflex.net"],
+      "notes": "Refreshed styling for 2013"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "SE FWD", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17" },
+        { "name": "SEL FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "SEL AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "Limited AWD", "oemWheelSize": "19x8", "oemTireSize": "235/55R19" },
+        { "name": "Limited EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fordflex.net"]
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        { "name": "SE FWD", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17" },
+        { "name": "SEL FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "SEL AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18" },
+        { "name": "Limited AWD", "oemWheelSize": "19x8", "oemTireSize": "235/55R19" },
+        { "name": "Limited EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fordflex.net"]
+    }
+  ]
+}

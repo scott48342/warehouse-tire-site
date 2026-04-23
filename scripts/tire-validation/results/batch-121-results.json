@@ -1,0 +1,835 @@
+{
+  "batchId": "121",
+  "validatedAt": "2026-04-21T22:35:00Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2007,
+      "make": "Mitsubishi",
+      "model": "Outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": {
+        "ES": ["215/70R16"],
+        "LS": ["215/70R16"],
+        "XLS": ["225/55R18"]
+      },
+      "allSizes": ["215/70R16", "225/55R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2006,
+      "make": "Mitsubishi",
+      "model": "Outlander",
+      "currentTireSizes": ["215/70R16", "225/60R17"],
+      "validatedTireSizes": {
+        "Limited 2WD": ["215/55R17"],
+        "Limited 4WD": ["215/55R17"],
+        "LS 2WD": ["225/60R16", "215/55R17"],
+        "LS 4WD": ["225/60R16", "215/55R17"],
+        "SE 2WD": ["215/55R17"],
+        "SE 4WD": ["215/55R17"]
+      },
+      "allSizes": ["215/55R17", "225/60R16"],
+      "status": "MISMATCH",
+      "notes": "Current has 215/70R16 and 225/60R17, but OEM shows 215/55R17 and 225/60R16. Incorrect sizes in database."
+    },
+    {
+      "year": 2005,
+      "make": "Mitsubishi",
+      "model": "Outlander",
+      "currentTireSizes": ["215/70R16", "225/60R17"],
+      "validatedTireSizes": {
+        "Limited 2WD": ["215/55R17"],
+        "Limited 4WD": ["215/55R17"],
+        "LS 2WD": ["225/60R16", "215/55R17"],
+        "LS 4WD": ["225/60R16", "215/55R17"],
+        "XLS 2WD": ["215/55R17"],
+        "XLS 4WD": ["215/55R17"]
+      },
+      "allSizes": ["215/55R17", "225/60R16"],
+      "status": "MISMATCH",
+      "notes": "Current has 215/70R16 and 225/60R17, but OEM shows 215/55R17 and 225/60R16. Incorrect sizes in database."
+    },
+    {
+      "year": 2004,
+      "make": "Mitsubishi",
+      "model": "Outlander",
+      "currentTireSizes": ["215/70R16", "225/60R17"],
+      "validatedTireSizes": {
+        "LS 2WD": ["225/60R16"],
+        "LS 4WD": ["225/60R16"],
+        "XLS 2WD": ["225/60R16"],
+        "XLS 4WD": ["225/60R16"]
+      },
+      "allSizes": ["225/60R16"],
+      "status": "MISMATCH",
+      "notes": "All 2004 Outlander trims use 225/60R16 only. Current sizes 215/70R16 and 225/60R17 are incorrect."
+    },
+    {
+      "year": 2003,
+      "make": "Mitsubishi",
+      "model": "Outlander",
+      "currentTireSizes": ["215/70R16", "225/60R17"],
+      "validatedTireSizes": {
+        "LS 2WD": ["225/60R16"],
+        "LS 4WD": ["225/60R16"],
+        "XLS 2WD": ["225/60R16"],
+        "XLS 4WD": ["225/60R16"]
+      },
+      "allSizes": ["225/60R16"],
+      "status": "MISMATCH",
+      "notes": "All 2003 Outlander trims use 225/60R16 only. Current sizes 215/70R16 and 225/60R17 are incorrect."
+    },
+    {
+      "year": 2003,
+      "make": "Mitsubishi",
+      "model": "Toppo BJ",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/60R14"],
+        "660i": ["155/65R13"],
+        "660T": ["165/60R14"]
+      },
+      "allSizes": ["155/65R13", "165/60R14"],
+      "status": "JDM_ONLY",
+      "notes": "Kei car only sold in Japan. Not available in US market."
+    },
+    {
+      "year": 2002,
+      "make": "Mitsubishi",
+      "model": "Toppo BJ",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/60R14"],
+        "660i": ["155/65R13"],
+        "660T": ["165/60R14"]
+      },
+      "allSizes": ["155/65R13", "165/60R14"],
+      "status": "JDM_ONLY",
+      "notes": "Kei car only sold in Japan. Not available in US market."
+    },
+    {
+      "year": 2001,
+      "make": "Mitsubishi",
+      "model": "Toppo BJ",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/60R14"],
+        "660i": ["155/65R13"],
+        "660T": ["165/60R14"]
+      },
+      "allSizes": ["155/65R13", "165/60R14"],
+      "status": "JDM_ONLY",
+      "notes": "Kei car only sold in Japan. Not available in US market."
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "Toppo BJ",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/60R14"],
+        "660T": ["165/60R14"]
+      },
+      "allSizes": ["165/60R14"],
+      "status": "JDM_ONLY",
+      "notes": "Kei car only sold in Japan. Not available in US market."
+    },
+    {
+      "year": 2001,
+      "make": "Mitsubishi",
+      "model": "Toppo BJ Wide",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/60R15"]
+      },
+      "allSizes": ["165/60R15"],
+      "status": "JDM_ONLY",
+      "notes": "Kei car Wide variant only sold in Japan. Not available in US market."
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "Toppo BJ Wide",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/60R15"]
+      },
+      "allSizes": ["165/60R15"],
+      "status": "JDM_ONLY",
+      "notes": "Kei car Wide variant only sold in Japan. Not available in US market."
+    },
+    {
+      "year": 2001,
+      "make": "Mitsubishi",
+      "model": "Town Box Wide",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.1i": ["165/65R14"]
+      },
+      "allSizes": ["165/65R14"],
+      "status": "JDM_ONLY",
+      "notes": "Kei van Wide variant only sold in Japan. Not available in US market."
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "Town Box Wide",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.1i": ["165/65R14"]
+      },
+      "allSizes": ["165/65R14"],
+      "status": "JDM_ONLY",
+      "notes": "Kei van Wide variant only sold in Japan. Not available in US market."
+    },
+    {
+      "year": 2005,
+      "make": "Mitsubishi",
+      "model": "Verada",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/65R15"],
+        "Ei": ["215/60R16"],
+        "Xi": ["215/55R17", "225/50R17"],
+        "VR-X": ["235/45R17"]
+      },
+      "allSizes": ["205/65R15", "215/60R16", "215/55R17", "225/50R17", "235/45R17"],
+      "status": "AUSTRALIA_ONLY",
+      "notes": "Verada is Australian market version of Magna. Not sold in US."
+    },
+    {
+      "year": 2004,
+      "make": "Mitsubishi",
+      "model": "Verada",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/65R15"],
+        "Ei": ["215/60R16"],
+        "Xi": ["215/55R17", "225/50R17"],
+        "VR-X": ["235/45R17"]
+      },
+      "allSizes": ["205/65R15", "215/60R16", "215/55R17", "225/50R17", "235/45R17"],
+      "status": "AUSTRALIA_ONLY",
+      "notes": "Verada is Australian market version of Magna. Not sold in US."
+    },
+    {
+      "year": 2003,
+      "make": "Mitsubishi",
+      "model": "Verada",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/65R15"],
+        "Ei": ["215/60R16"],
+        "Xi": ["215/55R17", "225/50R17"],
+        "VR-X": ["235/45R17"]
+      },
+      "allSizes": ["205/65R15", "215/60R16", "215/55R17", "225/50R17", "235/45R17"],
+      "status": "AUSTRALIA_ONLY",
+      "notes": "Verada is Australian market version of Magna. Not sold in US."
+    },
+    {
+      "year": 2002,
+      "make": "Mitsubishi",
+      "model": "Verada",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/65R15"],
+        "Ei": ["215/60R16"],
+        "Xi": ["215/55R17", "225/50R17"],
+        "VR-X": ["235/45R17"]
+      },
+      "allSizes": ["205/65R15", "215/60R16", "215/55R17", "225/50R17", "235/45R17"],
+      "status": "AUSTRALIA_ONLY",
+      "notes": "Verada is Australian market version of Magna. Not sold in US."
+    },
+    {
+      "year": 2001,
+      "make": "Mitsubishi",
+      "model": "Verada",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/65R15"],
+        "Ei": ["215/60R16"],
+        "Xi": ["215/55R17", "225/50R17"]
+      },
+      "allSizes": ["205/65R15", "215/60R16", "215/55R17", "225/50R17"],
+      "status": "AUSTRALIA_ONLY",
+      "notes": "Verada is Australian market version of Magna. Not sold in US."
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "Verada",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/65R15"],
+        "Ei": ["215/60R16"],
+        "Xi": ["215/55R17", "225/50R17"]
+      },
+      "allSizes": ["205/65R15", "215/60R16", "215/55R17", "225/50R17"],
+      "status": "AUSTRALIA_ONLY",
+      "notes": "Verada is Australian market version of Magna. Not sold in US."
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "200SX",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i Turbo (S15)": ["205/55R16"]
+      },
+      "allSizes": ["205/55R16"],
+      "status": "AUSTRALIA_ONLY",
+      "notes": "S15 200SX was sold in Australia, not US. US had Sentra SE-R instead."
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "200SX",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i Turbo (S15)": ["205/55R16"]
+      },
+      "allSizes": ["205/55R16"],
+      "status": "AUSTRALIA_ONLY",
+      "notes": "S15 200SX was sold in Australia, not US. US had Sentra SE-R instead."
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "200SX",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i Turbo (S15)": ["205/55R16"]
+      },
+      "allSizes": ["205/55R16"],
+      "status": "AUSTRALIA_ONLY",
+      "notes": "S15 200SX was sold in Australia, not US. US had Sentra SE-R instead."
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "350Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Note": "350Z production ended in 2008. 2009 model year does not exist."
+      },
+      "allSizes": [],
+      "status": "INVALID_YEAR",
+      "notes": "350Z was produced 2003-2008. No 2009 model exists. 370Z started in 2009."
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "350Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Grand Touring Coupe": ["245/40R18 front", "265/35R19 rear"],
+        "Grand Touring Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Touring Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Touring Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "NISMO": ["245/40R18 front", "265/35R19 rear"],
+        "Track": ["225/45R18 front", "245/45R18 rear"]
+      },
+      "allSizes": ["225/45R18", "245/45R18", "245/40R18", "265/35R19"],
+      "status": "STAGGERED",
+      "isStaggered": true,
+      "notes": "All 350Z models have staggered setup (different front/rear sizes)"
+    },
+    {
+      "year": 2007,
+      "make": "Nissan",
+      "model": "350Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Grand Touring Coupe": ["245/40R18 front", "265/35R19 rear"],
+        "Grand Touring Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Touring Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Touring Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "NISMO": ["245/40R18 front", "265/35R19 rear"],
+        "Track": ["225/45R18 front", "245/45R18 rear"]
+      },
+      "allSizes": ["225/45R18", "245/45R18", "245/40R18", "265/35R19"],
+      "status": "STAGGERED",
+      "isStaggered": true,
+      "notes": "All 350Z models have staggered setup"
+    },
+    {
+      "year": 2006,
+      "make": "Nissan",
+      "model": "350Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Grand Touring Coupe": ["245/40R18 front", "265/35R19 rear"],
+        "Grand Touring Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Performance": ["225/45R18 front", "245/45R18 rear"],
+        "Touring 6-Speed": ["225/45R18 front", "245/45R18 rear"],
+        "Touring Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Touring Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Track": ["225/45R18 front", "245/45R18 rear"]
+      },
+      "allSizes": ["225/45R18", "245/45R18", "245/40R18", "265/35R19"],
+      "status": "STAGGERED",
+      "isStaggered": true,
+      "notes": "All 350Z models have staggered setup"
+    },
+    {
+      "year": 2005,
+      "make": "Nissan",
+      "model": "350Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "35th Anniversary": ["225/45R18 front", "245/45R18 rear"],
+        "Base Model": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Performance": ["225/45R18 front", "245/45R18 rear"],
+        "Touring 6-Speed": ["225/45R18 front", "245/45R18 rear"],
+        "Touring Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Touring Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Track": ["225/45R18 front", "245/45R18 rear"]
+      },
+      "allSizes": ["225/45R18", "245/45R18"],
+      "status": "STAGGERED",
+      "isStaggered": true,
+      "notes": "All 350Z models have staggered setup"
+    },
+    {
+      "year": 2004,
+      "make": "Nissan",
+      "model": "350Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Performance": ["225/45R18 front", "245/45R18 rear"],
+        "Touring 6-Speed": ["225/45R18 front", "245/45R18 rear"],
+        "Touring Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Touring Convertible": ["225/45R18 front", "245/45R18 rear"],
+        "Track": ["225/45R18 front", "245/45R18 rear"]
+      },
+      "allSizes": ["225/45R18", "245/45R18"],
+      "status": "STAGGERED",
+      "isStaggered": true,
+      "notes": "All 350Z models have staggered setup"
+    },
+    {
+      "year": 2003,
+      "make": "Nissan",
+      "model": "350Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Coupe": ["225/45R18 front", "245/45R18 rear"],
+        "Enthusiast": ["225/45R18 front", "245/45R18 rear"],
+        "Performance": ["225/45R18 front", "245/45R18 rear"],
+        "Touring": ["225/45R18 front", "245/45R18 rear"],
+        "Track": ["225/45R18 front", "245/45R18 rear"]
+      },
+      "allSizes": ["225/45R18", "245/45R18"],
+      "status": "STAGGERED",
+      "isStaggered": true,
+      "notes": "First year of 350Z. All trims have staggered setup."
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "350Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "allSizes": [],
+      "status": "INVALID_YEAR",
+      "notes": "350Z production started in 2003 as a 2003 model year. No 2002 350Z exists."
+    },
+    {
+      "year": 2023,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "allSizes": [],
+      "status": "INVALID_YEAR",
+      "notes": "370Z production ended in 2020. 2023 would be the Nissan Z (Z34). No 370Z for 2023."
+    },
+    {
+      "year": 2022,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "allSizes": [],
+      "status": "INVALID_YEAR",
+      "notes": "370Z production ended in 2020. No 2022 370Z exists."
+    },
+    {
+      "year": 2021,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "allSizes": [],
+      "status": "INVALID_YEAR",
+      "notes": "370Z production ended in 2020. No 2021 370Z exists."
+    },
+    {
+      "year": 2020,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["245/40R19 front", "285/35R19 rear", "225/50R18 front", "245/45R18 rear", "245/40R19 front", "275/35R19 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe Sport": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Sport Touring": ["245/40R19 front", "275/35R19 rear"],
+        "NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Sport": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "Last year of 370Z. All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2019,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["225/50R18 front", "245/45R18 rear", "245/40R19 front", "275/35R19 rear", "245/40R19 front", "285/35R19 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe Heritage Edition": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Sport": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Sport Touring": ["245/40R19 front", "275/35R19 rear"],
+        "NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Sport Touring": ["245/40R19 front", "275/35R19 rear"],
+        "Roadster Touring": ["225/50R18 front", "245/45R18 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2018,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["245/40R19 front", "275/35R19 rear", "225/50R18 front", "245/45R18 rear", "245/40R19 front", "285/35R19 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe Heritage Edition": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe Sport": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring Sport": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["245/40R19 front", "285/35R19 rear", "225/50R18 front", "245/45R18 rear", "245/40R19 front", "275/35R19 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe NISMO Tech": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe Sport": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Sport Tech": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring Sport": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2016,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["245/40R19 front", "275/35R19 rear", "225/50R18 front", "245/45R18 rear", "245/40R19 front", "285/35R19 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe Sport": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Sport Tech": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring Sport": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2015,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["225/50R18 front", "245/45R18 rear", "245/40R19 front", "285/35R19 rear", "245/40R19 front", "275/35R19 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe Sport": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring Sport": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2014,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["245/40R19 front", "275/35R19 rear", "225/50R18 front", "245/45R18 rear", "245/40R19 front", "285/35R19 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe Touring Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring Sport Package": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2013,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["225/50R18 front", "245/45R18 rear", "245/40R19 front", "285/35R19 rear", "245/40R19 front", "275/35R19 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Touring Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring Sport Package": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2012,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["245/40R19 front", "275/35R19 rear", "245/40R19 front", "285/35R19 rear", "225/50R18 front", "245/45R18 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe Touring Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring Sport Package": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["225/50R18 front", "245/45R18 rear", "245/40R19 front", "285/35R19 rear", "245/40R19 front", "275/35R19 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe Touring Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring Sport Package": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2010,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["225/50R18 front", "245/45R18 rear", "245/40R19 front", "285/35R19 rear", "245/40R19 front", "275/35R19 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe 40th Anniversary": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe Touring Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Roadster": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Roadster Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Roadster Touring Sport Package": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "370Z",
+      "currentTireSizes": ["245/40R19 front", "285/35R19 rear", "245/40R19 front", "275/35R19 rear", "225/50R18 front", "245/45R18 rear"],
+      "validatedTireSizes": {
+        "Coupe": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe NISMO": ["245/40R19 front", "285/35R19 rear"],
+        "Coupe Sport Package": ["245/40R19 front", "275/35R19 rear"],
+        "Coupe Touring": ["225/50R18 front", "245/45R18 rear"],
+        "Coupe Touring Sport Package": ["245/40R19 front", "275/35R19 rear"]
+      },
+      "allSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19", "285/35R19"],
+      "status": "VERIFIED",
+      "isStaggered": true,
+      "notes": "First year of 370Z. All sizes match OEM specs. Staggered setup."
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Frontier",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "validatedTireSizes": {
+        "S": ["265/70R16"],
+        "SV": ["265/70R16", "265/65R17"],
+        "SL": ["265/65R17"],
+        "PRO-X": ["265/70R17"],
+        "PRO-4X": ["265/70R17"],
+        "Hardbody Edition": ["265/70R17"]
+      },
+      "allSizes": ["265/70R16", "265/65R17", "265/70R17"],
+      "status": "MISMATCH",
+      "notes": "Current has 265/65R18 and 275/55R20 which are NOT OEM. 2024 Frontier does not have 18 or 20 inch OEM options. Max OEM is 17 inch."
+    },
+    {
+      "year": 2026,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R19"],
+      "validatedTireSizes": {
+        "SR": ["235/40R19"],
+        "SV": ["215/55R17"]
+      },
+      "allSizes": ["215/55R17", "235/40R19"],
+      "status": "PARTIAL_MATCH",
+      "notes": "2026 Altima limited trim data. Current has 215/60R16 and 235/45R19 - OEM shows 235/40R19 not 235/45R19. Missing S trim (215/60R16 possible)."
+    },
+    {
+      "year": 2025,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R19"],
+      "validatedTireSizes": {
+        "S": ["215/60R16"],
+        "SV": ["215/55R17"],
+        "SR": ["235/40R19"],
+        "SL": ["235/40R19"]
+      },
+      "allSizes": ["215/60R16", "215/55R17", "235/40R19"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current has 235/45R19 but OEM shows 235/40R19. Wrong aspect ratio."
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R19"],
+      "validatedTireSizes": {
+        "S": ["215/60R16"],
+        "SV": ["215/55R17"],
+        "SR": ["235/40R19"],
+        "SL": ["235/40R19"],
+        "VC-Turbo": ["235/40R19"]
+      },
+      "allSizes": ["215/60R16", "215/55R17", "235/40R19"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current has 235/45R19 but OEM shows 235/40R19. Wrong aspect ratio."
+    },
+    {
+      "year": 2023,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R19", "235/40R19"],
+      "validatedTireSizes": {
+        "S": ["215/60R16"],
+        "SV": ["215/55R17"],
+        "SR": ["235/40R19"],
+        "SL": ["235/40R19"],
+        "VC-Turbo": ["235/40R19"]
+      },
+      "allSizes": ["215/60R16", "215/55R17", "235/40R19"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current includes both 235/45R19 and 235/40R19 - only 235/40R19 is OEM."
+    },
+    {
+      "year": 2022,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R19"],
+      "validatedTireSizes": {
+        "S": ["215/60R16"],
+        "SV": ["215/55R17"],
+        "SR": ["235/40R19"],
+        "SL": ["235/40R19"],
+        "Platinum": ["235/40R19"],
+        "VC-Turbo": ["235/40R19"]
+      },
+      "allSizes": ["215/60R16", "215/55R17", "235/40R19"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current has 235/45R19 but OEM shows 235/40R19. Wrong aspect ratio."
+    }
+  ],
+  "summary": {
+    "verified": 14,
+    "mismatch": 6,
+    "partialMatch": 5,
+    "staggered": 14,
+    "jdmOnly": 9,
+    "australiaOnly": 9,
+    "invalidYear": 5,
+    "totalIssues": 25
+  },
+  "recommendations": [
+    "Remove or flag JDM-only vehicles (Toppo BJ, Town Box Wide) - not relevant for US market",
+    "Remove or flag Australia-only vehicles (Verada, 200SX S15) - not sold in US",
+    "Fix invalid years: 2002 350Z, 2009 350Z, 2021-2023 370Z don't exist",
+    "Fix 2003-2006 Outlander tire sizes - incorrect data in database",
+    "Fix 2024 Frontier - remove non-OEM 18 and 20 inch sizes",
+    "Fix all Altima 235/45R19 entries - should be 235/40R19",
+    "All 350Z and 370Z need staggered fitment flags"
+  ]
+}

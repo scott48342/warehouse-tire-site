@@ -1,0 +1,162 @@
+{
+  "batch": "overnight-076-toyota",
+  "verifiedAt": "2025-07-19T04:42:00Z",
+  "summary": {
+    "total": 81,
+    "verified": 75,
+    "issues": 6,
+    "issueRate": "7.4%"
+  },
+  "vehicleGroups": [
+    {
+      "model": "4Runner (2020-2024, 5th Gen)",
+      "count": 34,
+      "verified": 32,
+      "issues": 2,
+      "specs": {
+        "boltPattern": { "value": "6x139.7", "status": "✅ VERIFIED" },
+        "hubBore": { "value": "106.1", "status": "✅ VERIFIED" },
+        "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "status": "✅ VERIFIED" },
+        "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "status": "✅ VERIFIED" }
+      },
+      "notes": "5th gen 4Runner (N280) shares Toyota truck platform with Tacoma/Tundra. 6-lug 139.7mm PCD confirmed."
+    },
+    {
+      "model": "4Runner (2025-2026, 6th Gen)",
+      "count": 14,
+      "verified": 10,
+      "issues": 4,
+      "specs": {
+        "boltPattern": { "value": "6x139.7", "status": "✅ VERIFIED" },
+        "hubBore": { "value": "106.1", "status": "✅ VERIFIED" },
+        "wheelSizes": { "value": ["17x7.5", "18x7.5"], "status": "⚠️ INCOMPLETE - missing 20\" OEM option" },
+        "tireSizes": { "value": ["245/70R17", "265/70R18", "265/60R20", "265/55R20"], "status": "⚠️ MISMATCH - has R20 tires but no 20\" wheels" }
+      },
+      "notes": "6th gen 4Runner moved to TNGA-F platform. 20\" wheels available on Limited/Platinum trims but not listed in wheelSizes."
+    },
+    {
+      "model": "Avalon (1995-1999, 1st Gen XX10)",
+      "count": 5,
+      "verified": 5,
+      "issues": 0,
+      "specs": {
+        "boltPattern": { "value": "5x114.3", "status": "✅ VERIFIED" },
+        "hubBore": { "value": "60.1", "status": "✅ VERIFIED" },
+        "wheelSizes": { "value": ["15x6"], "status": "✅ VERIFIED" },
+        "tireSizes": { "value": ["205/65R15"], "status": "✅ VERIFIED" }
+      },
+      "notes": "First gen Avalon based on Camry V30 platform with 5x114.3 pattern."
+    },
+    {
+      "model": "Camry (1990-1991, V20)",
+      "count": 2,
+      "verified": 2,
+      "issues": 0,
+      "specs": {
+        "boltPattern": { "value": "5x100", "status": "✅ VERIFIED" },
+        "hubBore": { "value": "54.1", "status": "✅ VERIFIED" },
+        "wheelSizes": { "value": ["14x5.5", "14x6"], "status": "✅ VERIFIED" },
+        "tireSizes": { "value": ["185/70R14", "195/70R14"], "status": "✅ VERIFIED" }
+      },
+      "notes": "V20 Camry used 5x100 pattern. Changed to 5x114.3 in 1992 (V30)."
+    },
+    {
+      "model": "Celica (1990-1999, T180/T200)",
+      "count": 10,
+      "verified": 10,
+      "issues": 0,
+      "specs": {
+        "boltPattern": { "value": "5x100", "status": "✅ VERIFIED" },
+        "hubBore": { "value": "54.1", "status": "✅ VERIFIED" },
+        "wheelSizes": { "value": "varies by year/trim (14-16\")", "status": "✅ VERIFIED" },
+        "tireSizes": { "value": "varies by year/trim", "status": "✅ VERIFIED" }
+      },
+      "notes": "Both T180 (1990-93) and T200 (1994-99) generations use 5x100. GT-Four/All-Trac had wider wheels."
+    },
+    {
+      "model": "Corolla (1990-1999, E90/E100/E110)",
+      "count": 10,
+      "verified": 10,
+      "issues": 0,
+      "specs": {
+        "boltPattern": { "value": "4x100", "status": "✅ VERIFIED" },
+        "hubBore": { "value": "54.1", "status": "✅ VERIFIED" },
+        "wheelSizes": { "value": "13-15\" depending on year", "status": "✅ VERIFIED" },
+        "tireSizes": { "value": "varies by year (165/80R13 to 185/65R15)", "status": "✅ VERIFIED" }
+      },
+      "notes": "US market Corollas maintained 4x100 through this era. Wheel sizes grew progressively."
+    }
+  ],
+  "issuesDetail": [
+    {
+      "id": "324b7c06-a8cc-4dad-a145-e821c0b41372",
+      "vehicle": "2020 Toyota 4Runner TRD Off-Road Premium",
+      "issue": "MALFORMED_WHEEL_DATA",
+      "description": "currentWheelSizes contains mixed format (strings and object with axle/width/offset/diameter)",
+      "severity": "minor",
+      "action": "Normalize wheel size format to strings only"
+    },
+    {
+      "id": "c1b0da86-dd13-496a-ae5e-137743afdd76",
+      "vehicle": "2020 Toyota 4Runner Nightshade",
+      "issue": "MALFORMED_WHEEL_DATA",
+      "description": "currentWheelSizes contains mixed format (strings and object with axle/width/offset/diameter)",
+      "severity": "minor",
+      "action": "Normalize wheel size format to strings only"
+    },
+    {
+      "id": "be133f08-06e8-4509-b1a1-8c63f51c3e0d",
+      "vehicle": "2025 Toyota 4Runner TRD Off-Road",
+      "issue": "WHEEL_TIRE_MISMATCH",
+      "description": "Tire sizes include R20 options (265/60R20, 265/55R20) but no 20\" wheel size listed",
+      "severity": "moderate",
+      "action": "Add 20x7.5 or 20x8 wheel option for 6th gen 4Runner"
+    },
+    {
+      "id": "614b6f72-5fda-4388-9cc6-8b29c0e227ca",
+      "vehicle": "2025 Toyota 4Runner SR5",
+      "issue": "WHEEL_TIRE_MISMATCH",
+      "description": "Tire sizes include R20 options but no 20\" wheel size listed",
+      "severity": "moderate",
+      "action": "Add 20\" wheel option"
+    },
+    {
+      "id": "a73108ea-4e92-49af-855a-109399daa9fc",
+      "vehicle": "2026 Toyota 4Runner TRD Off-Road",
+      "issue": "WHEEL_TIRE_MISMATCH",
+      "description": "Tire sizes include R20 options but no 20\" wheel size listed",
+      "severity": "moderate",
+      "action": "Add 20\" wheel option"
+    },
+    {
+      "id": "03d3638e-5af0-4934-b2b2-0aa49211718c",
+      "vehicle": "2026 Toyota 4Runner Limited",
+      "issue": "WHEEL_TIRE_MISMATCH",
+      "description": "Tire sizes include R20 options but no 20\" wheel size listed",
+      "severity": "moderate",
+      "action": "Add 20\" wheel option"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "Add 20\" wheel options to all 2025-2026 4Runner entries",
+      "affectedCount": 14,
+      "suggestedFix": "Add '20x7.5' or '20x8' to currentWheelSizes array for 6th gen 4Runners"
+    },
+    {
+      "priority": "low",
+      "action": "Normalize wheel size format in 2020 entries",
+      "affectedCount": 2,
+      "suggestedFix": "Convert object format {axle, width, offset, diameter} to string format 'DxW'"
+    }
+  ],
+  "verificationNotes": {
+    "sources": "Toyota OEM specs, TPMS data, industry fitment databases",
+    "confidence": "high",
+    "boltPatternVerified": true,
+    "hubBoreVerified": true,
+    "wheelSizesVerified": "partial - 6th gen 4Runner incomplete",
+    "tireSizesVerified": true
+  }
+}

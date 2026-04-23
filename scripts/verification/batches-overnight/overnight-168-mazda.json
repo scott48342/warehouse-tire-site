@@ -1,0 +1,2226 @@
+[
+  {
+    "id": "642a49f7-8cc5-4caa-bc6f-ae7357f7a4cd",
+    "year": 1998,
+    "make": "mazda",
+    "model": "Protege",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 13
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "175/70R13",
+      "185/65R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "31a34d6e-0fc2-4af9-87a5-958585f5108e",
+    "year": 1999,
+    "make": "mazda",
+    "model": "Protege",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14",
+      "195/55R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "46fef0a4-e0af-4dd1-92ce-0d37abfd091b",
+    "year": 1990,
+    "make": "mazda",
+    "model": "RX-7",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "59.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 37,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 45,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R15",
+      "205/55R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "5431c976-2989-4b5e-bb82-4c93ad16a55f",
+    "year": 1991,
+    "make": "mazda",
+    "model": "RX-7",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "59.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 37,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 45,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R15",
+      "205/55R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "8626f50a-36f3-4184-ae2d-a3b695070000",
+    "year": 1992,
+    "make": "mazda",
+    "model": "RX-7",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "59.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 37,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 45,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R15",
+      "205/55R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "4abd0677-3772-4238-801b-7e580fd36095",
+    "year": 1993,
+    "make": "mazda",
+    "model": "RX-7",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "54b1c77c-b745-461a-9345-5b83727010ba",
+    "year": 1994,
+    "make": "mazda",
+    "model": "RX-7",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "74d92bb9-def4-45e2-933d-5fd434fee775",
+    "year": 1995,
+    "make": "mazda",
+    "model": "RX-7",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "e68e8aac-8d72-49a5-871a-2d22f5174d1c",
+    "year": 2019,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9f6941a2-6baf-4f84-bdd5-c1760a9ab361",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "78f3a0fe-8a31-4782-a5ab-92e6ead958b4",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e9b7bc76-26ff-42c9-ae17-1661c10094b6",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "0c41a615-f86b-4ba0-9213-9a0dfc53dd30",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "cdabaf2b-5e9b-44e1-8940-90e71f9efe2e",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Base, Select, Preferred, Carbon Edition, Premium, Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "97c641b1-2238-45b7-a5c6-6cce50cf81c1",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Select",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "dd5a8913-be2c-49bd-8d4d-3576669db382",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e53de920-bc7c-471e-bf46-aacf077d2ec7",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "128e3642-3ebd-478a-b42c-e7e9756f6d2f",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Select",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6731dd34-0d25-4388-899c-c556dc6dffba",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Base, Select, Preferred, Carbon Edition, Premium, Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ae853edc-ae24-4ac2-a2a5-c4e6faf66749",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "809f611f-9dd5-4605-944d-c62065da229f",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b1fbadc2-3616-4c75-8cd9-928add643f3f",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "61b20a39-c7de-4432-8000-56258148a048",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f78df4e6-296c-409d-a0f7-66344bb0ac9f",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "8f589793-b39c-433d-9c80-b904b5339cbf",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "cdbe4f0e-6782-446c-8433-a83d99f05cd9",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4ef2cbb8-edea-4442-b295-486e018864af",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6148856e-3112-4ce3-af8d-1cf9a71fba23",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b4fff5be-f733-429d-af08-cb2c653eb447",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "9a28d27f-13e9-4b6b-bf70-08e432315ef8",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f4045cff-eed3-4556-b579-732fb919bb84",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Select",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "83be4039-08f7-4488-af07-5f04e9faab92",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Base, Select, Preferred, Carbon Edition, Premium, Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5c6cd94e-436b-496c-bbd4-e46d9e33805d",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b7183551-5047-4b7b-95c9-24b4dd293248",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7a29f4ee-84ec-4ea5-b3a4-ae00c6c5d851",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2b138851-dc87-414a-b40e-de5a89097716",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Select",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4bebcabb-ab0a-4d12-99b3-2ffcf350de94",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "dd28d0f0-8f5e-4ada-836b-dda0c09768b9",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d939716b-0a5b-470b-ae06-c8eeb33e348d",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "af2cf85b-156b-4f52-af6a-4cd41d1dc343",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Base, Select, Preferred, Carbon Edition, Premium, Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4840bbd1-3b2f-4ace-9641-26c2a5f54a35",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ae73850a-5706-47f1-9cac-54bd25f99e8c",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Base, Select, Preferred, Carbon Edition, Premium, Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5eb9d8d9-5fcb-4703-83a8-030c6ef30613",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2a8a1988-a9ec-4d7b-ae66-70274c3bd538",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Select",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ee77e357-0949-4d00-9ed7-ab7b78f195ca",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "560dc367-b8ea-43b5-813e-a2eec3b2aac8",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "84ba1347-11f1-4f64-96be-7bc7b8429f09",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "069d488a-0b7a-4e81-9745-597103f5bba3",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ab1376b3-87fd-4344-8724-8206c004a842",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "42ea1c80-dbcc-4440-b629-c1de78bdde4d",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "82d2a50d-63f0-407a-80fb-c23846f77bce",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4e628f00-27a9-4fe1-86bd-0dc954d1951b",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "14634ffb-cb1f-437d-a5a8-6e559d75199b",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "056200c7-54f3-4d02-9825-78b02eecc42d",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Base, Select, Preferred, Carbon Edition, Premium, Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "cfcf54b4-863a-4576-9bd9-911193312265",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "bf2d18a2-09b1-4a53-b5da-eb05c52083c6",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Select",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "076ddb1b-85b3-4ecf-a90b-a03d9a951f2e",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "8738ba71-9135-44db-b4a2-71bcfcb0571e",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "b68ad0b0-1a3f-4daa-9f1a-0566ef51a3a7",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "f9f3e9e8-5845-4423-9dd4-20c4afc658cb",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Select",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "b468bc11-0fd4-4655-ab87-b985dbac7e55",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "d4d14fc5-3c39-4737-a539-5b6bea19992f",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "bae092ff-6812-4f3b-a06d-a9cbcc05414c",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "6ef82d8f-6c2a-4f48-aef9-f89182c3c12c",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "baff8053-f227-4b42-bbdc-a0b87df4ba07",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-30",
+    "trim": "Base, Select, Preferred, Carbon Edition, Premium, Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "215/55R18"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "d523cbcb-9fb0-46bd-8d0c-947822897327",
+    "year": 2011,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "92987ece-00fb-4de2-a516-292d2388340a",
+    "year": 2012,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b5ba1a30-cb0b-40a1-909d-a0b5966c16d5",
+    "year": 2013,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "45b6109a-726e-4529-964b-59a8aa5a0539",
+    "year": 2013,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Grand Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6d0de501-36c7-4023-9020-73e9b641f7fa",
+    "year": 2013,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "05066da2-6203-4ff8-bec7-d053cbc5220a",
+    "year": 2014,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "095995e3-7632-455c-b5f6-f773c732ea41",
+    "year": 2014,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "efcd1367-d058-4189-91f6-0651af027943",
+    "year": 2014,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Grand Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f07ed292-a4ec-4203-bc10-cb22030b2731",
+    "year": 2015,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Grand Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d0519b6e-1ee7-4d88-9882-5ce78f330467",
+    "year": 2015,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  }
+]

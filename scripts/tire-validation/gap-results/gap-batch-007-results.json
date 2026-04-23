@@ -1,0 +1,478 @@
+{
+  "batchId": 7,
+  "processedAt": "2026-04-21T23:47:00Z",
+  "source": "tiresize.com, tirewheelguide.com, caranddriver.com",
+  "totalVehicles": 49,
+  "results": [
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "x6-m",
+      "tireSizes": [
+        { "front": "295/35ZR21", "rear": "315/30ZR22", "isStaggered": true, "wheelDiameters": { "front": 21, "rear": 22 } },
+        { "front": "295/35R21", "rear": "295/35R21", "isStaggered": false, "wheelDiameter": 21 }
+      ],
+      "notes": "X6 M and X6 M Competition have same specs"
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "x6-m",
+      "tireSizes": [
+        { "front": "295/35ZR21", "rear": "315/30ZR22", "isStaggered": true, "wheelDiameters": { "front": 21, "rear": 22 } },
+        { "front": "295/35R21", "rear": "295/35R21", "isStaggered": false, "wheelDiameter": 21 }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "x6-m",
+      "tireSizes": [
+        { "front": "295/35ZR21", "rear": "315/30ZR22", "isStaggered": true, "wheelDiameters": { "front": 21, "rear": 22 } },
+        { "front": "295/35R21", "rear": "295/35R21", "isStaggered": false, "wheelDiameter": 21 }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "x6-m",
+      "tireSizes": [
+        { "front": "295/35ZR21", "rear": "315/30ZR22", "isStaggered": true, "wheelDiameters": { "front": 21, "rear": 22 } },
+        { "front": "295/35R21", "rear": "295/35R21", "isStaggered": false, "wheelDiameter": 21 }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x6-m",
+      "tireSizes": [
+        { "front": "295/35ZR21", "rear": "315/30ZR22", "isStaggered": true, "wheelDiameters": { "front": 21, "rear": 22 } },
+        { "front": "295/35R21", "rear": "295/35R21", "isStaggered": false, "wheelDiameter": 21 }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "x6-m",
+      "tireSizes": [
+        { "front": "295/35ZR21", "rear": "315/30ZR22", "isStaggered": true, "wheelDiameters": { "front": 21, "rear": 22 } },
+        { "front": "295/35R21", "rear": "295/35R21", "isStaggered": false, "wheelDiameter": 21 }
+      ],
+      "notes": "Based on F96 generation specs"
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "x6-m",
+      "tireSizes": [
+        { "front": "295/35ZR21", "rear": "315/30ZR22", "isStaggered": true, "wheelDiameters": { "front": 21, "rear": 22 } },
+        { "front": "295/35R21", "rear": "295/35R21", "isStaggered": false, "wheelDiameter": 21 }
+      ],
+      "notes": "Based on F96 generation specs"
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "x7",
+      "notUS": true,
+      "notes": "BMW X7 first sold in US market as 2019 model year"
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "xm",
+      "tireSizes": [
+        { "front": "275/40R22", "rear": "315/35R22", "isStaggered": true, "wheelDiameter": 22 }
+      ],
+      "notes": "BMW XM has 22-inch standard. Pirelli P Zero PZ4 PNCS OEM"
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "xm",
+      "tireSizes": [
+        { "front": "275/40R22", "rear": "315/35R22", "isStaggered": true, "wheelDiameter": 22 }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "xm",
+      "tireSizes": [
+        { "front": "275/40R22", "rear": "315/35R22", "isStaggered": true, "wheelDiameter": 22 }
+      ],
+      "notes": "Based on G09 generation specs"
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "xm",
+      "tireSizes": [
+        { "front": "275/40R22", "rear": "315/35R22", "isStaggered": true, "wheelDiameter": 22 }
+      ],
+      "notes": "Based on G09 generation specs"
+    },
+    {
+      "year": 2000,
+      "make": "bmw",
+      "model": "z3",
+      "tireSizes": [
+        { "size": "225/50R16", "isStaggered": false, "wheelDiameter": 16, "trims": ["Roadster 2.3", "Coupe 2.8", "Roadster 2.8"] },
+        { "front": "225/45R17", "rear": "245/40R17", "isStaggered": true, "wheelDiameter": 17, "trims": ["Coupe 2.8", "Roadster 2.8"] }
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "bmw",
+      "model": "z3",
+      "tireSizes": [
+        { "size": "225/50R16", "isStaggered": false, "wheelDiameter": 16 },
+        { "front": "225/45R17", "rear": "245/40R17", "isStaggered": true, "wheelDiameter": 17 }
+      ],
+      "notes": "Same specs as 2000 MY"
+    },
+    {
+      "year": 2002,
+      "make": "bmw",
+      "model": "z3",
+      "tireSizes": [
+        { "size": "225/50R16", "isStaggered": false, "wheelDiameter": 16 },
+        { "front": "225/45R17", "rear": "245/40R17", "isStaggered": true, "wheelDiameter": 17 }
+      ],
+      "notes": "Final year of Z3 production"
+    },
+    {
+      "year": 2003,
+      "make": "bmw",
+      "model": "z3",
+      "notUS": true,
+      "notes": "Z3 production ended in 2002. 2003 Z3 not sold in US market"
+    },
+    {
+      "year": 2002,
+      "make": "bmw",
+      "model": "z4",
+      "notUS": true,
+      "notes": "Z4 production started late 2002 as 2003 model year in US"
+    },
+    {
+      "year": 2003,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "size": "225/45R17", "isStaggered": false, "wheelDiameter": 17, "trims": ["2.5i", "3.0i"] },
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17, "trims": ["3.0i Sport"] },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18, "trims": ["3.0i M Sport"] }
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "size": "225/45R17", "isStaggered": false, "wheelDiameter": 17 },
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 }
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "size": "225/45R17", "isStaggered": false, "wheelDiameter": 17 },
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 }
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "size": "225/45R17", "isStaggered": false, "wheelDiameter": 17 },
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 }
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "size": "225/45R17", "isStaggered": false, "wheelDiameter": 17 },
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 }
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "size": "225/45R17", "isStaggered": false, "wheelDiameter": 17 },
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 }
+      ],
+      "notes": "Final year of E85/E86 generation"
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17, "trims": ["sDrive30i"] },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18, "trims": ["sDrive30i Sport", "sDrive35i"] },
+        { "front": "225/35R19", "rear": "255/30R19", "isStaggered": true, "wheelDiameter": 19, "trims": ["sDrive35i M Sport"] }
+      ],
+      "notes": "E89 generation starts"
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "225/35R19", "rear": "255/30R19", "isStaggered": true, "wheelDiameter": 19 }
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "225/35R19", "rear": "255/30R19", "isStaggered": true, "wheelDiameter": 19 }
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "225/35R19", "rear": "255/30R19", "isStaggered": true, "wheelDiameter": 19 }
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "225/35R19", "rear": "255/30R19", "isStaggered": true, "wheelDiameter": 19 }
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "225/35R19", "rear": "255/30R19", "isStaggered": true, "wheelDiameter": 19 }
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "225/35R19", "rear": "255/30R19", "isStaggered": true, "wheelDiameter": 19 }
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R17", "rear": "255/40R17", "isStaggered": true, "wheelDiameter": 17 },
+        { "front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "225/35R19", "rear": "255/30R19", "isStaggered": true, "wheelDiameter": 19 }
+      ],
+      "notes": "Final year of E89 generation"
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "z4",
+      "notUS": true,
+      "notes": "No Z4 produced for 2017-2018. Gap year between E89 and G29 generations"
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "z4",
+      "notUS": true,
+      "notes": "No Z4 produced for 2017-2018. Gap year between E89 and G29 generations"
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "wheelDiameter": 18, "trims": ["sDrive30i Sport Line"] },
+        { "front": "255/40R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18, "trims": ["sDrive30i M Sport", "M40i"] },
+        { "front": "255/35R19", "rear": "275/35R19", "isStaggered": true, "wheelDiameter": 19, "trims": ["M40i M Sport"] }
+      ],
+      "notes": "G29 generation starts"
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "wheelDiameter": 18, "trims": ["sDrive30i Sport Line"] },
+        { "front": "255/40R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18, "trims": ["sDrive30i M Sport", "M40i"] },
+        { "front": "255/35R19", "rear": "275/35R19", "isStaggered": true, "wheelDiameter": 19, "trims": ["M40i M Sport"] }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/40R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/35R19", "rear": "275/35R19", "isStaggered": true, "wheelDiameter": 19 }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/40R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/35R19", "rear": "275/35R19", "isStaggered": true, "wheelDiameter": 19 }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/40R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/35R19", "rear": "275/35R19", "isStaggered": true, "wheelDiameter": 19 }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/40R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/35R19", "rear": "275/35R19", "isStaggered": true, "wheelDiameter": 19 }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/40R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/35R19", "rear": "275/35R19", "isStaggered": true, "wheelDiameter": 19 }
+      ],
+      "notes": "Based on G29 generation specs"
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "z4",
+      "tireSizes": [
+        { "front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/40R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18 },
+        { "front": "255/35R19", "rear": "275/35R19", "isStaggered": true, "wheelDiameter": 19 }
+      ],
+      "notes": "Based on G29 generation specs"
+    },
+    {
+      "year": 2000,
+      "make": "bmw",
+      "model": "z8",
+      "tireSizes": [
+        { "front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18 }
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "bmw",
+      "model": "z8",
+      "tireSizes": [
+        { "front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18 }
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "bmw",
+      "model": "z8",
+      "tireSizes": [
+        { "front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18 }
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "bmw",
+      "model": "z8",
+      "tireSizes": [
+        { "front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "wheelDiameter": 18 }
+      ],
+      "notes": "Final year of Z8 production"
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "allure",
+      "notUS": true,
+      "notes": "Buick Allure only sold in Canada. US market equivalent was Buick LaCrosse (225/60R16 or 225/55R17)"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "allure",
+      "notUS": true,
+      "notes": "Buick Allure only sold in Canada. US market equivalent was Buick LaCrosse"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "allure",
+      "notUS": true,
+      "notes": "Buick Allure only sold in Canada. US market equivalent was Buick LaCrosse"
+    },
+    {
+      "year": 2008,
+      "make": "buick",
+      "model": "allure",
+      "notUS": true,
+      "notes": "Buick Allure only sold in Canada. US market equivalent was Buick LaCrosse"
+    },
+    {
+      "year": 2009,
+      "make": "buick",
+      "model": "allure",
+      "notUS": true,
+      "notes": "Buick Allure only sold in Canada. US market equivalent was Buick LaCrosse"
+    }
+  ],
+  "summary": {
+    "vehiclesWithSpecs": 40,
+    "vehiclesNotUS": 9,
+    "notUSReasons": {
+      "BMW X7 2018": "X7 first sold as 2019 MY in US",
+      "BMW Z3 2003": "Z3 production ended 2002",
+      "BMW Z4 2002": "Z4 started as 2003 MY in US",
+      "BMW Z4 2017-2018": "Gap years between E89 and G29 generations",
+      "Buick Allure 2005-2009": "Canada-only nameplate (US: LaCrosse)"
+    }
+  }
+}

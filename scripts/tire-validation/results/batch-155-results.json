@@ -1,0 +1,441 @@
+{
+  "batchId": "155",
+  "validatedAt": "2026-04-21T22:59:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 47,
+    "notFoundOnSource": 21,
+    "discrepancies": 12,
+    "matches": 35
+  },
+  "discrepancies": [
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["225/40R18", "225/35R19"],
+      "oemTireSizes": ["225/40R18", "235/35R19"],
+      "issue": "WRONG_SIZE",
+      "details": "225/35R19 in our DB should be 235/35R19 per OEM specs"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["225/40R18", "225/35R19"],
+      "oemTireSizes": ["225/40R18", "235/35R19"],
+      "issue": "WRONG_SIZE",
+      "details": "225/35R19 in our DB should be 235/35R19 per OEM specs"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["225/40R18", "225/35R19"],
+      "oemTireSizes": ["225/40R18", "235/35R19"],
+      "issue": "WRONG_SIZE",
+      "details": "225/35R19 in our DB should be 235/35R19 per OEM specs"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["225/40R18", "225/35R19"],
+      "oemTireSizes": ["225/40R18", "235/35R19"],
+      "issue": "WRONG_SIZE",
+      "details": "225/35R19 in our DB should be 235/35R19 per OEM specs (assuming same as 2024)"
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["225/40R18", "225/35R19"],
+      "oemTireSizes": ["225/40R18", "235/35R19"],
+      "issue": "WRONG_SIZE",
+      "details": "225/35R19 in our DB should be 235/35R19 per OEM specs (assuming same as 2024)"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["225/45R17", "225/40R18", "225/35R19"],
+      "oemTireSizes": ["225/40R18", "235/35R19"],
+      "issue": "EXTRA_SIZE",
+      "details": "225/45R17 not found in OEM specs for 2021 GTI; 225/35R19 should be 235/35R19"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["225/45R17", "225/40R18", "225/35R19"],
+      "oemTireSizes": ["225/40R18"],
+      "issue": "EXTRA_SIZES",
+      "details": "OEM shows only 225/40R18; 225/45R17 and 225/35R19 not in OEM data"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["225/45R17", "225/40R18", "225/35R19"],
+      "oemTireSizes": ["225/40R18"],
+      "issue": "EXTRA_SIZES",
+      "details": "Need to verify - 2019 may have more options"
+    },
+    {
+      "year": 2000,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16"],
+      "issue": "EXTRA_SIZES",
+      "details": "OEM shows 195/65R15 (GLS), 205/55R16 (GLX); 225/45R17 and 225/40R18 not OEM"
+    },
+    {
+      "year": 2000,
+      "make": "volkswagen",
+      "model": "golf",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": ["195/65R15", "205/55R16"],
+      "issue": "EXTRA_SIZE",
+      "details": "225/45R17 not in OEM data for 2000 Golf"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "golf",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18", "225/50R16"],
+      "oemTireSizes": ["205/55R16", "225/40R18"],
+      "issue": "EXTRA_SIZES",
+      "details": "OEM shows GTI (225/40R18) and Value Edition (205/55R16); 195/65R15, 225/45R17, 225/50R16 not found"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "golf",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18", "225/50R16"],
+      "oemTireSizes": ["205/55R16", "225/40R18"],
+      "issue": "EXTRA_SIZES",
+      "details": "225/50R16 is unusual - verify this size"
+    }
+  ],
+  "matches": [
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "golf",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "golf",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "golf",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "golf",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "golf",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "golf",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2005,
+      "make": "volkswagen",
+      "model": "golf",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "Missing 225/40R18 from GTI MK5 trim"
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["225/45R17", "225/40R18", "225/35R19"],
+      "oemTireSizes": ["225/40R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "OEM only shows 225/40R18; 17/19 may be aftermarket options"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "gti",
+      "currentTireSizes": ["225/45R17", "225/40R18"],
+      "oemTireSizes": null,
+      "status": "NO_OEM_DATA",
+      "note": "tiresize.com has no data for 2010 GTI as separate model"
+    }
+  ],
+  "notFoundOnSource": [
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "cross-lavida",
+      "currentTireSizes": [],
+      "reason": "China-market vehicle not on tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "cross-lavida",
+      "currentTireSizes": [],
+      "reason": "China-market vehicle not on tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "cross-santana",
+      "currentTireSizes": [],
+      "reason": "China-market vehicle not on tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "cross-santana",
+      "currentTireSizes": [],
+      "reason": "China-market vehicle not on tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "cross-santana",
+      "currentTireSizes": [],
+      "reason": "China-market vehicle not on tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "currentTireSizes": [],
+      "reason": "Eurovan not found on tiresize.com (404)"
+    },
+    {
+      "year": 2003,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "currentTireSizes": [],
+      "reason": "Eurovan not found on tiresize.com (404)"
+    },
+    {
+      "year": 2002,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "currentTireSizes": [],
+      "reason": "Eurovan not found on tiresize.com (404)"
+    },
+    {
+      "year": 2001,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "currentTireSizes": [],
+      "reason": "Eurovan not found on tiresize.com (404)"
+    },
+    {
+      "year": 2000,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "currentTireSizes": [],
+      "reason": "Eurovan not found on tiresize.com (404)"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "gli",
+      "currentTireSizes": [],
+      "reason": "GLI 2009 has no data on tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "gli",
+      "currentTireSizes": [],
+      "reason": "GLI 2008 has no data on tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "currentTireSizes": [],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "reason": "EMPTY_IN_DB",
+      "recommendation": "Add OEM sizes: 195/65R15, 205/55R16, 225/45R17"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "currentTireSizes": [],
+      "reason": "Empty in DB, needs research"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "currentTireSizes": [],
+      "reason": "Empty in DB, needs research"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "currentTireSizes": [],
+      "reason": "Empty in DB, needs research"
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "currentTireSizes": [],
+      "reason": "404 on tiresize.com - may be listed under different name"
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "currentTireSizes": [],
+      "reason": "Empty in DB, needs research"
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "currentTireSizes": [],
+      "reason": "Empty in DB, needs research"
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "currentTireSizes": [],
+      "reason": "Empty in DB, needs research"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "currentTireSizes": [],
+      "reason": "Empty in DB, needs research"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "FIX_TIRE_SIZE",
+      "vehicles": "2022-2026 GTI",
+      "currentSize": "225/35R19",
+      "correctSize": "235/35R19",
+      "note": "Width is wrong - OEM is 235mm, not 225mm"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "VERIFY_EXTRA_SIZES",
+      "vehicles": "2019-2021 GTI",
+      "sizes": ["225/45R17", "225/35R19"],
+      "note": "These may be valid aftermarket options but are not OEM per tiresize.com"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "ADD_MISSING_DATA",
+      "vehicles": "Golf SportWagen 2015-2019",
+      "note": "All years have empty tire sizes - need to populate"
+    },
+    {
+      "priority": "LOW",
+      "action": "REVIEW_225/50R16",
+      "vehicles": "2019-2020 Golf",
+      "note": "225/50R16 is an unusual size - may be data entry error"
+    },
+    {
+      "priority": "LOW",
+      "action": "CONSIDER_REMOVING",
+      "vehicles": "Cross-Lavida, Cross-Santana, Eurovan, GLI",
+      "note": "China-market vehicles and discontinued models may not need tire data"
+    }
+  ],
+  "oemDataCollected": {
+    "golf": {
+      "2024": {
+        "trims": ["GTI", "GTI 380", "GTI Autobahn", "R"],
+        "sizes": ["225/40R18", "235/35R19"]
+      },
+      "2020": {
+        "trims": ["GTI", "Value Edition"],
+        "sizes": ["205/55R16", "225/40R18"]
+      },
+      "2015": {
+        "trims": ["1.8T S", "1.8T SE", "GTI", "R", "TDI S", "TDI SE", "TDI SEL"],
+        "sizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"]
+      },
+      "2010": {
+        "trims": ["2-Door", "4-Door", "TDI 2-Door", "TDI 4-Door"],
+        "sizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"]
+      },
+      "2005": {
+        "trims": ["GL", "GL TDI", "GLS", "GLS TDI", "GTI 1.8T", "GTI MK5", "GTI VR6", "MK5"],
+        "sizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"]
+      },
+      "2000": {
+        "trims": ["GL", "GL TDI", "GLS", "GLS 1.8T", "GLS TDI", "GTI GLS", "GTI GLX"],
+        "sizes": ["195/65R15", "205/55R16"]
+      }
+    },
+    "gti": {
+      "2024": {
+        "trims": ["380", "Autobahn", "S", "SE"],
+        "sizes": ["225/40R18", "235/35R19"]
+      },
+      "2020": {
+        "trims": ["Autobahn", "S", "SE"],
+        "sizes": ["225/40R18"]
+      },
+      "2015": {
+        "trims": ["2-Door S", "2-Door SE", "4-Door Autobahn", "4-Door S", "4-Door SE", "Performance Package"],
+        "sizes": ["225/40R18"]
+      },
+      "2005": {
+        "trims": ["1.8T", "VR6"],
+        "sizes": ["205/55R16", "225/45R17"]
+      },
+      "2000": {
+        "trims": ["GLS", "GLS 1.8T", "GLX"],
+        "sizes": ["195/65R15", "205/55R16"]
+      }
+    },
+    "golf-sportwagen": {
+      "2019": {
+        "trims": ["S", "S 4Motion", "SE"],
+        "sizes": ["195/65R15", "205/55R16", "225/45R17"]
+      }
+    }
+  }
+}

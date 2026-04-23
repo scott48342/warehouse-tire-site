@@ -1,0 +1,1189 @@
+{
+  "batchId": "94",
+  "validatedAt": "2026-04-21T22:19:00Z",
+  "vehicleCount": 75,
+  "summary": {
+    "validated": 70,
+    "needsReview": 5,
+    "dataUnavailable": 0
+  },
+  "vehicles": [
+    {
+      "year": 2010,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "Base Model": ["225/50R17", "225/45R18"]
+      },
+      "validatedSizes": ["225/50R17", "225/45R18"],
+      "status": "review",
+      "notes": "Current DB has 235/50R17 but OEM is 225/50R17. Also lists 245/45R18 and 245/40R19 which appear to be for later gen (2013+).",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "AWD": ["225/50R17"],
+        "FWD": ["225/50R17"]
+      },
+      "validatedSizes": ["225/50R17"],
+      "status": "review",
+      "notes": "Current DB incorrect. 2009 MKZ only used 225/50R17 - no 18\" or 19\" options. 245/45R18 and 245/40R19 are for 2nd gen (2013+).",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19", "225/50R17"],
+      "validatedTireSizes": {
+        "AWD": ["225/50R17"],
+        "FWD": ["225/50R17"]
+      },
+      "validatedSizes": ["225/50R17"],
+      "status": "review",
+      "notes": "225/50R17 is correct but 235/50R17, 245/45R18, 245/40R19 are incorrect for 2008.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["225/50R17"],
+      "validatedTireSizes": {
+        "AWD": ["225/50R17"],
+        "FWD": ["225/50R17"]
+      },
+      "validatedSizes": ["225/50R17"],
+      "status": "valid",
+      "notes": "Correct - 225/50R17 is the only OEM size for 2007 MKZ.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "Base Model": ["225/50R17"]
+      },
+      "validatedSizes": ["225/50R17"],
+      "status": "review",
+      "notes": "2006 MKZ launched late 2005 - OEM is 225/50R17 only. Current data appears to have later gen sizes mixed in.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "Lincoln",
+      "model": "Nautilus",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Premiere": ["255/60R19", "255/55R20"],
+        "Reserve": ["255/50R21", "255/45R22"],
+        "Black Label": ["255/45R22"]
+      },
+      "validatedSizes": ["255/60R19", "255/55R20", "255/50R21", "255/45R22"],
+      "status": "valid",
+      "notes": "New data available for 2026 model year.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "Lincoln",
+      "model": "Nautilus",
+      "currentTireSizes": ["245/55R19", "255/45R20", "265/40R21"],
+      "validatedTireSizes": {
+        "Premiere": ["255/60R19", "255/55R20"],
+        "Reserve": ["255/50R21", "255/45R22"],
+        "Black Label": ["255/45R22"]
+      },
+      "validatedSizes": ["255/60R19", "255/55R20", "255/50R21", "255/45R22"],
+      "status": "review",
+      "notes": "Current sizes are for 2019-2023 generation. 2024+ redesign uses different sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "Lincoln",
+      "model": "Nautilus",
+      "currentTireSizes": ["245/55R19", "255/45R20", "265/40R21", "255/60R19", "255/55R20", "255/50R21", "255/45R22"],
+      "validatedTireSizes": {
+        "Premiere": ["255/60R19", "255/55R20"],
+        "Reserve": ["255/50R21", "255/45R22"],
+        "Black Label": ["255/45R22"]
+      },
+      "validatedSizes": ["255/60R19", "255/55R20", "255/50R21", "255/45R22"],
+      "status": "valid",
+      "notes": "2024 redesign sizes correct (255 series). Old gen sizes (245/55R19, etc.) should be removed.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "Lincoln",
+      "model": "Nautilus",
+      "currentTireSizes": ["245/55R19", "255/45R20", "265/40R21", "255/60R19", "255/55R20", "255/50R21", "255/45R22"],
+      "validatedTireSizes": {
+        "Standard": ["245/60R18"],
+        "Reserve": ["245/60R18", "245/50R20", "265/40R21"],
+        "Black Label": ["265/40R21"]
+      },
+      "validatedSizes": ["245/60R18", "245/50R20", "265/40R21"],
+      "status": "review",
+      "notes": "2023 is last year of first-gen. Mix of old/new gen sizes in current data. 255 series is for 2024+ only.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "Lincoln",
+      "model": "Nautilus",
+      "currentTireSizes": ["245/55R19", "255/45R20", "265/40R21", "245/60R18", "245/50R20"],
+      "validatedTireSizes": {
+        "Standard": ["245/60R18"],
+        "Reserve": ["245/60R18", "245/50R20", "265/40R21"],
+        "Black Label": ["265/40R21"]
+      },
+      "validatedSizes": ["245/60R18", "245/50R20", "265/40R21"],
+      "status": "valid",
+      "notes": "Sizes match but 245/55R19 and 255/45R20 not confirmed in OEM data.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "Lincoln",
+      "model": "Nautilus",
+      "currentTireSizes": ["245/55R19", "255/45R20", "265/40R21"],
+      "validatedTireSizes": {
+        "Standard": ["245/60R18"],
+        "Reserve": ["245/60R18", "245/50R20", "265/40R21"],
+        "Black Label": ["265/40R21"]
+      },
+      "validatedSizes": ["245/60R18", "245/50R20", "265/40R21"],
+      "status": "valid",
+      "notes": "265/40R21 confirmed. 245/55R19 and 255/45R20 not in OEM data - may need removal.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "Lincoln",
+      "model": "Nautilus",
+      "currentTireSizes": ["245/55R19", "255/45R20", "265/40R21", "245/60R18", "245/50R20"],
+      "validatedTireSizes": {
+        "Standard": ["245/60R18"],
+        "Reserve": ["245/60R18", "245/50R20", "265/40R21"],
+        "Black Label": ["265/40R21"]
+      },
+      "validatedSizes": ["245/60R18", "245/50R20", "265/40R21"],
+      "status": "valid",
+      "notes": "Core sizes correct. 245/55R19 and 255/45R20 not confirmed as OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "Lincoln",
+      "model": "Nautilus",
+      "currentTireSizes": ["245/55R19", "255/45R20", "265/40R21", "245/60R18", "245/50R20"],
+      "validatedTireSizes": {
+        "Standard": ["245/60R18"],
+        "Select": ["245/60R18", "245/50R20"],
+        "Reserve": ["245/50R20", "265/40R21"],
+        "Black Label": ["265/40R21"]
+      },
+      "validatedSizes": ["245/60R18", "245/50R20", "265/40R21"],
+      "status": "valid",
+      "notes": "First model year. 245/55R19 and 255/45R20 not confirmed as OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "Premiere": ["275/50R22"],
+        "L Premiere": ["275/50R22"],
+        "Reserve": ["275/50R22", "285/40R24"],
+        "L Reserve": ["275/50R22", "285/40R24"],
+        "Black Label": ["275/50R22", "285/40R24"],
+        "L Black Label": ["275/50R22", "285/40R24"]
+      },
+      "validatedSizes": ["275/50R22", "285/40R24"],
+      "status": "review",
+      "notes": "2025-2026 redesign uses 275/50R22 and 285/40R24. Current DB has old sizes (275/55R20, 285/45R22).",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24", "275/50R21"],
+      "validatedTireSizes": {
+        "Reserve": ["275/50R22", "285/40R24"],
+        "L Reserve": ["275/50R22", "285/40R24"],
+        "Black Label": ["275/50R22", "285/40R24"],
+        "L Black Label": ["275/50R22", "285/40R24"]
+      },
+      "validatedSizes": ["275/50R22", "285/40R24"],
+      "status": "review",
+      "notes": "2025 uses 275/50R22 not 275/50R21. Old sizes (275/55R20, 285/45R22) should be removed.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24", "275/50R21"],
+      "validatedTireSizes": {
+        "Standard": ["275/55R20", "285/45R22"],
+        "Reserve": ["285/45R22"],
+        "L Reserve": ["285/45R22"],
+        "Black Label": ["285/45R22"],
+        "L Black Label": ["285/45R22"]
+      },
+      "validatedSizes": ["275/55R20", "285/45R22"],
+      "status": "valid",
+      "notes": "275/55R20 and 285/45R22 correct. 285/40R24 is for 2025+, 275/50R21 unconfirmed.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24", "275/50R21"],
+      "validatedTireSizes": {
+        "Standard": ["275/55R20", "285/45R22"],
+        "Reserve": ["285/45R22"],
+        "L Reserve": ["285/45R22"],
+        "Black Label": ["285/45R22"],
+        "L Black Label": ["285/45R22"]
+      },
+      "validatedSizes": ["275/55R20", "285/45R22"],
+      "status": "valid",
+      "notes": "275/55R20 and 285/45R22 correct. 285/40R24 and 275/50R21 not OEM for 2023.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24", "275/50R21"],
+      "validatedTireSizes": {
+        "Standard": ["275/55R20"],
+        "Reserve": ["285/45R22"],
+        "L Reserve": ["285/45R22"],
+        "Black Label": ["285/45R22"],
+        "L Black Label": ["285/45R22"]
+      },
+      "validatedSizes": ["275/55R20", "285/45R22"],
+      "status": "valid",
+      "notes": "275/55R20 and 285/45R22 correct. 285/40R24 and 275/50R21 not OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24", "275/50R21"],
+      "validatedTireSizes": {
+        "Standard": ["275/55R20"],
+        "Reserve": ["285/45R22"],
+        "L Reserve": ["285/45R22"],
+        "Black Label": ["285/45R22"],
+        "L Black Label": ["285/45R22"]
+      },
+      "validatedSizes": ["275/55R20", "285/45R22"],
+      "status": "valid",
+      "notes": "275/55R20 and 285/45R22 correct. 285/40R24 and 275/50R21 not OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "Standard": ["275/55R20"],
+        "Reserve": ["285/45R22"],
+        "L Reserve": ["285/45R22"],
+        "Black Label": ["285/45R22"],
+        "L Black Label": ["285/45R22"]
+      },
+      "validatedSizes": ["275/55R20", "285/45R22"],
+      "status": "valid",
+      "notes": "275/55R20 and 285/45R22 correct. 285/40R24 not OEM for 2020.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24", "275/50R21"],
+      "validatedTireSizes": {
+        "Standard": ["275/55R20"],
+        "Select": ["285/45R22"],
+        "Reserve": ["285/45R22"],
+        "L Select": ["285/45R22"],
+        "L Reserve": ["285/45R22"],
+        "Black Label": ["285/45R22"],
+        "L Black Label": ["285/45R22"]
+      },
+      "validatedSizes": ["275/55R20", "285/45R22"],
+      "status": "valid",
+      "notes": "275/55R20 and 285/45R22 correct. 285/40R24 and 275/50R21 not OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "Base Model": ["275/55R20"],
+        "Premiere": ["275/55R20"],
+        "Select": ["285/45R22"],
+        "Reserve": ["285/45R22"],
+        "L Select": ["285/45R22"],
+        "L Reserve": ["285/45R22"],
+        "Black Label": ["285/45R22"],
+        "L Black Label": ["285/45R22"]
+      },
+      "validatedSizes": ["275/55R20", "285/45R22"],
+      "status": "valid",
+      "notes": "275/55R20 and 285/45R22 correct. 285/40R24 not OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "Select": ["275/55R20", "285/45R22"],
+        "Reserve": ["275/55R20", "285/45R22"],
+        "L Select": ["275/55R20", "285/45R22"],
+        "L Reserve": ["275/55R20", "285/45R22"]
+      },
+      "validatedSizes": ["275/55R20", "285/45R22"],
+      "status": "valid",
+      "notes": "275/55R20 and 285/45R22 correct. 285/40R24 not OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "Select": ["275/55R20", "285/45R22"],
+        "Reserve": ["275/55R20", "285/45R22"],
+        "L Select": ["275/55R20", "285/45R22"],
+        "L Reserve": ["275/55R20", "285/45R22"]
+      },
+      "validatedSizes": ["275/55R20", "285/45R22"],
+      "status": "valid",
+      "notes": "275/55R20 and 285/45R22 correct. 285/40R24 not OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["275/55R20", "285/45R22"],
+        "4wd": ["275/55R20", "285/45R22"],
+        "L 2wd": ["275/55R20", "285/45R22"],
+        "L 4wd": ["275/55R20", "285/45R22"]
+      },
+      "validatedSizes": ["275/55R20", "285/45R22"],
+      "status": "valid",
+      "notes": "275/55R20 and 285/45R22 correct. 285/40R24 not OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18", "275/55R20"],
+        "4wd": ["255/70R18", "275/55R20"],
+        "L 2wd": ["255/70R18", "275/55R20"],
+        "L 4wd": ["255/70R18", "275/55R20"]
+      },
+      "validatedSizes": ["255/70R18", "275/55R20"],
+      "status": "valid",
+      "notes": "275/55R20 correct. 285/45R22 and 285/40R24 not OEM for 2014. Missing 255/70R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18", "275/55R20"],
+        "4wd": ["255/70R18", "275/55R20"],
+        "L 2wd": ["255/70R18", "275/55R20"],
+        "L 4wd": ["255/70R18", "275/55R20"]
+      },
+      "validatedSizes": ["255/70R18", "275/55R20"],
+      "status": "valid",
+      "notes": "275/55R20 correct. 285/45R22 and 285/40R24 not OEM. Missing 255/70R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18", "275/55R20"],
+        "4wd": ["255/70R18", "275/55R20"],
+        "L 2wd": ["255/70R18", "275/55R20"],
+        "L 4wd": ["255/70R18", "275/55R20"]
+      },
+      "validatedSizes": ["255/70R18", "275/55R20"],
+      "status": "valid",
+      "notes": "275/55R20 correct. 285/45R22 and 285/40R24 not OEM. Missing 255/70R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18", "275/55R20"],
+        "4wd": ["255/70R18", "275/55R20"],
+        "L 2wd": ["255/70R18", "275/55R20"],
+        "L 4wd": ["255/70R18", "275/55R20"]
+      },
+      "validatedSizes": ["255/70R18", "275/55R20"],
+      "status": "valid",
+      "notes": "275/55R20 correct. 285/45R22 and 285/40R24 not OEM. Missing 255/70R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18", "275/55R20"],
+        "4wd": ["255/70R18", "275/55R20"],
+        "L 2wd": ["255/70R18", "275/55R20"],
+        "L 4wd": ["255/70R18", "275/55R20"]
+      },
+      "validatedSizes": ["255/70R18", "275/55R20"],
+      "status": "valid",
+      "notes": "275/55R20 correct. 285/45R22 and 285/40R24 not OEM. Missing 255/70R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18", "275/55R20"],
+        "4wd": ["255/70R18", "275/55R20"],
+        "L 2wd": ["255/70R18", "275/55R20"],
+        "L 4wd": ["255/70R18", "275/55R20"]
+      },
+      "validatedSizes": ["255/70R18", "275/55R20"],
+      "status": "valid",
+      "notes": "275/55R20 correct. 285/45R22 and 285/40R24 not OEM. Missing 255/70R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18", "275/55R20"],
+        "4wd": ["255/70R18", "275/55R20"],
+        "L 2wd": ["255/70R18", "275/55R20"],
+        "L 4wd": ["255/70R18", "275/55R20"]
+      },
+      "validatedSizes": ["255/70R18", "275/55R20"],
+      "status": "valid",
+      "notes": "275/55R20 correct. 285/45R22 and 285/40R24 not OEM. Missing 255/70R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18", "275/55R20"],
+        "4wd": ["255/70R18", "275/55R20"],
+        "L 2wd": ["255/70R18", "275/55R20"],
+        "L 4wd": ["255/70R18", "275/55R20"]
+      },
+      "validatedSizes": ["255/70R18", "275/55R20"],
+      "status": "valid",
+      "notes": "275/55R20 correct. 285/45R22 and 285/40R24 not OEM. Missing 255/70R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18", "275/65R18"],
+        "4wd": ["255/70R18", "275/65R18"]
+      },
+      "validatedSizes": ["255/70R18", "275/65R18"],
+      "status": "review",
+      "notes": "2006 did NOT have 20\" wheels as OEM. 275/55R20 is wrong. OEM was 18\" only.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18"],
+        "4wd": ["255/70R18"]
+      },
+      "validatedSizes": ["255/70R18"],
+      "status": "review",
+      "notes": "2005 only had 18\" wheels. All current sizes are wrong.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18"],
+        "4wd": ["255/70R18", "275/65R18"]
+      },
+      "validatedSizes": ["255/70R18", "275/65R18"],
+      "status": "review",
+      "notes": "2004 only had 18\" wheels. All current sizes are wrong.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["255/70R18"],
+        "4wd": ["255/70R18", "275/65R18"]
+      },
+      "validatedSizes": ["255/70R18", "275/65R18"],
+      "status": "review",
+      "notes": "2003 only had 18\" wheels. All current sizes are wrong.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["275/60R17"],
+        "4wd": ["255/75R17"]
+      },
+      "validatedSizes": ["275/60R17", "255/75R17"],
+      "status": "review",
+      "notes": "2002 only had 17\" wheels. All current sizes are completely wrong.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["275/60R17"],
+        "4wd": ["255/75R17"]
+      },
+      "validatedSizes": ["275/60R17", "255/75R17"],
+      "status": "review",
+      "notes": "2001 only had 17\" wheels. All current sizes are completely wrong.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "Navigator",
+      "currentTireSizes": ["275/55R20", "285/45R22", "285/40R24"],
+      "validatedTireSizes": {
+        "2wd": ["275/60R17"],
+        "4wd": ["255/75R17"]
+      },
+      "validatedSizes": ["275/60R17", "255/75R17"],
+      "status": "review",
+      "notes": "2000 only had 17\" wheels. All current sizes are completely wrong.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Executive L": ["225/60R17"],
+        "Signature L": ["225/60R17"],
+        "Signature Limited": ["225/60R17"]
+      },
+      "validatedSizes": ["225/60R17"],
+      "status": "review",
+      "notes": "Current DB has 225/60R16 and 235/55R17 but OEM is 225/60R17. Wrong sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Executive": ["225/60R17"],
+        "Executive L": ["225/60R17"],
+        "Signature L": ["225/60R17"],
+        "Signature Limited": ["225/60R17"]
+      },
+      "validatedSizes": ["225/60R17"],
+      "status": "review",
+      "notes": "Current DB has wrong sizes. OEM is 225/60R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Executive": ["225/60R17"],
+        "Executive L": ["225/60R17"],
+        "Signature L": ["225/60R17"],
+        "Signature Limited": ["225/60R17"]
+      },
+      "validatedSizes": ["225/60R17"],
+      "status": "review",
+      "notes": "Current DB has wrong sizes. OEM is 225/60R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Executive": ["225/60R17"],
+        "Executive L": ["225/60R17"],
+        "Signature L": ["225/60R17"],
+        "Signature Limited": ["225/60R17"]
+      },
+      "validatedSizes": ["225/60R17"],
+      "status": "review",
+      "notes": "Current DB has wrong sizes. OEM is 225/60R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Designer": ["225/60R17"],
+        "Executive": ["225/60R17"],
+        "Executive L": ["225/60R17"],
+        "Signature": ["225/60R17"],
+        "Signature L": ["225/60R17"],
+        "Signature Limited": ["225/60R17"]
+      },
+      "validatedSizes": ["225/60R17"],
+      "status": "review",
+      "notes": "Current DB has wrong sizes. OEM is 225/60R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Designer": ["225/60R17"],
+        "Executive": ["225/60R17"],
+        "Executive L": ["225/60R17"],
+        "Signature": ["225/60R17"],
+        "Signature L": ["225/60R17"],
+        "Signature Limited": ["225/60R17"]
+      },
+      "validatedSizes": ["225/60R17"],
+      "status": "review",
+      "notes": "Current DB has wrong sizes. OEM is 225/60R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Executive": ["225/60R17"],
+        "Executive L": ["225/60R17"],
+        "Signature": ["225/60R17"],
+        "Signature L": ["225/60R17"],
+        "Signature Limited": ["225/60R17"]
+      },
+      "validatedSizes": ["225/60R17"],
+      "status": "review",
+      "notes": "Current DB has wrong sizes. OEM is 225/60R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Executive": ["225/60R17"],
+        "Executive L": ["225/60R17"],
+        "Signature": ["225/60R17"],
+        "Ultimate": ["225/60R17"],
+        "Ultimate L": ["225/60R17"]
+      },
+      "validatedSizes": ["225/60R17"],
+      "status": "review",
+      "notes": "Current DB has wrong sizes. OEM is 225/60R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Cartier": ["225/60R17"],
+        "Cartier L": ["225/70R16"],
+        "Executive": ["225/60R17"],
+        "Executive L": ["225/70R16"],
+        "Signature": ["225/60R17"]
+      },
+      "validatedSizes": ["225/60R17", "225/70R16"],
+      "status": "review",
+      "notes": "2003 had mixed 16/17\" depending on trim. L trims had 225/70R16, others 225/60R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Cartier": ["225/70R16"],
+        "Cartier L": ["225/70R16"],
+        "Executive": ["225/70R16"],
+        "Executive L": ["225/70R16"],
+        "Signature": ["225/70R16"],
+        "Touring": ["225/70R16"]
+      },
+      "validatedSizes": ["225/70R16"],
+      "status": "review",
+      "notes": "2002 only had 16\" wheels with 225/70R16. Current sizes wrong.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Cartier": ["225/70R16"],
+        "Cartier L": ["225/70R16"],
+        "Executive": ["225/70R16"],
+        "Executive L": ["225/70R16"],
+        "Signature": ["225/70R16"],
+        "Touring": ["225/70R16"]
+      },
+      "validatedSizes": ["225/70R16"],
+      "status": "review",
+      "notes": "2001 only had 225/70R16. Current sizes wrong.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "Town Car",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": {
+        "Cartier": ["225/70R16"],
+        "Cartier L": ["225/70R16"],
+        "Executive": ["225/70R16"],
+        "Executive L": ["225/70R16"],
+        "Signature": ["225/70R16"],
+        "Touring": ["225/70R16"]
+      },
+      "validatedSizes": ["225/70R16"],
+      "status": "review",
+      "notes": "2000 only had 225/70R16. Current sizes wrong.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "Lincoln",
+      "model": "Z-Zephyr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "validatedSizes": [],
+      "status": "data_unavailable",
+      "notes": "Lincoln Z/Zephyr is a China-market only vehicle (sold by Changan Ford). Not sold in North America. No US tire data available.",
+      "source": "N/A - China market only"
+    },
+    {
+      "year": 2024,
+      "make": "Lincoln",
+      "model": "Z-Zephyr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "validatedSizes": [],
+      "status": "data_unavailable",
+      "notes": "Lincoln Z/Zephyr is a China-market only vehicle. Not sold in North America.",
+      "source": "N/A - China market only"
+    },
+    {
+      "year": 2023,
+      "make": "Lincoln",
+      "model": "Z-Zephyr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "validatedSizes": [],
+      "status": "data_unavailable",
+      "notes": "Lincoln Z/Zephyr is a China-market only vehicle. Not sold in North America.",
+      "source": "N/A - China market only"
+    },
+    {
+      "year": 2022,
+      "make": "Lincoln",
+      "model": "Z-Zephyr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "validatedSizes": [],
+      "status": "data_unavailable",
+      "notes": "Lincoln Z/Zephyr is a China-market only vehicle. Not sold in North America.",
+      "source": "N/A - China market only"
+    },
+    {
+      "year": 2006,
+      "make": "Lincoln",
+      "model": "Zephyr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["225/50R17"]
+      },
+      "validatedSizes": ["225/50R17"],
+      "status": "valid",
+      "notes": "2006 Zephyr (US market, renamed to MKZ for 2007) - OEM is 225/50R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Note": "US sales ended in 2011. 2012-2021 sold in Europe only."
+      },
+      "validatedSizes": ["175/55R16", "225/45R17"],
+      "isStaggered": true,
+      "staggeredSizes": {
+        "front": "175/55R16",
+        "rear": "225/45R17"
+      },
+      "status": "valid",
+      "notes": "Staggered setup: Front 175/55R16 or 195/50R16 (Sport), Rear 225/45R17. US sales ended 2011.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Standard": {"front": "175/55R16", "rear": "225/45R17"},
+        "Sport": {"front": "195/50R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "isStaggered": true,
+      "staggeredSizes": {
+        "front": ["175/55R16", "195/50R16"],
+        "rear": "225/45R17"
+      },
+      "status": "valid",
+      "notes": "Staggered setup. Not sold in US after 2011.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Standard": {"front": "175/55R16", "rear": "225/45R17"},
+        "Sport": {"front": "195/50R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "isStaggered": true,
+      "status": "valid",
+      "notes": "Staggered setup. Not sold in US after 2011.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Standard": {"front": "175/55R16", "rear": "225/45R17"},
+        "Sport": {"front": "195/50R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "isStaggered": true,
+      "status": "valid",
+      "notes": "Staggered setup. Not sold in US after 2011.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Standard": {"front": "175/55R16", "rear": "225/45R17"},
+        "Sport": {"front": "195/50R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "isStaggered": true,
+      "status": "valid",
+      "notes": "Staggered setup. Not sold in US after 2011.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Standard": {"front": "175/55R16", "rear": "225/45R17"},
+        "Sport": {"front": "195/50R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "isStaggered": true,
+      "status": "valid",
+      "notes": "Staggered setup. Not sold in US after 2011.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Standard": {"front": "175/55R16", "rear": "225/45R17"},
+        "Sport": {"front": "195/50R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "isStaggered": true,
+      "status": "valid",
+      "notes": "Staggered setup. Not sold in US after 2011.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Cup R": {"front": "175/55R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "225/45R17"],
+      "isStaggered": true,
+      "status": "valid",
+      "notes": "Staggered setup. 2014 Cup R only in some markets. Not sold in US.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Standard": {"front": "175/55R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "225/45R17"],
+      "isStaggered": true,
+      "status": "valid",
+      "notes": "Staggered setup. Not sold in US after 2011.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Standard": {"front": "175/55R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "225/45R17"],
+      "isStaggered": true,
+      "status": "valid",
+      "notes": "Staggered setup. Not sold in US after 2011.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Base Model": {"front": "175/55R16", "rear": "225/45R17"},
+        "R": {"front": "175/55R16", "rear": "225/45R17"},
+        "SC": {"front": "195/50R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "isStaggered": true,
+      "status": "valid",
+      "notes": "Last year sold in US. Staggered setup confirmed.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "Lotus",
+      "model": "Elise",
+      "currentTireSizes": ["175/55R16", "195/50R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Base Model": {"front": "175/55R16", "rear": "225/45R17"},
+        "SC": {"front": "175/55R16", "rear": "225/45R17"}
+      },
+      "validatedSizes": ["175/55R16", "225/45R17"],
+      "isStaggered": true,
+      "status": "valid",
+      "notes": "Staggered setup. 195/50R16 may have been optional Sport pkg.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "Lotus",
+      "model": "Emira",
+      "currentTireSizes": ["245/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "Turbo SE": {"front": "245/35R20", "rear": "295/30R20"},
+        "V6 SE": {"front": "245/35R20", "rear": "295/30R20"}
+      },
+      "validatedSizes": ["245/35R20", "295/30R20"],
+      "isStaggered": true,
+      "staggeredSizes": {
+        "front": "245/35R20",
+        "rear": "295/30R20"
+      },
+      "status": "valid",
+      "notes": "Staggered 20\" setup. Sizes confirmed correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "Lotus",
+      "model": "Emira",
+      "currentTireSizes": ["245/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "Base Model": {"front": "245/35R20", "rear": "295/30R20"}
+      },
+      "validatedSizes": ["245/35R20", "295/30R20"],
+      "isStaggered": true,
+      "staggeredSizes": {
+        "front": "245/35R20",
+        "rear": "295/30R20"
+      },
+      "status": "valid",
+      "notes": "Staggered 20\" setup confirmed.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "Lotus",
+      "model": "Emira",
+      "currentTireSizes": ["245/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "Base Model": {"front": "245/35R20", "rear": "295/30R20"}
+      },
+      "validatedSizes": ["245/35R20", "295/30R20"],
+      "isStaggered": true,
+      "staggeredSizes": {
+        "front": "245/35R20",
+        "rear": "295/30R20"
+      },
+      "status": "valid",
+      "notes": "Staggered 20\" setup confirmed.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "Lotus",
+      "model": "Emira",
+      "currentTireSizes": ["245/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "Base Model": {"front": "245/35R20", "rear": "295/30R20"}
+      },
+      "validatedSizes": ["245/35R20", "295/30R20"],
+      "isStaggered": true,
+      "staggeredSizes": {
+        "front": "245/35R20",
+        "rear": "295/30R20"
+      },
+      "status": "valid",
+      "notes": "Staggered 20\" setup confirmed.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "Lotus",
+      "model": "Emira",
+      "currentTireSizes": ["245/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "First Edition": {"front": "245/35R20", "rear": "295/30R20"}
+      },
+      "validatedSizes": ["245/35R20", "295/30R20"],
+      "isStaggered": true,
+      "staggeredSizes": {
+        "front": "245/35R20",
+        "rear": "295/30R20"
+      },
+      "status": "valid",
+      "notes": "First Edition launch model. Staggered 20\" setup confirmed.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "Lotus",
+      "model": "Evora",
+      "currentTireSizes": ["225/40R18", "275/35R19", "235/35R19", "285/30R20"],
+      "validatedTireSizes": {
+        "GT": {"front": "245/35R19", "rear": "295/30R20"},
+        "GT4": {"front": "245/35R19", "rear": "295/30R20"}
+      },
+      "validatedSizes": ["245/35R19", "295/30R20"],
+      "isStaggered": true,
+      "staggeredSizes": {
+        "front": "245/35R19",
+        "rear": "295/30R20"
+      },
+      "status": "review",
+      "notes": "2021 GT/GT4 use 245/35R19 + 295/30R20. Current DB has older gen sizes mixed in (225/40R18, 275/35R19, etc).",
+      "source": "tiresize.com"
+    }
+  ]
+}

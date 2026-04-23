@@ -1,0 +1,459 @@
+{
+  "batchId": 25,
+  "researchedAt": "2026-04-21T23:50:00Z",
+  "source": "tiresize.com",
+  "vehicles": [
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": ["215/55R16", "235/65R16", "195/75R16", "205/75R16"],
+      "trims": {
+        "Connect Van": { "tires": ["215/55R16"] },
+        "Connect Wagon": { "tires": ["215/55R16"] },
+        "T150 Van": { "tires": ["235/65R16"] },
+        "T150 Van AWD": { "tires": ["235/65R16"] },
+        "T250 Van": { "tires": ["235/65R16"] },
+        "T250 Van AWD": { "tires": ["235/65R16"] },
+        "T350 Van": { "tires": ["235/65R16"] },
+        "T350 Van AWD": { "tires": ["235/65R16"] },
+        "T350 Van Dually": { "tires": ["195/75R16", "205/75R16"] }
+      }
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": ["215/55R16", "235/65R16", "195/75R16", "205/75R16"],
+      "trims": {
+        "Connect Van": { "tires": ["215/55R16"] },
+        "Connect Wagon": { "tires": ["215/55R16"] },
+        "T150 Van": { "tires": ["235/65R16"] },
+        "T250 Van": { "tires": ["235/65R16"] },
+        "T350 Van": { "tires": ["235/65R16"] },
+        "T350 Van Dually": { "tires": ["195/75R16", "205/75R16"] }
+      },
+      "notes": "Same specs as 2020"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": ["215/55R16", "235/65R16", "195/75R16", "205/75R16"],
+      "notes": "Same specs as 2020-2021"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": ["215/55R16", "235/65R16", "195/75R16", "205/75R16"],
+      "trims": {
+        "Connect Wagon": { "tires": ["215/55R16"] },
+        "T150 Van": { "tires": ["235/65R16"] },
+        "T150 Van AWD": { "tires": ["235/65R16"] },
+        "T250 Van": { "tires": ["235/65R16"] },
+        "T250 Van AWD": { "tires": ["235/65R16"] },
+        "T350 Van": { "tires": ["235/65R16"] },
+        "T350 Van AWD": { "tires": ["235/65R16"] },
+        "T350 Van Dually": { "tires": ["195/75R16", "205/75R16"] }
+      }
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": ["215/55R16", "235/65R16", "195/75R16", "205/75R16"],
+      "notes": "Same specs as 2023"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": ["215/55R16", "235/65R16", "195/75R16", "205/75R16"],
+      "notes": "Same specs as 2023-2024"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "transit-t8",
+      "notUS": true,
+      "reason": "T8 is European weight class designation - not sold in US market"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "transit-t8",
+      "notUS": true,
+      "reason": "T8 is European weight class designation - not sold in US market"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "transit-t8",
+      "notUS": true,
+      "reason": "T8 is European weight class designation - not sold in US market"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "windstar",
+      "tireSizes": ["205/70R15", "215/70R15", "225/60R16"],
+      "wheelSizes": [15, 16],
+      "trims": {
+        "Base Model": { "tires": ["205/70R15", "215/70R15"] },
+        "Cargo Van": { "tires": ["215/70R15"] },
+        "Limited": { "tires": ["225/60R16"] },
+        "LX": { "tires": ["205/70R15", "215/70R15"] },
+        "SE": { "tires": ["215/70R15"] },
+        "SEL": { "tires": ["225/60R16"] }
+      }
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "windstar",
+      "tireSizes": ["205/70R15", "215/70R15", "225/60R16"],
+      "wheelSizes": [15, 16],
+      "notes": "Same specs as 2000"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "windstar",
+      "tireSizes": ["205/70R15", "215/70R15", "225/60R16"],
+      "wheelSizes": [15, 16],
+      "notes": "Same specs as 2000"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "windstar",
+      "tireSizes": ["205/70R15", "215/70R15", "225/60R16"],
+      "wheelSizes": [15, 16],
+      "notes": "Same specs as 2000 - final year of Windstar"
+    },
+    {
+      "year": 2015,
+      "make": "genesis",
+      "model": "eq900",
+      "notUS": true,
+      "reason": "EQ900 is Korean market name - sold as G90 in US starting 2017"
+    },
+    {
+      "year": 2016,
+      "make": "genesis",
+      "model": "eq900",
+      "notUS": true,
+      "reason": "EQ900 is Korean market name - sold as G90 in US starting 2017"
+    },
+    {
+      "year": 2017,
+      "make": "genesis",
+      "model": "eq900",
+      "notUS": true,
+      "reason": "EQ900 is Korean market name - sold as G90 in US"
+    },
+    {
+      "year": 2018,
+      "make": "genesis",
+      "model": "eq900",
+      "notUS": true,
+      "reason": "EQ900 is Korean market name - sold as G90 in US"
+    },
+    {
+      "year": 2017,
+      "make": "genesis",
+      "model": "g70",
+      "notUS": true,
+      "reason": "Genesis G70 US debut was 2019 model year - 2017-2018 Korean market only"
+    },
+    {
+      "year": 2018,
+      "make": "genesis",
+      "model": "g70",
+      "notUS": true,
+      "reason": "Genesis G70 US debut was 2019 model year - 2018 Korean market only"
+    },
+    {
+      "year": 2016,
+      "make": "genesis",
+      "model": "g80",
+      "notUS": true,
+      "reason": "Genesis G80 US debut was 2017 model year - 2016 Korean market only"
+    },
+    {
+      "year": 2016,
+      "make": "genesis",
+      "model": "g90",
+      "notUS": true,
+      "reason": "Genesis G90 US debut was 2017 model year - 2016 Korean market only"
+    },
+    {
+      "year": 2020,
+      "make": "genesis",
+      "model": "gv70",
+      "notUS": true,
+      "reason": "Genesis GV70 US debut was 2022 model year - 2020-2021 Korean market only"
+    },
+    {
+      "year": 2021,
+      "make": "genesis",
+      "model": "gv70",
+      "notUS": true,
+      "reason": "Genesis GV70 US debut was 2022 model year - 2021 Korean market only"
+    },
+    {
+      "year": 2020,
+      "make": "genesis",
+      "model": "gv80",
+      "notUS": true,
+      "reason": "Genesis GV80 US debut was 2021 model year - 2020 Korean market only"
+    },
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "acadia-limited",
+      "tireSizes": ["235/65R18", "235/55R20", "245/65R17"],
+      "wheelSizes": [17, 18, 20],
+      "notes": "Acadia Limited was final year of first-gen Acadia sold alongside new 2017 Acadia",
+      "trims": {
+        "All Terrain": { "tires": ["235/65R18", "235/55R20"] },
+        "Denali": { "tires": ["235/55R20"] },
+        "SL": { "tires": ["245/65R17"] },
+        "SLE": { "tires": ["245/65R17", "235/65R18", "235/55R20"] },
+        "SLT": { "tires": ["235/65R18", "235/55R20"] }
+      }
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "envoy",
+      "notUS": true,
+      "reason": "GMC Envoy as standalone model started in 2002 - in 2000 it was 'GMC Jimmy Envoy' trim",
+      "alternateModel": "jimmy",
+      "alternateTrim": "Envoy"
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "envoy",
+      "tireSizes": ["245/65R17"],
+      "wheelSizes": [17],
+      "trims": {
+        "2wd": { "tires": ["245/65R17"] },
+        "4wd": { "tires": ["245/65R17"] },
+        "XL 2wd": { "tires": ["245/65R17"] },
+        "XL 4wd": { "tires": ["245/65R17"] }
+      }
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "envoy",
+      "tireSizes": ["245/65R17"],
+      "wheelSizes": [17],
+      "notes": "Same specs as 2002"
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "envoy",
+      "tireSizes": ["245/65R17"],
+      "wheelSizes": [17],
+      "notes": "Same specs as 2002-2003"
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "envoy",
+      "tireSizes": ["245/65R17"],
+      "wheelSizes": [17],
+      "notes": "Same specs as 2002-2004"
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "envoy",
+      "tireSizes": ["245/65R17"],
+      "wheelSizes": [17],
+      "notes": "Same specs as 2002-2005"
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "envoy",
+      "tireSizes": ["245/65R17"],
+      "wheelSizes": [17],
+      "notes": "Same specs as 2002-2006"
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "envoy",
+      "tireSizes": ["245/65R17"],
+      "wheelSizes": [17],
+      "notes": "Same specs as 2002-2007"
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "envoy",
+      "tireSizes": ["245/65R17"],
+      "wheelSizes": [17],
+      "notes": "Same specs as 2002-2008 - final year of Envoy"
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "jimmy",
+      "tireSizes": ["205/75R15", "235/70R15", "31X10.50R15"],
+      "wheelSizes": [15],
+      "trims": {
+        "2wd 2dr": { "tires": ["205/75R15"] },
+        "2wd 4dr": { "tires": ["205/75R15"] },
+        "4wd 2dr": { "tires": ["205/75R15", "235/70R15"] },
+        "4wd 4dr": { "tires": ["205/75R15", "235/70R15"] },
+        "Envoy": { "tires": ["235/70R15"] },
+        "ZR2": { "tires": ["31X10.50R15"] }
+      }
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "jimmy",
+      "tireSizes": ["205/75R15", "235/70R15", "31X10.50R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000"
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "jimmy",
+      "tireSizes": ["205/75R15", "235/70R15", "31X10.50R15"],
+      "wheelSizes": [15],
+      "notes": "Jimmy continued alongside new Envoy"
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "jimmy",
+      "tireSizes": ["205/75R15", "235/70R15", "31X10.50R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2002"
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "jimmy",
+      "tireSizes": ["205/75R15", "235/70R15", "31X10.50R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2003 - limited production"
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "trims": {
+        "1500": { "tires": ["215/75R15", "235/75R15"] }
+      },
+      "notes": "Data from GMC Savana page - 1500 variant"
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000"
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2001"
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2002"
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2003"
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2004"
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2005"
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2006"
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2007"
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2008"
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "savana-1500",
+      "tireSizes": ["215/75R15", "235/75R15"],
+      "wheelSizes": [15],
+      "notes": "Same specs as 2000-2009"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "notUS": 14,
+    "specsFound": 36,
+    "notUSModels": [
+      "ford transit-t8 (2023-2025) - European weight class",
+      "genesis eq900 (2015-2018) - Korean market name for G90",
+      "genesis g70 (2017-2018) - US debut 2019",
+      "genesis g80 (2016) - US debut 2017",
+      "genesis g90 (2016) - US debut 2017",
+      "genesis gv70 (2020-2021) - US debut 2022",
+      "genesis gv80 (2020) - US debut 2021",
+      "gmc envoy (2000) - Was 'Jimmy Envoy' trim in 2000"
+    ]
+  }
+}

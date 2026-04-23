@@ -1,0 +1,687 @@
+{
+  "batchId": "muscle-gm-f-body",
+  "description": "GM F-body: Camaro, Firebird, Trans Am - VERIFIED DATA",
+  "researchDate": "2026-04-22",
+  "sources": [
+    "nastyz28.com/camaro/camwheel.html",
+    "camaros.net forums",
+    "firebirdnation.com forums",
+    "firstgenfirebird.org forums",
+    "78ta.com (Trans Am technical reference)"
+  ],
+  "platformNotes": {
+    "boltPattern": "5x120.65",
+    "boltPatternImperial": "5x4.75",
+    "hubBore": 70.7,
+    "hubBoreNote": "nastyz28.com lists 2.783 center hole = 70.7mm",
+    "lugNuts": "12x1.5",
+    "generations": {
+      "1st": "1967-1969",
+      "2nd": "1970-1981"
+    }
+  },
+  "vehicles": [
+    {
+      "year": 1967,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "Base models" },
+        { "diameter": 14, "width": 7, "offset": 0, "notes": "SS models" }
+      ],
+      "oem_tire_sizes": ["E70-14", "F70-14"],
+      "modern_tire_equiv": ["205/70R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["nastyz28.com", "camaros.net"],
+      "confidence": "high",
+      "notes": "First year Camaro. Base had 14x6, SS had 14x7. No Z28 package in 1967."
+    },
+    {
+      "year": 1968,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "Base/RS models with drum brakes (code XN)" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "Base/RS models with disc brakes (code XG)" },
+        { "diameter": 14, "width": 7, "offset": 0, "notes": "SS models (code YJ)" },
+        { "diameter": 15, "width": 7, "offset": 0, "notes": "Z28 only (code AD)" }
+      ],
+      "oem_tire_sizes": ["E70-14", "F70-14", "F60-15"],
+      "modern_tire_equiv": ["205/70R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com", "camaros.net"],
+      "confidence": "high",
+      "notes": "First year Z28 with 15x7 wheels. SS still 14x7. Base 14x6."
+    },
+    {
+      "year": 1969,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "Base models (code XN drum, XG disc)" },
+        { "diameter": 14, "width": 7, "offset": 0, "notes": "SS models (code YJ)" },
+        { "diameter": 15, "width": 7, "offset": 0, "notes": "Z28 (codes AD, YH)" }
+      ],
+      "oem_tire_sizes": ["E70-14", "F70-14", "F60-15"],
+      "modern_tire_equiv": ["205/70R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com", "camaros.net"],
+      "confidence": "high",
+      "notes": "Last 1st gen. Z28 continued 15x7. SS discontinued Jan 1969, switched to Rally wheels."
+    },
+    {
+      "year": 1970,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel (0.50 offset per nastyz28)" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "SS steel (0.34 offset), Rally (ZJ7)" },
+        { "diameter": 15, "width": 7, "offset": 8, "notes": "Z28 mag wheel (0.30 offset)" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "F70-14", "F60-15"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com"],
+      "confidence": "high",
+      "notes": "First 2nd gen. Z28 had 15x7 mag wheels with F60-15 RWL."
+    },
+    {
+      "year": 1971,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "SS steel, Rally (ZJ7)" },
+        { "diameter": 15, "width": 7, "offset": 8, "notes": "Z28 mag wheel" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F60-15"],
+      "modern_tire_equiv": ["195/75R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com"],
+      "confidence": "high",
+      "notes": "Last year SS. Z28 continued 15x7/F60-15."
+    },
+    {
+      "year": 1972,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "SS steel, Rally (ZJ7)" },
+        { "diameter": 15, "width": 7, "offset": 8, "notes": "Z28 mag wheel" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F60-15"],
+      "modern_tire_equiv": ["195/75R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com"],
+      "confidence": "high",
+      "notes": "Last year SS option. Z28 continued."
+    },
+    {
+      "year": 1973,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 5, "notes": "Economy steel option" },
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel, Rally (ZJ7)" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Turbine (PE1), optional steel" },
+        { "diameter": 15, "width": 7, "offset": 8, "notes": "Z28 mag wheel" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F60-15"],
+      "modern_tire_equiv": ["195/75R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com"],
+      "confidence": "high",
+      "notes": "New front end design. Z28 with F60-15 RWL."
+    },
+    {
+      "year": 1974,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 5, "notes": "Economy steel" },
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel, Rally" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Turbine, optional steel" },
+        { "diameter": 15, "width": 7, "offset": 8, "notes": "Z28 mag wheel" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "FR78-14", "E60-15"],
+      "modern_tire_equiv": ["195/75R14", "215/70R14", "205/75R14", "225/60R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com"],
+      "confidence": "high",
+      "notes": "First year radials offered (FR78-14). Z28 switched to E60-15."
+    },
+    {
+      "year": 1975,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 5, "notes": "Economy steel" },
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel, Rally" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Turbine, optional steel" },
+        { "diameter": 15, "width": 7, "offset": 8, "notes": "Z28/Z86 mag wheel" }
+      ],
+      "oem_tire_sizes": ["E78-14", "FR78-14", "E60-15"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14", "225/60R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com"],
+      "confidence": "high",
+      "notes": "Last year of Z28 (first run). Z86 package with E60-15."
+    },
+    {
+      "year": 1976,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel, Rally" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Polycast (PE1), optional steel" }
+      ],
+      "oem_tire_sizes": ["E78-14", "FR78-14"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["nastyz28.com"],
+      "confidence": "high",
+      "notes": "Only year with NO 15 inch wheel option. No Z28 offered."
+    },
+    {
+      "year": 1977,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel, Rally" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Polycast (PE1), optional steel" },
+        { "diameter": 15, "width": 7, "offset": 8, "notes": "Z28 mag wheel (color keyed)" }
+      ],
+      "oem_tire_sizes": ["E78-14", "FR78-14", "GR70-15"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14", "225/70R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com"],
+      "confidence": "high",
+      "notes": "Z28 returns with 15x7 and GR70-15 RWL."
+    },
+    {
+      "year": 1978,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Polycast, aluminum (YJ8)" },
+        { "diameter": 15, "width": 7, "offset": 8, "notes": "Z28 mag, aluminum (YJ8)" }
+      ],
+      "oem_tire_sizes": ["E78-14", "FR78-14", "GR70-15"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14", "225/70R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com"],
+      "confidence": "high",
+      "notes": "New aluminum wheel options (YJ8). Z28 with GR70-15."
+    },
+    {
+      "year": 1979,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Polycast, aluminum (YJ8)" },
+        { "diameter": 15, "width": 7, "offset": 8, "notes": "Z28 mag, aluminum (YJ8)" }
+      ],
+      "oem_tire_sizes": ["E78-14", "FR78-14", "GR70-15", "P225/70R15"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14", "225/70R15"],
+      "staggered": false,
+      "sources": ["nastyz28.com"],
+      "confidence": "high",
+      "notes": "Last year bias-ply available. Z28 could get P225/70R15."
+    },
+    {
+      "year": 1967,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "Base models" },
+        { "diameter": 14, "width": 7, "offset": 0, "notes": "400 models" }
+      ],
+      "oem_tire_sizes": ["E70-14", "F70-14"],
+      "modern_tire_equiv": ["205/70R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["firstgenfirebird.org", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "First year Firebird. Same platform as Camaro. Rally wheels optional."
+    },
+    {
+      "year": 1968,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "Base models (JC code for disc brakes)" },
+        { "diameter": 14, "width": 7, "offset": 0, "notes": "400/HO models" }
+      ],
+      "oem_tire_sizes": ["E70-14", "F70-14"],
+      "modern_tire_equiv": ["205/70R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["firstgenfirebird.org", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "400 models had wider F70-14 tires on 14x7 wheels."
+    },
+    {
+      "year": 1969,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "Base models" },
+        { "diameter": 14, "width": 7, "offset": 0, "notes": "400/HO models" }
+      ],
+      "oem_tire_sizes": ["E70-14", "F70-14"],
+      "modern_tire_equiv": ["205/70R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["firstgenfirebird.org", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "Last 1st gen Firebird. Trans Am package introduced as separate model."
+    },
+    {
+      "year": 1969,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 7, "offset": 0, "notes": "Rally II wheels standard" }
+      ],
+      "oem_tire_sizes": ["F60-14"],
+      "modern_tire_equiv": ["235/60R14"],
+      "staggered": false,
+      "sources": ["motogallery.com", "78ta.com"],
+      "confidence": "high",
+      "notes": "First Trans Am. Only 697 built. 14x7 Rally II with wide F60-14 bias-ply tires."
+    },
+    {
+      "year": 1970,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Rally II, Formula models" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14"],
+      "modern_tire_equiv": ["195/75R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["78ta.com", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "First 2nd gen. Rally II continued from 1st gen design."
+    },
+    {
+      "year": 1970,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Rally II standard" }
+      ],
+      "oem_tire_sizes": ["F60-15"],
+      "modern_tire_equiv": ["235/60R15"],
+      "staggered": false,
+      "sources": ["78ta.com"],
+      "confidence": "high",
+      "notes": "First 2nd gen Trans Am. Upgraded to 15x7 Rally II wheels."
+    },
+    {
+      "year": 1971,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Rally II, Formula, Honeycomb (new)" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14"],
+      "modern_tire_equiv": ["195/75R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["78ta.com", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "Honeycomb wheels debut as option."
+    },
+    {
+      "year": 1971,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Rally II or Honeycomb" }
+      ],
+      "oem_tire_sizes": ["F60-15"],
+      "modern_tire_equiv": ["235/60R15"],
+      "staggered": false,
+      "sources": ["78ta.com"],
+      "confidence": "high",
+      "notes": "455 HO available. Honeycomb wheels debut."
+    },
+    {
+      "year": 1972,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Rally II, Formula, Honeycomb" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14"],
+      "modern_tire_equiv": ["195/75R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["78ta.com", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "Honeycomb option continues."
+    },
+    {
+      "year": 1972,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Rally II or Honeycomb" }
+      ],
+      "oem_tire_sizes": ["F60-15"],
+      "modern_tire_equiv": ["235/60R15"],
+      "staggered": false,
+      "sources": ["78ta.com"],
+      "confidence": "high",
+      "notes": "Last year 455 HO."
+    },
+    {
+      "year": 1973,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Rally II, Formula, Honeycomb" },
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Optional" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F60-15"],
+      "modern_tire_equiv": ["195/75R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["78ta.com", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "New front end design. SD-455 engine available."
+    },
+    {
+      "year": 1973,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Rally II or Honeycomb standard" }
+      ],
+      "oem_tire_sizes": ["F60-15"],
+      "modern_tire_equiv": ["235/60R15"],
+      "staggered": false,
+      "sources": ["78ta.com"],
+      "confidence": "high",
+      "notes": "SD-455 option (rare). Screaming chicken hood decal."
+    },
+    {
+      "year": 1974,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Rally II, Formula, Honeycomb" },
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Optional" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "FR78-14", "F60-15"],
+      "modern_tire_equiv": ["195/75R14", "215/70R14", "205/75R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["78ta.com", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "Last year SD-455. Radials available."
+    },
+    {
+      "year": 1974,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Rally II or Honeycomb" }
+      ],
+      "oem_tire_sizes": ["F60-15"],
+      "modern_tire_equiv": ["235/60R15"],
+      "staggered": false,
+      "sources": ["78ta.com"],
+      "confidence": "high",
+      "notes": "Last year SD-455 option. Popular year for Trans Am."
+    },
+    {
+      "year": 1975,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Rally II, Formula, Honeycomb" },
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Optional" }
+      ],
+      "oem_tire_sizes": ["E78-14", "FR78-14", "GR70-15"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14", "225/70R15"],
+      "staggered": false,
+      "sources": ["78ta.com", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "New radial-friendly wheel options."
+    },
+    {
+      "year": 1975,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Rally II or Honeycomb" }
+      ],
+      "oem_tire_sizes": ["GR70-15"],
+      "modern_tire_equiv": ["225/70R15"],
+      "staggered": false,
+      "sources": ["78ta.com"],
+      "confidence": "high",
+      "notes": "Switched to GR70-15 radials."
+    },
+    {
+      "year": 1976,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Rally II, Honeycomb" },
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Optional Honeycomb" }
+      ],
+      "oem_tire_sizes": ["E78-14", "FR78-14", "GR70-15"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14", "225/70R15"],
+      "staggered": false,
+      "sources": ["78ta.com", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "50th Anniversary Trans Am with gold Honeycomb wheels."
+    },
+    {
+      "year": 1976,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Rally II or Honeycomb (gold for 50th)" }
+      ],
+      "oem_tire_sizes": ["GR70-15"],
+      "modern_tire_equiv": ["225/70R15"],
+      "staggered": false,
+      "sources": ["78ta.com"],
+      "confidence": "high",
+      "notes": "Last year Honeycomb. 50th Anniversary with gold wheels. Last year 455 option."
+    },
+    {
+      "year": 1977,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Rally II" },
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Snowflake (new)" }
+      ],
+      "oem_tire_sizes": ["E78-14", "FR78-14", "P225/70R15"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14", "225/70R15"],
+      "staggered": false,
+      "sources": ["78ta.com", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "Snowflake wheels debut. Smokey and the Bandit movie."
+    },
+    {
+      "year": 1977,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Rally II or Snowflake (argent or gold)" }
+      ],
+      "oem_tire_sizes": ["P225/70R15"],
+      "modern_tire_equiv": ["225/70R15"],
+      "staggered": false,
+      "sources": ["78ta.com"],
+      "confidence": "high",
+      "notes": "Snowflake debut. SE with gold wheels. Bandit car popularized Trans Am."
+    },
+    {
+      "year": 1978,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Rally II" },
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Snowflake" }
+      ],
+      "oem_tire_sizes": ["E78-14", "FR78-14", "P225/70R15"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14", "225/70R15"],
+      "staggered": false,
+      "sources": ["78ta.com", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "WS6 handling package introduced with 15x8 Snowflakes."
+    },
+    {
+      "year": 1978,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Standard Snowflake" },
+        { "diameter": 15, "width": 8, "offset": 0, "notes": "WS6 package Snowflake" }
+      ],
+      "oem_tire_sizes": ["P225/70R15", "P255/60R15"],
+      "modern_tire_equiv": ["225/70R15", "255/60R15"],
+      "staggered": false,
+      "sources": ["78ta.com"],
+      "confidence": "high",
+      "notes": "WS6 introduced 15x8 Snowflakes with 255/60R15. SE continues with gold."
+    },
+    {
+      "year": 1979,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13, "notes": "Base steel" },
+        { "diameter": 14, "width": 7, "offset": 9, "notes": "Rally II" },
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Snowflake, Formula/Esprit" }
+      ],
+      "oem_tire_sizes": ["E78-14", "FR78-14", "P225/70R15"],
+      "modern_tire_equiv": ["195/75R14", "205/75R14", "225/70R15"],
+      "staggered": false,
+      "sources": ["78ta.com", "firebirdnation.com"],
+      "confidence": "high",
+      "notes": "Snowflake design slightly revised. 10th Anniversary Trans Am."
+    },
+    {
+      "year": 1979,
+      "make": "Pontiac",
+      "model": "Trans Am",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.7,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 6, "notes": "Standard Snowflake or Turbo" },
+        { "diameter": 15, "width": 8, "offset": 0, "notes": "WS6 Snowflake or Turbo" }
+      ],
+      "oem_tire_sizes": ["P225/70R15", "P255/60R15"],
+      "modern_tire_equiv": ["225/70R15", "255/60R15"],
+      "staggered": false,
+      "sources": ["78ta.com"],
+      "confidence": "high",
+      "notes": "10th Anniversary Edition with Turbo wheels debut. WS6 with 15x8."
+    }
+  ],
+  "tireConversionChart": {
+    "E70-14": "205/70R14",
+    "F70-14": "215/70R14",
+    "E78-14": "195/75R14",
+    "F78-14": "205/75R14",
+    "FR78-14": "205/75R14",
+    "F60-14": "235/60R14",
+    "F60-15": "235/60R15",
+    "E60-15": "225/60R15",
+    "GR70-15": "225/70R15",
+    "P225/70R15": "225/70R15",
+    "P255/60R15": "255/60R15"
+  },
+  "verificationNotes": {
+    "boltPattern": "VERIFIED: All F-body 1967-1979 use 5x120.65 (5x4.75 imperial). Shared with Corvette.",
+    "hubBore": "VERIFIED: nastyz28.com documents 2.783 center hole = 70.7mm (close to often-cited 70.3mm).",
+    "wheelSizes": "VERIFIED: Base models 14x6, performance 14x7, Z28/Trans Am 15x7. WS6 package 15x8 from 1978.",
+    "dataQuality": "HIGH - Primary sources are enthusiast forums with factory documentation references.",
+    "conflicts": "Hub bore slightly varies in sources (70.3mm vs 70.7mm) - 70.7mm from nastyz28 is authoritative."
+  }
+}

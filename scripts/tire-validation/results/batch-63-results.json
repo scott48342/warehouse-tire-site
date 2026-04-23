@@ -1,0 +1,1023 @@
+{
+  "batchId": "63",
+  "validatedAt": "2026-04-21T22:04:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "sierra-2500-hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17"],
+      "oemTireSizes": {
+        "base": ["LT245/75R16"],
+        "2wd Crew Cab": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "2wd Extended Cab": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "2wd Regular Cab": ["LT245/75R16"],
+        "4wd Crew Cab": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "4wd Extended Cab": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "4wd Regular Cab": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Missing LT265/75R16 from current sizes"
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "sierra-2500-hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16"],
+      "validation": "MATCH",
+      "notes": "Correct OEM sizes"
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "sierra-2500-hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "oemTireSizes": {
+        "2wd Crew Cab": ["LT245/75R16"],
+        "2wd Regular Cab": ["LT245/75R16"],
+        "4wd Crew Cab": ["LT245/75R16"],
+        "4wd Regular Cab": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16"],
+      "validation": "EXTRA_SIZES",
+      "notes": "LT265/75R16 may be optional or incorrect for 2005"
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "sierra-2500-hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16"],
+      "validation": "MATCH",
+      "notes": "Correct OEM sizes"
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "sierra-2500-hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16"],
+      "validation": "MATCH",
+      "notes": "Correct OEM sizes"
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "sierra-2500-hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16"],
+      "validation": "MATCH",
+      "notes": "Correct OEM sizes"
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "sierra-2500-hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "oemTireSizes": {
+        "2wd": ["LT245/75R16"],
+        "4wd": ["LT245/75R16"],
+        "4wd X-Cab": ["LT245/75R16", "LT265/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16"],
+      "validation": "MATCH",
+      "notes": "Correct OEM sizes"
+    },
+    {
+      "year": 2026,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17", "LT265/70R17"],
+        "SLE/SLT": ["LT275/70R18"],
+        "AT4/Denali": ["LT275/65R20"],
+        "AT4X": ["LT305/70R18"],
+        "Denali Ultimate": ["LT275/65R20", "LT265/60R22"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT305/70R18", "LT265/60R22"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17; LT265/70R18 should be LT265/70R17; missing AT4X 305/70R18 and Denali Ultimate 265/60R22"
+    },
+    {
+      "year": 2025,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17", "LT265/70R17"],
+        "SLE/SLT": ["LT275/70R18"],
+        "AT4/Denali": ["LT275/65R20"],
+        "AT4X": ["LT305/70R18"],
+        "Denali Ultimate": ["LT275/65R20", "LT265/60R22"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT305/70R18", "LT265/60R22"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17; LT265/70R18 should be LT265/70R17; missing AT4X 305/70R18"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17", "LT265/70R17"],
+        "SLE/SLT": ["LT275/70R18"],
+        "AT4/Denali": ["LT275/65R20"],
+        "AT4X": ["LT305/70R18"],
+        "Denali Ultimate": ["LT275/65R20", "LT265/60R22"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT305/70R18", "LT265/60R22"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17; LT265/70R18 should be LT265/70R17; missing AT4X 305/70R18"
+    },
+    {
+      "year": 2023,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17", "LT265/70R17"],
+        "SLE/SLT": ["LT275/70R18"],
+        "AT4/Denali": ["LT275/65R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17; LT265/70R18 should be LT265/70R17"
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17", "LT265/70R17"],
+        "SLE/SLT": ["LT275/70R18"],
+        "AT4/Denali": ["LT275/65R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17; LT265/70R18 should be LT265/70R17"
+    },
+    {
+      "year": 2021,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17", "LT265/70R17"],
+        "SLE/SLT": ["LT275/70R18"],
+        "AT4/Denali": ["LT275/65R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17; LT265/70R18 should be LT265/70R17"
+    },
+    {
+      "year": 2020,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "2wd/4wd Crew Cab": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+        "2wd/4wd Double Cab": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+        "Regular Cab": ["LT245/75R17", "LT265/70R17", "LT275/70R18"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17; LT265/70R18 should be LT265/70R17"
+    },
+    {
+      "year": 2019,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17"],
+        "SLE/SLT": ["LT265/70R18"],
+        "Denali": ["LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2019,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "2020 body style": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Duplicate entry - 2019 had two body styles (old/new). LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2018,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17"],
+        "SLE/SLT": ["LT265/70R18"],
+        "Denali": ["LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "MISMATCH",
+      "notes": "LT275/70R18 and LT275/65R20 not OEM for 2018; LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2018,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17"],
+        "SLE/SLT": ["LT265/70R18"],
+        "Denali": ["LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17"],
+        "SLE/SLT": ["LT265/70R18"],
+        "Denali": ["LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17"],
+        "SLE/SLT": ["LT265/70R18"],
+        "Denali": ["LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "MISMATCH",
+      "notes": "LT275/70R18 and LT275/65R20 not OEM for 2017; LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2016,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17"],
+        "SLE/SLT": ["LT265/70R18"],
+        "Denali": ["LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "MISMATCH",
+      "notes": "LT275/70R18 and LT275/65R20 not OEM for 2016; LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2016,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "oemTireSizes": {
+        "base": ["LT245/75R17"],
+        "SLE/SLT": ["LT265/70R18"],
+        "Denali": ["LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2015,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "2wd/4wd Crew Cab": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+        "2wd/4wd Regular Cab": ["LT245/75R17", "LT265/70R18"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "MISMATCH",
+      "notes": "LT275/70R18 and LT275/65R20 not OEM; LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2015,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "oemTireSizes": {
+        "2wd/4wd Crew Cab": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+        "2wd/4wd Regular Cab": ["LT245/75R17", "LT265/70R18"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2014,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R17", "LT265/70R18", "LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "MISMATCH",
+      "notes": "LT275/70R18 and LT275/65R20 not OEM; LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2014,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R17", "LT265/70R18", "LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2013,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R17", "LT265/70R18", "LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2013,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R17", "LT265/70R18", "LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "MISMATCH",
+      "notes": "LT275/70R18 and LT275/65R20 not OEM; LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2012,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R17", "LT265/70R18", "LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "MISMATCH",
+      "notes": "LT275/70R18 and LT275/65R20 not OEM; LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2012,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R17", "LT265/70R18", "LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2011,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R17", "LT265/70R18", "LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2011,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R17", "LT265/70R18", "LT265/60R20"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R18", "LT265/60R20"],
+      "validation": "MISMATCH",
+      "notes": "LT275/70R18 and LT275/65R20 not OEM; LT245/70R17 should be LT245/75R17"
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "oemTireSizes": {
+        "2wd Extended Cab": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "2wd Regular Cab": ["LT245/75R16"],
+        "4wd Crew Cab": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "4wd Extended Cab": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "4wd Regular Cab": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "validation": "EXTRA_SIZES",
+      "notes": "LT245/70R17 and LT265/65R18 not standard OEM for 2010"
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16", "LT265/70R17"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "validation": "MISMATCH",
+      "notes": "All current sizes incorrect for 2010 model"
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16", "LT265/70R17"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "validation": "MISMATCH",
+      "notes": "All current sizes incorrect for 2009 model"
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16", "LT265/70R17"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "validation": "EXTRA_SIZES",
+      "notes": "LT245/70R17 and LT265/65R18 not standard OEM"
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16", "LT265/70R17"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "validation": "EXTRA_SIZES",
+      "notes": "LT245/70R17 and LT265/65R18 not standard OEM"
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16", "LT265/70R17"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "validation": "MISMATCH",
+      "notes": "All current sizes incorrect for 2008 model"
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16", "LT265/70R17"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "validation": "MISMATCH",
+      "notes": "All current sizes incorrect for 2007 model"
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "oemTireSizes": {
+        "2wd Crew Cab": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "4wd Crew Cab": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "Regular Cab": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "validation": "EXTRA_SIZES",
+      "notes": "LT245/70R17 and LT265/65R18 not standard OEM"
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16"],
+      "validation": "MISMATCH",
+      "notes": "All current sizes incorrect for 2006 model"
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16"],
+      "validation": "EXTRA_SIZES",
+      "notes": "LT245/70R17, LT265/70R17, LT265/65R18 not standard OEM for 2006"
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16"],
+      "validation": "EXTRA_SIZES",
+      "notes": "Only LT245/75R16 is OEM; all other sizes are non-standard"
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16"],
+      "validation": "MISMATCH",
+      "notes": "All current sizes incorrect for 2005 model"
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16"],
+      "validation": "MISMATCH",
+      "notes": "All current sizes incorrect for 2004 model"
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16"],
+      "validation": "EXTRA_SIZES",
+      "notes": "Only LT245/75R16 is OEM; all other sizes are non-standard"
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16"],
+      "validation": "EXTRA_SIZES",
+      "notes": "Only LT245/75R16 is OEM; all other sizes are non-standard"
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16"],
+      "validation": "MISMATCH",
+      "notes": "All current sizes incorrect for 2003 model"
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16"],
+      "validation": "MISMATCH",
+      "notes": "All current sizes incorrect for 2002 model"
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16"],
+      "validation": "EXTRA_SIZES",
+      "notes": "Only LT245/75R16 is OEM; all other sizes are non-standard"
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "oemTireSizes": {
+        "2wd": ["LT245/75R16"],
+        "4wd": ["LT245/75R16"],
+        "4wd X-Cab": ["LT245/75R16", "LT265/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16"],
+      "validation": "EXTRA_SIZES",
+      "notes": "LT245/70R17, LT265/70R17, LT265/65R18 not standard OEM"
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "oemTireSizes": {
+        "all trims": ["LT245/75R16", "LT265/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16"],
+      "validation": "MISMATCH",
+      "notes": "All current sizes incorrect for 2001 model"
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+      "oemTireSizes": {
+        "2500 2wd": ["LT245/75R16"],
+        "2500 4wd": ["LT245/75R16"],
+        "4wd X-Cab": ["LT245/75R16", "LT265/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16", "LT265/75R16"],
+      "validation": "EXTRA_SIZES",
+      "notes": "LT225/75R16 not standard OEM for Sierra 2500HD (used on 1500 models)"
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "sierra-2500hd-classic",
+      "currentTireSizes": [],
+      "oemTireSizes": {
+        "2wd Crew Cab": ["LT245/75R16"],
+        "2wd Extended Cab": ["LT245/75R16"],
+        "2wd Regular Cab": ["LT245/75R16"],
+        "4wd Crew Cab": ["LT245/75R16"],
+        "4wd Extended Cab": ["LT245/75R16"],
+        "4wd Regular Cab": ["LT245/75R16"]
+      },
+      "allOemSizes": ["LT245/75R16"],
+      "validation": "MISSING_DATA",
+      "notes": "Current tire sizes empty - OEM is LT245/75R16 for all trims"
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "sierra-3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "oemTireSizes": {
+        "SRW 4wd": ["LT265/75R16", "LT265/70R17"],
+        "DRW (Dually)": ["LT215/85R16"]
+      },
+      "allOemSizes": ["LT265/75R16", "LT265/70R17", "LT215/85R16"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Missing LT265/70R17 for SRW and LT215/85R16 for DRW"
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "sierra-3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "oemTireSizes": {
+        "SRW 4wd": ["LT265/75R16", "LT265/70R17"],
+        "DRW (Dually)": ["LT215/85R16"]
+      },
+      "allOemSizes": ["LT265/75R16", "LT265/70R17", "LT215/85R16"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Missing LT265/70R17 for SRW and LT215/85R16 for DRW; LT245/75R16 not standard"
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "sierra-3500-classic",
+      "currentTireSizes": [],
+      "oemTireSizes": {
+        "SRW 4wd Crew Cab": ["LT265/75R16", "LT265/70R17"],
+        "SRW 4wd Extended Cab": ["LT265/75R16", "LT265/70R17"],
+        "SRW 4wd Regular Cab": ["LT265/75R16", "LT265/70R17"],
+        "DRW (Dually)": ["LT215/85R16"]
+      },
+      "allOemSizes": ["LT265/75R16", "LT265/70R17", "LT215/85R16"],
+      "validation": "MISSING_DATA",
+      "notes": "Current tire sizes empty - OEM sizes are LT265/75R16, LT265/70R17 (SRW) or LT215/85R16 (DRW)"
+    },
+    {
+      "year": 2025,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "oemTireSizes": {
+        "SRW": ["LT275/70R18", "LT275/65R20"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17"],
+      "validation": "MISMATCH",
+      "notes": "LT265/70R17, LT265/60R18, LT275/65R18 not standard OEM"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "oemTireSizes": {
+        "SRW": ["LT275/70R18", "LT275/65R20"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17"],
+      "validation": "MISMATCH",
+      "notes": "LT265/70R17, LT265/60R18, LT275/65R18 not standard OEM"
+    },
+    {
+      "year": 2023,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "oemTireSizes": {
+        "SRW": ["LT275/70R18", "LT275/65R20"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17"],
+      "validation": "MISMATCH",
+      "notes": "LT265/70R17, LT265/60R18, LT275/65R18 not standard OEM"
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "oemTireSizes": {
+        "SRW": ["LT275/70R18", "LT275/65R20"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17"],
+      "validation": "MISMATCH",
+      "notes": "LT265/70R17, LT265/60R18, LT275/65R18 not standard OEM"
+    },
+    {
+      "year": 2021,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "oemTireSizes": {
+        "SRW": ["LT275/70R18", "LT275/65R20"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17"],
+      "validation": "MISMATCH",
+      "notes": "LT265/70R17, LT265/60R18, LT275/65R18 not standard OEM"
+    },
+    {
+      "year": 2020,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "oemTireSizes": {
+        "SRW 2wd/4wd": ["LT275/70R18", "LT275/65R20"],
+        "DRW (Dually)": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17"],
+      "validation": "MISMATCH",
+      "notes": "LT265/70R17, LT265/60R18, LT275/65R18 not standard OEM"
+    },
+    {
+      "year": 2019,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "oemTireSizes": {
+        "SRW": ["LT275/70R18", "LT275/65R20"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17"],
+      "validation": "MISMATCH",
+      "notes": "LT265/70R17, LT265/60R18, LT275/65R18 not standard OEM"
+    },
+    {
+      "year": 2018,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18", "LT235/80R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Missing DRW size LT235/80R17"
+    },
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18", "LT235/80R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Missing DRW size LT235/80R17"
+    },
+    {
+      "year": 2016,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18", "LT235/80R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Missing DRW size LT235/80R17"
+    },
+    {
+      "year": 2015,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW 2wd": ["LT265/70R18"],
+        "SRW 4wd": ["LT265/70R18"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT265/70R18", "LT235/80R17"],
+      "validation": "MISMATCH",
+      "notes": "2015 3500HD SRW uses LT265/70R18, not LT245/75R17 or LT265/70R17"
+    },
+    {
+      "year": 2014,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW": ["LT265/70R18"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT265/70R18", "LT235/80R17"],
+      "validation": "MISMATCH",
+      "notes": "2014 3500HD uses different sizes than listed"
+    },
+    {
+      "year": 2013,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18", "LT235/80R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Missing DRW size LT235/80R17"
+    },
+    {
+      "year": 2012,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18", "LT235/80R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Missing DRW size LT235/80R17"
+    },
+    {
+      "year": 2011,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+        "DRW": ["LT235/80R17"]
+      },
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18", "LT235/80R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Missing DRW size LT235/80R17"
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW 2wd/4wd": ["LT265/75R16", "LT265/70R17"],
+        "DRW (Dually)": ["LT225/75R17"]
+      },
+      "allOemSizes": ["LT265/75R16", "LT265/70R17", "LT225/75R17"],
+      "validation": "MISMATCH",
+      "notes": "2010 uses LT265/75R16 and LT265/70R17 for SRW; LT225/75R17 for DRW"
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW 2wd/4wd": ["LT265/75R16", "LT265/70R17"],
+        "DRW (Dually)": ["LT225/75R17"]
+      },
+      "allOemSizes": ["LT265/75R16", "LT265/70R17", "LT225/75R17"],
+      "validation": "MISMATCH",
+      "notes": "2009 uses LT265/75R16 and LT265/70R17 for SRW; LT225/75R17 for DRW"
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "sierra-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "oemTireSizes": {
+        "SRW 2wd/4wd": ["LT265/75R16", "LT265/70R17"],
+        "DRW (Dually)": ["LT225/75R17"]
+      },
+      "allOemSizes": ["LT265/75R16", "LT265/70R17", "LT225/75R17"],
+      "validation": "MISMATCH",
+      "notes": "2008 uses LT265/75R16 and LT265/70R17 for SRW; LT225/75R17 for DRW"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "match": 6,
+    "partialMatch": 22,
+    "mismatch": 25,
+    "extraSizes": 15,
+    "missingData": 2,
+    "unknownDuplicates": 5,
+    "issuesFound": [
+      "Many older Sierra 2500HD models (2001-2010) have incorrect tire sizes mixed with newer generation specs",
+      "Sierra 3500HD 2019-2025 using wrong tire sizes - should be LT275/70R18 and LT275/65R20 for SRW",
+      "LT245/70R17 frequently appears but should be LT245/75R17 for most HD trucks",
+      "Missing DRW-specific tire sizes (LT235/80R17) for Sierra 3500HD",
+      "Sierra 2500HD Classic and 3500 Classic have empty tire sizes",
+      "Several duplicate vehicle entries with different tire size sets"
+    ],
+    "recommendedCorrections": {
+      "sierra-2500hd-2020-2026": "LT245/75R17, LT265/70R17, LT275/70R18, LT275/65R20 (add LT305/70R18 for AT4X, LT265/60R22 for Denali Ultimate)",
+      "sierra-2500hd-2011-2019": "LT245/75R17, LT265/70R18, LT265/60R20",
+      "sierra-2500hd-2007-2010": "LT245/75R16, LT265/75R16, LT265/70R17",
+      "sierra-2500hd-2001-2006": "LT245/75R16, LT265/75R16",
+      "sierra-3500hd-2020-2025-srw": "LT275/70R18, LT275/65R20",
+      "sierra-3500hd-2020-2025-drw": "LT235/80R17",
+      "sierra-3500hd-2011-2018-srw": "LT245/75R17, LT265/70R17, LT265/60R18",
+      "sierra-3500hd-2011-2018-drw": "LT235/80R17",
+      "sierra-3500hd-2008-2010-srw": "LT265/75R16, LT265/70R17",
+      "sierra-3500hd-2008-2010-drw": "LT225/75R17"
+    }
+  }
+}

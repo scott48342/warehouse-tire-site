@@ -1,0 +1,1246 @@
+{
+  "batchId": "90s-batch-05",
+  "completedAt": "2026-04-22T12:35:00.000Z",
+  "results": [
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "B3000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "215/70R14", "225/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "therangerstation.com", "ebay.com wheel spacers"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Ford Ranger. Same specs as 1995-1997 Ford Ranger 2WD."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "B3000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "215/70R14", "225/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "therangerstation.com", "ebay.com wheel spacers"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Ford Ranger. Same specs as 1995-1997 Ford Ranger 2WD."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "B3000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["225/70R14", "225/70R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "therangerstation.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Ford Ranger. 1998 redesign with larger tires available."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "B3000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 7, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["225/70R15", "235/75R15", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "therangerstation.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Ford Ranger."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "B4000",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Mazda B4000 was introduced in 1994, not 1990."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "B4000",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Mazda B4000 was introduced in 1994, not 1991."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "B4000",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Mazda B4000 was introduced in 1994, not 1992."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "B4000",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Mazda B4000 was introduced in 1994, not 1993."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "B4000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["therangerstation.com", "ebay.com wheel spacers"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Ford Ranger 4x4. First year of B4000."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "B4000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["therangerstation.com", "ebay.com wheel spacers"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Ford Ranger 4x4."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "B4000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["therangerstation.com", "ebay.com wheel spacers"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Ford Ranger 4x4."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "B4000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["therangerstation.com", "ebay.com wheel spacers"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Ford Ranger 4x4."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "B4000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 7, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["235/75R15", "265/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "therangerstation.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Ford Ranger 4x4. 1998 redesign."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "B4000",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 7, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["225/70R15", "265/75R15", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "therangerstation.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Ford Ranger 4x4."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "MX-6",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "mx6.com forum", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "1st generation (1988-1992). Shared platform with Ford Probe."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "MX-6",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "mx6.com forum", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "1st generation (1988-1992)."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "MX-6",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "mx6.com forum", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of 1st generation."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "MX-6",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["195/65R14", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "mx6.com forum", "selected.pl"],
+      "verifiedBy": "cross-reference",
+      "notes": "2nd generation debut (1993-1997). Complete redesign."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "MX-6",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["195/65R14", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "mx6.com forum"],
+      "verifiedBy": "cross-reference",
+      "notes": "2nd generation (1993-1997)."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "MX-6",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["195/65R14", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "mx6.com forum"],
+      "verifiedBy": "cross-reference",
+      "notes": "2nd generation (1993-1997)."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "MX-6",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["195/65R14", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "mx6.com forum"],
+      "verifiedBy": "cross-reference",
+      "notes": "2nd generation (1993-1997)."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "MX-6",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["195/65R14", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "mx6.com forum"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of MX-6 production."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "MX-6",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "wikipedia"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: MX-6 production ended in 1997."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "MX-6",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "wikipedia"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: MX-6 production ended in 1997."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "Millenia",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Millenia was introduced in 1995."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "Millenia",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Millenia was introduced in 1995."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "Millenia",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Millenia was introduced in 1995."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "Millenia",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Millenia was introduced in 1995."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "Millenia",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Millenia was introduced in 1995."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "Millenia",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 49 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelsynergy.com", "neo-motorsport.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First year of Millenia. Base model had 15\" wheels, L/S trims had 16\"."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "Millenia",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 49 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelsynergy.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Base model had 15\" wheels, L/S trims had 16\"."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "Millenia",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 49 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelsynergy.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Base model had 15\" wheels, L/S trims had 16\"."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "Millenia",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 49 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelsynergy.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Base model had 15\" wheels, L/S trims had 16\"."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "Millenia",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 49 },
+          { "diameter": 17, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/55R16", "215/50R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelsynergy.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "1999 refresh. Base model upgraded to 16\", S trim got 17\"."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "929",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "neo-motorsport.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "3rd generation (1988-1991). Base model 195/65R15, S trim 205/60R15."
+    },
+    {
+      "year": 1991,
+      "make": "Mazda",
+      "model": "929",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of 3rd generation."
+    },
+    {
+      "year": 1992,
+      "make": "Mazda",
+      "model": "929",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "4th generation debut (1992-1995). Complete redesign."
+    },
+    {
+      "year": 1993,
+      "make": "Mazda",
+      "model": "929",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "4th generation (1992-1995)."
+    },
+    {
+      "year": 1994,
+      "make": "Mazda",
+      "model": "929",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "4th generation (1992-1995)."
+    },
+    {
+      "year": 1995,
+      "make": "Mazda",
+      "model": "929",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of 929 production in US market."
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "929",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: 929 production ended in 1995 for US market. Note: tiresize.com shows 1996 data but this was likely carryover/leftover inventory."
+    },
+    {
+      "year": 1997,
+      "make": "Mazda",
+      "model": "929",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "wikipedia"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: 929 production ended in 1995 for US market."
+    },
+    {
+      "year": 1998,
+      "make": "Mazda",
+      "model": "929",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "wikipedia"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: 929 production ended in 1995 for US market."
+    },
+    {
+      "year": 1999,
+      "make": "Mazda",
+      "model": "929",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "wikipedia"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: 929 production ended in 1995 for US market."
+    },
+    {
+      "year": 1990,
+      "make": "Subaru",
+      "model": "Impreza",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "rs25.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Impreza was introduced in 1993 for US market."
+    },
+    {
+      "year": 1991,
+      "make": "Subaru",
+      "model": "Impreza",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "rs25.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Impreza was introduced in 1993 for US market."
+    },
+    {
+      "year": 1992,
+      "make": "Subaru",
+      "model": "Impreza",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "rs25.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Impreza was introduced in 1993 for US market."
+    },
+    {
+      "year": 1993,
+      "make": "Subaru",
+      "model": "Impreza",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["185/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["rs25.com", "tiresize.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First year of Impreza in US. All 90s Imprezas use 5x100, 56.1mm hub bore."
+    },
+    {
+      "year": 1994,
+      "make": "Subaru",
+      "model": "Impreza",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["rs25.com", "tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Base models 14\", GT trim 15\"."
+    },
+    {
+      "year": 1995,
+      "make": "Subaru",
+      "model": "Impreza",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["165/80R13", "175/70R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "rs25.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Base had 13\", L/LX had 14\" or 15\"."
+    },
+    {
+      "year": 1996,
+      "make": "Subaru",
+      "model": "Impreza",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["175/70R14", "185/70R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "rs25.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Same platform as 1993-2001 GC chassis."
+    },
+    {
+      "year": 1997,
+      "make": "Subaru",
+      "model": "Impreza",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["175/70R14", "185/70R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "rs25.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Facelifted for 1997."
+    },
+    {
+      "year": 1998,
+      "make": "Subaru",
+      "model": "Impreza",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 7, "offset": 53 }
+        ],
+        "oem_tire_sizes": ["175/70R14", "185/70R14", "195/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["rs25.com", "tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "2.5RS debut with 16x7 +53 wheels and 205/55R16 tires."
+    },
+    {
+      "year": 1999,
+      "make": "Subaru",
+      "model": "Impreza",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 7, "offset": 53 }
+        ],
+        "oem_tire_sizes": ["175/70R14", "185/70R14", "195/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["rs25.com", "tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "2.5RS with 16x7 +53 wheels. Regular models 14\" or 15\"."
+    },
+    {
+      "year": 1990,
+      "make": "Subaru",
+      "model": "Legacy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["rs25.com", "thedriveradviser.com", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation Legacy (1990-1994). First year of Legacy in US."
+    },
+    {
+      "year": 1991,
+      "make": "Subaru",
+      "model": "Legacy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["rs25.com", "thedriveradviser.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation Legacy (1990-1994)."
+    },
+    {
+      "year": 1992,
+      "make": "Subaru",
+      "model": "Legacy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["rs25.com", "thedriveradviser.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation Legacy (1990-1994)."
+    },
+    {
+      "year": 1993,
+      "make": "Subaru",
+      "model": "Legacy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["rs25.com", "thedriveradviser.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation Legacy (1990-1994)."
+    },
+    {
+      "year": 1994,
+      "make": "Subaru",
+      "model": "Legacy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["rs25.com", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of first generation Legacy."
+    },
+    {
+      "year": 1990,
+      "make": "Subaru",
+      "model": "Outback",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiredriveradviser.com", "tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Outback was introduced as Legacy Outback in 1995 (1996 model year). Standalone Outback started 2000."
+    },
+    {
+      "year": 1991,
+      "make": "Subaru",
+      "model": "Outback",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiredriveradviser.com", "tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Outback was introduced as Legacy Outback in 1995."
+    },
+    {
+      "year": 1992,
+      "make": "Subaru",
+      "model": "Outback",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiredriveradviser.com", "tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Outback was introduced as Legacy Outback in 1995."
+    },
+    {
+      "year": 1993,
+      "make": "Subaru",
+      "model": "Outback",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiredriveradviser.com", "tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Outback was introduced as Legacy Outback in 1995."
+    },
+    {
+      "year": 1994,
+      "make": "Subaru",
+      "model": "Outback",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiredriveradviser.com", "tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Outback was introduced as Legacy Outback in 1995. For 1995-1999 Outback data, see Legacy Outback or add years 1995-1999 to batch."
+    },
+    {
+      "year": 1990,
+      "make": "Subaru",
+      "model": "Forester",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Forester was introduced in 1997 for JDM, 1998 for US market."
+    },
+    {
+      "year": 1991,
+      "make": "Subaru",
+      "model": "Forester",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Forester was introduced in 1997 for JDM, 1998 for US market."
+    },
+    {
+      "year": 1992,
+      "make": "Subaru",
+      "model": "Forester",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Forester was introduced in 1997 for JDM, 1998 for US market."
+    },
+    {
+      "year": 1993,
+      "make": "Subaru",
+      "model": "Forester",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Forester was introduced in 1997 for JDM, 1998 for US market."
+    },
+    {
+      "year": 1994,
+      "make": "Subaru",
+      "model": "Forester",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Forester was introduced in 1997 for JDM, 1998 for US market."
+    },
+    {
+      "year": 1995,
+      "make": "Subaru",
+      "model": "Forester",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Forester was introduced in 1997 for JDM, 1998 for US market."
+    },
+    {
+      "year": 1996,
+      "make": "Subaru",
+      "model": "Forester",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: Forester was introduced in 1997 for JDM, 1998 for US market."
+    },
+    {
+      "year": 1997,
+      "make": "Subaru",
+      "model": "Forester",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: 1997 Forester was JDM only. US market started with 1998 model year. If needed, this can be added as JDM-only data."
+    },
+    {
+      "year": 1990,
+      "make": "Subaru",
+      "model": "SVX",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "verifiedBy": "production-history",
+      "notes": "INVALID: SVX was introduced in 1992 (as 1992 model year)."
+    },
+    {
+      "year": 1991,
+      "make": "Subaru",
+      "model": "SVX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tiresize.com", "tirewheelguide.com", "martiniworks.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Note: tiresize.com shows 1991 but most sources say 1992 was first year. May be early release. SVX is unique - uses 5x114.3 unlike other Subarus."
+    },
+    {
+      "year": 1992,
+      "make": "Subaru",
+      "model": "SVX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com", "martiniworks.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First official year of SVX. UNIQUE: Uses 5x114.3 bolt pattern unlike other Subarus (5x100). Hub bore is 56.1mm."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 38,
+    "partial": 0,
+    "invalid": 37,
+    "highConfidence": 36,
+    "mediumConfidence": 1,
+    "lowConfidence": 0,
+    "needsReview": 1
+  },
+  "researchNotes": {
+    "batchIssues": [
+      "Batch contains 37 invalid year/model combinations where vehicles didn't exist",
+      "Mazda B3000/B4000 started 1994, not 1990",
+      "Mazda MX-6 ended 1997, not 1999",
+      "Mazda Millenia started 1995, not 1990",
+      "Mazda 929 ended 1995, not 1999",
+      "Subaru Impreza started 1993, not 1990",
+      "Subaru Outback started 1995, not 1990 (batch only had 1990-1994)",
+      "Subaru Forester started 1998 in US, not 1990 (batch only had 1990-1997)",
+      "Subaru SVX started 1992, not 1990"
+    ],
+    "missingFromBatch": [
+      "Subaru Legacy 1995-1999 - not in batch but valid",
+      "Subaru Outback 1995-1999 - not in batch but valid",
+      "Subaru Forester 1998-1999 - not in batch but valid",
+      "Subaru SVX 1993-1997 - not in batch but valid"
+    ],
+    "keyFindings": {
+      "mazdaBSeries": "Rebadged Ford Rangers. Same 5x114.3 bolt pattern, 70.5mm hub bore as Ford Ranger.",
+      "mazdaMX6": "5x114.3 bolt pattern, 67.1mm hub bore. Shared platform with Ford Probe.",
+      "mazdaMillenia": "5x114.3 bolt pattern, 67.1mm hub bore. Premium sedan.",
+      "mazda929": "5x114.3 bolt pattern, 67.1mm hub bore. Flagship sedan, discontinued 1995.",
+      "subaruImpreza": "5x100 bolt pattern, 56.1mm hub bore. 98-99 2.5RS got 16x7 +53 wheels.",
+      "subaruLegacy": "5x100 bolt pattern, 56.1mm hub bore throughout 90s.",
+      "subaruSVX": "UNIQUE - uses 5x114.3 (NOT 5x100 like other Subarus). Hub bore 56.1mm."
+    }
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "batchId": "154",
+  "validatedAt": "2026-04-21T22:59:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 34,
+    "notFoundOnSource": 28,
+    "discrepancies": 17,
+    "matches": 17
+  },
+  "notFoundOnSource": [
+    {
+      "reason": "International/regional market models - not available on tiresize.com",
+      "vehicles": [
+        { "year": 2018, "make": "toyota", "model": "yaris-r", "note": "Regional variant" },
+        { "year": 2017, "make": "toyota", "model": "yaris-r", "note": "Regional variant" },
+        { "year": 2016, "make": "toyota", "model": "yaris-r", "note": "Regional variant" },
+        { "year": 2016, "make": "toyota", "model": "zelas", "note": "Asian market only" },
+        { "year": 2015, "make": "toyota", "model": "zelas", "note": "Asian market only" },
+        { "year": 2014, "make": "toyota", "model": "zelas", "note": "Asian market only" },
+        { "year": 2013, "make": "toyota", "model": "zelas", "note": "Asian market only" },
+        { "year": 2012, "make": "toyota", "model": "zelas", "note": "Asian market only" },
+        { "year": 2011, "make": "toyota", "model": "zelas", "note": "Asian market only" },
+        { "year": 2025, "make": "toyota", "model": "zenix", "note": "Asian market only" },
+        { "year": 2024, "make": "toyota", "model": "zenix", "note": "Asian market only" },
+        { "year": 2023, "make": "toyota", "model": "zenix", "note": "Asian market only" },
+        { "year": 2015, "make": "volkswagen", "model": "clasico", "note": "Mexico market only" },
+        { "year": 2014, "make": "volkswagen", "model": "clasico", "note": "Mexico market only" },
+        { "year": 2013, "make": "volkswagen", "model": "clasico", "note": "Mexico market only" },
+        { "year": 2012, "make": "volkswagen", "model": "clasico", "note": "Mexico market only" },
+        { "year": 2011, "make": "volkswagen", "model": "clasico", "note": "Mexico market only" },
+        { "year": 2018, "make": "volkswagen", "model": "cross-lavida", "note": "China market only" },
+        { "year": 2017, "make": "volkswagen", "model": "cross-lavida", "note": "China market only" },
+        { "year": 2016, "make": "volkswagen", "model": "cross-lavida", "note": "China market only" }
+      ]
+    },
+    {
+      "reason": "Model variant not found - may need different URL format",
+      "vehicles": [
+        { "year": 2025, "make": "volkswagen", "model": "arteon-sr", "note": "Shooting Brake variant - European market" },
+        { "year": 2024, "make": "volkswagen", "model": "arteon-sr", "note": "Shooting Brake variant - European market" },
+        { "year": 2023, "make": "volkswagen", "model": "arteon-sr", "note": "Shooting Brake variant - European market" },
+        { "year": 2022, "make": "volkswagen", "model": "arteon-sr", "note": "Shooting Brake variant - European market" }
+      ]
+    },
+    {
+      "reason": "Model year does not exist (Beetle discontinued after 2019)",
+      "vehicles": [
+        { "year": 2024, "make": "volkswagen", "model": "beetle", "currentTireSizes": [], "status": "INVALID_MODEL_YEAR" },
+        { "year": 2023, "make": "volkswagen", "model": "beetle", "currentTireSizes": [], "status": "INVALID_MODEL_YEAR" },
+        { "year": 2022, "make": "volkswagen", "model": "beetle", "currentTireSizes": [], "status": "INVALID_MODEL_YEAR" },
+        { "year": 2021, "make": "volkswagen", "model": "beetle", "currentTireSizes": [], "status": "INVALID_MODEL_YEAR" },
+        { "year": 2020, "make": "volkswagen", "model": "beetle", "currentTireSizes": [], "status": "INVALID_MODEL_YEAR" }
+      ]
+    }
+  ],
+  "discrepancies": [
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "arteon",
+      "currentTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "tiresizeComSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "issues": [
+        { "type": "WIDTH_MISMATCH", "db": "255/40R19", "expected": "245/40R19" },
+        { "type": "WIDTH_MISMATCH", "db": "255/35R20", "expected": "245/35R20" }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "arteon",
+      "currentTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "tiresizeComSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "issues": [
+        { "type": "WIDTH_MISMATCH", "db": "255/40R19", "expected": "245/40R19" },
+        { "type": "WIDTH_MISMATCH", "db": "255/35R20", "expected": "245/35R20" }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "arteon",
+      "currentTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "tiresizeComSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "issues": [
+        { "type": "WIDTH_MISMATCH", "db": "255/40R19", "expected": "245/40R19" },
+        { "type": "WIDTH_MISMATCH", "db": "255/35R20", "expected": "245/35R20" }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "arteon",
+      "currentTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "tiresizeComSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "issues": [
+        { "type": "WIDTH_MISMATCH", "db": "255/40R19", "expected": "245/40R19" },
+        { "type": "WIDTH_MISMATCH", "db": "255/35R20", "expected": "245/35R20" }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "arteon",
+      "currentTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "tiresizeComSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "issues": [
+        { "type": "WIDTH_MISMATCH", "db": "255/40R19", "expected": "245/40R19" },
+        { "type": "WIDTH_MISMATCH", "db": "255/35R20", "expected": "245/35R20" }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "arteon",
+      "currentTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "tiresizeComSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "issues": [
+        { "type": "WIDTH_MISMATCH", "db": "255/40R19", "expected": "245/40R19" },
+        { "type": "WIDTH_MISMATCH", "db": "255/35R20", "expected": "245/35R20" }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "atlas",
+      "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"],
+      "tiresizeComSizes": ["255/60R18", "255/50R20", "265/45R21"],
+      "issues": [
+        { "type": "WIDTH_MISMATCH", "db": "245/60R18", "expected": "255/60R18", "note": "SE/Peak Edition trims use 255 width" }
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "atlas",
+      "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"],
+      "tiresizeComSizes": ["255/60R18", "245/60R18", "255/50R20", "265/45R21"],
+      "issues": [
+        { "type": "MISSING_SIZE", "missing": "255/60R18", "note": "Peak Edition trim" }
+      ],
+      "severity": "LOW"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "atlas",
+      "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21", "245/65R17", "255/55R19"],
+      "tiresizeComSizes": ["245/60R18", "255/50R20", "265/45R21"],
+      "issues": [
+        { "type": "EXTRA_SIZE", "extra": "245/65R17", "note": "Not found on tiresize.com - verify source" },
+        { "type": "EXTRA_SIZE", "extra": "255/55R19", "note": "Not found on tiresize.com - verify source" }
+      ],
+      "severity": "LOW"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "atlas",
+      "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21", "255/55R19", "245/65R17"],
+      "tiresizeComSizes": ["245/60R18", "255/50R20"],
+      "issues": [
+        { "type": "EXTRA_SIZE", "extra": "265/45R21", "note": "Not found for 2018 - may be aftermarket option" },
+        { "type": "EXTRA_SIZE", "extra": "255/55R19", "note": "Not found for 2018" },
+        { "type": "EXTRA_SIZE", "extra": "245/65R17", "note": "Not found for 2018" }
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "atlas-cross-sport",
+      "currentTireSizes": ["255/50R20"],
+      "tiresizeComSizes": ["245/60R18", "255/50R20", "265/45R21"],
+      "issues": [
+        { "type": "MISSING_SIZE", "missing": "245/60R18" },
+        { "type": "MISSING_SIZE", "missing": "265/45R21" }
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "beetle",
+      "currentTireSizes": ["205/55R16", "215/55R17", "235/45R18"],
+      "tiresizeComSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "issues": [
+        { "type": "SIZE_MISMATCH", "db": "205/55R16", "expected": "215/60R16" }
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "beetle",
+      "currentTireSizes": ["205/55R16", "215/55R17", "235/45R18"],
+      "tiresizeComSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "issues": [
+        { "type": "EXTRA_SIZE", "extra": "205/55R16", "note": "Not OEM for 2012 Beetle (new gen)" },
+        { "type": "MISSING_SIZE", "missing": "235/40R19", "note": "Turbo trim option" }
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2005,
+      "make": "volkswagen",
+      "model": "beetle",
+      "currentTireSizes": ["205/55R16", "215/55R17", "235/45R18"],
+      "tiresizeComSizes": ["205/55R16", "225/45R17"],
+      "issues": [
+        { "type": "SIZE_MISMATCH", "db": "215/55R17", "expected": "225/45R17" },
+        { "type": "EXTRA_SIZE", "extra": "235/45R18", "note": "Not OEM for 2005 Beetle" }
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "atlas",
+      "currentTireSizes": [],
+      "tiresizeComSizes": "NOT_CHECKED",
+      "issues": [
+        { "type": "EMPTY_DATA", "note": "No tire sizes in DB - 2017 was partial year (late introduction)" }
+      ],
+      "severity": "LOW"
+    }
+  ],
+  "matches": [
+    { "year": 2019, "make": "volkswagen", "model": "arteon", "currentTireSizes": ["245/45ZR18", "245/40ZR19", "245/35ZR20"], "tiresizeComSizes": ["245/45R18", "245/40R19", "245/35R20"], "note": "Match - Z-rating notation difference only" },
+    { "year": 2017, "make": "volkswagen", "model": "arteon", "currentTireSizes": ["245/45R18", "255/40R19", "255/35R20"], "note": "First model year - limited trims, partial match" },
+    { "year": 2018, "make": "volkswagen", "model": "arteon", "currentTireSizes": ["245/45R18", "255/40R19", "255/35R20"], "note": "First US model year - limited trims" },
+    { "year": 2025, "make": "volkswagen", "model": "atlas", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2023, "make": "volkswagen", "model": "atlas", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2022, "make": "volkswagen", "model": "atlas", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2020, "make": "volkswagen", "model": "atlas", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2019, "make": "volkswagen", "model": "atlas", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2025, "make": "volkswagen", "model": "atlas-cross-sport", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2024, "make": "volkswagen", "model": "atlas-cross-sport", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2023, "make": "volkswagen", "model": "atlas-cross-sport", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2022, "make": "volkswagen", "model": "atlas-cross-sport", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2021, "make": "volkswagen", "model": "atlas-cross-sport", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2020, "make": "volkswagen", "model": "atlas-cross-sport", "status": "MATCH", "currentTireSizes": ["245/60R18", "255/50R20", "265/45R21"] },
+    { "year": 2018, "make": "volkswagen", "model": "beetle", "status": "APPROXIMATE_MATCH", "currentTireSizes": ["205/55R16", "215/55R17", "235/45R18"], "note": "Some years shared sizes" },
+    { "year": 2017, "make": "volkswagen", "model": "beetle", "status": "APPROXIMATE_MATCH", "currentTireSizes": ["205/55R16", "215/55R17", "235/45R18"] },
+    { "year": 2016, "make": "volkswagen", "model": "beetle", "status": "APPROXIMATE_MATCH", "currentTireSizes": ["205/55R16", "215/55R17", "235/45R18"] }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "UPDATE_ARTEON_SIZES",
+      "description": "VW Arteon 2020-2025 has incorrect tire widths. Change 255/40R19 to 245/40R19 and 255/35R20 to 245/35R20 for all years.",
+      "affectedVehicles": 6
+    },
+    {
+      "priority": "HIGH",
+      "action": "UPDATE_ATLAS_CROSS_SPORT_2026",
+      "description": "2026 Atlas Cross Sport is missing 245/60R18 and 265/45R21 sizes.",
+      "affectedVehicles": 1
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "REVIEW_BEETLE_SIZES",
+      "description": "Beetle tire sizes appear to be using a single set for all years (2000-2019). Different generations had different sizes. 2012+ new gen: 215/55R17, 235/45R18, 235/40R19. Pre-2012 old gen: 205/55R16, 225/45R17.",
+      "affectedVehicles": 20
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "REMOVE_INVALID_BEETLE_YEARS",
+      "description": "Remove Beetle model years 2020-2024 as the model was discontinued in 2019.",
+      "affectedVehicles": 5
+    },
+    {
+      "priority": "LOW",
+      "action": "VERIFY_ATLAS_2018_2021_EXTRA_SIZES",
+      "description": "Atlas 2018 and 2021 have extra sizes (265/45R21, 255/55R19, 245/65R17) not found on tiresize.com. Verify if these are valid OEM or aftermarket options.",
+      "affectedVehicles": 2
+    },
+    {
+      "priority": "LOW",
+      "action": "FLAG_REGIONAL_MODELS",
+      "description": "Consider flagging/removing regional-only models not sold in US market: Toyota Yaris-R, Zelas, Zenix; VW Clasico, Cross Lavida, Arteon SR (Shooting Brake).",
+      "affectedVehicles": 24
+    }
+  ],
+  "tiresizeComData": {
+    "volkswagen_arteon": {
+      "2024": ["245/45R18", "245/40R19", "245/35R20"],
+      "2019": ["245/45R18", "245/40R19", "245/35R20"]
+    },
+    "volkswagen_atlas": {
+      "2026": ["255/60R18", "255/50R20", "265/45R21"],
+      "2024": ["255/60R18", "245/60R18", "255/50R20", "265/45R21"],
+      "2021": ["245/60R18", "255/50R20", "265/45R21"],
+      "2018": ["245/60R18", "255/50R20"]
+    },
+    "volkswagen_atlas_cross_sport": {
+      "2026": ["245/60R18", "255/50R20", "265/45R21"],
+      "2024": ["245/60R18", "255/50R20", "265/45R21"]
+    },
+    "volkswagen_beetle": {
+      "2019": ["215/60R16", "215/55R17", "235/45R18"],
+      "2012": ["215/55R17", "235/45R18", "235/40R19"],
+      "2005": ["205/55R16", "225/45R17"]
+    }
+  }
+}

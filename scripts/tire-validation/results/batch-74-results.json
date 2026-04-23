@@ -1,0 +1,1031 @@
+{
+  "batchId": "74",
+  "validatedAt": "2026-04-21T22:12:00.000Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2008,
+      "make": "Hyundai",
+      "model": "Veracruz",
+      "currentTireSizes": ["235/65R17", "245/60R18", "265/50R20"],
+      "validatedTireSizes": ["245/65R17", "245/60R18"],
+      "trims": {
+        "GLS": { "tireSize": "245/65R17", "wheelSize": "17x7.5" },
+        "Limited": { "tireSize": "245/60R18", "wheelSize": "18x7.5" },
+        "SE": { "tireSize": "245/60R18", "wheelSize": "18x7.5" }
+      },
+      "discrepancies": ["235/65R17 not OEM - should be 245/65R17", "265/50R20 is aftermarket, not OEM"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2007,
+      "make": "Hyundai",
+      "model": "Veracruz",
+      "currentTireSizes": ["235/65R17", "245/60R18", "265/50R20"],
+      "validatedTireSizes": ["245/65R17", "245/60R18"],
+      "trims": {
+        "GLS": { "tireSize": "245/65R17", "wheelSize": "17x7.5" },
+        "Limited": { "tireSize": "245/60R18", "wheelSize": "18x7.5" },
+        "SE": { "tireSize": "245/60R18", "wheelSize": "18x7.5" }
+      },
+      "discrepancies": ["235/65R17 not OEM - should be 245/65R17", "265/50R20 is aftermarket, not OEM"],
+      "status": "needs_correction"
+    },
+    {
+      "year": 2006,
+      "make": "Hyundai",
+      "model": "Veracruz",
+      "currentTireSizes": ["235/65R17", "245/60R18", "265/50R20"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "discrepancies": ["2006 Veracruz did not exist - production started in 2007 model year"],
+      "status": "invalid_year"
+    },
+    {
+      "year": 2005,
+      "make": "Hyundai",
+      "model": "XG",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/55R16"],
+      "trims": {
+        "Base": { "tireSize": "205/65R15", "wheelSize": "15x6" },
+        "L": { "tireSize": "215/55R16", "wheelSize": "16x6" }
+      },
+      "notes": "Hyundai XG sold in international markets; US market had XG350 for this year",
+      "status": "validated"
+    },
+    {
+      "year": 2004,
+      "make": "Hyundai",
+      "model": "XG",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/55R16"],
+      "trims": {
+        "Base": { "tireSize": "205/65R15", "wheelSize": "15x6" },
+        "L": { "tireSize": "215/55R16", "wheelSize": "16x6" }
+      },
+      "notes": "Hyundai XG sold in international markets; US market had XG350 for this year",
+      "status": "validated"
+    },
+    {
+      "year": 2003,
+      "make": "Hyundai",
+      "model": "XG",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/55R16"],
+      "trims": {
+        "Base": { "tireSize": "205/65R15", "wheelSize": "15x6" },
+        "L": { "tireSize": "215/55R16", "wheelSize": "16x6" }
+      },
+      "notes": "Hyundai XG sold in international markets; US market had XG350 for this year",
+      "status": "validated"
+    },
+    {
+      "year": 2002,
+      "make": "Hyundai",
+      "model": "XG",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/55R16"],
+      "trims": {
+        "Base": { "tireSize": "205/65R15", "wheelSize": "15x6" },
+        "L": { "tireSize": "215/55R16", "wheelSize": "16x6" }
+      },
+      "notes": "Hyundai XG sold in international markets; US market had XG350 for this year",
+      "status": "validated"
+    },
+    {
+      "year": 2001,
+      "make": "Hyundai",
+      "model": "XG",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/55R16"],
+      "trims": {
+        "Base": { "tireSize": "205/65R15", "wheelSize": "15x6" },
+        "L": { "tireSize": "215/55R16", "wheelSize": "16x6" }
+      },
+      "notes": "Hyundai XG sold in international markets; US market had XG300 for this year",
+      "status": "validated"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "XG",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/55R16"],
+      "trims": {
+        "Base": { "tireSize": "205/65R15", "wheelSize": "15x6" },
+        "L": { "tireSize": "215/55R16", "wheelSize": "16x6" }
+      },
+      "notes": "Hyundai XG sold in international markets only for 2000MY",
+      "status": "validated"
+    },
+    {
+      "year": 2001,
+      "make": "Hyundai",
+      "model": "XG300",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15"],
+      "trims": {
+        "Base": { "tireSize": "205/65R15", "wheelSize": "15x6" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2005,
+      "make": "Hyundai",
+      "model": "XG350",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16"],
+      "trims": {
+        "Base": { "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        "L": { "tireSize": "205/60R16", "wheelSize": "16x6.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2004,
+      "make": "Hyundai",
+      "model": "XG350",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16"],
+      "trims": {
+        "Base": { "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        "L": { "tireSize": "205/60R16", "wheelSize": "16x6.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2003,
+      "make": "Hyundai",
+      "model": "XG350",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16"],
+      "trims": {
+        "Base": { "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        "L": { "tireSize": "205/60R16", "wheelSize": "16x6.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2002,
+      "make": "Hyundai",
+      "model": "XG350",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16"],
+      "trims": {
+        "Base": { "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        "L": { "tireSize": "205/60R16", "wheelSize": "16x6.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "EX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R18", "245/45R19"],
+      "trims": {
+        "Journey AWD": { "tireSize": ["225/55R18", "245/45R19"], "wheelSize": ["18x8", "19x8"] }
+      },
+      "notes": "EX37 for 2013 model year",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "Infiniti",
+      "model": "EX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R18", "245/45R19"],
+      "trims": {
+        "AWD": { "tireSize": "225/55R18", "wheelSize": "18x8" },
+        "Base": { "tireSize": "225/55R18", "wheelSize": "18x8" },
+        "Journey": { "tireSize": ["225/55R18", "245/45R19"], "wheelSize": ["18x8", "19x8"] },
+        "Journey AWD": { "tireSize": ["225/55R18", "245/45R19"], "wheelSize": ["18x8", "19x8"] }
+      },
+      "notes": "EX35",
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "Infiniti",
+      "model": "EX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R18", "245/45R19"],
+      "trims": {
+        "AWD": { "tireSize": "225/55R18", "wheelSize": "18x8" },
+        "Base": { "tireSize": "225/55R18", "wheelSize": "18x8" },
+        "Journey": { "tireSize": ["225/55R18", "245/45R19"], "wheelSize": ["18x8", "19x8"] },
+        "Journey AWD": { "tireSize": ["225/55R18", "245/45R19"], "wheelSize": ["18x8", "19x8"] }
+      },
+      "notes": "EX35",
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "Infiniti",
+      "model": "EX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "AWD": { "tireSize": "225/60R17", "wheelSize": "17x7.5" },
+        "Base": { "tireSize": "225/60R17", "wheelSize": "17x7.5" },
+        "Journey": { "tireSize": ["225/60R17", "225/55R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "Journey AWD": { "tireSize": ["225/60R17", "225/55R18"], "wheelSize": ["17x7.5", "18x8"] }
+      },
+      "notes": "EX35",
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "Infiniti",
+      "model": "EX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "AWD": { "tireSize": "225/60R17", "wheelSize": "17x7.5" },
+        "Base": { "tireSize": "225/60R17", "wheelSize": "17x7.5" },
+        "Journey": { "tireSize": ["225/60R17", "225/55R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "Journey AWD": { "tireSize": ["225/60R17", "225/55R18"], "wheelSize": ["17x7.5", "18x8"] }
+      },
+      "notes": "EX35",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "Infiniti",
+      "model": "EX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Journey": { "tireSize": ["225/60R17", "225/55R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "Journey AWD": { "tireSize": ["225/60R17", "225/55R18"], "wheelSize": ["17x7.5", "18x8"] }
+      },
+      "notes": "EX35",
+      "status": "validated"
+    },
+    {
+      "year": 2014,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "FX renamed to QX70 for 2014 - FX did not exist in 2014",
+      "status": "invalid_year"
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "265/45R21"],
+      "trims": {
+        "FX37 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX37 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX50 AWD": { "tireSize": ["265/50R20", "265/45R21"], "wheelSize": ["20x8", "21x9"] }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "265/45R21"],
+      "trims": {
+        "FX35 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 Limited Edition": { "tireSize": "265/45R21", "wheelSize": "21x9" },
+        "FX50 AWD": { "tireSize": ["265/50R20", "265/45R21"], "wheelSize": ["20x8", "21x9"] }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "265/45R21"],
+      "trims": {
+        "FX35 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX50 AWD": { "tireSize": ["265/50R20", "265/45R21"], "wheelSize": ["20x8", "21x9"] }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "265/45R21"],
+      "trims": {
+        "FX35 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX50 AWD": { "tireSize": "265/45R21", "wheelSize": "21x9" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "265/45R21"],
+      "trims": {
+        "FX35 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX50 AWD": { "tireSize": "265/45R21", "wheelSize": "21x9" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "FX35 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX45 AWD": { "tireSize": "265/50R20", "wheelSize": "20x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "FX35 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX45 AWD": { "tireSize": "265/50R20", "wheelSize": "20x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "FX35 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX45 AWD": { "tireSize": "265/50R20", "wheelSize": "20x8" },
+        "FX45 RWD": { "tireSize": "265/50R20", "wheelSize": "20x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2005,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "FX35 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX45 AWD": { "tireSize": "265/50R20", "wheelSize": "20x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2004,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "FX35 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX45 AWD": { "tireSize": "265/50R20", "wheelSize": "20x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2003,
+      "make": "Infiniti",
+      "model": "FX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "FX35 AWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX35 RWD": { "tireSize": ["265/60R18", "265/50R20"], "wheelSize": ["18x8", "20x8"] },
+        "FX45 AWD": { "tireSize": "265/50R20", "wheelSize": "20x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "Infiniti G series ended in 2013; renamed to Q50/Q60 for 2014+",
+      "status": "invalid_year"
+    },
+    {
+      "year": 2014,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "Infiniti G series ended in 2013; renamed to Q50/Q60 for 2014+",
+      "status": "invalid_year"
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "225/50R18", "225/45R19", "245/40R19", "245/45R18"],
+      "trims": {
+        "G37 Sedan Journey": { "tireSize": ["225/55R17", "225/50R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "G37 Sedan Sport": { "tireSize": "225/50R18 front / 245/45R18 rear", "wheelSize": "18x8", "staggered": true },
+        "G37 Coupe Journey": { "tireSize": ["225/50R18", "225/45R19 front / 245/40R19 rear"], "wheelSize": ["18x8", "19x8.5"] },
+        "G37 Coupe Sport": { "tireSize": "225/45R19 front / 245/40R19 rear", "wheelSize": "19x8.5", "staggered": true },
+        "G37 Convertible": { "tireSize": "225/50R18 front / 245/45R18 rear", "wheelSize": "18x8", "staggered": true },
+        "G37 X Sedan": { "tireSize": ["225/55R17", "225/50R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "G37 IPL Coupe": { "tireSize": "225/45R19 front / 245/40R19 rear", "wheelSize": "19x8.5", "staggered": true }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "225/50R18", "225/45R19", "245/40R19", "245/45R18"],
+      "trims": {
+        "G37 Sedan Journey": { "tireSize": ["225/55R17", "225/50R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "G37 Sedan Sport": { "tireSize": "225/50R18 front / 245/45R18 rear", "wheelSize": "18x8", "staggered": true },
+        "G37 Coupe": { "tireSize": "225/50R18", "wheelSize": "18x8" },
+        "G37 Coupe Sport": { "tireSize": "225/45R19 front / 245/40R19 rear", "wheelSize": "19x8.5", "staggered": true },
+        "G25 Sedan": { "tireSize": "225/55R17", "wheelSize": "17x7.5" },
+        "G25 Sedan X": { "tireSize": "225/55R17", "wheelSize": "17x7.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "225/50R18", "225/45R19", "245/40R19", "245/45R18"],
+      "trims": {
+        "G37 Sedan Journey": { "tireSize": ["225/55R17", "225/50R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "G37 Sedan Sport": { "tireSize": "225/50R18 front / 245/45R18 rear", "wheelSize": "18x8", "staggered": true },
+        "G37 Coupe": { "tireSize": "225/50R18", "wheelSize": "18x8" },
+        "G37 Coupe Sport": { "tireSize": "225/45R19 front / 245/40R19 rear", "wheelSize": "19x8.5", "staggered": true },
+        "G25 Sedan": { "tireSize": "225/55R17", "wheelSize": "17x7.5" },
+        "G25 Sedan X": { "tireSize": "225/55R17", "wheelSize": "17x7.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "225/50R18", "225/45R19", "245/40R19", "245/45R18"],
+      "trims": {
+        "G37 Sedan": { "tireSize": "225/55R17", "wheelSize": "17x7.5" },
+        "G37 Sedan Journey": { "tireSize": ["225/55R17", "225/50R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "G37 Sedan Sport": { "tireSize": "225/50R18 front / 245/45R18 rear", "wheelSize": "18x8", "staggered": true },
+        "G37 Coupe": { "tireSize": "225/50R18", "wheelSize": "18x8" },
+        "G37 Coupe Sport": { "tireSize": "225/45R19 front / 245/40R19 rear", "wheelSize": "19x8.5", "staggered": true },
+        "G37 X Sedan": { "tireSize": ["225/55R17", "225/50R18"], "wheelSize": ["17x7.5", "18x8"] }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "225/50R18", "225/45R19", "245/40R19", "245/45R18"],
+      "trims": {
+        "G37 Sedan": { "tireSize": "225/55R17", "wheelSize": "17x7.5" },
+        "G37 Sedan Journey": { "tireSize": ["225/55R17", "225/50R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "G37 Sedan Sport": { "tireSize": "225/50R18 front / 245/45R18 rear", "wheelSize": "18x8", "staggered": true },
+        "G37 Coupe": { "tireSize": "225/50R18", "wheelSize": "18x8" },
+        "G37 Coupe Sport": { "tireSize": "225/45R19 front / 245/40R19 rear", "wheelSize": "19x8.5", "staggered": true },
+        "G37 Convertible": { "tireSize": "225/50R18 front / 245/45R18 rear", "wheelSize": "18x8", "staggered": true },
+        "G37 Convertible Sport": { "tireSize": "225/45R19 front / 245/40R19 rear", "wheelSize": "19x8.5", "staggered": true },
+        "G37 X Sedan": { "tireSize": ["225/55R17", "225/50R18"], "wheelSize": ["17x7.5", "18x8"] }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "225/50R18", "225/45R19", "245/40R19", "245/45R18"],
+      "trims": {
+        "G35 Sedan": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "G37 Sedan": { "tireSize": "225/55R17", "wheelSize": "17x7.5" },
+        "G37 Sedan Sport": { "tireSize": "225/50R18 front / 245/45R18 rear", "wheelSize": "18x8", "staggered": true },
+        "G37 Coupe": { "tireSize": "225/50R18", "wheelSize": "18x8" },
+        "G37 Coupe Sport": { "tireSize": "225/45R19 front / 245/40R19 rear", "wheelSize": "19x8.5", "staggered": true }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/50R18", "225/45R18", "245/45R18"],
+      "trims": {
+        "G35 Sedan": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "G35 Sedan Journey": { "tireSize": ["215/55R17", "225/50R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "G35 Sedan Sport": { "tireSize": "225/45R18 front / 245/45R18 rear", "wheelSize": "18x8", "staggered": true },
+        "G35 Coupe": { "tireSize": "225/50R18", "wheelSize": "18x8" },
+        "G35 Coupe Sport": { "tireSize": "225/45R18 front / 245/45R18 rear", "wheelSize": "18x8", "staggered": true },
+        "G35 X Sedan": { "tireSize": "215/55R17", "wheelSize": "17x7.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/45R18", "235/45R18"],
+      "trims": {
+        "G35 Sedan": { "tireSize": "215/55R17", "wheelSize": "17x7" },
+        "G35 Sedan Sport": { "tireSize": "225/45R18 front / 235/45R18 rear", "wheelSize": "18x7.5 front / 18x8 rear", "staggered": true },
+        "G35 Coupe": { "tireSize": "225/45R18", "wheelSize": "18x8" },
+        "G35 Coupe Sport": { "tireSize": "225/45R18 front / 235/45R18 rear", "wheelSize": "18x7.5 front / 18x8 rear", "staggered": true },
+        "G35 X Sedan": { "tireSize": "215/55R17", "wheelSize": "17x7" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2005,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/45R18", "235/45R18"],
+      "trims": {
+        "G35 Sedan": { "tireSize": "215/55R17", "wheelSize": "17x7" },
+        "G35 Sedan Sport": { "tireSize": "225/45R18 front / 235/45R18 rear", "wheelSize": "18x7.5 front / 18x8 rear", "staggered": true },
+        "G35 Coupe": { "tireSize": "225/45R18", "wheelSize": "18x8" },
+        "G35 Coupe Sport": { "tireSize": "225/45R18 front / 235/45R18 rear", "wheelSize": "18x7.5 front / 18x8 rear", "staggered": true },
+        "G35 X Sedan": { "tireSize": "215/55R17", "wheelSize": "17x7" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2004,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "235/45R18"],
+      "trims": {
+        "G35 Sedan": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "G35 Coupe": { "tireSize": "235/45R18", "wheelSize": "18x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2003,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "235/45R18"],
+      "trims": {
+        "G35 Sedan": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "G35 Coupe": { "tireSize": "235/45R18", "wheelSize": "18x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2002,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/50R16"],
+      "trims": {
+        "G20 Base": { "tireSize": "195/65R15", "wheelSize": "15x6" },
+        "G20 Touring": { "tireSize": "195/65R15", "wheelSize": "15x6" },
+        "G20 Sport": { "tireSize": "205/50R16", "wheelSize": "16x6.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2001,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/60R15", "195/65R15"],
+      "trims": {
+        "G20 Luxury": { "tireSize": ["195/60R15", "195/65R15"], "wheelSize": "15x6" },
+        "G20 Touring": { "tireSize": "195/60R15", "wheelSize": "15x6" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2000,
+      "make": "Infiniti",
+      "model": "G",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/60R15", "195/65R15"],
+      "trims": {
+        "G20 Luxury": { "tireSize": ["195/60R15", "195/65R15"], "wheelSize": "15x6" },
+        "G20 Touring": { "tireSize": "195/60R15", "wheelSize": "15x6" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2004,
+      "make": "Infiniti",
+      "model": "I",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17"],
+      "trims": {
+        "I35 Base": { "tireSize": "215/55R17", "wheelSize": "17x7" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2003,
+      "make": "Infiniti",
+      "model": "I",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/50R17"],
+      "trims": {
+        "I35 Base": { "tireSize": "215/55R17", "wheelSize": "17x7" },
+        "I35 Sport": { "tireSize": "225/50R17", "wheelSize": "17x7" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2002,
+      "make": "Infiniti",
+      "model": "I",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "225/50R17"],
+      "trims": {
+        "I35 Base": { "tireSize": "215/55R17", "wheelSize": "17x7" },
+        "I35 Sport": { "tireSize": "225/50R17", "wheelSize": "17x7" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2001,
+      "make": "Infiniti",
+      "model": "I",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "225/50R17"],
+      "trims": {
+        "I30 Base": { "tireSize": "215/55R16", "wheelSize": "16x6.5" },
+        "I30 Touring": { "tireSize": "225/50R17", "wheelSize": "17x7" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2000,
+      "make": "Infiniti",
+      "model": "I",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "225/50R17"],
+      "trims": {
+        "I30 Base": { "tireSize": "215/55R16", "wheelSize": "16x6.5" },
+        "I30 Touring": { "tireSize": "225/50R17", "wheelSize": "17x7" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2014,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "Infiniti M renamed to Q70 for 2014 model year",
+      "status": "invalid_year"
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R18", "245/40R20"],
+      "trims": {
+        "M37 Base": { "tireSize": "245/50R18", "wheelSize": "18x8" },
+        "M37 Sport": { "tireSize": "245/40R20", "wheelSize": "20x8.5" },
+        "M37 X": { "tireSize": "245/50R18", "wheelSize": "18x8" },
+        "M37 X Sport": { "tireSize": "245/40R20", "wheelSize": "20x8.5" },
+        "M56 Base": { "tireSize": "245/50R18", "wheelSize": "18x8" },
+        "M56 Sport": { "tireSize": "245/40R20", "wheelSize": "20x8.5" },
+        "M56 X": { "tireSize": "245/50R18", "wheelSize": "18x8" },
+        "M56 X Sport": { "tireSize": "245/40R20", "wheelSize": "20x8.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R18", "245/40R20"],
+      "trims": {
+        "M37 Base": { "tireSize": "245/50R18", "wheelSize": "18x8" },
+        "M37 Sport": { "tireSize": "245/40R20", "wheelSize": "20x8.5" },
+        "M37 X": { "tireSize": "245/50R18", "wheelSize": "18x8" },
+        "M56 Base": { "tireSize": "245/50R18", "wheelSize": "18x8" },
+        "M56 Sport": { "tireSize": "245/40R20", "wheelSize": "20x8.5" },
+        "M56 X": { "tireSize": "245/50R18", "wheelSize": "18x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R18", "245/40R20"],
+      "trims": {
+        "M37 Base": { "tireSize": "245/50R18", "wheelSize": "18x8" },
+        "M37 Sport": { "tireSize": "245/40R20", "wheelSize": "20x8.5" },
+        "M37 X": { "tireSize": "245/50R18", "wheelSize": "18x8" },
+        "M56 Base": { "tireSize": "245/50R18", "wheelSize": "18x8" },
+        "M56 Sport": { "tireSize": "245/40R20", "wheelSize": "20x8.5" },
+        "M56 X": { "tireSize": "245/50R18", "wheelSize": "18x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "M35 Base": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M35 Sport": { "tireSize": "245/40R19", "wheelSize": "19x8.5" },
+        "M35 X": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M45 Base": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M45 Sport": { "tireSize": "245/40R19", "wheelSize": "19x8.5" },
+        "M45 X": { "tireSize": "245/45R18", "wheelSize": "18x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "M35 Base": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M35 Sport": { "tireSize": "245/40R19", "wheelSize": "19x8.5" },
+        "M35 X": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M45 Base": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M45 Sport": { "tireSize": "245/40R19", "wheelSize": "19x8.5" },
+        "M45 X": { "tireSize": "245/45R18", "wheelSize": "18x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "M35 Luxury": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M35 Sport": { "tireSize": "245/40R19", "wheelSize": "19x8.5" },
+        "M35 X": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M45 Base": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M45 Sport": { "tireSize": "245/40R19", "wheelSize": "19x8.5" },
+        "M45 X": { "tireSize": "245/45R18", "wheelSize": "18x8" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "M35 Base": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M35 Sport": { "tireSize": "245/40R19", "wheelSize": "19x8.5" },
+        "M35 X": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M45 Base": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M45 Sport": { "tireSize": "245/40R19", "wheelSize": "19x8.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "M35 AWD": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M35 Luxury": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M35 Sport": { "tireSize": "245/40R19", "wheelSize": "19x8.5" },
+        "M45 Base": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "M45 Sport": { "tireSize": "245/40R19", "wheelSize": "19x8.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2005,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "No M35/M45 for 2005 (generation gap between 2004 M45 and 2006 M35/M45)",
+      "status": "invalid_year"
+    },
+    {
+      "year": 2004,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R18"],
+      "trims": {
+        "M45 Standard": { "tireSize": "235/45R18", "wheelSize": "18x7.5" },
+        "M45 TPMS": { "tireSize": "235/45R18", "wheelSize": "18x7.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2003,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R18"],
+      "trims": {
+        "M45 Standard": { "tireSize": "235/45R18", "wheelSize": "18x7.5" },
+        "M45 TPMS": { "tireSize": "235/45R18", "wheelSize": "18x7.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2002,
+      "make": "Infiniti",
+      "model": "M",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "No Infiniti M for 2002 model year",
+      "status": "invalid_year"
+    },
+    {
+      "year": 2021,
+      "make": "Infiniti",
+      "model": "Q30",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "225/45R18", "225/40R19"],
+      "trims": {
+        "1.5d": { "tireSize": ["205/60R16", "215/55R17"], "wheelSize": ["16x7", "17x7"] },
+        "1.6t": { "tireSize": ["215/55R17", "225/45R18"], "wheelSize": ["17x7", "18x7.5"] },
+        "2.0t": { "tireSize": ["225/45R18", "225/40R19"], "wheelSize": ["18x7.5", "19x8"] },
+        "2.2d": { "tireSize": ["215/55R17", "225/45R18"], "wheelSize": ["17x7", "18x7.5"] }
+      },
+      "notes": "European market only - not sold in USA",
+      "status": "validated"
+    },
+    {
+      "year": 2020,
+      "make": "Infiniti",
+      "model": "Q30",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "225/45R18", "225/40R19"],
+      "trims": {
+        "Base": { "tireSize": ["205/60R16", "215/55R17"], "wheelSize": ["16x7", "17x7"] },
+        "Premium": { "tireSize": ["215/55R17", "225/45R18"], "wheelSize": ["17x7", "18x7.5"] },
+        "Sport": { "tireSize": ["225/45R18", "225/40R19"], "wheelSize": ["18x7.5", "19x8"] }
+      },
+      "notes": "European market only - not sold in USA",
+      "status": "validated"
+    },
+    {
+      "year": 2019,
+      "make": "Infiniti",
+      "model": "Q30",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "225/45R18", "225/40R19"],
+      "trims": {
+        "Base": { "tireSize": ["205/60R16", "215/55R17"], "wheelSize": ["16x7", "17x7"] },
+        "Premium": { "tireSize": ["215/55R17", "225/45R18"], "wheelSize": ["17x7", "18x7.5"] },
+        "Sport": { "tireSize": ["225/45R18", "225/40R19"], "wheelSize": ["18x7.5", "19x8"] }
+      },
+      "notes": "European market only - not sold in USA",
+      "status": "validated"
+    },
+    {
+      "year": 2018,
+      "make": "Infiniti",
+      "model": "Q30",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "225/45R18", "225/40R19"],
+      "trims": {
+        "Base": { "tireSize": ["205/60R16", "215/55R17"], "wheelSize": ["16x7", "17x7"] },
+        "Premium": { "tireSize": ["215/55R17", "225/45R18"], "wheelSize": ["17x7", "18x7.5"] },
+        "Sport": { "tireSize": ["225/45R18", "225/40R19"], "wheelSize": ["18x7.5", "19x8"] }
+      },
+      "notes": "European market only - not sold in USA",
+      "status": "validated"
+    },
+    {
+      "year": 2017,
+      "make": "Infiniti",
+      "model": "Q30",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "225/45R18", "225/40R19"],
+      "trims": {
+        "Base": { "tireSize": ["205/60R16", "215/55R17"], "wheelSize": ["16x7", "17x7"] },
+        "Premium": { "tireSize": ["215/55R17", "225/45R18"], "wheelSize": ["17x7", "18x7.5"] },
+        "Sport": { "tireSize": ["225/45R18", "225/40R19"], "wheelSize": ["18x7.5", "19x8"] }
+      },
+      "notes": "European market only - not sold in USA",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "Infiniti",
+      "model": "Q30",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "225/45R18", "225/40R19"],
+      "trims": {
+        "Base": { "tireSize": ["205/60R16", "215/55R17"], "wheelSize": ["16x7", "17x7"] },
+        "Premium": { "tireSize": ["215/55R17", "225/45R18"], "wheelSize": ["17x7", "18x7.5"] },
+        "Sport": { "tireSize": ["225/45R18", "225/40R19"], "wheelSize": ["18x7.5", "19x8"] }
+      },
+      "notes": "European market only - not sold in USA",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "Infiniti",
+      "model": "Q30",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "225/45R18"],
+      "trims": {
+        "Base": { "tireSize": "205/60R16", "wheelSize": "16x7" },
+        "Premium": { "tireSize": "215/55R17", "wheelSize": "17x7" },
+        "Sport": { "tireSize": "225/45R18", "wheelSize": "18x7.5" }
+      },
+      "notes": "European market only - not sold in USA. First model year.",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "Infiniti",
+      "model": "Q45",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "trims": {
+        "Base": { "tireSize": "225/55R17", "wheelSize": "17x7.5" },
+        "Premium Package": { "tireSize": "245/45R18", "wheelSize": "18x8" },
+        "Runflat Tires": { "tireSize": "225/55R17", "wheelSize": "17x7.5" },
+        "Sport Package": { "tireSize": "245/40R19", "wheelSize": "19x8.5" }
+      },
+      "status": "validated"
+    },
+    {
+      "year": 2005,
+      "make": "Infiniti",
+      "model": "Q45",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17", "245/45R18"],
+      "trims": {
+        "Base": { "tireSize": ["225/55R17", "245/45R18"], "wheelSize": ["17x7.5", "18x8"] },
+        "Premium Package": { "tireSize": "245/45R18", "wheelSize": "18x8" }
+      },
+      "status": "validated"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "validated": 62,
+    "needsCorrection": 2,
+    "invalidYear": 11,
+    "issues": [
+      "2006 Hyundai Veracruz did not exist - production started 2007",
+      "2008/2007 Veracruz has incorrect 235/65R17 in current data - should be 245/65R17",
+      "2008/2007 Veracruz has 265/50R20 which is aftermarket, not OEM",
+      "2014 Infiniti FX renamed to QX70",
+      "2014/2015 Infiniti G series ended in 2013 - renamed to Q50/Q60",
+      "2014 Infiniti M renamed to Q70",
+      "2005 Infiniti M was a gap year between generations",
+      "2002 Infiniti M did not exist",
+      "Infiniti Q30 (2015-2021) is European market only - not sold in USA"
+    ]
+  }
+}

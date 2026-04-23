@@ -1,0 +1,2494 @@
+[
+  {
+    "id": "30fe4be9-0abc-44fc-a1c6-2db62c93fb35",
+    "year": 2018,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "8.5Jx18",
+      "9Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "265/65R18",
+      "275/55R20",
+      "265/70R17",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "9f92b4a1-af91-41cf-9c3c-47ee3c7880af",
+    "year": 2019,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "8.5Jx18",
+      "9Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "265/65R18",
+      "275/55R20",
+      "265/70R17",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "bbfdbc90-a9b5-4ee2-a522-e39d8cbf90cf",
+    "year": 2019,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22",
+      "265/70R17"
+    ],
+    "source": "inherited_from_2018_SIBLING_PLATFORM"
+  },
+  {
+    "id": "560a78f4-3038-46d6-9d4d-faa796f33644",
+    "year": 2020,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [filled from 2020 suburban]"
+  },
+  {
+    "id": "382f8a77-dafd-400d-a8ef-8c32a1d928f3",
+    "year": 2020,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2020_SIBLING_PLATFORM"
+  },
+  {
+    "id": "ea37e540-6c66-4a0a-9952-268038f5c7f8",
+    "year": 2021,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2021]"
+  },
+  {
+    "id": "a3408845-7501-4810-a91a-a09d286ecc7c",
+    "year": 2022,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2022]"
+  },
+  {
+    "id": "6ba97e52-d5fa-40bb-8e37-74634c7ea35b",
+    "year": 2023,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2023]"
+  },
+  {
+    "id": "9dfe878a-cf9d-4c8a-9ca3-12fc04cff31b",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22",
+      "275/60R20",
+      "265/65R18",
+      "275/50R22",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2024]"
+  },
+  {
+    "id": "1a9ab21e-bfbd-46fa-a2f0-3ccaa5f01d94",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2025]"
+  },
+  {
+    "id": "7bc8b2c6-0d48-4b10-b012-8fd82015980f",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2026]"
+  },
+  {
+    "id": "68121251-0f1a-459b-9e26-ce856b2f7152",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c7f3dbe6-a7b5-47a7-b71c-19bf9449b2af",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8c70123e-efce-4f31-8513-20be5db04e71",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a563036c-16c3-4def-9288-6f019a711720",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "6ecff25b-a386-44ae-b79b-53d2d1be2452",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "6f39d699-bcc9-4f53-83c0-4af840e76789",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a45293cf-eb44-4284-9399-e023f874a796",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a9bbef84-418b-4b76-8e39-4b660f0142b2",
+    "year": 2007,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "46d119f3-7f5d-42cb-b72a-7e6fe348f1f1",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "bcb02c91-bf3a-4dee-8863-0e96cc4029e7",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "df6a0471-4bd9-4682-b4aa-8fdeede36f9b",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b431c05a-174b-4343-92e5-0754b004e421",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "12322069-43da-44cc-96c3-f054fb37a998",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ad675e24-f8f3-4a7c-b0e6-2cde0ea69ab3",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "3fcdd680-77ce-445a-9fc5-3d831f7cf16d",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "suburban-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "2d9d0cad-456e-4bf9-b5e2-f39f2693b7bd",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8858b840-6701-44d0-9f12-b4cf89164be0",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f0864690-6174-41ed-9d67-7478540e10c8",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "70a890e1-974e-4f35-8b3f-236e5176af16",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1aa1b776-ae2d-4124-9494-ff8064d0970a",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "43437062-b3fa-43d7-baef-c9d55dad83ba",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "473ab5f0-eed6-4147-a8e1-0381101ff788",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b78c6666-cef9-4982-b0d3-8055a7324ee2",
+    "year": 2007,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "fee98d8b-c5b0-420d-9b86-4ff66122cd41",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8276a916-5cb7-4eaf-9294-d5db9dd58eb7",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "202c6e7e-d7e0-4f46-95e6-fd74b7272e66",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9c07dd93-7a49-48f4-bc58-8d37041c8405",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ef348c6a-8744-471a-a760-1686c8ad3cdc",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d5313753-9d02-4b47-9e36-986cd50fb298",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "suburban-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "918104d3-f6c1-46fb-9489-ec64c139c63e",
+    "year": 1992,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "ad20fc70-2c0e-4d85-86bf-0d94017878b3",
+    "year": 1993,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "ba1f5015-0df2-41f5-9b93-623a6d11dcff",
+    "year": 1994,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "9a1013b9-bf9a-4b61-bd5b-13367e7e0d01",
+    "year": 1995,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "0b11cb11-2c6e-431e-b667-6867be6d024f",
+    "year": 1996,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "a12b5f2e-fbe8-4306-a332-ae1c088f27ed",
+    "year": 1997,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "83f2dbd1-e120-47a2-8563-a1cb1426f7e1",
+    "year": 1998,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "0aaff275-0e80-4205-8343-a50cbe389244",
+    "year": 1999,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "62ca9502-f621-4d80-acc7-ad13fbc20ef3",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17"
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "bd5a11f8-b23d-49e5-9d17-2c138851e97b",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17"
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "842ba651-e40a-4783-9b63-08fbd96be77a",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17"
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "baf5ca7d-ccb0-43e8-826b-a020c3c5b5c4",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17"
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "462a4d11-ff5d-4e81-9800-8fb803c647db",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17"
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "af9ea138-8315-4439-8ef7-32fa14fac62b",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17"
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "05ac89ff-e681-4341-82bb-b47c08b1efc1",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17"
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "75828333-1bb1-4687-a7a0-57a2c02d1389",
+    "year": 2007,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20"
+    ],
+    "source": "generation_template [filled from 2009 tahoe]"
+  },
+  {
+    "id": "b21e8e9d-2886-4f5f-8364-778a8e26f6a2",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20"
+    ],
+    "source": "generation_template [filled from 2007 tahoe]"
+  },
+  {
+    "id": "f8fd8052-3a5d-409f-aa7f-29e119d4a115",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "265/70R17",
+      "265/65R18",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "759843ec-e387-4b71-8e87-26f141c77a7e",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "265/70R17",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "7f86e16a-e950-424a-a62e-279a459800ec",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "265/70R17",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "0c31c003-b4db-4d67-8a7c-fcca2bce9765",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "265/70R17",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "801ea82d-5be7-46a1-808a-1bda1062d120",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "265/70R17",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "3d8ba5b6-a37a-476c-848d-8e21787c701f",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "265/70R17",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "7bc2cb58-4315-4504-b644-0bb727f4d4f7",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2015 tahoe]"
+  },
+  {
+    "id": "db6451ca-32de-436d-ac47-f161428e51e4",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2018_SAME_GENERATION"
+  },
+  {
+    "id": "4bf5418d-459a-45f1-884e-4cdd7afff55e",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2018_SAME_GENERATION"
+  },
+  {
+    "id": "8b8e4636-bbaa-40d2-9304-5664c2b000f9",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2016 tahoe]"
+  },
+  {
+    "id": "cdca39ee-5ef5-4aa0-acdb-f40924d7ffed",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2017 tahoe]"
+  },
+  {
+    "id": "8f5e5ce8-ee7b-4f1e-9e08-b7c8dc3ddd49",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2018_SAME_GENERATION"
+  },
+  {
+    "id": "5e380d75-a37e-4196-825d-8a68f64868ba",
+    "year": 2018,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "wheelsize"
+  },
+  {
+    "id": "ee7ef3cf-7031-4ae8-88ba-fe120046e9e2",
+    "year": 2018,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2018 tahoe]"
+  },
+  {
+    "id": "e0308cd8-cefe-4eda-ada6-7d532cadc438",
+    "year": 2019,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2019 tahoe]"
+  },
+  {
+    "id": "b194f6b5-fa8d-4e0f-ab34-968b9cd23ee1",
+    "year": 2019,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2018_SAME_GENERATION"
+  },
+  {
+    "id": "ea257588-7bbf-479a-b68c-0fc1ab586446",
+    "year": 2020,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "wheelsize"
+  },
+  {
+    "id": "11c12c28-19d1-4323-ad03-f22e3fdb27b1",
+    "year": 2020,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2020 tahoe]"
+  }
+]

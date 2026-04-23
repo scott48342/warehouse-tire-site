@@ -1,0 +1,716 @@
+{
+  "batchId": "61",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "245/60R18",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "255/65R18",
+        "255/55R19",
+        "255/50R20",
+        "255/60R19",
+        "255/55R20",
+        "265/65R18",
+        "285/50R20",
+        "275/55R19"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "255/65R18",
+        "255/55R19",
+        "255/50R20",
+        "255/60R19",
+        "255/55R20",
+        "265/65R18",
+        "285/50R20",
+        "275/55R19"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "255/65R18",
+        "255/55R19",
+        "255/50R20",
+        "255/60R19",
+        "255/55R20",
+        "265/65R18",
+        "285/50R20",
+        "275/55R19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "255/65R18",
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "255/65R18",
+        "255/55R19",
+        "255/50R20",
+        "255/60R19",
+        "255/55R20",
+        "265/65R18",
+        "285/50R20",
+        "275/55R19"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "255/65R18",
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "255/65R18",
+        "255/55R19",
+        "255/50R20",
+        "255/60R19",
+        "255/55R20",
+        "265/65R18",
+        "285/50R20",
+        "275/55R19"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "255/65R18",
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "255/65R18",
+        "255/60R19",
+        "255/55R20",
+        "275/55R19",
+        "285/50R20",
+        "275/60R18"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "255/65R18",
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "acadia",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "acadia-limited",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18",
+        "265/70R17",
+        "265/65R18",
+        "275/60R20",
+        "LT285/70R17",
+        "275/50R22",
+        "LT275/65R18",
+        "LT315/70R17"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18",
+        "265/70R16",
+        "255/55R20",
+        "265/65R17",
+        "265/55R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18",
+        "265/70R16",
+        "255/55R20",
+        "265/65R17",
+        "265/55R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18",
+        "265/70R16",
+        "255/55R20",
+        "265/65R17",
+        "265/55R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "215/70R15",
+        "235/75R15",
+        "245/65R17"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "215/70R15",
+        "235/75R15",
+        "245/65R17",
+        "215/70R16",
+        "235/70R16",
+        "235/65R17",
+        "245/55R18"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "215/70R15",
+        "235/75R15",
+        "245/65R17",
+        "215/70R16",
+        "235/70R16",
+        "235/65R17",
+        "245/55R18"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "215/70R15",
+        "235/75R15",
+        "245/65R17"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "215/70R15",
+        "235/75R15",
+        "245/65R17"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "215/70R15",
+        "235/75R15",
+        "245/65R17"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "215/70R15",
+        "235/75R15",
+        "245/65R17"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "215/70R15",
+        "235/75R15",
+        "245/65R17"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "canyon",
+      "currentTireSizes": [
+        "215/70R15",
+        "235/75R15",
+        "245/65R17"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "envoy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "envoy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "envoy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "envoy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "envoy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "envoy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "envoy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "envoy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "envoy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "hummer-ev-suv",
+      "currentTireSizes": [
+        "LT305/70R18",
+        "LT305/55R22"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "gmc",
+      "model": "hummer-ev-suv",
+      "currentTireSizes": [
+        "LT305/70R18",
+        "LT305/55R22"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "hummer-ev-suv",
+      "currentTireSizes": [
+        "LT305/70R18",
+        "LT305/55R22"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "jimmy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "jimmy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "jimmy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "jimmy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "jimmy",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2014,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2013,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2012,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2011,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "savana-1500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "currentTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "currentTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "currentTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "currentTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "275/65R18",
+        "275/60R20",
+        "275/50R22"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "currentTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "currentTireSizes": [
+        "275/60R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "currentTireSizes": [
+        "255/70R17",
+        "265/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "currentTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "currentTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "275/65R18",
+        "275/60R20",
+        "275/50R22"
+      ]
+    }
+  ]
+}

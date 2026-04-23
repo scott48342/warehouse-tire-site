@@ -1,0 +1,1035 @@
+{
+  "batchId": "11",
+  "processedAt": "2026-04-21T20:55:00Z",
+  "totalVehicles": 75,
+  "successCount": 72,
+  "partialCount": 3,
+  "failedCount": 0,
+  "notes": [
+    "2001 Cadillac Escalade was NOT produced (skipped model year) - marked as invalid",
+    "CTS-V has staggered setups for most years",
+    "SLS is China-only variant of STS with same wheel specs",
+    "New EVs (Lyriq, Optiq, GT4, Escalade IQ) use unique bolt patterns"
+  ],
+  "results": [
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "cts",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 17, "width": 8.0, "offset": 48 },
+          { "diameter": 18, "width": 8.5, "offset": 48 }
+        ]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "cts",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 17, "width": 8.0, "offset": 48 },
+          { "diameter": 18, "width": 8.5, "offset": 48 }
+        ]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "cts",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.5,
+        "options": [
+          { "diameter": 16, "width": 7.0, "offset": 51 },
+          { "diameter": 17, "width": 7.5, "offset": 51 }
+        ]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "cts",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.5,
+        "options": [
+          { "diameter": 16, "width": 7.0, "offset": 51 },
+          { "diameter": 17, "width": 7.5, "offset": 51 }
+        ]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "cts",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.5,
+        "options": [
+          { "diameter": 16, "width": 7.0, "offset": 51 },
+          { "diameter": 17, "width": 7.5, "offset": 51 }
+        ]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "cadillac",
+      "model": "cts",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.5,
+        "options": [
+          { "diameter": 16, "width": 7.0, "offset": 51 },
+          { "diameter": 17, "width": 7.5, "offset": 51 }
+        ]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "cadillac",
+      "model": "cts",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.5,
+        "options": [
+          { "diameter": 16, "width": 7.0, "offset": 51 },
+          { "diameter": 17, "width": 7.5, "offset": 51 }
+        ]
+      }
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.5, "offset": 23 },
+        "rear": { "diameter": 19, "width": 10.0, "offset": 39 }
+      }
+    },
+    {
+      "year": 2018,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.5, "offset": 23 },
+        "rear": { "diameter": 19, "width": 10.0, "offset": 39 }
+      }
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.5, "offset": 23 },
+        "rear": { "diameter": 19, "width": 10.0, "offset": 39 }
+      }
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.5, "offset": 23 },
+        "rear": { "diameter": 19, "width": 10.0, "offset": 39 }
+      }
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 67.1,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.0, "offset": 51 },
+        "rear": { "diameter": 19, "width": 10.0, "offset": 40 }
+      }
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 67.1,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.0, "offset": 51 },
+        "rear": { "diameter": 19, "width": 9.5, "offset": 56 }
+      }
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 67.1,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.0, "offset": 51 },
+        "rear": { "diameter": 19, "width": 9.5, "offset": 56 }
+      }
+    },
+    {
+      "year": 2012,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 67.1,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.0, "offset": 51 },
+        "rear": { "diameter": 19, "width": 9.5, "offset": 56 }
+      }
+    },
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 67.1,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.0, "offset": 51 },
+        "rear": { "diameter": 19, "width": 9.5, "offset": 56 }
+      }
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 67.1,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.0, "offset": 51 },
+        "rear": { "diameter": 19, "width": 9.5, "offset": 56 }
+      }
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 67.1,
+        "staggered": true,
+        "front": { "diameter": 19, "width": 9.0, "offset": 51 },
+        "rear": { "diameter": 19, "width": 9.5, "offset": 56 }
+      }
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.5,
+        "staggered": false,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 51 }
+        ]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.5,
+        "staggered": false,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 51 }
+        ]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.5,
+        "staggered": false,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 51 }
+        ]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "cadillac",
+      "model": "cts-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.5,
+        "staggered": false,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 51 }
+        ]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "cadillac",
+      "model": "eldorado",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 16, "width": 7.0, "offset": 40 }
+        ]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "cadillac",
+      "model": "eldorado",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 16, "width": 7.0, "offset": 40 }
+        ]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "cadillac",
+      "model": "eldorado",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 16, "width": 7.0, "offset": 40 }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "elr",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 20, "width": 8.5, "offset": 40 }
+        ]
+      }
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "elr",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 20, "width": 8.5, "offset": 40 }
+        ]
+      }
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "elr",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 20, "width": 8.5, "offset": 40 }
+        ]
+      }
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "escalade",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 22, "width": 9.0, "offset": 28 },
+          { "diameter": 24, "width": 10.0, "offset": 31 }
+        ]
+      }
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "escalade",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 22, "width": 9.0, "offset": 28 },
+          { "diameter": 24, "width": 10.0, "offset": 31 }
+        ]
+      }
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "escalade",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 22, "width": 9.0, "offset": 28 },
+          { "diameter": 24, "width": 10.0, "offset": 31 }
+        ]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "cadillac",
+      "model": "escalade",
+      "status": "invalid",
+      "error": "2001 model year was not produced - Cadillac skipped 2001 between Gen 1 (1999-2000) and Gen 2 (2002+)"
+    },
+    {
+      "year": 2000,
+      "make": "cadillac",
+      "model": "escalade",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7.0, "offset": 31 }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "escalade-iq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 116.7,
+        "options": [
+          { "diameter": 24, "width": 9.0, "offset": 35 }
+        ]
+      }
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "escalade-iq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 116.7,
+        "options": [
+          { "diameter": 24, "width": 9.0, "offset": 35 }
+        ]
+      }
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "escalade-iq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 116.7,
+        "options": [
+          { "diameter": 24, "width": 9.0, "offset": 35 }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 22, "width": 9.0, "offset": 28 }
+        ]
+      }
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 22, "width": 9.0, "offset": 28 }
+        ]
+      }
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 22, "width": 9.0, "offset": 28 }
+        ]
+      }
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 22, "width": 9.0, "offset": 28 }
+        ]
+      }
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 22, "width": 9.0, "offset": 28 }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "gt4",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 45 },
+          { "diameter": 19, "width": 8.0, "offset": 45 }
+        ]
+      }
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "gt4",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 45 },
+          { "diameter": 19, "width": 8.0, "offset": 45 }
+        ]
+      }
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "gt4",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 45 },
+          { "diameter": 19, "width": 8.0, "offset": 45 }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "lyriq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "options": [
+          { "diameter": 20, "width": 8.5, "offset": 42 },
+          { "diameter": 22, "width": 9.0, "offset": 42 }
+        ]
+      }
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "lyriq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "options": [
+          { "diameter": 20, "width": 8.5, "offset": 42 },
+          { "diameter": 22, "width": 9.0, "offset": 42 }
+        ]
+      }
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "lyriq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "options": [
+          { "diameter": 20, "width": 8.5, "offset": 42 },
+          { "diameter": 22, "width": 9.0, "offset": 42 }
+        ]
+      }
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "lyriq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "options": [
+          { "diameter": 20, "width": 8.5, "offset": 42 },
+          { "diameter": 22, "width": 9.0, "offset": 42 }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "lyriq-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "options": [
+          { "diameter": 22, "width": 9.5, "offset": 42 }
+        ]
+      }
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "lyriq-v",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "options": [
+          { "diameter": 22, "width": 9.5, "offset": 42 }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "optiq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 20, "width": 8.0, "offset": 42 }
+        ]
+      }
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "optiq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 20, "width": 8.0, "offset": 42 }
+        ]
+      }
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "optiq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 20, "width": 8.0, "offset": 42 }
+        ]
+      }
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "optiq",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 20, "width": 8.0, "offset": 42 }
+        ]
+      }
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "optiq-v",
+      "status": "partial",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 20, "width": 8.5, "offset": 42 }
+        ]
+      },
+      "notes": "New model - specs estimated based on Optiq platform"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "optiq-v",
+      "status": "partial",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 20, "width": 8.5, "offset": 42 }
+        ]
+      },
+      "notes": "New model - specs estimated based on Optiq platform"
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "sls",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 8.0, "offset": 40 },
+          { "diameter": 18, "width": 8.5, "offset": 40 }
+        ]
+      },
+      "notes": "China-market extended wheelbase variant of STS"
+    },
+    {
+      "year": 2012,
+      "make": "cadillac",
+      "model": "sls",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 8.0, "offset": 40 },
+          { "diameter": 18, "width": 8.5, "offset": 40 }
+        ]
+      },
+      "notes": "China-market extended wheelbase variant of STS"
+    },
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "sls",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 8.0, "offset": 40 },
+          { "diameter": 18, "width": 8.5, "offset": 40 }
+        ]
+      },
+      "notes": "China-market extended wheelbase variant of STS"
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "sls",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 8.0, "offset": 40 },
+          { "diameter": 18, "width": 8.5, "offset": 40 }
+        ]
+      },
+      "notes": "China-market extended wheelbase variant of STS"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "sls",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 8.0, "offset": 40 },
+          { "diameter": 18, "width": 8.5, "offset": 40 }
+        ]
+      },
+      "notes": "China-market extended wheelbase variant of STS"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "sls",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 8.0, "offset": 40 },
+          { "diameter": 18, "width": 8.5, "offset": 40 }
+        ]
+      },
+      "notes": "China-market extended wheelbase variant of STS"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "sls",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 8.0, "offset": 40 },
+          { "diameter": 18, "width": 8.5, "offset": 40 }
+        ]
+      },
+      "notes": "China-market extended wheelbase variant of STS"
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "partial",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 53 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ]
+      },
+      "notes": "2017 is carryover - final SRX year before XT5 replaced it"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 53 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ]
+      }
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 53 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ]
+      }
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 53 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ]
+      }
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 53 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ]
+      }
+    },
+    {
+      "year": 2012,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 53 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ]
+      }
+    },
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 53 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 53 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 51 },
+          { "diameter": 18, "width": 8.0, "offset": 40 }
+        ]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 51 },
+          { "diameter": 18, "width": 8.0, "offset": 40 }
+        ]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 51 },
+          { "diameter": 18, "width": 8.0, "offset": 40 }
+        ]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "complete",
+      "wheelSpecs": {
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 18, "width": 8.0, "offset": 51 },
+          { "diameter": 18, "width": 8.0, "offset": 40 }
+        ]
+      }
+    }
+  ]
+}

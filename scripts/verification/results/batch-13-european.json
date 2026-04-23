@@ -1,0 +1,1081 @@
+{
+  "batch": "batch-13-european",
+  "verifiedAt": "2026-04-23T00:22:00Z",
+  "verifiedBy": "subagent-verify-euro-13",
+  "vehicleCount": 75,
+  "summary": {
+    "verified": 60,
+    "flagged": 10,
+    "invalidYear": 5
+  },
+  "sources": [
+    "tirewheelguide.com",
+    "tiresize.com",
+    "wikipedia.org",
+    "jdpower.com",
+    "autoevolution.com",
+    "jaguarforums.com"
+  ],
+  "flaggedVehicles": [
+    {
+      "year": 2015,
+      "make": "jaguar",
+      "model": "f-pace",
+      "reason": "INVALID_YEAR",
+      "notes": "F-Pace production started 2016 (sold as 2017 MY in US). 2015 does not exist."
+    },
+    {
+      "year": 2016,
+      "make": "jaguar",
+      "model": "f-pace",
+      "reason": "INVALID_YEAR",
+      "notes": "F-Pace first sold in US as 2017 MY. 2016 MY does not exist for US market."
+    },
+    {
+      "year": 2007,
+      "make": "jaguar",
+      "model": "xf",
+      "reason": "INVALID_YEAR",
+      "notes": "XF deliveries started March 2008. 2007 model year does not exist."
+    },
+    {
+      "year": 2008,
+      "make": "jaguar",
+      "model": "xf",
+      "reason": "INVALID_YEAR",
+      "notes": "XF first US model year was 2009. 2008 MY may only exist in EU."
+    },
+    {
+      "year": 2000,
+      "make": "land-rover",
+      "model": "defender",
+      "reason": "INVALID_YEAR",
+      "notes": "Defender was last sold in North America in 1997. Not available 1998-2019."
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "xj",
+      "reason": "INVALID_YEAR",
+      "notes": "XJ production ended July 2019. 2020+ model years do not exist."
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "xj",
+      "reason": "INVALID_YEAR",
+      "notes": "XJ production ended July 2019. 2021 model year does not exist."
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "xj",
+      "reason": "INVALID_YEAR",
+      "notes": "XJ production ended July 2019. 2022 model year does not exist."
+    },
+    {
+      "year": 2001,
+      "make": "jaguar",
+      "model": "x-type",
+      "reason": "VERIFY_US_MARKET",
+      "notes": "X-Type 2001 may be EU-only. US sales started 2002 MY."
+    },
+    {
+      "year": 2018,
+      "make": "jaguar",
+      "model": "i-pace",
+      "reason": "VERIFY_US_MARKET",
+      "notes": "I-Pace US deliveries started October 2018. 2018 may technically exist but 2019 was primary first MY."
+    }
+  ],
+  "vehicles": [
+    {
+      "year": 2018,
+      "make": "Jaguar",
+      "model": "E-Pace",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "235/65R17"},
+        {"name": "S", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "SE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "R-Dynamic", "oemWheelSize": "20x8", "oemTireSize": "245/45R20"},
+        {"name": "First Edition", "oemWheelSize": "20x8", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2019,
+      "make": "Jaguar",
+      "model": "E-Pace",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "225/65R17"},
+        {"name": "S", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "SE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "R-Dynamic", "oemWheelSize": "20x8", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "E-Pace",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "SE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "R-Dynamic", "oemWheelSize": "20x8", "oemTireSize": "235/50R20"},
+        {"name": "Checkered Flag", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": "Facelift model year with X540 chassis"
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "E-Pace",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "SE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "300 Sport", "oemWheelSize": "20x8", "oemTireSize": "235/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2022,
+      "make": "Jaguar",
+      "model": "E-Pace",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "SE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "300 Sport", "oemWheelSize": "20x8", "oemTireSize": "235/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": null
+    },
+    {
+      "year": 2024,
+      "make": "Jaguar",
+      "model": "E-Pace",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": null
+    },
+    {
+      "year": 2025,
+      "make": "Jaguar",
+      "model": "E-Pace",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": null
+    },
+    {
+      "year": 2013,
+      "make": "Jaguar",
+      "model": "F-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "3.0 V6", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "245/45R18/275/40R18"},
+        {"name": "3.0 V6 S", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "245/40R19/275/35R19"},
+        {"name": "5.0 V8 S", "oemWheelSize": "20x9/20x10.5", "oemTireSize": "255/35R20/295/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "jaguarforums.com"],
+      "notes": "F-Type has STAGGERED wheel setup (different front/rear sizes)"
+    },
+    {
+      "year": 2018,
+      "make": "Jaguar",
+      "model": "I-Pace",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "S", "oemWheelSize": "18x7.5", "oemTireSize": "235/65R18"},
+        {"name": "SE", "oemWheelSize": "20x8", "oemTireSize": "245/50R20"},
+        {"name": "HSE", "oemWheelSize": "22x8.5", "oemTireSize": "255/40R22"}
+      ],
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"],
+      "notes": "US deliveries started Oct 2018. May be sold as 2019 MY."
+    },
+    {
+      "year": 2024,
+      "make": "Jaguar",
+      "model": "I-Pace",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "EV400", "oemWheelSize": "20x8", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "I-Pace discontinued in 2024. May be final year."
+    },
+    {
+      "year": 2025,
+      "make": "Jaguar",
+      "model": "I-Pace",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "EV400", "oemWheelSize": "20x8", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "low",
+      "sources": ["tirewheelguide.com"],
+      "notes": "VERIFY - I-Pace was discontinued in 2024. 2025 MY may not exist."
+    },
+    {
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "16x7.5", "oemTireSize": "225/55R16"},
+        {"name": "4.0", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2001,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "16x7.5", "oemTireSize": "225/55R16"},
+        {"name": "4.0", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "16x7.5", "oemTireSize": "225/55R16"},
+        {"name": "4.0", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"},
+        {"name": "R", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "16x7.5", "oemTireSize": "225/55R16"},
+        {"name": "4.2", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"},
+        {"name": "R", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "16x7.5", "oemTireSize": "225/55R16"},
+        {"name": "4.2", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"},
+        {"name": "R", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "2.5", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "3.0", "oemWheelSize": "16x7.5", "oemTireSize": "225/55R16"},
+        {"name": "4.2", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"},
+        {"name": "R", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "16x7.5", "oemTireSize": "225/55R16"},
+        {"name": "4.2", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"},
+        {"name": "R", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "16x7.5", "oemTireSize": "225/55R16"},
+        {"name": "4.2", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "16x7.5", "oemTireSize": "225/55R16"},
+        {"name": "4.2", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of S-Type production"
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "2.5", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16"},
+        {"name": "3.0", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "First year in US market"
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "2.5", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16"},
+        {"name": "3.0", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "2.5", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16"},
+        {"name": "3.0", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "2.5", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"},
+        {"name": "3.0", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"},
+        {"name": "VDP", "oemWheelSize": "18x7.5", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "2.5", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"},
+        {"name": "3.0", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "2.5", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"},
+        {"name": "3.0", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "2.5", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"},
+        {"name": "3.0", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year in US market"
+    },
+    {
+      "year": 2009,
+      "make": "Jaguar",
+      "model": "XF",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Premium", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"},
+        {"name": "Supercharged", "oemWheelSize": "20x8.5", "oemTireSize": "255/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "First US model year (X250 generation)"
+    },
+    {
+      "year": 2012,
+      "make": "Jaguar",
+      "model": "XF",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Portfolio", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"},
+        {"name": "XFR", "oemWheelSize": "20x8.5", "oemTireSize": "255/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2014,
+      "make": "Jaguar",
+      "model": "XF",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Premium", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"},
+        {"name": "XFR-S", "oemWheelSize": "20x9", "oemTireSize": "265/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2017,
+      "make": "Jaguar",
+      "model": "XF",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "25t", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "35t", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "S", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "X260 generation (second gen)"
+    },
+    {
+      "year": 2019,
+      "make": "Jaguar",
+      "model": "XF",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "25t", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "30t", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "XF",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "P250", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "P300", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "XF",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "P250", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "P300", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2023,
+      "make": "Jaguar",
+      "model": "XF",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "P250", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "P300", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2025,
+      "make": "Jaguar",
+      "model": "XF",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "P250", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com"],
+      "notes": "Verify XF is still in production for 2025"
+    },
+    {
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x120.65",
+      "hubBore": 73.8,
+      "trims": [
+        {"name": "XJ8", "oemWheelSize": "16x7", "oemTireSize": "225/60R16"},
+        {"name": "XJ8 L", "oemWheelSize": "17x7", "oemTireSize": "225/55R17"},
+        {"name": "XJR", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "jaguarforums.com"],
+      "notes": "X308 generation - DIFFERENT BOLT PATTERN than later XJ (5x120.65 vs 5x108)"
+    },
+    {
+      "year": 2001,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x120.65",
+      "hubBore": 73.8,
+      "trims": [
+        {"name": "XJ8", "oemWheelSize": "16x7", "oemTireSize": "225/60R16"},
+        {"name": "XJ8 L", "oemWheelSize": "17x7", "oemTireSize": "225/55R17"},
+        {"name": "XJR", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "X308 generation"
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x120.65",
+      "hubBore": 73.8,
+      "trims": [
+        {"name": "XJ8", "oemWheelSize": "16x7", "oemTireSize": "225/60R16"},
+        {"name": "XJ8 L", "oemWheelSize": "17x7", "oemTireSize": "225/55R17"},
+        {"name": "XJR", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Super V8", "oemWheelSize": "17x8", "oemTireSize": "245/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of X308 generation"
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "XJ8", "oemWheelSize": "17x7.5", "oemTireSize": "235/55R17"},
+        {"name": "XJ8 L", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "XJR", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "NEW X350 generation - BOLT PATTERN CHANGED to 5x108"
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "XJ8", "oemWheelSize": "17x7.5", "oemTireSize": "235/55R17"},
+        {"name": "XJ8 L", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "XJR", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "XJ8", "oemWheelSize": "17x7.5", "oemTireSize": "235/55R17"},
+        {"name": "XJ8 L", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "XJR", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"},
+        {"name": "Super V8", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "XJ8", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "XJ8 L", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "XJR", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "XJ8", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "XJ8 L", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "XJR", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "XJ8", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "XJ8 L", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "XJR", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"},
+        {"name": "Super V8", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2009,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "XJ8 L", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "XJR", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of X358 generation"
+    },
+    {
+      "year": 2010,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x9/19x10", "oemTireSize": "245/45R19/275/40R19"},
+        {"name": "Supercharged", "oemWheelSize": "20x9/20x10", "oemTireSize": "245/40R20/275/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "NEW X351 generation - STAGGERED wheel setup"
+    },
+    {
+      "year": 2011,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x9/19x10", "oemTireSize": "245/45R19/275/40R19"},
+        {"name": "Supercharged", "oemWheelSize": "20x9/20x10", "oemTireSize": "245/40R20/275/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2012,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x9/19x10", "oemTireSize": "245/45R19/275/40R19"},
+        {"name": "Supercharged", "oemWheelSize": "20x9/20x10", "oemTireSize": "245/40R20/275/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2013,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x9/19x10", "oemTireSize": "245/45R19/275/40R19"},
+        {"name": "Supercharged", "oemWheelSize": "20x9/20x10", "oemTireSize": "245/40R20/275/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2014,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x9/19x10", "oemTireSize": "245/45R19/275/40R19"},
+        {"name": "Supercharged", "oemWheelSize": "20x9/20x10", "oemTireSize": "245/40R20/275/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2015,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x9/19x10", "oemTireSize": "245/45R19/275/40R19"},
+        {"name": "Supercharged", "oemWheelSize": "20x9/20x10", "oemTireSize": "245/40R20/275/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2016,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x9/19x10", "oemTireSize": "245/45R19/275/40R19"},
+        {"name": "Supercharged", "oemWheelSize": "20x9/20x10", "oemTireSize": "245/40R20/275/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2017,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x9/19x10", "oemTireSize": "245/45R19/275/40R19"},
+        {"name": "Supercharged", "oemWheelSize": "20x9/20x10", "oemTireSize": "245/40R20/275/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2018,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XJ R-Sport", "oemWheelSize": "19x9/19x10", "oemTireSize": "245/45R19/275/40R19"},
+        {"name": "XJR575", "oemWheelSize": "20x9/20x10", "oemTireSize": "245/40R20/275/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2019,
+      "make": "Jaguar",
+      "model": "XJ",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XJ R-Sport", "oemWheelSize": "19x9/19x10", "oemTireSize": "245/45R19/275/40R19"},
+        {"name": "XJR575", "oemWheelSize": "20x9/20x10", "oemTireSize": "245/40R20/275/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "FINAL YEAR - XJ production ended July 2019"
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "XK",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XK", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "245/45R18/275/40R18"},
+        {"name": "XKR", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "245/40R19/275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "X150 generation - STAGGERED setup"
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "XK",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XK", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "245/45R18/275/40R18"},
+        {"name": "XKR", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "245/40R19/275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2009,
+      "make": "Jaguar",
+      "model": "XK",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XK", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "245/45R18/275/40R18"},
+        {"name": "XKR", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "245/40R19/275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2010,
+      "make": "Jaguar",
+      "model": "XK",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XK", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "245/40R19/275/35R19"},
+        {"name": "XKR", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2011,
+      "make": "Jaguar",
+      "model": "XK",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XK", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "245/40R19/275/35R19"},
+        {"name": "XKR", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2012,
+      "make": "Jaguar",
+      "model": "XK",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XK", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "245/40R19/275/35R19"},
+        {"name": "XKR", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "XKR-S", "oemWheelSize": "20x9.5/20x10.5", "oemTireSize": "265/35R20/295/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2013,
+      "make": "Jaguar",
+      "model": "XK",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XK", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "245/40R19/275/35R19"},
+        {"name": "XKR", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "XKR-S", "oemWheelSize": "20x9.5/20x10.5", "oemTireSize": "265/35R20/295/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2014,
+      "make": "Jaguar",
+      "model": "XK",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XK", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "245/40R19/275/35R19"},
+        {"name": "XKR", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": null
+    },
+    {
+      "year": 2015,
+      "make": "Jaguar",
+      "model": "XK",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "isStaggered": true,
+      "trims": [
+        {"name": "XK", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "245/40R19/275/35R19"},
+        {"name": "XKR", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "FINAL YEAR - XK production ended 2015"
+    }
+  ],
+  "criticalFindings": [
+    {
+      "issue": "XJ_BOLT_PATTERN_CHANGE",
+      "description": "Jaguar XJ changed bolt pattern in 2003. X308 (1997-2002) uses 5x120.65 with 73.8mm hub bore. X350/X351 (2003+) uses 5x108 with 63.4mm hub bore.",
+      "affectedYears": "2000, 2001, 2002 vs 2003+"
+    },
+    {
+      "issue": "STAGGERED_VEHICLES",
+      "description": "Several Jaguar models have staggered wheel setups (different front/rear sizes)",
+      "affectedModels": ["F-Type", "XJ (2010+)", "XK"]
+    },
+    {
+      "issue": "INVALID_MODEL_YEARS",
+      "description": "Multiple vehicles in batch have invalid/non-existent model years",
+      "count": 8,
+      "vehicles": [
+        "F-Pace 2015 (doesn't exist)",
+        "F-Pace 2016 (US MY was 2017)",
+        "XF 2007 (doesn't exist)",
+        "XF 2008 (EU only, not US)",
+        "XJ 2020 (production ended 2019)",
+        "XJ 2021 (doesn't exist)",
+        "XJ 2022 (doesn't exist)",
+        "Land Rover Defender 2000 (not sold in US 1998-2019)"
+      ]
+    }
+  ]
+}

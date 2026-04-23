@@ -1,0 +1,481 @@
+{
+  "batchId": 6,
+  "completedAt": "2026-04-21T23:45:00Z",
+  "source": "tiresize.com",
+  "results": [
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "x1",
+      "notUS": true,
+      "notes": "BMW X1 E84 was not sold in US until 2012 model year"
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "x1",
+      "wheelSizes": [17, 18, 19],
+      "tireSizes": [
+        { "front": "225/50R17", "rear": "225/50R17", "wheelDiameter": 17 },
+        { "front": "225/45R18", "rear": "225/45R18", "wheelDiameter": 18 },
+        { "front": "225/45R18", "rear": "255/40R18", "wheelDiameter": 18, "staggered": true, "trim": "M Sport" },
+        { "front": "225/40R19", "rear": "255/35R19", "wheelDiameter": 19, "staggered": true, "trim": "M Sport" }
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "x1",
+      "wheelSizes": [17, 18, 19],
+      "tireSizes": [
+        { "front": "225/50R17", "rear": "225/50R17", "wheelDiameter": 17 },
+        { "front": "225/45R18", "rear": "225/45R18", "wheelDiameter": 18 },
+        { "front": "225/45R18", "rear": "255/40R18", "wheelDiameter": 18, "staggered": true, "trim": "M Sport" },
+        { "front": "225/40R19", "rear": "255/35R19", "wheelDiameter": 19, "staggered": true, "trim": "M Sport" }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "x1",
+      "notUS": false,
+      "noData": true,
+      "notes": "Future model year - no OEM data available yet"
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "x2",
+      "notUS": true,
+      "notes": "BMW X2 was not sold in US until 2018 model year"
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "x2",
+      "notUS": false,
+      "noData": true,
+      "notes": "Future model year - no OEM data available yet"
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "x3-m",
+      "notUS": true,
+      "notes": "BMW X3 M was not sold in US until 2020 model year"
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "x3-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "255/45R20", "rear": "265/45R20", "wheelDiameter": 20, "staggered": true }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "x3-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "255/45R20", "rear": "265/45R20", "wheelDiameter": 20, "staggered": true }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "x3-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "255/45R20", "rear": "265/45R20", "wheelDiameter": 20, "staggered": true }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "x3-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "255/45R20", "rear": "265/45R20", "wheelDiameter": 20, "staggered": true }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x3-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "255/45R20", "rear": "265/45R20", "wheelDiameter": 20, "staggered": true }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "x4",
+      "notUS": false,
+      "noData": true,
+      "notes": "Future model year - no OEM data available yet"
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "x4-m",
+      "notUS": true,
+      "notes": "BMW X4 M was not sold in US until 2020 model year"
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "x4-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "255/45R20", "rear": "265/45R20", "wheelDiameter": 20, "staggered": true }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "x4-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "255/45R20", "rear": "265/45R20", "wheelDiameter": 20, "staggered": true }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "x4-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "255/45R20", "rear": "265/45R20", "wheelDiameter": 20, "staggered": true }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "x4-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "255/45R20", "rear": "265/45R20", "wheelDiameter": 20, "staggered": true }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x4-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "255/45R20", "rear": "265/45R20", "wheelDiameter": 20, "staggered": true }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "x4-m",
+      "notUS": false,
+      "noData": true,
+      "notes": "Future model year - no OEM data available yet"
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "x4-m",
+      "notUS": false,
+      "noData": true,
+      "notes": "Future model year - no OEM data available yet"
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E70 generation first year (late 2009 launch)"
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E70 generation"
+    },
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E70 generation"
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E70 generation"
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E70 generation final year"
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "x5-m",
+      "notUS": true,
+      "notes": "Gap year between E70 and F85 generations - no X5 M produced"
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "285/40R20", "rear": "325/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "F85 generation first year"
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "285/40R20", "rear": "325/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "F85 generation"
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "285/40R20", "rear": "325/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "F85 generation"
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "285/40R20", "rear": "325/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "F85 generation final year"
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "x5-m",
+      "notUS": true,
+      "notes": "Gap year between F85 and F95 generations - no X5 M produced"
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [21],
+      "tireSizes": [
+        { "front": "295/35R21", "rear": "315/35R21", "wheelDiameter": 21, "staggered": true }
+      ],
+      "notes": "F95 generation first year"
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [21],
+      "tireSizes": [
+        { "front": "295/35R21", "rear": "315/35R21", "wheelDiameter": 21, "staggered": true }
+      ],
+      "notes": "F95 generation"
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [21],
+      "tireSizes": [
+        { "front": "295/35R21", "rear": "315/35R21", "wheelDiameter": 21, "staggered": true }
+      ],
+      "notes": "F95 generation"
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [21],
+      "tireSizes": [
+        { "front": "295/35R21", "rear": "315/35R21", "wheelDiameter": 21, "staggered": true }
+      ],
+      "notes": "F95 generation"
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x5-m",
+      "wheelSizes": [21],
+      "tireSizes": [
+        { "front": "295/35R21", "rear": "315/35R21", "wheelDiameter": 21, "staggered": true }
+      ],
+      "notes": "F95 generation"
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "x5-m",
+      "notUS": false,
+      "noData": true,
+      "notes": "Future model year - assume same as 2024 (F95 generation)"
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "x5-m",
+      "notUS": false,
+      "noData": true,
+      "notes": "Future model year - no OEM data available yet"
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E71 generation first year (September 2009 launch)"
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E71 generation"
+    },
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E71 generation"
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E71 generation"
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E71 generation"
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20],
+      "tireSizes": [
+        { "front": "275/40R20", "rear": "315/35R20", "wheelDiameter": 20, "staggered": true }
+      ],
+      "notes": "E71 generation final year"
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20, 21],
+      "tireSizes": [
+        { "front": "285/40R20", "rear": "325/35R20", "wheelDiameter": 20, "staggered": true },
+        { "front": "285/35R21", "rear": "325/30R21", "wheelDiameter": 21, "staggered": true, "trim": "optional" }
+      ],
+      "notes": "F86 generation first year"
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20, 21],
+      "tireSizes": [
+        { "front": "285/40R20", "rear": "325/35R20", "wheelDiameter": 20, "staggered": true },
+        { "front": "285/35R21", "rear": "325/30R21", "wheelDiameter": 21, "staggered": true, "trim": "optional" }
+      ],
+      "notes": "F86 generation"
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20, 21],
+      "tireSizes": [
+        { "front": "285/40R20", "rear": "325/35R20", "wheelDiameter": 20, "staggered": true },
+        { "front": "285/35R21", "rear": "325/30R21", "wheelDiameter": 21, "staggered": true, "trim": "optional" }
+      ],
+      "notes": "F86 generation"
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20, 21],
+      "tireSizes": [
+        { "front": "285/40R20", "rear": "325/35R20", "wheelDiameter": 20, "staggered": true },
+        { "front": "285/35R21", "rear": "325/30R21", "wheelDiameter": 21, "staggered": true, "trim": "optional" }
+      ],
+      "notes": "F86 generation"
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "x6-m",
+      "wheelSizes": [20, 21],
+      "tireSizes": [
+        { "front": "285/40R20", "rear": "325/35R20", "wheelDiameter": 20, "staggered": true },
+        { "front": "285/35R21", "rear": "325/30R21", "wheelDiameter": 21, "staggered": true, "trim": "optional" }
+      ],
+      "notes": "F86 generation final year"
+    }
+  ],
+  "summary": {
+    "total": 50,
+    "withData": 38,
+    "notUS": 6,
+    "noData": 6,
+    "staggeredSetups": 38
+  }
+}

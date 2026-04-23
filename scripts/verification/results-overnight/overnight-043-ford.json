@@ -1,0 +1,1160 @@
+{
+  "batchId": "overnight-043-ford",
+  "verifiedAt": "2026-04-23T02:25:00.000Z",
+  "summary": {
+    "total": 75,
+    "verified": 26,
+    "flagged": 37,
+    "invalid": 12
+  },
+  "sources": [
+    "tirewheelguide.com",
+    "performanceplustire.com",
+    "ahgautoservice.com",
+    "fordmasterx.com",
+    "boltpatternhq.com"
+  ],
+  "findings": {
+    "criticalIssues": [
+      {
+        "issue": "1997-1998 F-350 bolt pattern WRONG",
+        "details": "Data shows 8x170 but these years used 8x165.1. Ford Super Duty with 8x170 started in 1999. The 1997-1998 F-350 was still the old body style.",
+        "affectedVehicles": 6,
+        "severity": "INVALID"
+      },
+      {
+        "issue": "1988-1996 F-350 tire sizes WRONG",
+        "details": "Tire sizes show modern 17/18/20 inch sizes (LT245/75R17, LT265/70R17, etc.) but this era only had 16 inch wheels. Correct sizes: LT215/85R16, LT235/85R16",
+        "affectedVehicles": 31,
+        "severity": "FLAGGED"
+      }
+    ],
+    "notes": [
+      "2023-2026 F-250 Super Duty: Bolt pattern (8x170), hub bore (124.9mm) verified correct",
+      "Ford Super Duty 8x170 bolt pattern confirmed starting 1999 model year",
+      "1988-1997 Ford F-350 used 8x165.1 (8x6.5 inch) bolt pattern",
+      "Some 'generation_inherit' entries inherited incorrect modern tire sizes for older vehicles"
+    ]
+  },
+  "vehicles": [
+    {
+      "id": "2c6dda51-3f51-46e4-b847-5d42cdde6641",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Tremor",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 18}], "valid": true, "notes": "Tremor comes with 18\" wheels standard" },
+        "tireSizes": { "valid": true, "notes": "LT tire sizes appropriate for Super Duty" }
+      }
+    },
+    {
+      "id": "b642b934-7971-43e0-8f73-d238d07d1a3d",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Platinum",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true, "notes": "Platinum comes with 20\" wheels standard" },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "ed1184ca-c5ea-4c31-8ba5-2455f711c164",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 18}], "valid": true, "notes": "XLT typically has 18\" wheels" },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "c1f055ae-f1c0-43a8-8bac-f846f22231fe",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": true, "notes": "Multiple wheel sizes (17/18/20) available for Lariat" },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "9609b022-bc93-4113-aa13-db8ee1ead3c3",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true, "notes": "King Ranch comes with 20\" wheels standard" },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "13ae36ee-2a84-4677-a496-c0df0c524d22",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "783d99f5-cebb-44f9-bac2-617af85a9ae3",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Platinum",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "9a502927-fdef-4164-920d-6bb21b4e33f7",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7.5, "diameter": 17}], "valid": true, "notes": "XL base trim has 17\" wheels" },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "3180af12-d988-413c-a819-1b17d61001f4",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 18}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "3858d07d-e77a-4318-a8eb-9132e2caee57",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Limited",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true, "notes": "Limited top trim has 20\" wheels" },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "4538682a-64c0-4098-92af-7e21f69baf1f",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Tremor",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 18}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "54f31749-0cf1-4c60-8690-b3e1b43264c3",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Tremor",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 18}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "318293cd-9b1a-4453-b233-a367bec6ed85",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 18}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "f74fdb25-3dff-4bdb-88e9-098f3cf5a460",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Limited",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "b3bd31b4-6ccf-4597-828a-1176ae2bed1b",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7.5, "diameter": 17}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "ba28ad55-d054-4053-8e8c-913e8ea63157",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "13b93933-cd4c-410a-b99e-0046d4e68724",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "ff0ee5dd-e940-4a5a-b1e1-4e8faac8450e",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Platinum",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "ab059fef-a84d-4e16-9d99-1938eefddc69",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Platinum",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "e1e6bb2c-4143-4a18-b8c1-87a5185d29ea",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "6.7D HO",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": true, "notes": "Multiple wheel sizes (17/18/20) correct for diesel variant" },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "b1f2f8b5-3cc7-461f-a0c5-2368c7fc5407",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 18}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "41cb97b1-d53b-42c4-ac0a-b8e4949a94ff",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Tremor",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 18}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "660d7b2f-1d3c-4481-86c5-616015bc5176",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Limited",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "97ae3f05-0be6-4174-9fc1-180025aa6d08",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "a1b4a1e8-157e-47c2-8a4c-a747edb54d91",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 20}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "150aeed2-89cd-4847-aea9-a12540ce1a83",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "verified",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7.5, "diameter": 17}], "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "c04e4a80-c602-475a-bcfb-4ccb761d00ae",
+      "year": 1988,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": ["16x6", "16x7"], "valid": true, "notes": "16\" wheel sizes correct for era" },
+        "tireSizes": { "current": ["LT215/85R16", "LT235/85R16"], "valid": true, "notes": "16\" tire sizes correct for this generation" }
+      },
+      "notes": "Good data from 80s-research-batch source"
+    },
+    {
+      "id": "26f4c563-1d9b-461a-a200-846a5423bd40",
+      "year": 1988,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "current": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R18", "LT275/65R20"], "valid": false, "expected": ["LT215/85R16", "LT235/85R16"], "notes": "WRONG: Inherited modern tire sizes. 1988 F-350 only had 16\" tires" }
+      },
+      "issues": ["Tire sizes inherited from wrong generation - need 16\" sizes only"]
+    },
+    {
+      "id": "cd376408-8e9a-4069-adc6-548ec86e6549",
+      "year": 1988,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false, "expected": ["LT215/85R16", "LT235/85R16"], "notes": "WRONG: Has modern 17/18/20 inch tire sizes" }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "83cf2a78-641b-450b-92a1-175bf4897a60",
+      "year": 1988,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false, "expected": ["LT215/85R16", "LT235/85R16"] }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "570b0fec-0a6d-4fca-817a-4886866180bc",
+      "year": 1989,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false, "expected": ["LT215/85R16", "LT235/85R16"] }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "12f714fd-43fc-40cd-9e41-5c810257e2ee",
+      "year": 1989,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false, "expected": ["LT215/85R16", "LT235/85R16"] }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "b6d8aef1-caa2-4630-bfc3-4a4d7e7835a2",
+      "year": 1989,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false, "expected": ["LT215/85R16", "LT235/85R16"] }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "9f483d17-780a-43a1-8e73-aa589fa1fa02",
+      "year": 1989,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": ["16x6", "16x7"], "valid": true },
+        "tireSizes": { "current": ["LT215/85R16", "LT235/85R16"], "valid": true }
+      },
+      "notes": "Good data from 80s-research-batch source"
+    },
+    {
+      "id": "08fcc8fd-3816-4b95-9aca-08cb138789da",
+      "year": 1990,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": ["7Jx16", "8Jx16"], "valid": true },
+        "tireSizes": { "current": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "valid": true, "notes": "Tire sizes correct for this generation" }
+      },
+      "notes": "Good data from api_import source"
+    },
+    {
+      "id": "8be08752-6f21-4243-bb3d-3cb7b1327b38",
+      "year": 1990,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false, "expected": ["LT215/85R16", "LT235/85R16", "LT225/75R16", "LT245/75R16", "LT265/75R16"] }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "84c419c3-f683-4ac6-8bed-8b63a82f3b74",
+      "year": 1990,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "620f91d4-b66c-4e76-998c-566e36c259de",
+      "year": 1990,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "3c7fcd1d-8234-4abd-b9a4-ce42643946a8",
+      "year": 1991,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "c9112a13-70d7-4dd0-9a09-eb41e7ce3746",
+      "year": 1991,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "59b0f6a5-172c-4538-94e1-ae42004e782c",
+      "year": 1991,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "bb86f3f8-2169-48e1-82df-f984826c4d63",
+      "year": 1991,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": ["7Jx16", "8Jx16"], "valid": true },
+        "tireSizes": { "current": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "valid": true }
+      },
+      "notes": "Good data from api_import source"
+    },
+    {
+      "id": "c98cf4eb-6389-4ec7-a6ec-f1c7a07c3b5d",
+      "year": 1992,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": ["7Jx16", "8Jx16"], "valid": true },
+        "tireSizes": { "current": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "valid": true }
+      },
+      "notes": "Good data from api_import source"
+    },
+    {
+      "id": "f128b369-ead9-436d-886a-a947ae2f0d4a",
+      "year": 1992,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "ccb80a1c-0d1b-448c-ba6c-efc9b30eddd4",
+      "year": 1992,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "d8974188-4464-4444-b06e-cdad26c7c92c",
+      "year": 1992,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "52ad7d73-f6b4-4deb-a223-2dfa8a1e10d9",
+      "year": 1993,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "ae2e50ec-f60a-4ec5-955e-fce93b4f36cb",
+      "year": 1993,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "38c7bf5d-d4db-44e9-b3b0-1abe44d3b54f",
+      "year": 1993,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": ["7Jx16", "8Jx16"], "valid": true },
+        "tireSizes": { "current": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "valid": true }
+      },
+      "notes": "Good data from api_import source"
+    },
+    {
+      "id": "12b4ebe2-44fd-4625-81b0-39aab1da46b6",
+      "year": 1993,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "f6585d0e-9aa5-4bd6-be4c-455498e86204",
+      "year": 1994,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": ["7Jx16", "8Jx16"], "valid": true },
+        "tireSizes": { "current": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "valid": true }
+      },
+      "notes": "Good data from api_import source"
+    },
+    {
+      "id": "adb6e801-84b1-4f0e-8ff6-5aed56e5a4cb",
+      "year": 1994,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "1e8e0dfb-0d86-4a0a-b7a0-e60db6391382",
+      "year": 1994,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "1e22adbe-6024-44a3-b69c-6937c02e9ec4",
+      "year": 1994,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "a9542553-dc4e-4295-afc5-5ef4f9b74c47",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "116484d4-9548-4466-87c7-2e3e7cd177bc",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "617e566d-7f24-4084-a035-d39432a9d1c5",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "9174929d-ec08-48d7-a81a-4cb919d1296d",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": ["7Jx16", "8Jx16"], "valid": true },
+        "tireSizes": { "current": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "valid": true }
+      },
+      "notes": "Good data from api_import source"
+    },
+    {
+      "id": "56a7df35-f0e3-450d-9507-1b63c9339736",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Base",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": ["7Jx16", "8Jx16"], "valid": true },
+        "tireSizes": { "current": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "valid": true }
+      },
+      "notes": "Good data from api_import source"
+    },
+    {
+      "id": "479e3869-ca80-44ba-a4c2-703e42468d83",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "867f0fb0-f936-4e0f-99bd-eab454c85dff",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "581d8cad-52f7-4db0-b846-efb15db83d3f",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x165.1", "expected": "8x165.1", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7, "diameter": 16}], "valid": true },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Tire sizes inherited from wrong generation"]
+    },
+    {
+      "id": "46ea1021-6353-48d1-be7b-024b2a78208d",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x165.1", "match": false, "notes": "CRITICAL: 1997 F-350 was NOT Super Duty. Super Duty with 8x170 started in 1999." },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7.5, "diameter": 17}], "valid": false, "expected": [{"width": 7, "diameter": 16}], "notes": "1997 F-350 had 16\" wheels, not 17\"" },
+        "tireSizes": { "valid": false, "expected": ["LT215/85R16", "LT235/85R16"], "notes": "Should be 16\" tire sizes" }
+      },
+      "issues": ["Wrong bolt pattern - should be 8x165.1, not 8x170", "Wrong wheel diameter - should be 16\", not 17\"", "Wrong tire sizes - inherited Super Duty sizes"]
+    },
+    {
+      "id": "7d7a1ee0-aa09-48df-8eb4-3a0d80fda3a9",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": false },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Wrong bolt pattern - should be 8x165.1", "Wrong wheel/tire sizes"]
+    },
+    {
+      "id": "aa30c267-d697-46bf-a873-fb7a1cf1376f",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": false },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Wrong bolt pattern - should be 8x165.1", "Wrong wheel/tire sizes"]
+    },
+    {
+      "id": "042ef16d-5b52-4333-9d2a-3cae681f2b1f",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x165.1", "match": false, "notes": "CRITICAL: 1998 F-350 was NOT Super Duty. Super Duty started 1999." },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": false },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Wrong bolt pattern - should be 8x165.1", "Wrong wheel/tire sizes"]
+    },
+    {
+      "id": "b30d44a0-efc5-4948-a7f8-651629463725",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": false },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Wrong bolt pattern - should be 8x165.1", "Wrong wheel/tire sizes"]
+    },
+    {
+      "id": "ae764ac4-e47f-4ec4-b70c-7fef53a83e1a",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x165.1", "match": false },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": false },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Wrong bolt pattern - should be 8x165.1", "Wrong wheel/tire sizes"]
+    },
+    {
+      "id": "7cf902e9-9ff5-4801-86ba-6ccf0ca3f8ac",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true, "notes": "1999 was first year of Super Duty with 8x170" },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7.5, "diameter": 17}], "valid": false, "expected": [{"width": 7, "diameter": 16}], "notes": "1999 Super Duty came with 16\" wheels standard" },
+        "tireSizes": { "valid": false, "notes": "Mix of tire sizes includes some that weren't available in 1999" }
+      },
+      "issues": ["Wheel diameter should be 16\", not 17\"", "Tire sizes need correction to 1999 era"]
+    },
+    {
+      "id": "d3ff6385-d569-442e-9617-2ccaa3739425",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 18}], "valid": false, "notes": "18\" wheels not standard in 1999 - came with 16\"" },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Wheel diameter should be 16\""]
+    },
+    {
+      "id": "192dcdfc-8b5c-4262-beb0-b7323d1d8dd0",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": false },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Wheel sizes need correction"]
+    },
+    {
+      "id": "8dd13829-bd17-44e2-bdd1-75c2eec1a16c",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": false, "notes": "Early Super Duty had 16\" wheels" },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Wheel sizes need correction to 16\" era specs"]
+    },
+    {
+      "id": "c73dd573-4572-4abb-95ff-95a4a4842ddf",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": false },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Wheel sizes need correction"]
+    },
+    {
+      "id": "08d79501-0747-4049-a45e-6457361b09bf",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "invalid",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "valid": false },
+        "tireSizes": { "valid": false }
+      },
+      "issues": ["Wheel sizes need correction"]
+    },
+    {
+      "id": "748037e2-994c-4c46-b280-f4baf671f926",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "flagged",
+      "verification": {
+        "boltPattern": { "current": "8x170", "expected": "8x170", "match": true },
+        "hubBore": { "current": "124.9", "expected": "124.9", "match": true },
+        "wheelSizes": { "current": [{"width": 7.5, "diameter": 17}], "valid": true, "notes": "17\" wheels became available for 2001 Super Duty" },
+        "tireSizes": { "valid": true, "notes": "Some tire sizes may be aftermarket options" }
+      },
+      "notes": "2001 Super Duty offered 16\" and 17\" wheel options"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Correct 1997-1998 F-350 bolt pattern from 8x170 to 8x165.1",
+      "affectedCount": 6,
+      "details": "The Super Duty with 8x170 bolt pattern didn't exist until 1999. 1997-1998 F-350 used the old body style with 8x165.1 (8x6.5 inch) bolt pattern."
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Update 1988-1996 F-350 tire sizes to period-correct 16\" sizes",
+      "affectedCount": 27,
+      "details": "These vehicles inherited modern 17/18/20 inch tire sizes but only had 16\" wheels. Correct tire sizes: LT215/85R16, LT235/85R16, LT225/75R16, LT245/75R16, LT265/75R16"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Update 1999-2000 F-350 wheel sizes to 16\" standard",
+      "affectedCount": 6,
+      "details": "Early Super Duty (1999-2000) came with 16\" wheels standard. 17\" and 18\" options came later."
+    }
+  ]
+}

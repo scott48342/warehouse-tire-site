@@ -1,0 +1,557 @@
+{
+  "batchId": 41,
+  "processedAt": "2026-04-21T23:56:00Z",
+  "summary": {
+    "total": 50,
+    "notUS": 28,
+    "usMarket": 22
+  },
+  "vehicles": [
+    {
+      "year": 2011,
+      "make": "mazda",
+      "model": "rx-8",
+      "status": "found",
+      "tiresize_model": "RX-8",
+      "trims": ["Grand Touring", "R3", "Sport"],
+      "tireSizes": [
+        { "trim": "Grand Touring", "size": "225/45R18" },
+        { "trim": "R3", "size": "225/40R19" },
+        { "trim": "Sport", "size": "225/45R18" }
+      ],
+      "notes": "US market sports car"
+    },
+    {
+      "year": 2012,
+      "make": "mazda",
+      "model": "rx-8",
+      "status": "found",
+      "tiresize_model": "RX-8",
+      "trims": ["Grand Touring", "R3", "Sport"],
+      "tireSizes": [
+        { "trim": "Grand Touring", "size": "225/45R18" },
+        { "trim": "R3", "size": "225/40R19" },
+        { "trim": "Sport", "size": "225/45R18" }
+      ],
+      "notes": "Last year of RX-8 production, US market"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "spiano",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "JDM-only kei car (rebadged Suzuki Lapin), never sold in US"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "spiano",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "JDM-only kei car (rebadged Suzuki Lapin), never sold in US"
+    },
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "spiano",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "JDM-only kei car (rebadged Suzuki Lapin), never sold in US"
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "spiano",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "JDM-only kei car (rebadged Suzuki Lapin), never sold in US"
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "spiano",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "JDM-only kei car (rebadged Suzuki Lapin), never sold in US"
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "spiano",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "JDM-only kei car (rebadged Suzuki Lapin), never sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "xedos-9",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European/JDM luxury sedan. US had Millenia instead (different model)"
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "xedos-9",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European/JDM luxury sedan. US had Millenia instead (different model)"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "xedos-9",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European/JDM luxury sedan. US had Millenia instead (different model)"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "xedos-9",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European/JDM luxury sedan. US had Millenia instead (different model)"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "AMG GT 4-Door Coupe did not start until 2019 model year in US. Only 2-door AMG GT available in 2018."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "status": "found",
+      "tiresize_model": "AMG GT",
+      "trims": ["53 4-Door Coupe", "63 4-Door Coupe", "63 S 4-Door Coupe"],
+      "tireSizes": [
+        { "trim": "53 4-Door Coupe", "front": "255/45R19", "rear": "285/40R19", "staggered": true },
+        { "trim": "53 4-Door Coupe", "front": "265/40R20", "rear": "295/35R20", "staggered": true },
+        { "trim": "53 4-Door Coupe", "front": "275/35R21", "rear": "315/30R21", "staggered": true },
+        { "trim": "63 4-Door Coupe", "front": "255/45R19", "rear": "285/40R19", "staggered": true },
+        { "trim": "63 S 4-Door Coupe", "front": "265/40R20", "rear": "295/35R20", "staggered": true }
+      ],
+      "notes": "First year of AMG GT 4-Door Coupe in US"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "status": "found",
+      "tiresize_model": "AMG GT",
+      "trims": ["53 4-Door Coupe", "63 4-Door Coupe", "63 S 4-Door Coupe"],
+      "tireSizes": [
+        { "trim": "53 4-Door Coupe", "front": "255/45R19", "rear": "285/40R19", "staggered": true },
+        { "trim": "53 4-Door Coupe", "front": "265/40R20", "rear": "295/35R20", "staggered": true },
+        { "trim": "53 4-Door Coupe", "front": "275/35R21", "rear": "315/30R21", "staggered": true }
+      ],
+      "notes": "US market AMG GT 4-Door Coupe"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "status": "found",
+      "tiresize_model": "AMG GT",
+      "trims": ["43 4-Door Coupe", "53 4-Door Coupe", "63 4-Door Coupe", "63 S 4-Door Coupe"],
+      "tireSizes": [
+        { "trim": "43 4-Door Coupe", "front": "255/45R19", "rear": "285/40R19", "staggered": true },
+        { "trim": "53 4-Door Coupe", "front": "265/40R20", "rear": "295/35R20", "staggered": true }
+      ],
+      "notes": "US market AMG GT 4-Door Coupe"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "status": "found",
+      "tiresize_model": "AMG GT",
+      "trims": ["43 4-Door Coupe", "53 4-Door Coupe"],
+      "tireSizes": [
+        { "trim": "43 4-Door Coupe", "front": "255/45R19", "rear": "285/40R19", "staggered": true },
+        { "trim": "53 4-Door Coupe", "front": "265/40R20", "rear": "295/35R20", "staggered": true }
+      ],
+      "notes": "US market AMG GT 4-Door Coupe"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "status": "found",
+      "tiresize_model": "AMG GT",
+      "trims": ["43 4-Door Coupe", "53 4-Door Coupe"],
+      "tireSizes": [
+        { "trim": "43 4-Door Coupe", "front": "255/45R19", "rear": "285/40R19", "staggered": true },
+        { "trim": "53 4-Door Coupe", "front": "265/40R20", "rear": "295/35R20", "staggered": true }
+      ],
+      "notes": "US market AMG GT 4-Door Coupe"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "status": "found",
+      "tiresize_model": "AMG GT",
+      "trims": ["43 4-Door Coupe", "53 4-Door Coupe", "63 4-Door Coupe", "63 S 4-Door Coupe"],
+      "tireSizes": [
+        { "trim": "43 4-Door Coupe", "front": "255/45R19", "rear": "285/40R19", "staggered": true },
+        { "trim": "53 4-Door Coupe", "front": "265/40R20", "rear": "295/35R20", "staggered": true }
+      ],
+      "notes": "US market AMG GT 4-Door Coupe"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "status": "found",
+      "tiresize_model": "AMG GT",
+      "trims": ["43 4-Door Coupe", "53 4-Door Coupe", "63 4-Door Coupe", "63 S 4-Door Coupe"],
+      "tireSizes": [
+        { "trim": "43 4-Door Coupe", "front": "255/45R19", "rear": "285/40R19", "staggered": true },
+        { "trim": "53 4-Door Coupe", "front": "265/40R20", "rear": "295/35R20", "staggered": true }
+      ],
+      "notes": "US market AMG GT 4-Door Coupe"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class-all-terrain",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European-only model. C-Class All-Terrain (estate wagon with raised suspension) not sold in US."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class-all-terrain",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European-only model. C-Class All-Terrain (estate wagon with raised suspension) not sold in US."
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "c-class-all-terrain",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European-only model. C-Class All-Terrain (estate wagon with raised suspension) not sold in US."
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "c-class-all-terrain",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European-only model. C-Class All-Terrain (estate wagon with raised suspension) not sold in US."
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "c-class-all-terrain",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European-only model. C-Class All-Terrain (estate wagon with raised suspension) not sold in US."
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "clc-class",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European-only compact coupe. CLC-Class was never sold in the US market."
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "clc-class",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European-only compact coupe. CLC-Class was never sold in the US market."
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "clc-class",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European-only compact coupe. CLC-Class was never sold in the US market."
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "clc-class",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "European-only compact coupe. CLC-Class was never sold in the US market."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cle-class",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "CLE-Class launched for 2024 model year in US. 2023 not available."
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cle-class",
+      "status": "found",
+      "tiresize_model": "CLE450",
+      "trims": ["4MATIC Cabriolet", "4MATIC Coupe"],
+      "tireSizes": [
+        { "trim": "4MATIC Coupe", "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+        { "trim": "4MATIC Coupe", "front": "245/35R20", "rear": "275/30R20", "staggered": true }
+      ],
+      "notes": "CLE450 is the main CLE-Class model in US"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cle-class",
+      "status": "found",
+      "tiresize_model": "CLE450",
+      "trims": ["4MATIC Cabriolet", "4MATIC Coupe"],
+      "tireSizes": [
+        { "trim": "4MATIC Coupe", "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+        { "trim": "4MATIC Coupe", "front": "245/35R20", "rear": "275/30R20", "staggered": true }
+      ],
+      "notes": "CLE450 is the main CLE-Class model in US"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "cle-class",
+      "status": "found",
+      "tiresize_model": "CLE450",
+      "trims": ["4MATIC Cabriolet", "4MATIC Coupe"],
+      "tireSizes": [
+        { "trim": "4MATIC Coupe", "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+        { "trim": "4MATIC Coupe", "front": "245/35R20", "rear": "275/30R20", "staggered": true }
+      ],
+      "notes": "CLE450 is the main CLE-Class model in US"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cle-class-amg",
+      "status": "found",
+      "tiresize_model": "CLE53",
+      "trims": ["AMG Coupe"],
+      "tireSizes": [
+        { "trim": "AMG Coupe", "front": "265/35R20", "rear": "295/30R20", "staggered": true }
+      ],
+      "notes": "CLE53 AMG is the AMG variant of CLE-Class"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cle-class-amg",
+      "status": "found",
+      "tiresize_model": "CLE53",
+      "trims": ["AMG Cabriolet", "AMG Coupe"],
+      "tireSizes": [
+        { "trim": "AMG Coupe", "front": "265/35R20", "rear": "295/30R20", "staggered": true }
+      ],
+      "notes": "CLE53 AMG is the AMG variant of CLE-Class"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "cle-class-amg",
+      "status": "found",
+      "tiresize_model": "CLE53",
+      "trims": ["AMG Cabriolet", "AMG Coupe"],
+      "tireSizes": [
+        { "trim": "AMG Coupe", "front": "265/35R20", "rear": "295/30R20", "staggered": true }
+      ],
+      "notes": "CLE53 AMG is the AMG variant of CLE-Class"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "clk-class",
+      "status": "found",
+      "tiresize_model": "CLK320/CLK430",
+      "trims": ["CLK320 Base", "CLK320 Cabriolet", "CLK430 Cabriolet", "CLK430 Coupe"],
+      "tireSizes": [
+        { "trim": "CLK320", "size": "205/55R16" },
+        { "trim": "CLK430", "front": "225/45R17", "rear": "245/40R17", "staggered": true }
+      ],
+      "notes": "US market CLK-Class. tiresize.com uses engine-specific naming (CLK320, CLK430)"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "clk-class",
+      "status": "found",
+      "tiresize_model": "CLK320/CLK430/CLK55",
+      "trims": ["CLK320", "CLK430", "CLK55 AMG"],
+      "tireSizes": [
+        { "trim": "CLK320", "size": "205/55R16" },
+        { "trim": "CLK430", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK55", "front": "225/45R17", "rear": "245/40R17", "staggered": true }
+      ],
+      "notes": "US market CLK-Class"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "clk-class",
+      "status": "found",
+      "tiresize_model": "CLK320/CLK430/CLK55",
+      "trims": ["CLK320", "CLK430", "CLK55 AMG"],
+      "tireSizes": [
+        { "trim": "CLK320", "size": "205/55R16" },
+        { "trim": "CLK320 Sport", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK430", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK55", "front": "225/45R17", "rear": "245/40R17", "staggered": true }
+      ],
+      "notes": "US market CLK-Class"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "clk-class",
+      "status": "found",
+      "tiresize_model": "CLK320/CLK500/CLK55",
+      "trims": ["CLK320", "CLK500", "CLK55 AMG"],
+      "tireSizes": [
+        { "trim": "CLK320 Standard", "size": "205/55R16" },
+        { "trim": "CLK320 Coupe", "front": "205/55R16", "rear": "225/50R16", "staggered": true },
+        { "trim": "CLK320 Sport", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK500", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK55", "front": "225/45R17", "rear": "245/40R17", "staggered": true }
+      ],
+      "notes": "US market CLK-Class. Second generation (C209) introduced."
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "clk-class",
+      "status": "found",
+      "tiresize_model": "CLK320/CLK500/CLK55",
+      "trims": ["CLK320", "CLK500", "CLK55 AMG"],
+      "tireSizes": [
+        { "trim": "CLK320", "front": "205/55R16", "rear": "225/50R16", "staggered": true },
+        { "trim": "CLK320", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK500", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK55", "front": "225/45R17", "rear": "245/40R17", "staggered": true }
+      ],
+      "notes": "US market CLK-Class"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "clk-class",
+      "status": "found",
+      "tiresize_model": "CLK320/CLK500/CLK55",
+      "trims": ["CLK320", "CLK500", "CLK55 AMG"],
+      "tireSizes": [
+        { "trim": "CLK320", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK500", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK55", "front": "225/40R18", "rear": "255/35R18", "staggered": true }
+      ],
+      "notes": "US market CLK-Class"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "clk-class",
+      "status": "found",
+      "tiresize_model": "CLK350/CLK500/CLK55",
+      "trims": ["CLK350", "CLK500", "CLK55 AMG"],
+      "tireSizes": [
+        { "trim": "CLK350", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK500", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK55", "front": "225/40R18", "rear": "255/35R18", "staggered": true }
+      ],
+      "notes": "US market CLK-Class. CLK350 replaces CLK320."
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "clk-class",
+      "status": "found",
+      "tiresize_model": "CLK350/CLK63",
+      "trims": ["CLK350", "CLK63 AMG"],
+      "tireSizes": [
+        { "trim": "CLK350", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK63", "front": "225/40R18", "rear": "255/35R18", "staggered": true }
+      ],
+      "notes": "US market CLK-Class. CLK63 AMG replaces CLK55."
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "clk-class",
+      "status": "found",
+      "tiresize_model": "CLK350/CLK63",
+      "trims": ["CLK350", "CLK63 AMG", "CLK63 AMG Black Series"],
+      "tireSizes": [
+        { "trim": "CLK350", "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+        { "trim": "CLK63", "front": "225/40R18", "rear": "255/35R18", "staggered": true },
+        { "trim": "CLK63 Black Series", "front": "265/30R19", "rear": "285/30R19", "staggered": true }
+      ],
+      "notes": "US market CLK-Class"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "clk-class",
+      "status": "found",
+      "tiresize_model": "CLK350",
+      "trims": ["CLK350 Cabriolet", "CLK350 Coupe"],
+      "tireSizes": [
+        { "trim": "CLK350", "front": "225/45R17", "rear": "245/40R17", "staggered": true }
+      ],
+      "notes": "Last year of CLK-Class production. E-Class Coupe replaced it for 2010."
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "clk-class",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "CLK-Class discontinued after 2009. Replaced by E-Class Coupe for 2010 model year."
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "notUS": true,
+      "status": "not_found",
+      "notes": "CLK AMG did not exist in 2000. CLK55 AMG started in 2001 model year."
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "status": "found",
+      "tiresize_model": "CLK55",
+      "trims": ["CLK55 AMG"],
+      "tireSizes": [
+        { "trim": "CLK55", "front": "225/45R17", "rear": "245/40R17", "staggered": true }
+      ],
+      "notes": "First year of CLK55 AMG in US"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "status": "found",
+      "tiresize_model": "CLK55",
+      "trims": ["CLK55 AMG Cabriolet", "CLK55 AMG Coupe"],
+      "tireSizes": [
+        { "trim": "CLK55", "front": "225/45R17", "rear": "245/40R17", "staggered": true }
+      ],
+      "notes": "US market CLK55 AMG"
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+{
+  "batchId": 10,
+  "processedAt": "2026-04-21T23:48:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "found": 36,
+    "notUS": 8,
+    "notInDatabase": 6
+  },
+  "results": [
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "verano-pro-gs",
+      "notUS": true,
+      "notes": "China-only model, not sold in US market"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "verano-pro-gs",
+      "notUS": true,
+      "notes": "China-only model, not sold in US market"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "ats-v",
+      "wheelSizes": [18],
+      "tireSizes": ["255/35R18", "275/35R18"],
+      "isStaggered": true,
+      "frontTire": "255/35R18",
+      "rearTire": "275/35R18",
+      "notes": "Listed under ATS model as V trim"
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "ats-v",
+      "wheelSizes": [18],
+      "tireSizes": ["255/35R18", "275/35R18"],
+      "isStaggered": true,
+      "frontTire": "255/35R18",
+      "rearTire": "275/35R18",
+      "notes": "Listed under ATS model as V trim"
+    },
+    {
+      "year": 2018,
+      "make": "cadillac",
+      "model": "ats-v",
+      "wheelSizes": [18],
+      "tireSizes": ["255/35R18", "275/35R18"],
+      "isStaggered": true,
+      "frontTire": "255/35R18",
+      "rearTire": "275/35R18",
+      "notes": "Listed under ATS model as V trim"
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "ats-v",
+      "wheelSizes": [18],
+      "tireSizes": ["255/35R18", "275/35R18"],
+      "isStaggered": true,
+      "frontTire": "255/35R18",
+      "rearTire": "275/35R18",
+      "notes": "Listed under ATS model as V trim"
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "bls",
+      "notUS": true,
+      "notes": "European-only model, not sold in US market"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "bls",
+      "notUS": true,
+      "notes": "European-only model, not sold in US market"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "bls",
+      "notUS": true,
+      "notes": "European-only model, not sold in US market"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "bls",
+      "notUS": true,
+      "notes": "European-only model, not sold in US market"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "bls",
+      "notUS": true,
+      "notes": "European-only model, not sold in US market"
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "bls",
+      "notUS": true,
+      "notes": "European-only model, not sold in US market"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "celestiq",
+      "wheelSizes": [22, 23],
+      "tireSizes": ["275/35R22", "275/35R23"],
+      "isStaggered": false,
+      "notes": "Ultra-luxury EV, not in tiresize.com database. Limited production. 22in standard, 23in optional. Michelin Pilot Sport EV tires."
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "celestiq",
+      "wheelSizes": [22, 23],
+      "tireSizes": ["275/35R22", "275/35R23"],
+      "isStaggered": false,
+      "notes": "Ultra-luxury EV, not in tiresize.com database. Limited production. 22in standard, 23in optional. Michelin Pilot Sport EV tires."
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "celestiq",
+      "wheelSizes": [22, 23],
+      "tireSizes": ["275/35R22", "275/35R23"],
+      "isStaggered": false,
+      "notes": "Ultra-luxury EV, not in tiresize.com database. Limited production. 22in standard, 23in optional. Michelin Pilot Sport EV tires."
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "wheelSizes": [18, 19],
+      "tireSizes": ["235/40R18", "235/35R19"],
+      "isStaggered": false,
+      "notes": "Listed under CT4 model as V trim"
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "wheelSizes": [18, 19],
+      "tireSizes": ["235/40R18", "235/35R19"],
+      "isStaggered": false,
+      "notes": "Listed under CT4 model as V trim"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "wheelSizes": [18, 19],
+      "tireSizes": ["235/40R18", "235/35R19"],
+      "isStaggered": false,
+      "notes": "Listed under CT4 model as V trim. V Blackwing is staggered: F 255/35R18, R 275/35R18"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "wheelSizes": [18, 19],
+      "tireSizes": ["235/40R18", "235/35R19"],
+      "isStaggered": false,
+      "notes": "Listed under CT4 model as V trim. V Blackwing is staggered: F 255/35R18, R 275/35R18"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "wheelSizes": [18, 19],
+      "tireSizes": ["235/40R18", "235/35R19"],
+      "isStaggered": false,
+      "notes": "Listed under CT4 model as V trim. V Blackwing is staggered: F 255/35R18, R 275/35R18"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "wheelSizes": [18, 19],
+      "tireSizes": ["235/40R18", "235/35R19"],
+      "isStaggered": false,
+      "notes": "Listed under CT4 model as V trim. V Blackwing is staggered: F 255/35R18, R 275/35R18"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "ct4-v",
+      "wheelSizes": [18, 19],
+      "tireSizes": ["235/40R18", "235/35R19"],
+      "isStaggered": false,
+      "notes": "Listed under CT4 model as V trim. V Blackwing is staggered: F 255/35R18, R 275/35R18"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "ct5",
+      "wheelSizes": [18, 19, 20],
+      "tireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Multiple wheel options depending on trim"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "ct5",
+      "wheelSizes": [18, 19, 20],
+      "tireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Multiple wheel options depending on trim"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "ct5",
+      "wheelSizes": [18, 19, 20],
+      "tireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Multiple wheel options depending on trim"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "ct5",
+      "wheelSizes": [18, 19, 20],
+      "tireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Multiple wheel options depending on trim"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "ct5",
+      "wheelSizes": [18, 19, 20],
+      "tireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Multiple wheel options depending on trim"
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "ct5-v",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Listed under CT5 model as V trim"
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "ct5-v",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Listed under CT5 model as V trim"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "ct5-v",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Listed under CT5 model as V trim. V Blackwing is staggered: F 275/35R19, R 305/30R19"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "ct5-v",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Listed under CT5 model as V trim. V Blackwing is staggered: F 275/35R19, R 305/30R19"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "ct5-v",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Listed under CT5 model as V trim. V Blackwing is staggered: F 275/35R19, R 305/30R19"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "ct5-v",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Listed under CT5 model as V trim. V Blackwing is staggered: F 275/35R19, R 305/30R19"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "ct5-v",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "isStaggered": false,
+      "notes": "Listed under CT5 model as V trim. V Blackwing is staggered: F 275/35R19, R 305/30R19"
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "ct6-v",
+      "wheelSizes": [20],
+      "tireSizes": ["245/40R20"],
+      "isStaggered": false,
+      "notes": "CT6-V only available for 2019-2020. Based on CT6 V trim specs."
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "ct6-v",
+      "wheelSizes": [20],
+      "tireSizes": ["245/40R20"],
+      "isStaggered": false,
+      "notes": "Listed under CT6 model as V trim"
+    },
+    {
+      "year": 2004,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [18],
+      "tireSizes": ["245/45R18"],
+      "isStaggered": false,
+      "notes": "First generation CTS-V"
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [18],
+      "tireSizes": ["245/45R18"],
+      "isStaggered": false,
+      "notes": "First generation CTS-V"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [18],
+      "tireSizes": ["245/45R18"],
+      "isStaggered": false,
+      "notes": "First generation CTS-V"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [18],
+      "tireSizes": ["245/45R18"],
+      "isStaggered": false,
+      "notes": "First generation CTS-V"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [19],
+      "tireSizes": ["255/40R19", "285/35R19"],
+      "isStaggered": true,
+      "frontTire": "255/40R19",
+      "rearTire": "285/35R19",
+      "notes": "Second generation CTS-V sedan"
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [19],
+      "tireSizes": ["255/40R19", "285/35R19"],
+      "isStaggered": true,
+      "frontTire": "255/40R19",
+      "rearTire": "285/35R19",
+      "notes": "Second generation CTS-V sedan"
+    },
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [19],
+      "tireSizes": ["255/40R19", "285/35R19"],
+      "isStaggered": true,
+      "frontTire": "255/40R19",
+      "rearTire": "285/35R19",
+      "notes": "Second generation CTS-V (coupe, sedan, sport wagon)"
+    },
+    {
+      "year": 2012,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [19],
+      "tireSizes": ["255/40R19", "285/35R19"],
+      "isStaggered": true,
+      "frontTire": "255/40R19",
+      "rearTire": "285/35R19",
+      "notes": "Second generation CTS-V (coupe, sedan, sport wagon)"
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [19],
+      "tireSizes": ["255/40R19", "285/35R19"],
+      "isStaggered": true,
+      "frontTire": "255/40R19",
+      "rearTire": "285/35R19",
+      "notes": "Second generation CTS-V (coupe, sedan, sport wagon)"
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [19],
+      "tireSizes": ["255/40R19", "285/35R19"],
+      "isStaggered": true,
+      "frontTire": "255/40R19",
+      "rearTire": "285/35R19",
+      "notes": "Second generation CTS-V (coupe, sedan, sport wagon)"
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [19],
+      "tireSizes": ["255/40R19", "285/35R19"],
+      "isStaggered": true,
+      "frontTire": "255/40R19",
+      "rearTire": "285/35R19",
+      "notes": "Second generation CTS-V coupe (last year for gen 2)"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [19],
+      "tireSizes": ["265/35R19", "295/30R19"],
+      "isStaggered": true,
+      "frontTire": "265/35R19",
+      "rearTire": "295/30R19",
+      "notes": "Third generation CTS-V sedan"
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [19],
+      "tireSizes": ["265/35R19", "295/30R19"],
+      "isStaggered": true,
+      "frontTire": "265/35R19",
+      "rearTire": "295/30R19",
+      "notes": "Third generation CTS-V sedan"
+    },
+    {
+      "year": 2018,
+      "make": "cadillac",
+      "model": "cts-v",
+      "wheelSizes": [19],
+      "tireSizes": ["265/35R19", "295/30R19"],
+      "isStaggered": true,
+      "frontTire": "265/35R19",
+      "rearTire": "295/30R19",
+      "notes": "Third generation CTS-V sedan"
+    }
+  ]
+}

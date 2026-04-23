@@ -1,0 +1,382 @@
+{
+  "batch": "batch-28-german",
+  "group": "german",
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "g-class-amg"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "g-class-amg"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gla-class"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gla-class-amg"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glb-class"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glb-class"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glb-class"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "glb-class"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "glb-class"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "glb-class"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "glb-class"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glb-class"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glc-class-coupe"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gle-class-coupe"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "glk-class"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "glk-class"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "glk-class"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "glk-class"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "glk-class"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "glk-class"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "glk-class"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "glk-class"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "m-class"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "m-class"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "m-class"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "m-class"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "m-class"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "m-class"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "m-class"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "m-class"
+    }
+  ]
+}

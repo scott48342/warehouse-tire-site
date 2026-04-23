@@ -1,0 +1,2669 @@
+[
+  {
+    "id": "b5255bfd-4777-4ab8-91f7-06d194b6e498",
+    "year": 2008,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c6f6e1e9-ea0b-4aa2-8485-28a5a03c6681",
+    "year": 2008,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "225/55R18",
+      "235/55R18",
+      "245/45R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "41a55acf-1443-41ea-9945-d23a43f97a50",
+    "year": 2009,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Daytona R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c4405981-dabc-4422-aafd-0a13ef3a41b1",
+    "year": 2009,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8 Super Bee",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "213a8cb3-d352-40cd-a739-b60a249ad1e3",
+    "year": 2009,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0320cdf2-cc68-4f3a-8f75-a509b252206b",
+    "year": 2009,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "12a4f2c9-0824-4cb7-8022-e2b6ef621039",
+    "year": 2009,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SE",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "77466111-4c5c-48c2-a266-c7d15bc9f70a",
+    "year": 2009,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "225/55R18",
+      "235/55R18",
+      "245/45R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "a152b234-4ca8-4449-97f6-0f29f0b57b82",
+    "year": 2009,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "29ce7414-2405-4754-af71-4e7dc42a5976",
+    "year": 2010,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8 Super Bee",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3f766e5c-1241-4d8f-9567-aa492761d485",
+    "year": 2010,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2395d70b-b817-42bf-b26a-72f0440938e7",
+    "year": 2010,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "81d902ce-6cf3-448b-a875-c76e032df202",
+    "year": 2010,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Daytona R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4995fcb7-0232-4b12-a9a2-9942516a370b",
+    "year": 2010,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "336ec4d2-7e11-41bc-9a1c-daf3987240b9",
+    "year": 2010,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "225/55R18",
+      "235/55R18",
+      "245/45R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "b7c383fd-8d30-4f85-be12-78f218939a9e",
+    "year": 2010,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SE",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "91b94732-9e4a-46e5-8203-6911e254e3b1",
+    "year": 2011,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SE",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8716a6fe-19cf-48a7-bcff-20a625c6088c",
+    "year": 2011,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9302de9a-bdc0-4475-90a7-caa25b47f7d4",
+    "year": 2011,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8 Super Bee",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1f4599cc-9c19-4836-b7fa-a0f3efdecfb2",
+    "year": 2011,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9db94c5e-09e3-462b-a625-053d3a77e39f",
+    "year": 2011,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Daytona R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "81283278-2ec2-4da1-828a-7d3714580598",
+    "year": 2011,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "235/55R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "365ed6a5-3171-4066-980f-84eeadf5549b",
+    "year": 2011,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4c06f1c4-5784-46eb-8c83-cfbac35ba300",
+    "year": 2012,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8 Super Bee",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "13468af6-ee1a-42df-9eb4-e7bcf89985c5",
+    "year": 2012,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6b1c757f-e1fc-414f-a2b8-011975ddfa4b",
+    "year": 2012,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c2de0213-d194-423d-aab0-5ea55d8e3fba",
+    "year": 2012,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SE",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7101ddc4-c795-4eb0-85ce-7f97f0503526",
+    "year": 2012,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c925490b-d08f-4e29-99ab-d7367eebb563",
+    "year": 2012,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "235/55R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "5075a3a7-187f-4fa4-abf7-444bcd826434",
+    "year": 2012,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Daytona R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b6ff8505-c8c4-4069-b742-3422b009c3f6",
+    "year": 2013,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "235/55R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45R20",
+      "265/40R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "1a251c98-94ab-4e76-aa47-d7dba4744dda",
+    "year": 2013,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "db9bfc02-94de-44ba-adb2-1ca77eedb3d3",
+    "year": 2013,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Daytona R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6754667b-704c-45e8-acb7-2e87586b58f7",
+    "year": 2013,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8 Super Bee",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0ddb4934-adc3-410a-8f37-05c4896c0577",
+    "year": 2013,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7d62cb42-1aaf-486e-8946-e0dd26bcaf1a",
+    "year": 2013,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ab1a9a4a-626f-4d7b-9378-3e3bf4c3d287",
+    "year": 2013,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SE",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "aff9a764-7c91-43d2-9307-1bae8636321a",
+    "year": 2014,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SE",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "01d85be2-c03a-4172-a1d3-ba3b64281be6",
+    "year": 2014,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d89e9b4b-17a1-4ea2-a553-34c5dffcb05b",
+    "year": 2014,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8 Super Bee",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bd0d5164-1f59-457f-9abc-72bdbcd2effb",
+    "year": 2014,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "876ffff8-8ef9-478f-89f4-d18ba0da8562",
+    "year": 2014,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "235/55R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "8b60c1db-8e70-46f1-832d-9be3ebaab435",
+    "year": 2014,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bc275471-dcbd-482c-898e-0612738c8e6e",
+    "year": 2014,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Daytona R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cb05fdb1-d4e0-4e6f-9e56-9d242aba66a3",
+    "year": 2015,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT Hellcat",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "fd92ac24-2b3b-4f68-aa96-16d3e083d293",
+    "year": 2015,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "0e060e66-d69c-4f2f-b192-d1814ec5d6b1",
+    "year": 2015,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "235/55R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "b1c097bd-2f98-494c-92e5-a67aa99bcfde",
+    "year": 2015,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "GT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "206ed5ff-2930-4dc0-b97e-d55d39ad3fa0",
+    "year": 2015,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "74d78d54-d425-440f-b419-9018613523c2",
+    "year": 2015,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "466ab9cf-de99-4f5f-bc30-fd9725ffb653",
+    "year": 2015,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "245/45R20",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "1fb4dbb1-e483-4534-b9dd-85771e1ae345",
+    "year": 2016,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "245/45R20",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "63d9c1a1-e2df-4686-a2b8-f2643c78cc37",
+    "year": 2016,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "235/55R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "4b562ed0-cf7d-4d75-969b-bbd49262142f",
+    "year": 2016,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "83e6cd0a-e49d-42c2-bb6d-87ca87376f8e",
+    "year": 2016,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "a2484346-34ac-465a-a6f7-b7926f97ae64",
+    "year": 2016,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT Hellcat",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "bd10a037-ab8b-4e31-b492-adf516d53f6d",
+    "year": 2016,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "3b3d0583-4be1-4bb7-a125-5e454e51e2f3",
+    "year": 2016,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "GT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "feb281b3-bbcf-417e-b30b-0ff0a6c25517",
+    "year": 2017,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "8268c290-548d-496d-8422-a1bbf67010e8",
+    "year": 2017,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "235/55R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "7f6df0a6-2f86-4eed-92a0-141f01046278",
+    "year": 2017,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "GT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "1470589e-0060-4dab-8380-c8524fe1ef72",
+    "year": 2017,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT Hellcat",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "275/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "453ce255-986d-4752-a1c1-4e2d782d7314",
+    "year": 2017,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "088a439f-d694-4ff0-9f7c-be2be20baf70",
+    "year": 2017,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "3fc85558-1679-470b-a1a5-465123eccc68",
+    "year": 2017,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "6d2216fc-a40a-4003-9b77-19a058c635ec",
+    "year": 2018,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "82b080ff-003b-4b50-879b-af2a84ca4f3f",
+    "year": 2018,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "0b13112b-71a7-41ac-a2dd-09271e090f10",
+    "year": 2018,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "1afaab78-6070-42de-8cba-f5a279e04cf1",
+    "year": 2018,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "235/55R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "ba82e0eb-5d3c-4664-9f52-735c19242a2f",
+    "year": 2018,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SRT Hellcat",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "275/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "d5cc18bd-8a23-4470-874a-78c1d64bdc9b",
+    "year": 2018,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "GT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "0a63b992-de8c-4041-8d9a-01b2506a1280",
+    "year": 2018,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "b9cf1343-09df-4dd3-b7f5-96be7cb05262",
+    "year": 2019,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "488a650d-0532-42c3-8e25-e2a039a01539",
+    "year": 2019,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "82810005-b215-40fc-b70b-c9f45c74067b",
+    "year": 2019,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "tier-a-import"
+  }
+]

@@ -1,0 +1,1851 @@
+[
+  {
+    "id": "a367f2cf-e0f9-4ee2-80e7-ae71e1de34ca",
+    "year": 2019,
+    "make": "genesis",
+    "model": "g70",
+    "trim": "2.0T, 3.3T, Sport",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "225/40R19",
+      "255/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f4a1f41f-4515-4f43-9d8f-48095e5cbaa6",
+    "year": 2020,
+    "make": "genesis",
+    "model": "g70",
+    "trim": "2.0T, 3.3T, Sport",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "225/40R19",
+      "255/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f8a1ad50-5c99-4d7c-8331-9e5ef244ad42",
+    "year": 2021,
+    "make": "genesis",
+    "model": "g70",
+    "trim": "2.0T, 3.3T, Sport",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 34,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 8.5,
+        "offset": 46.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "225/40R19",
+      "255/35R19",
+      "225/45ZR18",
+      "225/40ZR19",
+      "255/35ZR19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "cc3922bf-5457-4ce6-b23f-93e87abef881",
+    "year": 2022,
+    "make": "genesis",
+    "model": "g70",
+    "trim": "2.0T, 3.3T, Sport",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "225/40R19",
+      "255/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "00b969dd-38ee-48e2-8a1c-2c6488628ac4",
+    "year": 2023,
+    "make": "genesis",
+    "model": "g70",
+    "trim": "2.0T, 3.3T, Sport",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "225/40R19",
+      "255/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "34d3280c-35fb-4b6a-9f1f-2980e73a9559",
+    "year": 2024,
+    "make": "genesis",
+    "model": "g70",
+    "trim": "2.0T, 3.3T, Sport",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 8.5,
+        "offset": 46.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "225/40R19",
+      "255/35R19",
+      "225/40ZR19",
+      "255/35ZR19",
+      "225/45ZR18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0e378193-abf2-4515-b3b4-9188a908f399",
+    "year": 2025,
+    "make": "genesis",
+    "model": "g70",
+    "trim": "2.0T, 3.3T, Sport",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "225/40R19",
+      "255/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "85368c2c-74b9-40c2-af87-33c650de2480",
+    "year": 2026,
+    "make": "genesis",
+    "model": "g70",
+    "trim": "2.0T, 3.3T, Sport",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "225/40R19",
+      "255/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d7590578-945e-4da2-8f1f-39dfbe3f6ec6",
+    "year": 2017,
+    "make": "genesis",
+    "model": "g80",
+    "trim": "2.5T, 3.5T, Sport, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "245/40ZR19",
+      "275/35ZR19",
+      "245/35ZR20",
+      "285/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "deb34e60-e853-4608-8dd6-051babd17554",
+    "year": 2018,
+    "make": "genesis",
+    "model": "g80",
+    "trim": "2.5T, 3.5T, Sport, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "245/40ZR19",
+      "275/35ZR19",
+      "245/35ZR20",
+      "285/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "55939eab-9ee4-4cfb-986c-74700f69c9a5",
+    "year": 2019,
+    "make": "genesis",
+    "model": "g80",
+    "trim": "2.5T, 3.5T, Sport, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8d7c244b-284d-439b-9b00-61c74536ba5a",
+    "year": 2020,
+    "make": "genesis",
+    "model": "g80",
+    "trim": "2.5T, 3.5T, Sport, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "28fcda03-8445-45ff-aa0f-0b0433f9e8f3",
+    "year": 2021,
+    "make": "genesis",
+    "model": "g80",
+    "trim": "2.5T, 3.5T, Sport, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 43.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 56,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 56,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "245/40R19",
+      "255/40R20",
+      "275/35R20",
+      "245/45ZR19",
+      "275/40ZR19",
+      "245/50ZR18",
+      "245/40ZR20",
+      "275/35ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d2f26be0-2096-4db3-b506-6f58b6edc1dd",
+    "year": 2022,
+    "make": "genesis",
+    "model": "g80",
+    "trim": "2.5T, 3.5T, Sport, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "245/40R19",
+      "255/40R20",
+      "275/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "dc8979ff-e653-41df-a39f-eb43310f22cd",
+    "year": 2023,
+    "make": "genesis",
+    "model": "g80",
+    "trim": "2.5T, 3.5T, Sport, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "245/40R19",
+      "255/40R20",
+      "275/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c26bcae7-8ca9-45f2-be55-780f4d191e43",
+    "year": 2024,
+    "make": "genesis",
+    "model": "g80",
+    "trim": "2.5T, 3.5T, Sport, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "245/40R19",
+      "255/40R20",
+      "275/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9d25a6e3-c153-4c53-a891-5e0f73b44ea4",
+    "year": 2025,
+    "make": "genesis",
+    "model": "g80",
+    "trim": "2.5T, 3.5T, Sport, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "245/40R19",
+      "255/40R20",
+      "275/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c27b75d9-e28d-4598-8fbd-97a415054cd2",
+    "year": 2026,
+    "make": "genesis",
+    "model": "g80",
+    "trim": "2.5T, 3.5T, Sport, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "245/40R19",
+      "255/40R20",
+      "275/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "edac67ad-2245-49d8-b1e3-8c19d3e7c953",
+    "year": 2017,
+    "make": "genesis",
+    "model": "g90",
+    "trim": "3.3T, 5.0, Ultimate",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "245/45R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b42063b9-8cc2-4431-bf48-45427d6cc1ff",
+    "year": 2018,
+    "make": "genesis",
+    "model": "g90",
+    "trim": "3.3T, 5.0, Ultimate",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 32,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "245/45R19",
+      "245/45ZR19",
+      "275/40ZR19",
+      "245/40ZR20",
+      "275/35ZR20",
+      "245/50ZR18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "26653c71-ef38-47ec-8b5c-792fcc804279",
+    "year": 2019,
+    "make": "genesis",
+    "model": "g90",
+    "trim": "3.3T, 5.0, Ultimate",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "245/45R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "54524398-e363-42a3-a0bd-4980b1abdb6e",
+    "year": 2020,
+    "make": "genesis",
+    "model": "g90",
+    "trim": "3.3T, 5.0, Ultimate",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "245/45R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ae9da4d8-eb1f-44c0-a1cc-da84d2f7bcd0",
+    "year": 2021,
+    "make": "genesis",
+    "model": "g90",
+    "trim": "3.3T, 5.0, Ultimate",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "245/45R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a9376b4b-4e3b-4474-97b1-e306ddf06fb3",
+    "year": 2022,
+    "make": "genesis",
+    "model": "g90",
+    "trim": "3.3T, 5.0, Ultimate",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "245/45R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3b583f63-564d-4cf5-91f2-fd71ede38acb",
+    "year": 2023,
+    "make": "genesis",
+    "model": "g90",
+    "trim": "3.3T, 5.0, Ultimate",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "265/40R20",
+      "295/35R20",
+      "265/35R21",
+      "295/30R21",
+      "245/45R20",
+      "275/40R20",
+      "245/50R19",
+      "245/40ZR21",
+      "275/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "54dc8a01-acb7-47e4-bda1-0d3ce272be4c",
+    "year": 2024,
+    "make": "genesis",
+    "model": "g90",
+    "trim": "3.3T, 5.0, Ultimate",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "265/40R20",
+      "295/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "cdb4a889-ba7c-4735-ac44-117cd37f7fe5",
+    "year": 2025,
+    "make": "genesis",
+    "model": "g90",
+    "trim": "3.3T, 5.0, Ultimate",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "265/40R20",
+      "295/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "53270091-374d-4d98-9a83-bdca5e59f29c",
+    "year": 2026,
+    "make": "genesis",
+    "model": "g90",
+    "trim": "3.3T, 5.0, Ultimate",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "265/40R20",
+      "295/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "48b14fc2-dc8a-4e96-bae6-b05a511e417b",
+    "year": 2022,
+    "make": "genesis",
+    "model": "gv70",
+    "trim": "2.5T, 3.5T, Sport Prestige, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20",
+      "255/40R21",
+      "235/60ZR18",
+      "235/55ZR19",
+      "255/40ZR21",
+      "255/45ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c6eac9a6-da0b-4c55-848e-9497c3d5e8f4",
+    "year": 2023,
+    "make": "genesis",
+    "model": "gv70",
+    "trim": "2.5T, 3.5T, Sport Prestige, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20",
+      "255/40R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "989ea7fd-bcd5-4be0-83d4-7c046d88c635",
+    "year": 2024,
+    "make": "genesis",
+    "model": "gv70",
+    "trim": "2.5T, 3.5T, Sport Prestige, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20",
+      "255/40R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ef4434fd-ea69-4cc2-a487-3d7cc87cb8a1",
+    "year": 2025,
+    "make": "genesis",
+    "model": "gv70",
+    "trim": "2.5T, 3.5T, Sport Prestige, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20",
+      "255/40R21",
+      "235/60ZR18",
+      "235/55ZR19",
+      "255/45ZR20",
+      "255/40ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "5a60a464-7527-4ce8-8e0d-3129500cc242",
+    "year": 2026,
+    "make": "genesis",
+    "model": "gv70",
+    "trim": "2.5T, 3.5T, Sport Prestige, Electrified",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20",
+      "255/40R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "62aea07c-1c35-42dd-8356-90927735796e",
+    "year": 2021,
+    "make": "genesis",
+    "model": "gv80",
+    "trim": "2.5T, 3.5T",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/40R21",
+      "265/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8792b7e1-6219-419b-b1d8-28b0ec354cb0",
+    "year": 2022,
+    "make": "genesis",
+    "model": "gv80",
+    "trim": "2.5T, 3.5T",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 47,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/40R21",
+      "265/35R22",
+      "265/55ZR19",
+      "265/50ZR20",
+      "265/40ZR22",
+      "265/45ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f1f2e816-e0cd-45c6-9354-4df43d64ae25",
+    "year": 2023,
+    "make": "genesis",
+    "model": "gv80",
+    "trim": "2.5T, 3.5T",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 47,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/40R21",
+      "265/35R22",
+      "265/55ZR19",
+      "265/50ZR20",
+      "265/40ZR22",
+      "265/45ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "748339e5-f80a-4773-bcca-7d765fa42800",
+    "year": 2024,
+    "make": "genesis",
+    "model": "gv80",
+    "trim": "2.5T, 3.5T",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/40R21",
+      "265/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "66264ee6-b5d0-44cf-979b-c5ac76eceb9a",
+    "year": 2025,
+    "make": "genesis",
+    "model": "gv80",
+    "trim": "2.5T, 3.5T",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/40R21",
+      "265/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4763559e-7c92-4d4e-9416-807fb22d01b3",
+    "year": 2026,
+    "make": "genesis",
+    "model": "gv80",
+    "trim": "2.5T, 3.5T",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/40R21",
+      "265/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  }
+]

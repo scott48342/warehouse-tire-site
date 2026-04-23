@@ -1,0 +1,1032 @@
+{
+  "batchId": "49",
+  "processedAt": "2026-04-21T21:58:00.000Z",
+  "source": "tiresize.com, tirewheelguide.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "bronco",
+      "currentTireSizes": ["255/75R17", "275/65R18", "285/65R18", "285/70R17", "LT285/70R17", "315/70R17", "LT315/70R17", "LT265/70R17", "255/70R18"],
+      "validatedTireSizes": ["255/75R17", "265/70R17", "285/70R17", "315/70R17", "255/70R18", "37X12.50R17"],
+      "trimData": [
+        {"trim": "Badlands", "tireSize": "285/70R17"},
+        {"trim": "Big Bend", "tireSize": "255/75R17"},
+        {"trim": "Black Diamond", "tireSize": "265/70R17"},
+        {"trim": "Everglades", "tireSize": "315/70R17"},
+        {"trim": "Heritage", "tireSize": "315/70R17"},
+        {"trim": "Heritage Limited", "tireSize": "315/70R17"},
+        {"trim": "Outer Banks", "tireSize": "255/70R18"},
+        {"trim": "Raptor", "tireSize": "37X12.50R17"},
+        {"trim": "Sasquatch Package", "tireSize": "315/70R17"},
+        {"trim": "Wildtrak", "tireSize": "315/70R17"}
+      ],
+      "status": "VALIDATED",
+      "notes": "Missing 265/70R17 (Black Diamond). Has 275/65R18, 285/65R18, LT variants not in OEM data"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "bronco",
+      "currentTireSizes": ["255/75R17", "275/65R18", "285/65R18", "285/70R17", "LT285/70R17", "315/70R17", "LT315/70R17", "LT265/70R17", "255/70R18"],
+      "validatedTireSizes": ["255/75R17", "265/70R17", "285/70R17", "315/70R17", "255/70R18", "37X12.50R17"],
+      "trimData": [
+        {"trim": "Badlands", "tireSize": "285/70R17"},
+        {"trim": "Base", "tireSize": "255/75R17"},
+        {"trim": "Big Bend", "tireSize": "255/75R17"},
+        {"trim": "Black Diamond", "tireSize": "265/70R17"},
+        {"trim": "Everglades", "tireSize": "315/70R17"},
+        {"trim": "Heritage", "tireSize": "315/70R17"},
+        {"trim": "Heritage Limited", "tireSize": "315/70R17"},
+        {"trim": "Outer Banks", "tireSize": "255/70R18"},
+        {"trim": "Raptor", "tireSize": "37X12.50R17"},
+        {"trim": "Sasquatch Package", "tireSize": "315/70R17"},
+        {"trim": "Wildtrak", "tireSize": "315/70R17"}
+      ],
+      "status": "VALIDATED",
+      "notes": "Similar to 2024, missing 265/70R17"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "bronco",
+      "currentTireSizes": ["255/75R17", "275/65R18", "285/65R18", "285/70R17", "LT285/70R17", "315/70R17", "LT315/70R17", "LT265/70R17", "255/70R18"],
+      "validatedTireSizes": ["255/75R17", "255/70R16", "265/70R17", "285/70R17", "315/70R17", "255/70R18"],
+      "trimData": [
+        {"trim": "Badlands", "tireSize": "285/70R17"},
+        {"trim": "Base", "tireSize": "255/70R16"},
+        {"trim": "Big Bend", "tireSize": "255/75R17"},
+        {"trim": "Black Diamond", "tireSize": "265/70R17"},
+        {"trim": "Outer Banks", "tireSize": "255/70R18"},
+        {"trim": "Sasquatch Package", "tireSize": "315/70R17"},
+        {"trim": "Wildtrak", "tireSize": "315/70R17"}
+      ],
+      "status": "VALIDATED",
+      "notes": "Base has 255/70R16, missing 265/70R17"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "bronco",
+      "currentTireSizes": ["255/75R17", "275/65R18", "285/65R18", "285/70R17", "LT285/70R17", "315/70R17", "LT315/70R17", "LT265/70R17", "255/70R18"],
+      "validatedTireSizes": ["255/70R16", "255/75R17", "265/70R17", "285/70R17", "315/70R17", "255/70R18"],
+      "trimData": [
+        {"trim": "Badlands", "tireSize": "285/70R17"},
+        {"trim": "Base", "tireSize": "255/70R16"},
+        {"trim": "Big Bend", "tireSize": "255/75R17"},
+        {"trim": "Black Diamond", "tireSize": "265/70R17"},
+        {"trim": "First Edition", "tireSize": "315/70R17"},
+        {"trim": "Outer Banks", "tireSize": "255/70R18"},
+        {"trim": "Sasquatch Package", "tireSize": "315/70R17"},
+        {"trim": "Wildtrak", "tireSize": "315/70R17"}
+      ],
+      "status": "VALIDATED",
+      "notes": "Missing 255/70R16 (Base), 265/70R17 (Black Diamond)"
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "bronco-sport",
+      "currentTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "Badlands", "tireSizes": ["225/65R17", "235/65R17"]},
+        {"trim": "Big Bend", "tireSizes": ["225/65R17", "225/60R18"]},
+        {"trim": "Heritage", "tireSize": "225/65R17"},
+        {"trim": "Outer Banks", "tireSizes": ["235/65R17", "225/60R18"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "All sizes match OEM data"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "bronco-sport",
+      "currentTireSizes": ["225/65R17", "235/65R17"],
+      "validatedTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "Badlands", "tireSizes": ["225/65R17", "235/65R17"]},
+        {"trim": "Big Bend", "tireSize": "225/65R17"},
+        {"trim": "Free Wheeling", "tireSize": "225/65R17"},
+        {"trim": "Heritage", "tireSize": "225/65R17"},
+        {"trim": "Outer Banks", "tireSizes": ["235/65R17", "225/60R18"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "Missing 225/60R18 (Outer Banks)"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "bronco-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "Badlands", "tireSizes": ["225/65R17", "235/65R17"]},
+        {"trim": "Big Bend", "tireSizes": ["225/65R17", "225/60R18"]},
+        {"trim": "Free Wheeling", "tireSize": "225/65R17"},
+        {"trim": "Heritage", "tireSize": "225/65R17"},
+        {"trim": "Outer Banks", "tireSizes": ["225/65R17", "225/60R18"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "bronco-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "Badlands", "tireSizes": ["225/65R17", "235/65R17"]},
+        {"trim": "Base", "tireSize": "225/65R17"},
+        {"trim": "Big Bend", "tireSizes": ["225/65R17", "225/60R18"]},
+        {"trim": "Heritage", "tireSize": "225/65R17"},
+        {"trim": "Heritage Limited", "tireSize": "235/65R17"},
+        {"trim": "Outer Banks", "tireSizes": ["225/65R17", "225/60R18"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "bronco-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "Badlands", "tireSizes": ["225/65R17", "235/65R17"]},
+        {"trim": "Base", "tireSize": "225/65R17"},
+        {"trim": "Big Bend", "tireSizes": ["225/65R17", "225/60R18"]},
+        {"trim": "Outer Banks", "tireSizes": ["225/65R17", "225/60R18"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "bronco-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "Badlands", "tireSizes": ["225/65R17", "235/65R17"]},
+        {"trim": "Base", "tireSize": "225/65R17"},
+        {"trim": "Big Bend", "tireSizes": ["225/65R17", "225/60R18"]},
+        {"trim": "First Edition", "tireSize": "235/65R17"},
+        {"trim": "Outer Banks", "tireSizes": ["225/65R17", "225/60R18"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "195/55R15"],
+      "trimData": [
+        {"trim": "Base/LXi/EXi", "tireSize": "175/65R14"},
+        {"trim": "Titanium", "tireSize": "195/55R15"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "Indian market vehicle (Ford Figo/Fiesta Classic). No current sizes in DB"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "195/55R15"],
+      "trimData": [
+        {"trim": "Base/LXi/EXi", "tireSize": "175/65R14"},
+        {"trim": "Titanium", "tireSize": "195/55R15"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "Indian market vehicle"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "195/55R15"],
+      "trimData": [
+        {"trim": "Base/LXi/EXi", "tireSize": "175/65R14"},
+        {"trim": "Titanium", "tireSize": "195/55R15"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "Indian market vehicle"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "195/55R15"],
+      "trimData": [
+        {"trim": "Base/LXi/EXi", "tireSize": "175/65R14"},
+        {"trim": "Titanium", "tireSize": "195/55R15"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "Indian market vehicle"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "contour",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/65R14", "205/60R15", "215/50R16"],
+      "trimData": [
+        {"trim": "LX", "tireSizes": ["185/70R14", "195/65R14"]},
+        {"trim": "SE", "tireSize": "205/60R15"},
+        {"trim": "SVT", "tireSize": "215/50R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "cougar",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R15", "215/50R16"],
+      "trimData": [
+        {"trim": "Note", "tireSize": "Vehicle not sold in 2004 - Mercury Cougar ended 2002"}
+      ],
+      "status": "INVALID_YEAR",
+      "notes": "Ford/Mercury Cougar discontinued after 2002 MY"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "cougar",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R15", "215/50R16"],
+      "trimData": [
+        {"trim": "Note", "tireSize": "Vehicle not sold in 2003 - Mercury Cougar ended 2002"}
+      ],
+      "status": "INVALID_YEAR",
+      "notes": "Ford/Mercury Cougar discontinued after 2002 MY"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "cougar",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R15", "215/50R16", "215/50R17"],
+      "trimData": [
+        {"trim": "4cyl", "tireSizes": ["205/60R15", "215/50R16"]},
+        {"trim": "C2", "tireSize": "215/50R16"},
+        {"trim": "V6", "tireSizes": ["205/60R15", "215/50R16"]},
+        {"trim": "XR", "tireSize": "215/50R17"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "Mercury Cougar rebadged. No current sizes in DB"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "cougar",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R15", "215/50R16"],
+      "trimData": [
+        {"trim": "4cyl", "tireSizes": ["205/60R15", "215/50R16"]},
+        {"trim": "S", "tireSize": "215/50R16"},
+        {"trim": "V6", "tireSizes": ["205/60R15", "215/50R16"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "Mercury Cougar rebadged"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "cougar",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/60R15", "215/50R16"],
+      "trimData": [
+        {"trim": "4cyl", "tireSizes": ["205/60R15", "215/50R16"]},
+        {"trim": "V6", "tireSizes": ["205/60R15", "215/50R16"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "Mercury Cougar rebadged"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R17"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "235/55R17"},
+        {"trim": "LX", "tireSize": "235/55R17"},
+        {"trim": "Police Interceptor", "tireSize": "235/55R17"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "All trims use 235/55R17"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R17"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "235/55R17"},
+        {"trim": "LX", "tireSize": "235/55R17"},
+        {"trim": "Police Interceptor", "tireSize": "235/55R17"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "All trims use 235/55R17"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R17"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "235/55R17"},
+        {"trim": "LX", "tireSize": "235/55R17"},
+        {"trim": "Police Interceptor", "tireSize": "235/55R17"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "All trims use 235/55R17"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/60R16"},
+        {"trim": "LX", "tireSize": "225/60R16"},
+        {"trim": "LX Sport", "tireSize": "235/55R17"},
+        {"trim": "Police Interceptor", "tireSize": "235/55R17"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/60R16"},
+        {"trim": "LX", "tireSize": "225/60R16"},
+        {"trim": "LX Sport", "tireSize": "235/55R17"},
+        {"trim": "Police Interceptor", "tireSize": "235/55R17"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/60R16"},
+        {"trim": "LX", "tireSize": "225/60R16"},
+        {"trim": "LX Sport", "tireSize": "235/55R17"},
+        {"trim": "Police Interceptor", "tireSize": "235/55R17"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/60R16"},
+        {"trim": "LX", "tireSize": "225/60R16"},
+        {"trim": "LX Sport", "tireSize": "235/55R17"},
+        {"trim": "Police Interceptor", "tireSize": "225/60R16"},
+        {"trim": "S", "tireSize": "225/60R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/60R16"},
+        {"trim": "LX", "tireSize": "225/60R16"},
+        {"trim": "LX Sport", "tireSize": "235/55R17"},
+        {"trim": "Police Interceptor", "tireSize": "225/60R16"},
+        {"trim": "S", "tireSize": "225/60R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/60R16"},
+        {"trim": "LX", "tireSize": "225/60R16"},
+        {"trim": "LX Sport", "tireSize": "235/55R17"},
+        {"trim": "Police Interceptor", "tireSize": "225/60R16"},
+        {"trim": "S", "tireSize": "225/60R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/60R16"},
+        {"trim": "LX", "tireSize": "225/60R16"},
+        {"trim": "LX Sport", "tireSize": "235/55R17"},
+        {"trim": "Police Interceptor", "tireSize": "225/60R16"},
+        {"trim": "S", "tireSize": "225/60R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/60R16"},
+        {"trim": "LX", "tireSize": "225/60R16"},
+        {"trim": "Police Interceptor", "tireSize": "225/60R16"},
+        {"trim": "S", "tireSize": "225/60R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "All trims use 225/60R16"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "crown-victoria",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/60R16"},
+        {"trim": "LX", "tireSize": "225/60R16"},
+        {"trim": "Police Interceptor", "tireSize": "225/60R16"},
+        {"trim": "S", "tireSize": "225/60R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "All trims use 225/60R16"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "225/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "225/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "225/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "225/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "225/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "225/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "225/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "225/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/70R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "235/70R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/70R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "235/70R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/70R16"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "235/70R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/75R15"],
+      "trimData": [
+        {"trim": "E150", "tireSize": "235/75R15"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/75R15"],
+      "trimData": [
+        {"trim": "Econoline Van", "tireSize": "235/75R15"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/75R15"],
+      "trimData": [
+        {"trim": "Econoline Van", "tireSize": "235/75R15"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "e-150-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R15", "235/75R15"],
+      "trimData": [
+        {"trim": "Econoline Van", "tireSizes": ["225/75R15", "235/75R15"]},
+        {"trim": "Heavy Duty", "tireSize": "235/75R15"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSize": "245/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSize": "245/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSize": "245/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSize": "245/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSize": "245/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSize": "245/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSize": "245/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSize": "245/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSize": "245/75R16"}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E250", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "NEEDS_UPDATE",
+      "notes": "No current sizes in DB"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match (DB has LT prefix, OEM may or may not)"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16"],
+      "trimData": [
+        {"trim": "E350", "tireSizes": ["225/75R16", "245/75R16"]}
+      ],
+      "status": "VALIDATED",
+      "notes": "Sizes match"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 17,
+    "needsUpdate": 54,
+    "invalidYear": 2,
+    "missingInDB": 54,
+    "keyFindings": [
+      "Ford Bronco (2021-2024): Current DB has extra LT-prefix sizes not in OEM data, missing some trim-specific sizes like 265/70R17 (Black Diamond), 255/70R16 (Base)",
+      "Ford Bronco Sport (2021-2026): Empty in DB for 2021-2024, needs all tire sizes added",
+      "Ford Classic (2012-2015): Indian market vehicle, needs 175/65R14 and 195/55R15",
+      "Ford Contour (2000): Needs 185/70R14, 195/65R14, 205/60R15, 215/50R16",
+      "Ford Cougar (2003-2004): INVALID - Mercury Cougar discontinued after 2002",
+      "Ford Cougar (2000-2002): Actually Mercury Cougar, needs tire sizes added",
+      "Ford Crown Victoria (2000-2011): All empty, needs 225/60R16 and 235/55R17",
+      "Ford E-150 Econoline (2000-2014): All empty, needs sizes from 225/75R15 to 235/70R16",
+      "Ford E-250 Econoline (2000-2014): All empty, needs 225/75R16 and 245/75R16",
+      "Ford E-350 Econoline (2007-2019): VALIDATED - current LT225/75R16 and LT245/75R16 match OEM"
+    ]
+  }
+}

@@ -1,0 +1,980 @@
+{
+  "batchId": "134",
+  "validatedAt": "2026-04-21T22:37:00Z",
+  "vehicleCount": 75,
+  "summary": {
+    "validated": 36,
+    "noData": 39,
+    "notes": "Ram ProMaster Rapid, V700, and V1000 are Mexico-market commercial vehicles with limited US data availability. Tire sizes inferred from Fiat platform siblings where applicable."
+  },
+  "vehicles": [
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "ProMaster Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "moparinsiders.com, Fiat Fiorino platform (Brazil/Mexico market)",
+      "notes": "Mexico-market only. Based on Fiat Fiorino platform. 1.4L engine.",
+      "trims": {
+        "Base": { "tireSizes": ["175/65R14"], "wheelSize": "14\"" }
+      }
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "ProMaster Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "moparinsiders.com, Fiat Fiorino platform",
+      "notes": "Mexico-market only"
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "ProMaster Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "moparinsiders.com, Fiat Fiorino platform",
+      "notes": "Mexico-market only"
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "ProMaster Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "moparinsiders.com, Fiat Fiorino platform",
+      "notes": "Mexico-market only"
+    },
+    {
+      "year": 2020,
+      "make": "Ram",
+      "model": "ProMaster Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "moparinsiders.com, Fiat Fiorino platform",
+      "notes": "Mexico-market only"
+    },
+    {
+      "year": 2019,
+      "make": "Ram",
+      "model": "ProMaster Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "moparinsiders.com, Fiat Fiorino platform",
+      "notes": "Mexico-market only"
+    },
+    {
+      "year": 2018,
+      "make": "Ram",
+      "model": "ProMaster Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "moparinsiders.com, Fiat Fiorino platform",
+      "notes": "Mexico-market only"
+    },
+    {
+      "year": 2017,
+      "make": "Ram",
+      "model": "ProMaster Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "moparinsiders.com, Fiat Fiorino platform",
+      "notes": "Mexico-market only. First year."
+    },
+    {
+      "year": 2025,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "currentTireSizes": ["265/70R17", "275/60R20", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "status": "validated",
+      "source": "tiresize.com, jordistireshop.com",
+      "notes": "275/55R20 not commonly listed; may be dealer option",
+      "trims": {
+        "Tradesman": { "tireSizes": ["265/70R17"], "wheelSize": "17\"" },
+        "Big Horn": { "tireSizes": ["265/70R17", "275/60R20"], "wheelSize": "17\" or 20\"" },
+        "Warlock": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" }
+      }
+    },
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "currentTireSizes": ["265/70R17", "275/60R20", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "status": "validated",
+      "source": "tiresize.com, jordistireshop.com",
+      "trims": {
+        "Tradesman": { "tireSizes": ["265/70R17"], "wheelSize": "17\"" },
+        "Big Horn": { "tireSizes": ["265/70R17", "275/60R20"], "wheelSize": "17\" or 20\"" },
+        "Warlock": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" }
+      }
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "currentTireSizes": ["265/70R17", "275/60R20", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "status": "validated",
+      "source": "tiresize.com, jordistireshop.com",
+      "trims": {
+        "Tradesman": { "tireSizes": ["265/70R17"], "wheelSize": "17\"" },
+        "Big Horn": { "tireSizes": ["265/70R17", "275/60R20"], "wheelSize": "17\" or 20\"" },
+        "Warlock": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" }
+      }
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "currentTireSizes": ["265/70R17", "275/60R20", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "status": "validated",
+      "source": "tiresize.com, jordistireshop.com",
+      "trims": {
+        "Tradesman": { "tireSizes": ["265/70R17"], "wheelSize": "17\"" },
+        "Big Horn": { "tireSizes": ["265/70R17", "275/60R20"], "wheelSize": "17\" or 20\"" },
+        "Warlock": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" }
+      }
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "currentTireSizes": ["265/70R17", "275/60R20", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "status": "validated",
+      "source": "tiresize.com, jordistireshop.com",
+      "trims": {
+        "Tradesman": { "tireSizes": ["265/70R17"], "wheelSize": "17\"" },
+        "Big Horn": { "tireSizes": ["265/70R17", "275/60R20"], "wheelSize": "17\" or 20\"" },
+        "Warlock": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" }
+      }
+    },
+    {
+      "year": 2020,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "currentTireSizes": ["265/70R17", "275/60R20", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "status": "validated",
+      "source": "tiresize.com, jordistireshop.com",
+      "trims": {
+        "Tradesman": { "tireSizes": ["265/70R17"], "wheelSize": "17\"" },
+        "Big Horn": { "tireSizes": ["265/70R17", "275/60R20"], "wheelSize": "17\" or 20\"" },
+        "Warlock": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" }
+      }
+    },
+    {
+      "year": 2019,
+      "make": "Ram",
+      "model": "1500 Classic",
+      "currentTireSizes": ["265/70R17", "275/60R20", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "status": "validated",
+      "source": "tiresize.com, jordistireshop.com",
+      "trims": {
+        "Tradesman": { "tireSizes": ["265/70R17"], "wheelSize": "17\"" },
+        "Big Horn": { "tireSizes": ["265/70R17", "275/60R20"], "wheelSize": "17\" or 20\"" },
+        "Warlock": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" }
+      }
+    },
+    {
+      "year": 2025,
+      "make": "Ram",
+      "model": "V1000",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "status": "inferred",
+      "source": "1010tires.com (ProMaster City reference)",
+      "notes": "Mexico-market commercial van. Similar to ProMaster City platform.",
+      "trims": {
+        "Cargo": { "tireSizes": ["215/55R16"], "wheelSize": "16\"" }
+      }
+    },
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "V1000",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "status": "inferred",
+      "source": "1010tires.com",
+      "notes": "Mexico-market commercial van"
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "V1000",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "status": "inferred",
+      "source": "1010tires.com",
+      "notes": "Mexico-market commercial van"
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "V1000",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "status": "inferred",
+      "source": "1010tires.com",
+      "notes": "Mexico-market commercial van"
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "V1000",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "status": "inferred",
+      "source": "1010tires.com",
+      "notes": "Mexico-market commercial van"
+    },
+    {
+      "year": 2020,
+      "make": "Ram",
+      "model": "V1000",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "status": "inferred",
+      "source": "1010tires.com",
+      "notes": "Mexico-market commercial van"
+    },
+    {
+      "year": 2019,
+      "make": "Ram",
+      "model": "V1000",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "status": "inferred",
+      "source": "1010tires.com",
+      "notes": "Mexico-market commercial van"
+    },
+    {
+      "year": 2018,
+      "make": "Ram",
+      "model": "V1000",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "status": "inferred",
+      "source": "1010tires.com",
+      "notes": "Mexico-market commercial van"
+    },
+    {
+      "year": 2017,
+      "make": "Ram",
+      "model": "V1000",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "status": "inferred",
+      "source": "1010tires.com",
+      "notes": "Mexico-market commercial van"
+    },
+    {
+      "year": 2016,
+      "make": "Ram",
+      "model": "V1000",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "status": "inferred",
+      "source": "1010tires.com",
+      "notes": "Mexico-market commercial van"
+    },
+    {
+      "year": 2025,
+      "make": "Ram",
+      "model": "V700 City",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Uno/Fiorino platform reference",
+      "notes": "Mexico-market compact commercial van. '225' refers to engine displacement (72hp 1.4L).",
+      "trims": {
+        "225": { "tireSizes": ["175/65R14"], "wheelSize": "14\"" }
+      }
+    },
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "V700 City",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Uno/Fiorino platform reference",
+      "notes": "Mexico-market compact commercial van"
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "V700 City",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Uno/Fiorino platform reference",
+      "notes": "Mexico-market compact commercial van"
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "V700 City",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Uno/Fiorino platform reference",
+      "notes": "Mexico-market compact commercial van"
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "V700 City",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Uno/Fiorino platform reference",
+      "notes": "Mexico-market compact commercial van"
+    },
+    {
+      "year": 2020,
+      "make": "Ram",
+      "model": "V700 City",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Uno/Fiorino platform reference",
+      "notes": "Mexico-market compact commercial van"
+    },
+    {
+      "year": 2019,
+      "make": "Ram",
+      "model": "V700 City",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Uno/Fiorino platform reference",
+      "notes": "Mexico-market compact commercial van"
+    },
+    {
+      "year": 2018,
+      "make": "Ram",
+      "model": "V700 City",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Uno/Fiorino platform reference",
+      "notes": "Mexico-market compact commercial van. First year."
+    },
+    {
+      "year": 2025,
+      "make": "Ram",
+      "model": "V700 Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Strada platform reference",
+      "notes": "Mexico-market compact pickup/van. '327' refers to cargo capacity.",
+      "trims": {
+        "327": { "tireSizes": ["175/65R14"], "wheelSize": "14\"" }
+      }
+    },
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "V700 Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Strada platform reference",
+      "notes": "Mexico-market compact pickup/van"
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "V700 Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Strada platform reference",
+      "notes": "Mexico-market compact pickup/van"
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "V700 Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Strada platform reference",
+      "notes": "Mexico-market compact pickup/van"
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "V700 Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Strada platform reference",
+      "notes": "Mexico-market compact pickup/van"
+    },
+    {
+      "year": 2020,
+      "make": "Ram",
+      "model": "V700 Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Strada platform reference",
+      "notes": "Mexico-market compact pickup/van"
+    },
+    {
+      "year": 2019,
+      "make": "Ram",
+      "model": "V700 Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Strada platform reference",
+      "notes": "Mexico-market compact pickup/van"
+    },
+    {
+      "year": 2018,
+      "make": "Ram",
+      "model": "V700 Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Strada platform reference",
+      "notes": "Mexico-market compact pickup/van"
+    },
+    {
+      "year": 2017,
+      "make": "Ram",
+      "model": "V700 Rapid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "status": "inferred",
+      "source": "Fiat Strada platform reference",
+      "notes": "Mexico-market compact pickup/van. First year."
+    },
+    {
+      "year": 2026,
+      "make": "Rivian",
+      "model": "R1S",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "validatedTireSizes": ["275/60R20", "275/65R20", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "notes": "Gen 2 model (2025-2026). 21\" Road wheel discontinued for Gen 2.",
+      "trims": {
+        "All-Season (20\")": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" },
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Range/Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" },
+        "Super Sport (22\")": { "tireSizes": ["275/50R22 (F)", "305/45R22 (R)"], "wheelSize": "22\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2025,
+      "make": "Rivian",
+      "model": "R1S",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "validatedTireSizes": ["275/60R20", "275/65R20", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "notes": "Gen 2 model. 275/55R21 replaced by 275/60R20 All-Season option.",
+      "trims": {
+        "All-Season (20\")": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" },
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Range/Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" }
+      }
+    },
+    {
+      "year": 2024,
+      "make": "Rivian",
+      "model": "R1S",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22", "275/60R20"],
+      "validatedTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "notes": "Gen 1 model (2022-2024). 275/60R20 not standard for Gen 1.",
+      "trims": {
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Road (21\")": { "tireSizes": ["275/55R21"], "wheelSize": "21\"" },
+        "Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" }
+      }
+    },
+    {
+      "year": 2023,
+      "make": "Rivian",
+      "model": "R1S",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "validatedTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "trims": {
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Road (21\")": { "tireSizes": ["275/55R21"], "wheelSize": "21\"" },
+        "Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" }
+      }
+    },
+    {
+      "year": 2022,
+      "make": "Rivian",
+      "model": "R1S",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "validatedTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "trims": {
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Road (21\")": { "tireSizes": ["275/55R21"], "wheelSize": "21\"" },
+        "Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" }
+      }
+    },
+    {
+      "year": 2026,
+      "make": "Rivian",
+      "model": "R1T",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "validatedTireSizes": ["275/60R20", "275/65R20", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "notes": "Gen 2 model (2025-2026)",
+      "trims": {
+        "All-Season (20\")": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" },
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Range/Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" },
+        "Super Sport (22\")": { "tireSizes": ["275/50R22 (F)", "305/45R22 (R)"], "wheelSize": "22\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2025,
+      "make": "Rivian",
+      "model": "R1T",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "validatedTireSizes": ["275/60R20", "275/65R20", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "notes": "Gen 2 model",
+      "trims": {
+        "All-Season (20\")": { "tireSizes": ["275/60R20"], "wheelSize": "20\"" },
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Range/Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" }
+      }
+    },
+    {
+      "year": 2024,
+      "make": "Rivian",
+      "model": "R1T",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "validatedTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "notes": "Gen 1 model",
+      "trims": {
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Road (21\")": { "tireSizes": ["275/55R21"], "wheelSize": "21\"" },
+        "Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" }
+      }
+    },
+    {
+      "year": 2023,
+      "make": "Rivian",
+      "model": "R1T",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "validatedTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "trims": {
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Road (21\")": { "tireSizes": ["275/55R21"], "wheelSize": "21\"" },
+        "Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" }
+      }
+    },
+    {
+      "year": 2022,
+      "make": "Rivian",
+      "model": "R1T",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "validatedTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "trims": {
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Road (21\")": { "tireSizes": ["275/55R21"], "wheelSize": "21\"" },
+        "Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" }
+      }
+    },
+    {
+      "year": 2021,
+      "make": "Rivian",
+      "model": "R1T",
+      "currentTireSizes": ["275/65R20", "275/55R21", "275/50R22", "275/60R20"],
+      "validatedTireSizes": ["275/65R20", "275/55R21", "275/50R22"],
+      "status": "validated",
+      "source": "rivian.com/support (official)",
+      "notes": "275/60R20 not available in 2021. Launch year.",
+      "trims": {
+        "All-Terrain (20\")": { "tireSizes": ["275/65R20"], "wheelSize": "20\"" },
+        "Road (21\")": { "tireSizes": ["275/55R21"], "wheelSize": "21\"" },
+        "Sport (22\")": { "tireSizes": ["275/50R22"], "wheelSize": "22\"" }
+      }
+    },
+    {
+      "year": 2026,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "currentTireSizes": ["295/40R22", "305/40R22"],
+      "validatedTireSizes": ["255/45R22 (F)", "285/40R22 (R)", "255/40R23 (F)", "295/35R23 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "notes": "Staggered fitment. Current sizes in DB appear incorrect. 2025+ added 23\" option.",
+      "trims": {
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Base Model (23\")": { "tireSizes": ["255/40R23 (F)", "295/35R23 (R)"], "wheelSize": "23\"", "staggered": true },
+        "Black Badge (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Black Badge (23\")": { "tireSizes": ["255/40R23 (F)", "295/35R23 (R)"], "wheelSize": "23\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2025,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "currentTireSizes": ["295/40R22", "305/40R22"],
+      "validatedTireSizes": ["255/45R22 (F)", "285/40R22 (R)", "255/40R23 (F)", "295/35R23 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "notes": "Staggered fitment. 23\" wheels added for 2025+.",
+      "trims": {
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Base Model (23\")": { "tireSizes": ["255/40R23 (F)", "295/35R23 (R)"], "wheelSize": "23\"", "staggered": true },
+        "Black Badge": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2024,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "currentTireSizes": ["295/40R22", "305/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "notes": "Staggered fitment. Current sizes in DB appear incorrect.",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Black Badge (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Black Badge (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2023,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "currentTireSizes": ["295/40R22", "305/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Black Badge": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2022,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "currentTireSizes": ["295/40R22", "305/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Black Badge": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2021,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "currentTireSizes": ["295/40R22", "305/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Black Badge": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2020,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "currentTireSizes": ["295/40R22", "305/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Black Badge": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2019,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "currentTireSizes": ["295/40R22", "305/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "notes": "First year of Cullinan production",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2018,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "currentTireSizes": ["295/40R22", "305/40R22"],
+      "validatedTireSizes": [],
+      "status": "no_data",
+      "source": "tiresize.com",
+      "notes": "Cullinan launched late 2018/2019. Limited 2018 data available."
+    },
+    {
+      "year": 2026,
+      "make": "Rolls-Royce",
+      "model": "Ghost",
+      "currentTireSizes": ["255/40R21", "265/40R22"],
+      "validatedTireSizes": ["255/40R21 (F)", "285/35R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "notes": "Staggered fitment. Current sizes appear simplified.",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Black Badge": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2025,
+      "make": "Rolls-Royce",
+      "model": "Ghost",
+      "currentTireSizes": ["255/40R21", "265/40R22"],
+      "validatedTireSizes": ["255/40R21 (F)", "285/35R21 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2024,
+      "make": "Rolls-Royce",
+      "model": "Ghost",
+      "currentTireSizes": ["255/40R21", "265/40R22"],
+      "validatedTireSizes": ["255/40R21 (F)", "285/35R21 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2023,
+      "make": "Rolls-Royce",
+      "model": "Ghost",
+      "currentTireSizes": ["255/40R21", "265/40R22"],
+      "validatedTireSizes": ["255/40R21 (F)", "285/35R21 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2022,
+      "make": "Rolls-Royce",
+      "model": "Ghost",
+      "currentTireSizes": ["255/40R21", "265/40R22"],
+      "validatedTireSizes": ["255/40R21 (F)", "285/35R21 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2021,
+      "make": "Rolls-Royce",
+      "model": "Ghost",
+      "currentTireSizes": ["255/40R21", "265/40R22"],
+      "validatedTireSizes": ["255/50R19", "255/40R21 (F)", "285/35R21 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "notes": "New generation Ghost started 2021. Multiple wheel options.",
+      "trims": {
+        "Base Model (19\")": { "tireSizes": ["255/50R19"], "wheelSize": "19\"", "staggered": false },
+        "Base Model (21\")": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2020,
+      "make": "Rolls-Royce",
+      "model": "Ghost",
+      "currentTireSizes": ["255/40R21", "265/40R22"],
+      "validatedTireSizes": ["255/50R19", "255/45R20 (F)", "285/40R20 (R)", "255/40R21 (F)", "285/35R21 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "notes": "Previous generation Ghost (2010-2020). Multiple wheel options.",
+      "trims": {
+        "Base Model (19\")": { "tireSizes": ["255/50R19"], "wheelSize": "19\"", "staggered": false },
+        "Base Model (20\")": { "tireSizes": ["255/45R20 (F)", "285/40R20 (R)"], "wheelSize": "20\"", "staggered": true },
+        "Base Model (21\")": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Black Badge": { "tireSizes": ["255/40R21 (F)", "285/35R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/45R20 (F)", "285/40R20 (R)"], "wheelSize": "20\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2026,
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "currentTireSizes": ["255/45R22", "265/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "notes": "Staggered fitment. Current sizes appear simplified.",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2025,
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "currentTireSizes": ["255/45R22", "265/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2024,
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "currentTireSizes": ["255/45R22", "265/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2023,
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "currentTireSizes": ["255/45R22", "265/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2022,
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "currentTireSizes": ["255/45R22", "265/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    },
+    {
+      "year": 2021,
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "currentTireSizes": ["255/45R22", "265/40R22"],
+      "validatedTireSizes": ["255/50R21 (F)", "285/45R21 (R)", "255/45R22 (F)", "285/40R22 (R)"],
+      "status": "validated",
+      "source": "tiresize.com",
+      "trims": {
+        "Base Model (21\")": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true },
+        "Base Model (22\")": { "tireSizes": ["255/45R22 (F)", "285/40R22 (R)"], "wheelSize": "22\"", "staggered": true },
+        "Extended Wheelbase": { "tireSizes": ["255/50R21 (F)", "285/45R21 (R)"], "wheelSize": "21\"", "staggered": true }
+      }
+    }
+  ],
+  "discrepancies": [
+    {
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "issue": "Current DB has 295/40R22 and 305/40R22. Should be staggered: 255/45R22 (F) + 285/40R22 (R) for 22\". Also has 21\" option: 255/50R21 (F) + 285/45R21 (R)."
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Ghost",
+      "issue": "Current DB has 255/40R21 and 265/40R22 (non-staggered). Should be staggered: 255/40R21 (F) + 285/35R21 (R)."
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "issue": "Current DB has 255/45R22 and 265/40R22. Should include staggered options with proper front/rear differentiation."
+    },
+    {
+      "make": "Ram",
+      "model": "1500 Classic",
+      "issue": "275/55R20 listed in current DB but not commonly found in OEM specs. May be aftermarket or rare option."
+    },
+    {
+      "make": "Rivian",
+      "model": "R1S/R1T",
+      "issue": "Gen 2 (2025-2026) replaced 275/55R21 with 275/60R20 All-Season. DB should reflect generation-specific options."
+    }
+  ],
+  "recommendations": [
+    "Consider removing Mexico-market vehicles (ProMaster Rapid, V700, V1000) from US tire site or flag them appropriately",
+    "Update Rolls-Royce vehicles to use staggered fitment with proper (F)/(R) designations",
+    "Add 23\" wheel option for 2025+ Rolls-Royce Cullinan",
+    "Verify Ram 1500 Classic 275/55R20 availability - may need removal if not OEM"
+  ]
+}

@@ -1,0 +1,1189 @@
+{
+  "batchId": "26",
+  "processedAt": "2026-04-21T21:03:00Z",
+  "totalVehicles": 75,
+  "successCount": 75,
+  "failureCount": 0,
+  "results": [
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 116.6,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006"
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 116.6,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006"
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 116.6,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006"
+    },
+    {
+      "year": 2014,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 17, "width": 6.5, "offset": 55 },
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "2010-2014"
+    },
+    {
+      "year": 2013,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 17, "width": 6.5, "offset": 55 },
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "2010-2014"
+    },
+    {
+      "year": 2012,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 17, "width": 6.5, "offset": 55 },
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "2010-2014"
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 17, "width": 6.5, "offset": 55 },
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "2010-2014"
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "accord-crosstour",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 17, "width": 6.5, "offset": 55 },
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "2010-2014"
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "domani",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ]
+      },
+      "source": "auto-data.net/honda-platform",
+      "generation": "II 1997-2000",
+      "notes": "JDM model based on Civic/Integra platform"
+    },
+    {
+      "year": 2000,
+      "make": "honda",
+      "model": "domani",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ]
+      },
+      "source": "auto-data.net/honda-platform",
+      "generation": "II 1997-2000",
+      "notes": "JDM model based on Civic/Integra platform"
+    },
+    {
+      "year": 2024,
+      "make": "honda",
+      "model": "e",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true,
+        "frontWheels": [
+          { "diameter": 16, "width": 6, "offset": 50 },
+          { "diameter": 17, "width": 6.5, "offset": 55 }
+        ],
+        "rearWheels": [
+          { "diameter": 16, "width": 7, "offset": 45 },
+          { "diameter": 17, "width": 7.5, "offset": 50 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "2020-2023",
+      "notes": "Electric vehicle with staggered wheel setup"
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "e",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true,
+        "frontWheels": [
+          { "diameter": 16, "width": 6, "offset": 50 },
+          { "diameter": 17, "width": 6.5, "offset": 55 }
+        ],
+        "rearWheels": [
+          { "diameter": 16, "width": 7, "offset": 45 },
+          { "diameter": 17, "width": 7.5, "offset": 50 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "2020-2023"
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "e",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true,
+        "frontWheels": [
+          { "diameter": 16, "width": 6, "offset": 50 },
+          { "diameter": 17, "width": 6.5, "offset": 55 }
+        ],
+        "rearWheels": [
+          { "diameter": 16, "width": 7, "offset": 45 },
+          { "diameter": 17, "width": 7.5, "offset": 50 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "2020-2023"
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "e",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true,
+        "frontWheels": [
+          { "diameter": 16, "width": 6, "offset": 50 },
+          { "diameter": 17, "width": 6.5, "offset": 55 }
+        ],
+        "rearWheels": [
+          { "diameter": 16, "width": 7, "offset": 45 },
+          { "diameter": 17, "width": 7.5, "offset": 50 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "2020-2023"
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "e",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true,
+        "frontWheels": [
+          { "diameter": 16, "width": 6, "offset": 50 },
+          { "diameter": 17, "width": 6.5, "offset": 55 }
+        ],
+        "rearWheels": [
+          { "diameter": 16, "width": 7, "offset": 45 },
+          { "diameter": 17, "width": 7.5, "offset": 50 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "2020-2023"
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "element",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 50 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "wheelsynergy.com/elementownersclub.com",
+      "generation": "2003-2011"
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "element",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 50 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "wheelsynergy.com/elementownersclub.com",
+      "generation": "2003-2011"
+    },
+    {
+      "year": 2009,
+      "make": "honda",
+      "model": "element",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 50 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "wheelsynergy.com/elementownersclub.com",
+      "generation": "2003-2011"
+    },
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "element",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 50 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "wheelsynergy.com/elementownersclub.com",
+      "generation": "2003-2011"
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "element",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 50 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "wheelsynergy.com/elementownersclub.com",
+      "generation": "2003-2011"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "element",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 50 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "wheelsynergy.com/elementownersclub.com",
+      "generation": "2003-2011"
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "element",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 50 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "wheelsynergy.com/elementownersclub.com",
+      "generation": "2003-2011"
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "element",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 50 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "wheelsynergy.com/elementownersclub.com",
+      "generation": "2003-2011"
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "element",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 50 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "wheelsynergy.com/elementownersclub.com",
+      "generation": "2003-2011"
+    },
+    {
+      "year": 2025,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GR 2020-2027"
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GR 2020-2027"
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GR 2020-2027"
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GP/GK Facelift 2017-2023"
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GP/GK Facelift 2017-2023"
+    },
+    {
+      "year": 2018,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GP/GK Facelift 2017-2023"
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GP/GK Facelift 2017-2023"
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GP/GK 2013-2018"
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "wheelsynergy.com/fitfreak.net",
+      "generation": "GP/GK 2013-2018"
+    },
+    {
+      "year": 2014,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GP/GK 2013-2018"
+    },
+    {
+      "year": 2013,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GP/GK 2013-2018"
+    },
+    {
+      "year": 2012,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GE/GP 2007-2014"
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GE/GP 2007-2014"
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GE/GP 2007-2014"
+    },
+    {
+      "year": 2009,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GE/GP 2007-2014"
+    },
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 6.5, "offset": 48 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GD 2001-2008"
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 6.5, "offset": 48 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GD 2001-2008"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 6.5, "offset": 48 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GD 2001-2008"
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 6.5, "offset": 48 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GD 2001-2008"
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 6.5, "offset": 48 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GD 2001-2008"
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 6.5, "offset": 48 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GD 2001-2008"
+    },
+    {
+      "year": 2002,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GD 2001-2008"
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "fit",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GD 2001-2008"
+    },
+    {
+      "year": 2009,
+      "make": "honda",
+      "model": "fr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 17, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "BE 2004-2009"
+    },
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "fr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 17, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "BE 2004-2009"
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "fr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 17, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "BE 2004-2009"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "fr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 17, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "BE 2004-2009"
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "fr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 17, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "BE 2004-2009"
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "fr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 17, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "BE 2004-2009"
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "hr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 7, "offset": 55 },
+          { "diameter": 17, "width": 7, "offset": 55 },
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "RU 2015-2018"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "hr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GH 1998-2006"
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "hr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GH 1998-2006"
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "hr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GH 1998-2006"
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "hr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GH 1998-2006"
+    },
+    {
+      "year": 2002,
+      "make": "honda",
+      "model": "hr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GH 1998-2006"
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "hr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GH 1998-2006"
+    },
+    {
+      "year": 2000,
+      "make": "honda",
+      "model": "hr-v",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GH 1998-2006"
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 7, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE4 2018-2023"
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 7, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE4 2018-2023"
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "wheels": [
+          { "diameter": 16, "width": 7, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE4 2018-2023"
+    },
+    {
+      "year": 2014,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE2/ZE3 2009-2014"
+    },
+    {
+      "year": 2013,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE2/ZE3 2009-2014"
+    },
+    {
+      "year": 2012,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE2/ZE3 2009-2014"
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 53 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE2 2009-2011"
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 48 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE2 2009-2011"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE1 1999-2006"
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE1 1999-2006"
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE1 1999-2006"
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE1 1999-2006"
+    },
+    {
+      "year": 2002,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE1 1999-2006"
+    },
+    {
+      "year": 2001,
+      "make": "honda",
+      "model": "insight",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "ZE1 1999-2006"
+    }
+  ]
+}

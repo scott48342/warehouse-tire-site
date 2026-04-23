@@ -1,0 +1,445 @@
+{
+  "batchId": 30,
+  "processedAt": "2026-04-21T23:53:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 41,
+    "usMarket": 9,
+    "withSpecs": 9
+  },
+  "results": [
+    {
+      "year": 2009,
+      "make": "hyundai",
+      "model": "entourage",
+      "tireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "GLS": ["225/70R16", "235/60R17"],
+        "Limited": ["235/60R17"]
+      },
+      "wheelDiameters": [16, 17],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "hyundai",
+      "model": "entourage",
+      "notUS": true,
+      "reason": "Entourage discontinued after 2009 model year in US"
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "ioniq",
+      "notUS": true,
+      "reason": "Ioniq not sold in US until 2017 model year"
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "ioniq",
+      "notUS": true,
+      "reason": "Original Ioniq discontinued; replaced by Ioniq 5/6 (separate models)"
+    },
+    {
+      "year": 2004,
+      "make": "hyundai",
+      "model": "jm",
+      "notUS": true,
+      "reason": "JM is internal Hyundai platform code, not a US model name"
+    },
+    {
+      "year": 2005,
+      "make": "hyundai",
+      "model": "jm",
+      "notUS": true,
+      "reason": "JM is internal Hyundai platform code, not a US model name"
+    },
+    {
+      "year": 2006,
+      "make": "hyundai",
+      "model": "jm",
+      "notUS": true,
+      "reason": "JM is internal Hyundai platform code, not a US model name"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "jm",
+      "notUS": true,
+      "reason": "JM is internal Hyundai platform code, not a US model name"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "jm",
+      "notUS": true,
+      "reason": "JM is internal Hyundai platform code, not a US model name"
+    },
+    {
+      "year": 2009,
+      "make": "hyundai",
+      "model": "jm",
+      "notUS": true,
+      "reason": "JM is internal Hyundai platform code, not a US model name"
+    },
+    {
+      "year": 2010,
+      "make": "hyundai",
+      "model": "jm",
+      "notUS": true,
+      "reason": "JM is internal Hyundai platform code, not a US model name"
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "mufasa",
+      "notUS": true,
+      "reason": "Mufasa is a China-market only vehicle"
+    },
+    {
+      "year": 2025,
+      "make": "hyundai",
+      "model": "mufasa",
+      "notUS": true,
+      "reason": "Mufasa is a China-market only vehicle"
+    },
+    {
+      "year": 2005,
+      "make": "hyundai",
+      "model": "nf",
+      "notUS": true,
+      "reason": "NF is internal Hyundai platform code (Sonata), not a US model name"
+    },
+    {
+      "year": 2006,
+      "make": "hyundai",
+      "model": "nf",
+      "notUS": true,
+      "reason": "NF is internal Hyundai platform code (Sonata), not a US model name"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "nf",
+      "notUS": true,
+      "reason": "NF is internal Hyundai platform code (Sonata), not a US model name"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "nf",
+      "notUS": true,
+      "reason": "NF is internal Hyundai platform code (Sonata), not a US model name"
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "palisade",
+      "notUS": true,
+      "reason": "Palisade not sold in US until 2020 model year"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "notUS": true,
+      "reason": "Santa Fe Classic is not a US model name (market-specific variant)"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "notUS": true,
+      "reason": "Santa Fe Classic is not a US model name (market-specific variant)"
+    },
+    {
+      "year": 2009,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "notUS": true,
+      "reason": "Santa Fe Classic is not a US model name (market-specific variant)"
+    },
+    {
+      "year": 2010,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "notUS": true,
+      "reason": "Santa Fe Classic is not a US model name (market-specific variant)"
+    },
+    {
+      "year": 2011,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "notUS": true,
+      "reason": "Santa Fe Classic is not a US model name (market-specific variant)"
+    },
+    {
+      "year": 2012,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "notUS": true,
+      "reason": "Santa Fe Classic is not a US model name (market-specific variant)"
+    },
+    {
+      "year": 2013,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "tireSizes": ["235/65R17", "235/55R19"],
+      "trims": {
+        "Sport Base": ["235/65R17"],
+        "Sport 2.0T": ["235/55R19"]
+      },
+      "wheelDiameters": [17, 19],
+      "note": "Listed under Santa Fe model on tiresize.com",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "tireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "Sport Base": ["235/65R17"],
+        "Sport 2.0T": ["235/60R18", "235/55R19"]
+      },
+      "wheelDiameters": [17, 18, 19],
+      "note": "Listed under Santa Fe model on tiresize.com",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "tireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "Sport Base": ["235/65R17"],
+        "Sport 2.0T": ["235/60R18", "235/55R19"]
+      },
+      "wheelDiameters": [17, 18, 19],
+      "note": "Listed under Santa Fe model on tiresize.com",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "tireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "Sport Base": ["235/65R17"],
+        "Sport 2.0T": ["235/60R18", "235/55R19"]
+      },
+      "wheelDiameters": [17, 18, 19],
+      "note": "Listed under Santa Fe model on tiresize.com",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "tireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "Sport": ["235/65R17"],
+        "Sport 2.0T": ["235/60R18", "235/55R19"],
+        "Sport 2.0T Ultimate": ["235/55R19"]
+      },
+      "wheelDiameters": [17, 18, 19],
+      "note": "Listed under Santa Fe model on tiresize.com",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "tireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "Sport": ["235/65R17"],
+        "Sport 2.0T": ["235/60R18", "235/55R19"],
+        "Sport 2.0T Ultimate": ["235/55R19"]
+      },
+      "wheelDiameters": [17, 18, 19],
+      "note": "Listed under Santa Fe model on tiresize.com",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "hyundai",
+      "model": "santro-zip",
+      "notUS": true,
+      "reason": "Santro Zip is India-market only vehicle"
+    },
+    {
+      "year": 2001,
+      "make": "hyundai",
+      "model": "santro-zip",
+      "notUS": true,
+      "reason": "Santro Zip is India-market only vehicle"
+    },
+    {
+      "year": 2002,
+      "make": "hyundai",
+      "model": "santro-zip",
+      "notUS": true,
+      "reason": "Santro Zip is India-market only vehicle"
+    },
+    {
+      "year": 2003,
+      "make": "hyundai",
+      "model": "santro-zip",
+      "notUS": true,
+      "reason": "Santro Zip is India-market only vehicle"
+    },
+    {
+      "year": 2000,
+      "make": "hyundai",
+      "model": "tiburon",
+      "tireSizes": ["195/60R15", "205/55R16"],
+      "wheelDiameters": [15, 16],
+      "note": "First gen Tiburon (RD)",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "hyundai",
+      "model": "tiburon",
+      "tireSizes": ["195/60R15", "205/55R16"],
+      "wheelDiameters": [15, 16],
+      "note": "First gen Tiburon (RD)",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "hyundai",
+      "model": "tiburon",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "Base Model": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "wheelDiameters": [16, 17],
+      "note": "Second gen Tiburon (GK)",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "hyundai",
+      "model": "tiburon",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "Base Model": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "wheelDiameters": [16, 17],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "hyundai",
+      "model": "tiburon",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "GS": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"],
+        "SE": ["215/45R17"]
+      },
+      "wheelDiameters": [16, 17],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "hyundai",
+      "model": "tiburon",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "GS": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"],
+        "SE": ["215/45R17"]
+      },
+      "wheelDiameters": [16, 17],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "tiburon",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "GS": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"],
+        "SE": ["215/45R17"]
+      },
+      "wheelDiameters": [16, 17],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "tiburon",
+      "tireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "GS": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"],
+        "SE": ["215/45R17"]
+      },
+      "wheelDiameters": [16, 17],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "hyundai",
+      "model": "tiburon-turbulence",
+      "notUS": true,
+      "reason": "Tiburon Turbulence is not a separate US model; special edition sold as Tiburon"
+    },
+    {
+      "year": 2001,
+      "make": "hyundai",
+      "model": "tiburon-turbulence",
+      "notUS": true,
+      "reason": "Tiburon Turbulence is not a separate US model; special edition sold as Tiburon"
+    },
+    {
+      "year": 2001,
+      "make": "hyundai",
+      "model": "tuscani",
+      "notUS": true,
+      "reason": "Tuscani is Korean market name for Tiburon; not sold under this name in US"
+    },
+    {
+      "year": 2002,
+      "make": "hyundai",
+      "model": "tuscani",
+      "notUS": true,
+      "reason": "Tuscani is Korean market name for Tiburon; not sold under this name in US"
+    },
+    {
+      "year": 2003,
+      "make": "hyundai",
+      "model": "tuscani",
+      "notUS": true,
+      "reason": "Tuscani is Korean market name for Tiburon; not sold under this name in US"
+    },
+    {
+      "year": 2004,
+      "make": "hyundai",
+      "model": "tuscani",
+      "notUS": true,
+      "reason": "Tuscani is Korean market name for Tiburon; not sold under this name in US"
+    },
+    {
+      "year": 2005,
+      "make": "hyundai",
+      "model": "tuscani",
+      "notUS": true,
+      "reason": "Tuscani is Korean market name for Tiburon; not sold under this name in US"
+    },
+    {
+      "year": 2006,
+      "make": "hyundai",
+      "model": "tuscani",
+      "notUS": true,
+      "reason": "Tuscani is Korean market name for Tiburon; not sold under this name in US"
+    }
+  ]
+}

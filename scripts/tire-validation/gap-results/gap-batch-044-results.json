@@ -1,0 +1,1054 @@
+{
+  "batchId": 44,
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-21T23:58:00Z",
+  "notes": "Mercedes GLC-Class AMG, GLC-Class Coupe AMG, GLE-Class, GLE-Class AMG, GLE-Class Coupe AMG - mapping to actual model names (GLC 43, GLC 63, GLE350, GLE450, GLE53, GLE63)",
+  "vehicles": [
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "tiresizeModel": "GLC-43 / GLC-63",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC SUV",
+          "tireSizes": { "front": "255/45R20", "rear": "285/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLC 63 AMG SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "tiresizeModel": "GLC-43 / GLC-63",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC SUV",
+          "tireSizes": { "front": "255/45R20", "rear": "285/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLC 63 AMG SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "tiresizeModel": "GLC-43",
+      "notes": "GLC 63 not available 2022-2024 (model gap)",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC SUV",
+          "tireSizes": { "front": "255/45R20", "rear": "285/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "tiresizeModel": "GLC-43",
+      "notes": "New generation - GLC 63 returns 2025",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "tiresizeModel": "GLC-43",
+      "notes": "GLC 63 not available (model gap)",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "tiresizeModel": "GLC-43 / GLC-63",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLC 63 S E Performance AMG 4MATIC SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "tiresizeModel": "GLC-43 / GLC-63",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLC 63 S E Performance AMG 4MATIC SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "notUS": true,
+      "notes": "GLC Coupe AMG not available in US until 2018"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "notUS": true,
+      "notes": "GLC Coupe AMG not available in US until 2018"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "tiresizeModel": "GLC-43 / GLC-63 Coupe",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC Coupe",
+          "tireSizes": { "front": "255/45R20", "rear": "285/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLC 63 AMG Coupe",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "tiresizeModel": "GLC-43 / GLC-63 Coupe",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC Coupe",
+          "tireSizes": { "front": "255/45R20", "rear": "285/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLC 63 AMG Coupe",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "tiresizeModel": "GLC-43 / GLC-63 Coupe",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC Coupe",
+          "tireSizes": { "front": "255/45R20", "rear": "285/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLC 63 AMG Coupe",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "tiresizeModel": "GLC-43 / GLC-63 Coupe",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC Coupe",
+          "tireSizes": { "front": "255/45R20", "rear": "285/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLC 63 AMG Coupe",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "tiresizeModel": "GLC-43 Coupe",
+      "notes": "GLC 63 Coupe not available 2022-2024",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC Coupe",
+          "tireSizes": { "front": "255/45R20", "rear": "285/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "tiresizeModel": "GLC-43 Coupe",
+      "notes": "New generation - GLC 63 Coupe returns 2025",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC Coupe",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "tiresizeModel": "GLC-43 Coupe",
+      "notes": "GLC 63 Coupe not available",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC Coupe",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "tiresizeModel": "GLC-43 / GLC-63 Coupe",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC Coupe",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLC 63 S E Performance AMG 4MATIC Coupe",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "tiresizeModel": "GLC-43 / GLC-63 Coupe",
+      "trims": [
+        {
+          "name": "GLC 43 AMG 4MATIC Coupe",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLC 63 S E Performance AMG 4MATIC Coupe",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gle-class",
+      "notUS": true,
+      "notes": "GLE-Class started in 2016 in US (was ML-Class in 2015)"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "255/50R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE350 SUV",
+          "tireSizes": { "all": "255/50R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "255/50R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "255/50R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "255/50R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350 / GLE450",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE450 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350 / GLE450",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE450 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350 / GLE450",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE450 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350 / GLE450",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE450 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350 / GLE450",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE450 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350 / GLE450",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE450 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE450 4MATIC Coupe",
+          "tireSizes": { "all": "275/50R20" },
+          "wheelDiameter": 20,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gle-class",
+      "tiresizeModel": "GLE350 / GLE450",
+      "trims": [
+        {
+          "name": "GLE350 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE450 4MATIC SUV",
+          "tireSizes": { "all": "275/55R19" },
+          "wheelDiameter": 19,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE450 4MATIC Coupe",
+          "tireSizes": { "all": "275/50R20" },
+          "wheelDiameter": 20,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "notUS": true,
+      "notes": "GLE AMG started in 2016 in US (was ML63 AMG in 2015)"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE63",
+      "trims": [
+        {
+          "name": "GLE63 AMG 4MATIC SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "all": "295/35R21" },
+          "wheelDiameter": 21,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE63",
+      "trims": [
+        {
+          "name": "GLE63 AMG SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "all": "295/35R21" },
+          "wheelDiameter": 21,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE63",
+      "trims": [
+        {
+          "name": "GLE63 AMG SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "all": "295/35R21" },
+          "wheelDiameter": 21,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE63",
+      "trims": [
+        {
+          "name": "GLE63 AMG SUV",
+          "tireSizes": { "front": "265/45R20", "rear": "295/40R20" },
+          "wheelDiameter": 20,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "all": "295/35R21" },
+          "wheelDiameter": 21,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE63",
+      "trims": [
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE53 / GLE63",
+      "trims": [
+        {
+          "name": "GLE53 AMG SUV 4MATIC",
+          "tireSizes": { "all": "275/50R20" },
+          "wheelDiameter": 20,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE53 / GLE63",
+      "trims": [
+        {
+          "name": "GLE53 AMG SUV 4MATIC",
+          "tireSizes": { "all": "275/50R20" },
+          "wheelDiameter": 20,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE53 / GLE63",
+      "trims": [
+        {
+          "name": "GLE53 AMG SUV 4MATIC",
+          "tireSizes": { "all": "275/50R20" },
+          "wheelDiameter": 20,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE53 / GLE63",
+      "trims": [
+        {
+          "name": "GLE53 AMG SUV 4MATIC",
+          "tireSizes": { "all": "275/50R20" },
+          "wheelDiameter": 20,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE53 / GLE63",
+      "trims": [
+        {
+          "name": "GLE53 AMG SUV 4MATIC",
+          "tireSizes": { "all": "275/50R20" },
+          "wheelDiameter": 20,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "tiresizeModel": "GLE53 / GLE63",
+      "trims": [
+        {
+          "name": "GLE53 AMG SUV 4MATIC",
+          "tireSizes": { "all": "275/50R20" },
+          "wheelDiameter": 20,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        },
+        {
+          "name": "GLE63 S AMG SUV",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "notUS": true,
+      "notes": "GLE Coupe AMG didn't exist in 2015"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "notes": "GLE Coupe AMG sold in US (GLE450 AMG Coupe, GLE63 S Coupe) but not listed separately on tiresize.com",
+      "trims": [
+        {
+          "name": "GLE63 S AMG Coupe",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "source": "derived from GLE63 S SUV specs"
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "notes": "GLE Coupe AMG sold in US",
+      "trims": [
+        {
+          "name": "GLE63 S AMG Coupe",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "source": "derived from GLE63 S SUV specs"
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "notes": "GLE Coupe AMG sold in US",
+      "trims": [
+        {
+          "name": "GLE63 S AMG Coupe",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "source": "derived from GLE63 S SUV specs"
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "notes": "GLE Coupe AMG sold in US",
+      "trims": [
+        {
+          "name": "GLE63 S AMG Coupe",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "source": "derived from GLE63 S SUV specs"
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "notes": "GLE Coupe AMG sold in US - new generation",
+      "trims": [
+        {
+          "name": "GLE63 S AMG Coupe",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "source": "derived from GLE63 S SUV specs"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "trims": [
+        {
+          "name": "GLE53 AMG Coupe 4MATIC",
+          "tireSizes": { "all": "275/50R20" },
+          "wheelDiameter": 20,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "source": "derived from GLE53 SUV specs"
+        },
+        {
+          "name": "GLE63 S AMG Coupe",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "source": "derived from GLE63 S SUV specs"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "trims": [
+        {
+          "name": "GLE53 AMG Coupe 4MATIC",
+          "tireSizes": { "all": "275/50R20" },
+          "wheelDiameter": 20,
+          "isStaggered": false,
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "source": "derived from GLE53 SUV specs"
+        },
+        {
+          "name": "GLE63 S AMG Coupe",
+          "tireSizes": { "front": "275/45R21", "rear": "315/40R21" },
+          "wheelDiameter": 21,
+          "isStaggered": true,
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "source": "derived from GLE63 S SUV specs"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "notUS": 5,
+    "withSpecs": 45,
+    "notUSVehicles": [
+      "2016 mercedes glc-class-coupe-amg",
+      "2017 mercedes glc-class-coupe-amg",
+      "2015 mercedes gle-class",
+      "2015 mercedes gle-class-amg",
+      "2015 mercedes gle-class-coupe-amg"
+    ],
+    "keyFindings": [
+      "GLC-Class AMG maps to GLC 43 and GLC 63 models",
+      "GLC 63 had a model gap 2022-2024 (returned 2025 as S E Performance)",
+      "GLC Coupe AMG started in US from 2018 (2016-2017 not available)",
+      "GLE-Class started in US from 2016 (was ML-Class in 2015)",
+      "GLE53 introduced in 2021 (newer AMG model replacing GLE43)",
+      "All Mercedes GLC/GLE use 5x112 bolt pattern with 66.6mm hub bore",
+      "GLC AMG models have staggered fitments (wider rear)",
+      "GLE63 S uses 21-inch wheels with staggered fitment"
+    ]
+  }
+}

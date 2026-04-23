@@ -1,0 +1,1344 @@
+{
+  "batchId": "65",
+  "processedAt": "2026-04-21T21:30:00.000Z",
+  "results": [
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6.5, "offset": 42},
+          {"diameter": 17, "width": 7, "offset": 42}
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "isStaggered": false
+      },
+      "source": "ipdusa.com, tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 1 S40/V40 shared Mitsubishi platform - different bolt pattern than later Volvos"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6.5, "offset": 42},
+          {"diameter": 17, "width": 7, "offset": 42}
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "isStaggered": false
+      },
+      "source": "ipdusa.com, tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 1 S40/V40 shared Mitsubishi platform - different bolt pattern than later Volvos"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "S60",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 43},
+          {"diameter": 16, "width": 7, "offset": 43},
+          {"diameter": 17, "width": 7.5, "offset": 43},
+          {"diameter": 18, "width": 8, "offset": 40}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "car-us.com, tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 1 S60 (2000-2009) uses older 65.1mm center bore"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "S70",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 38},
+          {"diameter": 16, "width": 7, "offset": 38},
+          {"diameter": 17, "width": 7, "offset": 43}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tiresize.com, redline360.com",
+      "confidence": "high",
+      "notes": "S70/V70 850-based platform uses 65.1mm center bore"
+    },
+    {
+      "year": 2016,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.3,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com, redline360.com",
+      "confidence": "high",
+      "notes": "Gen 2 S80 (2007-2016) final year"
+    },
+    {
+      "year": 2015,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.3,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com, redline360.com",
+      "confidence": "high",
+      "notes": "Gen 2 S80 (2007-2016)"
+    },
+    {
+      "year": 2014,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.3,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com, redline360.com",
+      "confidence": "high",
+      "notes": "Gen 2 S80 (2007-2016)"
+    },
+    {
+      "year": 2013,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.3,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com, redline360.com",
+      "confidence": "high",
+      "notes": "Gen 2 S80 (2007-2016)"
+    },
+    {
+      "year": 2012,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.3,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com, redline360.com",
+      "confidence": "high",
+      "notes": "Gen 2 S80 (2007-2016)"
+    },
+    {
+      "year": 2011,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.3,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com, redline360.com",
+      "confidence": "high",
+      "notes": "Gen 2 S80 (2007-2016)"
+    },
+    {
+      "year": 2010,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.3,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com, redline360.com",
+      "confidence": "high",
+      "notes": "Gen 2 S80 (2007-2016)"
+    },
+    {
+      "year": 2009,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.3,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com, redline360.com",
+      "confidence": "high",
+      "notes": "Gen 2 S80 (2007-2016)"
+    },
+    {
+      "year": 2008,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.3,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com, redline360.com",
+      "confidence": "high",
+      "notes": "Gen 2 S80 (2007-2016)"
+    },
+    {
+      "year": 2007,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.3,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com, redline360.com",
+      "confidence": "high",
+      "notes": "Gen 2 S80 first year (2007-2016)"
+    },
+    {
+      "year": 2006,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 43},
+          {"diameter": 17, "width": 7.5, "offset": 43},
+          {"diameter": 18, "width": 8, "offset": 43}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 1 S80 (1998-2006) uses older 65.1mm center bore"
+    },
+    {
+      "year": 2005,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 43},
+          {"diameter": 17, "width": 7.5, "offset": 43},
+          {"diameter": 18, "width": 8, "offset": 43}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 1 S80 (1998-2006)"
+    },
+    {
+      "year": 2004,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 43},
+          {"diameter": 17, "width": 7.5, "offset": 43},
+          {"diameter": 18, "width": 8, "offset": 43}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 1 S80 (1998-2006)"
+    },
+    {
+      "year": 2003,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 43},
+          {"diameter": 17, "width": 7.5, "offset": 43},
+          {"diameter": 18, "width": 8, "offset": 43}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 1 S80 (1998-2006)"
+    },
+    {
+      "year": 2002,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 43},
+          {"diameter": 17, "width": 7.5, "offset": 43},
+          {"diameter": 18, "width": 8, "offset": 43}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 1 S80 (1998-2006)"
+    },
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 43},
+          {"diameter": 17, "width": 7.5, "offset": 43},
+          {"diameter": 18, "width": 8, "offset": 43}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 1 S80 (1998-2006)"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "S80",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 43},
+          {"diameter": 17, "width": 7.5, "offset": 43},
+          {"diameter": 18, "width": 8, "offset": 43}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 1 S80 (1998-2006)"
+    },
+    {
+      "year": 2016,
+      "make": "Volvo",
+      "model": "S90",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 42},
+          {"diameter": 18, "width": 8, "offset": 42},
+          {"diameter": 19, "width": 8, "offset": 42},
+          {"diameter": 20, "width": 8.5, "offset": 45},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com, swedespeed.com",
+      "confidence": "high",
+      "notes": "SPA platform S90 - same specs as V90"
+    },
+    {
+      "year": 2021,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 2 V40 (2012-2021) final year"
+    },
+    {
+      "year": 2020,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 2 V40 (2012-2021)"
+    },
+    {
+      "year": 2019,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 2 V40 (2012-2021)"
+    },
+    {
+      "year": 2018,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 2 V40 (2012-2021)"
+    },
+    {
+      "year": 2017,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 2 V40 (2012-2021)"
+    },
+    {
+      "year": 2016,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 2 V40 (2012-2021)"
+    },
+    {
+      "year": 2015,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 2 V40 (2012-2021)"
+    },
+    {
+      "year": 2014,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 2 V40 (2012-2021)"
+    },
+    {
+      "year": 2013,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 2 V40 (2012-2021)"
+    },
+    {
+      "year": 2012,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Gen 2 V40 first year (2012-2021)"
+    },
+    {
+      "year": 2005,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6.5, "offset": 42},
+          {"diameter": 17, "width": 7, "offset": 42}
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "isStaggered": false
+      },
+      "source": "ipdusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 V40 (2000-2004) final year - Mitsubishi platform"
+    },
+    {
+      "year": 2004,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6.5, "offset": 42},
+          {"diameter": 17, "width": 7, "offset": 42}
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "isStaggered": false
+      },
+      "source": "ipdusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 V40 (2000-2004) - Mitsubishi platform"
+    },
+    {
+      "year": 2003,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6.5, "offset": 42},
+          {"diameter": 17, "width": 7, "offset": 42}
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "isStaggered": false
+      },
+      "source": "ipdusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 V40 (2000-2004) - Mitsubishi platform"
+    },
+    {
+      "year": 2002,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6.5, "offset": 42},
+          {"diameter": 17, "width": 7, "offset": 42}
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "isStaggered": false
+      },
+      "source": "ipdusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 V40 (2000-2004) - Mitsubishi platform"
+    },
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6.5, "offset": 42},
+          {"diameter": 17, "width": 7, "offset": 42}
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "isStaggered": false
+      },
+      "source": "ipdusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 V40 (2000-2004) - Mitsubishi platform"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "V40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 42},
+          {"diameter": 16, "width": 6.5, "offset": 42},
+          {"diameter": 17, "width": 7, "offset": 42}
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "isStaggered": false
+      },
+      "source": "ipdusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 V40 (2000-2004) - Mitsubishi platform"
+    },
+    {
+      "year": 2012,
+      "make": "Volvo",
+      "model": "V50",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tireswheels.org",
+      "confidence": "high",
+      "notes": "V50 (2004-2012) final year"
+    },
+    {
+      "year": 2011,
+      "make": "Volvo",
+      "model": "V50",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tireswheels.org",
+      "confidence": "high",
+      "notes": "V50 (2004-2012)"
+    },
+    {
+      "year": 2010,
+      "make": "Volvo",
+      "model": "V50",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tireswheels.org",
+      "confidence": "high",
+      "notes": "V50 (2004-2012)"
+    },
+    {
+      "year": 2009,
+      "make": "Volvo",
+      "model": "V50",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tireswheels.org",
+      "confidence": "high",
+      "notes": "V50 (2004-2012)"
+    },
+    {
+      "year": 2008,
+      "make": "Volvo",
+      "model": "V50",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tireswheels.org",
+      "confidence": "high",
+      "notes": "V50 (2004-2012)"
+    },
+    {
+      "year": 2007,
+      "make": "Volvo",
+      "model": "V50",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tireswheels.org",
+      "confidence": "high",
+      "notes": "V50 (2004-2012)"
+    },
+    {
+      "year": 2006,
+      "make": "Volvo",
+      "model": "V50",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tireswheels.org",
+      "confidence": "high",
+      "notes": "V50 (2004-2012)"
+    },
+    {
+      "year": 2005,
+      "make": "Volvo",
+      "model": "V50",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tireswheels.org",
+      "confidence": "high",
+      "notes": "V50 (2004-2012)"
+    },
+    {
+      "year": 2004,
+      "make": "Volvo",
+      "model": "V50",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tireswheels.org",
+      "confidence": "high",
+      "notes": "V50 first year (2004-2012)"
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "V60",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 8, "offset": 42},
+          {"diameter": 19, "width": 8, "offset": 42}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "go-parts.com",
+      "confidence": "high",
+      "notes": "V60 (2019+) SPA platform"
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "V90",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 42},
+          {"diameter": 19, "width": 8, "offset": 42},
+          {"diameter": 20, "width": 8.5, "offset": 45},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 SPA platform"
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "V90",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 42},
+          {"diameter": 19, "width": 8, "offset": 42},
+          {"diameter": 20, "width": 8.5, "offset": 45},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 SPA platform"
+    },
+    {
+      "year": 2021,
+      "make": "Volvo",
+      "model": "V90",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 42},
+          {"diameter": 19, "width": 8, "offset": 42},
+          {"diameter": 20, "width": 8.5, "offset": 45},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 SPA platform"
+    },
+    {
+      "year": 2019,
+      "make": "Volvo",
+      "model": "V90",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 42},
+          {"diameter": 19, "width": 8, "offset": 42},
+          {"diameter": 20, "width": 8.5, "offset": 45},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 SPA platform"
+    },
+    {
+      "year": 2018,
+      "make": "Volvo",
+      "model": "V90",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 42},
+          {"diameter": 19, "width": 8, "offset": 42},
+          {"diameter": 20, "width": 8.5, "offset": 45},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 SPA platform"
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 CC SPA platform - raised suspension variant"
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 CC SPA platform"
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 CC SPA platform"
+    },
+    {
+      "year": 2023,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 CC SPA platform"
+    },
+    {
+      "year": 2022,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 CC SPA platform"
+    },
+    {
+      "year": 2021,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 CC SPA platform"
+    },
+    {
+      "year": 2020,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 9, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 CC SPA platform"
+    },
+    {
+      "year": 2019,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 CC SPA platform"
+    },
+    {
+      "year": 2018,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 CC SPA platform"
+    },
+    {
+      "year": 2017,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "V90 CC first year (2017+)"
+    },
+    {
+      "year": 2016,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "medium",
+      "notes": "V90 CC - 2016 may be early release/market dependent"
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "XC40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 50.5},
+          {"diameter": 19, "width": 7.5, "offset": 50.5},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "XC40 CMA platform"
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "XC40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 50.5},
+          {"diameter": 19, "width": 7.5, "offset": 50.5},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "XC40 CMA platform"
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "XC40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 50.5},
+          {"diameter": 19, "width": 7.5, "offset": 50.5},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "XC40 CMA platform"
+    },
+    {
+      "year": 2023,
+      "make": "Volvo",
+      "model": "XC40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 50.5},
+          {"diameter": 19, "width": 7.5, "offset": 50.5},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "XC40 CMA platform"
+    },
+    {
+      "year": 2018,
+      "make": "Volvo",
+      "model": "XC40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 50.5},
+          {"diameter": 19, "width": 7.5, "offset": 50.5},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "high",
+      "notes": "XC40 first year (2018+)"
+    },
+    {
+      "year": 2017,
+      "make": "Volvo",
+      "model": "XC40",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 50.5},
+          {"diameter": 19, "width": 7.5, "offset": 50.5},
+          {"diameter": 20, "width": 8, "offset": 50}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "swedespeed.com",
+      "confidence": "medium",
+      "notes": "XC40 - 2017 may be early release/concept year"
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "XC60",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 42},
+          {"diameter": 19, "width": 8, "offset": 42},
+          {"diameter": 20, "width": 8, "offset": 42},
+          {"diameter": 21, "width": 9, "offset": 45},
+          {"diameter": 22, "width": 9, "offset": 45}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "wheelplususa.com",
+      "confidence": "high",
+      "notes": "XC60 Gen 2 SPA platform"
+    },
+    {
+      "year": 2008,
+      "make": "Volvo",
+      "model": "XC60",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 45},
+          {"diameter": 19, "width": 8, "offset": 40},
+          {"diameter": 20, "width": 8, "offset": 40}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XC60 Gen 1 first year (2008-2017)"
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "XC90",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 42},
+          {"diameter": 20, "width": 8.5, "offset": 45},
+          {"diameter": 21, "width": 9, "offset": 45},
+          {"diameter": 22, "width": 9, "offset": 45}
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "wheelplususa.com",
+      "confidence": "high",
+      "notes": "XC90 Gen 2 SPA platform (2015+)"
+    }
+  ]
+}

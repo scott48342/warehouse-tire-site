@@ -1,0 +1,3053 @@
+[
+  {
+    "id": "c0d35a7e-4e71-40b5-80d8-29e5d756b1cb",
+    "year": 2015,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20",
+      "265/55R19",
+      "275/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "4b9666f0-40a2-4b41-b44d-efe5742ab653",
+    "year": 2016,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20",
+      "265/55R19",
+      "275/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "dfd15104-3a96-4341-b59b-822086772953",
+    "year": 2017,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "e55d2a8c-e459-4b36-a487-81722c176cea",
+    "year": 2018,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "84ef9d4f-feea-4508-ba19-4e1c11eaac78",
+    "year": 2019,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20",
+      "265/55R19",
+      "275/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "003eb534-79e0-46e1-bfce-16462a9e37ef",
+    "year": 2020,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20",
+      "265/55R19",
+      "275/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "b202cb90-a745-45e2-b030-77c49f4c90eb",
+    "year": 2021,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "cdc96d75-cfe7-43a7-b732-a74d6f4b0491",
+    "year": 2022,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "f063495f-9c1f-41fe-a5ee-e523872e432a",
+    "year": 2023,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "839bf188-7608-4941-940b-ee92513e6c45",
+    "year": 2024,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20",
+      "265/55R19",
+      "275/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "134d09ca-ce3c-40f2-b0e6-792b23919bd5",
+    "year": 2025,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56.4,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 56,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20",
+      "265/55R19",
+      "275/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "8a837bf5-fde4-454f-93d8-2cceb6142349",
+    "year": 2026,
+    "make": "dodge",
+    "model": "durango",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R18",
+      "265/50R20",
+      "295/45R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "eadc94ba-eef6-493b-a176-a0cf842d9c10",
+    "year": 1987,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 14
+      },
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "205/70R14",
+      "205/70R15",
+      "215/65R15"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x100",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "815034d0-8247-434d-8217-47eb601666ad",
+    "year": 1988,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 14
+      },
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "205/70R14",
+      "205/70R15",
+      "215/65R15"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x100",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "83d5873e-e30d-40f5-9b08-124e02941eab",
+    "year": 1989,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 14
+      },
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "205/70R14",
+      "205/70R15",
+      "215/65R15"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x100",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "65ff9b3d-a435-4902-9477-dd19779639a0",
+    "year": 2000,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/65R15",
+      "215/65R16"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "0f87a11e-8399-4138-a02b-e7f4318c829d",
+    "year": 2001,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/60R16",
+      "225/55R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "67aeb365-4635-4d7e-9cd2-a61ef0793a6a",
+    "year": 2002,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/60R16",
+      "225/55R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "f2b00048-5fd4-450d-96be-0dea870c210a",
+    "year": 2003,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/60R16",
+      "225/55R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "3d963332-980b-45d5-9e09-8329b5aed49c",
+    "year": 2004,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/60R16",
+      "225/55R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "d37900de-4c94-4860-a497-dac581dd93a8",
+    "year": 2005,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/60R16",
+      "225/55R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "1fc99cae-ca76-4c29-9061-b54ed7e63a0a",
+    "year": 2006,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/60R16",
+      "225/55R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "32c25e92-9eba-4382-ab5d-86515b4f8f3a",
+    "year": 2007,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/60R16",
+      "225/55R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "45e48918-8872-499b-a93d-fd173abff542",
+    "year": 2008,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "c3f1ca6d-bd07-457e-a482-a8f3da34341b",
+    "year": 2009,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "2bf4954a-fa1a-457d-b8ed-c25e90f088f1",
+    "year": 2010,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "2c54bc4a-8a95-4ccd-b25f-c7c19bec0092",
+    "year": 2011,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "3d2095d6-2c98-4602-979e-17310baa9d95",
+    "year": 2012,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "e55dd517-87ed-46d0-ad99-10ea077ad316",
+    "year": 2013,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "dedb3df7-35de-47cf-9a17-dbf58b7f75a7",
+    "year": 2014,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "7aee06a0-5900-4fe6-826f-c95b0388f84e",
+    "year": 2015,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "225/60R18",
+      "245/50R19",
+      "245/45R20"
+    ],
+    "source": "railway_import",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x127",
+    "verifiedHubBore": "71.6",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "82ef1f8a-219a-4e20-a72b-ae5d2dc83c9d",
+    "year": 2016,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "a4ee80b6-05ce-4892-b972-67c6d7be2fdf",
+    "year": 2017,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "c3e1367e-df55-458d-bcee-cde2e8067c89",
+    "year": 2018,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "9c31bf5d-4dd8-4b88-aadc-12cc7232bd94",
+    "year": 2019,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "43cbc3b9-cabc-492d-9581-f21fc217c4e9",
+    "year": 2020,
+    "make": "dodge",
+    "model": "grand-caravan",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R16",
+      "225/65R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "00d4a2ac-2e93-4de3-9bba-d7e4ffe4818d",
+    "year": 2022,
+    "make": "dodge",
+    "model": "hornet",
+    "trim": "2.0 Turbo",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 37,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "235/45R19",
+      "225/55R18",
+      "235/40R20"
+    ],
+    "source": "railway_import",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x110",
+    "verifiedHubBore": "65.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "079d9fd0-63c7-4df8-af05-e769e59bf17e",
+    "year": 2023,
+    "make": "dodge",
+    "model": "hornet",
+    "trim": "Base",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "235/50R18",
+      "235/40R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x110",
+    "verifiedHubBore": "65.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "b1192013-768c-4052-81cc-57322750c848",
+    "year": 2024,
+    "make": "dodge",
+    "model": "hornet",
+    "trim": "Base",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "235/50R18",
+      "235/40R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x110",
+    "verifiedHubBore": "65.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "0e02f1e8-af2a-4ffe-ae0b-d21f072c4ec3",
+    "year": 2025,
+    "make": "dodge",
+    "model": "hornet",
+    "trim": "Base",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "235/50R18",
+      "235/40R20",
+      "225/55R18",
+      "235/45R19",
+      "215/60R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x110",
+    "verifiedHubBore": "65.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "77ccd9e5-93f7-4f32-9c52-37fdca323736",
+    "year": 2026,
+    "make": "dodge",
+    "model": "hornet",
+    "trim": "Base",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "235/50R18",
+      "235/40R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x110",
+    "verifiedHubBore": "65.1",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "c5ee98f3-536d-40b1-b1b4-43f0b3c5ee6b",
+    "year": 2005,
+    "make": "dodge",
+    "model": "magnum",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "225/55R18",
+      "235/55R18",
+      "245/45R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "71.5",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "1d22a409-b637-497b-9826-b7416b3d5cc2",
+    "year": 2006,
+    "make": "dodge",
+    "model": "magnum",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "225/55R18",
+      "235/55R18",
+      "245/45R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "71.5",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "b5a1ebba-fece-4efe-8db6-4a0e931913f4",
+    "year": 2007,
+    "make": "dodge",
+    "model": "magnum",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "225/55R18",
+      "235/55R18",
+      "245/45R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "71.5",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "17f3b8ce-fada-44da-b001-c0d9ea195030",
+    "year": 2008,
+    "make": "dodge",
+    "model": "magnum",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R17",
+      "225/55R18",
+      "235/55R18",
+      "245/45R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "71.5",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "a9bb5600-acc5-466b-99cd-6b4a5371c51a",
+    "year": 2007,
+    "make": "dodge",
+    "model": "nitro",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R16",
+      "235/65R16",
+      "235/65R17",
+      "245/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "71.5",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "ff5f4dad-f4a7-4738-a848-8cc69926984d",
+    "year": 2008,
+    "make": "dodge",
+    "model": "nitro",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R16",
+      "235/65R16",
+      "235/65R17",
+      "245/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "71.5",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "240d70f9-f604-483a-ba25-0f7aba09cacc",
+    "year": 2009,
+    "make": "dodge",
+    "model": "nitro",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R16",
+      "235/65R16",
+      "235/65R17",
+      "245/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "71.5",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "bc0db1ed-e6cd-4535-b49d-187c6ad16b29",
+    "year": 2010,
+    "make": "dodge",
+    "model": "nitro",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R16",
+      "235/65R16",
+      "235/65R17",
+      "245/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "71.5",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "d4c1162d-b5f7-435a-93a4-a91c8290d5e5",
+    "year": 2011,
+    "make": "dodge",
+    "model": "nitro",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R16",
+      "235/65R16",
+      "235/65R17",
+      "245/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "71.5",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "3ba6499b-bd76-416d-a23d-96fbeaf53b02",
+    "year": 2012,
+    "make": "dodge",
+    "model": "nitro",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/75R16",
+      "235/65R16",
+      "235/65R17",
+      "245/50R20"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "71.5",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "00b7d09e-1269-4a35-a4b2-f07c03220916",
+    "year": 2000,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "ST",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "74a1fe44-b885-4b7b-95b8-32f2e58f9df1",
+    "year": 2000,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "9a15e576-151e-43d8-a018-1819d6027ef2",
+    "year": 2000,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "7f62dba3-6d6a-4e19-9b3f-ecbad8d7ab78",
+    "year": 2000,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "7abb57e5-5da6-4573-801b-f0f2634fbff0",
+    "year": 2001,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "ST",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "b38f6861-a654-438d-8442-4fd623e31c18",
+    "year": 2001,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "62a5b31c-34cd-4739-95b2-094367547ee4",
+    "year": 2001,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "e1a85353-1aad-4d3d-8356-1189b29dace6",
+    "year": 2001,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "1e759fda-6c8b-4504-b241-e533f22b0ea1",
+    "year": 2002,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "561c723f-4c82-41e5-8df2-4a3405fea68c",
+    "year": 2002,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "dd33fba8-fea1-4715-afd2-84e809a57488",
+    "year": 2002,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "ST",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "1fc5632f-db24-4c97-be79-70cfe2e9e4f3",
+    "year": 2002,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "a284c1d7-4fce-460d-9bca-afe010a9760b",
+    "year": 2002,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "manufacturer_spec [filled from 2002 ram-1500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "abf69690-55eb-4f5b-9251-c681e2579fd3",
+    "year": 2003,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "manufacturer_spec [filled from 2003 ram-1500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "06285286-0f24-46ea-b1e4-90677ea891e0",
+    "year": 2003,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "2a64f43a-8c25-475e-a6b7-652296e63937",
+    "year": 2003,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "ST",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "0965fe35-55bc-40aa-baa8-0ef12c4a5482",
+    "year": 2003,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "0a8fbe09-517c-4eb5-983f-e2fa09fe927a",
+    "year": 2003,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "3aafc82c-e58f-4c17-a90f-7b661a1b0b8b",
+    "year": 2004,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "ST",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "a11c6e7d-c702-420e-bd85-1d57207cd155",
+    "year": 2004,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "a50e943d-ed16-4876-92c3-a58d09bdd23a",
+    "year": 2004,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "ebf7d30f-5365-4cd3-81d4-afffc03fdd18",
+    "year": 2004,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "41a89e1a-c470-4221-89fa-77d2ac389c63",
+    "year": 2004,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "SRT-10",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "9f44c71a-5ca3-4597-adf7-8fee713f5d90",
+    "year": 2004,
+    "make": "dodge",
+    "model": "ram-1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "manufacturer_spec [filled from 2004 ram-1500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "5x139.7",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  }
+]

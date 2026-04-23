@@ -1,0 +1,1078 @@
+{
+  "batchId": "106",
+  "processedAt": "2026-04-21T22:25:00.000Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300/E350 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300/E350 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E500/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "255/35R19 in current data not standard OEM for A207 generation - remove. Standard sizes: 225/55R16, 245/45R17, 245/40R18"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300/E350 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300/E350 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E500/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "255/35R19 not standard OEM for A207 generation"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300/E350 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300/E350 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E500/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "255/35R19 not standard OEM for A207 generation"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300/E350 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300/E350 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E500/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "255/35R19 not standard OEM for A207 generation"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300/E350 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300/E350 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E500/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "255/35R19 not standard OEM for A207 generation"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "265/35R19", "265/30R20"],
+      "trims": {
+        "E300 Base": { "tireSize": "245/45R18", "wheelSize": "8x18" },
+        "E300/E450": { "tireSize": "245/40R19", "wheelSize": "8.5x19" },
+        "E450/AMG Line": { "tireSize": "265/35R19", "wheelSize": "9x19", "rearTireSize": "295/30R19" },
+        "E53 AMG": { "tireSize": "265/30R20 F / 295/25R20 R", "wheelSize": "9x20 F / 10x20 R", "isStaggered": true }
+      },
+      "status": "MISMATCH",
+      "notes": "C238 generation (2017-2023) does not use 225/55R16. Base is 18-inch minimum. Remove 225/55R16 and 265/30R19, add correct sizes."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "265/35R19", "265/30R20"],
+      "trims": {
+        "E300 Base": { "tireSize": "245/45R18", "wheelSize": "8x18" },
+        "E300/E450": { "tireSize": "245/40R19", "wheelSize": "8.5x19" },
+        "E450/AMG Line": { "tireSize": "265/35R19", "wheelSize": "9x19", "rearTireSize": "295/30R19" },
+        "E53 AMG": { "tireSize": "265/30R20 F / 295/25R20 R", "wheelSize": "9x20 F / 10x20 R", "isStaggered": true }
+      },
+      "status": "MISMATCH",
+      "notes": "C238 generation does not use 16-inch wheels"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "265/35R19", "265/30R20"],
+      "trims": {
+        "E300 Base": { "tireSize": "245/45R18", "wheelSize": "8x18" },
+        "E300/E450": { "tireSize": "245/40R19", "wheelSize": "8.5x19" },
+        "E450/AMG Line": { "tireSize": "265/35R19", "wheelSize": "9x19" },
+        "E53 AMG": { "tireSize": "265/30R20 F / 295/25R20 R", "wheelSize": "9x20 F / 10x20 R", "isStaggered": true }
+      },
+      "status": "MISMATCH",
+      "notes": "C238 facelift, 18-inch minimum"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "265/35R19"],
+      "trims": {
+        "E300 Base": { "tireSize": "245/45R18", "wheelSize": "8x18" },
+        "E300/E450": { "tireSize": "245/40R19", "wheelSize": "8.5x19" },
+        "E450/AMG Line": { "tireSize": "265/35R19", "wheelSize": "9x19" },
+        "E53 AMG": { "tireSize": "265/35R19 F / 295/30R19 R", "wheelSize": "9x19 F / 10x19 R", "isStaggered": true }
+      },
+      "status": "MISMATCH",
+      "notes": "C238 generation, 18-inch minimum"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "265/35R19"],
+      "trims": {
+        "E300 Base": { "tireSize": "245/45R18", "wheelSize": "8x18" },
+        "E300/E400": { "tireSize": "245/40R19", "wheelSize": "8.5x19" },
+        "E400/E53 AMG": { "tireSize": "265/35R19", "wheelSize": "9x19" }
+      },
+      "status": "MISMATCH",
+      "notes": "C238 generation"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "265/35R19"],
+      "trims": {
+        "E300 Base": { "tireSize": "245/45R18", "wheelSize": "8x18" },
+        "E300/E400": { "tireSize": "245/40R19", "wheelSize": "8.5x19" },
+        "E400 4MATIC": { "tireSize": "265/35R19", "wheelSize": "9x19" }
+      },
+      "status": "MISMATCH",
+      "notes": "C238 launch year, 18-inch minimum"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "265/35R19"],
+      "trims": {
+        "E300 Base": { "tireSize": "245/45R18", "wheelSize": "8x18" },
+        "E300/E400": { "tireSize": "245/40R19", "wheelSize": "8.5x19" },
+        "E400 4MATIC": { "tireSize": "265/35R19", "wheelSize": "9x19" }
+      },
+      "status": "MISMATCH",
+      "notes": "C238 launch year"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "C207 generation. 265/30R19 not OEM for this generation."
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "C207 facelift generation"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "C207 facelift generation"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "C207 facelift generation"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "C207 generation"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "C207 generation"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "C207 launch year"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "e-class-coupe",
+      "currentTireSizes": ["225/55R16", "245/40R18", "265/30R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18"],
+      "trims": {
+        "E200/E250/E300 Base": { "tireSize": "225/55R16", "wheelSize": "7.5x16" },
+        "E200/E250/E300 Sport": { "tireSize": "245/45R17", "wheelSize": "8x17" },
+        "E350/E400/E550": { "tireSize": "245/40R18", "wheelSize": "8.5x18" }
+      },
+      "status": "MISMATCH",
+      "notes": "C207 generation (note: E-Class Coupe launched 2009 in some markets)"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqa",
+      "currentTireSizes": ["215/60R18", "235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "trims": {
+        "EQA 250 Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQA 250+/260": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQA 300/350 4MATIC": { "tireSize": "255/45R19", "wheelSize": "8.5x19" }
+      },
+      "status": "MISMATCH",
+      "notes": "215/60R18 not standard OEM for EQA. Base is 235/55R18. Add 255/45R19 for higher trims."
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqa",
+      "currentTireSizes": ["215/60R18", "235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "trims": {
+        "EQA 250 Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQA 250+/260": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQA 300/350 4MATIC": { "tireSize": "255/45R19", "wheelSize": "8.5x19" }
+      },
+      "status": "MISMATCH",
+      "notes": "Replace 215/60R18 with 255/45R19"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqa",
+      "currentTireSizes": ["215/60R18", "235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "trims": {
+        "EQA 250 Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQA 250+/260": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQA 300/350 4MATIC": { "tireSize": "255/45R19", "wheelSize": "8.5x19" }
+      },
+      "status": "MISMATCH",
+      "notes": "Replace 215/60R18 with 255/45R19"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqa",
+      "currentTireSizes": ["215/60R18", "235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "trims": {
+        "EQA 250 Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQA 250+/260": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQA 300/350 4MATIC": { "tireSize": "255/45R19", "wheelSize": "8.5x19" }
+      },
+      "status": "MISMATCH",
+      "notes": "Replace 215/60R18 with 255/45R19"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqa",
+      "currentTireSizes": ["215/60R18", "235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "trims": {
+        "EQA 250 Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQA 250+/260": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQA 300/350 4MATIC": { "tireSize": "255/45R19", "wheelSize": "8.5x19" }
+      },
+      "status": "MISMATCH",
+      "notes": "Replace 215/60R18 with 255/45R19"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "eqa",
+      "currentTireSizes": ["215/60R18", "235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "trims": {
+        "EQA 250 Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQA 250+/260": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQA 300/350 4MATIC": { "tireSize": "255/45R19", "wheelSize": "8.5x19" }
+      },
+      "status": "MISMATCH",
+      "notes": "Launch year. Replace 215/60R18 with 255/45R19"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqb",
+      "currentTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19", "255/45R20"],
+      "trims": {
+        "EQB 250 Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQB 300/350": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQB 350 4MATIC AMG Line": { "tireSize": "255/45R19", "wheelSize": "8.5x19" },
+        "EQB 350 4MATIC 20\" Package": { "tireSize": "255/45R20", "wheelSize": "8.5x20" }
+      },
+      "status": "VALID_PARTIAL",
+      "notes": "Current sizes correct but missing 255/45R20 option for top trims"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqb",
+      "currentTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19", "255/45R20"],
+      "trims": {
+        "EQB 250 Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQB 300/350": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQB 350 4MATIC AMG Line": { "tireSize": "255/45R19", "wheelSize": "8.5x19" },
+        "EQB 350 4MATIC 20\" Package": { "tireSize": "255/45R20", "wheelSize": "8.5x20" }
+      },
+      "status": "VALID_PARTIAL",
+      "notes": "Consider adding 255/45R20"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqb",
+      "currentTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19", "255/45R20"],
+      "trims": {
+        "EQB 250+ Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQB 300/350": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQB 350 4MATIC AMG Line": { "tireSize": "255/45R19", "wheelSize": "8.5x19" }
+      },
+      "status": "VALID_PARTIAL",
+      "notes": "Core sizes correct"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqb",
+      "currentTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19", "255/45R20"],
+      "trims": {
+        "EQB 250+ Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQB 300/350": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQB 350 4MATIC AMG Line": { "tireSize": "255/45R19", "wheelSize": "8.5x19" }
+      },
+      "status": "VALID_PARTIAL",
+      "notes": "Core sizes correct"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqb",
+      "currentTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19", "255/45R20"],
+      "trims": {
+        "EQB 250+ Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQB 300/350": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQB 350 4MATIC AMG Line": { "tireSize": "255/45R19", "wheelSize": "8.5x19" }
+      },
+      "status": "VALID_PARTIAL",
+      "notes": "US launch year"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "eqb",
+      "currentTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "validatedTireSizes": ["235/55R18", "235/50R19", "255/45R19"],
+      "trims": {
+        "EQB 250 Base": { "tireSize": "235/55R18", "wheelSize": "7.5x18" },
+        "EQB 300/350": { "tireSize": "235/50R19", "wheelSize": "8x19" },
+        "EQB 350 4MATIC": { "tireSize": "255/45R19", "wheelSize": "8.5x19" }
+      },
+      "status": "VALID",
+      "notes": "All sizes verified correct"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqc",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/50R19", "255/45R20", "255/40R21"],
+      "trims": {
+        "EQC 400 4MATIC Base": { "tireSize": "255/50R19", "wheelSize": "8x19" },
+        "EQC 400 4MATIC Sport": { "tireSize": "255/45R20", "wheelSize": "8.5x20" },
+        "EQC 400 4MATIC AMG Line": { "tireSize": "255/40R21", "wheelSize": "9x21" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Empty - add validated sizes: 255/50R19, 255/45R20, 255/40R21"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqc",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/50R19", "255/45R20", "255/40R21"],
+      "trims": {
+        "EQC 400 4MATIC Base": { "tireSize": "255/50R19", "wheelSize": "8x19" },
+        "EQC 400 4MATIC Sport": { "tireSize": "255/45R20", "wheelSize": "8.5x20" },
+        "EQC 400 4MATIC AMG Line": { "tireSize": "255/40R21", "wheelSize": "9x21" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "eqc",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/50R19", "255/45R20", "255/40R21"],
+      "trims": {
+        "EQC 400 4MATIC Base": { "tireSize": "255/50R19", "wheelSize": "8x19" },
+        "EQC 400 4MATIC Sport": { "tireSize": "255/45R20", "wheelSize": "8.5x20" },
+        "EQC 400 4MATIC AMG Line": { "tireSize": "255/40R21", "wheelSize": "9x21" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "eqc",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/50R19", "255/45R20"],
+      "trims": {
+        "EQC 400 4MATIC Base": { "tireSize": "255/50R19", "wheelSize": "8x19" },
+        "EQC 400 4MATIC Sport": { "tireSize": "255/45R20", "wheelSize": "8.5x20" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "US launch year. Add validated sizes."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "eqc",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/50R19", "255/45R20"],
+      "trims": {
+        "EQC 400 4MATIC Base": { "tireSize": "255/50R19", "wheelSize": "8x19" },
+        "EQC 400 4MATIC Sport": { "tireSize": "255/45R20", "wheelSize": "8.5x20" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "European launch year"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqe",
+      "currentTireSizes": ["255/45R19", "275/40R20", "285/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "265/40R20", "275/35R21"],
+      "trims": {
+        "EQE 350 Base": { "tireSize": "255/45R19", "wheelSize": "8.5x19" },
+        "EQE 350+": { "tireSize": "255/40R20", "wheelSize": "9x20" },
+        "EQE 350+ Sport": { "tireSize": "265/40R20", "wheelSize": "9x20" },
+        "EQE 500": { "tireSize": "275/35R21", "wheelSize": "9.5x21" }
+      },
+      "status": "MISMATCH",
+      "notes": "285/35R21 not standard OEM - typically rear only on AMG variants. Replace with 275/35R21"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqe",
+      "currentTireSizes": ["255/45R19", "275/40R20", "285/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "265/40R20", "275/35R21"],
+      "trims": {
+        "EQE 350 Base": { "tireSize": "255/45R19", "wheelSize": "8.5x19" },
+        "EQE 350+": { "tireSize": "255/40R20", "wheelSize": "9x20" },
+        "EQE 350+ Sport": { "tireSize": "265/40R20", "wheelSize": "9x20" },
+        "EQE 500": { "tireSize": "275/35R21", "wheelSize": "9.5x21" }
+      },
+      "status": "MISMATCH",
+      "notes": "Replace 275/40R20 with 255/40R20, 285/35R21 with 275/35R21"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqe",
+      "currentTireSizes": ["255/45R19", "275/40R20", "285/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "265/40R20", "275/35R21"],
+      "trims": {
+        "EQE 350 Base": { "tireSize": "255/45R19", "wheelSize": "8.5x19" },
+        "EQE 350+": { "tireSize": "255/40R20", "wheelSize": "9x20" },
+        "EQE 350 4MATIC": { "tireSize": "265/40R20", "wheelSize": "9x20" },
+        "EQE 500": { "tireSize": "275/35R21", "wheelSize": "9.5x21" }
+      },
+      "status": "MISMATCH",
+      "notes": "Update 275/40R20 and 285/35R21"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqe",
+      "currentTireSizes": ["255/45R19", "275/40R20", "285/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "265/40R20", "275/35R21"],
+      "trims": {
+        "EQE 350 Base": { "tireSize": "255/45R19", "wheelSize": "8.5x19" },
+        "EQE 350+": { "tireSize": "255/40R20", "wheelSize": "9x20" },
+        "EQE 350 4MATIC": { "tireSize": "265/40R20", "wheelSize": "9x20" },
+        "EQE 500": { "tireSize": "275/35R21", "wheelSize": "9.5x21" }
+      },
+      "status": "MISMATCH",
+      "notes": "Update sizes"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqe",
+      "currentTireSizes": ["255/45R19", "275/40R20", "285/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "265/40R20", "275/35R21"],
+      "trims": {
+        "EQE 350 Base": { "tireSize": "255/45R19", "wheelSize": "8.5x19" },
+        "EQE 350+": { "tireSize": "255/40R20", "wheelSize": "9x20" },
+        "EQE 350 4MATIC": { "tireSize": "265/40R20", "wheelSize": "9x20" }
+      },
+      "status": "MISMATCH",
+      "notes": "Launch year - update sizes"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqe-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/40R20", "295/35R20", "265/35R21", "295/30R21"],
+      "trims": {
+        "AMG EQE 43 4MATIC": { "frontTireSize": "265/40R20", "rearTireSize": "295/35R20", "isStaggered": true, "frontWheelSize": "9x20", "rearWheelSize": "10x20" },
+        "AMG EQE 53 4MATIC+": { "frontTireSize": "265/35R21", "rearTireSize": "295/30R21", "isStaggered": true, "frontWheelSize": "9.5x21", "rearWheelSize": "10.5x21" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add staggered tire configurations. F: 265/40R20, R: 295/35R20 (20\") or F: 265/35R21, R: 295/30R21 (21\")"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqe-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/40R20", "295/35R20", "265/35R21", "295/30R21"],
+      "trims": {
+        "AMG EQE 43 4MATIC": { "frontTireSize": "265/40R20", "rearTireSize": "295/35R20", "isStaggered": true },
+        "AMG EQE 53 4MATIC+": { "frontTireSize": "265/35R21", "rearTireSize": "295/30R21", "isStaggered": true }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add staggered tire configurations"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqe-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/40R20", "295/35R20", "265/35R21", "295/30R21"],
+      "trims": {
+        "AMG EQE 43 4MATIC": { "frontTireSize": "265/40R20", "rearTireSize": "295/35R20", "isStaggered": true },
+        "AMG EQE 53 4MATIC+": { "frontTireSize": "265/35R21", "rearTireSize": "295/30R21", "isStaggered": true }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add staggered tire configurations"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqe-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/40R20", "295/35R20", "265/35R21", "295/30R21"],
+      "trims": {
+        "AMG EQE 43 4MATIC": { "frontTireSize": "265/40R20", "rearTireSize": "295/35R20", "isStaggered": true },
+        "AMG EQE 53 4MATIC+": { "frontTireSize": "265/35R21", "rearTireSize": "295/30R21", "isStaggered": true }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Launch year. Add staggered configurations."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqe-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/40R20", "295/35R20", "265/35R21", "295/30R21"],
+      "trims": {
+        "AMG EQE 43 4MATIC": { "frontTireSize": "265/40R20", "rearTireSize": "295/35R20", "isStaggered": true },
+        "AMG EQE 53 4MATIC+": { "frontTireSize": "265/35R21", "rearTireSize": "295/30R21", "isStaggered": true }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add staggered configurations"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqe-suv",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/50R19", "275/40R21", "275/35R22"],
+      "trims": {
+        "EQE 350 SUV Base": { "tireSize": "255/50R19", "wheelSize": "8.5x19" },
+        "EQE 350+ SUV": { "tireSize": "275/40R21", "wheelSize": "9x21" },
+        "EQE 500 SUV": { "tireSize": "275/35R22", "wheelSize": "9.5x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add 255/50R19, 275/40R21, 275/35R22"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqe-suv",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/50R19", "275/40R21", "275/35R22"],
+      "trims": {
+        "EQE 350 SUV Base": { "tireSize": "255/50R19", "wheelSize": "8.5x19" },
+        "EQE 350+ SUV": { "tireSize": "275/40R21", "wheelSize": "9x21" },
+        "EQE 500 SUV": { "tireSize": "275/35R22", "wheelSize": "9.5x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqe-suv",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/50R19", "275/40R21", "275/35R22"],
+      "trims": {
+        "EQE 350 SUV Base": { "tireSize": "255/50R19", "wheelSize": "8.5x19" },
+        "EQE 350+ SUV": { "tireSize": "275/40R21", "wheelSize": "9x21" },
+        "EQE 500 SUV": { "tireSize": "275/35R22", "wheelSize": "9.5x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqe-suv",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/50R19", "275/40R21", "275/35R22"],
+      "trims": {
+        "EQE 350 SUV Base": { "tireSize": "255/50R19", "wheelSize": "8.5x19" },
+        "EQE 350+ SUV": { "tireSize": "275/40R21", "wheelSize": "9x21" },
+        "EQE 500 SUV": { "tireSize": "275/35R22", "wheelSize": "9.5x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Launch year. Add validated sizes."
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqe-suv-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/40R21", "275/35R22"],
+      "trims": {
+        "AMG EQE 43 SUV": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "AMG EQE 53 SUV": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add 275/40R21 and 275/35R22"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqe-suv-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/40R21", "275/35R22"],
+      "trims": {
+        "AMG EQE 43 SUV": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "AMG EQE 53 SUV": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqe-suv-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/40R21", "275/35R22"],
+      "trims": {
+        "AMG EQE 43 SUV": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "AMG EQE 53 SUV": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqe-suv-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/40R21", "275/35R22"],
+      "trims": {
+        "AMG EQE 43 SUV": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "AMG EQE 53 SUV": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Launch year"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqs",
+      "currentTireSizes": ["265/40R21", "285/35R22"],
+      "validatedTireSizes": ["265/40R21", "275/40R21", "275/35R22"],
+      "trims": {
+        "EQS 450 Base": { "tireSize": "265/40R21", "wheelSize": "9x21" },
+        "EQS 450+/580": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "EQS 580 AMG Line": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "MISMATCH",
+      "notes": "285/35R22 should be 275/35R22. Add 275/40R21."
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqs",
+      "currentTireSizes": ["265/40R21", "285/35R22"],
+      "validatedTireSizes": ["265/40R21", "275/40R21", "275/35R22"],
+      "trims": {
+        "EQS 450 Base": { "tireSize": "265/40R21", "wheelSize": "9x21" },
+        "EQS 450+/580": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "EQS 580 AMG Line": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "MISMATCH",
+      "notes": "Update 285/35R22 to 275/35R22"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqs",
+      "currentTireSizes": ["265/40R21", "285/35R22"],
+      "validatedTireSizes": ["265/40R21", "275/40R21", "275/35R22"],
+      "trims": {
+        "EQS 450 Base": { "tireSize": "265/40R21", "wheelSize": "9x21" },
+        "EQS 450+/580": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "EQS 580 AMG Line": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "MISMATCH",
+      "notes": "Update sizes"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqs",
+      "currentTireSizes": ["265/40R21", "285/35R22"],
+      "validatedTireSizes": ["265/40R21", "275/40R21", "275/35R22"],
+      "trims": {
+        "EQS 450 Base": { "tireSize": "265/40R21", "wheelSize": "9x21" },
+        "EQS 450+/580": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "EQS 580 AMG Line": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "MISMATCH",
+      "notes": "Update sizes"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqs",
+      "currentTireSizes": ["265/40R21", "285/35R22"],
+      "validatedTireSizes": ["265/40R21", "275/40R21", "275/35R22"],
+      "trims": {
+        "EQS 450 Base": { "tireSize": "265/40R21", "wheelSize": "9x21" },
+        "EQS 450+/580": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "EQS 580 AMG Line": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "MISMATCH",
+      "notes": "US launch year"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "eqs",
+      "currentTireSizes": ["265/40R21", "285/35R22"],
+      "validatedTireSizes": ["265/40R21", "275/40R21", "275/35R22"],
+      "trims": {
+        "EQS 450 Base": { "tireSize": "265/40R21", "wheelSize": "9x21" },
+        "EQS 450+/580": { "tireSize": "275/40R21", "wheelSize": "9.5x21" }
+      },
+      "status": "MISMATCH",
+      "notes": "Global launch year"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqs-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/35R21", "295/30R21", "275/35R22"],
+      "trims": {
+        "AMG EQS 53 4MATIC+": { "frontTireSize": "265/35R21", "rearTireSize": "295/30R21", "isStaggered": true, "frontWheelSize": "9.5x21", "rearWheelSize": "10.5x21" },
+        "AMG EQS 53 4MATIC+ 22\"": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add staggered 265/35R21 F / 295/30R21 R and 275/35R22"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqs-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/35R21", "295/30R21", "275/35R22"],
+      "trims": {
+        "AMG EQS 53 4MATIC+": { "frontTireSize": "265/35R21", "rearTireSize": "295/30R21", "isStaggered": true },
+        "AMG EQS 53 4MATIC+ 22\"": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqs-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/35R21", "295/30R21", "275/35R22"],
+      "trims": {
+        "AMG EQS 53 4MATIC+": { "frontTireSize": "265/35R21", "rearTireSize": "295/30R21", "isStaggered": true },
+        "AMG EQS 53 4MATIC+ 22\"": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqs-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/35R21", "295/30R21", "275/35R22"],
+      "trims": {
+        "AMG EQS 53 4MATIC+": { "frontTireSize": "265/35R21", "rearTireSize": "295/30R21", "isStaggered": true },
+        "AMG EQS 53 4MATIC+ 22\"": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqs-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/35R21", "295/30R21", "275/35R22"],
+      "trims": {
+        "AMG EQS 53 4MATIC+": { "frontTireSize": "265/35R21", "rearTireSize": "295/30R21", "isStaggered": true },
+        "AMG EQS 53 4MATIC+ 22\"": { "tireSize": "275/35R22", "wheelSize": "10x22" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Launch year"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqs-suv",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/45R20", "275/40R21", "285/40R21"],
+      "trims": {
+        "EQS 450 SUV Base": { "tireSize": "265/45R20", "wheelSize": "9x20" },
+        "EQS 450+ SUV": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "EQS 580 SUV": { "tireSize": "285/40R21", "wheelSize": "10x21" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add 265/45R20, 275/40R21, 285/40R21"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqs-suv",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/45R20", "275/40R21", "285/40R21"],
+      "trims": {
+        "EQS 450 SUV Base": { "tireSize": "265/45R20", "wheelSize": "9x20" },
+        "EQS 450+ SUV": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "EQS 580 SUV": { "tireSize": "285/40R21", "wheelSize": "10x21" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqs-suv",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/45R20", "275/40R21", "285/40R21"],
+      "trims": {
+        "EQS 450 SUV Base": { "tireSize": "265/45R20", "wheelSize": "9x20" },
+        "EQS 450+ SUV": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "EQS 580 SUV": { "tireSize": "285/40R21", "wheelSize": "10x21" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqs-suv",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/45R20", "275/40R21", "285/40R21"],
+      "trims": {
+        "EQS 450 SUV Base": { "tireSize": "265/45R20", "wheelSize": "9x20" },
+        "EQS 450+ SUV": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "EQS 580 SUV": { "tireSize": "285/40R21", "wheelSize": "10x21" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "US launch year"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqs-suv",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/45R20", "275/40R21", "285/40R21"],
+      "trims": {
+        "EQS 450 SUV Base": { "tireSize": "265/45R20", "wheelSize": "9x20" },
+        "EQS 450+ SUV": { "tireSize": "275/40R21", "wheelSize": "9.5x21" },
+        "EQS 580 SUV": { "tireSize": "285/40R21", "wheelSize": "10x21" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Launch year"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R17", "215/55R17", "215/50R18"],
+      "trims": {
+        "EQT Base": { "tireSize": "205/55R17", "wheelSize": "6.5x17" },
+        "EQT Progressive": { "tireSize": "215/55R17", "wheelSize": "7x17" },
+        "EQT AMG Line": { "tireSize": "215/50R18", "wheelSize": "7x18" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add 205/55R17, 215/55R17, 215/50R18 for this electric van"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R17", "215/55R17", "215/50R18"],
+      "trims": {
+        "EQT Base": { "tireSize": "205/55R17", "wheelSize": "6.5x17" },
+        "EQT Progressive": { "tireSize": "215/55R17", "wheelSize": "7x17" },
+        "EQT AMG Line": { "tireSize": "215/50R18", "wheelSize": "7x18" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R17", "215/55R17", "215/50R18"],
+      "trims": {
+        "EQT Base": { "tireSize": "205/55R17", "wheelSize": "6.5x17" },
+        "EQT Progressive": { "tireSize": "215/55R17", "wheelSize": "7x17" },
+        "EQT AMG Line": { "tireSize": "215/50R18", "wheelSize": "7x18" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Add validated sizes"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R17", "215/55R17", "215/50R18"],
+      "trims": {
+        "EQT Base": { "tireSize": "205/55R17", "wheelSize": "6.5x17" },
+        "EQT Progressive": { "tireSize": "215/55R17", "wheelSize": "7x17" },
+        "EQT AMG Line": { "tireSize": "215/50R18", "wheelSize": "7x18" }
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Launch year for EQT electric van"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "valid": 1,
+    "validPartial": 5,
+    "mismatch": 32,
+    "needsData": 37,
+    "validationSources": [
+      "tiresize.com",
+      "hulkoffsets.com",
+      "cartiresize.net",
+      "hubcaphaven.com"
+    ],
+    "keyFindings": [
+      "E-Class Cabriolet (A207): Remove 255/35R19 - not OEM for this generation, add 245/45R17",
+      "E-Class Coupe 2017+: Minimum 18-inch wheels - remove 225/55R16 from C238 generation",
+      "E-Class Coupe 2009-2016: 265/30R19 not OEM for C207 generation",
+      "EQA: 215/60R18 not OEM - base is 235/55R18, add 255/45R19 for upper trims",
+      "EQB: Current sizes good, add 255/45R20 for 20-inch package",
+      "EQC: Empty data - add 255/50R19, 255/45R20, 255/40R21",
+      "EQE: Minor corrections needed - 275/40R20→255/40R20, 285/35R21→275/35R21",
+      "EQE AMG: Staggered setup required - F: 265/40R20, R: 295/35R20 or F: 265/35R21, R: 295/30R21",
+      "EQE SUV/SUV AMG: Empty data - add sizes",
+      "EQS: 285/35R22→275/35R22, add 275/40R21",
+      "EQS AMG: Staggered required - F: 265/35R21, R: 295/30R21 or 275/35R22",
+      "EQS SUV: Empty data - add 265/45R20, 275/40R21, 285/40R21",
+      "EQT: Empty data - add 205/55R17, 215/55R17, 215/50R18 (electric van)"
+    ]
+  }
+}

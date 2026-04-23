@@ -1,0 +1,1692 @@
+{
+  "batchId": "19",
+  "processedAt": "2026-04-21T21:45:00.000Z",
+  "results": [
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "295/35R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition (22\" option)",
+          "wheelSize": { "diameter": 22, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "295/35R21", "rear": "315/30R22" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "295/35R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition (22\" option)",
+          "wheelSize": { "diameter": 22, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "295/35R21", "rear": "315/30R22" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "295/35R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition (22\" option)",
+          "wheelSize": { "diameter": 22, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "295/35R21", "rear": "315/30R22" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "295/35R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition (22\" option)",
+          "wheelSize": { "diameter": 22, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "295/35R21", "rear": "315/30R22" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "295/35R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "295/35R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "295/35R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "295/35R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "295/35R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "295/35R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base (F85)",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "Transition year between F85 and F95 generations"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base (E70)",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "X5 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 20, "width": 9, "offset": 38 },
+          "tireSize": "275/45R20"
+        },
+        {
+          "trim": "xDrive40i M Sport",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "M60i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "M60i (22\" option)",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R22", "rear": "315/30R22" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 20, "width": 9, "offset": 38 },
+          "tireSize": "275/45R20"
+        },
+        {
+          "trim": "xDrive40i M Sport",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "M60i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "M60i (22\" option)",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R22", "rear": "315/30R22" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "265/50R19"
+        },
+        {
+          "trim": "xDrive40i (20\")",
+          "wheelSize": { "diameter": 20, "width": 9, "offset": 38 },
+          "tireSize": "275/45R20"
+        },
+        {
+          "trim": "xDrive40i M Sport",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "M60i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "M60i (22\" option)",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R22", "rear": "315/30R22" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive40i (20\")",
+          "wheelSize": { "diameter": 20, "width": 9, "offset": 38 },
+          "tireSize": "275/40R20"
+        },
+        {
+          "trim": "M50i/M60i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive40i (20\")",
+          "wheelSize": { "diameter": 20, "width": 9, "offset": 38 },
+          "tireSize": "275/40R20"
+        },
+        {
+          "trim": "M50i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive40i (20\")",
+          "wheelSize": { "diameter": 20, "width": 9, "offset": 38 },
+          "tireSize": "275/40R20"
+        },
+        {
+          "trim": "M50i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive40i (20\")",
+          "wheelSize": { "diameter": 20, "width": 9, "offset": 38 },
+          "tireSize": "275/40R20"
+        },
+        {
+          "trim": "M50i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive35i M Sport",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive50i M Sport",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive35i M Sport",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive50i M Sport",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive35i M Sport",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive35i M Sport",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive35i M Sport",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive50i M Performance",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive50i M Performance",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive35i Sport",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "285/45R19"
+        },
+        {
+          "trim": "xDrive50i Sport",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive35i Sport",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": "275/45R20"
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": "275/45R20"
+        }
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": "275/45R20"
+        }
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "X6",
+      "trims": [
+        {
+          "trim": "xDrive35i",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 38 },
+          "tireSize": "255/50R19"
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": "275/45R20"
+        }
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition (22\" option)",
+          "wheelSize": { "diameter": 22, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "295/35R21", "rear": "315/30R22" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "goodyear.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "goodyear.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "goodyear.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        },
+        {
+          "trim": "Competition",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R21", "rear": "315/35R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base (F86)",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base (E71)",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        },
+        {
+          "trim": "Base (21\" option)",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        },
+        {
+          "trim": "Base (21\" option)",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        },
+        {
+          "trim": "Base (21\" option)",
+          "wheelSize": { "diameter": 21, "width": 10, "offset": 40 },
+          "tireSize": { "front": "285/35R21", "rear": "325/30R21" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "X6 M",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 20, "width": 10, "offset": 40 },
+          "tireSize": { "front": "275/40R20", "rear": "315/35R20" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X7",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "xDrive40i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "xDrive40i (23\")",
+          "wheelSize": { "diameter": 23, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        },
+        {
+          "trim": "M60i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "M60i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "M60i (23\")",
+          "wheelSize": { "diameter": 23, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        },
+        {
+          "trim": "XB7 (Alpina)",
+          "wheelSize": { "diameter": 23, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "285/35R23", "rear": "325/30R23" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X7",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "xDrive40i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "xDrive40i (23\")",
+          "wheelSize": { "diameter": 23, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        },
+        {
+          "trim": "M60i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "M60i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "M60i (23\")",
+          "wheelSize": { "diameter": 23, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        },
+        {
+          "trim": "XB7 (Alpina)",
+          "wheelSize": { "diameter": 23, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "285/35R23", "rear": "325/30R23" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X7",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "xDrive40i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "xDrive40i (23\")",
+          "wheelSize": { "diameter": 23, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        },
+        {
+          "trim": "M60i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "M60i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "M60i (23\")",
+          "wheelSize": { "diameter": 23, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X7",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "xDrive40i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "xDrive40i (23\")",
+          "wheelSize": { "diameter": 23, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        },
+        {
+          "trim": "M60i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "M60i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "M60i (23\")",
+          "wheelSize": { "diameter": 23, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X7",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "xDrive40i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "M50i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "M50i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X7",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "xDrive40i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "M50i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X7",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "xDrive40i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "M50i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X7",
+      "trims": [
+        {
+          "trim": "xDrive40i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "xDrive40i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "xDrive50i",
+          "wheelSize": { "diameter": 21, "width": 9.5, "offset": 36 },
+          "tireSize": "285/45R21"
+        },
+        {
+          "trim": "xDrive50i (22\")",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "X7",
+      "trims": [],
+      "isStaggered": false,
+      "source": "N/A",
+      "confidence": "none",
+      "notes": "X7 not produced in 2018 - production started 2019"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "XM",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "Label Red",
+          "wheelSize": { "diameter": 23, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "goodyear.com, continentaltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "XM",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "Label Red",
+          "wheelSize": { "diameter": 23, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "goodyear.com, continentaltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "XM",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "Label Red",
+          "wheelSize": { "diameter": 23, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "goodyear.com, continentaltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "XM",
+      "trims": [
+        {
+          "trim": "Base",
+          "wheelSize": { "diameter": 22, "width": 10, "offset": 35 },
+          "tireSize": { "front": "275/40R22", "rear": "315/35R22" }
+        },
+        {
+          "trim": "Label Red",
+          "wheelSize": { "diameter": 23, "width": 10.5, "offset": 35 },
+          "tireSize": { "front": "275/35R23", "rear": "315/30R23" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "goodyear.com, continentaltire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "Z3",
+      "trims": [
+        {
+          "trim": "Roadster 2.5i",
+          "wheelSize": { "diameter": 16, "width": 7, "offset": 47 },
+          "tireSize": "225/50R16"
+        },
+        {
+          "trim": "Roadster 3.0i",
+          "wheelSize": { "diameter": 17, "width": 7.5, "offset": 41 },
+          "tireSize": { "front": "225/45R17", "rear": "245/40R17" }
+        },
+        {
+          "trim": "Coupe 3.0i",
+          "wheelSize": { "diameter": 17, "width": 7.5, "offset": 41 },
+          "tireSize": { "front": "225/45R17", "rear": "245/40R17" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "BMW",
+      "model": "Z3",
+      "trims": [
+        {
+          "trim": "Roadster 2.5i",
+          "wheelSize": { "diameter": 16, "width": 7, "offset": 47 },
+          "tireSize": "225/50R16"
+        },
+        {
+          "trim": "Roadster 3.0i",
+          "wheelSize": { "diameter": 17, "width": 7.5, "offset": 41 },
+          "tireSize": { "front": "225/45R17", "rear": "245/40R17" }
+        },
+        {
+          "trim": "Coupe 3.0i",
+          "wheelSize": { "diameter": 17, "width": 7.5, "offset": 41 },
+          "tireSize": { "front": "225/45R17", "rear": "245/40R17" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "BMW",
+      "model": "Z3",
+      "trims": [
+        {
+          "trim": "Roadster 2.5i",
+          "wheelSize": { "diameter": 16, "width": 7, "offset": 47 },
+          "tireSize": "225/50R16"
+        },
+        {
+          "trim": "Roadster 3.0",
+          "wheelSize": { "diameter": 17, "width": 7.5, "offset": 41 },
+          "tireSize": { "front": "225/45R17", "rear": "245/40R17" }
+        },
+        {
+          "trim": "Coupe 3.0",
+          "wheelSize": { "diameter": 17, "width": 7.5, "offset": 41 },
+          "tireSize": { "front": "225/45R17", "rear": "245/40R17" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "Z3",
+      "trims": [
+        {
+          "trim": "Roadster 2.3",
+          "wheelSize": { "diameter": 16, "width": 7, "offset": 47 },
+          "tireSize": "225/50R16"
+        },
+        {
+          "trim": "Roadster 2.8",
+          "wheelSize": { "diameter": 16, "width": 7, "offset": 47 },
+          "tireSize": "225/50R16"
+        },
+        {
+          "trim": "Roadster 2.8 (17\" option)",
+          "wheelSize": { "diameter": 17, "width": 7.5, "offset": 41 },
+          "tireSize": { "front": "225/45R17", "rear": "245/40R17" }
+        },
+        {
+          "trim": "Coupe 2.8",
+          "wheelSize": { "diameter": 16, "width": 7, "offset": 47 },
+          "tireSize": "225/50R16"
+        },
+        {
+          "trim": "Coupe 2.8 (17\" option)",
+          "wheelSize": { "diameter": 17, "width": 7.5, "offset": 41 },
+          "tireSize": { "front": "225/45R17", "rear": "245/40R17" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "Z4",
+      "trims": [
+        {
+          "trim": "sDrive30i",
+          "wheelSize": { "diameter": 18, "width": 8, "offset": 46 },
+          "tireSize": { "front": "225/45R18", "rear": "255/40R18" }
+        },
+        {
+          "trim": "sDrive30i (19\")",
+          "wheelSize": { "diameter": 19, "width": 8.5, "offset": 32 },
+          "tireSize": { "front": "255/35R19", "rear": "275/35R19" }
+        },
+        {
+          "trim": "M40i",
+          "wheelSize": { "diameter": 18, "width": 9, "offset": 32 },
+          "tireSize": { "front": "255/40R18", "rear": "275/40R18" }
+        },
+        {
+          "trim": "M40i (19\")",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 32 },
+          "tireSize": { "front": "255/35R19", "rear": "275/35R19" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com, competitionbmw.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "Z4",
+      "trims": [
+        {
+          "trim": "sDrive30i",
+          "wheelSize": { "diameter": 18, "width": 8, "offset": 46 },
+          "tireSize": { "front": "225/45R18", "rear": "255/40R18" }
+        },
+        {
+          "trim": "sDrive30i (19\")",
+          "wheelSize": { "diameter": 19, "width": 8.5, "offset": 32 },
+          "tireSize": { "front": "255/35R19", "rear": "275/35R19" }
+        },
+        {
+          "trim": "M40i",
+          "wheelSize": { "diameter": 18, "width": 9, "offset": 32 },
+          "tireSize": { "front": "255/40R18", "rear": "275/40R18" }
+        },
+        {
+          "trim": "M40i (19\")",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 32 },
+          "tireSize": { "front": "255/35R19", "rear": "275/35R19" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com, competitionbmw.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "Z4",
+      "trims": [
+        {
+          "trim": "sDrive30i",
+          "wheelSize": { "diameter": 18, "width": 8, "offset": 46 },
+          "tireSize": { "front": "225/45R18", "rear": "255/40R18" }
+        },
+        {
+          "trim": "sDrive30i (19\")",
+          "wheelSize": { "diameter": 19, "width": 8.5, "offset": 32 },
+          "tireSize": { "front": "255/35R19", "rear": "275/35R19" }
+        },
+        {
+          "trim": "M40i",
+          "wheelSize": { "diameter": 18, "width": 9, "offset": 32 },
+          "tireSize": { "front": "255/40R18", "rear": "275/40R18" }
+        },
+        {
+          "trim": "M40i (19\")",
+          "wheelSize": { "diameter": 19, "width": 9, "offset": 32 },
+          "tireSize": { "front": "255/35R19", "rear": "275/35R19" }
+        }
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com, competitionbmw.com",
+      "confidence": "high"
+    }
+  ]
+}

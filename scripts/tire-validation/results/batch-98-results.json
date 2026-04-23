@@ -1,0 +1,980 @@
+{
+  "batchId": "98",
+  "processedAt": "2026-04-21T22:20:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "currentTireSizes": ["205/55R16"],
+      "validatedTireSizes": ["205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "4-Door i Sport", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "4-Door i SV", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "4-Door i Touring", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "4-Door s Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "4-Door s Sport", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "5-Door s Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "5-Door s Sport", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "4-Door i Sport", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "4-Door i SV", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "4-Door i Touring", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "4-Door s Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "4-Door s Sport", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "5-Door s Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "5-Door s Sport", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "4-Door i Sport", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "4-Door i Touring", "tireSize": ["195/65R15", "205/55R16"], "wheelSize": ["15", "16"]},
+        {"trim": "4-Door i Touring Value", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "4-Door s Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "4-Door s Sport", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "4-Door s Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "5-Door s Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "5-Door s Sport", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "5-Door s Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "4-Door i Sport", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "4-Door i Touring", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "4-Door i Touring Value", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "4-Door s Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "4-Door s Sport", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "4-Door s Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "5-Door s Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "5-Door s Sport", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "5-Door s Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "i 4-Door", "tireSize": ["195/65R15", "205/55R16"], "wheelSize": ["15", "16"]},
+        {"trim": "s 4-Door", "tireSize": ["205/55R16", "205/50R17"], "wheelSize": ["16", "17"]},
+        {"trim": "s 5-Door", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "i 4-Door", "tireSize": ["195/65R15", "205/55R16"], "wheelSize": ["15", "16"]},
+        {"trim": "s 4-Door With TPMS", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "s 4-Door Without TPMS", "tireSize": ["205/55R16", "205/50R17"], "wheelSize": ["16", "17"]},
+        {"trim": "s 5-Door With TPMS", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "s 5-Door Without TPMS", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "i 4-Door", "tireSize": ["195/65R15", "205/55R16"], "wheelSize": ["15", "16"]},
+        {"trim": "s 4-Door With TPMS", "tireSize": ["205/55R16", "205/50R17"], "wheelSize": ["16", "17"]},
+        {"trim": "s 4-Door Without TPMS", "tireSize": ["205/55R16", "205/50R17"], "wheelSize": ["16", "17"]},
+        {"trim": "s 5-Door With TPMS", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "s 5-Door Without TPMS", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2004,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "currentTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "i 4-Door", "tireSize": ["195/65R15", "205/55R16"], "wheelSize": ["15", "16"]},
+        {"trim": "s 4-Door With TPMS", "tireSize": ["205/55R16", "205/50R17"], "wheelSize": ["16", "17"]},
+        {"trim": "s 4-Door Without TPMS", "tireSize": ["205/55R16", "205/50R17"], "wheelSize": ["16", "17"]},
+        {"trim": "s 5-Door", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2003,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trimData": [
+        {"trim": "i 4-Door", "tireSize": ["195/65R15", "205/55R16"], "wheelSize": ["15", "16"]},
+        {"trim": "s 4-Door", "tireSize": "205/55R16", "wheelSize": "16"}
+      ],
+      "source": "tiresize.com",
+      "notes": "First model year, limited trims",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda3 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed3 equivalent - Gen 2 (BL platform)",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda3 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed3 equivalent - Gen 2",
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda3 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed3 equivalent - Gen 2",
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda3 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed3 equivalent - Gen 2 first year",
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda3 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed3 equivalent - Gen 1 (BK platform)",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda3 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed3 equivalent - Gen 1",
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda3 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed3 equivalent - Gen 1",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda3 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed3 equivalent - Gen 1 first year",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Sport", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Sport", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Sport", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/55R16", "205/50R17"],
+      "trimData": [
+        {"trim": "Sport", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/50R17"],
+      "trimData": [
+        {"trim": "Sport", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "notes": "2011 was transition year - all trims 17in",
+      "status": "validated",
+      "discrepancy": "Current data shows 205/55R16 option but 2011 was all 17-inch"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/50R17"],
+      "trimData": [
+        {"trim": "Sport", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated",
+      "discrepancy": "Current data shows 205/55R16 option but 2010 was all 17-inch"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/50R17"],
+      "trimData": [
+        {"trim": "Sport", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated",
+      "discrepancy": "Current data shows 205/55R16 option but 2009 was all 17-inch"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/50R17"],
+      "trimData": [
+        {"trim": "Sport", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated",
+      "discrepancy": "Current data shows 205/55R16 option but 2008 was all 17-inch"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/50R17"],
+      "trimData": [
+        {"trim": "Sport", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Touring", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Grand Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated",
+      "discrepancy": "Current data shows 205/55R16 option but 2007 was all 17-inch"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": ["205/55R16", "205/50R17"],
+      "validatedTireSizes": ["205/50R17"],
+      "trimData": [
+        {"trim": "Sport", "tireSize": "205/50R17", "wheelSize": "17"},
+        {"trim": "Touring", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated",
+      "discrepancy": "Current data shows 205/55R16 option but 2006 was all 17-inch"
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/50R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "205/50R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com",
+      "notes": "First model year for Mazda5",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda6 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "2.3 MZR Turbo", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed6 equivalent",
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda6 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "2.3 MZR Turbo", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed6 equivalent",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda6 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "2.3 MZR Turbo", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed6 equivalent",
+      "status": "validated"
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Mazda6 MPS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "2.3 MZR Turbo", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "European MazdaSpeed6 equivalent - first year",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "Mazda6 Ruiyi",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Chinese market Mazda6 variant (GH platform facelift)",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "Mazda6 Ruiyi",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Chinese market Mazda6 variant",
+      "status": "validated"
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "Mazda6 Ruiyi",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Chinese market Mazda6 variant",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda6 Ruiyi",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Chinese market Mazda6 variant",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda6 Ruiyi",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Chinese market Mazda6 variant (GH platform facelift begins)",
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda6 Ruiyi",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Chinese market Mazda6 variant",
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda6 Ruiyi",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Chinese market Mazda6 variant",
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda6 Ruiyi",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Chinese market Mazda6 variant - first year",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/55R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Japan/China market MPV (rebadged Mazda MPV)",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/55R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Japan/China market MPV",
+      "status": "validated"
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/55R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Japan/China market MPV",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/55R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Japan/China market MPV",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/55R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Japan/China market MPV",
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/55R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Japan/China market MPV",
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/55R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Japan/China market MPV",
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/55R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Japan/China market MPV",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "Premium", "tireSize": "215/55R17", "wheelSize": "17"}
+      ],
+      "source": "wheel-size.com",
+      "notes": "Japan/China market MPV",
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/60R17"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "ES", "tireSize": "215/60R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com (MPV equivalent)",
+      "notes": "Japan/China market MPV",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R16", "215/60R17"],
+      "trimData": [
+        {"trim": "LX-SV", "tireSize": "205/65R15", "wheelSize": "15"},
+        {"trim": "LX", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "ES", "tireSize": "215/60R17", "wheelSize": "17"}
+      ],
+      "source": "tiresize.com (MPV equivalent)",
+      "notes": "Japan/China market MPV",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "MazdaSpeed3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "MazdaSpeed3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "MazdaSpeed3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base Model", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "MazdaSpeed3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Grand Touring", "tireSize": "225/40R18", "wheelSize": "18"},
+        {"trim": "Sport", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Gen 2 first year - changed from 215/45R18 to 225/40R18",
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "MazdaSpeed3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Grand Touring", "tireSize": "215/45R18", "wheelSize": "18"},
+        {"trim": "Sport", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "MazdaSpeed3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Grand Touring", "tireSize": "215/45R18", "wheelSize": "18"},
+        {"trim": "Sport", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "MazdaSpeed3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Grand Touring", "tireSize": "215/45R18", "wheelSize": "18"},
+        {"trim": "Sport", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "Gen 1 first year",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "MazdaSpeed3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "2006 was very late production (introduced mid-2006)",
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "MazdaSpeed6",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Grand Touring", "tireSize": "215/45R18", "wheelSize": "18"},
+        {"trim": "Sport", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "MazdaSpeed6",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Grand Touring", "tireSize": "215/45R18", "wheelSize": "18"},
+        {"trim": "Sport", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "MazdaSpeed6",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tiresize.com",
+      "notes": "First year - limited production",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "MazdaSpeed Axela",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tirewheelguide.com",
+      "notes": "Japan market MazdaSpeed3 equivalent - Gen 2 (BL platform)",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "MazdaSpeed Axela",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tirewheelguide.com",
+      "notes": "Japan market MazdaSpeed3 equivalent - Gen 2",
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "MazdaSpeed Axela",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tirewheelguide.com",
+      "notes": "Japan market MazdaSpeed3 equivalent - Gen 2",
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "MazdaSpeed Axela",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "source": "tirewheelguide.com",
+      "notes": "Japan market MazdaSpeed3 equivalent - Gen 2 first year",
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "MazdaSpeed Axela",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tirewheelguide.com",
+      "notes": "Japan market MazdaSpeed3 equivalent - Gen 1 (BK platform) final year",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "MazdaSpeed Axela",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R18"],
+      "trimData": [
+        {"trim": "Base", "tireSize": "215/45R18", "wheelSize": "18"}
+      ],
+      "source": "tirewheelguide.com",
+      "notes": "Japan market MazdaSpeed3 equivalent - Gen 1",
+      "status": "validated"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 75,
+    "discrepancies": 6,
+    "regionalVariants": {
+      "mazda3_mps": "European MazdaSpeed3 - same tire sizes",
+      "mazda6_mps": "European MazdaSpeed6 - 215/45R18",
+      "mazda6_ruiyi": "Chinese market Mazda6 - 205/55R16 or 215/45R17",
+      "mazda8": "Japan/China market MPV - 215/60R16 or 215/55R17",
+      "mazdaspeed_axela": "Japan MazdaSpeed3 - same tire sizes"
+    },
+    "keyFindings": [
+      "Mazda3 (2003-2011): 15in/16in/17in options depending on trim (i vs s)",
+      "MazdaSpeed3 Gen 1 (2007-2009): 215/45R18",
+      "MazdaSpeed3 Gen 2 (2010-2013): 225/40R18 - wider tire",
+      "Mazda5 (2006-2010): All 17-inch (205/50R17) - current DB showing 16in options is incorrect",
+      "Mazda5 (2012-2015): Sport=16in, Touring/GT=17in",
+      "MPS variants match MazdaSpeed equivalent tire sizes"
+    ]
+  }
+}

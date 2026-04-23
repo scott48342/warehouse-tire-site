@@ -1,0 +1,1102 @@
+{
+  "batchId": "65",
+  "validatedAt": "2026-04-21T22:04:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["275/55R20", "285/45R22"],
+        "SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "SLT": ["265/65R18", "275/55R20", "285/45R22"]
+      },
+      "allTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "currentTireSizes": ["275/55R20", "265/65R18", "285/45R22"],
+      "status": "VALID",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2018,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["275/55R20", "285/45R22"],
+        "SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "SLT": ["265/65R18", "275/55R20", "285/45R22"]
+      },
+      "allTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "currentTireSizes": ["275/55R20", "265/65R18", "285/45R22"],
+      "status": "VALID",
+      "notes": "P-metric prefix variants are equivalent to standard sizes"
+    },
+    {
+      "year": 2017,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["275/55R20", "285/45R22"],
+        "SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "SLT": ["265/65R18", "275/55R20", "285/45R22"]
+      },
+      "allTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "currentTireSizes": ["275/55R20", "265/65R18", "285/45R22"],
+      "status": "VALID",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2016,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["275/55R20", "285/45R22"],
+        "SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "SLT": ["265/65R18", "275/55R20", "285/45R22"]
+      },
+      "allTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "currentTireSizes": ["275/55R20", "265/65R18", "285/45R22"],
+      "status": "VALID",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2015,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["275/55R20", "285/45R22"],
+        "SLE": ["265/65R18", "275/55R20", "285/45R22"],
+        "SLT": ["265/65R18", "275/55R20", "285/45R22"]
+      },
+      "allTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "currentTireSizes": ["275/55R20", "265/65R18", "285/45R22"],
+      "status": "VALID",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "P285/45R22"],
+      "status": "REVIEW",
+      "notes": "285/45R22 in current list is for XL models or dealer-installed 22-inch option, not base Yukon for 2014"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "P285/45R22"],
+      "status": "REVIEW",
+      "notes": "285/45R22 in current list is for optional 22-inch wheels"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "Hybrid": ["265/65R18"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "P285/45R22", "LT265/70R17", "LT265/65R18", "LT275/55R20"],
+      "status": "VALID",
+      "notes": "LT-rated variants valid for towing packages"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "Hybrid": ["265/65R18"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "P285/45R22"],
+      "status": "REVIEW",
+      "notes": "285/45R22 is optional 22-inch wheel package"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "Hybrid": ["265/65R18"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "P285/45R22"],
+      "status": "REVIEW",
+      "notes": "285/45R22 is optional 22-inch wheel package"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "Hybrid": ["265/65R18"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "P285/45R22"],
+      "status": "REVIEW",
+      "notes": "285/45R22 is optional 22-inch wheel package"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "P285/45R22"],
+      "status": "REVIEW",
+      "notes": "285/45R22 is optional 22-inch wheel package"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20", "P285/45R22"],
+      "status": "REVIEW",
+      "notes": "285/45R22 is optional 22-inch wheel package"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "SLE": ["265/70R16", "265/70R17"],
+        "SLT": ["265/70R16", "265/70R17"],
+        "Denali": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R16", "265/70R17", "275/55R20"],
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "status": "REVIEW",
+      "notes": "265/65R17 in current list should be 265/70R17"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "2WD": ["265/70R16", "265/70R17"],
+        "4WD": ["265/70R16", "265/70R17"],
+        "Denali": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R16", "265/70R17", "275/55R20"],
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "status": "REVIEW",
+      "notes": "265/65R17 in current list should be 265/70R17"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "SLE": ["265/70R16", "265/70R17"],
+        "SLT": ["265/70R16", "265/70R17"],
+        "Denali": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R16", "265/70R17", "275/55R20"],
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "status": "REVIEW",
+      "notes": "265/65R17 in current list should be 265/70R17"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "SLE": ["265/70R16", "265/70R17"],
+        "SLT": ["265/70R16", "265/70R17"],
+        "Denali": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R16", "265/70R17", "275/55R20"],
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "status": "REVIEW",
+      "notes": "265/65R17 in current list should be 265/70R17"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "SLE": ["265/70R16", "265/70R17"],
+        "SLT": ["265/70R16", "265/70R17"],
+        "Denali": ["265/70R16"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R16", "265/70R17", "275/55R20"],
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20", "LT265/70R16", "LT245/75R16"],
+      "status": "REVIEW",
+      "notes": "265/65R17 in current list should be 265/70R17; LT245/75R16 valid for base models"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "SLE": ["265/70R16"],
+        "SLT": ["265/70R16", "265/70R17"],
+        "Denali": ["265/70R16"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R16", "265/70R17"],
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "status": "REVIEW",
+      "notes": "265/65R17 in current list should be 265/70R17; 275/55R20 is aftermarket upgrade"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Yukon",
+      "trims": {
+        "2WD": ["245/75R16", "265/70R16", "265/75R16"],
+        "4WD": ["245/75R16", "265/70R16", "265/75R16"],
+        "Denali": ["265/70R16"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R16", "265/75R16"],
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "status": "REVIEW",
+      "notes": "265/65R17 and 275/55R20 not OEM for 2000; 245/75R16 is base size"
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Yukon XL",
+      "trims": {
+        "AT4": ["275/60R20"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "SLT": ["275/60R20", "275/50R22"]
+      },
+      "allTireSizes": ["265/65R18", "275/60R20", "275/50R22", "285/45R22"],
+      "currentTireSizes": ["275/65R18", "275/60R20", "285/45R22"],
+      "status": "REVIEW",
+      "notes": "275/65R18 in current should be 265/65R18. 285/45R22 is older spec; current 22-inch uses 275/50R22"
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Yukon XL",
+      "trims": {
+        "AT4": ["275/60R20"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "SLT": ["275/60R20", "275/50R22"]
+      },
+      "allTireSizes": ["265/65R18", "275/60R20", "275/50R22", "285/45R22"],
+      "currentTireSizes": ["275/65R18", "275/60R20", "285/45R22"],
+      "status": "REVIEW",
+      "notes": "275/65R18 in current should be 265/65R18"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Yukon XL",
+      "trims": {
+        "AT4": ["275/60R20"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "SLT": ["275/60R20", "275/50R22"]
+      },
+      "allTireSizes": ["265/65R18", "275/60R20", "275/50R22", "285/45R22"],
+      "currentTireSizes": ["275/65R18", "275/60R20", "285/45R22"],
+      "status": "REVIEW",
+      "notes": "275/65R18 in current should be 265/65R18"
+    },
+    {
+      "year": 2021,
+      "make": "GMC",
+      "model": "Yukon XL",
+      "trims": {
+        "AT4": ["275/60R20"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "SLE": ["265/65R18", "275/60R20", "275/50R22"],
+        "SLT": ["275/60R20", "275/50R22"]
+      },
+      "allTireSizes": ["265/65R18", "275/60R20", "275/50R22", "285/45R22"],
+      "currentTireSizes": ["275/65R18", "275/60R20", "285/45R22"],
+      "status": "REVIEW",
+      "notes": "275/65R18 in current should be 265/65R18"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "Denali": ["265/65R18", "275/55R20"],
+        "SLE": ["265/70R17", "275/55R20"],
+        "SLT": ["265/70R17", "275/55R20"]
+      },
+      "allTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "SLE": ["265/70R16", "265/70R17"],
+        "SLT": ["265/70R16", "265/70R17"]
+      },
+      "allTireSizes": ["265/70R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "2WD": ["265/70R16", "265/70R17"],
+        "4WD": ["265/70R16", "265/70R17"],
+        "Denali XL": ["265/70R17"]
+      },
+      "allTireSizes": ["265/70R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "SLE": ["265/70R16", "265/70R17"],
+        "SLT": ["265/70R16", "265/70R17"]
+      },
+      "allTireSizes": ["265/70R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "SLE": ["265/70R16", "265/70R17"],
+        "SLT": ["265/70R16", "265/70R17"]
+      },
+      "allTireSizes": ["265/70R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "SLE": ["245/75R16", "265/70R16", "265/75R16"],
+        "SLT": ["245/75R16", "265/70R16", "265/75R16"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R16", "265/75R16"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "SLE": ["245/75R16", "265/70R16", "265/75R16"],
+        "SLT": ["245/75R16", "265/70R16", "265/75R16"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R16", "265/75R16"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "trims": {
+        "2WD": ["245/75R16", "265/70R16", "265/75R16"],
+        "4WD": ["245/75R16", "265/70R16", "265/75R16"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R16", "265/75R16"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16", "265/70R17"],
+        "SLT": ["245/75R16", "265/70R17"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population. HD truck with 8-lug pattern"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16", "265/70R17"],
+        "SLT": ["245/75R16", "265/70R17"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16", "265/70R17"],
+        "SLT": ["245/75R16", "265/70R17"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16", "265/70R17"],
+        "SLT": ["245/75R16", "265/70R17"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16", "265/70R17"],
+        "SLT": ["245/75R16", "265/70R17"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16", "265/70R17"],
+        "SLT": ["245/75R16", "265/70R17"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16", "265/70R17"],
+        "SLT": ["245/75R16", "265/70R17"]
+      },
+      "allTireSizes": ["245/75R16", "265/70R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE 2WD": ["245/75R16"],
+        "SLE 4WD": ["245/75R16"],
+        "SLT 2WD": ["245/75R16"],
+        "SLT 4WD": ["245/75R16"]
+      },
+      "allTireSizes": ["245/75R16"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "2WD": ["245/75R16"],
+        "4WD": ["245/75R16"]
+      },
+      "allTireSizes": ["245/75R16"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16"],
+        "SLT": ["245/75R16"]
+      },
+      "allTireSizes": ["245/75R16"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16"],
+        "SLT": ["245/75R16"]
+      },
+      "allTireSizes": ["245/75R16"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16", "265/75R16"],
+        "SLT": ["245/75R16", "265/75R16"]
+      },
+      "allTireSizes": ["245/75R16", "265/75R16"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "SLE": ["245/75R16", "265/75R16"],
+        "SLT": ["245/75R16", "265/75R16"]
+      },
+      "allTireSizes": ["245/75R16", "265/75R16"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "trims": {
+        "2WD": ["245/75R16", "265/75R16"],
+        "4WD": ["245/75R16", "265/75R16"]
+      },
+      "allTireSizes": ["245/75R16", "265/75R16"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database - needs population"
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "LX": ["225/50R17"],
+        "EX": ["225/50R17"],
+        "EX-L Hybrid": ["225/50R17"],
+        "Sport Hybrid": ["235/40R19"],
+        "Sport-L Hybrid": ["235/40R19"],
+        "Touring Hybrid": ["235/40R19"]
+      },
+      "allTireSizes": ["225/50R17", "235/40R19"],
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/45R18", "235/40R19"],
+      "status": "REVIEW",
+      "notes": "225/45R18 and 235/45R18 not in 2026 OEM specs - may be legacy data or aftermarket"
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "LX": ["225/50R17"],
+        "EX": ["225/50R17"],
+        "EX-L Hybrid": ["225/50R17"],
+        "Sport Hybrid": ["235/40R19"],
+        "Sport-L Hybrid": ["235/40R19"],
+        "Touring Hybrid": ["235/40R19"]
+      },
+      "allTireSizes": ["225/50R17", "235/40R19"],
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/45R18", "235/40R19"],
+      "status": "REVIEW",
+      "notes": "225/45R18 and 235/45R18 not OEM for 11th gen Accord"
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "LX": ["225/50R17"],
+        "EX": ["225/50R17"],
+        "EX-L Hybrid": ["225/50R17"],
+        "Sport Hybrid": ["235/40R19"],
+        "Sport-L Hybrid": ["235/40R19"],
+        "Touring Hybrid": ["235/40R19"]
+      },
+      "allTireSizes": ["225/50R17", "235/40R19"],
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/45R18", "235/40R19"],
+      "status": "REVIEW",
+      "notes": "225/45R18 and 235/45R18 not OEM for 11th gen Accord"
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "LX": ["225/50R17"],
+        "EX": ["225/50R17"],
+        "EX-L Hybrid": ["225/50R17"],
+        "Sport Hybrid": ["235/40R19"],
+        "Sport-L Hybrid": ["235/40R19"],
+        "Touring Hybrid": ["235/40R19"]
+      },
+      "allTireSizes": ["225/50R17", "235/40R19"],
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/45R18", "235/40R19"],
+      "status": "REVIEW",
+      "notes": "225/45R18 and 235/45R18 not OEM for 11th gen Accord"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "LX": ["225/50R17"],
+        "EX": ["225/50R17"],
+        "EX-L": ["225/50R17"],
+        "Sport": ["235/40R19"],
+        "Sport 2.0T": ["235/40R19"],
+        "Touring": ["235/40R19"]
+      },
+      "allTireSizes": ["225/50R17", "235/40R19"],
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/45R18", "235/40R19", "235/45ZR18"],
+      "status": "REVIEW",
+      "notes": "225/45R18 and 235/45R18 not standard OEM; Z-rated variant valid for performance"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "LX": ["225/50R17"],
+        "EX": ["225/50R17"],
+        "EX-L": ["225/50R17"],
+        "Sport": ["235/40R19"],
+        "Sport 2.0T": ["235/40R19"],
+        "Touring": ["235/40R19"]
+      },
+      "allTireSizes": ["225/50R17", "235/40R19"],
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/45R18", "235/40R19", "235/45ZR18"],
+      "status": "REVIEW",
+      "notes": "225/45R18 and 235/45R18 not standard OEM"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "LX": ["225/50R17"],
+        "EX": ["225/50R17"],
+        "EX-L": ["225/50R17"],
+        "Hybrid": ["225/50R17"],
+        "Sport": ["235/40R19"],
+        "Touring": ["235/40R19"]
+      },
+      "allTireSizes": ["225/50R17", "235/40R19"],
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/45R18", "235/40R19", "235/45ZR18"],
+      "status": "REVIEW",
+      "notes": "225/45R18 and 235/45R18 not standard OEM"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "LX": ["225/50R17"],
+        "EX": ["225/50R17"],
+        "EX-L": ["225/50R17"],
+        "Sport": ["235/40R19"],
+        "Touring": ["235/40R19"]
+      },
+      "allTireSizes": ["225/50R17", "235/40R19"],
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/45R18", "235/40R19"],
+      "status": "REVIEW",
+      "notes": "225/45R18 and 235/45R18 not standard OEM"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "LX": ["225/50R17"],
+        "EX": ["225/50R17"],
+        "EX-L": ["225/50R17"],
+        "Hybrid": ["225/50R17"],
+        "Sport": ["235/40R19"],
+        "Touring": ["235/40R19"]
+      },
+      "allTireSizes": ["225/50R17", "235/40R19"],
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/45R18", "235/40R19", "235/45ZR18"],
+      "status": "REVIEW",
+      "notes": "225/45R18 and 235/45R18 not standard OEM for 10th gen"
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "Sedan LX": ["205/65R16"],
+        "Sedan EX": ["215/55R17"],
+        "Sedan EX-L": ["215/55R17"],
+        "Sedan EX-L V6": ["215/55R17"],
+        "Sedan Sport": ["235/40R19"],
+        "Sedan Touring": ["235/40R19"],
+        "Coupe EX": ["215/55R17"],
+        "Coupe EX-L": ["215/55R17"],
+        "Coupe EX-L V6": ["235/45R18", "235/40R19"],
+        "Coupe Touring": ["235/40R19"],
+        "Hybrid": ["225/50R17"]
+      },
+      "allTireSizes": ["205/65R16", "215/55R17", "225/50R17", "235/45R18", "235/40R19"],
+      "currentTireSizes": ["205/65R16", "225/50R17", "225/45R18", "235/40R19", "235/45R18"],
+      "status": "REVIEW",
+      "notes": "215/55R17 (actual OEM for EX/EX-L) missing from current; 225/50R17 only for Hybrid"
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "Sedan LX": ["205/65R16"],
+        "Sedan EX": ["215/55R17"],
+        "Sedan EX-L": ["215/55R17"],
+        "Sedan EX-L V6": ["215/55R17"],
+        "Sedan Sport": ["235/45R18"],
+        "Sedan Touring": ["215/55R17"],
+        "Coupe LX-S": ["215/55R17"],
+        "Coupe EX": ["215/55R17"],
+        "Coupe EX-L": ["215/55R17"],
+        "Coupe EX-L V6": ["235/45R18", "235/40R19"],
+        "Coupe Touring": ["235/40R19"]
+      },
+      "allTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "currentTireSizes": ["205/65R16", "225/50R17", "225/45R18", "235/40R19"],
+      "status": "REVIEW",
+      "notes": "215/55R17 missing from current; 225/50R17 only for Hybrid which started 2017"
+    },
+    {
+      "year": 2015,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "Sedan LX": ["205/65R16"],
+        "Sedan EX": ["215/55R17"],
+        "Sedan EX-L": ["215/55R17"],
+        "Sedan EX-L V6": ["215/55R17"],
+        "Sedan Sport": ["235/45R18"],
+        "Sedan Touring": ["215/55R17"],
+        "Sedan Hybrid": ["225/50R17"],
+        "Coupe LX-S": ["215/55R17"],
+        "Coupe EX": ["215/55R17"],
+        "Coupe EX-L": ["215/55R17"],
+        "Coupe EX-L V6": ["235/45R18", "235/40R19"]
+      },
+      "allTireSizes": ["205/65R16", "215/55R17", "225/50R17", "235/45R18", "235/40R19"],
+      "currentTireSizes": ["205/65R16", "225/50R17", "225/45R18", "235/40R19", "235/45R18"],
+      "status": "REVIEW",
+      "notes": "215/55R17 missing from current; 225/50R17 only for Hybrid"
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "Sedan LX": ["205/65R16"],
+        "Sedan EX": ["215/55R17"],
+        "Sedan EX-L": ["215/55R17"],
+        "Sedan EX-L V6": ["215/55R17"],
+        "Sedan Sport": ["235/45R18"],
+        "Sedan Touring": ["215/55R17"],
+        "Sedan Hybrid": ["225/50R17"],
+        "Coupe LX-S": ["215/55R17"],
+        "Coupe EX": ["215/55R17"],
+        "Coupe EX-L": ["215/55R17"],
+        "Coupe EX-L V6": ["235/45R18", "235/40R19"]
+      },
+      "allTireSizes": ["205/65R16", "215/55R17", "225/50R17", "235/45R18", "235/40R19"],
+      "currentTireSizes": ["205/65R16", "225/50R17", "225/45R18", "235/40R19", "235/45R18"],
+      "status": "REVIEW",
+      "notes": "215/55R17 missing from current; 225/45R18 not standard OEM"
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "Sedan LX": ["205/65R16"],
+        "Sedan EX": ["215/55R17"],
+        "Sedan EX-L": ["215/55R17"],
+        "Sedan EX-L V6": ["215/55R17"],
+        "Sedan Sport": ["235/45R18"],
+        "Sedan Touring": ["215/55R17"],
+        "Coupe LX-S": ["215/55R17"],
+        "Coupe EX": ["215/55R17"],
+        "Coupe EX-L": ["215/55R17"],
+        "Coupe EX-L V6": ["235/45R18", "235/40R19"]
+      },
+      "allTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "currentTireSizes": ["205/65R16", "225/50R17", "225/45R18", "235/40R19"],
+      "status": "REVIEW",
+      "notes": "215/55R17 and 235/45R18 missing from current"
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "Sedan LX": ["215/60R16"],
+        "Sedan LX-P": ["215/60R16"],
+        "Sedan SE": ["215/60R16"],
+        "Sedan EX": ["225/50R17"],
+        "Sedan EX V6": ["225/50R17"],
+        "Sedan EX-L": ["225/50R17"],
+        "Sedan EX-L V6": ["225/50R17"],
+        "Coupe LX-S": ["225/50R17"],
+        "Coupe EX": ["225/50R17"],
+        "Coupe EX-L": ["225/50R17"],
+        "Coupe EX-L V6": ["235/45R18"]
+      },
+      "allTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "currentTireSizes": ["205/65R16", "225/50R17", "225/45R18"],
+      "status": "REVIEW",
+      "notes": "205/65R16 in current should be 215/60R16; 235/45R18 missing from current"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "Sedan LX": ["215/60R16"],
+        "Sedan LX-P": ["215/60R16"],
+        "Sedan EX": ["225/50R17"],
+        "Sedan EX V6": ["225/50R17"],
+        "Sedan EX-L": ["225/50R17"],
+        "Sedan EX-L V6": ["225/50R17"],
+        "Coupe LX-S": ["225/50R17"],
+        "Coupe EX": ["225/50R17"],
+        "Coupe EX-L": ["225/50R17"],
+        "Coupe EX-L V6": ["235/45R18"]
+      },
+      "allTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "currentTireSizes": ["205/65R16", "225/50R17", "225/45R18"],
+      "status": "REVIEW",
+      "notes": "205/65R16 in current should be 215/60R16; 235/45R18 missing from current"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "Sedan LX": ["215/60R16"],
+        "Sedan LX-P": ["215/60R16"],
+        "Sedan EX": ["225/50R17"],
+        "Sedan EX V6": ["225/50R17"],
+        "Sedan EX-L": ["225/50R17"],
+        "Sedan EX-L V6": ["225/50R17"],
+        "Coupe LX-S": ["225/50R17"],
+        "Coupe EX": ["225/50R17"],
+        "Coupe EX-L": ["225/50R17"],
+        "Coupe EX-L V6": ["235/45R18"],
+        "Crosstour EX": ["225/65R17"],
+        "Crosstour EX-L": ["225/60R18"]
+      },
+      "allTireSizes": ["215/60R16", "225/50R17", "225/60R18", "225/65R17", "235/45R18"],
+      "currentTireSizes": ["205/65R16", "225/50R17", "225/45R18", "215/60R16", "235/45R18", "245/40ZR19"],
+      "status": "REVIEW",
+      "notes": "205/65R16 should be 215/60R16; 225/65R17 and 225/60R18 (Crosstour) missing; 245/40ZR19 aftermarket"
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "Accord",
+      "trims": {
+        "Sedan LX 4cyl": ["215/60R16"],
+        "Sedan LX-P 4cyl": ["215/60R16"],
+        "Sedan EX 4cyl": ["225/50R17"],
+        "Sedan EX V6": ["225/50R17"],
+        "Sedan EX-L 4cyl": ["225/50R17"],
+        "Sedan EX-L V6": ["225/50R17"],
+        "Coupe LX-S 4cyl": ["225/50R17"],
+        "Coupe EX 4cyl": ["225/50R17"],
+        "Coupe EX-L 4cyl": ["225/50R17"],
+        "Coupe EX-L V6": ["235/45R18"]
+      },
+      "allTireSizes": ["215/60R16", "225/50R17", "235/45R18"],
+      "currentTireSizes": ["205/65R16", "225/50R17", "225/45R18"],
+      "status": "REVIEW",
+      "notes": "205/65R16 in current should be 215/60R16; 235/45R18 missing; 225/45R18 incorrect for 2009"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 6,
+    "review": 40,
+    "missingData": 29,
+    "issues": [
+      "GMC Yukon 2000-2006: 265/65R17 listed should be 265/70R17",
+      "GMC Yukon XL 2021-2024: 275/65R18 listed should be 265/65R18",
+      "GMC Yukon XL 1500/2500 (all years): No tire data populated in database",
+      "Honda Accord 2009-2012: 205/65R16 in current should be 215/60R16",
+      "Honda Accord 2013-2017: 215/55R17 missing from current data (used by most trims)",
+      "Honda Accord 2018-2026: 225/45R18 and 235/45R18 appear but are not standard OEM"
+    ]
+  }
+}

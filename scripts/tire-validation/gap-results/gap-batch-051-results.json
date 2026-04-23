@@ -1,0 +1,499 @@
+{
+  "batchId": 51,
+  "processedAt": "2026-04-21T23:59:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "usMarket": 15,
+    "notUS": 35
+  },
+  "vehicles": [
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "nv3500",
+      "specs": {
+        "tireSizes": ["245/70R17", "245/75R17"],
+        "wheelDiameters": [17],
+        "boltPattern": "6x139.7",
+        "hubBore": 78.1
+      },
+      "trims": ["HD S", "HD SL", "HD SV"],
+      "source": "tiresize.com/tires/Nissan/NV3500/"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "nv3500",
+      "specs": {
+        "tireSizes": ["245/70R17", "245/75R17"],
+        "wheelDiameters": [17],
+        "boltPattern": "6x139.7",
+        "hubBore": 78.1
+      },
+      "trims": ["HD S", "HD SL", "HD SV"],
+      "source": "tiresize.com/tires/Nissan/NV3500/"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "nv3500",
+      "specs": {
+        "tireSizes": ["245/70R17", "245/75R17"],
+        "wheelDiameters": [17],
+        "boltPattern": "6x139.7",
+        "hubBore": 78.1
+      },
+      "trims": ["HD S", "HD SL", "HD SV"],
+      "source": "tiresize.com/tires/Nissan/NV3500/"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "nv3500",
+      "specs": {
+        "tireSizes": ["245/70R17", "245/75R17"],
+        "wheelDiameters": [17],
+        "boltPattern": "6x139.7",
+        "hubBore": 78.1
+      },
+      "trims": ["HD S", "HD SL", "HD SV"],
+      "source": "tiresize.com/tires/Nissan/NV3500/"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "nv3500",
+      "specs": {
+        "tireSizes": ["245/70R17", "245/75R17"],
+        "wheelDiameters": [17],
+        "boltPattern": "6x139.7",
+        "hubBore": 78.1
+      },
+      "trims": ["HD S", "HD SL", "HD SV"],
+      "source": "tiresize.com/tires/Nissan/NV3500/"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "nv3500",
+      "specs": {
+        "tireSizes": ["245/70R17", "245/75R17"],
+        "wheelDiameters": [17],
+        "boltPattern": "6x139.7",
+        "hubBore": 78.1
+      },
+      "trims": ["HD S", "HD SL", "HD SV"],
+      "source": "tiresize.com/tires/Nissan/NV3500/"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "nv3500",
+      "specs": {
+        "tireSizes": ["245/70R17", "245/75R17"],
+        "wheelDiameters": [17],
+        "boltPattern": "6x139.7",
+        "hubBore": 78.1
+      },
+      "trims": ["HD S", "HD SL", "HD SV"],
+      "source": "tiresize.com/tires/Nissan/NV3500/"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "nv3500",
+      "specs": {
+        "tireSizes": ["245/75R17"],
+        "wheelDiameters": [17],
+        "boltPattern": "6x139.7",
+        "hubBore": 78.1
+      },
+      "trims": ["HD S", "HD SL", "HD SV"],
+      "source": "tiresize.com/tires/Nissan/NV3500/"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "nv3500",
+      "specs": {
+        "tireSizes": ["245/75R17"],
+        "wheelDiameters": [17],
+        "boltPattern": "6x139.7",
+        "hubBore": 78.1
+      },
+      "trims": ["HD SL", "HD SV"],
+      "source": "tiresize.com/tires/Nissan/NV3500/"
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "paladin",
+      "notUS": true,
+      "reason": "Mexico/China market only - rebadged Xterra for Latin America and China",
+      "specs": null
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "paladin",
+      "notUS": true,
+      "reason": "Mexico/China market only - rebadged Xterra for Latin America and China",
+      "specs": null
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "paladin",
+      "notUS": true,
+      "reason": "Mexico/China market only - rebadged Xterra for Latin America and China",
+      "specs": null
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "paladin",
+      "notUS": true,
+      "reason": "Mexico/China market only - rebadged Xterra for Latin America and China",
+      "specs": null
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "paladin",
+      "notUS": true,
+      "reason": "Mexico/China market only - rebadged Xterra for Latin America and China",
+      "specs": null
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "platina",
+      "notUS": true,
+      "reason": "Mexico market only - rebadged Renault Clio for Latin America",
+      "specs": null
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "platina",
+      "notUS": true,
+      "reason": "Mexico market only - rebadged Renault Clio for Latin America",
+      "specs": null
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "platina",
+      "notUS": true,
+      "reason": "Mexico market only - rebadged Renault Clio for Latin America",
+      "specs": null
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "platina",
+      "notUS": true,
+      "reason": "Mexico market only - rebadged Renault Clio for Latin America",
+      "specs": null
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "platina",
+      "notUS": true,
+      "reason": "Mexico market only - rebadged Renault Clio for Latin America",
+      "specs": null
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "platina",
+      "notUS": true,
+      "reason": "Mexico market only - rebadged Renault Clio for Latin America",
+      "specs": null
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "platina",
+      "notUS": true,
+      "reason": "Mexico market only - rebadged Renault Clio for Latin America",
+      "specs": null
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "platina",
+      "notUS": true,
+      "reason": "Mexico market only - rebadged Renault Clio for Latin America",
+      "specs": null
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "platina",
+      "notUS": true,
+      "reason": "Mexico market only - rebadged Renault Clio for Latin America",
+      "specs": null
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "presea",
+      "notUS": true,
+      "reason": "Japan domestic market only - compact sedan discontinued 1995",
+      "specs": null
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "r-nessa",
+      "notUS": true,
+      "reason": "Japan domestic market only - compact minivan (1997-2001)",
+      "specs": null
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "r-nessa",
+      "notUS": true,
+      "reason": "Japan domestic market only - compact minivan (1997-2001)",
+      "specs": null
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "rasheen",
+      "notUS": true,
+      "reason": "Japan domestic market only - retro-styled compact crossover (1994-2000)",
+      "specs": null
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "rogue-select",
+      "specs": {
+        "tireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+        "wheelDiameters": [16, 17, 18],
+        "boltPattern": "5x114.3",
+        "hubBore": 66.1
+      },
+      "trims": ["S", "SL", "SV"],
+      "note": "First-gen Rogue continued alongside 2nd-gen; uses 2013 Rogue specs",
+      "source": "tiresize.com/tires/Nissan/Rogue/2013/"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "rogue-select",
+      "specs": {
+        "tireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+        "wheelDiameters": [16, 17, 18],
+        "boltPattern": "5x114.3",
+        "hubBore": 66.1
+      },
+      "trims": ["S", "SL", "SV"],
+      "note": "First-gen Rogue continued alongside 2nd-gen; uses 2013 Rogue specs",
+      "source": "tiresize.com/tires/Nissan/Rogue/2013/"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "rogue-sport",
+      "specs": {
+        "tireSizes": ["215/65R16", "215/60R17", "225/45R19"],
+        "wheelDiameters": [16, 17, 19],
+        "boltPattern": "5x114.3",
+        "hubBore": 66.1
+      },
+      "trims": ["S", "SL", "SV"],
+      "source": "tiresize.com/tires/Nissan/Rogue-Sport/"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "rogue-sport",
+      "specs": {
+        "tireSizes": ["215/65R16", "215/60R17", "225/45R19"],
+        "wheelDiameters": [16, 17, 19],
+        "boltPattern": "5x114.3",
+        "hubBore": 66.1
+      },
+      "trims": ["S", "SL", "SV"],
+      "source": "tiresize.com/tires/Nissan/Rogue-Sport/"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "rogue-sport",
+      "specs": {
+        "tireSizes": ["215/65R16", "215/60R17", "225/45R19"],
+        "wheelDiameters": [16, 17, 19],
+        "boltPattern": "5x114.3",
+        "hubBore": 66.1
+      },
+      "trims": ["S", "SL", "SV"],
+      "source": "tiresize.com/tires/Nissan/Rogue-Sport/"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "rogue-sport",
+      "specs": {
+        "tireSizes": ["215/65R16", "215/60R17", "225/45R19"],
+        "wheelDiameters": [16, 17, 19],
+        "boltPattern": "5x114.3",
+        "hubBore": 66.1
+      },
+      "trims": ["S", "SL", "SV"],
+      "source": "tiresize.com/tires/Nissan/Rogue-Sport/"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "rogue-sport",
+      "specs": {
+        "tireSizes": ["215/60R17", "225/45R19"],
+        "wheelDiameters": [17, 19],
+        "boltPattern": "5x114.3",
+        "hubBore": 66.1
+      },
+      "trims": ["S", "SL", "SV"],
+      "source": "tiresize.com/tires/Nissan/Rogue-Sport/"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "rogue-sport",
+      "specs": {
+        "tireSizes": ["215/60R17", "225/45R19"],
+        "wheelDiameters": [17, 19],
+        "boltPattern": "5x114.3",
+        "hubBore": 66.1
+      },
+      "trims": ["S", "SL", "SV"],
+      "source": "tiresize.com/tires/Nissan/Rogue-Sport/"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "sakura",
+      "notUS": true,
+      "reason": "Japan domestic market only - kei-class electric vehicle",
+      "specs": null
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "sakura",
+      "notUS": true,
+      "reason": "Japan domestic market only - kei-class electric vehicle",
+      "specs": null
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "sakura",
+      "notUS": true,
+      "reason": "Japan domestic market only - kei-class electric vehicle",
+      "specs": null
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "sakura",
+      "notUS": true,
+      "reason": "Japan domestic market only - kei-class electric vehicle",
+      "specs": null
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "notUS": true,
+      "reason": "Japan domestic market only - sold as Infiniti EX35/EX37/QX50 in US",
+      "specs": null
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "notUS": true,
+      "reason": "Japan domestic market only - sold as Infiniti EX35/EX37/QX50 in US",
+      "specs": null
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "notUS": true,
+      "reason": "Japan domestic market only - sold as Infiniti EX35/EX37/QX50 in US",
+      "specs": null
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "notUS": true,
+      "reason": "Japan domestic market only - sold as Infiniti EX35/EX37/QX50 in US",
+      "specs": null
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "notUS": true,
+      "reason": "Japan domestic market only - sold as Infiniti EX35/EX37/QX50 in US",
+      "specs": null
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "notUS": true,
+      "reason": "Japan domestic market only - sold as Infiniti EX35/EX37/QX50 in US",
+      "specs": null
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "notUS": true,
+      "reason": "Japan domestic market only - sold as Infiniti EX35/EX37/QX50 in US",
+      "specs": null
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "notUS": true,
+      "reason": "Japan domestic market only - sold as Infiniti EX35/EX37/QX50 in US",
+      "specs": null
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "terrano-2",
+      "notUS": true,
+      "reason": "European market only - Ford Maverick-based SUV sold in Europe",
+      "specs": null
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "terrano-2",
+      "notUS": true,
+      "reason": "European market only - Ford Maverick-based SUV sold in Europe",
+      "specs": null
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "terrano-2",
+      "notUS": true,
+      "reason": "European market only - Ford Maverick-based SUV sold in Europe",
+      "specs": null
+    }
+  ]
+}

@@ -1,0 +1,613 @@
+{
+  "batchId": "110",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gle-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gle-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gle-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "currentTireSizes": [
+        "275/50R19",
+        "285/45R21",
+        "295/35R22"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "glk-class",
+      "currentTireSizes": [
+        "235/60R17",
+        "235/50R19"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "glk-class",
+      "currentTireSizes": [
+        "235/60R17",
+        "235/50R19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "glk-class",
+      "currentTireSizes": [
+        "235/60R17",
+        "235/50R19"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "glk-class",
+      "currentTireSizes": [
+        "235/60R17",
+        "235/50R19"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "glk-class",
+      "currentTireSizes": [
+        "235/60R17",
+        "235/50R19"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "glk-class",
+      "currentTireSizes": [
+        "235/60R17",
+        "235/50R19"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "glk-class",
+      "currentTireSizes": [
+        "235/60R17",
+        "235/50R19"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "glk-class",
+      "currentTireSizes": [
+        "235/60R17",
+        "235/50R19"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gls",
+      "currentTireSizes": [
+        "275/50R20",
+        "275/45R21",
+        "285/45R21",
+        "285/40R22",
+        "295/40R22",
+        "325/35R22",
+        "295/35R23",
+        "325/30R23"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gls",
+      "currentTireSizes": [
+        "275/50R20",
+        "275/45R21",
+        "285/45R21",
+        "285/40R22",
+        "295/40R22",
+        "325/35R22",
+        "295/35R23",
+        "325/30R23"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gls",
+      "currentTireSizes": [
+        "275/50R20",
+        "275/45R21",
+        "285/45R21",
+        "285/40R22",
+        "295/40R22",
+        "325/35R22",
+        "295/35R23",
+        "325/30R23"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gls",
+      "currentTireSizes": [
+        "275/50R20",
+        "275/45R21",
+        "285/45R21",
+        "285/40R22",
+        "295/40R22",
+        "325/35R22",
+        "295/35R23",
+        "325/30R23"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gls",
+      "currentTireSizes": [
+        "275/50R20",
+        "275/45R21",
+        "285/45R21",
+        "285/40R22",
+        "295/40R22",
+        "325/35R22",
+        "295/35R23",
+        "325/30R23"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gls",
+      "currentTireSizes": [
+        "275/50R20",
+        "275/45R21",
+        "285/45R21",
+        "285/40R22",
+        "295/40R22",
+        "325/35R22",
+        "295/35R23",
+        "325/30R23"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gls",
+      "currentTireSizes": [
+        "275/50R20",
+        "275/45R21",
+        "285/45R21",
+        "285/40R22",
+        "295/40R22",
+        "325/35R22",
+        "295/35R23",
+        "325/30R23"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gls",
+      "currentTireSizes": [
+        "265/60R18",
+        "275/55R19",
+        "275/50R20",
+        "295/45R20",
+        "295/40R21",
+        "315/35R21"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gls",
+      "currentTireSizes": [
+        "265/60R18",
+        "275/55R19",
+        "275/50R20",
+        "295/45R20",
+        "295/40R21",
+        "315/35R21"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gls",
+      "currentTireSizes": [
+        "265/60R18",
+        "275/55R19",
+        "275/50R20",
+        "295/45R20",
+        "295/40R21",
+        "315/35R21"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gls-class",
+      "currentTireSizes": []
+    }
+  ]
+}

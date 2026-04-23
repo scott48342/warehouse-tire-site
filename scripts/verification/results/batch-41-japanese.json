@@ -1,0 +1,1342 @@
+{
+  "batch": "batch-41-japanese",
+  "verifiedAt": "2026-04-23T00:27:00Z",
+  "summary": {
+    "totalVehicles": 75,
+    "validForUSA": 36,
+    "invalidForUSA": 39,
+    "flaggedIssues": [
+      "Toyota Etios Valco - Indonesia market only, not sold in USA",
+      "Toyota Grand HiAce - Japan market only, not sold in USA",
+      "Toyota FJ Cruiser 2015-2023 - Discontinued in USA in 2014",
+      "Toyota GR Corolla 2022 - First US model year is 2023",
+      "Toyota GR Corolla 2026 - Future model year (speculative)",
+      "Toyota Grand Highlander 2026 - Future model year (speculative)",
+      "Toyota GT 86 - In USA sold as Scion FR-S (2013-2016) then Toyota 86 (2017-2020), not 'GT 86'",
+      "Toyota Land Cruiser 2022 - Not produced for USA 2022-2023 (gap years)"
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Etios Valco",
+      "status": "INVALID",
+      "reason": "Indonesia market only - never sold in USA",
+      "confidence": "high",
+      "sources": ["zigwheels.co.id", "motoroids.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Etios Valco",
+      "status": "INVALID",
+      "reason": "Indonesia market only - never sold in USA",
+      "confidence": "high",
+      "sources": ["zigwheels.co.id", "motoroids.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Etios Valco",
+      "status": "INVALID",
+      "reason": "Indonesia market only - discontinued in Indonesia 2017",
+      "confidence": "high",
+      "sources": ["zigwheels.co.id", "motoroids.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        },
+        {
+          "name": "TRD",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "fjcruiserforums.com", "hardrockoffroad.com"],
+      "notes": "First model year in USA"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        },
+        {
+          "name": "Upgrade",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "fjcruiserforums.com", "tiresize.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        },
+        {
+          "name": "Upgrade",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "fjcruiserforums.com", "tiresize.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        },
+        {
+          "name": "Upgrade",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        },
+        {
+          "name": "Trail Teams",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "fjcruiserforums.com", "tiresize.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        },
+        {
+          "name": "Upgrade",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "fjcruiserforums.com", "tiresize.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        },
+        {
+          "name": "Upgrade",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "fjcruiserforums.com", "tiresize.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        },
+        {
+          "name": "Upgrade",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "fjcruiserforums.com", "tiresize.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        },
+        {
+          "name": "Upgrade",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "265/70R17"
+        },
+        {
+          "name": "Trail Teams Ultimate",
+          "oemWheelSize": "16x7.5",
+          "oemTireSize": "265/75R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "fjcruiserforums.com", "tiresize.com"],
+      "notes": "Final model year in USA"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "INVALID",
+      "reason": "Discontinued in USA in 2014 - sold in other markets (Australia, Middle East) until 2016",
+      "confidence": "high",
+      "sources": ["toyota.com", "motor1.com", "cars.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "INVALID",
+      "reason": "Discontinued in USA in 2014 - last export market (Australia) ended Aug 2016",
+      "confidence": "high",
+      "sources": ["toyota.com", "motor1.com", "wikipedia.org"]
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "INVALID",
+      "reason": "Discontinued in USA in 2014 - Japan market continued until 2018",
+      "confidence": "high",
+      "sources": ["toyota.com", "toyotaofplano.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "INVALID",
+      "reason": "Discontinued in USA in 2014 - Japan production ended 2018",
+      "confidence": "high",
+      "sources": ["toyota.com", "toyotaofplano.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "INVALID",
+      "reason": "FJ Cruiser production ended worldwide - invalid year",
+      "confidence": "high",
+      "sources": ["toyota.com", "motor1.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "INVALID",
+      "reason": "FJ Cruiser production ended worldwide - invalid year",
+      "confidence": "high",
+      "sources": ["toyota.com", "motor1.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "INVALID",
+      "reason": "FJ Cruiser production ended worldwide - invalid year",
+      "confidence": "high",
+      "sources": ["toyota.com", "motor1.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "INVALID",
+      "reason": "FJ Cruiser production ended worldwide - invalid year",
+      "confidence": "high",
+      "sources": ["toyota.com", "motor1.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "FJ Cruiser",
+      "status": "INVALID",
+      "reason": "FJ Cruiser production ended worldwide April 2023 - UAE final production run, never in USA",
+      "confidence": "high",
+      "sources": ["motor1.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "GR Corolla",
+      "status": "INVALID",
+      "reason": "GR Corolla first sold in USA for 2023 model year - 2022 does not exist",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "wikipedia.org", "cars.usnews.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "GR Corolla",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Core",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "235/40R18"
+        },
+        {
+          "name": "Circuit Edition",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "235/40R18"
+        },
+        {
+          "name": "Morizo Edition",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "grcorollaforum.com", "toyota.com"],
+      "notes": "First model year in USA. Core/Circuit use Michelin Pilot Sport 4, Morizo uses Pilot Sport Cup 2"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "GR Corolla",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Core",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "235/40R18"
+        },
+        {
+          "name": "Circuit Edition",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "235/40R18"
+        },
+        {
+          "name": "Morizo Edition",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Premium",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "235/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "toyota.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "GR Corolla",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Core",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "235/40R18"
+        },
+        {
+          "name": "Premium",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "235/40R18"
+        },
+        {
+          "name": "Morizo Edition",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "toyota.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "GR Corolla",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Core",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "235/40R18"
+        },
+        {
+          "name": "Premium",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "235/40R18"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["caranddriver.com"],
+      "notes": "Current model year - specs may be updated"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Grand HiAce",
+      "status": "INVALID",
+      "reason": "Japan/Asia market only - never sold in USA",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdmbuysell.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Grand HiAce",
+      "status": "INVALID",
+      "reason": "Japan/Asia market only - never sold in USA",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdmbuysell.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Grand HiAce",
+      "status": "INVALID",
+      "reason": "Japan/Asia market only - never sold in USA",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdmbuysell.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Grand Highlander",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "XLE",
+          "oemWheelSize": "18x7.5",
+          "oemTireSize": "235/65R18"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "20x7.5",
+          "oemTireSize": "255/55R20"
+        },
+        {
+          "name": "Platinum",
+          "oemWheelSize": "21x7.5",
+          "oemTireSize": "255/45R21"
+        },
+        {
+          "name": "Hybrid Max XLE",
+          "oemWheelSize": "18x7.5",
+          "oemTireSize": "235/65R18"
+        },
+        {
+          "name": "Hybrid Max Limited",
+          "oemWheelSize": "20x7.5",
+          "oemTireSize": "255/55R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "caranddriver.com", "edmunds.com", "grandhighlanderforum.com"],
+      "notes": "First model year - all-new nameplate. Uses 14x1.5 lug size (different from regular Highlander)"
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Grand Highlander",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "XLE",
+          "oemWheelSize": "18x7.5",
+          "oemTireSize": "235/65R18"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "20x7.5",
+          "oemTireSize": "255/55R20"
+        },
+        {
+          "name": "Platinum",
+          "oemWheelSize": "21x7.5",
+          "oemTireSize": "255/45R21"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "caranddriver.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Grand Highlander",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "XLE",
+          "oemWheelSize": "18x7.5",
+          "oemTireSize": "235/65R18"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "20x7.5",
+          "oemTireSize": "255/55R20"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["toyota.com"],
+      "notes": "Current model year - specs may be updated"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "GT 86",
+      "status": "INVALID",
+      "reason": "In USA sold as Scion FR-S starting 2013. 'GT 86' name used internationally only. 2012 model year does not exist in any market.",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com", "drivingline.com"],
+      "suggestedCorrection": {
+        "model": "86",
+        "year": 2017,
+        "note": "Use 'Toyota 86' for 2017-2020 USA or 'Scion FR-S' for 2013-2016"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "GT 86",
+      "status": "INVALID",
+      "reason": "In USA sold as Scion FR-S (2013-2016). 'GT 86' name used internationally only.",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "suggestedCorrection": {
+        "model": "Scion FR-S",
+        "year": 2013
+      }
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "GT 86",
+      "status": "INVALID",
+      "reason": "In USA sold as Scion FR-S (2013-2016). 'GT 86' name used internationally only.",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "suggestedCorrection": {
+        "model": "Scion FR-S",
+        "year": 2014
+      }
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "GT 86",
+      "status": "INVALID",
+      "reason": "In USA sold as Scion FR-S (2013-2016). 'GT 86' name used internationally only.",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "suggestedCorrection": {
+        "model": "Scion FR-S",
+        "year": 2015
+      }
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "GT 86",
+      "status": "INVALID",
+      "reason": "In USA sold as Scion FR-S (2013-2016). 'GT 86' name used internationally only.",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "suggestedCorrection": {
+        "model": "Scion FR-S",
+        "year": 2016
+      }
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "GT 86",
+      "status": "INVALID",
+      "reason": "In USA sold as 'Toyota 86' (2017-2020). 'GT 86' name used internationally only.",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "suggestedCorrection": {
+        "model": "86",
+        "year": 2017,
+        "boltPattern": "5x100",
+        "hubBore": 56.1,
+        "oemTireSize": "205/55R16 or 215/45R17"
+      }
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "GT 86",
+      "status": "INVALID",
+      "reason": "In USA sold as 'Toyota 86' (2017-2020). 'GT 86' name used internationally only.",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "suggestedCorrection": {
+        "model": "86",
+        "year": 2018
+      }
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "GT 86",
+      "status": "INVALID",
+      "reason": "In USA sold as 'Toyota 86' (2017-2020). 'GT 86' name used internationally only.",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "suggestedCorrection": {
+        "model": "86",
+        "year": 2019
+      }
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "GT 86",
+      "status": "INVALID",
+      "reason": "In USA sold as 'Toyota 86' (2017-2020). 'GT 86' name used internationally only.",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "suggestedCorrection": {
+        "model": "86",
+        "year": 2020
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Highlander",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/70R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "toyotanation.com"],
+      "notes": "First generation XU20 (2001-2007)"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Highlander",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/70R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "toyotanation.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Highlander",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/70R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "toyotanation.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Highlander",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/70R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "toyotanation.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Highlander",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/70R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "toyotanation.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Highlander",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/70R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "toyotanation.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Highlander",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x6.5",
+          "oemTireSize": "225/70R16"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "225/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "toyotanation.com"],
+      "notes": "Last year of first generation XU20"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Highlander",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "245/65R17"
+        },
+        {
+          "name": "Sport",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "245/55R19"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "245/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "toyotanation.com"],
+      "notes": "Second generation XU40 (2008-2013)"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Highlander",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x6.5",
+          "oemTireSize": "245/65R17"
+        },
+        {
+          "name": "Sport",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "245/55R19"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "245/55R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "toyotanation.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x8",
+          "oemTireSize": "275/70R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "trailbuiltoffroad.com", "flexmotor.com"],
+      "notes": "J100 Series (1998-2007). 50th anniversary commemorative models available."
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x8",
+          "oemTireSize": "275/70R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "trailbuiltoffroad.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "16x8",
+          "oemTireSize": "275/70R16"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "trailbuiltoffroad.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "275/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "trailbuiltoffroad.com"],
+      "notes": "J100 refresh - 17\" wheels now standard"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "275/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "trailbuiltoffroad.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "275/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "trailbuiltoffroad.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "275/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "trailbuiltoffroad.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x8",
+          "oemTireSize": "275/65R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "trailbuiltoffroad.com"],
+      "notes": "Last year of J100 Series"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "carbuzz.com"],
+      "notes": "First year of J200 Series (2008-2021)"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "carbuzz.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "carbuzz.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "carbuzz.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "carbuzz.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "carbuzz.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "carbuzz.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "carbuzz.com"],
+      "notes": "J200 Series facelift begins"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "carbuzz.com"],
+      "notes": "2016-2017 not in batch but exist. Batch gap."
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "VALID",
+      "boltPattern": "5x150",
+      "hubBore": 110.0,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        },
+        {
+          "name": "Heritage Edition",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "285/60R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["fifteen52.com", "carbuzz.com"],
+      "notes": "2020-2021 exist but not in batch"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "INVALID",
+      "reason": "Land Cruiser not sold in USA for 2022-2023 model years. J200 ended 2021, J300 came to USA for 2024.",
+      "confidence": "high",
+      "sources": ["cars.com", "carsdirect.com", "carbuzz.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "215/55R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tirewheelguide.com", "caranddriver.com"],
+      "notes": "First generation (2016-2020). First mass-produced hydrogen fuel cell vehicle."
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "215/55R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tirewheelguide.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "215/55R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tirewheelguide.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "215/55R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tirewheelguide.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "215/55R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tirewheelguide.com"],
+      "notes": "Last year of first generation"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "XLE",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/50R19"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/50R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "tirewheelguide.com", "caranddriver.com"],
+      "notes": "Second generation - NEW bolt pattern 5x120 (changed from 5x114.3), rear-wheel drive"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Mirai",
+      "status": "VALID",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "trims": [
+        {
+          "name": "XLE",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/50R19"
+        },
+        {
+          "name": "Limited",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/50R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com", "tirewheelguide.com", "caranddriver.com"]
+    }
+  ]
+}

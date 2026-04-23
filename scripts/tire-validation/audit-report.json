@@ -1,0 +1,316 @@
+{
+  "generatedAt": "2026-04-21T23:34:28.020Z",
+  "overall": {
+    "totalRecords": 19422,
+    "uniqueMakes": 61,
+    "uniqueModels": 985,
+    "uniqueYMM": 11578,
+    "yearRange": "1953-2026"
+  },
+  "wheelSpecs": {
+    "boltPattern": {
+      "count": 19422,
+      "percent": 100
+    },
+    "centerBore": {
+      "count": 19422,
+      "percent": 100
+    },
+    "wheelSizes": {
+      "count": 17205,
+      "percent": 88.6
+    },
+    "threadSize": {
+      "count": 19373,
+      "percent": 99.7
+    }
+  },
+  "tireSpecs": {
+    "withTireSizes": {
+      "count": 16408,
+      "percent": 84.5
+    },
+    "emptyTireSizes": {
+      "count": 3014,
+      "percent": 15.5
+    },
+    "staggeredVehicles": 15605
+  },
+  "byMake": [
+    {
+      "make": "chevrolet",
+      "total": 2024,
+      "tireCoverage": 89,
+      "wheelCoverage": 89,
+      "boltCoverage": 100
+    },
+    {
+      "make": "mercedes",
+      "total": 1804,
+      "tireCoverage": 84,
+      "wheelCoverage": 84,
+      "boltCoverage": 100
+    },
+    {
+      "make": "ford",
+      "total": 1635,
+      "tireCoverage": 86,
+      "wheelCoverage": 89,
+      "boltCoverage": 100
+    },
+    {
+      "make": "toyota",
+      "total": 1576,
+      "tireCoverage": 90,
+      "wheelCoverage": 96,
+      "boltCoverage": 100
+    },
+    {
+      "make": "bmw",
+      "total": 1268,
+      "tireCoverage": 84,
+      "wheelCoverage": 100,
+      "boltCoverage": 100
+    },
+    {
+      "make": "nissan",
+      "total": 810,
+      "tireCoverage": 75,
+      "wheelCoverage": 75,
+      "boltCoverage": 100
+    },
+    {
+      "make": "audi",
+      "total": 799,
+      "tireCoverage": 82,
+      "wheelCoverage": 100,
+      "boltCoverage": 100
+    },
+    {
+      "make": "gmc",
+      "total": 794,
+      "tireCoverage": 90,
+      "wheelCoverage": 90,
+      "boltCoverage": 100
+    },
+    {
+      "make": "ram",
+      "total": 783,
+      "tireCoverage": 93,
+      "wheelCoverage": 97,
+      "boltCoverage": 100
+    },
+    {
+      "make": "dodge",
+      "total": 754,
+      "tireCoverage": 92,
+      "wheelCoverage": 90,
+      "boltCoverage": 100
+    },
+    {
+      "make": "mazda",
+      "total": 729,
+      "tireCoverage": 76,
+      "wheelCoverage": 75,
+      "boltCoverage": 100
+    },
+    {
+      "make": "jeep",
+      "total": 595,
+      "tireCoverage": 97,
+      "wheelCoverage": 96,
+      "boltCoverage": 100
+    },
+    {
+      "make": "subaru",
+      "total": 477,
+      "tireCoverage": 75,
+      "wheelCoverage": 73,
+      "boltCoverage": 100
+    },
+    {
+      "make": "chrysler",
+      "total": 391,
+      "tireCoverage": 78,
+      "wheelCoverage": 78,
+      "boltCoverage": 100
+    },
+    {
+      "make": "honda",
+      "total": 355,
+      "tireCoverage": 79,
+      "wheelCoverage": 70,
+      "boltCoverage": 100
+    },
+    {
+      "make": "lexus",
+      "total": 301,
+      "tireCoverage": 89,
+      "wheelCoverage": 85,
+      "boltCoverage": 100
+    },
+    {
+      "make": "kia",
+      "total": 292,
+      "tireCoverage": 75,
+      "wheelCoverage": 81,
+      "boltCoverage": 100
+    },
+    {
+      "make": "pontiac",
+      "total": 290,
+      "tireCoverage": 100,
+      "wheelCoverage": 100,
+      "boltCoverage": 100
+    },
+    {
+      "make": "hyundai",
+      "total": 281,
+      "tireCoverage": 64,
+      "wheelCoverage": 83,
+      "boltCoverage": 100
+    },
+    {
+      "make": "buick",
+      "total": 265,
+      "tireCoverage": 60,
+      "wheelCoverage": 80,
+      "boltCoverage": 100
+    }
+  ],
+  "emptyRecords": [
+    {
+      "make": "ford",
+      "model": "transit",
+      "emptyCount": 26
+    },
+    {
+      "make": "bmw",
+      "model": "z4",
+      "emptyCount": 25
+    },
+    {
+      "make": "chrysler",
+      "model": "voyager",
+      "emptyCount": 24
+    },
+    {
+      "make": "subaru",
+      "model": "legacy-b4",
+      "emptyCount": 21
+    },
+    {
+      "make": "mini",
+      "model": "convertible",
+      "emptyCount": 21
+    },
+    {
+      "make": "subaru",
+      "model": "legacy-outback",
+      "emptyCount": 20
+    },
+    {
+      "make": "bmw",
+      "model": "x5-m",
+      "emptyCount": 18
+    },
+    {
+      "make": "bmw",
+      "model": "x6-m",
+      "emptyCount": 18
+    },
+    {
+      "make": "bmw",
+      "model": "6-series",
+      "emptyCount": 17
+    },
+    {
+      "make": "infiniti",
+      "model": "g",
+      "emptyCount": 16
+    },
+    {
+      "make": "jaguar",
+      "model": "xk",
+      "emptyCount": 16
+    },
+    {
+      "make": "chrysler",
+      "model": "grand-voyager",
+      "emptyCount": 16
+    },
+    {
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "emptyCount": 15
+    },
+    {
+      "make": "ford",
+      "model": "e-250-econoline",
+      "emptyCount": 15
+    },
+    {
+      "make": "ford",
+      "model": "e-150-econoline",
+      "emptyCount": 15
+    },
+    {
+      "make": "gmc",
+      "model": "yukon-xl-1500",
+      "emptyCount": 15
+    },
+    {
+      "make": "cadillac",
+      "model": "cts-v",
+      "emptyCount": 15
+    },
+    {
+      "make": "subaru",
+      "model": "impreza-sport",
+      "emptyCount": 15
+    },
+    {
+      "make": "audi",
+      "model": "sq5",
+      "emptyCount": 15
+    },
+    {
+      "make": "gmc",
+      "model": "savana-1500",
+      "emptyCount": 15
+    },
+    {
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "emptyCount": 14
+    },
+    {
+      "make": "cadillac",
+      "model": "srx",
+      "emptyCount": 14
+    },
+    {
+      "make": "audi",
+      "model": "rs6",
+      "emptyCount": 14
+    },
+    {
+      "make": "gmc",
+      "model": "yukon-xl-2500",
+      "emptyCount": 14
+    },
+    {
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "emptyCount": 14
+    }
+  ],
+  "qualityIssues": [],
+  "qualityScore": {
+    "tireDataCoverage": 84.5,
+    "wheelDataCoverage": 88.6,
+    "boltPatternCoverage": 100,
+    "overallScore": 91,
+    "grade": "🥇 A"
+  }
+}

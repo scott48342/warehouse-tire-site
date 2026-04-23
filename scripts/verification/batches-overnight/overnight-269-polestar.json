@@ -1,0 +1,272 @@
+[
+  {
+    "id": "d9ab6ad1-475c-4be1-bf15-197842559853",
+    "year": 2020,
+    "make": "polestar",
+    "model": "polestar-1",
+    "trim": "Base",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "275/30R21",
+      "295/30R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "ce0d9f8c-bd55-4c11-a4d2-8cba228d8af9",
+    "year": 2021,
+    "make": "polestar",
+    "model": "polestar-1",
+    "trim": "Base",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "275/30R21",
+      "295/30R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "bd41d0ac-0761-4890-8fb3-da264023e5e6",
+    "year": 2020,
+    "make": "polestar",
+    "model": "polestar-2",
+    "trim": "Long range Dual motor",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 53,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 53,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45ZR19",
+      "245/40ZR20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "5837f039-4704-432a-8cd1-5be0396dd95a",
+    "year": 2021,
+    "make": "polestar",
+    "model": "polestar-2",
+    "trim": "Base",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R19",
+      "245/40R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "2a219d3d-49ac-4620-8ebe-4490950ce947",
+    "year": 2022,
+    "make": "polestar",
+    "model": "polestar-2",
+    "trim": "Base",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R19",
+      "245/40R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "0ca1cae5-4bca-4a87-9e98-d73001394aaf",
+    "year": 2023,
+    "make": "polestar",
+    "model": "polestar-2",
+    "trim": "Base",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R19",
+      "245/40R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "3434446c-38a4-463b-a3a5-8f35da0ddb25",
+    "year": 2024,
+    "make": "polestar",
+    "model": "polestar-2",
+    "trim": "Base",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R19",
+      "245/40R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "0cb13690-ca9e-4dd7-944d-aabd509dd379",
+    "year": 2025,
+    "make": "polestar",
+    "model": "polestar-2",
+    "trim": "Base",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R19",
+      "245/40R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "bae45f36-89b0-4519-9e21-06f5c026634d",
+    "year": 2026,
+    "make": "polestar",
+    "model": "polestar-2",
+    "trim": "Base",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R19",
+      "245/40R20"
+    ],
+    "source": "api_import"
+  }
+]

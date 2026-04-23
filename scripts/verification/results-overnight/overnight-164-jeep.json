@@ -1,0 +1,3218 @@
+﻿[
+    {
+        "year":  2001,
+        "make":  "jeep",
+        "id":  "fa81f055-ee7f-4f91-886a-029de53bb6bb",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2002,
+        "make":  "jeep",
+        "id":  "1f143b84-df0b-4955-a2f8-da696e17cd4d",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "SE",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2002,
+        "make":  "jeep",
+        "id":  "4be25674-924b-4397-8e97-4b7ca9797019",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2002,
+        "make":  "jeep",
+        "id":  "2b407568-4424-466e-9b7f-898e5b00de30",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2002,
+        "make":  "jeep",
+        "id":  "7674075f-c367-48c5-9503-2be5367781d2",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2003,
+        "make":  "jeep",
+        "id":  "3642e2e1-49ee-486b-b162-38d1a56b3a15",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2003,
+        "make":  "jeep",
+        "id":  "c78e0923-e50b-463e-a6a5-4a918019a4ea",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "SE",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2003,
+        "make":  "jeep",
+        "id":  "e4eb5b84-189d-48d6-80e7-f552c279bf08",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2003,
+        "make":  "jeep",
+        "id":  "2cfd2f82-64c8-4c82-8d44-6137de1c0b69",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2003,
+        "make":  "jeep",
+        "id":  "ec1abd97-4f2f-4735-881f-b074405b24ef",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2004,
+        "make":  "jeep",
+        "id":  "9fad27be-cf1a-45e0-818d-2e030a6e161b",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2004,
+        "make":  "jeep",
+        "id":  "0a400b92-f73d-4f67-a0ce-9dc0a819f27b",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "SE",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2004,
+        "make":  "jeep",
+        "id":  "da986740-e17c-4513-9a1f-98352d6f5b31",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2004,
+        "make":  "jeep",
+        "id":  "04398e80-ac75-4220-b0f5-0faa0b84acd0",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2004,
+        "make":  "jeep",
+        "id":  "12149805-0580-4f7d-bfbe-6402fed67148",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "jeep",
+        "id":  "f35dd5ce-8df0-4eb8-b66f-dccd31b07308",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "jeep",
+        "id":  "fbee6f4d-7c64-4c02-98a1-ee861419112b",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "jeep",
+        "id":  "5de6445b-6a9d-4224-91d3-16ceb8155966",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "jeep",
+        "id":  "13a81ae7-fbef-4153-8dd1-8cb4e8282838",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "jeep",
+        "id":  "d9c2617b-8857-4bbc-9842-14447a99dbac",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "SE",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "jeep",
+        "id":  "dd9b1057-fad1-49b5-a505-999a023e1220",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "SE",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "jeep",
+        "id":  "3356dcb3-527a-46bf-88b3-3402102482fb",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  15
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "jeep",
+        "id":  "125e5eef-c1c1-411a-87c4-adaf11baba70",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "jeep",
+        "id":  "0953cddc-99e2-4e92-a348-1f07618593cb",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "jeep",
+        "id":  "5248b47c-32bd-4fd2-b528-d8b30f50dacd",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "jeep",
+        "id":  "95b0f1cd-4e2a-41ff-bcce-f446cdca8d09",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "245/75R17",
+                                  "265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "jeep",
+        "id":  "317c72b1-0af0-455b-a2ae-e1ddcbc51b92",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "jeep",
+        "id":  "e58e9a11-a223-4b24-8d4e-025d0257cbe0",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "jeep",
+        "id":  "093ffe76-da69-47bc-930c-011d6e82f95a",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "jeep",
+        "id":  "1f01e7b2-bdb5-44a8-9d72-ff71633780b1",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "jeep",
+        "id":  "a59fc5be-71e1-43ce-84d3-71260b24bddb",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "jeep",
+        "id":  "b7e181f1-66b8-41a0-81e4-048a09996d16",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "LT245/75R16",
+                                  "245/75R17",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "LT255/70R18"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "jeep",
+        "id":  "1008a7c8-c09b-4e52-a8bc-b40cd14f5460",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "jeep",
+        "id":  "0556429b-20e0-45d4-a29d-5aba726174fc",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "jeep",
+        "id":  "11198edf-e05b-4ad5-adf3-c673047762bd",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "jeep",
+        "id":  "c1edc4b4-81af-4feb-a463-7a372bc274ad",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "245/75R17",
+                                  "265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "jeep",
+        "id":  "3a162ef6-0d60-4db6-bc9f-331cb87b6cc1",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "jeep",
+        "id":  "b48b5999-d709-42e7-bea8-4f32c595e2da",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "jeep",
+        "id":  "9c341a23-2673-4848-b60f-2db12f12bc8c",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "jeep",
+        "id":  "1951a12d-9eb9-4b3f-b99c-28239b1be386",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "jeep",
+        "id":  "8b0b7e7a-514d-4ea6-80a4-24874ee09f15",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "jeep",
+        "id":  "9daa107a-0210-4f8c-9bc7-f02297394abd",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "jeep",
+        "id":  "eca71b65-97b8-449b-abdd-2fd96a7eb7dd",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "jeep",
+        "id":  "8f7affbf-9f02-49d2-bd58-7c34585e065a",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "jeep",
+        "id":  "beda2b53-90ca-49ba-b26f-6fcef918f4b4",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "245/75R17",
+                                  "265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "jeep",
+        "id":  "a128a5fe-489d-4d6f-98ba-1845d23da71e",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "245/75R17",
+                                  "265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "jeep",
+        "id":  "eb1db724-9a44-4c3e-b4ae-1fb385a3c5f6",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "jeep",
+        "id":  "983133ba-6f08-4d2d-9f1e-3d952d0baee3",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "jeep",
+        "id":  "1194d398-eceb-44f0-8121-072dd3ee913a",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "jeep",
+        "id":  "bd4ade53-0677-4619-ac9b-30ba0e9ce098",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "jeep",
+        "id":  "26909f84-465e-49e7-95ea-cd56239b2bb4",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "jeep",
+        "id":  "93fc7627-1fc7-410c-890c-6c65f3e63e14",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "jeep",
+        "id":  "c109d2cf-6f95-43d4-8303-3815c4d3121d",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "jeep",
+        "id":  "92cdaef6-4dd0-48d4-b00f-91d80c37e5fa",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "jeep",
+        "id":  "81433cef-9ca7-498f-9c91-344b70da84ba",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "245/75R17",
+                                  "265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16",
+                                  "LT265/70R17"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "jeep",
+        "id":  "583f3e72-c02d-43c2-b7dc-04c1ee27b82a",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "245/75R17",
+                                  "265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16",
+                                  "LT265/70R17"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "jeep",
+        "id":  "8a051f2d-d97d-40e7-905d-51e2abbe60a1",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "jeep",
+        "id":  "6647d68a-2bef-4fb1-b002-ac8621b687be",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "jeep",
+        "id":  "39ae4c8b-2c3b-4035-8826-9e8ceff4b8bc",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "jeep",
+        "id":  "3b7cc53b-366a-4758-a67c-50cbcf7d267c",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "jeep",
+        "id":  "487920a2-9c4d-49e4-b22d-0a667e92d94d",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "jeep",
+        "id":  "329f2767-e485-4058-b650-840a3697882b",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "245/75R17",
+                                  "265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16",
+                                  "LT265/70R17"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "jeep",
+        "id":  "7c5cad16-9e3f-4ee0-b576-d1ce1193a8f8",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "jeep",
+        "id":  "113c1e1d-8059-4622-aadc-d2a2d97f031f",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "jeep",
+        "id":  "febb0cd8-ae9c-4baf-8cc9-27d123ab15ba",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/75R15",
+                                  "225/75R15",
+                                  "30x9.5R15",
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "LT245/75R16"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "jeep",
+        "id":  "399df515-d571-48cb-82ff-c5a0664c10ce",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "LT245/75R16",
+                                  "245/75R17",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "LT255/70R18",
+                                  "245/75R16",
+                                  "LT265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Sahara",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "jeep",
+        "id":  "5ae624a2-7dc1-4754-a0e2-eb170c713ca8",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "LT245/75R16",
+                                  "245/75R17",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "LT255/70R18",
+                                  "245/75R16",
+                                  "LT265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "jeep",
+        "id":  "c5dbc08b-f0d6-4b56-a581-62f3d6970db4",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "LT245/75R16",
+                                  "245/75R17",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "LT255/70R18",
+                                  "245/75R16",
+                                  "LT265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "jeep",
+        "id":  "f3e82d72-520e-4b9b-9239-6096332b5dbc",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "LT245/75R16",
+                                  "245/75R17",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "LT255/70R18",
+                                  "245/75R16",
+                                  "LT265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Rubicon",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "jeep",
+        "id":  "3e045f79-81f8-421a-813c-476cbef2c03f",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "245/75R17",
+                                  "265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16",
+                                  "LT265/70R17"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "jeep",
+        "id":  "c8b03366-a7d0-4970-b68f-7ec771b2f471",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "LT245/75R16",
+                                  "245/75R17",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "LT255/70R18",
+                                  "245/75R16",
+                                  "LT265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Rubicon Hard Rock",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "jeep",
+        "id":  "6191ba1e-1c15-4494-935d-990cccd62844",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "LT245/75R16",
+                                  "245/75R17",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "LT255/70R18",
+                                  "245/75R16",
+                                  "LT265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Sport S",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "jeep",
+        "id":  "290f6df7-f6c6-4cbc-a427-4bac96130c02",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "LT245/75R16",
+                                  "245/75R17",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "LT255/70R18",
+                                  "245/75R16",
+                                  "LT265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Sport",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "jeep",
+        "id":  "3d314ef3-5f34-426f-8720-710f5c1879a5",
+        "verifiedHubBore":  "71.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "diameter":  17
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "LT245/75R16",
+                                  "245/75R17",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "LT255/70R18",
+                                  "245/75R16",
+                                  "LT265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16"
+                              ],
+        "trim":  "Rubicon Hard Rock",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "jeep",
+        "id":  "c45dac3d-d348-4b47-89e5-1e5e8368c5ec",
+        "verifiedHubBore":  "71.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  50,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "225/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  16,
+                                       "tireSize":  "245/75R16"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  17,
+                                       "tireSize":  "255/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44.45,
+                                       "isStock":  true,
+                                       "diameter":  18,
+                                       "tireSize":  "255/70R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "245/75R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  17,
+                                       "tireSize":  "265/70R17"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  18,
+                                       "tireSize":  "265/65R18"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  40,
+                                       "isStock":  false,
+                                       "diameter":  19,
+                                       "tireSize":  "265/55R19"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  35,
+                                       "isStock":  false,
+                                       "diameter":  20,
+                                       "tireSize":  "285/50R20"
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  44,
+                                       "isStock":  false,
+                                       "diameter":  16,
+                                       "tireSize":  "255/70R16"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/75R16",
+                                  "245/75R16",
+                                  "255/75R17",
+                                  "255/70R18",
+                                  "245/75R17",
+                                  "265/70R17",
+                                  "265/65R18",
+                                  "265/55R19",
+                                  "285/50R20",
+                                  "255/70R16",
+                                  "LT265/70R17"
+                              ],
+        "trim":  "Base",
+        "reason":  "jeep wrangler specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "wrangler",
+        "verifiedBoltPattern":  "5x127",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    }
+]

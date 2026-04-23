@@ -1,0 +1,915 @@
+{
+  "batch": "overnight-054-mercedes-benz",
+  "verifiedAt": "2026-04-23T02:30:00.000Z",
+  "sources": [
+    "tiresize.com",
+    "Wikipedia (Mercedes-AMG GT, Mercedes-Benz C-Class W202)",
+    "Car and Driver",
+    "Edmunds",
+    "autoevolution.com"
+  ],
+  "summary": {
+    "total": 77,
+    "verified": 24,
+    "flagged": 14,
+    "invalid": 39
+  },
+  "knowledgeBase": {
+    "mercedesBoltPattern": "5x112 is correct for all Mercedes-Benz vehicles in batch",
+    "mercedesHubBore": "66.6mm is correct for all Mercedes-Benz vehicles in batch",
+    "amgGtGenerations": {
+      "C190_R190": {
+        "years": "2015-2022 (Black Series 2021-2023)",
+        "trims": ["GT", "GT S", "GT C", "GT R", "GT R Pro", "GT Black Series"],
+        "notes": "2-door coupe/roadster, RWD, front-mid engine"
+      },
+      "C192": {
+        "years": "2024+",
+        "trims": ["GT 55", "GT 63", "GT 43"],
+        "notes": "Completely redesigned 2+2 coupe, AWD only. GT S/C/R/Pro/Black Series trims DO NOT EXIST"
+      }
+    },
+    "cClassW202": {
+      "years": "1993-2000",
+      "C43AMG": "1997-2000 ONLY (not 1994-1996)",
+      "C55AMG": "1998-2000 ONLY",
+      "C36AMG": "1993-1997"
+    }
+  },
+  "vehicles": [
+    {
+      "id": "6e3c5ea1-dc2c-4c2f-bf39-7ee4ee79af10",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "invalid",
+      "reason": "AMG GT R Pro was only produced 2019-2020. C190 production ended September 2022. No 2023 model year exists.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "8c2a7a65-359e-4471-8993-1104ac5f816b",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "invalid",
+      "reason": "AMG GT C190 production ended September 2022. No 2023 'AMG GT' base coupe exists. Only 2023 AMG GT was Black Series (limited production ending 2023).",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "48b1fd39-a3fe-4884-856f-c0122d86468c",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "invalid",
+      "reason": "AMG GT S was discontinued in 2020. No 2023 model exists.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "4a7e44bc-6c92-4da5-b6e4-edfb8268f568",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "invalid",
+      "reason": "2024+ AMG GT (C192) only comes in GT 55 and GT 63 trims. 'AMG GT S' does not exist on new platform.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "b29a9f7f-17ff-44e7-88f6-95f9fed4db9d",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "invalid",
+      "reason": "2024+ AMG GT (C192) only comes in GT 55 and GT 63 trims. Generic 'AMG GT' base trim does not exist.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "bd99a076-7fed-4c73-8f9e-05411b865865",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "invalid",
+      "reason": "AMG GT C was discontinued in 2021. 2024+ C192 platform does not have GT C trim.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "b3fe7b59-59a6-4d95-92c7-311decd7a5b4",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "invalid",
+      "reason": "AMG GT R was discontinued in 2021. 2024+ C192 platform does not have GT R trim.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "4fee889c-bc90-4030-9eef-33932905d3f4",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "invalid",
+      "reason": "AMG GT R Pro was only produced 2019-2020 (750 units). Does not exist for 2024.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "323b4611-c9f7-440e-84c2-57c920605c5b",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "invalid",
+      "reason": "AMG GT Black Series production ended February 2022 (~1,700 units). Does not exist for 2024.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "6bf73ca7-6144-4c53-a196-d25569d8e4a8",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "flagged",
+      "reason": "2024 AMG GT exists but trim should be 'GT 55' or 'GT 63', not 'Base'. Bolt pattern and hub bore correct. Wheel/tire sizes need update for C192 platform.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true },
+      "wheelSizesNote": "C192 uses 19\" front / 20\" rear staggered, but widths differ from C190",
+      "correctTireSizes": ["275/35R20 front", "295/30R21 rear (optional)"]
+    },
+    {
+      "id": "d2515923-961d-4adc-86c5-40ca55d2e476",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "flagged",
+      "reason": "2025 AMG GT exists but trim should be 'GT 55' or 'GT 63', not 'Base'. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "e72c4069-30d2-42d9-896f-1909c7bd60d4",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "invalid",
+      "reason": "AMG GT C does not exist for 2025. Only GT 55 and GT 63 available on C192 platform.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "1b199756-ed98-4a6f-bca4-e2d7e4eca76b",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "invalid",
+      "reason": "AMG GT R does not exist for 2025. Only GT 55 and GT 63 available on C192 platform.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "7a545207-19fa-469f-9b65-c08b9c161161",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "invalid",
+      "reason": "AMG GT R Pro does not exist for 2025. Was only 2019-2020.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "6c7d81d4-49a4-4fe4-8732-2e11aff77270",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "invalid",
+      "reason": "AMG GT Black Series does not exist for 2025. Production ended February 2022.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "836d6ebd-82e5-4952-85d3-af981c0aba90",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "invalid",
+      "reason": "Generic 'AMG GT' trim does not exist for 2025. Should be GT 55 or GT 63.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "14cdff35-5e4f-480c-aa87-e3f76e68d163",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "invalid",
+      "reason": "AMG GT S does not exist for 2025. Was discontinued in 2020.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "7ec757ad-db89-408d-b227-c4a67e03f387",
+      "year": 2026,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "invalid",
+      "reason": "AMG GT R does not exist for 2026. Only GT 55 and GT 63 available on C192 platform.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "e0b7b0ed-4ea8-42c9-88f3-db1bd7cdeace",
+      "year": 2026,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "invalid",
+      "reason": "AMG GT R Pro does not exist for 2026. Was only 2019-2020.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "fddb9f7f-5f21-455b-92a7-40e9942bfd41",
+      "year": 2026,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "invalid",
+      "reason": "Generic 'AMG GT' trim does not exist for 2026. Should be GT 55 or GT 63.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "9bc7d5d1-1e6d-44ad-86bb-afa53cd38ada",
+      "year": 2026,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "invalid",
+      "reason": "AMG GT C does not exist for 2026. Was discontinued in 2021.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "6e11e780-ab82-4051-bcad-67f80f9408f7",
+      "year": 2026,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "invalid",
+      "reason": "AMG GT S does not exist for 2026. Was discontinued in 2020.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "3015ab48-e0d1-432c-8274-2620ecba997f",
+      "year": 2026,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "flagged",
+      "reason": "2026 AMG GT may exist but trim should be 'GT 55' or 'GT 63', not 'Base'. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "2980dca5-788a-42fa-959e-d48bc6c8341b",
+      "year": 2026,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "invalid",
+      "reason": "AMG GT Black Series does not exist for 2026. Production ended February 2022.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "4f461363-5a33-4fec-8968-45bd97b1492f",
+      "year": 1994,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "invalid",
+      "reason": "C43 AMG was only produced 1997-2000. Did not exist in 1994. In 1994, the AMG model was C36 AMG (1993-1997).",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "d9a785af-3c11-4868-9eab-8b5c1f67b57a",
+      "year": 1994,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C280",
+      "status": "verified",
+      "reason": "C280 existed 1993-2000. Bolt pattern 5x112 and hub bore 66.6mm correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true },
+      "wheelSizes": { "verified": true, "note": "16\" wheels standard for C280 in this era" }
+    },
+    {
+      "id": "06974638-739e-4985-8f83-ae9ba4fe2c06",
+      "year": 1994,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C220",
+      "status": "verified",
+      "reason": "C220 existed 1993-1996. Bolt pattern 5x112 and hub bore 66.6mm correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true },
+      "wheelSizes": { "verified": true, "note": "15\" wheels typical for C220" }
+    },
+    {
+      "id": "a263c141-cfa0-4f18-83d0-33e5d64076f4",
+      "year": 1994,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "invalid",
+      "reason": "C230 was introduced in 1996, replacing C220. Did not exist in 1994.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "2cdf9089-2c61-4e67-a97a-93babda6c72d",
+      "year": 1994,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "1994 C-Class base trims existed. Bolt pattern and hub bore correct. Wheel sizes appropriate for era.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "3e3411d9-e15e-4e7c-b65c-b38c5c20ee7f",
+      "year": 1995,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "1995 C-Class base trims existed. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "5ba3cbcb-caa3-41f5-a1b8-170f0b841bdd",
+      "year": 1995,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "invalid",
+      "reason": "C43 AMG was only produced 1997-2000. Did not exist in 1995.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "a7e6dce9-9323-4df2-990d-268b183f59f5",
+      "year": 1995,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "invalid",
+      "reason": "C230 was introduced in 1996. Did not exist in 1995.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "6d45c44c-a447-4121-92b1-e43ff1435de6",
+      "year": 1995,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C220",
+      "status": "verified",
+      "reason": "C220 existed 1993-1996. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "94b461d0-f6c6-4265-a359-6b58e45ebd54",
+      "year": 1995,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C280",
+      "status": "verified",
+      "reason": "C280 existed 1993-2000. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "58b254b5-335c-422c-82e5-9b9645f779a0",
+      "year": 1996,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C280",
+      "status": "verified",
+      "reason": "C280 existed 1993-2000. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "7659044d-d742-485f-8783-d6e7677f9728",
+      "year": 1996,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "invalid",
+      "reason": "C43 AMG was only produced 1997-2000. Did not exist in 1996.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "e71b679d-2068-4c1c-86e4-c86b92f7a97b",
+      "year": 1996,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C220",
+      "status": "verified",
+      "reason": "C220 existed 1993-1996 (last year). Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "b4f04422-e24a-4218-8a73-9ca1476b13b3",
+      "year": 1996,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "verified",
+      "reason": "C230 was introduced in 1996. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "17634ff8-d644-44e6-b8a5-8c862cc18cf4",
+      "year": 1996,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "1996 C-Class base trims existed. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "052238de-576e-4ddf-8279-5385664ae046",
+      "year": 1997,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C280",
+      "status": "verified",
+      "reason": "C280 existed 1993-2000. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "fd7ceb27-4a73-4ceb-a67c-d74ed09954d1",
+      "year": 1997,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "1997 C-Class base trims existed. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "054f48ff-3fd9-4f3d-ad15-9818aec17f5f",
+      "year": 1997,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "verified",
+      "reason": "C230 existed 1996-1998. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "ca44b809-9840-4917-bf2b-ec3c7563bbe0",
+      "year": 1997,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C220",
+      "status": "flagged",
+      "reason": "C220 was replaced by C230 in 1996/1997. May have limited 1997 availability but C230 was the primary model.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "b3843d24-8bc1-41da-a1a4-e9d1887b5375",
+      "year": 1997,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "flagged",
+      "reason": "C43 AMG production started late 1997. First model year, limited availability. Verify production started end of 1997.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "3897b90b-9780-4c36-b2df-3c66acbd1291",
+      "year": 1998,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C220",
+      "status": "flagged",
+      "reason": "C220 was discontinued in 1996. 1998 C-Class used C230 or C240. Tire sizes listed appear to be aftermarket options, not OEM.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "5d1e04f9-3d50-48c4-8de8-701cd22cada6",
+      "year": 1998,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "verified",
+      "reason": "C43 AMG existed 1997-2000. 1998 is valid. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "2a1ca24c-2b45-401c-a10e-72213d2b0da7",
+      "year": 1998,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C280",
+      "status": "verified",
+      "reason": "C280 existed 1993-2000. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "4bf390b7-c8d9-48eb-8d92-f67198c4ced7",
+      "year": 1998,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "flagged",
+      "reason": "C230 existed 1996-1998 (last year). C240 replaced it in late 1997. Verify availability.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "589fc220-d968-4954-8410-df5db6d6e5e6",
+      "year": 1998,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "1998 C-Class base trims existed. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "6d93bf19-d343-4def-bb82-e04323211f38",
+      "year": 1999,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C280",
+      "status": "verified",
+      "reason": "C280 existed 1993-2000. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "5f09bd25-0629-4cad-a3ac-bbcf790449bc",
+      "year": 1999,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "flagged",
+      "reason": "C230 was largely replaced by C240 in 1997-1998. Limited 1999 availability. Verify.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "49d9534a-b797-465e-ad8a-cb5ab8e7f509",
+      "year": 1999,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C220",
+      "status": "flagged",
+      "reason": "C220 was discontinued in 1996. Should not exist for 1999.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "79da3123-fa2f-464f-8058-9d9bf90d49b7",
+      "year": 1999,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "verified",
+      "reason": "C43 AMG existed 1997-2000. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "737a4385-44eb-49da-928f-5139238602cb",
+      "year": 1999,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "1999 C-Class base trims existed. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "304b0927-e40f-406c-a791-c5936afbf06f",
+      "year": 2000,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C280",
+      "status": "verified",
+      "reason": "C280 existed 1993-2000 (last year for W202). Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "03f64845-0859-469b-8a75-84eb5e781503",
+      "year": 2000,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "verified",
+      "reason": "C43 AMG existed 1997-2000 (last year). Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "e698e36b-d687-4549-9319-9c1b0f5a07c3",
+      "year": 2000,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "flagged",
+      "reason": "C230 was replaced by C240 in 1997. Limited 2000 availability unlikely.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "dca00e29-318d-4e9a-8d23-4fc07e2862c7",
+      "year": 2000,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C220",
+      "status": "invalid",
+      "reason": "C220 was discontinued in 1996. Does not exist for 2000.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "2cf29d65-a56e-4194-b808-29aa9784b91a",
+      "year": 2000,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "2000 C-Class base trims existed (last year W202). Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "afd1e23a-c8d7-4937-a40e-1d1972d999ec",
+      "year": 2001,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C55 AMG",
+      "status": "flagged",
+      "reason": "C55 AMG W202 existed 1998-2000. 2001 would be W203 generation. Verify which generation this refers to.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "9a764e7b-854c-450a-90b1-43f8681efd6d",
+      "year": 2001,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "2001 C-Class existed (W203 generation started). Bolt pattern and hub bore correct for Mercedes.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "6a8872b2-bfec-479c-8786-a30714a6321c",
+      "year": 2001,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C320",
+      "status": "verified",
+      "reason": "C320 existed in W203 generation (2001+). Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "c0891adb-93f2-430d-9556-2e665e5adfe0",
+      "year": 2001,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "verified",
+      "reason": "C230 existed in W203 generation (2001+). Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "f2fb453f-3a1f-4830-952e-883459066c83",
+      "year": 2001,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C240",
+      "status": "verified",
+      "reason": "C240 existed in W203 generation (2001+). Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "61124aca-c9a6-4053-980d-e4aa3bba1ae5",
+      "year": 2002,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C240",
+      "status": "verified",
+      "reason": "C240 existed in W203 generation. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "f09a0f17-d7a5-4413-8739-532bbfdd04ca",
+      "year": 2002,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "2002 C-Class existed. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "163fc05d-2774-4f79-8c06-ac41d36e641c",
+      "year": 2002,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C55 AMG",
+      "status": "flagged",
+      "reason": "Verify C55 AMG existed in 2002 for W203. C32 AMG was the main AMG in 2002.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "d901803f-7180-471b-8dfe-7826f7309c22",
+      "year": 2002,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C320",
+      "status": "verified",
+      "reason": "C320 existed in W203 generation. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "ee8d8fb8-b6aa-4848-91a0-0d26bc2d2035",
+      "year": 2002,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "verified",
+      "reason": "C230 existed in W203 generation. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "96821b85-4dcf-4711-8725-efe2e15a0551",
+      "year": 2003,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C240",
+      "status": "verified",
+      "reason": "C240 existed in W203 generation. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "90ba842a-6432-4005-904d-973db5b3684a",
+      "year": 2003,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C55 AMG",
+      "status": "flagged",
+      "reason": "Verify C55 AMG existed in 2003 for W203. C32 AMG was primary AMG until 2004.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "1d238f6f-b093-42a6-b23a-0c9f7837a729",
+      "year": 2003,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "verified",
+      "reason": "C230 existed in W203 generation. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "7f33c747-cd0a-4a46-bf38-f832b6df2706",
+      "year": 2003,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "2003 C-Class existed. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "e508f306-f1ff-42dc-8deb-1a9df0ddf9b9",
+      "year": 2003,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C320",
+      "status": "verified",
+      "reason": "C320 existed in W203 generation. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    },
+    {
+      "id": "67bcfec4-c03a-46dd-b160-9c170fff1d62",
+      "year": 2004,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C230",
+      "status": "verified",
+      "reason": "C230 existed in W203 generation. Bolt pattern and hub bore correct.",
+      "boltPattern": { "current": "5x112", "correct": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "correct": "66.6", "match": true }
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "Remove all 2023-2026 AMG GT entries with old C190 trim names (GT S, GT C, GT R, GT R Pro, Black Series). These trims do not exist on C192 platform.",
+      "affectedCount": 21
+    },
+    {
+      "priority": "high", 
+      "action": "Remove C43 AMG entries for 1994-1996. C43 AMG was only available 1997-2000.",
+      "affectedCount": 3
+    },
+    {
+      "priority": "medium",
+      "action": "Update 2024+ AMG GT 'Base' trim to 'GT 55' or create separate GT 55/GT 63 entries.",
+      "affectedCount": 3
+    },
+    {
+      "priority": "medium",
+      "action": "Remove C230 entries for 1994-1995. C230 was introduced in 1996.",
+      "affectedCount": 2
+    },
+    {
+      "priority": "low",
+      "action": "Verify C220 entries for 1997-2000. C220 was discontinued in 1996.",
+      "affectedCount": 4
+    },
+    {
+      "priority": "low",
+      "action": "Verify C55 AMG entries for 2001-2003. W203 C55 AMG was introduced later (2004+). Earlier years had C32 AMG.",
+      "affectedCount": 3
+    }
+  ],
+  "tireSizeNotes": {
+    "generalObservation": "Many vehicles in batch have extremely large tire size ranges (e.g., 205/60R16 through 285/25R20) that appear to be aftermarket/upgrade options rather than OEM specifications. This is acceptable for fitment purposes but should be clearly labeled.",
+    "amgGt": {
+      "C190_typical": {
+        "front": "265/35R19",
+        "rear": "295/30R20 or 305/30R20 (GT C/R)"
+      },
+      "C192_typical": {
+        "front": "275/35R20",
+        "rear": "295/30R21 (optional larger)"
+      }
+    }
+  }
+}

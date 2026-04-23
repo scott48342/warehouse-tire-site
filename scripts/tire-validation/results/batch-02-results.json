@@ -1,0 +1,983 @@
+{
+  "batchId": "02",
+  "processedAt": "2026-04-21T21:40:00.000Z",
+  "results": [
+    {
+      "year": 2017,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Single tire size across all trims 2013-2018 gen"
+    },
+    {
+      "year": 2016,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "Base AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Base FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Technology Package AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Technology Package FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "Base 2WD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Base AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Technology Package 2WD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Technology Package AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "Base 2WD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Base AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Technology Package 2WD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Technology Package AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "New generation - switched from 235/55R18 to 235/60R18"
+    },
+    {
+      "year": 2012,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"},
+        {"trim": "SH-AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"},
+        {"trim": "SH-AWD Technology Package", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Optional 245/45R19 available on 19-inch wheels"
+    },
+    {
+      "year": 2011,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"},
+        {"trim": "SH-AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"},
+        {"trim": "SH-AWD Technology Package", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"},
+        {"trim": "SH-AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"},
+        {"trim": "SH-AWD Technology Package", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First model year for RDX"
+    },
+    {
+      "year": 2006,
+      "make": "Acura",
+      "model": "RDX",
+      "trims": [],
+      "isStaggered": false,
+      "source": "N/A",
+      "confidence": "invalid",
+      "notes": "MODEL DOES NOT EXIST - RDX started in 2007 model year. Remove from database."
+    },
+    {
+      "year": 2013,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "invalid",
+      "notes": "MODEL DOES NOT EXIST - RL was discontinued after 2012 (replaced by RLX in 2013). Remove from database."
+    },
+    {
+      "year": 2012,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "245/45R18"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year for RL"
+    },
+    {
+      "year": 2011,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "245/45R18"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "245/45R18"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Upgraded to 18-inch wheels from 17-inch"
+    },
+    {
+      "year": 2008,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "Standard Model", "wheelSize": {"diameter": 17, "width": 8, "offset": 55}, "tireSize": "245/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 17, "width": 8, "offset": 55}, "tireSize": "245/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "Standard Model", "wheelSize": {"diameter": 17, "width": 8, "offset": 55}, "tireSize": "245/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 17, "width": 8, "offset": 55}, "tireSize": "245/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "Standard Model", "wheelSize": {"diameter": 17, "width": 8, "offset": 55}, "tireSize": "245/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 17, "width": 8, "offset": 55}, "tireSize": "245/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 8, "offset": 55}, "tireSize": "245/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "2nd gen RL started - new platform with SH-AWD"
+    },
+    {
+      "year": 2004,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 16, "width": 7, "offset": 50}, "tireSize": "225/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year 1st gen RL"
+    },
+    {
+      "year": 2003,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "3.5L", "wheelSize": {"diameter": 16, "width": 7, "offset": 50}, "tireSize": "225/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "3.5L", "wheelSize": {"diameter": 16, "width": 7, "offset": 50}, "tireSize": "225/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "3.5L", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 50}, "tireSize": "215/60R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "RL",
+      "trims": [
+        {"trim": "3.5L", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 50}, "tireSize": "215/60R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Acura",
+      "model": "RSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"},
+        {"trim": "Type S", "wheelSize": {"diameter": 17, "width": 7, "offset": 45}, "tireSize": "215/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year for RSX. Type S gets 17-inch wheels"
+    },
+    {
+      "year": 2005,
+      "make": "Acura",
+      "model": "RSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"},
+        {"trim": "Type S", "wheelSize": {"diameter": 17, "width": 7, "offset": 45}, "tireSize": "215/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Facelifted 05-06 Type S gets 17-inch wheels"
+    },
+    {
+      "year": 2004,
+      "make": "Acura",
+      "model": "RSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"},
+        {"trim": "Type S", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Acura",
+      "model": "RSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"},
+        {"trim": "Type S", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Acura",
+      "model": "RSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"},
+        {"trim": "Type S", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First year for RSX"
+    },
+    {
+      "year": 2014,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "245/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD Advance Package", "wheelSize": {"diameter": 19, "width": 8, "offset": 45}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year for TL. Replaced by TLX in 2015"
+    },
+    {
+      "year": 2013,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "245/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD Advance Package", "wheelSize": {"diameter": 19, "width": 8, "offset": 45}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "245/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD Advance Package", "wheelSize": {"diameter": 19, "width": 8, "offset": 45}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "245/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD Technology Package", "wheelSize": {"diameter": 19, "width": 8, "offset": 45}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "245/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD Technology Package", "wheelSize": {"diameter": 19, "width": 8, "offset": 45}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "245/50R17"},
+        {"trim": "SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 45}, "tireSize": "245/45R18"},
+        {"trim": "SH-AWD Technology Package", "wheelSize": {"diameter": 19, "width": 8, "offset": 45}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "4th gen TL started - introduced SH-AWD"
+    },
+    {
+      "year": 2008,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base/Automatic", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "235/45R17"},
+        {"trim": "6-Speed Manual", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "235/45R17"},
+        {"trim": "Type-S", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "235/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Optional 235/40R18 on 18-inch wheels"
+    },
+    {
+      "year": 2007,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "235/45R17"},
+        {"trim": "Type-S", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "235/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Optional 245/40R18 on 18-inch wheels"
+    },
+    {
+      "year": 2006,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "235/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Optional 245/40R18 on 18-inch wheels"
+    },
+    {
+      "year": 2005,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "235/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 8, "offset": 45}, "tireSize": "235/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "3rd gen TL started"
+    },
+    {
+      "year": 2003,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "3.2 TL", "wheelSize": {"diameter": 16, "width": 7, "offset": 50}, "tireSize": "205/60R16"},
+        {"trim": "3.2 TL Type-S", "wheelSize": {"diameter": 17, "width": 7, "offset": 50}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year 2nd gen TL"
+    },
+    {
+      "year": 2002,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "3.2 TL", "wheelSize": {"diameter": 16, "width": 7, "offset": 50}, "tireSize": "205/60R16"},
+        {"trim": "3.2 TL Type-S", "wheelSize": {"diameter": 17, "width": 7, "offset": 50}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "3.2 TL", "wheelSize": {"diameter": 16, "width": 7, "offset": 50}, "tireSize": "205/60R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "TL",
+      "trims": [
+        {"trim": "3.2 TL", "wheelSize": {"diameter": 16, "width": 7, "offset": 50}, "tireSize": "205/60R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "Technology Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "Type S", "wheelSize": {"diameter": 20, "width": 9, "offset": 50}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "Technology Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "Type S", "wheelSize": {"diameter": 20, "width": 9, "offset": 50}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "Technology Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "Type S", "wheelSize": {"diameter": 20, "width": 9, "offset": 50}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "235/50R18"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "Advance Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "Type S", "wheelSize": {"diameter": 20, "width": 9, "offset": 50}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "235/50R18"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "Advance Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "Type S", "wheelSize": {"diameter": 20, "width": 9, "offset": 50}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "235/50R18"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "Advance Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/40R19"},
+        {"trim": "Type S", "wheelSize": {"diameter": 20, "width": 9, "offset": 50}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "2nd gen TLX started - complete redesign"
+    },
+    {
+      "year": 2020,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "4cyl FWD", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 50}, "tireSize": "225/55R17"},
+        {"trim": "V6 FWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"},
+        {"trim": "V6 SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8, "offset": 50}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year 1st gen TLX"
+    },
+    {
+      "year": 2019,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "4cyl FWD", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 50}, "tireSize": "225/55R17"},
+        {"trim": "V6 FWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"},
+        {"trim": "V6 SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8, "offset": 50}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "4cyl FWD", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 50}, "tireSize": "225/55R17"},
+        {"trim": "V6 FWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"},
+        {"trim": "V6 SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8, "offset": 50}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "A-Spec trim added"
+    },
+    {
+      "year": 2017,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "4cyl FWD", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 50}, "tireSize": "225/55R17"},
+        {"trim": "V6 FWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"},
+        {"trim": "V6 SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Optional 245/40R19 on 19-inch wheels"
+    },
+    {
+      "year": 2016,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "4cyl FWD", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 50}, "tireSize": "225/55R17"},
+        {"trim": "V6 FWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"},
+        {"trim": "V6 SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [
+        {"trim": "4cyl FWD", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 50}, "tireSize": "225/55R17"},
+        {"trim": "V6 FWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"},
+        {"trim": "V6 SH-AWD", "wheelSize": {"diameter": 18, "width": 8, "offset": 50}, "tireSize": "225/50R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First year for TLX - replaced TL and TSX"
+    },
+    {
+      "year": 2014,
+      "make": "Acura",
+      "model": "TLX",
+      "trims": [],
+      "isStaggered": false,
+      "source": "N/A",
+      "confidence": "invalid",
+      "notes": "MODEL DOES NOT EXIST - TLX started in 2015. Remove from database."
+    },
+    {
+      "year": 2014,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "Sport Wagon", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "With Technology Package", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "V6 With Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "235/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year for TSX. Optional 225/45R18 on base models"
+    },
+    {
+      "year": 2013,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "Sport Wagon", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "V6 Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "235/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "Sport Wagon", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "V6 Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "235/45R18"},
+        {"trim": "V6 Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "235/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "Sport Wagon", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "V6 Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "235/45R18"},
+        {"trim": "V6 Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "235/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Sport Wagon variant added"
+    },
+    {
+      "year": 2010,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 55}, "tireSize": "225/50R17"},
+        {"trim": "V6 Base", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "235/45R18"},
+        {"trim": "V6 Technology Package", "wheelSize": {"diameter": 18, "width": 8, "offset": 55}, "tireSize": "235/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "V6 model added with 18-inch wheels"
+    },
+    {
+      "year": 2009,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7, "offset": 55}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "2nd gen TSX started"
+    },
+    {
+      "year": 2008,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7, "offset": 55}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year 1st gen TSX"
+    },
+    {
+      "year": 2007,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7, "offset": 55}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7, "offset": 55}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7, "offset": 55}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7, "offset": 55}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First year for TSX"
+    },
+    {
+      "year": 2003,
+      "make": "Acura",
+      "model": "TSX",
+      "trims": [],
+      "isStaggered": false,
+      "source": "N/A",
+      "confidence": "invalid",
+      "notes": "MODEL DOES NOT EXIST - TSX started in 2004. Remove from database."
+    },
+    {
+      "year": 2025,
+      "make": "Acura",
+      "model": "ZDX",
+      "trims": [
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 50}, "tireSize": "265/50R20"},
+        {"trim": "Type S", "wheelSize": {"diameter": 22, "width": 9, "offset": 50}, "tireSize": "275/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "2nd gen ZDX - all-electric"
+    },
+    {
+      "year": 2024,
+      "make": "Acura",
+      "model": "ZDX",
+      "trims": [
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 50}, "tireSize": "265/50R20"},
+        {"trim": "Type S", "wheelSize": {"diameter": 22, "width": 9, "offset": 50}, "tireSize": "275/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First year 2nd gen ZDX"
+    },
+    {
+      "year": 2023,
+      "make": "Acura",
+      "model": "ZDX",
+      "trims": [],
+      "isStaggered": false,
+      "source": "N/A",
+      "confidence": "invalid",
+      "notes": "MODEL DOES NOT EXIST - 2nd gen ZDX started in 2024, 1st gen ended 2013. Remove from database."
+    },
+    {
+      "year": 2013,
+      "make": "Acura",
+      "model": "ZDX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 50}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year 1st gen ZDX"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 70,
+    "invalid": 5,
+    "invalidEntries": [
+      {"year": 2006, "model": "RDX", "reason": "Model did not exist until 2007"},
+      {"year": 2013, "model": "RL", "reason": "Model discontinued after 2012 (replaced by RLX)"},
+      {"year": 2014, "model": "TLX", "reason": "Model did not exist until 2015"},
+      {"year": 2003, "model": "TSX", "reason": "Model did not exist until 2004"},
+      {"year": 2023, "model": "ZDX", "reason": "Gap year - 1st gen ended 2013, 2nd gen started 2024"}
+    ],
+    "corrections": {
+      "RDX_2007-2012": "Correct tire size is 235/55R18 (not 235/60R18)",
+      "RDX_2013-2018": "Correct tire size is 235/60R18 (not 255/45R20 which is A-Spec 2019+)",
+      "RL_2000-2001": "Correct tire size is 215/60R16 (not 225/55R17)",
+      "RL_2002-2004": "Correct tire size is 225/55R16 (not 245/50R17)",
+      "RSX_2002-2004": "All trims use 205/55R16 (Type S gets 17-inch only in 05-06)",
+      "TL_2000-2003": "Correct tire size is 205/60R16 or 215/50R17 Type-S (not 245/50R17)"
+    }
+  }
+}

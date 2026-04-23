@@ -1,0 +1,1369 @@
+{
+  "batchId": "23",
+  "processedAt": "2026-04-21T21:02:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 30},
+          {"diameter": 19, "width": 9, "offset": 35},
+          {"diameter": 20, "width": 10, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S650"
+      },
+      "source": "hulkoffsets.com, lmr.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 35},
+          {"diameter": 18, "width": 8.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 (2005-2009)"
+      },
+      "source": "lmr.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 35},
+          {"diameter": 18, "width": 8.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 (2005-2009)"
+      },
+      "source": "lmr.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 35},
+          {"diameter": 18, "width": 8.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 (2005-2009)"
+      },
+      "source": "lmr.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 35},
+          {"diameter": 18, "width": 8.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 (2005-2009)"
+      },
+      "source": "lmr.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 35},
+          {"diameter": 18, "width": 8.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 (2005-2009)"
+      },
+      "source": "lmr.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.5, "offset": 35},
+          {"diameter": 17, "width": 8, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 New Edge (1999-2004)"
+      },
+      "source": "cosmisusa.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.5, "offset": 35},
+          {"diameter": 17, "width": 8, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 New Edge (1999-2004)"
+      },
+      "source": "cosmisusa.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.5, "offset": 35},
+          {"diameter": 17, "width": 8, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 New Edge (1999-2004)"
+      },
+      "source": "cosmisusa.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.5, "offset": 35},
+          {"diameter": 17, "width": 8, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 New Edge (1999-2004)"
+      },
+      "source": "cosmisusa.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Mustang",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.5, "offset": 35},
+          {"diameter": 17, "width": 8, "offset": 40}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 New Edge (1999-2004)"
+      },
+      "source": "cosmisusa.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Mustang Boss 302",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 9, "offset": 42, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 47, "position": "rear"}
+        ],
+        "offsetRange": {"min": 42, "max": 47},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 Boss 302",
+        "isStaggered": true
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Mustang Boss 302",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 9, "offset": 42, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 47, "position": "rear"}
+        ],
+        "offsetRange": {"min": 42, "max": 47},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 Boss 302",
+        "isStaggered": true
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Mustang Cobra",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 9, "offset": 30}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 Terminator Cobra (2003-2004)",
+        "notes": "IRS equipped, reduced inner clearance"
+      },
+      "source": "cosmisusa.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Mustang Cobra",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 9, "offset": 30}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 Terminator Cobra (2003-2004)",
+        "notes": "IRS equipped, reduced inner clearance"
+      },
+      "source": "cosmisusa.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Mustang Cobra",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 35}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 Cobra (1999-2001)"
+      },
+      "source": "cosmisusa.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Mustang Cobra",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 35}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 Cobra (1999-2001)"
+      },
+      "source": "cosmisusa.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "specs": null,
+      "error": "Vehicle does not exist - S550 Mach 1 was introduced in 2021 model year",
+      "confidence": "none"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 Mach 1 (2003-2004)"
+      },
+      "source": "sizemywheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30}
+        ],
+        "offsetRange": {"min": 30, "max": 40},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "SN95 Mach 1 (2003-2004)"
+      },
+      "source": "sizemywheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 10.5, "offset": 45, "position": "front"},
+          {"diameter": 19, "width": 11, "offset": 50, "position": "rear"}
+        ],
+        "offsetRange": {"min": 45, "max": 50},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S550 GT350 (2015-2020)",
+        "isStaggered": true
+      },
+      "source": "sizemywheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 10.5, "offset": 45, "position": "front"},
+          {"diameter": 19, "width": 11, "offset": 50, "position": "rear"}
+        ],
+        "offsetRange": {"min": 45, "max": 50},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S550 GT350 (2015-2020)",
+        "isStaggered": true
+      },
+      "source": "sizemywheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 10.5, "offset": 45, "position": "front"},
+          {"diameter": 19, "width": 11, "offset": 50, "position": "rear"}
+        ],
+        "offsetRange": {"min": 45, "max": 50},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S550 GT350 (2015-2020)",
+        "isStaggered": true
+      },
+      "source": "sizemywheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 9.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 35, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT350 (2011-2014)"
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 9.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 35, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT350 (2011-2014)"
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 9.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 35, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT350 (2011-2014)"
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 9.5, "offset": 45, "position": "front"},
+          {"diameter": 20, "width": 9.5, "offset": 50, "position": "rear"}
+        ],
+        "offsetRange": {"min": 40, "max": 50},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT500 (2010-2014)",
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 9.5, "offset": 45, "position": "front"},
+          {"diameter": 20, "width": 9.5, "offset": 50, "position": "rear"}
+        ],
+        "offsetRange": {"min": 40, "max": 50},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT500 (2010-2014)",
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 9.5, "offset": 45, "position": "front"},
+          {"diameter": 20, "width": 9.5, "offset": 50, "position": "rear"}
+        ],
+        "offsetRange": {"min": 40, "max": 50},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT500 (2010-2014)",
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 9.5, "offset": 45, "position": "front"},
+          {"diameter": 20, "width": 9.5, "offset": 50, "position": "rear"}
+        ],
+        "offsetRange": {"min": 40, "max": 50},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT500 (2010-2014)",
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 19, "width": 9.5, "offset": 45, "position": "front"},
+          {"diameter": 20, "width": 9.5, "offset": 50, "position": "rear"}
+        ],
+        "offsetRange": {"min": 40, "max": 50},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT500 (2010-2014)",
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 18, "width": 9.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 35, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT500 (2007-2009)"
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 18, "width": 9.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 35, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT500 (2007-2009)"
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.5,
+        "wheelSizes": [
+          {"diameter": 18, "width": 9.5, "offset": 40}
+        ],
+        "offsetRange": {"min": 35, "max": 45},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "S197 GT500 (2007-2009)"
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "SportKa",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 34}
+        ],
+        "offsetRange": {"min": 34, "max": 36},
+        "lugNutThread": "M12x1.5",
+        "generation": "SportKa (2003-2008)",
+        "market": "European"
+      },
+      "source": "avtoreference.com, wheelfitment.eu",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "SportKa",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 34}
+        ],
+        "offsetRange": {"min": 34, "max": 36},
+        "lugNutThread": "M12x1.5",
+        "generation": "SportKa (2003-2008)",
+        "market": "European"
+      },
+      "source": "avtoreference.com, wheelfitment.eu",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "SportKa",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 34}
+        ],
+        "offsetRange": {"min": 34, "max": 36},
+        "lugNutThread": "M12x1.5",
+        "generation": "SportKa (2003-2008)",
+        "market": "European"
+      },
+      "source": "avtoreference.com, wheelfitment.eu",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "SportKa",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 34}
+        ],
+        "offsetRange": {"min": 34, "max": 36},
+        "lugNutThread": "M12x1.5",
+        "generation": "SportKa (2003-2008)",
+        "market": "European"
+      },
+      "source": "avtoreference.com, wheelfitment.eu",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "SportKa",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 34}
+        ],
+        "offsetRange": {"min": 34, "max": 36},
+        "lugNutThread": "M12x1.5",
+        "generation": "SportKa (2003-2008)",
+        "market": "European"
+      },
+      "source": "avtoreference.com, wheelfitment.eu",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "SportKa",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 34}
+        ],
+        "offsetRange": {"min": 34, "max": 36},
+        "lugNutThread": "M12x1.5",
+        "generation": "SportKa (2003-2008)",
+        "market": "European"
+      },
+      "source": "avtoreference.com, wheelfitment.eu",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "StreetKa",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 37}
+        ],
+        "offsetRange": {"min": 37, "max": 37},
+        "lugNutThread": "M12x1.5",
+        "generation": "StreetKa (2003-2006)",
+        "market": "European",
+        "notes": "Convertible variant of Ka"
+      },
+      "source": "wheelfitment.eu",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "StreetKa",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 37}
+        ],
+        "offsetRange": {"min": 37, "max": 37},
+        "lugNutThread": "M12x1.5",
+        "generation": "StreetKa (2003-2006)",
+        "market": "European",
+        "notes": "Convertible variant of Ka"
+      },
+      "source": "wheelfitment.eu",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "StreetKa",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 37}
+        ],
+        "offsetRange": {"min": 37, "max": 37},
+        "lugNutThread": "M12x1.5",
+        "generation": "StreetKa (2003-2006)",
+        "market": "European",
+        "notes": "Convertible variant of Ka"
+      },
+      "source": "wheelfitment.eu",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "StreetKa",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 37}
+        ],
+        "offsetRange": {"min": 37, "max": 37},
+        "lugNutThread": "M12x1.5",
+        "generation": "StreetKa (2003-2006)",
+        "market": "European",
+        "notes": "Convertible variant of Ka"
+      },
+      "source": "wheelfitment.eu",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 39},
+          {"diameter": 20, "width": 8, "offset": 39}
+        ],
+        "offsetRange": {"min": 39, "max": 39},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus SHO VI (2010-2019)"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 39},
+          {"diameter": 20, "width": 8, "offset": 39}
+        ],
+        "offsetRange": {"min": 39, "max": 39},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus SHO VI (2010-2019)"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 39},
+          {"diameter": 20, "width": 8, "offset": 39}
+        ],
+        "offsetRange": {"min": 39, "max": 39},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus SHO VI (2010-2019)"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 39},
+          {"diameter": 20, "width": 8, "offset": 39}
+        ],
+        "offsetRange": {"min": 39, "max": 39},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus SHO VI (2010-2019)"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 39},
+          {"diameter": 20, "width": 8, "offset": 39}
+        ],
+        "offsetRange": {"min": 39, "max": 39},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus SHO VI (2010-2019)"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 39},
+          {"diameter": 20, "width": 8, "offset": 39}
+        ],
+        "offsetRange": {"min": 39, "max": 39},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus SHO VI (2010-2019)"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 39},
+          {"diameter": 20, "width": 8, "offset": 39}
+        ],
+        "offsetRange": {"min": 39, "max": 39},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus SHO VI (2010-2019)"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 39},
+          {"diameter": 20, "width": 8, "offset": 39}
+        ],
+        "offsetRange": {"min": 39, "max": 39},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus SHO VI (2010-2019)"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 39},
+          {"diameter": 20, "width": 8, "offset": 39}
+        ],
+        "offsetRange": {"min": 39, "max": 39},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus SHO VI (2010-2019)"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Taurus SHO",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 39},
+          {"diameter": 20, "width": 8, "offset": 39}
+        ],
+        "offsetRange": {"min": 39, "max": 39},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus SHO VI (2010-2019)"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Taurus X",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 44},
+          {"diameter": 18, "width": 7.5, "offset": 44}
+        ],
+        "offsetRange": {"min": 44, "max": 44},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus X (2008-2009)",
+        "notes": "Crossover wagon, replaced Freestyle"
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Taurus X",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 44},
+          {"diameter": 18, "width": 7.5, "offset": 44}
+        ],
+        "offsetRange": {"min": 44, "max": 44},
+        "lugNutThread": "1/2\"-20 UNF",
+        "generation": "Taurus X (2008-2009)",
+        "notes": "Crossover wagon, replaced Freestyle"
+      },
+      "source": "wheel-size.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 40},
+          {"diameter": 18, "width": 8, "offset": 42}
+        ],
+        "offsetRange": {"min": 40, "max": 42},
+        "lugNutThread": "M12x1.5",
+        "generation": "Thunderbird XI (2002-2005)"
+      },
+      "source": "selected.pl",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 40},
+          {"diameter": 18, "width": 8, "offset": 42}
+        ],
+        "offsetRange": {"min": 40, "max": 42},
+        "lugNutThread": "M12x1.5",
+        "generation": "Thunderbird XI (2002-2005)"
+      },
+      "source": "selected.pl",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 40},
+          {"diameter": 18, "width": 8, "offset": 42}
+        ],
+        "offsetRange": {"min": 40, "max": 42},
+        "lugNutThread": "M12x1.5",
+        "generation": "Thunderbird XI (2002-2005)"
+      },
+      "source": "selected.pl",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 40},
+          {"diameter": 18, "width": 8, "offset": 42}
+        ],
+        "offsetRange": {"min": 40, "max": 42},
+        "lugNutThread": "M12x1.5",
+        "generation": "Thunderbird XI (2002-2005)"
+      },
+      "source": "selected.pl",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 60}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit (2015-present US)",
+        "notes": "First year of US Transit; SRW models; DRW uses 6x180 bolt pattern"
+      },
+      "source": "relationsracewheels.com, faroutride.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 50}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit European (2006-2014)",
+        "market": "European",
+        "notes": "European Transit pre-US introduction"
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 50}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit European (2006-2014)",
+        "market": "European",
+        "notes": "European Transit pre-US introduction"
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 50}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit European (2006-2014)",
+        "market": "European",
+        "notes": "European Transit pre-US introduction"
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Transit",
+      "specs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 50}
+        ],
+        "offsetRange": {"min": 50, "max": 60},
+        "lugNutThread": "M14x1.5",
+        "generation": "Transit European (2006-2014)",
+        "market": "European",
+        "notes": "European Transit pre-US introduction"
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium"
+    }
+  ],
+  "summary": {
+    "processed": 75,
+    "successful": 74,
+    "failed": 1,
+    "notes": [
+      "2019 Ford Mustang Mach 1 does not exist - S550 Mach 1 was introduced in 2021",
+      "SportKa and StreetKa are European-market only vehicles",
+      "Ford Transit 2011-2014 in batch are European models (US Transit started 2015)",
+      "Ford Transit DRW models use 6x180 bolt pattern (not covered in this batch)"
+    ]
+  }
+}

@@ -1,0 +1,818 @@
+{
+  "batchId": "159",
+  "make": "Volvo",
+  "validatedAt": "2026-04-21T23:00:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "vehiclesWithDiscrepancies": 52,
+    "vehiclesMissingData": 38,
+    "vehiclesCorrect": 9,
+    "notAvailableInUS": 10
+  },
+  "discrepancies": [
+    {
+      "year": 2010,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/50R17", "215/45R18"],
+      "status": "MISSING_DATA",
+      "notes": "Trims: 2.4i, T5 R-Design AWD, T5 R-Design FWD"
+    },
+    {
+      "year": 2009,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/50R17", "215/45R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same generation as 2010"
+    },
+    {
+      "year": 2008,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/50R17", "215/45R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same generation as 2010"
+    },
+    {
+      "year": 2007,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/50R17", "215/45R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same generation as 2010"
+    },
+    {
+      "year": 2006,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Same generation as 2005"
+    },
+    {
+      "year": 2005,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Trims: 2.4I, T5 AWD, T5 FWD"
+    },
+    {
+      "year": 2004,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "First year of new generation"
+    },
+    {
+      "year": 2003,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation - tiresize.com has no trim data"
+    },
+    {
+      "year": 2002,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation - tiresize.com has no trim data"
+    },
+    {
+      "year": 2001,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation - tiresize.com has no trim data"
+    },
+    {
+      "year": 2000,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation - tiresize.com has no trim data"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "notes": "Current has 235/45R17, 235/40R18, 245/35R20 which are NOT OEM. Correct: 235/45R18, 235/40R19"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "notes": "Trims: B5, Recharge T8, Recharge T8 Polestar. 235/45R17, 235/40R18, 245/35R20 NOT OEM"
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2024"
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2024"
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20", "235/45ZR18", "235/40ZR19", "245/35ZR20", "235/45R18", "225/50R17"],
+      "oemTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "notes": "235/45R18, 235/40R19 are correct. Others NOT OEM. ZR variants are speed-rated versions of same size."
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2024"
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20", "225/50R17", "235/45ZR18", "235/40ZR19", "245/35ZR20", "215/60R16"],
+      "oemTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "notes": "New gen started 2019. Trims: T5 Inscription/Momentum/R-Design, T6 variants, T8 variants. 235/45R18, 235/40R19 OEM"
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Old generation 2011-2018. Missing 215/50R17. Other sizes correct for this gen."
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2018"
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20", "215/55R16", "215/50ZR17", "225/45ZR17", "235/45ZR17", "205/60R16", "235/40ZR18"],
+      "oemTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "status": "HAS_EXTRAS",
+      "notes": "Has correct sizes plus extras. 215/55R16, 225/45ZR17, 205/60R16 may be aftermarket or European specs."
+    },
+    {
+      "year": 2015,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "245/35R20", "235/45R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Trims: Polestar (245/35R20), T5 AWD/FWD, T6 AWD, T6 R-Design. Missing 215/50R17, 235/45R18"
+    },
+    {
+      "year": 2014,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20", "215/55R16", "215/50ZR17", "225/45ZR17", "235/45ZR17", "205/60R16", "235/40ZR18"],
+      "oemTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "status": "HAS_EXTRAS",
+      "notes": "Same as 2016"
+    },
+    {
+      "year": 2013,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Missing 215/50R17"
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20", "235/40ZR18", "215/55R16", "215/50ZR17", "225/45ZR17", "235/45ZR17", "205/60R16"],
+      "oemTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "status": "HAS_EXTRAS",
+      "notes": "215/55R16, 225/45ZR17, 205/60R16 may be aftermarket"
+    },
+    {
+      "year": 2011,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20", "235/40ZR18", "215/50ZR17", "235/45ZR17", "235/40ZR19", "245/35ZR19", "215/55ZR16"],
+      "oemTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "status": "HAS_EXTRAS",
+      "notes": "First year of new gen. ZR variants equivalent. 215/55ZR16, 245/35ZR19 may be aftermarket"
+    },
+    {
+      "year": 2010,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": [],
+      "status": "YEAR_GAP",
+      "notes": "S60 was NOT sold in 2010 (gap year between generations). Remove from database."
+    },
+    {
+      "year": 2009,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+      "status": "DISCREPANCY",
+      "notes": "Old gen (2001-2009). 235/40R19, 245/35R20 NOT available on this gen. Max was R18."
+    },
+    {
+      "year": 2008,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2009 - old gen"
+    },
+    {
+      "year": 2007,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2009 - old gen"
+    },
+    {
+      "year": 2006,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2009 - old gen"
+    },
+    {
+      "year": 2005,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+      "status": "DISCREPANCY",
+      "notes": "Trims: 2.4, 2.5T AWD, 2.5T FWD, R, T5. Max 235/40R18. No R19/R20."
+    },
+    {
+      "year": 2004,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2005"
+    },
+    {
+      "year": 2003,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2005"
+    },
+    {
+      "year": 2002,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2005"
+    },
+    {
+      "year": 2001,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+      "status": "DISCREPANCY",
+      "notes": "First year S60. Same as 2005"
+    },
+    {
+      "year": 2000,
+      "make": "volvo",
+      "model": "s60",
+      "currentTireSizes": ["225/50R17", "235/45R18", "235/40R19"],
+      "oemTireSizes": [],
+      "status": "YEAR_INVALID",
+      "notes": "S60 did NOT exist in 2000. First year was 2001. Remove from database."
+    },
+    {
+      "year": 2000,
+      "make": "volvo",
+      "model": "s70",
+      "currentTireSizes": [],
+      "oemTireSizes": ["195/60R15", "195/65R15", "205/50R16", "205/55R16"],
+      "status": "MISSING_DATA",
+      "notes": "Trims: AWD, Base Model, GLT, T5"
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R17", "245/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same as 2010 S80 - final year"
+    },
+    {
+      "year": 2015,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R17", "245/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same as 2010 S80"
+    },
+    {
+      "year": 2014,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R17", "245/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same as 2010 S80"
+    },
+    {
+      "year": 2013,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R17", "245/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same as 2010 S80"
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R17", "245/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same as 2010 S80"
+    },
+    {
+      "year": 2011,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R17", "245/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same as 2010 S80"
+    },
+    {
+      "year": 2010,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R17", "245/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "Trims: 3.2, T6 AWD, V8 AWD"
+    },
+    {
+      "year": 2009,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R17", "245/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same as 2010 S80"
+    },
+    {
+      "year": 2008,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R17", "245/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "Same as 2010 S80"
+    },
+    {
+      "year": 2007,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R17", "245/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "New gen started 2007. Same as 2010."
+    },
+    {
+      "year": 2006,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation (1999-2006) - tiresize.com has limited data"
+    },
+    {
+      "year": 2005,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation"
+    },
+    {
+      "year": 2004,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation"
+    },
+    {
+      "year": 2003,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation"
+    },
+    {
+      "year": 2002,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation"
+    },
+    {
+      "year": 2001,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation"
+    },
+    {
+      "year": 2000,
+      "make": "volvo",
+      "model": "s80",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NO_DATA_AVAILABLE",
+      "notes": "Old generation"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "s90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "oemTireSizes": ["255/40R19", "255/35R20"],
+      "status": "DISCREPANCY",
+      "notes": "Width mismatch - OEM is 255mm, batch has 245mm. No R18 on current gen."
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "s90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/35R20", "255/40R19", "255/35ZR20", "245/35ZR21", "245/40ZR20"],
+      "oemTireSizes": ["255/40R19", "255/35R20"],
+      "status": "HAS_EXTRAS",
+      "notes": "Trims: B6 Plus, B6 Ultimate, Recharge T8. 255/40R19, 255/35R20 correct. Others not confirmed OEM."
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "s90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "oemTireSizes": ["255/40R19", "255/35R20"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2025"
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "s90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "oemTireSizes": ["255/40R19", "255/35R20"],
+      "status": "DISCREPANCY",
+      "notes": "Same as 2025"
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "s90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "oemTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "245/45R18 may have been on earlier trims. Mostly needs 255 width."
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "s90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "oemTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2021"
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "s90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/35R20", "255/40R19", "255/35ZR20", "245/35ZR21", "225/55R17"],
+      "oemTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "status": "HAS_EXTRAS",
+      "notes": "Has core OEM sizes. 225/55R17, 245/35ZR21 unverified."
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "s90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/35R20"],
+      "oemTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Similar to 2021"
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "s90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/35R20", "255/40R19", "255/35ZR20", "245/35ZR21", "225/55R17"],
+      "oemTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "status": "CORRECT_WITH_EXTRAS",
+      "notes": "Trims: T5 Inscription, T5 Momentum, T6 Inscription, T6 Momentum. Core sizes correct."
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "s90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "oemTireSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "First year. Missing 255/40R19, has 245/40R19 instead."
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NOT_US_MARKET",
+      "notes": "V40 was never sold in US/Canada. European model only. Consider removing or flagging."
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NOT_US_MARKET",
+      "notes": "V40 not sold in US"
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NOT_US_MARKET",
+      "notes": "V40 not sold in US"
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NOT_US_MARKET",
+      "notes": "V40 not sold in US"
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NOT_US_MARKET",
+      "notes": "V40 not sold in US"
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NOT_US_MARKET",
+      "notes": "V40 not sold in US"
+    },
+    {
+      "year": 2015,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NOT_US_MARKET",
+      "notes": "V40 not sold in US"
+    },
+    {
+      "year": 2014,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NOT_US_MARKET",
+      "notes": "V40 not sold in US"
+    },
+    {
+      "year": 2013,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NOT_US_MARKET",
+      "notes": "V40 not sold in US"
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "oemTireSizes": [],
+      "status": "NOT_US_MARKET",
+      "notes": "V40 not sold in US"
+    }
+  ],
+  "corrections": {
+    "s40": {
+      "2004-2010": {
+        "correctSizes": ["205/55R16", "205/50R17", "215/45R18"],
+        "notes": "Second generation S40"
+      },
+      "2000-2003": {
+        "correctSizes": [],
+        "notes": "First generation - limited data available. Consider dropping or researching European sources."
+      }
+    },
+    "s60": {
+      "2019-2025": {
+        "correctSizes": ["235/45R18", "235/40R19"],
+        "notes": "Third generation. Remove 235/45R17, 235/40R18, 245/35R20 from batch."
+      },
+      "2011-2018": {
+        "correctSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "245/35R20"],
+        "notes": "Second generation. All sizes mostly correct."
+      },
+      "2001-2009": {
+        "correctSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+        "notes": "First generation. Remove R19/R20 sizes - not available."
+      },
+      "2000": {
+        "correctSizes": [],
+        "notes": "REMOVE - S60 did not exist in 2000"
+      },
+      "2010": {
+        "correctSizes": [],
+        "notes": "REMOVE - Gap year, S60 not sold in 2010"
+      }
+    },
+    "s70": {
+      "2000": {
+        "correctSizes": ["195/60R15", "195/65R15", "205/50R16", "205/55R16"],
+        "notes": "Final year of S70"
+      }
+    },
+    "s80": {
+      "2007-2016": {
+        "correctSizes": ["225/50R17", "245/40R18"],
+        "notes": "Second generation"
+      },
+      "2000-2006": {
+        "correctSizes": [],
+        "notes": "First generation - limited data. Research needed."
+      }
+    },
+    "s90": {
+      "2017-2025": {
+        "correctSizes": ["245/45R18", "255/40R19", "255/35R20"],
+        "notes": "Current generation. Note 255mm width for R19/R20, not 245mm."
+      },
+      "2016": {
+        "correctSizes": ["245/45R18", "255/40R19", "255/35R20"],
+        "notes": "First year of current generation"
+      }
+    },
+    "v40": {
+      "2012-2021": {
+        "correctSizes": [],
+        "notes": "NOT SOLD IN US MARKET. Consider removing from US database or flagging as Europe-only."
+      }
+    }
+  },
+  "actionItems": [
+    {
+      "priority": "HIGH",
+      "action": "REMOVE_VEHICLES",
+      "vehicles": ["2000 S60", "2010 S60"],
+      "reason": "S60 did not exist in these years"
+    },
+    {
+      "priority": "HIGH",
+      "action": "REMOVE_OR_FLAG",
+      "vehicles": ["2012-2021 V40"],
+      "reason": "V40 never sold in US market"
+    },
+    {
+      "priority": "HIGH",
+      "action": "UPDATE_SIZES",
+      "vehicles": ["2019-2025 S60"],
+      "correctSizes": ["235/45R18", "235/40R19"],
+      "reason": "Current data has wrong sizes from older generation"
+    },
+    {
+      "priority": "HIGH",
+      "action": "UPDATE_SIZES",
+      "vehicles": ["2001-2009 S60"],
+      "correctSizes": ["195/65R15", "205/55R16", "215/55R16", "235/45R17", "235/40R18"],
+      "reason": "Remove R19/R20 sizes - not available on first gen"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "ADD_SIZES",
+      "vehicles": ["2004-2010 S40"],
+      "correctSizes": ["205/55R16", "205/50R17", "215/45R18"],
+      "reason": "Currently empty"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "ADD_SIZES",
+      "vehicles": ["2007-2016 S80"],
+      "correctSizes": ["225/50R17", "245/40R18"],
+      "reason": "Currently empty"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "ADD_SIZES",
+      "vehicles": ["2000 S70"],
+      "correctSizes": ["195/60R15", "195/65R15", "205/50R16", "205/55R16"],
+      "reason": "Currently empty"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "UPDATE_SIZES",
+      "vehicles": ["2017-2025 S90"],
+      "correctSizes": ["245/45R18", "255/40R19", "255/35R20"],
+      "reason": "Width should be 255mm for R19/R20, not 245mm"
+    },
+    {
+      "priority": "LOW",
+      "action": "RESEARCH_NEEDED",
+      "vehicles": ["2000-2003 S40", "2000-2006 S80"],
+      "reason": "Old generation vehicles with limited data on tiresize.com"
+    }
+  ]
+}

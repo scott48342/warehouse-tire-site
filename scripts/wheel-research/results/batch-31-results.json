@@ -1,0 +1,1415 @@
+{
+  "batchId": "31",
+  "processedAt": "2026-04-21T21:05:00Z",
+  "totalVehicles": 75,
+  "successCount": 75,
+  "failureCount": 0,
+  "results": [
+    {
+      "year": 2014,
+      "make": "infiniti",
+      "model": "qx70",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50},
+          {"diameter": 19, "width": 8.5, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50},
+          {"diameter": 21, "width": 9.0, "offset": 50}
+        ],
+        "offsetRange": {"min": 27, "max": 54},
+        "source": "wheelssize.com"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "infiniti",
+      "model": "qx70",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50},
+          {"diameter": 19, "width": 8.5, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50},
+          {"diameter": 21, "width": 9.0, "offset": 50}
+        ],
+        "offsetRange": {"min": 27, "max": 54},
+        "source": "wheelssize.com"
+      }
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "e-pace",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 40},
+          {"diameter": 20, "width": 8.0, "offset": 40},
+          {"diameter": 21, "width": 8.0, "offset": 40}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "e-pace",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 40},
+          {"diameter": 20, "width": 8.0, "offset": 40},
+          {"diameter": 21, "width": 8.0, "offset": 40}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "e-pace",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 40},
+          {"diameter": 20, "width": 8.0, "offset": 40},
+          {"diameter": 21, "width": 8.0, "offset": 40}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2019,
+      "make": "jaguar",
+      "model": "e-pace",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 40},
+          {"diameter": 20, "width": 8.0, "offset": 40},
+          {"diameter": 21, "width": 8.0, "offset": 40}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2018,
+      "make": "jaguar",
+      "model": "e-pace",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 40},
+          {"diameter": 20, "width": 8.0, "offset": 40},
+          {"diameter": 21, "width": 8.0, "offset": 40}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2016,
+      "make": "jaguar",
+      "model": "f-pace",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 45},
+          {"diameter": 19, "width": 8.5, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 45},
+          {"diameter": 22, "width": 9.0, "offset": 45}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2015,
+      "make": "jaguar",
+      "model": "f-pace",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 45},
+          {"diameter": 19, "width": 8.5, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 45},
+          {"diameter": 22, "width": 9.0, "offset": 45}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "jaguar",
+      "model": "f-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 27, "position": "rear"},
+          {"diameter": 19, "width": 8.5, "offset": 50, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 27, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 55, "position": "front"},
+          {"diameter": 20, "width": 10.5, "offset": 38, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "jaguar",
+      "model": "s-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 55},
+          {"diameter": 16, "width": 7.5, "offset": 60},
+          {"diameter": 17, "width": 7.0, "offset": 60},
+          {"diameter": 17, "width": 7.5, "offset": 60},
+          {"diameter": 18, "width": 7.0, "offset": 60},
+          {"diameter": 18, "width": 8.0, "offset": 55}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "jaguar",
+      "model": "s-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 55},
+          {"diameter": 16, "width": 7.5, "offset": 60},
+          {"diameter": 17, "width": 7.0, "offset": 60},
+          {"diameter": 17, "width": 7.5, "offset": 60},
+          {"diameter": 18, "width": 7.0, "offset": 60},
+          {"diameter": 18, "width": 8.0, "offset": 55}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2006,
+      "make": "jaguar",
+      "model": "s-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 55},
+          {"diameter": 16, "width": 7.5, "offset": 60},
+          {"diameter": 17, "width": 7.0, "offset": 60},
+          {"diameter": 17, "width": 7.5, "offset": 60},
+          {"diameter": 18, "width": 7.0, "offset": 60},
+          {"diameter": 18, "width": 8.0, "offset": 55}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "jaguar",
+      "model": "s-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 55},
+          {"diameter": 16, "width": 7.5, "offset": 60},
+          {"diameter": 17, "width": 7.0, "offset": 60},
+          {"diameter": 17, "width": 7.5, "offset": 60},
+          {"diameter": 18, "width": 7.0, "offset": 60},
+          {"diameter": 18, "width": 8.0, "offset": 55}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2004,
+      "make": "jaguar",
+      "model": "s-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 55},
+          {"diameter": 16, "width": 7.5, "offset": 60},
+          {"diameter": 17, "width": 7.0, "offset": 60},
+          {"diameter": 17, "width": 7.5, "offset": 60},
+          {"diameter": 18, "width": 7.0, "offset": 60},
+          {"diameter": 18, "width": 8.0, "offset": 55}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2003,
+      "make": "jaguar",
+      "model": "s-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 55},
+          {"diameter": 16, "width": 7.5, "offset": 60},
+          {"diameter": 17, "width": 7.0, "offset": 60},
+          {"diameter": 17, "width": 7.5, "offset": 60},
+          {"diameter": 18, "width": 7.0, "offset": 60},
+          {"diameter": 18, "width": 8.0, "offset": 55}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2002,
+      "make": "jaguar",
+      "model": "s-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 55},
+          {"diameter": 16, "width": 7.5, "offset": 60},
+          {"diameter": 17, "width": 7.0, "offset": 60},
+          {"diameter": 17, "width": 7.5, "offset": 60},
+          {"diameter": 18, "width": 7.0, "offset": 60},
+          {"diameter": 18, "width": 8.0, "offset": 55}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "jaguar",
+      "model": "s-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 55},
+          {"diameter": 16, "width": 7.5, "offset": 60},
+          {"diameter": 17, "width": 7.0, "offset": 60},
+          {"diameter": 17, "width": 7.5, "offset": 60},
+          {"diameter": 18, "width": 7.0, "offset": 60},
+          {"diameter": 18, "width": 8.0, "offset": 55}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "jaguar",
+      "model": "s-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 55},
+          {"diameter": 16, "width": 7.5, "offset": 60},
+          {"diameter": 17, "width": 7.0, "offset": 60},
+          {"diameter": 17, "width": 7.5, "offset": 60},
+          {"diameter": 18, "width": 7.0, "offset": 60},
+          {"diameter": 18, "width": 8.0, "offset": 55}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "jaguar",
+      "model": "x-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 16, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 7.5, "offset": 52.5},
+          {"diameter": 18, "width": 7.0, "offset": 52.5},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "jaguar",
+      "model": "x-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 16, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 7.5, "offset": 52.5},
+          {"diameter": 18, "width": 7.0, "offset": 52.5},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "jaguar",
+      "model": "x-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 16, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 7.5, "offset": 52.5},
+          {"diameter": 18, "width": 7.0, "offset": 52.5},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2006,
+      "make": "jaguar",
+      "model": "x-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 16, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 7.5, "offset": 52.5},
+          {"diameter": 18, "width": 7.0, "offset": 52.5},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "jaguar",
+      "model": "x-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 16, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 7.5, "offset": 52.5},
+          {"diameter": 18, "width": 7.0, "offset": 52.5},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2004,
+      "make": "jaguar",
+      "model": "x-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 16, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 7.5, "offset": 52.5},
+          {"diameter": 18, "width": 7.0, "offset": 52.5},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2003,
+      "make": "jaguar",
+      "model": "x-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 16, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 7.5, "offset": 52.5},
+          {"diameter": 18, "width": 7.0, "offset": 52.5},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2002,
+      "make": "jaguar",
+      "model": "x-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 16, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 7.5, "offset": 52.5},
+          {"diameter": 18, "width": 7.0, "offset": 52.5},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2001,
+      "make": "jaguar",
+      "model": "x-type",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 52.5},
+          {"diameter": 16, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 6.5, "offset": 52.5},
+          {"diameter": 17, "width": 7.0, "offset": 52.5},
+          {"diameter": 17, "width": 7.5, "offset": 52.5},
+          {"diameter": 18, "width": 7.0, "offset": 52.5},
+          {"diameter": 18, "width": 7.5, "offset": 52.5}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2025,
+      "make": "jaguar",
+      "model": "xel",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 48.5},
+          {"diameter": 18, "width": 7.5, "offset": 46},
+          {"diameter": 19, "width": 8.0, "offset": 45}
+        ],
+        "notes": "China-market long wheelbase XE variant, uses XE platform specs",
+        "source": "tirewheelguide.com (XE)"
+      }
+    },
+    {
+      "year": 2024,
+      "make": "jaguar",
+      "model": "xel",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 48.5},
+          {"diameter": 18, "width": 7.5, "offset": 46},
+          {"diameter": 19, "width": 8.0, "offset": 45}
+        ],
+        "notes": "China-market long wheelbase XE variant",
+        "source": "tirewheelguide.com (XE)"
+      }
+    },
+    {
+      "year": 2023,
+      "make": "jaguar",
+      "model": "xel",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 48.5},
+          {"diameter": 18, "width": 7.5, "offset": 46},
+          {"diameter": 19, "width": 8.0, "offset": 45}
+        ],
+        "notes": "China-market long wheelbase XE variant",
+        "source": "tirewheelguide.com (XE)"
+      }
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "xel",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 48.5},
+          {"diameter": 18, "width": 7.5, "offset": 46},
+          {"diameter": 19, "width": 8.0, "offset": 45}
+        ],
+        "notes": "China-market long wheelbase XE variant",
+        "source": "tirewheelguide.com (XE)"
+      }
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "xel",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 48.5},
+          {"diameter": 18, "width": 7.5, "offset": 46},
+          {"diameter": 19, "width": 8.0, "offset": 45}
+        ],
+        "notes": "China-market long wheelbase XE variant",
+        "source": "tirewheelguide.com (XE)"
+      }
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "xel",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 48.5},
+          {"diameter": 18, "width": 7.5, "offset": 46},
+          {"diameter": 19, "width": 8.0, "offset": 45}
+        ],
+        "notes": "China-market long wheelbase XE variant",
+        "source": "tirewheelguide.com (XE)"
+      }
+    },
+    {
+      "year": 2019,
+      "make": "jaguar",
+      "model": "xel",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 48.5},
+          {"diameter": 18, "width": 7.5, "offset": 46},
+          {"diameter": 19, "width": 8.0, "offset": 45}
+        ],
+        "notes": "China-market long wheelbase XE variant",
+        "source": "tirewheelguide.com (XE)"
+      }
+    },
+    {
+      "year": 2025,
+      "make": "jaguar",
+      "model": "xf",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2023,
+      "make": "jaguar",
+      "model": "xf",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "xf",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "xf",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2019,
+      "make": "jaguar",
+      "model": "xf",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2017,
+      "make": "jaguar",
+      "model": "xf",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2014,
+      "make": "jaguar",
+      "model": "xf",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 49},
+          {"diameter": 18, "width": 8.0, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 49},
+          {"diameter": 20, "width": 9.0, "offset": 49}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2012,
+      "make": "jaguar",
+      "model": "xf",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 49},
+          {"diameter": 18, "width": 8.0, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 49},
+          {"diameter": 20, "width": 9.0, "offset": 49}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "jaguar",
+      "model": "xf",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 49},
+          {"diameter": 18, "width": 8.0, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 49},
+          {"diameter": 20, "width": 9.0, "offset": 49}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2025,
+      "make": "jaguar",
+      "model": "xfl",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "notes": "China-market long wheelbase XF variant",
+        "source": "tirewheelguide.com (XF)"
+      }
+    },
+    {
+      "year": 2024,
+      "make": "jaguar",
+      "model": "xfl",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "notes": "China-market long wheelbase XF variant",
+        "source": "tirewheelguide.com (XF)"
+      }
+    },
+    {
+      "year": 2023,
+      "make": "jaguar",
+      "model": "xfl",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "notes": "China-market long wheelbase XF variant",
+        "source": "tirewheelguide.com (XF)"
+      }
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "xfl",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "notes": "China-market long wheelbase XF variant",
+        "source": "tirewheelguide.com (XF)"
+      }
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "xfl",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "notes": "China-market long wheelbase XF variant",
+        "source": "tirewheelguide.com (XF)"
+      }
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "xfl",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8.0, "offset": 45},
+          {"diameter": 19, "width": 8.0, "offset": 45},
+          {"diameter": 20, "width": 8.5, "offset": 49}
+        ],
+        "notes": "China-market long wheelbase XF variant",
+        "source": "tirewheelguide.com (XF)"
+      }
+    },
+    {
+      "year": 2019,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50.5, "position": "front"},
+          {"diameter": 18, "width": 9.0, "offset": 42, "position": "rear"},
+          {"diameter": 19, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 10.0, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 46, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2018,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50.5, "position": "front"},
+          {"diameter": 18, "width": 9.0, "offset": 42, "position": "rear"},
+          {"diameter": 19, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 10.0, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 46, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2017,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50.5, "position": "front"},
+          {"diameter": 18, "width": 9.0, "offset": 42, "position": "rear"},
+          {"diameter": 19, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 10.0, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 46, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2016,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50.5, "position": "front"},
+          {"diameter": 18, "width": 9.0, "offset": 42, "position": "rear"},
+          {"diameter": 19, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 10.0, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 46, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2015,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50.5, "position": "front"},
+          {"diameter": 18, "width": 9.0, "offset": 42, "position": "rear"},
+          {"diameter": 19, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 10.0, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 46, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2014,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50.5, "position": "front"},
+          {"diameter": 18, "width": 9.0, "offset": 42, "position": "rear"},
+          {"diameter": 19, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 10.0, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 46, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50.5, "position": "front"},
+          {"diameter": 18, "width": 9.0, "offset": 42, "position": "rear"},
+          {"diameter": 19, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 10.0, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 46, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2012,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50.5, "position": "front"},
+          {"diameter": 18, "width": 9.0, "offset": 42, "position": "rear"},
+          {"diameter": 19, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 10.0, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 46, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2011,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50.5, "position": "front"},
+          {"diameter": 18, "width": 9.0, "offset": 42, "position": "rear"},
+          {"diameter": 19, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 10.0, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 46, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2010,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.0, "offset": 50.5, "position": "front"},
+          {"diameter": 18, "width": 9.0, "offset": 42, "position": "rear"},
+          {"diameter": 19, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 10.0, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.0, "offset": 49, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 46, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 49},
+          {"diameter": 18, "width": 8.0, "offset": 49},
+          {"diameter": 18, "width": 8.5, "offset": 49},
+          {"diameter": 19, "width": 8.0, "offset": 52},
+          {"diameter": 19, "width": 8.5, "offset": 49}
+        ],
+        "notes": "X358 generation (2007-2009)",
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 49},
+          {"diameter": 18, "width": 8.0, "offset": 49},
+          {"diameter": 18, "width": 8.5, "offset": 49},
+          {"diameter": 19, "width": 8.0, "offset": 52},
+          {"diameter": 19, "width": 8.5, "offset": 49}
+        ],
+        "notes": "X358 generation (2007-2009)",
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 49},
+          {"diameter": 17, "width": 8.0, "offset": 52},
+          {"diameter": 18, "width": 8.0, "offset": 49},
+          {"diameter": 18, "width": 8.5, "offset": 49},
+          {"diameter": 19, "width": 8.0, "offset": 52},
+          {"diameter": 19, "width": 8.5, "offset": 49}
+        ],
+        "notes": "X358/X350 generation",
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2006,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 49},
+          {"diameter": 17, "width": 8.0, "offset": 52},
+          {"diameter": 18, "width": 8.0, "offset": 49},
+          {"diameter": 18, "width": 8.5, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 49}
+        ],
+        "notes": "X350 generation (2003-2007)",
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 49},
+          {"diameter": 17, "width": 8.0, "offset": 52},
+          {"diameter": 18, "width": 8.0, "offset": 49},
+          {"diameter": 18, "width": 8.5, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 49}
+        ],
+        "notes": "X350 generation (2003-2007)",
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2004,
+      "make": "jaguar",
+      "model": "xj",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 49},
+          {"diameter": 17, "width": 8.0, "offset": 52},
+          {"diameter": 18, "width": 8.0, "offset": 49},
+          {"diameter": 18, "width": 8.5, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 49}
+        ],
+        "notes": "X350 generation (2003-2007)",
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2015,
+      "make": "jaguar",
+      "model": "xk",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 19, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.5, "offset": 46, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 45, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2014,
+      "make": "jaguar",
+      "model": "xk",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 19, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.5, "offset": 46, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 45, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "jaguar",
+      "model": "xk",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 19, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.5, "offset": 46, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 45, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2012,
+      "make": "jaguar",
+      "model": "xk",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 19, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.5, "offset": 46, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 45, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2011,
+      "make": "jaguar",
+      "model": "xk",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 19, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.5, "offset": 46, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 45, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2010,
+      "make": "jaguar",
+      "model": "xk",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 19, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.5, "offset": 46, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 45, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "jaguar",
+      "model": "xk",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 19, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.5, "offset": 46, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 45, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "jaguar",
+      "model": "xk",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 19, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.5, "offset": 46, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 45, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "jaguar",
+      "model": "xk",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": true,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 19, "width": 8.5, "offset": 49, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 46, "position": "rear"},
+          {"diameter": 20, "width": 9.5, "offset": 46, "position": "front"},
+          {"diameter": 20, "width": 10.0, "offset": 45, "position": "rear"}
+        ],
+        "source": "tirewheelguide.com"
+      }
+    }
+  ]
+}

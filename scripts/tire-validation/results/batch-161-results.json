@@ -1,0 +1,403 @@
+{
+  "batchId": "161",
+  "validatedAt": "2026-04-21T23:01:04Z",
+  "source": "tiresize.com",
+  "vehicleCount": 31,
+  "summary": {
+    "totalVehicles": 31,
+    "validated": 27,
+    "notFoundOnSource": 4,
+    "withDiscrepancies": 25,
+    "fullyMatched": 2
+  },
+  "notFoundOnSource": [
+    {
+      "year": 2009,
+      "make": "volvo",
+      "model": "xc60",
+      "reason": "404 - XC60 production started in 2010, not available for 2009"
+    },
+    {
+      "year": 2008,
+      "make": "volvo",
+      "model": "xc60",
+      "reason": "404 - XC60 production started in 2010, not available for 2008"
+    },
+    {
+      "year": 2015,
+      "make": "volvo",
+      "model": "xc90",
+      "reason": "404 - 2015 XC90 not listed (gap year between 1st and 2nd gen)"
+    }
+  ],
+  "vehicles": [
+    {
+      "year": 2014,
+      "make": "volvo",
+      "model": "xc60",
+      "status": "discrepancy",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20", "255/50R19"],
+      "oemTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "missing": [],
+      "extra": ["235/65R17", "255/50R19"],
+      "notes": "2014 XC60 dropped R17 option (available 2013 and earlier). 255/50R19 not OEM for this year."
+    },
+    {
+      "year": 2013,
+      "make": "volvo",
+      "model": "xc60",
+      "status": "discrepancy",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "missing": [],
+      "extra": [],
+      "notes": "MATCH - All sizes correct"
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "xc60",
+      "status": "discrepancy",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20", "255/45ZR20", "275/40R20"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "missing": [],
+      "extra": ["255/45ZR20", "275/40R20"],
+      "notes": "255/45ZR20 is speed-rated variant of 255/45R20 (acceptable). 275/40R20 is NOT OEM."
+    },
+    {
+      "year": 2011,
+      "make": "volvo",
+      "model": "xc60",
+      "status": "match",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "missing": [],
+      "extra": [],
+      "notes": "MATCH - All sizes correct"
+    },
+    {
+      "year": 2010,
+      "make": "volvo",
+      "model": "xc60",
+      "status": "match",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "missing": [],
+      "extra": [],
+      "notes": "MATCH - All sizes correct"
+    },
+    {
+      "year": 2009,
+      "make": "volvo",
+      "model": "xc60",
+      "status": "not_found",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "oemTireSizes": null,
+      "missing": null,
+      "extra": null,
+      "notes": "INVALID YEAR - Volvo XC60 production started in 2010. Should be removed from database."
+    },
+    {
+      "year": 2008,
+      "make": "volvo",
+      "model": "xc60",
+      "status": "not_found",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "oemTireSizes": null,
+      "missing": null,
+      "extra": null,
+      "notes": "INVALID YEAR - Volvo XC60 production started in 2010. Should be removed from database."
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["235/60R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["275/45R20", "275/40R21", "275/35R22"],
+      "missing": ["275/35R22"],
+      "extra": ["235/60R19"],
+      "notes": "235/60R19 is NOT OEM for 2026 XC90. Missing 275/35R22."
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["275/45R20", "275/40R21", "275/35R22"],
+      "missing": ["275/35R22"],
+      "extra": ["255/55R18", "255/50R19"],
+      "notes": "255/55R18 and 255/50R19 appear to be old gen XC90 sizes (pre-2016). Missing 275/35R22."
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21", "235/60R18", "275/35R22", "235/55R19"],
+      "oemTireSizes": ["235/55R19", "275/45R20", "275/40R21", "275/35R22"],
+      "missing": [],
+      "extra": ["255/55R18", "255/50R19", "235/60R18"],
+      "notes": "255/55R18, 255/50R19, 235/60R18 are NOT OEM for 2024 XC90."
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/55R19", "275/45R20", "275/40R21", "275/35R22"],
+      "missing": ["235/55R19", "275/35R22"],
+      "extra": ["255/55R18", "255/50R19"],
+      "notes": "Old gen sizes mixed in. Missing new gen OEM sizes."
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/55R19", "275/45R20", "275/40R21", "275/35R22"],
+      "missing": ["235/55R19", "275/35R22"],
+      "extra": ["255/55R18", "255/50R19"],
+      "notes": "Old gen sizes mixed in. Missing new gen OEM sizes."
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21", "235/60R18", "235/55R19", "275/35ZR22"],
+      "oemTireSizes": ["235/55R19", "275/45R20", "275/40R21", "275/35R22"],
+      "missing": [],
+      "extra": ["255/55R18", "255/50R19", "235/60R18"],
+      "notes": "255/55R18, 255/50R19, 235/60R18 are NOT OEM. 275/35ZR22 is speed-rated variant (acceptable)."
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/55R19", "275/45R20", "275/40R21", "275/35R22"],
+      "missing": ["235/55R19", "275/35R22"],
+      "extra": ["255/55R18", "255/50R19"],
+      "notes": "Old gen sizes mixed in. Missing new gen OEM sizes."
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21", "235/60R18", "235/55R19", "275/35ZR22"],
+      "oemTireSizes": ["235/60R18", "235/55R19", "275/45R20", "275/40R21", "275/35R22"],
+      "missing": [],
+      "extra": ["255/55R18", "255/50R19"],
+      "notes": "255/55R18 and 255/50R19 are NOT OEM for 2019 XC90 (new gen). 275/35ZR22 is speed-rated variant (acceptable)."
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/60R18", "235/55R19", "275/45R20", "275/40R21", "275/35R22"],
+      "missing": ["235/60R18", "235/55R19", "275/35R22"],
+      "extra": ["255/55R18", "255/50R19"],
+      "notes": "Old gen sizes mixed in. Missing new gen OEM sizes."
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/60R18", "235/55R19", "275/45R20", "275/40R21", "275/35R22"],
+      "missing": ["235/60R18", "235/55R19", "275/35R22"],
+      "extra": ["255/55R18", "255/50R19"],
+      "notes": "Old gen sizes mixed in. Missing new gen OEM sizes."
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21", "275/35ZR22", "235/60R18", "235/55R19"],
+      "oemTireSizes": ["235/60R18", "235/55R19", "275/45R20", "275/40R21", "275/35R22"],
+      "missing": [],
+      "extra": ["255/55R18", "255/50R19"],
+      "notes": "255/55R18 and 255/50R19 are NOT OEM for 2016 XC90 (new gen). 275/35ZR22 is speed-rated variant (acceptable)."
+    },
+    {
+      "year": 2015,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "not_found",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": null,
+      "missing": null,
+      "extra": null,
+      "notes": "INVALID YEAR - 2015 XC90 not available on tiresize.com. Gap year between 1st gen (ended 2014) and 2nd gen (started 2016)."
+    },
+    {
+      "year": 2014,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/60R18", "255/50R19", "255/45R20"],
+      "missing": ["235/60R18", "255/45R20"],
+      "extra": ["255/55R18", "275/45R20", "275/40R21"],
+      "notes": "Severely wrong data. 275/45R20 and 275/40R21 are 2nd gen sizes (2016+). Missing correct 1st gen OEM sizes."
+    },
+    {
+      "year": 2013,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/60R18", "255/50R19", "255/45R20"],
+      "missing": ["235/60R18", "255/45R20"],
+      "extra": ["255/55R18", "275/45R20", "275/40R21"],
+      "notes": "Severely wrong data. 275/45R20 and 275/40R21 are 2nd gen sizes (2016+). Missing correct 1st gen OEM sizes."
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/60R18", "255/50R19", "255/45R20"],
+      "missing": ["235/60R18", "255/45R20"],
+      "extra": ["255/55R18", "275/45R20", "275/40R21"],
+      "notes": "Severely wrong data. 275/45R20 and 275/40R21 are 2nd gen sizes (2016+). Missing correct 1st gen OEM sizes."
+    },
+    {
+      "year": 2011,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21", "235/65R17", "235/60R18", "255/50ZR19", "255/45ZR20"],
+      "oemTireSizes": ["235/60R18", "255/50R19", "255/45R20"],
+      "missing": [],
+      "extra": ["255/55R18", "275/45R20", "275/40R21", "235/65R17"],
+      "notes": "235/65R17 was NOT OEM for 2011 XC90. 275/45R20 and 275/40R21 are 2nd gen sizes. ZR variants acceptable."
+    },
+    {
+      "year": 2010,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21", "235/65R17", "235/60R18", "255/50ZR19", "255/45ZR20"],
+      "oemTireSizes": ["235/60R18", "255/50R19", "255/45R20"],
+      "missing": [],
+      "extra": ["255/55R18", "275/45R20", "275/40R21", "235/65R17"],
+      "notes": "235/65R17 was NOT OEM for 2010 XC90. 275/45R20 and 275/40R21 are 2nd gen sizes. ZR variants acceptable."
+    },
+    {
+      "year": 2009,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/60R18", "255/50R19", "255/45R20"],
+      "missing": ["235/60R18", "255/45R20"],
+      "extra": ["255/55R18", "275/45R20", "275/40R21"],
+      "notes": "Severely wrong data. 275/45R20 and 275/40R21 are 2nd gen sizes (2016+). Missing correct 1st gen OEM sizes."
+    },
+    {
+      "year": 2008,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "255/50R19"],
+      "missing": ["235/65R17", "235/60R18"],
+      "extra": ["255/55R18", "275/45R20", "275/40R21"],
+      "notes": "Severely wrong data. 275/45R20 and 275/40R21 are 2nd gen sizes (2016+). Missing correct 1st gen OEM sizes."
+    },
+    {
+      "year": 2007,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "255/50R19"],
+      "missing": ["235/65R17", "235/60R18"],
+      "extra": ["255/55R18", "275/45R20", "275/40R21"],
+      "notes": "Severely wrong data. 275/45R20 and 275/40R21 are 2nd gen sizes (2016+). Missing correct 1st gen OEM sizes."
+    },
+    {
+      "year": 2006,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/65R17", "235/60R18"],
+      "missing": ["235/65R17", "235/60R18"],
+      "extra": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "notes": "Severely wrong data. All current sizes are incorrect for 2006 XC90."
+    },
+    {
+      "year": 2005,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/65R17", "235/60R18"],
+      "missing": ["235/65R17", "235/60R18"],
+      "extra": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "notes": "Severely wrong data. All current sizes are incorrect for 2005 XC90."
+    },
+    {
+      "year": 2004,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["235/65R17", "235/60R18"],
+      "missing": ["235/65R17", "235/60R18"],
+      "extra": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "notes": "Severely wrong data. All current sizes are incorrect for 2004 XC90."
+    },
+    {
+      "year": 2003,
+      "make": "volvo",
+      "model": "xc90",
+      "status": "discrepancy",
+      "currentTireSizes": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "oemTireSizes": ["225/70R16", "235/65R17", "235/60R18"],
+      "missing": ["225/70R16", "235/65R17", "235/60R18"],
+      "extra": ["255/55R18", "255/50R19", "275/45R20", "275/40R21"],
+      "notes": "Severely wrong data. All current sizes are incorrect for 2003 XC90."
+    }
+  ],
+  "recommendations": {
+    "critical": [
+      {
+        "action": "REMOVE_INVALID_YEARS",
+        "vehicles": ["2008 XC60", "2009 XC60", "2015 XC90"],
+        "reason": "These model years don't exist. XC60 started 2010, XC90 had gap year in 2015."
+      },
+      {
+        "action": "FIX_GENERATION_MISMATCH",
+        "vehicles": ["2003-2014 XC90"],
+        "reason": "1st gen XC90 (2003-2014) has completely wrong tire sizes. Current data uses 2nd gen (2016+) sizes. This affects ALL 1st gen XC90 vehicles."
+      }
+    ],
+    "moderate": [
+      {
+        "action": "REMOVE_EXTRA_SIZES",
+        "vehicles": ["2014 XC60", "2012 XC60"],
+        "reason": "Contains non-OEM tire sizes that should be removed."
+      },
+      {
+        "action": "ADD_MISSING_SIZES",
+        "vehicles": ["2016-2025 XC90"],
+        "reason": "Many 2nd gen XC90 years are missing OEM sizes like 235/55R19 and 275/35R22."
+      }
+    ],
+    "summary": "Batch 161 has SEVERE data quality issues. The 1st gen XC90 (2003-2014) appears to have been incorrectly populated with 2nd gen tire sizes. This is a systematic error affecting 12 vehicles. Additionally, 3 vehicles reference non-existent model years."
+  }
+}

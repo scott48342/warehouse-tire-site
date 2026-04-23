@@ -1,0 +1,1231 @@
+{
+  "batchId": "08",
+  "results": [
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 30},
+          {"diameter": 19, "width": 8.5, "offset": 32},
+          {"diameter": 19, "width": 10, "offset": 40, "position": "rear"}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "G29 generation, staggered option available"
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 30},
+          {"diameter": 19, "width": 8.5, "offset": 32},
+          {"diameter": 19, "width": 10, "offset": 40, "position": "rear"}
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "G29 generation, staggered option available"
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30},
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "E89 generation, 2018 is transition year - could be E89 or early G29"
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30},
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E89 generation"
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30},
+          {"diameter": 18, "width": 8, "offset": 35},
+          {"diameter": 19, "width": 9, "offset": 32}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E89 generation final year"
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30},
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E89 generation"
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30},
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E89 generation"
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30},
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E89 generation"
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30},
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E89 generation"
+    },
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30},
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E89 generation"
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 30},
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E89 generation"
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 35},
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E89 generation first year"
+    },
+    {
+      "year": 2008,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 35},
+          {"diameter": 18, "width": 8, "offset": 47}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E85/E86 generation LCI"
+    },
+    {
+      "year": 2007,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 35},
+          {"diameter": 18, "width": 8, "offset": 47}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E85/E86 generation LCI"
+    },
+    {
+      "year": 2006,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 35},
+          {"diameter": 18, "width": 8, "offset": 47}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E85/E86 generation LCI"
+    },
+    {
+      "year": 2005,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 35},
+          {"diameter": 17, "width": 8, "offset": 47}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E85/E86 generation"
+    },
+    {
+      "year": 2004,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 47},
+          {"diameter": 17, "width": 7.5, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E85/E86 generation"
+    },
+    {
+      "year": 2003,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 47},
+          {"diameter": 17, "width": 7.5, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "E85/E86 generation first year"
+    },
+    {
+      "year": 2002,
+      "make": "bmw",
+      "model": "z4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 47},
+          {"diameter": 17, "width": 7.5, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "E85/E86 generation - Z4 launched late 2002, limited availability"
+    },
+    {
+      "year": 2003,
+      "make": "bmw",
+      "model": "z8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 15, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 25, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "E52 generation, always staggered setup"
+    },
+    {
+      "year": 2002,
+      "make": "bmw",
+      "model": "z8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 15, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 25, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "E52 generation, always staggered setup"
+    },
+    {
+      "year": 2001,
+      "make": "bmw",
+      "model": "z8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 15, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 25, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "E52 generation, always staggered setup"
+    },
+    {
+      "year": 2000,
+      "make": "bmw",
+      "model": "z8",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 15, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 25, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 72.6,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "E52 generation, always staggered setup"
+    },
+    {
+      "year": 2010,
+      "make": "buick",
+      "model": "allure",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 43},
+          {"diameter": 18, "width": 7.5, "offset": 40}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 67.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Allure II generation (2010 only)"
+    },
+    {
+      "year": 2009,
+      "make": "buick",
+      "model": "allure",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 43},
+          {"diameter": 17, "width": 7, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Allure I Facelift generation"
+    },
+    {
+      "year": 2008,
+      "make": "buick",
+      "model": "allure",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 43},
+          {"diameter": 17, "width": 7, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Allure I Facelift generation"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "allure",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 43}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Allure I generation"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "allure",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 43}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Allure I generation"
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "allure",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 43}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Allure I generation first year"
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "cascada",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Final year of Cascada"
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "cascada",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "OEM 20-inch wheels standard"
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "cascada",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "OEM 20-inch wheels standard"
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "cascada",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "First year, OEM 20-inch wheels standard"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "electra-e4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 7.5, "offset": 42},
+          {"diameter": 20, "width": 8, "offset": 43}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Chinese market EV, specs may vary by region"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "electra-e4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 7.5, "offset": 42},
+          {"diameter": 20, "width": 8, "offset": 43}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Chinese market EV"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "electra-e4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 7.5, "offset": 42},
+          {"diameter": 20, "width": 8, "offset": 43}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Chinese market EV first year"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "electra-e4-gs",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 43},
+          {"diameter": 21, "width": 8.5, "offset": 45}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "GS performance variant"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "electra-e4-gs",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 43},
+          {"diameter": 21, "width": 8.5, "offset": 45}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "GS performance variant"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "electra-e4-gs",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 43},
+          {"diameter": 21, "width": 8.5, "offset": 45}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "GS performance variant first year"
+    },
+    {
+      "year": 2026,
+      "make": "buick",
+      "model": "electra-e5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 7.5, "offset": 42},
+          {"diameter": 20, "width": 8, "offset": 43},
+          {"diameter": 21, "width": 8.5, "offset": 45}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Mid-size EV crossover"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "electra-e5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 7.5, "offset": 42},
+          {"diameter": 20, "width": 8, "offset": 43},
+          {"diameter": 21, "width": 8.5, "offset": 45}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Mid-size EV crossover"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "electra-e5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 7.5, "offset": 42},
+          {"diameter": 20, "width": 8, "offset": 43},
+          {"diameter": 21, "width": 8.5, "offset": 45}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Mid-size EV crossover"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "electra-e5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 7.5, "offset": 42},
+          {"diameter": 20, "width": 8, "offset": 43},
+          {"diameter": 21, "width": 8.5, "offset": 45}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Mid-size EV crossover first year"
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "enclave",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 36},
+          {"diameter": 19, "width": 7.5, "offset": 49},
+          {"diameter": 20, "width": 7.5, "offset": 49}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1 final year"
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "enclave",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 36},
+          {"diameter": 19, "width": 7.5, "offset": 49},
+          {"diameter": 20, "width": 7.5, "offset": 49}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2015,
+      "make": "buick",
+      "model": "enclave",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 36},
+          {"diameter": 19, "width": 7.5, "offset": 49},
+          {"diameter": 20, "width": 7.5, "offset": 49}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2014,
+      "make": "buick",
+      "model": "enclave",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 36},
+          {"diameter": 19, "width": 7.5, "offset": 49},
+          {"diameter": 20, "width": 7.5, "offset": 49}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2013,
+      "make": "buick",
+      "model": "enclave",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 36},
+          {"diameter": 19, "width": 7.5, "offset": 49},
+          {"diameter": 20, "width": 7.5, "offset": 49}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2012,
+      "make": "buick",
+      "model": "enclave",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 36},
+          {"diameter": 19, "width": 7.5, "offset": 49}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2011,
+      "make": "buick",
+      "model": "enclave",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 36},
+          {"diameter": 19, "width": 7.5, "offset": 49}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2010,
+      "make": "buick",
+      "model": "enclave",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 36},
+          {"diameter": 19, "width": 7.5, "offset": 49}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2009,
+      "make": "buick",
+      "model": "enclave",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 36},
+          {"diameter": 19, "width": 7.5, "offset": 49}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2008,
+      "make": "buick",
+      "model": "enclave",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 36},
+          {"diameter": 19, "width": 7.5, "offset": 49}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 74.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1 first year"
+    },
+    {
+      "year": 2026,
+      "make": "buick",
+      "model": "envision",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 2"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "envision",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 2"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "envision",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 2"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "envision",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 2"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "envision",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 2"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "envision",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 43},
+          {"diameter": 19, "width": 7.5, "offset": 43}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1 final year"
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "envision",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 43},
+          {"diameter": 19, "width": 7.5, "offset": 43}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "envision",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 43},
+          {"diameter": 19, "width": 7.5, "offset": 43}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "envision",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 43},
+          {"diameter": 19, "width": 7.5, "offset": 43}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1"
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "envision",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 43}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Gen 1 first year"
+    },
+    {
+      "year": 2026,
+      "make": "buick",
+      "model": "envision-s",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Gen 2 variant"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "envision-s",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Gen 2 variant"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "envision-s",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Gen 2 variant"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "envision-s",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Gen 2 variant"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "envision-s",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Gen 2 variant"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "envision-s",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 37},
+          {"diameter": 20, "width": 8, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Gen 2 variant first year"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "envision-s",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 43},
+          {"diameter": 19, "width": 7.5, "offset": 43}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Gen 1 variant if exists"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "envision-s-gs",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 37},
+          {"diameter": 21, "width": 8.5, "offset": 40}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "GS variant with larger wheels"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "envision-s-gs",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 37},
+          {"diameter": 21, "width": 8.5, "offset": 40}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "GS variant with larger wheels"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "envision-s-gs",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 37},
+          {"diameter": 21, "width": 8.5, "offset": 40}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "GS variant with larger wheels"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "envision-s-gs",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 20, "width": 8, "offset": 37},
+          {"diameter": 21, "width": 8.5, "offset": 40}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "GS variant first year"
+    },
+    {
+      "year": 2026,
+      "make": "buick",
+      "model": "envista",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7.5, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "Compact crossover"
+    }
+  ],
+  "stats": {
+    "total": 75,
+    "complete": 69,
+    "partial": 6,
+    "failed": 0
+  },
+  "researchSources": [
+    "hulkoffsets.com",
+    "go-parts.com",
+    "wheelssize.com",
+    "wheel-sizes.com",
+    "avtoreference.com",
+    "apexwheels.com"
+  ],
+  "notes": {
+    "bmwZ4": "Three generations: E85/E86 (2003-2008) 5x120, E89 (2009-2016) 5x120, G29 (2019+) 5x112 - note bolt pattern change",
+    "bmwZ8": "E52 generation always has staggered setup with 18x8 front / 18x9.5 rear",
+    "buickElectra": "Chinese market EVs - specs may vary, marked as medium confidence",
+    "buickEnvision": "Gen 1 (2016-2020) uses 5x115, Gen 2 (2021+) uses 5x120 - bolt pattern change",
+    "buickEnclave": "First gen (2008-2017) uses uncommon 6x132 bolt pattern"
+  },
+  "generatedAt": "2026-04-21T20:52:00.000Z"
+}

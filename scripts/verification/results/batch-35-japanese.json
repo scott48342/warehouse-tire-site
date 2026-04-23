@@ -1,0 +1,988 @@
+{
+  "batch": "batch-35-japanese",
+  "verifiedAt": "2026-04-23T00:30:00Z",
+  "verifiedBy": "subagent:verify-jp-35",
+  "summary": {
+    "total": 75,
+    "valid": 60,
+    "invalid": 11,
+    "flagged": 4
+  },
+  "invalidModelYears": [
+    {
+      "year": 2000,
+      "make": "acura",
+      "model": "cl",
+      "reason": "2000 Acura CL never existed. 2nd gen CL released March 2000 as 2001 model year.",
+      "sources": ["Wikipedia - Acura CL", "autoevolution"]
+    },
+    {
+      "year": 2012,
+      "make": "acura",
+      "model": "ilx",
+      "reason": "Acura ILX debuted at 2012 Chicago Auto Show for the 2013 model year.",
+      "sources": ["acuranews.com", "CarBuzz"]
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "tsx",
+      "reason": "Acura TSX introduced at 2003 NAIAS as 2004 model year.",
+      "sources": ["Wikipedia - Acura TSX", "JD Power"]
+    },
+    {
+      "year": 2006,
+      "make": "acura",
+      "model": "rdx",
+      "reason": "Acura RDX debuted at 2006 NY Auto Show, went on sale August 2006 as 2007 model.",
+      "sources": ["Wikipedia - Acura RDX", "acuranews.com"]
+    },
+    {
+      "year": 2009,
+      "make": "acura",
+      "model": "zdx",
+      "reason": "ZDX debuted at 2009 NY Auto Show but first production model was 2010.",
+      "sources": ["Wikipedia - Acura ZDX", "acuranews.com"]
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "clarity",
+      "reason": "Honda Clarity Fuel Cell launched December 2016 for 2017 model year in US. No 2016 MY in US market.",
+      "sources": ["Wikipedia - Honda Clarity", "hondanews.com"]
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "crosstour",
+      "reason": "Honda Crosstour discontinued after 2015 model year.",
+      "sources": ["Wikipedia - Honda Crosstour", "JD Power"]
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "nsx",
+      "reason": "2nd gen NSX production ended November 2022. Final model year was 2022 Type S.",
+      "sources": ["acuranews.com", "Car and Driver"]
+    },
+    {
+      "year": 2013,
+      "make": "acura",
+      "model": "rl",
+      "reason": "Acura RL ended production after 2012 model year. Replaced by RLX for 2014.",
+      "sources": ["YourMechanic", "Kelley Blue Book", "CarGurus"]
+    }
+  ],
+  "flaggedForReview": [
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "integra",
+      "reason": "Future model year - currently in production and available for purchase. Include if desired.",
+      "status": "valid_future"
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "zdx",
+      "reason": "2nd gen ZDX (electric) available 2024-2025. Different platform from 1st gen - uses 6x132 bolt pattern vs 5x120.",
+      "status": "valid_check_specs"
+    }
+  ],
+  "vehicles": [
+    {
+      "year": 2001,
+      "make": "Acura",
+      "model": "CL",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "3.2i", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "3.2i Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2nd generation YA4 platform, 2001-2003"
+    },
+    {
+      "year": 2002,
+      "make": "Acura",
+      "model": "CL",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "3.2i", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "3.2i Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2001"
+    },
+    {
+      "year": 2003,
+      "make": "Acura",
+      "model": "CL",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "3.2i", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "3.2i Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of CL production"
+    },
+    {
+      "year": 2001,
+      "make": "Acura",
+      "model": "CL Type-S",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "260hp 3.2L V6, available 2001-2003"
+    },
+    {
+      "year": 2002,
+      "make": "Acura",
+      "model": "CL Type-S",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2001"
+    },
+    {
+      "year": 2003,
+      "make": "Acura",
+      "model": "CL Type-S",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year"
+    },
+    {
+      "year": 2023,
+      "make": "Acura",
+      "model": "Integra",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"},
+        {"name": "A-Spec", "oemWheelSize": "18x8", "oemTireSize": "235/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["Car and Driver", "acura.com"],
+      "notes": "4th generation (DE), revived nameplate based on Civic platform"
+    },
+    {
+      "year": 2024,
+      "make": "Acura",
+      "model": "Integra",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"},
+        {"name": "A-Spec", "oemWheelSize": "18x8", "oemTireSize": "235/40R18"},
+        {"name": "Type S", "oemWheelSize": "19x9.5", "oemTireSize": "265/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["Car and Driver", "integratalk.com"],
+      "notes": "Type S added for 2024 with 2.0L turbo 320hp"
+    },
+    {
+      "year": 2026,
+      "make": "Acura",
+      "model": "Integra",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"},
+        {"name": "A-Spec", "oemWheelSize": "18x8", "oemTireSize": "235/40R18"},
+        {"name": "Type S", "oemWheelSize": "19x9.5", "oemTireSize": "265/30R19"}
+      ],
+      "confidence": "high",
+      "sources": ["acura.com", "Car and Driver"],
+      "notes": "Refreshed 2026 model now arriving at dealers"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "Integra Type-R",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Type-R", "oemWheelSize": "15x6", "oemTireSize": "195/55R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "Hagerty"],
+      "notes": "DC2 platform, returned after 1999 hiatus. Phoenix Yellow/Flamenco Black Pearl"
+    },
+    {
+      "year": 2001,
+      "make": "Acura",
+      "model": "Integra Type-R",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Type-R", "oemWheelSize": "15x6", "oemTireSize": "195/55R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "Wikipedia"],
+      "notes": "Final year of DC2 Integra Type-R. Nighthawk Black Pearl color added."
+    },
+    {
+      "year": 2021,
+      "make": "Acura",
+      "model": "MDX",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8", "oemTireSize": "245/60R18"},
+        {"name": "Technology", "oemWheelSize": "19x8", "oemTireSize": "245/55R19"},
+        {"name": "A-Spec", "oemWheelSize": "20x9", "oemTireSize": "255/50R20"},
+        {"name": "Type S", "oemWheelSize": "21x9.5", "oemTireSize": "275/40R21"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "4th generation (YD4) launched mid-2020 as 2022MY, but 3rd gen YD3 also sold as 2021"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x114.3",
+      "hubBore": "front:70.1/rear:64.1",
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "16x7", "oemWheelSizeRear": "17x8.5", "oemTireSizeFront": "215/45ZR16", "oemTireSizeRear": "245/40ZR17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "1st gen NA1, staggered setup. 3.2L V6 276hp"
+    },
+    {
+      "year": 2001,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x114.3",
+      "hubBore": "front:70.1/rear:64.1",
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "16x7", "oemWheelSizeRear": "17x8.5", "oemTireSizeFront": "215/45ZR16", "oemTireSizeRear": "245/40ZR17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2000, final year of pop-up headlights"
+    },
+    {
+      "year": 2002,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x114.3",
+      "hubBore": "front:70.1/rear:64.1",
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x9", "oemTireSizeFront": "215/40ZR17", "oemTireSizeRear": "255/40ZR17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Facelift with fixed HID headlights, targa roof standard"
+    },
+    {
+      "year": 2003,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x114.3",
+      "hubBore": "front:70.1/rear:64.1",
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x9", "oemTireSizeFront": "215/40ZR17", "oemTireSizeRear": "255/40ZR17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2002"
+    },
+    {
+      "year": 2004,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x114.3",
+      "hubBore": "front:70.1/rear:64.1",
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x9", "oemTireSizeFront": "215/40ZR17", "oemTireSizeRear": "255/40ZR17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Redesigned meter panel, trunk-mounted 6-disc CD changer"
+    },
+    {
+      "year": 2005,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x114.3",
+      "hubBore": "front:70.1/rear:64.1",
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x9", "oemTireSizeFront": "215/40ZR17", "oemTireSizeRear": "255/40ZR17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of 1st gen NSX"
+    },
+    {
+      "year": 2016,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "19x8.5", "oemWheelSizeRear": "20x11", "oemTireSizeFront": "245/35ZR19", "oemTireSizeRear": "305/30ZR20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2nd gen NC1, twin-turbo 3.5L V6 hybrid 573hp, staggered setup"
+    },
+    {
+      "year": 2017,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "19x8.5", "oemWheelSizeRear": "20x11", "oemTireSizeFront": "245/35ZR19", "oemTireSizeRear": "305/30ZR20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2016"
+    },
+    {
+      "year": 2018,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "19x8.5", "oemWheelSizeRear": "20x11", "oemTireSizeFront": "245/35ZR19", "oemTireSizeRear": "305/30ZR20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2016-2017"
+    },
+    {
+      "year": 2019,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "19x8.5", "oemWheelSizeRear": "20x11", "oemTireSizeFront": "245/35ZR19", "oemTireSizeRear": "305/30ZR20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Minor updates including new colors"
+    },
+    {
+      "year": 2020,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "19x8.5", "oemWheelSizeRear": "20x11", "oemTireSizeFront": "245/35ZR19", "oemTireSizeRear": "305/30ZR20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Chassis and suspension tweaks"
+    },
+    {
+      "year": 2021,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Base", "oemWheelSizeFront": "19x8.5", "oemWheelSizeRear": "20x11", "oemTireSizeFront": "245/35ZR19", "oemTireSizeRear": "305/30ZR20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same specs as 2020"
+    },
+    {
+      "year": 2022,
+      "make": "Acura",
+      "model": "NSX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Type S", "oemWheelSizeFront": "19x8.5", "oemWheelSizeRear": "20x11", "oemTireSizeFront": "245/35ZR19", "oemTireSizeRear": "305/30ZR20"}
+      ],
+      "confidence": "high",
+      "sources": ["Car and Driver", "acuranews.com"],
+      "notes": "Final year - Type S only. 600hp. 350 units worldwide, 300 for US."
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "3.5", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "1st gen KA9 platform, 208hp 3.5L V6"
+    },
+    {
+      "year": 2001,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "3.5", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2000"
+    },
+    {
+      "year": 2002,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "3.5", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Engine bumped to 225hp"
+    },
+    {
+      "year": 2003,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "3.5", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2002"
+    },
+    {
+      "year": 2004,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "3.5", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of 1st gen, nav system standard"
+    },
+    {
+      "year": 2005,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "SH-AWD", "oemWheelSize": "17x8", "oemTireSize": "245/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2nd gen KB1 platform, SH-AWD standard, 290hp 3.5L V6. BOLT PATTERN CHANGED to 5x120"
+    },
+    {
+      "year": 2006,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "SH-AWD", "oemWheelSize": "17x8", "oemTireSize": "245/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2005"
+    },
+    {
+      "year": 2007,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "SH-AWD", "oemWheelSize": "17x8", "oemTireSize": "245/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2005-2006"
+    },
+    {
+      "year": 2008,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "SH-AWD", "oemWheelSize": "17x8", "oemTireSize": "245/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year before facelift"
+    },
+    {
+      "year": 2009,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "SH-AWD", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Facelift, upgraded to 3.7L 300hp engine"
+    },
+    {
+      "year": 2010,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "SH-AWD", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2009"
+    },
+    {
+      "year": 2011,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "SH-AWD", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "6-speed auto transmission added"
+    },
+    {
+      "year": 2012,
+      "make": "Acura",
+      "model": "RL",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "SH-AWD", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "KBB"],
+      "notes": "Final year of RL, replaced by RLX for 2014"
+    },
+    {
+      "year": 2002,
+      "make": "Acura",
+      "model": "RSX",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16"},
+        {"name": "Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "DC5 platform, Base 160hp, Type-S 200hp"
+    },
+    {
+      "year": 2003,
+      "make": "Acura",
+      "model": "RSX",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16"},
+        {"name": "Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2002"
+    },
+    {
+      "year": 2004,
+      "make": "Acura",
+      "model": "RSX",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16"},
+        {"name": "Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2002-2003"
+    },
+    {
+      "year": 2005,
+      "make": "Acura",
+      "model": "RSX",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16"},
+        {"name": "Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Facelift, Type-S updated to 210hp"
+    },
+    {
+      "year": 2006,
+      "make": "Acura",
+      "model": "RSX",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16"},
+        {"name": "Type-S", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of RSX"
+    },
+    {
+      "year": 2010,
+      "make": "Acura",
+      "model": "ZDX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "Technology", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "1st gen YB1, 3.7L V6 295hp, crossover coupe"
+    },
+    {
+      "year": 2011,
+      "make": "Acura",
+      "model": "ZDX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "Technology", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2010"
+    },
+    {
+      "year": 2012,
+      "make": "Acura",
+      "model": "ZDX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "Technology", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2010-2011"
+    },
+    {
+      "year": 2013,
+      "make": "Acura",
+      "model": "ZDX",
+      "boltPattern": "5x120",
+      "hubBore": 70.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "Technology", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of 1st gen ZDX"
+    },
+    {
+      "year": 2023,
+      "make": "Acura",
+      "model": "ZDX",
+      "boltPattern": "6x132",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "A-Spec", "oemWheelSize": "20x9", "oemTireSize": "265/50R20"},
+        {"name": "Type S", "oemWheelSize": "22x9.5", "oemTireSize": "285/40R22"}
+      ],
+      "confidence": "high",
+      "sources": ["Car and Driver", "go-parts.com"],
+      "notes": "2nd gen - ALL ELECTRIC. Ultium platform (GM). Different bolt pattern than 1st gen!"
+    },
+    {
+      "year": 2024,
+      "make": "Acura",
+      "model": "ZDX",
+      "boltPattern": "6x132",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "A-Spec", "oemWheelSize": "20x9", "oemTireSize": "265/50R20"},
+        {"name": "Type S", "oemWheelSize": "22x9.5", "oemTireSize": "285/40R22"}
+      ],
+      "confidence": "high",
+      "sources": ["Car and Driver", "acura.com"],
+      "notes": "Electric SUV, 102 kWh battery"
+    },
+    {
+      "year": 2025,
+      "make": "Acura",
+      "model": "ZDX",
+      "boltPattern": "6x132",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "A-Spec", "oemWheelSize": "20x9", "oemTireSize": "265/50R20"},
+        {"name": "Type S", "oemWheelSize": "22x9.5", "oemTireSize": "285/40R22"}
+      ],
+      "confidence": "high",
+      "sources": ["acura.com"],
+      "notes": "Same as 2024"
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "Clarity",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Fuel Cell", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Electric", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hondanews.com"],
+      "notes": "First full model year in US"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Clarity",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Fuel Cell", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Electric", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Plug-in Hybrid", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "PHEV joins lineup December 2017 as 2018 model"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Clarity",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Fuel Cell", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Plug-in Hybrid", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Electric version discontinued"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Clarity",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Fuel Cell", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Plug-in Hybrid", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2019"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Clarity",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "Fuel Cell", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Plug-in Hybrid", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "Wikipedia"],
+      "notes": "Final year of Clarity, production ended August 2021"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Crosstour",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "EX-L 4WD", "oemWheelSize": "17x6.5", "oemTireSize": "225/65R17"},
+        {"name": "EX-L V6", "oemWheelSize": "18x7", "oemTireSize": "225/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Based on 8th gen Accord, crossover styling"
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Crosstour",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "EX-L", "oemWheelSize": "17x6.5", "oemTireSize": "225/65R17"},
+        {"name": "EX-L V6", "oemWheelSize": "18x7", "oemTireSize": "225/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Accord name dropped, now just Crosstour"
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Crosstour",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "EX-L", "oemWheelSize": "17x6.5", "oemTireSize": "225/65R17"},
+        {"name": "EX-L V6", "oemWheelSize": "18x7", "oemTireSize": "225/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2012"
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Crosstour",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "EX-L", "oemWheelSize": "17x6.5", "oemTireSize": "225/65R17"},
+        {"name": "EX-L V6", "oemWheelSize": "18x7", "oemTireSize": "225/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2012-2013"
+    },
+    {
+      "year": 2015,
+      "make": "Honda",
+      "model": "Crosstour",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "EX-L", "oemWheelSize": "17x6.5", "oemTireSize": "225/65R17"},
+        {"name": "EX-L V6", "oemWheelSize": "18x7", "oemTireSize": "225/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "Wikipedia"],
+      "notes": "Final year of Crosstour production"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Element",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "DX/EX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "First year of Element, YH platform"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "Element",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "DX/EX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2003"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "Element",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "LX/EX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2003-2004"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "Element",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "LX/EX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same specs, minor updates"
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "Element",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "LX/EX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "SC", "oemWheelSize": "17x6.5", "oemTireSize": "215/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "SC (Street Coupe) trim added with 17\" wheels"
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "Element",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        {"name": "LX/EX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16"},
+        {"name": "SC", "oemWheelSize": "17x6.5", "oemTireSize": "215/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Same as 2007"
+    }
+  ]
+}

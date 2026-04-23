@@ -1,0 +1,555 @@
+{
+  "batchId": 4,
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-21T23:45:00Z",
+  "summary": {
+    "total": 50,
+    "found": 28,
+    "notFound": 15,
+    "notUS": 0,
+    "futureModel": 7
+  },
+  "vehicles": [
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "2-series",
+      "resolvedModel": "230i",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/45R17", "rear": "225/45R17", "isStaggered": false, "trim": "Coupe Luxury"},
+        {"front": "225/40R18", "rear": "255/35R18", "isStaggered": true, "trim": "Coupe M Sport"}
+      ],
+      "wheelSizes": [17, 18],
+      "notes": "Multiple trims available - 230i model"
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "2-series",
+      "resolvedModel": "230i",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/40R18", "rear": "225/40R18", "isStaggered": false, "trim": "Coupe"},
+        {"front": "225/35R19", "rear": "255/30R19", "isStaggered": true, "trim": "Coupe M Sport"}
+      ],
+      "wheelSizes": [18, 19],
+      "notes": "2026 model year available"
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "found": false,
+      "notes": "4-series Gran Coupe introduced in 2014, 2013 does not exist"
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Base Model"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18],
+      "notes": "First year of 4-series Gran Coupe production"
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Base Model"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Base Model"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Base Model"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Base Model"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Gran Coupe"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Gran Coupe"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "found": false,
+      "notes": "2021 model year not listed on tiresize.com - may be transition year between generations"
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Gran Coupe"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "Gran Coupe M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Gran Coupe"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Gran Coupe"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Gran Coupe"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "resolvedModel": "430i Gran Coupe",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R17", "rear": "225/50R17", "isStaggered": false, "trim": "Gran Coupe"},
+        {"front": "225/45R18", "rear": "255/40R18", "isStaggered": true, "trim": "M Sport"}
+      ],
+      "wheelSizes": [17, 18]
+    },
+    {
+      "year": 2003,
+      "make": "bmw",
+      "model": "6-series",
+      "found": false,
+      "notes": "E63/E64 6-series introduced in 2004 for US market. 2003 does not exist."
+    },
+    {
+      "year": 2004,
+      "make": "bmw",
+      "model": "6-series",
+      "resolvedModel": "645Ci",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "245/45R18", "isStaggered": false, "trim": "Coupe Standard Model"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe Sport Package"}
+      ],
+      "wheelSizes": [18, 19]
+    },
+    {
+      "year": 2005,
+      "make": "bmw",
+      "model": "6-series",
+      "resolvedModel": "645Ci",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "245/45R18", "isStaggered": false, "trim": "Coupe Standard Model"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe Sport Package"}
+      ],
+      "wheelSizes": [18, 19]
+    },
+    {
+      "year": 2006,
+      "make": "bmw",
+      "model": "6-series",
+      "found": false,
+      "notes": "E63/E64 650i (2006-2010) not available on tiresize.com. Likely specs: F:245/40R19 R:275/35R19"
+    },
+    {
+      "year": 2007,
+      "make": "bmw",
+      "model": "6-series",
+      "found": false,
+      "notes": "E63/E64 650i (2006-2010) not available on tiresize.com. Likely specs: F:245/40R19 R:275/35R19"
+    },
+    {
+      "year": 2008,
+      "make": "bmw",
+      "model": "6-series",
+      "found": false,
+      "notes": "E63/E64 650i (2006-2010) not available on tiresize.com. Likely specs: F:245/40R19 R:275/35R19"
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "6-series",
+      "found": false,
+      "notes": "E63/E64 650i (2006-2010) not available on tiresize.com. Likely specs: F:245/40R19 R:275/35R19"
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "6-series",
+      "found": false,
+      "notes": "E63/E64 650i (2006-2010) not available on tiresize.com. Likely specs: F:245/40R19 R:275/35R19"
+    },
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "6-series",
+      "found": false,
+      "notes": "Transition year - E63/E64 discontinued, F12/F13 starting. Data gap on tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "6-series",
+      "resolvedModel": "650i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Coupe Base Model"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe M Sport Package"}
+      ],
+      "wheelSizes": [18, 19],
+      "notes": "F12/F13 generation"
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "6-series",
+      "resolvedModel": "640i/650i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Base Model"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "M Sport Package"}
+      ],
+      "wheelSizes": [18, 19]
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "6-series",
+      "resolvedModel": "640i/650i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Base Model"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "M Sport Package"}
+      ],
+      "wheelSizes": [18, 19]
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "6-series",
+      "resolvedModel": "640i/650i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Coupe"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Staggered Tires"}
+      ],
+      "wheelSizes": [18, 19]
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "6-series",
+      "resolvedModel": "640i/650i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Coupe"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Staggered Tires"}
+      ],
+      "wheelSizes": [18, 19]
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "6-series",
+      "resolvedModel": "640i/650i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Convertible"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Staggered Tires"}
+      ],
+      "wheelSizes": [18, 19]
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "6-series",
+      "resolvedModel": "640i/650i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Convertible"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Staggered Tires"}
+      ],
+      "wheelSizes": [18, 19]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "6-series",
+      "resolvedModel": "640i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Gran Coupe"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Staggered Tires"}
+      ],
+      "wheelSizes": [18, 19],
+      "notes": "Last year of F12/F13 6-series production"
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "8-series",
+      "found": false,
+      "notes": "G14/G15 8-series introduced in 2019 for US market. 2018 does not exist."
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "8-series",
+      "resolvedModel": "840i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Coupe"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe M Sport"},
+        {"front": "245/35R20", "rear": "275/30R20", "isStaggered": true, "trim": "20-inch option"}
+      ],
+      "wheelSizes": [18, 19, 20],
+      "notes": "First year of 8-series reintroduction"
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "8-series",
+      "resolvedModel": "840i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Coupe"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe M Sport"},
+        {"front": "245/35R20", "rear": "275/30R20", "isStaggered": true, "trim": "20-inch option"}
+      ],
+      "wheelSizes": [18, 19, 20]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "8-series",
+      "resolvedModel": "840i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Coupe"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe M Sport"},
+        {"front": "245/35R20", "rear": "275/30R20", "isStaggered": true, "trim": "20-inch option"}
+      ],
+      "wheelSizes": [18, 19, 20]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "8-series",
+      "resolvedModel": "840i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R18", "rear": "275/40R18", "isStaggered": true, "trim": "Coupe"},
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe M Sport"},
+        {"front": "245/35R20", "rear": "275/30R20", "isStaggered": true, "trim": "20-inch option"}
+      ],
+      "wheelSizes": [18, 19, 20]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "8-series",
+      "resolvedModel": "840i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe"},
+        {"front": "245/35R20", "rear": "275/30R20", "isStaggered": true, "trim": "20-inch option"}
+      ],
+      "wheelSizes": [19, 20],
+      "notes": "18-inch option dropped in 2023"
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "8-series",
+      "resolvedModel": "840i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe"},
+        {"front": "245/35R20", "rear": "275/30R20", "isStaggered": true, "trim": "20-inch option"}
+      ],
+      "wheelSizes": [19, 20]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "8-series",
+      "resolvedModel": "840i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe"},
+        {"front": "245/35R20", "rear": "275/30R20", "isStaggered": true, "trim": "20-inch option"}
+      ],
+      "wheelSizes": [19, 20]
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "8-series",
+      "resolvedModel": "840i",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/40R19", "rear": "275/35R19", "isStaggered": true, "trim": "Coupe"},
+        {"front": "245/35R20", "rear": "275/30R20", "isStaggered": true, "trim": "20-inch option"}
+      ],
+      "wheelSizes": [19, 20]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "i4",
+      "found": false,
+      "futureModel": true,
+      "notes": "BMW i4 introduced in 2022 model year. 2021 does not exist in US market."
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "i4",
+      "found": true,
+      "tireSizes": [
+        {"front": "225/50R18", "rear": "225/50R18", "isStaggered": false, "trim": "eDrive40"},
+        {"front": "245/40R19", "rear": "255/40R19", "isStaggered": true, "trim": "M Sport Package"},
+        {"front": "255/35R20", "rear": "285/30R20", "isStaggered": true, "trim": "M60"}
+      ],
+      "wheelSizes": [18, 19, 20]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "i5",
+      "found": false,
+      "futureModel": true,
+      "notes": "BMW i5 introduced in 2024 model year. 2023 does not exist in US market."
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "i5",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/45R19", "rear": "245/45R19", "isStaggered": false, "trim": "eDrive40"},
+        {"front": "245/40R20", "rear": "275/35R20", "isStaggered": true, "trim": "M Sport Package"},
+        {"front": "245/35R21", "rear": "275/30R21", "isStaggered": true, "trim": "M60"}
+      ],
+      "wheelSizes": [19, 20, 21]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "i7",
+      "found": false,
+      "futureModel": true,
+      "notes": "BMW i7 introduced in 2023 model year. 2022 does not exist in US market."
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "i7",
+      "found": true,
+      "tireSizes": [
+        {"front": "245/50R19", "rear": "245/50R19", "isStaggered": false, "trim": "eDrive50"},
+        {"front": "255/45R20", "rear": "285/40R20", "isStaggered": true, "trim": "M Sport Package"},
+        {"front": "255/40R21", "rear": "285/35R21", "isStaggered": true, "trim": "M70"}
+      ],
+      "wheelSizes": [19, 20, 21]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "i8",
+      "found": false,
+      "futureModel": true,
+      "notes": "BMW i8 introduced in 2014 (as 2015 MY). 2013 does not exist."
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "i8",
+      "found": false,
+      "futureModel": true,
+      "notes": "BMW i8 introduced in late 2014 as 2015 model year. Tiresize.com only has 2019-2020. Likely specs: F:215/45R20 R:245/40R20"
+    }
+  ]
+}

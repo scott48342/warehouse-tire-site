@@ -1,0 +1,1084 @@
+{
+  "batch": "batch-27-german",
+  "verifiedAt": "2026-04-23T00:40:00Z",
+  "vehicleCount": 75,
+  "validCount": 47,
+  "invalidCount": 28,
+  "summary": {
+    "invalidModels": [
+      {
+        "model": "eqa",
+        "reason": "NOT SOLD IN US MARKET - Europe/China only model",
+        "affectedYears": [2021, 2022, 2023, 2024, 2025, 2026],
+        "count": 6
+      },
+      {
+        "model": "eqb",
+        "reason": "First US model year is 2022 (arrived summer 2022)",
+        "affectedYears": [2021],
+        "count": 1
+      },
+      {
+        "model": "eqe",
+        "reason": "First US model year is 2023 (arrived late 2022)",
+        "affectedYears": [2022],
+        "count": 1
+      },
+      {
+        "model": "eqs",
+        "reason": "First US model year is 2022",
+        "affectedYears": [2021],
+        "count": 1
+      },
+      {
+        "model": "g-class",
+        "reason": "First US model year is 2002",
+        "affectedYears": [2000, 2001],
+        "count": 2
+      },
+      {
+        "model": "g-class-amg",
+        "reason": "First US model year is 2002 (G55 AMG)",
+        "affectedYears": [2000, 2001],
+        "count": 2
+      },
+      {
+        "model": "e-class-coupe",
+        "reason": "Discontinued after 2023, replaced by CLE-Class in 2024",
+        "affectedYears": [],
+        "count": 0,
+        "note": "2022-2023 models in batch are VALID"
+      }
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 300", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "E 450", "oemWheelSize": "18x8 / 18x9", "oemTireSize": "245/45R18 / 275/40R18"},
+        {"name": "E 450", "oemWheelSize": "19x8 / 19x9", "oemTireSize": "245/40R19 / 275/35R19"},
+        {"name": "AMG E 53", "oemWheelSize": "20x8 / 20x9", "oemTireSize": "245/35R20 / 275/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mbusa.com"],
+      "notes": "Staggered setup on E 450 and AMG variants. Final generation before CLE replacement."
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 300", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "E 450", "oemWheelSize": "18x8 / 18x9", "oemTireSize": "245/45R18 / 275/40R18"},
+        {"name": "E 450", "oemWheelSize": "19x8 / 19x9", "oemTireSize": "245/40R19 / 275/35R19"},
+        {"name": "AMG E 53", "oemWheelSize": "20x8 / 20x9", "oemTireSize": "245/35R20 / 275/30R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mbusa.com"],
+      "notes": "FINAL MODEL YEAR - Discontinued after 2023, replaced by CLE-Class"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "EQA",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - EQA is Europe/China only",
+      "confidence": "high",
+      "sources": ["topelectricsuv.com", "greencarscompare.com", "mbusa.com"],
+      "notes": "Mercedes-Benz chose not to bring EQA to US market. EQB is the smallest EQ SUV sold in US."
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "EQA",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - EQA is Europe/China only",
+      "confidence": "high",
+      "sources": ["topelectricsuv.com", "greencarscompare.com", "mbusa.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "EQA",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - EQA is Europe/China only",
+      "confidence": "high",
+      "sources": ["topelectricsuv.com", "greencarscompare.com", "mbusa.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "EQA",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - EQA is Europe/China only",
+      "confidence": "high",
+      "sources": ["topelectricsuv.com", "greencarscompare.com", "mbusa.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "EQA",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - EQA is Europe/China only",
+      "confidence": "high",
+      "sources": ["topelectricsuv.com", "greencarscompare.com", "mbusa.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "EQA",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - EQA is Europe/China only",
+      "confidence": "high",
+      "sources": ["topelectricsuv.com", "greencarscompare.com", "mbusa.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "EQB",
+      "status": "INVALID",
+      "reason": "First US model year is 2022 - EQB went on sale in US summer 2022",
+      "confidence": "high",
+      "sources": ["greencarreports.com", "media.mbusa.com", "electrek.co"]
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "EQB",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQB 300 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"},
+        {"name": "EQB 300 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/50R19"},
+        {"name": "EQB 350 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/50R19"},
+        {"name": "EQB 350 4MATIC", "oemWheelSize": "20x8", "oemTireSize": "235/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mbusa.com"],
+      "notes": "First US model year. Electric compact SUV based on GLB platform."
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "EQB",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQB 250+", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"},
+        {"name": "EQB 300 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/50R19"},
+        {"name": "EQB 350 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/50R19"},
+        {"name": "EQB 350 4MATIC", "oemWheelSize": "20x8", "oemTireSize": "235/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mbusa.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "EQB",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQB 250+", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"},
+        {"name": "EQB 300 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/50R19"},
+        {"name": "EQB 350 4MATIC", "oemWheelSize": "20x8", "oemTireSize": "235/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mbusa.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "EQB",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQB 250+", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"},
+        {"name": "EQB 300 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/50R19"},
+        {"name": "EQB 350 4MATIC", "oemWheelSize": "20x8", "oemTireSize": "235/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "kbb.com", "mbusa.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "EQB",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQB 250+", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"},
+        {"name": "EQB 300 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/50R19"},
+        {"name": "EQB 350 4MATIC", "oemWheelSize": "20x8", "oemTireSize": "235/45R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["mbusa.com"],
+      "notes": "Continuing model year - specs likely unchanged from 2025"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "EQE",
+      "status": "INVALID",
+      "reason": "First US model year is 2023 - EQE arrived in US late 2022 as 2023 MY",
+      "confidence": "high",
+      "sources": ["greencarreports.com", "caranddriver.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "EQE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQE 350+", "oemWheelSize": "19x8.5 / 19x9.5", "oemTireSize": "255/45R19 / 285/40R19"},
+        {"name": "EQE 350 4MATIC", "oemWheelSize": "19x8.5 / 19x9.5", "oemTireSize": "255/45R19 / 285/40R19"},
+        {"name": "EQE 500 4MATIC", "oemWheelSize": "20x8.5 / 20x10", "oemTireSize": "255/40R20 / 285/35R20"},
+        {"name": "AMG EQE 43", "oemWheelSize": "20x9 / 20x10.5", "oemTireSize": "265/40R20 / 295/35R20"},
+        {"name": "AMG EQE 53", "oemWheelSize": "21x9.5 / 21x10.5", "oemTireSize": "265/35R21 / 295/30R21"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com", "caranddriver.com"],
+      "notes": "First US model year. Electric sedan on EVA2 platform. Staggered setup on all trims."
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "EQE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQE 350+", "oemWheelSize": "19x8.5 / 19x9.5", "oemTireSize": "255/45R19 / 285/40R19"},
+        {"name": "EQE 350 4MATIC", "oemWheelSize": "19x8.5 / 19x9.5", "oemTireSize": "255/45R19 / 285/40R19"},
+        {"name": "AMG EQE 53", "oemWheelSize": "21x9.5 / 21x10.5", "oemTireSize": "265/35R21 / 295/30R21"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com", "caranddriver.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "EQE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQE 350+", "oemWheelSize": "19x8.5 / 19x9.5", "oemTireSize": "255/45R19 / 285/40R19"},
+        {"name": "EQE 350 4MATIC", "oemWheelSize": "19x8.5 / 19x9.5", "oemTireSize": "255/45R19 / 285/40R19"},
+        {"name": "AMG EQE 53", "oemWheelSize": "21x9.5 / 21x10.5", "oemTireSize": "265/35R21 / 295/30R21"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"],
+      "notes": "US sales paused temporarily in late 2025, resumed January 2026"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "EQE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQE 350+", "oemWheelSize": "19x8.5 / 19x9.5", "oemTireSize": "255/45R19 / 285/40R19"},
+        {"name": "EQE 350 4MATIC", "oemWheelSize": "19x8.5 / 19x9.5", "oemTireSize": "255/45R19 / 285/40R19"},
+        {"name": "AMG EQE 53", "oemWheelSize": "21x9.5 / 21x10.5", "oemTireSize": "265/35R21 / 295/30R21"}
+      ],
+      "confidence": "high",
+      "sources": ["insideevs.com", "autoblog.com"],
+      "notes": "Sales resumed January 2026 after temporary pause"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "EQS",
+      "status": "INVALID",
+      "reason": "First US model year is 2022 - EQS went on sale in US summer 2021 as 2022 MY",
+      "confidence": "high",
+      "sources": ["autoweek.com", "motor1.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "EQS",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQS 450+", "oemWheelSize": "20x9 / 20x10", "oemTireSize": "255/45R20 / 285/40R20"},
+        {"name": "EQS 450 4MATIC", "oemWheelSize": "20x9 / 20x10", "oemTireSize": "255/45R20 / 285/40R20"},
+        {"name": "EQS 580 4MATIC", "oemWheelSize": "21x9.5 / 21x10.5", "oemTireSize": "265/40R21 / 295/35R21"},
+        {"name": "AMG EQS 53", "oemWheelSize": "22x10 / 22x11", "oemTireSize": "265/35R22 / 295/30R22"}
+      ],
+      "confidence": "high",
+      "sources": ["goodyear.com", "mbusa.com"],
+      "notes": "First US model year. Flagship electric sedan. Staggered setup on all trims."
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "EQS",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQS 450+", "oemWheelSize": "20x9 / 20x10", "oemTireSize": "255/45R20 / 285/40R20"},
+        {"name": "EQS 450 4MATIC", "oemWheelSize": "20x9 / 20x10", "oemTireSize": "255/45R20 / 285/40R20"},
+        {"name": "EQS 580 4MATIC", "oemWheelSize": "21x9.5 / 21x10.5", "oemTireSize": "265/40R21 / 295/35R21"},
+        {"name": "AMG EQS 53", "oemWheelSize": "22x10 / 22x11", "oemTireSize": "265/35R22 / 295/30R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbusa.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "EQS",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQS 450+", "oemWheelSize": "20x9 / 20x10", "oemTireSize": "255/45R20 / 285/40R20"},
+        {"name": "EQS 450 4MATIC", "oemWheelSize": "20x9 / 20x10", "oemTireSize": "255/45R20 / 285/40R20"},
+        {"name": "EQS 580 4MATIC", "oemWheelSize": "21x9.5 / 21x10.5", "oemTireSize": "265/40R21 / 295/35R21"},
+        {"name": "AMG EQS 53", "oemWheelSize": "22x10 / 22x11", "oemTireSize": "265/35R22 / 295/30R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbusa.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "EQS",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQS 450+", "oemWheelSize": "20x9 / 20x10", "oemTireSize": "255/45R20 / 285/40R20"},
+        {"name": "EQS 450 4MATIC", "oemWheelSize": "20x9 / 20x10", "oemTireSize": "255/45R20 / 285/40R20"},
+        {"name": "EQS 580 4MATIC", "oemWheelSize": "21x9.5 / 21x10.5", "oemTireSize": "265/40R21 / 295/35R21"},
+        {"name": "AMG EQS 53", "oemWheelSize": "22x10 / 22x11", "oemTireSize": "265/35R22 / 295/30R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbusa.com"],
+      "notes": "US sales paused temporarily in late 2025, resumed January 2026"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "EQS",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "EQS 450+", "oemWheelSize": "20x9 / 20x10", "oemTireSize": "255/45R20 / 285/40R20"},
+        {"name": "EQS 450 4MATIC", "oemWheelSize": "20x9 / 20x10", "oemTireSize": "255/45R20 / 285/40R20"},
+        {"name": "EQS 580 4MATIC", "oemWheelSize": "21x9.5 / 21x10.5", "oemTireSize": "265/40R21 / 295/35R21"},
+        {"name": "AMG EQS 53", "oemWheelSize": "22x10 / 22x11", "oemTireSize": "265/35R22 / 295/30R22"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "insideevs.com"],
+      "notes": "Sales resumed January 2026. 2027 redesign announced."
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "INVALID",
+      "reason": "First US model year is 2002 - G-Class was not officially sold in US until 2002",
+      "confidence": "high",
+      "sources": ["en.wikipedia.org", "cars.com", "carbuzz.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "INVALID",
+      "reason": "First US model year is 2002 - G-Class was not officially sold in US until 2002",
+      "confidence": "high",
+      "sources": ["en.wikipedia.org", "cars.com", "carbuzz.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 500", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com", "en.wikipedia.org"],
+      "notes": "First official US model year. G500 and G55 AMG available."
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 500", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 500", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 500", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 500", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com"],
+      "notes": "G500 renamed to G550 starting 2007"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x7.5", "oemTireSize": "265/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Last year of pre-facelift W463. New generation launched late 2018 as 2019 MY."
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"},
+        {"name": "G 550", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "New generation W463 facelift. Significantly updated platform."
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"},
+        {"name": "G 550", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"},
+        {"name": "G 550", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"},
+        {"name": "G 550", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"},
+        {"name": "G 550", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"},
+        {"name": "G 550", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbusa.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 550", "oemWheelSize": "18x8", "oemTireSize": "265/60R18"},
+        {"name": "G 550", "oemWheelSize": "19x8.5", "oemTireSize": "275/55R19"},
+        {"name": "G 550", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbusa.com"],
+      "notes": "Updated for 2025 model year"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "INVALID",
+      "reason": "First US model year is 2002 - G55 AMG introduced alongside G500 for US market",
+      "confidence": "high",
+      "sources": ["en.wikipedia.org", "autoevolution.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "INVALID",
+      "reason": "First US model year is 2002 - G55 AMG introduced alongside G500 for US market",
+      "confidence": "high",
+      "sources": ["en.wikipedia.org", "autoevolution.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["en.wikipedia.org", "autoevolution.com"],
+      "notes": "First US model year for G-Class AMG (G55 AMG)"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"],
+      "notes": "G55 AMG Kompressor introduced with supercharged engine"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "285/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 63 AMG", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "G55 AMG replaced by G63 AMG with new 5.5L twin-turbo V8"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 63 AMG", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"},
+        {"name": "G 63 AMG", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "G 63 AMG", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"},
+        {"name": "G 63 AMG", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"},
+        {"name": "G 65 AMG", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "G65 AMG with V12 engine added to US lineup"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "AMG G 63", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"},
+        {"name": "AMG G 63", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"},
+        {"name": "AMG G 65", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Naming changed to 'AMG G' prefix format"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "AMG G 63", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"},
+        {"name": "AMG G 63", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"},
+        {"name": "AMG G 65", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "AMG G 63", "oemWheelSize": "20x8.5", "oemTireSize": "275/50R20"},
+        {"name": "AMG G 63", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"},
+        {"name": "AMG G 65", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of pre-facelift. G65 discontinued after 2018."
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "AMG G 63", "oemWheelSize": "20x9.5", "oemTireSize": "275/50R20"},
+        {"name": "AMG G 63", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"},
+        {"name": "AMG G 63", "oemWheelSize": "22x10", "oemTireSize": "295/40R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "cartiresize.com"],
+      "notes": "New generation with new 4.0L twin-turbo V8"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "AMG G 63", "oemWheelSize": "20x9.5", "oemTireSize": "275/50R20"},
+        {"name": "AMG G 63", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"},
+        {"name": "AMG G 63", "oemWheelSize": "22x10", "oemTireSize": "295/40R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "cartiresize.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "AMG G 63", "oemWheelSize": "20x9.5", "oemTireSize": "275/50R20"},
+        {"name": "AMG G 63", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"},
+        {"name": "AMG G 63", "oemWheelSize": "22x10", "oemTireSize": "295/40R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "cartiresize.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "AMG G 63", "oemWheelSize": "20x9.5", "oemTireSize": "275/50R20"},
+        {"name": "AMG G 63", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"},
+        {"name": "AMG G 63", "oemWheelSize": "22x10", "oemTireSize": "295/40R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "cartiresize.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {"name": "AMG G 63", "oemWheelSize": "20x9.5", "oemTireSize": "275/50R20"},
+        {"name": "AMG G 63", "oemWheelSize": "21x10", "oemTireSize": "285/45R21"},
+        {"name": "AMG G 63", "oemWheelSize": "22x10", "oemTireSize": "295/40R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbusa.com"]
+    }
+  ]
+}

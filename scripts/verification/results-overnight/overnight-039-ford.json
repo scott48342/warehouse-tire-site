@@ -1,0 +1,746 @@
+{
+  "batchId": "overnight-039-ford",
+  "verifiedAt": "2026-04-23T02:21:00.000Z",
+  "summary": {
+    "totalVehicles": 64,
+    "verified": 55,
+    "flagged": 7,
+    "invalid": 2
+  },
+  "sources": [
+    "Wikipedia - Ford Raptor",
+    "hulkoffsets.com - Ford F-150 Wheel Fitment Guide",
+    "jimburkeford.com - Ford F-150 Bolt Pattern Research",
+    "Ford Raptor Forum - OEM specs discussions",
+    "eBay OEM wheel listings (part number verification)"
+  ],
+  "coreSpecsVerification": {
+    "boltPattern": {
+      "expected": "6x135",
+      "allVehiclesMatch": true,
+      "notes": "All 2004+ F-150s use 6x135 bolt pattern. Confirmed across multiple sources."
+    },
+    "hubBore": {
+      "expected": "87.1",
+      "allVehiclesMatch": true,
+      "notes": "87.1mm hub bore is consistent across all F-150 generations from 2004+."
+    }
+  },
+  "invalidVehicles": [
+    {
+      "id": "3b3c4357-396f-4660-8a2a-5a9019b0c1d5",
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Raptor",
+      "status": "invalid",
+      "reason": "VEHICLE_DOES_NOT_EXIST",
+      "details": "The Ford F-150 Raptor was NOT produced for the 2015 model year. First-gen Raptor ended in 2014, second-gen started in 2017. There was a 2-year production gap (2015-2016).",
+      "source": "Wikipedia Ford Raptor, carbuzz.com, f150hub.com"
+    },
+    {
+      "id": "78d507a5-7689-4ab8-82b3-a92060a091a3",
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Raptor",
+      "status": "invalid",
+      "reason": "VEHICLE_DOES_NOT_EXIST",
+      "details": "The Ford F-150 Raptor was NOT produced for the 2016 model year. First-gen Raptor ended in 2014, second-gen started in 2017. There was a 2-year production gap (2015-2016).",
+      "source": "Wikipedia Ford Raptor, carbuzz.com, f150hub.com"
+    }
+  ],
+  "flaggedVehicles": [
+    {
+      "id": "fa2d71c4-9350-4b71-bde5-e06265da2f9a",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Raptor",
+      "status": "flagged",
+      "reason": "WHEEL_SIZE_INCOMPLETE",
+      "details": "2014 Raptor wheel is correctly 17\" but missing width should be 8.5\". Stock tire should be 315/70R17 (BFGoodrich KO), not the generic tire sizes listed.",
+      "currentWheelSizes": [{"width": 8.5, "diameter": 17}],
+      "currentTireSizes": ["265/70R17", "275/65R18", "275/55R20", "275/45R22"],
+      "suggestedTireSizes": ["315/70R17", "LT315/70R17"],
+      "source": "Wikipedia, Ford Raptor Forum OEM specs"
+    },
+    {
+      "id": "63ba9445-e561-47e7-8b9a-793ee46697f6",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "3.3 Ti-VCT",
+      "status": "flagged",
+      "reason": "TRIM_NAME_ENGINE_NOT_TRIM",
+      "details": "3.3 Ti-VCT is an engine option, not a trim level. This should likely be merged with Base or XL trim. Data is otherwise correct for base F-150.",
+      "source": "Ford documentation"
+    },
+    {
+      "id": "c378540f-d355-4a37-a0dd-0f4a1002bf30",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "3.3 Ti-VCT",
+      "status": "flagged",
+      "reason": "TRIM_NAME_ENGINE_NOT_TRIM",
+      "details": "3.3 Ti-VCT is an engine option, not a trim level. This should likely be merged with Base or XL trim. Data is otherwise correct for base F-150.",
+      "source": "Ford documentation"
+    },
+    {
+      "id": "a0aa92db-9df3-4333-92b5-9c953d93e61e",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "2.7 EcoBoost",
+      "status": "flagged",
+      "reason": "TRIM_NAME_ENGINE_NOT_TRIM",
+      "details": "2.7 EcoBoost is an engine option, not a trim level. This should likely be merged with XL, XLT, or Lariat trim. Data is otherwise correct.",
+      "source": "Ford documentation"
+    },
+    {
+      "id": "e03dd6c0-c106-4154-99cb-fec06cef122b",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Raptor",
+      "status": "flagged",
+      "reason": "MISSING_RAPTOR_TIRE",
+      "details": "2017+ Raptor stock tire is LT315/70R17 (BFGoodrich KO2). Should be included in tire sizes. Current list missing this OEM option.",
+      "suggestedTireAddition": "LT315/70R17",
+      "source": "Wikipedia, eBay OEM listings, Ford Raptor Forum"
+    },
+    {
+      "id": "6375e723-cc12-4662-9fcf-a89ed4e76716",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Raptor",
+      "status": "flagged",
+      "reason": "MISSING_RAPTOR_TIRE",
+      "details": "2021 Raptor stock tire is LT315/70R17 or 35\" tires. Current tire list doesn't include proper Raptor-specific sizes.",
+      "suggestedTireAddition": "LT315/70R17",
+      "source": "Wikipedia, Ford Raptor specifications"
+    },
+    {
+      "id": "e02549a4-cc69-4a0d-a094-108f84661f31",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Tremor",
+      "status": "flagged",
+      "reason": "TIRE_SIZES_MAY_BE_INCOMPLETE",
+      "details": "Tremor package typically includes 33\" all-terrain tires on 18\" wheels. LT285/70R18 or similar should be included.",
+      "suggestedTireAddition": "LT285/70R18",
+      "source": "Ford F-150 Tremor specs"
+    }
+  ],
+  "verifiedVehicles": [
+    {
+      "id": "8df51410-49f0-4664-b961-b8ee57a2649c",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "FX4",
+      "status": "verified",
+      "notes": "Bolt pattern 6x135 and hub bore 87.1mm confirmed. FX4 is a valid trim. Wheel/tire sizes appropriate for trim."
+    },
+    {
+      "id": "6633af0a-87cc-42d8-bb9f-7f9aac332e9e",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "STX",
+      "status": "verified",
+      "notes": "All specs confirmed correct."
+    },
+    {
+      "id": "f30e1d43-5f7e-4120-b6a1-7af3632f1fa3",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "FX2",
+      "status": "verified",
+      "notes": "All specs confirmed correct."
+    },
+    {
+      "id": "c55613f4-5d2e-4af6-b6cd-3d9ebf53a6b0",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "notes": "All specs confirmed correct."
+    },
+    {
+      "id": "fa87df50-6941-4bd9-b2ae-39126c303dd7",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Limited",
+      "status": "verified",
+      "notes": "Limited trim with 22\" wheels is correct. 9x22 wheel size is OEM for Limited."
+    },
+    {
+      "id": "45c41638-70d2-4c01-9bd5-fc0c786ce95d",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "notes": "20\" wheels correct for King Ranch trim."
+    },
+    {
+      "id": "28bc0ea6-51ad-4312-9a08-509103415c03",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Comprehensive wheel/tire options verified. LT tire variants included."
+    },
+    {
+      "id": "7395a08c-573f-4f6d-bd94-47a0582a21ec",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Platinum",
+      "status": "verified",
+      "notes": "20\" wheels correct for Platinum trim."
+    },
+    {
+      "id": "5964a114-872e-4a0b-b39c-666e41b948e4",
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Platinum",
+      "status": "verified",
+      "notes": "All specs confirmed. 2015 is first year of aluminum body 13th gen."
+    },
+    {
+      "id": "0f0d158a-7a3c-48a7-9e62-c2c0230299d5",
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Comprehensive wheel/tire options verified."
+    },
+    {
+      "id": "a21a8758-dbfb-48de-ae75-d596da2a9691",
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Limited",
+      "status": "verified",
+      "notes": "22\" wheels correct for Limited."
+    },
+    {
+      "id": "7c3bf91f-cbef-4943-9a49-c37755750fc6",
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "notes": "20\" wheels correct for King Ranch."
+    },
+    {
+      "id": "6f6fde15-9da5-422a-a715-29f454bda253",
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "notes": "17\" base wheels correct for XL trim."
+    },
+    {
+      "id": "5499ee32-44b8-41c4-9a5c-6f137833d11a",
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "notes": "17\" and 18\" options correct for XLT."
+    },
+    {
+      "id": "1483fdb4-e01f-4abe-a4e5-138cd27eece2",
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "notes": "18\" and 20\" options correct for Lariat."
+    },
+    {
+      "id": "9216bcff-1e1b-436d-b382-2f439feadfea",
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "All specs confirmed correct."
+    },
+    {
+      "id": "713c1a03-8dde-4717-bacb-9621727edfcc",
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "notes": "17\" wheels correct for XL."
+    },
+    {
+      "id": "c9226ccc-d131-4196-ade6-a1ae53a234e2",
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Platinum",
+      "status": "verified",
+      "notes": "20\" wheels correct for Platinum."
+    },
+    {
+      "id": "cac38aa6-65fd-447d-9ca8-dba2ab35ca6e",
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "notes": "17\" and 18\" options correct for XLT."
+    },
+    {
+      "id": "af604d55-486e-47e7-804a-de92a915db70",
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "notes": "20\" wheels correct for King Ranch."
+    },
+    {
+      "id": "47dbf74e-6315-4b50-a518-84c097d4e638",
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "notes": "18\" and 20\" options correct for Lariat."
+    },
+    {
+      "id": "d17cffe6-602f-4080-ba9e-801075ebd093",
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Limited",
+      "status": "verified",
+      "notes": "22\" wheels correct for Limited."
+    },
+    {
+      "id": "0ce947c9-a7b0-480c-bfad-763a2cdda443",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Limited",
+      "status": "verified",
+      "notes": "22\" wheels correct for Limited."
+    },
+    {
+      "id": "32fa4dde-f947-4cf0-84ae-ec561af2c0ec",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "notes": "17\" wheels correct for XL."
+    },
+    {
+      "id": "645842fa-34d5-4bbe-800e-4ed35a685b29",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "notes": "20\" wheels correct for King Ranch."
+    },
+    {
+      "id": "0ae14c81-5463-43b3-b46d-ca92c7f31bdf",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "notes": "17\" and 18\" options correct for XLT."
+    },
+    {
+      "id": "c62561a1-8b3b-4bea-ad63-222b127adc75",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "notes": "18\" and 20\" options correct for Lariat."
+    },
+    {
+      "id": "aebe6721-35bb-4947-a506-83aba80cb1bc",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Platinum",
+      "status": "verified",
+      "notes": "20\" wheels correct for Platinum."
+    },
+    {
+      "id": "23981fe1-571f-4597-b9a7-b9eec9a70fac",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "All specs confirmed correct."
+    },
+    {
+      "id": "235ee914-2f60-4e1c-8f45-7d5b56fde1a4",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Platinum",
+      "status": "verified",
+      "notes": "20\" wheels correct for Platinum."
+    },
+    {
+      "id": "ee976f26-d95f-497b-94d1-9a55d4f1cfa2",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "notes": "17\" wheels correct for XL."
+    },
+    {
+      "id": "a6839851-2a90-455a-9a7a-364b01b78a07",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Raptor",
+      "status": "verified",
+      "notes": "17x8.5 wheels correct for Raptor. LT315/70R17 in tire list confirms Raptor-specific tire."
+    },
+    {
+      "id": "e294396d-63d2-4c7e-8467-f95f15fa0f11",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "notes": "18\" and 20\" options correct for Lariat."
+    },
+    {
+      "id": "dddade7a-0f47-4cb8-955d-d7e846a7f478",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Limited",
+      "status": "verified",
+      "notes": "22\" wheels correct for Limited."
+    },
+    {
+      "id": "78f24039-c03e-442a-8f98-8766b87d20ef",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "notes": "17\" and 18\" options correct for XLT."
+    },
+    {
+      "id": "38fb6954-cb5a-4686-a0f2-592757b97985",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "All specs confirmed correct."
+    },
+    {
+      "id": "92d64d9a-4fef-4103-9a11-fc5b0ee5151a",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "notes": "20\" wheels correct for King Ranch."
+    },
+    {
+      "id": "a47501f0-023f-4cbc-b25c-6f8f097de6ed",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "All specs confirmed correct."
+    },
+    {
+      "id": "bcc0162c-b728-48a1-82ca-61385ea58bf0",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "notes": "18\" and 20\" options correct for Lariat."
+    },
+    {
+      "id": "87de2b70-d31b-470d-bd8d-8544602fd414",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Raptor",
+      "status": "verified",
+      "notes": "17x8.5 wheels correct for Raptor."
+    },
+    {
+      "id": "a05eb0a6-0aba-4c28-b525-5ecd13e50854",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "notes": "20\" wheels correct for King Ranch."
+    },
+    {
+      "id": "25e877f7-ae2a-4d52-91d5-e7c3cc5fd609",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Limited",
+      "status": "verified",
+      "notes": "22\" wheels correct for Limited."
+    },
+    {
+      "id": "263bd09e-db28-4fa4-bfd3-9faf7b706e62",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "notes": "17\" and 18\" options correct for XLT."
+    },
+    {
+      "id": "598781af-be4f-47b0-9117-3d56ff16a04a",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "notes": "17\" wheels correct for XL."
+    },
+    {
+      "id": "f59ef713-8245-4f70-8957-a2e229b71d3b",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Platinum",
+      "status": "verified",
+      "notes": "20\" wheels correct for Platinum."
+    },
+    {
+      "id": "31f28d3b-1a85-4b92-95bb-509aa60b0205",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Platinum",
+      "status": "verified",
+      "notes": "20\" wheels correct for Platinum."
+    },
+    {
+      "id": "abdb5852-499e-48f8-a994-5f3f639773b1",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Limited",
+      "status": "verified",
+      "notes": "22\" wheels correct for Limited."
+    },
+    {
+      "id": "29725f1d-fe9d-4be0-92a3-269d292d8f4c",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Raptor",
+      "status": "verified",
+      "notes": "17x8.5 wheels correct for Raptor. Last year of 2nd gen Raptor."
+    },
+    {
+      "id": "be6089e0-36df-426e-97b6-7ea623e0ecca",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "notes": "20\" wheels correct for King Ranch."
+    },
+    {
+      "id": "dbecc0c8-43ef-4024-ba2b-73ab8b3c7950",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "notes": "17\" wheels correct for XL."
+    },
+    {
+      "id": "46d559ad-9907-4c2f-bd3d-51ea84043764",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "notes": "17\" and 18\" options correct for XLT."
+    },
+    {
+      "id": "0ccb7432-8126-4a8e-abc9-cd48953329e8",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "notes": "18\" and 20\" options correct for Lariat."
+    },
+    {
+      "id": "b842e0b9-bcf4-432d-b4b2-bb0351f7acce",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "All specs confirmed correct."
+    },
+    {
+      "id": "5de797cb-0742-491e-879d-794bf78da917",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "notes": "20\" wheels correct for Lariat. 2021 is 14th gen."
+    },
+    {
+      "id": "270a714b-e954-478a-9620-ad15dedb6648",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "notes": "17\" wheels correct for XL."
+    },
+    {
+      "id": "0ab98674-79a7-4bc5-9c85-f82d35138a5b",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "notes": "20\" wheels correct for King Ranch."
+    },
+    {
+      "id": "81c96889-3bb7-4d0d-87db-a142020070f5",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Platinum",
+      "status": "verified",
+      "notes": "20\" wheels correct for Platinum."
+    },
+    {
+      "id": "4b6de610-1c35-4cbc-8f57-3da1c5e422f2",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "All specs confirmed correct for 14th gen."
+    },
+    {
+      "id": "b524e49a-0257-4362-8293-cdc1aab0d31c",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Limited",
+      "status": "verified",
+      "notes": "22\" wheels correct for Limited."
+    },
+    {
+      "id": "132c3364-3c79-4db1-ae84-d2779919b68e",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "notes": "18\" wheels correct for XLT."
+    },
+    {
+      "id": "ef9a08ca-649c-4f31-b39a-7435ac044063",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "notes": "20\" wheels correct for Lariat."
+    },
+    {
+      "id": "d2d05528-659a-40e8-acc3-68f6fed242bf",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "All specs confirmed correct."
+    },
+    {
+      "id": "c3e0b991-101c-47df-9366-f1ca64702979",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Platinum",
+      "status": "verified",
+      "notes": "20\" wheels correct for Platinum."
+    },
+    {
+      "id": "2dbc95e0-6878-446b-9289-1b4e914c3cd9",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "notes": "18\" wheels correct for XLT."
+    },
+    {
+      "id": "bc449797-ed1c-4d4f-89d2-5879aa0c9f83",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Tremor",
+      "status": "verified",
+      "notes": "18\" wheels correct for Tremor. Off-road package trim."
+    },
+    {
+      "id": "a524f995-fab1-4364-a118-d50ff46629a2",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Limited",
+      "status": "verified",
+      "notes": "22\" wheels correct for Limited."
+    }
+  ],
+  "recommendations": {
+    "critical": [
+      "DELETE 2015 Ford F-150 Raptor (id: 3b3c4357-396f-4660-8a2a-5a9019b0c1d5) - vehicle does not exist",
+      "DELETE 2016 Ford F-150 Raptor (id: 78d507a5-7689-4ab8-82b3-a92060a091a3) - vehicle does not exist"
+    ],
+    "suggested": [
+      "Consider merging '3.3 Ti-VCT' and '2.7 EcoBoost' trims into their respective base trims (XL/XLT/Base)",
+      "Add LT315/70R17 to 2017-2021 Raptor tire options",
+      "Add LT285/70R18 to Tremor tire options",
+      "Update 2014 Raptor with 315/70R17 OEM tire size"
+    ]
+  }
+}

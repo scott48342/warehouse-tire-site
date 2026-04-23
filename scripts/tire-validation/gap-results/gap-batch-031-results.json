@@ -1,0 +1,384 @@
+{
+  "batchId": 31,
+  "processedAt": "2026-04-21T23:53:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 36,
+    "usVehicles": 14,
+    "resolved": 5,
+    "notes": "Generic Infiniti model names (EX, FX, G, I) not found on tiresize.com - they use specific model designations (EX35, G35, etc). Hyundai Tuscani is Korean market name for Tiburon. Hyundai XG is international name for XG300/XG350."
+  },
+  "vehicles": [
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "tuscani",
+      "notUS": true,
+      "notes": "Korean market name for Tiburon. Not sold as 'Tuscani' in US."
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "tuscani",
+      "notUS": true,
+      "notes": "Korean market name for Tiburon. Not sold as 'Tuscani' in US."
+    },
+    {
+      "year": 2009,
+      "make": "hyundai",
+      "model": "tuscani",
+      "notUS": true,
+      "notes": "Korean market name for Tiburon. Not sold as 'Tuscani' in US."
+    },
+    {
+      "year": 2000,
+      "make": "hyundai",
+      "model": "xg",
+      "notUS": true,
+      "notes": "Generic XG name not used in US. Sold as XG300/XG350 in US market."
+    },
+    {
+      "year": 2001,
+      "make": "hyundai",
+      "model": "xg",
+      "notUS": true,
+      "notes": "Generic XG name not used in US. 2001 was sold as XG300 in US."
+    },
+    {
+      "year": 2002,
+      "make": "hyundai",
+      "model": "xg",
+      "notUS": true,
+      "notes": "Generic XG name not used in US. 2002+ sold as XG350 in US."
+    },
+    {
+      "year": 2003,
+      "make": "hyundai",
+      "model": "xg",
+      "notUS": true,
+      "notes": "Generic XG name not used in US. Sold as XG350 in US market."
+    },
+    {
+      "year": 2004,
+      "make": "hyundai",
+      "model": "xg",
+      "notUS": true,
+      "notes": "Generic XG name not used in US. Sold as XG350 in US market."
+    },
+    {
+      "year": 2005,
+      "make": "hyundai",
+      "model": "xg",
+      "notUS": true,
+      "notes": "Generic XG name not used in US. Sold as XG350 in US market."
+    },
+    {
+      "year": 2001,
+      "make": "hyundai",
+      "model": "xg300",
+      "notUS": false,
+      "tireSizes": ["205/65R15"],
+      "trims": {
+        "Base Model": "205/65R15",
+        "L": "205/65R15"
+      }
+    },
+    {
+      "year": 2002,
+      "make": "hyundai",
+      "model": "xg350",
+      "notUS": false,
+      "tireSizes": ["205/60R16"],
+      "trims": {
+        "Base Model": "205/60R16",
+        "L": "205/60R16"
+      }
+    },
+    {
+      "year": 2003,
+      "make": "hyundai",
+      "model": "xg350",
+      "notUS": false,
+      "tireSizes": ["205/60R16"],
+      "trims": {
+        "Base Model": "205/60R16",
+        "L": "205/60R16"
+      }
+    },
+    {
+      "year": 2004,
+      "make": "hyundai",
+      "model": "xg350",
+      "notUS": false,
+      "tireSizes": ["205/60R16"],
+      "trims": {
+        "Base Model": "205/60R16",
+        "L": "205/60R16"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "hyundai",
+      "model": "xg350",
+      "notUS": false,
+      "tireSizes": ["205/60R16"],
+      "trims": {
+        "Base Model": "205/60R16",
+        "L": "205/60R16"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "infiniti",
+      "model": "ex",
+      "notUS": true,
+      "notes": "Generic 'EX' model not used in US. 2008 was sold as EX35 (225/60R17, 225/55R18)."
+    },
+    {
+      "year": 2009,
+      "make": "infiniti",
+      "model": "ex",
+      "notUS": true,
+      "notes": "Generic 'EX' model not used in US. 2009 was sold as EX35 (225/60R17, 225/55R18)."
+    },
+    {
+      "year": 2010,
+      "make": "infiniti",
+      "model": "ex",
+      "notUS": true,
+      "notes": "Generic 'EX' model not used in US. 2010 was sold as EX35 (225/60R17, 225/55R18)."
+    },
+    {
+      "year": 2011,
+      "make": "infiniti",
+      "model": "ex",
+      "notUS": true,
+      "notes": "Generic 'EX' model not used in US. 2011 was sold as EX35 (225/55R18, 245/45R19)."
+    },
+    {
+      "year": 2012,
+      "make": "infiniti",
+      "model": "ex",
+      "notUS": true,
+      "notes": "Generic 'EX' model not used in US. 2012 was sold as EX35 (225/55R18, 245/45R19)."
+    },
+    {
+      "year": 2013,
+      "make": "infiniti",
+      "model": "ex",
+      "notUS": true,
+      "notes": "Generic 'EX' model not used in US. 2013 was sold as EX35/EX37 (225/55R18, 245/45R19)."
+    },
+    {
+      "year": 2003,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2003 was sold as FX35/FX45 (265/60R18, 265/50R20)."
+    },
+    {
+      "year": 2004,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2004 was sold as FX35/FX45 (265/60R18, 265/50R20)."
+    },
+    {
+      "year": 2005,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2005 was sold as FX35/FX45 (265/60R18, 265/50R20)."
+    },
+    {
+      "year": 2006,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2006 was sold as FX35/FX45 (265/60R18, 265/50R20)."
+    },
+    {
+      "year": 2007,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2007 was sold as FX35/FX45 (265/60R18, 265/50R20)."
+    },
+    {
+      "year": 2008,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2008 was sold as FX35/FX45 (265/60R18, 265/50R20)."
+    },
+    {
+      "year": 2009,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2009 was sold as FX35/FX50 (265/60R18, 265/50R20, 265/45R21)."
+    },
+    {
+      "year": 2010,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2010 was sold as FX35/FX50 (265/60R18, 265/50R20, 265/45R21)."
+    },
+    {
+      "year": 2011,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2011 was sold as FX35/FX50 (265/60R18, 265/50R20, 265/45R21)."
+    },
+    {
+      "year": 2012,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2012 was sold as FX35/FX50 (265/60R18, 265/50R20, 265/45R21)."
+    },
+    {
+      "year": 2013,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "Generic 'FX' model not used in US. 2013 was sold as FX37/FX50 (265/60R18, 265/50R20, 265/45R21)."
+    },
+    {
+      "year": 2014,
+      "make": "infiniti",
+      "model": "fx",
+      "notUS": true,
+      "notes": "No 2014 Infiniti FX exists. FX was renamed to QX70 in 2014."
+    },
+    {
+      "year": 2000,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2000 was sold as G20 (205/55R16)."
+    },
+    {
+      "year": 2001,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2001 was sold as G20 (205/55R16)."
+    },
+    {
+      "year": 2002,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2002 was sold as G20 (205/55R16)."
+    },
+    {
+      "year": 2003,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2003 was sold as G35 (215/55R17, 225/50R17, 225/45R18)."
+    },
+    {
+      "year": 2004,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2004 was sold as G35 (215/55R17, 225/50V17, 225/45V18)."
+    },
+    {
+      "year": 2005,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2005 was sold as G35 (215/55R17, 225/50V17, 225/45V18)."
+    },
+    {
+      "year": 2006,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2006 was sold as G35 (215/55R17, 225/50V17, 225/45V18)."
+    },
+    {
+      "year": 2007,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2007 was sold as G35 (215/55R17, 225/50V17, 225/45V18)."
+    },
+    {
+      "year": 2008,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2008 was sold as G35/G37 (various sizes 17-19 inch)."
+    },
+    {
+      "year": 2009,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2009 was sold as G37 (225/55R17, 225/50R18, 245/40R19)."
+    },
+    {
+      "year": 2010,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2010 was sold as G37 (225/55R17, 225/50R18, 245/40R19)."
+    },
+    {
+      "year": 2011,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2011 was sold as G37 (225/55R17, 225/50R18, 245/40R19)."
+    },
+    {
+      "year": 2012,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2012 was sold as G37 (225/55R17, 225/50R18, 245/40R19)."
+    },
+    {
+      "year": 2013,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "Generic 'G' model not used in US. 2013 was last year of G37 (225/55R17, 225/50R18, 245/40R19)."
+    },
+    {
+      "year": 2014,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "No 2014 Infiniti G exists. G series was renamed to Q50/Q60 in 2014."
+    },
+    {
+      "year": 2015,
+      "make": "infiniti",
+      "model": "g",
+      "notUS": true,
+      "notes": "No 2015 Infiniti G exists. G series was renamed to Q50/Q60 in 2014."
+    },
+    {
+      "year": 2000,
+      "make": "infiniti",
+      "model": "i",
+      "notUS": true,
+      "notes": "Generic 'I' model not used in US. 2000 was sold as I30 (215/55R16, 225/50R17)."
+    },
+    {
+      "year": 2001,
+      "make": "infiniti",
+      "model": "i",
+      "notUS": true,
+      "notes": "Generic 'I' model not used in US. 2001 was sold as I30 (215/55R16, 225/50R17)."
+    }
+  ]
+}

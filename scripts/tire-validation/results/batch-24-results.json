@@ -1,0 +1,1050 @@
+{
+  "batchId": "24",
+  "processedAt": "2026-04-21T21:47:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT5",
+      "trims": [
+        {"trim": "Luxury", "tireSizes": ["245/45R18", "255/35R20"]},
+        {"trim": "Premium Luxury", "tireSizes": ["245/45R18", "245/40R19", "255/35R20"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19", "255/35R20"]},
+        {"trim": "V", "tireSizes": ["245/40R19", "255/35R20"]}
+      ],
+      "oeSizes": ["245/45R18", "245/40R19", "255/35R20"]
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "CT5",
+      "trims": [
+        {"trim": "Luxury", "tireSizes": ["245/45R18", "255/35R20"]},
+        {"trim": "Premium Luxury", "tireSizes": ["245/45R18", "245/40R19", "255/35R20"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19", "255/35R20"]},
+        {"trim": "V", "tireSizes": ["245/40R19", "255/35R20"]}
+      ],
+      "oeSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "notes": "CT5 started production in 2020 MY; 2019 data may be pre-production"
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "trims": [
+        {"trim": "V", "tireSizes": ["245/40R19", "255/35R20"]},
+        {"trim": "V Blackwing", "tireSizes": ["275/35R19 (front)", "305/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["245/40R19", "255/35R20", "275/35R19", "305/30R19"]
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "trims": [
+        {"trim": "V", "tireSizes": ["245/40R19", "255/35R20"]},
+        {"trim": "V Blackwing", "tireSizes": ["275/35R19 (front)", "305/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["245/40R19", "255/35R20", "275/35R19", "305/30R19"]
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "trims": [
+        {"trim": "V", "tireSizes": ["245/40R19", "255/35R20"]},
+        {"trim": "V Blackwing", "tireSizes": ["275/35R19 (front)", "305/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["245/40R19", "255/35R20", "275/35R19", "305/30R19"]
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "trims": [
+        {"trim": "V", "tireSizes": ["245/40R19", "255/35R20"]},
+        {"trim": "V Blackwing", "tireSizes": ["275/35R19 (front)", "305/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["245/40R19", "255/35R20", "275/35R19", "305/30R19"]
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "trims": [
+        {"trim": "V", "tireSizes": ["245/40R19", "255/35R20"]},
+        {"trim": "V Blackwing", "tireSizes": ["275/35R19 (front)", "305/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["245/40R19", "255/35R20", "275/35R19", "305/30R19"]
+    },
+    {
+      "year": 2021,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "trims": [
+        {"trim": "V", "tireSizes": ["245/40R19", "255/35R20"]}
+      ],
+      "oeSizes": ["245/40R19", "255/35R20"],
+      "notes": "V Blackwing introduced 2022 MY"
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "trims": [
+        {"trim": "V", "tireSizes": ["245/40R19", "255/35R20"]}
+      ],
+      "oeSizes": ["245/40R19", "255/35R20"]
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "CT6",
+      "trims": [
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Platinum", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["235/50R18", "245/45R19", "245/40R20"],
+      "notes": "CT6 discontinued after 2020 MY; 2025 data likely incorrect in source"
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "CT6",
+      "trims": [
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Platinum", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["235/50R18", "245/45R19", "245/40R20"],
+      "notes": "CT6 discontinued after 2020 MY; verify vehicle exists"
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "CT6",
+      "trims": [
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Platinum", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["235/50R18", "245/45R19", "245/40R20"],
+      "notes": "CT6 discontinued after 2020 MY; verify vehicle exists"
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "CT6",
+      "trims": [
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Platinum", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["235/50R18", "245/45R19", "245/40R20"],
+      "notes": "CT6 discontinued after 2020 MY; verify vehicle exists"
+    },
+    {
+      "year": 2021,
+      "make": "Cadillac",
+      "model": "CT6",
+      "trims": [
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Platinum", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["235/50R18", "245/45R19", "245/40R20"],
+      "notes": "CT6 discontinued after 2020 MY; verify vehicle exists"
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT6",
+      "trims": [
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Platinum", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["235/50R18", "245/45R19", "245/40R20"]
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "CT6",
+      "trims": [
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "2.0L Turbo Premium Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.0L Twin Turbo Sport", "tireSizes": ["245/40R20"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Premium Luxury", "tireSizes": ["245/45R19", "245/40R20"]}
+      ],
+      "oeSizes": ["245/45R19", "245/40R20"]
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "CT6",
+      "trims": [
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.0L Twin Turbo Premium Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.6L Premium Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Standard", "tireSizes": ["245/45R19"]},
+        {"trim": "Plug-In", "tireSizes": ["245/45R19", "245/40R20"]}
+      ],
+      "oeSizes": ["235/50R18", "245/45R19", "245/40R20"]
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "CT6",
+      "trims": [
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.0L Twin Turbo Premium Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.6L Premium Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Standard", "tireSizes": ["245/45R19"]}
+      ],
+      "oeSizes": ["235/50R18", "245/45R19", "245/40R20"]
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "CT6",
+      "trims": [
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.0L Twin Turbo Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.0L Twin Turbo Premium Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Platinum", "tireSizes": ["245/40R20"]},
+        {"trim": "3.6L Premium Luxury", "tireSizes": ["245/45R19", "245/40R20"]},
+        {"trim": "3.6L Standard", "tireSizes": ["245/45R19"]}
+      ],
+      "oeSizes": ["235/50R18", "245/45R19", "245/40R20"]
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT6-V",
+      "trims": [
+        {"trim": "Sedan", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["245/40R20"]
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "CT6-V",
+      "trims": [
+        {"trim": "Sedan", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["245/40R20"]
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R17", "255/35R19"]},
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["245/45R17", "255/35R19"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R17", "245/40R18", "255/35R19"]},
+        {"trim": "3.6L Premium Luxury", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "3.6L Twin Turbo V-Sport", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)", "255/35R19"], "isStaggered": true},
+        {"trim": "3.6L Twin Turbo V-Sport Premium Luxury", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)", "255/35R19"], "isStaggered": true},
+        {"trim": "V", "tireSizes": ["265/35R19 (front)", "295/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["245/45R17", "245/40R18", "255/35R19", "265/35R19", "275/35R18", "295/30R19"]
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R17", "255/35R19"]},
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["245/45R17", "255/35R19"]},
+        {"trim": "2.0L Turbo Premium Luxury", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R17", "245/40R18", "255/35R19"]},
+        {"trim": "3.6L Premium Luxury", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "3.6L Twin Turbo V-Sport", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)"], "isStaggered": true},
+        {"trim": "3.6L Twin Turbo V-Sport Premium", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)"], "isStaggered": true},
+        {"trim": "V", "tireSizes": ["265/35R19 (front)", "295/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["245/45R17", "245/40R18", "255/35R19", "265/35R19", "275/35R18", "295/30R19"]
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R17", "255/35R19"]},
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["245/45R17", "255/35R19"]},
+        {"trim": "2.0L Turbo Premium Luxury", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R17", "245/40R18", "255/35R19"]},
+        {"trim": "3.6L Premium Luxury", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "3.6L Twin Turbo V-Sport", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)"], "isStaggered": true},
+        {"trim": "3.6L Twin Turbo V-Sport Premium", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)"], "isStaggered": true},
+        {"trim": "V", "tireSizes": ["265/35R19 (front)", "295/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["245/45R17", "245/40R18", "255/35R19", "265/35R19", "275/35R18", "295/30R19"]
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R17", "245/40R18"]},
+        {"trim": "2.0L Turbo Performance", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "2.0L Turbo Premium", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["245/45R17"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R17", "245/40R18"]},
+        {"trim": "3.6L Performance", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "3.6L Premium", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "3.6L Twin Turbo V-Sport", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)"], "isStaggered": true},
+        {"trim": "3.6L Twin Turbo V-Sport Premium", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)"], "isStaggered": true},
+        {"trim": "V", "tireSizes": ["265/35R19 (front)", "295/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["245/45R17", "245/40R18", "255/35R19", "265/35R19", "275/35R18", "295/30R19"]
+    },
+    {
+      "year": 2015,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "2.0L Turbo Luxury", "tireSizes": ["245/45R17", "245/40R18"]},
+        {"trim": "2.0L Turbo Performance", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "2.0L Turbo Premium", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "2.0L Turbo Standard", "tireSizes": ["245/45R17"]},
+        {"trim": "3.6L Luxury", "tireSizes": ["245/45R17", "245/40R18"]},
+        {"trim": "3.6L Performance", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "3.6L Premium", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "3.6L Twin Turbo V-Sport", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)"], "isStaggered": true},
+        {"trim": "3.6L Twin Turbo V-Sport Premium", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)"], "isStaggered": true},
+        {"trim": "V Coupe", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["245/45R17", "245/40R18", "255/35R19", "255/40R19", "275/35R18", "285/35R19"]
+    },
+    {
+      "year": 2014,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Coupe Performance", "tireSizes": ["235/50R18 (front)", "265/45R18 (rear)", "235/45R19 (front)", "265/40R19 (rear)"], "isStaggered": true},
+        {"trim": "Coupe Premium", "tireSizes": ["235/50R18 (front)", "265/45R18 (rear)", "235/45R19 (front)", "265/40R19 (rear)"], "isStaggered": true},
+        {"trim": "Coupe Standard", "tireSizes": ["235/50R18 (front)", "265/45R18 (rear)", "235/45R19 (front)", "265/40R19 (rear)"], "isStaggered": true},
+        {"trim": "Sedan 2.0L Turbo Luxury", "tireSizes": ["245/45R17", "245/40R18"]},
+        {"trim": "Sedan 2.0L Turbo Performance", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "Sedan 2.0L Turbo Premium", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "Sedan 2.0L Turbo Standard", "tireSizes": ["245/45R17"]},
+        {"trim": "Sedan 3.6L Luxury", "tireSizes": ["245/45R17", "245/40R18"]},
+        {"trim": "Sedan 3.6L Performance", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "Sedan 3.6L Premium", "tireSizes": ["245/40R18", "255/35R19"]},
+        {"trim": "Sedan 3.6L Twin Turbo V-Sport", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)"], "isStaggered": true},
+        {"trim": "Sedan 3.6L Twin Turbo V-Sport Premium", "tireSizes": ["245/40R18 (front)", "275/35R18 (rear)"], "isStaggered": true},
+        {"trim": "Sport Wagon 3.0L Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Sport Wagon 3.6L Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sport Wagon 3.6L Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "V", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["235/45R19", "235/50R18", "235/55R17", "245/40R18", "245/45R17", "245/45R19", "255/35R19", "255/40R19", "265/40R19", "265/45R18", "275/35R18", "285/35R19"]
+    },
+    {
+      "year": 2013,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Coupe Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Coupe Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Coupe Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sedan 3.0L Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Sedan 3.0L Standard", "tireSizes": ["235/55R17"]},
+        {"trim": "Sedan 3.6L Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sedan 3.6L Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sport Wagon 3.0L Base", "tireSizes": ["235/55R17"]},
+        {"trim": "Sport Wagon 3.0L Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Sport Wagon 3.0L Performance", "tireSizes": ["235/50R18"]},
+        {"trim": "Sport Wagon 3.6L Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sport Wagon 3.6L Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "V", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["235/50R18", "235/55R17", "245/45R19", "255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2012,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Coupe Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Coupe Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Coupe Standard", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sedan 3.0L Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Sedan 3.0L Standard", "tireSizes": ["235/55R17"]},
+        {"trim": "Sedan 3.6L Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sedan 3.6L Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sport Wagon 3.0L Base", "tireSizes": ["235/55R17"]},
+        {"trim": "Sport Wagon 3.0L Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Sport Wagon 3.0L Performance", "tireSizes": ["235/50R18"]},
+        {"trim": "Sport Wagon 3.6L Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sport Wagon 3.6L Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "V", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["235/50R18", "235/55R17", "245/45R19", "255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2011,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Coupe Base", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Coupe Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Coupe Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sedan 3.0L Base", "tireSizes": ["235/55R17"]},
+        {"trim": "Sedan 3.0L Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Sedan 3.0L Performance", "tireSizes": ["235/50R18"]},
+        {"trim": "Sedan 3.6L Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sedan 3.6L Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sport Wagon 3.0L Base", "tireSizes": ["235/55R17"]},
+        {"trim": "Sport Wagon 3.0L Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Sport Wagon 3.0L Performance", "tireSizes": ["235/50R18"]},
+        {"trim": "Sport Wagon 3.6L Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sport Wagon 3.6L Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "V Coupe", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true},
+        {"trim": "V Sedan", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true},
+        {"trim": "V Sport Wagon", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["235/50R18", "235/55R17", "245/45R19", "255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2010,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Sedan 3.0L Base", "tireSizes": ["235/55R17"]},
+        {"trim": "Sedan 3.0L Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Sedan 3.0L Performance", "tireSizes": ["235/50R18"]},
+        {"trim": "Sedan 3.6L Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sedan 3.6L Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sport Wagon 3.0L Base", "tireSizes": ["235/55R17"]},
+        {"trim": "Sport Wagon 3.0L Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Sport Wagon 3.0L Performance", "tireSizes": ["235/50R18"]},
+        {"trim": "Sport Wagon 3.6L Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sport Wagon 3.6L Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "V", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["235/50R18", "235/55R17", "245/45R19", "255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2009,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Sedan 3.0L Base", "tireSizes": ["235/55R17"]},
+        {"trim": "Sedan 3.0L Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Sedan 3.6L Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Sedan 3.6L Premium", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "V", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["235/50R18", "235/55R17", "245/45R19", "255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["235/55R17"]},
+        {"trim": "Luxury", "tireSizes": ["235/55R17"]},
+        {"trim": "Performance", "tireSizes": ["235/50R18", "245/45R19"]},
+        {"trim": "Premium", "tireSizes": ["235/50R18", "245/45R19"]}
+      ],
+      "oeSizes": ["235/50R18", "235/55R17", "245/45R19"]
+    },
+    {
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "2.8L Base Model", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "2.8L Sport Package", "tireSizes": ["225/50R17"]},
+        {"trim": "3.6L 18 Inch Wheels", "tireSizes": ["225/50R18"]},
+        {"trim": "3.6L Base Model", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "3.6L Luxury Package", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "3.6L Luxury Sport Package", "tireSizes": ["225/50R17"]},
+        {"trim": "3.6L Sport Package", "tireSizes": ["225/50R17"]},
+        {"trim": "V", "tireSizes": ["245/45R18"]}
+      ],
+      "oeSizes": ["225/50R17", "225/50R18", "225/55R16", "245/45R18"]
+    },
+    {
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "2.8L Base Model", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "2.8L Luxury Package", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "2.8L Luxury Sport Package", "tireSizes": ["225/50R17"]},
+        {"trim": "2.8L Sport Package", "tireSizes": ["225/50R17"]},
+        {"trim": "3.6L 18 Inch Wheels", "tireSizes": ["225/50R18"]},
+        {"trim": "3.6L Base Model", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "3.6L Luxury Package", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "3.6L Luxury Sport Package", "tireSizes": ["225/50R17"]},
+        {"trim": "3.6L Sport Package", "tireSizes": ["225/50R17"]},
+        {"trim": "V", "tireSizes": ["245/45R18"]}
+      ],
+      "oeSizes": ["225/50R17", "225/50R18", "225/55R16", "245/45R18"]
+    },
+    {
+      "year": 2005,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "Luxury Package", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "Luxury Sport Package", "tireSizes": ["225/50R17"]},
+        {"trim": "V", "tireSizes": ["245/45R18"]}
+      ],
+      "oeSizes": ["225/50R17", "225/55R16", "245/45R18"]
+    },
+    {
+      "year": 2004,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "Luxury Package", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "Luxury Sport Package", "tireSizes": ["225/50R17"]},
+        {"trim": "V", "tireSizes": ["245/45R18"]}
+      ],
+      "oeSizes": ["225/50R17", "225/55R16", "245/45R18"]
+    },
+    {
+      "year": 2003,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "Luxury Package", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "Luxury Sport Package", "tireSizes": ["225/50R17"]}
+      ],
+      "oeSizes": ["225/50R17", "225/55R16"]
+    },
+    {
+      "year": 2002,
+      "make": "Cadillac",
+      "model": "CTS",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["225/55R16", "225/50R17"]},
+        {"trim": "Luxury Package", "tireSizes": ["225/55R16", "225/50R17"]}
+      ],
+      "oeSizes": ["225/50R17", "225/55R16"],
+      "notes": "CTS started production in 2003 MY; 2002 may be pre-production or error"
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Sedan", "tireSizes": ["265/35R19 (front)", "295/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["265/35R19", "295/30R19"]
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Sedan", "tireSizes": ["265/35R19 (front)", "295/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["265/35R19", "295/30R19"]
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Sedan", "tireSizes": ["265/35R19 (front)", "295/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["265/35R19", "295/30R19"]
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Sedan", "tireSizes": ["265/35R19 (front)", "295/30R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["265/35R19", "295/30R19"]
+    },
+    {
+      "year": 2015,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Coupe", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2014,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Coupe", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true},
+        {"trim": "Sedan", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true},
+        {"trim": "Sport Wagon", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2013,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Coupe", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true},
+        {"trim": "Sedan", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true},
+        {"trim": "Sport Wagon", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2012,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Coupe", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true},
+        {"trim": "Sedan", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true},
+        {"trim": "Sport Wagon", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2011,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Coupe", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true},
+        {"trim": "Sedan", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true},
+        {"trim": "Sport Wagon", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2010,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Sedan", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2009,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Sedan", "tireSizes": ["255/40R19 (front)", "285/35R19 (rear)"], "isStaggered": true}
+      ],
+      "oeSizes": ["255/40R19", "285/35R19"]
+    },
+    {
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["245/45R18"]}
+      ],
+      "oeSizes": ["245/45R18"]
+    },
+    {
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["245/45R18"]}
+      ],
+      "oeSizes": ["245/45R18"]
+    },
+    {
+      "year": 2005,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["245/45R18"]}
+      ],
+      "oeSizes": ["245/45R18"]
+    },
+    {
+      "year": 2004,
+      "make": "Cadillac",
+      "model": "CTS-V",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["245/45R18"]}
+      ],
+      "oeSizes": ["245/45R18"]
+    },
+    {
+      "year": 2002,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "trims": [
+        {"trim": "ESC", "tireSizes": ["225/60R16"]},
+        {"trim": "ETC", "tireSizes": ["235/60R16"]}
+      ],
+      "oeSizes": ["225/60R16", "235/60R16"]
+    },
+    {
+      "year": 2001,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "trims": [
+        {"trim": "ESC", "tireSizes": ["225/60R16"]},
+        {"trim": "ETC", "tireSizes": ["235/60R16"]}
+      ],
+      "oeSizes": ["225/60R16", "235/60R16"]
+    },
+    {
+      "year": 2000,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "trims": [
+        {"trim": "ESC", "tireSizes": ["225/60R16"]},
+        {"trim": "ETC", "tireSizes": ["235/60R16"]}
+      ],
+      "oeSizes": ["225/60R16", "235/60R16"]
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "ELR",
+      "trims": [
+        {"trim": "Plug-in Hybrid", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["245/40R20"]
+    },
+    {
+      "year": 2015,
+      "make": "Cadillac",
+      "model": "ELR",
+      "trims": [
+        {"trim": "Plug-in Hybrid", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["245/40R20"]
+    },
+    {
+      "year": 2014,
+      "make": "Cadillac",
+      "model": "ELR",
+      "trims": [
+        {"trim": "Plug-in Hybrid", "tireSizes": ["245/40R20"]}
+      ],
+      "oeSizes": ["245/40R20"]
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "V", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport Platinum", "tireSizes": ["275/50R22"]}
+      ],
+      "oeSizes": ["275/50R22"]
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "V", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport Platinum", "tireSizes": ["275/50R22"]}
+      ],
+      "oeSizes": ["275/50R22"]
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "V", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport Platinum", "tireSizes": ["275/50R22"]}
+      ],
+      "oeSizes": ["275/50R22"]
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "V", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport Platinum", "tireSizes": ["275/50R22"]}
+      ],
+      "oeSizes": ["275/50R22"]
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport Platinum", "tireSizes": ["275/50R22"]}
+      ],
+      "oeSizes": ["275/50R22"]
+    },
+    {
+      "year": 2021,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "Sport Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Premium Luxury Platinum", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport", "tireSizes": ["275/50R22"]},
+        {"trim": "ESV Sport Platinum", "tireSizes": ["275/50R22"]}
+      ],
+      "oeSizes": ["275/50R22"]
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "Premium Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Premium Luxury", "tireSizes": ["285/45R22"]}
+      ],
+      "oeSizes": ["275/55R20", "285/45R22"]
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "Premium Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Premium Luxury", "tireSizes": ["285/45R22"]}
+      ],
+      "oeSizes": ["275/55R20", "285/45R22"]
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "Premium Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Premium Luxury", "tireSizes": ["285/45R22"]}
+      ],
+      "oeSizes": ["275/55R20", "285/45R22"]
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "Premium Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Premium Luxury", "tireSizes": ["285/45R22"]}
+      ],
+      "oeSizes": ["275/55R20", "285/45R22"]
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["275/55R20"]},
+        {"trim": "Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "Premium", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV", "tireSizes": ["275/55R20"]},
+        {"trim": "ESV Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Premium", "tireSizes": ["285/45R22"]}
+      ],
+      "oeSizes": ["275/55R20", "285/45R22"]
+    },
+    {
+      "year": 2015,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["275/55R20"]},
+        {"trim": "Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "Premium", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV", "tireSizes": ["275/55R20"]},
+        {"trim": "ESV Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Premium", "tireSizes": ["285/45R22"]}
+      ],
+      "oeSizes": ["275/55R20", "285/45R22"]
+    },
+    {
+      "year": 2014,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["265/65R18", "285/45R22"]},
+        {"trim": "Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "Premium", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV", "tireSizes": ["265/65R18", "285/45R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Premium", "tireSizes": ["285/45R22"]}
+      ],
+      "oeSizes": ["265/65R18", "285/45R22"]
+    },
+    {
+      "year": 2013,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["265/65R18", "285/45R22"]},
+        {"trim": "Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "Premium", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV", "tireSizes": ["265/65R18", "285/45R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Premium", "tireSizes": ["285/45R22"]},
+        {"trim": "EXT", "tireSizes": ["265/65R18", "285/45R22"]},
+        {"trim": "EXT Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "EXT Premium", "tireSizes": ["285/45R22"]},
+        {"trim": "Hybrid", "tireSizes": ["285/45R22"]},
+        {"trim": "Hybrid Platinum", "tireSizes": ["285/45R22"]}
+      ],
+      "oeSizes": ["265/65R18", "285/45R22"]
+    },
+    {
+      "year": 2012,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["265/65R18", "285/45R22"]},
+        {"trim": "Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "Premium", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV", "tireSizes": ["265/65R18", "285/45R22"]},
+        {"trim": "ESV Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Platinum", "tireSizes": ["285/45R22"]},
+        {"trim": "ESV Premium", "tireSizes": ["285/45R22"]},
+        {"trim": "EXT", "tireSizes": ["265/65R18", "285/45R22"]},
+        {"trim": "EXT Luxury", "tireSizes": ["285/45R22"]},
+        {"trim": "EXT Premium", "tireSizes": ["285/45R22"]},
+        {"trim": "Hybrid", "tireSizes": ["285/45R22"]},
+        {"trim": "Hybrid Platinum", "tireSizes": ["285/45R22"]}
+      ],
+      "oeSizes": ["265/65R18", "285/45R22"]
+    }
+  ],
+  "summary": {
+    "vehiclesProcessed": 75,
+    "modelsIncluded": ["CT5", "CT5-V", "CT6", "CT6-V", "CTS", "CTS-V", "Eldorado", "ELR", "Escalade"],
+    "staggeredSetups": ["CT5-V Blackwing", "CTS-V (all years)", "CTS V-Sport (2014-2019)", "CTS Coupe (staggered options)"],
+    "notes": [
+      "CT5 started production in 2020 MY; 2019 data may be pre-production",
+      "CT6 was discontinued after 2020 MY; 2021-2025 data in DB may need removal",
+      "CTS-V changed from 245/45R18 (2004-2007) to staggered 255/40R19+285/35R19 (2009-2015) to 265/35R19+295/30R19 (2016-2019)",
+      "CT5-V Blackwing introduced in 2022 with staggered 275/35R19 front + 305/30R19 rear",
+      "Escalade switched from 22-inch base to 22-inch standard in 2021+ generation"
+    ]
+  }
+}

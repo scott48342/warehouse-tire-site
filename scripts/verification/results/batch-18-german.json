@@ -1,0 +1,1530 @@
+{
+  "batch": "batch-18-german",
+  "verifiedAt": "2026-04-23T00:38:00.000Z",
+  "verifiedBy": "subagent:verify-de-18",
+  "totalVehicles": 75,
+  "validVehicles": 50,
+  "invalidVehicles": 25,
+  "summary": {
+    "invalidYears": {
+      "RS6": ["2002 - not sold in US (C5 was 2003 only)", "2025 - future model", "2026 - future model"],
+      "RS7": ["2019 - gap year (C7 ended 2018)", "2020 - gap year (C8 started 2021)", "2025 - future model", "2026 - future model"],
+      "S3": ["2021 - skipped in US (8Y started 2022)", "2025 - future model", "2026 - future model"],
+      "S4": ["2003 - B6 was 2004+ in US", "2009 - gap year (B7 ended 2008, B8 started 2010)", "2017 - gap year (B8.5 ended 2016, B9 started 2018)"],
+      "S5": ["2007 - S5 started as 2008 MY in US", "2025 - future model", "2026 - future model"],
+      "S6": ["2004-2006 - C5/C6 gap in NA", "2012 - gap year (C6 ended 2011, C7 started 2013)"]
+    }
+  },
+  "vehicles": [
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "RS6",
+      "validForUS": false,
+      "invalidReason": "RS6 C5 was only sold in US for 2003 model year (sedan only, 860 units)",
+      "confidence": "high",
+      "sources": ["motorauthority.com", "wikipedia.org/wiki/Audi_RS_6"]
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "RS6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["motorauthority.com", "wikipedia.org/wiki/Audi_RS_6"],
+      "notes": "C5 generation, sedan only in US, V8 twin-turbo, limited to 860 units"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "RS6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Avant",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Avant (optional)",
+          "oemWheelSize": "22x9.5",
+          "oemTireSize": "285/30R22"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "tirewheelguide.com"],
+      "notes": "C8 generation, RS6 Avant only (no sedan), 591hp twin-turbo V8"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "RS6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Avant",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Avant (optional)",
+          "oemWheelSize": "22x9.5",
+          "oemTireSize": "285/30R22"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"],
+      "notes": "C8 generation"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "RS6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Avant",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Avant (optional)",
+          "oemWheelSize": "22x9.5",
+          "oemTireSize": "285/30R22"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"],
+      "notes": "C8 generation"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "RS6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Avant",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Avant (optional)",
+          "oemWheelSize": "22x9.5",
+          "oemTireSize": "285/30R22"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"],
+      "notes": "C8 generation"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "RS6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Avant",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Avant (optional)",
+          "oemWheelSize": "22x9.5",
+          "oemTireSize": "285/30R22"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"],
+      "notes": "C8 generation"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "RS6",
+      "validForUS": false,
+      "invalidReason": "Future model year - not yet in production/sale",
+      "confidence": "medium",
+      "sources": ["manufacturer announcements"],
+      "notes": "Flag for review when 2025 MY is confirmed"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "RS6",
+      "validForUS": false,
+      "invalidReason": "Future model year - not yet in production/sale",
+      "confidence": "medium",
+      "sources": ["manufacturer announcements"],
+      "notes": "Flag for review when 2026 MY is confirmed"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x9",
+          "oemTireSize": "275/35R21"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "carbuzz.com"],
+      "notes": "C7 generation, first year RS7 in US, 4.0T twin-turbo V8 560hp"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x9",
+          "oemTireSize": "275/35R21"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "carbuzz.com"],
+      "notes": "C7 generation"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x9",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Performance",
+          "oemWheelSize": "21x9",
+          "oemTireSize": "275/35R21"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "carbuzz.com"],
+      "notes": "C7 generation, Performance model added with 605hp"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x9",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Performance",
+          "oemWheelSize": "21x9",
+          "oemTireSize": "275/35R21"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "carbuzz.com"],
+      "notes": "C7 generation"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x9",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Performance",
+          "oemWheelSize": "21x9",
+          "oemTireSize": "275/35R21"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "carbuzz.com"],
+      "notes": "C7 generation, final year of first gen RS7"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": false,
+      "invalidReason": "Gap year - C7 ended 2018, C8 not available until 2021 in US",
+      "confidence": "high",
+      "sources": ["carbuzz.com", "carscounsel.com"],
+      "notes": "Production gap between C7 and C8 generations"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": false,
+      "invalidReason": "Gap year - C8 RS7 not available until 2021 model year in US",
+      "confidence": "high",
+      "sources": ["carbuzz.com", "carscounsel.com"],
+      "notes": "Production gap between C7 and C8 generations"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "22x9.5",
+          "oemTireSize": "285/30R22"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "carbuzz.com"],
+      "notes": "C8 generation, 591hp twin-turbo V8, mild hybrid"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "22x9.5",
+          "oemTireSize": "285/30R22"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "carbuzz.com"],
+      "notes": "C8 generation"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "22x9.5",
+          "oemTireSize": "285/30R22"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "carbuzz.com"],
+      "notes": "C8 generation"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "275/35R21"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "22x9.5",
+          "oemTireSize": "285/30R22"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "carbuzz.com"],
+      "notes": "C8 generation"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": false,
+      "invalidReason": "Future model year - not yet confirmed for US market",
+      "confidence": "medium",
+      "sources": ["manufacturer announcements"],
+      "notes": "Flag for review when 2025 MY is confirmed"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "RS7",
+      "validForUS": false,
+      "invalidReason": "Future model year - not yet confirmed for US market",
+      "confidence": "medium",
+      "sources": ["manufacturer announcements"],
+      "notes": "Flag for review when 2026 MY is confirmed"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "225/40R18"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "motortrend.com"],
+      "notes": "8V generation, first year S3 in US, 292hp 2.0T"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "225/40R18"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"],
+      "notes": "8V generation"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "225/40R18"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"],
+      "notes": "8V facelift"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "225/40R18"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"],
+      "notes": "8V facelift"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "225/40R18"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"],
+      "notes": "8V facelift"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "225/40R18"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"],
+      "notes": "8V facelift, last year of first-gen S3 in US"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": false,
+      "invalidReason": "Skipped model year - Audi USA skipped 2021 MY for A3/S3, went to 2022 MY for new gen",
+      "confidence": "high",
+      "sources": ["carscoops.com", "autoblog.com"],
+      "notes": "No 2021 S3 was sold in US - model year was skipped during generational change"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "225/40R18"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com", "kbb.com"],
+      "notes": "8Y generation, 306hp 2.0T, sedan only in US"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "225/40R18"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"],
+      "notes": "8Y generation"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "225/40R18"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"],
+      "notes": "8Y generation"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": false,
+      "invalidReason": "Future model year - not yet confirmed for US market",
+      "confidence": "medium",
+      "sources": ["manufacturer announcements"],
+      "notes": "Flag for review when 2025 MY is confirmed"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "S3",
+      "validForUS": false,
+      "invalidReason": "Future model year - not yet confirmed for US market",
+      "confidence": "medium",
+      "sources": ["manufacturer announcements"],
+      "notes": "Flag for review when 2026 MY is confirmed"
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "S4",
+      "validForUS": false,
+      "invalidReason": "B6 S4 started as 2004 model year in US, not 2003",
+      "confidence": "high",
+      "sources": ["cars.com", "cargurus.com", "wikipedia.org/wiki/Audi_S4"],
+      "notes": "B6 S4 came to US mid-2003 but was sold as 2004 MY"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "S4",
+      "validForUS": false,
+      "invalidReason": "Gap year - B7 S4 ended 2008, B8 S4 started 2010 in US",
+      "confidence": "high",
+      "sources": ["cars.com", "fcpeuro.com", "wikipedia.org/wiki/Audi_S4"],
+      "notes": "No 2009 S4 was sold in US - gap between generations"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "S4",
+      "validForUS": false,
+      "invalidReason": "Gap year - B8.5 S4 ended 2016, B9 S4 started 2018 in US",
+      "confidence": "high",
+      "sources": ["cars.com", "reddit.com/r/Audi", "wikipedia.org/wiki/Audi_A4"],
+      "notes": "No 2017 S4 was sold in US - B9 A4 launched 2017 but S4 not until 2018"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": false,
+      "invalidReason": "S5 launched as 2008 model year in US, not 2007",
+      "confidence": "high",
+      "sources": ["wikipedia.org/wiki/Audi_A5", "carbuzz.com"],
+      "notes": "S5 went on sale late 2007 but as 2008 MY vehicles"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "255/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S5"],
+      "notes": "8T generation, first year S5 in US, 4.2L V8 354hp"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "255/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "8T generation"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "Cabriolet",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "8T generation, Cabriolet added with 3.0T V6 333hp"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "Cabriolet",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "8T generation"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "Cabriolet",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "8T generation, all models now 3.0T V6"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "Cabriolet",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "8T facelift (8.5) generation"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "Cabriolet",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "8T facelift generation"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "Cabriolet",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "8T facelift generation"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "Cabriolet",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "8T facelift generation"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Coupe (optional)",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Both 8T facelift and F5 generation overlapped in 2017"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Sportback",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "F5 generation, Sportback body added, 3.0T V6 354hp"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Sportback",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "F5 generation"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Sportback",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "20-inch Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/30R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "F5 facelift, 349hp"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Sportback",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "19-inch Optional",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "20-inch Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/30R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "F5 facelift"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Sportback",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "19-inch Optional",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "20-inch Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/30R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "F5 facelift"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Sportback",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "19-inch Optional",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "20-inch Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/30R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "F5 facelift"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "Sportback",
+          "oemWheelSize": "18x8.5",
+          "oemTireSize": "245/40R18"
+        },
+        {
+          "name": "19-inch Optional",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/35R19"
+        },
+        {
+          "name": "20-inch Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/30R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "F5 facelift"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": false,
+      "invalidReason": "Future model year - not yet confirmed for US market",
+      "confidence": "medium",
+      "sources": ["manufacturer announcements"],
+      "notes": "Flag for review when 2025 MY is confirmed"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "S5",
+      "validForUS": false,
+      "invalidReason": "Future model year - not yet confirmed for US market",
+      "confidence": "medium",
+      "sources": ["manufacturer announcements"],
+      "notes": "Flag for review when 2026 MY is confirmed"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        },
+        {
+          "name": "Avant",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C5 generation, 4.2L V8 340hp"
+    },
+    {
+      "year": 2001,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        },
+        {
+          "name": "Avant",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C5 generation"
+    },
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        },
+        {
+          "name": "Avant",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C5 generation"
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        },
+        {
+          "name": "Avant",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "225/45R17"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C5 generation, final year"
+    },
+    {
+      "year": 2006,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": false,
+      "invalidReason": "No 2006 model year S6 for North America - gap between C5 and C6 generations",
+      "confidence": "high",
+      "sources": ["cars.com", "wikipedia.org/wiki/Audi_A6"],
+      "notes": "C6 S6 production started June 2006 but first US model was 2007 MY"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "265/35R19"
+        },
+        {
+          "name": "Avant",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "265/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C6 generation, 5.2L V10 435hp"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "265/35R19"
+        },
+        {
+          "name": "Avant",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "265/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C6 generation"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "265/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C6 facelift, Avant discontinued in US"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "265/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C6 facelift"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "265/35R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C6 facelift, final year"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": false,
+      "invalidReason": "Gap year - C6 S6 ended 2011, C7 S6 started 2013 in US",
+      "confidence": "high",
+      "sources": ["cars.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "No 2012 S6 was sold in US"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/40R19"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/35R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C7 generation, 4.0T twin-turbo V8 420hp"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/40R19"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/35R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C7 generation"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/40R19"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/35R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C7 generation"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/40R19"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/35R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C7 facelift, 450hp"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/40R19"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/35R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C7 facelift"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/40R19"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/35R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C7 facelift"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "S6",
+      "validForUS": true,
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "255/40R19"
+        },
+        {
+          "name": "Optional",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "265/35R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org/wiki/Audi_S6"],
+      "notes": "C7 facelift, final year of C7 generation in US"
+    }
+  ]
+}

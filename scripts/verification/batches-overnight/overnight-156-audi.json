@@ -1,0 +1,2253 @@
+[
+  {
+    "id": "8b89ad6d-8944-487c-b4e3-9c7281b7d432",
+    "year": 2023,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "91267184-1a4b-4a65-89b3-3b6c11ec9a59",
+    "year": 2023,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "83b665d2-7514-4e70-97e6-dadc079cdec6",
+    "year": 2023,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5c38746a-b217-4037-adbb-07e9a94a7208",
+    "year": 2024,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b296c35d-2a79-4258-9377-a287a72707f4",
+    "year": 2024,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6c7c45a6-baba-468e-a4df-7e7eae9815de",
+    "year": 2024,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "21fac18d-e064-4ded-ba93-defb0904445c",
+    "year": 2024,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "28b4af3d-d961-44a5-9b9e-039669696aac",
+    "year": 2025,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "132a777b-1ff9-4c62-84dd-b35491ec7079",
+    "year": 2025,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4836cd6c-3b54-46f4-aa0e-8d21ac1751f2",
+    "year": 2025,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0a18056b-6589-444f-9c9f-d6e51196ca73",
+    "year": 2025,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "33d31bc6-6417-4506-9516-a915920dc938",
+    "year": 2026,
+    "make": "audi",
+    "model": "s4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a54fee23-afbc-4320-9bdb-0769adf695bc",
+    "year": 2026,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Premium Plus",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c0d55890-be67-47be-b42a-e79a09012202",
+    "year": 2026,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4 Prestige",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "52ccc76b-c2ab-427e-8aa0-892ace03cbfa",
+    "year": 2026,
+    "make": "audi",
+    "model": "s4",
+    "trim": "S4",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "89dce0a6-263c-4d54-9d51-afd28789e293",
+    "year": 2007,
+    "make": "audi",
+    "model": "s5",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 32,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "1054b3bb-5d8e-4edb-80ca-8c5f417e859d",
+    "year": 2025,
+    "make": "audi",
+    "model": "s5",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 32,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 32,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "e9268c59-1eb7-4711-9aa8-6714a69b8fec",
+    "year": 2026,
+    "make": "audi",
+    "model": "s5",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 32,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 32,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "1ca4cca4-cb59-43a4-a797-8afede35bfd4",
+    "year": 2006,
+    "make": "audi",
+    "model": "s6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f987cffa-0c47-431c-8c9d-64f0abf42bc1",
+    "year": 2012,
+    "make": "audi",
+    "model": "s6",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "275/30R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1eeee1af-d5b8-4de4-af9b-fc267d5d9eb9",
+    "year": 2024,
+    "make": "audi",
+    "model": "s6-e-tron",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 48,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 48,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R19",
+      "265/40R20",
+      "275/35R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "1161538c-4c86-4253-bd40-a0703f06e67b",
+    "year": 2025,
+    "make": "audi",
+    "model": "s6-e-tron",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R19",
+      "265/40R20",
+      "275/35R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1f88ed6c-b241-4786-9a5c-35d5ec28d5b6",
+    "year": 2026,
+    "make": "audi",
+    "model": "s6-e-tron",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R19",
+      "265/40R20",
+      "275/35R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e77603af-f640-434d-b36f-dca6c8473e3a",
+    "year": 2006,
+    "make": "audi",
+    "model": "s8",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/45R19",
+      "275/35R21",
+      "285/30R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e3342b48-e7f1-47b2-b217-b90e23740bf9",
+    "year": 2011,
+    "make": "audi",
+    "model": "s8",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/45R19",
+      "275/35R21",
+      "285/30R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "0794592f-29b5-42f9-be93-988db73c9757",
+    "year": 2012,
+    "make": "audi",
+    "model": "s8",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/45R19",
+      "275/35R21",
+      "285/30R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f3d17b00-5802-4db9-b7a2-f22d6a842efe",
+    "year": 2019,
+    "make": "audi",
+    "model": "s8",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/45R19",
+      "275/35R21",
+      "285/30R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1a54b9ba-6eef-425d-b753-d10331e331b9",
+    "year": 2021,
+    "make": "audi",
+    "model": "s8l",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 25,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 25,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "16d5454d-5d11-48ae-83b2-894e9924b7f4",
+    "year": 2022,
+    "make": "audi",
+    "model": "s8l",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 25,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 25,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "511bc948-9bcf-4eab-a3c1-58721d5b8bfa",
+    "year": 2023,
+    "make": "audi",
+    "model": "s8l",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 25,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 25,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "e3cdbb40-994c-4aa8-ac58-b72516e638a6",
+    "year": 2024,
+    "make": "audi",
+    "model": "s8l",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 25,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 25,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "f843cfe7-8325-4bf0-b3cb-25c44806f778",
+    "year": 2025,
+    "make": "audi",
+    "model": "s8l",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 25,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 25,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "5208add6-924e-41d6-b608-105b169d6f39",
+    "year": 2026,
+    "make": "audi",
+    "model": "s8l",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 25,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 25,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "13669fd9-fede-4f70-826a-2876803fd75c",
+    "year": 2024,
+    "make": "audi",
+    "model": "sq6-e-tron",
+    "trim": "Base",
+    "currentBoltPattern": "5x130",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 33,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 36,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "cab8c59a-7f24-4c68-9f22-2578a6559fe2",
+    "year": 2025,
+    "make": "audi",
+    "model": "sq6-e-tron",
+    "trim": "Base",
+    "currentBoltPattern": "5x130",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 33,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 36,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "cbfc0ff3-af9a-41b4-91f7-38eda2250a60",
+    "year": 2026,
+    "make": "audi",
+    "model": "sq6-e-tron",
+    "trim": "Base",
+    "currentBoltPattern": "5x130",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "offset": 33,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 36,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "788b888f-a0cc-4363-9e8f-b17263800ac8",
+    "year": 2005,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9ae8b1e2-9cb8-40d7-be85-5a1f831d9477",
+    "year": 2006,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "aa8f02ed-ee6d-462d-a5f2-d4d785cad0b2",
+    "year": 2007,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9dc0ecdf-9443-494f-9677-3110ad28657b",
+    "year": 2008,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4bbf5161-7052-46e0-a907-182a78cba068",
+    "year": 2009,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "885b15cb-38eb-4a63-beb4-baa0012f8307",
+    "year": 2010,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9ae2b3d0-226f-46d0-958e-5e1c74eda124",
+    "year": 2011,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9482b047-e3c1-46a4-8dde-913674b04640",
+    "year": 2012,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b73d6bac-bfeb-400d-9bd5-db1049335869",
+    "year": 2013,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "947e3c5a-0166-4987-9c93-823c23a239f4",
+    "year": 2014,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "0e07e959-0c8f-4b7e-9936-b3763c724bf0",
+    "year": 2015,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f0c05b96-45db-4d12-b40a-a22794e38c5c",
+    "year": 2016,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "14ddd736-a912-4a43-9db6-deb38e5c3a59",
+    "year": 2017,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "11410b96-3185-478c-a997-6237c2815a80",
+    "year": 2018,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "3d63d697-b7e9-4655-824a-d28a5487884a",
+    "year": 2019,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9f8b5c5e-aeb5-4832-979c-d2e5dea05297",
+    "year": 2020,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "5a4399ea-35f1-4b2e-ab24-f56e0ec7fe35",
+    "year": 2021,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1eadf07a-28d4-4058-8c11-fa5390c93985",
+    "year": 2022,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9b915224-4aeb-4a69-86e4-3d5099695286",
+    "year": 2023,
+    "make": "audi",
+    "model": "tt",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "245/40R18",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8555ffd1-d6d1-4f37-ba65-332dd19634dc",
+    "year": 2009,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e1abc4ca-15a6-48c1-8615-c6d536e3cd60",
+    "year": 2010,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "53b05b93-d5af-4ce2-afc7-0d4e3f597244",
+    "year": 2011,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "30b02354-b33e-4a99-af25-8aa138f2c2da",
+    "year": 2012,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "74dc47d5-0ec1-409a-983e-7b4d49aaafe4",
+    "year": 2013,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "7f863bd4-0534-4ecf-86fd-db81dd8db551",
+    "year": 2014,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "db83c127-2562-46eb-ac10-b82839c049d3",
+    "year": 2016,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "894162c0-a29b-4929-8017-291ed72f6d06",
+    "year": 2017,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "52d8fea6-ad41-41b3-8542-08eb658fa96d",
+    "year": 2018,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "831a38f5-09c4-4aa7-a45a-ada9f165914d",
+    "year": 2019,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "0b71ea7f-e0b6-40ca-b56f-1c2199fbcd2f",
+    "year": 2020,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "fd784b6c-f69d-4c6b-81fe-59f319f25090",
+    "year": 2021,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c7cb944a-4fc2-40e2-8abf-9393601aa7ff",
+    "year": 2022,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "76d22d90-a13f-4d33-bb90-fef8d3aa6780",
+    "year": 2023,
+    "make": "audi",
+    "model": "tt-rs",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f3298d98-aeec-46a0-8aef-5eb97736e0f9",
+    "year": 2008,
+    "make": "audi",
+    "model": "tt-s",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "856aa745-d9a7-4c19-9881-7ba3abc95ba8",
+    "year": 2009,
+    "make": "audi",
+    "model": "tt-s",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "42f5b62b-f2bc-4d52-9d74-a414487a5030",
+    "year": 2010,
+    "make": "audi",
+    "model": "tt-s",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "218ca166-87a6-4a94-a962-6786a3b9ab85",
+    "year": 2011,
+    "make": "audi",
+    "model": "tt-s",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a8e797ef-f553-4bef-b346-09346c0f6397",
+    "year": 2012,
+    "make": "audi",
+    "model": "tt-s",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d15a256c-aaf8-4405-b864-3172d7769e38",
+    "year": 2013,
+    "make": "audi",
+    "model": "tt-s",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "255/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  }
+]

@@ -1,0 +1,995 @@
+{
+  "batchId": "118",
+  "processedAt": "2026-04-21T22:30:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2006,
+      "make": "mini",
+      "model": "cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Standard": ["175/65R15", "195/55R16", "205/45R17"],
+        "Convertible": ["175/65R15", "195/55R16", "205/45R17"],
+        "S": ["195/55R16", "205/45R17"],
+        "S Convertible": ["195/55R16", "205/45R17"],
+        "John Cooper Works": ["205/45R17"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2005,
+      "make": "mini",
+      "model": "cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Standard": ["175/65R15", "195/55R16", "205/45R17"],
+        "Convertible": ["175/65R15", "195/55R16", "205/45R17"],
+        "S": ["195/55R16", "205/45R17"],
+        "S Convertible": ["195/55R16", "205/45R17"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2004,
+      "make": "mini",
+      "model": "cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Standard": ["175/65R15", "195/55R16", "205/45R17"],
+        "Convertible": ["175/65R15", "195/55R16", "205/45R17"],
+        "S": ["195/55R16", "205/45R17"],
+        "S Convertible": ["195/55R16", "205/45R17"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2003,
+      "make": "mini",
+      "model": "cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Standard": ["175/65R15", "195/55R16", "205/45R17"],
+        "S": ["195/55R16", "205/45R17"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs; no convertible this year"
+    },
+    {
+      "year": 2002,
+      "make": "mini",
+      "model": "cooper",
+      "currentTireSizes": ["175/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Standard": ["175/65R15", "195/55R16"],
+        "S": ["195/55R16", "205/45R17"]
+      },
+      "status": "updated",
+      "notes": "First year of new MINI (R50/R53). 205/45R17 available on S trim only",
+      "recommendedSizes": ["175/65R15", "195/55R16", "205/45R17"]
+    },
+    {
+      "year": 2001,
+      "make": "mini",
+      "model": "cooper",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Modern MINI not sold in US until 2002. This year references classic Mini which used different sizing"
+    },
+    {
+      "year": 2000,
+      "make": "mini",
+      "model": "cooper",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Modern MINI not sold in US until 2002. This year references classic Mini which used different sizing"
+    },
+    {
+      "year": 2026,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["225/55R17", "225/50R18", "225/45R19"],
+      "validatedTireSizes": {
+        "S ALL4": ["225/55R18", "245/45R19", "245/40R20"],
+        "SE ALL4": ["225/55R18", "245/45R19"],
+        "John Cooper Works ALL4": ["245/45R19", "245/40R20"]
+      },
+      "status": "updated",
+      "notes": "2024+ Countryman redesign (U25 generation) uses larger sizes",
+      "recommendedSizes": ["225/55R18", "245/45R19", "245/40R20"]
+    },
+    {
+      "year": 2025,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["225/55R17", "225/50R18", "225/45R19"],
+      "validatedTireSizes": {
+        "S ALL4": ["225/55R18", "245/45R19", "245/40R20"],
+        "SE ALL4": ["225/55R18", "245/45R19"],
+        "John Cooper Works ALL4": ["245/45R19", "245/40R20"]
+      },
+      "status": "updated",
+      "notes": "2024+ Countryman redesign (U25 generation) uses larger sizes",
+      "recommendedSizes": ["225/55R18", "245/45R19", "245/40R20"]
+    },
+    {
+      "year": 2024,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["225/55R17", "225/50R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Cooper": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper ALL4": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S": ["225/50R18", "225/45R19"],
+        "Cooper S ALL4": ["225/50R18", "225/45R19"],
+        "Cooper SE ALL4": ["225/50R18"],
+        "John Cooper Works ALL4": ["225/50R18"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs for F60 generation"
+    },
+    {
+      "year": 2023,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["215/70R16", "225/55R18", "215/65R17", "235/50R19"],
+      "validatedTireSizes": {
+        "Cooper": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper ALL4": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S": ["225/50R18", "225/45R19"],
+        "Cooper S ALL4": ["225/50R18", "225/45R19"],
+        "Cooper SE ALL4": ["225/50R18"],
+        "John Cooper Works ALL4": ["225/50R18"]
+      },
+      "status": "updated",
+      "notes": "Current DB has incorrect sizes. Should be standard Countryman F60 sizes",
+      "recommendedSizes": ["225/55R17", "225/50R18", "225/45R19"]
+    },
+    {
+      "year": 2022,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["225/55R17", "225/50R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Cooper": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper ALL4": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S": ["225/50R18", "225/45R19"],
+        "Cooper S ALL4": ["225/50R18", "225/45R19"],
+        "Cooper SE ALL4": ["225/50R18"],
+        "John Cooper Works ALL4": ["225/50R18", "225/45R19"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2021,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["225/55R17", "225/50R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Cooper": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper ALL4": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S": ["225/50R18", "225/45R19"],
+        "Cooper S ALL4": ["225/50R18", "225/45R19"],
+        "Cooper SE ALL4": ["225/50R18"],
+        "John Cooper Works ALL4": ["225/50R18", "225/45R19"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2020,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["225/55R17", "225/50R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Cooper": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper ALL4": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S": ["225/50R18", "225/45R19"],
+        "Cooper S ALL4": ["225/50R18", "225/45R19"],
+        "Cooper SE ALL4": ["225/50R18"],
+        "John Cooper Works ALL4": ["225/50R18", "225/45R19"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2019,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["225/55R17", "225/50R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Cooper": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper ALL4": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S": ["225/50R18", "225/45R19"],
+        "Cooper S ALL4": ["225/50R18", "225/45R19"],
+        "Cooper S E ALL4": ["225/50R18"],
+        "John Cooper Works ALL4": ["225/50R18", "225/45R19"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2018,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["225/55R17", "225/50R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Cooper": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper ALL4": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S ALL4": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S E ALL4": ["225/50R18"],
+        "John Cooper Works ALL4": ["225/50R18", "225/45R19"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2017,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["225/55R17", "225/50R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Cooper": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper ALL4": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S": ["225/55R17", "225/50R18", "225/45R19"],
+        "Cooper S ALL4": ["225/55R17", "225/50R18", "225/45R19"],
+        "John Cooper Works ALL4": ["225/50R18", "225/45R19"]
+      },
+      "status": "verified",
+      "notes": "Current sizes match OEM specs - F60 generation begins"
+    },
+    {
+      "year": 2016,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["205/60R16", "225/55R17", "225/45R18", "225/40R19", "195/60R16", "205/55R17", "225/50R17"],
+      "validatedTireSizes": {
+        "Cooper": ["205/55R17", "225/45R18"],
+        "Cooper S": ["205/55R17", "225/45R18"],
+        "Cooper S ALL4": ["205/55R17", "225/45R18"],
+        "John Cooper Works": ["225/45R18", "225/40R19"]
+      },
+      "status": "updated",
+      "notes": "R60 generation. Some sizes in DB appear incorrect. OEM sizes are 17-19 inch",
+      "recommendedSizes": ["205/55R17", "225/45R18", "225/40R19"]
+    },
+    {
+      "year": 2015,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["205/60R16", "225/55R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": {
+        "Cooper": ["205/55R17", "225/45R18"],
+        "Cooper S": ["205/55R17", "225/45R18"],
+        "Cooper S ALL4": ["205/55R17", "225/45R18"],
+        "John Cooper Works": ["225/45R18", "225/40R19"]
+      },
+      "status": "updated",
+      "notes": "R60 generation. 205/60R16 not OEM - should be 205/55R17",
+      "recommendedSizes": ["205/55R17", "225/45R18", "225/40R19"]
+    },
+    {
+      "year": 2014,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["205/60R16", "225/55R17", "225/45R18", "225/40R19", "195/60R16", "205/55R17", "225/50R17"],
+      "validatedTireSizes": {
+        "Cooper": ["205/55R17", "225/45R18"],
+        "Cooper S": ["205/55R17", "225/45R18"],
+        "Cooper S ALL4": ["205/55R17", "225/45R18"],
+        "John Cooper Works": ["225/45R18", "225/40R19"]
+      },
+      "status": "updated",
+      "notes": "R60 generation. OEM sizes are 17-19 inch",
+      "recommendedSizes": ["205/55R17", "225/45R18", "225/40R19"]
+    },
+    {
+      "year": 2013,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["205/60R16", "225/55R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": {
+        "Cooper": ["205/55R17", "225/45R18"],
+        "Cooper S": ["205/55R17", "225/45R18"],
+        "Cooper S ALL4": ["205/55R17", "225/45R18"],
+        "John Cooper Works": ["225/45R18", "225/40R19"]
+      },
+      "status": "updated",
+      "notes": "R60 generation. 205/60R16 not OEM - should be 205/55R17",
+      "recommendedSizes": ["205/55R17", "225/45R18", "225/40R19"]
+    },
+    {
+      "year": 2012,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["205/60R16", "225/55R17", "225/45R18", "225/40R19", "195/60R16", "205/55R17", "225/50R17"],
+      "validatedTireSizes": {
+        "Cooper": ["205/55R17", "225/45R18"],
+        "Cooper S": ["205/55R17", "225/45R18"],
+        "Cooper S ALL4": ["205/55R17", "225/45R18"]
+      },
+      "status": "updated",
+      "notes": "R60 generation. OEM sizes are 17-18 inch only",
+      "recommendedSizes": ["205/55R17", "225/45R18"]
+    },
+    {
+      "year": 2011,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": ["205/60R16", "225/55R17", "225/45R18", "225/40R19"],
+      "validatedTireSizes": {
+        "Cooper": ["205/55R17", "225/45R18"],
+        "Cooper S": ["205/55R17", "225/45R18"],
+        "Cooper S ALL4": ["205/55R17", "225/45R18"]
+      },
+      "status": "updated",
+      "notes": "First year R60 Countryman. OEM sizes are 17-18 inch only",
+      "recommendedSizes": ["205/55R17", "225/45R18"]
+    },
+    {
+      "year": 2010,
+      "make": "mini",
+      "model": "countryman",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "MINI Countryman was not produced until 2011"
+    },
+    {
+      "year": 2015,
+      "make": "mini",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Roadster": ["175/65R15", "195/55R16", "205/45R17"],
+        "S Roadster": ["195/55R16", "205/45R17", "205/40R18"]
+      },
+      "status": "updated",
+      "notes": "Final year of R59 Roadster",
+      "recommendedSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"]
+    },
+    {
+      "year": 2014,
+      "make": "mini",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Roadster": ["175/65R15", "195/55R16", "205/45R17"],
+        "S Roadster": ["195/55R16", "205/45R17", "205/40R18"]
+      },
+      "status": "updated",
+      "notes": "R59 Roadster",
+      "recommendedSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"]
+    },
+    {
+      "year": 2013,
+      "make": "mini",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Roadster": ["175/65R15", "195/55R16", "205/45R17"],
+        "S Roadster": ["195/55R16", "205/45R17", "205/40R18"]
+      },
+      "status": "updated",
+      "notes": "R59 Roadster",
+      "recommendedSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"]
+    },
+    {
+      "year": 2012,
+      "make": "mini",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Roadster": ["175/65R15", "195/55R16", "205/45R17"],
+        "S Roadster": ["195/55R16", "205/45R17", "205/40R18"]
+      },
+      "status": "updated",
+      "notes": "First year R59 Roadster",
+      "recommendedSizes": ["175/65R15", "195/55R16", "205/45R17", "205/40R18"]
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "3000-gt",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "3000GT was discontinued after 1999 model year in US market"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "3000-gt",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "3000GT was discontinued after 1999 model year in US market"
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "aspire",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Mitsubishi Aspire was JDM-only (Japanese Domestic Market). Not sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "aspire",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Mitsubishi Aspire was JDM-only (Japanese Domestic Market). Not sold in US"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "aspire",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Mitsubishi Aspire was JDM-only (Japanese Domestic Market). Not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "aspire",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Mitsubishi Aspire was JDM-only (Japanese Domestic Market). Not sold in US"
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "chariot-grandis",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Chariot Grandis was JDM-only (Japanese Domestic Market). Not sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "chariot-grandis",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Chariot Grandis was JDM-only (Japanese Domestic Market). Not sold in US"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "chariot-grandis",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Chariot Grandis was JDM-only (Japanese Domestic Market). Not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "chariot-grandis",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Chariot Grandis was JDM-only (Japanese Domestic Market). Not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "debonair",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Mitsubishi Debonair was JDM-only (Japanese Domestic Market). Not sold in US"
+    },
+    {
+      "year": 2026,
+      "make": "mitsubishi",
+      "model": "destinator",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["225/55R18"]
+      },
+      "status": "updated",
+      "notes": "New emerging markets compact SUV. Not sold in US market (Africa, Latin America, Middle East, SE Asia)",
+      "recommendedSizes": ["225/55R18"]
+    },
+    {
+      "year": 2025,
+      "make": "mitsubishi",
+      "model": "destinator",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["225/55R18"]
+      },
+      "status": "updated",
+      "notes": "New emerging markets compact SUV. Not sold in US market (Africa, Latin America, Middle East, SE Asia)",
+      "recommendedSizes": ["225/55R18"]
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Diamante was discontinued after 2004 model year in US"
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "ES": ["215/60R16"],
+        "LS": ["215/60R16"],
+        "VR-X": ["215/60R16"]
+      },
+      "status": "updated",
+      "notes": "Final year of Diamante in US",
+      "recommendedSizes": ["215/60R16"]
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "ES": ["215/60R16"],
+        "LS": ["215/60R16"],
+        "VR-X": ["215/60R16"]
+      },
+      "status": "updated",
+      "recommendedSizes": ["215/60R16"]
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "ES": ["215/60R16"],
+        "LS": ["215/60R16"],
+        "VR-X": ["215/60R16"]
+      },
+      "status": "updated",
+      "recommendedSizes": ["215/60R16"]
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "ES": ["205/65R15"],
+        "LS": ["215/60R16"]
+      },
+      "status": "updated",
+      "recommendedSizes": ["205/65R15", "215/60R16"]
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "diamante",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "ES": ["205/65R15"],
+        "LS": ["215/60R16"]
+      },
+      "status": "updated",
+      "recommendedSizes": ["205/65R15", "215/60R16"]
+    },
+    {
+      "year": 2012,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "validatedTireSizes": {
+        "GS Coupe": ["235/45R18"],
+        "GS Sport Coupe": ["235/45R18"],
+        "GS Sport Spyder": ["235/45R18"],
+        "GT Coupe": ["235/45R18"],
+        "GT Spyder": ["235/45R18"]
+      },
+      "status": "updated",
+      "notes": "Final year Eclipse. 2011-2012 all trims standardized to 235/45R18",
+      "recommendedSizes": ["235/45R18"]
+    },
+    {
+      "year": 2011,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "validatedTireSizes": {
+        "GS Coupe": ["235/45R18"],
+        "GS Sport": ["235/45R18"],
+        "GS Spyder": ["235/45R18"],
+        "GT Coupe": ["235/45R18"],
+        "GT Spyder": ["235/45R18"]
+      },
+      "status": "updated",
+      "notes": "2011 model standardized to 235/45R18 across all trims",
+      "recommendedSizes": ["235/45R18"]
+    },
+    {
+      "year": 2010,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "validatedTireSizes": {
+        "GS Coupe": ["225/50R17"],
+        "GS Sport": ["235/45R18"],
+        "GS Spyder": ["225/50R17"],
+        "GT Coupe": ["235/45R18"],
+        "GT Spyder": ["235/45R18"]
+      },
+      "status": "updated",
+      "notes": "Mixed 17/18 inch depending on trim",
+      "recommendedSizes": ["225/50R17", "235/45R18"]
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "validatedTireSizes": {
+        "GS Coupe": ["225/50R17"],
+        "GS Spyder": ["225/50R17"],
+        "GT Coupe": ["235/45R18"],
+        "GT Spyder": ["235/45R18"]
+      },
+      "status": "updated",
+      "notes": "GS uses 17 inch, GT uses 18 inch",
+      "recommendedSizes": ["225/50R17", "235/45R18"]
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "validatedTireSizes": {
+        "GS Coupe": ["225/50R17", "235/45R18"],
+        "GS Spyder": ["225/50R17", "235/45R18"],
+        "GT Coupe": ["225/50R17", "235/45R18"],
+        "GT Spyder": ["225/50R17", "235/45R18"]
+      },
+      "status": "updated",
+      "notes": "Current sizes incorrect - should be 225/50R17 or 235/45R18",
+      "recommendedSizes": ["225/50R17", "235/45R18"]
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "validatedTireSizes": {
+        "GS": ["225/50R17", "235/45R18"],
+        "GS Spyder": ["225/50R17", "235/45R18"],
+        "GT": ["225/50R17", "235/45R18"],
+        "GT Spyder": ["225/50R17", "235/45R18"],
+        "SE": ["235/45R18"]
+      },
+      "status": "updated",
+      "notes": "Current sizes incorrect - should be 225/50R17 or 235/45R18",
+      "recommendedSizes": ["225/50R17", "235/45R18"]
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "validatedTireSizes": {
+        "GS": ["225/50R17", "235/45R18"],
+        "GT": ["225/50R17", "235/45R18"]
+      },
+      "status": "updated",
+      "notes": "4G Eclipse begins. Current sizes incorrect - should be 225/50R17 or 235/45R18",
+      "recommendedSizes": ["225/50R17", "235/45R18"]
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/60R16", "215/50R17", "225/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "GS": ["205/55R16"],
+        "GS Spyder": ["205/55R16"],
+        "GT": ["215/50R17"],
+        "GT Spyder": ["215/50R17"],
+        "GTS": ["215/50R17"],
+        "GTS Spyder": ["215/50R17"]
+      },
+      "status": "updated",
+      "notes": "3G Eclipse final year. DB has some non-OEM sizes",
+      "recommendedSizes": ["205/55R16", "215/50R17"]
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/60R16", "215/50R17", "225/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "GS": ["205/55R16"],
+        "GS Spyder": ["205/55R16"],
+        "GT": ["215/50R17"],
+        "GT Spyder": ["215/50R17"],
+        "GTS": ["215/50R17"],
+        "GTS Spyder": ["215/50R17"],
+        "RS": ["195/65R15"]
+      },
+      "status": "updated",
+      "notes": "3G Eclipse. DB has some non-OEM sizes",
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/50R17"]
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/60R16", "215/50R17", "225/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "GS": ["205/55R16"],
+        "GS Spyder": ["205/55R16"],
+        "GT": ["215/50R17"],
+        "GT Spyder": ["215/50R17"],
+        "GTS": ["215/50R17"],
+        "GTS Spyder": ["215/50R17"],
+        "RS": ["195/65R15"]
+      },
+      "status": "updated",
+      "notes": "3G Eclipse. DB has some non-OEM sizes",
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/50R17"]
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/60R16", "215/50R17", "225/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "GS": ["205/55R16"],
+        "GS Spyder": ["205/55R16"],
+        "GT": ["215/50R17"],
+        "GT Spyder": ["215/50R17"],
+        "RS": ["195/65R15"]
+      },
+      "status": "updated",
+      "notes": "3G Eclipse. DB has some non-OEM sizes",
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/50R17"]
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/60R16", "215/50R17", "225/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "GS": ["205/55R16"],
+        "GS Spyder": ["205/55R16"],
+        "GT": ["215/50R17"],
+        "GT Spyder": ["215/50R17"],
+        "RS": ["195/65R15"]
+      },
+      "status": "updated",
+      "notes": "3G Eclipse. DB has some non-OEM sizes",
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/50R17"]
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "currentTireSizes": ["215/60R16", "215/50R17", "225/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "GS": ["205/55R16"],
+        "GT": ["215/50R17"],
+        "RS": ["195/65R15"]
+      },
+      "status": "updated",
+      "notes": "3G Eclipse first year. DB has some non-OEM sizes",
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/50R17"]
+    },
+    {
+      "year": 2026,
+      "make": "mitsubishi",
+      "model": "eclipse-cross",
+      "currentTireSizes": ["225/55R18", "235/45R20"],
+      "validatedTireSizes": {
+        "ES": ["215/70R16"],
+        "SE": ["225/55R18"],
+        "LE": ["225/55R18"],
+        "SEL": ["225/55R18"],
+        "SEL Touring": ["225/55R18"],
+        "Black Edition": ["225/55R18"],
+        "Ralliart": ["225/55R18"]
+      },
+      "status": "updated",
+      "notes": "235/45R20 not OEM - should add 215/70R16 for ES trim",
+      "recommendedSizes": ["215/70R16", "225/55R18"]
+    },
+    {
+      "year": 2025,
+      "make": "mitsubishi",
+      "model": "eclipse-cross",
+      "currentTireSizes": ["225/55R18", "235/45R20"],
+      "validatedTireSizes": {
+        "ES": ["215/70R16"],
+        "SE": ["225/55R18"],
+        "LE": ["225/55R18"],
+        "SEL": ["225/55R18"],
+        "SEL Touring": ["225/55R18"]
+      },
+      "status": "updated",
+      "notes": "235/45R20 not OEM - should add 215/70R16 for ES trim",
+      "recommendedSizes": ["215/70R16", "225/55R18"]
+    },
+    {
+      "year": 2024,
+      "make": "mitsubishi",
+      "model": "eclipse-cross",
+      "currentTireSizes": ["225/55R18", "235/45R20"],
+      "validatedTireSizes": {
+        "ES": ["215/70R16"],
+        "SE": ["225/55R18"],
+        "LE": ["225/55R18"],
+        "SEL": ["225/55R18"],
+        "Black Edition": ["225/55R18"],
+        "Ralliart": ["225/55R18"]
+      },
+      "status": "updated",
+      "notes": "235/45R20 not OEM - should add 215/70R16 for ES trim",
+      "recommendedSizes": ["215/70R16", "225/55R18"]
+    },
+    {
+      "year": 2023,
+      "make": "mitsubishi",
+      "model": "eclipse-cross",
+      "currentTireSizes": ["215/70R16", "225/55R18", "215/65R17", "235/50R19"],
+      "validatedTireSizes": {
+        "ES": ["215/70R16"],
+        "SE": ["225/55R18"],
+        "LE": ["225/55R18"],
+        "SEL": ["225/55R18"]
+      },
+      "status": "updated",
+      "notes": "215/65R17 and 235/50R19 not OEM sizes",
+      "recommendedSizes": ["215/70R16", "225/55R18"]
+    },
+    {
+      "year": 2022,
+      "make": "mitsubishi",
+      "model": "eclipse-cross",
+      "currentTireSizes": ["225/55R18", "235/45R20"],
+      "validatedTireSizes": {
+        "ES": ["215/70R16"],
+        "SE": ["225/55R18"],
+        "LE": ["225/55R18"],
+        "SEL": ["225/55R18"]
+      },
+      "status": "updated",
+      "notes": "235/45R20 not OEM - should add 215/70R16 for ES trim",
+      "recommendedSizes": ["215/70R16", "225/55R18"]
+    },
+    {
+      "year": 2021,
+      "make": "mitsubishi",
+      "model": "eclipse-cross",
+      "currentTireSizes": ["225/55R18", "235/45R20"],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Eclipse Cross was not produced for 2021 model year (gap year between refresh)"
+    },
+    {
+      "year": 2020,
+      "make": "mitsubishi",
+      "model": "eclipse-cross",
+      "currentTireSizes": ["225/55R18", "235/45R20"],
+      "validatedTireSizes": {
+        "ES": ["215/70R16"],
+        "SE": ["225/55R18"],
+        "LE": ["225/55R18"],
+        "SEL": ["225/55R18"]
+      },
+      "status": "updated",
+      "notes": "235/45R20 not OEM - should add 215/70R16 for ES trim",
+      "recommendedSizes": ["215/70R16", "225/55R18"]
+    },
+    {
+      "year": 2019,
+      "make": "mitsubishi",
+      "model": "eclipse-cross",
+      "currentTireSizes": ["225/55R18", "235/45R20"],
+      "validatedTireSizes": {
+        "ES": ["215/70R16"],
+        "SE": ["225/55R18"],
+        "LE": ["225/55R18"],
+        "SEL": ["225/55R18"]
+      },
+      "status": "updated",
+      "notes": "235/45R20 not OEM - should add 215/70R16 for ES trim",
+      "recommendedSizes": ["215/70R16", "225/55R18"]
+    },
+    {
+      "year": 2018,
+      "make": "mitsubishi",
+      "model": "eclipse-cross",
+      "currentTireSizes": ["225/55R18", "235/45R20"],
+      "validatedTireSizes": {
+        "ES": ["215/70R16"],
+        "SE": ["225/55R18"],
+        "LE": ["225/55R18"],
+        "SEL": ["225/55R18"]
+      },
+      "status": "updated",
+      "notes": "First year Eclipse Cross. 235/45R20 not OEM - should add 215/70R16 for ES trim",
+      "recommendedSizes": ["215/70R16", "225/55R18"]
+    },
+    {
+      "year": 2017,
+      "make": "mitsubishi",
+      "model": "eclipse-cross",
+      "currentTireSizes": ["225/55R18", "235/45R20"],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Eclipse Cross was not sold in US until 2018 model year"
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "eclipse-spider",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Eclipse Spyder trims are included under main Eclipse model. Use eclipse model instead"
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "eclipse-spider",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Eclipse Spyder trims are included under main Eclipse model. Use eclipse model instead"
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "eclipse-spider",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Eclipse Spyder trims are included under main Eclipse model. Use eclipse model instead"
+    },
+    {
+      "year": 2022,
+      "make": "mitsubishi",
+      "model": "express",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Mitsubishi Express is Australian market only (rebadged Renault Trafic). Not sold in US"
+    },
+    {
+      "year": 2021,
+      "make": "mitsubishi",
+      "model": "express",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "status": "unsupported",
+      "notes": "Mitsubishi Express is Australian market only (rebadged Renault Trafic). Not sold in US"
+    }
+  ],
+  "summary": {
+    "verified": 14,
+    "updated": 38,
+    "unsupported": 23,
+    "total": 75
+  }
+}

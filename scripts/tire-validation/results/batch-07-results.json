@@ -1,0 +1,1246 @@
+{
+  "batchId": "07",
+  "processedAt": "2026-04-21T21:38:00.000Z",
+  "results": [
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "Q5",
+      "trims": [
+        {"trim": "2.0T Hybrid Premium", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "2.0T Hybrid Premium", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "Q5",
+      "trims": [
+        {"trim": "2.0T Hybrid", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "Q5",
+      "trims": [
+        {"trim": "2.0T Hybrid", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "Q5",
+      "trims": [
+        {"trim": "2.0T Hybrid", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "2.0T Hybrid", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "Q5",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.2 Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "3.2 Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.2 Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.2 Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.2 S-Line", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "Q5",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.2 Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "3.2 Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.2 Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.2 Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.2 Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.2 S-Line", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "Q5",
+      "trims": [
+        {"trim": "3.2 Quattro Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "3.2 Quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "3.2 Quattro Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.2 Quattro Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.2 Quattro Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.2 Quattro Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.2 Quattro S-Line", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "Q5",
+      "trims": [
+        {"trim": "3.2 Quattro Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "3.2 Quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "3.2 Quattro Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.2 Quattro Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.2 Quattro Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "3.2 Quattro Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"},
+        {"trim": "3.2 Quattro S-Line", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "Q5",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 8}, "tireSize": "235/65R17"},
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "Base", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q5-e-tron",
+      "trims": [
+        {"trim": "40 e-tron", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "40 e-tron", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/45R20"},
+        {"trim": "50 e-tron quattro", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "50 e-tron quattro", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "Q5-e-tron",
+      "trims": [
+        {"trim": "40 e-tron", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "40 e-tron", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/45R20"},
+        {"trim": "50 e-tron quattro", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "50 e-tron quattro", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "Q5-e-tron",
+      "trims": [
+        {"trim": "40 e-tron", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "40 e-tron", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/45R20"},
+        {"trim": "50 e-tron quattro", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "50 e-tron quattro", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "Q6",
+      "trims": [],
+      "isStaggered": false,
+      "source": "none",
+      "confidence": "none",
+      "notes": "Model may not exist for US market as standard Q6 - see Q6 e-tron instead"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q6",
+      "trims": [],
+      "isStaggered": false,
+      "source": "none",
+      "confidence": "none",
+      "notes": "Model may not exist for US market as standard Q6 - see Q6 e-tron instead"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "Q6",
+      "trims": [],
+      "isStaggered": false,
+      "source": "none",
+      "confidence": "none",
+      "notes": "Model may not exist for US market as standard Q6 - see Q6 e-tron instead"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "Q6",
+      "trims": [],
+      "isStaggered": false,
+      "source": "none",
+      "confidence": "none",
+      "notes": "Model may not exist for US market as standard Q6 - see Q6 e-tron instead"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "Q6-e-tron",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 9}, "tireSize": "255/50R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "255/45R20"},
+        {"trim": "S line", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "Q6-e-tron",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 9}, "tireSize": "255/50R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "255/45R20"},
+        {"trim": "S line", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q6-e-tron",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/55R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "Q6l-sportback-e-tron",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "255/50R19"},
+        {"trim": "S line", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "low",
+      "notes": "China-market sportback variant"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "Prestige Sport Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "Prestige Sport Plus", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/35R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "Premium Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "Premium Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "Premium Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/35R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "Premium Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "Premium Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "Premium Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/35R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/35R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/35R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/35R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/60R18"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/35R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/60R18"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/35R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/60R18"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/60R18"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/60R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/60R18"},
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "3.0 TDI Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "3.0 TDI Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "3.0 TDI Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0T S-Line Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0T S-Line Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "3.0 TDI Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.0 TDI S-Line", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI S-Line", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0T S-Line Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0T S-Line Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "3.0 TDI Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.0 TDI S-Line", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI S-Line", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0T S-Line Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0T S-Line Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "3.0 TDI Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.6 Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.6 Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.6 Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.6 Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.6 Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.6 Premium Plus", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.6 Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.6 Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "4.2 Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "4.2 Prestige", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "3.0 TDI Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI S-Line", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.0 TDI S-Line", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "3.6 Base Model", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.6 Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.6 Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.6 Premium Plus", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.6 Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.6 Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.6 S-Line", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.6 S-Line", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "4.2 Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "4.2 Prestige", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "4.2 S-Line", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "4.2 S-Line", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "3.6", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.6 Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "3.6 Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.6 Premium", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "4.2", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "4.2", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "4.2", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "4.2", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "4.2 Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "4.2 Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "4.2 Premium", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "3.6", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "3.6 Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/60R18"},
+        {"trim": "3.6 Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "3.6 Premium", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "4.2", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "255/55R18"},
+        {"trim": "4.2", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "4.2", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "4.2", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"},
+        {"trim": "4.2 Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/50R19"},
+        {"trim": "4.2 Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/45R20"},
+        {"trim": "4.2 Premium", "wheelSize": {"diameter": 21, "width": 10}, "tireSize": "295/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/65R18"},
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "Base", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2005,
+      "make": "Audi",
+      "model": "Q7",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/65R18"},
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/55R19"},
+        {"trim": "Base", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "285/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium",
+      "notes": "Q7 first released in late 2005/2006 in Europe, limited early data"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "Q8",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 23, "width": 10.5}, "tireSize": "285/35R23"},
+        {"trim": "Sport Plus Package", "wheelSize": {"diameter": 23, "width": 10.5}, "tireSize": "285/35R23"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "Q8",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q8",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "Q8",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "Q8",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "Q8",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/50R20"},
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "Q8",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/50R20"},
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "Q8",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/50R20"},
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "Q8",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "265/55R19"},
+        {"trim": "Base", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/50R20"},
+        {"trim": "Base", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "285/45R21"},
+        {"trim": "Base", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "285/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "Q8-e-tron",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "255/55R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "265/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "265/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q8-e-tron",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "255/55R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "265/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "265/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "Q8-e-tron",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "255/55R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "265/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "265/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "Q8-sportback-e-tron",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "255/55R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "265/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "265/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q8-sportback-e-tron",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "255/55R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "265/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "265/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "Q8-sportback-e-tron",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "255/55R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "265/45R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 22, "width": 10}, "tireSize": "265/40R22"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Performance Coupe", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}},
+        {"trim": "V10 Performance Spyder", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Performance Coupe", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}},
+        {"trim": "V10 Performance Spyder", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Performance Coupe", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}},
+        {"trim": "V10 Performance Spyder", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Performance Coupe", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}},
+        {"trim": "V10 Performance Spyder", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Performance Coupe", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}},
+        {"trim": "V10 Performance Spyder", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Plus Coupe", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}},
+        {"trim": "V10 Plus Spyder", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Plus Coupe", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}},
+        {"trim": "V10 Plus Spyder", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "V10 Plus Coupe", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "4.2 V8 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "4.2 V8 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Plus Coupe", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}},
+        {"trim": "5.2 V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "4.2 V8 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "4.2 V8 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Plus Coupe", "wheelSize": {"frontDiameter": 20, "frontWidth": 9, "rearDiameter": 20, "rearWidth": 11}, "tireSize": {"front": "295/30R20", "rear": "305/30R20"}},
+        {"trim": "5.2 V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "4.2 V8 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "4.2 V8 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "4.2 V8 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "4.2 V8 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "4.2 V8 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "4.2 V8 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "4.2 V8 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "4.2 V8 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}},
+        {"trim": "5.2 V10 Spyder", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "4.2 V8 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "4.2 V8 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "R8",
+      "trims": [
+        {"trim": "4.2 V8 Coupe", "wheelSize": {"frontDiameter": 19, "frontWidth": 8.5, "rearDiameter": 19, "rearWidth": 11}, "tireSize": {"front": "245/35R19", "rear": "295/35R19"}}
+      ],
+      "isStaggered": true,
+      "source": "web_search",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "RS-models",
+      "trims": [
+        {"trim": "RS3", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "RS3", "wheelSize": {"diameter": 20, "width": 9}, "tireSize": "275/30R20"},
+        {"trim": "RS6", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "255/30R21"},
+        {"trim": "RS6", "wheelSize": {"diameter": 21, "width": 10.5}, "tireSize": "285/30R21"},
+        {"trim": "RS7", "wheelSize": {"diameter": 21, "width": 9.5}, "tireSize": "255/30R21"},
+        {"trim": "RS7", "wheelSize": {"diameter": 21, "width": 10.5}, "tireSize": "285/30R21"}
+      ],
+      "isStaggered": false,
+      "source": "web_search",
+      "confidence": "medium",
+      "notes": "RS-models is a category, individual RS models may have specific fitments - RS6/RS7 can be staggered"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 75,
+    "highConfidence": 57,
+    "mediumConfidence": 14,
+    "lowConfidence": 1,
+    "noData": 3,
+    "staggeredSetups": 17,
+    "primarySource": "tiresize.com"
+  }
+}

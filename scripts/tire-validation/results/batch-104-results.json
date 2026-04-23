@@ -1,0 +1,833 @@
+{
+  "batchId": "104",
+  "validatedAt": "2026-04-21T22:23:00.000Z",
+  "source": "tirewheelguide.com, tiresize.com, cartiresize.net, caranddriver.com, goodyear.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19", "265/30R19", "285/30R19"],
+      "trims": {
+        "CLK 63 AMG (475hp)": { "front": "225/40R18", "rear": "255/35R18", "wheelSize": "18", "staggered": true },
+        "CLK 63 AMG (500hp Black Series)": { "front": "265/30R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLK63 AMG available in standard and Black Series. Staggered setups standard."
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19", "265/30R19", "285/30R19"],
+      "trims": {
+        "CLK 63 AMG (475hp)": { "front": "225/40R18", "rear": "255/35R18", "wheelSize": "18", "staggered": true },
+        "CLK 63 AMG (500hp Black Series)": { "front": "265/30R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLK63 AMG available with 17/18/19 inch wheel options."
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19", "255/35R19", "265/30R19"],
+      "trims": {
+        "CLK 55 AMG": { "front": "225/40R18", "rear": "255/35R18", "wheelSize": "18", "staggered": true },
+        "CLK 63 AMG": { "front": "225/40R18", "rear": "255/35R18", "wheelSize": "18", "staggered": true },
+        "CLK DTM AMG": { "front": "255/35R19", "rear": "255/35R19", "wheelSize": "20", "staggered": false }
+      },
+      "isStaggered": true,
+      "notes": "Transition year: CLK55 AMG and new CLK63 AMG both available. DTM special edition."
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19", "255/35R19", "265/30R19", "285/30R20"],
+      "trims": {
+        "CLK 55 AMG": { "front": "225/40R18", "rear": "255/35R18", "wheelSize": "18", "staggered": true },
+        "CLK DTM AMG": { "front": "255/35R19", "rear": "285/30R20", "wheelSize": "19/20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLK55 AMG 362hp. DTM special edition with extreme staggered setup 19F/20R."
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19", "255/35R19", "265/30R19", "285/30R20"],
+      "trims": {
+        "CLK 55 AMG": { "front": "225/40R18", "rear": "255/35R18", "wheelSize": "18", "staggered": true },
+        "CLK DTM AMG": { "front": "255/35R19", "rear": "285/30R20", "wheelSize": "19/20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLK55 AMG 362hp. DTM special edition available."
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19", "265/30R19"],
+      "trims": {
+        "CLK 55 AMG": { "front": "225/45R17", "rear": "245/40R17", "wheelSize": "17", "staggered": true },
+        "CLK 55 AMG (18\" option)": { "front": "225/40R18", "rear": "255/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLK55 AMG 362hp. New W209 generation."
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19", "265/30R19"],
+      "trims": {
+        "CLK 55 AMG": { "front": "225/45R17", "rear": "245/40R17", "wheelSize": "17", "staggered": true },
+        "CLK 55 AMG (18\" option)": { "front": "225/40R18", "rear": "255/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLK55 AMG 342hp. W208 generation."
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19", "265/30R19"],
+      "trims": {
+        "CLK 55 AMG": { "front": "225/45R17", "rear": "245/40R17", "wheelSize": "17", "staggered": true },
+        "CLK 55 AMG (18\" option)": { "front": "225/40R18", "rear": "255/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLK55 AMG 342hp. W208 generation."
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19", "265/30R19"],
+      "trims": {
+        "CLK 55 AMG": { "front": "225/45R17", "rear": "245/40R17", "wheelSize": "17", "staggered": true },
+        "CLK 55 AMG (18\" option)": { "front": "225/40R18", "rear": "255/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLK55 AMG 342hp. W208 generation."
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "CLS 450 4MATIC": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true },
+        "CLS 450 4MATIC (20\" option)": { "front": "245/35R20", "rear": "275/30R20", "wheelSize": "20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS 450 with 3.0L I6 Turbo. Staggered setup standard. Database has incorrect 18\" size - CLS450 starts at 19\"."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "CLS 450 4MATIC": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true },
+        "CLS 450 4MATIC (20\" option)": { "front": "245/35R20", "rear": "275/30R20", "wheelSize": "20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS 450 final year. Database has incorrect 18\" size."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "CLS 450 4MATIC": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "Database has incorrect 18\" size."
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "CLS 450 Coupe": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true },
+        "CLS 450 4MATIC Coupe": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "Database has incorrect 18\" size."
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "CLS 450 Coupe": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true },
+        "CLS 450 4MATIC Coupe": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "Database has incorrect 18\" size."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "CLS 450 Coupe": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true },
+        "CLS 450 4MATIC Coupe": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "New C257 generation. Database has incorrect 18\" size - C257 CLS starts at 19\"."
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 550": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 550 4MATIC": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 550 (19\" option)": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W218 final year. CLS550 with V8."
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 550": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 550 4MATIC": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W218 generation. CLS550 with V8."
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 550": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 400": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W218 facelift. CLS400 V6 Turbo and CLS550 V8."
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 550": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 400": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W218 facelift."
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 550": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 550 4MATIC": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W218 generation."
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 550": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 550 4MATIC": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W218 generation."
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 550": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 550 4MATIC": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "New W218 generation."
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 550": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "Transition year to W218."
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R18", "275/35R18", "255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 550": { "front": "245/40R18", "rear": "275/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 550 (Sport Package)": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W219 final year."
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R18", "275/35R18", "255/40R18", "285/35R18"],
+      "trims": {
+        "CLS 550": { "front": "245/40R18", "rear": "275/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 550 (Sport Package)": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W219 generation."
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R18", "275/35R18", "255/40R18", "285/35R18"],
+      "trims": {
+        "CLS 550": { "front": "245/40R18", "rear": "275/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 550 (Sport Package)": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W219 generation."
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R18", "275/35R18", "255/40R18", "285/35R18"],
+      "trims": {
+        "CLS 550": { "front": "245/40R18", "rear": "275/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 550 (Sport Package)": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W219 generation."
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R18", "275/35R18", "255/40R18", "285/35R18"],
+      "trims": {
+        "CLS 500": { "front": "245/40R18", "rear": "275/35R18", "wheelSize": "18", "staggered": true },
+        "CLS 500 (Sport Package)": { "front": "255/40R18", "rear": "285/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W219 generation. CLS500 designation."
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R18", "275/35R18", "255/40R18", "285/35R18"],
+      "trims": {
+        "CLS 500": { "front": "245/40R18", "rear": "275/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "First year W219. CLS500 designation."
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "cls-class",
+      "currentTireSizes": ["245/40R18", "255/35R19", "275/30R20"],
+      "validatedTireSizes": ["245/40R18", "275/35R18"],
+      "trims": {
+        "CLS 500": { "front": "245/40R18", "rear": "275/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS debut year. Limited availability."
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R20", "285/30R20", "265/30R21", "295/25R21"],
+      "trims": {
+        "AMG CLS 53 4MATIC+": { "front": "255/35R20", "rear": "285/30R20", "wheelSize": "20", "staggered": true },
+        "AMG CLS 53 (21\" option)": { "front": "265/30R21", "rear": "295/25R21", "wheelSize": "21", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "AMG CLS 53 with inline-6 turbo + EQ Boost. Database R19 size incorrect."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R20", "285/30R20", "265/30R21", "295/25R21"],
+      "trims": {
+        "AMG CLS 53 4MATIC+": { "front": "255/35R20", "rear": "285/30R20", "wheelSize": "20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "AMG CLS 53 final year. Database R19 size incorrect."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R20", "285/30R20", "265/30R21", "295/25R21"],
+      "trims": {
+        "AMG CLS 53 4MATIC+": { "front": "255/35R20", "rear": "285/30R20", "wheelSize": "20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "AMG CLS 53. Database R19 size incorrect."
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R20", "285/30R20", "265/30R21", "295/25R21"],
+      "trims": {
+        "AMG CLS 53 4MATIC+": { "front": "255/35R20", "rear": "285/30R20", "wheelSize": "20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "AMG CLS 53."
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R20", "285/30R20", "265/30R21", "295/25R21"],
+      "trims": {
+        "AMG CLS 53 4MATIC+": { "front": "255/35R20", "rear": "285/30R20", "wheelSize": "20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "AMG CLS 53."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R20", "285/30R20", "265/30R21", "295/25R21"],
+      "trims": {
+        "AMG CLS 53 4MATIC+": { "front": "255/35R20", "rear": "285/30R20", "wheelSize": "20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "New AMG CLS 53 replaces CLS 63."
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "trims": {
+        "CLS 63 AMG S": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true },
+        "CLS 63 AMG S (20\" option)": { "front": "255/30R20", "rear": "285/25R20", "wheelSize": "20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS 63 AMG S final year. V8 BiTurbo."
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "trims": {
+        "CLS 63 AMG S": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS 63 AMG S. V8 BiTurbo 577hp."
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "trims": {
+        "CLS 63 AMG S": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS 63 AMG S."
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "trims": {
+        "CLS 63 AMG S": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS 63 AMG S facelift."
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "trims": {
+        "CLS 63 AMG": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true },
+        "CLS 63 AMG S": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS 63 AMG and S variant."
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "trims": {
+        "CLS 63 AMG": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS 63 AMG BiTurbo."
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "trims": {
+        "CLS 63 AMG": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "New W218 AMG. 5.5L V8 BiTurbo."
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 63 AMG": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "Transition to W218 AMG."
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 63 AMG": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W219 AMG final year. 6.2L V8."
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 63 AMG": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W219 AMG. 6.2L V8."
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 63 AMG": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W219 AMG. 6.2L V8."
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19"],
+      "trims": {
+        "CLS 63 AMG": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W219 AMG. New 6.2L V8."
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R19", "285/30R19", "255/35R18", "285/30R18"],
+      "trims": {
+        "CLS 55 AMG": { "front": "255/35R18", "rear": "285/30R18", "wheelSize": "18", "staggered": true },
+        "CLS 63 AMG": { "front": "255/35R19", "rear": "285/30R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "Transition year: CLS55 AMG (supercharged V8) to CLS63 AMG (NA V8)."
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R18", "285/30R18"],
+      "trims": {
+        "CLS 55 AMG": { "front": "255/35R18", "rear": "285/30R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS55 AMG debut. 5.4L supercharged V8."
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "cls-class-amg",
+      "currentTireSizes": ["255/35R19", "275/30R20", "285/30R21"],
+      "validatedTireSizes": ["255/35R18", "285/30R18"],
+      "trims": {
+        "CLS 55 AMG": { "front": "255/35R18", "rear": "285/30R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "CLS55 AMG debut year. Limited production."
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "275/35R19", "255/35R20", "285/30R20", "255/35R21", "285/30R21"],
+      "trims": {
+        "E 300 4MATIC": { "front": "245/45R18", "rear": "245/45R18", "wheelSize": "18", "staggered": false },
+        "E 450 4MATIC": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true },
+        "E 450 4MATIC (20\" option)": { "front": "255/35R20", "rear": "285/30R20", "wheelSize": "20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W214 generation. Most trims staggered. Database has some W213 sizes mixed in."
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["245/45R18", "245/40R19", "275/35R19", "255/35R20", "285/30R20", "255/35R21", "285/30R21"],
+      "validatedTireSizes": ["245/45R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "trims": {
+        "E 350 4MATIC": { "front": "245/45R18", "rear": "245/45R18", "wheelSize": "18", "staggered": false },
+        "E 450 4MATIC": { "front": "245/45R19", "rear": "275/40R19", "wheelSize": "19", "staggered": true },
+        "E 450 4MATIC (20\" option)": { "front": "245/40R20", "rear": "275/35R20", "wheelSize": "20", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W214 generation."
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["245/45R18", "245/40R19", "275/35R19", "255/35R20", "285/30R20", "255/35R21", "285/30R21"],
+      "validatedTireSizes": ["245/45R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "trims": {
+        "E 350 4MATIC": { "front": "245/45R18", "rear": "245/45R18", "wheelSize": "18", "staggered": false },
+        "E 450 4MATIC": { "front": "245/45R19", "rear": "275/40R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "New W214 generation launches."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "E 350": { "front": "225/55R17", "rear": "225/55R17", "wheelSize": "17", "staggered": false },
+        "E 350 4MATIC": { "front": "245/45R18", "rear": "245/45R18", "wheelSize": "18", "staggered": false },
+        "E 450 4MATIC": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W213 final year. Database correct."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "E 350": { "front": "225/55R17", "rear": "225/55R17", "wheelSize": "17", "staggered": false },
+        "E 350 4MATIC": { "front": "245/45R18", "rear": "245/45R18", "wheelSize": "18", "staggered": false },
+        "E 450 4MATIC": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W213 facelift. 265/35R20 and 295/30R20 are E63 AMG sizes (separate model)."
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "E 350": { "front": "225/55R17", "rear": "225/55R17", "wheelSize": "17", "staggered": false },
+        "E 350 4MATIC": { "front": "245/45R18", "rear": "245/45R18", "wheelSize": "18", "staggered": false },
+        "E 450 4MATIC": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W213 facelift. Database correct."
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "E 350": { "front": "225/55R17", "rear": "225/55R17", "wheelSize": "17", "staggered": false },
+        "E 450 4MATIC": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W213. Database correct."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "E 300": { "front": "225/55R17", "rear": "225/55R17", "wheelSize": "17", "staggered": false },
+        "E 300 4MATIC": { "front": "225/55R17", "rear": "225/55R17", "wheelSize": "17", "staggered": false },
+        "E 450 4MATIC": { "front": "245/40R19", "rear": "275/35R19", "wheelSize": "19", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W213. Database correct."
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "E 300": { "front": "225/55R17", "rear": "225/55R17", "wheelSize": "17", "staggered": false },
+        "E 300 4MATIC": { "front": "225/55R17", "rear": "225/55R17", "wheelSize": "17", "staggered": false },
+        "E 400 4MATIC": { "front": "245/45R18", "rear": "245/45R18", "wheelSize": "18", "staggered": false }
+      },
+      "isStaggered": true,
+      "notes": "W213. Database correct."
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "E 300": { "front": "225/55R17", "rear": "225/55R17", "wheelSize": "17", "staggered": false },
+        "E 300 4MATIC": { "front": "225/55R17", "rear": "225/55R17", "wheelSize": "17", "staggered": false },
+        "E 400 4MATIC": { "front": "245/45R18", "rear": "245/45R18", "wheelSize": "18", "staggered": false }
+      },
+      "isStaggered": true,
+      "notes": "New W213 generation. Database correct."
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18", "245/35R19", "275/30R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18", "245/35R19", "275/30R19"],
+      "trims": {
+        "E 350": { "front": "225/55R16", "rear": "225/55R16", "wheelSize": "16", "staggered": false },
+        "E 350 (Sport Package)": { "front": "245/45R17", "rear": "245/45R17", "wheelSize": "17", "staggered": false },
+        "E 400": { "front": "245/45R17", "rear": "245/45R17", "wheelSize": "17", "staggered": false },
+        "E 550": { "front": "245/40R18", "rear": "265/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W212 final year. Database correct for W212 sizes."
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18", "245/35R19", "275/30R19"],
+      "validatedTireSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18", "245/35R19", "275/30R19"],
+      "trims": {
+        "E 350": { "front": "225/55R16", "rear": "225/55R16", "wheelSize": "16", "staggered": false },
+        "E 350 (Sport)": { "front": "245/45R17", "rear": "245/45R17", "wheelSize": "17", "staggered": false },
+        "E 400": { "front": "245/45R17", "rear": "245/45R17", "wheelSize": "17", "staggered": false },
+        "E 550": { "front": "245/40R18", "rear": "265/35R18", "wheelSize": "18", "staggered": true }
+      },
+      "isStaggered": true,
+      "notes": "W212 facelift. Database correct."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validatedVehicles": 75,
+    "vehiclesWithIssues": 18,
+    "issuesSummary": [
+      "CLK-Class AMG (2000-2008): Database had no tire sizes. Added validated OEM staggered sizes for CLK55 and CLK63 AMG trims.",
+      "CLS-Class (2019-2024): Database had incorrect 18\" sizes. C257 CLS 450 starts at 19\", not 18\".",
+      "CLS-Class AMG (2019-2024): Database had 19\" sizes. AMG CLS 53 uses 20\" standard, not 19\".",
+      "E-Class (2024-2026): Some W213 sizes mixed with W214. W214 has different tire sizing (staggered more common)."
+    ],
+    "staggeredVehicles": 75,
+    "notes": "All Mercedes AMG and high-performance trims use staggered setups. Standard E-Class base trims often have square (non-staggered) setups."
+  }
+}

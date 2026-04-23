@@ -1,0 +1,1445 @@
+[
+  {
+    "id": "ef7617ba-0cf6-4cfc-9100-7547b4cd4cf8",
+    "year": 2021,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22",
+      "275/60R20",
+      "265/65R18",
+      "275/50R22",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2022 tahoe]"
+  },
+  {
+    "id": "00e43774-a814-466c-b2f5-a22f34da7e8d",
+    "year": 2022,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22",
+      "275/60R20",
+      "265/65R18",
+      "275/50R22",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2022 tahoe]"
+  },
+  {
+    "id": "6e519c85-5af8-409d-865d-e36009e8632f",
+    "year": 2022,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "265/65R18",
+      "275/50R22",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "wheelsize"
+  },
+  {
+    "id": "71c0ebac-ebef-4fde-9a3b-db140671321f",
+    "year": 2023,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22",
+      "275/60R20",
+      "265/65R18",
+      "275/50R22",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2022 tahoe]"
+  },
+  {
+    "id": "3a5450ab-b3cc-4b07-ac3f-e0a54f3901ba",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22",
+      "275/60R20",
+      "265/65R18",
+      "275/50R22",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2023 tahoe]"
+  },
+  {
+    "id": "1d12d0c1-de9e-4b52-83b8-38a3757a7a17",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22",
+      "275/60R20",
+      "265/65R18",
+      "275/50R22",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2024 tahoe]"
+  },
+  {
+    "id": "0292cb77-86b9-425c-a9e2-cf32e4f962b6",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "tahoe",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22",
+      "275/60R20",
+      "265/65R18",
+      "275/50R22",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2025 tahoe]"
+  },
+  {
+    "id": "fb569e00-1ae4-455c-9126-3339334df023",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "trailblazer",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "225/55R18",
+      "235/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "6a114934-8c85-48e4-9b64-ce63d9c561d5",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "trailblazer",
+    "trim": "2.8 D",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "100.3",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 33,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 33,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R16",
+      "265/60R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "b9a4b3a7-ad27-4065-97d2-d9cc938c5bbe",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "trailblazer",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "225/55R18",
+      "235/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a125f613-03b3-4cf7-8bc1-929b2cf784e5",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "trailblazer",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "225/55R18",
+      "235/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ddb2db56-8e97-43e1-9ec2-6cabf47757ea",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "trailblazer",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "225/55R18",
+      "235/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "55e249fd-5460-44fe-8ff2-e815f1685589",
+    "year": 2018,
+    "make": "chevrolet",
+    "model": "trailblazer",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "225/55R18",
+      "235/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "0755ba8f-c524-4ff6-93a8-2ddf13b7c5d1",
+    "year": 2019,
+    "make": "chevrolet",
+    "model": "trailblazer",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "225/55R18",
+      "235/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a835ccb2-db47-4500-96c5-04abbdd83b5c",
+    "year": 2020,
+    "make": "chevrolet",
+    "model": "trailblazer",
+    "trim": "1.2T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R17",
+      "215/65R16",
+      "225/55R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "bb72711e-18b5-4c12-89d4-128e33fce11d",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "trailblazer",
+    "trim": "Activ, RS",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "18x7.5",
+      "19x7.5"
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "225/45R19"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "5c8b0f89-623e-4eee-b624-08a46d16f18e",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "trailblazer",
+    "trim": "L, LS, LT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "225/55R18"
+    ],
+    "source": "final-gap-fill"
+  },
+  {
+    "id": "79b57d1f-8cb2-4691-b134-09e626fc18ae",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "74.5",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "7.5Jx19",
+      "7.5Jx20",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/65R18",
+      "255/55R19",
+      "255/50R20"
+    ],
+    "source": "generation_template [filled from 2013 traverse]"
+  },
+  {
+    "id": "73168e45-eaa9-4ea4-9bc6-ed8ca4cbb39b",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "74.5",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "7.5Jx19",
+      "7.5Jx20",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/65R18",
+      "255/55R19",
+      "255/50R20"
+    ],
+    "source": "generation_template [filled from 2009 traverse]"
+  },
+  {
+    "id": "129a6a59-d02a-4091-a3e6-aa2531ba5325",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "74.5",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "7.5Jx19",
+      "7.5Jx20",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/65R18",
+      "255/55R19",
+      "255/50R20"
+    ],
+    "source": "generation_template [filled from 2010 traverse]"
+  },
+  {
+    "id": "ed302bb4-1f6e-478c-a085-08d5bbfeacde",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "74.5",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "7.5Jx19",
+      "7.5Jx20",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/65R18",
+      "255/55R19",
+      "255/50R20"
+    ],
+    "source": "generation_template [filled from 2011 traverse]"
+  },
+  {
+    "id": "7fc68abc-b6c8-4187-ab54-3293eaa412c8",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "74.5",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "7.5Jx19",
+      "7.5Jx20",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/65R18",
+      "255/55R19",
+      "255/50R20",
+      "245/70R17",
+      "255/55R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "94501412-a09d-4bf6-8c94-368986307856",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "74.5",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "7.5Jx19",
+      "7.5Jx20",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/65R18",
+      "255/55R19",
+      "255/50R20"
+    ],
+    "source": "generation_template [filled from 2013 traverse]"
+  },
+  {
+    "id": "b11ff3e8-77fc-4a55-9c8e-15cedff4c939",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "74.5",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "7.5Jx19",
+      "7.5Jx20",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/65R18",
+      "255/55R19",
+      "255/50R20",
+      "245/70R17",
+      "255/55R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "e81584ba-1da1-4812-b23a-0c774d6b34e7",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "74.5",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "7.5Jx19",
+      "7.5Jx20",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/65R18",
+      "255/55R19",
+      "255/50R20"
+    ],
+    "source": "generation_template [filled from 2015 traverse]"
+  },
+  {
+    "id": "fcba693f-f4e0-411f-bb5b-d2931877caf3",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "74.5",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "7.5Jx19",
+      "7.5Jx20",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/65R18",
+      "255/55R19",
+      "255/50R20"
+    ],
+    "source": "generation_template [filled from 2016 traverse]"
+  },
+  {
+    "id": "f799ec87-9bc4-4bb8-8b2c-9530388f73a0",
+    "year": 2018,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx20",
+      "8.5Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/55R20",
+      "275/45R22"
+    ],
+    "source": "generation_template [filled from 2019 traverse]"
+  },
+  {
+    "id": "48ce226f-dde9-46ea-b17a-7c46d252be33",
+    "year": 2019,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx20",
+      "8.5Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/55R20",
+      "275/45R22",
+      "255/65R18",
+      "255/60R19"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "8472a7bf-815d-4c63-a714-800c1660b765",
+    "year": 2020,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx20",
+      "8.5Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/55R20",
+      "275/45R22"
+    ],
+    "source": "generation_template [filled from 2019 traverse]"
+  },
+  {
+    "id": "55bcb617-056e-43e4-a98e-1ef3ee10ebb2",
+    "year": 2021,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx20",
+      "8.5Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/55R20",
+      "275/45R22"
+    ],
+    "source": "generation_template [filled from 2020 traverse]"
+  },
+  {
+    "id": "495f70f6-02ae-4448-b966-a51c8bc31806",
+    "year": 2022,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx20",
+      "8.5Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/55R20",
+      "275/45R22"
+    ],
+    "source": "generation_template [filled from 2021 traverse]"
+  },
+  {
+    "id": "655c49f5-cc60-492c-82d2-a5b6a42c74e6",
+    "year": 2023,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx20",
+      "8.5Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/55R20",
+      "275/45R22"
+    ],
+    "source": "generation_template [filled from 2022 traverse]"
+  },
+  {
+    "id": "df99783d-3de5-47d9-b0a5-6c09192f5ed2",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx20",
+      "8.5Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/55R20",
+      "275/45R22"
+    ],
+    "source": "generation_template [filled from 2023 traverse]"
+  },
+  {
+    "id": "4b1f1197-02c6-400d-ba43-2088b5317f2b",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx20",
+      "8.5Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/55R20",
+      "275/45R22"
+    ],
+    "source": "generation_template [filled from 2024 traverse]"
+  },
+  {
+    "id": "697360cc-6e1f-4553-9892-3dd9e1dddb6e",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "traverse",
+    "trim": "LS, LT, RS, Premier, High Country",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx20",
+      "8.5Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/55R20",
+      "275/45R22"
+    ],
+    "source": "generation_template [filled from 2025 traverse]"
+  },
+  {
+    "id": "40f38f32-a3ef-4526-b03e-5e4fcc75ff01",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "trax",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R16",
+      "215/55R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ef688096-d5c9-4f8c-938f-c83657856ba6",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "trax",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R16",
+      "215/55R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "bdc75e7f-3e20-4bb8-b456-657478383adc",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "trax",
+    "trim": "1.4T",
+    "currentBoltPattern": "5x105",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R16",
+      "215/65R16",
+      "215/55R18",
+      "215/60R17"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "4ba445e8-bbcf-4dc5-9b8e-6d4e7ee5da71",
+    "year": 2018,
+    "make": "chevrolet",
+    "model": "trax",
+    "trim": "1.4T",
+    "currentBoltPattern": "5x105",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R16",
+      "215/55R18",
+      "215/60R17",
+      "215/65R16"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "ad25336c-85ec-43a0-9d76-abc88a3d1068",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "trax",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": "[{\"diameter\":17,\"position\":\"both\"},{\"diameter\":18,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "225/55R18",
+      "225/60R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c1a889e2-62c6-4d95-8673-0791e58068fb",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "volt",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17",
+      "215/50R17"
+    ],
+    "source": "catalog-gap-fill"
+  }
+]

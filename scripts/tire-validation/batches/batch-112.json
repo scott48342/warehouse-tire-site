@@ -1,0 +1,869 @@
+{
+  "batchId": "112",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "255/50R18",
+        "255/45R19",
+        "285/40R19",
+        "255/40R20",
+        "285/35R20",
+        "265/35R21",
+        "295/30R21"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "255/50R18",
+        "255/45R19",
+        "285/40R19",
+        "255/40R20",
+        "285/35R20",
+        "265/35R21",
+        "295/30R21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "255/50R18",
+        "255/45R19",
+        "285/40R19",
+        "255/40R20",
+        "285/35R20",
+        "265/35R21",
+        "295/30R21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "255/50R18",
+        "255/45R19",
+        "285/40R19",
+        "255/40R20",
+        "285/35R20",
+        "265/35R21",
+        "295/30R21"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "255/50R18",
+        "255/45R19",
+        "285/40R19",
+        "255/40R20",
+        "285/35R20",
+        "265/35R21",
+        "295/30R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "255/50R18",
+        "255/45R19",
+        "285/40R19",
+        "255/40R20",
+        "285/35R20",
+        "265/35R21",
+        "295/30R21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/55R17",
+        "245/50R18",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19",
+        "255/35R20",
+        "285/30R20",
+        "255/35R21"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/55R17",
+        "245/50R18",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19",
+        "255/35R20",
+        "285/30R20",
+        "255/35R21"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/55R17",
+        "245/50R18",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19",
+        "255/35R20",
+        "285/30R20",
+        "255/35R21"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/55R17",
+        "245/50R18",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19",
+        "255/35R20",
+        "285/30R20",
+        "255/35R21"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/55R17",
+        "245/50R18",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19",
+        "255/35R20",
+        "285/30R20",
+        "255/35R21"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/55R17",
+        "245/50R18",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19",
+        "255/35R20",
+        "285/30R20",
+        "255/35R21"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/55R17",
+        "245/50R18",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19",
+        "255/35R20",
+        "285/30R20",
+        "255/35R21"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/45R19",
+        "255/40R20",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "255/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/50R17",
+        "255/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/50R17",
+        "255/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "255/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "255/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/50R17",
+        "255/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "255/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/50R17",
+        "255/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "255/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/50R17",
+        "255/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "255/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/50R17",
+        "255/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "255/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/50R17",
+        "255/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "255/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "245/50R17",
+        "255/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/50R17",
+        "245/45R18",
+        "275/40R18",
+        "255/40R19"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/50R17",
+        "245/45R18",
+        "275/40R18",
+        "255/40R19"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/50R17",
+        "245/45R18",
+        "275/40R18",
+        "255/40R19"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/50R17",
+        "245/45R18",
+        "275/40R18",
+        "255/40R19"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/50R17",
+        "245/45R18",
+        "275/40R18",
+        "255/40R19"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "s-class",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/50R17",
+        "245/45R18",
+        "275/40R18",
+        "255/40R19"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "s-class-amg",
+      "currentTireSizes": [
+        "255/45R18",
+        "275/35R20",
+        "255/35R21",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class-cabrio",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class-cabrio",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class-cabrio",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "s-class-cabrio",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "s-class-cabrio",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "s-class-cabrio",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class-cabrio-amg",
+      "currentTireSizes": []
+    }
+  ]
+}

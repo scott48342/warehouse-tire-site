@@ -1,0 +1,742 @@
+{
+  "batchId": "88",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2007,
+      "make": "land-rover",
+      "model": "lr3",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "land-rover",
+      "model": "lr3",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "land-rover",
+      "model": "lr3",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "land-rover",
+      "model": "lr4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "land-rover",
+      "model": "lr4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2014,
+      "make": "land-rover",
+      "model": "lr4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2013,
+      "make": "land-rover",
+      "model": "lr4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2012,
+      "make": "land-rover",
+      "model": "lr4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "lr4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2010,
+      "make": "land-rover",
+      "model": "lr4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R21",
+        "275/50R22",
+        "275/45R23"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R21",
+        "275/50R22",
+        "275/45R23"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R21",
+        "275/50R22",
+        "275/45R23"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R21",
+        "275/50R22",
+        "275/45R23"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R20",
+        "275/45R21",
+        "275/40R22"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R20",
+        "275/45R21",
+        "275/40R22"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R20",
+        "275/45R21",
+        "275/40R22"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R20",
+        "275/45R21",
+        "275/40R22"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R20",
+        "275/45R21",
+        "275/40R22"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R20",
+        "275/45R21",
+        "275/40R22"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R20",
+        "275/45R21",
+        "275/40R22"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "275/40R21",
+        "305/35R22"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "land-rover",
+      "model": "range-rover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/50R19",
+        "245/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/50R19",
+        "245/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/50R19",
+        "245/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/50R19",
+        "245/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/50R19",
+        "245/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/50R19",
+        "245/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/45R20",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/45R20",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/45R20",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/45R20",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/45R20",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/45R20",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/45R20",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/45R20",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "range-rover-evoque",
+      "currentTireSizes": [
+        "235/60R18",
+        "245/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "land-rover",
+      "model": "range-rover-sport",
+      "currentTireSizes": [
+        "255/55R19",
+        "275/45R21",
+        "285/40R22",
+        "285/35R23"
+      ]
+    }
+  ]
+}

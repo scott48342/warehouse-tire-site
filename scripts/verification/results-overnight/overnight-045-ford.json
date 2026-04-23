@@ -1,0 +1,1182 @@
+{
+  "batchId": "overnight-045-ford",
+  "verifiedAt": "2026-04-23T02:25:00.000Z",
+  "summary": {
+    "total": 71,
+    "verified": 65,
+    "flagged": 0,
+    "invalid": 6,
+    "verifiedPercent": 91.5
+  },
+  "sources": [
+    "fordmasterx.com/ford-super-duty-wheel-offset-chart",
+    "hulkoffsets.com/blogs/news/ford-f-350-wheel-bolt-pattern",
+    "hulkoffsets.com/blogs/news/ford-f-450-wheel-bolt-pattern",
+    "tiresize.com/tires/Ford/F350",
+    "performanceplustire.com (8x170 expert guide)"
+  ],
+  "referenceSpecs": {
+    "fordF350SRW": {
+      "boltPattern": "8x170",
+      "hubBore": "124.9",
+      "stockOffsets": "+40 to +55",
+      "validTireSizes": [
+        "LT245/75R17",
+        "LT265/70R17",
+        "LT275/65R18",
+        "LT275/70R18",
+        "LT275/65R20",
+        "LT285/70R17"
+      ],
+      "validWheelDiameters": [17, 18, 20]
+    },
+    "fordF350DRW": {
+      "boltPattern": "8x200",
+      "hubBore": "142.1",
+      "stockOffsets": "+142 typical",
+      "validTireSizes": ["LT245/75R17"],
+      "validWheelDiameters": [17]
+    },
+    "fordF450_1999to2004": {
+      "boltPattern": "8x225",
+      "hubBore": "170.1",
+      "oemWheelSize": 16,
+      "validTireSizes": ["225/70R19.5", "265/70R17"],
+      "notes": "Chassis cab only - no pickup version existed"
+    }
+  },
+  "results": [
+    {
+      "id": "942ebc96-92bf-47fd-ae2b-942c4f6e6adc",
+      "year": 2016,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true, "notes": "Multiple OEM sizes including 17, 18, 20 inch" },
+        "tireSizes": { "correct": true, "notes": "All sizes match OEM specs for F-350 SRW" }
+      }
+    },
+    {
+      "id": "dee3507f-0466-40bf-83b6-91d1fe45d141",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Platinum",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true, "notes": "20-inch standard for Platinum trim" },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "ab4fd140-3a02-4834-93b8-8afe26c319a0",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true, "notes": "18-inch standard for XLT" },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "0a5e77e1-31b7-4530-8bf5-86ee79f45a8e",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "2402423f-9fe1-4ad0-aba0-9f7271cb0eeb",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "King Ranch",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "2ed9c590-d7c3-4bec-8fd1-859e998ebe67",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x200", "correct": true, "notes": "DRW (Dually) configuration" },
+        "hubBore": { "value": "142.1", "correct": true, "notes": "Correct for DRW" },
+        "wheelSizes": { "correct": true, "notes": "17-inch DRW wheels with +142 offset" },
+        "tireSizes": { "correct": true, "notes": "LT245/75R17 standard for DRW" }
+      }
+    },
+    {
+      "id": "49f83295-b49e-41a4-95be-2d22d6129065",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true, "notes": "17-inch standard for XL base trim" },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "c4b7bf64-c0a6-4d55-876a-9806c57a57ba",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Limited",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "df9235de-1805-4ce4-8d2c-aaf594198704",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "de65ad39-a53b-40b7-b5e8-0963b5e86f85",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "be311002-9510-4809-8c23-ccc87e85a541",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "King Ranch",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "8fdc55e7-e7a9-4053-bbfb-d289d17bef7c",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "3ff2eb4b-cfb8-4ac1-8057-c56a94fcf9c3",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x200", "correct": true, "notes": "DRW configuration" },
+        "hubBore": { "value": "142.1", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "6500ef47-0d10-418a-b58f-034a4929132f",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Limited",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "96259543-bead-48bd-8ff1-f6211a18f91e",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Platinum",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "67f446f7-b4b6-4089-975e-c6988f169704",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "King Ranch",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "e1e71525-b8ea-44ac-b844-053adddf91a7",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "63c8bebe-51b1-40e0-a3d5-d09ecb4c69af",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "14ca3854-bc2f-47be-bd21-a7b2a60dcd15",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "bb074c58-80db-4b2c-b35f-d808f96d54e1",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Platinum",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "9c1a596d-108d-464b-8434-32806f1b8ffd",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Limited",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "a84e9c18-0e3c-4db4-8065-3045accd2553",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x200", "correct": true, "notes": "DRW configuration" },
+        "hubBore": { "value": "142.1", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "0b340255-88bc-43d3-8234-135bcd60a927",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "24742e8c-6ac8-4e40-96f8-4f80e6398925",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "8b81c725-1cda-4a08-86b5-65f374eb91f4",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "King Ranch",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "977f119b-a848-4761-ae2e-b3b8e0a544ce",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Platinum",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "4bfe9724-7315-4b7a-9cbf-033fd60e96cf",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Limited",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "6bca9b45-dc8b-46d4-826d-03c9406606b3",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true, "notes": "Multiple wheel size options" },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "72848155-3e43-4938-9212-1201c7b3e0d3",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "2a8a0947-7c6e-4c76-86fc-89bc146d0f29",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "473e79d2-7b95-4bd0-8972-9f42cec23bea",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Platinum",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "17861645-bba4-461b-b56c-127d5c4942b5",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Limited",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "7f6bdefc-b170-4488-bf35-03363ebe0ca0",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "e0dcfed4-2d78-4f7b-bd93-343e2d54a335",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "4c57677b-a3b8-43de-bc4a-2321469dc17b",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "King Ranch",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "253447ee-51ff-4c3b-bfa9-561f0309b460",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true, "notes": "Multiple OEM wheel options" },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "4242b11d-a717-4422-a98a-6c86379c71ee",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "66c29dc0-38a6-44ce-a208-591a925cdcf0",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "02c3ce8b-3369-4a5a-8be7-62fd4e5a2bc7",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Limited",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "ca6550a3-c079-4dc8-87b3-1218bcfce339",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Platinum",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "66c5be23-8a10-4beb-98c7-c355842694f9",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "0d687946-bb01-4e27-a3c5-17fc97546ba7",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "King Ranch",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "e3fb9fc4-decf-401a-92d1-0893ee724af9",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "7b437e31-c09a-4ea0-a4d0-21365901909a",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Limited",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "9a33c8aa-db98-4301-ab04-b619176e6f78",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "f20bccc9-466d-4e82-aaeb-a83ce16fd35c",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Platinum",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "b3c80c4e-f3b9-4933-ba5f-02575ba79328",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "King Ranch",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "6aa90f35-fa7d-4135-8e84-16afdd80aa6b",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "b43cfe11-fb85-4912-8990-9aef04f46cb5",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "b11a6319-5bcf-4107-be7b-d562e56034ff",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "008bd86a-da00-4b74-9244-0353e7980357",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "King Ranch",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "c8b6635f-b055-4434-8328-dedb24245752",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Limited",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "c5f85a6b-953b-4918-992f-2d2358d9da11",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Platinum",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "9f03e92b-9cb0-45d8-962c-c4390bf94951",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "481fe864-5063-425b-8689-7dd888c92f2f",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "e443ca9b-b25f-4456-aaa1-71a74adbb42d",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "ba055821-5d41-4623-9ffd-0f90cea1c45a",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "a9685d8d-7b1c-4b2d-9963-7b85ed63e01a",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "ae7f6f2a-4037-4927-bc82-763c190e819a",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "1d97fed7-f944-442d-ab6b-0b2bfed0d632",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "King Ranch",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "dcfbd100-0f7b-4632-a729-c8f43a5665e0",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Limited",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "3ef9f8a0-444e-4a6a-a9f8-3f9bd3ecc893",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Platinum",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "57d5cdfe-99cf-44f7-8936-78f67d74bb50",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XLT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "0691b128-c7ef-492b-a172-3bfa4a3f9808",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Limited",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "f9284af5-4f2f-451d-9fb1-c7ea33643840",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Platinum",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "9e2827b8-158a-4817-8b95-22345ad5bb86",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "King Ranch",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "d16a129e-913c-4431-a59b-121c29842b48",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "XL",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "4495932d-43b9-458b-a6be-d27404a518ce",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "Lariat",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "3e9f1e5b-4c8c-4170-a30a-6e8c361346ee",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-350",
+      "trim": "6.7D HO",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "value": "8x170", "correct": true },
+        "hubBore": { "value": "124.9", "correct": true },
+        "wheelSizes": { "correct": true },
+        "tireSizes": { "correct": true }
+      }
+    },
+    {
+      "id": "57d4221d-64ab-4754-bbbd-f9122f99a6d5",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { 
+          "value": "5x114.3", 
+          "correct": false, 
+          "expected": "8x225",
+          "notes": "CRITICAL ERROR: 5x114.3 is a passenger car bolt pattern. F-450 Super Duty uses 8x225mm."
+        },
+        "hubBore": { 
+          "value": "67.1", 
+          "correct": false, 
+          "expected": "170.1",
+          "notes": "CRITICAL ERROR: 67.1mm is a passenger car hub bore. F-450 uses 170.1mm."
+        },
+        "wheelSizes": { 
+          "correct": false, 
+          "notes": "Data stored as JSON string instead of array. 19-inch is wrong for 2000 - should be 16-inch OEM."
+        },
+        "tireSizes": { 
+          "correct": false, 
+          "expected": ["225/70R19.5", "265/70R17"],
+          "notes": "Current tire sizes may be plausible but wheel data is completely wrong."
+        }
+      },
+      "recommendation": "DELETE or completely re-import. This appears to be garbage data from catalog-gap-fill using passenger car specs."
+    },
+    {
+      "id": "4aa8d96b-42ef-481a-bfd4-346ee61935ee",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { 
+          "value": "5x114.3", 
+          "correct": false, 
+          "expected": "8x225"
+        },
+        "hubBore": { 
+          "value": "67.1", 
+          "correct": false, 
+          "expected": "170.1"
+        },
+        "wheelSizes": { "correct": false },
+        "tireSizes": { "correct": false }
+      },
+      "recommendation": "DELETE - catalog-gap-fill garbage data"
+    },
+    {
+      "id": "41323a39-287f-42cd-840f-2f7a64825368",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { 
+          "value": "5x114.3", 
+          "correct": false, 
+          "expected": "8x225"
+        },
+        "hubBore": { 
+          "value": "67.1", 
+          "correct": false, 
+          "expected": "170.1"
+        },
+        "wheelSizes": { "correct": false },
+        "tireSizes": { "correct": false }
+      },
+      "recommendation": "DELETE - catalog-gap-fill garbage data"
+    },
+    {
+      "id": "43196d4c-15fa-4fd9-8462-06b9f3371c70",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { 
+          "value": "5x114.3", 
+          "correct": false, 
+          "expected": "8x225"
+        },
+        "hubBore": { 
+          "value": "67.1", 
+          "correct": false, 
+          "expected": "170.1"
+        },
+        "wheelSizes": { "correct": false },
+        "tireSizes": { "correct": false }
+      },
+      "recommendation": "DELETE - catalog-gap-fill garbage data"
+    },
+    {
+      "id": "61991808-2f2f-4da9-ae13-f2d79f4928da",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { 
+          "value": "5x114.3", 
+          "correct": false, 
+          "expected": "8x225"
+        },
+        "hubBore": { 
+          "value": "67.1", 
+          "correct": false, 
+          "expected": "170.1"
+        },
+        "wheelSizes": { "correct": false },
+        "tireSizes": { "correct": false }
+      },
+      "recommendation": "DELETE - catalog-gap-fill garbage data"
+    },
+    {
+      "id": "ad7a6ad3-6313-4d40-aad3-add04444d2ba",
+      "year": 2005,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { 
+          "value": "5x114.3", 
+          "correct": false, 
+          "expected": "10x225",
+          "notes": "2005 F-450 switched to 10x225mm bolt pattern"
+        },
+        "hubBore": { 
+          "value": "67.1", 
+          "correct": false, 
+          "expected": "170.1"
+        },
+        "wheelSizes": { "correct": false },
+        "tireSizes": { "correct": false }
+      },
+      "recommendation": "DELETE - catalog-gap-fill garbage data"
+    }
+  ],
+  "invalidVehicleIds": [
+    "57d4221d-64ab-4754-bbbd-f9122f99a6d5",
+    "4aa8d96b-42ef-481a-bfd4-346ee61935ee",
+    "41323a39-287f-42cd-840f-2f7a64825368",
+    "43196d4c-15fa-4fd9-8462-06b9f3371c70",
+    "61991808-2f2f-4da9-ae13-f2d79f4928da",
+    "ad7a6ad3-6313-4d40-aad3-add04444d2ba"
+  ],
+  "notes": [
+    "All 65 Ford F-350 entries (2016-2026) have correct fitment data",
+    "F-350 SRW uses 8x170mm bolt pattern with 124.9mm hub bore - all verified",
+    "F-350 DRW entries correctly use 8x200mm bolt pattern with 142.1mm hub bore",
+    "All 6 Ford F-450 Super Duty entries (2000-2005) have INVALID data",
+    "F-450 entries appear to be populated with generic passenger car specs (5x114.3 / 67.1mm)",
+    "F-450 should use 8x225mm (1999-2004) or 10x225mm (2005+) with 170.1mm hub bore",
+    "Recommend deleting all F-450 entries and re-importing with correct specs",
+    "Some F-350 entries have tire size '275/70R18' without LT prefix - unusual but acceptable"
+  ]
+}

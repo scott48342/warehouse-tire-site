@@ -1,0 +1,1176 @@
+{
+  "batchId": "132",
+  "validatedAt": "2026-04-21T22:35:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Limited Longhorn": ["275/55R20", "285/45R22"],
+        "Rebel": ["275/70R18"],
+        "Tradesman": ["275/65R18", "275/55R20"],
+        "Tradesman HFE": ["275/55R20"]
+      },
+      "issues": ["305/45R22 not a factory OEM size", "275/60R20 not found for 5th gen 1500 (that's 4th gen/Classic)"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["275/65R18", "275/55R20", "LT275/65R18", "285/45R22", "LT275/70R18"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Limited Longhorn": ["275/55R20", "285/45R22"],
+        "Rebel": ["275/70R18"],
+        "Tradesman": ["275/65R18", "275/55R20"],
+        "Tradesman HFE": ["275/55R20"]
+      },
+      "issues": ["LT275/65R18 and LT275/70R18 are LT (light truck) variants - may be aftermarket or HD package"],
+      "status": "MOSTLY_VALID"
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Rebel": ["275/70R18"]
+      },
+      "issues": ["305/45R22 not a factory OEM size", "275/60R20 is 4th gen/Classic size, not 5th gen"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Rebel": ["275/70R18"]
+      },
+      "issues": ["305/45R22 not a factory OEM size", "275/60R20 is 4th gen/Classic size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["275/65R18", "275/55R20", "LT275/65R18", "285/45R22", "LT275/70R18"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Rebel": ["275/70R18"]
+      },
+      "issues": ["LT prefix sizes may be aftermarket variants"],
+      "status": "MOSTLY_VALID"
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["275/65R18", "275/55R20", "LT275/65R18", "285/45R22", "LT275/70R18"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Rebel": ["275/70R18"]
+      },
+      "issues": ["LT prefix sizes may be aftermarket variants"],
+      "status": "MOSTLY_VALID"
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Rebel": ["275/70R18"]
+      },
+      "issues": ["305/45R22 not a factory OEM size", "275/60R20 is 4th gen/Classic size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2020,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["275/65R18", "275/55R20", "LT275/65R18", "285/45R22", "LT275/70R18"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Rebel": ["275/70R18"]
+      },
+      "issues": ["LT prefix sizes may be aftermarket variants"],
+      "status": "MOSTLY_VALID"
+    },
+    {
+      "year": 2020,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Rebel": ["275/70R18"]
+      },
+      "issues": ["305/45R22 not a factory OEM size", "275/60R20 is 4th gen/Classic size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2019,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Laramie Longhorn": ["275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Lone Star": ["275/65R18", "275/55R20"],
+        "Rebel": ["275/70R18"],
+        "Tradesman": ["275/65R18", "275/55R20"]
+      },
+      "issues": ["305/45R22 not a factory OEM size", "275/60R20 is Classic/4th gen size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2019,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["275/65R18", "275/55R20", "LT275/65R18", "285/45R22", "LT275/70R18"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22", "275/70R18"],
+      "trims": {
+        "Big Horn": ["275/65R18", "275/55R20"],
+        "Laramie": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Rebel": ["275/70R18"],
+        "Tradesman": ["275/65R18", "275/55R20"]
+      },
+      "issues": ["LT prefix sizes may be aftermarket variants"],
+      "status": "MOSTLY_VALID"
+    },
+    {
+      "year": 2018,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/60R20", "285/45R22", "285/70R17"],
+      "trims": {
+        "Big Horn": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"],
+        "Harvest": ["265/70R17", "275/60R20"],
+        "Laramie": ["275/60R20"],
+        "Laramie Longhorn": ["275/60R20"],
+        "Limited": ["275/60R20"],
+        "Lone Star": ["275/60R20"],
+        "Night": ["275/60R20", "285/45R22"],
+        "Rebel": ["285/70R17"],
+        "Sport": ["275/60R20", "285/45R22"],
+        "Tradesman": ["265/70R17"],
+        "Tradesman HFE": ["275/60R20"]
+      },
+      "issues": ["305/45R22 not a factory OEM size for 4th gen"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2017,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/60R20", "285/45R22", "285/70R17"],
+      "trims": {
+        "Big Horn": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"],
+        "Laramie": ["275/60R20"],
+        "Limited": ["275/60R20"],
+        "Night": ["275/60R20", "285/45R22"],
+        "Rebel": ["285/70R17"],
+        "Sport": ["275/60R20", "285/45R22"],
+        "Tradesman": ["265/70R17"]
+      },
+      "issues": ["305/45R22 not a factory OEM size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2016,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/60R20", "285/45R22", "285/70R17"],
+      "trims": {
+        "Big Horn": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"],
+        "Laramie": ["275/60R20"],
+        "Limited": ["275/60R20"],
+        "Rebel": ["285/70R17"],
+        "Sport": ["275/60R20", "285/45R22"],
+        "Tradesman": ["265/70R17"]
+      },
+      "issues": ["305/45R22 not a factory OEM size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2015,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/60R20", "285/45R22", "285/70R17"],
+      "trims": {
+        "Big Horn": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"],
+        "Laramie": ["275/60R20"],
+        "Limited": ["275/60R20"],
+        "Rebel": ["285/70R17"],
+        "Sport": ["275/60R20", "285/45R22"],
+        "Tradesman": ["265/70R17"]
+      },
+      "issues": ["305/45R22 not a factory OEM size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2014,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/60R20", "285/45R22"],
+      "trims": {
+        "Big Horn": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"],
+        "Laramie": ["275/60R20"],
+        "Limited": ["275/60R20"],
+        "Sport": ["275/60R20", "285/45R22"],
+        "Tradesman": ["265/70R17"]
+      },
+      "issues": ["305/45R22 not a factory OEM size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2013,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/60R20", "285/45R22"],
+      "trims": {
+        "Big Horn": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"],
+        "Laramie": ["275/60R20"],
+        "Sport": ["275/60R20", "285/45R22"],
+        "Tradesman": ["265/70R17"]
+      },
+      "issues": ["305/45R22 not a factory OEM size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2012,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/60R20", "285/45R22"],
+      "trims": {
+        "Big Horn": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"],
+        "Laramie": ["275/60R20"],
+        "Sport": ["275/60R20", "285/45R22"],
+        "Tradesman": ["265/70R17"]
+      },
+      "issues": ["305/45R22 not a factory OEM size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2011,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/60R20", "285/45R22"],
+      "trims": {
+        "Big Horn": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"],
+        "Laramie": ["275/60R20"],
+        "Sport": ["275/60R20", "285/45R22"],
+        "Tradesman": ["265/70R17"]
+      },
+      "issues": ["305/45R22 not a factory OEM size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2010,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/60R20", "285/45R22"],
+      "trims": {
+        "Big Horn": ["275/60R20"],
+        "Laramie": ["275/60R20"],
+        "Sport": ["275/60R20", "285/45R22"],
+        "SLT": ["265/70R17", "275/60R20"],
+        "ST": ["265/70R17"]
+      },
+      "issues": ["305/45R22 not a factory OEM size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2009,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["285/45R22", "275/60R20", "305/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/60R20", "285/45R22"],
+      "trims": {
+        "Laramie": ["275/60R20"],
+        "Sport": ["275/60R20", "285/45R22"],
+        "SLT": ["265/70R17", "275/60R20"],
+        "ST": ["265/70R17"]
+      },
+      "issues": ["305/45R22 not a factory OEM size"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2008,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["245/70R17", "265/70R17", "275/60R20"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "275/60R20"],
+      "trims": {
+        "QuadCab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "QuadCab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "Regular Cab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "Regular Cab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "MegaCab": ["265/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["245/70R17", "265/70R17", "275/60R20"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "275/60R20", "275/70R17"],
+      "trims": {
+        "QuadCab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "QuadCab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "Regular Cab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "Regular Cab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "MegaCab": ["265/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["245/70R17", "265/70R17", "275/60R20"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "275/60R20", "275/70R17"],
+      "trims": {
+        "QuadCab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "QuadCab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "Regular Cab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "Regular Cab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "MegaCab": ["265/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2005,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["245/70R17", "265/70R17", "275/60R20"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "275/60R20", "275/70R17"],
+      "trims": {
+        "QuadCab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "QuadCab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "Regular Cab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "Regular Cab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2004,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["245/70R17", "265/70R17", "275/60R20"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "275/60R20", "275/70R17"],
+      "trims": {
+        "QuadCab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "QuadCab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "Regular Cab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "Regular Cab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2003,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["245/70R17", "265/70R17", "275/60R20"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "275/60R20", "275/70R17"],
+      "trims": {
+        "QuadCab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "QuadCab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "Regular Cab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "Regular Cab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2002,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["245/70R17", "265/70R17", "275/60R20"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "275/60R20", "275/70R17"],
+      "trims": {
+        "QuadCab 2WD": ["245/70R17", "265/70R17", "275/60R20"],
+        "QuadCab 4WD": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "Regular Cab 2WD": ["245/70R17", "265/70R17"],
+        "Regular Cab 4WD": ["245/70R17", "265/70R17", "275/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2001,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["245/70R17", "265/70R17", "275/60R20"],
+      "validatedTireSizes": ["225/75R16", "245/75R16", "265/75R16", "275/70R17"],
+      "trims": {
+        "ClubCab 2WD": ["225/75R16", "245/75R16"],
+        "ClubCab 4WD": ["245/75R16", "265/75R16", "275/70R17"],
+        "QuadCab 2WD": ["225/75R16", "245/75R16"],
+        "QuadCab 4WD": ["245/75R16", "265/75R16", "275/70R17"],
+        "Regular Cab 2WD": ["225/75R16", "245/75R16"],
+        "Regular Cab 4WD": ["245/75R16", "265/75R16", "275/70R17"]
+      },
+      "issues": ["Current sizes show 17-inch tires but 2001 was primarily 16-inch wheels", "275/60R20 unlikely factory option for 2001"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2000,
+      "make": "Ram",
+      "model": "1500",
+      "currentTireSizes": ["245/70R17", "265/70R17", "275/60R20"],
+      "validatedTireSizes": ["225/75R16", "245/75R16", "265/75R16", "275/70R17"],
+      "trims": {
+        "ClubCab 2WD": ["225/75R16", "245/75R16"],
+        "ClubCab 4WD": ["245/75R16", "265/75R16", "275/70R17"],
+        "QuadCab 2WD": ["225/75R16", "245/75R16"],
+        "QuadCab 4WD": ["245/75R16", "265/75R16", "275/70R17"],
+        "Regular Cab 2WD": ["225/75R16", "245/75R16"],
+        "Regular Cab 4WD": ["245/75R16", "265/75R16", "275/70R17"]
+      },
+      "issues": ["Current sizes show 17-inch tires but 2000 was primarily 16-inch wheels", "275/60R20 unlikely factory option for 2000"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "1500-Classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "trims": {
+        "Tradesman": ["265/70R17", "275/60R20"],
+        "Warlock": ["265/70R17", "275/60R20"]
+      },
+      "issues": ["No current tire sizes in database - needs population"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "1500-Classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "trims": {
+        "Tradesman": ["265/70R17", "275/60R20"],
+        "Warlock": ["265/70R17", "275/60R20"]
+      },
+      "issues": ["No current tire sizes in database - needs population"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "1500-Classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "trims": {
+        "Tradesman": ["265/70R17", "275/60R20"],
+        "Warlock": ["275/60R20"]
+      },
+      "issues": ["No current tire sizes in database - needs population"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "1500-Classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "trims": {
+        "Tradesman": ["265/70R17", "275/60R20"],
+        "Warlock": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"]
+      },
+      "issues": ["No current tire sizes in database - needs population"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2020,
+      "make": "Ram",
+      "model": "1500-Classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "trims": {
+        "Tradesman": ["265/70R17", "275/60R20"],
+        "Warlock": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"],
+        "Big Horn": ["265/70R17", "275/60R20"]
+      },
+      "issues": ["No current tire sizes in database - needs population"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2019,
+      "make": "Ram",
+      "model": "1500-Classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/70R17", "275/60R20"],
+      "trims": {
+        "Tradesman": ["265/70R17", "275/60R20"],
+        "Warlock": ["275/60R20"],
+        "Express": ["265/70R17", "275/60R20"],
+        "Big Horn": ["265/70R17", "275/60R20"],
+        "Lone Star": ["265/70R17", "275/60R20"]
+      },
+      "issues": ["No current tire sizes in database - needs population"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2025,
+      "make": "Ram",
+      "model": "1500-TRX",
+      "currentTireSizes": ["325/65R18"],
+      "validatedTireSizes": ["325/65R18"],
+      "trims": {
+        "TRX": ["325/65R18"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "1500-TRX",
+      "currentTireSizes": ["325/65R18"],
+      "validatedTireSizes": ["325/65R18"],
+      "trims": {
+        "TRX": ["325/65R18"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "1500-TRX",
+      "currentTireSizes": ["325/65R18"],
+      "validatedTireSizes": ["325/65R18"],
+      "trims": {
+        "TRX": ["325/65R18"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "1500-TRX",
+      "currentTireSizes": ["325/65R18"],
+      "validatedTireSizes": ["325/65R18"],
+      "trims": {
+        "TRX": ["325/65R18"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "1500-TRX",
+      "currentTireSizes": ["325/65R18"],
+      "validatedTireSizes": ["325/65R18"],
+      "trims": {
+        "TRX": ["325/65R18"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2026,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "285/70R17"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Limited Longhorn": ["LT275/70R18", "LT285/60R20"],
+        "Power Wagon": ["285/70R17"],
+        "Rebel": ["LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2025,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "285/70R17"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Limited Longhorn": ["LT275/70R18", "LT285/60R20"],
+        "Power Wagon": ["285/70R17"],
+        "Rebel": ["LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2024,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "285/70R17"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Limited Longhorn": ["LT275/70R18", "LT285/60R20"],
+        "Power Wagon": ["285/70R17"],
+        "Rebel": ["LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2023,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "285/70R17"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Power Wagon": ["285/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2022,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "285/70R17"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Power Wagon": ["285/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2021,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "285/70R17"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Power Wagon": ["285/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "285/70R17"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Power Wagon": ["285/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2019,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "285/70R17"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Power Wagon": ["285/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT275/65R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Power Wagon": ["285/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20", "LT285/60R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT275/65R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT275/65R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Power Wagon": ["285/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20", "LT285/60R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT275/65R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT275/65R20", "LT265/70R17", "LT255/65R19"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "Big Horn": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "Limited": ["LT285/60R20"],
+        "Power Wagon": ["285/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20", "LT265/70R17", "LT255/65R19", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20", "LT265/70R17", "LT255/65R19", "LT285/60R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "SLT": ["LT265/70R17", "LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT275/65R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20", "LT285/60R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "SLT": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT275/65R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT275/65R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "SLT": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2014,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT275/65R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "SLT": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2014,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20", "LT285/60R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "SLT": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT275/65R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2013,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT275/65R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "SLT": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2013,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20", "LT285/60R20"],
+      "trims": {
+        "Tradesman": ["LT245/70R17", "LT275/70R18"],
+        "SLT": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT275/65R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT275/65R20"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20", "LT285/60R20"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT275/65R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2011,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT275/65R20"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2011,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT275/65R20", "LT285/60R20"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT275/65R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT265/70R17", "LT275/70R18"],
+        "Laramie": ["LT275/70R18"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT265/70R17"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT265/70R17", "LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2009,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT265/70R17", "LT275/70R18"],
+        "Laramie": ["LT275/70R18"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2009,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT265/70R17"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT265/70R17", "LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2008,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT265/70R17", "LT275/70R18"],
+        "Laramie": ["LT275/70R18"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2008,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20", "LT265/70R17"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT265/70R17", "LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18", "LT285/60R20"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT265/70R17", "LT275/70R18"],
+        "Laramie": ["LT275/70R18", "LT285/60R20"],
+        "MegaCab": ["LT265/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT265/70R17", "LT275/70R18"],
+        "Laramie": ["LT275/70R18"],
+        "MegaCab": ["LT265/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT265/70R17"],
+        "Laramie": ["LT275/70R18"],
+        "QuadCab": ["LT245/70R17", "LT265/70R17"],
+        "MegaCab": ["LT265/70R17"]
+      },
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "Ram",
+      "model": "2500",
+      "currentTireSizes": ["LT245/70R17", "LT275/70R18", "LT285/60R20"],
+      "validatedTireSizes": ["LT245/70R17", "LT265/70R17", "LT275/70R18"],
+      "trims": {
+        "ST": ["LT245/70R17"],
+        "SLT": ["LT265/70R17"],
+        "Laramie": ["LT275/70R18"],
+        "QuadCab": ["LT245/70R17", "LT265/70R17"],
+        "MegaCab": ["LT265/70R17"]
+      },
+      "issues": ["LT285/60R20 may not be factory OEM for 2006 - verify"],
+      "status": "NEEDS_REVIEW"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "valid": 43,
+    "mostlyValid": 5,
+    "needsReview": 21,
+    "missingData": 6,
+    "keyFindings": [
+      "305/45R22 appears in many Ram 1500 entries but is NOT a factory OEM size - likely aftermarket wheel package data",
+      "5th gen Ram 1500 (2019+) uses 275/55R20, 275/65R18, 285/45R22, 275/70R18 - NOT 275/60R20",
+      "275/60R20 is a 4th gen (2009-2018) and Classic size, incorrectly mapped to some 5th gen entries",
+      "Ram 1500 Classic (2019-2024) has NO tire sizes in database - all 6 entries need population",
+      "Ram 1500 TRX tire size 325/65R18 is correct for all years",
+      "Ram 2500 tire sizes are generally correct with appropriate LT prefix",
+      "Years 2000-2001 show 17-inch sizes but those years primarily had 16-inch wheels"
+    ],
+    "recommendedActions": [
+      "Remove 305/45R22 from all Ram 1500 entries - not factory OEM",
+      "Correct 5th gen Ram 1500 entries to use 275/55R20 instead of 275/60R20",
+      "Populate Ram 1500 Classic with 265/70R17 and 275/60R20",
+      "Review 2000-2001 Ram 1500 entries for correct 16-inch tire sizes",
+      "Add missing LT sizes to Ram 2500 where appropriate"
+    ]
+  }
+}

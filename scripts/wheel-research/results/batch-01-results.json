@@ -1,0 +1,1057 @@
+{
+  "batchId": "01",
+  "processedAt": "2026-04-21T20:52:00.000Z",
+  "results": [
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "adx",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "amazon.com",
+      "confidence": "medium",
+      "notes": "New model - specs based on compatible aftermarket wheels for 2025-2026"
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "adx",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "amazon.com",
+      "confidence": "medium",
+      "notes": "Based on compatible aftermarket wheel listings"
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "cl",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7, "offset": 32}],
+        "boltPattern": "5x115",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "acura",
+      "model": "cl",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6, "offset": 48}, {"diameter": 17, "width": 7, "offset": 34}],
+        "boltPattern": "4x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "cl",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6, "offset": 48}, {"diameter": 17, "width": 7, "offset": 34}],
+        "boltPattern": "4x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "acura",
+      "model": "cl",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6, "offset": 48}],
+        "boltPattern": "4x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "cl-type-s",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7, "offset": 45}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "acura",
+      "model": "cl-type-s",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7, "offset": 45}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "cl-type-s",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7, "offset": 45}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "sizemywheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "acura",
+      "model": "ilx",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 7, "offset": 40}, {"diameter": 17, "width": 7, "offset": 34}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "integra",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "acura",
+      "model": "integra",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "integraforums.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "integra",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "integraforums.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "integra-type-r",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 7, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "acura",
+      "model": "integra-type-r",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 7, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "mdx",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8.5, "offset": 50}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "autorimshop.com",
+      "confidence": "high",
+      "notes": "A-Spec trim uses 5x120; base trims may use 5x114.3"
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 43, "position": "front"},
+          {"diameter": 20, "width": 11, "offset": 36, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 70.5,
+        "isStaggered": true
+      },
+      "source": "autotalent.com",
+      "confidence": "high",
+      "notes": "NC1 generation - staggered setup"
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 43, "position": "front"},
+          {"diameter": 20, "width": 11, "offset": 36, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 70.5,
+        "isStaggered": true
+      },
+      "source": "autotalent.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 43, "position": "front"},
+          {"diameter": 20, "width": 11, "offset": 36, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 70.5,
+        "isStaggered": true
+      },
+      "source": "autotalent.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 43, "position": "front"},
+          {"diameter": 20, "width": 11, "offset": 36, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 70.5,
+        "isStaggered": true
+      },
+      "source": "autotalent.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 43, "position": "front"},
+          {"diameter": 20, "width": 11, "offset": 36, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 70.5,
+        "isStaggered": true
+      },
+      "source": "autotalent.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 43, "position": "front"},
+          {"diameter": 20, "width": 11, "offset": 36, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 70.5,
+        "isStaggered": true
+      },
+      "source": "autotalent.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 43, "position": "front"},
+          {"diameter": 20, "width": 11, "offset": 36, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 70.5,
+        "isStaggered": true
+      },
+      "source": "autotalent.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 43, "position": "front"},
+          {"diameter": 20, "width": 11, "offset": 36, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 70.5,
+        "isStaggered": true
+      },
+      "source": "autotalent.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 60, "position": "front"},
+          {"diameter": 17, "width": 9, "offset": 65, "position": "rear"}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true
+      },
+      "source": "wheelssize.com",
+      "confidence": "medium",
+      "notes": "NA1/NA2 generation - staggered setup"
+    },
+    {
+      "year": 2004,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 60, "position": "front"},
+          {"diameter": 17, "width": 9, "offset": 65, "position": "rear"}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true
+      },
+      "source": "wheelssize.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 60, "position": "front"},
+          {"diameter": 17, "width": 9, "offset": 65, "position": "rear"}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true
+      },
+      "source": "wheelssize.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2002,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 60, "position": "front"},
+          {"diameter": 17, "width": 9, "offset": 65, "position": "rear"}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true
+      },
+      "source": "wheelssize.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 55, "position": "front"},
+          {"diameter": 17, "width": 8.5, "offset": 46, "position": "rear"}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true
+      },
+      "source": "wheelssize.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2000,
+      "make": "acura",
+      "model": "nsx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 55, "position": "front"},
+          {"diameter": 17, "width": 8.5, "offset": 46, "position": "rear"}
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": true
+      },
+      "source": "wheelssize.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2006,
+      "make": "acura",
+      "model": "rdx",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 7.5, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 55}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 50}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 50}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 50}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 8, "offset": 45}, {"diameter": 18, "width": 8, "offset": 50}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 8, "offset": 45}, {"diameter": 18, "width": 8, "offset": 50}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 8, "offset": 45}, {"diameter": 18, "width": 8, "offset": 50}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 8, "offset": 45}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 8, "offset": 45}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "acura",
+      "model": "rl",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6, "offset": 50}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "acura",
+      "model": "rsx",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6.5, "offset": 45}, {"diameter": 17, "width": 7, "offset": 45}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "cosmisusa.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "acura",
+      "model": "rsx",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6.5, "offset": 45}, {"diameter": 17, "width": 7, "offset": 45}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "cosmisusa.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "acura",
+      "model": "rsx",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6.5, "offset": 45}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "rsx",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6.5, "offset": 45}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "acura",
+      "model": "rsx",
+      "specs": {
+        "wheelSizes": [{"diameter": 16, "width": 6.5, "offset": 45}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "tsx",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7, "offset": 55}],
+        "boltPattern": "5x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "tsxclub.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "zdx",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 45}],
+        "boltPattern": "6x132",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "multiple",
+      "confidence": "medium",
+      "notes": "New EV platform - uses 6x132 bolt pattern"
+    },
+    {
+      "year": 2024,
+      "make": "acura",
+      "model": "zdx",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 45}],
+        "boltPattern": "6x132",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "multiple",
+      "confidence": "medium",
+      "notes": "EV platform - uses 6x132 bolt pattern"
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "zdx",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 45}],
+        "boltPattern": "6x132",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "multiple",
+      "confidence": "medium",
+      "notes": "EV platform - uses 6x132 bolt pattern"
+    },
+    {
+      "year": 2013,
+      "make": "acura",
+      "model": "zdx",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 45}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "acura",
+      "model": "zdx",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 45}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "acura",
+      "model": "zdx",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 45}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "acura",
+      "model": "zdx",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 45}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "acura",
+      "model": "zdx",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 45}],
+        "boltPattern": "5x120",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "medium",
+      "notes": "ZDX was first released in 2010; 2009 may be a database error"
+    },
+    {
+      "year": 2005,
+      "make": "audi",
+      "model": "a3",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7, "offset": 42}, {"diameter": 18, "width": 7.5, "offset": 45}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "audi",
+      "model": "a3",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7, "offset": 42}, {"diameter": 18, "width": 7.5, "offset": 45}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 40}, {"diameter": 19, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "medium",
+      "notes": "New model year - specs based on current generation"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 40}, {"diameter": 19, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 40}, {"diameter": 19, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 40}, {"diameter": 19, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 40}, {"diameter": 19, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 40}, {"diameter": 19, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 40}, {"diameter": 19, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 40}, {"diameter": 19, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7.5, "offset": 42}, {"diameter": 18, "width": 8, "offset": 35}, {"diameter": 19, "width": 9, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7.5, "offset": 42}, {"diameter": 18, "width": 8, "offset": 35}, {"diameter": 19, "width": 9, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7.5, "offset": 42}, {"diameter": 18, "width": 8, "offset": 35}, {"diameter": 19, "width": 9, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7.5, "offset": 42}, {"diameter": 18, "width": 8, "offset": 35}, {"diameter": 19, "width": 9, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7.5, "offset": 42}, {"diameter": 18, "width": 8, "offset": 35}, {"diameter": 19, "width": 9, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "a5",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7.5, "offset": 42}, {"diameter": 18, "width": 8, "offset": 35}, {"diameter": 19, "width": 9, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheelssize.com",
+      "confidence": "high"
+    }
+  ],
+  "stats": {
+    "total": 75,
+    "complete": 68,
+    "partial": 5,
+    "failed": 2
+  },
+  "notes": {
+    "partialResults": [
+      "2026 Acura ADX - new model, specs from aftermarket compatibility",
+      "2025 Acura ADX - new model, specs from aftermarket compatibility", 
+      "2023-2025 Acura ZDX - new EV platform with unusual 6x132 bolt pattern",
+      "2009 Acura ZDX - may be database error (ZDX launched 2010)",
+      "2026 Audi A5 - future model year"
+    ],
+    "staggeredVehicles": [
+      "Acura NSX 2016-2023 (NC1): Front 19x8.5, Rear 20x11",
+      "Acura NSX 2002-2005 (NA1/NA2): Front 17x7, Rear 17x9",
+      "Acura NSX 2000-2001 (NA1): Front 16x7, Rear 17x8.5"
+    ],
+    "boltPatternChanges": [
+      "Acura RL: Changed from 5x114.3 (2000-2004) to 5x120 (2005-2013)",
+      "Acura ZDX: Changed from 5x120 (2010-2013) to 6x132 (2023-2025 EV)"
+    ]
+  }
+}

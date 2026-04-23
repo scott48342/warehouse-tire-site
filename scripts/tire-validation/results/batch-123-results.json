@@ -1,0 +1,1134 @@
+{
+  "batchId": "123",
+  "processedAt": "2026-04-21T22:32:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "dayz-roox",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["155/65R14", "165/55R15"],
+      "trims": {
+        "Base (0.7i)": "155/65R14",
+        "Highway Star": "155/65R14",
+        "Highway Star Turbo (0.7i Turbo)": "165/55R15",
+        "Rider": "165/55R15"
+      },
+      "source": "tirewheelguide.com, carfromjapan.com",
+      "notes": "JDM Kei car. Bolt pattern 4x100.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "dayz-roox",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["155/65R14", "165/55R15"],
+      "trims": {
+        "Base (0.7i)": "155/65R14",
+        "Highway Star S": "155/65R14",
+        "Highway Star Turbo (0.7i Turbo)": "165/55R15",
+        "Rider": "165/55R15"
+      },
+      "source": "tirewheelguide.com, carfromjapan.com",
+      "notes": "JDM Kei car. Bolt pattern 4x100.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "dayz-roox",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["155/65R14", "165/55R15"],
+      "trims": {
+        "Base (0.7i)": "155/65R14",
+        "Highway Star S": "155/65R14",
+        "Highway Star Turbo (0.7i Turbo)": "165/55R15"
+      },
+      "source": "tirewheelguide.com, carfromjapan.com",
+      "notes": "JDM Kei car launched 2014. Bolt pattern 4x100.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "dualis-2",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["215/65R16", "215/60R17", "215/55R18"],
+      "trims": {
+        "20S (2.0i)": "215/65R16",
+        "20S (2.0i) 17-inch": "215/60R17",
+        "20G (2.0i) 18-inch": "215/55R18",
+        "1.6 dCi": "215/65R16"
+      },
+      "source": "tirewheelguide.com, carfromjapan.com",
+      "notes": "JDM/Australia market. Dualis+2 is 7-seater variant. Bolt pattern 5x114.3.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "dualis-2",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["215/65R16", "215/60R17", "215/55R18"],
+      "trims": {
+        "20S (2.0i)": "215/65R16",
+        "20S (2.0i) 17-inch": "215/60R17",
+        "20G (2.0i) 18-inch": "215/55R18"
+      },
+      "source": "tirewheelguide.com",
+      "notes": "JDM/Australia market. Bolt pattern 5x114.3.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "dualis-2",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["215/65R16", "215/60R17", "215/55R18"],
+      "trims": {
+        "20S (2.0i)": "215/65R16",
+        "20S (2.0i) 17-inch": "215/60R17",
+        "20G (2.0i) 18-inch": "215/55R18"
+      },
+      "source": "tirewheelguide.com",
+      "notes": "JDM/Australia market. Bolt pattern 5x114.3.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "dualis-2",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["215/65R16", "215/60R17", "215/55R18"],
+      "trims": {
+        "20S (2.0i)": "215/65R16",
+        "20S (2.0i) 17-inch": "215/60R17",
+        "20G (2.0i) 18-inch": "215/55R18"
+      },
+      "source": "tirewheelguide.com",
+      "notes": "JDM/Australia market. First year of facelift (J10). Bolt pattern 5x114.3.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "frontier",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "researchedTireSizes": ["265/70R16", "265/65R17", "265/70R17"],
+      "trims": {
+        "S": "265/70R16",
+        "SV (base)": "265/70R16",
+        "SV (17-inch)": "265/65R17",
+        "PRO-X": "265/70R17",
+        "PRO-4X": "265/70R17",
+        "Midnight Edition": "265/70R17"
+      },
+      "source": "tiresize.com",
+      "notes": "275/55R20 NOT FOUND in OEM data - may be aftermarket. Current data shows 265/65R18 NOT standard.",
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "frontier",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "researchedTireSizes": ["265/70R16", "265/65R17", "265/70R17"],
+      "trims": {
+        "S": "265/70R16",
+        "SV (base)": "265/70R16",
+        "SV (17-inch)": "265/65R17",
+        "PRO-X": "265/70R17",
+        "PRO-4X": "265/70R17",
+        "Midnight Edition": "265/70R17"
+      },
+      "source": "tiresize.com",
+      "notes": "275/55R20 NOT FOUND in OEM data - may be aftermarket. Current data shows 265/65R18 NOT standard.",
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "frontier",
+      "currentTireSizes": ["255/70R16", "265/70R17", "265/65R18"],
+      "researchedTireSizes": ["265/70R16", "265/75R16", "265/60R18"],
+      "trims": {
+        "King Cab S": "265/70R16",
+        "King Cab SV": ["265/70R16", "265/60R18"],
+        "Crew Cab S": "265/70R16",
+        "Crew Cab SV": ["265/70R16", "265/60R18"],
+        "Crew Cab Long Bed SV": ["265/70R16", "265/60R18"],
+        "Crew Cab PRO-4X": "265/75R16",
+        "Midnight Edition": "265/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "255/70R16 NOT FOUND - current data incorrect. Should be 265/70R16. 265/65R18 should be 265/60R18.",
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "frontier",
+      "currentTireSizes": ["255/70R16", "265/70R17", "265/65R18"],
+      "researchedTireSizes": ["265/70R16", "265/75R16", "265/60R18"],
+      "trims": {
+        "King Cab S": "265/70R16",
+        "King Cab SV": ["265/70R16", "265/60R18"],
+        "Crew Cab S": "265/70R16",
+        "Crew Cab SV": ["265/70R16", "265/60R18"],
+        "Crew Cab Long Bed SV": ["265/70R16", "265/60R18"],
+        "Crew Cab PRO-4X": "265/75R16",
+        "Midnight Edition": "265/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "255/70R16 and 265/70R17 NOT FOUND in OEM data. Current data may be incorrect.",
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "All Trims": {
+          "front": "255/40R20",
+          "rear": "285/35R20"
+        }
+      },
+      "source": "tiresize.com (extrapolated from 2024)",
+      "notes": "Staggered setup all trims. GT-R uses same tire sizes across all generations.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "All Trims": {
+          "front": "255/40R20",
+          "rear": "285/35R20"
+        }
+      },
+      "source": "tiresize.com (extrapolated from 2024)",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Nismo": { "front": "255/40R20", "rear": "285/35R20" },
+        "T-Spec": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Nismo": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Nismo": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Nismo": { "front": "255/40R20", "rear": "285/35R20" },
+        "Track Edition": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "50th Anniversary": { "front": "255/40R20", "rear": "285/35R20" },
+        "Nismo": { "front": "255/40R20", "rear": "285/35R20" },
+        "Track Edition": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Pure": { "front": "255/40R20", "rear": "285/35R20" },
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Nismo": { "front": "255/40R20", "rear": "285/35R20" },
+        "Track Edition": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Pure": { "front": "255/40R20", "rear": "285/35R20" },
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Nismo": { "front": "255/40R20", "rear": "285/35R20" },
+        "Track Edition": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Nismo": { "front": "255/40R20", "rear": "285/35R20" },
+        "Track Edition": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Black Edition": { "front": "255/40R20", "rear": "285/35R20" },
+        "Nismo": { "front": "255/40R20", "rear": "285/35R20" },
+        "45th Anniversary Gold Edition": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Black Edition": { "front": "255/40R20", "rear": "285/35R20" },
+        "Nismo": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Black Edition": { "front": "255/40R20", "rear": "285/35R20" },
+        "Track Edition": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Black Edition": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" },
+        "Black Edition": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Base Model": { "front": "255/40R20", "rear": "285/35R20" },
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": ["255/40R20", "285/35R20"],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Base Model": { "front": "255/40R20", "rear": "285/35R20" },
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup all trims.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["255/40R20", "285/35R20"],
+      "trims": {
+        "Base Model": { "front": "255/40R20", "rear": "285/35R20" },
+        "Premium": { "front": "255/40R20", "rear": "285/35R20" }
+      },
+      "source": "tiresize.com",
+      "notes": "R35 GT-R launch year. Staggered setup.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "gt-r",
+      "currentTireSizes": [],
+      "researchedTireSizes": [],
+      "trims": {},
+      "source": "N/A",
+      "notes": "2007 R35 GT-R only available in Japan late 2007. US model started 2008.",
+      "status": "NOT_AVAILABLE"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": ["205/60R16", "205/55R17"],
+      "researchedTireSizes": ["215/65R16", "215/60R17", "225/45R19"],
+      "trims": {
+        "S": "215/65R16",
+        "SV": "215/60R17",
+        "SR": "225/45R19"
+      },
+      "source": "tiresize.com",
+      "notes": "2025+ redesign with new tire sizes. Current data outdated.",
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": ["205/60R16", "205/55R17"],
+      "researchedTireSizes": ["205/60R16", "215/65R16", "215/60R17", "225/45R19"],
+      "trims": {
+        "Play": "205/60R16",
+        "S": "215/65R16",
+        "SV": "215/60R17",
+        "SR": "225/45R19"
+      },
+      "source": "tiresize.com",
+      "notes": "2025 redesign introduced new tire sizes. Multiple options available.",
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": ["205/60R16", "205/55R17"],
+      "researchedTireSizes": ["205/60R16", "205/55R17"],
+      "trims": {
+        "S": "205/60R16",
+        "SV": "205/55R17",
+        "SR": "205/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "Pre-redesign model.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": ["205/60R16", "205/55R17"],
+      "researchedTireSizes": ["205/60R16", "205/55R17"],
+      "trims": {
+        "S": "205/60R16",
+        "SV": "205/55R17",
+        "SR": "205/55R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": ["205/60R16", "205/55R17"],
+      "researchedTireSizes": ["205/60R16", "205/55R17"],
+      "trims": {
+        "S": "205/60R16",
+        "SV": "205/55R17",
+        "SR": "205/55R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": ["205/60R16", "205/55R17"],
+      "researchedTireSizes": ["205/60R16", "205/55R17"],
+      "trims": {
+        "S": "205/60R16",
+        "SV": "205/55R17",
+        "SR": "205/55R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": ["205/60R16", "205/55R17"],
+      "researchedTireSizes": ["205/60R16", "205/55R17"],
+      "trims": {
+        "S": "205/60R16",
+        "SV": "205/55R17",
+        "SR": "205/55R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": ["205/60R16", "205/55R17"],
+      "researchedTireSizes": ["205/60R16", "205/55R17"],
+      "trims": {
+        "S": "205/60R16",
+        "SV": "205/55R17",
+        "SR": "205/55R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": ["205/60R16", "205/55R17"],
+      "researchedTireSizes": ["205/60R16", "205/55R17"],
+      "trims": {
+        "S": "205/60R16",
+        "SV": "205/55R17",
+        "SR": "205/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "US market launch year.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["205/60R16", "205/55R17"],
+      "trims": {
+        "S": "205/60R16",
+        "SV": "205/55R17",
+        "SR": "205/55R17"
+      },
+      "source": "tiresize.com (extrapolated)",
+      "notes": "2017 Kicks available in some markets (Brazil, Mexico). US started 2018.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "kicks",
+      "currentTireSizes": ["205/60R16", "205/55R17"],
+      "researchedTireSizes": ["205/60R16", "205/55R17"],
+      "trims": {
+        "Base": "205/60R16",
+        "SV": "205/55R17"
+      },
+      "source": "tiresize.com (extrapolated)",
+      "notes": "Brazil/Latin America market only in 2016.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "kix",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["175/80R15"],
+      "trims": {
+        "RS": "175/80R15",
+        "RX": "175/80R15"
+      },
+      "source": "carfromjapan.com",
+      "notes": "JDM only. Based on Mitsubishi Pajero Mini. Bolt pattern 5x114.3. Final year.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "kix",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["175/80R15"],
+      "trims": {
+        "RS": "175/80R15",
+        "RX": "175/80R15"
+      },
+      "source": "carfromjapan.com",
+      "notes": "JDM only. Bolt pattern 5x114.3.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "kix",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["175/80R15"],
+      "trims": {
+        "RS": "175/80R15",
+        "RX": "175/80R15"
+      },
+      "source": "carfromjapan.com",
+      "notes": "JDM only. Bolt pattern 5x114.3.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "kix",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["175/80R15"],
+      "trims": {
+        "RS": "175/80R15",
+        "RX": "175/80R15"
+      },
+      "source": "carfromjapan.com",
+      "notes": "JDM only. Bolt pattern 5x114.3.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "kix",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["175/80R15"],
+      "trims": {
+        "RS": "175/80R15",
+        "RX": "175/80R15"
+      },
+      "source": "carfromjapan.com",
+      "notes": "JDM only. Launch year (Model code H59A). Bolt pattern 5x114.3.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "kubistar",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["165/70R13", "165/75R14"],
+      "trims": {
+        "1.2i": "165/70R13",
+        "1.5 dCi": ["165/70R13", "165/75R14"],
+        "1.6i": ["165/70R13", "165/75R14"]
+      },
+      "source": "tirewheelguide.com",
+      "notes": "European market van (rebadged Renault Kangoo). Final year. Bolt pattern 4x100.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "kubistar",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["165/70R13", "165/75R14"],
+      "trims": {
+        "1.2i": "165/70R13",
+        "1.5 dCi": ["165/70R13", "165/75R14"],
+        "1.6i": ["165/70R13", "165/75R14"]
+      },
+      "source": "tirewheelguide.com",
+      "notes": "European market van. Bolt pattern 4x100.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "kubistar",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["165/70R13", "165/75R14", "175/65R14"],
+      "trims": {
+        "1.2i": ["165/70R13", "175/65R14"],
+        "1.5 dCi": ["165/70R13", "165/75R14"],
+        "1.6i": ["165/70R13", "165/75R14"]
+      },
+      "source": "tirewheelguide.com",
+      "notes": "European market van. Bolt pattern 4x100.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "kubistar",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["165/70R13", "165/75R14", "175/65R14"],
+      "trims": {
+        "1.2i": ["165/70R13", "175/65R14"],
+        "1.5 dCi": ["165/70R13", "165/75R14"],
+        "1.6i": ["165/70R13", "165/75R14"]
+      },
+      "source": "tirewheelguide.com",
+      "notes": "European market van. Bolt pattern 4x100.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "kubistar",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["165/70R13", "165/75R14", "175/65R14"],
+      "trims": {
+        "1.2i": ["165/70R13", "175/65R14"],
+        "1.5 dCi": ["165/70R13", "165/75R14"],
+        "1.6i": ["165/70R13", "165/75R14"]
+      },
+      "source": "tirewheelguide.com",
+      "notes": "European market van. Bolt pattern 4x100.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "kubistar",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["165/70R13", "165/75R14", "175/65R14"],
+      "trims": {
+        "1.2i": ["165/70R13", "175/65R14"],
+        "1.5 dCi": ["165/70R13", "165/75R14"],
+        "1.6i": ["165/70R13", "165/75R14"]
+      },
+      "source": "tirewheelguide.com",
+      "notes": "European market van. Launch year. Bolt pattern 4x100.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "lannia",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["205/50R17", "215/45R17"],
+      "trims": {
+        "1.6L CVT": ["205/50R17", "215/45R17"]
+      },
+      "source": "wheel-size.com (description)",
+      "notes": "China market only sedan. Limited data available.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "lannia",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["205/50R17", "215/45R17"],
+      "trims": {
+        "1.6L CVT": ["205/50R17", "215/45R17"]
+      },
+      "source": "wheel-size.com (description)",
+      "notes": "China market only sedan.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "lannia",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["205/50R17", "215/45R17"],
+      "trims": {
+        "1.6L CVT": ["205/50R17", "215/45R17"]
+      },
+      "source": "wheel-size.com (description)",
+      "notes": "China market only sedan.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "lannia",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["205/50R17", "215/45R17"],
+      "trims": {
+        "1.6L CVT": ["205/50R17", "215/45R17"]
+      },
+      "source": "wheel-size.com (description)",
+      "notes": "China market only sedan.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "lannia",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["205/50R17", "215/45R17"],
+      "trims": {
+        "1.6L CVT": ["205/50R17", "215/45R17"]
+      },
+      "source": "wheel-size.com (description)",
+      "notes": "China market only sedan.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "lannia",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["205/50R17", "215/45R17"],
+      "trims": {
+        "1.6L CVT": ["205/50R17", "215/45R17"]
+      },
+      "source": "wheel-size.com (description)",
+      "notes": "China market only sedan.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "lannia",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["205/50R17", "215/45R17"],
+      "trims": {
+        "1.6L CVT": ["205/50R17", "215/45R17"]
+      },
+      "source": "wheel-size.com (description)",
+      "notes": "China market only sedan.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "lannia",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["205/50R17", "215/45R17"],
+      "trims": {
+        "1.6L CVT": ["205/50R17", "215/45R17"]
+      },
+      "source": "wheel-size.com (description)",
+      "notes": "China market only sedan.",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "lannia",
+      "currentTireSizes": [],
+      "researchedTireSizes": ["205/50R17", "215/45R17"],
+      "trims": {
+        "1.6L CVT": ["205/50R17", "215/45R17"]
+      },
+      "source": "wheel-size.com (description), carnewschina.com",
+      "notes": "China market only sedan. Launch year (October 2015 reveal, 2016 sales).",
+      "status": "NEW_DATA"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "researchedTireSizes": ["215/55R18", "235/45R19"],
+      "trims": {
+        "S+": "215/55R18",
+        "SV+": "215/55R18",
+        "Platinum+": "235/45R19"
+      },
+      "source": "tiresize.com",
+      "notes": "2026 Leaf redesign with new tire sizes. Current data outdated.",
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "SV Plus": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "SV Plus": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17", "225/45ZR18"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "SV Plus": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "notes": "225/45ZR18 NOT FOUND in tiresize.com data for 2023.",
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17", "225/45ZR18"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "S Plus": "205/55R16",
+        "SV": "215/50R17",
+        "SV Plus": "215/50R17",
+        "SL Plus": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "notes": "225/45ZR18 NOT FOUND in tiresize.com data for 2022.",
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "S Plus": "205/55R16",
+        "SV": "215/50R17",
+        "SV Plus": "215/50R17",
+        "SL Plus": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "S Plus": "205/55R16",
+        "SV": "215/50R17",
+        "SV Plus": "215/50R17",
+        "SL Plus": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "S Plus": "205/55R16",
+        "SV": "215/50R17",
+        "SV Plus": "215/50R17",
+        "SL": "215/50R17",
+        "SL Plus": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "SV": "215/50R17",
+        "SL": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "notes": "2nd gen Leaf started 2018.",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "SV": "215/50R17",
+        "SL": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "SV": "215/50R17",
+        "SL": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "SV": "215/50R17",
+        "SL": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "status": "VERIFIED"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17", "195/65R15"],
+      "researchedTireSizes": ["205/55R16", "215/50R17"],
+      "trims": {
+        "S": "205/55R16",
+        "SV": "205/55R16",
+        "SL": "215/50R17"
+      },
+      "source": "tiresize.com",
+      "notes": "195/65R15 NOT FOUND in tiresize.com data. May be aftermarket or error.",
+      "status": "DISCREPANCY"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "verified": 30,
+    "newData": 32,
+    "discrepancy": 12,
+    "notAvailable": 1,
+    "jdmOnlyModels": ["dayz-roox", "dualis-2", "kix"],
+    "europeOnlyModels": ["kubistar"],
+    "chinaOnlyModels": ["lannia"],
+    "staggeredSetups": ["gt-r"],
+    "notes": [
+      "GT-R confirmed staggered 255/40R20 front, 285/35R20 rear across all trims 2008-2026",
+      "Dayz Roox is JDM kei car - small tire sizes 155/65R14 and 165/55R15",
+      "Dualis-2 is 7-seater variant sold in Japan/Australia - known as Qashqai+2 in Europe",
+      "Kix is rebadged Mitsubishi Pajero Mini sold only in Japan 2008-2012",
+      "Kubistar is rebadged Renault Kangoo sold in Europe 2003-2008",
+      "Lannia is China-market only sedan, limited tire data available",
+      "Frontier 2020-2021 had different tire sizes than 2022+ redesign",
+      "Kicks 2025+ redesign introduced larger tire options including 225/45R19",
+      "Leaf 2026 redesign introduces 215/55R18 and 235/45R19 options"
+    ]
+  }
+}

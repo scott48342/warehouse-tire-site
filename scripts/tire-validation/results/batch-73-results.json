@@ -1,0 +1,1135 @@
+{
+  "batchId": "73",
+  "processedAt": "2026-04-21T22:10:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2006,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "GL": ["215/60R16"],
+        "GLS": ["215/60R16", "225/50R17"],
+        "LX": ["225/50R17"]
+      },
+      "allValidSizes": ["215/60R16", "225/50R17"],
+      "issues": ["Current sizes 205/65R16, 215/55R17, 235/45R18, 245/40R19 do not match OEM specs"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2005,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": {
+        "GL": ["205/65R15"],
+        "GLS": ["205/60R16"],
+        "LX": ["205/60R16"]
+      },
+      "allValidSizes": ["205/65R15", "205/60R16"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2005,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/65R15"],
+      "validatedTireSizes": {
+        "GL": ["205/65R15"],
+        "GLS": ["205/60R16"],
+        "LX": ["205/60R16"]
+      },
+      "allValidSizes": ["205/65R15", "205/60R16"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2004,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["205/65R15"],
+        "GLS": ["205/60R16"],
+        "LX": ["205/60R16"]
+      },
+      "allValidSizes": ["205/65R15", "205/60R16"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2004,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/65R15"],
+      "validatedTireSizes": {
+        "Base Model": ["205/65R15"],
+        "GLS": ["205/60R16"],
+        "LX": ["205/60R16"]
+      },
+      "allValidSizes": ["205/65R15", "205/60R16"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2003,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["205/65R15"],
+        "GLS": ["205/60R16"],
+        "LX": ["205/60R16"]
+      },
+      "allValidSizes": ["205/65R15", "205/60R16"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2003,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/65R15"],
+      "validatedTireSizes": {
+        "Base Model": ["205/65R15"],
+        "GLS": ["205/60R16"],
+        "LX": ["205/60R16"]
+      },
+      "allValidSizes": ["205/65R15", "205/60R16"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2002,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/65R15"],
+      "validatedTireSizes": {
+        "Base Model": ["205/65R15"],
+        "GLS": ["205/60R16"],
+        "LX": ["205/60R16"]
+      },
+      "allValidSizes": ["205/65R15", "205/60R16"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2002,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["205/65R15"],
+        "GLS": ["205/60R16"],
+        "LX": ["205/60R16"]
+      },
+      "allValidSizes": ["205/65R15", "205/60R16"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2001,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/65R15"],
+      "validatedTireSizes": {
+        "Base Model": ["205/60R15"],
+        "GLS": ["205/60R15"]
+      },
+      "allValidSizes": ["205/60R15"],
+      "issues": ["Current 205/65R15 does not match OEM 205/60R15"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2001,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["205/60R15"],
+        "GLS": ["205/60R15"]
+      },
+      "allValidSizes": ["205/60R15"],
+      "issues": ["Current 205/60R16 does not match OEM 205/60R15"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/65R15"],
+      "validatedTireSizes": {
+        "Base Model": ["195/70R14"],
+        "GLS": ["205/60R15"]
+      },
+      "allValidSizes": ["195/70R14", "205/60R15"],
+      "issues": ["Current 205/65R15 does not match OEM sizes"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["195/70R14"],
+        "GLS": ["205/60R15"]
+      },
+      "allValidSizes": ["195/70R14", "205/60R15"],
+      "issues": ["Current 205/60R16 does not match OEM sizes"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2008,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "GS": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"],
+        "SE": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2007,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "GS": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"],
+        "SE": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2006,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "GS": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"],
+        "SE": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2005,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "GS": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"],
+        "SE": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["195/55R15"]
+      },
+      "allValidSizes": ["195/55R15"],
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["195/55R15"]
+      },
+      "allValidSizes": ["195/55R15"],
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "Hyundai",
+      "model": "Tiburon-Turbulence",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["195/55R15"]
+      },
+      "allValidSizes": ["195/55R15"],
+      "notes": "Tiburon Turbulence is a special edition variant of the Tiburon",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "Tiburon-Turbulence",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["195/55R15"]
+      },
+      "allValidSizes": ["195/55R15"],
+      "notes": "Tiburon Turbulence is a special edition variant of the Tiburon",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2026,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["235/65R17", "235/55R18", "255/45R19"],
+      "validatedTireSizes": {
+        "Blue SE Hybrid": ["235/65R17"],
+        "SE": ["235/65R17"],
+        "SEL": ["235/60R18"],
+        "SEL Hybrid": ["235/60R18"],
+        "SEL Plug-In Hybrid": ["235/60R18"],
+        "XRT": ["235/60R18"],
+        "Limited": ["235/55R19"],
+        "Limited Hybrid": ["235/55R19"],
+        "Limited Plug-In Hybrid": ["235/55R19"]
+      },
+      "allValidSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "issues": ["Current 235/55R18 should be 235/60R18", "Current 255/45R19 should be 235/55R19"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2025,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["235/65R17", "235/55R18", "255/45R19"],
+      "validatedTireSizes": {
+        "Blue Hybrid": ["235/65R17"],
+        "SE": ["235/65R17"],
+        "SEL": ["235/60R18"],
+        "SEL Hybrid": ["235/60R18"],
+        "SEL Plug-In Hybrid": ["235/60R18"],
+        "XRT": ["235/60R18"],
+        "Limited": ["235/55R19"],
+        "Limited Hybrid": ["235/55R19"],
+        "Limited Plug-In Hybrid": ["235/55R19"],
+        "N Line Hybrid": ["235/55R19"]
+      },
+      "allValidSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "issues": ["Current 235/55R18 should be 235/60R18", "Current 255/45R19 should be 235/55R19"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2024,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["235/65R17", "235/55R18", "255/45R19"],
+      "validatedTireSizes": {
+        "Blue Hybrid": ["235/65R17"],
+        "SE": ["235/65R17"],
+        "SEL": ["235/65R17", "235/55R19"],
+        "SEL Hybrid": ["235/55R19"],
+        "SEL Plug-In Hybrid": ["235/55R19"],
+        "XRT": ["235/55R19"],
+        "N Line": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited Hybrid": ["235/55R19"],
+        "Limited Plug-In Hybrid": ["235/55R19"]
+      },
+      "allValidSizes": ["235/65R17", "235/55R19"],
+      "issues": ["Current 235/55R18 not a valid OEM size", "Current 255/45R19 should be 235/55R19"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2023,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["235/65R17", "235/55R18", "255/45R19", "235/55R19", "215/65R17", "235/50R19", "235/60R18", "235/50R20", "235/45R20"],
+      "validatedTireSizes": {
+        "Blue Hybrid": ["235/65R17"],
+        "SE": ["235/65R17"],
+        "SEL": ["235/65R17", "235/55R19"],
+        "SEL Hybrid": ["235/55R19"],
+        "SEL Plug-In Hybrid": ["235/55R19"],
+        "XRT": ["235/55R19"],
+        "N Line": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited Hybrid": ["235/55R19"],
+        "Limited Plug-In Hybrid": ["235/55R19"]
+      },
+      "allValidSizes": ["235/65R17", "235/55R19"],
+      "issues": ["Many non-OEM sizes in current list: 235/55R18, 255/45R19, 215/65R17, 235/50R19, 235/60R18, 235/50R20, 235/45R20"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2023,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "235/50R20", "255/45R20", "235/55R18", "215/65R17", "235/50R19", "235/45R20"],
+      "validatedTireSizes": {
+        "Blue Hybrid": ["235/65R17"],
+        "SE": ["235/65R17"],
+        "SEL": ["235/65R17", "235/55R19"],
+        "SEL Hybrid": ["235/55R19"],
+        "SEL Plug-In Hybrid": ["235/55R19"],
+        "XRT": ["235/55R19"],
+        "N Line": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited Hybrid": ["235/55R19"],
+        "Limited Plug-In Hybrid": ["235/55R19"]
+      },
+      "allValidSizes": ["235/65R17", "235/55R19"],
+      "issues": ["Many non-OEM sizes in current list"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2022,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "235/50R20", "255/45R20", "235/55R18", "215/65R17", "235/50R19", "235/45R20"],
+      "validatedTireSizes": {
+        "Blue Hybrid": ["235/65R17"],
+        "SE": ["235/65R17"],
+        "SEL": ["235/65R17", "235/55R19"],
+        "SEL Hybrid": ["235/55R19"],
+        "SEL Plug-In Hybrid": ["235/55R19"],
+        "XRT": ["235/55R19"],
+        "N Line": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited Hybrid": ["235/55R19"],
+        "Limited Plug-In Hybrid": ["235/55R19"]
+      },
+      "allValidSizes": ["235/65R17", "235/55R19"],
+      "issues": ["Many non-OEM sizes in current list"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2022,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["235/65R17", "235/55R18", "255/45R19", "235/55R19", "215/65R17", "235/50R19", "235/60R18", "235/50R20", "235/45R20"],
+      "validatedTireSizes": {
+        "Blue Hybrid": ["235/65R17"],
+        "SE": ["235/65R17"],
+        "SEL": ["235/65R17", "235/55R19"],
+        "SEL Hybrid": ["235/55R19"],
+        "SEL Plug-In Hybrid": ["235/55R19"],
+        "XRT": ["235/55R19"],
+        "N Line": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited Hybrid": ["235/55R19"],
+        "Limited Plug-In Hybrid": ["235/55R19"]
+      },
+      "allValidSizes": ["235/65R17", "235/55R19"],
+      "issues": ["Many non-OEM sizes in current list"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2021,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "validatedTireSizes": {
+        "SE": ["225/60R17"],
+        "Value": ["225/60R17"],
+        "SEL": ["225/55R18"],
+        "Ultimate": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Sport": ["245/45R19"]
+      },
+      "allValidSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "validatedTireSizes": {
+        "SE": ["225/60R17"],
+        "Value": ["225/60R17"],
+        "SEL": ["225/55R18"],
+        "Ultimate": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Sport": ["245/45R19"]
+      },
+      "allValidSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2019,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19", "225/50R19"],
+      "validatedTireSizes": {
+        "SE": ["225/60R17"],
+        "Value": ["225/60R17"],
+        "SEL": ["225/55R18"],
+        "Ultimate": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Sport": ["245/45R19"]
+      },
+      "allValidSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "issues": ["225/50R19 not a valid OEM size"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2018,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19", "245/45ZR19", "245/40ZR20"],
+      "validatedTireSizes": {
+        "SE": ["225/60R17"],
+        "SEL": ["225/60R17"],
+        "SEL Plus": ["225/60R17"],
+        "Value": ["225/60R17"],
+        "Limited": ["245/45R19"]
+      },
+      "allValidSizes": ["225/60R17", "245/45R19"],
+      "issues": ["225/55R18, 245/45ZR19, 245/40ZR20 not standard OEM sizes"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2017,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "validatedTireSizes": {
+        "Eco": ["225/60R17"],
+        "SE": ["225/60R17"],
+        "SE Plus": ["225/60R17"],
+        "Limited": ["245/45R19"],
+        "Night": ["245/45R19"],
+        "Sport": ["245/45R19"]
+      },
+      "allValidSizes": ["225/60R17", "245/45R19"],
+      "issues": ["225/55R18 not a standard OEM size for 2017"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2016,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "validatedTireSizes": {
+        "Eco": ["225/60R17"],
+        "Fuel Cell": ["225/60R17"],
+        "SE": ["225/60R17"],
+        "Limited": ["245/45R19"],
+        "Sport": ["245/45R19"]
+      },
+      "allValidSizes": ["225/60R17", "245/45R19"],
+      "issues": ["225/55R18 not a standard OEM size for 2016"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2015,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": {
+        "GLS": ["225/60R17"],
+        "SE": ["225/60R17"],
+        "Limited": ["225/55R18"]
+      },
+      "allValidSizes": ["225/60R17", "225/55R18"],
+      "issues": ["215/70R16 not a valid OEM size for 2015"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2014,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": {
+        "GLS": ["225/60R17"],
+        "SE": ["225/60R17"],
+        "Limited": ["225/55R18"]
+      },
+      "allValidSizes": ["225/60R17", "225/55R18"],
+      "issues": ["215/70R16 not a valid OEM size for 2014"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2013,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": {
+        "GL": ["225/60R17"],
+        "GLS": ["225/60R17"],
+        "Limited": ["225/55R18"]
+      },
+      "allValidSizes": ["225/60R17", "225/55R18"],
+      "issues": ["215/70R16 not a valid OEM size for 2013"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2012,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": {
+        "GL": ["225/60R17"],
+        "GLS": ["225/60R17"],
+        "Limited": ["225/55R18"]
+      },
+      "allValidSizes": ["225/60R17", "225/55R18"],
+      "issues": ["215/70R16 not a valid OEM size for 2012"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2011,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": {
+        "GL": ["225/60R17"],
+        "GLS": ["225/60R17"],
+        "Limited": ["225/55R18"]
+      },
+      "allValidSizes": ["225/60R17", "225/55R18"],
+      "issues": ["215/70R16 not a valid OEM size for 2011"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2010,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": {
+        "GLS": ["225/60R17"],
+        "Limited": ["225/55R18"]
+      },
+      "allValidSizes": ["225/60R17", "225/55R18"],
+      "issues": ["215/70R16 not a valid OEM size for 2010 (new gen)"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2009,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": {
+        "GLS 2wd": ["215/65R16"],
+        "GLS 4wd": ["215/65R16"],
+        "Limited 2wd": ["235/60R16"],
+        "Limited 4wd": ["235/60R16"],
+        "SE 2wd": ["235/60R16"],
+        "SE 4wd": ["235/60R16"]
+      },
+      "allValidSizes": ["215/65R16", "235/60R16"],
+      "issues": ["225/60R17 not a standard OEM size; should be 235/60R16 for higher trims"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2008,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": {
+        "GLS 2wd": ["215/65R16"],
+        "GLS 4wd": ["215/65R16"],
+        "Limited 2wd": ["235/60R16"],
+        "Limited 4wd": ["235/60R16"],
+        "SE 2wd": ["235/60R16"],
+        "SE 4wd": ["235/60R16"]
+      },
+      "allValidSizes": ["215/65R16", "235/60R16"],
+      "issues": ["225/60R17 not a standard OEM size; should be 235/60R16 for higher trims"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2007,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": {
+        "GLS 2wd": ["215/65R16"],
+        "GLS 4wd": ["215/65R16"],
+        "Limited 2wd": ["235/60R16"],
+        "Limited 4wd": ["235/60R16"],
+        "SE 2wd": ["235/60R16"],
+        "SE 4wd": ["235/60R16"]
+      },
+      "allValidSizes": ["215/65R16", "235/60R16"],
+      "issues": ["225/60R17 not a standard OEM size"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2006,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": {
+        "GL 2wd": ["215/65R16"],
+        "GL 4wd": ["215/65R16"],
+        "GLS 2wd": ["235/60R16"],
+        "GLS 4wd": ["235/60R16"],
+        "Limited 2wd": ["235/60R16"],
+        "Limited 4wd": ["235/60R16"]
+      },
+      "allValidSizes": ["215/65R16", "235/60R16"],
+      "issues": ["225/60R17 not a standard OEM size"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2005,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": {
+        "GL 2wd": ["215/65R16"],
+        "GL 4wd": ["215/65R16"],
+        "GLS 2wd": ["235/60R16"],
+        "GLS 4wd": ["235/60R16"],
+        "LX 2wd": ["235/60R16"],
+        "LX 4wd": ["235/60R16"]
+      },
+      "allValidSizes": ["215/65R16", "235/60R16"],
+      "issues": ["225/60R17 not a standard OEM size"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2004,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": {
+        "GL": ["215/65R16"],
+        "GLS": ["235/60R16"],
+        "LX": ["235/60R16"]
+      },
+      "allValidSizes": ["215/65R16", "235/60R16"],
+      "notes": "2004 Tucson may not have been released in all markets; first model year was 2005 in US",
+      "issues": ["225/60R17 not a standard OEM size"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2009,
+      "make": "Hyundai",
+      "model": "Tuscani",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "notes": "Tuscani is Korean market name for Tiburon (same vehicle)",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2008,
+      "make": "Hyundai",
+      "model": "Tuscani",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "notes": "Tuscani is Korean market name for Tiburon (same vehicle)",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2007,
+      "make": "Hyundai",
+      "model": "Tuscani",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "notes": "Tuscani is Korean market name for Tiburon (same vehicle)",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2006,
+      "make": "Hyundai",
+      "model": "Tuscani",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "notes": "Tuscani is Korean market name for Tiburon (same vehicle)",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2005,
+      "make": "Hyundai",
+      "model": "Tuscani",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "notes": "Tuscani is Korean market name for Tiburon (same vehicle)",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "Hyundai",
+      "model": "Tuscani",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "notes": "Tuscani is Korean market name for Tiburon (same vehicle)",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "Hyundai",
+      "model": "Tuscani",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/55R16", "215/45R17"],
+        "GT": ["215/45R17"]
+      },
+      "allValidSizes": ["205/55R16", "215/45R17"],
+      "notes": "Tuscani is Korean market name for Tiburon (same vehicle)",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "Hyundai",
+      "model": "Tuscani",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/55R15"]
+      },
+      "allValidSizes": ["195/55R15"],
+      "notes": "Tuscani is Korean market name for Tiburon (first generation)",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "Hyundai",
+      "model": "Tuscani",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/55R15"]
+      },
+      "allValidSizes": ["195/55R15"],
+      "notes": "Tuscani is Korean market name for Tiburon (first generation)",
+      "issues": ["No current tire sizes configured"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2021,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0": ["215/45R17", "225/40R18"],
+        "2.0 Premium": ["225/40R18"],
+        "Turbo": ["225/40R18"],
+        "Turbo R-Spec": ["225/40R18"],
+        "Turbo Ultimate": ["225/40R18"],
+        "N": ["235/35R19"]
+      },
+      "allValidSizes": ["215/45R17", "225/40R18", "235/35R19"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0": ["215/45R17", "225/40R18"],
+        "2.0 Premium": ["225/40R18"],
+        "Turbo": ["225/40R18"],
+        "Turbo R-Spec": ["225/40R18"],
+        "Turbo Ultimate": ["225/40R18"],
+        "N": ["225/40R18"],
+        "N Performance Package": ["235/35R19"]
+      },
+      "allValidSizes": ["215/45R17", "225/40R18", "235/35R19"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2019,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0": ["215/45R17"],
+        "2.0 Premium": ["225/40R18"],
+        "Turbo": ["225/40R18"],
+        "Turbo R-Spec": ["225/40R18"],
+        "Turbo Ultimate": ["225/40R18"],
+        "N": ["225/40R18"],
+        "N Performance Package": ["235/35R19"]
+      },
+      "allValidSizes": ["215/45R17", "225/40R18", "235/35R19"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2018,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base": ["215/45R17", "225/40R18"],
+        "Turbo": ["225/40R18"],
+        "Turbo R-Spec": ["225/40R18"]
+      },
+      "allValidSizes": ["215/45R17", "225/40R18"],
+      "notes": "2018 was gap year between generations; data based on 2017 specs",
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base": ["215/45R17", "225/40R18"],
+        "Turbo": ["225/40R18"],
+        "Turbo R-Spec": ["225/40R18"],
+        "Value Edition": ["225/40R18"]
+      },
+      "allValidSizes": ["215/45R17", "225/40R18"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base": ["215/45R17", "225/40R18"],
+        "Turbo": ["225/40R18"],
+        "Turbo R-Spec": ["225/40R18"],
+        "Turbo Rally": ["225/40R18"]
+      },
+      "allValidSizes": ["215/45R17", "225/40R18"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base": ["215/45R17", "215/40R18"],
+        "RE:FLEX Edition": ["215/40R18"],
+        "Turbo": ["215/40R18"],
+        "Turbo R-Spec": ["215/40R18"]
+      },
+      "allValidSizes": ["215/45R17", "215/40R18"],
+      "issues": ["Current 225/40R18 should be 215/40R18 for 2015"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2014,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base Model": ["215/45R17", "215/40R18"],
+        "Turbo": ["215/40R18"],
+        "Turbo R-Spec": ["215/40R18"]
+      },
+      "allValidSizes": ["215/45R17", "215/40R18"],
+      "issues": ["Current 225/40R18 should be 215/40R18 for 2014"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2013,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base Model": ["215/45R17", "215/40R18"],
+        "Turbo": ["215/40R18"]
+      },
+      "allValidSizes": ["215/45R17", "215/40R18"],
+      "issues": ["Current 225/40R18 should be 215/40R18 for 2013"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2012,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base Model": ["215/45R17", "215/40R18"]
+      },
+      "allValidSizes": ["215/45R17", "215/40R18"],
+      "issues": ["Current 225/40R18 should be 215/40R18 for 2012"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2011,
+      "make": "Hyundai",
+      "model": "Veloster",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {},
+      "allValidSizes": [],
+      "notes": "Veloster production started in 2012, not 2011. Vehicle entry may be invalid.",
+      "issues": ["2011 Veloster does not exist; first model year was 2012"],
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2015,
+      "make": "Hyundai",
+      "model": "Veracruz",
+      "currentTireSizes": ["235/65R17", "245/60R18", "265/50R20"],
+      "validatedTireSizes": {
+        "GLS": ["245/65R17"],
+        "Limited": ["245/60R18"]
+      },
+      "allValidSizes": ["245/65R17", "245/60R18"],
+      "notes": "Veracruz was discontinued after 2012. This entry may be invalid.",
+      "issues": ["2015 Veracruz does not exist; production ended 2012", "235/65R17 should be 245/65R17", "265/50R20 not OEM"],
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2014,
+      "make": "Hyundai",
+      "model": "Veracruz",
+      "currentTireSizes": ["235/65R17", "245/60R18", "265/50R20"],
+      "validatedTireSizes": {
+        "GLS": ["245/65R17"],
+        "Limited": ["245/60R18"]
+      },
+      "allValidSizes": ["245/65R17", "245/60R18"],
+      "notes": "Veracruz was discontinued after 2012. This entry may be invalid.",
+      "issues": ["2014 Veracruz does not exist; production ended 2012"],
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2013,
+      "make": "Hyundai",
+      "model": "Veracruz",
+      "currentTireSizes": ["235/65R17", "245/60R18", "265/50R20"],
+      "validatedTireSizes": {
+        "GLS": ["245/65R17"],
+        "Limited": ["245/60R18"]
+      },
+      "allValidSizes": ["245/65R17", "245/60R18"],
+      "notes": "Veracruz was discontinued after 2012. This entry may be invalid.",
+      "issues": ["2013 Veracruz does not exist; production ended 2012"],
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2012,
+      "make": "Hyundai",
+      "model": "Veracruz",
+      "currentTireSizes": ["235/65R17", "245/60R18", "265/50R20"],
+      "validatedTireSizes": {
+        "GLS": ["245/65R17"],
+        "Limited": ["245/60R18"]
+      },
+      "allValidSizes": ["245/65R17", "245/60R18"],
+      "issues": ["235/65R17 should be 245/65R17", "265/50R20 not OEM"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2011,
+      "make": "Hyundai",
+      "model": "Veracruz",
+      "currentTireSizes": ["235/65R17", "245/60R18", "265/50R20"],
+      "validatedTireSizes": {
+        "GLS": ["245/65R17"],
+        "Limited": ["245/60R18"]
+      },
+      "allValidSizes": ["245/65R17", "245/60R18"],
+      "issues": ["235/65R17 should be 245/65R17", "265/50R20 not OEM"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2010,
+      "make": "Hyundai",
+      "model": "Veracruz",
+      "currentTireSizes": ["235/65R17", "245/60R18", "265/50R20"],
+      "validatedTireSizes": {
+        "GLS": ["245/65R17"],
+        "Limited": ["245/60R18"]
+      },
+      "allValidSizes": ["245/65R17", "245/60R18"],
+      "issues": ["235/65R17 should be 245/65R17", "265/50R20 not OEM"],
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2009,
+      "make": "Hyundai",
+      "model": "Veracruz",
+      "currentTireSizes": ["235/65R17", "245/60R18", "265/50R20"],
+      "validatedTireSizes": {
+        "GLS": ["245/65R17"],
+        "Limited": ["245/60R18"]
+      },
+      "allValidSizes": ["245/65R17", "245/60R18"],
+      "issues": ["235/65R17 should be 245/65R17", "265/50R20 not OEM"],
+      "status": "MISMATCH"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 14,
+    "mismatch": 41,
+    "missingData": 17,
+    "invalidYear": 4
+  }
+}

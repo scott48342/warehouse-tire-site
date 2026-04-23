@@ -1,0 +1,1229 @@
+{
+  "batchId": "overnight-037-ford",
+  "verifiedAt": "2026-04-23T02:25:00.000Z",
+  "summary": {
+    "total": 75,
+    "verified": 34,
+    "flagged": 33,
+    "invalid": 8
+  },
+  "generationSummary": {
+    "9thGen_1992_1996": {
+      "correctBoltPattern": "5x139.7",
+      "correctHubBore": "87.1",
+      "standardWheels": ["15x6", "15x7"],
+      "standardTires": ["215/75R15", "235/75R15"],
+      "lightningWheels": "17x8",
+      "lightningTires": "275/60R17",
+      "lightningYears": "1993-1995 only"
+    },
+    "10thGen_1997_2003": {
+      "correctBoltPattern": "5x135",
+      "correctHubBore": "87.1",
+      "standardWheels": ["16x7", "17x7.5"],
+      "standardTires": ["235/70R16", "245/75R16", "255/70R16", "265/70R17"],
+      "lightningWheels": "18x9.5",
+      "lightningTires": "295/45R18",
+      "lightningYears": "1999-2004 only"
+    },
+    "11thGen_2004_2008": {
+      "correctBoltPattern": "6x135",
+      "correctHubBore": "87.1",
+      "standardWheels": ["17x7.5", "18x7.5", "20x8.5"],
+      "standardTires": ["235/70R17", "255/65R17", "255/70R17", "265/60R18", "275/65R18", "275/55R20"]
+    }
+  },
+  "sources": [
+    "tirewheelguide.com",
+    "Wikipedia Ford F-Series generations",
+    "samlemanford.com bolt pattern guide",
+    "lmr.com SVT Lightning specs"
+  ],
+  "vehicles": [
+    {
+      "id": "6a2f67d0-f130-4c1f-ab81-9158ee69044b",
+      "year": 1992,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes are for 16\"/17\" wheels but 1992 Base came with 15\" wheels (215/75R15, 235/75R15)",
+          "current": ["245/75R16", "265/75R16", "255/70R17", "265/70R17"],
+          "expected": ["215/75R15", "235/75R15"]
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "flagged", "note": "15\" wheels typical for Base, data shows 7x15 which is plausible" }
+      }
+    },
+    {
+      "id": "ee0b561d-ecf5-4c99-ab07-0c97f4525976",
+      "year": 1992,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "trim",
+          "severity": "critical",
+          "message": "SVT Lightning did not exist in 1992. Lightning debuted in 1993.",
+          "source": "Wikipedia, LMR.com SVT Lightning specs"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      },
+      "recommendation": "Remove this trim or change year to 1993"
+    },
+    {
+      "id": "d4cde9cd-f687-4ab4-b3cd-fdcb1e9aea62",
+      "year": 1992,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch wheel diameter. 16\" wheels came as an option on XLT but standard tires were 15\" sizes",
+          "current": ["245/75R16", "265/75R16", "255/70R17", "265/70R17"],
+          "expected": ["215/75R15", "235/75R15"]
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "flagged", "note": "7x16 possible as upgrade option" }
+      }
+    },
+    {
+      "id": "d896fdfa-98db-44b6-9db4-371cd13cbbaf",
+      "year": 1992,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Eddie Bauer",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch. Eddie Bauer came with forged aluminum wheels but 15\" or 16\" sizes",
+          "current": ["245/75R16", "265/75R16", "255/70R17", "265/70R17"],
+          "expected": ["215/75R15", "235/75R15"]
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      },
+      "note": "Eddie Bauer trim existed 1995-1996 only per Wikipedia"
+    },
+    {
+      "id": "f454fd93-4a01-4ada-bc69-c482636cf9a8",
+      "year": 1992,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes are for 16\"/17\" wheels but XL came with 15\" wheels",
+          "current": ["245/75R16", "265/75R16", "255/70R17", "265/70R17"],
+          "expected": ["215/75R15", "235/75R15"]
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "7x15 matches standard XL spec" }
+      }
+    },
+    {
+      "id": "28508ba0-82e6-4438-be21-a0a1658d3c98",
+      "year": 1993,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Eddie Bauer",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "trim",
+          "severity": "critical",
+          "message": "Eddie Bauer trim was not available until 1995 per Wikipedia",
+          "source": "Wikipedia 9th gen F-Series"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      },
+      "recommendation": "Remove this trim or change to XLT"
+    },
+    {
+      "id": "999c11d7-62b9-4093-b664-3b9d899fa677",
+      "year": 1993,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "8x17 matches Lightning OEM spec (17x8)" },
+        "tireSizes": { "status": "flagged", "note": "Lightning had 275/60R17, data shows wrong sizes" }
+      },
+      "note": "First year of SVT Lightning (1993-1995)"
+    },
+    {
+      "id": "0e1c877a-79b2-4ff3-bb15-18493b41ec8c",
+      "year": 1993,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch wheel sizes",
+          "current": ["245/75R16", "265/75R16", "255/70R17", "265/70R17"],
+          "expected": ["215/75R15", "235/75R15"]
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "a51d3fd9-d97f-4b26-9297-0853a18c0fea",
+      "year": 1993,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch wheel sizes"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "301a47bb-2dd0-44c4-bd51-4801f83be4cb",
+      "year": 1993,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch wheel sizes"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "be3327dc-0c2d-42d2-997d-d2ebc7f68ba4",
+      "year": 1994,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "8x17 matches Lightning OEM spec" }
+      },
+      "note": "Production: 4,007 units in 1994"
+    },
+    {
+      "id": "820163df-d815-454b-b0ab-2cbc50e572da",
+      "year": 1994,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Eddie Bauer",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "trim",
+          "severity": "critical",
+          "message": "Eddie Bauer trim was not available until 1995"
+        }
+      ],
+      "recommendation": "Remove or change to XLT"
+    },
+    {
+      "id": "c9898306-4b8f-4475-bace-da6bee3a7c43",
+      "year": 1994,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "95dd08f8-b16f-4c1e-b240-f30545362f77",
+      "year": 1994,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "81abdc48-36ce-4d23-a59a-469e8d3f4614",
+      "year": 1994,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "babd72db-8631-497b-ab62-ac0adef293d6",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "8x17 matches Lightning OEM spec" }
+      },
+      "note": "Final year of 1st gen Lightning (2,280 units)"
+    },
+    {
+      "id": "5fd57f7d-d6f9-469f-9a56-45abb3e1eb31",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "fd58ad60-7e5b-4690-8bf4-fb568655b621",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "867bde9e-b71f-4855-b0d3-ffbc628d52f5",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "a841b454-aa37-4986-9378-eef89401d6f2",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Eddie Bauer",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      },
+      "note": "Eddie Bauer introduced in 1995"
+    },
+    {
+      "id": "a7a72b56-4f45-4b91-8b96-9d7b028e4596",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "ed601847-06e0-4d64-a13d-155f930ebfe4",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "52314556-ef3a-41e1-9272-782d09f2c258",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "Tire sizes mismatch"
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "1caea1c7-127d-4d9b-bb2e-aede26ef0279",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Eddie Bauer",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x139.7" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      },
+      "note": "Last year of Eddie Bauer F-150 trim"
+    },
+    {
+      "id": "ac29a1d1-39a4-4e41-9e23-f03e48e6de04",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "trim",
+          "severity": "critical",
+          "message": "SVT Lightning was not produced in 1996. 1st gen ended 1995, 2nd gen started 1999.",
+          "source": "Wikipedia, LMR.com"
+        }
+      ],
+      "recommendation": "Remove this vehicle"
+    },
+    {
+      "id": "4c382c53-82f5-459a-a0ed-cfa37a1d060f",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "trim",
+          "severity": "critical",
+          "message": "SVT Lightning was not produced in 1997. 2nd gen Lightning started in 1999.",
+          "source": "Wikipedia 10th gen F-Series"
+        }
+      ],
+      "recommendation": "Remove this vehicle"
+    },
+    {
+      "id": "c6c316db-aa94-4aad-b06e-fb6bf8f47ea7",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "critical",
+          "message": "Incorrect bolt pattern. 1997 F-150 uses 5x135, not 6x135. 6x135 wasn't introduced until 2004.",
+          "current": "6x135",
+          "expected": "5x135",
+          "source": "tirewheelguide.com, samlemanford.com"
+        }
+      ],
+      "verifiedFields": {
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "986df76c-5165-4869-88ce-9b28ee60a36b",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "16x7 matches tirewheelguide.com specs" },
+        "tireSizes": { "status": "flagged", "note": "Sizes plausible but some mismatch" }
+      }
+    },
+    {
+      "id": "a3e6725a-d339-4f3a-a656-9ea26fec38c6",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "16x7 and 17x7.5 match OEM options" }
+      }
+    },
+    {
+      "id": "4184fbe0-956b-43d3-9803-756fd876f70c",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "17x7.5 matches Lariat standard" }
+      }
+    },
+    {
+      "id": "b9b0bf15-17f8-47f0-a00d-c8b237aa8098",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "trim",
+          "severity": "critical",
+          "message": "SVT Lightning was not produced in 1998. 2nd gen started in 1999."
+        }
+      ],
+      "recommendation": "Remove this vehicle"
+    },
+    {
+      "id": "d4a82603-c039-4f4a-95d0-3aad3e8d89da",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "critical",
+          "message": "Incorrect bolt pattern. Should be 5x135, not 6x135.",
+          "current": "6x135",
+          "expected": "5x135"
+        }
+      ],
+      "verifiedFields": {
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "d67dc158-b317-40d3-b5cb-cb262e070585",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "32734c3d-1c98-49fa-bd80-d29bff8e0e31",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "471bf3cf-ca20-4056-9fe4-c0aecda4ed07",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "2365acc4-27c9-4ccb-ba11-75de3f85e7b5",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "critical",
+          "message": "Incorrect bolt pattern. Should be 5x135, not 6x135.",
+          "current": "6x135",
+          "expected": "5x135"
+        }
+      ]
+    },
+    {
+      "id": "f3122991-a502-49b7-ac69-0b1278ff5209",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "70cbeba7-810a-42e0-936f-9904e47a5fdb",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "6e637737-683b-4922-aab1-bb4f2b463130",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "18x9.5 matches 2nd gen Lightning OEM spec" }
+      },
+      "note": "First year of 2nd gen Lightning (4,000 units)"
+    },
+    {
+      "id": "16fb37b7-0f22-4ed5-80d4-d66be838c106",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "3b40950f-4d3d-4b65-9909-10ae7e8ec292",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "e40566c9-acc0-4997-aad2-751fe7ce47cb",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "b06b3212-fc59-4e9d-a456-17a678c2980e",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "18x9.5 matches OEM" }
+      },
+      "note": "4,966 units produced in 2000"
+    },
+    {
+      "id": "084b38e2-19c2-4783-a2b4-12ca3b1802b4",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "cae9068d-9bab-42e9-816d-e908d056ab70",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "critical",
+          "message": "Incorrect bolt pattern. Should be 5x135, not 6x135.",
+          "current": "6x135",
+          "expected": "5x135"
+        }
+      ]
+    },
+    {
+      "id": "9c49ecec-e693-4207-8c95-ed461d2c69b9",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "critical",
+          "message": "Incorrect bolt pattern. Should be 5x135, not 6x135."
+        }
+      ]
+    },
+    {
+      "id": "aa677d2b-1f00-4bfb-8b8b-cdf38377db80",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "169e7d44-0ebf-46b1-bd41-5252eefdfb40",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "f125d208-a9c8-4b9b-b7f1-1a5859241901",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "765a734b-7177-420d-b977-bc3372e32a94",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "18x9.5 matches OEM" }
+      }
+    },
+    {
+      "id": "51fd7121-a6c4-4fe9-b1fd-7c9fae30d18c",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      },
+      "note": "First year of King Ranch trim"
+    },
+    {
+      "id": "3b88ecdc-2e6b-48ff-9fa2-ff9096ae9b60",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "3fadfb7d-43c6-4810-9df8-827154e78bb8",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "19c36dd5-f0c7-45f3-baf5-33db64a52d88",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "1ed92047-5d85-4078-aa91-1854be87c9e4",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "a4c96d96-60b5-4ef3-a94b-55b3d50fde3b",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "ef7c8a86-2016-4f94-844a-d62428ba6855",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "critical",
+          "message": "Incorrect bolt pattern. Should be 5x135, not 6x135."
+        }
+      ]
+    },
+    {
+      "id": "70b67fe3-cff4-4db1-93e4-32c3b33a2e90",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "critical",
+          "message": "Incorrect bolt pattern. Should be 5x135, not 6x135."
+        }
+      ]
+    },
+    {
+      "id": "71cb2329-b725-46ac-9136-5e3b0c8fc260",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "5021a5dd-4f19-42be-9990-edec1ccc69c6",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "0279ab54-4aca-4365-ba7e-a74e9164789d",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "0eb4c52d-3014-47ac-a7a7-492d4079a103",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "0ff78a98-19d9-4b8f-9a3f-a717c28aad7c",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "5x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "e841932d-3f6f-4fb9-a8b0-975fc6594ea7",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XL",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      },
+      "note": "11th gen F-150 correctly uses 6x135"
+    },
+    {
+      "id": "081f7f57-97b5-4771-a95f-49b4e5bd60f5",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "wheelSizes": { "status": "correct", "note": "18\" wheels standard on King Ranch" }
+      }
+    },
+    {
+      "id": "cb6e6ddf-bf61-4afb-8689-95534a1b8a84",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "STX",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "6b906100-c2d2-43df-aba8-e8e0ac0c08f0",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "FX4",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "0ada5597-e6f5-4bb6-82ce-0791601b52fd",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "abcf5502-d8f7-470d-9217-d7cc8a938a8c",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "fe926b66-38e4-453f-99d3-b0a7d30f022b",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "tireSizes": { "status": "correct", "note": "Tire sizes match tirewheelguide.com" }
+      }
+    },
+    {
+      "id": "da980880-7261-4125-b6a3-e315e30e6f2d",
+      "year": 2005,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "warning",
+          "message": "2005 tire sizes should include 17\" sizes, not 16\" sizes",
+          "current": ["245/75R16", "265/75R16", "255/70R17", "265/70R17"],
+          "expected": ["235/70R17", "255/65R17", "255/70R17", "265/60R18", "275/65R18", "275/55R20"]
+        }
+      ],
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "2419aff2-c0aa-4804-a836-5f127dcbf27b",
+      "year": 2005,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" },
+        "tireSizes": { "status": "correct", "note": "Sizes match 11th gen specs" }
+      }
+    },
+    {
+      "id": "67291195-fb55-4180-8586-952d07a00edf",
+      "year": 2005,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "FX4",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "b73f9aad-121e-413c-b244-25fd9e9ae907",
+      "year": 2005,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "King Ranch",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    },
+    {
+      "id": "7f2a1176-cf3e-4d29-84da-e5fdf7adef64",
+      "year": 2005,
+      "make": "ford",
+      "model": "f-150",
+      "trim": "Lariat",
+      "status": "verified",
+      "verifiedFields": {
+        "boltPattern": { "status": "correct", "value": "6x135" },
+        "hubBore": { "status": "correct", "value": "87.1" }
+      }
+    }
+  ],
+  "criticalFindings": [
+    {
+      "issue": "Invalid Lightning years",
+      "affectedIds": [
+        "ee0b561d-ecf5-4c99-ab07-0c97f4525976",
+        "ac29a1d1-39a4-4e41-9e23-f03e48e6de04",
+        "4c382c53-82f5-459a-a0ed-cfa37a1d060f",
+        "b9b0bf15-17f8-47f0-a00d-c8b237aa8098"
+      ],
+      "description": "Lightning trim only existed 1993-1995 (1st gen) and 1999-2004 (2nd gen). Years 1992, 1996, 1997, 1998 are invalid.",
+      "recommendation": "Remove these vehicles from the database"
+    },
+    {
+      "issue": "Invalid Eddie Bauer years",
+      "affectedIds": [
+        "28508ba0-82e6-4438-be21-a0a1658d3c98",
+        "820163df-d815-454b-b0ab-2cbc50e572da"
+      ],
+      "description": "Eddie Bauer trim was only available 1995-1996. Years 1992, 1993, 1994 are invalid.",
+      "recommendation": "Remove these vehicles or change trim to XLT"
+    },
+    {
+      "issue": "Incorrect bolt pattern on 1997-2003 Base trims",
+      "affectedIds": [
+        "c6c316db-aa94-4aad-b06e-fb6bf8f47ea7",
+        "d4a82603-c039-4f4a-95d0-3aad3e8d89da",
+        "2365acc4-27c9-4ccb-ba11-75de3f85e7b5",
+        "cae9068d-9bab-42e9-816d-e908d056ab70",
+        "9c49ecec-e693-4207-8c95-ed461d2c69b9",
+        "ef7c8a86-2016-4f94-844a-d62428ba6855",
+        "70b67fe3-cff4-4db1-93e4-32c3b33a2e90"
+      ],
+      "description": "1997-2003 F-150 uses 5x135 bolt pattern, not 6x135. The 6x135 pattern wasn't introduced until 2004 (11th gen).",
+      "recommendation": "Update bolt pattern from 6x135 to 5x135"
+    },
+    {
+      "issue": "Tire sizes mismatch wheel diameters on 1992-1996 vehicles",
+      "description": "Most 9th gen F-150s have tire sizes for 16\"/17\" wheels but came with 15\" wheels. Need to add 215/75R15 and 235/75R15 as primary options.",
+      "recommendation": "Review and correct tire sizes for 9th generation vehicles"
+    }
+  ],
+  "recommendedActions": [
+    {
+      "priority": 1,
+      "action": "Remove 8 invalid vehicles (Lightning 1992/1996/1997/1998, Eddie Bauer 1993/1994)"
+    },
+    {
+      "priority": 2,
+      "action": "Fix bolt pattern on 7 vehicles (1997-2003 Base trims) from 6x135 to 5x135"
+    },
+    {
+      "priority": 3,
+      "action": "Review tire sizes for 1992-1996 vehicles - add 15\" tire options"
+    }
+  ]
+}

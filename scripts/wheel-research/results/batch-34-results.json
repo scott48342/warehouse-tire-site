@@ -1,0 +1,1035 @@
+{
+  "batchId": "34",
+  "processedAt": "2026-04-21T21:10:00.000Z",
+  "totalVehicles": 75,
+  "successCount": 62,
+  "failureCount": 13,
+  "results": [
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7", "19x7.5"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "3rd Gen (2015-2021)"
+      },
+      "source": "wheelssize.com, kipardoracing.com"
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7", "19x7.5"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "3rd Gen (2015-2021)"
+      },
+      "source": "wheelssize.com, kipardoracing.com"
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7", "19x7.5"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "3rd Gen (2015-2021)"
+      },
+      "source": "wheelssize.com, kipardoracing.com"
+    },
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7", "19x7.5"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "3rd Gen (2015-2021)"
+      },
+      "source": "wheelssize.com, kipardoracing.com"
+    },
+    {
+      "year": 2015,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7", "19x7.5"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "3rd Gen (2015-2021)"
+      },
+      "source": "wheelssize.com, kipardoracing.com"
+    },
+    {
+      "year": 2014,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "2nd Gen (2006-2014)"
+      },
+      "source": "wheelssize.com"
+    },
+    {
+      "year": 2013,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "2nd Gen (2006-2014)"
+      },
+      "source": "wheelssize.com"
+    },
+    {
+      "year": 2012,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "2nd Gen (2006-2014)"
+      },
+      "source": "wheelssize.com"
+    },
+    {
+      "year": 2011,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "2nd Gen (2006-2014)"
+      },
+      "source": "wheelssize.com"
+    },
+    {
+      "year": 2010,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "2nd Gen (2006-2014)"
+      },
+      "source": "wheelssize.com"
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "2nd Gen (2006-2014)"
+      },
+      "source": "wheelssize.com"
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "2nd Gen (2006-2014)"
+      },
+      "source": "wheelssize.com"
+    },
+    {
+      "year": 2007,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "2nd Gen (2006-2014)"
+      },
+      "source": "wheelssize.com"
+    },
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x6.5", "17x7", "18x7"],
+        "offsetRange": { "min": 35, "max": 53 },
+        "generation": "2nd Gen (2006-2014)"
+      },
+      "source": "wheelssize.com"
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5"],
+        "offsetRange": { "min": 45, "max": 50 },
+        "generation": "1st Gen (2002-2005)"
+      },
+      "source": "hubcaphaven.com"
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5"],
+        "offsetRange": { "min": 45, "max": 50 },
+        "generation": "1st Gen (2002-2005)"
+      },
+      "source": "hubcaphaven.com"
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5"],
+        "offsetRange": { "min": 45, "max": 50 },
+        "generation": "1st Gen (2002-2005)"
+      },
+      "source": "hubcaphaven.com"
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5"],
+        "offsetRange": { "min": 45, "max": 50 },
+        "generation": "1st Gen (2002-2005)"
+      },
+      "source": "hubcaphaven.com"
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6"],
+        "offsetRange": { "min": 45, "max": 50 },
+        "generation": "1st Gen (2002-2005)"
+      },
+      "source": "estimated from generation data"
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "sedona",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6"],
+        "offsetRange": { "min": 45, "max": 50 },
+        "generation": "1st Gen (2002-2005)"
+      },
+      "source": "estimated from generation data"
+    },
+    {
+      "year": 2026,
+      "make": "kia",
+      "model": "seltos",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x7", "18x7.5"],
+        "offsetRange": { "min": 45, "max": 52 },
+        "generation": "1st Gen Facelift (2023+)"
+      },
+      "source": "detroitwheelandtire.com, ebay listings"
+    },
+    {
+      "year": 2025,
+      "make": "kia",
+      "model": "seltos",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x7", "18x7.5"],
+        "offsetRange": { "min": 45, "max": 52 },
+        "generation": "1st Gen Facelift (2023+)"
+      },
+      "source": "hubcaphaven.com"
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "seltos",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x7", "18x7.5"],
+        "offsetRange": { "min": 45, "max": 52 },
+        "generation": "1st Gen Facelift (2023+)"
+      },
+      "source": "hubcaphaven.com"
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "seltos",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x7", "18x7.5"],
+        "offsetRange": { "min": 45, "max": 52 },
+        "generation": "1st Gen Facelift (2023+)"
+      },
+      "source": "selected.pl"
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "seltos",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x7", "18x7.5"],
+        "offsetRange": { "min": 45, "max": 52 },
+        "generation": "1st Gen (2019-2022)"
+      },
+      "source": "detroitwheelandtire.com"
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "seltos",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["17x7", "18x7.5"],
+        "offsetRange": { "min": 45, "max": 52 },
+        "generation": "1st Gen (2019-2022)"
+      },
+      "source": "avtoreference.com"
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "sorento",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": ["16x7", "17x7", "18x7.5"],
+        "offsetRange": { "min": 30, "max": 46 },
+        "generation": "1st Gen Body-on-Frame (2003-2009)"
+      },
+      "source": "kipardoracing.com, kia-forums.com"
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "sorento",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": ["16x7", "17x7", "18x7.5"],
+        "offsetRange": { "min": 30, "max": 46 },
+        "generation": "1st Gen Body-on-Frame (2003-2009)"
+      },
+      "source": "kipardoracing.com, kia-forums.com"
+    },
+    {
+      "year": 2007,
+      "make": "kia",
+      "model": "sorento",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": ["16x7", "17x7", "18x7.5"],
+        "offsetRange": { "min": 30, "max": 46 },
+        "generation": "1st Gen Body-on-Frame (2003-2009)"
+      },
+      "source": "kipardoracing.com, kia-forums.com"
+    },
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "sorento",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": ["16x7", "17x7", "18x7.5"],
+        "offsetRange": { "min": 30, "max": 46 },
+        "generation": "1st Gen Body-on-Frame (2003-2009)"
+      },
+      "source": "kipardoracing.com, kia-forums.com"
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "sorento",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": ["16x7", "17x7", "18x7.5"],
+        "offsetRange": { "min": 30, "max": 46 },
+        "generation": "1st Gen Body-on-Frame (2003-2009)"
+      },
+      "source": "kipardoracing.com, kia-forums.com"
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "sorento",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": ["16x7", "17x7", "18x7.5"],
+        "offsetRange": { "min": 30, "max": 46 },
+        "generation": "1st Gen Body-on-Frame (2003-2009)"
+      },
+      "source": "kipardoracing.com, kia-forums.com"
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "sorento",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": ["16x7", "17x7", "18x7.5"],
+        "offsetRange": { "min": 30, "max": 46 },
+        "generation": "1st Gen Body-on-Frame (2003-2009)"
+      },
+      "source": "kipardoracing.com, kia-forums.com"
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "soul",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5", "17x7", "18x7.5"],
+        "offsetRange": { "min": 38, "max": 50 },
+        "generation": "1st Gen (2009-2013)"
+      },
+      "source": "kipardoracing.com, selected.pl"
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "soul",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5", "17x7", "18x7.5"],
+        "offsetRange": { "min": 38, "max": 50 },
+        "generation": "1st Gen (2009-2013)",
+        "notes": "2008 may be pre-production/Korean market"
+      },
+      "source": "kipardoracing.com"
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "spectra-wing",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 67.1,
+        "wheelSizes": ["14x5.5", "15x6"],
+        "offsetRange": { "min": 38, "max": 46 },
+        "generation": "SD (2000-2003)"
+      },
+      "source": "kipardoracing.com"
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "spectra-wing",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 67.1,
+        "wheelSizes": ["14x5.5", "15x6"],
+        "offsetRange": { "min": 38, "max": 46 },
+        "generation": "SD (2000-2003)"
+      },
+      "source": "kipardoracing.com"
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "spectra-wing",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 67.1,
+        "wheelSizes": ["14x5.5", "15x6"],
+        "offsetRange": { "min": 38, "max": 46 },
+        "generation": "SD (2000-2003)"
+      },
+      "source": "kipardoracing.com"
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "spectra-wing",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 67.1,
+        "wheelSizes": ["14x5.5", "15x6"],
+        "offsetRange": { "min": 38, "max": 46 },
+        "generation": "SD (2000-2003)"
+      },
+      "source": "kipardoracing.com"
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "spectra5",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5"],
+        "offsetRange": { "min": 38, "max": 46 },
+        "generation": "LD (2005-2009)"
+      },
+      "source": "kipardoracing.com"
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "spectra5",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5"],
+        "offsetRange": { "min": 38, "max": 46 },
+        "generation": "LD (2005-2009)"
+      },
+      "source": "kipardoracing.com"
+    },
+    {
+      "year": 2007,
+      "make": "kia",
+      "model": "spectra5",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5"],
+        "offsetRange": { "min": 38, "max": 46 },
+        "generation": "LD (2005-2009)"
+      },
+      "source": "kipardoracing.com"
+    },
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "spectra5",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5"],
+        "offsetRange": { "min": 38, "max": 46 },
+        "generation": "LD (2005-2009)"
+      },
+      "source": "kipardoracing.com"
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "spectra5",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["15x6", "16x6.5"],
+        "offsetRange": { "min": 38, "max": 46 },
+        "generation": "LD (2005-2009)"
+      },
+      "source": "kipardoracing.com"
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "sportage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": ["15x6", "16x7", "17x7"],
+        "offsetRange": { "min": 20, "max": 40 },
+        "generation": "1st Gen Body-on-Frame (1993-2002)"
+      },
+      "source": "kipardoracing.com, bbwheelsonline.com"
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "sportage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": ["15x6", "16x7", "17x7"],
+        "offsetRange": { "min": 20, "max": 40 },
+        "generation": "1st Gen Body-on-Frame (1993-2002)"
+      },
+      "source": "kipardoracing.com, bbwheelsonline.com"
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "sportage",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": ["15x6", "16x7", "17x7"],
+        "offsetRange": { "min": 20, "max": 40 },
+        "generation": "1st Gen Body-on-Frame (1993-2002)"
+      },
+      "source": "kipardoracing.com, bbwheelsonline.com"
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "tonic",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["16x6", "17x6.5"],
+        "offsetRange": { "min": 40, "max": 50 },
+        "generation": "Stonic YB (2017-2021)",
+        "notes": "Likely Kia Stonic (tonic may be regional spelling)"
+      },
+      "source": "carsguide.com.au"
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "tonic",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["16x6", "17x6.5"],
+        "offsetRange": { "min": 40, "max": 50 },
+        "generation": "Stonic YB (2017-2021)",
+        "notes": "Likely Kia Stonic (tonic may be regional spelling)"
+      },
+      "source": "carsguide.com.au"
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "tonic",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["16x6", "17x6.5"],
+        "offsetRange": { "min": 40, "max": 50 },
+        "generation": "Stonic YB (2017-2021)",
+        "notes": "Likely Kia Stonic (tonic may be regional spelling)"
+      },
+      "source": "carsguide.com.au"
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "tonic",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": ["16x6", "17x6.5"],
+        "offsetRange": { "min": 40, "max": 50 },
+        "generation": "Stonic YB (2017-2021)",
+        "notes": "Likely Kia Stonic (tonic may be regional spelling)"
+      },
+      "source": "carsguide.com.au"
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "vigato",
+      "status": "failed",
+      "error": "Regional model (Japan/Korea market) - insufficient data available",
+      "notes": "Kia Vigato was a regional variant, may share specs with Kia Joice or other platform"
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "visto",
+      "status": "failed",
+      "error": "Regional model (Korea market) - insufficient data available",
+      "notes": "Kia Visto was a Korean market city car"
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "visto",
+      "status": "failed",
+      "error": "Regional model (Korea market) - insufficient data available",
+      "notes": "Kia Visto was a Korean market city car"
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "visto",
+      "status": "failed",
+      "error": "Regional model (Korea market) - insufficient data available",
+      "notes": "Kia Visto was a Korean market city car"
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "visto",
+      "status": "failed",
+      "error": "Regional model (Korea market) - insufficient data available",
+      "notes": "Kia Visto was a Korean market city car"
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "visto",
+      "status": "failed",
+      "error": "Regional model (Korea market) - insufficient data available",
+      "notes": "Kia Visto was a Korean market city car"
+    },
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "x-trek",
+      "status": "failed",
+      "error": "Regional model (Korea market) - insufficient data available",
+      "notes": "Kia X-Trek was a Korean market compact SUV"
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "x-trek",
+      "status": "failed",
+      "error": "Regional model (Korea market) - insufficient data available",
+      "notes": "Kia X-Trek was a Korean market compact SUV"
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "x-trek",
+      "status": "failed",
+      "error": "Regional model (Korea market) - insufficient data available",
+      "notes": "Kia X-Trek was a Korean market compact SUV"
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "x-trek",
+      "status": "failed",
+      "error": "Regional model (Korea market) - insufficient data available",
+      "notes": "Kia X-Trek was a Korean market compact SUV"
+    },
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "discovery",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 72.5,
+        "wheelSizes": ["18x8", "19x8"],
+        "offsetRange": { "min": 48, "max": 57 },
+        "generation": "Discovery 4 / LR4 (2010-2016)"
+      },
+      "source": "wheelssize.com, landroverforums.com"
+    },
+    {
+      "year": 2010,
+      "make": "land-rover",
+      "model": "discovery",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 72.5,
+        "wheelSizes": ["18x8", "19x8"],
+        "offsetRange": { "min": 48, "max": 57 },
+        "generation": "Discovery 4 / LR4 (2010-2016)"
+      },
+      "source": "wheelssize.com, landroverforums.com"
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "discovery",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 72.5,
+        "wheelSizes": ["18x8", "19x8"],
+        "offsetRange": { "min": 48, "max": 57 },
+        "generation": "Discovery 3 / LR3 (2004-2009)"
+      },
+      "source": "wheelssize.com, landroverworld.org"
+    },
+    {
+      "year": 2008,
+      "make": "land-rover",
+      "model": "discovery",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 72.5,
+        "wheelSizes": ["18x8", "19x8"],
+        "offsetRange": { "min": 48, "max": 57 },
+        "generation": "Discovery 3 / LR3 (2004-2009)"
+      },
+      "source": "wheelssize.com, landroverworld.org"
+    },
+    {
+      "year": 2007,
+      "make": "land-rover",
+      "model": "discovery",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 72.5,
+        "wheelSizes": ["18x8", "19x8"],
+        "offsetRange": { "min": 48, "max": 57 },
+        "generation": "Discovery 3 / LR3 (2004-2009)"
+      },
+      "source": "wheelssize.com, landroverworld.org"
+    },
+    {
+      "year": 2006,
+      "make": "land-rover",
+      "model": "discovery",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 72.5,
+        "wheelSizes": ["18x8", "19x8"],
+        "offsetRange": { "min": 48, "max": 57 },
+        "generation": "Discovery 3 / LR3 (2004-2009)"
+      },
+      "source": "wheelssize.com, landroverworld.org"
+    },
+    {
+      "year": 2005,
+      "make": "land-rover",
+      "model": "discovery",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 72.5,
+        "wheelSizes": ["18x8", "19x8"],
+        "offsetRange": { "min": 48, "max": 57 },
+        "generation": "Discovery 3 / LR3 (2004-2009)"
+      },
+      "source": "wheelssize.com, landroverworld.org"
+    },
+    {
+      "year": 2004,
+      "make": "land-rover",
+      "model": "discovery-2",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 70.1,
+        "wheelSizes": ["16x7", "16x8", "18x8"],
+        "offsetRange": { "min": 25, "max": 57 },
+        "generation": "Discovery II (1999-2004)"
+      },
+      "source": "landroverforums.com, wheelssize.com"
+    },
+    {
+      "year": 2003,
+      "make": "land-rover",
+      "model": "discovery-2",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 70.1,
+        "wheelSizes": ["16x7", "16x8", "18x8"],
+        "offsetRange": { "min": 25, "max": 57 },
+        "generation": "Discovery II (1999-2004)"
+      },
+      "source": "landroverforums.com, wheelssize.com"
+    },
+    {
+      "year": 2002,
+      "make": "land-rover",
+      "model": "discovery-2",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 70.1,
+        "wheelSizes": ["16x7", "16x8", "18x8"],
+        "offsetRange": { "min": 25, "max": 57 },
+        "generation": "Discovery II (1999-2004)"
+      },
+      "source": "landroverforums.com, wheelssize.com"
+    },
+    {
+      "year": 2001,
+      "make": "land-rover",
+      "model": "discovery-2",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 70.1,
+        "wheelSizes": ["16x7", "16x8", "18x8"],
+        "offsetRange": { "min": 25, "max": 57 },
+        "generation": "Discovery II (1999-2004)"
+      },
+      "source": "landroverforums.com, wheelssize.com"
+    },
+    {
+      "year": 2000,
+      "make": "land-rover",
+      "model": "discovery-2",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 70.1,
+        "wheelSizes": ["16x7", "16x8", "18x8"],
+        "offsetRange": { "min": 25, "max": 57 },
+        "generation": "Discovery II (1999-2004)"
+      },
+      "source": "landroverforums.com, wheelssize.com"
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "discovery-3",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 72.5,
+        "wheelSizes": ["17x8", "18x8", "19x8"],
+        "offsetRange": { "min": 48, "max": 57 },
+        "generation": "Discovery 3 / LR3 (2004-2009)"
+      },
+      "source": "landroverworld.org, roadkillcustoms.com"
+    },
+    {
+      "year": 2008,
+      "make": "land-rover",
+      "model": "discovery-3",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 72.5,
+        "wheelSizes": ["17x8", "18x8", "19x8"],
+        "offsetRange": { "min": 48, "max": 57 },
+        "generation": "Discovery 3 / LR3 (2004-2009)"
+      },
+      "source": "landroverworld.org, roadkillcustoms.com"
+    }
+  ],
+  "summary": {
+    "kiaSedona": {
+      "generations": [
+        { "years": "2015-2021", "boltPattern": "5x114.3", "centerBore": 67.1, "wheelSizes": "17-19 inch" },
+        { "years": "2006-2014", "boltPattern": "5x114.3", "centerBore": 67.1, "wheelSizes": "17-18 inch" },
+        { "years": "2002-2005", "boltPattern": "5x114.3", "centerBore": 67.1, "wheelSizes": "15-16 inch" }
+      ]
+    },
+    "kiaSeltos": {
+      "allYears": "5x114.3, 67.1mm CB, 17-18 inch wheels"
+    },
+    "kiaSorento1stGen": {
+      "years": "2003-2009",
+      "note": "Body-on-frame SUV with 5x139.7 bolt pattern, 95.1mm center bore"
+    },
+    "kiaSportage1stGen": {
+      "years": "2000-2002",
+      "note": "Body-on-frame SUV with 5x139.7 bolt pattern, 95.1mm center bore"
+    },
+    "landRoverDiscovery": {
+      "generations": [
+        { "name": "Discovery II", "years": "2000-2004", "boltPattern": "5x120", "centerBore": 70.1 },
+        { "name": "Discovery 3/LR3", "years": "2005-2009", "boltPattern": "5x120", "centerBore": 72.5 },
+        { "name": "Discovery 4/LR4", "years": "2010-2011", "boltPattern": "5x120", "centerBore": 72.5 }
+      ]
+    },
+    "regionalModels": {
+      "failed": ["Kia Vigato", "Kia Visto", "Kia X-Trek"],
+      "reason": "Korean/Japanese market only - insufficient English-language data available"
+    }
+  }
+}

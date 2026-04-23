@@ -1,0 +1,1124 @@
+{
+  "batchId": "90s-batch-15",
+  "completedAt": "2026-04-22T12:45:00.000Z",
+  "results": [
+    {
+      "year": 1997,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "205/60R15", "225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation III (Y3) Facelift 1996-1998"
+    },
+    {
+      "year": 1998,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "205/60R15", "225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation III (Y3) Facelift 1996-1998"
+    },
+    {
+      "year": 1999,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "205/60R15", "225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation IV (EF) 1998-2001"
+    },
+    {
+      "year": 1990,
+      "make": "Hyundai",
+      "model": "Accent",
+      "status": "dne",
+      "reason": "Hyundai Accent first sold in US in 1995 (Generation I X3 1994-1999, US market 1995+)",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1991,
+      "make": "Hyundai",
+      "model": "Accent",
+      "status": "dne",
+      "reason": "Hyundai Accent first sold in US in 1995",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1992,
+      "make": "Hyundai",
+      "model": "Accent",
+      "status": "dne",
+      "reason": "Hyundai Accent first sold in US in 1995",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1993,
+      "make": "Hyundai",
+      "model": "Accent",
+      "status": "dne",
+      "reason": "Hyundai Accent first sold in US in 1995",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1994,
+      "make": "Hyundai",
+      "model": "Accent",
+      "status": "dne",
+      "reason": "Hyundai Accent first sold in US in 1995",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1995,
+      "make": "Hyundai",
+      "model": "Accent",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 46 },
+          { "diameter": 13, "width": 5, "offset": 46 },
+          { "diameter": 14, "width": 5, "offset": 46 },
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["155/80R13", "175/70R13", "175/65R14", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation I (X3) 1994-1999, first US model year"
+    },
+    {
+      "year": 1996,
+      "make": "Hyundai",
+      "model": "Accent",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 46 },
+          { "diameter": 13, "width": 5, "offset": 46 },
+          { "diameter": 14, "width": 5, "offset": 46 },
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["155/80R13", "175/70R13", "175/65R14", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation I (X3) 1994-1999"
+    },
+    {
+      "year": 1997,
+      "make": "Hyundai",
+      "model": "Accent",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 46 },
+          { "diameter": 13, "width": 5, "offset": 46 },
+          { "diameter": 14, "width": 5, "offset": 46 },
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["155/80R13", "175/70R13", "175/65R14", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation I (X3) 1994-1999"
+    },
+    {
+      "year": 1998,
+      "make": "Hyundai",
+      "model": "Accent",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 46 },
+          { "diameter": 13, "width": 5, "offset": 46 },
+          { "diameter": 14, "width": 5, "offset": 46 },
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["155/80R13", "175/70R13", "175/65R14", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation I (X3) 1994-1999"
+    },
+    {
+      "year": 1999,
+      "make": "Hyundai",
+      "model": "Accent",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 46 },
+          { "diameter": 13, "width": 5, "offset": 46 },
+          { "diameter": 14, "width": 5, "offset": 46 },
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["155/80R13", "175/70R13", "175/65R14", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation I (X3) 1994-1999, final year of this generation"
+    },
+    {
+      "year": 1990,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "status": "dne",
+      "reason": "Hyundai Tiburon first sold in US in 1997 (Generation RD 1996-2001)",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1991,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "status": "dne",
+      "reason": "Hyundai Tiburon first sold in US in 1997",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1992,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "status": "dne",
+      "reason": "Hyundai Tiburon first sold in US in 1997",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1993,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "status": "dne",
+      "reason": "Hyundai Tiburon first sold in US in 1997",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1994,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "status": "dne",
+      "reason": "Hyundai Tiburon first sold in US in 1997",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1995,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "status": "dne",
+      "reason": "Hyundai Tiburon first sold in US in 1997",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1996,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "status": "dne",
+      "reason": "Hyundai Tiburon first sold in US in 1997",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1997,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 51 },
+          { "diameter": 15, "width": 6, "offset": 46 },
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/60R14", "195/55R15", "205/45R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation RD 1996-1999, first US model year"
+    },
+    {
+      "year": 1998,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 51 },
+          { "diameter": 15, "width": 6, "offset": 46 },
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/60R14", "195/55R15", "205/45R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation RD 1996-1999"
+    },
+    {
+      "year": 1999,
+      "make": "Hyundai",
+      "model": "Tiburon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 51 },
+          { "diameter": 15, "width": 6, "offset": 46 },
+          { "diameter": 16, "width": 7, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/60R14", "195/55R15", "205/45R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation RD 1996-1999"
+    },
+    {
+      "year": 1990,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "status": "dne",
+      "reason": "Hyundai Santa Fe first produced in 2001 (2001+ model years)",
+      "confidence": "high",
+      "sources": ["wikipedia", "hyundai official"]
+    },
+    {
+      "year": 1991,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "status": "dne",
+      "reason": "Hyundai Santa Fe first produced in 2001",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1992,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "status": "dne",
+      "reason": "Hyundai Santa Fe first produced in 2001",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1993,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "status": "dne",
+      "reason": "Hyundai Santa Fe first produced in 2001",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1994,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "status": "dne",
+      "reason": "Hyundai Santa Fe first produced in 2001",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1995,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "status": "dne",
+      "reason": "Hyundai Santa Fe first produced in 2001",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1996,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "status": "dne",
+      "reason": "Hyundai Santa Fe first produced in 2001",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1997,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "status": "dne",
+      "reason": "Hyundai Santa Fe first produced in 2001",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1998,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "status": "dne",
+      "reason": "Hyundai Santa Fe first produced in 2001",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1999,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "status": "dne",
+      "reason": "Hyundai Santa Fe first produced in 2001",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1990,
+      "make": "Mitsubishi",
+      "model": "3000GT",
+      "status": "dne",
+      "reason": "Mitsubishi 3000GT first sold in US in 1991 (Generation Z16 1991-1999 for US market)",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "notes": "1990 was pre-production in Japan only"
+    },
+    {
+      "year": 1990,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 108.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 22 },
+          { "diameter": 15, "width": 6.5, "offset": 15 },
+          { "diameter": 15, "width": 7, "offset": 10 },
+          { "diameter": 16, "width": 6, "offset": 22 },
+          { "diameter": 16, "width": 7, "offset": 10 }
+        ],
+        "oem_tire_sizes": ["215R15", "235/75R15", "265/70R15", "205/80R16", "245/70R16", "265/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation L040 1982-1990, final year of this generation"
+    },
+    {
+      "year": 1991,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 108.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 33 },
+          { "diameter": 15, "width": 7, "offset": 10 },
+          { "diameter": 16, "width": 7, "offset": 10 },
+          { "diameter": 17, "width": 7.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["215R15", "225/80R15", "265/70R15", "265/70R16", "265/65R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation V20 1991-1999, first year of new generation"
+    },
+    {
+      "year": 1990,
+      "make": "Mitsubishi",
+      "model": "Galant",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 6, "offset": 46 },
+          { "diameter": 16, "width": 6.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/65R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation E5/E7/E8 1989-1993"
+    },
+    {
+      "year": 1991,
+      "make": "Mitsubishi",
+      "model": "Galant",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 6, "offset": 46 },
+          { "diameter": 16, "width": 6.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/65R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation E5/E7/E8 1989-1993"
+    },
+    {
+      "year": 1992,
+      "make": "Mitsubishi",
+      "model": "Galant",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 6, "offset": 46 },
+          { "diameter": 16, "width": 6.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/65R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation E5/E7/E8 1992-1996"
+    },
+    {
+      "year": 1993,
+      "make": "Mitsubishi",
+      "model": "Galant",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 6, "offset": 46 },
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/65R14", "195/60R15", "205/60R15", "205/55R16", "215/45R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation E5/E7/E8 1992-1996"
+    },
+    {
+      "year": 1990,
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "status": "dne",
+      "reason": "Mitsubishi Lancer not sold in US until 2002 model year (replaced Mirage). Was sold in other markets but not North America.",
+      "confidence": "high",
+      "sources": ["wikipedia", "carsforsale.com", "cargurus.com"]
+    },
+    {
+      "year": 1991,
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "status": "dne",
+      "reason": "Mitsubishi Lancer not sold in US until 2002 model year",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1992,
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "status": "dne",
+      "reason": "Mitsubishi Lancer not sold in US until 2002 model year",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1993,
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "status": "dne",
+      "reason": "Mitsubishi Lancer not sold in US until 2002 model year",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1994,
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "status": "dne",
+      "reason": "Mitsubishi Lancer not sold in US until 2002 model year",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1995,
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "status": "dne",
+      "reason": "Mitsubishi Lancer not sold in US until 2002 model year",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1996,
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "status": "dne",
+      "reason": "Mitsubishi Lancer not sold in US until 2002 model year",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1997,
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "status": "dne",
+      "reason": "Mitsubishi Lancer not sold in US until 2002 model year",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1998,
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "status": "dne",
+      "reason": "Mitsubishi Lancer not sold in US until 2002 model year",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1999,
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "status": "dne",
+      "reason": "Mitsubishi Lancer not sold in US until 2002 model year",
+      "confidence": "high",
+      "sources": ["wikipedia"]
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 37 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/75R15", "205/70R15", "215/65R16", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation I (AS) 1988-1990, final year of this generation"
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R16", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation II (AS) 1990-1995"
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R16", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation II (AS) 1990-1995"
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R16", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation II (AS) 1990-1995"
+    },
+    {
+      "year": 1994,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R16", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation II (AS) 1990-1995"
+    },
+    {
+      "year": 1995,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/65R15", "215/65R16", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation III (GS) 1995-2000"
+    },
+    {
+      "year": 1996,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/65R15", "215/65R16", "225/60R16", "225/55R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation III (GS) 1995-2000"
+    },
+    {
+      "year": 1997,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/65R15", "215/65R16", "225/60R16", "225/55R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation III (GS) 1995-2000"
+    },
+    {
+      "year": 1998,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/65R15", "215/65R16", "225/60R16", "225/55R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation III (GS) 1995-2000"
+    },
+    {
+      "year": 1999,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/65R15", "215/65R16", "225/60R16", "225/55R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation III (GS) 1995-2000"
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "dne",
+      "reason": "Chrysler Sebring first produced in 1995 (Generation FJ/JX 1995-2000)",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "dne",
+      "reason": "Chrysler Sebring first produced in 1995",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "dne",
+      "reason": "Chrysler Sebring first produced in 1995",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "dne",
+      "reason": "Chrysler Sebring first produced in 1995",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1994,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "dne",
+      "reason": "Chrysler Sebring first produced in 1995",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1995,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 37 },
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15", "205/55R16", "215/50R17"],
+        "staggered": false,
+        "alternate_bolt_pattern": {
+          "bolt_pattern": "5x114.3",
+          "hub_bore": 67.1,
+          "notes": "2.0i and some 2.5i trims use 5x114.3"
+        }
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation FJ/JX 1995-2000. BOTH 5x100 (sedans/2.4i) and 5x114.3 (convertibles/2.0i) patterns exist depending on trim. Primary bolt pattern is 5x100 for most trims."
+    },
+    {
+      "year": 1996,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 37 },
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15", "205/55R16", "215/50R17"],
+        "staggered": false,
+        "alternate_bolt_pattern": {
+          "bolt_pattern": "5x114.3",
+          "hub_bore": 67.1,
+          "notes": "Convertible and some trims use 5x114.3"
+        }
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation FJ/JX 1995-2000. BOTH 5x100 and 5x114.3 patterns exist."
+    },
+    {
+      "year": 1997,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 37 },
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15", "205/55R16", "215/50R17"],
+        "staggered": false,
+        "alternate_bolt_pattern": {
+          "bolt_pattern": "5x114.3",
+          "hub_bore": 67.1,
+          "notes": "Convertible and some trims use 5x114.3"
+        }
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation FJ/JX 1995-2000. BOTH 5x100 and 5x114.3 patterns exist."
+    },
+    {
+      "year": 1998,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 37 },
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15", "205/55R16", "215/50R17"],
+        "staggered": false,
+        "alternate_bolt_pattern": {
+          "bolt_pattern": "5x114.3",
+          "hub_bore": 67.1,
+          "notes": "Convertible and some trims use 5x114.3"
+        }
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation FJ/JX 1995-2000. BOTH 5x100 and 5x114.3 patterns exist."
+    },
+    {
+      "year": 1999,
+      "make": "Chrysler",
+      "model": "Sebring",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 37 },
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15", "205/55R16", "215/50R17"],
+        "staggered": false,
+        "alternate_bolt_pattern": {
+          "bolt_pattern": "5x114.3",
+          "hub_bore": 67.1,
+          "notes": "Convertible and some trims use 5x114.3"
+        }
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation FJ/JX 1995-2000. BOTH 5x100 and 5x114.3 patterns exist."
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "status": "dne",
+      "reason": "Chrysler Concorde first produced in 1993 for 1993 model year (Generation LH1 1992-1997)",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "status": "dne",
+      "reason": "Chrysler Concorde first produced in 1993",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "status": "dne",
+      "reason": "Chrysler Concorde first produced in 1993",
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"]
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 39 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 },
+          { "diameter": 17, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "205/65R16", "225/60R16", "225/55R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation LH1 1992-1997, first model year"
+    },
+    {
+      "year": 1994,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 39 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 },
+          { "diameter": 17, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "205/65R16", "225/60R16", "225/55R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Generation LH1 1992-1997"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 38,
+    "partial": 0,
+    "dne": 37,
+    "highConfidence": 75,
+    "mediumConfidence": 0,
+    "lowConfidence": 0,
+    "needsReview": 0
+  },
+  "researchNotes": {
+    "dneBreakdown": {
+      "hyundaiSantaFe": "10 entries - model started 2001",
+      "hyundaiAccent": "5 entries (1990-1994) - US sales started 1995",
+      "hyundaiTiburon": "7 entries (1990-1996) - US sales started 1997",
+      "mitsubishi3000GT": "1 entry (1990) - US sales started 1991",
+      "mitsubishiLancer": "10 entries - not sold in US until 2002",
+      "chryslerSebring": "5 entries (1990-1994) - model started 1995",
+      "chryslerConcorde": "3 entries (1990-1992) - model started 1993"
+    },
+    "specialCases": {
+      "chryslerSebring": "Has BOTH 5x100 (sedan) and 5x114.3 (convertible) bolt patterns depending on trim. Primary pattern documented as 5x100 per task notes, with alternate noted.",
+      "mitsubishi3000GT_VR4": "VR4 trim has staggered wheels (front narrower than rear). Base model is not staggered."
+    },
+    "sources": [
+      "tirewheelguide.com (primary)",
+      "wikipedia (vehicle production dates)",
+      "redline360.com (3000GT specs)",
+      "bbwheelsonline.com (bolt pattern verification)"
+    ]
+  }
+}

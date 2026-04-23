@@ -1,0 +1,237 @@
+﻿[
+    {
+        "year":  2025,
+        "make":  "bmw",
+        "id":  "e1676e1c-21d5-440d-8a58-39ac14110657",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  10,
+                                       "offset":  40,
+                                       "diameter":  21,
+                                       "position":  "both"
+                                   },
+                                   {
+                                       "width":  11,
+                                       "offset":  35,
+                                       "diameter":  22,
+                                       "position":  "both"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/40R21"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x6-m",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "bmw",
+        "id":  "2cf43410-7110-49b6-9910-33c85d08b567",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  10,
+                                       "offset":  40,
+                                       "diameter":  21,
+                                       "position":  "both"
+                                   },
+                                   {
+                                       "width":  11,
+                                       "offset":  35,
+                                       "diameter":  22,
+                                       "position":  "both"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "265/40R21"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x6-m",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "bmw",
+        "id":  "dc70593d-6264-498e-95b6-bc284c409b67",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  9.5,
+                                       "offset":  36,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9.5,
+                                       "offset":  32,
+                                       "isStock":  false,
+                                       "diameter":  22
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  10.5,
+                                       "offset":  43,
+                                       "isStock":  false,
+                                       "diameter":  22
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  9.5,
+                                       "offset":  36,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9.5,
+                                       "offset":  32,
+                                       "isStock":  false,
+                                       "diameter":  22
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  10.5,
+                                       "offset":  43,
+                                       "isStock":  false,
+                                       "diameter":  22
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9.5,
+                                       "offset":  32,
+                                       "isStock":  false,
+                                       "diameter":  23
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  10.5,
+                                       "offset":  43,
+                                       "isStock":  false,
+                                       "diameter":  23
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "285/45ZR21",
+                                  "275/40ZR22",
+                                  "315/35ZR22",
+                                  "285/45R21",
+                                  "275/35ZR23",
+                                  "315/30ZR23"
+                              ],
+        "trim":  "M60i xDrive",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x7",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2002,
+        "make":  "bmw",
+        "id":  "9a955a26-5a76-47b7-b30d-977f6e8e170c",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7,
+                                       "offset":  47,
+                                       "diameter":  16,
+                                       "position":  "both"
+                                   },
+                                   {
+                                       "width":  7.5,
+                                       "offset":  35,
+                                       "diameter":  17,
+                                       "position":  "both"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "z4",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2017,
+        "make":  "bmw",
+        "id":  "ac5920b6-736b-4f4a-b67a-78fb160fb849",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "offset":  30,
+                                       "diameter":  17,
+                                       "position":  "both"
+                                   },
+                                   {
+                                       "width":  8,
+                                       "offset":  35,
+                                       "diameter":  18,
+                                       "position":  "both"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/55R17"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "z4",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "bmw",
+        "id":  "59bf9b50-6058-4d62-8418-e343e0fb67a5",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  8,
+                                       "offset":  30,
+                                       "diameter":  17,
+                                       "position":  "both"
+                                   },
+                                   {
+                                       "width":  8,
+                                       "offset":  35,
+                                       "diameter":  18,
+                                       "position":  "both"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "215/55R17"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "z4",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    }
+]

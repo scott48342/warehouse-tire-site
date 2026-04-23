@@ -1,0 +1,1151 @@
+{
+  "batchId": "overnight-072-mercedes-benz",
+  "verifiedAt": "2026-04-23T02:50:00.000Z",
+  "summary": {
+    "total": 72,
+    "verified": 12,
+    "flagged": 60,
+    "invalid": 0
+  },
+  "criticalIssue": "60 vehicles have WRONG bolt pattern (5x114.3 instead of 5x112) and hub bore (67.1 instead of 66.6). Mercedes-Benz uses 5x112/66.6mm - the 5x114.3 pattern is for Japanese vehicles (Honda, Nissan, etc.). These wheels would NOT PHYSICALLY FIT.",
+  "sources": [
+    "https://hulkoffsets.com/blogs/news/mercedes-benz-sl-class-wheel-bolt-pattern-rim-size-hub-bore-and-offsets",
+    "https://hulkoffsets.com/blogs/news/mercedes-benz-slc-class-wheel-bolt-pattern-wheel-size-hub-bore-offsets-and-tire-size"
+  ],
+  "correctSpecs": {
+    "boltPattern": "5x112",
+    "hubBore": "66.6"
+  },
+  "results": [
+    {
+      "id": "5a8feb78-29f7-41cc-9628-5665722c71f3",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "sl-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "ab434d76-a51d-4bb4-8b4a-c448755117c0",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "sl-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "a2c7d5b5-8fd0-49c8-8236-e039a22dce08",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "sl-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "d9d60e10-e375-4ae3-9002-e6c9030b7ecd",
+      "year": 2001,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "82a045a6-b4d4-4138-848d-1ca88cf43d2b",
+      "year": 2002,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "1e0b4d0d-e64c-4c20-ade6-8a2b289d0a46",
+      "year": 2003,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "9e816b7d-2a1d-4a4a-ab99-9f34543c30d2",
+      "year": 2004,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "c6ac6407-87a7-4ab2-ab7a-f839c3f5526b",
+      "year": 2005,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "06f2054d-aeca-44de-8f3a-e8c04ed25cbe",
+      "year": 2006,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "b189e6a9-867e-452c-892f-847dc65387b7",
+      "year": 2007,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "65db2297-2d8c-470d-8e40-d75299f5a645",
+      "year": 2008,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "8d227acf-ea2e-4a31-b735-aaca4da7e188",
+      "year": 2009,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "ef77789f-eca6-4f76-8df8-40c1156920b9",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "05524616-fa12-45c6-b567-99b722b18da0",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "a705e0d7-41f7-4e1b-8ca6-9b2f71e03667",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "8f806b95-79b6-492b-8f08-c6ab7a424a03",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "6f492786-c361-4cf5-9df3-52a2624fb04e",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "0311e02c-8e71-4723-b426-902936fc4150",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "2d001b38-b6e1-4360-8de8-3abbc7ec3ed9",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "beb9365d-51be-494b-b208-5988d2a52af5",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "e4c87288-7104-4c7f-bcef-c1e491ceedd4",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "a081f77f-c9df-4dff-8f14-deb0f7525ee8",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "f42319e2-91c6-4c69-b084-5de660c4d01b",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "71073bd2-05a4-445a-95bf-9f1cc3d39ece",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "9f017bd0-7b8c-4ac0-bea5-f034b8d44b0d",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "a45c985e-2be3-4bd2-b37a-61e8d54d1788",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "bfcf86df-cfa0-4731-a090-2caf50643973",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "slc-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "d94cbe97-9012-4907-8e99-85aed70ba624",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "slc-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "c6b3ba4f-eb04-4932-b956-f444cbdddbb6",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "slc-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "4697c888-f109-4586-af2d-2391f22f33ad",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "slc-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "6405b635-cae6-44c5-ad96-6b91cb008482",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "slc-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "0255d1d7-46a4-4c9b-a958-17e42a177b73",
+      "year": 2000,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "8f92806d-fa10-4b69-8be4-a2a9709682c0",
+      "year": 2001,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "1ded8cf5-8f26-4781-8078-136cf46126cd",
+      "year": 2002,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "054ca4f4-89c7-470e-97f9-440e3795566c",
+      "year": 2003,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "b591033d-7c5a-48ce-a4f5-4f930d27c2a9",
+      "year": 2004,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "19725075-30a6-4502-a133-8510852b5fa8",
+      "year": 2005,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "f8d3988f-0ad6-446e-a4ce-ba53b7f2221d",
+      "year": 2006,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "47f3ae09-d3e6-4aad-aeac-4809b70a076a",
+      "year": 2007,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "ea68cbae-ad43-44f4-a9f4-04371d74a7a8",
+      "year": 2008,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "5ab0f118-17ef-413b-ae50-774063d96084",
+      "year": 2009,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "17e3ebde-7868-47ca-92b2-2021e6032704",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "4ef1f3fb-2d68-4a86-912e-0d075e3643b0",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "c9fb24a2-acc6-4e27-996c-5bccb8498050",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "78e89872-b5d5-46ca-a24d-954e2ea21e81",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "74dfd68a-126a-4ad8-b22d-cb7c3f9309d5",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "e4c5a393-ae20-4b7a-9b20-9cb0fc0da250",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "96e5fcfc-5f3d-43dd-aa25-41b66f93f7f1",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "slk-class",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "6e374a8b-ddda-4cf8-b465-39e148b6a380",
+      "year": 2000,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "3c2a13c9-a989-480f-8c83-7ed306d6993f",
+      "year": 2001,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "4d6b7b91-7bc7-42b0-93d6-dee28e319f34",
+      "year": 2002,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "da12e5c0-5abc-43e6-ba18-dff078d6dead",
+      "year": 2003,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "b666d678-15cd-4d16-be77-b17da84f4a1e",
+      "year": 2004,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "acb7f5b5-99af-4b5f-9478-505322f5bd8f",
+      "year": 2005,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "f05eea7e-0477-4cc2-9faf-0b703e06f9e0",
+      "year": 2006,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "a9b703aa-3221-4a80-94ef-59049390dfc8",
+      "year": 2007,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "ddb628ad-b662-42d5-ad90-a5896125c54a",
+      "year": 2008,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "ab84209b-8e69-4dee-8de6-177f9f4487c7",
+      "year": 2009,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "036cd62d-fbbd-4113-a222-6195f67afa36",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "41c190ab-fad7-49c1-bc0a-5423689b4ff4",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "aeae3e1f-0edb-4ffc-8609-c1a0c9c069e1",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "e506f079-28e5-4024-8c26-ad918fd8bd3d",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "ef2d1df2-1276-4763-8fad-be6689b18b33",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "738b1bb8-fe8f-4ffa-9374-482eace47d01",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "4266b0b0-e20c-4018-9c8c-d27f8bf54cc7",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "CRITICAL: Bolt pattern 5x114.3 is WRONG - Mercedes uses 5x112",
+        "CRITICAL: Hub bore 67.1 is WRONG - Mercedes uses 66.6mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "id": "1f1fc492-2ee6-49ea-81ba-29817ec94121",
+      "year": 1990,
+      "make": "mercedes-benz",
+      "model": "190E",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Bolt pattern 5x112 and hub bore 66.6 are correct for Mercedes-Benz"
+    },
+    {
+      "id": "09995abf-d638-4d69-89d1-3cb70269928a",
+      "year": 1991,
+      "make": "mercedes-benz",
+      "model": "190E",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Bolt pattern 5x112 and hub bore 66.6 are correct for Mercedes-Benz"
+    },
+    {
+      "id": "ec8aba0e-cb51-4629-8538-b2c98ead2a88",
+      "year": 1992,
+      "make": "mercedes-benz",
+      "model": "190E",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Bolt pattern 5x112 and hub bore 66.6 are correct for Mercedes-Benz"
+    },
+    {
+      "id": "a6263161-67c2-457a-9b98-1340a5821f82",
+      "year": 1993,
+      "make": "mercedes-benz",
+      "model": "190E",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Bolt pattern 5x112 and hub bore 66.6 are correct for Mercedes-Benz"
+    },
+    {
+      "id": "ef31fe23-a75c-43a8-9b85-6f90c1f9e92d",
+      "year": 1990,
+      "make": "mercedes-benz",
+      "model": "E-Class",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Bolt pattern 5x112 and hub bore 66.6 are correct for Mercedes-Benz"
+    },
+    {
+      "id": "dba704a6-58cd-4149-a7e6-4516da453b26",
+      "year": 1991,
+      "make": "mercedes-benz",
+      "model": "E-Class",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Bolt pattern 5x112 and hub bore 66.6 are correct for Mercedes-Benz"
+    },
+    {
+      "id": "d2f17b77-f493-435c-b2c4-437fa34799dd",
+      "year": 1992,
+      "make": "mercedes-benz",
+      "model": "E-Class",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Bolt pattern 5x112 and hub bore 66.6 are correct for Mercedes-Benz"
+    },
+    {
+      "id": "15af9d17-ad2b-475f-ad07-878a3c220037",
+      "year": 1993,
+      "make": "mercedes-benz",
+      "model": "E-Class",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Bolt pattern 5x112 and hub bore 66.6 are correct for Mercedes-Benz"
+    },
+    {
+      "id": "15421cca-5335-4b5e-8bbd-ff77bc2268c4",
+      "year": 1994,
+      "make": "mercedes-benz",
+      "model": "E-Class",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Bolt pattern 5x112 and hub bore 66.6 are correct for Mercedes-Benz"
+    },
+    {
+      "id": "887cb3d3-07b1-4f93-9208-9cdff64359c6",
+      "year": 1995,
+      "make": "mercedes-benz",
+      "model": "E-Class",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Bolt pattern 5x112 and hub bore 66.6 are correct for Mercedes-Benz"
+    }
+  ]
+}

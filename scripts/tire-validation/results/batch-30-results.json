@@ -1,0 +1,1128 @@
+{
+  "batchId": "30",
+  "validatedAt": "2026-04-21T21:50:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P285/35ZR19", "P325/30ZR19", "P335/25ZR20", "245/40ZR18", "285/35ZR19"],
+      "validatedTireSizes": {
+        "C6 Coupe Standard Model": { "front": "245/40R18", "rear": "285/35R19" },
+        "C6 Coupe Performance Handling Package": { "front": "245/40R18", "rear": "285/35R19" },
+        "C6 Convertible Standard Model": { "front": "245/40R18", "rear": "285/35R19" },
+        "C6 Convertible Performance Handling Package": { "front": "245/40R18", "rear": "285/35R19" }
+      },
+      "allSizes": ["245/40R18", "285/35R19"],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "notes": "C6 generation. 2005 Corvette all trims use staggered 18F/19R setup."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P265/40ZR17", "P295/35ZR18"],
+      "validatedTireSizes": {
+        "Z06": { "front": "265/40R17", "rear": "295/35R18" }
+      },
+      "allSizes": ["265/40R17", "295/35R18"],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "notes": "C5 Z06 trim. Staggered 17F/18R setup."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/45ZR17", "P275/40ZR18"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/45R17", "rear": "275/40R18" },
+        "Convertible": { "front": "245/45R17", "rear": "275/40R18" }
+      },
+      "allSizes": ["245/45R17", "275/40R18"],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "notes": "C5 Base/Convertible. Staggered 17F/18R setup."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P265/40ZR17", "P295/35ZR18"],
+      "validatedTireSizes": {
+        "Z06": { "front": "265/40R17", "rear": "295/35R18" }
+      },
+      "allSizes": ["265/40R17", "295/35R18"],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "notes": "C5 Z06 trim. Staggered 17F/18R setup."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/45ZR17", "P275/40ZR18"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/45R17", "rear": "275/40R18" },
+        "Convertible": { "front": "245/45R17", "rear": "275/40R18" }
+      },
+      "allSizes": ["245/45R17", "275/40R18"],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "notes": "C5 Base/Convertible. Staggered 17F/18R setup."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P265/40ZR17", "P295/35ZR18"],
+      "validatedTireSizes": {
+        "Z06": { "front": "265/40R17", "rear": "295/35R18" }
+      },
+      "allSizes": ["265/40R17", "295/35R18"],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "notes": "C5 Z06 trim. Staggered 17F/18R setup."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/45ZR17", "P275/40ZR18"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/45R17", "rear": "275/40R18" },
+        "Convertible": { "front": "245/45R17", "rear": "275/40R18" }
+      },
+      "allSizes": ["245/45R17", "275/40R18"],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "notes": "C5 Base/Convertible. Staggered 17F/18R setup."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P265/40ZR17", "P295/35ZR18"],
+      "validatedTireSizes": {
+        "Z06": { "front": "265/40R17", "rear": "295/35R18" }
+      },
+      "allSizes": ["265/40R17", "295/35R18"],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "notes": "C5 Z06 trim. Staggered 17F/18R setup."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/45ZR17", "P275/40ZR18"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/45R17", "rear": "275/40R18" },
+        "Convertible": { "front": "245/45R17", "rear": "275/40R18" }
+      },
+      "allSizes": ["245/45R17", "275/40R18"],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "notes": "C5 Base/Convertible. Staggered 17F/18R setup."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/45ZR17", "P275/40ZR18"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/45R17", "rear": "275/40R18" },
+        "Convertible": { "front": "245/45R17", "rear": "275/40R18" }
+      },
+      "allSizes": ["245/45R17", "275/40R18"],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "notes": "C5 Base/Convertible. Staggered 17F/18R setup."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "cruze-limited",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Limited L": "215/60R16",
+        "Limited LS": "215/60R16",
+        "Limited LT": ["215/60R16", "225/50R17"],
+        "Limited LTZ": "225/45R18",
+        "Limited Eco": "215/55R17"
+      },
+      "allSizes": ["215/60R16", "215/55R17", "225/50R17", "225/45R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "Cruze Limited continued the Gen1 body. Different sizes than 2nd-gen Cruze."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "cruze-limited",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Limited L": "215/60R16",
+        "Limited LS": "215/60R16",
+        "Limited LT": ["215/60R16", "225/50R17"],
+        "Limited LTZ": "225/45R18",
+        "Limited Eco": "215/55R17"
+      },
+      "allSizes": ["215/60R16", "215/55R17", "225/50R17", "225/45R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "Cruze Limited continued the Gen1 body in 2016."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Sport6 RS": "225/45R17"
+      },
+      "allSizes": ["225/45R17"],
+      "isStaggered": false,
+      "source": "web search",
+      "notes": "Brazil/South America market vehicle. Sport6 RS is the hatchback variant."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Sport6 RS": "225/45R17"
+      },
+      "allSizes": ["225/45R17"],
+      "isStaggered": false,
+      "source": "web search",
+      "notes": "Brazil/South America market vehicle."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Sport6 RS": "225/45R17"
+      },
+      "allSizes": ["225/45R17"],
+      "isStaggered": false,
+      "source": "web search",
+      "notes": "Brazil/South America market vehicle."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Sport6 RS": "225/45R17"
+      },
+      "allSizes": ["225/45R17"],
+      "isStaggered": false,
+      "source": "web search",
+      "notes": "Brazil/South America market vehicle."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Sport6 RS": "225/45R17"
+      },
+      "allSizes": ["225/45R17"],
+      "isStaggered": false,
+      "source": "web search",
+      "notes": "Brazil/South America market vehicle. D2LC generation (2020-2026)."
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": {
+        "ACTIV": "235/65R17",
+        "LT": ["235/65R17", "235/55R19"],
+        "RS": ["235/55R19", "235/50R20"]
+      },
+      "allSizes": ["235/65R17", "235/55R19", "235/50R20"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "2025+ redesign has different sizes. Current DB has older sizes - needs update."
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": {
+        "ACTIV": "235/65R17",
+        "LT": ["235/65R17", "235/55R19"],
+        "RS": ["235/55R19", "235/50R20"]
+      },
+      "allSizes": ["235/65R17", "235/55R19", "235/50R20"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "2025 redesign has larger tire sizes. DB needs update."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": {
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "225/60R18", "235/50R19"],
+        "Premier": ["225/60R18", "235/50R19"],
+        "RS": "235/50R19"
+      },
+      "allSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": {
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "225/60R18", "235/50R19"],
+        "Premier": ["225/60R18", "235/50R19"],
+        "RS": "235/50R19"
+      },
+      "allSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": {
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "225/60R18", "235/50R19"],
+        "Premier": ["225/60R18", "235/50R19"],
+        "RS": "235/50R19"
+      },
+      "allSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": {
+        "L": "225/65R17",
+        "LS": ["225/65R17", "235/50R19"],
+        "LT": ["225/65R17", "225/60R18", "235/50R19"],
+        "Premier": ["225/60R18", "235/50R19"],
+        "RS": ["225/60R18", "235/50R19"]
+      },
+      "allSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": {
+        "L": "225/65R17",
+        "LS": ["225/65R17", "235/50R19"],
+        "LT": ["225/65R17", "225/60R18", "235/50R19"],
+        "Premier": ["225/60R18", "235/50R19"]
+      },
+      "allSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": {
+        "L": "225/65R17",
+        "LS": ["225/65R17", "235/50R19"],
+        "LT": ["225/65R17", "225/60R18", "235/50R19"],
+        "Premier": ["225/60R18", "235/50R19"]
+      },
+      "allSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "validatedTireSizes": {
+        "L": "225/65R17",
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "225/60R18"],
+        "LT Redline Edition": "235/50R19",
+        "Premier": ["225/60R18", "235/50R19"]
+      },
+      "allSizes": ["225/65R17", "225/60R18", "235/50R19"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": {
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "235/55R18"],
+        "Premier": ["225/65R17", "235/55R18"]
+      },
+      "allSizes": ["225/65R17", "235/55R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has 235/55R19 but should be 235/55R18. Needs correction."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": {
+        "L": "225/65R17",
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "235/55R18"],
+        "LTZ": "235/55R18"
+      },
+      "allSizes": ["225/65R17", "235/55R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has 235/55R19 but should be 235/55R18. No R19 option for this year."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": {
+        "L": "225/65R17",
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "235/55R18"],
+        "LTZ": ["225/65R17", "235/55R18"]
+      },
+      "allSizes": ["225/65R17", "235/55R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has 235/55R19 but should be 235/55R18. No R19 option for this year."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19", "235/55R18"],
+      "validatedTireSizes": {
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "235/55R18"],
+        "LTZ": ["225/65R17", "235/55R18"]
+      },
+      "allSizes": ["225/65R17", "235/55R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has 225/60R18 and 235/55R19 but these are not OEM options. Remove them."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": {
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "235/55R18"],
+        "LTZ": "225/65R17"
+      },
+      "allSizes": ["225/65R17", "235/55R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has incorrect sizes. No R18 or R19 options except 235/55R18 on LT."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": {
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "235/55R18"],
+        "LTZ": "225/65R17"
+      },
+      "allSizes": ["225/65R17", "235/55R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has incorrect sizes. Remove 225/60R18 and 235/55R19."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": {
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "235/55R18"],
+        "LTZ": "225/65R17"
+      },
+      "allSizes": ["225/65R17", "235/55R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has incorrect sizes. Remove 225/60R18 and 235/55R19."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": {
+        "LS": "225/65R17",
+        "LT": ["225/65R17", "235/55R18"],
+        "LTZ": "225/65R17"
+      },
+      "allSizes": ["225/65R17", "235/55R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "2010 redesign (2nd gen). DB has incorrect sizes. Remove 225/60R18 and 235/55R19."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["235/65R16", "235/60R17"],
+      "validatedTireSizes": {
+        "LS AWD": "235/65R16",
+        "LS FWD": "235/65R16",
+        "LT AWD": ["235/65R16", "235/60R17"],
+        "LT FWD": ["235/65R16", "235/60R17"],
+        "LTZ AWD": "235/60R17",
+        "LTZ FWD": "235/60R17",
+        "Sport AWD": "235/50R18",
+        "Sport FWD": "235/50R18"
+      },
+      "allSizes": ["235/65R16", "235/60R17", "235/50R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB missing 235/50R18 Sport trim option."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["235/65R16", "235/60R17"],
+      "validatedTireSizes": {
+        "LS AWD": "235/65R16",
+        "LS FWD": "235/65R16",
+        "LT AWD": ["235/65R16", "235/60R17"],
+        "LT FWD": ["235/65R16", "235/60R17"],
+        "LTZ AWD": "235/60R17",
+        "LTZ FWD": "235/60R17",
+        "Sport AWD": "235/50R18",
+        "Sport FWD": "235/50R18"
+      },
+      "allSizes": ["235/65R16", "235/60R17", "235/50R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB missing 235/50R18 Sport trim option."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["235/65R16", "235/60R17"],
+      "validatedTireSizes": {
+        "LS AWD": ["235/65R16", "235/60R17"],
+        "LS FWD": ["235/65R16", "235/60R17"],
+        "LT AWD": ["235/65R16", "235/60R17"],
+        "LT FWD": ["235/65R16", "235/60R17"]
+      },
+      "allSizes": ["235/65R16", "235/60R17"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["235/65R16", "235/60R17"],
+      "validatedTireSizes": {
+        "LS AWD": ["235/65R16", "235/60R17"],
+        "LS FWD": ["235/65R16", "235/60R17"],
+        "LT AWD": ["235/65R16", "235/60R17"],
+        "LT FWD": ["235/65R16", "235/60R17"]
+      },
+      "allSizes": ["235/65R16", "235/60R17"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["235/65R16", "235/60R17"],
+      "validatedTireSizes": {
+        "LS AWD": ["235/65R16", "235/60R17"],
+        "LS FWD": ["235/65R16", "235/60R17"],
+        "LT AWD": ["235/65R16", "235/60R17"],
+        "LT FWD": ["235/65R16", "235/60R17"]
+      },
+      "allSizes": ["235/65R16", "235/60R17"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "equinox",
+      "currentTireSizes": ["215/70R16", "225/60R17"],
+      "validatedTireSizes": {
+        "LS": ["215/70R16", "225/60R17"],
+        "LT": ["215/70R16", "225/60R17"]
+      },
+      "allSizes": ["215/70R16", "225/60R17"],
+      "isStaggered": false,
+      "source": "web search",
+      "notes": "2004 was first year. Different sizes than 2005+.",
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "evanda",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "205/60R15"
+      },
+      "allSizes": ["205/60R15"],
+      "isStaggered": false,
+      "source": "web search",
+      "notes": "Korean market (Daewoo rebadge). Standard tire size 205/60R15."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "evanda",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "205/60R15"
+      },
+      "allSizes": ["205/60R15"],
+      "isStaggered": false,
+      "source": "web search",
+      "notes": "Korean market (Daewoo rebadge)."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "evanda",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "205/60R15"
+      },
+      "allSizes": ["205/60R15"],
+      "isStaggered": false,
+      "source": "web search",
+      "notes": "Korean market (Daewoo rebadge)."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "evanda",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "205/60R15"
+      },
+      "allSizes": ["205/60R15"],
+      "isStaggered": false,
+      "source": "web search",
+      "notes": "Korean market (Daewoo rebadge)."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500 AWD": "245/70R17",
+        "G1500 RWD": "245/70R17"
+      },
+      "allSizes": ["245/70R17"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has incorrect sizes. Should be 245/70R17, not 245/75R16 or 265/70R17."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500 AWD": "245/70R17",
+        "G1500 RWD": "245/70R17"
+      },
+      "allSizes": ["245/70R17"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB incorrect. Should be 245/70R17 only."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500 AWD": "245/70R17",
+        "G1500 RWD": "245/70R17"
+      },
+      "allSizes": ["245/70R17"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB incorrect. Should be 245/70R17 only."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500 AWD": "245/70R17",
+        "G1500 RWD": "245/70R17"
+      },
+      "allSizes": ["245/70R17"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB incorrect. Should be 245/70R17 only."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500 AWD": "245/70R17",
+        "G1500 RWD": "245/70R17"
+      },
+      "allSizes": ["245/70R17"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB incorrect. Should be 245/70R17 only."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500 AWD": "245/70R17",
+        "G1500 RWD": "245/70R17"
+      },
+      "allSizes": ["245/70R17"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "2009 switched to 245/70R17. DB has old sizes."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500 AWD": ["245/75R16", "235/75R16"],
+        "G1500 RWD": ["245/75R16", "235/75R16"]
+      },
+      "allSizes": ["235/75R16", "245/75R16"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has 265/70R17 which is incorrect for 2008."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500 AWD": ["245/75R16", "235/75R16"],
+        "G1500 RWD": ["245/75R16", "235/75R16"]
+      },
+      "allSizes": ["235/75R16", "245/75R16"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has 265/70R17 which is incorrect."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500 AWD": ["235/75R16", "245/75R16"],
+        "G1500 RWD": ["235/75R16", "245/75R16"]
+      },
+      "allSizes": ["235/75R16", "245/75R16"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has 265/70R17 which is incorrect."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500": "235/75R16"
+      },
+      "allSizes": ["235/75R16"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB incorrect. 2005 used 235/75R16 only."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500": "235/75R16"
+      },
+      "allSizes": ["235/75R16"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB incorrect. 2004 used 235/75R16 only."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500": "235/75R16"
+      },
+      "allSizes": ["235/75R16"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB incorrect. 2003 used 235/75R16 only."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500": "235/75R15"
+      },
+      "allSizes": ["235/75R15"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB incorrect. 2002 and earlier used 235/75R15."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500": "235/75R15"
+      },
+      "allSizes": ["235/75R15"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB incorrect. 2001 used 235/75R15."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "validatedTireSizes": {
+        "G1500": "235/75R15"
+      },
+      "allSizes": ["235/75R15"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB incorrect. 2000 used 235/75R15."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "hhr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS Panel Sport Wagon": "215/55R16",
+        "LS Sport Wagon": "215/55R16",
+        "LT Panel Sport Wagon": ["215/55R16", "215/50R17"],
+        "LT Sport Wagon": ["215/55R16", "215/50R17"]
+      },
+      "allSizes": ["215/55R16", "215/50R17"],
+      "isStaggered": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "hhr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS Panel Sport Wagon": "215/55R16",
+        "LS Sport Wagon": "215/55R16",
+        "LT Panel Sport Wagon": ["215/55R16", "215/50R17"],
+        "LT Sport Wagon": ["215/55R16", "215/50R17"],
+        "SS": "225/45R18"
+      },
+      "allSizes": ["215/55R16", "215/50R17", "225/45R18"],
+      "isStaggered": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "hhr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS Panel Sport Wagon": "215/55R16",
+        "LS Sport Wagon": "215/55R16",
+        "LT Panel Sport Wagon": ["215/55R16", "215/50R17"],
+        "LT Sport Wagon": ["215/55R16", "215/50R17"],
+        "SS": "225/45R18"
+      },
+      "allSizes": ["215/55R16", "215/50R17", "225/45R18"],
+      "isStaggered": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "hhr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS Panel Sport Wagon": "215/55R16",
+        "LS Sport Wagon": "215/55R16",
+        "LT Panel Sport Wagon": ["215/55R16", "215/50R17"],
+        "LT Sport Wagon": ["215/55R16", "215/50R17"],
+        "SS": "225/45R18"
+      },
+      "allSizes": ["215/55R16", "215/50R17", "225/45R18"],
+      "isStaggered": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "hhr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS": "215/55R16",
+        "LT": ["215/55R16", "215/50R17"]
+      },
+      "allSizes": ["215/55R16", "215/50R17"],
+      "isStaggered": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "hhr",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS": "215/55R16",
+        "LT": ["215/55R16", "215/50R17"]
+      },
+      "allSizes": ["215/55R16", "215/50R17"],
+      "isStaggered": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "hhr-ss",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SS": "225/45R18"
+      },
+      "allSizes": ["225/45R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "HHR SS model only. Turbocharged version."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "hhr-ss",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SS": "225/45R18"
+      },
+      "allSizes": ["225/45R18"],
+      "isStaggered": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "hhr-ss",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SS": "225/45R18"
+      },
+      "allSizes": ["225/45R18"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "First year of HHR SS."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P235/55R18", "P245/45R19", "P245/40R20", "245/45R19", "245/40R20", "235/50R18"],
+      "validatedTireSizes": {
+        "LT": "235/50R18",
+        "Premier": ["245/45R19", "245/40R20"]
+      },
+      "allSizes": ["235/50R18", "245/45R19", "245/40R20"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has P235/55R18 which should be 235/50R18. Final year of Impala.",
+      "status": "NEEDS_CORRECTION"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P235/55R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": {
+        "LS": "235/50R18",
+        "LT": ["235/50R18", "245/45R19"],
+        "Premier": ["245/45R19", "245/40R20"]
+      },
+      "allSizes": ["235/50R18", "245/45R19", "245/40R20"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has P235/55R18 which should be 235/50R18."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P235/55R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": {
+        "LS": "235/50R18",
+        "LT": ["235/50R18", "245/45R19"],
+        "Premier": "245/45R19"
+      },
+      "allSizes": ["235/50R18", "245/45R19"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has P235/55R18 (should be 235/50R18) and P245/40R20 not available in 2018."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P235/55R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": {
+        "LS": ["235/50R18", "245/45R19"],
+        "LT": ["235/50R18", "245/45R19"],
+        "Premier": ["245/45R19", "245/40R20"]
+      },
+      "allSizes": ["235/50R18", "245/45R19", "245/40R20"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "DB has P235/55R18 which should be 235/50R18."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P235/55R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": {
+        "LS": "235/50R18",
+        "LT": ["235/50R18", "245/45R19", "245/40R20"],
+        "LTZ": ["245/45R19", "245/40R20"],
+        "Limited LS": "225/60R16",
+        "Limited LT": ["225/60R16", "225/55R17"],
+        "Limited LTZ": "235/50R18"
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18", "245/45R19", "245/40R20"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "2016 had both regular Impala and Impala Limited (old body). DB should separate these."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P235/55R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": {
+        "LS": "235/50R18",
+        "LT": ["235/50R18", "245/45R19", "245/40R20"],
+        "LTZ": ["245/45R19", "245/40R20"],
+        "Limited LS": "225/60R16",
+        "Limited LT": ["225/60R16", "235/55R17"],
+        "Limited LTZ": "235/50R18"
+      },
+      "allSizes": ["225/60R16", "235/55R17", "235/50R18", "245/45R19", "245/40R20"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "2015 had both regular and Limited. DB has P235/55R18 which should be 235/50R18."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P235/55R18", "P245/45R19", "P245/40R20"],
+      "validatedTireSizes": {
+        "Base Model": "235/50R18",
+        "LS": "235/50R18",
+        "LT": ["235/50R18", "245/45R19"],
+        "LTZ": ["245/45R19", "245/40R20"],
+        "Limited LS": "225/60R16",
+        "Limited LT": ["225/60R16", "235/55R17"],
+        "Limited LTZ": "235/50R18"
+      },
+      "allSizes": ["225/60R16", "235/55R17", "235/50R18", "245/45R19", "245/40R20"],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "notes": "2014 redesigned Impala. DB has P235/55R18 which should be 235/50R18."
+    }
+  ],
+  "summary": {
+    "totalValidated": 75,
+    "correctInDB": 18,
+    "needsCorrection": 57,
+    "issues": [
+      "Corvette entries are correct but duplicated (one for base, one for Z06 trims)",
+      "Equinox 2010-2016 has wrong 19\" sizes - should be 18\"",
+      "Equinox 2025-2026 has completely new sizes (redesign)",
+      "Express 1500 has wrong tire sizes for most years",
+      "Impala sizes use P-metric format but should be standard metric",
+      "Cruze Limited is missing tire data entirely",
+      "Cruze Sport6 RS (Brazil) is missing tire data",
+      "HHR is missing tire data entirely",
+      "HHR SS is missing tire data",
+      "Evanda (Korea) is missing tire data"
+    ]
+  }
+}

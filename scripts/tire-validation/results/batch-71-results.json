@@ -1,0 +1,1141 @@
+{
+  "batchId": "71",
+  "processedAt": "2026-04-21T22:08:00Z",
+  "source": "tiresize.com + web search",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2003,
+      "make": "hyundai",
+      "model": "elantra",
+      "currentTireSizes": ["195/60R15"],
+      "validatedTireSizes": ["195/60R15"],
+      "trims": {
+        "GLS Sedan": ["195/60R15"],
+        "GT Hatchback": ["195/60R15"],
+        "GT Sedan": ["195/60R15"]
+      },
+      "status": "verified",
+      "notes": "All trims use same size"
+    },
+    {
+      "year": 2002,
+      "make": "hyundai",
+      "model": "elantra",
+      "currentTireSizes": ["195/60R15"],
+      "validatedTireSizes": ["195/60R15"],
+      "trims": {
+        "GLS Sedan": ["195/60R15"],
+        "GT Hatchback": ["195/60R15"]
+      },
+      "status": "verified",
+      "notes": "All trims use same size"
+    },
+    {
+      "year": 2001,
+      "make": "hyundai",
+      "model": "elantra",
+      "currentTireSizes": ["195/60R15"],
+      "validatedTireSizes": ["195/60R15"],
+      "trims": {
+        "GLS Sedan": ["195/60R15"],
+        "GT Hatchback": ["195/60R15"]
+      },
+      "status": "verified",
+      "notes": "All trims use same size"
+    },
+    {
+      "year": 2000,
+      "make": "hyundai",
+      "model": "elantra",
+      "currentTireSizes": ["195/60R15"],
+      "validatedTireSizes": ["195/60R14"],
+      "trims": {
+        "GLS Sedan": ["195/60R14"],
+        "GLS Wagon": ["195/60R14"]
+      },
+      "status": "mismatch",
+      "notes": "Database shows R15, OEM data shows R14 for 2000 model year"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "elantra-ev",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16"],
+      "trims": {
+        "Base": ["205/55R16"]
+      },
+      "status": "missing_data",
+      "notes": "Korean market vehicle. Limited US availability. Uses Ioniq Electric platform tire sizes."
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "elantra-ev",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16"],
+      "trims": {
+        "Base": ["205/55R16"]
+      },
+      "status": "missing_data",
+      "notes": "Korean market vehicle. Limited US availability."
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trims": {
+        "Base": ["225/40R18"],
+        "N Line": ["225/40R18"]
+      },
+      "status": "missing_data",
+      "notes": "Final year for Elantra GT"
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trims": {
+        "Base": ["225/40R18"],
+        "N Line": ["225/40R18"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/40R18"],
+      "trims": {
+        "GT": ["225/40R18"],
+        "Sport": ["225/40R18"]
+      },
+      "status": "missing_data",
+      "notes": "Redesigned for 2018"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "Base": ["205/55R16"],
+        "Sport": ["215/45R17"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "Base": ["205/55R16"],
+        "Style": ["215/45R17"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "Base": ["205/55R16"],
+        "Style": ["215/45R17"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2014,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "Base": ["205/55R16"],
+        "Style": ["215/45R17"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2013,
+      "make": "hyundai",
+      "model": "elantra-gt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "215/45R17"],
+      "trims": {
+        "Base": ["205/55R16"],
+        "Style": ["215/45R17"]
+      },
+      "status": "missing_data",
+      "notes": "First year for separate Elantra GT model"
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "encino",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/50R18"],
+      "trims": {
+        "1.6 T-GDi": ["215/50R18"],
+        "EV": ["215/50R18"]
+      },
+      "status": "missing_data",
+      "notes": "Chinese market Kona variant"
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "encino",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/50R18"],
+      "trims": {
+        "1.6 T-GDi": ["215/50R18"],
+        "EV": ["215/50R18"]
+      },
+      "status": "missing_data",
+      "notes": "Chinese market Kona variant"
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "encino",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/50R18"],
+      "trims": {
+        "1.6 T-GDi": ["215/50R18"]
+      },
+      "status": "missing_data",
+      "notes": "Chinese market Kona variant"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "encino",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/50R18"],
+      "trims": {
+        "1.6 T-GDi": ["215/50R18"]
+      },
+      "status": "missing_data",
+      "notes": "Chinese market Kona variant - first year"
+    },
+    {
+      "year": 2010,
+      "make": "hyundai",
+      "model": "entourage",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "GLS": ["225/70R16", "235/60R17"],
+        "Limited": ["235/60R17"]
+      },
+      "status": "missing_data",
+      "notes": "2010 likely used 2009 specs - final year"
+    },
+    {
+      "year": 2009,
+      "make": "hyundai",
+      "model": "entourage",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "GLS": ["225/70R16", "235/60R17"],
+        "Limited": ["235/60R17"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "entourage",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "GLS": ["225/70R16", "235/60R17"],
+        "Limited": ["235/60R17"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "entourage",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "GLS": ["225/70R16"],
+        "Limited": ["235/60R17"],
+        "SE": ["235/60R17"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2006,
+      "make": "hyundai",
+      "model": "entourage",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "GLS": ["225/70R16"],
+        "Limited": ["235/60R17"]
+      },
+      "status": "missing_data",
+      "notes": "First year - may not be available at tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "trims": {
+        "Hybrid Blue": ["195/65R15"],
+        "Hybrid SEL": ["195/65R15"],
+        "Hybrid Limited": ["225/45R17"],
+        "Plug-in Hybrid": ["205/55R16"]
+      },
+      "status": "missing_data",
+      "notes": "Final year for Ioniq (non-Ioniq 5/6)"
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "trims": {
+        "Electric SE": ["205/55R16"],
+        "Electric Limited": ["205/55R16"],
+        "Hybrid Blue": ["195/65R15"],
+        "Hybrid SE": ["195/65R15"],
+        "Hybrid SEL": ["195/65R15"],
+        "Hybrid Limited": ["225/45R17"],
+        "Plug-in Hybrid SE": ["205/55R16"],
+        "Plug-in Hybrid SEL": ["205/55R16"],
+        "Plug-in Hybrid Limited": ["205/55R16"]
+      },
+      "status": "partial_match",
+      "notes": "Current data missing 225/45R17 for Hybrid Limited trim"
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["225/45R17"],
+      "validatedTireSizes": ["225/45R17"],
+      "trims": {
+        "Hybrid Limited": ["225/45R17"]
+      },
+      "status": "verified",
+      "notes": "Hybrid Limited trim entry"
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["225/45R17"],
+      "validatedTireSizes": ["225/45R17"],
+      "trims": {
+        "Hybrid Limited": ["225/45R17"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "trims": {
+        "Electric SE": ["205/55R16"],
+        "Electric Limited": ["205/55R16"],
+        "Hybrid Blue": ["195/65R15"],
+        "Hybrid SE": ["195/65R15"],
+        "Hybrid SEL": ["195/65R15"],
+        "Hybrid Limited": ["225/45R17"],
+        "Plug-in Hybrid SE": ["205/55R16"],
+        "Plug-in Hybrid SEL": ["205/55R16"],
+        "Plug-in Hybrid Limited": ["205/55R16"]
+      },
+      "status": "partial_match"
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "trims": {
+        "Electric SE": ["205/55R16"],
+        "Electric Limited": ["205/55R16"],
+        "Hybrid Blue": ["195/65R15"],
+        "Hybrid SE": ["195/65R15"],
+        "Hybrid SEL": ["195/65R15"],
+        "Hybrid Limited": ["225/45R17"],
+        "Plug-in Hybrid SE": ["205/55R16"],
+        "Plug-in Hybrid SEL": ["205/55R16"],
+        "Plug-in Hybrid Limited": ["205/55R16"]
+      },
+      "status": "partial_match"
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["225/45R17"],
+      "validatedTireSizes": ["225/45R17"],
+      "trims": {
+        "Hybrid Limited": ["225/45R17"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "trims": {
+        "Electric": ["205/55R16"],
+        "Electric Limited": ["205/55R16"],
+        "Hybrid Blue": ["195/65R15"],
+        "Hybrid SEL": ["195/65R15"],
+        "Hybrid Limited": ["225/45R17"],
+        "Plug-in Hybrid": ["205/55R16"]
+      },
+      "status": "partial_match"
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["225/45R17"],
+      "validatedTireSizes": ["225/45R17"],
+      "trims": {
+        "Hybrid Limited": ["225/45R17"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "trims": {
+        "Electric": ["205/55R16"],
+        "Electric Limited": ["205/55R16"],
+        "Hybrid Blue": ["195/65R15"],
+        "Hybrid SEL": ["195/65R15"],
+        "Hybrid Limited": ["225/45R17"],
+        "Plug-in Hybrid": ["205/55R16"],
+        "Plug-in Hybrid Limited": ["205/55R16"]
+      },
+      "status": "partial_match"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["225/45R17"],
+      "validatedTireSizes": ["225/45R17"],
+      "trims": {
+        "Hybrid Limited": ["225/45R17"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "trims": {
+        "Electric": ["205/55R16"],
+        "Electric Limited": ["205/55R16"],
+        "Hybrid Blue": ["195/65R15"],
+        "Hybrid SEL": ["195/65R15"],
+        "Hybrid Limited": ["225/45R17"],
+        "Plug-in Hybrid": ["205/55R16"]
+      },
+      "status": "partial_match"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": ["225/45R17"],
+      "validatedTireSizes": ["225/45R17"],
+      "trims": {
+        "Hybrid Limited": ["225/45R17"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "ioniq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "trims": {
+        "Hybrid Blue": ["195/65R15"],
+        "Electric": ["205/55R16"],
+        "Hybrid Limited": ["225/45R17"]
+      },
+      "status": "missing_data",
+      "notes": "2016 was Korea-only launch year, no US sales"
+    },
+    {
+      "year": 2026,
+      "make": "hyundai",
+      "model": "ioniq-5",
+      "currentTireSizes": ["235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20", "275/35R21", "235/60R18"],
+      "trims": {
+        "SE": ["235/55R19"],
+        "SE Standard Range": ["235/55R19"],
+        "SEL": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited AWD": ["255/45R20"],
+        "N": ["275/35R21"],
+        "XRT": ["235/60R18"]
+      },
+      "status": "partial_match",
+      "notes": "Missing N trim (275/35R21) and XRT (235/60R18)"
+    },
+    {
+      "year": 2025,
+      "make": "hyundai",
+      "model": "ioniq-5",
+      "currentTireSizes": ["235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20", "275/35R21", "235/60R18"],
+      "trims": {
+        "SE": ["235/55R19"],
+        "SE Standard Range": ["235/55R19"],
+        "SEL": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited AWD": ["255/45R20"],
+        "N": ["275/35R21"],
+        "XRT": ["235/60R18"]
+      },
+      "status": "partial_match",
+      "notes": "Missing N trim (275/35R21) and XRT (235/60R18)"
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "ioniq-5",
+      "currentTireSizes": ["235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20", "275/35R21"],
+      "trims": {
+        "SE": ["235/55R19"],
+        "SE Standard Range": ["235/55R19"],
+        "SEL": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited AWD": ["255/45R20"],
+        "D100 Platinum": ["255/45R20"],
+        "N": ["275/35R21"]
+      },
+      "status": "partial_match",
+      "notes": "Missing N trim (275/35R21)"
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "ioniq-5",
+      "currentTireSizes": ["235/55ZR19", "255/45ZR20", "235/60R18", "235/50ZR20", "255/40ZR21"],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "SE": ["235/55R19"],
+        "SE Standard Range": ["235/55R19"],
+        "SEL": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited AWD": ["255/45R20"]
+      },
+      "status": "mismatch",
+      "notes": "Current data has extra Z-rated sizes and larger sizes not in tiresize.com. May be aftermarket/performance packages."
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "ioniq-5",
+      "currentTireSizes": ["235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "SE": ["235/55R19"],
+        "SEL": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited AWD": ["255/45R20"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "ioniq-5",
+      "currentTireSizes": ["235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "SE": ["235/55R19"],
+        "SE Standard Range": ["235/55R19"],
+        "SEL": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited AWD": ["255/45R20"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "ioniq-5",
+      "currentTireSizes": ["235/55ZR19", "255/45ZR20", "235/60R18", "235/50ZR20", "255/40ZR21"],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "SE": ["235/55R19"],
+        "SEL": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited AWD": ["255/45R20"]
+      },
+      "status": "mismatch",
+      "notes": "Current data has extra Z-rated sizes not in standard OEM specs"
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "ioniq-5",
+      "currentTireSizes": ["235/55ZR19", "255/45ZR20", "235/60R18", "235/50ZR20", "255/40ZR21"],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "SE": ["235/55R19"],
+        "SEL": ["235/55R19"],
+        "Limited": ["235/55R19"],
+        "Limited AWD": ["255/45R20"]
+      },
+      "status": "mismatch",
+      "notes": "2021 was Korea/Europe only. US sales started 2022. Extra sizes may be international specs."
+    },
+    {
+      "year": 2010,
+      "make": "hyundai",
+      "model": "jm",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "GLS": ["225/60R17"],
+        "Limited": ["225/55R18"]
+      },
+      "status": "missing_data",
+      "notes": "JM is Tucson 1st gen platform code. 2010 was 2nd gen in US."
+    },
+    {
+      "year": 2009,
+      "make": "hyundai",
+      "model": "jm",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "235/60R16"],
+      "trims": {
+        "GLS 2WD": ["215/65R16"],
+        "GLS 4WD": ["215/65R16"],
+        "Limited 2WD": ["235/60R16"],
+        "Limited 4WD": ["235/60R16"],
+        "SE 2WD": ["235/60R16"],
+        "SE 4WD": ["235/60R16"]
+      },
+      "status": "missing_data",
+      "notes": "JM = Tucson 1st gen (2004-2009)"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "jm",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "235/60R16"],
+      "trims": {
+        "GLS 2WD": ["215/65R16"],
+        "GLS 4WD": ["215/65R16"],
+        "Limited 2WD": ["235/60R16"],
+        "Limited 4WD": ["235/60R16"],
+        "SE 2WD": ["235/60R16"],
+        "SE 4WD": ["235/60R16"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "jm",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "235/60R16"],
+      "trims": {
+        "GLS 2WD": ["215/65R16"],
+        "GLS 4WD": ["215/65R16"],
+        "Limited 2WD": ["235/60R16"],
+        "Limited 4WD": ["235/60R16"],
+        "SE 2WD": ["235/60R16"],
+        "SE 4WD": ["235/60R16"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2006,
+      "make": "hyundai",
+      "model": "jm",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "235/60R16"],
+      "trims": {
+        "GL 2WD": ["215/65R16"],
+        "GL 4WD": ["215/65R16"],
+        "GLS 2WD": ["235/60R16"],
+        "GLS 4WD": ["235/60R16"],
+        "Limited 2WD": ["235/60R16"],
+        "Limited 4WD": ["235/60R16"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2005,
+      "make": "hyundai",
+      "model": "jm",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "235/60R16"],
+      "trims": {
+        "GL 2WD": ["215/65R16"],
+        "GL 4WD": ["215/65R16"],
+        "GLS 2WD": ["235/60R16"],
+        "GLS 4WD": ["235/60R16"],
+        "LX 2WD": ["235/60R16"],
+        "LX 4WD": ["235/60R16"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2004,
+      "make": "hyundai",
+      "model": "jm",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "235/60R16"],
+      "trims": {
+        "GL": ["215/65R16"],
+        "GLS": ["235/60R16"],
+        "LX": ["235/60R16"]
+      },
+      "status": "missing_data",
+      "notes": "First year for Tucson/JM"
+    },
+    {
+      "year": 2026,
+      "make": "hyundai",
+      "model": "kona",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R17", "215/55R18", "235/45R19"],
+      "trims": {
+        "SE": ["215/60R17"],
+        "Limited": ["215/60R17"],
+        "SEL Sport": ["215/55R18"],
+        "SEL Premium": ["235/45R19"],
+        "Electric SE": ["215/60R17"],
+        "Electric SEL": ["215/60R17"],
+        "Electric Limited": ["215/60R17"],
+        "Electric N Line": ["235/45R19"]
+      },
+      "status": "mismatch",
+      "notes": "2026 redesign has different sizes. 215/55R17 and 235/45R18 are pre-2024 sizes."
+    },
+    {
+      "year": 2025,
+      "make": "hyundai",
+      "model": "kona",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R17", "215/55R18", "235/45R19"],
+      "trims": {
+        "SE": ["215/60R17"],
+        "SEL": ["215/55R18"],
+        "Limited": ["235/45R19"],
+        "N Line": ["235/45R19"],
+        "Electric SE": ["215/60R17"],
+        "Electric SEL": ["215/60R17"],
+        "Electric Limited": ["215/60R17"],
+        "Electric N Line": ["235/45R19"]
+      },
+      "status": "mismatch",
+      "notes": "2024+ redesign has larger wheel sizes"
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "kona",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R17", "215/55R18", "235/45R19"],
+      "trims": {
+        "SE": ["215/60R17"],
+        "SEL": ["215/55R18"],
+        "Limited": ["235/45R19"],
+        "N Line": ["235/45R19"],
+        "Electric SE": ["215/60R17"],
+        "Electric SEL": ["215/60R17"],
+        "Electric Limited": ["215/60R17"]
+      },
+      "status": "mismatch",
+      "notes": "2024 redesign introduced new sizes"
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "kona",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18", "235/40R19"],
+      "trims": {
+        "SE": ["205/60R16"],
+        "SEL": ["215/55R17"],
+        "Limited": ["235/45R18"],
+        "N Line": ["235/45R18"],
+        "N": ["235/40R19"],
+        "Electric SE": ["215/55R17"],
+        "Electric SEL": ["215/55R17"],
+        "Electric Limited": ["215/55R17"]
+      },
+      "status": "partial_match",
+      "notes": "Missing 205/60R16 (SE) and 235/40R19 (N)"
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "kona",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18", "235/40R19"],
+      "trims": {
+        "SE": ["205/60R16"],
+        "SEL": ["215/55R17"],
+        "Limited": ["235/45R18"],
+        "N Line": ["235/45R18"],
+        "N": ["235/40R19"],
+        "Electric SEL": ["215/55R17"],
+        "Electric Limited": ["215/55R17"]
+      },
+      "status": "partial_match"
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "kona",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "SE": ["205/60R16"],
+        "SEL": ["215/55R17"],
+        "SEL Plus": ["215/55R17"],
+        "Limited": ["235/45R18"],
+        "Ultimate": ["235/45R18"],
+        "Electric SEL": ["215/55R17"],
+        "Electric Limited": ["215/55R17"],
+        "Electric Ultimate": ["215/55R17"]
+      },
+      "status": "partial_match"
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "kona",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "SE": ["205/60R16"],
+        "SEL": ["215/55R17"],
+        "SEL Plus": ["215/55R17"],
+        "Limited": ["235/45R18"],
+        "Ultimate": ["235/45R18"],
+        "Electric SEL": ["215/55R17"],
+        "Electric Limited": ["215/55R17"],
+        "Electric Ultimate": ["215/55R17"]
+      },
+      "status": "partial_match"
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "kona",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40ZR19", "205/60R16"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "SE": ["205/60R16"],
+        "SEL": ["215/55R17"],
+        "Limited": ["235/45R18"],
+        "Ultimate": ["235/45R18"],
+        "Electric SEL": ["215/55R17"],
+        "Electric Limited": ["215/55R17"],
+        "Electric Ultimate": ["215/55R17"]
+      },
+      "status": "partial_match",
+      "notes": "235/40ZR19 in current data not found in standard OEM specs"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "kona",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "SE": ["205/60R16"],
+        "SEL": ["215/55R17"],
+        "Limited": ["235/45R18"],
+        "Ultimate": ["235/45R18"],
+        "Electric": ["215/55R17"]
+      },
+      "status": "partial_match"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "kona",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "SE": ["205/60R16"],
+        "SEL": ["215/55R17"],
+        "Limited": ["235/45R18"],
+        "Ultimate": ["235/45R18"]
+      },
+      "status": "partial_match",
+      "notes": "2017 was Korea launch, US started 2018"
+    },
+    {
+      "year": 2025,
+      "make": "hyundai",
+      "model": "mufasa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R19"],
+      "trims": {
+        "2.0 MPi": ["225/50R19"]
+      },
+      "status": "missing_data",
+      "notes": "Chinese market crossover"
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "mufasa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R19"],
+      "trims": {
+        "2.0 MPi": ["225/50R19"]
+      },
+      "status": "missing_data",
+      "notes": "Chinese market crossover - first year"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "nf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trims": {
+        "GLS": ["215/60R16"],
+        "Limited": ["215/55R17"],
+        "SE": ["215/55R17"]
+      },
+      "status": "missing_data",
+      "notes": "NF = Sonata V platform code (2005-2010)"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "nf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "225/50R17"],
+      "trims": {
+        "GLS": ["215/60R16", "215/55R17"],
+        "Limited": ["215/55R17", "225/50R17"],
+        "SE": ["215/55R17", "225/50R17"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2006,
+      "make": "hyundai",
+      "model": "nf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "225/50R17"],
+      "trims": {
+        "GL": ["215/60R16"],
+        "GLS": ["215/60R16", "225/50R17"],
+        "LX": ["225/50R17"]
+      },
+      "status": "missing_data"
+    },
+    {
+      "year": 2005,
+      "make": "hyundai",
+      "model": "nf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "205/60R16"],
+      "trims": {
+        "GL": ["205/65R15"],
+        "GLS": ["205/60R16"],
+        "LX": ["205/60R16"]
+      },
+      "status": "missing_data",
+      "notes": "First year for NF/Sonata V platform"
+    },
+    {
+      "year": 2026,
+      "make": "hyundai",
+      "model": "palisade",
+      "currentTireSizes": ["245/60R18", "245/50R20"],
+      "validatedTireSizes": ["235/65R18", "255/50R20", "255/60R18", "265/45R21"],
+      "trims": {
+        "SE": ["235/65R18"],
+        "SEL": ["235/65R18"],
+        "Limited": ["255/50R20"],
+        "Calligraphy": ["265/45R21"],
+        "XRT PRO": ["255/60R18"],
+        "Hybrid SEL": ["235/65R18"],
+        "Hybrid Limited": ["255/50R20"],
+        "Hybrid Calligraphy": ["265/45R21"]
+      },
+      "status": "mismatch",
+      "notes": "2026 refresh has all new tire sizes"
+    },
+    {
+      "year": 2025,
+      "make": "hyundai",
+      "model": "palisade",
+      "currentTireSizes": ["245/60R18", "245/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "SE": ["245/60R18"],
+        "SEL": ["245/60R18", "245/50R20"],
+        "Limited": ["245/50R20"],
+        "Calligraphy": ["245/50R20"],
+        "XRT": ["245/50R20"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "palisade",
+      "currentTireSizes": ["245/60R18", "245/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "SE": ["245/60R18"],
+        "SEL": ["245/60R18", "245/50R20"],
+        "Limited": ["245/50R20"],
+        "Calligraphy": ["245/50R20"],
+        "XRT": ["245/50R20"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "palisade",
+      "currentTireSizes": ["245/60R18", "245/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "SE": ["245/60R18"],
+        "SEL": ["245/60R18", "245/50R20"],
+        "Limited": ["245/50R20"],
+        "Calligraphy": ["245/50R20"],
+        "XRT": ["245/50R20"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "palisade",
+      "currentTireSizes": ["245/60R18", "245/50R20", "245/55R19", "255/45R21"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "SE": ["245/60R18"],
+        "SEL": ["245/60R18", "245/50R20"],
+        "Limited": ["245/50R20"],
+        "Calligraphy": ["245/50R20"]
+      },
+      "status": "mismatch",
+      "notes": "245/55R19 and 255/45R21 in current data not in standard OEM specs"
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "palisade",
+      "currentTireSizes": ["245/60R18", "245/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "SE": ["245/60R18"],
+        "SEL": ["245/60R18", "245/50R20"],
+        "Limited": ["245/50R20"],
+        "Calligraphy": ["245/50R20"]
+      },
+      "status": "verified"
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "palisade",
+      "currentTireSizes": ["245/60R18", "245/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "SE": ["245/60R18"],
+        "SEL": ["245/60R18", "245/50R20"],
+        "Limited": ["245/50R20"]
+      },
+      "status": "verified"
+    }
+  ],
+  "summary": {
+    "verified": 18,
+    "partial_match": 13,
+    "mismatch": 9,
+    "missing_data": 35,
+    "total": 75
+  },
+  "recommendations": [
+    {
+      "action": "fix",
+      "vehicles": ["2000 Hyundai Elantra"],
+      "issue": "Tire size should be 195/60R14, not 195/60R15"
+    },
+    {
+      "action": "add_sizes",
+      "vehicles": ["2024-2026 Hyundai Kona"],
+      "issue": "2024+ redesign needs updated sizes: 215/60R17, 215/55R18, 235/45R19"
+    },
+    {
+      "action": "add_sizes",
+      "vehicles": ["2026 Hyundai Palisade"],
+      "issue": "2026 refresh needs all new sizes: 235/65R18, 255/50R20, 265/45R21"
+    },
+    {
+      "action": "add_sizes",
+      "vehicles": ["2024-2026 Hyundai Ioniq 5"],
+      "issue": "Missing N trim size (275/35R21) and XRT size (235/60R18)"
+    },
+    {
+      "action": "populate",
+      "vehicles": ["Elantra GT 2013-2020", "Entourage 2006-2010", "Encino 2018-2021", "JM/Tucson 2004-2010", "NF/Sonata 2005-2008", "Mufasa 2024-2025"],
+      "issue": "Missing tire size data in database"
+    },
+    {
+      "action": "review",
+      "vehicles": ["Ioniq 2017-2022"],
+      "issue": "Some entries missing 225/45R17 for Hybrid Limited trim"
+    },
+    {
+      "action": "review",
+      "vehicles": ["2019 Hyundai Kona", "2022 Hyundai Palisade"],
+      "issue": "Extra tire sizes in database not in OEM specs - may be aftermarket"
+    }
+  ]
+}

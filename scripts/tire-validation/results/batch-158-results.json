@@ -1,0 +1,716 @@
+{
+  "batchId": "158",
+  "validatedAt": "2026-04-21T23:00:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 31,
+    "discrepancies": 15,
+    "notFoundOnSource": 44,
+    "emptyInBatch": 37
+  },
+  "results": [
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R17", "235/55R18", "255/45R19", "255/40R20", "235/50R19", "235/45R20"],
+      "oemTireSizes": ["215/65R17", "235/55R18", "235/50R19", "255/45R19", "255/40R20"],
+      "status": "discrepancy",
+      "notes": "235/45R20 in batch not found in OEM data"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R17", "235/55R18", "255/45R19", "255/40R20"],
+      "oemTireSizes": ["215/65R17", "235/50R19", "255/40R20"],
+      "status": "discrepancy",
+      "notes": "235/55R18 and 255/45R19 in batch not found in OEM data for 2021"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R17", "235/55R18", "255/45R19", "255/40R20", "235/50R19", "235/45R20"],
+      "oemTireSizes": ["215/65R17", "235/50R19", "255/40R20"],
+      "status": "discrepancy",
+      "notes": "235/55R18, 255/45R19, 235/45R20 in batch not found in OEM data for 2020"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R17", "235/55R18", "255/45R19", "255/40R20", "235/50R19", "235/45R20"],
+      "oemTireSizes": ["215/65R17", "235/55R18", "235/50R19", "255/40R20"],
+      "status": "discrepancy",
+      "notes": "255/45R19, 235/45R20 in batch not found in OEM data for 2019"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R17", "235/55R18", "255/45R19", "255/40R20", "235/50R19", "235/45R20"],
+      "oemTireSizes": ["215/65R16", "235/55R17", "215/65R17", "235/55R18", "235/50R19"],
+      "status": "discrepancy",
+      "notes": "255/45R19, 255/40R20, 235/45R20 in batch not found in OEM. Also missing 215/65R16, 235/55R17 from Limited trims"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "oemTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "status": "match",
+      "notes": "All sizes match OEM data"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "oemTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "status": "match",
+      "notes": "All sizes match OEM data (same generation as 2017)"
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "oemTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "status": "match",
+      "notes": "All sizes match OEM data"
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "oemTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "status": "match",
+      "notes": "All sizes match OEM data"
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "oemTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "status": "match",
+      "notes": "All sizes match OEM data"
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "oemTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "status": "match",
+      "notes": "All sizes match OEM data"
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "oemTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "status": "match",
+      "notes": "All sizes match OEM data"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "oemTireSizes": ["215/65R16", "235/55R17", "235/50R18"],
+      "status": "discrepancy",
+      "notes": "255/40R19 in batch not found in OEM data for 2010"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R16", "235/55R17", "235/50R18", "255/40R19"],
+      "oemTireSizes": ["215/65R16", "235/55R17", "235/50R18"],
+      "status": "discrepancy",
+      "notes": "255/40R19 in batch not found in OEM data for 2009"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "2008 Tiguan not found on tiresize.com - vehicle may not have been sold in US this year"
+    },
+    {
+      "year": 2007,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "2007 Tiguan not found on tiresize.com - Tiguan launched in 2008 (2009 MY in US)"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "tiguan-limited",
+      "currentTireSizes": [],
+      "oemTireSizes": ["215/65R16", "235/55R17"],
+      "status": "empty_batch",
+      "notes": "Batch has no sizes. OEM data from tiresize.com: 215/65R16, 235/55R17"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "tiguan-limited",
+      "currentTireSizes": [],
+      "oemTireSizes": ["215/65R16", "235/55R17"],
+      "status": "empty_batch",
+      "notes": "Batch has no sizes. OEM data from tiresize.com: 215/65R16, 235/55R17"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "2026 Touareg not sold in US market - tiresize.com has no data"
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "Touareg not sold in US since 2017 - cannot validate. Sizes appear to be European spec"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "Touareg not sold in US since 2017 - cannot validate"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "Touareg not sold in US since 2017 - cannot validate"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "Touareg not sold in US since 2017 - 404 on tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "Touareg not sold in US since 2017"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "Touareg not sold in US since 2017"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "Touareg not sold in US since 2017"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "Touareg not sold in US in 2018"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/55R18", "275/45R20", "275/40R21"],
+      "status": "discrepancy",
+      "notes": "Major discrepancies - batch has 235/65R17, 275/45R19, 285/40R20, 285/35R21 not in OEM. OEM has 275/45R20, 275/40R21 not in batch"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/55R18", "265/50R19", "275/45R20"],
+      "status": "discrepancy",
+      "notes": "Major discrepancies - batch sizes don't match 2016 OEM data"
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/55R18", "265/50R19", "275/45R20"],
+      "status": "discrepancy",
+      "notes": "Major discrepancies - batch sizes don't match 2015 OEM data"
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/55R18", "265/50R19", "275/45R20"],
+      "status": "discrepancy",
+      "notes": "Batch sizes appear to be European spec, not US OEM"
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/55R18", "265/50R19", "275/45R20"],
+      "status": "discrepancy",
+      "notes": "Batch sizes appear to be European spec"
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/55R18", "265/50R19", "275/45R20"],
+      "status": "discrepancy",
+      "notes": "Batch sizes appear to be European spec"
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/55R18", "265/50R19", "275/45R20"],
+      "status": "discrepancy",
+      "notes": "Batch sizes appear to be European spec"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/60R17", "275/45R19", "275/40R20"],
+      "status": "discrepancy",
+      "notes": "Some overlap (275/45R19) but many sizes differ"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/60R17", "275/45R19", "275/40R20"],
+      "status": "discrepancy",
+      "notes": "Using 2010 OEM data as proxy"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/60R17", "255/55R18", "275/45R19"],
+      "status": "discrepancy",
+      "notes": "Batch includes 235/65R17, 285/40R20, 285/35R21 not in OEM"
+    },
+    {
+      "year": 2007,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/60R17", "255/55R18", "275/45R19"],
+      "status": "discrepancy",
+      "notes": "Batch includes sizes not in OEM"
+    },
+    {
+      "year": 2006,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["255/60R17", "255/55R18", "275/45R19"],
+      "status": "discrepancy",
+      "notes": "Batch includes sizes not in OEM"
+    },
+    {
+      "year": 2005,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["235/65R17", "255/60R17", "255/55R18", "275/45R19"],
+      "status": "discrepancy",
+      "notes": "235/65R17 matches! But 285/40R20, 285/35R21 not in OEM"
+    },
+    {
+      "year": 2004,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": ["235/65R17", "255/55R18", "275/45R19", "285/40R20", "285/35R21"],
+      "oemTireSizes": ["235/65R17", "255/60R17", "255/55R18", "275/45R19"],
+      "status": "discrepancy",
+      "notes": "Using 2005 data as proxy - 285/40R20, 285/35R21 not in OEM"
+    },
+    {
+      "year": 2003,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "Touareg launched as 2004 model year in US"
+    },
+    {
+      "year": 2002,
+      "make": "volkswagen",
+      "model": "touareg",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "Touareg didn't exist in 2002"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "xl1",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "VW XL1 not found on tiresize.com - rare limited production vehicle"
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "xl1",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "VW XL1 not found on tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "xl1",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "VW XL1 not found on tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "xl1",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "VW XL1 not found on tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "c40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["235/50R19", "255/45R19", "235/45R20", "255/40R20"],
+      "status": "empty_batch",
+      "notes": "Batch has no sizes. C40 Recharge uses XC40 Recharge tire sizes (staggered setup)"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "c40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["235/50R19", "255/45R19", "235/45R20", "255/40R20"],
+      "status": "empty_batch",
+      "notes": "Batch has no sizes. C40 uses XC40 Recharge sizes"
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "c40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["235/50R19", "255/45R19", "235/45R20", "255/40R20"],
+      "status": "empty_batch",
+      "notes": "Batch has no sizes. Using XC40 Recharge 2023 data"
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "c40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["235/50R19", "255/45R19", "235/45R20", "255/40R20"],
+      "status": "empty_batch",
+      "notes": "Batch has no sizes. Using XC40 Recharge 2022 data"
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "c40",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "C40 launched in late 2021, limited data available"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ec40",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EC40 (renamed C40) not found on tiresize.com - too new"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ec40",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EC40 not found on tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ec40",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EC40 not found on tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "em90",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EM90 (electric minivan) not found - China market only"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "em90",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EM90 not found on tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "em90",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EM90 not found on tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "es90",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "ES90 (electric sedan) not found - not yet released"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "es90",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "ES90 not found on tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex30",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX30 not found on tiresize.com - new model"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex30",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX30 not found on tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ex30",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX30 not found on tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "ex30",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX30 not found on tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex30-cross-country",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX30 Cross Country not found - future model"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex30-cross-country",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX30 Cross Country not found"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex40",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX40 (renamed XC40 Recharge) not found under this name"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex40",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX40 not found - try XC40 Recharge"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ex40",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX40 not found on tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex90",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX90 not found on tiresize.com - new flagship EV"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex90",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX90 not found on tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ex90",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX90 not found on tiresize.com - may use XC90 sizes"
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "ex90",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "not_found",
+      "notes": "EX90 not found on tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/50R17", "215/45R18"],
+      "status": "empty_batch",
+      "notes": "Batch has no sizes. OEM: 205/50R17, 215/45R18 (using 2011 data)"
+    },
+    {
+      "year": 2011,
+      "make": "volvo",
+      "model": "s40",
+      "currentTireSizes": [],
+      "oemTireSizes": ["205/50R17", "215/45R18"],
+      "status": "empty_batch",
+      "notes": "Batch has no sizes. OEM: 205/50R17, 215/45R18"
+    }
+  ],
+  "recommendations": [
+    {
+      "category": "volkswagen_tiguan_2018_2022",
+      "action": "review",
+      "details": "New gen Tiguan (2018-2022) has discrepancies. Recommend removing 235/45R20 which doesn't appear in OEM data. The batch appears to have both first-gen (16/17 inch) and second-gen (17-20 inch) sizes mixed."
+    },
+    {
+      "category": "volkswagen_touareg",
+      "action": "major_review",
+      "details": "Touareg data appears to be European spec, not US OEM. The Touareg was discontinued in the US after 2017. Years 2018-2026 should likely be removed. Years 2004-2017 need sizes corrected to US spec: 255/55R18, 255/60R17, 265/50R19, 275/45R19, 275/45R20, 275/40R21."
+    },
+    {
+      "category": "volvo_electric_models",
+      "action": "add_data",
+      "details": "All new Volvo EV models (C40, EC40, EX30, EX40, EX90, EM90, ES90) have empty tire data. These need to be populated. C40/EC40 can use XC40 Recharge sizes. EX90 may use XC90 sizes as starting point."
+    },
+    {
+      "category": "volvo_s40",
+      "action": "add_data",
+      "details": "Volvo S40 2011-2012 need tire sizes added: 205/50R17, 215/45R18"
+    },
+    {
+      "category": "vw_tiguan_limited",
+      "action": "add_data",
+      "details": "VW Tiguan Limited 2017-2018 need tire sizes added: 215/65R16, 235/55R17"
+    }
+  ]
+}

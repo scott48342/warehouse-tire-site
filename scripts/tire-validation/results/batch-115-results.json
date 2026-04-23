@@ -1,0 +1,1203 @@
+{
+  "batchId": "115",
+  "processedAt": "2026-04-21T22:30:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2010,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C300 Luxury Sedan": { "front": "225/45R17", "rear": "225/45R17" },
+          "C300 4MATIC Luxury Sedan": { "front": "225/45R17", "rear": "225/45R17" },
+          "C300 Sport Sedan": { "front": "225/45R17", "rear": "245/40R17", "staggered": true, "alt": {"front": "225/40R18", "rear": "255/35R18"} },
+          "C300 4MATIC Sport Sedan": { "front": "225/45R17", "rear": "245/40R17", "staggered": true, "alt": {"front": "225/40R18", "rear": "255/35R18"} }
+        },
+        "allSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "Current sizes (225/50R17, 225/45R18, 235/40R19) don't match OEM. 2008-2011 C300 uses 225/45R17 base, staggered 225/45-245/40R17 or 225/40-255/35R18 sport"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C300 Luxury Sedan": { "front": "225/45R17", "rear": "225/45R17" },
+          "C300 4MATIC Luxury Sedan": { "front": "225/45R17", "rear": "225/45R17" },
+          "C300 Sport Sedan": { "front": "225/45R17", "rear": "245/40R17", "staggered": true, "alt": {"front": "225/40R18", "rear": "255/35R18"} },
+          "C300 4MATIC Sport Sedan": { "front": "225/45R17", "rear": "245/40R17", "staggered": true, "alt": {"front": "225/40R18", "rear": "255/35R18"} }
+        },
+        "allSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "Same as 2010 C-Class"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C300 Luxury Sedan": { "front": "225/45R17", "rear": "225/45R17" },
+          "C300 4MATIC Luxury Sedan": { "front": "225/45R17", "rear": "225/45R17" },
+          "C300 Sport Sedan": { "front": "225/45R17", "rear": "245/40R17", "staggered": true, "alt": {"front": "225/40R18", "rear": "255/35R18"} },
+          "C300 4MATIC Sport Sedan": { "front": "225/45R17", "rear": "245/40R17", "staggered": true, "alt": {"front": "225/40R18", "rear": "255/35R18"} }
+        },
+        "allSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "First year W204, same as 2009-2010"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C230 Sport Sedan": { "front": "225/45R17", "rear": "245/40R17", "staggered": true, "alt": "225/40R18" },
+          "C280 Sedan": { "front": "205/55R16", "rear": "205/55R16" },
+          "C280 4MATIC Sedan": { "front": "205/55R16", "rear": "205/55R16" }
+        },
+        "allSizes": ["205/55R16", "225/45R17", "245/40R17", "225/40R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W203 final year. C230 Sport staggered 225/45-245/40R17, C280 uses 205/55R16"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C230 Sport Sedan": { "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+          "C280 Sedan": { "front": "205/55R16", "rear": "205/55R16" },
+          "C280 4MATIC Sedan": { "front": "205/55R16", "rear": "205/55R16" }
+        },
+        "allSizes": ["205/55R16", "225/45R17", "245/40R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "W203 generation"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C230 Sport Coupe": { "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+          "C230 Sport Sedan": { "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+          "C240 4MATIC Sedan": { "front": "205/55R16", "rear": "205/55R16" },
+          "C240 4MATIC Wagon": { "front": "205/55R16", "rear": "205/55R16" },
+          "C240 Sedan": { "front": "205/55R16", "rear": "205/55R16" },
+          "C240 Wagon": { "front": "205/55R16", "rear": "205/55R16" }
+        },
+        "allSizes": ["205/55R16", "225/45R17", "245/40R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "W203. C230 Sport staggered, C240 base 205/55R16"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C230 Sport Coupe": { "front": "225/45R17", "rear": "225/45R17" },
+          "C230 Sport Sedan": { "front": "225/45R17", "rear": "245/40R17", "staggered": true },
+          "C240 4MATIC Sedan": { "front": "205/55R16", "rear": "205/55R16" },
+          "C240 Sedan": { "front": "205/55R16", "rear": "205/55R16" }
+        },
+        "allSizes": ["205/55R16", "225/45R17", "245/40R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "W203"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C230 Coupe": { "sizes": ["205/55R16", "225/45R17"] },
+          "C230 Sport Sedan": { "front": "225/45R17", "rear": "225/45R17" },
+          "C240 4MATIC Sedan": { "sizes": ["205/55R16", "225/50R16"] },
+          "C240 Sedan": { "sizes": ["205/55R16", "225/50R16"] }
+        },
+        "allSizes": ["205/55R16", "225/50R16", "225/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "W203"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C230 Coupe": { "sizes": ["205/55R16", "225/45R17"] },
+          "C240 Sedan": { "front": "205/55R16", "rear": "205/55R16" },
+          "C240 Sedan Sport Package": { "front": "225/50R16", "rear": "225/50R16" }
+        },
+        "allSizes": ["205/55R16", "225/50R16", "225/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "W203 first year"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C240 Base Model": { "front": "205/55R16", "rear": "205/55R16" },
+          "C240 Sport Package": { "front": "225/50R16", "rear": "225/50R16" }
+        },
+        "allSizes": ["205/55R16", "225/50R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "W203 generation debut"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "C230 Base Model": { "sizes": ["205/60R15", "205/55R16"] },
+          "C230 Special Edition": { "front": "205/55R16", "rear": "205/55R16" },
+          "C230 Sport Package": { "front": "205/55R16", "rear": "205/55R16" }
+        },
+        "allSizes": ["205/60R15", "205/55R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "W202 final year. No 17/18/19 inch options OEM"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC Coupe": { "sizes": ["205/55R17", "225/45R18", "225/40R19"] },
+          "CLA250 Coupe": { "sizes": ["205/55R17", "225/45R18", "225/40R19"] },
+          "CLA250 Sedan": { "sizes": ["205/55R17", "225/45R18", "225/40R19"] }
+        },
+        "allSizes": ["205/55R17", "225/45R18", "225/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "2026 CLA redesign uses 205/55R17, 225/45R18, 225/40R19. Current 225/45R17 wrong, 235/35R19 wrong"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC": { "sizes": ["225/45R18", "225/40R19"] },
+          "CLA250 Base Model": { "sizes": ["225/45R18", "225/40R19"] }
+        },
+        "allSizes": ["225/45R18", "225/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "2020+ CLA uses 18-19 inch only. 225/45R17 incorrect"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC": { "sizes": ["225/45R18", "225/40R19"] },
+          "CLA250 Base Model": { "sizes": ["225/45R18", "225/40R19"] }
+        },
+        "allSizes": ["225/45R18", "225/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "Same as 2025"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC": { "sizes": ["225/45R18", "225/40R19"] },
+          "CLA250 Base Model": { "sizes": ["225/45R18", "225/40R19"] }
+        },
+        "allSizes": ["225/45R18", "225/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "Same as 2024-2025"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC": { "sizes": ["225/45R18", "225/40R19"] },
+          "CLA250 Base Model": { "sizes": ["225/45R18", "225/40R19"] }
+        },
+        "allSizes": ["225/45R18", "225/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "Same as 2023-2025"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC": { "sizes": ["225/45R18", "225/40R19"] },
+          "CLA250 Base Model": { "sizes": ["225/45R18", "225/40R19"] }
+        },
+        "allSizes": ["225/45R18", "225/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "Same as 2022-2025"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC Base Model": { "sizes": ["225/45R18", "225/40R19"] },
+          "CLA250 4MATIC Sport Package": { "sizes": ["225/45R18", "225/40R19"] },
+          "CLA250 Base Model": { "sizes": ["225/45R18", "225/40R19"] },
+          "CLA250 Sport Package": { "sizes": ["225/45R18", "225/40R19"] }
+        },
+        "allSizes": ["225/45R18", "225/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "C118 generation debut. New platform uses 18-19 only"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 4MATIC Sport Package": { "front": "235/40R18", "rear": "235/40R18" },
+          "CLA250 Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 Sport Package": { "front": "235/40R18", "rear": "235/40R18" }
+        },
+        "allSizes": ["225/45R17", "225/40R18", "235/40R18"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "C117 final year. 225/45R17 and 225/40R18 correct. 235/35R19 not OEM (235/40R18 is sport)"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 4MATIC Sport Package": { "front": "235/40R18", "rear": "235/40R18" },
+          "CLA250 Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 Sport Package": { "front": "235/40R18", "rear": "235/40R18" }
+        },
+        "allSizes": ["225/45R17", "225/40R18", "235/40R18"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2019"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 4MATIC Sport": { "front": "235/40R18", "rear": "235/40R18" },
+          "CLA250 Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 Sport": { "front": "235/40R18", "rear": "235/40R18" }
+        },
+        "allSizes": ["225/45R17", "225/40R18", "235/40R18"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2018-2019"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 4MATIC Sport Package": { "front": "235/40R18", "rear": "235/40R18" },
+          "CLA250 Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 Sport Package": { "front": "235/40R18", "rear": "235/40R18" }
+        },
+        "allSizes": ["225/45R17", "225/40R18", "235/40R18"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2017-2019"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 Sport Package": { "front": "225/40R18", "rear": "225/40R18" }
+        },
+        "allSizes": ["225/45R17", "225/40R18"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "235/35R19 not OEM"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes-benz",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/35R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 Sport Package": { "front": "225/40R18", "rear": "225/40R18" }
+        },
+        "allSizes": ["225/45R17", "225/40R18"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "CLA debut year. 235/35R19 not OEM"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes-benz",
+      "model": "cla-class",
+      "currentTireSizes": ["205/50R17", "225/45R17", "225/40ZR18", "235/35ZR19", "255/30ZR19", "245/35ZR18", "235/40ZR18"],
+      "validatedTireSizes": {
+        "trims": {
+          "CLA250 4MATIC Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 4MATIC Sport Package": { "front": "235/40R18", "rear": "235/40R18" },
+          "CLA250 Base Model": { "sizes": ["225/45R17", "225/40R18"] },
+          "CLA250 Sport Package": { "front": "235/40R18", "rear": "235/40R18" },
+          "CLA45 AMG": { "sizes": ["235/40R18", "235/35R19", "255/30R19"], "note": "AMG staggered rear" }
+        },
+        "allSizes": ["225/45R17", "225/40R18", "235/40R18", "235/35R19", "255/30R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "205/50R17 not OEM. 245/35ZR18 is aftermarket. 235/35R19 & 255/30R19 are AMG only"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E450 4MATIC Sedan": { "sizes": ["225/55R18"], "staggered": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}, {"front": "245/35R21", "rear": "275/30R21"}] }
+        },
+        "allSizes": ["225/55R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20", "245/35R21", "275/30R21"]
+      },
+      "status": "MISMATCH",
+      "notes": "W214 generation. No 17 inch. Uses staggered setups 19-21 inch. Current sizes all incorrect"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E450 4MATIC Sedan": { "sizes": ["225/55R18"], "staggered": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}, {"front": "245/35R21", "rear": "275/30R21"}] }
+        },
+        "allSizes": ["225/55R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20", "245/35R21", "275/30R21"]
+      },
+      "status": "MISMATCH",
+      "notes": "Same as 2026"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E450 4MATIC Sedan": { "sizes": ["225/55R18"], "staggered": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}, {"front": "245/35R21", "rear": "275/30R21"}] }
+        },
+        "allSizes": ["225/55R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20", "245/35R21", "275/30R21"]
+      },
+      "status": "MISMATCH",
+      "notes": "W214 generation debut"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E450 4MATIC Sedan": { "sizes": ["245/45R18", "245/40R19"] },
+          "E450 Sedan": { "sizes": ["245/45R18", "245/40R19"] },
+          "E450 Coupe/Cabriolet": { "sizes": ["245/45R18", "245/40R19"], "staggered": {"front": "245/45R18", "rear": "275/40R18"} }
+        },
+        "allSizes": ["245/45R18", "245/40R19", "275/40R18", "275/35R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "W213 final year. 225/55R17 not standard, 245/35R20 not OEM"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E450 4MATIC Sedan": { "sizes": ["245/45R18", "245/40R19"] },
+          "E450 Sedan": { "sizes": ["245/45R18", "245/40R19"] },
+          "E450 Coupe/Cabriolet": { "sizes": ["245/45R18", "245/40R19"], "staggered": {"front": "245/45R18", "rear": "275/40R18"} }
+        },
+        "allSizes": ["245/45R18", "245/40R19", "275/40R18", "275/35R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2023"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E450 4MATIC Sedan": { "sizes": ["245/45R18", "245/40R19"] },
+          "E450 4MATIC Wagon": { "sizes": ["245/45R19", "245/40R20"] },
+          "E450 Coupe/Cabriolet": { "sizes": ["245/45R18", "245/40R19"], "staggered": {"front": "245/45R18", "rear": "275/40R18"} }
+        },
+        "allSizes": ["245/45R18", "245/40R19", "275/40R18", "275/35R19", "245/45R19", "245/40R20"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "225/55R17 not OEM, 245/35R20 not OEM"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55ZR17", "225/55R17", "225/50ZR18", "225/50R18", "245/45ZR18", "245/45R18", "275/40ZR18", "275/40R18", "245/40ZR19", "245/40R19", "275/35ZR19", "275/35R19", "245/35ZR20", "275/30ZR20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E350 4MATIC Sedan": { "sizes": ["245/50R17", "245/45R18", "245/40R19"] },
+          "E350 Sedan": { "sizes": ["245/50R17", "245/45R18", "245/40R19"] },
+          "E450 4MATIC": { "sizes": ["245/45R18", "245/40R19"] },
+          "E450 Coupe/Cabriolet": { "sizes": ["245/45R18", "245/40R19"], "staggered": {"front": "245/45R18", "rear": "275/40R18"} }
+        },
+        "allSizes": ["245/50R17", "245/45R18", "245/40R19", "275/40R18", "275/35R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "E350 uses 245/50R17 not 225/55R17. Some staggered setups for sport/AMG"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E350 4MATIC Sedan": { "sizes": ["245/50R17", "245/45R18", "245/40R19"] },
+          "E350 Sedan": { "sizes": ["245/50R17", "245/45R18", "245/40R19"] },
+          "E450 4MATIC": { "sizes": ["245/45R18", "245/40R19"] }
+        },
+        "allSizes": ["245/50R17", "245/45R18", "245/40R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Duplicate entry. E350 uses 245/50R17 not 225/55R17"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E450 4MATIC": { "sizes": ["245/45R18", "245/40R19"] },
+          "E450 Coupe/Cabriolet": { "sizes": ["245/45R18", "245/40R19"], "staggered": {"front": "245/45R18", "rear": "275/40R18"} }
+        },
+        "allSizes": ["245/45R18", "245/40R19", "275/40R18", "275/35R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "225/55R17 not OEM for E450"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E300 Sedan": { "sizes": ["225/55R17", "245/45R18", "245/40R19"] },
+          "E400 4MATIC Coupe": { "sizes": ["245/45R18", "245/40R19"], "staggered": {"front": "245/45R18", "rear": "275/40R18"} }
+        },
+        "allSizes": ["225/55R17", "245/45R18", "245/40R19", "275/40R18"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "E300 has 225/55R17. 245/35R20 not standard OEM"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E300 Sedan": { "sizes": ["225/55R17", "245/45R18", "245/40R19"] },
+          "E400 Coupe": { "sizes": ["245/45R18", "245/40R19"] }
+        },
+        "allSizes": ["225/55R17", "245/45R18", "245/40R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "W213 debut. 245/35R20 not standard"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E350 Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E350 4MATIC Sedan": { "sizes": ["225/55R16", "245/45R17", "245/40R18"] }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W212 final year. Uses 16-18 inch. Current sizes are W213 spec"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E350 Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E350 4MATIC Sedan": { "sizes": ["225/55R16", "245/45R17", "245/40R18"] }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W212. Uses 16-18 inch"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E350 Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E350 4MATIC Sedan": { "sizes": ["225/55R16", "245/45R17", "245/40R18"] }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W212"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E350 Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E350 4MATIC Sedan": { "sizes": ["225/55R16", "245/45R17", "245/40R18"] }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W212"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E350 Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E350 4MATIC Sedan": { "sizes": ["225/55R16", "245/45R17", "245/40R18"] }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W212"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E350 Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E350 4MATIC Sedan": { "sizes": ["225/55R16", "245/45R17", "245/40R18"] }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W212"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E350 Sedan": { "sizes": ["245/45R17"], "staggered": {"front": "245/40R18", "rear": "265/35R18"} },
+          "E350 Sedan 4MATIC": { "sizes": ["245/45R17", "245/40R18"] },
+          "E350 Sedan BlueTEC": { "front": "245/45R17", "rear": "245/45R17" },
+          "E350 Coupe": { "staggered": [{"front": "235/45R17", "rear": "255/40R17"}, {"front": "235/40R18", "rear": "255/35R18"}] }
+        },
+        "allSizes": ["245/45R17", "245/40R18", "265/35R18", "235/45R17", "255/40R17", "235/40R18", "255/35R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W212 debut. Uses 17-18 inch, no 19/20. 225/55R17 not OEM"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E320 BlueTEC Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E350 Sedan": { "sizes": ["225/55R16", "245/45R17"], "staggered": {"front": "245/40R18", "rear": "265/35R18"} }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W211 final year. 225/55R16 base, 245/45R17 appearance, 18 sport"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E320 BlueTEC Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E350 Sedan": { "sizes": ["225/55R16", "245/45R17"], "staggered": {"front": "245/40R18", "rear": "265/35R18"} }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W211"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E320 BlueTEC Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E350 Sedan": { "sizes": ["225/55R16", "245/45R17"], "staggered": {"front": "245/40R18", "rear": "265/35R18"} }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W211"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E320 CDI Sedan": { "front": "225/55R16", "rear": "225/55R16" },
+          "E350 Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E350 Sedan Sport Package": { "staggered": {"front": "245/40R18", "rear": "265/35R18"} }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W211"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E320 4Matic Sedan": { "front": "225/55R16", "rear": "225/55R16" },
+          "E320 Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E320 Sedan Sport Package": { "staggered": {"front": "245/40R18", "rear": "265/35R18"} },
+          "E320 CDI Sedan": { "front": "225/55R16", "rear": "225/55R16" }
+        },
+        "allSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "W211"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E320 Sedan": { "sizes": ["225/55R16", "245/45R17"] },
+          "E320 4Matic Sedan": { "front": "225/55R16", "rear": "225/55R16" },
+          "E320 Wagon": { "front": "225/55R16", "rear": "225/55R16" }
+        },
+        "allSizes": ["225/55R16", "245/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "W211. No 18+ inch standard"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E320 Sedan": { "sizes": ["215/55R16", "235/45R17"] },
+          "E320 4Matic Sedan": { "front": "215/55R16", "rear": "215/55R16" },
+          "E320 Wagon": { "front": "215/55R16", "rear": "215/55R16" }
+        },
+        "allSizes": ["215/55R16", "235/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "W211 debut"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E320 Sedan": { "front": "215/55R16", "rear": "215/55R16" },
+          "E320 4-Matic Sedan": { "front": "215/55R16", "rear": "215/55R16" },
+          "E320 4-Matic Wagon": { "front": "215/55R16", "rear": "215/55R16" },
+          "E320 Sedan Sport Package": { "front": "235/45R17", "rear": "235/45R17" }
+        },
+        "allSizes": ["215/55R16", "235/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "W210 final year"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E320 Sedan": { "front": "215/55R16", "rear": "215/55R16" },
+          "E320 4-Matic Sedan": { "front": "215/55R16", "rear": "215/55R16" },
+          "E430 Sport": { "front": "235/45R17", "rear": "235/45R17" }
+        },
+        "allSizes": ["215/55R16", "235/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "W210"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes-benz",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/35R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "E320 Sedan": { "front": "215/55R16", "rear": "215/55R16" },
+          "E320 4-Matic Sedan": { "front": "215/55R16", "rear": "215/55R16" },
+          "E320 4-Matic Wagon": { "front": "215/55R16", "rear": "215/55R16" },
+          "E320 Wagon": { "front": "215/55R16", "rear": "215/55R16" },
+          "E430 Sedan": { "front": "235/45R17", "rear": "235/45R17" }
+        },
+        "allSizes": ["215/55R16", "235/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "W210. No 18+ inch OEM. Current sizes completely wrong for this era"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] },
+          "GLA250 Base Model": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] }
+        },
+        "allSizes": ["235/55R18", "235/50R19", "235/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "H247 generation uses 18-20 inch. 215/60R17 not OEM. 235/50R18 close but should be 235/55R18"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] },
+          "GLA250 Base Model": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] }
+        },
+        "allSizes": ["235/55R18", "235/50R19", "235/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "Same as 2026"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] },
+          "GLA250 Base Model": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] }
+        },
+        "allSizes": ["235/55R18", "235/50R19", "235/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "Same as 2025-2026"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] },
+          "GLA250 Base Model": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] }
+        },
+        "allSizes": ["235/55R18", "235/50R19", "235/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "H247"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] },
+          "GLA250 Base Model": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] }
+        },
+        "allSizes": ["235/55R18", "235/50R19", "235/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "H247"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] },
+          "GLA250 Base Model": { "sizes": ["235/55R18", "235/50R19", "235/45R20"] }
+        },
+        "allSizes": ["235/55R18", "235/50R19", "235/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "H247 debut"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/50R18", "235/45R19"] },
+          "GLA250 Base Model": { "sizes": ["235/50R18", "235/45R19"] }
+        },
+        "allSizes": ["235/50R18", "235/45R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "X156 final year. 215/60R17 not OEM, 235/50R18 & 235/45R19 correct"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/50R18", "235/45R19"] },
+          "GLA250 Base Model": { "sizes": ["235/50R18", "235/45R19"] }
+        },
+        "allSizes": ["235/50R18", "235/45R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "X156"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/50R18", "235/45R19"] },
+          "GLA250 Base Model": { "sizes": ["235/50R18", "235/45R19"] }
+        },
+        "allSizes": ["235/50R18", "235/45R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "X156"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/50R18", "235/45R19"] },
+          "GLA250 Base Model": { "sizes": ["235/50R18", "235/45R19"] }
+        },
+        "allSizes": ["235/50R18", "235/45R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "X156"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/50R18", "235/45R19"] },
+          "GLA250 Base Model": { "sizes": ["235/50R18", "235/45R19"] }
+        },
+        "allSizes": ["235/50R18", "235/45R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "X156"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes-benz",
+      "model": "gla",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLA250 4MATIC": { "sizes": ["235/50R18", "235/45R19"] },
+          "GLA250 Base Model": { "sizes": ["235/50R18", "235/45R19"] }
+        },
+        "allSizes": ["235/50R18", "235/45R19"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "GLA debut. 215/60R17 not OEM"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLC300 4MATIC SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 4MATIC Coupe": { "sizes": ["235/55R19"], "staggered": {"front": "255/45R20", "rear": "285/40R20"} }
+        },
+        "allSizes": ["235/60R18", "235/55R19", "255/45R20", "285/40R20"]
+      },
+      "status": "VALID",
+      "notes": "Perfect match for SUV trims"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLC300 4MATIC SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] }
+        },
+        "allSizes": ["235/60R18", "235/55R19", "255/45R20"]
+      },
+      "status": "VALID",
+      "notes": "Perfect match"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLC300 4MATIC SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] }
+        },
+        "allSizes": ["235/60R18", "235/55R19", "255/45R20"]
+      },
+      "status": "VALID",
+      "notes": "Perfect match"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLC300 4MATIC SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] }
+        },
+        "allSizes": ["235/60R18", "235/55R19", "255/45R20"]
+      },
+      "status": "VALID",
+      "notes": "X254 generation"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLC300 4MATIC SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] }
+        },
+        "allSizes": ["235/60R18", "235/55R19", "255/45R20"]
+      },
+      "status": "VALID",
+      "notes": "X253 final year"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLC300 4MATIC SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] }
+        },
+        "allSizes": ["235/60R18", "235/55R19", "255/45R20"]
+      },
+      "status": "VALID",
+      "notes": "Perfect match"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLC300 4MATIC SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] }
+        },
+        "allSizes": ["235/60R18", "235/55R19", "255/45R20"]
+      },
+      "status": "VALID",
+      "notes": "Perfect match"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLC300 4MATIC SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] }
+        },
+        "allSizes": ["235/60R18", "235/55R19", "255/45R20"]
+      },
+      "status": "VALID",
+      "notes": "Perfect match"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLC300 4MATIC SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] }
+        },
+        "allSizes": ["235/60R18", "235/55R19", "255/45R20"]
+      },
+      "status": "VALID",
+      "notes": "Perfect match"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": {
+        "trims": {
+          "GLC300 4MATIC SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 4MATIC SUV Sport": { "sizes": ["235/55R19", "255/45R20"] },
+          "GLC300 SUV": { "sizes": ["235/60R18", "235/55R19", "255/45R20"] },
+          "GLC300 SUV Sport": { "sizes": ["235/55R19", "255/45R20"] }
+        },
+        "allSizes": ["235/60R18", "235/55R19", "255/45R20"]
+      },
+      "status": "VALID",
+      "notes": "Perfect match"
+    }
+  ],
+  "summary": {
+    "valid": 10,
+    "partialMatch": 17,
+    "mismatch": 48,
+    "total": 75,
+    "majorFindings": [
+      "C-Class (2000-2010): Current sizes are W204/later gen specs applied incorrectly to W202/W203. 2000-2005 used 205/55R16 base, 2006-2007 W203 used 205/55R16 & 225/45R17. W204 (2008-2010) used 225/45R17 base with staggered sport options.",
+      "CLA (2014-2019): First gen C117 uses 225/45R17 & 225/40R18. 235/35R19 is NOT standard OEM.",
+      "CLA (2020-2026): Second gen C118/redesign uses 18-19 inch only. No 17 inch option. 225/45R18 & 225/40R19.",
+      "E-Class (2000-2009): W210/W211 uses 215/55R16 & 235-245/45R17. 18 inch only on sport packages with staggered setups.",
+      "E-Class (2010-2016): W212 uses 245/45R17 base, 245/40R18 option. No 19/20 inch standard.",
+      "E-Class (2017-2023): W213 uses 225/55R17, 245/45R18, 245/40R19. Some staggered on coupe/AMG.",
+      "E-Class (2024-2026): W214 new gen uses 18-21 inch with staggered options. No 17 inch.",
+      "GLA (2015-2020): X156 uses 235/50R18 & 235/45R19 only. 215/60R17 NOT OEM.",
+      "GLA (2021-2026): H247 uses 235/55R18, 235/50R19, 235/45R20. 17 inch not offered.",
+      "GLC (2016-2026): PERFECT MATCH! All current sizes 235/60R18, 235/55R19, 255/45R20 are correct OEM specs."
+    ]
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "batchId": "muscle-amc",
+  "description": "AMC muscle cars: Javelin, AMX, Rebel Machine, SC/Rambler, Hornet SC/360, Gremlin",
+  "researchDate": "2026-04-22",
+  "platformNotes": {
+    "general": "All AMC muscle cars 1967-1974 used 5x114.3 (5x4.5\") bolt pattern with 72mm hub bore",
+    "javelin_amx_platform": "Javelin and AMX shared the same 109\" wheelbase platform. AMX was 2-seat through 1970, then became trim package on Javelin 1971-1974",
+    "rebel_platform": "Rebel used AMC's intermediate 114\" wheelbase platform",
+    "hornet_gremlin_platform": "Hornet (108\" WB) and Gremlin (96\" WB, Hornet-based) were compact platform"
+  },
+  "vehicles": [
+    {
+      "year": 1968,
+      "make": "AMC",
+      "model": "Javelin",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "wikipedia.org/AMC_Javelin", "hotrod.com"],
+      "confidence": "high",
+      "notes": "First year Javelin. Base and SST trims. Go Package added Magnum 500 wheels with E70-14 redlines."
+    },
+    {
+      "year": 1969,
+      "make": "AMC",
+      "model": "Javelin",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "wikipedia.org/AMC_Javelin", "hotrod.com"],
+      "confidence": "high",
+      "notes": "Go Package with 343 or 390 engines included Magnum 500 chrome wheels and E70-14 tires."
+    },
+    {
+      "year": 1970,
+      "make": "AMC",
+      "model": "Javelin",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "curbsideclassic.com", "wikipedia.org/AMC_Javelin"],
+      "confidence": "high",
+      "notes": "One-year-only styling. Go Package continued with 14x6JK wheels and E70-14 tires."
+    },
+    {
+      "year": 1971,
+      "make": "AMC",
+      "model": "Javelin",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "hemmings.com"],
+      "confidence": "high",
+      "notes": "Second generation Javelin. AMX became package option. 14x6 slot-style wheels with E70-14 RWL tires."
+    },
+    {
+      "year": 1972,
+      "make": "AMC",
+      "model": "Javelin",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "195/75R14", "G60-15", "225/60R15"],
+      "staggered": false,
+      "sources": ["tiresize.com", "hemmings.com"],
+      "confidence": "high",
+      "notes": "AMX Go Package added 15x7 wheels with G60-15 tires as option."
+    },
+    {
+      "year": 1973,
+      "make": "AMC",
+      "model": "Javelin",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "195/75R14", "G60-15", "225/60R15"],
+      "staggered": false,
+      "sources": ["tiresize.com", "hemmings.com"],
+      "confidence": "high",
+      "notes": "AMX Go Package continued 15x7 wheels with G60-15/225/60R15 tires."
+    },
+    {
+      "year": 1974,
+      "make": "AMC",
+      "model": "Javelin",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "205/70R14", "G60-15", "225/60R15"],
+      "staggered": false,
+      "sources": ["tiresize.com", "theamcforum.com"],
+      "confidence": "high",
+      "notes": "Final year Javelin. AMX Go Package still offered 15-inch option."
+    },
+    {
+      "year": 1968,
+      "make": "AMC",
+      "model": "AMX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14"],
+      "staggered": false,
+      "sources": ["theamcforum.com", "highlandscurrent.org", "hotrod.com"],
+      "confidence": "high",
+      "notes": "2-seat sports car based on shortened Javelin platform. Go-Pac included Magnum 500 wheels with E70-14 redline tires."
+    },
+    {
+      "year": 1969,
+      "make": "AMC",
+      "model": "AMX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "205/70R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "hotrod.com", "amx-perience.com"],
+      "confidence": "high",
+      "notes": "Same 2-seat platform. 390 engine option with E70-14 fiberglass-belted tires."
+    },
+    {
+      "year": 1970,
+      "make": "AMC",
+      "model": "AMX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "205/70R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "hotrod.com"],
+      "confidence": "high",
+      "notes": "Final year of 2-seat AMX. Same wheel/tire specs as Javelin SST with Go Package."
+    },
+    {
+      "year": 1971,
+      "make": "AMC",
+      "model": "AMX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "205/70R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "hemmings.com"],
+      "confidence": "high",
+      "notes": "AMX became trim package on second-gen Javelin. 14x6 slot-style wheels with E70x14 RWL tires."
+    },
+    {
+      "year": 1972,
+      "make": "AMC",
+      "model": "AMX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "205/70R14", "G60-15", "225/60R15"],
+      "staggered": false,
+      "sources": ["tiresize.com", "theamcforum.com"],
+      "confidence": "high",
+      "notes": "AMX Go Package added 15x7 wheel option with G60-15 tires."
+    },
+    {
+      "year": 1973,
+      "make": "AMC",
+      "model": "AMX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "205/70R14", "G60-15", "225/60R15"],
+      "staggered": false,
+      "sources": ["tiresize.com", "hemmings.com"],
+      "confidence": "high",
+      "notes": "AMX Go Package continued with 15-inch wheel/tire option."
+    },
+    {
+      "year": 1974,
+      "make": "AMC",
+      "model": "AMX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14", "205/70R14", "G60-15", "225/60R15"],
+      "staggered": false,
+      "sources": ["tiresize.com", "theamcforum.com"],
+      "confidence": "high",
+      "notes": "Final year AMX. Go Package still offered 15x7 wheels with 225/60R15 tires."
+    },
+    {
+      "year": 1967,
+      "make": "AMC",
+      "model": "Rebel",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.75-14", "8.25-14"],
+      "staggered": false,
+      "sources": ["theamcforum.com", "amclives.com", "motor-car.net"],
+      "confidence": "medium",
+      "notes": "First year Rebel as separate model (replaced Classic). Standard 14-inch wheels."
+    },
+    {
+      "year": 1968,
+      "make": "AMC",
+      "model": "Rebel",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.75-14", "8.25-14", "E78-14"],
+      "staggered": false,
+      "sources": ["theamcforum.com", "amclives.com"],
+      "confidence": "medium",
+      "notes": "V8 options available. Standard 14-inch wheels."
+    },
+    {
+      "year": 1969,
+      "make": "AMC",
+      "model": "Rebel",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14"],
+      "staggered": false,
+      "sources": ["theamcforum.com", "wikipedia.org/AMC_Rebel"],
+      "confidence": "medium",
+      "notes": "Intermediate platform. The Machine concept was proposed this year."
+    },
+    {
+      "year": 1970,
+      "make": "AMC",
+      "model": "Rebel",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14"],
+      "staggered": false,
+      "sources": ["theamcforum.com", "amclives.com"],
+      "confidence": "medium",
+      "notes": "Final year Rebel. Standard models had 14-inch wheels."
+    },
+    {
+      "year": 1970,
+      "make": "AMC",
+      "model": "Rebel Machine",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E60-15"],
+      "staggered": false,
+      "sources": ["hotrod.com", "streetmusclemag.com", "theamcforum.com"],
+      "confidence": "high",
+      "notes": "Special 15x7 Kelsey-Hayes 'Machine Wheels' with silver metalflake paint and gear icon center caps. E60-15 Goodyear Polyglas tires (same as Hemi 'Cuda front tires). 390 V8 standard. Only 2,326 built."
+    },
+    {
+      "year": 1969,
+      "make": "AMC",
+      "model": "SC/Rambler",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E70-14"],
+      "staggered": false,
+      "sources": ["hemmings.com", "streetmusclemag.com", "bringatrailer.com"],
+      "confidence": "high",
+      "notes": "Hurst SC/Rambler. Blue Magnum 500 stamped-steel wheels 14x6 with chrome rings and AMC hub centers. Goodyear Polyglas Red Line E70-14 4-ply tires. Only 1,512 built."
+    },
+    {
+      "year": 1970,
+      "make": "AMC",
+      "model": "Hornet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["C78-14", "D78-14", "D70-14"],
+      "staggered": false,
+      "sources": ["wikipedia.org/AMC_Hornet", "motor-car.net"],
+      "confidence": "high",
+      "notes": "First year Hornet. Base and SST trims. V8 option included D70-14 redline tires."
+    },
+    {
+      "year": 1971,
+      "make": "AMC",
+      "model": "Hornet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["C78-14", "D78-14", "185R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "wikipedia.org/AMC_Hornet"],
+      "confidence": "high",
+      "notes": "Sportabout wagon added. X package included slot-style wheels with C78-14 Polyglas tires."
+    },
+    {
+      "year": 1972,
+      "make": "AMC",
+      "model": "Hornet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["C78-14", "D78-14", "185R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "wikipedia.org/AMC_Hornet"],
+      "confidence": "high",
+      "notes": "AMC Buyer Protection Plan introduced. Standard 14-inch wheels."
+    },
+    {
+      "year": 1973,
+      "make": "AMC",
+      "model": "Hornet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "E78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "ultimatespecs.com"],
+      "confidence": "high",
+      "notes": "Hatchback coupe added. Levi's trim package introduced."
+    },
+    {
+      "year": 1974,
+      "make": "AMC",
+      "model": "Hornet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "E78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "ultimatespecs.com"],
+      "confidence": "high",
+      "notes": "Standard 14-inch wheels across all trims."
+    },
+    {
+      "year": 1971,
+      "make": "AMC",
+      "model": "Hornet SC/360",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D70-14"],
+      "staggered": false,
+      "sources": ["hemmings.com", "streetmusclemag.com", "oldcarsweekly.com", "hotrod.com"],
+      "confidence": "high",
+      "notes": "Compact muscle car with 360 V8 (245hp std, 285hp with Go pkg). 14x6 eight-slot mag-style wheels with D70-14 Goodyear Polyglas tires. Only 784 built. Rare - only 304 with 4-speed/4-barrel combo."
+    },
+    {
+      "year": 1972,
+      "make": "AMC",
+      "model": "Gremlin",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["A78-13", "165/80R13", "D70-14", "205/70R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "classicindustries.com"],
+      "confidence": "high",
+      "notes": "Base Gremlin had 13-inch wheels. Gremlin X with V8 had 14x6 slot wheels with D70-14 or 205/70R14 tires."
+    },
+    {
+      "year": 1973,
+      "make": "AMC",
+      "model": "Gremlin",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["C78-14", "195/75R14", "205/70R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "automobile-catalog.com"],
+      "confidence": "high",
+      "notes": "All Gremlins moved to 14-inch wheels. X package included styled wheels."
+    },
+    {
+      "year": 1974,
+      "make": "AMC",
+      "model": "Gremlin",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 72.0,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["C78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "automobile-catalog.com"],
+      "confidence": "high",
+      "notes": "Standard 14-inch wheels. 304 V8 option available."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 29,
+    "boltPattern": "5x114.3",
+    "hubBore": 72.0,
+    "commonWheelSizes": ["14x6", "15x7"],
+    "commonTireSizes": ["E70-14", "D70-14", "E60-15", "G60-15"],
+    "notableModels": [
+      "Rebel Machine (1970) - 15x7 Machine wheels, E60-15 tires, 2,326 built",
+      "SC/Rambler (1969) - Blue Magnum 500 wheels, E70-14 redlines, 1,512 built",
+      "Hornet SC/360 (1971) - 14x6 mag wheels, D70-14, only 784 built"
+    ],
+    "modernEquivalents": {
+      "E70-14": "205/70R14",
+      "D70-14": "195/70R14",
+      "E60-15": "215/60R15",
+      "G60-15": "225/60R15",
+      "C78-14": "185/78R14 or 195/75R14"
+    }
+  }
+}

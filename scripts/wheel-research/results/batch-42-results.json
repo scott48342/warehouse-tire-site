@@ -1,0 +1,1139 @@
+{
+  "batchId": "42",
+  "processedAt": "2026-04-21T21:09:30Z",
+  "vehicleCount": 75,
+  "sources": [
+    "tirewheelguide.com",
+    "hulkoffsets.com",
+    "wheelsclearance.com",
+    "factorystylewheels.com",
+    "mbworld.org"
+  ],
+  "results": [
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5, 9.5], "rear": [9, 9.5, 10]},
+        "offsets": {"front": [19, 30, 38, 40], "rear": [18, 20, 22, 28]},
+        "isStaggered": true,
+        "notes": "GLC 43: 19-21\", GLC 63/63S: 20-21\" staggered. C253 Facelift generation."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5, 9.5], "rear": [9, 9.5, 10]},
+        "offsets": {"front": [19, 30, 38, 40], "rear": [18, 20, 22, 28]},
+        "isStaggered": true,
+        "notes": "GLC 43: 19-21\", GLC 63/63S: 20-21\" staggered. C253 Facelift generation."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5, 9.5], "rear": [9, 9.5, 10]},
+        "offsets": {"front": [19, 30, 38, 40], "rear": [18, 20, 22, 28]},
+        "isStaggered": true,
+        "notes": "GLC 43: 19-21\", GLC 63/63S: 20-21\" staggered. C253 Facelift start year."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5, 9.5], "rear": [9, 9.5, 10]},
+        "offsets": {"front": [35, 38, 40], "rear": [20, 22, 28]},
+        "isStaggered": true,
+        "notes": "Pre-facelift C253. GLC 43/63 available."
+      }
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5, 9.5], "rear": [9, 9.5, 10]},
+        "offsets": {"front": [35, 38, 40], "rear": [20, 22, 28]},
+        "isStaggered": true,
+        "notes": "First year C253 Coupe. GLC 43/63 available."
+      }
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "glc-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5], "rear": [9, 9.5]},
+        "offsets": {"front": [35, 38, 40], "rear": [20, 22]},
+        "isStaggered": true,
+        "notes": "Launch year C253 Coupe. Limited production."
+      }
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21, 22],
+        "wheelWidths": {"front": [8, 8.5, 9, 9.5, 10], "rear": [8, 8.5, 9, 9.5, 10]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "V167 Facelift. GLE 350/450/580. Square setup standard, staggered optional."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21, 22],
+        "wheelWidths": {"front": [8, 8.5, 9, 9.5, 10], "rear": [8, 8.5, 9, 9.5, 10]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "V167 Facelift. GLE 350/450/580."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21, 22],
+        "wheelWidths": {"front": [8, 8.5, 9, 9.5, 10], "rear": [8, 8.5, 9, 9.5, 10]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "V167 Facelift. GLE 350/450/580."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21, 22],
+        "wheelWidths": {"front": [8, 8.5, 9, 9.5, 10], "rear": [8, 8.5, 9, 9.5, 10]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "V167 Facelift starts. GLE 350/450/580."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21, 22],
+        "wheelWidths": {"front": [8, 8.5, 9, 9.5], "rear": [8, 8.5, 9, 9.5]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "V167. GLE 350/450/580."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21, 22],
+        "wheelWidths": {"front": [8, 8.5, 9, 9.5], "rear": [8, 8.5, 9, 9.5]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "V167. GLE 350/450/580."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21, 22],
+        "wheelWidths": {"front": [8, 8.5, 9, 9.5], "rear": [8, 8.5, 9, 9.5]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "V167 launch year. GLE 350/450/580."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5, 9], "rear": [8, 8.5, 9]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "Transition year V167/W166. GLE 350/400/450."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5, 9], "rear": [8, 8.5, 9]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "W166 generation. GLE 350/400/550e."
+      }
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5, 9], "rear": [8, 8.5, 9]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "W166 generation. GLE 350/400/550e."
+      }
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5, 9], "rear": [8, 8.5, 9]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "W166. First year GLE name (replaced ML)."
+      }
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gle-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21],
+        "wheelWidths": {"front": [8, 8.5, 9], "rear": [8, 8.5, 9]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "W166. Limited 2015 production under GLE name."
+      }
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10, 10.5], "rear": [10, 10.5, 11, 11.5]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [28, 30, 35, 45]},
+        "isStaggered": true,
+        "notes": "V167 Facelift AMG. GLE 53/63/63 S. Staggered standard."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10, 10.5], "rear": [10, 10.5, 11, 11.5]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [28, 30, 35, 45]},
+        "isStaggered": true,
+        "notes": "V167 Facelift AMG. GLE 53/63/63 S."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10, 10.5], "rear": [10, 10.5, 11, 11.5]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [28, 30, 35, 45]},
+        "isStaggered": true,
+        "notes": "V167 Facelift AMG. GLE 53/63/63 S."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10, 10.5], "rear": [10, 10.5, 11, 11.5]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [28, 30, 35, 45]},
+        "isStaggered": true,
+        "notes": "V167 Facelift AMG starts."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10], "rear": [10, 10.5, 11, 11.5]},
+        "offsets": {"front": [30, 35, 40], "rear": [28, 30, 35]},
+        "isStaggered": true,
+        "notes": "V167 AMG. GLE 53/63/63 S."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10], "rear": [10, 10.5, 11, 11.5]},
+        "offsets": {"front": [30, 35, 40], "rear": [28, 30, 35]},
+        "isStaggered": true,
+        "notes": "V167 AMG. GLE 53/63/63 S."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10], "rear": [10, 10.5, 11, 11.5]},
+        "offsets": {"front": [30, 35, 40], "rear": [28, 30, 35]},
+        "isStaggered": true,
+        "notes": "V167 AMG launch. GLE 53/63/63 S."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9, 9.5], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 50], "rear": [30, 35, 45]},
+        "isStaggered": true,
+        "notes": "W166 AMG. GLE 43/63/63 S. Final W166 year."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9, 9.5], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 50], "rear": [30, 35, 45]},
+        "isStaggered": true,
+        "notes": "W166 AMG. GLE 43/63/63 S."
+      }
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9, 9.5], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 50], "rear": [30, 35, 45]},
+        "isStaggered": true,
+        "notes": "W166 AMG. GLE 43/63/63 S."
+      }
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9, 9.5], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 50], "rear": [30, 35, 45]},
+        "isStaggered": true,
+        "notes": "W166 AMG. First GLE AMG year."
+      }
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gle-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9, 9.5], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 50], "rear": [30, 35, 45]},
+        "isStaggered": true,
+        "notes": "W166 AMG. Limited 2015 production."
+      }
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22],
+        "wheelWidths": {"front": [10, 10.5], "rear": [11, 11.5]},
+        "offsets": {"front": [30, 35, 40], "rear": [28, 30, 35]},
+        "isStaggered": true,
+        "notes": "C167 Facelift AMG Coupe. GLE 53/63/63 S Coupe."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22],
+        "wheelWidths": {"front": [10, 10.5], "rear": [11, 11.5]},
+        "offsets": {"front": [30, 35, 40], "rear": [28, 30, 35]},
+        "isStaggered": true,
+        "notes": "C167 Facelift AMG Coupe."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22],
+        "wheelWidths": {"front": [10, 10.5], "rear": [11, 11.5]},
+        "offsets": {"front": [30, 35, 40], "rear": [28, 30, 35]},
+        "isStaggered": true,
+        "notes": "C167 Facelift AMG Coupe."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22],
+        "wheelWidths": {"front": [10, 10.5], "rear": [11, 11.5]},
+        "offsets": {"front": [30, 35, 40], "rear": [28, 30, 35]},
+        "isStaggered": true,
+        "notes": "C167 Facelift AMG Coupe starts."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22],
+        "wheelWidths": {"front": [10, 10.5], "rear": [11, 11.5]},
+        "offsets": {"front": [30, 35, 40], "rear": [28, 30, 35]},
+        "isStaggered": true,
+        "notes": "C167 AMG Coupe. GLE 53/63/63 S Coupe."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22],
+        "wheelWidths": {"front": [10, 10.5], "rear": [11, 11.5]},
+        "offsets": {"front": [30, 35, 40], "rear": [28, 30, 35]},
+        "isStaggered": true,
+        "notes": "C167 AMG Coupe."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22],
+        "wheelWidths": {"front": [10, 10.5], "rear": [11, 11.5]},
+        "offsets": {"front": [30, 35, 40], "rear": [28, 30, 35]},
+        "isStaggered": true,
+        "notes": "C167 AMG Coupe launch."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9, 9.5], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 50], "rear": [30, 35, 45]},
+        "isStaggered": true,
+        "notes": "C292 AMG Coupe. Final C292 year."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9, 9.5], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 50], "rear": [30, 35, 45]},
+        "isStaggered": true,
+        "notes": "C292 AMG Coupe. GLE 43/63/63 S Coupe."
+      }
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9, 9.5], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 50], "rear": [30, 35, 45]},
+        "isStaggered": true,
+        "notes": "C292 AMG Coupe."
+      }
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9, 9.5], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 50], "rear": [30, 35, 45]},
+        "isStaggered": true,
+        "notes": "C292 AMG Coupe launch."
+      }
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gle-class-coupe-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21],
+        "wheelWidths": {"front": [9, 9.5], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 50], "rear": [30, 35, 45]},
+        "isStaggered": true,
+        "notes": "C292 AMG Coupe. Limited 2015 production."
+      }
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21, 22, 23],
+        "wheelWidths": {"front": [8.5, 9, 9.5, 10], "rear": [8.5, 9, 9.5, 10]},
+        "offsets": {"front": [35, 40, 45, 50], "rear": [35, 40, 45, 50]},
+        "isStaggered": false,
+        "notes": "X167 Facelift. GLS 450/580. Square setup standard."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21, 22, 23],
+        "wheelWidths": {"front": [8.5, 9, 9.5, 10], "rear": [8.5, 9, 9.5, 10]},
+        "offsets": {"front": [35, 40, 45, 50], "rear": [35, 40, 45, 50]},
+        "isStaggered": false,
+        "notes": "X167 Facelift. GLS 450/580."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21, 22, 23],
+        "wheelWidths": {"front": [8.5, 9, 9.5, 10], "rear": [8.5, 9, 9.5, 10]},
+        "offsets": {"front": [35, 40, 45, 50], "rear": [35, 40, 45, 50]},
+        "isStaggered": false,
+        "notes": "X167 Facelift. GLS 450/580."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21, 22, 23],
+        "wheelWidths": {"front": [8.5, 9, 9.5, 10], "rear": [8.5, 9, 9.5, 10]},
+        "offsets": {"front": [35, 40, 45, 50], "rear": [35, 40, 45, 50]},
+        "isStaggered": false,
+        "notes": "X167 Facelift starts. GLS 450/580."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21, 22],
+        "wheelWidths": {"front": [8.5, 9, 9.5, 10, 10.5], "rear": [8.5, 9, 9.5, 10, 10.5]},
+        "offsets": {"front": [32, 35, 40, 45, 50], "rear": [32, 35, 40, 45, 50]},
+        "isStaggered": false,
+        "notes": "X167. GLS 450/580."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21, 22],
+        "wheelWidths": {"front": [8.5, 9, 9.5, 10, 10.5], "rear": [8.5, 9, 9.5, 10, 10.5]},
+        "offsets": {"front": [32, 35, 40, 45, 50], "rear": [32, 35, 40, 45, 50]},
+        "isStaggered": false,
+        "notes": "X167. GLS 450/580."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [19, 20, 21, 22],
+        "wheelWidths": {"front": [8.5, 9, 9.5, 10, 10.5], "rear": [8.5, 9, 9.5, 10, 10.5]},
+        "offsets": {"front": [32, 35, 40, 45, 50], "rear": [32, 35, 40, 45, 50]},
+        "isStaggered": false,
+        "notes": "X167 launch. GLS 450/580."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21],
+        "wheelWidths": {"front": [8.5, 9, 10], "rear": [8.5, 9, 10]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "X166. Final year. GLS 450/550."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21],
+        "wheelWidths": {"front": [8.5, 9, 10], "rear": [8.5, 9, 10]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "X166. GLS 450/550/550e."
+      }
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21],
+        "wheelWidths": {"front": [8.5, 9, 10], "rear": [8.5, 9, 10]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "X166. First GLS year (renamed from GL)."
+      }
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21],
+        "wheelWidths": {"front": [8.5, 9, 10], "rear": [8.5, 9, 10]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "X166. Partial 2016 production as GLS."
+      }
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gls-class",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [18, 19, 20, 21],
+        "wheelWidths": {"front": [8.5, 9, 10], "rear": [8.5, 9, 10]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": false,
+        "notes": "X166. Sold as GL-Class in 2015 (spec match)."
+      }
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22, 23],
+        "wheelWidths": {"front": [10, 10.5, 11], "rear": [10.5, 11, 11.5]},
+        "offsets": {"front": [35, 40, 45, 50], "rear": [35, 40, 45, 50]},
+        "isStaggered": true,
+        "notes": "X167 Facelift AMG. GLS 63. Staggered optional."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22, 23],
+        "wheelWidths": {"front": [10, 10.5, 11], "rear": [10.5, 11, 11.5]},
+        "offsets": {"front": [35, 40, 45, 50], "rear": [35, 40, 45, 50]},
+        "isStaggered": true,
+        "notes": "X167 Facelift AMG. GLS 63."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22, 23],
+        "wheelWidths": {"front": [10, 10.5, 11], "rear": [10.5, 11, 11.5]},
+        "offsets": {"front": [35, 40, 45, 50], "rear": [35, 40, 45, 50]},
+        "isStaggered": true,
+        "notes": "X167 Facelift AMG. GLS 63."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22, 23],
+        "wheelWidths": {"front": [10, 10.5, 11], "rear": [10.5, 11, 11.5]},
+        "offsets": {"front": [35, 40, 45, 50], "rear": [35, 40, 45, 50]},
+        "isStaggered": true,
+        "notes": "X167 Facelift AMG starts."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22, 23],
+        "wheelWidths": {"front": [10, 10.5], "rear": [10.5, 11, 11.5]},
+        "offsets": {"front": [32, 35, 40, 45, 50], "rear": [32, 35, 40, 45, 50]},
+        "isStaggered": true,
+        "notes": "X167 AMG. GLS 63."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22, 23],
+        "wheelWidths": {"front": [10, 10.5], "rear": [10.5, 11, 11.5]},
+        "offsets": {"front": [32, 35, 40, 45, 50], "rear": [32, 35, 40, 45, 50]},
+        "isStaggered": true,
+        "notes": "X167 AMG. GLS 63."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [21, 22, 23],
+        "wheelWidths": {"front": [10, 10.5], "rear": [10.5, 11, 11.5]},
+        "offsets": {"front": [32, 35, 40, 45, 50], "rear": [32, 35, 40, 45, 50]},
+        "isStaggered": true,
+        "notes": "X167 AMG launch. GLS 63."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10], "rear": [10, 10.5]},
+        "offsets": {"front": [25, 30, 35, 40, 45], "rear": [25, 30, 35, 40, 45]},
+        "isStaggered": true,
+        "notes": "X166 AMG. GLS 63. Final X166 year."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10], "rear": [10, 10.5]},
+        "offsets": {"front": [25, 30, 35, 40, 45], "rear": [25, 30, 35, 40, 45]},
+        "isStaggered": true,
+        "notes": "X166 AMG. GLS 63."
+      }
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10], "rear": [10, 10.5]},
+        "offsets": {"front": [25, 30, 35, 40, 45], "rear": [25, 30, 35, 40, 45]},
+        "isStaggered": true,
+        "notes": "X166 AMG. First GLS 63 year."
+      }
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": true,
+        "notes": "X166 AMG. GL 63 renamed to GLS 63."
+      }
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gls-class-amg",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [20, 21, 22],
+        "wheelWidths": {"front": [9.5, 10], "rear": [10, 10.5]},
+        "offsets": {"front": [30, 35, 40, 45], "rear": [30, 35, 40, 45]},
+        "isStaggered": true,
+        "notes": "X166 AMG. Sold as GL 63 AMG (spec match)."
+      }
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [17, 18, 19, 20],
+        "wheelWidths": {"front": [7.5, 8, 8.5, 9], "rear": [7.5, 8, 8.5, 9]},
+        "offsets": {"front": [48, 49, 50, 51], "rear": [48, 49, 50, 51]},
+        "isStaggered": false,
+        "notes": "W447. V-Class based camper van. Square setup."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [17, 18, 19, 20],
+        "wheelWidths": {"front": [7.5, 8, 8.5, 9], "rear": [7.5, 8, 8.5, 9]},
+        "offsets": {"front": [48, 49, 50, 51], "rear": [48, 49, 50, 51]},
+        "isStaggered": false,
+        "notes": "W447. V-Class based camper van."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [17, 18, 19, 20],
+        "wheelWidths": {"front": [7.5, 8, 8.5, 9], "rear": [7.5, 8, 8.5, 9]},
+        "offsets": {"front": [48, 49, 50, 51], "rear": [48, 49, 50, 51]},
+        "isStaggered": false,
+        "notes": "W447. V-Class based camper van."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [17, 18, 19, 20],
+        "wheelWidths": {"front": [7.5, 8, 8.5, 9], "rear": [7.5, 8, 8.5, 9]},
+        "offsets": {"front": [48, 49, 50, 51], "rear": [48, 49, 50, 51]},
+        "isStaggered": false,
+        "notes": "W447. Facelift continues."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [17, 18, 19],
+        "wheelWidths": {"front": [7, 7.5, 8, 8.5], "rear": [7, 7.5, 8, 8.5]},
+        "offsets": {"front": [47, 48, 49, 50], "rear": [47, 48, 49, 50]},
+        "isStaggered": false,
+        "notes": "W447. Mid-cycle update."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [17, 18, 19],
+        "wheelWidths": {"front": [7, 7.5, 8, 8.5], "rear": [7, 7.5, 8, 8.5]},
+        "offsets": {"front": [47, 48, 49, 50], "rear": [47, 48, 49, 50]},
+        "isStaggered": false,
+        "notes": "W447. 4MATIC AWD available."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [17, 18, 19],
+        "wheelWidths": {"front": [7, 7.5, 8, 8.5], "rear": [7, 7.5, 8, 8.5]},
+        "offsets": {"front": [47, 48, 49, 50], "rear": [47, 48, 49, 50]},
+        "isStaggered": false,
+        "notes": "W447. Mid-cycle refresh."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [16, 17, 18, 19],
+        "wheelWidths": {"front": [6.5, 7, 7.5, 8], "rear": [6.5, 7, 7.5, 8]},
+        "offsets": {"front": [45, 46, 47, 48], "rear": [45, 46, 47, 48]},
+        "isStaggered": false,
+        "notes": "W447. Pre-facelift final year."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "marco-polo",
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "threadSize": "M14x1.5",
+        "wheelDiameters": [16, 17, 18, 19],
+        "wheelWidths": {"front": [6.5, 7, 7.5, 8], "rear": [6.5, 7, 7.5, 8]},
+        "offsets": {"front": [45, 46, 47, 48], "rear": [45, 46, 47, 48]},
+        "isStaggered": false,
+        "notes": "W447. V-Class camper van platform."
+      }
+    }
+  ]
+}

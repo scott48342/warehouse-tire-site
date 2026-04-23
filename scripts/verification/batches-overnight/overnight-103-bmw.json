@@ -1,0 +1,3822 @@
+[
+  {
+    "id": "122ea848-6910-45e2-8b6b-b9d70874e47d",
+    "year": 2016,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "sDrive28i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R17",
+      "245/55R18",
+      "245/50R19",
+      "245/45R19",
+      "275/40R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a8a5ce5c-6f08-4c3a-86e9-fd3de733c273",
+    "year": 2016,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive28i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R17",
+      "245/55R18",
+      "245/50R19",
+      "245/45R19",
+      "275/40R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "1dd20425-ff1b-40ed-8183-fc1bd0e6c344",
+    "year": 2016,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive28d",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R17",
+      "245/55R18",
+      "245/50R19",
+      "245/45R19",
+      "275/40R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "9f236668-b394-431c-b57e-fb366c287c8b",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive28d",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R17",
+      "245/55R18",
+      "245/50R19",
+      "245/45R19",
+      "275/40R19",
+      "245/50R18",
+      "245/55R17",
+      "245/45ZR19",
+      "275/40ZR19",
+      "245/40ZR20",
+      "275/35ZR20",
+      "245/35ZR21",
+      "275/30ZR21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a14b2665-1016-43bc-a83b-15384c08c807",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R17",
+      "245/55R18",
+      "245/50R19",
+      "245/45R19",
+      "275/40R19",
+      "245/50R18",
+      "245/55R17",
+      "245/45ZR19",
+      "275/40ZR19",
+      "245/40ZR20",
+      "275/35ZR20",
+      "245/35ZR21",
+      "275/30ZR21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "3723bec9-e58e-4a39-82d7-ccda8c6d3e73",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "sDrive28i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R17",
+      "245/55R18",
+      "245/50R19",
+      "245/45R19",
+      "275/40R19",
+      "245/50R18",
+      "245/55R17",
+      "245/45ZR19",
+      "275/40ZR19",
+      "245/40ZR20",
+      "275/35ZR20",
+      "245/35ZR21",
+      "275/30ZR21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d26bd74b-112a-45d1-9f09-9bda0fd9b4f9",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "245/50R18",
+      "255/50R18",
+      "245/45R19",
+      "255/45R19",
+      "245/40R20",
+      "275/35R20",
+      "245/55R17",
+      "225/60R17",
+      "245/45ZR19",
+      "275/40ZR19",
+      "245/40ZR20",
+      "275/35ZR20",
+      "245/35ZR21",
+      "275/30ZR21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b32a1af8-7fb3-4f45-8438-c787ddcaf308",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive28i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R17",
+      "245/55R18",
+      "245/50R19",
+      "245/45R19",
+      "275/40R19",
+      "245/50R18",
+      "245/55R17",
+      "245/45ZR19",
+      "275/40ZR19",
+      "245/40ZR20",
+      "275/35ZR20",
+      "245/35ZR21",
+      "275/30ZR21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6207fa38-9701-4a5c-a80a-bfbd0c3373de",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "265/40R20",
+      "245/40R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7b85f703-f403-44b9-9570-daad7c4e835d",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b2563984-0e89-4997-9ec7-80534a0699aa",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "M40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "94643732-c714-4144-a185-a4d3e45cc06e",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "sDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "24df07c0-b0aa-47f9-97c1-1ee78e4ffeeb",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "8df31378-9c30-4cf6-97bc-8e2d1960c3eb",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "39e127e3-3a76-4413-83a7-2391cea79f21",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f72ee0a1-1093-48a1-a22d-ba7a7f89d873",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d83caf2a-d304-41f1-b30a-42d905e95a73",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "38520a6d-84cd-4397-ad36-98268a083313",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "M40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "9e6e9ef5-0291-42eb-a5e3-2771d0a4d75a",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c95a55aa-ad10-4bc3-bca3-49e5a4fc4caa",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "fd10b74c-20f6-454d-b95b-f352befdfbbe",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "sDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "bb395056-98cf-4e55-8551-ab16012e437f",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "265/40R20",
+      "245/40R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f09ad87d-f3c1-4016-b6b7-d0cf0e14339d",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "265/40R20",
+      "245/40R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "15e9b543-8da1-44a7-a715-c08ae592a957",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "M40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "0c3eabc7-f40e-451d-81fe-b5a94e825428",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "222eb69b-3cea-4e79-b73d-cbf3906eee95",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "sDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ce7eebd5-5b4b-47c9-a47a-36adaa84ad78",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c81caf3a-35f9-4233-9077-f12c4fceb5b6",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "baa82569-d11e-47ca-a6f6-6f6bcefe9ef4",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5b812a79-a9d6-4c67-bf15-e5e2ff91e3bf",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "M40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d7b7bb76-5c70-4aa8-a43f-fa87905e7841",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ebf5ad80-96a0-459b-8f22-f9cfdb864a2f",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7e20c0ef-79b7-4717-8a36-a6a036623502",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "abe25de3-3547-4787-9372-7b01a5ca9616",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "sDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "da3f5373-c004-4dd3-8ed6-c734d0893ee7",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "265/40R20",
+      "245/40R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b75740c9-1e8e-4d6b-896b-61f2c7919bb9",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "43d3191b-0ec2-46af-a116-a8bb39987d39",
+    "year": 2022,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "265/40R20",
+      "245/40R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "280c2f19-d972-4e9e-8b4b-5754290ff3be",
+    "year": 2022,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a8d971b7-f0a7-457a-a54d-60a2198fdae1",
+    "year": 2022,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7e7361c0-c71a-4a48-bc07-cd67456b2dcd",
+    "year": 2022,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "sDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "17fe84ad-ead7-42e6-8fca-59ec010e4729",
+    "year": 2022,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "adde1273-e654-4443-ae72-96b6a863a1db",
+    "year": 2022,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f88cced9-98f7-4ac9-a968-bfa346654fbd",
+    "year": 2022,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "M40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4f63dce3-5421-4a09-a6cf-b17992e8fd06",
+    "year": 2023,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "07d75c1e-036e-45a9-92d5-4e5c3c480e6d",
+    "year": 2023,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7a6c465c-839e-4c9e-8735-2a6270942325",
+    "year": 2023,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "bb323d73-2b5f-46c6-85cb-934e29a86a44",
+    "year": 2023,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "M40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e8339be6-092a-4ff6-9796-e20e6b921a08",
+    "year": 2023,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "fe582a3e-5441-4d62-8bbb-9e37bdfdcc98",
+    "year": 2023,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "sDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "9b734b77-da33-49db-9bd2-a178385c0010",
+    "year": 2023,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "265/40R20",
+      "245/40R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "32adb819-9b78-4618-8cd6-6561c5fc5dbb",
+    "year": 2024,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "265/40R20",
+      "245/40R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ee16a64a-763e-4d3b-a139-9a0480169cc6",
+    "year": 2024,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "22b5d39a-195e-4dcd-bb24-b31b541a5af9",
+    "year": 2024,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "M40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7b482c66-16f0-4f44-9c8d-72bb7eae8e12",
+    "year": 2024,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "sDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "402c6d1a-0d0c-460b-babe-5a4b20d79057",
+    "year": 2024,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2d8cd3c6-7f6a-4b46-90af-c7116514b7f5",
+    "year": 2024,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "9ba9842f-4e9f-4b76-81d4-8f902af92979",
+    "year": 2024,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a9756106-e97f-4b7d-949f-8b554a9ef410",
+    "year": 2025,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "acf7f1dc-e99c-441b-b3d4-380e0401de41",
+    "year": 2025,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "sDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "634d2c5c-7919-4eeb-8d10-e3ae0cb7600c",
+    "year": 2025,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "M40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a728d65c-7a85-4da6-be43-c98a113b4f37",
+    "year": 2025,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "X3 M",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "1eaab010-25ea-435c-a35d-cb07f19112dc",
+    "year": 2025,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "13962846-0aa2-4143-8835-c27464bdd00b",
+    "year": 2025,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "265/40R20",
+      "245/40R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6595b9cc-01c4-4bf2-b761-9f92b29035e0",
+    "year": 2025,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "xDrive30e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "275/40R20",
+      "255/40R21",
+      "265/35R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "716fb569-a513-4f52-beef-9caf1f77bc23",
+    "year": 2026,
+    "make": "bmw",
+    "model": "x3",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/50R19",
+      "245/45R20",
+      "265/40R20",
+      "245/40R21",
+      "265/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "395630b1-bd6a-4752-83c0-17997dd68f5f",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x3-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 28,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "bd768dfa-2868-4d33-9d09-ee2c2bbff54e",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x3-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 28,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "491552bb-48b6-45cd-999e-7d2163416383",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x3-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 28,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "cd8608a4-1f45-44d7-877d-aff4cc11893e",
+    "year": 2022,
+    "make": "bmw",
+    "model": "x3-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 28,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "176f76bd-907f-41ed-93df-6b300d0479eb",
+    "year": 2023,
+    "make": "bmw",
+    "model": "x3-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 28,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "c294be29-3baf-4273-ab5a-1fb7b369cc7a",
+    "year": 2024,
+    "make": "bmw",
+    "model": "x3-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 28,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "5b132bc6-2929-4877-9721-64c6aa3ab0f2",
+    "year": 2014,
+    "make": "bmw",
+    "model": "x4",
+    "trim": "xDrive20d",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/50ZR18",
+      "245/45R19",
+      "225/60R17",
+      "245/55R17",
+      "245/40ZR20",
+      "275/35ZR20",
+      "245/45ZR19",
+      "275/40ZR19",
+      "245/35ZR21",
+      "275/30ZR21",
+      "205/65R17",
+      "245/50R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "a35641e0-79c6-47e8-b030-800f2436054a",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x4",
+    "trim": "M40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 32,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 27,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 27,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45ZR20",
+      "275/40ZR20",
+      "245/50ZR19",
+      "245/40ZR21",
+      "275/35ZR21",
+      "245/50R19",
+      "245/45R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "d244e894-e8cd-4cdd-bc49-11e6a8c02dc3",
+    "year": 2026,
+    "make": "bmw",
+    "model": "x4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 38,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R18",
+      "245/45R19",
+      "255/40R20",
+      "275/35R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "36b91846-cefa-4ae4-9361-f15008132c14",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x4-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 31,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 35,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  }
+]

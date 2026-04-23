@@ -1,0 +1,1068 @@
+{
+  "batchId": "04",
+  "processedAt": "2026-04-21T20:52:00.000Z",
+  "results": [
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 7.5, "offset": 54}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8P generation (2006-2013)"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 7.5, "offset": 54}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8P generation (2006-2013)"
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 7.5, "offset": 54}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8P generation (2006-2013)"
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 7.5, "offset": 54}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8P generation (2006-2013)"
+    },
+    {
+      "year": 2009,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 7.5, "offset": 54}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8P generation (2006-2013)"
+    },
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 7.5, "offset": 54}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8P generation (2006-2013)"
+    },
+    {
+      "year": 2007,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 7.5, "offset": 54}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8P generation (2006-2013)"
+    },
+    {
+      "year": 2006,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 7.5, "offset": 54}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8P generation (2006-2013)"
+    },
+    {
+      "year": 2003,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7.5, "offset": 32}],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "8L generation (1999-2003), uses 5x100 bolt pattern"
+    },
+    {
+      "year": 2002,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7.5, "offset": 32}],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "8L generation (1999-2003), uses 5x100 bolt pattern"
+    },
+    {
+      "year": 2001,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7.5, "offset": 32}],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "8L generation (1999-2003), uses 5x100 bolt pattern"
+    },
+    {
+      "year": 2000,
+      "make": "audi",
+      "model": "s3",
+      "specs": {
+        "wheelSizes": [{"diameter": 17, "width": 7.5, "offset": 32}],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "8L generation (1999-2003), uses 5x100 bolt pattern"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "s4",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 40}, {"diameter": 19, "width": 8.5, "offset": 40}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com",
+      "confidence": "high",
+      "notes": "B9 generation (2016+)"
+    },
+    {
+      "year": 2009,
+      "make": "audi",
+      "model": "s4",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 43}, {"diameter": 19, "width": 8.5, "offset": 43}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "audizine.com",
+      "confidence": "high",
+      "notes": "B8 generation (2009-2012)"
+    },
+    {
+      "year": 2003,
+      "make": "audi",
+      "model": "s4",
+      "specs": {
+        "wheelSizes": [{"diameter": 18, "width": 8, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "sizemywheels.com",
+      "confidence": "high",
+      "notes": "B6 generation (2003-2005)"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}, {"diameter": 20, "width": 9, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "medium",
+      "notes": "B9 generation continued"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}, {"diameter": 20, "width": 9, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "medium",
+      "notes": "B9 generation continued"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}, {"diameter": 20, "width": 9, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B9 generation continued"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B9 generation"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B9 generation"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B9 generation"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B9 generation"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B9 generation"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B9 generation"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B9 generation (started 2017)"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B8 facelift generation"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B8 facelift generation"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B8 facelift generation"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B8 facelift generation"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B8 generation"
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B8 generation"
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B8 generation"
+    },
+    {
+      "year": 2009,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B8 generation"
+    },
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B8 generation"
+    },
+    {
+      "year": 2007,
+      "make": "audi",
+      "model": "s5",
+      "specs": {
+        "wheelSizes": [{"diameter": 19, "width": 8.5, "offset": 32}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "B8 generation launch year"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "s6-e-tron",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 9, "offset": 48}, {"diameter": 21, "width": 9.5, "offset": 48}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "medium",
+      "notes": "PPE platform, new for 2024"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "s8l",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 9, "offset": 25}, {"diameter": 21, "width": 9.5, "offset": 25}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "D5 facelift long wheelbase"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "s8l",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 9, "offset": 25}, {"diameter": 21, "width": 9.5, "offset": 25}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "D5 facelift long wheelbase"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "s8l",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 9, "offset": 25}, {"diameter": 21, "width": 9.5, "offset": 25}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "D5 facelift long wheelbase"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "s8l",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 9, "offset": 25}, {"diameter": 21, "width": 9.5, "offset": 25}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "D5 facelift long wheelbase"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "s8l",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 9, "offset": 25}, {"diameter": 21, "width": 9.5, "offset": 25}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "D5 facelift long wheelbase"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "s8l",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 9, "offset": 25}, {"diameter": 21, "width": 9.5, "offset": 25}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "D5 facelift long wheelbase"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "medium",
+      "notes": "FY generation continued"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "FY generation"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/Audi",
+      "confidence": "high",
+      "notes": "FY generation"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "FY generation"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "FY generation"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "FY generation"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "FY generation"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "FY generation"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 33}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "FY generation start"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8.5, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8R generation"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8.5, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8R generation"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8.5, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8R generation"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8.5, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8R generation (US launch)"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8.5, "offset": 39}, {"diameter": 21, "width": 8.5, "offset": 35}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8R generation (Europe)"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "sq5",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 8.5, "offset": 39}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "8R generation launch (TDI only)"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "sq6-e-tron",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 9, "offset": 33}, {"diameter": 21, "width": 9.5, "offset": 36}],
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "PPE platform, shares with Porsche Macan EV"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "sq6-e-tron",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 9, "offset": 33}, {"diameter": 21, "width": 9.5, "offset": 36}],
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "PPE platform, shares with Porsche Macan EV"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "sq6-e-tron",
+      "specs": {
+        "wheelSizes": [{"diameter": 20, "width": 9, "offset": 33}, {"diameter": 21, "width": 9.5, "offset": 36}],
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "PPE platform, shares with Porsche Macan EV"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}, {"diameter": 22, "width": 10, "offset": 26}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "medium",
+      "notes": "4M facelift generation"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}, {"diameter": 22, "width": 10, "offset": 26}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "4M facelift generation"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}, {"diameter": 22, "width": 10, "offset": 26}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "4M facelift generation"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}, {"diameter": 22, "width": 10, "offset": 26}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "4M facelift generation"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}, {"diameter": 22, "width": 10, "offset": 26}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "4M facelift generation"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}, {"diameter": 22, "width": 10, "offset": 26}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "4M facelift generation"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}, {"diameter": 22, "width": 10, "offset": 26}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "4M facelift start"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "4M pre-facelift"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "4M pre-facelift"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "4M pre-facelift"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "sq7",
+      "specs": {
+        "wheelSizes": [{"diameter": 21, "width": 9.5, "offset": 31}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "4M launch year"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "sq8",
+      "specs": {
+        "wheelSizes": [{"diameter": 22, "width": 10, "offset": 21}, {"diameter": 23, "width": 10.5, "offset": 22}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "medium",
+      "notes": "4M generation"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "sq8",
+      "specs": {
+        "wheelSizes": [{"diameter": 22, "width": 10, "offset": 21}, {"diameter": 23, "width": 10.5, "offset": 22}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high",
+      "notes": "4M generation"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "sq8",
+      "specs": {
+        "wheelSizes": [{"diameter": 22, "width": 10, "offset": 21}, {"diameter": 23, "width": 10.5, "offset": 22}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "4M generation"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "sq8",
+      "specs": {
+        "wheelSizes": [{"diameter": 22, "width": 10, "offset": 21}],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "4M generation"
+    }
+  ],
+  "stats": {
+    "total": 75,
+    "complete": 71,
+    "partial": 4,
+    "failed": 0
+  },
+  "notes": {
+    "S3_8L_2000-2003": "Uses 5x100 bolt pattern (not 5x112 like newer models)",
+    "S3_8P_2006-2013": "5x112 bolt pattern, 57.1mm center bore",
+    "SQ6_e-tron_PPE": "Uses Porsche PPE platform with 5x130 bolt pattern (not 5x112)",
+    "future_years": "2025-2026 specs extrapolated from current generation"
+  }
+}

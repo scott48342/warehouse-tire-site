@@ -1,0 +1,332 @@
+{
+  "batchId": "90s-batch-22-euro-luxury",
+  "completedAt": "2026-04-22T12:58:00.000Z",
+  "category": "European Luxury",
+  "results": [
+    {
+      "year_range": "1990-1994",
+      "make": "Jaguar",
+      "model": "XJ6",
+      "generation": "XJ40",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 73.8,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 30 },
+          { "diameter": 16, "width": 7, "offset": 33 }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["jaguarforums.com", "hulkoffsets.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "XJ40 generation. Same bolt pattern as Chevrolet (5x4.75 inch). BMW E39 wheels (5x120, 74mm hub) also fit with slight hub bore difference."
+    },
+    {
+      "year_range": "1995-1997",
+      "make": "Jaguar",
+      "model": "XJ6",
+      "generation": "X300",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 73.8,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 33 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["jaguarforums.com", "tiresize.com", "automobile-catalog.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "X300 generation. Continued use of 5x120.65 bolt pattern."
+    },
+    {
+      "year_range": "1998-1999",
+      "make": "Jaguar",
+      "model": "XJ8",
+      "generation": "X308",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 73.8,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 33 },
+          { "diameter": 17, "width": 7.5, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["225/60R16", "235/55R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["jaguarforums.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "X308 generation with V8 engine. XJR trim had 17-inch wheels."
+    },
+    {
+      "year_range": "1990-1996",
+      "make": "Jaguar",
+      "model": "XJS",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 73.8,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 30 },
+          { "diameter": 16, "width": 7, "offset": 33 }
+        ],
+        "oem_tire_sizes": ["215/70VR15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["jaguarforums.com", "avtoreference.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Grand tourer. Same bolt pattern as XJ series (5x4.75 inch). Last year 1996."
+    },
+    {
+      "year_range": "1997-1999",
+      "make": "Jaguar",
+      "model": "XK8",
+      "generation": "X100",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 73.8,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 8, "offset": 35 },
+          { "diameter": 18, "width": 8, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["245/50ZR17", "245/45ZR18"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["jaguarforums.com", "redline360.com", "autofiles.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Sports coupe/convertible replacing XJS. XKR supercharged variant available 1998+."
+    },
+    {
+      "year_range": "1992-1994",
+      "make": "Jaguar",
+      "model": "XJ220",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 9, "offset": 40, "position": "front" },
+          { "diameter": 18, "width": 13, "offset": 35, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["255/45ZR17", "345/35ZR18"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tire-size.net", "avtoreference.com", "automobile-catalog.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "RARE SUPERCAR - Only 281 produced. Unique bolt pattern (5x108) different from other Jaguars. Extreme staggered setup with 13-inch wide rear wheels. Bridgestone Expedia tires OEM."
+    },
+    {
+      "year_range": "1990-1994",
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "generation": "Classic",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x165.1",
+        "hub_bore": 113,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 33 }
+        ],
+        "oem_tire_sizes": ["205/80R16", "235/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["rangerovers.net", "rangeroverclassic.net", "roverparts.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Range Rover Classic. Unusual 5x165.1mm (5x6.5 inch) bolt pattern. Long wheelbase option added 1992."
+    },
+    {
+      "year_range": "1995-1999",
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "generation": "P38A",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 46 },
+          { "diameter": 18, "width": 8, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["255/65R16", "255/55R18"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com", "roverparts.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "P38A generation changed bolt pattern from 5x165.1 to 5x120. First Range Rover with 5x120 pattern."
+    },
+    {
+      "year_range": "1994-1999",
+      "make": "Land Rover",
+      "model": "Discovery",
+      "generation": "Series I",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x165.1",
+        "hub_bore": 113,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 33 }
+        ],
+        "oem_tire_sizes": ["235/70R16", "205/80R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "landroversonly.com", "roverparts.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Series I Discovery. Same 5x165.1mm bolt pattern as Range Rover Classic. US market 1994+."
+    },
+    {
+      "year_range": "1993-1997",
+      "make": "Land Rover",
+      "model": "Defender 90",
+      "generation": "NAS (North American Spec)",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x165.1",
+        "hub_bore": 113,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 33 }
+        ],
+        "oem_tire_sizes": ["235/85R16", "255/85R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roverparts.com", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "NAS (North American Spec) Defender. Limited US import 1993-1997. Same 5x165.1mm bolt pattern as Discovery/RR Classic."
+    },
+    {
+      "year_range": "1990-1993",
+      "make": "Mercedes-Benz",
+      "model": "190E",
+      "generation": "W201",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x112",
+        "hub_bore": 66.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 49 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "benzworld.org", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Compact executive sedan. Final production year 1993. 190E 2.3-16 and 2.5-16 sportier variants had same fitment."
+    },
+    {
+      "year_range": "1990-1999",
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "generation": "W463",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x130",
+        "hub_bore": 84.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 43 },
+          { "diameter": 18, "width": 7.5, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["265/70R16", "275/55R18"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "sizemywheels.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "DIFFERENT bolt pattern from other Mercedes (5x130, not 5x112). Shares pattern with Porsche. G500 available US 1999."
+    },
+    {
+      "year_range": "1990-1999",
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R129",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x112",
+        "hub_bore": 66.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 35 },
+          { "diameter": 17, "width": 8, "offset": 37 },
+          { "diameter": 18, "width": 8.5, "offset": 25, "position": "front" },
+          { "diameter": 18, "width": 9.5, "offset": 23, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/55R16", "245/45ZR17", "245/40ZR18", "275/35ZR18"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "benzworld.org", "hagerty.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Luxury roadster. 300SL, 500SL, 600SL (renamed SL320, SL500, SL600 in 1994). AMG Sport package had staggered 18-inch setup (8.5J front, 9.5J rear)."
+    },
+    {
+      "year_range": "1992-1999",
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "generation": "W140",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x112",
+        "hub_bore": 66.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 51 },
+          { "diameter": 17, "width": 7.5, "offset": 46 },
+          { "diameter": 18, "width": 8, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16", "235/60R16", "235/55R17", "245/45R18"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "benzworld.org", "tiresizehelp.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Flagship sedan. S320, S420, S500, S600 trims. Also available in coupe form (CL-Class C140). US market 1992+ (1991 European launch)."
+    },
+    {
+      "year_range": "1990-1995",
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W124",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x112",
+        "hub_bore": 66.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 49 },
+          { "diameter": 15, "width": 7, "offset": 44 },
+          { "diameter": 16, "width": 7.5, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "benzworld.org", "tireswheels.org", "wheelfitment.eu"],
+      "verifiedBy": "cross-reference",
+      "notes": "Mid-size sedan/wagon/coupe. Renamed from 200/300 series to E-Class in 1993. E36 AMG had 17x8 ET+30-35mm wheels."
+    }
+  ],
+  "summary": {
+    "total": 15,
+    "complete": 15,
+    "partial": 0,
+    "failed": 0,
+    "highConfidence": 15,
+    "needsReview": 0
+  },
+  "notes": {
+    "jaguar": "All Jaguar sedans/coupes (XJ, XJS, XK8) use 5x120.65mm (5x4.75 inch) - same as Chevrolet. XJ220 supercar uniquely uses 5x108mm.",
+    "land_rover": "Range Rover Classic, Discovery I, and Defender NAS all use 5x165.1mm. P38 Range Rover (1995+) switched to 5x120mm.",
+    "mercedes": "All Mercedes except G-Class use 5x112mm with 66.6mm hub bore. G-Class uses 5x130mm (Porsche pattern) with 84.1mm hub bore."
+  }
+}

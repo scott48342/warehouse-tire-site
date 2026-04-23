@@ -1,0 +1,899 @@
+{
+  "batchId": "81",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2008,
+      "make": "jeep",
+      "model": "patriot",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "jeep",
+      "model": "patriot",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19",
+        "215/65R17",
+        "225/60R17",
+        "235/55R17"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": [
+        "215/65R16",
+        "215/60R17",
+        "225/55R17",
+        "225/55R18",
+        "235/45R19"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "jeep",
+      "model": "renegade",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "jeep",
+      "model": "wagoneer",
+      "currentTireSizes": [
+        "275/55R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "jeep",
+      "model": "wagoneer",
+      "currentTireSizes": [
+        "275/55R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "jeep",
+      "model": "wagoneer",
+      "currentTireSizes": [
+        "275/55R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "jeep",
+      "model": "wagoneer",
+      "currentTireSizes": [
+        "285/45R22",
+        "275/55R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "jeep",
+      "model": "wagoneer",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "255/70R17",
+        "LT285/70R17",
+        "255/70R18",
+        "LT285/65R18",
+        "275/55R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "255/70R17",
+        "LT285/70R17",
+        "255/70R18",
+        "LT285/65R18",
+        "275/55R20",
+        "LT255/75R17"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "LT255/75R17",
+        "255/70R18",
+        "275/55R20",
+        "LT285/70R17"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "255/70R17",
+        "LT285/70R17",
+        "255/70R18",
+        "LT285/65R18",
+        "275/55R20",
+        "LT255/75R17"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "255/70R17",
+        "LT285/70R17",
+        "255/70R18",
+        "LT285/65R18",
+        "275/55R20",
+        "LT255/75R17"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "255/70R17",
+        "LT285/70R17",
+        "255/70R18",
+        "LT285/65R18",
+        "275/55R20",
+        "LT255/75R17"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "LT255/75R17",
+        "255/70R18",
+        "275/55R20",
+        "LT285/70R17"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "255/70R17",
+        "LT285/70R17",
+        "255/70R18",
+        "LT285/65R18",
+        "275/55R20",
+        "LT255/75R17"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "255/70R17",
+        "LT285/70R17",
+        "255/70R18",
+        "LT285/65R18",
+        "275/55R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "LT255/75R17",
+        "255/70R18",
+        "275/55R20",
+        "LT285/70R17"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "255/70R17",
+        "LT285/70R17",
+        "255/70R18",
+        "LT285/65R18",
+        "275/55R20",
+        "LT255/75R17"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "245/75R17",
+        "255/70R17",
+        "LT285/70R17",
+        "255/70R18",
+        "LT285/65R18",
+        "275/55R20",
+        "LT255/75R17"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "LT245/75R16",
+        "245/75R17",
+        "255/75R17",
+        "255/70R18",
+        "LT255/70R18",
+        "245/75R16",
+        "LT265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "245/75R16",
+        "255/75R17",
+        "255/70R18",
+        "245/75R17",
+        "265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "LT245/75R16",
+        "245/75R17",
+        "255/75R17",
+        "255/70R18",
+        "LT255/70R18",
+        "245/75R16",
+        "LT265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "245/75R16",
+        "255/75R17",
+        "255/70R18",
+        "245/75R17",
+        "265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "LT245/75R16",
+        "245/75R17",
+        "255/75R17",
+        "255/70R18",
+        "LT255/70R18",
+        "245/75R16",
+        "LT265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "245/75R16",
+        "255/75R17",
+        "255/70R18",
+        "245/75R17",
+        "265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "245/75R16",
+        "255/75R17",
+        "255/70R18",
+        "245/75R17",
+        "265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "245/75R16",
+        "255/75R17",
+        "255/70R18",
+        "245/75R17",
+        "265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "245/75R16",
+        "255/75R17",
+        "255/70R18",
+        "245/75R17",
+        "265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "245/75R16",
+        "255/75R17",
+        "255/70R18",
+        "245/75R17",
+        "265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "245/75R16",
+        "255/75R17",
+        "255/70R18",
+        "245/75R17",
+        "265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "245/75R16",
+        "255/75R17",
+        "255/70R18",
+        "245/75R17",
+        "265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "LT245/75R16",
+        "245/75R17",
+        "255/75R17",
+        "255/70R18",
+        "LT255/70R18"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "225/75R16",
+        "245/75R16",
+        "255/75R17",
+        "255/70R18",
+        "245/75R17",
+        "265/70R17",
+        "265/65R18",
+        "265/55R19",
+        "285/50R20",
+        "255/70R16"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "jeep",
+      "model": "wrangler",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "300e",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "300e",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "300e",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "300e",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "300e",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "amanti",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "amanti",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "kia",
+      "model": "amanti",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "amanti",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "amanti",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "amanti",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "avella",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "avella",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "avella",
+      "currentTireSizes": []
+    }
+  ]
+}

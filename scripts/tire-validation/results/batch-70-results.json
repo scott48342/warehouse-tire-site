@@ -1,0 +1,1098 @@
+{
+  "batchId": "70",
+  "processedAt": "2026-04-21T22:10:00Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "S2000",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {
+          "front": "215/45R17",
+          "rear": "245/40R17",
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["215/45R17", "245/40R17"],
+      "notes": "AP2 generation (2004-2009) uses staggered 17-inch setup. Current DB has incorrect sizes (205/55R16 is AP1, 225/45R17 and 245/40R18 are not OEM).",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "S2000",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {
+          "front": "215/45R17",
+          "rear": "245/40R17",
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["215/45R17", "245/40R17"],
+      "notes": "AP2 generation. Staggered 17-inch setup standard.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "S2000",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {
+          "front": "215/45R17",
+          "rear": "245/40R17",
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["215/45R17", "245/40R17"],
+      "notes": "First year of AP2 generation. Staggered 17-inch setup.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "S2000",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {
+          "front": "205/55R16",
+          "rear": "225/50R16",
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["205/55R16", "225/50R16"],
+      "notes": "AP1 generation. Staggered 16-inch setup. Current DB missing 225/50R16 rear size.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "S2000",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {
+          "front": "205/55R16",
+          "rear": "225/50R16",
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["205/55R16", "225/50R16"],
+      "notes": "AP1 generation. Staggered 16-inch setup.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "S2000",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {
+          "front": "205/55R16",
+          "rear": "225/50R16",
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["205/55R16", "225/50R16"],
+      "notes": "AP1 generation. Staggered 16-inch setup.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "S2000",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {
+          "front": "205/55R16",
+          "rear": "225/50R16",
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["205/55R16", "225/50R16"],
+      "notes": "AP1 generation. Staggered 16-inch setup.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Saber",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "32V (UA5)": "205/60R16",
+        "25V (UA4)": "205/60R16",
+        "Type S (UA5)": "205/60R16"
+      },
+      "recommendedSizes": ["205/60R16"],
+      "notes": "JDM market only. Honda Saber is the Japanese-market version of Acura TL (2nd gen). Uses 205/60R16 across all trims.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Saber",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "32V (UA5)": "205/60R16",
+        "25V (UA4)": "205/60R16"
+      },
+      "recommendedSizes": ["205/60R16"],
+      "notes": "JDM market only. Uses 205/60R16.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Saber",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "32V (UA5)": "205/60R16",
+        "25V (UA4)": "205/60R16"
+      },
+      "recommendedSizes": ["205/60R16"],
+      "notes": "JDM market only. Uses 205/60R16.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Saber",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "32V (UA5)": "205/60R16",
+        "25V (UA4)": "205/60R16"
+      },
+      "recommendedSizes": ["205/60R16"],
+      "notes": "JDM market only. Uses 205/60R16.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base (PA1)": "175/80R15",
+        "Turbo (PA1)": "175/80R15"
+      },
+      "recommendedSizes": ["175/80R15"],
+      "notes": "JDM kei car only. Mid-engine turbo AWD micro-SUV. Uses 175/80R15 for all variants.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base (PA1)": "175/80R15",
+        "Turbo (PA1)": "175/80R15"
+      },
+      "recommendedSizes": ["175/80R15"],
+      "notes": "JDM kei car only. Uses 175/80R15.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Z",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base (PA1)": "175/80R15",
+        "Turbo (PA1)": "175/80R15"
+      },
+      "recommendedSizes": ["175/80R15"],
+      "notes": "JDM kei car only. Uses 175/80R15.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2006,
+      "make": "Hummer",
+      "model": "H1",
+      "currentTireSizes": ["37x12.50R17"],
+      "validatedTireSizes": {
+        "Alpha": "37X12.50R17"
+      },
+      "recommendedSizes": ["37X12.50R17"],
+      "notes": "2006 H1 Alpha was the only civilian trim. Single tire size.",
+      "status": "VALID"
+    },
+    {
+      "year": 2005,
+      "make": "Hummer",
+      "model": "H1",
+      "currentTireSizes": ["37x12.50R17"],
+      "validatedTireSizes": {
+        "Base Model": "37X12.50R17"
+      },
+      "recommendedSizes": ["37X12.50R17"],
+      "notes": "All H1 models 2000-2006 use 37X12.50R17.",
+      "status": "VALID"
+    },
+    {
+      "year": 2004,
+      "make": "Hummer",
+      "model": "H1",
+      "currentTireSizes": ["37x12.50R17"],
+      "validatedTireSizes": {
+        "Base Model": "37X12.50R17"
+      },
+      "recommendedSizes": ["37X12.50R17"],
+      "notes": "All H1 models 2000-2006 use 37X12.50R17.",
+      "status": "VALID"
+    },
+    {
+      "year": 2003,
+      "make": "Hummer",
+      "model": "H1",
+      "currentTireSizes": ["37x12.50R17"],
+      "validatedTireSizes": {
+        "Base Model": "37X12.50R17"
+      },
+      "recommendedSizes": ["37X12.50R17"],
+      "notes": "All H1 models 2000-2006 use 37X12.50R17.",
+      "status": "VALID"
+    },
+    {
+      "year": 2002,
+      "make": "Hummer",
+      "model": "H1",
+      "currentTireSizes": ["37x12.50R17"],
+      "validatedTireSizes": {
+        "Base Model": "37X12.50R17"
+      },
+      "recommendedSizes": ["37X12.50R17"],
+      "notes": "All H1 models 2000-2006 use 37X12.50R17.",
+      "status": "VALID"
+    },
+    {
+      "year": 2001,
+      "make": "Hummer",
+      "model": "H1",
+      "currentTireSizes": ["37x12.50R17"],
+      "validatedTireSizes": {
+        "Base Model": "37X12.50R17"
+      },
+      "recommendedSizes": ["37X12.50R17"],
+      "notes": "All H1 models 2000-2006 use 37X12.50R17.",
+      "status": "VALID"
+    },
+    {
+      "year": 2000,
+      "make": "Hummer",
+      "model": "H1",
+      "currentTireSizes": ["37x12.50R17"],
+      "validatedTireSizes": {
+        "Base Model": "37X12.50R17"
+      },
+      "recommendedSizes": ["37X12.50R17"],
+      "notes": "First year with 17-inch wheels (prior years used 16.5-inch).",
+      "status": "VALID"
+    },
+    {
+      "year": 2009,
+      "make": "Hummer",
+      "model": "H2",
+      "currentTireSizes": ["LT315/70R17", "LT295/70R18", "305/55R20"],
+      "validatedTireSizes": {
+        "Base Model": "315/70R17"
+      },
+      "recommendedSizes": ["315/70R17"],
+      "notes": "All H2 models (2003-2009) used 315/70R17 as standard OEM. 295/70R18 and 305/55R20 appear to be aftermarket options, not OEM.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2008,
+      "make": "Hummer",
+      "model": "H2",
+      "currentTireSizes": ["LT315/70R17", "LT295/70R18", "305/55R20"],
+      "validatedTireSizes": {
+        "Base Model": "315/70R17"
+      },
+      "recommendedSizes": ["315/70R17"],
+      "notes": "Standard OEM is 315/70R17. Other sizes likely aftermarket.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2007,
+      "make": "Hummer",
+      "model": "H2",
+      "currentTireSizes": ["LT315/70R17", "LT295/70R18", "305/55R20"],
+      "validatedTireSizes": {
+        "Base Model": "315/70R17"
+      },
+      "recommendedSizes": ["315/70R17"],
+      "notes": "Standard OEM is 315/70R17.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2006,
+      "make": "Hummer",
+      "model": "H2",
+      "currentTireSizes": ["LT315/70R17", "LT295/70R18", "305/55R20"],
+      "validatedTireSizes": {
+        "Base Model": "315/70R17"
+      },
+      "recommendedSizes": ["315/70R17"],
+      "notes": "Standard OEM is 315/70R17.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2005,
+      "make": "Hummer",
+      "model": "H2",
+      "currentTireSizes": ["LT315/70R17", "LT295/70R18", "305/55R20"],
+      "validatedTireSizes": {
+        "Base Model": "315/70R17"
+      },
+      "recommendedSizes": ["315/70R17"],
+      "notes": "Standard OEM is 315/70R17.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2004,
+      "make": "Hummer",
+      "model": "H2",
+      "currentTireSizes": ["LT315/70R17", "LT295/70R18", "305/55R20"],
+      "validatedTireSizes": {
+        "Base Model": "315/70R17"
+      },
+      "recommendedSizes": ["315/70R17"],
+      "notes": "Standard OEM is 315/70R17.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2003,
+      "make": "Hummer",
+      "model": "H2",
+      "currentTireSizes": ["LT315/70R17", "LT295/70R18", "305/55R20"],
+      "validatedTireSizes": {
+        "Base Model": "315/70R17"
+      },
+      "recommendedSizes": ["315/70R17"],
+      "notes": "First year of H2. Standard OEM is 315/70R17.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2010,
+      "make": "Hummer",
+      "model": "H3",
+      "currentTireSizes": ["P265/75R16", "285/55R18"],
+      "validatedTireSizes": {
+        "Base Model": "265/75R16",
+        "Luxury Package": "265/75R16",
+        "Adventure Package": "285/75R16",
+        "Alpha": "265/75R16",
+        "Alpha Adventure Package": "285/75R16",
+        "H3X": "265/65R18",
+        "H3T": "265/75R16"
+      },
+      "recommendedSizes": ["265/75R16", "285/75R16", "265/65R18"],
+      "notes": "Current DB has 285/55R18 which is not OEM. H3X uses 265/65R18. Most trims use 265/75R16 or 285/75R16.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2009,
+      "make": "Hummer",
+      "model": "H3",
+      "currentTireSizes": ["P265/75R16", "285/55R18"],
+      "validatedTireSizes": {
+        "Base Model": "265/75R16",
+        "Luxury Package": "265/75R16",
+        "Adventure Package": "285/75R16",
+        "Alpha Base": "265/75R16",
+        "Alpha Adventure Package": "285/75R16",
+        "X": "265/65R18"
+      },
+      "recommendedSizes": ["265/75R16", "285/75R16", "265/65R18"],
+      "notes": "285/55R18 not OEM. Correct sizes are 265/75R16, 285/75R16, 265/65R18.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2008,
+      "make": "Hummer",
+      "model": "H3",
+      "currentTireSizes": ["P265/75R16", "285/55R18"],
+      "validatedTireSizes": {
+        "Base Model": "265/75R16",
+        "Luxury Package": "265/75R16",
+        "Adventure Package": "285/75R16",
+        "Alpha": "265/75R16",
+        "Alpha Adventure Package": "285/75R16",
+        "X": "265/65R18"
+      },
+      "recommendedSizes": ["265/75R16", "285/75R16", "265/65R18"],
+      "notes": "285/55R18 not OEM.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2007,
+      "make": "Hummer",
+      "model": "H3",
+      "currentTireSizes": ["P265/75R16", "285/55R18"],
+      "validatedTireSizes": {
+        "Base Model": "265/75R16",
+        "Luxury Package": "265/75R16",
+        "Adventure Package": "285/75R16",
+        "Off-Road Suspension": "285/75R16",
+        "X": "265/65R18"
+      },
+      "recommendedSizes": ["265/75R16", "285/75R16", "265/65R18"],
+      "notes": "First year for H3 X trim with 18-inch wheels. 285/55R18 not OEM.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2006,
+      "make": "Hummer",
+      "model": "H3",
+      "currentTireSizes": ["P265/75R16", "285/55R18"],
+      "validatedTireSizes": {
+        "Base Model": "265/75R16",
+        "Luxury Package": "265/75R16",
+        "Adventure Package": "285/75R16",
+        "Off-Road Suspension": "285/75R16"
+      },
+      "recommendedSizes": ["265/75R16", "285/75R16"],
+      "notes": "First year of H3. No 18-inch option in 2006. 285/55R18 is incorrect.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2008,
+      "make": "Hyundai",
+      "model": "Amica",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "155/70R13",
+        "GL": "175/60R13"
+      },
+      "recommendedSizes": ["155/70R13", "175/60R13"],
+      "notes": "UK/Europe market (also known as Atos). 2004-2008 generation. Small city car.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2007,
+      "make": "Hyundai",
+      "model": "Amica",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "155/70R13",
+        "GL": "175/60R13"
+      },
+      "recommendedSizes": ["155/70R13", "175/60R13"],
+      "notes": "UK/Europe market.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2006,
+      "make": "Hyundai",
+      "model": "Amica",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "155/70R13",
+        "GL": "175/60R13"
+      },
+      "recommendedSizes": ["155/70R13", "175/60R13"],
+      "notes": "UK/Europe market.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2005,
+      "make": "Hyundai",
+      "model": "Amica",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "155/70R13",
+        "GL": "175/60R13"
+      },
+      "recommendedSizes": ["155/70R13", "175/60R13"],
+      "notes": "UK/Europe market.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2004,
+      "make": "Hyundai",
+      "model": "Amica",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "155/70R13",
+        "GL": "175/60R13"
+      },
+      "recommendedSizes": ["155/70R13", "175/60R13"],
+      "notes": "UK/Europe market. First year of second generation (4x100 bolt pattern).",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2003,
+      "make": "Hyundai",
+      "model": "Amica",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "155/70R13",
+        "GL": "175/60R13"
+      },
+      "recommendedSizes": ["155/70R13", "175/60R13"],
+      "notes": "UK/Europe market. First generation (4x114.3 bolt pattern).",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2002,
+      "make": "Hyundai",
+      "model": "Amica",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "155/70R13",
+        "GL": "175/60R13"
+      },
+      "recommendedSizes": ["155/70R13", "175/60R13"],
+      "notes": "UK/Europe market. First generation.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2001,
+      "make": "Hyundai",
+      "model": "Amica",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "155/70R13",
+        "GL": "175/60R13"
+      },
+      "recommendedSizes": ["155/70R13", "175/60R13"],
+      "notes": "UK/Europe market. First generation.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "Amica",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": "155/70R13",
+        "GL": "175/60R13"
+      },
+      "recommendedSizes": ["155/70R13", "175/60R13"],
+      "notes": "UK/Europe market. First generation.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2018,
+      "make": "Hyundai",
+      "model": "Aslan",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.4 GDi": "235/50R18",
+        "3.0 GDi": "235/50R18"
+      },
+      "recommendedSizes": ["235/50R18"],
+      "notes": "Korean market only. Executive sedan based on Grandeur platform. Standard 18-inch wheels.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2017,
+      "make": "Hyundai",
+      "model": "Aslan",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.4 GDi": "235/50R18",
+        "3.0 GDi": "235/50R18"
+      },
+      "recommendedSizes": ["235/50R18"],
+      "notes": "Korean market only.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2016,
+      "make": "Hyundai",
+      "model": "Aslan",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.4 GDi": "235/50R18",
+        "3.0 GDi": "235/50R18"
+      },
+      "recommendedSizes": ["235/50R18"],
+      "notes": "Korean market only.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2015,
+      "make": "Hyundai",
+      "model": "Aslan",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.4 GDi": "235/50R18",
+        "3.0 GDi": "235/50R18"
+      },
+      "recommendedSizes": ["235/50R18"],
+      "notes": "Korean market only.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2014,
+      "make": "Hyundai",
+      "model": "Aslan",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.4 GDi": "235/50R18",
+        "3.0 GDi": "235/50R18"
+      },
+      "recommendedSizes": ["235/50R18"],
+      "notes": "Korean market only. First year of production.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2025,
+      "make": "Hyundai",
+      "model": "Custo",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "380T": "235/55R18"
+      },
+      "recommendedSizes": ["235/55R18"],
+      "notes": "Chinese market minivan. Based on Tucson platform. Standard 18-inch wheels.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2024,
+      "make": "Hyundai",
+      "model": "Custo",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "380T": "235/55R18"
+      },
+      "recommendedSizes": ["235/55R18"],
+      "notes": "Chinese market minivan.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2023,
+      "make": "Hyundai",
+      "model": "Custo",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "380T": "235/55R18"
+      },
+      "recommendedSizes": ["235/55R18"],
+      "notes": "Chinese market minivan.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2022,
+      "make": "Hyundai",
+      "model": "Custo",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "380T": "235/55R18"
+      },
+      "recommendedSizes": ["235/55R18"],
+      "notes": "Chinese market minivan.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2021,
+      "make": "Hyundai",
+      "model": "Custo",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "380T": "235/55R18"
+      },
+      "recommendedSizes": ["235/55R18"],
+      "notes": "Chinese market minivan. First year of production.",
+      "status": "ADD_SIZES"
+    },
+    {
+      "year": 2026,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["205/55R16", "225/45R17", "235/40R18"],
+      "validatedTireSizes": {
+        "SE": "195/65R15",
+        "SEL Sport": "225/45R17",
+        "Hybrid Blue": "205/55R16",
+        "Hybrid SEL Sport": "225/45R17",
+        "Hybrid Limited": "225/45R17",
+        "Limited": "225/45R17",
+        "N Line": "235/40R18",
+        "N": "245/35R19"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "225/45R17", "235/40R18", "245/35R19"],
+      "notes": "Current DB missing 195/65R15 (SE) and 245/35R19 (Elantra N).",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2025,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["205/55R16", "225/45R17", "235/40R18"],
+      "validatedTireSizes": {
+        "SE": "195/65R15",
+        "SEL": "225/45R17",
+        "Hybrid Blue": "205/55R16",
+        "Hybrid SEL Sport": "225/45R17",
+        "Hybrid Limited": "225/45R17",
+        "Limited": "225/45R17",
+        "N Line": "235/40R18",
+        "N": "245/35R19"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "225/45R17", "235/40R18", "245/35R19"],
+      "notes": "Missing 195/65R15 and 245/35R19.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2024,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["205/55R16", "225/45R17", "235/40R18"],
+      "validatedTireSizes": {
+        "SE": "195/65R15",
+        "SEL": ["205/55R16", "225/45R17"],
+        "Hybrid Blue": "205/55R16",
+        "Hybrid Limited": "225/45R17",
+        "Limited": "225/45R17",
+        "N Line": "235/40R18",
+        "N": "245/35R19"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "225/45R17", "235/40R18", "245/35R19"],
+      "notes": "Missing 195/65R15 and 245/35R19.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2023,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["205/55R16", "225/45R17", "235/40R18", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "SE": "195/65R15",
+        "SEL": ["205/55R16", "225/45R17"],
+        "Hybrid Blue": "205/55R16",
+        "Hybrid Limited": "225/45R17",
+        "Limited": "225/45R17",
+        "N Line": "235/40R18",
+        "N": "245/35R19"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "225/45R17", "235/40R18", "245/35R19"],
+      "notes": "205/50R17 and 225/40R18 are not OEM for US market. Missing 195/65R15 and 245/35R19.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2022,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["205/55R16", "225/45R17", "235/40R18"],
+      "validatedTireSizes": {
+        "SE": "195/65R15",
+        "SEL": "205/55R16",
+        "Hybrid Blue": "205/55R16",
+        "Hybrid Limited": "225/45R17",
+        "Limited": "225/45R17",
+        "N Line": "235/40R18",
+        "N": "245/35R19"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "225/45R17", "235/40R18", "245/35R19"],
+      "notes": "First year for Elantra N with 245/35R19.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2021,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["205/55R16", "225/45R17", "235/40R18"],
+      "validatedTireSizes": {
+        "SE": "195/65R15",
+        "SEL": "205/55R16",
+        "Hybrid Blue": "205/55R16",
+        "Hybrid Limited": "225/45R17",
+        "Limited": "225/45R17",
+        "N Line": "235/40R18"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "225/45R17", "235/40R18"],
+      "notes": "New generation (CN7). Missing 195/65R15.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2020,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/45ZR17", "205/50R17"],
+      "validatedTireSizes": {
+        "Eco": "195/65R15",
+        "SE": "195/65R15",
+        "Value Edition": "205/55R16",
+        "SEL": "205/55R16",
+        "Limited": "225/45R17",
+        "GT": "225/45R17",
+        "GT N Line": "225/40R18",
+        "Sport": "225/40R18"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "notes": "205/50R17 and 225/45ZR17 are not standard OEM.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2019,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Eco": "195/65R15",
+        "SE": "195/65R15",
+        "Value Edition": "205/55R16",
+        "SEL": "205/55R16",
+        "Limited": "225/45R17",
+        "GT": "225/45R17",
+        "GT N Line": "225/40R18",
+        "Sport": "225/40R18"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "notes": "Missing 225/40R18 for GT N Line and Sport trims.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2018,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "validatedTireSizes": {
+        "Eco": "195/65R15",
+        "SE": "195/65R15",
+        "Value Edition": "205/55R16",
+        "SEL": "205/55R16",
+        "Limited": "225/45R17",
+        "GT": "225/40R18",
+        "Sport": "225/40R18"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "notes": "Missing 225/40R18 for GT and Sport.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2017,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "225/45ZR17", "205/50R17"],
+      "validatedTireSizes": {
+        "Eco": "195/65R15",
+        "SE": ["195/65R15", "205/55R16"],
+        "Value Edition": "205/55R16",
+        "Limited": "225/45R17",
+        "GT": ["205/55R16", "215/45R17"],
+        "Sport": "225/40R18"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "notes": "205/50R17 and 225/45ZR17 not standard OEM. Sport trim uses 225/40R18.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2016,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": {
+        "SE": ["195/65R15", "205/55R16"],
+        "Value Edition": "205/55R16",
+        "Limited": "215/45R17",
+        "GT": ["205/55R16", "215/45R17"],
+        "Sport": "215/45R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "notes": "Data matches current DB.",
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": {
+        "SE": ["195/65R15", "205/55R16"],
+        "Limited": "215/45R17",
+        "Sport": "215/45R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "notes": "Data matches current DB.",
+      "status": "VALID"
+    },
+    {
+      "year": 2014,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": {
+        "SE": ["195/65R15", "205/55R16"],
+        "Limited": "215/45R17",
+        "Coupe": "215/45R17",
+        "GT": ["205/55R16", "215/45R17"],
+        "Sport": "215/45R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "notes": "Data matches current DB.",
+      "status": "VALID"
+    },
+    {
+      "year": 2013,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": {
+        "GLS": "205/55R16",
+        "Limited": "215/45R17",
+        "Coupe GS": "205/55R16",
+        "Coupe SE": "215/45R17",
+        "GT": ["205/55R16", "215/45R17"]
+      },
+      "recommendedSizes": ["205/55R16", "215/45R17"],
+      "notes": "195/65R15 not available for 2013 model year.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2012,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": {
+        "GLS": ["195/65R15", "205/55R16"],
+        "Limited": "215/45R17",
+        "Touring GLS": "195/65R15",
+        "Touring SE": ["205/55R16", "215/45R17"]
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "notes": "Data matches current DB.",
+      "status": "VALID"
+    },
+    {
+      "year": 2011,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": {
+        "GLS": ["195/65R15", "205/55R16"],
+        "Limited": "215/45R17",
+        "Touring GLS": "195/65R15",
+        "Touring SE": ["205/55R16", "215/45R17"]
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "notes": "Data matches current DB.",
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": {
+        "Blue": "195/65R15",
+        "GLS": ["195/65R15", "205/55R16"],
+        "SE": "205/55R16",
+        "Touring GLS": "195/65R15",
+        "Touring SE": ["205/55R16", "215/45R17"]
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "notes": "Touring SE has 215/45R17 option not in current DB.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2009,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": {
+        "GLS": ["195/65R15", "205/55R16"],
+        "SE": "205/55R16",
+        "Touring Standard": "205/55R16",
+        "Touring Premium Sport": "215/45R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "notes": "Touring Premium Sport has 215/45R17 not in DB.",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2008,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": {
+        "GLS": ["195/65R15", "205/55R16"],
+        "SE": "205/55R16"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16"],
+      "notes": "Data matches current DB.",
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": {
+        "GLS": ["195/65R15", "205/55R16"],
+        "SE": "205/55R16",
+        "Limited": "205/55R16"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16"],
+      "notes": "Data matches current DB.",
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/60R15"],
+      "validatedTireSizes": {
+        "GLS 5-Door": "195/60R15",
+        "GLS Sedan": "195/60R15",
+        "GT 5-Door": "195/60R15",
+        "Limited Sedan": "195/60R15"
+      },
+      "recommendedSizes": ["195/60R15"],
+      "notes": "Data matches current DB.",
+      "status": "VALID"
+    },
+    {
+      "year": 2005,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/60R15"],
+      "validatedTireSizes": {
+        "GLS Hatchback": "195/60R15",
+        "GLS Sedan": "195/60R15",
+        "GT Hatchback": "195/60R15",
+        "GT Sedan": "195/60R15"
+      },
+      "recommendedSizes": ["195/60R15"],
+      "notes": "Data matches current DB.",
+      "status": "VALID"
+    },
+    {
+      "year": 2004,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "currentTireSizes": ["195/60R15"],
+      "validatedTireSizes": {
+        "GLS Sedan": "195/60R15",
+        "GT Hatchback": "195/60R15",
+        "GT Sedan": "195/60R15"
+      },
+      "recommendedSizes": ["195/60R15"],
+      "notes": "Data matches current DB.",
+      "status": "VALID"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "valid": 21,
+    "needsUpdate": 31,
+    "addSizes": 23,
+    "keyFindings": [
+      "Honda S2000: AP1 (2000-2003) uses staggered 16-inch (F:205/55R16, R:225/50R16), AP2 (2004-2009) uses staggered 17-inch (F:215/45R17, R:245/40R17). Current DB has mixed/incorrect sizes.",
+      "Honda Saber: JDM-only vehicle (2000-2003), uses 205/60R16. Needs sizes added.",
+      "Honda Z: JDM kei car (2000-2002), uses 175/80R15. Needs sizes added.",
+      "Hummer H1: All 2000-2006 use 37X12.50R17. Data valid.",
+      "Hummer H2: Standard OEM is 315/70R17. DB has non-OEM sizes (LT295/70R18, 305/55R20).",
+      "Hummer H3: 285/55R18 is not OEM. Correct 18-inch size is 265/65R18 (H3X only).",
+      "Hyundai Amica: UK/Europe market city car (2000-2008), uses 155/70R13 and 175/60R13. Needs sizes added.",
+      "Hyundai Aslan: Korean market executive sedan (2014-2018), uses 235/50R18. Needs sizes added.",
+      "Hyundai Custo: Chinese market minivan (2021-2025), uses 235/55R18. Needs sizes added.",
+      "Hyundai Elantra: Several years missing 195/65R15, 225/40R18, or 245/35R19 for specific trims."
+    ]
+  }
+}

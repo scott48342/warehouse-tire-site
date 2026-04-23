@@ -1,0 +1,895 @@
+{
+  "batchId": "overnight-070-mercedes-benz",
+  "verifiedAt": "2025-07-19T03:15:00Z",
+  "summary": {
+    "total": 75,
+    "verified": 60,
+    "flagged": 0,
+    "invalid": 15
+  },
+  "notes": [
+    "All Mercedes S-Class use 5x112 bolt pattern and 66.6mm hub bore - CONFIRMED",
+    "W221 (2007-2013): S450 started 2008 in US, not 2007",
+    "W222 (2014-2020): S450 and S560 introduced in 2018 facelift, not available 2014-2017",
+    "W223 (2021+): S63 E Performance is a 2023 model, not 2021"
+  ],
+  "results": [
+    {
+      "id": "cb12f08b-266d-4960-9b5a-1993986c0000",
+      "year": 2007,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S550",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S550 - verified correct"
+    },
+    {
+      "id": "683970d6-168c-47a7-b589-84d80b53a9fa",
+      "year": 2007,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "invalid",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "INVALID: S450 not available in US until 2008. Delete this entry."
+    },
+    {
+      "id": "15ad6d64-4e69-4217-a2b4-f53addf757b8",
+      "year": 2007,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 Base - verified correct"
+    },
+    {
+      "id": "b176bfca-1801-49bd-9b1c-b5894189f269",
+      "year": 2007,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S600",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S600 V12 - verified correct"
+    },
+    {
+      "id": "15f68aa5-6ec6-4ee0-addb-0d3ecf01c4e2",
+      "year": 2007,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S63 AMG - staggered 19\" wheels correct"
+    },
+    {
+      "id": "96a165c6-5902-4b4c-babc-479256f6cff0",
+      "year": 2008,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S600",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S600 - verified correct"
+    },
+    {
+      "id": "4da08171-fd5f-400e-9d48-0bfac7b2768d",
+      "year": 2008,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S550",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S550 - verified correct"
+    },
+    {
+      "id": "d34dfc36-40ad-494c-9caf-513910abb9f0",
+      "year": 2008,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S450 - first year in US, verified correct"
+    },
+    {
+      "id": "4c9f9999-1edb-4f5a-9454-8bafb111bd78",
+      "year": 2008,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 Base - verified correct"
+    },
+    {
+      "id": "e0366b44-1ace-4372-b311-c42f769904b2",
+      "year": 2008,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S63 AMG - staggered 19\" wheels correct"
+    },
+    {
+      "id": "d0b68c15-c903-4f7b-a7d8-e85f82ca6971",
+      "year": 2009,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S63 AMG - verified correct"
+    },
+    {
+      "id": "ead4a604-45e8-441d-a882-8b5557463bb4",
+      "year": 2009,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S450 - verified correct"
+    },
+    {
+      "id": "7bf50456-f74c-4922-a76b-cba64a13e72f",
+      "year": 2009,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S550",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S550 - verified correct"
+    },
+    {
+      "id": "ab3a29dc-3ba9-4b86-9178-3434d3cd0481",
+      "year": 2009,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S600",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S600 - verified correct"
+    },
+    {
+      "id": "07ba9e47-57a4-48d8-84c9-1bc8063ab701",
+      "year": 2009,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 Base - verified correct"
+    },
+    {
+      "id": "5557c24f-9bc5-4000-b646-f5226c4a6541",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 Base - verified correct"
+    },
+    {
+      "id": "f6cbcb45-fd9d-4852-a7c7-beb03a97c96c",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S63 AMG - verified correct"
+    },
+    {
+      "id": "d146b7e9-110f-47f6-b1b9-b3deb3a86bac",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S450 - verified correct"
+    },
+    {
+      "id": "8b1d7f27-a760-44ee-a5b1-594561460ee5",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S550",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S550 - verified correct"
+    },
+    {
+      "id": "f13c79d9-797d-4704-9c6e-ee8e4be2737b",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S600",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S600 - verified correct"
+    },
+    {
+      "id": "7471eca0-7e74-4070-814e-95733b7b3bf6",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S550",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S550 - verified correct"
+    },
+    {
+      "id": "ccbaeae4-0ac0-44a0-b1be-14a967b7bfa6",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S63 AMG - verified correct"
+    },
+    {
+      "id": "8a607bfb-16b4-42eb-866a-9149094d8ae8",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S450 - verified correct"
+    },
+    {
+      "id": "d1c9de92-93fb-469b-a6dd-8cc0f6f4d7a7",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 Base - verified correct"
+    },
+    {
+      "id": "fedb4d6f-f5d1-4b90-93a3-3d2014aaf925",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S600",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S600 - verified correct"
+    },
+    {
+      "id": "b74a2c0b-f1d5-4727-a1ac-dcd248a98ebe",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S550",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S550 - verified correct"
+    },
+    {
+      "id": "f8417694-bb70-4795-8936-52d83abae0fb",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 Base - verified correct"
+    },
+    {
+      "id": "464f4c3d-c7b1-4728-af8c-5a8006cd315c",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S450 - verified correct"
+    },
+    {
+      "id": "d07d4b78-920f-4cc0-864e-26b7d012203a",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S600",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S600 - verified correct"
+    },
+    {
+      "id": "6efb2922-64e9-4644-8f20-4e8b36cf8772",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S63 AMG - verified correct"
+    },
+    {
+      "id": "1f2943ee-fd8b-408e-82a9-cc46733ff341",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S450 - last year of W221, verified correct"
+    },
+    {
+      "id": "7ef147e6-24de-4ae8-bb41-5d1902c042ff",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S63 AMG - verified correct"
+    },
+    {
+      "id": "97f68ca0-2cd0-426f-b6e4-6dd9fb9df953",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S550",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S550 - verified correct"
+    },
+    {
+      "id": "3661e078-4143-4702-837c-9c3923d00893",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 Base - verified correct"
+    },
+    {
+      "id": "47f7fbd8-1105-496d-866e-40be7dbb3d02",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S600",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W221 S600 - verified correct"
+    },
+    {
+      "id": "43a5a3e6-ec59-4423-99e0-e8b999517c5a",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 Base - first year of new generation, verified correct"
+    },
+    {
+      "id": "37397b79-46a9-4df8-ab2a-f58c7bd35c58",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "invalid",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "INVALID: S450 not available until 2018 facelift. Delete this entry."
+    },
+    {
+      "id": "69a6b041-c126-44f7-85d4-455cd58793d5",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S560",
+      "status": "invalid",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "INVALID: S560 not available until 2018 facelift. Delete this entry."
+    },
+    {
+      "id": "aa67ce19-180c-49b3-b00d-2227d896e8a0",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S63 AMG - staggered 20\" wheels correct"
+    },
+    {
+      "id": "7d62c9c9-c125-4798-949a-fc1629e8417d",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S65 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S65 AMG - staggered 20\" wheels (9/10\") correct"
+    },
+    {
+      "id": "b3a4deed-31ad-422a-a50e-0fc8dd1dd3bc",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S65 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S65 AMG - verified correct"
+    },
+    {
+      "id": "3d3790b2-dff2-4103-a8ce-29f14d8c6a8b",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 Base - verified correct"
+    },
+    {
+      "id": "250a12a3-4328-498a-b1b2-610b63627c56",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S560",
+      "status": "invalid",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "INVALID: S560 not available until 2018 facelift. Delete this entry."
+    },
+    {
+      "id": "a799808c-9c3a-496b-bb34-3dabc442b3f2",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S63 AMG - verified correct"
+    },
+    {
+      "id": "fea2a7f0-a029-45b7-9bf2-28fd30c05740",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "invalid",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "INVALID: S450 not available until 2018 facelift. Delete this entry."
+    },
+    {
+      "id": "2af3438c-4a19-4d42-9599-f5b8c4fe1f73",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S65 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S65 AMG - verified correct"
+    },
+    {
+      "id": "eae64c26-6fc0-42e5-b505-1a267e07dfd4",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S560",
+      "status": "invalid",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "INVALID: S560 not available until 2018 facelift. Delete this entry."
+    },
+    {
+      "id": "9524051a-80bb-4a86-89b0-3f50dbf67df7",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S63 AMG - verified correct"
+    },
+    {
+      "id": "c0c52d2e-87aa-4bef-9446-1b35fd05d8d1",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "invalid",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "INVALID: S450 not available until 2018 facelift. Delete this entry."
+    },
+    {
+      "id": "50a3b92d-e08b-4ae9-bdd9-956084971cc9",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 Base - verified correct"
+    },
+    {
+      "id": "317fe40b-1873-4e31-abee-d307fa040027",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S63 AMG - verified correct"
+    },
+    {
+      "id": "68cff4b6-1a1b-4492-ae47-5a0cd17daf4e",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S65 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S65 AMG - verified correct"
+    },
+    {
+      "id": "64117b83-9e19-4bd9-b605-d44a19198ee1",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 Base - verified correct"
+    },
+    {
+      "id": "df779035-97a7-4d39-8e45-2599d8c498e6",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S560",
+      "status": "invalid",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "INVALID: S560 not available until 2018 facelift. Delete this entry."
+    },
+    {
+      "id": "064eba05-7739-4f85-ac3c-05a3bb1861c9",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "invalid",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "INVALID: S450 not available until 2018 facelift. Delete this entry."
+    },
+    {
+      "id": "97fd2501-a0e4-4394-b1cd-4ac28c27f9cc",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S65 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 facelift S65 AMG - verified correct"
+    },
+    {
+      "id": "0df50b4b-d210-43cc-8329-c5f7137b1bd4",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 facelift Base - verified correct"
+    },
+    {
+      "id": "e680492f-4bc9-4b6e-81b2-ac2b534c8e15",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 facelift S450 - first year of S450 return, verified correct"
+    },
+    {
+      "id": "ca019ade-63b8-4990-aac4-52f9c09689bc",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S560",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 facelift S560 - first year, replaced S550, verified correct"
+    },
+    {
+      "id": "5dfbdb3f-a759-4527-a80a-891dae79400b",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 facelift S63 AMG - verified correct"
+    },
+    {
+      "id": "8db78fc3-e13e-4e72-9922-faad07944902",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S560",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S560 - verified correct"
+    },
+    {
+      "id": "d362d24f-2bd2-42ec-ba33-b4febd675e6c",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 Base - verified correct"
+    },
+    {
+      "id": "d9560b11-ed1f-44ca-8847-ceb533d10f2b",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S450 - verified correct"
+    },
+    {
+      "id": "47eaba87-4d31-4fc6-ab9a-93a6e79b5dd6",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S63 AMG - verified correct"
+    },
+    {
+      "id": "b459dbb0-43ea-4e63-9e11-8a5c6606bde4",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S65 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S65 AMG - verified correct"
+    },
+    {
+      "id": "47b353b2-4d34-4767-8387-a87bdf2cf040",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S450",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S450 - last year of W222, verified correct"
+    },
+    {
+      "id": "80359a2f-b6db-4ebf-bd08-fba9b40f4f3f",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S65 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S65 AMG - last year of V12 AMG, verified correct"
+    },
+    {
+      "id": "9f92c83b-cbde-4a44-8153-240668f3d78f",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S63 AMG - verified correct"
+    },
+    {
+      "id": "5b68f7e4-83ce-47f9-8114-50245e0ca763",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S560",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 S560 - last year, verified correct"
+    },
+    {
+      "id": "5cc23e9c-021e-4bc6-acca-5d16c790d180",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W222 Base - verified correct"
+    },
+    {
+      "id": "130f40ff-6be6-40b9-a0e8-e9ff0214429e",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG E Performance",
+      "status": "invalid",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "INVALID: S63 E Performance is a 2023 model (debuted Dec 2022). Delete this entry."
+    },
+    {
+      "id": "aacff53a-c1ca-4c8e-9494-5b148ac8e670",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W223 Base - first year of new generation, verified correct"
+    },
+    {
+      "id": "66ad589a-7e6e-440c-961f-8cfe367ce838",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S500",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W223 S500 - new trim for W223, verified correct"
+    },
+    {
+      "id": "f9c0ca0d-ddc9-487a-8c7a-f78d283296dd",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "Maybach S580",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W223 Maybach S580 - verified correct"
+    },
+    {
+      "id": "d89f81db-0fd4-4586-827c-87ca3ecc24ce",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class",
+      "trim": "S580",
+      "status": "verified",
+      "boltPattern": { "current": "5x112", "verified": "5x112", "match": true },
+      "hubBore": { "current": "66.6", "verified": "66.6", "match": true },
+      "notes": "W223 S580 - replaces S560, verified correct"
+    }
+  ],
+  "invalidVehicles": [
+    {
+      "id": "683970d6-168c-47a7-b589-84d80b53a9fa",
+      "vehicle": "2007 Mercedes S-Class S450",
+      "reason": "S450 not sold in US until 2008"
+    },
+    {
+      "id": "37397b79-46a9-4df8-ab2a-f58c7bd35c58",
+      "vehicle": "2014 Mercedes S-Class S450",
+      "reason": "S450 not available until 2018 facelift"
+    },
+    {
+      "id": "69a6b041-c126-44f7-85d4-455cd58793d5",
+      "vehicle": "2014 Mercedes S-Class S560",
+      "reason": "S560 not available until 2018 facelift"
+    },
+    {
+      "id": "250a12a3-4328-498a-b1b2-610b63627c56",
+      "vehicle": "2015 Mercedes S-Class S560",
+      "reason": "S560 not available until 2018 facelift"
+    },
+    {
+      "id": "fea2a7f0-a029-45b7-9bf2-28fd30c05740",
+      "vehicle": "2015 Mercedes S-Class S450",
+      "reason": "S450 not available until 2018 facelift"
+    },
+    {
+      "id": "eae64c26-6fc0-42e5-b505-1a267e07dfd4",
+      "vehicle": "2016 Mercedes S-Class S560",
+      "reason": "S560 not available until 2018 facelift"
+    },
+    {
+      "id": "c0c52d2e-87aa-4bef-9446-1b35fd05d8d1",
+      "vehicle": "2016 Mercedes S-Class S450",
+      "reason": "S450 not available until 2018 facelift"
+    },
+    {
+      "id": "df779035-97a7-4d39-8e45-2599d8c498e6",
+      "vehicle": "2017 Mercedes S-Class S560",
+      "reason": "S560 not available until 2018 facelift"
+    },
+    {
+      "id": "064eba05-7739-4f85-ac3c-05a3bb1861c9",
+      "vehicle": "2017 Mercedes S-Class S450",
+      "reason": "S450 not available until 2018 facelift"
+    },
+    {
+      "id": "130f40ff-6be6-40b9-a0e8-e9ff0214429e",
+      "vehicle": "2021 Mercedes S-Class S63 AMG E Performance",
+      "reason": "S63 E Performance is a 2023 model (debuted December 2022)"
+    }
+  ]
+}

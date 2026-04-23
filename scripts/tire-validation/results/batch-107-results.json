@@ -1,0 +1,1014 @@
+{
+  "batchId": "107",
+  "processedAt": "2026-04-21T22:25:00Z",
+  "source": "tiresize.com, ultimatespecs.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "EQV",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/55R17"],
+      "trims": [
+        {"trim": "EQV 300", "tireSizes": ["245/55R17"]}
+      ],
+      "notes": "Europe-only electric van based on V-Class platform. Not sold in North America.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "medium"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "EQV",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/55R17"],
+      "trims": [
+        {"trim": "EQV 300", "tireSizes": ["245/55R17"]}
+      ],
+      "notes": "Europe-only electric van based on V-Class platform. Not sold in North America.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "EQV",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/55R17"],
+      "trims": [
+        {"trim": "EQV 300", "tireSizes": ["245/55R17"]}
+      ],
+      "notes": "Europe-only electric van based on V-Class platform. Not sold in North America.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "EQV",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/55R17"],
+      "trims": [
+        {"trim": "EQV 300", "tireSizes": ["245/55R17"]}
+      ],
+      "notes": "Europe-only electric van based on V-Class platform. Not sold in North America.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "EQV",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/55R17"],
+      "trims": [
+        {"trim": "EQV 300", "tireSizes": ["245/55R17"]}
+      ],
+      "notes": "Europe-only electric van based on V-Class platform. Not sold in North America.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "EQV",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/55R17"],
+      "trims": [
+        {"trim": "EQV 300", "tireSizes": ["245/55R17"]}
+      ],
+      "notes": "Europe-only electric van based on V-Class platform. Not sold in North America.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "EQV",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/55R17"],
+      "trims": [
+        {"trim": "EQV 300", "tireSizes": ["245/55R17"]}
+      ],
+      "notes": "Europe-only electric van based on V-Class platform. First model year. Not sold in North America.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "275/55R19", "275/50R20"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18", "275/55R19", "275/50R20"]}
+      ],
+      "notes": "2026 data extrapolated from 2025 model year.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18", "275/55R19", "275/50R20"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18", "275/55R19", "275/50R20"]}
+      ],
+      "notes": "CORRECTION: 295/40R21 and 295/40R22 are AMG G63 sizes, not standard G-Class. Remove these.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19", "275/50R20"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["275/55R19", "275/50R20"]}
+      ],
+      "notes": "CORRECTION: Remove 265/60R18, 295/40R21, 295/40R22. These are not standard G550 sizes for 2024.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19", "275/50R20"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["275/55R19", "275/50R20"]}
+      ],
+      "notes": "CORRECTION: Remove 265/60R18, 295/40R21, 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19", "275/50R20"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["275/55R19", "275/50R20"]}
+      ],
+      "notes": "CORRECTION: Remove 265/60R18, 295/40R21, 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19", "275/50R20"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["275/55R19", "275/50R20"]}
+      ],
+      "notes": "CORRECTION: Remove 265/60R18, 295/40R21, 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19", "275/50R20"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["275/55R19", "275/50R20"]}
+      ],
+      "notes": "CORRECTION: Remove 265/60R18, 295/40R21, 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19", "275/50R20"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["275/55R19", "275/50R20"]}
+      ],
+      "notes": "CORRECTION: Remove 265/60R18, 295/40R21, 295/40R22. Major redesign year (W463A).",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19", "325/55R22"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["275/55R19"]},
+        {"trim": "G550 4x4 Squared", "tireSizes": ["325/55R22"]}
+      ],
+      "notes": "CORRECTION: Transition year. Standard G550 uses 275/55R19. 4x4 Squared uses 325/55R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18", "275/55R19"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18", "275/55R19"]}
+      ],
+      "notes": "CORRECTION: Remove 275/50R20, 295/40R21, 295/40R22. Old body style.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18", "275/55R19"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18", "275/55R19"]}
+      ],
+      "notes": "CORRECTION: Remove 275/50R20, 295/40R21, 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G550", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18. First year of G550 (replaced G500).",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G500", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18. Last year of G500.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G500", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G500", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G500", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G500", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G500", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G500", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: Remove all sizes except 265/60R18. First year of G-Class in US market.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G500", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: G-Class may not have been sold in US in 2001. If supported, use 265/60R18.",
+      "status": "NEEDS_VERIFICATION",
+      "confidence": "medium"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "currentTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["265/60R18"],
+      "trims": [
+        {"trim": "G500", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "CORRECTION: G-Class may not have been sold in US in 2000. If supported, use 265/60R18.",
+      "status": "NEEDS_VERIFICATION",
+      "confidence": "medium"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R20", "285/45R21", "295/40R22"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20", "285/45R21", "295/40R22"]}
+      ],
+      "notes": "Extrapolated from 2025 model year.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20", "285/45R21", "295/40R22"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20", "285/45R21", "295/40R22"]}
+      ],
+      "notes": "CORRECTION: Should be 285/45R21, not 295/40R21.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20", "285/45R21", "295/40R22"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20", "285/45R21", "295/40R22"]}
+      ],
+      "notes": "CORRECTION: Should be 285/45R21, not 295/40R21.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20", "285/45R21", "295/40R22"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20", "285/45R21", "295/40R22"]}
+      ],
+      "notes": "CORRECTION: Should be 285/45R21, not 295/40R21.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20", "285/45R21", "295/40R22"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20", "285/45R21", "295/40R22"]}
+      ],
+      "notes": "CORRECTION: Should be 285/45R21, not 295/40R21.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20", "285/45R21", "295/40R22"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20", "285/45R21", "295/40R22"]}
+      ],
+      "notes": "CORRECTION: Should be 285/45R21, not 295/40R21.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20", "285/45R21", "295/40R22"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20", "285/45R21", "295/40R22"]}
+      ],
+      "notes": "CORRECTION: Should be 285/45R21, not 295/40R21.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20", "285/45R21", "295/40R22"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20", "285/45R21", "295/40R22"]}
+      ],
+      "notes": "CORRECTION: Major redesign year. Should be 285/45R21, not 295/40R21.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20"]}
+      ],
+      "notes": "CORRECTION: Old body style - only 275/50R20. Remove 295/40R21 and 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20"]}
+      ],
+      "notes": "CORRECTION: Only 275/50R20. Remove 295/40R21 and 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20"]}
+      ],
+      "notes": "CORRECTION: Only 275/50R20. Remove 295/40R21 and 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20"]}
+      ],
+      "notes": "CORRECTION: Only 275/50R20. Remove 295/40R21 and 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20"]}
+      ],
+      "notes": "CORRECTION: Only 275/50R20. Remove 295/40R21 and 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/50R20"],
+      "trims": [
+        {"trim": "AMG G63", "tireSizes": ["275/50R20"]}
+      ],
+      "notes": "CORRECTION: Only 275/50R20. First year of G63. Remove 295/40R21 and 295/40R22.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19"],
+      "trims": [
+        {"trim": "AMG G55", "tireSizes": ["275/55R19"]}
+      ],
+      "notes": "CORRECTION: This was the G55 AMG year, NOT G63. Correct size is 275/55R19.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19"],
+      "trims": [
+        {"trim": "AMG G55", "tireSizes": ["275/55R19"]}
+      ],
+      "notes": "CORRECTION: This was the G55 AMG. Correct size is 275/55R19.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19"],
+      "trims": [
+        {"trim": "AMG G55", "tireSizes": ["275/55R19"]}
+      ],
+      "notes": "CORRECTION: This was the G55 AMG. Correct size is 275/55R19.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["275/55R19"],
+      "trims": [
+        {"trim": "AMG G55", "tireSizes": ["275/55R19"]}
+      ],
+      "notes": "CORRECTION: This was the G55 AMG. Correct size is 275/55R19.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["285/55R18"],
+      "trims": [
+        {"trim": "AMG G55", "tireSizes": ["285/55R18"]}
+      ],
+      "notes": "CORRECTION: This was the G55 AMG. Correct size is 285/55R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["285/55R18"],
+      "trims": [
+        {"trim": "AMG G55", "tireSizes": ["285/55R18"]}
+      ],
+      "notes": "CORRECTION: This was the G55 AMG. Correct size is 285/55R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["285/55R18"],
+      "trims": [
+        {"trim": "AMG G55", "tireSizes": ["285/55R18"]}
+      ],
+      "notes": "CORRECTION: This was the G55 AMG. Correct size is 285/55R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["285/55R18"],
+      "trims": [
+        {"trim": "AMG G55", "tireSizes": ["285/55R18"]}
+      ],
+      "notes": "CORRECTION: This was the G55 AMG. Correct size is 285/55R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["285/55R18"],
+      "trims": [
+        {"trim": "AMG G55", "tireSizes": ["285/55R18"]}
+      ],
+      "notes": "CORRECTION: This was the G55 AMG. Correct size is 285/55R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": ["285/55R18"],
+      "trims": [
+        {"trim": "AMG G55", "tireSizes": ["285/55R18"]}
+      ],
+      "notes": "CORRECTION: This was the G55 AMG. First year. Correct size is 285/55R18.",
+      "status": "NEEDS_CORRECTION",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "G55 AMG was not available in US until 2003. Remove this year.",
+      "status": "INVALID_YEAR",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "G55 AMG was not available in US until 2003. Remove this year.",
+      "status": "INVALID_YEAR",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "currentTireSizes": ["275/50R20", "295/40R21", "295/40R22"],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "G55 AMG was not available in US until 2003. Remove this year.",
+      "status": "INVALID_YEAR",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "295/40R21"],
+      "trims": [
+        {"trim": "GL350 BlueTEC", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL450", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL550", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "Last year of GL-Class before becoming GLS-Class.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "295/40R21"],
+      "trims": [
+        {"trim": "GL350 BlueTEC", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL450", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL550", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "295/40R21"],
+      "trims": [
+        {"trim": "GL350 BlueTEC", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL450", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL550", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "295/40R21"],
+      "trims": [
+        {"trim": "GL350 BlueTEC", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL450", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL550", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "X166 generation begins.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "295/40R21"],
+      "trims": [
+        {"trim": "GL350 BlueTEC", "tireSizes": ["275/50R20"]},
+        {"trim": "GL450", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL550", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "Last year of X164 generation.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "295/40R21"],
+      "trims": [
+        {"trim": "GL350 BlueTEC", "tireSizes": ["275/50R20"]},
+        {"trim": "GL450", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL550", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "295/40R21"],
+      "trims": [
+        {"trim": "GL350 BlueTEC", "tireSizes": ["275/50R20"]},
+        {"trim": "GL450", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL550", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21"],
+      "trims": [
+        {"trim": "GL320 BlueTEC", "tireSizes": ["275/55R19", "275/50R20"]},
+        {"trim": "GL450", "tireSizes": ["265/60R18", "275/55R19", "275/50R20"]},
+        {"trim": "GL550", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "275/55R19", "275/50R20", "295/40R21", "265/40R22"],
+      "trims": [
+        {"trim": "GL320 CDI", "tireSizes": ["265/60R18", "275/55R19", "275/50R20"]},
+        {"trim": "GL450", "tireSizes": ["265/60R18", "275/55R19", "275/50R20"]},
+        {"trim": "GL550", "tireSizes": ["295/40R21", "265/40R22"]}
+      ],
+      "notes": "",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "275/55R19", "275/50R20"],
+      "trims": [
+        {"trim": "GL320 CDI", "tireSizes": ["265/60R18", "275/55R19", "275/50R20"]},
+        {"trim": "GL450", "tireSizes": ["265/60R18", "275/55R19", "275/50R20"]}
+      ],
+      "notes": "First year of GL-Class.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "GL-Class was not available until 2007 model year. Remove this year.",
+      "status": "INVALID_YEAR",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GL-Class-AMG",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["295/40R21"],
+      "trims": [
+        {"trim": "GL63 AMG", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "Last year of GL63 AMG before becoming GLS63 AMG.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "GL-Class-AMG",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["295/40R21"],
+      "trims": [
+        {"trim": "GL63 AMG", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "GL-Class-AMG",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["295/40R21"],
+      "trims": [
+        {"trim": "GL63 AMG", "tireSizes": ["295/40R21"]}
+      ],
+      "notes": "First year of GL63 AMG.",
+      "status": "NEEDS_UPDATE",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "needsUpdate": 25,
+    "needsCorrection": 43,
+    "invalidYear": 4,
+    "verified": 0,
+    "needsVerification": 3,
+    "keyFindings": [
+      "EQV: Europe-only electric van using 245/55R17 - all years need tire data added",
+      "G-Class: Pre-2019 models incorrectly have modern tire sizes (295/40R21, 295/40R22) - these are G63 AMG sizes only",
+      "G-Class: 2009-2015 G550 uses 265/60R18 only, not the 5 sizes currently listed",
+      "G-Class-AMG: Pre-2019 G63 uses only 275/50R20, not 285/45R21 or 295/40R22",
+      "G-Class-AMG: 2003-2011 was G55 AMG with 285/55R18 (2003-2008) or 275/55R19 (2009-2011)",
+      "G-Class-AMG: 2000-2002 invalid - G55 AMG US sales started 2003",
+      "GL-Class: All years missing tire data - needs full population",
+      "GL-Class: 2006 invalid - GL-Class launched 2007",
+      "GL-Class-AMG: Missing tire data - GL63 AMG uses 295/40R21"
+    ]
+  }
+}

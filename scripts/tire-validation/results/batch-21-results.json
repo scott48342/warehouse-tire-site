@@ -1,0 +1,1061 @@
+{
+  "batchId": "21",
+  "processedAt": "2026-04-21T21:46:30.000Z",
+  "results": [
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "Encore",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "Encore",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Convenience", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Buick",
+      "model": "Encore",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Convenience", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Buick",
+      "model": "Encore",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Convenience", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Buick",
+      "model": "Encore",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/70R16"},
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Buick",
+      "model": "Encore",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "215/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2012 Encore data limited; assumed same as 2013+"
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Encore GX",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Encore GX",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Encore GX",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Encore GX",
+      "trims": [
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Select", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "ST", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Encore GX",
+      "trims": [
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Select", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "ST", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Encore GX",
+      "trims": [
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Select", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "ST", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "Encore GX",
+      "trims": [
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Select", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "ST", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "235/60R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "235/60R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "235/60R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "235/60R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "235/60R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "235/60R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "235/60R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "235/60R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "235/60R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Premium II", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Premium II", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Premium II", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/60R18"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.0}, "tireSize": "225/65R17"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/55R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "medium",
+      "notes": "2015 Envision was China-market only; specs inferred from platform"
+    },
+    {
+      "year": 2014,
+      "make": "Buick",
+      "model": "Envision",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.0}, "tireSize": "225/65R17"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "235/55R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "medium",
+      "notes": "2014 Envision was China-market only; specs inferred from platform"
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Envision S",
+      "trims": [
+        {"trim": "652T", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "225/55R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; specs estimated from Envision platform"
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Envision S",
+      "trims": [
+        {"trim": "652T", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "225/55R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; specs estimated from Envision platform"
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Envision S",
+      "trims": [
+        {"trim": "652T", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "225/55R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; specs estimated from Envision platform"
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Envision S",
+      "trims": [
+        {"trim": "652T", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "225/55R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; specs estimated from Envision platform"
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Envision S",
+      "trims": [
+        {"trim": "652T", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "225/55R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; specs estimated from Envision platform"
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Envision S",
+      "trims": [
+        {"trim": "652T", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "225/55R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; specs estimated from Envision platform"
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "Envision S",
+      "trims": [
+        {"trim": "652T", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "225/55R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; specs estimated from Envision platform"
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Envision S GS",
+      "trims": [
+        {"trim": "GS", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; GS trim uses largest wheel option"
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Envision S GS",
+      "trims": [
+        {"trim": "GS", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; GS trim uses largest wheel option"
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Envision S GS",
+      "trims": [
+        {"trim": "GS", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; GS trim uses largest wheel option"
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Envision S GS",
+      "trims": [
+        {"trim": "GS", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "China-market only; GS trim uses largest wheel option"
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Envista",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 17, "width": 7.0}, "tireSize": "225/60R17"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Envista",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 17, "width": 7.0}, "tireSize": "225/60R17"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Envista",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 17, "width": 7.0}, "tireSize": "225/60R17"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Envista",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 17, "width": 7.0}, "tireSize": "225/60R17"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "Envista launched 2024 in US; 2023 may be pre-production or China-market"
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Envista",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 17, "width": 7.0}, "tireSize": "225/60R17"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 7.0}, "tireSize": "225/55R18"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "Pre-production model year; specs inferred from 2024"
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Envista GS",
+      "trims": [
+        {"trim": "GS", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "medium",
+      "notes": "GS trim uses sport package wheel/tire"
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Envista GS",
+      "trims": [
+        {"trim": "GS", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "medium",
+      "notes": "GS trim uses sport package wheel/tire"
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Envista GS",
+      "trims": [
+        {"trim": "GS", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "Pre-production; GS trim uses sport package wheel/tire"
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Envista GS",
+      "trims": [
+        {"trim": "GS", "wheelSize": {"diameter": 19, "width": 7.5}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "low",
+      "notes": "Pre-production; GS trim uses sport package wheel/tire"
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "Excelle XT",
+      "trims": [
+        {"trim": "1.4T", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"},
+        {"trim": "1.6L", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China-market only vehicle"
+    },
+    {
+      "year": 2015,
+      "make": "Buick",
+      "model": "Excelle XT",
+      "trims": [
+        {"trim": "1.4T", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"},
+        {"trim": "1.6L", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China-market only vehicle"
+    },
+    {
+      "year": 2014,
+      "make": "Buick",
+      "model": "Excelle XT",
+      "trims": [
+        {"trim": "1.6L", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"},
+        {"trim": "1.6T", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China-market only vehicle"
+    },
+    {
+      "year": 2013,
+      "make": "Buick",
+      "model": "Excelle XT",
+      "trims": [
+        {"trim": "1.6L", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"},
+        {"trim": "1.6T", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China-market only vehicle"
+    },
+    {
+      "year": 2012,
+      "make": "Buick",
+      "model": "Excelle XT",
+      "trims": [
+        {"trim": "1.6L", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"},
+        {"trim": "1.6T", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China-market only vehicle"
+    },
+    {
+      "year": 2011,
+      "make": "Buick",
+      "model": "Excelle XT",
+      "trims": [
+        {"trim": "1.6L", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"},
+        {"trim": "1.6T", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China-market only vehicle"
+    },
+    {
+      "year": 2010,
+      "make": "Buick",
+      "model": "Excelle XT",
+      "trims": [
+        {"trim": "1.6L", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"},
+        {"trim": "1.6T", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China-market only vehicle"
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "medium",
+      "notes": "China-market continuation; specs based on 2020 US model"
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "medium",
+      "notes": "China-market continuation; specs based on 2020 US model"
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "medium",
+      "notes": "China-market continuation; specs based on 2020 US model"
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "medium",
+      "notes": "China-market continuation; specs based on 2020 US model"
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "medium",
+      "notes": "China-market continuation; specs based on 2020 US model"
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "inferred",
+      "confidence": "medium",
+      "notes": "China-market continuation; specs based on 2020 US model"
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"},
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"},
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "Avenir", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"},
+        {"trim": "Avenir", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"},
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Essence", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"},
+        {"trim": "Preferred", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "2.4L", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "2.4L", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"},
+        {"trim": "Sport Touring", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "2.4L", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "2.4L", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "2.4L", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "2.4L", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/45R19"},
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.0}, "tireSize": "245/40R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "2.4L", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "2.4L", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "3.6L", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "CX", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "CXL", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "CXS", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "CXS", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"},
+        {"trim": "CXS Touring", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "CXS Touring", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "CX", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "CXL", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "CXS", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "CXS Touring", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"},
+        {"trim": "CXS Touring", "wheelSize": {"diameter": 19, "width": 8.0}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "CX", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "225/60R16"},
+        {"trim": "CX", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "CXL", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "Super", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "CX", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "225/60R16"},
+        {"trim": "CXL", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "225/60R16"},
+        {"trim": "CXL", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "CXS", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "Super", "wheelSize": {"diameter": 18, "width": 8.0}, "tireSize": "235/50R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "CX", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "225/60R16"},
+        {"trim": "CXL", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "225/60R16"},
+        {"trim": "CXL", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"},
+        {"trim": "CXS", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "CX", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "225/60R16"},
+        {"trim": "CXL", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "225/60R16"},
+        {"trim": "CXS", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "trims": [
+        {"trim": "CX", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "225/60R16"},
+        {"trim": "CXL", "wheelSize": {"diameter": 16, "width": 6.5}, "tireSize": "225/60R16"},
+        {"trim": "CXS", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/55R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "highConfidence": 51,
+    "mediumConfidence": 17,
+    "lowConfidence": 7,
+    "staggeredSetups": 0,
+    "notes": "Batch 21 covers Buick Encore, Encore GX, Envision, Envision S, Envista, Envista GS, Excelle XT, and LaCrosse. US market vehicles have high confidence from tiresize.com. China-market models (Envision S, Envision S GS, Excelle XT, LaCrosse 2021+) have lower confidence with inferred specs."
+  }
+}

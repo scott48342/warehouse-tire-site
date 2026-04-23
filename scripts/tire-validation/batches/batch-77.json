@@ -1,0 +1,730 @@
+{
+  "batchId": "77",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2024,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "255/40R19",
+        "255/35R20",
+        "245/40ZR19",
+        "275/35ZR19",
+        "255/35ZR20",
+        "295/30ZR20",
+        "245/45ZR18",
+        "275/40ZR18"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "255/40R19",
+        "255/35R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "255/40R19",
+        "255/35R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "255/40R19",
+        "255/35R20",
+        "245/45ZR18",
+        "275/40ZR18",
+        "245/40ZR19",
+        "275/35ZR19",
+        "255/35ZR20",
+        "295/30ZR20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "255/40R19",
+        "255/35R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20",
+        "245/40ZR19",
+        "275/35ZR19",
+        "245/45ZR18",
+        "275/40ZR18",
+        "255/35ZR20",
+        "295/30ZR20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "245/45ZR18",
+        "275/40ZR18",
+        "245/40ZR19",
+        "275/35ZR19",
+        "255/35ZR20",
+        "295/30ZR20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "245/45ZR18",
+        "275/40ZR18",
+        "245/40ZR19",
+        "275/35ZR19",
+        "255/35ZR20",
+        "295/30ZR20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "295/35R19"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "jaguar",
+      "model": "f-type",
+      "currentTireSizes": [
+        "245/45ZR18",
+        "275/40ZR18",
+        "245/40ZR19",
+        "275/35ZR19",
+        "255/35ZR20",
+        "295/30ZR20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "jaguar",
+      "model": "i-pace",
+      "currentTireSizes": [
+        "245/50R20",
+        "265/40R22"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "jaguar",
+      "model": "i-pace",
+      "currentTireSizes": [
+        "245/50R20",
+        "265/40R22"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "jaguar",
+      "model": "i-pace",
+      "currentTireSizes": [
+        "235/65R18",
+        "245/50R20",
+        "255/40R22",
+        "235/60R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "i-pace",
+      "currentTireSizes": [
+        "235/65R18",
+        "245/50R20",
+        "255/40R22",
+        "235/60R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "i-pace",
+      "currentTireSizes": [
+        "235/65R18",
+        "245/50R20",
+        "255/40R22",
+        "235/60R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "i-pace",
+      "currentTireSizes": [
+        "235/65R18",
+        "245/50R20",
+        "255/40R22",
+        "235/60R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "jaguar",
+      "model": "i-pace",
+      "currentTireSizes": [
+        "235/65R18",
+        "245/50R20",
+        "255/40R22",
+        "235/60R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "jaguar",
+      "model": "i-pace",
+      "currentTireSizes": [
+        "245/50R20",
+        "265/40R22"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "jaguar",
+      "model": "s-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "jaguar",
+      "model": "s-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "jaguar",
+      "model": "s-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "jaguar",
+      "model": "s-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "jaguar",
+      "model": "s-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "jaguar",
+      "model": "s-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "jaguar",
+      "model": "s-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "jaguar",
+      "model": "s-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "jaguar",
+      "model": "s-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "jaguar",
+      "model": "x-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "jaguar",
+      "model": "x-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "jaguar",
+      "model": "x-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "jaguar",
+      "model": "x-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "jaguar",
+      "model": "x-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "jaguar",
+      "model": "x-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "jaguar",
+      "model": "x-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "jaguar",
+      "model": "x-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "jaguar",
+      "model": "x-type",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "255/35R19",
+        "265/30R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "255/35R19",
+        "265/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "255/35R19",
+        "265/30R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "255/35R19",
+        "265/30R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "255/35R19",
+        "265/30R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19",
+        "245/35R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19",
+        "245/35R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "jaguar",
+      "model": "xe",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "jaguar",
+      "model": "xel",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "jaguar",
+      "model": "xel",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "jaguar",
+      "model": "xel",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "xel",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "xel",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "xel",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "jaguar",
+      "model": "xel",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20",
+        "245/45ZR18",
+        "245/40ZR19",
+        "255/35ZR20",
+        "285/30ZR20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20",
+        "245/45ZR18",
+        "245/40ZR19",
+        "255/35ZR20",
+        "285/30ZR20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20",
+        "245/45ZR18",
+        "245/40ZR19",
+        "255/35ZR20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20",
+        "245/45ZR18",
+        "245/40ZR19",
+        "255/35ZR20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "275/35R20",
+        "235/55R17",
+        "245/45ZR18",
+        "245/40ZR19",
+        "255/35ZR20",
+        "285/30ZR20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "275/35R20",
+        "235/55R17",
+        "245/45ZR18",
+        "245/40ZR19",
+        "255/35ZR20",
+        "285/30ZR20"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "275/35R20",
+        "255/35ZR20",
+        "285/30ZR20",
+        "265/30ZR21",
+        "295/25ZR21"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "275/35R20",
+        "245/40ZR19",
+        "255/35ZR20"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "255/45R18",
+        "275/35R20"
+      ]
+    }
+  ]
+}

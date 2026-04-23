@@ -1,0 +1,990 @@
+{
+  "batchId": "61",
+  "processedAt": "2025-07-22T04:30:00Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2017,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R21"],
+      "validatedOemTireSizes": {
+        "SL": ["245/65R17"],
+        "SLE": ["235/65R18", "245/65R17"],
+        "SLT": ["235/65R18"],
+        "Denali": ["235/55R20", "255/55R20"]
+      },
+      "source": "mavis.com, simpletire.com",
+      "notes": "2017 is first year of second-gen Acadia with smaller platform"
+    },
+    {
+      "year": 2016,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20", "255/60R19", "255/55R20", "265/65R18", "285/50R20", "275/55R19"],
+      "validatedOemTireSizes": {
+        "SL": ["255/65R18"],
+        "SLE": ["255/65R18", "255/60R19"],
+        "SLT": ["255/60R19"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "mavis.com, simpletire.com",
+      "notes": "First-gen Acadia final year"
+    },
+    {
+      "year": 2015,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20", "255/60R19", "255/55R20", "265/65R18", "285/50R20", "275/55R19"],
+      "validatedOemTireSizes": {
+        "SLE": ["255/65R18"],
+        "SLT": ["255/60R19", "255/55R20"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "tiresize.com, simpletire.com",
+      "notes": "OEM sizes: 255/65R18, 255/60R19, 255/55R20"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20", "255/60R19", "255/55R20", "265/65R18", "285/50R20", "275/55R19"],
+      "validatedOemTireSizes": {
+        "SLE": ["255/65R18"],
+        "SLT": ["255/60R19", "255/55R20"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "simpletire.com",
+      "notes": "OEM sizes: 255/55R20, 255/65R18, 255/60R19"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedOemTireSizes": {
+        "SL": ["255/65R18"],
+        "SLE": ["255/65R18"],
+        "SLT": ["255/60R19", "255/55R20"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "tiresize.com, mavis.com",
+      "notes": "Standard sizes validated"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20", "255/60R19", "255/55R20", "265/65R18", "285/50R20", "275/55R19"],
+      "validatedOemTireSizes": {
+        "SLE": ["255/65R18"],
+        "SLT": ["255/60R19", "255/55R20"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "simpletire.com",
+      "notes": "OEM: 255/55R20, 255/65R18, 255/60R19"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedOemTireSizes": {
+        "SLE": ["255/65R18"],
+        "SLT": ["255/60R19", "255/55R20"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "simpletire.com, tiresize411.com",
+      "notes": "First year for Denali trim"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20", "255/60R19", "255/55R20", "265/65R18", "285/50R20", "275/55R19"],
+      "validatedOemTireSizes": {
+        "SL": ["255/65R18"],
+        "SLE": ["255/65R18"],
+        "SLT": ["255/60R19"]
+      },
+      "source": "tiresize.com, mavis.com",
+      "notes": "OEM: 255/65R18, 255/60R19, 255/55R20"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedOemTireSizes": {
+        "SLE_AWD": ["255/65R18"],
+        "SLE_FWD": ["255/65R18"],
+        "SLT_AWD": ["255/65R18", "255/60R19"],
+        "SLT_FWD": ["255/65R18", "255/60R19"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 255/65R18, 255/60R19"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["255/65R18", "255/60R19", "255/55R20", "275/55R19", "285/50R20", "275/60R18"],
+      "validatedOemTireSizes": {
+        "SLE": ["255/65R18"],
+        "SLT": ["255/65R18"]
+      },
+      "source": "mavis.com, acadiaforum.net",
+      "notes": "OEM: P255/65R18"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedOemTireSizes": {
+        "SLE_AWD": ["255/65R18"],
+        "SLE_FWD": ["255/65R18"],
+        "SLT_AWD": ["255/65R18", "255/60R19"],
+        "SLT_FWD": ["255/65R18", "255/60R19"]
+      },
+      "source": "tiresize.com",
+      "notes": "First model year for Acadia"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["235/65R17", "255/55R20", "275/45R21"],
+      "validatedOemTireSizes": {},
+      "source": "N/A",
+      "notes": "2006 Acadia does not exist - first model year was 2007. Remove from database."
+    },
+    {
+      "year": 2017,
+      "make": "GMC",
+      "model": "Acadia Limited",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["255/55R20"],
+        "All": ["255/65R18", "255/60R19", "255/55R20"]
+      },
+      "source": "mavis.com",
+      "notes": "Acadia Limited is carryover first-gen Acadia sold alongside new 2017 Acadia"
+    },
+    {
+      "year": 2026,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18"],
+      "validatedOemTireSizes": {
+        "Elevation": ["265/65R18"],
+        "AT4": ["265/65R18", "275/65R18", "275/60R20"],
+        "AT4X": ["LT285/70R17"],
+        "Denali": ["275/60R20"]
+      },
+      "source": "wheel-size.com, rbptires.com",
+      "notes": "Third-gen Canyon, 17-22 inch wheel options"
+    },
+    {
+      "year": 2025,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18"],
+      "validatedOemTireSizes": {
+        "Elevation": ["265/65R18"],
+        "AT4": ["265/65R18", "275/65R18", "275/60R20"],
+        "AT4X": ["LT285/70R17"],
+        "Denali": ["275/60R20"]
+      },
+      "source": "wheel-size.com, simpletire.com",
+      "notes": "Third-gen Canyon"
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R17", "265/65R18", "275/60R20", "LT285/70R17", "275/50R22", "LT275/65R18", "LT315/70R17"],
+      "validatedOemTireSizes": {
+        "Elevation": ["265/65R18"],
+        "AT4": ["265/65R18", "275/65R18", "275/60R20"],
+        "AT4X": ["LT285/70R17"],
+        "AT4X_AEV": ["LT315/70R17"],
+        "Denali": ["275/60R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "First year of third-gen Canyon"
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18"],
+      "validatedOemTireSizes": {
+        "Elevation": ["265/65R18"],
+        "AT4": ["265/65R18", "275/65R18", "275/60R20"],
+        "AT4X": ["LT285/70R17"],
+        "Denali": ["275/60R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "First year of third-gen Canyon"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "255/55R20", "265/65R17", "265/55R19"],
+      "validatedOemTireSizes": {
+        "Base": ["265/70R16"],
+        "Elevation": ["265/60R18"],
+        "SLE": ["265/60R18"],
+        "SLT": ["265/60R18"],
+        "AT4": ["255/65R17", "265/65R17"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "rbptires.com, wheel-size.com",
+      "notes": "Second-gen final year"
+    },
+    {
+      "year": 2021,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "255/55R20", "265/65R17", "265/55R19"],
+      "validatedOemTireSizes": {
+        "Base": ["265/60R18"],
+        "Elevation": ["265/60R18"],
+        "AT4": ["255/65R17", "265/65R17"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 255/65R17, 265/65R17, 265/60R18, 255/55R20"
+    },
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "255/55R20", "265/65R17", "265/55R19"],
+      "validatedOemTireSizes": {
+        "Base": ["265/70R16"],
+        "SL": ["265/70R16"],
+        "SLE": ["265/60R18"],
+        "SLT": ["265/60R18"],
+        "All_Terrain": ["255/65R17", "265/65R17"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "tiresize.com, simpletire.com",
+      "notes": "Second-gen Canyon"
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18"],
+      "validatedOemTireSizes": {
+        "Base": ["265/70R16"],
+        "SL": ["265/70R16"],
+        "SLE": ["265/60R18"],
+        "SLT": ["265/60R18"],
+        "All_Terrain": ["255/65R17", "265/65R17"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "tiresize.com, simpletire.com",
+      "notes": "OEM: 255/65R17, 265/65R17, 265/70R16, 255/55R20, 265/60R18"
+    },
+    {
+      "year": 2018,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18"],
+      "validatedOemTireSizes": {
+        "Base": ["265/70R16"],
+        "SL": ["265/70R16"],
+        "SLE": ["265/60R18"],
+        "SLT": ["265/60R18"],
+        "All_Terrain": ["255/65R17", "265/65R17"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "tiresize.com, simpletire.com",
+      "notes": "Second-gen Canyon"
+    },
+    {
+      "year": 2017,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18"],
+      "validatedOemTireSizes": {
+        "Base": ["265/70R16"],
+        "SL": ["265/70R16"],
+        "SLE": ["265/60R18"],
+        "SLT": ["265/60R18"],
+        "All_Terrain": ["255/65R17", "265/65R17"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "simpletire.com",
+      "notes": "OEM: 265/70R16, 255/55R20, 265/65R17, 265/60R18, 255/65R17"
+    },
+    {
+      "year": 2016,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18"],
+      "validatedOemTireSizes": {
+        "Base": ["265/70R16"],
+        "SL": ["265/70R16"],
+        "SLE": ["265/60R18"],
+        "SLT": ["265/60R18"],
+        "All_Terrain": ["255/65R17", "265/65R17"],
+        "Denali": ["255/55R20"]
+      },
+      "source": "simpletire.com",
+      "notes": "Second-gen Canyon"
+    },
+    {
+      "year": 2015,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18"],
+      "validatedOemTireSizes": {
+        "Crew_Cab": ["265/70R16", "255/65R17", "265/60R18"],
+        "Extended_Cab": ["265/70R16", "255/65R17", "265/60R18"]
+      },
+      "source": "tiresize.com",
+      "notes": "First year of second-gen Canyon"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedOemTireSizes": {
+        "Work_Truck": ["215/70R15"],
+        "SLE": ["235/75R15"],
+        "SLT": ["245/65R17"]
+      },
+      "source": "wheel-size.com",
+      "notes": "First-gen Canyon final year"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17", "215/70R16", "235/70R16", "235/65R17", "245/55R18"],
+      "validatedOemTireSizes": {
+        "Work_Truck_2WD": ["215/70R15"],
+        "Work_Truck_4WD": ["235/75R15"],
+        "SLE": ["235/75R15", "235/75R16"],
+        "SLT": ["245/65R17"]
+      },
+      "source": "tire-sizes.com, sizemytires.com",
+      "notes": "OEM: P215/70R16, P235/75R16, P265/70R17, P235/50R18"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17", "215/70R16", "235/70R16", "235/65R17", "245/55R18"],
+      "validatedOemTireSizes": {
+        "Work_Truck": ["215/70R15"],
+        "SLE": ["235/75R15", "235/75R16"],
+        "SLT": ["245/65R17"]
+      },
+      "source": "sizemytires.com",
+      "notes": "OEM: P235/75R16"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedOemTireSizes": {
+        "Work_Truck": ["215/70R15"],
+        "SLE": ["235/75R15"],
+        "SLT": ["245/65R17"]
+      },
+      "source": "sizemytires.com",
+      "notes": "OEM: P235/75R16"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedOemTireSizes": {
+        "WT_2WD": ["215/70R15"],
+        "WT_4WD": ["235/75R15"],
+        "SLE": ["235/75R15"],
+        "SLT": ["245/65R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "First-gen Canyon"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedOemTireSizes": {
+        "WT_2WD": ["215/70R15"],
+        "WT_4WD": ["235/75R15"],
+        "SLE": ["235/75R15"],
+        "SLT": ["245/65R17"]
+      },
+      "source": "wheel-size.com, autopadre.com",
+      "notes": "First-gen Canyon"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedOemTireSizes": {
+        "WT_2WD": ["215/70R15"],
+        "WT_4WD": ["235/75R15"],
+        "SLE": ["235/75R15"],
+        "SLT": ["245/65R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "First-gen Canyon"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedOemTireSizes": {
+        "SL_2WD": ["205/75R15"],
+        "SL_4WD": ["235/75R15"],
+        "SL_Z71": ["265/75R15"],
+        "SLE_2WD": ["225/75R15"],
+        "SLE_4WD": ["235/75R15"],
+        "SLT": ["245/65R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "First-gen Canyon"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Canyon",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedOemTireSizes": {
+        "SL_2WD": ["205/75R15"],
+        "SL_4WD": ["235/75R15"],
+        "SLE": ["235/75R15"],
+        "SLT": ["245/65R17"]
+      },
+      "source": "wheel-size.com, tiresize.com",
+      "notes": "First model year for Canyon"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Envoy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "SLT_4WD": ["245/60R18"]
+      },
+      "source": "tiresize.com",
+      "notes": "Final year for Envoy"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Envoy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "2WD": ["245/65R17", "245/60R18"],
+        "4WD": ["245/65R17", "245/60R18"],
+        "Denali_2WD": ["245/60R18"],
+        "Denali_4WD": ["245/60R18"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 245/65R17, 245/60R18"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Envoy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "2WD": ["245/65R17", "245/60R18"],
+        "4WD": ["245/65R17", "245/60R18"],
+        "Denali_2WD": ["245/60R18"],
+        "Denali_4WD": ["245/60R18"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 245/65R17, 245/60R18"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Envoy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "SLE": ["245/65R17"],
+        "SLT": ["245/65R17", "245/60R18"],
+        "XL_Denali": ["245/60R18"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 245/65R17, 245/60R18"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Envoy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "SLE": ["245/65R17"],
+        "SLT": ["245/65R17"],
+        "XUV": ["245/65R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 245/65R17"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Envoy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "SLE": ["245/65R17"],
+        "SLT": ["245/65R17"],
+        "XUV": ["245/65R17"]
+      },
+      "source": "justanswer.com, wheel-size.com",
+      "notes": "OEM: 245/65R17"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Envoy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "2WD": ["245/65R17"],
+        "4WD": ["245/65R17"],
+        "XL_2WD": ["245/65R17"],
+        "XL_4WD": ["245/65R17"]
+      },
+      "source": "tiresize.com, autopadre.com",
+      "notes": "OEM: P245/65R17 or P245/60R18"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Envoy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "2WD": ["245/65R17"],
+        "4WD": ["245/65R17"],
+        "XL_2WD": ["245/65R17"],
+        "XL_4WD": ["245/65R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "First year of second-gen Envoy"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Envoy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["235/70R15"]
+      },
+      "source": "avtoreference.com, gmc-wheels.com",
+      "notes": "First-gen Envoy (GMT330), OEM: 235/70R15"
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Hummer EV SUV",
+      "currentTireSizes": ["LT305/70R18", "LT305/55R22"],
+      "validatedOemTireSizes": {
+        "EV2": ["LT305/70R18"],
+        "EV2X": ["LT305/70R18"],
+        "EV3X": ["LT305/70R18"],
+        "Edition_1": ["LT305/70R18", "LT305/55R22"]
+      },
+      "source": "autopadre.com, wheel-size.com",
+      "notes": "35-inch Goodyear Wrangler All-Territory or BF Goodrich Mud-Terrain"
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Hummer EV SUV",
+      "currentTireSizes": ["LT305/70R18", "LT305/55R22"],
+      "validatedOemTireSizes": {
+        "EV2": ["LT305/70R18"],
+        "EV2X": ["LT305/70R18"],
+        "EV3X": ["LT305/55R22"],
+        "Edition_1": ["LT305/70R18"]
+      },
+      "source": "autopadre.com, hummerchat.com",
+      "notes": "OEM: LT305/55R22, LT305/70R18"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Hummer EV SUV",
+      "currentTireSizes": ["LT305/70R18", "LT305/55R22"],
+      "validatedOemTireSizes": {
+        "Edition_1": ["LT305/70R18", "LT305/55R22"]
+      },
+      "source": "autopadre.com, hummerchat.com",
+      "notes": "First model year, 35-inch tires standard"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Jimmy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "SLS_2WD": ["205/75R15"],
+        "SLS_4WD": ["235/70R15"],
+        "SLT": ["235/70R15"]
+      },
+      "source": "tirewheelguide.com, wheel-size.com",
+      "notes": "Final year of Jimmy"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Jimmy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "2WD": ["205/75R15"],
+        "4WD": ["235/70R15"],
+        "ZR2": ["31X10.50R15"]
+      },
+      "source": "tiresize.com, tirewheelguide.com",
+      "notes": "OEM: 205/75R15, 235/70R15, 31X10.50R15 (ZR2)"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Jimmy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "SLS_2WD": ["205/75R15"],
+        "SLS_4WD": ["235/70R15"],
+        "SLT": ["235/70R15"]
+      },
+      "source": "wheel-size.com, gmc-wheels.com",
+      "notes": "OEM: 195/75R14, 205/75R14, 205/75R15, 235/75R15"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Jimmy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "SLS_4WD": ["235/70R15"],
+        "SLT": ["235/70R15"]
+      },
+      "source": "sizemytires.com",
+      "notes": "OEM: P235/70R15"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Jimmy",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "2WD_2dr": ["205/75R15"],
+        "2WD_4dr": ["205/75R15"],
+        "4WD_2dr": ["205/75R15", "235/70R15"],
+        "4WD_4dr": ["205/75R15", "235/70R15"]
+      },
+      "source": "tiresize.com, sizemytires.com",
+      "notes": "OEM: P235/75R15"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["245/70R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "Last year for Savana 1500"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["245/70R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 245/70R17"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["245/70R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 245/70R17"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["245/70R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 245/70R17"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["245/70R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 245/70R17"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["245/70R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 245/70R17"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["235/75R16", "245/70R17"]
+      },
+      "source": "tiresize.com",
+      "notes": "Multiple stock tire sizes"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["235/75R16", "245/75R16"]
+      },
+      "source": "tiresize.com, tirewheelguide.com",
+      "notes": "OEM: 235/75R16, 245/75R16, 245/70R17, 255/65R17, 255/65R18, 265/60R18"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["235/75R16", "245/75R16"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 235/75R16, 245/75R16"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["235/75R16"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 235/75R16"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["235/75R16"]
+      },
+      "source": "tiresize.com",
+      "notes": "OEM: 235/75R16"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["235/75R16"]
+      },
+      "source": "tire-sizes.com, wheel-size.com",
+      "notes": "OEM: P235/75R16"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["215/75R15", "235/75R15"]
+      },
+      "source": "sizemytires.com",
+      "notes": "OEM: P215/75R15, P235/75R15"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["215/70R15", "235/75R15"]
+      },
+      "source": "sizemytires.com, tirewheelguide.com",
+      "notes": "OEM: P215/70R15, P235/75R15"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "currentTireSizes": [],
+      "validatedOemTireSizes": {
+        "Base": ["215/75R15", "235/75R15"]
+      },
+      "source": "sizemytires.com, tirewheelguide.com",
+      "notes": "OEM: P215/75R15, P235/75R15"
+    },
+    {
+      "year": 2026,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "validatedOemTireSizes": {
+        "Pro": ["255/70R17"],
+        "SLE": ["265/70R17", "265/65R18"],
+        "SLT": ["265/65R18", "275/60R20"],
+        "AT4": ["275/65R18", "LT275/65R18"],
+        "AT4X": ["275/70R18"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "Denali_Ultimate": ["275/50R22"]
+      },
+      "source": "wheel-size.com, iseecars.com",
+      "notes": "Current gen Sierra 1500"
+    },
+    {
+      "year": 2025,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "validatedOemTireSizes": {
+        "Pro": ["255/70R17"],
+        "SLE": ["265/70R17", "265/65R18"],
+        "SLT": ["265/65R18", "275/60R20"],
+        "AT4": ["275/65R18", "LT275/65R18"],
+        "AT4X": ["275/70R18"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "Denali_Ultimate": ["275/50R22"]
+      },
+      "source": "wheel-size.com, simpletire.com",
+      "notes": "Current gen Sierra 1500"
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "validatedOemTireSizes": {
+        "Pro": ["255/70R17"],
+        "SLE": ["265/70R17", "265/65R18"],
+        "Elevation": ["265/65R18", "275/60R20"],
+        "SLT": ["265/65R18", "275/60R20"],
+        "AT4": ["275/65R18", "265/60R20", "275/60R20"],
+        "AT4X": ["275/70R18"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "Denali_Ultimate": ["275/50R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "Validated OEM sizes"
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedOemTireSizes": {
+        "Pro": ["255/70R17"],
+        "SLE": ["265/70R17", "265/65R18"],
+        "Elevation": ["265/65R18", "275/60R20"],
+        "SLT": ["265/65R18", "275/60R20"],
+        "AT4": ["275/65R18", "265/60R20", "275/60R20"],
+        "AT4X": ["275/70R18"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "Denali_Ultimate": ["275/50R22"]
+      },
+      "source": "wheel-size.com, simpletire.com",
+      "notes": "Refreshed sixth-gen Sierra"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "currentTireSizes": ["275/60R20", "285/45R22", "255/70R17", "265/65R18", "255/70R17", "265/70R17", "LT265/70R17", "LT275/65R18", "275/50R22"],
+      "validatedOemTireSizes": {
+        "Pro": ["255/70R17"],
+        "SLE": ["265/70R17", "265/65R18"],
+        "Elevation": ["265/65R18", "275/60R20"],
+        "SLT": ["265/65R18", "275/60R20", "275/50R22"],
+        "AT4": ["275/65R18", "265/60R20", "275/60R20"],
+        "AT4X": ["275/70R18"],
+        "Denali": ["275/60R20", "275/50R22"],
+        "Denali_Ultimate": ["275/50R22"]
+      },
+      "source": "tiresize.com, wheel-size.com",
+      "notes": "Two body styles in 2022: new and Limited (carryover)"
+    },
+    {
+      "year": 2021,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedOemTireSizes": {
+        "Base": ["255/70R17"],
+        "SLE": ["265/70R17", "265/65R18"],
+        "Elevation": ["265/65R18", "275/60R20"],
+        "SLT": ["265/65R18", "275/60R20", "275/50R22"],
+        "AT4": ["LT275/65R18"],
+        "Denali": ["275/60R20", "275/50R22"]
+      },
+      "source": "tiresize.com, simpletire.com",
+      "notes": "OEM: LT275/65R18, 275/60R20, 265/65R18, 265/70R17, LT265/70R17, 255/70R17, 275/50R22"
+    }
+  ],
+  "summary": {
+    "vehiclesProcessed": 75,
+    "vehiclesWithIssues": 1,
+    "issues": [
+      {
+        "vehicle": "2006 GMC Acadia",
+        "issue": "Vehicle does not exist - Acadia first model year was 2007",
+        "recommendation": "Remove from database"
+      }
+    ],
+    "generalNotes": [
+      "Most GMC Acadia models 2007-2016 use 255/65R18, 255/60R19, or 255/55R20 OEM sizes",
+      "2017+ Acadia (second-gen) is smaller platform with 235/65R18 to 255/55R20 range",
+      "Canyon first-gen (2004-2012) uses 15-17 inch wheels; second-gen (2015-2022) uses 16-20 inch; third-gen (2023+) uses 17-22 inch",
+      "Envoy consistently uses 245/65R17 or 245/60R18 across all years (2002-2009)",
+      "Jimmy uses 205/75R15 (2WD) or 235/70R15 (4WD) consistently",
+      "Savana 1500 transitioned from 15-inch (2000-2002) to 16-inch (2003-2007) to 17-inch (2008-2014)",
+      "Sierra 1500 current gen offers 17-22 inch wheel options depending on trim",
+      "Hummer EV SUV uses 35-inch tires: LT305/70R18 or LT305/55R22"
+    ]
+  }
+}

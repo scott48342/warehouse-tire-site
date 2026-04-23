@@ -1,0 +1,517 @@
+{
+  "batchId": 52,
+  "researchedAt": "2026-04-21T23:59:00Z",
+  "source": "tiresize.com",
+  "vehicles": [
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "terrano-2",
+      "notUS": true,
+      "notes": "Terrano II was sold in Europe/Australia, not US market. 404 on tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "terrano-2",
+      "notUS": true,
+      "notes": "Terrano II was sold in Europe/Australia, not US market. 404 on tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "terrano-2",
+      "notUS": true,
+      "notes": "Terrano II was sold in Europe/Australia, not US market. 404 on tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "terrano-2",
+      "notUS": true,
+      "notes": "Terrano II was sold in Europe/Australia, not US market. 404 on tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "terrano-regulus",
+      "notUS": true,
+      "notes": "Terrano Regulus was Japan-only luxury variant. Not found on tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "terrano-regulus",
+      "notUS": true,
+      "notes": "Terrano Regulus was Japan-only luxury variant. Not found on tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "terrano-regulus",
+      "notUS": true,
+      "notes": "Terrano Regulus was Japan-only luxury variant. Not found on tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "versa-note",
+      "notUS": true,
+      "notes": "2013 Versa Note not found on tiresize.com - US market data starts at 2014"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "versa-note",
+      "tireSizes": [
+        { "trim": "S", "size": "185/65R15" },
+        { "trim": "S Plus", "size": "185/65R15" },
+        { "trim": "SV", "sizes": ["185/65R15", "195/55R16"] },
+        { "trim": "SV with SL Package", "size": "195/55R16" }
+      ],
+      "wheelDiameters": [15, 16]
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "versa-note",
+      "tireSizes": [
+        { "trim": "S", "size": "185/65R15" },
+        { "trim": "S Plus", "size": "185/65R15" },
+        { "trim": "SL", "size": "195/55R16" },
+        { "trim": "SR", "size": "195/55R16" },
+        { "trim": "SV", "sizes": ["185/65R15", "195/55R16"] }
+      ],
+      "wheelDiameters": [15, 16]
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "versa-note",
+      "tireSizes": [
+        { "trim": "S", "size": "185/65R15" },
+        { "trim": "S Plus", "size": "185/65R15" },
+        { "trim": "SL", "size": "195/55R16" },
+        { "trim": "SR", "sizes": ["185/65R15", "195/55R16"] },
+        { "trim": "SV", "sizes": ["185/65R15", "195/55R16"] }
+      ],
+      "wheelDiameters": [15, 16]
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "versa-note",
+      "tireSizes": [
+        { "trim": "S", "size": "185/65R15" },
+        { "trim": "S Plus", "size": "185/65R15" },
+        { "trim": "SL", "size": "195/55R16" },
+        { "trim": "SR", "size": "195/55R16" },
+        { "trim": "SV", "size": "185/65R15" }
+      ],
+      "wheelDiameters": [15, 16]
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "versa-note",
+      "tireSizes": [
+        { "trim": "S", "size": "185/65R15" },
+        { "trim": "SR", "size": "195/55R16" },
+        { "trim": "SV", "size": "185/65R15" }
+      ],
+      "wheelDiameters": [15, 16]
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "versa-note",
+      "tireSizes": [
+        { "trim": "S", "size": "185/65R15" },
+        { "trim": "SR", "size": "195/55R16" },
+        { "trim": "SV", "size": "185/65R15" }
+      ],
+      "wheelDiameters": [15, 16]
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "x-terra",
+      "notUS": true,
+      "notes": "X-Terra (hyphenated) is Middle East/international model. US Xterra ended in 2015. 404 on tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "x-terra",
+      "notUS": true,
+      "notes": "X-Terra (hyphenated) is Middle East/international model. US Xterra ended in 2015. 404 on tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "x-terra",
+      "notUS": true,
+      "notes": "X-Terra (hyphenated) is Middle East/international model. US Xterra ended in 2015. 404 on tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "x-terra",
+      "notUS": true,
+      "notes": "X-Terra (hyphenated) is Middle East/international model. US Xterra ended in 2015. 404 on tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "x-terra",
+      "notUS": true,
+      "notes": "X-Terra (hyphenated) is Middle East/international model. US Xterra ended in 2015. 404 on tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "x-trail-x-treme",
+      "notUS": true,
+      "notes": "X-Trail X-Treme is Mexico/Latin America special edition. Not sold in US."
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "x-trail-x-treme",
+      "notUS": true,
+      "notes": "X-Trail X-Treme is Mexico/Latin America special edition. Not sold in US."
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "x-trail-x-treme",
+      "notUS": true,
+      "notes": "X-Trail X-Treme is Mexico/Latin America special edition. Not sold in US."
+    },
+    {
+      "year": 2016,
+      "make": "porsche",
+      "model": "718",
+      "notUS": true,
+      "notes": "2016 Porsche 718 not found - 718 launched mid-2016, US model year starts 2017. 404 on tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "porsche",
+      "model": "718",
+      "tireSizes": [
+        { "trim": "Boxster", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Boxster", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Boxster", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Boxster S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Boxster S", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Cayman", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Cayman", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Cayman", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Cayman S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Cayman S", "front": "235/35R20", "rear": "265/35R20", "staggered": true }
+      ],
+      "wheelDiameters": [18, 19, 20],
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "porsche",
+      "model": "718",
+      "tireSizes": [
+        { "trim": "Boxster", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Boxster GTS", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Boxster S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Cayman", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Cayman GTS", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Cayman S", "front": "235/40R19", "rear": "265/40R19", "staggered": true }
+      ],
+      "wheelDiameters": [18, 19, 20],
+      "isStaggered": true
+    },
+    {
+      "year": 2019,
+      "make": "porsche",
+      "model": "718",
+      "tireSizes": [
+        { "trim": "Boxster", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Boxster GTS", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Boxster S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Cayman", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Cayman GTS", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Cayman S", "front": "235/40R19", "rear": "265/40R19", "staggered": true }
+      ],
+      "wheelDiameters": [18, 19, 20],
+      "isStaggered": true
+    },
+    {
+      "year": 2020,
+      "make": "porsche",
+      "model": "718",
+      "tireSizes": [
+        { "trim": "Boxster", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Boxster S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Boxster T", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Cayman", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Cayman GT4", "front": "245/35R20", "rear": "295/30R20", "staggered": true },
+        { "trim": "Cayman S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Cayman T", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Spyder", "front": "245/35R20", "rear": "295/30R20", "staggered": true }
+      ],
+      "wheelDiameters": [18, 19, 20],
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "porsche",
+      "model": "718",
+      "tireSizes": [
+        { "trim": "Boxster", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Boxster GTS", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Boxster S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Boxster T", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Cayman", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Cayman GT4", "front": "245/35R20", "rear": "295/30R20", "staggered": true },
+        { "trim": "Cayman GTS", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Cayman S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Cayman T", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Spyder", "front": "245/35R20", "rear": "295/30R20", "staggered": true }
+      ],
+      "wheelDiameters": [18, 19, 20],
+      "isStaggered": true
+    },
+    {
+      "year": 2022,
+      "make": "porsche",
+      "model": "718",
+      "tireSizes": [
+        { "trim": "Boxster", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Boxster GTS 4.0", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Boxster S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Boxster T", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Cayman", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Cayman GT4", "front": "245/35R20", "rear": "295/30R20", "staggered": true },
+        { "trim": "Cayman GT4 RS", "front": "245/35R20", "rear": "295/30R20", "staggered": true },
+        { "trim": "Cayman GTS 4.0", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Cayman S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Cayman T", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Spyder", "front": "245/35R20", "rear": "295/30R20", "staggered": true }
+      ],
+      "wheelDiameters": [18, 19, 20],
+      "isStaggered": true
+    },
+    {
+      "year": 2023,
+      "make": "porsche",
+      "model": "718",
+      "tireSizes": [
+        { "trim": "Boxster", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Boxster GTS 4.0", "front": "235/35R20", "rear": "265/35R20", "staggered": true },
+        { "trim": "Boxster S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "Boxster T", "front": "235/35R20", "rear": "265/35R20", "staggered": true }
+      ],
+      "wheelDiameters": [18, 19, 20],
+      "isStaggered": true,
+      "notes": "Data truncated - similar trims to 2022"
+    },
+    {
+      "year": 2024,
+      "make": "porsche",
+      "model": "718",
+      "tireSizes": [
+        { "trim": "Boxster/Cayman", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Boxster/Cayman S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "GTS/GT4/Spyder", "front": "235/35R20-245/35R20", "rear": "265/35R20-295/30R20", "staggered": true }
+      ],
+      "wheelDiameters": [18, 19, 20],
+      "isStaggered": true,
+      "notes": "Extrapolated from 2023 data - similar specs expected"
+    },
+    {
+      "year": 2025,
+      "make": "porsche",
+      "model": "718",
+      "tireSizes": [
+        { "trim": "Boxster/Cayman", "front": "235/45R18", "rear": "265/45R18", "staggered": true },
+        { "trim": "Boxster/Cayman S", "front": "235/40R19", "rear": "265/40R19", "staggered": true },
+        { "trim": "GTS/GT4/Spyder", "front": "235/35R20-245/35R20", "rear": "265/35R20-295/30R20", "staggered": true }
+      ],
+      "wheelDiameters": [18, 19, 20],
+      "isStaggered": true,
+      "notes": "Extrapolated - 718 may be in final year before electric replacement"
+    },
+    {
+      "year": 2013,
+      "make": "porsche",
+      "model": "918",
+      "notUS": true,
+      "notes": "918 Spyder production started late 2013. Not found on tiresize.com for 2013 model year"
+    },
+    {
+      "year": 2014,
+      "make": "porsche",
+      "model": "918",
+      "tireSizes": [
+        { "trim": "Spyder", "front": "265/35R20", "rear": "325/30R21", "staggered": true }
+      ],
+      "wheelDiameters": [20, 21],
+      "isStaggered": true,
+      "notes": "Hypercar with mixed diameter staggered setup"
+    },
+    {
+      "year": 2015,
+      "make": "porsche",
+      "model": "918",
+      "tireSizes": [
+        { "trim": "Spyder", "front": "265/35R20", "rear": "325/30R21", "staggered": true }
+      ],
+      "wheelDiameters": [20, 21],
+      "isStaggered": true,
+      "notes": "Final production year for 918 Spyder"
+    },
+    {
+      "year": 2016,
+      "make": "porsche",
+      "model": "918",
+      "notUS": true,
+      "notes": "918 Spyder production ended in 2015. 2016 model year does not exist"
+    },
+    {
+      "year": 2009,
+      "make": "porsche",
+      "model": "panamera",
+      "notUS": true,
+      "notes": "Panamera launched in 2010 for US market. 2009 not found on tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "ram",
+      "model": "1500-classic",
+      "tireSizes": [
+        { "trim": "Classic Express", "size": "265/70R17" },
+        { "trim": "Classic Tradesman", "size": "265/70R17" },
+        { "trim": "Classic Warlock", "size": "265/70R17" }
+      ],
+      "wheelDiameters": [17],
+      "notes": "Classic trim is continuation of 4th gen 1500 alongside new 5th gen"
+    },
+    {
+      "year": 2020,
+      "make": "ram",
+      "model": "1500-classic",
+      "tireSizes": [
+        { "trim": "Classic Express", "size": "265/70R17" },
+        { "trim": "Classic Tradesman", "size": "265/70R17" },
+        { "trim": "Classic Warlock", "size": "265/70R17" }
+      ],
+      "wheelDiameters": [17]
+    },
+    {
+      "year": 2021,
+      "make": "ram",
+      "model": "1500-classic",
+      "tireSizes": [
+        { "trim": "Classic Express", "size": "265/70R17" },
+        { "trim": "Classic Tradesman", "size": "265/70R17" },
+        { "trim": "Classic Warlock", "size": "265/70R17" }
+      ],
+      "wheelDiameters": [17]
+    },
+    {
+      "year": 2022,
+      "make": "ram",
+      "model": "1500-classic",
+      "tireSizes": [
+        { "trim": "Classic Express", "size": "265/70R17" },
+        { "trim": "Classic Tradesman", "size": "265/70R17" },
+        { "trim": "Classic Warlock", "size": "265/70R17" }
+      ],
+      "wheelDiameters": [17]
+    },
+    {
+      "year": 2023,
+      "make": "ram",
+      "model": "1500-classic",
+      "tireSizes": [
+        { "trim": "Classic Tradesman", "size": "265/70R17" },
+        { "trim": "Classic Warlock", "size": "265/70R17" }
+      ],
+      "wheelDiameters": [17]
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "1500-classic",
+      "tireSizes": [
+        { "trim": "Classic Tradesman", "size": "265/70R17" },
+        { "trim": "Classic Warlock", "size": "265/70R17" }
+      ],
+      "wheelDiameters": [17]
+    },
+    {
+      "year": 2013,
+      "make": "ram",
+      "model": "c-v",
+      "tireSizes": [
+        { "trim": "Tradesman", "size": "225/65R16" }
+      ],
+      "wheelDiameters": [16],
+      "notes": "Cargo Van based on Dodge Grand Caravan"
+    },
+    {
+      "year": 2014,
+      "make": "ram",
+      "model": "c-v",
+      "tireSizes": [
+        { "trim": "Tradesman", "size": "225/65R17" }
+      ],
+      "wheelDiameters": [17]
+    },
+    {
+      "year": 2015,
+      "make": "ram",
+      "model": "c-v",
+      "tireSizes": [
+        { "trim": "Tradesman", "size": "225/65R17" }
+      ],
+      "wheelDiameters": [17]
+    },
+    {
+      "year": 2016,
+      "make": "ram",
+      "model": "c-v",
+      "notUS": true,
+      "notes": "Ram C/V was discontinued after 2015. 2016+ model years do not exist"
+    },
+    {
+      "year": 2017,
+      "make": "ram",
+      "model": "c-v",
+      "notUS": true,
+      "notes": "Ram C/V was discontinued after 2015. 2016+ model years do not exist"
+    },
+    {
+      "year": 2018,
+      "make": "ram",
+      "model": "c-v",
+      "notUS": true,
+      "notes": "Ram C/V was discontinued after 2015. 2016+ model years do not exist"
+    },
+    {
+      "year": 2005,
+      "make": "subaru",
+      "model": "b9-tribeca",
+      "notUS": true,
+      "notes": "B9 Tribeca was produced 2006-2007. 2005 model year does not exist. Tribeca (without B9) was 2008-2014"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "usMarket": 27,
+    "notUS": 23,
+    "notUSReasons": {
+      "internationalOnly": ["nissan terrano-2", "nissan terrano-regulus", "nissan x-terra", "nissan x-trail-x-treme"],
+      "invalidYear": ["2013 nissan versa-note", "2016 porsche 718", "2013 porsche 918", "2016 porsche 918", "2009 porsche panamera", "2016-2018 ram c-v", "2005 subaru b9-tribeca"]
+    }
+  }
+}

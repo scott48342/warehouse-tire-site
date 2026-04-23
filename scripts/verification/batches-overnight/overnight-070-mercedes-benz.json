@@ -1,0 +1,2422 @@
+[
+  {
+    "id": "cb12f08b-266d-4960-9b5a-1993986c0000",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S550",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "width": 9,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "683970d6-168c-47a7-b589-84d80b53a9fa",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "15ad6d64-4e69-4217-a2b4-f53addf757b8",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R17",
+      "255/45R18",
+      "275/40R18",
+      "255/40R19",
+      "275/35R19",
+      "255/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b176bfca-1801-49bd-9b1c-b5894189f269",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S600",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "15f68aa5-6ec6-4ee0-addb-0d3ecf01c4e2",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "96a165c6-5902-4b4c-babc-479256f6cff0",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S600",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "4da08171-fd5f-400e-9d48-0bfac7b2768d",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S550",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "width": 9,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "d34dfc36-40ad-494c-9caf-513910abb9f0",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "4c9f9999-1edb-4f5a-9454-8bafb111bd78",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R17",
+      "255/45R18",
+      "275/40R18",
+      "255/40R19",
+      "275/35R19",
+      "255/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e0366b44-1ace-4372-b311-c42f769904b2",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "d0b68c15-c903-4f7b-a7d8-e85f82ca6971",
+    "year": 2009,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "ead4a604-45e8-441d-a882-8b5557463bb4",
+    "year": 2009,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "7bf50456-f74c-4922-a76b-cba64a13e72f",
+    "year": 2009,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S550",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "width": 9,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "ab3a29dc-3ba9-4b86-9178-3434d3cd0481",
+    "year": 2009,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S600",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "07ba9e47-57a4-48d8-84c9-1bc8063ab701",
+    "year": 2009,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R17",
+      "255/45R18",
+      "275/40R18",
+      "255/40R19",
+      "275/35R19",
+      "255/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5557c24f-9bc5-4000-b646-f5226c4a6541",
+    "year": 2010,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R17",
+      "255/45R18",
+      "275/40R18",
+      "255/40R19",
+      "275/35R19",
+      "255/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f6cbcb45-fd9d-4852-a7c7-beb03a97c96c",
+    "year": 2010,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "d146b7e9-110f-47f6-b1b9-b3deb3a86bac",
+    "year": 2010,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "8b1d7f27-a760-44ee-a5b1-594561460ee5",
+    "year": 2010,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S550",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "width": 9,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "f13c79d9-797d-4704-9c6e-ee8e4be2737b",
+    "year": 2010,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S600",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "7471eca0-7e74-4070-814e-95733b7b3bf6",
+    "year": 2011,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S550",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "width": 9,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "ccbaeae4-0ac0-44a0-b1be-14a967b7bfa6",
+    "year": 2011,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "8a607bfb-16b4-42eb-866a-9149094d8ae8",
+    "year": 2011,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "d1c9de92-93fb-469b-a6dd-8cc0f6f4d7a7",
+    "year": 2011,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R17",
+      "255/45R18",
+      "275/40R18",
+      "255/40R19",
+      "275/35R19",
+      "255/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "fedb4d6f-f5d1-4b90-93a3-3d2014aaf925",
+    "year": 2011,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S600",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "b74a2c0b-f1d5-4727-a1ac-dcd248a98ebe",
+    "year": 2012,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S550",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "width": 9,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "f8417694-bb70-4795-8936-52d83abae0fb",
+    "year": 2012,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R17",
+      "255/45R18",
+      "275/40R18",
+      "255/40R19",
+      "275/35R19",
+      "255/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "464f4c3d-c7b1-4728-af8c-5a8006cd315c",
+    "year": 2012,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "d07d4b78-920f-4cc0-864e-26b7d012203a",
+    "year": 2012,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S600",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "6efb2922-64e9-4644-8f20-4e8b36cf8772",
+    "year": 2012,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "1f2943ee-fd8b-408e-82a9-cc46733ff341",
+    "year": 2013,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "7ef147e6-24de-4ae8-bb41-5d1902c042ff",
+    "year": 2013,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "97f68ca0-2cd0-426f-b6e4-6dd9fb9df953",
+    "year": 2013,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S550",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      },
+      {
+        "width": 9,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "3661e078-4143-4702-837c-9c3923d00893",
+    "year": 2013,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R17",
+      "255/45R18",
+      "275/40R18",
+      "255/40R19",
+      "275/35R19",
+      "255/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "47f7fbd8-1105-496d-866e-40be7dbb3d02",
+    "year": 2013,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S600",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R17",
+      "255/45R18",
+      "255/40R19",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "43a5a3e6-ec59-4423-99e0-e8b999517c5a",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "37397b79-46a9-4df8-ab2a-f58c7bd35c58",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R18",
+      "255/45R19",
+      "255/40R20",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "69a6b041-c126-44f7-85d4-455cd58793d5",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S560",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R18",
+      "255/45R19",
+      "255/40R20",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "aa67ce19-180c-49b3-b00d-2227d896e8a0",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R18",
+      "255/45R19",
+      "255/40R20",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "7d62c9c9-c125-4798-949a-fc1629e8417d",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S65 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R18",
+      "255/45R19",
+      "255/40R20",
+      "275/35R20"
+    ],
+    "source": "fix_cross_gen"
+  },
+  {
+    "id": "b3a4deed-31ad-422a-a50e-0fc8dd1dd3bc",
+    "year": 2015,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S65 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "3d3790b2-dff2-4103-a8ce-29f14d8c6a8b",
+    "year": 2015,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "250a12a3-4328-498a-b1b2-610b63627c56",
+    "year": 2015,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S560",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "a799808c-9c3a-496b-bb34-3dabc442b3f2",
+    "year": 2015,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "fea2a7f0-a029-45b7-9bf2-28fd30c05740",
+    "year": 2015,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "2af3438c-4a19-4d42-9599-f5b8c4fe1f73",
+    "year": 2016,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S65 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "eae64c26-6fc0-42e5-b505-1a267e07dfd4",
+    "year": 2016,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S560",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "9524051a-80bb-4a86-89b0-3f50dbf67df7",
+    "year": 2016,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "c0c52d2e-87aa-4bef-9446-1b35fd05d8d1",
+    "year": 2016,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "50a3b92d-e08b-4ae9-bdd9-956084971cc9",
+    "year": 2016,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "317fe40b-1873-4e31-abee-d307fa040027",
+    "year": 2017,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "68cff4b6-1a1b-4492-ae47-5a0cd17daf4e",
+    "year": 2017,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S65 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "64117b83-9e19-4bd9-b605-d44a19198ee1",
+    "year": 2017,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "df779035-97a7-4d39-8e45-2599d8c498e6",
+    "year": 2017,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S560",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "064eba05-7739-4f85-ac3c-05a3bb1861c9",
+    "year": 2017,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "97fd2501-a0e4-4394-b1cd-4ac28c27f9cc",
+    "year": 2018,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S65 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "0df50b4b-d210-43cc-8329-c5f7137b1bd4",
+    "year": 2018,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e680492f-4bc9-4b6e-81b2-ac2b534c8e15",
+    "year": 2018,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "ca019ade-63b8-4990-aac4-52f9c09689bc",
+    "year": 2018,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S560",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "5dfbdb3f-a759-4527-a80a-891dae79400b",
+    "year": 2018,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "8db78fc3-e13e-4e72-9922-faad07944902",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S560",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "d362d24f-2bd2-42ec-ba33-b4febd675e6c",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "d9560b11-ed1f-44ca-8847-ceb533d10f2b",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "47eaba87-4d31-4fc6-ab9a-93a6e79b5dd6",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "b459dbb0-43ea-4e63-9e11-8a5c6606bde4",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S65 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "47b353b2-4d34-4767-8387-a87bdf2cf040",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "80359a2f-b6db-4ebf-bd08-fba9b40f4f3f",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S65 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "9f92c83b-cbde-4a44-8153-240668f3d78f",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "5b68f7e4-83ce-47f9-8114-50245e0ca763",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S560",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "5cc23e9c-021e-4bc6-acca-5d16c790d180",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R17",
+      "245/50R18",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "130f40ff-6be6-40b9-a0e8-e9ff0214429e",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S63 AMG E Performance",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 21
+      },
+      {
+        "rear": true,
+        "width": 10.5,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/50R18",
+      "255/45R19",
+      "285/40R19",
+      "255/40R20",
+      "285/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "aacff53a-c1ca-4c8e-9494-5b148ac8e670",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/50R18",
+      "255/45R19",
+      "285/40R19",
+      "255/40R20",
+      "285/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "66ad589a-7e6e-440c-961f-8cfe367ce838",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S500",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "255/50R18",
+      "255/45R19",
+      "285/40R19",
+      "255/40R20",
+      "285/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "f9c0ca0d-ddc9-487a-8c7a-f78d283296dd",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "Maybach S580",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/50R18",
+      "255/45R19",
+      "285/40R19",
+      "255/40R20",
+      "285/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "d89f81db-0fd4-4586-827c-87ca3ecc24ce",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "s-class",
+    "trim": "S580",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/50R18",
+      "255/45R19",
+      "285/40R19",
+      "255/40R20",
+      "285/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "cleanup_cache-import"
+  }
+]

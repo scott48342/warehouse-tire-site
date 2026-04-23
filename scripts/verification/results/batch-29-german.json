@@ -1,0 +1,1188 @@
+{
+  "batch": "batch-29-german",
+  "verifiedAt": "2026-04-23T00:40:00Z",
+  "totalVehicles": 75,
+  "verified": 70,
+  "flagged": 5,
+  "sources": ["hulkoffsets.com", "wikipedia.org", "classic.com", "hagerty.com", "mbca.org", "carbuzz.com"],
+  "results": [
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "generation": "W164 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML350", "oemWheelSize": "18x8", "oemTireSize": "255/55R18" },
+        { "name": "ML550", "oemWheelSize": "19x8.5", "oemTireSize": "275/50R19" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W164 facelift model (2008-2011)"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "generation": "W164 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML350", "oemWheelSize": "18x8", "oemTireSize": "255/55R18" },
+        { "name": "ML550", "oemWheelSize": "19x8.5", "oemTireSize": "275/50R19" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W164 facelift model (2008-2011)"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "generation": "W164 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML350", "oemWheelSize": "18x8", "oemTireSize": "255/55R18" },
+        { "name": "ML550", "oemWheelSize": "19x8.5", "oemTireSize": "275/50R19" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W164 facelift model (2008-2011)"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "generation": "W164 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML350", "oemWheelSize": "18x8", "oemTireSize": "255/55R18" },
+        { "name": "ML550", "oemWheelSize": "19x8.5", "oemTireSize": "275/50R19" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W164 facelift final year"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "generation": "W166",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML350", "oemWheelSize": "18x8", "oemTireSize": "255/50R19" },
+        { "name": "ML350 BlueTEC", "oemWheelSize": "18x8", "oemTireSize": "255/50R19" },
+        { "name": "ML550", "oemWheelSize": "20x9", "oemTireSize": "275/45R20" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W166 first year"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "generation": "W166",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML350", "oemWheelSize": "18x8", "oemTireSize": "255/50R19" },
+        { "name": "ML350 BlueTEC", "oemWheelSize": "18x8", "oemTireSize": "255/50R19" },
+        { "name": "ML550", "oemWheelSize": "20x9", "oemTireSize": "275/45R20" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W166 generation"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "generation": "W166",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML350", "oemWheelSize": "18x8", "oemTireSize": "255/50R19" },
+        { "name": "ML350 BlueTEC", "oemWheelSize": "18x8", "oemTireSize": "255/50R19" },
+        { "name": "ML550", "oemWheelSize": "20x9", "oemTireSize": "275/45R20" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W166 generation"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "generation": "W166",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML350", "oemWheelSize": "18x8", "oemTireSize": "255/50R19" },
+        { "name": "ML400", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W166 final year; renamed to GLE for 2016"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W163",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "275/55R17" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML55 AMG first model year (2000-2005)"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W163",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "275/55R17" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML55 AMG (2000-2005)"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W163",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "275/55R17" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML55 AMG (2000-2005)"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W163",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "275/55R17" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML55 AMG (2000-2005)"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W163",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "275/55R17" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML55 AMG (2000-2005)"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W163",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "275/55R17" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML55 AMG final year; W163 ended"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W164",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML63 AMG", "oemWheelSize": "20x9", "oemTireSize": "295/35R21" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML63 AMG first year (W164, 2006-2011)"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W164",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML63 AMG", "oemWheelSize": "20x9", "oemTireSize": "295/35R21" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML63 AMG (W164)"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W164 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML63 AMG", "oemWheelSize": "20x9", "oemTireSize": "295/35R21" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML63 AMG (W164 facelift)"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W164 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML63 AMG", "oemWheelSize": "20x9", "oemTireSize": "295/35R21" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML63 AMG (W164 facelift)"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W164 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML63 AMG", "oemWheelSize": "20x9", "oemTireSize": "295/35R21" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML63 AMG (W164 facelift)"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W164 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML63 AMG", "oemWheelSize": "20x9", "oemTireSize": "295/35R21" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML63 AMG W164 final year"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W166",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML63 AMG", "oemWheelSize": "21x9", "oemTireSize": "285/40R22" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML63 AMG (W166, 2012-2015)"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W166",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML63 AMG", "oemWheelSize": "21x9", "oemTireSize": "285/40R22" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML63 AMG (W166)"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W166",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML63 AMG", "oemWheelSize": "21x9", "oemTireSize": "285/40R22" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML63 AMG (W166)"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "generation": "W166",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "ML63 AMG", "oemWheelSize": "21x9", "oemTireSize": "285/40R22" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "ML63 AMG final year; renamed GLE63 AMG for 2016"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18" }
+      ],
+      "confidence": "medium",
+      "usMarketValid": true,
+      "notes": "S55 AMG introduced late 2000 for 2001 MY; some sources list 2000 availability",
+      "flagged": true,
+      "flagReason": "Verify 2000 MY S55 AMG US availability - most sources cite 2001 as first US model year"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "S55 AMG (W220, 2001-2006)"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "S55 AMG (W220)"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "S55 AMG supercharged variant introduced"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18" },
+        { "name": "S65 AMG", "oemWheelSize": "19x9", "oemTireSize": "275/35R19" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "S65 AMG V12 introduced"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18" },
+        { "name": "S65 AMG", "oemWheelSize": "19x9", "oemTireSize": "275/35R19" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W220 final year"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W220/W221",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S55 AMG", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18" },
+        { "name": "S65 AMG", "oemWheelSize": "19x9", "oemTireSize": "275/35R19" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "Transition year W220/W221"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W221",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19 (F), 275/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "19x9", "oemTireSize": "255/40R19 (F), 275/35R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "S63 AMG replaces S55 AMG; staggered setup"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W221",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/40R19 (F), 275/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "19x9/10", "oemTireSize": "255/40R19 (F), 275/35R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W221 generation; staggered setup"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W221 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/40R19 (F), 275/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "19x9/10", "oemTireSize": "255/40R19 (F), 275/35R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W221 facelift; staggered setup"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W221 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/40R19 (F), 275/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "19x9/10", "oemTireSize": "255/40R19 (F), 275/35R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W221 facelift; staggered setup"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W221 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/35R20 (F), 275/30R20 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 275/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W221 facelift; staggered setup"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W221 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/35R20 (F), 275/30R20 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 275/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W221 facelift; staggered setup"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W221 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/35R20 (F), 275/30R20 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 275/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W221 final year"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W222",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W222 first year; staggered setup"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W222",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W222 generation; staggered setup"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W222",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W222 generation; staggered setup"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W222 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W222 facelift; staggered setup"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W222 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W222 facelift; staggered setup"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W222 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W222 facelift; staggered setup"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W222 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W222 final year; S65 final production year"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W223",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG", "oemWheelSize": "21x9/10", "oemTireSize": "265/35R21 (F), 295/30R21 (R)" }
+      ],
+      "confidence": "medium",
+      "usMarketValid": true,
+      "notes": "W223 first year; S63 arrived late 2021",
+      "flagged": true,
+      "flagReason": "S63 AMG W223 arrived late 2021/early 2022 - verify exact US availability"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W223",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG E Performance", "oemWheelSize": "21x9/10", "oemTireSize": "265/35R21 (F), 295/30R21 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W223; S63 E Performance plug-in hybrid"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W223",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG E Performance", "oemWheelSize": "21x9/10", "oemTireSize": "265/35R21 (F), 295/30R21 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "W223; S63 E Performance plug-in hybrid"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "generation": "W223",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S63 AMG E Performance", "oemWheelSize": "21x9/10", "oemTireSize": "265/35R21 (F), 295/30R21 (R)" }
+      ],
+      "confidence": "medium",
+      "usMarketValid": true,
+      "notes": "W223; 2025 MY projected specs",
+      "flagged": true,
+      "flagReason": "2025 MY not yet released - specs based on 2024 carryover"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "S-Class Coupe",
+      "generation": "C217",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S550 4MATIC Coupe", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "245/45R19 (F), 275/40R19 (R)" },
+        { "name": "S63 AMG Coupe", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG Coupe", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "C217 first year; staggered setup"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "S-Class Coupe",
+      "generation": "C217",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S550 4MATIC Coupe", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "245/45R19 (F), 275/40R19 (R)" },
+        { "name": "S63 AMG Coupe", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG Coupe", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "C217 generation; staggered setup"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "S-Class Coupe",
+      "generation": "C217",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S550 4MATIC Coupe", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "245/45R19 (F), 275/40R19 (R)" },
+        { "name": "S63 AMG Coupe", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG Coupe", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "C217 pre-facelift final year"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "S-Class Coupe",
+      "generation": "C217 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S560 4MATIC Coupe", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "245/45R19 (F), 275/40R19 (R)" },
+        { "name": "S63 AMG Coupe", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG Coupe", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "C217 facelift; staggered setup"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "S-Class Coupe",
+      "generation": "C217 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S560 4MATIC Coupe", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "245/45R19 (F), 275/40R19 (R)" },
+        { "name": "S63 AMG Coupe", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG Coupe", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "C217 facelift; staggered setup"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "S-Class Coupe",
+      "generation": "C217 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S560 4MATIC Coupe", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "245/45R19 (F), 275/40R19 (R)" },
+        { "name": "S63 AMG Coupe", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" },
+        { "name": "S65 AMG Coupe", "oemWheelSize": "20x9/10", "oemTireSize": "255/35R20 (F), 285/30R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "C217 facelift; staggered setup"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "S-Class Coupe",
+      "generation": "C217 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "S560 4MATIC Coupe", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "245/45R19 (F), 275/40R19 (R)" },
+        { "name": "S63 AMG Coupe", "oemWheelSize": "20x8.5/9.5", "oemTireSize": "255/40R19 (F), 285/35R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "C217 final year; S-Class Coupe discontinued after 2021"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R129",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL500", "oemWheelSize": "17x8/9", "oemTireSize": "245/45R17 (F), 275/40R17 (R)" },
+        { "name": "SL600", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "245/40R18 (F), 275/35R18 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R129 generation (1990-2002); staggered setup"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R129",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL500", "oemWheelSize": "17x8/9", "oemTireSize": "245/45R17 (F), 275/40R17 (R)" },
+        { "name": "SL600", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "245/40R18 (F), 275/35R18 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R129 generation; staggered setup"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R129",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL500", "oemWheelSize": "17x8/9", "oemTireSize": "245/45R17 (F), 275/40R17 (R)" },
+        { "name": "SL500 Silver Arrow", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "245/40R18 (F), 275/35R18 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R129 final year; Silver Arrow special edition"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R230",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL500", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL55 AMG", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL600", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R230 first US model year; staggered setup"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R230",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL500", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL55 AMG", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL600", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R230; SL65 AMG V12 introduced; staggered setup"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R230",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL500", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL55 AMG", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL600", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R230; staggered setup"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R230 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL500", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL55 AMG", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL600", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R230 facelift; staggered setup"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R230 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL550", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL55 AMG", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL600", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R230 facelift; SL500 renamed SL550; staggered setup"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R230 Second Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL550", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL600", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R230 second facelift; SL55 replaced by SL63 AMG; staggered setup"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R230 Second Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL550", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL600", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R230; staggered setup"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R230 Second Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL550", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL600", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R230; staggered setup"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R230 Second Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL550", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R230 final year; staggered setup"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R230/R231",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL550", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x9/10", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R231 first year (debuted mid-year); staggered setup"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R231",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL550", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x9/10", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R231 generation; staggered setup"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R231",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL550", "oemWheelSize": "18x8.5/9.5", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "19x9/10", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R231 generation; staggered setup"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R231",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL400", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL550", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/30R20 (F), 285/25R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R231; SL400 V6 added; staggered setup"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R231 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL450", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL550", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/30R20 (F), 285/25R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R231 facelift; SL400 renamed SL450; staggered setup"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R231 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL450", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL550", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/30R20 (F), 285/25R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R231 facelift; staggered setup"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "generation": "R231 Facelift",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "SL450", "oemWheelSize": "18x8.5/9", "oemTireSize": "255/40R18 (F), 285/35R18 (R)" },
+        { "name": "SL550", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL63 AMG", "oemWheelSize": "19x8.5/9.5", "oemTireSize": "255/35R19 (F), 285/30R19 (R)" },
+        { "name": "SL65 AMG", "oemWheelSize": "20x9/10", "oemTireSize": "255/30R20 (F), 285/25R20 (R)" }
+      ],
+      "confidence": "high",
+      "usMarketValid": true,
+      "notes": "R231 second-to-last year in US; 2019 skipped for redesign; staggered setup"
+    }
+  ],
+  "flaggedVehicles": [
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "reason": "S55 AMG US availability uncertain for 2000 MY - most sources indicate 2001 as first US model year"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "reason": "S63 AMG W223 arrived late 2021/early 2022 - verify exact US availability"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "reason": "2025 MY not yet released - specs based on 2024 carryover projections"
+    }
+  ],
+  "summary": {
+    "allMercedesModels": {
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "consistent": true
+    },
+    "staggeredSetups": "Most Mercedes performance/luxury models use staggered wheel/tire setups (wider rear)",
+    "modelNotes": {
+      "M-Class": "W164 (2006-2011), W166 (2012-2015); renamed GLE for 2016",
+      "M-Class AMG": "ML55 AMG (2000-2005 W163), ML63 AMG (2006-2015 W164/W166)",
+      "S-Class AMG": "S55 AMG (2001-2006 W220), S63/S65 AMG (2007+ W221/W222/W223)",
+      "S-Class Coupe": "C217 (2015-2021); discontinued after 2021 MY",
+      "SL-Class": "R129 (1990-2002), R230 (2003-2011), R231 (2012-2018)"
+    }
+  }
+}

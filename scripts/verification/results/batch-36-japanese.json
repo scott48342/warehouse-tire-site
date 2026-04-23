@@ -1,0 +1,1182 @@
+{
+  "batch": "batch-36-japanese",
+  "verifiedAt": "2026-04-23T00:30:00Z",
+  "vehicleCount": 75,
+  "validCount": 62,
+  "invalidCount": 13,
+  "vehicles": [
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "Element",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "EX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "tiresize.com"],
+      "notes": "Production: 2003-2011"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Element",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "EX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "SC", "oemWheelSize": "18x7", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "tiresize.com"],
+      "notes": "SC trim had 18\" wheels"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Element",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "EX", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "tiresize.com"],
+      "notes": "Final model year"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "14x5.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "insightcentral.net"],
+      "notes": "First generation 2-seat hybrid. Production: 2000-2006"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "14x5.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "insightcentral.net"],
+      "notes": "First generation"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "14x5.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First generation"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "14x5.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First generation"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "14x5.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First generation"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "14x5.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First generation"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "14x5.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Final year of first generation"
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "15x6", "oemTireSize": "175/65R15" },
+        { "name": "EX", "oemWheelSize": "15x6", "oemTireSize": "175/65R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "cars.com"],
+      "notes": "Second generation launched late 2009. Production: 2009-2014"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "15x6", "oemTireSize": "175/65R15" },
+        { "name": "EX", "oemWheelSize": "15x6", "oemTireSize": "175/65R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "15x6", "oemTireSize": "175/65R15" },
+        { "name": "EX", "oemWheelSize": "15x6", "oemTireSize": "175/65R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation"
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "EX", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation - tire size changed to 185/60R15"
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "EX", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation"
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" },
+        { "name": "EX", "oemWheelSize": "15x6", "oemTireSize": "185/60R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Final year of second generation - discontinued mid-2014"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "INVALID",
+      "reason": "Model not produced in 2018. Third generation started 2019.",
+      "validYears": "2000-2006, 2009-2014, 2019-2022",
+      "confidence": "high",
+      "sources": ["cars.com", "wikipedia.org"],
+      "notes": "Gap year - no Insight produced 2015-2018"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "16x7", "oemTireSize": "215/55R16" },
+        { "name": "EX", "oemWheelSize": "16x7", "oemTireSize": "215/55R16" },
+        { "name": "Touring", "oemWheelSize": "17x7", "oemTireSize": "215/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hondainfocenter.com"],
+      "notes": "Third generation. Bolt pattern changed to 5x114.3"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "16x7", "oemTireSize": "215/55R16" },
+        { "name": "EX", "oemWheelSize": "16x7", "oemTireSize": "215/55R16" },
+        { "name": "Touring", "oemWheelSize": "17x7", "oemTireSize": "215/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Third generation"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "Insight",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "EX", "oemWheelSize": "16x7", "oemTireSize": "215/55R16" },
+        { "name": "Touring", "oemWheelSize": "17x7", "oemTireSize": "215/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Final model year - discontinued after 2022"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 100.0,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "16x7", "oemTireSize": "245/70R16" },
+        { "name": "EX", "oemWheelSize": "16x7", "oemTireSize": "245/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "performanceplustire.com"],
+      "notes": "First generation (rebadged Isuzu Rodeo). Production: 1994-2002"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 100.0,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "16x7", "oemTireSize": "245/70R16" },
+        { "name": "EX", "oemWheelSize": "16x7", "oemTireSize": "245/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org"],
+      "notes": "First generation"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "valid",
+      "boltPattern": "6x139.7",
+      "hubBore": 100.0,
+      "trims": [
+        { "name": "LX", "oemWheelSize": "16x7", "oemTireSize": "245/70R16" },
+        { "name": "EX", "oemWheelSize": "16x7", "oemTireSize": "245/70R16" }
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org"],
+      "notes": "Final year of first generation"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "EX-L", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "Touring", "oemWheelSize": "20x8.5", "oemTireSize": "265/45R20" },
+        { "name": "Elite", "oemWheelSize": "20x8.5", "oemTireSize": "265/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["passportforums.com", "tiresize.com"],
+      "notes": "Third generation. Production: 2019-present"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "EX-L", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "Touring", "oemWheelSize": "20x8.5", "oemTireSize": "265/45R20" },
+        { "name": "Elite", "oemWheelSize": "20x8.5", "oemTireSize": "265/45R20" },
+        { "name": "TrailSport", "oemWheelSize": "18x8", "oemTireSize": "265/60R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "TrailSport trim added"
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "EX-L", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "Touring", "oemWheelSize": "20x8.5", "oemTireSize": "265/45R20" },
+        { "name": "Elite", "oemWheelSize": "20x8.5", "oemTireSize": "265/45R20" },
+        { "name": "TrailSport", "oemWheelSize": "18x8", "oemTireSize": "265/60R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Third generation"
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "EX-L", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "Touring", "oemWheelSize": "20x8.5", "oemTireSize": "265/45R20" },
+        { "name": "Elite", "oemWheelSize": "20x8.5", "oemTireSize": "265/45R20" },
+        { "name": "TrailSport", "oemWheelSize": "18x8", "oemTireSize": "265/60R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Third generation"
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "EX-L", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "Touring", "oemWheelSize": "20x8.5", "oemTireSize": "265/45R20" },
+        { "name": "TrailSport", "oemWheelSize": "18x8", "oemTireSize": "265/60R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "automobiles.honda.com"],
+      "notes": "Third generation - 4th gen coming 2026"
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "EX-L", "oemWheelSize": "20x8", "oemTireSize": "245/50R20" },
+        { "name": "Touring", "oemWheelSize": "20x8.5", "oemTireSize": "265/45R20" },
+        { "name": "TrailSport", "oemWheelSize": "18x8", "oemTireSize": "265/60R18" }
+      ],
+      "confidence": "medium",
+      "sources": ["performanceplustire.com"],
+      "notes": "Fourth generation - new redesign expected"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16" },
+        { "name": "Type SH", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["owners.honda.com", "apexwheels.com"],
+      "notes": "Fifth generation. Production: 1997-2001"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16" },
+        { "name": "Type SH", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["owners.honda.com", "parkers.co.uk"],
+      "notes": "Final year of fifth generation - discontinued 2001"
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "INVALID",
+      "reason": "2026 is the revival model year, not 2025. Prelude was discontinued 2001-2025.",
+      "validYears": "1979-2001, 2026+",
+      "confidence": "high",
+      "sources": ["automobiles.honda.com", "caranddriver.com"],
+      "notes": "Prelude returns as 2026 model year only"
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "Two-Tone", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" }
+      ],
+      "confidence": "high",
+      "sources": ["automobiles.honda.com", "caranddriver.com"],
+      "notes": "Revival model - 2.0L hybrid, 200hp, based on Civic platform"
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Prologue",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 64.1,
+      "trims": [
+        { "name": "EX", "oemWheelSize": "19x8", "oemTireSize": "255/60R19" },
+        { "name": "Touring", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21" },
+        { "name": "Elite", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21" }
+      ],
+      "confidence": "high",
+      "sources": ["automobiles.honda.com", "caranddriver.com"],
+      "notes": "Electric SUV based on GM Ultium platform. Production: 2024-present"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "S2000",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "Base", "oemWheelSizeFront": "16x6.5", "oemWheelSizeRear": "16x7.5", "oemTireSizeFront": "205/55R16", "oemTireSizeRear": "225/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "s2ki.com"],
+      "notes": "AP1 generation (2000-2003). STAGGERED setup. Hub bore is 70.1mm front, 64.1mm rear"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "S2000",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "Base", "oemWheelSizeFront": "16x6.5", "oemWheelSizeRear": "16x7.5", "oemTireSizeFront": "205/55R16", "oemTireSizeRear": "225/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com"],
+      "notes": "AP1 generation"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "S2000",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "Base", "oemWheelSizeFront": "16x6.5", "oemWheelSizeRear": "16x7.5", "oemTireSizeFront": "205/55R16", "oemTireSizeRear": "225/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com"],
+      "notes": "AP1 generation"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "S2000",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "Base", "oemWheelSizeFront": "16x6.5", "oemWheelSizeRear": "16x7.5", "oemTireSizeFront": "205/55R16", "oemTireSizeRear": "225/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com"],
+      "notes": "Final year of AP1"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "S2000",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "Base", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x8.5", "oemTireSizeFront": "215/45R17", "oemTireSizeRear": "245/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com"],
+      "notes": "AP2 generation starts (2004-2009). 17\" wheels, wider stagger"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "S2000",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "Base", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x8.5", "oemTireSizeFront": "215/45R17", "oemTireSizeRear": "245/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com"],
+      "notes": "AP2 generation"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "S2000",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "Base", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x8.5", "oemTireSizeFront": "215/45R17", "oemTireSizeRear": "245/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com"],
+      "notes": "AP2 generation"
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "S2000",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "Base", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x8.5", "oemTireSizeFront": "215/45R17", "oemTireSizeRear": "245/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com"],
+      "notes": "AP2 generation"
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "S2000",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "Base", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x8.5", "oemTireSizeFront": "215/45R17", "oemTireSizeRear": "245/40R17" },
+        { "name": "CR", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x8.5", "oemTireSizeFront": "215/45R17", "oemTireSizeRear": "245/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com"],
+      "notes": "AP2 generation. CR (Club Racer) limited edition added"
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "S2000",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "Base", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x8.5", "oemTireSizeFront": "215/45R17", "oemTireSizeRear": "245/40R17" },
+        { "name": "CR", "oemWheelSizeFront": "17x7", "oemWheelSizeRear": "17x8.5", "oemTireSizeFront": "215/45R17", "oemTireSizeRear": "245/40R17" }
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com"],
+      "notes": "Final model year - discontinued 2009"
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "Q60",
+      "status": "INVALID",
+      "reason": "Q60 name introduced in 2014. In 2013, this was still called Infiniti G37 Coupe.",
+      "validYears": "2014-2015, 2017-2022",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "cars.com"],
+      "notes": "Rebadging from G to Q naming happened in 2014"
+    },
+    {
+      "year": 2023,
+      "make": "Infiniti",
+      "model": "Q60",
+      "status": "INVALID",
+      "reason": "Q60 discontinued after 2022 model year.",
+      "validYears": "2014-2015, 2017-2022",
+      "confidence": "high",
+      "sources": ["autoevolution.com", "jdpower.com"],
+      "notes": "No 2016 model year either (gap between generations)"
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "Q70",
+      "status": "INVALID",
+      "reason": "Q70 name introduced in 2014. In 2013, this was still called Infiniti M.",
+      "validYears": "2014-2019",
+      "confidence": "high",
+      "sources": ["autoevolution.com", "wikipedia.org"],
+      "notes": "Rebadging from M to Q70 happened in 2014"
+    },
+    {
+      "year": 2014,
+      "make": "Infiniti",
+      "model": "Q70",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "3.7", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "5.6", "oemWheelSize": "20x9", "oemTireSize": "245/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "thedriveradviser.com"],
+      "notes": "First year as Q70 (formerly Infiniti M)"
+    },
+    {
+      "year": 2015,
+      "make": "Infiniti",
+      "model": "Q70",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "3.7", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "5.6", "oemWheelSize": "20x9", "oemTireSize": "245/40R20" },
+        { "name": "Q70L", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Q70L long-wheelbase variant introduced"
+    },
+    {
+      "year": 2016,
+      "make": "Infiniti",
+      "model": "Q70",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "3.7", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "5.6", "oemWheelSize": "20x9", "oemTireSize": "245/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Q70"
+    },
+    {
+      "year": 2017,
+      "make": "Infiniti",
+      "model": "Q70",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "3.7", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "5.6", "oemWheelSize": "20x9", "oemTireSize": "245/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Q70"
+    },
+    {
+      "year": 2018,
+      "make": "Infiniti",
+      "model": "Q70",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "3.7", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "5.6", "oemWheelSize": "20x9", "oemTireSize": "245/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autoevolution.com"],
+      "notes": "Q70"
+    },
+    {
+      "year": 2019,
+      "make": "Infiniti",
+      "model": "Q70",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "3.7", "oemWheelSize": "18x8", "oemTireSize": "245/50R18" },
+        { "name": "5.6", "oemWheelSize": "20x9", "oemTireSize": "245/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Final model year - Q70 discontinued after 2019"
+    },
+    {
+      "year": 2020,
+      "make": "Infiniti",
+      "model": "Q70",
+      "status": "INVALID",
+      "reason": "Q70 discontinued after 2019 model year.",
+      "validYears": "2014-2019",
+      "confidence": "high",
+      "sources": ["autoevolution.com", "cars.com"],
+      "notes": "Production ended 2019"
+    },
+    {
+      "year": 2021,
+      "make": "Infiniti",
+      "model": "Q70",
+      "status": "INVALID",
+      "reason": "Q70 discontinued after 2019 model year.",
+      "validYears": "2014-2019",
+      "confidence": "high",
+      "sources": ["autoevolution.com"],
+      "notes": "Production ended 2019"
+    },
+    {
+      "year": 2018,
+      "make": "Infiniti",
+      "model": "QX50",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "Pure", "oemWheelSize": "19x7.5", "oemTireSize": "235/55R19" },
+        { "name": "Luxe", "oemWheelSize": "19x7.5", "oemTireSize": "235/55R19" },
+        { "name": "Essential", "oemWheelSize": "20x8", "oemTireSize": "255/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Second generation launched late 2017 as 2019 MY, but some early 2018 sales. Actually this is first year of redesign."
+    },
+    {
+      "year": 2022,
+      "make": "Infiniti",
+      "model": "QX55",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "Luxe", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20" },
+        { "name": "Essential", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20" },
+        { "name": "Sensory", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "First model year. Production: 2022-2025"
+    },
+    {
+      "year": 2023,
+      "make": "Infiniti",
+      "model": "QX55",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "Luxe", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20" },
+        { "name": "Essential", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20" },
+        { "name": "Sensory", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "QX55"
+    },
+    {
+      "year": 2025,
+      "make": "Infiniti",
+      "model": "QX55",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "Luxe", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20" },
+        { "name": "Essential", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20" },
+        { "name": "Sensory", "oemWheelSize": "20x8.5", "oemTireSize": "255/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["infinitiusa.com", "tiresize.com"],
+      "notes": "Final model year - QX55 discontinued after 2025"
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "QX70",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "3.7", "oemWheelSize": "18x8", "oemTireSize": "265/60R18" },
+        { "name": "5.0", "oemWheelSize": "21x9.5", "oemTireSize": "265/45R21" }
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com", "tiresize.com"],
+      "notes": "First year as QX70 (formerly Infiniti FX). Production: 2013-2017"
+    },
+    {
+      "year": 2014,
+      "make": "Infiniti",
+      "model": "QX70",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        { "name": "3.7", "oemWheelSize": "18x8", "oemTireSize": "265/60R18" },
+        { "name": "3.7 Sport", "oemWheelSize": "20x8", "oemTireSize": "265/50R20" },
+        { "name": "5.0", "oemWheelSize": "21x9.5", "oemTireSize": "265/45R21" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "QX70"
+    },
+    {
+      "year": 2002,
+      "make": "Lexus",
+      "model": "GX",
+      "status": "INVALID",
+      "reason": "GX 470 launched late 2002 as 2003 model year. No 2002 model year exists.",
+      "validYears": "2003-2009 (GX 470), 2010-present (GX 460/550)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "carbuzz.com"],
+      "notes": "First GX was the 2003 GX 470"
+    },
+    {
+      "year": 2018,
+      "make": "Lexus",
+      "model": "LC",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "LC 500", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" },
+        { "name": "LC 500h", "oemWheelSizeFront": "20x8.5", "oemWheelSizeRear": "20x10.5", "oemTireSizeFront": "245/45R20", "oemTireSizeRear": "275/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "lexus.com"],
+      "notes": "STAGGERED setup. Production: 2018-2026 (final year)"
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "LC",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "LC 500", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" },
+        { "name": "LC 500h", "oemWheelSizeFront": "20x8.5", "oemWheelSizeRear": "20x10.5", "oemTireSizeFront": "245/45R20", "oemTireSizeRear": "275/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "STAGGERED setup"
+    },
+    {
+      "year": 2022,
+      "make": "Lexus",
+      "model": "LC",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "LC 500", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" },
+        { "name": "LC 500 Convertible", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" },
+        { "name": "LC 500h", "oemWheelSizeFront": "20x8.5", "oemWheelSizeRear": "20x10.5", "oemTireSizeFront": "245/45R20", "oemTireSizeRear": "275/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "STAGGERED setup"
+    },
+    {
+      "year": 2023,
+      "make": "Lexus",
+      "model": "LC",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "LC 500", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" },
+        { "name": "LC 500 Convertible", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "STAGGERED setup"
+    },
+    {
+      "year": 2024,
+      "make": "Lexus",
+      "model": "LC",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "LC 500", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" },
+        { "name": "LC 500 Convertible", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "STAGGERED setup"
+    },
+    {
+      "year": 2025,
+      "make": "Lexus",
+      "model": "LC",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "LC 500", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" },
+        { "name": "LC 500 Convertible", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" }
+      ],
+      "confidence": "high",
+      "sources": ["lexus.com", "caranddriver.com"],
+      "notes": "STAGGERED setup"
+    },
+    {
+      "year": 2026,
+      "make": "Lexus",
+      "model": "LC",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 60.1,
+      "isStaggered": true,
+      "trims": [
+        { "name": "LC 500", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" },
+        { "name": "LC 500 Convertible", "oemWheelSizeFront": "21x8.5", "oemWheelSizeRear": "21x10.5", "oemTireSizeFront": "245/40R21", "oemTireSizeRear": "275/35R21" }
+      ],
+      "confidence": "high",
+      "sources": ["lexus.com", "wikipedia.org"],
+      "notes": "FINAL MODEL YEAR - production ends August 2026"
+    },
+    {
+      "year": 2015,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350 F Sport RWD", "isStaggered": true, "oemWheelSizeFront": "19x8", "oemWheelSizeRear": "19x9", "oemTireSizeFront": "235/40R19", "oemTireSizeRear": "265/35R19" },
+        { "name": "RC F", "isStaggered": true, "oemWheelSizeFront": "19x9", "oemWheelSizeRear": "19x10", "oemTireSizeFront": "255/35R19", "oemTireSizeRear": "275/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "First model year. F Sport and RC F have staggered setup"
+    },
+    {
+      "year": 2016,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "RC 200t", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 300", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350 F Sport", "isStaggered": true, "oemWheelSizeFront": "19x8", "oemWheelSizeRear": "19x9", "oemTireSizeFront": "235/40R19", "oemTireSizeRear": "265/35R19" },
+        { "name": "RC F", "isStaggered": true, "oemWheelSizeFront": "19x9", "oemWheelSizeRear": "19x10", "oemTireSizeFront": "255/35R19", "oemTireSizeRear": "275/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "RC 200t (turbo 4-cyl) added"
+    },
+    {
+      "year": 2017,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "RC 300", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350 F Sport", "isStaggered": true, "oemWheelSizeFront": "19x8", "oemWheelSizeRear": "19x9", "oemTireSizeFront": "235/40R19", "oemTireSizeRear": "265/35R19" },
+        { "name": "RC F", "isStaggered": true, "oemWheelSizeFront": "19x9", "oemWheelSizeRear": "19x10", "oemTireSizeFront": "255/35R19", "oemTireSizeRear": "275/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "RC 200t renamed to RC 300"
+    },
+    {
+      "year": 2018,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "RC 300", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350 F Sport", "isStaggered": true, "oemWheelSizeFront": "19x8", "oemWheelSizeRear": "19x9", "oemTireSizeFront": "235/40R19", "oemTireSizeRear": "265/35R19" },
+        { "name": "RC F", "isStaggered": true, "oemWheelSizeFront": "19x9", "oemWheelSizeRear": "19x10", "oemTireSizeFront": "255/35R19", "oemTireSizeRear": "275/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Lexus RC"
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "RC 300", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350 F Sport", "isStaggered": true, "oemWheelSizeFront": "19x8", "oemWheelSizeRear": "19x9", "oemTireSizeFront": "235/40R19", "oemTireSizeRear": "265/35R19" },
+        { "name": "RC F", "isStaggered": true, "oemWheelSizeFront": "19x9", "oemWheelSizeRear": "19x10", "oemTireSizeFront": "255/35R19", "oemTireSizeRear": "275/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Lexus RC"
+    },
+    {
+      "year": 2020,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "RC 300", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18" },
+        { "name": "RC 350 F Sport", "isStaggered": true, "oemWheelSizeFront": "19x8", "oemWheelSizeRear": "19x9", "oemTireSizeFront": "235/40R19", "oemTireSizeRear": "265/35R19" },
+        { "name": "RC F", "isStaggered": true, "oemWheelSizeFront": "19x9", "oemWheelSizeRear": "19x10", "oemTireSizeFront": "255/35R19", "oemTireSizeRear": "275/35R19" },
+        { "name": "RC F Track Edition", "isStaggered": true, "oemWheelSizeFront": "19x9", "oemWheelSizeRear": "19x10", "oemTireSizeFront": "255/35R19", "oemTireSizeRear": "275/35R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "kbb.com"],
+      "notes": "RC F Track Edition with Brembo brakes added"
+    }
+  ],
+  "invalidVehicles": [
+    { "year": 2018, "make": "Honda", "model": "Insight", "reason": "Not produced 2015-2018. Third gen starts 2019." },
+    { "year": 2025, "make": "Honda", "model": "Prelude", "reason": "Prelude revival is 2026 MY only. Gap: 2002-2025." },
+    { "year": 2013, "make": "Infiniti", "model": "Q60", "reason": "Still called G37 Coupe in 2013. Q naming started 2014." },
+    { "year": 2023, "make": "Infiniti", "model": "Q60", "reason": "Discontinued after 2022." },
+    { "year": 2013, "make": "Infiniti", "model": "Q70", "reason": "Still called Infiniti M in 2013. Q naming started 2014." },
+    { "year": 2020, "make": "Infiniti", "model": "Q70", "reason": "Discontinued after 2019." },
+    { "year": 2021, "make": "Infiniti", "model": "Q70", "reason": "Discontinued after 2019." },
+    { "year": 2002, "make": "Lexus", "model": "GX", "reason": "GX 470 launched as 2003 MY. No 2002 exists." }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validVehicles": 62,
+    "invalidVehicles": 8,
+    "staggeredSetups": 19,
+    "modelsVerified": [
+      "Honda Element (2009-2011)",
+      "Honda Insight (2000-2006, 2009-2014, 2019-2022)",
+      "Honda Passport (2000-2002, 2021-2026)",
+      "Honda Prelude (2000-2001, 2026)",
+      "Honda Prologue (2026)",
+      "Honda S2000 (2000-2009)",
+      "Infiniti Q70 (2014-2019)",
+      "Infiniti QX50 (2018)",
+      "Infiniti QX55 (2022-2025)",
+      "Infiniti QX70 (2013-2014)",
+      "Lexus LC (2018-2026)",
+      "Lexus RC (2015-2020)"
+    ],
+    "invalidModelYears": [
+      "2018 Honda Insight - gap year",
+      "2025 Honda Prelude - revival is 2026",
+      "2013 Infiniti Q60 - was G37 Coupe",
+      "2023 Infiniti Q60 - discontinued",
+      "2013 Infiniti Q70 - was Infiniti M",
+      "2020-2021 Infiniti Q70 - discontinued",
+      "2002 Lexus GX - started 2003"
+    ]
+  }
+}

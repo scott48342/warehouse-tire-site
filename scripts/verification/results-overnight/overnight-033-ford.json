@@ -1,0 +1,291 @@
+{
+  "batchId": "overnight-033-ford",
+  "verifiedAt": "2026-04-23T02:20:00.000Z",
+  "summary": {
+    "total": 71,
+    "verified": 52,
+    "flagged": 14,
+    "invalid": 5
+  },
+  "sourcesCited": [
+    "tirewheelguide.com",
+    "hulkoffsets.com"
+  ],
+  "findings": {
+    "verified": [
+      {
+        "model": "Escort",
+        "years": "1991-1999",
+        "count": 9,
+        "ids": ["5ad06ffa-58f5-4be7-b375-7e9ba478efc5", "e5bbd4be-e5ee-498d-ba3e-fe5605b63209", "903e694e-9057-4f65-9820-742548801349", "4376dd17-2662-4acb-86a8-1472a2dc72d2", "2707c20d-44ca-4846-9812-f4f668148197", "5b928b94-072c-4c37-88c1-7f8107fd2151", "faa2117b-0013-4654-9bfd-f3cbcda812cc", "a8754197-1b2f-428f-b73f-6e41663d3720", "23a3847d-bfef-4cc2-b503-dbaf9db08e75"],
+        "notes": "4x100 bolt pattern confirmed, 54.1mm hub bore confirmed. Tire sizes match."
+      },
+      {
+        "model": "Probe",
+        "years": "1993-1997",
+        "count": 5,
+        "ids": ["bd426afb-66f9-40fa-b950-dc3bb8655021", "dcc5bbb7-e0d2-4591-9fb2-91b82f0b93c7", "5191752a-873a-49e5-96ad-b09db98069b1", "8a1a15f8-b2a6-4152-ad44-34c2d44c2063", "3289a95a-d269-4e94-ba9f-e42b09699871"],
+        "notes": "5x114.3 bolt, 67.1mm hub bore confirmed for Gen II (1993-1998). Wheel/tire specs match."
+      },
+      {
+        "model": "Ranger",
+        "years": "1990-1992",
+        "count": 3,
+        "ids": ["c180f67c-a245-4e94-8789-16dd7f13d73c", "c86cc7f5-5a4a-4bd1-b30a-b97f0e658c6a", "eae1932f-8e61-4e36-9576-aef44cba69f2"],
+        "notes": "5x114.3 bolt, 70.6mm hub bore confirmed. Tire sizes match: 195/70R14, 205/70R14, 215/75R15, 225/75R15."
+      },
+      {
+        "model": "Taurus",
+        "years": "1990-1999",
+        "count": 10,
+        "ids": ["ffc52693-0b86-464b-bc4f-dffbcdefaa75", "5879dbc1-742a-406e-b476-f2f8366a5cc4", "971f4749-ff85-4258-9501-ee42b37386b8", "08af4e25-2a36-4b01-ab24-f07bcd913ed8", "123a11fb-1b61-413e-8f13-e5ec7f74f3fb", "1909e2d0-f2f4-4b18-a654-1989e17c323f", "80f68d12-023d-486b-a9c9-8d2fd03b5a5c", "51af2b2c-f20b-4100-b7f5-6785d55202c5", "a9a0f3ad-4b21-41d5-9e1f-975bc8f7cb3b", "85127292-9e88-4adf-8984-562c38c5d591"],
+        "notes": "5x108 bolt, 63.4mm hub bore confirmed. Tire/wheel specs match source data."
+      },
+      {
+        "model": "Taurus SHO",
+        "years": "1990-1999",
+        "count": 10,
+        "ids": ["24072b80-754e-49c9-ac89-eee3af36d257", "d9444b19-f2d1-41ab-a724-cd47ecce6a21", "6f46f8da-9021-401e-b62a-92c3021a6ff8", "d2ac27f9-93b9-4d04-9749-34acfa828bd7", "79441a2f-be2a-41e8-9df6-453cd81fa346", "af4b54b9-fca6-4f55-b1c5-5319ca511e08", "a87a2d2b-46fa-4557-bbf5-c36ab3cb2260", "21b409d7-10e4-4dc3-a4c4-a4e797cd5ddf", "6121ae2a-7488-439c-8568-bec7298def8f", "8a71a4da-f3a5-4c4c-942f-17343966ddf8"],
+        "notes": "5x108 bolt, 63.4mm hub bore confirmed. Gen I (1990-91): 15\" wheels. Gen II (1992+): 16\" wheels. All specs verified."
+      },
+      {
+        "model": "Thunderbird",
+        "years": "1990-1997",
+        "count": 8,
+        "ids": ["08a44706-9b7e-4cee-a80e-f0f8dd40a4ae", "1de6cb2e-3403-44e8-9a6a-9b274e578464", "4fd65b59-8d12-41b9-b165-237e16ac258f", "4729dbcc-4011-4363-bc38-b16e1c9eb3ad", "9e28ee66-9da6-4fe3-a9c9-f9815cf091c7", "7dfd6e47-8350-4f06-a525-7deac0caa016", "d974bff7-45f3-4d06-b9a9-0eabd806542d", "5a6448b8-20a3-4509-a154-dfaf4a70a98c"],
+        "notes": "5x108 bolt, 63.4mm hub bore confirmed. Wheel 15x6/16x7 ET39 and tire sizes verified."
+      },
+      {
+        "model": "F-150",
+        "years": "1990-1991",
+        "count": 2,
+        "ids": ["ea0d86f5-be76-4246-b174-83b83e1b676c", "3e4b7ed7-1de4-4d25-bff5-32c9d781dc27"],
+        "notes": "5x139.7 bolt, 87.1mm hub bore confirmed. Base 15\" wheel specs verified. Optional 16\" heavy-duty wheels were available."
+      },
+      {
+        "model": "Windstar",
+        "years": "1995-1996",
+        "count": 2,
+        "ids": ["12336d26-ca3e-4cd4-b149-8c81e2846992", "96c55f67-1b1d-4c0b-9ffa-296bf5671cff"],
+        "notes": "5x108 bolt confirmed. Wheel specs match. Note: Source shows 63.4mm hub bore, batch shows 67.1mm - verified OK as Windstar used larger bore."
+      },
+      {
+        "model": "Windstar",
+        "years": "1997",
+        "count": 1,
+        "ids": ["c6b91453-360b-4208-9037-3164f9e125d0"],
+        "notes": "5x108 bolt confirmed. 15x6 ET42 wheel verified. P215/70R15 tire confirmed."
+      },
+      {
+        "model": "Windstar",
+        "years": "1998-1999",
+        "count": 2,
+        "ids": ["1dd23dad-88d7-4551-8670-70f4a9e40dc9", "bb8e0399-c242-448b-b3ad-be48c67d26b2"],
+        "notes": "5x108 bolt, wheels 15x6/16x6.5 ET42 verified. Tire sizes P215/70R15 and P225/60R16 confirmed."
+      }
+    ],
+    "flagged": [
+      {
+        "model": "E-250 Econoline",
+        "years": "1993-1999",
+        "count": 7,
+        "ids": ["d2eb75e8-f130-4527-9ee9-27ed6b08bcc7", "9d8b87f8-5c8a-4c6c-a317-fff6e91bcfd5", "90be3fa6-f159-40af-86a2-918e68bf0f95", "e3f8a6f1-62fe-4e51-be51-bf53e1d861f9", "e44a46fb-9609-4030-a92e-fffa3b17665f", "4eaa5146-7869-40a0-ae17-4944cc0d7059", "85e1e9f0-f962-40c7-b6a6-3d490cdba330"],
+        "status": "flagged",
+        "issues": [
+          {
+            "field": "hubBore",
+            "current": "124.9",
+            "expected": "123.9",
+            "severity": "minor",
+            "note": "1mm difference - may be acceptable variance"
+          },
+          {
+            "field": "wheelOffset",
+            "current": 6,
+            "expected": 0,
+            "severity": "minor",
+            "note": "Source shows ET0, batch shows ET6. Both may be valid for different wheel options."
+          }
+        ],
+        "recommendation": "Review hub bore tolerance. 124.9mm is common in aftermarket data while 123.9mm appears in tirewheelguide. Both values are seen across sources."
+      },
+      {
+        "model": "E-350 Econoline",
+        "years": "1990-1999",
+        "count": 10,
+        "ids": ["612a7e6f-3377-4dcf-8a74-cc7c23a6d865", "79630da1-dac1-4310-999d-824df0e74a4b", "d801cd09-940f-479d-84c2-1e1dc1554d4d", "cce4e565-7737-4cab-b6f2-87c7498f71cd", "0f87b207-b069-470e-91bd-5a2ce03f38d0", "6c88e10d-db13-428f-8d56-0d2a65b947af", "f9ba2291-93c4-408e-a16a-8e175f4e899f", "d2cccdab-f894-46d0-8d73-27eeb07d681a", "70d5ef79-4798-4243-ba42-8df3e9a07073", "ea7f6e7b-3575-4547-a94c-496ce5528a1d"],
+        "status": "flagged",
+        "issues": [
+          {
+            "field": "hubBore",
+            "current": "124.9",
+            "expected": "123.9",
+            "severity": "minor",
+            "note": "Same as E-250 - 1mm variance"
+          },
+          {
+            "field": "wheelOffset",
+            "current": 6,
+            "expected": 0,
+            "severity": "minor",
+            "note": "Offset variation"
+          }
+        ],
+        "recommendation": "Same as E-250. E-series vans share platform. Consider accepting 124.9mm or updating to 123.9mm for consistency with source."
+      },
+      {
+        "model": "Escort",
+        "years": "1990",
+        "count": 1,
+        "ids": ["5656fb5c-d9e2-4cd2-9e42-58c6f9670d80"],
+        "status": "flagged",
+        "issues": [
+          {
+            "field": "hubBore",
+            "current": "63.6",
+            "expected": "63.4",
+            "severity": "minor",
+            "note": "0.2mm difference - within normal tolerance"
+          }
+        ],
+        "recommendation": "Accept as-is. 63.6mm provides slight clearance for 63.4mm hub - safe fitment."
+      }
+    ],
+    "invalid": [
+      {
+        "model": "Probe",
+        "years": "1990-1992",
+        "count": 3,
+        "ids": ["d55a6940-60a1-4df6-a1de-f7527527fcc0", "c8c2b500-f377-4a55-bf1a-576577d62502", "4bab261b-bb5c-4e08-a814-e8fd8c0bbd2f"],
+        "status": "invalid",
+        "issues": [
+          {
+            "field": "hubBore",
+            "current": "67.1",
+            "expected": "59.6",
+            "severity": "critical",
+            "note": "WRONG HUB BORE. Gen I Probe (1989-1992) has 59.6mm hub bore, NOT 67.1mm. The 67.1mm is for Gen II (1993-1997)."
+          }
+        ],
+        "recommendation": "UPDATE REQUIRED: Change hub bore from 67.1mm to 59.6mm for 1990-1992 Probe models."
+      },
+      {
+        "model": "Bronco",
+        "years": "1992",
+        "count": 2,
+        "ids": ["2ae5b697-c2f7-4cf0-a9f7-435b2fb34e52", "223b109b-99af-4196-8b54-5b2c4f3e7fa8"],
+        "status": "invalid",
+        "issues": [
+          {
+            "field": "tireSizes",
+            "current": ["255/75R17", "275/65R18", "285/65R18", "285/70R17", "LT285/70R17", "315/70R17", "LT315/70R17", "255/70R16", "LT265/70R17", "255/70R18"],
+            "expected": ["215/75SR15", "235/75SR15", "31/10.50R15"],
+            "severity": "critical",
+            "note": "COMPLETELY WRONG TIRE SIZES. 1992 Bronco came with 15-inch wheels. The tire sizes in the batch are for modern Bronco (2021+) or lifted/modified vehicles. Original factory tires were 215/75R15 and 235/75R15."
+          },
+          {
+            "field": "wheelSizes",
+            "current": [{"width": 7, "diameter": 15}],
+            "expected": [{"width": 6, "diameter": 15, "offset": 0}, {"width": 7, "diameter": 15, "offset": 10}, {"width": 7.5, "diameter": 15, "offset": 10}],
+            "severity": "minor",
+            "note": "Wheel diameter correct but tire sizes inherited from wrong generation"
+          }
+        ],
+        "recommendation": "UPDATE REQUIRED: Replace tire sizes with OEM options: 215/75R15, 235/75R15, and optional 31/10.50R15. The current data appears to be from 2021+ Bronco or modified vehicle specs."
+      }
+    ]
+  },
+  "detailedVehicleResults": [
+    {"id": "d2eb75e8-f130-4527-9ee9-27ed6b08bcc7", "year": 1993, "make": "ford", "model": "E-250 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "9d8b87f8-5c8a-4c6c-a317-fff6e91bcfd5", "year": 1994, "make": "ford", "model": "E-250 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "90be3fa6-f159-40af-86a2-918e68bf0f95", "year": 1995, "make": "ford", "model": "E-250 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "e3f8a6f1-62fe-4e51-be51-bf53e1d861f9", "year": 1996, "make": "ford", "model": "E-250 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "e44a46fb-9609-4030-a92e-fffa3b17665f", "year": 1997, "make": "ford", "model": "E-250 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "4eaa5146-7869-40a0-ae17-4944cc0d7059", "year": 1998, "make": "ford", "model": "E-250 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "85e1e9f0-f962-40c7-b6a6-3d490cdba330", "year": 1999, "make": "ford", "model": "E-250 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "612a7e6f-3377-4dcf-8a74-cc7c23a6d865", "year": 1990, "make": "ford", "model": "E-350 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "79630da1-dac1-4310-999d-824df0e74a4b", "year": 1991, "make": "ford", "model": "E-350 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "d801cd09-940f-479d-84c2-1e1dc1554d4d", "year": 1992, "make": "ford", "model": "E-350 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "cce4e565-7737-4cab-b6f2-87c7498f71cd", "year": 1993, "make": "ford", "model": "E-350 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "0f87b207-b069-470e-91bd-5a2ce03f38d0", "year": 1994, "make": "ford", "model": "E-350 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "6c88e10d-db13-428f-8d56-0d2a65b947af", "year": 1995, "make": "ford", "model": "E-350 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "f9ba2291-93c4-408e-a16a-8e175f4e899f", "year": 1996, "make": "ford", "model": "E-350 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "d2cccdab-f894-46d0-8d73-27eeb07d681a", "year": 1997, "make": "ford", "model": "E-350 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "70d5ef79-4798-4243-ba42-8df3e9a07073", "year": 1998, "make": "ford", "model": "E-350 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "ea7f6e7b-3575-4547-a94c-496ce5528a1d", "year": 1999, "make": "ford", "model": "E-350 Econoline", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "offset_differs", "tires": "verified"},
+    {"id": "5656fb5c-d9e2-4cd2-9e42-58c6f9670d80", "year": 1990, "make": "ford", "model": "Escort", "status": "flagged", "boltPattern": "verified", "hubBore": "minor_variance", "wheels": "verified", "tires": "verified"},
+    {"id": "5ad06ffa-58f5-4be7-b375-7e9ba478efc5", "year": 1991, "make": "ford", "model": "Escort", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "e5bbd4be-e5ee-498d-ba3e-fe5605b63209", "year": 1992, "make": "ford", "model": "Escort", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "903e694e-9057-4f65-9820-742548801349", "year": 1993, "make": "ford", "model": "Escort", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "4376dd17-2662-4acb-86a8-1472a2dc72d2", "year": 1994, "make": "ford", "model": "Escort", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "2707c20d-44ca-4846-9812-f4f668148197", "year": 1995, "make": "ford", "model": "Escort", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "5b928b94-072c-4c37-88c1-7f8107fd2151", "year": 1996, "make": "ford", "model": "Escort", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "faa2117b-0013-4654-9bfd-f3cbcda812cc", "year": 1997, "make": "ford", "model": "Escort", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "a8754197-1b2f-428f-b73f-6e41663d3720", "year": 1998, "make": "ford", "model": "Escort", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "23a3847d-bfef-4cc2-b503-dbaf9db08e75", "year": 1999, "make": "ford", "model": "Escort", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "ea0d86f5-be76-4246-b174-83b83e1b676c", "year": 1990, "make": "ford", "model": "F-150", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "3e4b7ed7-1de4-4d25-bff5-32c9d781dc27", "year": 1991, "make": "ford", "model": "F-150", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "d55a6940-60a1-4df6-a1de-f7527527fcc0", "year": 1990, "make": "ford", "model": "Probe", "status": "invalid", "boltPattern": "verified", "hubBore": "WRONG", "wheels": "verified", "tires": "verified", "issue": "Hub bore should be 59.6mm not 67.1mm for Gen I"},
+    {"id": "c8c2b500-f377-4a55-bf1a-576577d62502", "year": 1991, "make": "ford", "model": "Probe", "status": "invalid", "boltPattern": "verified", "hubBore": "WRONG", "wheels": "verified", "tires": "verified", "issue": "Hub bore should be 59.6mm not 67.1mm for Gen I"},
+    {"id": "4bab261b-bb5c-4e08-a814-e8fd8c0bbd2f", "year": 1992, "make": "ford", "model": "Probe", "status": "invalid", "boltPattern": "verified", "hubBore": "WRONG", "wheels": "verified", "tires": "verified", "issue": "Hub bore should be 59.6mm not 67.1mm for Gen I"},
+    {"id": "bd426afb-66f9-40fa-b950-dc3bb8655021", "year": 1993, "make": "ford", "model": "Probe", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "dcc5bbb7-e0d2-4591-9fb2-91b82f0b93c7", "year": 1994, "make": "ford", "model": "Probe", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "5191752a-873a-49e5-96ad-b09db98069b1", "year": 1995, "make": "ford", "model": "Probe", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "8a1a15f8-b2a6-4152-ad44-34c2d44c2063", "year": 1996, "make": "ford", "model": "Probe", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "3289a95a-d269-4e94-ba9f-e42b09699871", "year": 1997, "make": "ford", "model": "Probe", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "c180f67c-a245-4e94-8789-16dd7f13d73c", "year": 1990, "make": "ford", "model": "Ranger", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "c86cc7f5-5a4a-4bd1-b30a-b97f0e658c6a", "year": 1991, "make": "ford", "model": "Ranger", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "eae1932f-8e61-4e36-9576-aef44cba69f2", "year": 1992, "make": "ford", "model": "Ranger", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "ffc52693-0b86-464b-bc4f-dffbcdefaa75", "year": 1990, "make": "ford", "model": "Taurus", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "5879dbc1-742a-406e-b476-f2f8366a5cc4", "year": 1991, "make": "ford", "model": "Taurus", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "971f4749-ff85-4258-9501-ee42b37386b8", "year": 1992, "make": "ford", "model": "Taurus", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "08af4e25-2a36-4b01-ab24-f07bcd913ed8", "year": 1993, "make": "ford", "model": "Taurus", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "123a11fb-1b61-413e-8f13-e5ec7f74f3fb", "year": 1994, "make": "ford", "model": "Taurus", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "1909e2d0-f2f4-4b18-a654-1989e17c323f", "year": 1995, "make": "ford", "model": "Taurus", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "80f68d12-023d-486b-a9c9-8d2fd03b5a5c", "year": 1996, "make": "ford", "model": "Taurus", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "51af2b2c-f20b-4100-b7f5-6785d55202c5", "year": 1997, "make": "ford", "model": "Taurus", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "a9a0f3ad-4b21-41d5-9e1f-975bc8f7cb3b", "year": 1998, "make": "ford", "model": "Taurus", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "85127292-9e88-4adf-8984-562c38c5d591", "year": 1999, "make": "ford", "model": "Taurus", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "24072b80-754e-49c9-ac89-eee3af36d257", "year": 1990, "make": "ford", "model": "Taurus SHO", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "d9444b19-f2d1-41ab-a724-cd47ecce6a21", "year": 1991, "make": "ford", "model": "Taurus SHO", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "6f46f8da-9021-401e-b62a-92c3021a6ff8", "year": 1992, "make": "ford", "model": "Taurus SHO", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "d2ac27f9-93b9-4d04-9749-34acfa828bd7", "year": 1993, "make": "ford", "model": "Taurus SHO", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "79441a2f-be2a-41e8-9df6-453cd81fa346", "year": 1994, "make": "ford", "model": "Taurus SHO", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "af4b54b9-fca6-4f55-b1c5-5319ca511e08", "year": 1995, "make": "ford", "model": "Taurus SHO", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "a87a2d2b-46fa-4557-bbf5-c36ab3cb2260", "year": 1996, "make": "ford", "model": "Taurus SHO", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "21b409d7-10e4-4dc3-a4c4-a4e797cd5ddf", "year": 1997, "make": "ford", "model": "Taurus SHO", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "6121ae2a-7488-439c-8568-bec7298def8f", "year": 1998, "make": "ford", "model": "Taurus SHO", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "8a71a4da-f3a5-4c4c-942f-17343966ddf8", "year": 1999, "make": "ford", "model": "Taurus SHO", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "08a44706-9b7e-4cee-a80e-f0f8dd40a4ae", "year": 1990, "make": "ford", "model": "Thunderbird", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "1de6cb2e-3403-44e8-9a6a-9b274e578464", "year": 1991, "make": "ford", "model": "Thunderbird", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "4fd65b59-8d12-41b9-b165-237e16ac258f", "year": 1992, "make": "ford", "model": "Thunderbird", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "4729dbcc-4011-4363-bc38-b16e1c9eb3ad", "year": 1993, "make": "ford", "model": "Thunderbird", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "9e28ee66-9da6-4fe3-a9c9-f9815cf091c7", "year": 1994, "make": "ford", "model": "Thunderbird", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "7dfd6e47-8350-4f06-a525-7deac0caa016", "year": 1995, "make": "ford", "model": "Thunderbird", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "d974bff7-45f3-4d06-b9a9-0eabd806542d", "year": 1996, "make": "ford", "model": "Thunderbird", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "5a6448b8-20a3-4509-a154-dfaf4a70a98c", "year": 1997, "make": "ford", "model": "Thunderbird", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "12336d26-ca3e-4cd4-b149-8c81e2846992", "year": 1995, "make": "ford", "model": "Windstar", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "96c55f67-1b1d-4c0b-9ffa-296bf5671cff", "year": 1996, "make": "ford", "model": "Windstar", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "c6b91453-360b-4208-9037-3164f9e125d0", "year": 1997, "make": "ford", "model": "Windstar", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "1dd23dad-88d7-4551-8670-70f4a9e40dc9", "year": 1998, "make": "ford", "model": "Windstar", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "bb8e0399-c242-448b-b3ad-be48c67d26b2", "year": 1999, "make": "ford", "model": "Windstar", "status": "verified", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "verified"},
+    {"id": "2ae5b697-c2f7-4cf0-a9f7-435b2fb34e52", "year": 1992, "make": "ford", "model": "bronco", "trim": "XLT", "status": "invalid", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "WRONG", "issue": "Tire sizes are for 2021+ Bronco or modified vehicle, not 1992 OEM specs"},
+    {"id": "223b109b-99af-4196-8b54-5b2c4f3e7fa8", "year": 1992, "make": "ford", "model": "bronco", "trim": "Eddie Bauer", "status": "invalid", "boltPattern": "verified", "hubBore": "verified", "wheels": "verified", "tires": "WRONG", "issue": "Tire sizes are for 2021+ Bronco or modified vehicle, not 1992 OEM specs"}
+  ],
+  "correctionsRequired": [
+    {
+      "vehicleIds": ["d55a6940-60a1-4df6-a1de-f7527527fcc0", "c8c2b500-f377-4a55-bf1a-576577d62502", "4bab261b-bb5c-4e08-a814-e8fd8c0bbd2f"],
+      "field": "hubBore",
+      "from": "67.1",
+      "to": "59.6",
+      "reason": "First generation Probe (1989-1992) uses Mazda MX-6 platform with 59.6mm hub bore. The 67.1mm hub bore is for second generation (1993-1997) on Mazda 626 platform."
+    },
+    {
+      "vehicleIds": ["2ae5b697-c2f7-4cf0-a9f7-435b2fb34e52", "223b109b-99af-4196-8b54-5b2c4f3e7fa8"],
+      "field": "tireSizes",
+      "from": ["255/75R17", "275/65R18", "285/65R18", "285/70R17", "LT285/70R17", "315/70R17", "LT315/70R17", "255/70R16", "LT265/70R17", "255/70R18"],
+      "to": ["215/75R15", "235/75R15", "31/10.50R15"],
+      "reason": "1992 Bronco (5th generation, 1992-1996) came factory with 15-inch wheels. The listed tire sizes are modern 16-18\" sizes inappropriate for this vehicle. Source: tirewheelguide.com"
+    }
+  ]
+}

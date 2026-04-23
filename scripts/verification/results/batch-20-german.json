@@ -1,0 +1,1041 @@
+{
+  "batch": "batch-20-german",
+  "verifiedAt": "2026-04-23T00:37:00Z",
+  "totalVehicles": 75,
+  "validVehicles": 56,
+  "invalidVehicles": 19,
+  "summary": {
+    "audiTT": "19 vehicles, 1 invalid (2007 gap year)",
+    "audiTTRS": "14 vehicles, 8 invalid (2009-2011 not in US, 2014 gap, 2016-2017 gap, 2023 discontinued)",
+    "audiTTS": "16 vehicles, 1 invalid (2008 - first US model year was 2009)",
+    "bmw2Series": "14 vehicles, 1 invalid (2013 - first US model year was 2014)",
+    "bmw4Series": "1 vehicle, 1 invalid (2013 - first US model year was 2014)",
+    "bmw4SeriesGranCoupe": "11 vehicles, 1 invalid (2013 - first US model year was 2014)"
+  },
+  "invalidModelYears": [
+    {
+      "year": 2007,
+      "make": "audi",
+      "model": "tt",
+      "reason": "Generation gap - 1st gen ended 2006, 2nd gen started 2008 in US market",
+      "sources": ["cars.com", "tiresize.com", "carbuzz.com"]
+    },
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "tt-s",
+      "reason": "TTS launched at 2008 NAIAS but went on sale Nov 2008 - first US model year is 2009",
+      "sources": ["wikipedia.org", "autoevolution.com"]
+    },
+    {
+      "year": 2009,
+      "make": "audi",
+      "model": "tt-rs",
+      "reason": "TT RS not sold in US until 2012 model year",
+      "sources": ["media.audiusa.com", "jdpower.com", "cars.com"]
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "tt-rs",
+      "reason": "TT RS not sold in US until 2012 model year",
+      "sources": ["media.audiusa.com", "jdpower.com", "cars.com"]
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "tt-rs",
+      "reason": "TT RS not sold in US until 2012 model year",
+      "sources": ["media.audiusa.com", "jdpower.com", "cars.com"]
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "tt-rs",
+      "reason": "TT RS discontinued in US after 2013, not sold 2014-2017",
+      "sources": ["media.audiusa.com", "jdpower.com", "cars.com"]
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "tt-rs",
+      "reason": "TT RS not available in US 2014-2017, 2nd gen arrived 2018",
+      "sources": ["media.audiusa.com", "cars.com"]
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "tt-rs",
+      "reason": "TT RS not available in US 2014-2017, 2nd gen arrived 2018",
+      "sources": ["media.audiusa.com", "cars.com"]
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "tt-rs",
+      "reason": "TT RS discontinued in US after 2022 model year (Heritage Edition was final)",
+      "sources": ["media.audiusa.com"]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "2-series",
+      "reason": "BMW 2 Series first sold in US as 2014 model year (debuted at 2014 NAIAS)",
+      "sources": ["wikipedia.org", "classic.com"]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "4-series",
+      "reason": "BMW 4 Series first sold in US as 2014 model year",
+      "sources": ["autoevolution.com"]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "reason": "BMW 4 Series Gran Coupe first sold in US as 2014 model year",
+      "sources": ["autoevolution.com"]
+    }
+  ],
+  "verifiedVehicles": [
+    {
+      "year": 2005,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8N (1st Gen)",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "1.8 FWD Coupe", "oemTireSize": "225/45R17"},
+        {"name": "1.8 Quattro Coupe", "oemTireSize": "225/45R17"},
+        {"name": "3.2 Quattro Coupe", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com", "vwvortex.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8N (1st Gen)",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "1.8 FWD Coupe", "oemTireSize": "225/45R17"},
+        {"name": "1.8 Quattro Coupe", "oemTireSize": "225/45R17"},
+        {"name": "3.2 Quattro Coupe", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com", "vwvortex.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T FWD Coupe", "oemTireSize": "225/50R17"},
+        {"name": "2.0T FWD Coupe Premium", "oemTireSize": "245/40R18"},
+        {"name": "2.0T FWD Coupe S-Line", "oemTireSize": "255/35R19"},
+        {"name": "3.2T Quattro Coupe", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com", "lltek.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T FWD Coupe", "oemTireSize": "225/50R17"},
+        {"name": "2.0T FWD Coupe Premium", "oemTireSize": "245/40R18"},
+        {"name": "2.0T FWD Coupe S-Line", "oemTireSize": "255/35R19"},
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com", "autopadre.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe Premium", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe Prestige", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Roadster S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe Premium Plus", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe Prestige", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe Premium Plus", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe Prestige", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe Premium Plus", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe Prestige", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "Final year of 2nd generation"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Coupe", "oemTireSize": "225/50R17"},
+        {"name": "2.0T Coupe Premium", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com", "wikipedia.org"]
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "TT",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "Final model year"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "TT RS",
+      "generation": "8J (1st Gen US)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "RS", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "media.audiusa.com", "lltek.com"],
+      "notes": "First US model year for TT RS"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "TT RS",
+      "generation": "8J (1st Gen US)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "RS", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "media.audiusa.com", "lltek.com"],
+      "notes": "Final year of 1st gen TT RS in US"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "TT RS",
+      "generation": "8S (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "RS", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "media.audiusa.com"],
+      "notes": "2nd gen TT RS returns to US market"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "TT RS",
+      "generation": "8S (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "RS", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "media.audiusa.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "TT RS",
+      "generation": "8S (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "RS", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "media.audiusa.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "TT RS",
+      "generation": "8S (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "RS", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "media.audiusa.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "TT RS",
+      "generation": "8S (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "RS", "oemTireSize": "255/35R19"},
+        {"name": "RS Heritage Edition", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "media.audiusa.com"],
+      "notes": "Final US model year - Heritage Edition limited to 50 units"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Roadster", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com", "lltek.com"],
+      "notes": "First US model year for TTS"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe Premium", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe Prestige", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Roadster Premium", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Roadster Prestige", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com", "lltek.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Roadster", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Roadster", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Roadster", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Roadster", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8J (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "Final year of 2nd generation TTS"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com", "wikipedia.org"]
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "TTS",
+      "generation": "8S (3rd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.0T Quattro Coupe", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Quattro Coupe S-Line", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "Final model year"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "F22/F23 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "228i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "228i Coupe Sport Line", "oemTireSize": "225/40R18"},
+        {"name": "M235i Coupe", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com", "lionharttires.com"],
+      "notes": "First US model year for BMW 2 Series"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "F22/F23 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "228i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "228i Coupe Sport Line", "oemTireSize": "225/40R18"},
+        {"name": "M235i Coupe", "oemTireSize": "225/40R18"},
+        {"name": "M235i xDrive", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "F22/F23 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "228i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "228i Convertible", "oemTireSize": "225/45R17"},
+        {"name": "M235i Coupe", "oemTireSize": "225/40R18"},
+        {"name": "M2", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "F22/F23 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "230i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "230i Convertible", "oemTireSize": "225/45R17"},
+        {"name": "M240i Coupe", "oemTireSize": "225/40R18"},
+        {"name": "M2", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "F22/F23 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "230i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "230i Convertible", "oemTireSize": "225/45R17"},
+        {"name": "M240i Coupe", "oemTireSize": "225/40R18"},
+        {"name": "M2", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "F22/F23 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "230i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "230i Convertible", "oemTireSize": "225/45R17"},
+        {"name": "M240i Coupe", "oemTireSize": "225/40R18"},
+        {"name": "M2 Competition", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "F22/F23 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "230i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "M240i Coupe", "oemTireSize": "225/40R18"},
+        {"name": "M2 Competition", "oemTireSize": "245/35R19"},
+        {"name": "M2 CS", "oemTireSize": "265/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "F22/F23 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "230i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "M240i Coupe", "oemTireSize": "225/40R18"},
+        {"name": "M2 Competition", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["apexwheels.com", "hulkoffsets.com"],
+      "notes": "Final year of F22 generation coupe"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "G42 (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "230i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "230i Coupe M Sport", "oemTireSize": "225/40R18"},
+        {"name": "M240i xDrive Coupe", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "apexwheels.com"],
+      "notes": "New generation - bolt pattern changed to 5x112"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "G42 (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "230i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "230i Coupe M Sport", "oemTireSize": "225/40R18"},
+        {"name": "M240i xDrive Coupe", "oemTireSize": "255/35R19"},
+        {"name": "M2", "oemTireSize": "275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "apexwheels.com"]
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "G42 (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "230i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "230i Coupe M Sport", "oemTireSize": "225/40R18"},
+        {"name": "M240i xDrive Coupe", "oemTireSize": "255/35R19"},
+        {"name": "M2", "oemTireSize": "275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"]
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "G42 (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "230i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "M240i xDrive Coupe", "oemTireSize": "255/35R19"},
+        {"name": "M2", "oemTireSize": "275/35R19"}
+      ],
+      "confidence": "medium",
+      "sources": ["classic.com"],
+      "notes": "Current model year"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "2 Series",
+      "generation": "G42 (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "230i Coupe", "oemTireSize": "225/45R17"},
+        {"name": "M240i xDrive Coupe", "oemTireSize": "255/35R19"},
+        {"name": "M2", "oemTireSize": "275/35R19"}
+      ],
+      "confidence": "medium",
+      "sources": ["bmwusa.com"],
+      "notes": "Future model year - specs may change"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "F36 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "428i Gran Coupe", "oemTireSize": "225/50R17"},
+        {"name": "428i Gran Coupe Luxury Line", "oemTireSize": "225/45R18"},
+        {"name": "428i Gran Coupe M Sport", "oemTireSize": "225/45R18"},
+        {"name": "435i Gran Coupe", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["goodyear.com", "hulkoffsets.com"],
+      "notes": "First US model year for 4 Series Gran Coupe"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "F36 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "428i Gran Coupe", "oemTireSize": "225/50R17"},
+        {"name": "428i Gran Coupe Luxury Line", "oemTireSize": "225/45R18"},
+        {"name": "428i Gran Coupe M Sport", "oemTireSize": "225/45R18"},
+        {"name": "435i Gran Coupe", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["goodyear.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "F36 (1st Gen)",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "428i Gran Coupe", "oemTireSize": "225/50R17"},
+        {"name": "428i Gran Coupe M Sport", "oemTireSize": "225/45R18"},
+        {"name": "435i Gran Coupe", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["goodyear.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "F36 LCI",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "430i Gran Coupe", "oemTireSize": "225/50R17"},
+        {"name": "430i Gran Coupe M Sport", "oemTireSize": "225/45R18"},
+        {"name": "440i Gran Coupe", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["goodyear.com", "hulkoffsets.com"],
+      "notes": "LCI facelift"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "F36 LCI",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "430i Gran Coupe", "oemTireSize": "225/50R17"},
+        {"name": "430i Gran Coupe M Sport", "oemTireSize": "225/45R18"},
+        {"name": "440i Gran Coupe", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["goodyear.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "F36 LCI",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "430i Gran Coupe", "oemTireSize": "225/50R17"},
+        {"name": "430i Gran Coupe M Sport", "oemTireSize": "225/45R18"},
+        {"name": "440i Gran Coupe", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["goodyear.com", "hulkoffsets.com"]
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "F36 LCI",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "430i Gran Coupe", "oemTireSize": "225/50R17"},
+        {"name": "430i Gran Coupe M Sport", "oemTireSize": "225/45R18"},
+        {"name": "440i Gran Coupe", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["goodyear.com", "hulkoffsets.com"],
+      "notes": "Final year of F36 generation"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "G26 (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "430i Gran Coupe", "oemTireSize": "225/45R18"},
+        {"name": "430i Gran Coupe M Sport", "oemTireSize": "225/40R19"},
+        {"name": "M440i Gran Coupe", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com", "curvaconcepts.com"],
+      "notes": "New G26 generation - bolt pattern changed to 5x112"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "G26 (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "430i Gran Coupe", "oemTireSize": "225/45R18"},
+        {"name": "430i Gran Coupe M Sport", "oemTireSize": "225/40R19"},
+        {"name": "M440i xDrive Gran Coupe", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com", "curvaconcepts.com"]
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "generation": "G26 (2nd Gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "430i Gran Coupe", "oemTireSize": "225/45R18"},
+        {"name": "430i Gran Coupe M Sport", "oemTireSize": "225/40R19"},
+        {"name": "M440i xDrive Gran Coupe", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["autoevolution.com", "curvaconcepts.com"]
+    }
+  ]
+}

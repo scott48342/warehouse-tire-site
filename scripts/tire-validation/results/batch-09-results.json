@@ -1,0 +1,916 @@
+{
+  "batchId": "09",
+  "processedAt": "2026-04-21T21:40:00.000Z",
+  "results": [
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com (interpolated from 8Y generation)",
+      "confidence": "medium",
+      "notes": "2021 was transition year to 8Y platform"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8V)", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Base (8V)", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "8V generation specs",
+      "confidence": "medium",
+      "notes": "First year of 8V in Europe; not sold in US until 2015"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "8P generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8P not sold in US market"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "8P generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8P not sold in US market"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "8P generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8P not sold in US market"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "8P generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8P not sold in US market"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "8P generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8P not sold in US market"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "8P generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8P not sold in US market"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"},
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 19, "width": 8}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "8P generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8P not sold in US market"
+    },
+    {
+      "year": 2006,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8P)", "wheelSize": {"diameter": 18, "width": 7.5}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "8P generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8P first year; not sold in US market"
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8L)", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/45R17"},
+        {"trim": "Base (8L)", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "8L generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8L not sold in US market"
+    },
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8L)", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/45R17"},
+        {"trim": "Base (8L)", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "8L generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8L not sold in US market"
+    },
+    {
+      "year": 2001,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8L)", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/45R17"},
+        {"trim": "Base (8L)", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "8L generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8L not sold in US market"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "S3",
+      "trims": [
+        {"trim": "Base (8L)", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/45R17"},
+        {"trim": "Base (8L)", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "8L generation specs (Europe only)",
+      "confidence": "medium",
+      "notes": "S3 8L not sold in US market"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com (interpolated from B9 generation)",
+      "confidence": "medium",
+      "notes": "2026 model year projected"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/35R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First year of B9 generation"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "New Model (B8)", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "New Model (B8)", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Transition year - both B7 and B8 available"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"},
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "235/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "235/45R17"},
+        {"trim": "Avant", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Sedan", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "235/45R17"},
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "First year of B6 generation"
+    },
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/45R17"},
+        {"trim": "Sedan", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/45R17"},
+        {"trim": "Sedan", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "S4",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.5}, "tireSize": "225/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/40R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/40R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "245/35R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/40R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "245/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/40R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/40R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "245/35R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "245/40R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "245/35R20"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5}, "tireSize": "265/30R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Coupe Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Coupe Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Premium Plus", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Coupe Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Prestige", "wheelSize": {"diameter": 18, "width": 8}, "tireSize": "245/40R18"},
+        {"trim": "Coupe Prestige", "wheelSize": {"diameter": 19, "width": 8.5}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "processedVehicles": 63,
+    "highConfidence": 51,
+    "mediumConfidence": 12,
+    "lowConfidence": 0,
+    "notAvailable": 0,
+    "notes": "Batch covers Audi S3 (2000-2025), S4 (2000-2026), S5 (2015-2026). Some S3 years (2006-2014) were Europe-only. All S models use square (non-staggered) setups."
+  }
+}

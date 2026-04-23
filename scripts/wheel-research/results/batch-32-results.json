@@ -1,0 +1,1138 @@
+{
+  "batchId": "32",
+  "processedAt": "2026-04-21T21:05:00Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "XK",
+      "wheelSpecs": {
+        "boltPattern": "5x120.7",
+        "centerBore": 73.9,
+        "offset": { "min": 15, "max": 25 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 8.0, "max": 9.0 }
+      },
+      "notes": "X100 generation (XK8/XKR). Last year of this gen.",
+      "confidence": "high",
+      "sources": ["wheelssize.com", "roadkillcustoms.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "XK",
+      "wheelSpecs": {
+        "boltPattern": "5x120.7",
+        "centerBore": 73.9,
+        "offset": { "min": 15, "max": 25 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 8.0, "max": 9.0 }
+      },
+      "notes": "X100 generation (XK8/XKR)",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "XK",
+      "wheelSpecs": {
+        "boltPattern": "5x120.7",
+        "centerBore": 73.9,
+        "offset": { "min": 15, "max": 25 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 8.0, "max": 9.0 }
+      },
+      "notes": "X100 generation (XK8/XKR)",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "XK",
+      "wheelSpecs": {
+        "boltPattern": "5x120.7",
+        "centerBore": 73.9,
+        "offset": { "min": 15, "max": 25 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 8.0, "max": 9.0 }
+      },
+      "notes": "X100 generation (XK8/XKR)",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "XK",
+      "wheelSpecs": {
+        "boltPattern": "5x120.7",
+        "centerBore": 73.9,
+        "offset": { "min": 15, "max": 25 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 8.0, "max": 9.0 }
+      },
+      "notes": "X100 generation (XK8/XKR)",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Jaguar",
+      "model": "XK",
+      "wheelSpecs": {
+        "boltPattern": "5x120.7",
+        "centerBore": 73.9,
+        "offset": { "min": 15, "max": 25 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 8.0, "max": 9.0 }
+      },
+      "notes": "X100 generation (XK8/XKR)",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "XK",
+      "wheelSpecs": {
+        "boltPattern": "5x120.7",
+        "centerBore": 73.9,
+        "offset": { "min": 15, "max": 25 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 8.0, "max": 9.0 }
+      },
+      "notes": "X100 generation (XK8/XKR)",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 15, "max": 16 },
+        "width": { "min": 7.0, "max": 7.0 }
+      },
+      "notes": "XJ generation, final year",
+      "confidence": "high",
+      "sources": ["originalwheels.com", "opplehouse.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 15, "max": 16 },
+        "width": { "min": 7.0, "max": 7.0 }
+      },
+      "notes": "XJ generation",
+      "confidence": "high",
+      "sources": ["originalwheels.com", "colorado4wheel.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Compass",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "First generation MK49",
+      "confidence": "high",
+      "sources": ["studpattern.com", "myjeepcompass.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 30, "max": 45 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "WK generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com", "sizemywheels.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 30, "max": 45 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "WK generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 30, "max": 45 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "WK generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 30, "max": 45 },
+        "diameter": { "min": 17, "max": 20 },
+        "width": { "min": 7.0, "max": 8.0 }
+      },
+      "notes": "WK generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 30, "max": 45 },
+        "diameter": { "min": 17, "max": 18 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "WK generation, first year",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.4,
+        "offset": { "min": 18, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "WJ generation, final year",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.4,
+        "offset": { "min": 18, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "WJ generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.4,
+        "offset": { "min": 18, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "WJ generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.4,
+        "offset": { "min": 18, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "WJ generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 32 },
+        "diameter": { "min": 20, "max": 22 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "Full-size SUV, same platform as Ram 1500",
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 32 },
+        "diameter": { "min": 20, "max": 22 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "Full-size SUV",
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 32 },
+        "diameter": { "min": 20, "max": 22 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "Full-size SUV",
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 32 },
+        "diameter": { "min": 20, "max": 22 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "Full-size SUV, first model year",
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 32 },
+        "diameter": { "min": 20, "max": 22 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "2021 may be limited intro year",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KK generation, final year (marketed as 2012 last US year, some markets 2013-2014)",
+      "confidence": "medium",
+      "sources": ["wheel-size.com", "streetdirttrack.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KK generation",
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KK generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com", "streetdirttrack.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KK generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KK generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KK generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KK generation, first year",
+      "confidence": "high",
+      "sources": ["wheelssize.com", "streetdirttrack.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KJ generation, final year",
+      "confidence": "high",
+      "sources": ["wheelssize.com", "wheel-size.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KJ generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KJ generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KJ generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.5 }
+      },
+      "notes": "KJ generation",
+      "confidence": "high",
+      "sources": ["wheelssize.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.0 }
+      },
+      "notes": "KJ generation, first year",
+      "confidence": "high",
+      "sources": ["wheelssize.com", "streetdirttrack.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Liberty",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 7.0, "max": 7.0 }
+      },
+      "notes": "KJ generation intro year (may be limited production)",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform, final model year",
+      "confidence": "high",
+      "sources": ["tireswheels.org", "wheelsynergy.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform",
+      "confidence": "high",
+      "sources": ["tireswheels.org"]
+    },
+    {
+      "year": 2015,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform",
+      "confidence": "high",
+      "sources": ["tireswheels.org"]
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform",
+      "confidence": "high",
+      "sources": ["tireswheels.org"]
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform",
+      "confidence": "high",
+      "sources": ["tireswheels.org"]
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform",
+      "confidence": "high",
+      "sources": ["tireswheels.org"]
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform",
+      "confidence": "high",
+      "sources": ["tireswheels.org", "wheel-size.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform",
+      "confidence": "high",
+      "sources": ["tireswheels.org"]
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform",
+      "confidence": "high",
+      "sources": ["tireswheels.org"]
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform",
+      "confidence": "high",
+      "sources": ["tireswheels.org"]
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Patriot",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 39, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "MK74 platform, first model year",
+      "confidence": "high",
+      "sources": ["tireswheels.org", "wheelsynergy.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Renegade",
+      "wheelSpecs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "offset": { "min": 38, "max": 40 },
+        "diameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "BU platform, shared with Fiat 500X. Early production year.",
+      "confidence": "high",
+      "sources": ["jeepabc.com", "jeeprenegadeforum.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 32 },
+        "diameter": { "min": 20, "max": 22 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "Full-size SUV, same platform as Grand Wagoneer",
+      "confidence": "high",
+      "sources": ["wheel-size.com", "boltsoft.net"]
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 32 },
+        "diameter": { "min": 20, "max": 22 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "Full-size SUV",
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 32 },
+        "diameter": { "min": 20, "max": 22 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "Full-size SUV",
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 32 },
+        "diameter": { "min": 20, "max": 22 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "Full-size SUV, first model year",
+      "confidence": "high",
+      "sources": ["wheel-size.com", "wheelssize.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 32 },
+        "diameter": { "min": 20, "max": 22 },
+        "width": { "min": 9.0, "max": 9.5 }
+      },
+      "notes": "2021 may be limited intro year",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "300E",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "offset": { "min": 40, "max": 45 },
+        "diameter": { "min": 14, "max": 15 },
+        "width": { "min": 5.5, "max": 6.0 }
+      },
+      "notes": "Small economy car, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheelmeasure.com", "wheel-size.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "300E",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "offset": { "min": 40, "max": 45 },
+        "diameter": { "min": 14, "max": 15 },
+        "width": { "min": 5.5, "max": 6.0 }
+      },
+      "notes": "Small economy car, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheelmeasure.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "300E",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "offset": { "min": 40, "max": 45 },
+        "diameter": { "min": 14, "max": 15 },
+        "width": { "min": 5.5, "max": 6.0 }
+      },
+      "notes": "Small economy car, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheelmeasure.com", "wheel-size.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "300E",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "offset": { "min": 40, "max": 45 },
+        "diameter": { "min": 14, "max": 15 },
+        "width": { "min": 5.5, "max": 6.0 }
+      },
+      "notes": "Small economy car, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheelmeasure.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "300E",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "offset": { "min": 40, "max": 45 },
+        "diameter": { "min": 14, "max": 15 },
+        "width": { "min": 5.5, "max": 6.0 }
+      },
+      "notes": "Small economy car, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheelmeasure.com", "wheel-size.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Amanti",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 33, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Full-size luxury sedan, final model year",
+      "confidence": "high",
+      "sources": ["autotk.com", "wheelssize.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Amanti",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 33, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Full-size luxury sedan",
+      "confidence": "high",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Amanti",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 33, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Full-size luxury sedan, second generation refresh",
+      "confidence": "high",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Amanti",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 33, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Full-size luxury sedan",
+      "confidence": "high",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Amanti",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 33, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Full-size luxury sedan",
+      "confidence": "high",
+      "sources": ["autotk.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Amanti",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 33, "max": 45 },
+        "diameter": { "min": 16, "max": 17 },
+        "width": { "min": 6.5, "max": 7.0 }
+      },
+      "notes": "Full-size luxury sedan, first model year",
+      "confidence": "high",
+      "sources": ["autotk.com", "wheel-size.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Avella",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "offset": { "min": 40, "max": 45 },
+        "diameter": { "min": 13, "max": 14 },
+        "width": { "min": 5.0, "max": 5.5 }
+      },
+      "notes": "Subcompact car, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Avella",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "offset": { "min": 40, "max": 45 },
+        "diameter": { "min": 13, "max": 14 },
+        "width": { "min": 5.0, "max": 5.5 }
+      },
+      "notes": "Subcompact car, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Avella",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "offset": { "min": 40, "max": 45 },
+        "diameter": { "min": 13, "max": 14 },
+        "width": { "min": 5.0, "max": 5.5 }
+      },
+      "notes": "Subcompact car, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Avella",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "offset": { "min": 40, "max": 45 },
+        "diameter": { "min": 13, "max": 14 },
+        "width": { "min": 5.0, "max": 5.5 }
+      },
+      "notes": "Subcompact car, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Besta",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.0,
+        "offset": { "min": 30, "max": 45 },
+        "diameter": { "min": 14, "max": 15 },
+        "width": { "min": 5.5, "max": 6.0 }
+      },
+      "notes": "Light commercial van/minibus, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheel-size.com", "tirewheelguide.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Besta",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.0,
+        "offset": { "min": 30, "max": 45 },
+        "diameter": { "min": 14, "max": 15 },
+        "width": { "min": 5.5, "max": 6.0 }
+      },
+      "notes": "Light commercial van/minibus, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Besta",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.0,
+        "offset": { "min": 30, "max": 45 },
+        "diameter": { "min": 14, "max": 15 },
+        "width": { "min": 5.5, "max": 6.0 }
+      },
+      "notes": "Light commercial van/minibus, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Besta",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.0,
+        "offset": { "min": 30, "max": 45 },
+        "diameter": { "min": 14, "max": 15 },
+        "width": { "min": 5.5, "max": 6.0 }
+      },
+      "notes": "Light commercial van/minibus, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Besta",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.0,
+        "offset": { "min": 30, "max": 45 },
+        "diameter": { "min": 14, "max": 15 },
+        "width": { "min": 5.5, "max": 6.0 }
+      },
+      "notes": "Light commercial van/minibus, primarily for international markets",
+      "confidence": "medium",
+      "sources": ["wheel-size.com"]
+    }
+  ],
+  "summary": {
+    "highConfidence": 59,
+    "mediumConfidence": 16,
+    "lowConfidence": 0,
+    "totalProcessed": 75
+  }
+}

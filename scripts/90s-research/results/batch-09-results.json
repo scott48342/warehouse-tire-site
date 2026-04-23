@@ -1,0 +1,1338 @@
+{
+  "batchId": "90s-batch-09",
+  "completedAt": "2026-04-22T12:40:00.000Z",
+  "results": [
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Intrepid",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "First generation LH platform. Base model has 15\" wheels, ES has 16\"."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Intrepid",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "First generation. Base model has 15\" wheels, ES has 16\"."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Intrepid",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Last year of first generation. All trims have 16\" wheels."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Intrepid",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "First year of second generation."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Intrepid",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Second generation. Base may have 15\" option."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Intrepid",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Second generation."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Stratus",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": [],
+      "notes": "Dodge Stratus production began in 1995. This year does not exist."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Stratus",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": [],
+      "notes": "Dodge Stratus production began in 1995. This year does not exist."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Stratus",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": [],
+      "notes": "Dodge Stratus production began in 1995. This year does not exist."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Stratus",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": [],
+      "notes": "Dodge Stratus production began in 1995. This year does not exist."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Stratus",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": [],
+      "notes": "Dodge Stratus production began in 1995. This year does not exist."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Stratus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "studpattern.com"],
+      "notes": "First generation JA platform. Base has 14\" wheels, ES has 15\"."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Stratus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "studpattern.com"],
+      "notes": "First generation. Base has 14\" wheels, ES has 15\"."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Stratus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "studpattern.com"],
+      "notes": "First generation. Base has 14\" wheels, ES has 15\"."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Stratus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "studpattern.com"],
+      "notes": "First generation. Base has 14\" wheels, ES has 15\"."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Stratus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "studpattern.com"],
+      "notes": "First generation. Base has 14\" wheels, ES has 15\"."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Caravan",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/70R14", "205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "First generation. Base has 14\", ES/Turbo Sport have 15\"."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Caravan",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/70R14", "205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Second generation ES platform started. Bolt pattern changed to 5x114.3."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Caravan",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/70R14", "205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Second generation."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Caravan",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/70R14", "205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Second generation."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Caravan",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/70R14", "205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Second generation."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Caravan",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/70R14", "205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Last year of second generation."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Caravan",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "215/65R15", "215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Third generation NS platform. Bolt pattern returned to 5x100."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Caravan",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "215/65R15", "215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Third generation."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Caravan",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "215/65R15", "215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Third generation."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Caravan",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "215/65R15", "215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "notes": "Third generation."
+    },
+    {
+      "year": 1996,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["quadratec.com", "tiresize.com", "jeepforum.com"],
+      "notes": "No 1996 model year produced. YJ ended in 1995, TJ started in 1997. If this is meant to be YJ, use 1995 specs."
+    },
+    {
+      "year": 1990,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["cherokeeforum.com", "jeepforum.com", "naxja.org"],
+      "notes": "XJ generation. Base/SE has 215/75R15, Sport/UpCountry has 225/75R15."
+    },
+    {
+      "year": 1991,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["cherokeeforum.com", "jeepforum.com", "naxja.org"],
+      "notes": "XJ generation."
+    },
+    {
+      "year": 1992,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["cherokeeforum.com", "jeepforum.com", "naxja.org"],
+      "notes": "XJ generation."
+    },
+    {
+      "year": 1993,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["cherokeeforum.com", "jeepforum.com", "naxja.org"],
+      "notes": "XJ generation."
+    },
+    {
+      "year": 1994,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["cherokeeforum.com", "jeepforum.com", "naxja.org"],
+      "notes": "XJ generation."
+    },
+    {
+      "year": 1995,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["cherokeeforum.com", "jeepforum.com", "naxja.org"],
+      "notes": "XJ generation."
+    },
+    {
+      "year": 1996,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["cherokeeforum.com", "jeepforum.com", "naxja.org"],
+      "notes": "XJ generation."
+    },
+    {
+      "year": 1997,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["cherokeeforum.com", "jeepforum.com", "naxja.org"],
+      "notes": "XJ generation. Restyled front end."
+    },
+    {
+      "year": 1998,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["cherokeeforum.com", "jeepforum.com", "naxja.org"],
+      "notes": "XJ generation."
+    },
+    {
+      "year": 1999,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["cherokeeforum.com", "jeepforum.com", "naxja.org"],
+      "notes": "XJ generation."
+    },
+    {
+      "year": 1990,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": [],
+      "notes": "Grand Cherokee production began in 1993 (ZJ). This year does not exist."
+    },
+    {
+      "year": 1991,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": [],
+      "notes": "Grand Cherokee production began in 1993 (ZJ). This year does not exist."
+    },
+    {
+      "year": 1992,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": [],
+      "notes": "Grand Cherokee production began in 1993 (ZJ). This year does not exist."
+    },
+    {
+      "year": 1993,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "automobile-catalog.com"],
+      "notes": "First year of ZJ generation. Base has 215/75R15, Laredo/Limited have 225/75R15 or 235/75R15."
+    },
+    {
+      "year": 1994,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "automobile-catalog.com"],
+      "notes": "ZJ generation."
+    },
+    {
+      "year": 1995,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 30 },
+          { "diameter": 16, "width": 7, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15", "245/70R15", "225/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "automobile-catalog.com"],
+      "notes": "ZJ generation. Orvis edition has 16\" wheels."
+    },
+    {
+      "year": 1996,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 30 },
+          { "diameter": 16, "width": 7, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "245/70R15", "225/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "automobile-catalog.com"],
+      "notes": "ZJ generation. Limited/Orvis have 16\"."
+    },
+    {
+      "year": 1997,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 30 },
+          { "diameter": 16, "width": 7, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15", "245/70R15", "225/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "automobile-catalog.com"],
+      "notes": "ZJ generation. TSi/Laredo on 15\", Limited/Orvis on 16\"."
+    },
+    {
+      "year": 1998,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 30 },
+          { "diameter": 16, "width": 7, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "225/75R15", "245/70R15", "225/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "automobile-catalog.com"],
+      "notes": "Last year of ZJ generation. 5.9L Limited has 16\"."
+    },
+    {
+      "year": 1999,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/75R16", "245/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "automobile-catalog.com"],
+      "notes": "First year of WJ generation. Bolt pattern changed to 5x127."
+    },
+    {
+      "year": 1990,
+      "make": "GMC",
+      "model": "Sierra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sizewheeltire.com", "tiresize.com"],
+      "notes": "GMT400 platform. 1500 2WD has 15\" (6-lug 6x139.7), 4WD and 2500 have 16\" (may be 8-lug 8x165.1)."
+    },
+    {
+      "year": 1991,
+      "make": "GMC",
+      "model": "Sierra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sizewheeltire.com", "tiresize.com"],
+      "notes": "GMT400 platform."
+    },
+    {
+      "year": 1992,
+      "make": "GMC",
+      "model": "Sierra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sizewheeltire.com", "tiresize.com"],
+      "notes": "GMT400 platform."
+    },
+    {
+      "year": 1993,
+      "make": "GMC",
+      "model": "Sierra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sizewheeltire.com", "tiresize.com"],
+      "notes": "GMT400 platform."
+    },
+    {
+      "year": 1994,
+      "make": "GMC",
+      "model": "Sierra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "225/75R16", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sizewheeltire.com", "tiresize.com"],
+      "notes": "GMT400 platform."
+    },
+    {
+      "year": 1995,
+      "make": "GMC",
+      "model": "Sierra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "225/75R16", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sizewheeltire.com", "tiresize.com"],
+      "notes": "GMT400 platform."
+    },
+    {
+      "year": 1996,
+      "make": "GMC",
+      "model": "Sierra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "225/75R16", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sizewheeltire.com", "tiresize.com"],
+      "notes": "GMT400 platform."
+    },
+    {
+      "year": 1997,
+      "make": "GMC",
+      "model": "Sierra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "225/75R16", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sizewheeltire.com", "tiresize.com"],
+      "notes": "GMT400 platform."
+    },
+    {
+      "year": 1998,
+      "make": "GMC",
+      "model": "Sierra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "225/75R16", "245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sizewheeltire.com", "tiresize.com"],
+      "notes": "Last year of GMT400 platform."
+    },
+    {
+      "year": 1999,
+      "make": "GMC",
+      "model": "Sierra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["235/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sizewheeltire.com", "tiresize.com"],
+      "notes": "First year of GMT800 platform. New body style."
+    },
+    {
+      "year": 1990,
+      "make": "GMC",
+      "model": "Yukon",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": [],
+      "notes": "GMC Yukon production began in 1992. This year does not exist."
+    },
+    {
+      "year": 1991,
+      "make": "GMC",
+      "model": "Yukon",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": [],
+      "notes": "GMC Yukon production began in 1992. This year does not exist."
+    },
+    {
+      "year": 1990,
+      "make": "GMC",
+      "model": "Jimmy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "S-15 Jimmy/compact Jimmy. 5x120.65 (5x4.75\") bolt pattern."
+    },
+    {
+      "year": 1991,
+      "make": "GMC",
+      "model": "Jimmy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "S-15 Jimmy. Last year of S-15 body."
+    },
+    {
+      "year": 1992,
+      "make": "GMC",
+      "model": "Jimmy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "S-15 Jimmy redesigned."
+    },
+    {
+      "year": 1993,
+      "make": "GMC",
+      "model": "Jimmy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1994,
+      "make": "GMC",
+      "model": "Jimmy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1995,
+      "make": "GMC",
+      "model": "Jimmy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "GMT330 platform. New body style."
+    },
+    {
+      "year": 1996,
+      "make": "GMC",
+      "model": "Jimmy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/75R15", "31X10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "GMT330 platform. ZR2 package has 31X10.50R15."
+    },
+    {
+      "year": 1997,
+      "make": "GMC",
+      "model": "Jimmy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/75R15", "31X10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1998,
+      "make": "GMC",
+      "model": "Jimmy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/75R15", "31X10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "GMT330 platform. Envoy sub-model has 235/70R15."
+    },
+    {
+      "year": 1999,
+      "make": "GMC",
+      "model": "Jimmy",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/75R15", "31X10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1990,
+      "make": "GMC",
+      "model": "Sonoma",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 35 },
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/75R14", "205/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "notes": "S-15 Sonoma compact pickup. 2WD on 14\", 4WD on 15\"."
+    },
+    {
+      "year": 1991,
+      "make": "GMC",
+      "model": "Sonoma",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 35 },
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/75R14", "205/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "notes": "S-15 Sonoma."
+    },
+    {
+      "year": 1992,
+      "make": "GMC",
+      "model": "Sonoma",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 35 },
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/75R14", "205/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "notes": "S-15 Sonoma."
+    },
+    {
+      "year": 1993,
+      "make": "GMC",
+      "model": "Sonoma",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 35 },
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/75R14", "205/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "notes": "S-15 Sonoma."
+    },
+    {
+      "year": 1994,
+      "make": "GMC",
+      "model": "Sonoma",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "notes": "Sonoma redesigned. All trims on 15\" wheels."
+    },
+    {
+      "year": 1995,
+      "make": "GMC",
+      "model": "Sonoma",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/65R15", "235/75R15", "31X10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "notes": "Sonoma. ZR2 package has 31X10.50R15."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 62,
+    "partial": 0,
+    "not_produced": 13,
+    "highConfidence": 62,
+    "needsReview": 1
+  },
+  "notes": {
+    "not_produced_vehicles": [
+      "Dodge Stratus 1990-1994 (production began 1995)",
+      "Jeep Grand Cherokee 1990-1992 (production began 1993)",
+      "GMC Yukon 1990-1991 (production began 1992)"
+    ],
+    "data_source_notes": "Data compiled from tiresize.com, hulkoffsets.com, bbwheelsonline.com, and various enthusiast forums (cherokeeforum.com, jeepforum.com, naxja.org, gmt400.com). Avoided banned sources (wheel-size.com, simpletire.com, tirerack.com).",
+    "special_cases": [
+      "1996 Jeep Wrangler: No 1996 model year was produced. YJ ended 1995, TJ started 1997. Marked with combined specs.",
+      "1999 Jeep Grand Cherokee: WJ generation started, bolt pattern changed from 5x114.3 to 5x127.",
+      "Dodge Caravan 1991-1995: Second generation had 5x114.3, third generation (1996+) reverted to 5x100.",
+      "GMC Sierra: 1500 models use 6x139.7 (6-lug), 2500/3500 may use 8x165.1 (8-lug) - specs shown are for 1500."
+    ]
+  }
+}

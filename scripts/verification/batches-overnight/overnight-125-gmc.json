@@ -1,0 +1,1693 @@
+[
+  {
+    "id": "fdd70e5b-3a8b-430b-8376-cff914434e79",
+    "year": 2003,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6ae87d6c-6a3f-4829-af20-110a708f2769",
+    "year": 2004,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3e23442d-5708-4798-b182-7781934ed221",
+    "year": 2004,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "3f83f292-82ef-4bc1-b478-d056946c9ed2",
+    "year": 2004,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "12b29f43-f862-4372-ae82-5bc384155d7c",
+    "year": 2004,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "94ca22c4-7080-4e1e-8622-fe8412b626fa",
+    "year": 2005,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "478e5392-659a-4bee-aea4-2970bafc7af2",
+    "year": 2005,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "8cc38477-2b1b-4bf5-b313-c5e9f5ff5ad8",
+    "year": 2005,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5bb44620-78b1-4ec7-aa65-e4971c64311e",
+    "year": 2005,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "a143cb03-e99b-4c1c-b83a-5db0a3e3514e",
+    "year": 2006,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "2030617e-cc54-443e-9d79-dad4ebd9e101",
+    "year": 2006,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "3ead9281-a8da-4531-b1d4-75fc7cb44e8c",
+    "year": 2006,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "49ea5b1e-d2c9-43d5-a1c6-750dead099f4",
+    "year": 2006,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "981b188c-ead7-4e27-a217-c0caabdb42a0",
+    "year": 2007,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2007 sierra-2500hd]"
+  },
+  {
+    "id": "61acc64b-4ae5-432c-9b9e-6f081d029196",
+    "year": 2007,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bae387a6-043e-4079-adf8-fbebf0f931f4",
+    "year": 2007,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0bebe2eb-5aaf-4c47-95cb-4da58b251364",
+    "year": 2007,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2007 sierra-2500hd]"
+  },
+  {
+    "id": "f9f113ba-5287-445c-b398-94ddabb15d2f",
+    "year": 2007,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2007 sierra-2500hd]"
+  },
+  {
+    "id": "a65b791a-25aa-433b-a053-d192ea3227b6",
+    "year": 2008,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2008 sierra-2500hd]"
+  },
+  {
+    "id": "bb74eae9-6a94-46fb-b709-3b64b97e68d9",
+    "year": 2008,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2008 sierra-2500hd]"
+  },
+  {
+    "id": "a3733521-c5a2-470c-9de5-12984618b11e",
+    "year": 2008,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "da016b93-a382-45f7-8327-8f0bac83012c",
+    "year": 2008,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e8a1be3e-eead-4a2c-ab38-eac91772db83",
+    "year": 2008,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2008 sierra-2500hd]"
+  },
+  {
+    "id": "bbcd9ceb-d202-4379-a945-6a084e306fca",
+    "year": 2009,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2009 sierra-2500hd]"
+  },
+  {
+    "id": "e4fd1c98-4807-4d6a-a67b-85799b32d442",
+    "year": 2009,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "03974c6d-cfaf-4eb2-8aec-c218ee424cb6",
+    "year": 2009,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2009 sierra-2500hd]"
+  },
+  {
+    "id": "ea76c465-cd78-4a3a-ba37-7ce027997c1f",
+    "year": 2009,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3bb987bb-eb63-419f-999a-6f9e9555ea8c",
+    "year": 2009,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2009 sierra-2500hd]"
+  },
+  {
+    "id": "1765b31b-6a11-4b95-a5c5-167fae1be488",
+    "year": 2010,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2010 sierra-2500hd]"
+  },
+  {
+    "id": "31478931-86e5-4144-8584-de8f841f71ff",
+    "year": 2010,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ec36b44f-2ea4-4302-aa9a-be2fdf633ed9",
+    "year": 2010,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "908e10b2-80e2-470c-b3b3-341fe0dda3e5",
+    "year": 2010,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2010 sierra-2500hd]"
+  },
+  {
+    "id": "fcd74bf6-b6eb-4d3f-a6b2-1bd4ae1986c5",
+    "year": 2010,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16",
+      "LT245/70R17",
+      "LT265/70R17",
+      "LT265/65R18"
+    ],
+    "source": "api_import [filled from 2010 sierra-2500hd]"
+  },
+  {
+    "id": "3d72ed21-0269-4166-8a79-8dae32dc9221",
+    "year": 2011,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2011 sierra-2500hd]"
+  },
+  {
+    "id": "fcdd1579-7b92-411d-8a4b-e221bace5d11",
+    "year": 2011,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "77be2286-d989-45e4-aab7-eda25f47eb17",
+    "year": 2011,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2011 sierra-2500hd]"
+  },
+  {
+    "id": "7403607d-a8df-4725-9162-f91c55943705",
+    "year": 2011,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2011 sierra-2500hd]"
+  },
+  {
+    "id": "28445fa1-9db8-484a-acac-6a8f8b57a5f1",
+    "year": 2011,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2011 sierra-2500hd]"
+  },
+  {
+    "id": "9d3434be-e8a2-4b2a-83c0-4b01fddb94ae",
+    "year": 2012,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2012 sierra-2500hd]"
+  },
+  {
+    "id": "63341f91-a4f0-4e9c-9a14-8ad6a45427c3",
+    "year": 2012,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2012 sierra-2500hd]"
+  },
+  {
+    "id": "1f018dff-eea1-4d83-84e2-3b5481a34aac",
+    "year": 2012,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2012 sierra-2500hd]"
+  },
+  {
+    "id": "6ab3032c-9190-4413-af74-4931add15331",
+    "year": 2012,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2012 sierra-2500hd]"
+  },
+  {
+    "id": "d07bb7ab-5104-4789-ab73-310742fc93ad",
+    "year": 2012,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7b8e3217-9e22-418c-ae1b-7910c3faf5b9",
+    "year": 2013,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "516a38d9-055c-452d-b5fb-398aa8c036e1",
+    "year": 2013,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2013 sierra-2500hd]"
+  },
+  {
+    "id": "f747f800-cd31-4767-86e2-f167e54c39b2",
+    "year": 2013,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2013 sierra-2500hd]"
+  },
+  {
+    "id": "3559c6ec-6a21-45df-b20c-88cac91b1e63",
+    "year": 2013,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2013 sierra-2500hd]"
+  },
+  {
+    "id": "dbeae253-8c13-45e7-96d7-651bf0ed0006",
+    "year": 2013,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2013 sierra-2500hd]"
+  },
+  {
+    "id": "01545a85-864e-4dbe-a13b-939831e549fb",
+    "year": 2014,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2014 sierra-2500hd]"
+  },
+  {
+    "id": "eac84b62-873c-4a47-868c-5c9a2c7cdb6a",
+    "year": 2014,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2014 sierra-2500hd]"
+  },
+  {
+    "id": "5907a245-f83b-4351-9b76-ddd4531d785c",
+    "year": 2014,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2014 sierra-2500hd]"
+  },
+  {
+    "id": "71bd8faf-f810-48a5-91a7-e242a1074258",
+    "year": 2014,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2014 sierra-2500hd]"
+  },
+  {
+    "id": "9c07e417-1b3c-43f2-a8f9-b2fad2fd0515",
+    "year": 2014,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "63e8666e-f602-4137-873d-bc72222c8abb",
+    "year": 2015,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2015 sierra-2500hd]"
+  },
+  {
+    "id": "d9103284-122f-4a43-ae97-0512a12d994f",
+    "year": 2015,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2015 sierra-2500hd]"
+  },
+  {
+    "id": "9af44f82-d65f-4073-a82b-8833f5dc5968",
+    "year": 2015,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "All Terrain",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d2eee397-0041-481c-8fc8-beb60e353abf",
+    "year": 2015,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2015 sierra-2500hd]"
+  },
+  {
+    "id": "8a7ceb33-94cf-4a53-b307-441817c12eea",
+    "year": 2015,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2015 sierra-2500hd]"
+  },
+  {
+    "id": "e67665c9-82e0-4b39-a71a-46602a5f52bc",
+    "year": 2016,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "All Terrain",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c972c376-023a-4f74-8b90-105c111d6bb3",
+    "year": 2016,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2016 sierra-2500hd]"
+  },
+  {
+    "id": "df044e5d-16cc-4b05-94e8-b8dec344af01",
+    "year": 2016,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2016 sierra-2500hd]"
+  },
+  {
+    "id": "56e33d7c-2798-4639-96b5-48cf53b331e9",
+    "year": 2016,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2016 sierra-2500hd]"
+  },
+  {
+    "id": "a28fe53b-b27a-47f0-9484-15065235d99d",
+    "year": 2016,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2016 sierra-2500hd]"
+  },
+  {
+    "id": "692fe895-522b-4d55-a5b7-ad5079dc9ea4",
+    "year": 2017,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2017 sierra-2500hd]"
+  },
+  {
+    "id": "59ee6391-16c3-453c-8d19-3de6be74ff8a",
+    "year": 2017,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2017 sierra-2500hd]"
+  },
+  {
+    "id": "a63515a1-8271-4045-8a54-e7ef96954409",
+    "year": 2017,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2017 sierra-2500hd]"
+  },
+  {
+    "id": "26b7e81e-b891-4ffe-86de-d245b68a8daa",
+    "year": 2017,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2017 sierra-2500hd]"
+  },
+  {
+    "id": "1bb6a607-bc31-48a9-91dd-2f4971c063c9",
+    "year": 2017,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "All Terrain",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "37dee523-0557-4c33-8c5e-337f7145cd6f",
+    "year": 2018,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "All Terrain",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dbc82019-c584-4eaa-90c1-80b1d0821b6b",
+    "year": 2018,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2018 sierra-2500hd]"
+  },
+  {
+    "id": "3d941f36-b4d5-4e99-89d3-8c605589c0d7",
+    "year": 2018,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2018 sierra-2500hd]"
+  },
+  {
+    "id": "ef5335da-03fe-4a8e-ac5f-41692f7b4bec",
+    "year": 2018,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2018 sierra-2500hd]"
+  },
+  {
+    "id": "3f1ff185-f9f0-400d-b8ae-ae3ca2fba914",
+    "year": 2018,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2018 sierra-2500hd]"
+  },
+  {
+    "id": "8c999125-eb24-4dea-aee4-f8405231bda4",
+    "year": 2019,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2019 sierra-2500hd]"
+  },
+  {
+    "id": "aab98482-abff-4911-8714-1166319d6ab8",
+    "year": 2019,
+    "make": "gmc",
+    "model": "sierra-2500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT265/60R20"
+    ],
+    "source": "api_import [filled from 2019 sierra-2500hd]"
+  }
+]

@@ -1,0 +1,1944 @@
+[
+  {
+    "id": "fa283379-01bf-40ac-90a3-c9911281e142",
+    "year": 2017,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "046e03b0-77b2-42f3-84d2-079b89c00e33",
+    "year": 2018,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "631a1942-e692-41b1-95bd-91bedbd05eac",
+    "year": 2018,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Titanium/Sport",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8",
+      "19x8.5"
+    ],
+    "currentTireSizes": [
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "e0a3bb56-0c09-4c1d-9173-a987ecefc53e",
+    "year": 2018,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "bead72aa-deff-48de-a37d-44a1851173d4",
+    "year": 2019,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "d29c06b0-a8e0-455d-9045-326220996b3c",
+    "year": 2019,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Titanium/Sport",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8",
+      "19x8.5"
+    ],
+    "currentTireSizes": [
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "6af6451c-3657-4160-b04e-1bc0dfe0bcff",
+    "year": 2019,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "7fe03f4e-c60f-48ae-b4e0-e294508719c8",
+    "year": 2020,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "acf959af-bfe1-4c94-9340-52ae96a0d19e",
+    "year": 2020,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "08d8578a-2120-4e44-aa81-6dc88b23c60f",
+    "year": 2020,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Titanium/Sport",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8",
+      "19x8.5"
+    ],
+    "currentTireSizes": [
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "ceb3cabc-79c0-4fdd-9dbf-85629e73917f",
+    "year": 2021,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "1.5 EcoBoost",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "235/50R17",
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "4500accc-5a9e-4725-aeb2-2f281ec8832b",
+    "year": 2021,
+    "make": "ford",
+    "model": "maverick",
+    "trim": "2.0 EcoBoost",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 37.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 37.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 37.5,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 37.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 37.5,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 37.5,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 37.5,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "225/55R19",
+      "245/50R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "b42d1545-af27-4b8f-b4a8-1a88e43e139f",
+    "year": 2022,
+    "make": "ford",
+    "model": "maverick",
+    "trim": "2.0 EcoBoost",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 37.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 37.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 37.5,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 37.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 37.5,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 37.5,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 37.5,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "225/55R19",
+      "245/50R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "35780507-fc68-45d6-acfc-b7a5abc6d2e2",
+    "year": 1964,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "GT",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "55b8c93d-1e27-4c09-bd2b-7928aeaf0b87",
+    "year": 1964,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT350",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e2977df1-2a52-4791-a475-a5db4cb62e16",
+    "year": 1964,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT500",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "27489f60-98ca-4283-b1da-8818a53e2506",
+    "year": 1964,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3dd1dd1a-6e76-46ea-9e12-a212ee804411",
+    "year": 1965,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "GT",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "30f0525f-7fee-4d14-a362-af9449331b05",
+    "year": 1965,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "61.5",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 19,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "6.50-13",
+      "6.50-14",
+      "6.95-14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "d3880a56-54c6-4f85-8d42-8a8cc39024b3",
+    "year": 1965,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT500",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5693cd02-63ef-4bcd-af62-968ffc20ccae",
+    "year": 1965,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT350",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "172dd467-679a-4b85-b25c-6aa739eb4405",
+    "year": 1966,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "GT",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f9469ec5-87c7-4058-ace6-2c3935f469d0",
+    "year": 1966,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT350",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9dfe7456-d6ee-47b9-a441-07c6f833ffc3",
+    "year": 1966,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "61.5",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 19,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "6.95-14",
+      "7.35-14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "c2e07e8d-26f6-4e2f-9fd2-02f886afdc08",
+    "year": 1966,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT500",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c63515c6-b9c2-4a26-97a7-c5f45a0aace3",
+    "year": 1967,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT500",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "944a729c-a7a0-43d9-b70c-666725d34cb6",
+    "year": 1967,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT350",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "61.5",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 19,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "6.95-14",
+      "7.35-14",
+      "E70-14",
+      "F70-14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "29dc0237-f459-4ef9-9a73-2b32fb515625",
+    "year": 1967,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "be5e822e-c592-4606-8899-d4315023bca9",
+    "year": 1967,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "GT",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "59923716-da33-48f2-94e1-ba8dc5401436",
+    "year": 1968,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "91502fd6-ff7f-47f4-88d0-e0c809fbfd81",
+    "year": 1968,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "GT",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "69d434b3-f17f-4ca2-98f0-695b68fbbe53",
+    "year": 1968,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT350",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ba1e20b8-a0ce-449d-b04a-bf8483b19d4b",
+    "year": 1968,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT500",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "61.5",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 19,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "C78-14",
+      "E78-14",
+      "E70-14",
+      "F70-14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "010e884f-de76-4f6a-aa66-683539dc24c8",
+    "year": 1969,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "07fc1a68-3384-4ee0-8f2a-a04dbd8ba532",
+    "year": 1969,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT500",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "61.5",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 19,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 0,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "C78-14",
+      "E78-14",
+      "E70-14",
+      "F70-14",
+      "F60-15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "55e21242-a3e8-42f3-8ae6-6c12bf450439",
+    "year": 1969,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Mach 1",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5e794134-61f0-4b1c-9c38-c03d570b2d48",
+    "year": 1969,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Boss 302",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5395ac08-7928-4d65-90e5-bdd814a7d4cd",
+    "year": 1969,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fd9e1df0-0560-4e00-884e-13c22a10eba0",
+    "year": 1969,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT350",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a2014f33-c625-4c70-94a3-43dc3b13abf0",
+    "year": 1969,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Boss 429",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4794210a-0727-4b46-ad78-d8ac2d5468ba",
+    "year": 1970,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT350",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "44b518e3-1220-4120-8b04-87a41d6c4df6",
+    "year": 1970,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Boss 429",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1511cab2-d543-4d80-af21-700f2098b414",
+    "year": 1970,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Shelby GT500",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "aa702e61-a05c-4c5f-b158-65764f71b414",
+    "year": 1970,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Boss 302",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "73f5e379-bcad-4ca3-bff0-97b6d9e4adb2",
+    "year": 1970,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "61.5",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 0,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 0,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 0,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "E78-14",
+      "E70-14",
+      "F70-14",
+      "F60-15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "6c7546c1-6851-4ef5-98b9-fb0ea7109bbf",
+    "year": 1970,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Mach 1",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a7e26bce-64dd-4766-8906-64ade75fa8dc",
+    "year": 1970,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fd8b30dd-f68a-4e66-8ed5-d3001a8912eb",
+    "year": 1971,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "61.5",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 0,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 0,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "E78-14",
+      "E70-14",
+      "F70-14",
+      "F60-15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "45d05670-32a1-40bc-bb6e-e976cbfd1593",
+    "year": 1971,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Boss 351",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cb04cf42-b204-4814-89f5-a1a97f2027c0",
+    "year": 1971,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Mach 1",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4c8071bd-6fd4-41e4-8c22-a5d3b82bb7ed",
+    "year": 1971,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Grande",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dad60e92-43b0-453b-80c2-eff044b6bf0c",
+    "year": 1972,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Mach 1",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "28a5b4ad-1bcf-4ea9-b849-0992c245f9b3",
+    "year": 1972,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Grande",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7c27a8e5-61f8-432e-8f75-b6dff122fff6",
+    "year": 1972,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "61.5",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 0,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 0,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "E78-14",
+      "E70-14",
+      "F70-14",
+      "F60-15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "4e9ec09f-4216-45fa-9dbe-1b0842f5d423",
+    "year": 1972,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Boss 351",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f49a5964-6f4c-44b5-a147-4dee69ae5ccf",
+    "year": 1973,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Grande",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ac62deb0-ea5e-41c8-a432-334c70811972",
+    "year": 1973,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Mach 1",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e777fbfa-b95c-4055-af00-9acc5a8e7d79",
+    "year": 1973,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Boss 351",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7c41f0c1-b883-426f-aa7c-e58ef85947a3",
+    "year": 1973,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "61.5",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 0,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 0,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "E78-14",
+      "E70-14",
+      "F70-14",
+      "GR78-14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "080e1040-07f5-46bc-9e80-f05b89598f63",
+    "year": 1974,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Mach 1",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d95037fd-9fc7-48bd-8ef3-ad6c9b8cd860",
+    "year": 1974,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Ghia",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "284f92f2-d050-42e7-9660-83e4e0444e55",
+    "year": 1974,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0465ed1e-5faa-4bee-bb2b-660a089f721a",
+    "year": 1974,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "King Cobra",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "17f1ec6d-096f-4f9e-8b68-4a8ede366a96",
+    "year": 1974,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Cobra II",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0718abe9-1fed-4aff-be5e-c79371ddd6cd",
+    "year": 1975,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Cobra II",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "461e935b-7492-41c5-aa19-e636fa3602ab",
+    "year": 1975,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "13896aa5-a391-4640-a837-d62a4afce139",
+    "year": 1975,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Ghia",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "601e26e9-4eb0-4dd7-aeb2-850534102888",
+    "year": 1975,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Mach 1",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "191aff79-35b7-47ca-bb6b-37f28c4f1961",
+    "year": 1975,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "King Cobra",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2507411e-1f95-4d3a-aae7-25abaf116ff3",
+    "year": 1976,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "King Cobra",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f4f92d92-f462-4b77-9d36-e467f40da543",
+    "year": 1976,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Mach 1",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "de52288f-70cc-480e-b75d-39871992873c",
+    "year": 1976,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Cobra II",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7ccb6db0-e609-4a56-ae75-1d443c3c5de8",
+    "year": 1976,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Base",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "34987761-5146-41ea-b555-72d41fe0c712",
+    "year": 1976,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "Ghia",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7139573b-14bc-46e9-b36d-b36335b71d64",
+    "year": 1977,
+    "make": "ford",
+    "model": "mustang",
+    "trim": "King Cobra",
+    "currentBoltPattern": "4x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 13
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R17",
+      "235/50R18",
+      "245/45R19",
+      "255/45R18",
+      "285/40R18",
+      "255/40R19",
+      "285/35R19"
+    ],
+    "source": "generation_inherit"
+  }
+]

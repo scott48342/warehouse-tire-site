@@ -1,0 +1,477 @@
+{
+  "batchId": 56,
+  "researchedAt": "2026-04-22T00:01:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 41,
+    "found": 9
+  },
+  "vehicles": [
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "notUS": true,
+      "reason": "FJ Cruiser discontinued in US after 2014 model year"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "notUS": true,
+      "reason": "FJ Cruiser discontinued in US after 2014 model year"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "notUS": true,
+      "reason": "FJ Cruiser discontinued in US after 2014 model year"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "notUS": true,
+      "reason": "FJ Cruiser discontinued in US after 2014 model year"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "notUS": true,
+      "reason": "FJ Cruiser discontinued in US after 2014 model year"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "notUS": true,
+      "reason": "FJ Cruiser discontinued in US after 2014 model year"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "grand-hiace",
+      "notUS": true,
+      "reason": "JDM only - never sold in US market"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "grand-hiace",
+      "notUS": true,
+      "reason": "JDM only - never sold in US market"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "grand-hiace",
+      "notUS": true,
+      "reason": "JDM only - never sold in US market"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "iq",
+      "notUS": true,
+      "reason": "Toyota iQ not sold in US (Scion iQ 2012-2015 was different branding)"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "iq",
+      "notUS": true,
+      "reason": "Toyota iQ not sold in US (Scion iQ 2012-2015 was different branding)"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "iq",
+      "notUS": true,
+      "reason": "Toyota iQ not sold in US (Scion iQ 2012-2015 was different branding)"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "iq",
+      "notUS": true,
+      "reason": "Toyota iQ not sold in US (Scion iQ 2012-2015 was different branding)"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "iq",
+      "notUS": true,
+      "reason": "Toyota iQ not sold in US (Scion iQ 2012-2015 was different branding)"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "iq",
+      "notUS": true,
+      "reason": "Toyota iQ not sold in US (Scion iQ 2012-2015 was different branding)"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "iq",
+      "notUS": true,
+      "reason": "Toyota iQ not sold in US (Scion iQ 2012-2015 was different branding)"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "iq",
+      "notUS": true,
+      "reason": "Toyota iQ not sold in US (Scion iQ 2012-2015 was different branding)"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "iq",
+      "notUS": true,
+      "reason": "Toyota iQ not sold in US (Scion iQ 2012-2015 was different branding)"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "found": true,
+      "trims": [
+        {
+          "name": "1958 Edition",
+          "tires": ["245/70R18"]
+        },
+        {
+          "name": "Base",
+          "tires": ["265/70R18", "265/60R20"]
+        },
+        {
+          "name": "First Edition",
+          "tires": ["265/70R18"]
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "found": true,
+      "trims": [
+        {
+          "name": "1958 Edition",
+          "tires": ["245/70R18"]
+        },
+        {
+          "name": "Base",
+          "tires": ["265/70R18", "265/60R20"]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "found": true,
+      "trims": [
+        {
+          "name": "1958 Edition",
+          "tires": ["245/70R18"]
+        },
+        {
+          "name": "Base",
+          "tires": ["265/70R18", "265/60R20"]
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "notUS": true,
+      "reason": "JDM only - luxury variant of Land Cruiser sold only in Japan"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "notUS": true,
+      "reason": "JDM only - luxury variant of Land Cruiser sold only in Japan"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "notUS": true,
+      "reason": "JDM only - luxury variant of Land Cruiser sold only in Japan"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "notUS": true,
+      "reason": "JDM only - luxury variant of Land Cruiser sold only in Japan"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "notUS": true,
+      "reason": "JDM only - luxury variant of Land Cruiser sold only in Japan"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "notUS": true,
+      "reason": "JDM only - luxury variant of Land Cruiser sold only in Japan"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "notUS": true,
+      "reason": "JDM only - luxury variant of Land Cruiser sold only in Japan"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "notUS": true,
+      "reason": "JDM only - luxury variant of Land Cruiser sold only in Japan"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mega-cruiser",
+      "notUS": true,
+      "reason": "JDM only - military/government vehicle never sold in US"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mega-cruiser",
+      "notUS": true,
+      "reason": "JDM only - military/government vehicle never sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2",
+      "found": true,
+      "note": "Listed as MR2 Spyder in tiresize.com",
+      "trims": [
+        {
+          "name": "Spyder",
+          "staggered": true,
+          "frontTire": "185/55R15",
+          "rearTire": "205/50R15"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "notUS": true,
+      "reason": "European name for MR2 Spyder - not sold under this name in US"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "notUS": true,
+      "reason": "European name for MR2 Spyder - not sold under this name in US"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "notUS": true,
+      "reason": "European name for MR2 Spyder - not sold under this name in US"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "notUS": true,
+      "reason": "European name for MR2 Spyder - not sold under this name in US"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "notUS": true,
+      "reason": "European name for MR2 Spyder - not sold under this name in US"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "notUS": true,
+      "reason": "European name for MR2 Spyder - not sold under this name in US"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "notUS": true,
+      "reason": "European name for MR2 Spyder - not sold under this name in US"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "notUS": true,
+      "reason": "European name for MR2 Spyder - not sold under this name in US"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "found": true,
+      "trims": [
+        {
+          "name": "Spyder",
+          "staggered": true,
+          "frontTire": "185/55R15",
+          "rearTire": "205/50R15"
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "found": true,
+      "note": "Specs same as 2000 model",
+      "trims": [
+        {
+          "name": "Spyder",
+          "staggered": true,
+          "frontTire": "185/55R15",
+          "rearTire": "205/50R15"
+        }
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "found": true,
+      "note": "Specs same as 2000 model",
+      "trims": [
+        {
+          "name": "Spyder",
+          "staggered": true,
+          "frontTire": "185/55R15",
+          "rearTire": "205/50R15"
+        }
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "found": true,
+      "note": "Specs same as 2000 model",
+      "trims": [
+        {
+          "name": "Spyder",
+          "staggered": true,
+          "frontTire": "185/55R15",
+          "rearTire": "205/50R15"
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "found": true,
+      "note": "Specs same as 2000 model",
+      "trims": [
+        {
+          "name": "Spyder",
+          "staggered": true,
+          "frontTire": "185/55R15",
+          "rearTire": "205/50R15"
+        }
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "found": true,
+      "trims": [
+        {
+          "name": "Spyder",
+          "staggered": true,
+          "frontTire": "185/55R15",
+          "rearTire": "215/45R16"
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "notUS": true,
+      "reason": "MR2 Spyder discontinued in US after 2005 model year"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "rav4-prime",
+      "found": true,
+      "note": "RAV4 Prime launched mid-2020; tiresize.com lists under RAV4 model but 2020 page doesn't include Prime trims. Using 2021 specs.",
+      "trims": [
+        {
+          "name": "Prime SE",
+          "tires": ["225/60R18"]
+        },
+        {
+          "name": "Prime XSE",
+          "tires": ["235/55R19"]
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "rav4-prime",
+      "found": true,
+      "note": "Listed under Toyota RAV4 in tiresize.com",
+      "trims": [
+        {
+          "name": "Prime SE",
+          "tires": ["225/60R18"]
+        },
+        {
+          "name": "Prime XSE",
+          "tires": ["235/55R19"]
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "rav4-prime",
+      "found": true,
+      "note": "Listed under Toyota RAV4 in tiresize.com",
+      "trims": [
+        {
+          "name": "Prime SE",
+          "tires": ["225/60R18"]
+        },
+        {
+          "name": "Prime XSE",
+          "tires": ["235/55R19"]
+        }
+      ]
+    }
+  ]
+}

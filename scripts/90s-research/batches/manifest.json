@@ -1,0 +1,104 @@
+{
+  "created": "2026-04-22T12:18:54.621Z",
+  "totalBatches": 16,
+  "totalVehicles": 1150,
+  "batchSize": 75,
+  "batches": [
+    {
+      "id": "90s-batch-01",
+      "vehicles": 75,
+      "priority": "HIGH",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-02",
+      "vehicles": 75,
+      "priority": "HIGH",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-03",
+      "vehicles": 75,
+      "priority": "HIGH",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-04",
+      "vehicles": 75,
+      "priority": "HIGH",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-05",
+      "vehicles": 75,
+      "priority": "HIGH",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-06",
+      "vehicles": 75,
+      "priority": "MEDIUM",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-07",
+      "vehicles": 75,
+      "priority": "MEDIUM",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-08",
+      "vehicles": 75,
+      "priority": "MEDIUM",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-09",
+      "vehicles": 75,
+      "priority": "MEDIUM",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-10",
+      "vehicles": 75,
+      "priority": "MEDIUM",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-11",
+      "vehicles": 75,
+      "priority": "LOW",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-12",
+      "vehicles": 75,
+      "priority": "LOW",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-13",
+      "vehicles": 75,
+      "priority": "LOW",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-14",
+      "vehicles": 75,
+      "priority": "LOW",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-15",
+      "vehicles": 75,
+      "priority": "LOW",
+      "status": "pending"
+    },
+    {
+      "id": "90s-batch-16",
+      "vehicles": 25,
+      "priority": "LOW",
+      "status": "pending"
+    }
+  ]
+}

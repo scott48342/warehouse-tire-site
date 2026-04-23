@@ -1,0 +1,1324 @@
+{
+  "batchId": "64",
+  "processedAt": "2025-07-27T00:45:00.000Z",
+  "results": [
+    {
+      "year": 2004,
+      "make": "Volkswagen",
+      "model": "Sedan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 },
+          { "diameter": 17, "width": 7.0, "offset": 40 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com, roadkillcustoms.com",
+      "confidence": "medium",
+      "notes": "Likely refers to Jetta/Bora MK4 platform. 5x100 with 57.1mm center bore standard for MK4 VWs."
+    },
+    {
+      "year": 2003,
+      "make": "Volkswagen",
+      "model": "Sedan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 },
+          { "diameter": 17, "width": 7.0, "offset": 40 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com, roadkillcustoms.com",
+      "confidence": "medium",
+      "notes": "Likely refers to Jetta/Bora MK4 platform."
+    },
+    {
+      "year": 2002,
+      "make": "Volkswagen",
+      "model": "Sedan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 },
+          { "diameter": 17, "width": 7.0, "offset": 40 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com, roadkillcustoms.com",
+      "confidence": "medium",
+      "notes": "Likely refers to Jetta/Bora MK4 platform."
+    },
+    {
+      "year": 2001,
+      "make": "Volkswagen",
+      "model": "Sedan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 },
+          { "diameter": 17, "width": 7.0, "offset": 40 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com, roadkillcustoms.com",
+      "confidence": "medium",
+      "notes": "Likely refers to Jetta/Bora MK4 platform."
+    },
+    {
+      "year": 2000,
+      "make": "Volkswagen",
+      "model": "Sedan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com, roadkillcustoms.com",
+      "confidence": "medium",
+      "notes": "Likely refers to Jetta/Bora MK4 platform."
+    },
+    {
+      "year": 2010,
+      "make": "Volkswagen",
+      "model": "Sportvan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 51 },
+          { "diameter": 17, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 8.0, "offset": 50 }
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Likely refers to Caravelle/Transporter T5 platform. 5x120 bolt pattern from 2003+."
+    },
+    {
+      "year": 2009,
+      "make": "Volkswagen",
+      "model": "Sportvan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 51 },
+          { "diameter": 17, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 8.0, "offset": 50 }
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Likely refers to Caravelle/Transporter T5 platform."
+    },
+    {
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "Sportvan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 51 },
+          { "diameter": 17, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 8.0, "offset": 50 }
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Likely refers to Caravelle/Transporter T5 platform."
+    },
+    {
+      "year": 2007,
+      "make": "Volkswagen",
+      "model": "Sportvan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 51 },
+          { "diameter": 17, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 8.0, "offset": 50 }
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Likely refers to Caravelle/Transporter T5 platform."
+    },
+    {
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "Tacqua",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.0, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market crossover on MQB-A0 platform (same as T-Cross)."
+    },
+    {
+      "year": 2023,
+      "make": "Volkswagen",
+      "model": "Tacqua",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.0, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market crossover on MQB-A0 platform."
+    },
+    {
+      "year": 2022,
+      "make": "Volkswagen",
+      "model": "Tacqua",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.0, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market crossover on MQB-A0 platform."
+    },
+    {
+      "year": 2021,
+      "make": "Volkswagen",
+      "model": "Tacqua",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.0, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market crossover on MQB-A0 platform."
+    },
+    {
+      "year": 2020,
+      "make": "Volkswagen",
+      "model": "Tacqua",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.0, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market crossover on MQB-A0 platform. Launch year."
+    },
+    {
+      "year": 2025,
+      "make": "Volkswagen",
+      "model": "Taigo",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "European market coupe-crossover on MQB-A0 platform."
+    },
+    {
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "Taigo",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "European market coupe-crossover on MQB-A0 platform."
+    },
+    {
+      "year": 2023,
+      "make": "Volkswagen",
+      "model": "Taigo",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "European market coupe-crossover on MQB-A0 platform."
+    },
+    {
+      "year": 2022,
+      "make": "Volkswagen",
+      "model": "Taigo",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "European market coupe-crossover on MQB-A0 platform."
+    },
+    {
+      "year": 2021,
+      "make": "Volkswagen",
+      "model": "Taigo",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "European market coupe-crossover on MQB-A0 platform. Launch year."
+    },
+    {
+      "year": 2020,
+      "make": "Volkswagen",
+      "model": "Taos",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 },
+          { "diameter": 19, "width": 8.0, "offset": 45 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "taosforums.com, tirewheelguide.com",
+      "confidence": "high",
+      "notes": "US market compact crossover on MQB-A1 platform."
+    },
+    {
+      "year": 2023,
+      "make": "Volkswagen",
+      "model": "Tayron GTE",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 50 },
+          { "diameter": 19, "width": 8.0, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 43 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com, various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market hybrid SUV on MQB platform."
+    },
+    {
+      "year": 2022,
+      "make": "Volkswagen",
+      "model": "Tayron GTE",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 50 },
+          { "diameter": 19, "width": 8.0, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 43 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com, various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market hybrid SUV on MQB platform."
+    },
+    {
+      "year": 2021,
+      "make": "Volkswagen",
+      "model": "Tayron GTE",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 50 },
+          { "diameter": 19, "width": 8.0, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 43 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com, various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market hybrid SUV on MQB platform."
+    },
+    {
+      "year": 2020,
+      "make": "Volkswagen",
+      "model": "Tayron GTE",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 50 },
+          { "diameter": 19, "width": 8.0, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 43 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "apexwheels.com, various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market hybrid SUV on MQB platform. Launch year."
+    },
+    {
+      "year": 2026,
+      "make": "Volkswagen",
+      "model": "Tharu XR",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market compact SUV on MQB-A0 platform (C11 generation)."
+    },
+    {
+      "year": 2025,
+      "make": "Volkswagen",
+      "model": "Tharu XR",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market compact SUV on MQB-A0 platform (C11 generation)."
+    },
+    {
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "Tharu XR",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.0, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Chinese market compact SUV on MQB-A0 platform (C11 generation). Launch year."
+    },
+    {
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "Tiguan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 33 },
+          { "diameter": 17, "width": 7.0, "offset": 43 },
+          { "diameter": 18, "width": 7.5, "offset": 45 },
+          { "diameter": 19, "width": 8.0, "offset": 41 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "First generation Tiguan (5N). 5x112 bolt pattern confirmed."
+    },
+    {
+      "year": 2007,
+      "make": "Volkswagen",
+      "model": "Tiguan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 33 },
+          { "diameter": 17, "width": 7.0, "offset": 43 },
+          { "diameter": 18, "width": 7.5, "offset": 45 },
+          { "diameter": 19, "width": 8.0, "offset": 41 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "First generation Tiguan (5N). 5x112 bolt pattern confirmed."
+    },
+    {
+      "year": 2018,
+      "make": "Volkswagen",
+      "model": "Tiguan Limited",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 33 },
+          { "diameter": 17, "width": 7.0, "offset": 43 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "bbwheelsonline.com, tirewheelguide.com",
+      "confidence": "high",
+      "notes": "US market continuation of first-gen Tiguan sold alongside new-gen Tiguan."
+    },
+    {
+      "year": 2017,
+      "make": "Volkswagen",
+      "model": "Tiguan Limited",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 33 },
+          { "diameter": 17, "width": 7.0, "offset": 43 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "bbwheelsonline.com, tirewheelguide.com",
+      "confidence": "high",
+      "notes": "US market continuation of first-gen Tiguan."
+    },
+    {
+      "year": 2026,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8.0, "offset": 33 },
+          { "diameter": 19, "width": 8.5, "offset": 28 },
+          { "diameter": 20, "width": 9.0, "offset": 33 },
+          { "diameter": 21, "width": 9.5, "offset": 31 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Third generation facelift (CR). Larger 66.6mm center bore unlike most VWs."
+    },
+    {
+      "year": 2003,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 55 },
+          { "diameter": 18, "width": 8.0, "offset": 57 },
+          { "diameter": 19, "width": 9.0, "offset": 60 }
+        ],
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "clubtouareg.com, carsandcollectibles.com, redline360.com",
+      "confidence": "high",
+      "notes": "First generation Touareg (7L). Shares platform with Porsche Cayenne. 5x130 bolt pattern."
+    },
+    {
+      "year": 2002,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 55 },
+          { "diameter": 18, "width": 8.0, "offset": 57 },
+          { "diameter": 19, "width": 9.0, "offset": 60 }
+        ],
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "clubtouareg.com, carsandcollectibles.com, redline360.com",
+      "confidence": "high",
+      "notes": "First generation Touareg (7L). Pre-production/early model year."
+    },
+    {
+      "year": 2016,
+      "make": "Volkswagen",
+      "model": "XL1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 4.5, "offset": 40, "position": "front" },
+          { "diameter": 16, "width": 5.5, "offset": 36, "position": "rear" }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": true
+      },
+      "source": "autoevolution.com, sizemywheels.com",
+      "confidence": "medium",
+      "notes": "Ultra-efficient plug-in hybrid. Limited production (250 units). Staggered setup with narrower front wheels for aerodynamics."
+    },
+    {
+      "year": 2015,
+      "make": "Volkswagen",
+      "model": "XL1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 4.5, "offset": 40, "position": "front" },
+          { "diameter": 16, "width": 5.5, "offset": 36, "position": "rear" }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": true
+      },
+      "source": "autoevolution.com, sizemywheels.com",
+      "confidence": "medium",
+      "notes": "Ultra-efficient plug-in hybrid. Staggered setup for aerodynamics."
+    },
+    {
+      "year": 2014,
+      "make": "Volkswagen",
+      "model": "XL1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 4.5, "offset": 40, "position": "front" },
+          { "diameter": 16, "width": 5.5, "offset": 36, "position": "rear" }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": true
+      },
+      "source": "autoevolution.com, sizemywheels.com",
+      "confidence": "medium",
+      "notes": "Ultra-efficient plug-in hybrid. Staggered setup for aerodynamics."
+    },
+    {
+      "year": 2013,
+      "make": "Volkswagen",
+      "model": "XL1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 4.5, "offset": 40, "position": "front" },
+          { "diameter": 16, "width": 5.5, "offset": 36, "position": "rear" }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": true
+      },
+      "source": "autoevolution.com, sizemywheels.com",
+      "confidence": "medium",
+      "notes": "Ultra-efficient plug-in hybrid. Launch year. Staggered setup for aerodynamics."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "C40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Electric coupe-crossover on CMA platform. Shares specs with XC40 Recharge."
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "C40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Electric coupe-crossover on CMA platform."
+    },
+    {
+      "year": 2023,
+      "make": "Volvo",
+      "model": "C40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Electric coupe-crossover on CMA platform."
+    },
+    {
+      "year": 2022,
+      "make": "Volvo",
+      "model": "C40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Electric coupe-crossover on CMA platform."
+    },
+    {
+      "year": 2021,
+      "make": "Volvo",
+      "model": "C40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Electric coupe-crossover on CMA platform. Launch year."
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "EC40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Renamed C40 Recharge. Same CMA platform specifications."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "EC40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Renamed C40 Recharge. Same CMA platform specifications."
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "EC40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Renamed C40 Recharge. Same CMA platform specifications."
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "EM90",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "isStaggered": false
+      },
+      "source": "motor1.com, various fitment databases",
+      "confidence": "medium",
+      "notes": "Electric luxury minivan based on Zeekr 009 platform. Chinese market primarily."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "EM90",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "isStaggered": false
+      },
+      "source": "motor1.com, various fitment databases",
+      "confidence": "medium",
+      "notes": "Electric luxury minivan based on Zeekr 009 platform."
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "EM90",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "isStaggered": false
+      },
+      "source": "motor1.com, various fitment databases",
+      "confidence": "medium",
+      "notes": "Electric luxury minivan based on Zeekr 009 platform. Launch year."
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "ES90",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 8.0, "offset": 40 },
+          { "diameter": 20, "width": 8.5, "offset": 40 },
+          { "diameter": 21, "width": 9.0, "offset": 40 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Electric flagship sedan on SPA2 platform. Shares specs with EX90."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "ES90",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 8.0, "offset": 40 },
+          { "diameter": 20, "width": 8.5, "offset": 40 },
+          { "diameter": 21, "width": 9.0, "offset": 40 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Electric flagship sedan on SPA2 platform. Launch year."
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "EX30",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.0, "offset": 45 },
+          { "diameter": 19, "width": 7.5, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Compact electric SUV on SEA platform."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "EX30",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.0, "offset": 45 },
+          { "diameter": 19, "width": 7.5, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Compact electric SUV on SEA platform."
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "EX30",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.0, "offset": 45 },
+          { "diameter": 19, "width": 7.5, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Compact electric SUV on SEA platform."
+    },
+    {
+      "year": 2023,
+      "make": "Volvo",
+      "model": "EX30",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.0, "offset": 45 },
+          { "diameter": 19, "width": 7.5, "offset": 45 },
+          { "diameter": 20, "width": 8.0, "offset": 45 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Compact electric SUV on SEA platform. Launch year."
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "EX30 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.0, "offset": 45 },
+          { "diameter": 19, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Lifted EX30 variant with raised suspension. Same wheel specs as standard EX30."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "EX30 Cross Country",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.0, "offset": 45 },
+          { "diameter": 19, "width": 7.5, "offset": 45 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "medium",
+      "notes": "Lifted EX30 variant. Launch year."
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "EX40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Renamed XC40 Recharge. Same CMA platform specifications."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "EX40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Renamed XC40 Recharge."
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "EX40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 7.5, "offset": 50.5 },
+          { "diameter": 20, "width": 8.0, "offset": 49 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Renamed XC40 Recharge. Rebrand year."
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "EX90",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 21, "width": 9.0, "offset": 40 },
+          { "diameter": 22, "width": 9.5, "offset": 40 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Electric flagship SUV on SPA2 platform."
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "EX90",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 21, "width": 9.0, "offset": 40 },
+          { "diameter": 22, "width": 9.5, "offset": 40 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Electric flagship SUV on SPA2 platform."
+    },
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "EX90",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 21, "width": 9.0, "offset": 40 },
+          { "diameter": 22, "width": 9.5, "offset": 40 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Electric flagship SUV on SPA2 platform."
+    },
+    {
+      "year": 2023,
+      "make": "Volvo",
+      "model": "EX90",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 21, "width": 9.0, "offset": 40 },
+          { "diameter": 22, "width": 9.5, "offset": 40 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "various fitment databases",
+      "confidence": "high",
+      "notes": "Electric flagship SUV on SPA2 platform. Announcement/pre-production year."
+    },
+    {
+      "year": 2012,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 52.5 },
+          { "diameter": 17, "width": 7.0, "offset": 50 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/Volvo, ipdusa.com",
+      "confidence": "high",
+      "notes": "Second generation S40 (P1 platform). Final model year."
+    },
+    {
+      "year": 2011,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 52.5 },
+          { "diameter": 17, "width": 7.0, "offset": 50 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/Volvo, ipdusa.com",
+      "confidence": "high",
+      "notes": "Second generation S40 (P1 platform)."
+    },
+    {
+      "year": 2010,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 52.5 },
+          { "diameter": 17, "width": 7.0, "offset": 50 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/Volvo, ipdusa.com",
+      "confidence": "high",
+      "notes": "Second generation S40 (P1 platform)."
+    },
+    {
+      "year": 2009,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 52.5 },
+          { "diameter": 17, "width": 7.0, "offset": 50 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/Volvo, ipdusa.com",
+      "confidence": "high",
+      "notes": "Second generation S40 (P1 platform)."
+    },
+    {
+      "year": 2008,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 52.5 },
+          { "diameter": 17, "width": 7.0, "offset": 50 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/Volvo, ipdusa.com",
+      "confidence": "high",
+      "notes": "Second generation S40 (P1 platform)."
+    },
+    {
+      "year": 2007,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 52.5 },
+          { "diameter": 17, "width": 7.0, "offset": 50 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/Volvo, ipdusa.com",
+      "confidence": "high",
+      "notes": "Second generation S40 (P1 platform)."
+    },
+    {
+      "year": 2006,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 52.5 },
+          { "diameter": 17, "width": 7.0, "offset": 50 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/Volvo, ipdusa.com",
+      "confidence": "high",
+      "notes": "Second generation S40 (P1 platform)."
+    },
+    {
+      "year": 2005,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 52.5 },
+          { "diameter": 17, "width": 7.0, "offset": 50 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/Volvo, ipdusa.com",
+      "confidence": "high",
+      "notes": "Second generation S40 (P1 platform)."
+    },
+    {
+      "year": 2004,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 52.5 },
+          { "diameter": 17, "width": 7.0, "offset": 50 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/Volvo, ipdusa.com",
+      "confidence": "high",
+      "notes": "Second generation S40 (P1 platform). First year of new generation."
+    },
+    {
+      "year": 2003,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.0, "offset": 43 },
+          { "diameter": 16, "width": 6.5, "offset": 43 }
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "ipdusa.com",
+      "confidence": "high",
+      "notes": "First generation S40. Uses 4x114.3 (4x4.5 inch) bolt pattern, different from later models."
+    },
+    {
+      "year": 2002,
+      "make": "Volvo",
+      "model": "S40",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.0, "offset": 43 },
+          { "diameter": 16, "width": 6.5, "offset": 43 }
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 64.1,
+        "isStaggered": false
+      },
+      "source": "ipdusa.com",
+      "confidence": "high",
+      "notes": "First generation S40. Uses 4x114.3 (4x4.5 inch) bolt pattern."
+    }
+  ]
+}

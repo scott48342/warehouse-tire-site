@@ -1,0 +1,499 @@
+{
+  "batchId": 26,
+  "processedAt": "2026-04-21T23:52:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "found": 32,
+    "notFound": 4,
+    "invalidModel": 14
+  },
+  "vehicles": [
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "originalModel": "savana-1500",
+      "tireSizes": ["245/70R17"],
+      "wheelDiameters": [17],
+      "boltPattern": "6x139.7",
+      "notes": "Full-size van"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "originalModel": "savana-1500",
+      "tireSizes": ["245/70R17"],
+      "wheelDiameters": [17],
+      "boltPattern": "6x139.7",
+      "notes": "Full-size van"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "originalModel": "savana-1500",
+      "tireSizes": ["245/70R17"],
+      "wheelDiameters": [17],
+      "boltPattern": "6x139.7",
+      "notes": "Full-size van"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Savana 1500",
+      "originalModel": "savana-1500",
+      "tireSizes": ["245/70R17"],
+      "wheelDiameters": [17],
+      "boltPattern": "6x139.7",
+      "notes": "Full-size van, last year for 1500 trim"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Sierra 1500 Classic",
+      "originalModel": "sierra-1500-classic",
+      "tireSizes": ["245/70R17", "265/70R17", "275/55R20"],
+      "wheelDiameters": [17, 20],
+      "boltPattern": "6x139.7",
+      "notes": "Classic body style (2006.5-2007 transitional year)"
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Sierra 1500 Limited",
+      "originalModel": "sierra-1500-limited",
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "boltPattern": "6x139.7",
+      "notes": "Previous-gen Sierra sold alongside redesigned 2019 model"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Sierra 1500 Limited",
+      "originalModel": "sierra-1500-limited",
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+      "wheelDiameters": [17, 18, 20, 22],
+      "boltPattern": "6x139.7",
+      "notes": "Previous-gen Sierra sold alongside redesigned 2022 model"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Sierra 2500HD Classic",
+      "originalModel": "sierra-2500hd-classic",
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "boltPattern": "8x165.1",
+      "notes": "Classic body style heavy duty"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Sierra 3500 Classic",
+      "originalModel": "sierra-3500-classic",
+      "tireSizes": ["265/75R16", "265/70R17", "215/85R16"],
+      "wheelDiameters": [16, 17],
+      "boltPattern": "8x165.1",
+      "notes": "Classic body style. SRW: 265/75R16 or 265/70R17. DRW: 215/85R16"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Sonoma",
+      "originalModel": "sonoma",
+      "tireSizes": ["205/75R15", "235/60R16", "235/70R15", "235/75R15", "31X10.50R15"],
+      "wheelDiameters": [15, 16],
+      "boltPattern": "5x120.7",
+      "notes": "Data extrapolated from 2002 (only year on tiresize.com). Compact pickup."
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Sonoma",
+      "originalModel": "sonoma",
+      "tireSizes": ["205/75R15", "235/60R16", "235/70R15", "235/75R15", "31X10.50R15"],
+      "wheelDiameters": [15, 16],
+      "boltPattern": "5x120.7",
+      "notes": "Data extrapolated from 2002 (only year on tiresize.com). Compact pickup."
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Sonoma",
+      "originalModel": "sonoma",
+      "tireSizes": ["205/75R15", "235/60R16", "235/70R15", "235/75R15", "31X10.50R15"],
+      "wheelDiameters": [15, 16],
+      "boltPattern": "5x120.7",
+      "notes": "2wd SL/SLS: 205/75R15. 4wd: 235/70R15 or 235/75R15. ZR2: 31X10.50R15"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Sonoma",
+      "originalModel": "sonoma",
+      "tireSizes": ["205/75R15", "235/60R16", "235/70R15", "235/75R15", "31X10.50R15"],
+      "wheelDiameters": [15, 16],
+      "boltPattern": "5x120.7",
+      "notes": "Data extrapolated from 2002 (only year on tiresize.com). Compact pickup."
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Sonoma",
+      "originalModel": "sonoma",
+      "tireSizes": ["205/75R15", "235/60R16", "235/70R15", "235/75R15", "31X10.50R15"],
+      "wheelDiameters": [15, 16],
+      "boltPattern": "5x120.7",
+      "notes": "Data extrapolated from 2002 (only year on tiresize.com). Last year of Sonoma."
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "originalModel": "suburban-1500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL."
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "originalModel": "suburban-1500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL."
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "originalModel": "suburban-1500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL."
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "originalModel": "suburban-1500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL."
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "originalModel": "suburban-1500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL."
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "originalModel": "suburban-1500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL."
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "originalModel": "suburban-1500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL."
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "originalModel": "suburban-2500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL 2500."
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "originalModel": "suburban-2500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL 2500."
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "originalModel": "suburban-2500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL 2500."
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "originalModel": "suburban-2500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL 2500."
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "originalModel": "suburban-2500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL 2500."
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "originalModel": "suburban-2500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL 2500."
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "originalModel": "suburban-2500",
+      "notUS": true,
+      "invalidModel": true,
+      "notes": "INVALID: Suburban is a Chevrolet-only model. GMC equivalent is Yukon XL 2500."
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["245/75R16", "265/70R16", "265/75R16"],
+      "wheelDiameters": [16],
+      "boltPattern": "6x139.7",
+      "notes": "First year of Yukon XL name (replaced Suburban in GMC lineup)"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["245/75R16", "265/70R16", "265/70R17"],
+      "wheelDiameters": [16, 17],
+      "boltPattern": "6x139.7",
+      "notes": null
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R16", "265/70R17"],
+      "wheelDiameters": [16, 17],
+      "boltPattern": "6x139.7",
+      "notes": null
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R16", "265/70R17"],
+      "wheelDiameters": [16, 17],
+      "boltPattern": "6x139.7",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R16", "265/70R17"],
+      "wheelDiameters": [16, 17],
+      "boltPattern": "6x139.7",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R16", "265/70R17"],
+      "wheelDiameters": [16, 17],
+      "boltPattern": "6x139.7",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R16", "265/70R17"],
+      "wheelDiameters": [16, 17],
+      "boltPattern": "6x139.7",
+      "notes": "Last year of GMT800 platform"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R17", "275/55R20"],
+      "wheelDiameters": [17, 20],
+      "boltPattern": "6x139.7",
+      "notes": "First year GMT900 platform"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R17", "275/55R20"],
+      "wheelDiameters": [17, 20],
+      "boltPattern": "6x139.7",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R17", "275/55R20"],
+      "wheelDiameters": [17, 20],
+      "boltPattern": "6x139.7",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "wheelDiameters": [17, 18, 20],
+      "boltPattern": "6x139.7",
+      "notes": "SLE/SLT: 265/70R17 or 275/55R20. Denali: 265/65R18 or 275/55R20"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "wheelDiameters": [17, 18, 20],
+      "boltPattern": "6x139.7",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "wheelDiameters": [17, 18, 20],
+      "boltPattern": "6x139.7",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "wheelDiameters": [17, 18, 20],
+      "boltPattern": "6x139.7",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "originalModel": "yukon-xl-1500",
+      "tireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "wheelDiameters": [17, 18, 20],
+      "boltPattern": "6x139.7",
+      "notes": "Last year of GMT900 platform"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "originalModel": "yukon-xl-2500",
+      "tireSizes": ["245/75R16", "265/75R16"],
+      "wheelDiameters": [16],
+      "boltPattern": "8x165.1",
+      "notes": "Heavy duty with 3/4 ton rating"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "originalModel": "yukon-xl-2500",
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "boltPattern": "8x165.1",
+      "notes": "Heavy duty with 3/4 ton rating"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "originalModel": "yukon-xl-2500",
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "boltPattern": "8x165.1",
+      "notes": "Heavy duty with 3/4 ton rating"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "originalModel": "yukon-xl-2500",
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "boltPattern": "8x165.1",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "originalModel": "yukon-xl-2500",
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "boltPattern": "8x165.1",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "originalModel": "yukon-xl-2500",
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "boltPattern": "8x165.1",
+      "notes": "Specs extrapolated from adjacent years"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "originalModel": "yukon-xl-2500",
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "boltPattern": "8x165.1",
+      "notes": "Last year of GMT800 XL 2500"
+    }
+  ]
+}

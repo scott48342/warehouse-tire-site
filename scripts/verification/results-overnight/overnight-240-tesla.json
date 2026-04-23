@@ -1,0 +1,3464 @@
+[
+  {
+    "id": "ff6b84e3-45fd-4606-bfdd-0a9ed86276aa",
+    "year": 2024,
+    "make": "tesla",
+    "model": "cybertruck",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x150 to 6x139.7; Hub bore corrected from 110.1 to 78.1",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "78.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "285/65R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d91bd56d-d670-415b-83ca-ecec85eebd89",
+    "year": 2025,
+    "make": "tesla",
+    "model": "cybertruck",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x150 to 6x139.7; Hub bore corrected from 110.1 to 78.1",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "78.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "285/65R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "40afc6ca-7b19-4eeb-b2cf-510f3a27cbee",
+    "year": 2026,
+    "make": "tesla",
+    "model": "cybertruck",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x150 to 6x139.7; Hub bore corrected from 110.1 to 78.1",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "78.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "285/65R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "9a238d0f-e634-4c39-836e-91adde6fbd84",
+    "year": 2017,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "255c48fa-bfaf-4451-ac1f-1f6e83b34675",
+    "year": 2017,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Long Range",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/40ZR19",
+      "235/45ZR18",
+      "275/35ZR19",
+      "235/35ZR20",
+      "245/35ZR20",
+      "275/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "b0c815c7-1a8c-45bf-a729-b11107c8e6a1",
+    "year": 2017,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "e6e2e650-7777-4375-a317-5aa91a5ab35e",
+    "year": 2018,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "82afd2f2-cccb-45ab-a781-bbbad3beee10",
+    "year": 2018,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "b7251592-86f0-46fd-a4a4-986402d76d69",
+    "year": 2019,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "bbae811e-c34b-4ba7-9368-2acbfc94068b",
+    "year": 2019,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "3da5b978-3f80-4ce9-90cb-5d07a0bb86ed",
+    "year": 2020,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "9609283d-7983-4e2b-910b-466aaf6ee77e",
+    "year": 2020,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "9ac0f026-ffe4-4f4a-8873-223ad19aa7f8",
+    "year": 2020,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Long Range",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/40ZR19",
+      "235/45ZR18",
+      "275/35ZR19",
+      "235/35ZR20",
+      "245/35ZR20",
+      "275/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "bfbf11f4-43d0-458c-a03a-b11605f27d8f",
+    "year": 2021,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Long Range",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/40ZR19",
+      "235/45ZR18",
+      "275/35ZR19",
+      "235/35ZR20",
+      "245/35ZR20",
+      "275/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "957e590f-9416-43e5-b7e2-e98a25ccb3fc",
+    "year": 2021,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "2782b04c-767f-4e02-b68b-71f452a5817a",
+    "year": 2021,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "e61d6c5e-554d-472d-b40a-6e10b7f5ca49",
+    "year": 2022,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "6cfe3cbe-7e92-4fc0-8571-951ead76c139",
+    "year": 2022,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "9d5aad5d-1385-43bb-a753-d8d87af63fa0",
+    "year": 2022,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Long Range",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/40ZR19",
+      "235/45ZR18",
+      "275/35ZR19",
+      "235/35ZR20",
+      "245/35ZR20",
+      "275/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "7e84f1bb-f37e-4060-982c-1173af211ebe",
+    "year": 2023,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f070da22-d3d9-43cf-9d4e-73807fa27a7c",
+    "year": 2023,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "4fc5fd36-d146-4ab4-8062-114759360c58",
+    "year": 2023,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Long Range",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 34,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45ZR18",
+      "235/40ZR19",
+      "235/35ZR20",
+      "245/35ZR20",
+      "275/30ZR20",
+      "285/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "2bea95ad-8d97-430e-b7b1-4c88caf22bba",
+    "year": 2024,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "8399c7cb-b170-4b69-9187-706898c97e8e",
+    "year": 2024,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Highland (2nd Gen)",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "24f4ec0a-c900-4ea1-a9a8-bf08f3fc6f9c",
+    "year": 2025,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Highland (2nd Gen)",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "99a7f71c-c61f-4b0b-bbd3-4ec2a302ebb7",
+    "year": 2025,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "885a3580-0344-4550-b5de-613c7c4da32c",
+    "year": 2026,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Highland (2nd Gen)",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "b1058b83-8605-4219-9c90-266519e0a876",
+    "year": 2026,
+    "make": "tesla",
+    "model": "model-3",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 5x120",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/45R18",
+      "235/40R19",
+      "235/35R20",
+      "275/30R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "6b4f6c95-610b-4952-8766-62538b2b1414",
+    "year": 2012,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b85c8b60-1f54-404f-a643-b3a440c477f6",
+    "year": 2012,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "7bbf8afb-4a66-4dc2-ba9d-e10b36fa77d3",
+    "year": 2013,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "74e168a2-99db-4312-a40e-8a3f455048ce",
+    "year": 2013,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR19",
+      "245/40ZR20",
+      "245/35ZR21",
+      "265/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d9b2c8b7-a371-430b-be47-4f44e7921ae3",
+    "year": 2014,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "be464f58-31ed-4811-b17c-73787ab9df7b",
+    "year": 2014,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ffe44c85-30a5-4c19-a725-634f6cf8a067",
+    "year": 2015,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f7a9b19a-08cc-42a3-8286-2cd01c24d47f",
+    "year": 2015,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "411a1e14-b73a-4bee-af37-b52930325991",
+    "year": 2016,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR19",
+      "245/40ZR20",
+      "245/35ZR21",
+      "265/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e644d44a-d536-4976-bdd4-8ab303e1bc89",
+    "year": 2016,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a98010d6-e4bf-4abc-b7c5-2760348b4b1a",
+    "year": 2017,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "100D",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR19",
+      "245/35ZR21",
+      "245/40ZR20",
+      "265/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "51cf259d-a388-4a49-bc55-fe8ea2490f46",
+    "year": 2017,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d6b2fac9-d993-439b-8abf-5ced1a4ed86a",
+    "year": 2017,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9286ee2c-cee5-4b78-ae80-4b058e8c2464",
+    "year": 2018,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "67d81e98-4363-448b-960b-ad713d937e2c",
+    "year": 2018,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b2cea49e-4c74-4b83-8f7f-af4687f9e23a",
+    "year": 2019,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "73a06d04-c443-4d12-b358-15653461b541",
+    "year": 2019,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "fa5bd1d1-58de-4ddf-8c9f-11bc48b48966",
+    "year": 2020,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2ba3756e-771d-4206-8f01-029b2835bc92",
+    "year": 2020,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "245/35R21",
+      "265/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3cc51c48-5ba8-4a3d-942d-34061bea7459",
+    "year": 2020,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "100D",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR19",
+      "245/35ZR21",
+      "245/40ZR20",
+      "265/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f2c335cd-6dc6-4caa-8336-170cba32be1b",
+    "year": 2021,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "100D",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR19",
+      "245/35ZR21",
+      "245/40ZR20",
+      "265/35ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a21c3b88-e027-4154-bb40-f366af72c4d8",
+    "year": 2021,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "062ce21e-4836-487d-98f5-80ab60c2ffd3",
+    "year": 2021,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Refresh (2nd Gen)",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "6bcfffb1-be9a-4132-a5aa-59c9588503e8",
+    "year": 2022,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Refresh (2nd Gen)",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f89b0a31-531f-433a-abfe-fbbb16669f9b",
+    "year": 2022,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "edb0aebe-8819-40ae-beb7-2c60476f2ee4",
+    "year": 2022,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Long Range",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/45ZR19",
+      "285/40ZR19",
+      "265/35ZR21",
+      "295/30ZR21",
+      "255/40ZR20",
+      "285/35ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "cc997fd8-7c3c-4754-b020-4d585d294636",
+    "year": 2023,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Refresh (2nd Gen)",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "35613f4d-dcd2-4e65-838b-731b8b97352f",
+    "year": 2023,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Long Range",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/45ZR19",
+      "285/40ZR19",
+      "265/35ZR21",
+      "295/30ZR21",
+      "255/40ZR20",
+      "285/35ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e8e7f211-8169-4409-b8bd-4b2f60954d48",
+    "year": 2023,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9fcedce9-a520-4c24-9ff0-ee2971127a3b",
+    "year": 2024,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Refresh (2nd Gen)",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ffdce24e-3d13-4aee-ab8c-c2e62fe7d071",
+    "year": 2024,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "71ba2e65-a48e-4a3f-b752-91fa5b1811f5",
+    "year": 2025,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Refresh (2nd Gen)",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "178e2ad2-a2f3-43c7-82a7-ae43a2c19ba9",
+    "year": 2025,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4a0d0fe0-02f8-4a41-83e9-cd638a18c5a6",
+    "year": 2026,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Refresh (2nd Gen)",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "552411b0-f4db-477c-be4a-3b1e7d3bc810",
+    "year": 2026,
+    "make": "tesla",
+    "model": "model-s",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R19",
+      "255/35R21",
+      "265/35R21",
+      "275/35R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e7015e65-a164-409c-87cb-52cef9a2fbc5",
+    "year": 2015,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/35R22",
+      "285/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2dd64a16-ee57-46b4-b37a-60ca8b1efe7f",
+    "year": 2015,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/35R22",
+      "285/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0745a9b7-79d3-4f2d-898a-0b8db06ed61e",
+    "year": 2016,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/35R22",
+      "285/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "dea1c4c1-0837-47e0-865f-d5aedc2f888e",
+    "year": 2016,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/35R22",
+      "285/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "09795a92-e453-4281-8a8c-ad71b0aa920b",
+    "year": 2017,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/35R22",
+      "285/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a5a840a5-fa20-485a-ba07-50af7972367c",
+    "year": 2017,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/35R22",
+      "285/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "377eb50f-f2bd-4d74-aee9-e7b6b105eead",
+    "year": 2018,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "100D",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/35ZR22",
+      "285/35ZR22",
+      "265/45R20",
+      "275/45R20",
+      "265/45ZR20",
+      "275/45ZR20",
+      "285/30ZR22",
+      "305/30ZR22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "55cb3e83-4616-4ed3-b0f0-ce29d88231c4",
+    "year": 2018,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/35R22",
+      "285/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f8440b5d-135b-4189-ae33-2f51358b19d9",
+    "year": 2018,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/35R22",
+      "285/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "5b4b4655-eabc-49fd-88a5-7985629bf277",
+    "year": 2019,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "1st Gen",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/35R22",
+      "285/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "5b4bec35-d166-4ec6-9929-aa63d6c8eff9",
+    "year": 2019,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "265/35R22",
+      "285/35R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "406a91c7-6014-44fc-95f4-4cc26e3e4ba0",
+    "year": 2020,
+    "make": "tesla",
+    "model": "model-x",
+    "trim": "75D",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "265/45R20",
+      "275/45R20",
+      "265/50R19",
+      "265/40R21",
+      "275/40R21",
+      "265/35ZR22",
+      "285/35ZR22",
+      "255/45R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  }
+]

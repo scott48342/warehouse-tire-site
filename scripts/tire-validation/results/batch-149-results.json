@@ -1,0 +1,1025 @@
+{
+  "batchId": "149",
+  "validatedAt": "2026-04-21T22:57:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 42,
+    "discrepancies": 39,
+    "noDataAvailable": 14,
+    "emptyInBatch": 14
+  },
+  "oemDataByGeneration": {
+    "prius": {
+      "gen5_2023_plus": {
+        "years": "2023-2026",
+        "oem": ["195/60R17", "195/50R19"],
+        "notes": "New generation - no 15\" or 17\" sizes from Gen4"
+      },
+      "gen4_2016_2022": {
+        "years": "2016-2022",
+        "oem": ["195/65R15", "215/45R17"],
+        "notes": "Base gets 15\", Touring trims get 17\""
+      },
+      "gen3_2010_2015": {
+        "years": "2010-2015",
+        "oem": ["195/65R15", "215/45R17"],
+        "notes": "Base/Four get 15\", Five/Persona get 17\""
+      },
+      "gen2_2004_2009": {
+        "years": "2004-2009",
+        "oem": ["185/65R15", "195/55R16"],
+        "notes": "Base gets 15\", Touring gets 16\" (2007+ data)"
+      },
+      "gen1_2000_2003": {
+        "years": "2000-2003",
+        "oem": ["175/65R14"],
+        "notes": "First gen - limited US data on tiresize.com"
+      }
+    },
+    "prius_v": {
+      "all_years": {
+        "years": "2011-2017 (US discontinued after 2017)",
+        "oem": ["205/60R16", "215/50R17"],
+        "notes": "Base/Two/Three/Four get 16\", Five gets 17\". Note: 195/65R15 NOT an OEM size for Prius V"
+      }
+    },
+    "prius_prime": {
+      "all_years": {
+        "years": "2017-2024",
+        "oem": ["195/65R15", "195/60R17", "195/50R19"],
+        "notes": "2017-2022: 195/65R15, 2023+: 195/60R17 or 195/50R19"
+      }
+    },
+    "prius_plug_in": {
+      "all_years": {
+        "years": "2012-2015",
+        "oem": ["195/65R15"],
+        "notes": "Same as base Prius of same era"
+      }
+    }
+  },
+  "vehicles": [
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "picnic",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Picnic not sold in US market - not on tiresize.com. European/JDM market vehicle."
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "picnic",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Picnic not sold in US market - not on tiresize.com. European/JDM market vehicle."
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "picnic",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Picnic not sold in US market - not on tiresize.com. European/JDM market vehicle."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "picnic",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Picnic not sold in US market - not on tiresize.com. European/JDM market vehicle."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "picnic",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Picnic not sold in US market - not on tiresize.com. European/JDM market vehicle."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "picnic",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Picnic not sold in US market - not on tiresize.com. European/JDM market vehicle."
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/60R17", "195/50R19"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17"],
+        "inOemNotBatch": ["195/60R17"],
+        "matching": ["195/50R19"]
+      },
+      "notes": "Gen5 Prius uses 195/60R17 and 195/50R19, not old Gen4 sizes"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/60R17", "195/50R19"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17"],
+        "inOemNotBatch": ["195/60R17"],
+        "matching": ["195/50R19"]
+      },
+      "notes": "Gen5 Prius uses 195/60R17 and 195/50R19"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/60R17", "195/50R19"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17"],
+        "inOemNotBatch": ["195/60R17"],
+        "matching": ["195/50R19"]
+      },
+      "notes": "Verified from tiresize.com - Gen5 Prius (2023+) uses 195/60R17 and 195/50R19"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/60R17", "195/50R19"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17"],
+        "inOemNotBatch": ["195/60R17"],
+        "matching": ["195/50R19"]
+      },
+      "notes": "Gen5 redesign year - new tire sizes"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "195/50R19 is Gen5 size, not available on 2022 Gen4"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "195/50R19 not OEM for Gen4 Prius"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "195/50R19 not OEM for Gen4 Prius"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17", "175/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": ["175/65R15"],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "Verified from tiresize.com. 175/65R15 is for Prius c submodel. 195/50R19 not OEM."
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17", "175/65R15", "195/50R16"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": ["175/65R15", "195/50R16"],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "Verified from tiresize.com. Prius c trims use 175/65R15 or 195/50R16."
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17", "175/65R15", "195/50R16", "205/60R16", "215/50R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": ["175/65R15", "195/50R16", "205/60R16", "215/50R17"],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "Verified from tiresize.com. Includes Prius c (175/65R15, 195/50R16) and Prius v (205/60R16, 215/50R17) sizes."
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17", "175/65R15", "195/50R16", "205/60R16", "215/50R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": ["175/65R15", "195/50R16", "205/60R16", "215/50R17"],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "Verified from tiresize.com. Gen4 base Prius plus Prius c and v variants."
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "Verified from tiresize.com. Gen3 Prius."
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "Gen3 Prius - 195/50R19 not OEM"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "Gen3 Prius - 195/50R19 not OEM"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17", "175/65R15", "195/50R16", "205/60R16", "215/50R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": ["175/65R15", "195/50R16", "205/60R16", "215/50R17"],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "Verified from tiresize.com. Gen3 base plus Prius c and v variants."
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "Gen3 Prius - 195/50R19 not OEM"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["195/65R15", "215/45R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/50R19"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15", "215/45R17"]
+      },
+      "notes": "Verified from tiresize.com. Gen3 Prius first year."
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["185/65R15", "195/55R16"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17", "195/50R19"],
+        "inOemNotBatch": ["185/65R15", "195/55R16"],
+        "matching": []
+      },
+      "notes": "Gen2 Prius uses different sizes than batch data"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["185/65R15", "195/55R16"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17", "195/50R19"],
+        "inOemNotBatch": ["185/65R15", "195/55R16"],
+        "matching": []
+      },
+      "notes": "Gen2 Prius - batch has wrong sizes"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["185/65R15", "195/55R16"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17", "195/50R19"],
+        "inOemNotBatch": ["185/65R15", "195/55R16"],
+        "matching": []
+      },
+      "notes": "Verified from tiresize.com. Gen2 uses 185/65R15 (Base) and 195/55R16 (Touring)"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["185/65R15", "195/55R16"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17", "195/50R19"],
+        "inOemNotBatch": ["185/65R15", "195/55R16"],
+        "matching": []
+      },
+      "notes": "Gen2 Prius - inferred from 2007 data"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["185/65R15", "195/55R16"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17", "195/50R19"],
+        "inOemNotBatch": ["185/65R15", "195/55R16"],
+        "matching": []
+      },
+      "notes": "Gen2 Prius - inferred from 2007 data"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["195/65R15", "215/45R17", "195/50R19"],
+      "oemTireSizes": ["185/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17", "195/50R19"],
+        "inOemNotBatch": ["185/65R15"],
+        "matching": []
+      },
+      "notes": "Gen2 first year - Touring trim added 2006"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["175/65R15", "185/65R15"],
+      "oemTireSizes": ["175/65R14"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["175/65R15", "185/65R15"],
+        "inOemNotBatch": ["175/65R14"],
+        "matching": []
+      },
+      "notes": "Gen1 Prius used 14\" wheels, not 15\""
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["175/65R15", "185/65R15"],
+      "oemTireSizes": ["175/65R14"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["175/65R15", "185/65R15"],
+        "inOemNotBatch": ["175/65R14"],
+        "matching": []
+      },
+      "notes": "Gen1 Prius - 14\" wheels"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["175/65R15", "185/65R15"],
+      "oemTireSizes": ["175/65R14"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["175/65R15", "185/65R15"],
+        "inOemNotBatch": ["175/65R14"],
+        "matching": []
+      },
+      "notes": "Gen1 Prius first US year - 14\" wheels"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "prius",
+      "currentTireSizes": ["175/65R15", "185/65R15"],
+      "oemTireSizes": ["175/65R14"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["175/65R15", "185/65R15"],
+        "inOemNotBatch": ["175/65R14"],
+        "matching": []
+      },
+      "notes": "Gen1 Prius - 14\" wheels (JDM launch year)"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius Plug-in discontinued after 2015, replaced by Prius Prime. Invalid year in database."
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius Plug-in discontinued after 2015. Invalid year."
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius Plug-in discontinued after 2015. Invalid year."
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius Plug-in discontinued after 2015. Invalid year."
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius Plug-in discontinued after 2015. Invalid year."
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius Plug-in discontinued after 2015. Invalid year."
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius Plug-in discontinued after 2015. Invalid year."
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius Plug-in discontinued after 2015. Invalid year."
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius Plug-in discontinued after 2015. Invalid year."
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius Plug-in discontinued after 2015. Prius Prime replaced it in 2017."
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "No 2016 Prius Plug-in was sold - gap year before Prime"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["215/45R17"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15"]
+      },
+      "notes": "Verified from tiresize.com. Prius Plug-in Hybrid only came with 195/65R15, no 17\" option."
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["215/45R17"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15"]
+      },
+      "notes": "Prius Plug-in only had 195/65R15"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["215/45R17"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15"]
+      },
+      "notes": "Prius Plug-in only had 195/65R15"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["215/45R17"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15"]
+      },
+      "notes": "Verified from tiresize.com. Prius Plug-in Hybrid only 195/65R15."
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "prius-prime",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/60R17", "195/50R19"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17"],
+        "inOemNotBatch": ["195/60R17", "195/50R19"],
+        "matching": []
+      },
+      "notes": "2024 Prius Prime redesigned with Gen5 platform - new sizes"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "prius-prime",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/60R17", "195/50R19"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15", "215/45R17"],
+        "inOemNotBatch": ["195/60R17", "195/50R19"],
+        "matching": []
+      },
+      "notes": "2023+ Prius Prime uses Gen5 sizes"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "prius-prime",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["215/45R17"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15"]
+      },
+      "notes": "Pre-Gen5 Prius Prime only had 195/65R15"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "prius-prime",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["215/45R17"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15"]
+      },
+      "notes": "Prius Prime only had 195/65R15 before 2023 redesign"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "prius-prime",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["215/45R17"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15"]
+      },
+      "notes": "Prius Prime only had 195/65R15"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "prius-prime",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["215/45R17"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15"]
+      },
+      "notes": "Verified from tiresize.com. Prime Plus/Premium/Advanced all use 195/65R15."
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "prius-prime",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["215/45R17"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15"]
+      },
+      "notes": "Verified from tiresize.com. Prius Prime only 195/65R15."
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "prius-prime",
+      "currentTireSizes": ["195/65R15", "215/45R17"],
+      "oemTireSizes": ["195/65R15"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["215/45R17"],
+        "inOemNotBatch": [],
+        "matching": ["195/65R15"]
+      },
+      "notes": "Verified from tiresize.com. First year Prius Prime - only 195/65R15."
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius V discontinued in US after 2017. Invalid year."
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius V discontinued in US after 2017. Invalid year."
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius V discontinued in US after 2017. Invalid year."
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Prius V discontinued in US after 2017. Invalid year."
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": ["205/60R16", "215/50R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15"],
+        "inOemNotBatch": ["205/60R16"],
+        "matching": ["215/50R17"]
+      },
+      "notes": "Verified from tiresize.com. Prius v uses 205/60R16 (base) or 215/50R17 (Five), NOT 195/65R15"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": ["205/60R16", "215/50R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15"],
+        "inOemNotBatch": ["205/60R16"],
+        "matching": ["215/50R17"]
+      },
+      "notes": "Verified from tiresize.com. Prius v uses 205/60R16 or 215/50R17"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": ["205/60R16", "215/50R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15"],
+        "inOemNotBatch": ["205/60R16"],
+        "matching": ["215/50R17"]
+      },
+      "notes": "Prius v uses 16\" or 17\" wheels, never 15\""
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": ["205/60R16", "215/50R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15"],
+        "inOemNotBatch": ["205/60R16"],
+        "matching": ["215/50R17"]
+      },
+      "notes": "Prius v uses 16\" or 17\" wheels, never 15\""
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": ["205/60R16", "215/50R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15"],
+        "inOemNotBatch": ["205/60R16"],
+        "matching": ["215/50R17"]
+      },
+      "notes": "Prius v uses 16\" or 17\" wheels, never 15\""
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": ["205/60R16", "215/50R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15"],
+        "inOemNotBatch": ["205/60R16"],
+        "matching": ["215/50R17"]
+      },
+      "notes": "Verified from tiresize.com. Prius v Two/Three uses 205/60R16, Five uses 215/50R17"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "prius-v",
+      "currentTireSizes": ["195/65R15", "215/50R17"],
+      "oemTireSizes": ["205/60R16", "215/50R17"],
+      "status": "discrepancy",
+      "discrepancies": {
+        "inBatchNotOem": ["195/65R15"],
+        "inOemNotBatch": ["205/60R16"],
+        "matching": ["215/50R17"]
+      },
+      "notes": "First year Prius v - 205/60R16 or 215/50R17"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Proace City Verso not sold in US market. European commercial vehicle based on PSA platform."
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Proace City Verso not sold in US market."
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Proace City Verso not sold in US market."
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Proace City Verso not sold in US market."
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Proace City Verso not sold in US market."
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Proace City Verso not sold in US market."
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "proace-max",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Proace Max not sold in US market. European commercial vehicle."
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "proace-max",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "no_data",
+      "notes": "Proace Max not sold in US market. European commercial vehicle."
+    }
+  ],
+  "recommendations": {
+    "critical": [
+      {
+        "issue": "Gen5 Prius (2023-2026) has wrong tire sizes",
+        "current": ["195/65R15", "215/45R17", "195/50R19"],
+        "correct": ["195/60R17", "195/50R19"],
+        "action": "Update to 195/60R17 and 195/50R19 only"
+      },
+      {
+        "issue": "Gen2 Prius (2004-2009) has wrong tire sizes",
+        "current": ["195/65R15", "215/45R17", "195/50R19"],
+        "correct": ["185/65R15", "195/55R16"],
+        "action": "Update to 185/65R15 (Base) and 195/55R16 (Touring)"
+      },
+      {
+        "issue": "Gen1 Prius (2000-2003) has wrong tire sizes",
+        "current": ["175/65R15", "185/65R15"],
+        "correct": ["175/65R14"],
+        "action": "Update to 175/65R14 - Gen1 used 14\" wheels"
+      },
+      {
+        "issue": "Prius V has wrong base tire size",
+        "current": ["195/65R15", "215/50R17"],
+        "correct": ["205/60R16", "215/50R17"],
+        "action": "Replace 195/65R15 with 205/60R16"
+      },
+      {
+        "issue": "Prius Prime (2017-2022) should only have 195/65R15",
+        "current": ["195/65R15", "215/45R17"],
+        "correct": ["195/65R15"],
+        "action": "Remove 215/45R17 from pre-2023 Prius Prime"
+      },
+      {
+        "issue": "Prius Plug-in (2012-2015) should only have 195/65R15",
+        "current": ["195/65R15", "215/45R17"],
+        "correct": ["195/65R15"],
+        "action": "Remove 215/45R17"
+      }
+    ],
+    "dataQuality": [
+      {
+        "issue": "Invalid model years in database",
+        "examples": ["2016-2026 Prius Plug-in (discontinued 2015)", "2018-2021 Prius V (discontinued 2017)"],
+        "action": "Remove or mark these vehicle years as invalid"
+      },
+      {
+        "issue": "Non-US market vehicles",
+        "examples": ["Toyota Picnic", "Proace City Verso", "Proace Max"],
+        "action": "Consider removing or flagging as non-US market"
+      },
+      {
+        "issue": "195/50R19 incorrectly applied to pre-2023 Prius",
+        "action": "This size only available on Gen5 Prius (2023+)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1115 @@
+{
+  "batchId": "overnight-017-chevrolet",
+  "verifiedAt": "2026-04-23T02:10:00Z",
+  "sourcesUsed": [
+    "hulkoffsets.com",
+    "wheel-size.com (search results only - not scraped)",
+    "chevymalibuforum.com",
+    "Wikipedia",
+    "Chevrolet manufacturer data",
+    "gmauthority.com"
+  ],
+  "summary": {
+    "total": 81,
+    "verified": 61,
+    "flagged": 3,
+    "invalid": 17
+  },
+  "issuesSummary": [
+    {
+      "issue": "Express 1500 wrong bolt pattern",
+      "count": 8,
+      "details": "Batch has 5x120, should be 5x127 (5x5\")"
+    },
+    {
+      "issue": "1994-1996 Impala wrong trims",
+      "count": 3,
+      "details": "Only Impala SS existed 1994-96, not LS/LT/Premier trims"
+    },
+    {
+      "issue": "2026 Malibu doesn't exist",
+      "count": 1,
+      "details": "Malibu discontinued after 2025 model year"
+    },
+    {
+      "issue": "Future model years (2025-2026)",
+      "count": 2,
+      "details": "2025 Malibu is final year, 2026 doesn't exist"
+    }
+  ],
+  "results": [
+    {
+      "id": "55629c05-94eb-401c-a3ab-01eff8d99728",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "boltPattern",
+          "current": "5x120",
+          "correct": "5x127",
+          "severity": "critical",
+          "source": "hulkoffsets.com, wheel-size.com"
+        }
+      ],
+      "notes": "Express 1500 uses 5x127 (5x5\") bolt pattern, not 5x120. Hub bore should also be verified (~78.1mm typical for 5x127 GM vans)."
+    },
+    {
+      "id": "0563633e-46ba-44fa-b62c-aed50f4551f4",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "boltPattern",
+          "current": "5x120",
+          "correct": "5x127",
+          "severity": "critical",
+          "source": "hulkoffsets.com, wheel-size.com"
+        }
+      ],
+      "notes": "Express 1500 uses 5x127 (5x5\") bolt pattern"
+    },
+    {
+      "id": "4b3e24fc-6f84-481a-b2a4-2557ce48f3cd",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "boltPattern",
+          "current": "5x120",
+          "correct": "5x127",
+          "severity": "critical",
+          "source": "hulkoffsets.com, wheel-size.com"
+        }
+      ],
+      "notes": "Express 1500 uses 5x127 (5x5\") bolt pattern"
+    },
+    {
+      "id": "9b483047-88a5-4203-ad0d-0f472ed58b88",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "boltPattern",
+          "current": "5x120",
+          "correct": "5x127",
+          "severity": "critical",
+          "source": "hulkoffsets.com, wheel-size.com"
+        }
+      ],
+      "notes": "Express 1500 uses 5x127 (5x5\") bolt pattern"
+    },
+    {
+      "id": "5b914b8a-e3cb-4725-936d-bf990e7cb7be",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "boltPattern",
+          "current": "5x120",
+          "correct": "5x127",
+          "severity": "critical",
+          "source": "hulkoffsets.com, wheel-size.com"
+        }
+      ],
+      "notes": "Express 1500 uses 5x127 (5x5\") bolt pattern"
+    },
+    {
+      "id": "6a3be0e4-308c-45a6-a84c-f237047d3b2f",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "boltPattern",
+          "current": "5x120",
+          "correct": "5x127",
+          "severity": "critical",
+          "source": "hulkoffsets.com, wheel-size.com"
+        }
+      ],
+      "notes": "Express 1500 uses 5x127 (5x5\") bolt pattern"
+    },
+    {
+      "id": "d8c69c56-b5c8-4ccd-a255-e76a3885c33d",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "boltPattern",
+          "current": "5x120",
+          "correct": "5x127",
+          "severity": "critical",
+          "source": "hulkoffsets.com, wheel-size.com"
+        }
+      ],
+      "notes": "Express 1500 uses 5x127 (5x5\") bolt pattern"
+    },
+    {
+      "id": "493adb66-e1c1-414b-8346-b2a1e6872d50",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "express-1500",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "boltPattern",
+          "current": "5x120",
+          "correct": "5x127",
+          "severity": "critical",
+          "source": "hulkoffsets.com, wheel-size.com"
+        }
+      ],
+      "notes": "Express 1500 uses 5x127 (5x5\") bolt pattern. This was the last model year for Express 1500."
+    },
+    {
+      "id": "a51a022c-9c23-4673-875c-f430904be343",
+      "year": 1994,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "trim",
+          "current": "LS, LT, Premier",
+          "correct": "SS",
+          "severity": "moderate",
+          "source": "Wikipedia, wheel-size.com"
+        }
+      ],
+      "notes": "1994-1996 Impala was ONLY sold as Impala SS (B-body platform). No LS/LT/Premier trims existed. Bolt pattern 5x127 and hub bore 78.1mm are correct for SS."
+    },
+    {
+      "id": "ada7a8a3-0e8f-459c-b375-785c27451047",
+      "year": 1995,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "trim",
+          "current": "LS, LT, Premier",
+          "correct": "SS",
+          "severity": "moderate",
+          "source": "Wikipedia, wheel-size.com"
+        }
+      ],
+      "notes": "1994-1996 Impala was ONLY sold as Impala SS. Specs are correct for SS model."
+    },
+    {
+      "id": "27353722-171d-44a2-80be-be87957161f9",
+      "year": 1996,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "trim",
+          "current": "LS, LT, Premier",
+          "correct": "SS",
+          "severity": "moderate",
+          "source": "Wikipedia, wheel-size.com"
+        }
+      ],
+      "notes": "1994-1996 Impala was ONLY sold as Impala SS. Specs are correct for SS model."
+    },
+    {
+      "id": "4f738210-9ff7-4909-be0b-c172d4f456aa",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3",
+        "wheelSizes": ["16\"", "17\""],
+        "tireSizes": ["225/60R16", "225/55R17"]
+      },
+      "notes": "8th gen W-body Impala. Specs verified correct."
+    },
+    {
+      "id": "4c0d02fd-00c8-44ea-8c33-a07a5c2db893",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "8th gen W-body Impala. Specs verified correct."
+    },
+    {
+      "id": "28327158-a0f1-4ae5-a088-61eabdd83490",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "8th gen W-body Impala. Specs verified correct."
+    },
+    {
+      "id": "57c7ceb9-f572-4002-b008-772c8dbf2911",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "8th gen W-body Impala. Specs verified correct."
+    },
+    {
+      "id": "c43491c8-4a7c-4613-9764-750c18ea94db",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "8th gen W-body Impala. Specs verified correct."
+    },
+    {
+      "id": "a8397a13-c8fb-4520-8b49-db5bd588490f",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "8th gen W-body Impala. Specs verified correct."
+    },
+    {
+      "id": "e66e2706-5e3d-48bc-b1b0-8e3826fc5f2d",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen W-body Impala (2006-2013 body style). Specs verified correct."
+    },
+    {
+      "id": "52313860-1a3d-4f81-9ce5-9ee8ceb8d5cf",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "6355af3e-3e39-47c5-bafd-5c3f4dd0b9eb",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "1e1f06cc-aefa-4691-9c0c-e791deaaa223",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "63d317f8-1f50-453e-bd32-0f7306a0e2d5",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "5f218f8f-3a4e-431e-a568-0c901c823702",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "2270c6f8-82f7-45b5-ba43-8a62e446ca78",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "557a596d-c471-4de5-9b89-89129fb2b700",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Impala (last year). Specs verified correct."
+    },
+    {
+      "id": "0e5a2c99-fa85-4c3c-8ff7-63fda84730a5",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120",
+        "hubBore": "67.1",
+        "wheelSizes": ["18\"", "19\"", "20\""],
+        "tireSizes": ["235/55R18", "245/45R19", "245/40R20"]
+      },
+      "notes": "10th gen Impala (Epsilon II platform). Specs verified correct."
+    },
+    {
+      "id": "bace7e2f-4fcb-46d0-8cc4-1aeb5ee1a365",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120",
+        "hubBore": "67.1"
+      },
+      "notes": "10th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "9120a767-b8de-4630-9709-d8d7d32b26e9",
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120",
+        "hubBore": "67.1"
+      },
+      "notes": "10th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "5c1b0f10-5db5-41c9-8cf8-9c021e52c61e",
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120",
+        "hubBore": "67.1"
+      },
+      "notes": "10th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "1850ce0c-ecb6-4fb2-9b7c-8ee1002ac6a0",
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120",
+        "hubBore": "67.1"
+      },
+      "notes": "10th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "3896b8b6-d53e-4139-be52-e5b310fbdc40",
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120",
+        "hubBore": "67.1"
+      },
+      "notes": "10th gen Impala. Specs verified correct."
+    },
+    {
+      "id": "c7d60555-e4ac-4e16-aa89-a93fb1f9d878",
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "impala",
+      "trim": "LS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120",
+        "hubBore": "67.1"
+      },
+      "notes": "10th gen Impala (final year - discontinued). Specs verified correct."
+    },
+    {
+      "id": "f1c05084-6084-414a-a57c-8f9c9dedb549",
+      "year": 1990,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3",
+        "wheelSizes": ["15\"", "16\""],
+        "tireSizes": ["205/70R15", "215/60R16", "225/60R16"]
+      },
+      "notes": "1st gen Lumina (W-body). Specs verified correct."
+    },
+    {
+      "id": "f4b729b0-ea72-43ad-93b6-468a7110b43e",
+      "year": 1991,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "1st gen Lumina. Specs verified correct."
+    },
+    {
+      "id": "6966c7e2-8de4-4d2c-89e6-1017c27ed1a9",
+      "year": 1992,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "1st gen Lumina. Specs verified correct."
+    },
+    {
+      "id": "875f7d1c-99bf-498e-9075-cfc7c67deb75",
+      "year": 1993,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "1st gen Lumina. Specs verified correct."
+    },
+    {
+      "id": "48e28e25-a822-4e48-99fb-ac50ce65fe0c",
+      "year": 1994,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "1st gen Lumina. Specs verified correct."
+    },
+    {
+      "id": "b31b5d11-b370-440e-a674-c84e3b34a7d1",
+      "year": 1995,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "2nd gen Lumina. Specs verified correct."
+    },
+    {
+      "id": "aef1a6f4-f737-4c5b-8149-f8121f3ff647",
+      "year": 1996,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "2nd gen Lumina. Specs verified correct."
+    },
+    {
+      "id": "f0425ce8-7f16-441e-b3b5-a027905168d2",
+      "year": 1997,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "2nd gen Lumina. Specs verified correct."
+    },
+    {
+      "id": "0f462cc3-be54-4171-8430-d80757aac378",
+      "year": 1998,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "2nd gen Lumina. Specs verified correct."
+    },
+    {
+      "id": "7ce00a46-4bcf-44d9-af28-4b9868902f65",
+      "year": 1999,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "2nd gen Lumina. Specs verified correct."
+    },
+    {
+      "id": "738df290-cb52-48e7-a7c4-1398edc9e5d8",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "2nd gen Lumina. Specs verified correct."
+    },
+    {
+      "id": "3a80a5fd-0af2-4dc9-937f-6b3bd099abd1",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "lumina",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "2nd gen Lumina (final year - discontinued). Specs verified correct."
+    },
+    {
+      "id": "ed8f8e47-1a9b-4e91-8603-689c694e1534",
+      "year": 1997,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3",
+        "wheelSizes": ["15\"", "16\""],
+        "tireSizes": ["205/70R15", "215/60R16"]
+      },
+      "notes": "5th gen Malibu (N-body). Specs verified correct."
+    },
+    {
+      "id": "e0b2c3e9-1c6b-4607-8d84-9d83a276215d",
+      "year": 1998,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "5th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "b208b46c-f77a-4903-baba-144812b73fcd",
+      "year": 1999,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "5th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "7b8b05e0-c655-496b-b356-91f770703469",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "5th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "2fbb5f09-3665-4fc2-82df-d3eb7074a115",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "5th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "38219bdc-74a7-483e-a4ed-efa54ae7a229",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "5th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "15e68263-e50c-4e8c-8787-86ae675ed3fc",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "5th gen Malibu (final year). Specs verified correct."
+    },
+    {
+      "id": "46b0d806-f109-44c5-906f-b376f98b9aff",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x110",
+        "hubBore": "65.1",
+        "wheelSizes": ["16\"", "17\""],
+        "tireSizes": ["215/60R16", "225/50R17"]
+      },
+      "notes": "6th gen Malibu (Epsilon platform). Specs verified correct."
+    },
+    {
+      "id": "796d4ddf-7fc3-4591-a062-c462e9447f6d",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x110",
+        "hubBore": "65.1"
+      },
+      "notes": "6th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "97b128a8-a494-44b1-90ab-b12af5705d33",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x110",
+        "hubBore": "65.1"
+      },
+      "notes": "6th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "aa90f64a-b16d-4b87-9aee-2c727b9200a8",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x110",
+        "hubBore": "65.1"
+      },
+      "notes": "6th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "caa85c63-3c71-45b7-8db8-5cd590c85a4a",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x110",
+        "hubBore": "65.1",
+        "wheelSizes": ["16\"", "17\"", "18\""],
+        "tireSizes": ["225/50R17", "225/45R18"]
+      },
+      "notes": "7th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "9dfd9bff-09a9-4f7b-82c6-716158e48515",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x110",
+        "hubBore": "65.1"
+      },
+      "notes": "7th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "7c304d5a-5631-4840-8f30-be1134ad6eeb",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x110",
+        "hubBore": "65.1"
+      },
+      "notes": "7th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "006c224a-aec5-4b98-b95b-e07f213b2181",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x110",
+        "hubBore": "65.1"
+      },
+      "notes": "7th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "f018f6bf-607f-446e-a4fd-6cf0d143d1bb",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x110",
+        "hubBore": "65.1"
+      },
+      "notes": "7th gen Malibu (final year). Specs verified correct."
+    },
+    {
+      "id": "fbae1689-2154-4f05-917d-30bef2582e53",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120",
+        "hubBore": "67.1",
+        "wheelSizes": ["17\"", "18\"", "19\""],
+        "tireSizes": ["225/55R17", "245/45R18", "245/40R19"]
+      },
+      "notes": "8th gen Malibu (Epsilon II platform). Specs verified correct."
+    },
+    {
+      "id": "84abdc96-8aba-44fe-b788-95aadfd178fd",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120",
+        "hubBore": "67.1"
+      },
+      "notes": "8th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "f2253cb4-4e22-41c9-8c64-57f53c4dde8b",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120",
+        "hubBore": "67.1"
+      },
+      "notes": "8th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "345b60ed-9bf2-4874-b81a-41246ebc5e75",
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3",
+        "wheelSizes": ["16\"", "17\"", "18\"", "19\""],
+        "tireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"]
+      },
+      "notes": "9th gen Malibu (E2XX platform). Specs verified correct."
+    },
+    {
+      "id": "d2b668d0-60f1-44e2-bb7b-dd33e8b37364",
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "e2b8c1a8-04b9-46d9-a884-f7f25470559b",
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "0a17f20c-a561-4462-b90e-89be5fa2c9ee",
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "3bef667d-5bb2-4a88-86f4-f41a0d0457d3",
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "fa0682ac-693a-4439-a673-97fc31e998f0",
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "b4f6ac1e-2289-4598-81cd-7ef6411d6ffd",
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "59884e56-cff7-44b0-8d95-f7d9f2c36030",
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "a1402c51-4cb8-4356-bc52-c54adaa8717e",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Malibu. Specs verified correct."
+    },
+    {
+      "id": "64e52d13-04ee-4b2d-a119-baac12832398",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x115",
+        "hubBore": "70.3"
+      },
+      "notes": "9th gen Malibu (FINAL MODEL YEAR - discontinued after 2025). Specs verified correct."
+    },
+    {
+      "id": "631c4ee1-5400-40a3-a035-f4ddb00928bd",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "malibu",
+      "trim": "LS, RS, LT, Premier",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "year",
+          "current": "2026",
+          "correct": null,
+          "severity": "critical",
+          "source": "Chevrolet, gmauthority.com, Wikipedia"
+        }
+      ],
+      "notes": "VEHICLE DOES NOT EXIST. Chevrolet Malibu was discontinued after the 2025 model year. Production ended November 2024."
+    },
+    {
+      "id": "ec4c9b02-f657-487b-9b18-1ab36df5397a",
+      "year": 1978,
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "trim": "Base",
+      "status": "verified",
+      "verifiedSpecs": {
+        "boltPattern": "5x120.65",
+        "hubBore": "70.3",
+        "wheelSizes": ["14\"", "15\""],
+        "tireSizes": ["205/70R14", "215/65R15", "225/70R15"]
+      },
+      "notes": "3rd gen Monte Carlo (G-body). 5x120.65mm = 5x4.75\". Specs verified correct."
+    }
+  ],
+  "recommendedActions": [
+    {
+      "priority": "critical",
+      "action": "Fix Express 1500 bolt pattern",
+      "details": "Change all 8 Express 1500 vehicles (2007-2014) from 5x120 to 5x127. Also verify hub bore - should be ~78.1mm for GM 5x127 pattern.",
+      "affectedCount": 8
+    },
+    {
+      "priority": "critical",
+      "action": "Remove 2026 Malibu",
+      "details": "Delete or mark inactive the 2026 Malibu entry - vehicle doesn't exist (Malibu discontinued after 2025).",
+      "affectedCount": 1
+    },
+    {
+      "priority": "moderate",
+      "action": "Update 1994-1996 Impala trims",
+      "details": "Change trims from 'LS, LT, Premier' to 'SS' for 1994-1996 Impala. These years only had the Impala SS (B-body). The fitment specs are correct.",
+      "affectedCount": 3
+    }
+  ]
+}

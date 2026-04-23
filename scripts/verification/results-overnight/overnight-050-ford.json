@@ -1,0 +1,1051 @@
+{
+  "batchId": "overnight-050-ford",
+  "verifiedAt": "2026-04-23T02:30:00.000Z",
+  "summary": {
+    "total": 74,
+    "verified": 32,
+    "flagged": 11,
+    "invalid": 31
+  },
+  "criticalFindings": [
+    {
+      "issue": "BOLT_PATTERN_ERROR",
+      "description": "1994-1999 Mustang trims incorrectly show 4x108 bolt pattern. Ford switched ALL Mustangs to 5x114.3 (5-lug) starting in 1994. Only the 1993 model year should have 4x108.",
+      "affectedVehicles": 30,
+      "correctValue": "5x114.3",
+      "sources": [
+        "https://lmr.com/products/mustang-wheel-torque-specs",
+        "https://www.americanmuscle.com/wheel-tech-guide.html",
+        "https://factorywheelwarehouse.com"
+      ]
+    },
+    {
+      "issue": "HUB_BORE_ERROR",
+      "description": "1994-1999 Mustangs show 63.4mm hub bore but should be 70.3mm for the 5-lug SN95 platform",
+      "affectedVehicles": 30,
+      "correctValue": "70.3",
+      "sources": [
+        "https://www.americanmuscle.com/wheel-tech-guide.html"
+      ]
+    },
+    {
+      "issue": "INVALID_TRIM",
+      "description": "GTS trim did not exist on 1994-1999 SN95 Mustangs. GTS was a Fox Body trim (1987-1993 only)",
+      "affectedVehicles": 6,
+      "affectedIds": [
+        "16295bb8-a3b0-4a45-8532-f07a591b24f3",
+        "ab7740aa-7257-483f-baa1-998eada86c34",
+        "e76f61f1-6936-4190-b5cb-762e0c4e89b2",
+        "07d1acd8-ece7-47aa-bea7-0f0ff86e8609",
+        "e60f9193-5bb6-486a-ad1e-7ea51dbdfa7e",
+        "15744975-03d0-464e-8f99-4abee96e2b3c"
+      ]
+    },
+    {
+      "issue": "INVALID_TRIM_YEAR",
+      "description": "Cobra R was only produced in 1993, 1995, and 2000. Entries for 1994, 1996, 1997, 1998, 1999 Cobra R do not exist",
+      "affectedVehicles": 5,
+      "validCobraRYears": [1993, 1995, 2000],
+      "affectedIds": [
+        "458f716d-a1f1-4aec-b717-a9feb524a95b",
+        "e2419ea5-3572-4481-a724-d7a3f5cc859d",
+        "92bbda75-09d9-4fdd-8512-14ab1d9326e5",
+        "4934752c-dfb4-4fa9-872a-e98bea2187e1",
+        "8855f94b-50a4-4e7a-b773-72611b92819d"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "908cb1fb-594e-4d36-8714-0cd68cdd78b5",
+      "year": 1993,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "4x108", "status": "correct" },
+        "hubBore": { "current": "63.4", "verified": "63.4", "status": "correct" },
+        "wheelSizes": { "status": "correct", "note": "17x7.5 matches OEM specs for 1993 SVT Cobra" },
+        "tireSizes": { "status": "flagged", "note": "Tire sizes appear inherited from newer generation. 1993 Cobra OEM was 245/45ZR17" }
+      },
+      "sources": ["https://www.svtperformance.com/threads/1993-cobra-svt-oem-wheels-set-of-four.1221785/"]
+    },
+    {
+      "id": "16295bb8-a3b0-4a45-8532-f07a591b24f3",
+      "year": 1994,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GTS",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" },
+        "trim": { "status": "invalid", "note": "GTS trim did not exist in 1994. This was a Fox Body trim only (1987-1993)" }
+      }
+    },
+    {
+      "id": "eeafa655-2f9e-4f9c-b298-b48a34fd698f",
+      "year": 1994,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" },
+        "wheelSizes": { "status": "flagged", "note": "7x15 is plausible for base trim" },
+        "tireSizes": { "status": "incorrect", "note": "Tire sizes are from wrong generation" }
+      }
+    },
+    {
+      "id": "cf8e20f4-986c-4ff4-871c-907dd3f7478f",
+      "year": 1994,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" },
+        "wheelSizes": { "current": [{"width": 8, "diameter": 17}], "verified": "17x8 is correct for 1994+ Cobra", "status": "correct" },
+        "tireSizes": { "status": "incorrect", "note": "1994 Cobra OEM was 255/45ZR17" }
+      }
+    },
+    {
+      "id": "dd18f465-a446-4274-b495-7acd84afab8d",
+      "year": 1994,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" },
+        "wheelSizes": { "status": "correct", "note": "7.5x16 matches 1994 GT OEM" }
+      }
+    },
+    {
+      "id": "458f716d-a1f1-4aec-b717-a9feb524a95b",
+      "year": 1994,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra R",
+      "status": "invalid",
+      "findings": {
+        "trim": { "status": "invalid", "note": "Cobra R was NOT produced in 1994. Only 1993, 1995, and 2000 production years exist" },
+        "boltPattern": { "current": "4x108", "verified": "N/A - vehicle doesn't exist", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "520fe5af-f0b5-45d4-b135-382e9d59ce54",
+      "year": 1995,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "4b0d5899-088c-4cc6-8ca9-26b068b9b95e",
+      "year": 1995,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "dcb3eb67-2780-4f2f-966d-5fe06cc90f4e",
+      "year": 1995,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "ab7740aa-7257-483f-baa1-998eada86c34",
+      "year": 1995,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GTS",
+      "status": "invalid",
+      "findings": {
+        "trim": { "status": "invalid", "note": "GTS trim did not exist in 1995" },
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "70e643e1-23f2-43cf-8b8b-9da47a7345e5",
+      "year": 1995,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra R",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" },
+        "trim": { "status": "correct", "note": "1995 Cobra R did exist (250 units produced)" },
+        "wheelSizes": { "status": "flagged", "note": "1995 Cobra R had 17x9 wheels, not 18 inch" }
+      }
+    },
+    {
+      "id": "e2419ea5-3572-4481-a724-d7a3f5cc859d",
+      "year": 1996,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra R",
+      "status": "invalid",
+      "findings": {
+        "trim": { "status": "invalid", "note": "Cobra R was NOT produced in 1996" }
+      }
+    },
+    {
+      "id": "505370a9-c79e-4912-a9c1-c5b2fd5fd08a",
+      "year": 1996,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "88ce2920-b43e-4586-94bc-7223456d7537",
+      "year": 1996,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "e505e19a-f262-4c3c-a3fd-38a66aee2607",
+      "year": 1996,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "e76f61f1-6936-4190-b5cb-762e0c4e89b2",
+      "year": 1996,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GTS",
+      "status": "invalid",
+      "findings": {
+        "trim": { "status": "invalid", "note": "GTS trim did not exist in 1996" }
+      }
+    },
+    {
+      "id": "07d1acd8-ece7-47aa-bea7-0f0ff86e8609",
+      "year": 1997,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GTS",
+      "status": "invalid",
+      "findings": {
+        "trim": { "status": "invalid", "note": "GTS trim did not exist in 1997" }
+      }
+    },
+    {
+      "id": "0ae7580d-d549-4a26-ac7b-582f89f8fccb",
+      "year": 1997,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "b0f91ad6-b223-4998-89ce-f7df6407d18a",
+      "year": 1997,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "92bbda75-09d9-4fdd-8512-14ab1d9326e5",
+      "year": 1997,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra R",
+      "status": "invalid",
+      "findings": {
+        "trim": { "status": "invalid", "note": "Cobra R was NOT produced in 1997" }
+      }
+    },
+    {
+      "id": "54545d38-eef6-44c7-9079-129fc3d352ef",
+      "year": 1997,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "feae7447-0952-4aad-b410-aec20339cae4",
+      "year": 1998,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "4934752c-dfb4-4fa9-872a-e98bea2187e1",
+      "year": 1998,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra R",
+      "status": "invalid",
+      "findings": {
+        "trim": { "status": "invalid", "note": "Cobra R was NOT produced in 1998" }
+      }
+    },
+    {
+      "id": "626d9a99-51ce-44af-baf7-859f5ecca5ed",
+      "year": 1998,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "52dba304-604c-4f46-9699-8609f5c81ff9",
+      "year": 1998,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "e60f9193-5bb6-486a-ad1e-7ea51dbdfa7e",
+      "year": 1998,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GTS",
+      "status": "invalid",
+      "findings": {
+        "trim": { "status": "invalid", "note": "GTS trim did not exist in 1998" }
+      }
+    },
+    {
+      "id": "15744975-03d0-464e-8f99-4abee96e2b3c",
+      "year": 1999,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GTS",
+      "status": "invalid",
+      "findings": {
+        "trim": { "status": "invalid", "note": "GTS trim did not exist in 1999" }
+      }
+    },
+    {
+      "id": "f8df772c-819a-4a13-84fd-0f41501f3e8b",
+      "year": 1999,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "7f7919da-95ef-416d-853e-96edd9910ce7",
+      "year": 1999,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "4a09eaf5-6b96-42a4-a279-0de619878100",
+      "year": 1999,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "4x108", "verified": "5x114.3", "status": "incorrect" },
+        "hubBore": { "current": "63.4", "verified": "70.3", "status": "incorrect" }
+      }
+    },
+    {
+      "id": "8855f94b-50a4-4e7a-b773-72611b92819d",
+      "year": 1999,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Cobra R",
+      "status": "invalid",
+      "findings": {
+        "trim": { "status": "invalid", "note": "Cobra R was NOT produced in 1999" }
+      }
+    },
+    {
+      "id": "17c2065c-5812-4537-aee1-1cd0c541ad90",
+      "year": 2010,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.6", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "sources": ["https://www.americanmuscle.com/wheel-tech-guide.html"]
+    },
+    {
+      "id": "761765f3-dd66-4e41-bfaa-b1fb098d7da1",
+      "year": 2010,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.6", "status": "correct" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      }
+    },
+    {
+      "id": "572e296d-4464-4405-b0c6-d14b0f8ff474",
+      "year": 2011,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.6", "status": "correct" }
+      }
+    },
+    {
+      "id": "1a729e3b-7989-45bb-99c8-5bb7c03dbec9",
+      "year": 2011,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.6", "status": "correct" }
+      }
+    },
+    {
+      "id": "b8309cf3-6313-4277-9504-d7c748157138",
+      "year": 2012,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.6", "status": "correct" }
+      }
+    },
+    {
+      "id": "a9533b99-3151-4cd0-bf14-145eb180a97b",
+      "year": 2012,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.6", "status": "correct" }
+      }
+    },
+    {
+      "id": "b27dc4c8-8dad-46ff-a7e6-c303b33e1fb5",
+      "year": 2013,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.6", "status": "correct" }
+      }
+    },
+    {
+      "id": "75fe5521-e9cf-4eee-97cd-862ce0d9516d",
+      "year": 2013,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.6", "status": "correct" }
+      }
+    },
+    {
+      "id": "5c1b2fb4-3c95-43f4-84bd-1415fbe07760",
+      "year": 2014,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.6", "status": "correct" }
+      }
+    },
+    {
+      "id": "40890dd3-bbb2-4674-9bfb-65efc7f8a69f",
+      "year": 2014,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.6", "status": "correct" }
+      }
+    },
+    {
+      "id": "1176dd18-0e85-4546-a9c7-9e95c3e1655a",
+      "year": 2015,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "correct", "note": "70.5-70.6mm both acceptable for S550" },
+        "wheelSizes": { "status": "correct" },
+        "tireSizes": { "status": "correct" }
+      },
+      "sources": ["https://hulkoffsets.com/blogs/news/ford-mustang-wheel-bolt-pattern-rim-size-hub-bore-and-offsets"]
+    },
+    {
+      "id": "38f5e76d-4efa-44f3-8df3-d843af0959d2",
+      "year": 2015,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" }
+      }
+    },
+    {
+      "id": "4568e604-b6bb-428d-aca5-d38cc5ac9c41",
+      "year": 2015,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT Performance Pack",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct", "note": "Staggered 19x9 front / 19x9.5 rear is correct for Performance Pack" },
+        "tireSizes": { "status": "correct", "note": "255/40R19 front, 275/40R19 rear matches OEM" }
+      },
+      "sources": ["https://www.americanmuscle.com/wheel-tech-guide.html"]
+    },
+    {
+      "id": "ee5f41b9-742d-40fb-913d-cc5c999cfaa3",
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "f6c40dea-b5f9-4a2f-9e2d-94169d19c111",
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "2c54d216-9f26-4ed8-9d3c-e478a1728ebd",
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT Performance Pack",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct" }
+      }
+    },
+    {
+      "id": "dafb98c8-0bb5-46eb-aa06-0ce5d1df64fe",
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct", "note": "19x10.5 front / 19x11 rear matches GT350 staggered setup" },
+        "tireSizes": { "status": "correct", "note": "295/35R19 front, 305/35R19 rear matches OEM" }
+      },
+      "sources": ["https://www.mustang6g.com/forums/threads/official-gt350-wheel-specs.40696/"]
+    },
+    {
+      "id": "bf726caf-6aef-4d5e-adc8-35a1c5ed8ecb",
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT Performance Pack",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "daeb6de0-ab2e-421e-b018-80cb72ce157b",
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "56371bb9-428d-4eaa-b91c-80586796d7b7",
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "b9919331-cb7d-47af-9544-12ab121ae77b",
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "252506a2-8c50-461b-93c3-b5e9540ea904",
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "b4b9f045-97e9-4262-94ed-d776ccb0d006",
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "9a93f2cc-eec3-4042-89f7-24d7317e8d18",
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "713349d0-01ab-415d-af03-80437bbfad60",
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT Performance Pack",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "0d41943a-4ac6-4543-b81b-ecfd65d22283",
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT Performance Pack",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "8cf132ae-8046-4ce1-bb01-52e0261fb741",
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "flagged", "note": "Contains extra wheel sizes from other trims that may not be applicable to GT350" }
+      }
+    },
+    {
+      "id": "55dd7006-c338-4bcc-b707-608dc6fa7340",
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "91ad2bdb-c306-437c-bbf1-73fd0b1e7203",
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "166bb113-a878-4ba7-8180-7a9c7845b96a",
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct", "note": "20x11 front / 20x11.5 rear matches GT500 staggered setup" },
+        "tireSizes": { "status": "correct", "note": "305/30R20 front, 315/30R20 rear matches OEM" }
+      },
+      "sources": ["https://tirewheelguide.com/sizes/ford/mustang-shelby-gt500/2020/", "https://tiresize.com/tires/Ford/Mustang/2020/Shelby-GT500/"]
+    },
+    {
+      "id": "0f048d78-7762-4d5c-9448-d8fbb69112d6",
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT350",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "bb27a4b8-d09b-44d3-9e8f-86c9c4866690",
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT Performance Pack",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "777ee7d6-7473-4e42-8f63-538a43d98992",
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "minor", "note": "70.6 works but spec is 70.5" }
+      }
+    },
+    {
+      "id": "d88c8c77-ad8b-4c0d-8b23-95fb6c8fb9de",
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "minor" }
+      }
+    },
+    {
+      "id": "c977e857-a81f-4e4b-b24d-a7dfa706602d",
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "minor" }
+      }
+    },
+    {
+      "id": "ac16df68-38cc-40b1-90ea-fcd84e44880f",
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "minor" }
+      }
+    },
+    {
+      "id": "d4492ae6-d6f1-452f-baa6-cf8ba0902130",
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "a18474c6-c61e-49fd-b9c7-d0eae4a00c98",
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "correct", "note": "19x10.5 front / 19x11 rear matches Mach 1 OEM staggered setup" },
+        "tireSizes": { "status": "correct", "note": "305/30R19 front, 315/30R19 rear matches OEM specs" }
+      },
+      "sources": ["https://www.steeda.com/2021-mustang-mach-1-specs", "https://www.cars.com/research/ford-mustang-2021/specs/418522/"]
+    },
+    {
+      "id": "0530a453-bd22-41a0-b986-e7676751dc39",
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT Performance Pack",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" },
+        "wheelSizes": { "status": "flagged", "note": "Contains extra wheel sizes from other trims mixed in" }
+      }
+    },
+    {
+      "id": "991a73a9-4bf6-41c0-8d38-9064b973779d",
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "96728022-a105-4b1d-b559-e0a0de2d5de7",
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "minor" }
+      }
+    },
+    {
+      "id": "06afc922-a154-4c33-8be4-fb71d864d4be",
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.6", "verified": "70.5", "status": "minor" }
+      }
+    },
+    {
+      "id": "ff7bcf12-6d36-4ad9-9ee2-0a285fd813bd",
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT Performance Pack",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    },
+    {
+      "id": "280a1c56-3866-4679-8fdf-5fa2fb6bd004",
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "verified": "5x114.3", "status": "correct" },
+        "hubBore": { "current": "70.5", "verified": "70.5", "status": "correct" }
+      }
+    }
+  ],
+  "recommendedActions": [
+    {
+      "priority": "critical",
+      "action": "DELETE_INVALID_TRIMS",
+      "description": "Remove 6 GTS entries (trim never existed on SN95 1994-1999) and 5 Cobra R entries (trim only existed in 1993, 1995, 2000)",
+      "vehicleCount": 11
+    },
+    {
+      "priority": "critical",
+      "action": "FIX_BOLT_PATTERN",
+      "description": "Update all 1994-1999 Mustangs from 4x108 to 5x114.3. Ford switched to 5-lug on ALL models starting in 1994.",
+      "vehicleCount": 30
+    },
+    {
+      "priority": "critical",
+      "action": "FIX_HUB_BORE",
+      "description": "Update hub bore from 63.4mm to 70.3mm for all 1994-2004 SN95/New Edge Mustangs",
+      "vehicleCount": 30
+    },
+    {
+      "priority": "medium",
+      "action": "STANDARDIZE_HUB_BORE",
+      "description": "Consider standardizing S550 hub bore to 70.5mm instead of mix of 70.5/70.6mm",
+      "vehicleCount": 10
+    },
+    {
+      "priority": "low",
+      "action": "VERIFY_TIRE_SIZES",
+      "description": "Review tire sizes for 1993-1999 vehicles which appear to be inherited from newer generations",
+      "vehicleCount": 31
+    }
+  ],
+  "verificationSources": [
+    {
+      "source": "LMR.com",
+      "url": "https://lmr.com/products/mustang-wheel-torque-specs",
+      "note": "Confirms ALL 1994+ Mustangs have 5-lug (5x114.3)"
+    },
+    {
+      "source": "American Muscle",
+      "url": "https://www.americanmuscle.com/wheel-tech-guide.html",
+      "note": "Comprehensive wheel specs chart by year"
+    },
+    {
+      "source": "Hulk Offsets",
+      "url": "https://hulkoffsets.com/blogs/news/ford-mustang-wheel-bolt-pattern-rim-size-hub-bore-and-offsets",
+      "note": "Confirms S550 specs: 5x114.3, 70.5mm hub bore"
+    },
+    {
+      "source": "SVT Performance Forum",
+      "url": "https://www.svtperformance.com/threads/1993-cobra-svt-oem-wheels-set-of-four.1221785/",
+      "note": "Confirms 1993 Cobra had 4x108 (4 x 4.25\")"
+    },
+    {
+      "source": "Steeda",
+      "url": "https://www.steeda.com/2021-mustang-mach-1-specs",
+      "note": "Confirms Mach 1 wheel/tire specs"
+    },
+    {
+      "source": "TireSize.com",
+      "url": "https://tiresize.com/tires/Ford/Mustang/2020/Shelby-GT500/",
+      "note": "Confirms GT500 tire sizes"
+    }
+  ]
+}

@@ -1,0 +1,1334 @@
+{
+  "batchId": "90s-batch-02",
+  "completedAt": "2026-04-22T12:22:00.000Z",
+  "results": [
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "dne",
+      "notes": "RAV4 first sold in US market in 1996 (first gen XA10 was 1994-2000 globally, but US got it 1996+)"
+    },
+    {
+      "year": 1992,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "dne",
+      "notes": "RAV4 first sold in US market in 1996"
+    },
+    {
+      "year": 1993,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "dne",
+      "notes": "RAV4 first sold in US market in 1996"
+    },
+    {
+      "year": 1994,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "dne",
+      "notes": "RAV4 first sold in US market in 1996"
+    },
+    {
+      "year": 1995,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "dne",
+      "notes": "RAV4 first sold in US market in 1996"
+    },
+    {
+      "year": 1996,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["215/70R16", "235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "rav4world.com forum"],
+      "notes": "First gen XA10, first US model year"
+    },
+    {
+      "year": 1997,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["215/70R16", "235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "rav4world.com forum"],
+      "notes": "First gen XA10"
+    },
+    {
+      "year": 1998,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["215/70R16", "235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "rav4world.com forum"],
+      "notes": "First gen XA10"
+    },
+    {
+      "year": 1999,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["215/70R16", "235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "rav4world.com forum"],
+      "notes": "First gen XA10"
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "Supra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "trim": "base" },
+          { "diameter": 15, "width": 6.5, "offset": 50, "trim": "twin turbo" },
+          { "diameter": 16, "width": 7, "offset": 37, "position": "front", "trim": "Turbo US" },
+          { "diameter": 16, "width": 9, "offset": 37, "position": "rear", "trim": "Turbo US" },
+          { "diameter": 16, "width": 8, "offset": 50, "trim": "JDM turbo" }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15", "215/60R15", "225/50R16", "245/45R16"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "A70 generation. Turbo models have staggered setup (F:16x7/R:16x9). Base NA models have 15\" non-staggered."
+    },
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "Supra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "trim": "base" },
+          { "diameter": 15, "width": 6.5, "offset": 50, "trim": "twin turbo" },
+          { "diameter": 16, "width": 7, "offset": 37, "position": "front", "trim": "Turbo US" },
+          { "diameter": 16, "width": 9, "offset": 37, "position": "rear", "trim": "Turbo US" },
+          { "diameter": 16, "width": 8, "offset": 50, "trim": "JDM turbo" }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15", "215/60R15", "225/50R16", "245/45R16"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "A70 generation. Turbo models have staggered setup."
+    },
+    {
+      "year": 1992,
+      "make": "Toyota",
+      "model": "Supra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "trim": "base" },
+          { "diameter": 15, "width": 6.5, "offset": 50, "trim": "twin turbo" },
+          { "diameter": 16, "width": 7, "offset": 37, "position": "front", "trim": "Turbo US" },
+          { "diameter": 16, "width": 9, "offset": 37, "position": "rear", "trim": "Turbo US" },
+          { "diameter": 16, "width": 8, "offset": 50, "trim": "JDM turbo" }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15", "215/60R15", "225/50R16", "245/45R16"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "Last year of A70 generation. Turbo models have staggered setup."
+    },
+    {
+      "year": 1993,
+      "make": "Toyota",
+      "model": "Supra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 37, "position": "front", "trim": "NA" },
+          { "diameter": 16, "width": 9, "offset": 37, "position": "rear", "trim": "NA" },
+          { "diameter": 17, "width": 8, "offset": 50, "position": "front", "trim": "Turbo" },
+          { "diameter": 17, "width": 9.5, "offset": 50, "position": "rear", "trim": "Turbo" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/50R16", "235/45ZR17", "255/40ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "First year A80 (MKIV). All trims have staggered setup. NA: 16\", Turbo: 17\""
+    },
+    {
+      "year": 1994,
+      "make": "Toyota",
+      "model": "Supra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 37, "position": "front", "trim": "NA" },
+          { "diameter": 16, "width": 9, "offset": 37, "position": "rear", "trim": "NA" },
+          { "diameter": 17, "width": 8, "offset": 50, "position": "front", "trim": "Turbo" },
+          { "diameter": 17, "width": 9.5, "offset": 50, "position": "rear", "trim": "Turbo" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/50R16", "235/45ZR17", "255/40ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "A80 (MKIV). All trims have staggered setup."
+    },
+    {
+      "year": 1995,
+      "make": "Toyota",
+      "model": "Supra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 37, "position": "front", "trim": "NA" },
+          { "diameter": 16, "width": 9, "offset": 37, "position": "rear", "trim": "NA" },
+          { "diameter": 17, "width": 8, "offset": 50, "position": "front", "trim": "Turbo" },
+          { "diameter": 17, "width": 9.5, "offset": 50, "position": "rear", "trim": "Turbo" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/50R16", "235/45ZR17", "255/40ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "A80 (MKIV). All trims have staggered setup."
+    },
+    {
+      "year": 1996,
+      "make": "Toyota",
+      "model": "Supra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 37, "position": "front", "trim": "NA" },
+          { "diameter": 16, "width": 9, "offset": 37, "position": "rear", "trim": "NA" },
+          { "diameter": 17, "width": 8, "offset": 50, "position": "front", "trim": "Turbo" },
+          { "diameter": 17, "width": 9.5, "offset": 50, "position": "rear", "trim": "Turbo" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/50R16", "235/45ZR17", "255/40ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "A80 (MKIV). NA dropped after this year in US."
+    },
+    {
+      "year": 1997,
+      "make": "Toyota",
+      "model": "Supra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 8, "offset": 50, "position": "front" },
+          { "diameter": 17, "width": 9.5, "offset": 50, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["235/45ZR17", "255/40ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "A80 (MKIV). Turbo only in US 1997-1998."
+    },
+    {
+      "year": 1998,
+      "make": "Toyota",
+      "model": "Supra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 8, "offset": 50, "position": "front" },
+          { "diameter": 17, "width": 9.5, "offset": 50, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["235/45ZR17", "255/40ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "A80 (MKIV). Last US model year. Turbo only."
+    },
+    {
+      "year": 1999,
+      "make": "Toyota",
+      "model": "Supra",
+      "status": "dne",
+      "notes": "US Supra production ended after 1998 model year. JDM continued to 2002."
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "Celica",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 14, "width": 6.5, "offset": 45, "trim": "GT-R" },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/65R14", "185/70R14", "195/60R14", "205/60R14", "195/60R15", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"],
+      "notes": "T180 gen. US base 1.6L models use 4x100, higher trims (GT/GT-Four) use 5x100. Data shown for 5x100 models which are more common for aftermarket."
+    },
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "Celica",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 14, "width": 6.5, "offset": 45, "trim": "GT-R" },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/65R14", "185/70R14", "195/60R14", "205/60R14", "195/60R15", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"],
+      "notes": "T180 gen. US base 1.6L = 4x100, GT/GT-Four = 5x100."
+    },
+    {
+      "year": 1992,
+      "make": "Toyota",
+      "model": "Celica",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 14, "width": 6.5, "offset": 45, "trim": "GT-R" },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/65R14", "185/70R14", "195/60R14", "205/60R14", "195/60R15", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"],
+      "notes": "T180 gen. US base 1.6L = 4x100, GT/GT-Four = 5x100."
+    },
+    {
+      "year": 1993,
+      "make": "Toyota",
+      "model": "Celica",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 14, "width": 6.5, "offset": 45, "trim": "GT-R" },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/65R14", "185/70R14", "195/60R14", "205/60R14", "195/60R15", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Last year T180. Transition year - both T180 and T200 sold. US base 1.6L = 4x100, GT = 5x100."
+    },
+    {
+      "year": 1994,
+      "make": "Toyota",
+      "model": "Celica",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R15", "205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "T200 gen. All trims use 5x100."
+    },
+    {
+      "year": 1995,
+      "make": "Toyota",
+      "model": "Celica",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 7.5, "offset": 45, "trim": "GT-Four" }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R15", "205/50R16", "215/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "T200 gen. All trims use 5x100."
+    },
+    {
+      "year": 1996,
+      "make": "Toyota",
+      "model": "Celica",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R15", "205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "T200 gen. All trims use 5x100."
+    },
+    {
+      "year": 1997,
+      "make": "Toyota",
+      "model": "Celica",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R15", "205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "T200 gen. All trims use 5x100."
+    },
+    {
+      "year": 1998,
+      "make": "Toyota",
+      "model": "Celica",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R15", "205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "T200 gen. All trims use 5x100."
+    },
+    {
+      "year": 1999,
+      "make": "Toyota",
+      "model": "Celica",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/55R15", "205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Last year T200 gen. T230 started late 1999 for 2000MY."
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 10 },
+          { "diameter": 16, "width": 6, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 14 },
+          { "diameter": 16, "width": 8, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["265/75R15", "215/80R16", "275/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ih8mud.com forum"],
+      "notes": "80 Series (FJ80/FZJ80). 6x139.7 aka 6x5.5\""
+    },
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 10 },
+          { "diameter": 16, "width": 6, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 14 },
+          { "diameter": 16, "width": 8, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["265/75R15", "215/80R16", "275/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ih8mud.com forum"],
+      "notes": "80 Series"
+    },
+    {
+      "year": 1992,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 10 },
+          { "diameter": 16, "width": 6, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 14 },
+          { "diameter": 16, "width": 8, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["265/75R15", "215/80R16", "275/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ih8mud.com forum"],
+      "notes": "80 Series"
+    },
+    {
+      "year": 1993,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 10 },
+          { "diameter": 16, "width": 6, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 14 },
+          { "diameter": 16, "width": 8, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["265/75R15", "215/80R16", "275/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ih8mud.com forum"],
+      "notes": "80 Series"
+    },
+    {
+      "year": 1994,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 10 },
+          { "diameter": 16, "width": 6, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 14 },
+          { "diameter": 16, "width": 8, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["265/75R15", "215/80R16", "275/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ih8mud.com forum"],
+      "notes": "80 Series"
+    },
+    {
+      "year": 1995,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 10 },
+          { "diameter": 16, "width": 6, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 14 },
+          { "diameter": 16, "width": 8, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["265/75R15", "215/80R16", "275/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ih8mud.com forum"],
+      "notes": "80 Series"
+    },
+    {
+      "year": 1996,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 10 },
+          { "diameter": 16, "width": 6, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 14 },
+          { "diameter": 16, "width": 8, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["265/75R15", "215/80R16", "275/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ih8mud.com forum"],
+      "notes": "80 Series"
+    },
+    {
+      "year": 1997,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 10 },
+          { "diameter": 16, "width": 6, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 0 },
+          { "diameter": 16, "width": 8, "offset": 14 },
+          { "diameter": 16, "width": 8, "offset": 30 }
+        ],
+        "oem_tire_sizes": ["265/75R15", "215/80R16", "275/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ih8mud.com forum"],
+      "notes": "Last year 80 Series in US"
+    },
+    {
+      "year": 1998,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x150",
+        "hub_bore": 110,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ],
+        "oem_tire_sizes": ["275/70R16", "275/65R17", "275/60R18"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ih8mud.com forum"],
+      "notes": "100 Series. BOLT PATTERN CHANGED from 6x139.7 to 5x150!"
+    },
+    {
+      "year": 1999,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x150",
+        "hub_bore": 110,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ],
+        "oem_tire_sizes": ["275/70R16", "275/65R17", "275/60R18"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ih8mud.com forum"],
+      "notes": "100 Series. 5x150 bolt pattern."
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "T100",
+      "status": "dne",
+      "notes": "T100 first sold in US in 1993 model year"
+    },
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "T100",
+      "status": "dne",
+      "notes": "T100 first sold in US in 1993 model year"
+    },
+    {
+      "year": 1992,
+      "make": "Toyota",
+      "model": "T100",
+      "status": "dne",
+      "notes": "T100 first sold in US in 1993 model year"
+    },
+    {
+      "year": 1993,
+      "make": "Toyota",
+      "model": "T100",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 15, "width": 7, "offset": 8 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "265/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "First model year. 6x139.7 aka 6x5.5\""
+    },
+    {
+      "year": 1994,
+      "make": "Toyota",
+      "model": "T100",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 15, "width": 7, "offset": 8 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "265/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "6x139.7 bolt pattern"
+    },
+    {
+      "year": 1995,
+      "make": "Toyota",
+      "model": "T100",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 15, "width": 7, "offset": 8 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "265/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "6x139.7 bolt pattern"
+    },
+    {
+      "year": 1996,
+      "make": "Toyota",
+      "model": "T100",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 15, "width": 7, "offset": 8 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "265/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "6x139.7 bolt pattern"
+    },
+    {
+      "year": 1997,
+      "make": "Toyota",
+      "model": "T100",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 15, "width": 7, "offset": 8 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "265/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "6x139.7 bolt pattern"
+    },
+    {
+      "year": 1998,
+      "make": "Toyota",
+      "model": "T100",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 106.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 15, "width": 7, "offset": 8 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "265/70R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Last model year. Replaced by Tundra for 2000."
+    },
+    {
+      "year": 1999,
+      "make": "Toyota",
+      "model": "T100",
+      "status": "dne",
+      "notes": "T100 production ended after 1998 model year. Replaced by Tundra."
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "Tercel",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4, "offset": 39 },
+          { "diameter": 13, "width": 4.5, "offset": 39 },
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["145SR13", "155SR13", "175/70R13", "175/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tercel4wd.com forum"],
+      "notes": "L40 generation (1990-1994)"
+    },
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "Tercel",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4, "offset": 39 },
+          { "diameter": 13, "width": 4.5, "offset": 39 },
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["145SR13", "155SR13", "175/70R13", "175/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tercel4wd.com forum"],
+      "notes": "L40 generation"
+    },
+    {
+      "year": 1992,
+      "make": "Toyota",
+      "model": "Tercel",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4, "offset": 39 },
+          { "diameter": 13, "width": 4.5, "offset": 39 },
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["145SR13", "155SR13", "175/70R13", "175/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tercel4wd.com forum"],
+      "notes": "L40 generation"
+    },
+    {
+      "year": 1993,
+      "make": "Toyota",
+      "model": "Tercel",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4, "offset": 39 },
+          { "diameter": 13, "width": 4.5, "offset": 39 },
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["145SR13", "155SR13", "175/70R13", "175/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tercel4wd.com forum"],
+      "notes": "L40 generation"
+    },
+    {
+      "year": 1994,
+      "make": "Toyota",
+      "model": "Tercel",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 39 },
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["155SR13", "155/80R13", "175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tercel4wd.com forum"],
+      "notes": "Transition year L40 to L50"
+    },
+    {
+      "year": 1995,
+      "make": "Toyota",
+      "model": "Tercel",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 39 },
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["155SR13", "155/80R13", "175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tercel4wd.com forum"],
+      "notes": "L50 generation (1994-1999)"
+    },
+    {
+      "year": 1996,
+      "make": "Toyota",
+      "model": "Tercel",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 39 },
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["155SR13", "155/80R13", "175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tercel4wd.com forum"],
+      "notes": "L50 generation"
+    },
+    {
+      "year": 1997,
+      "make": "Toyota",
+      "model": "Tercel",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 39 },
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["155SR13", "155/80R13", "175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tercel4wd.com forum"],
+      "notes": "L50 generation"
+    },
+    {
+      "year": 1998,
+      "make": "Toyota",
+      "model": "Tercel",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 39 },
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["155SR13", "155/80R13", "175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tercel4wd.com forum"],
+      "notes": "L50 generation"
+    },
+    {
+      "year": 1999,
+      "make": "Toyota",
+      "model": "Tercel",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 4.5, "offset": 39 },
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["155SR13", "155/80R13", "175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tercel4wd.com forum"],
+      "notes": "Last year L50. Tercel discontinued in US."
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "dne",
+      "notes": "Avalon first sold in US in 1995 model year"
+    },
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "dne",
+      "notes": "Avalon first sold in US in 1995 model year"
+    },
+    {
+      "year": 1992,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "dne",
+      "notes": "Avalon first sold in US in 1995 model year"
+    },
+    {
+      "year": 1993,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "dne",
+      "notes": "Avalon first sold in US in 1995 model year"
+    },
+    {
+      "year": 1994,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "dne",
+      "notes": "Avalon first sold in US in 1995 model year"
+    },
+    {
+      "year": 1995,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "First gen. Camry platform."
+    },
+    {
+      "year": 1996,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "First gen"
+    },
+    {
+      "year": 1997,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "First gen"
+    },
+    {
+      "year": 1998,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "First gen"
+    },
+    {
+      "year": 1999,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyotanation.com forum"],
+      "notes": "First gen"
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "Sienna",
+      "status": "dne",
+      "notes": "Sienna first sold in US in 1998 model year"
+    },
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "Sienna",
+      "status": "dne",
+      "notes": "Sienna first sold in US in 1998 model year"
+    },
+    {
+      "year": 1992,
+      "make": "Toyota",
+      "model": "Sienna",
+      "status": "dne",
+      "notes": "Sienna first sold in US in 1998 model year"
+    },
+    {
+      "year": 1993,
+      "make": "Toyota",
+      "model": "Sienna",
+      "status": "dne",
+      "notes": "Sienna first sold in US in 1998 model year"
+    },
+    {
+      "year": 1994,
+      "make": "Toyota",
+      "model": "Sienna",
+      "status": "dne",
+      "notes": "Sienna first sold in US in 1998 model year"
+    },
+    {
+      "year": 1995,
+      "make": "Toyota",
+      "model": "Sienna",
+      "status": "dne",
+      "notes": "Sienna first sold in US in 1998 model year"
+    },
+    {
+      "year": 1996,
+      "make": "Toyota",
+      "model": "Sienna",
+      "status": "dne",
+      "notes": "Sienna first sold in US in 1998 model year"
+    },
+    {
+      "year": 1997,
+      "make": "Toyota",
+      "model": "Sienna",
+      "status": "dne",
+      "notes": "Sienna first sold in US in 1998 model year"
+    },
+    {
+      "year": 1998,
+      "make": "Toyota",
+      "model": "Sienna",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 38 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "siennachat.com forum"],
+      "notes": "First gen XL10. First model year."
+    },
+    {
+      "year": 1999,
+      "make": "Toyota",
+      "model": "Sienna",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 38 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "siennachat.com forum"],
+      "notes": "First gen XL10"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 50,
+    "dne": 25,
+    "partial": 0,
+    "failed": 0,
+    "highConfidence": 46,
+    "mediumConfidence": 4,
+    "needsReview": 4
+  },
+  "notes": {
+    "key_findings": [
+      "Land Cruiser bolt pattern CHANGED from 6x139.7 (80 Series 1990-1997) to 5x150 (100 Series 1998-1999)",
+      "Supra A80 (1993-1998) is STAGGERED - all trims have different front/rear wheel sizes",
+      "Supra A70 Turbo (1990-1992) is also staggered on turbo models",
+      "Celica T180 (1990-1993) has MIXED bolt patterns: base US 1.6L = 4x100, GT/GT-Four = 5x100",
+      "Celica T200 (1994-1999) standardized on 5x100 for all trims"
+    ],
+    "sources_used": [
+      "tirewheelguide.com (primary)",
+      "toyotanation.com forum (verification)",
+      "ih8mud.com forum (Land Cruiser specifics)",
+      "rav4world.com forum (RAV4 verification)",
+      "tercel4wd.com forum (Tercel verification)",
+      "siennachat.com forum (Sienna verification)"
+    ],
+    "vehicles_flagged_for_review": [
+      "Celica 1990-1993: Has two bolt patterns depending on trim (4x100 or 5x100). Recorded 5x100 as primary."
+    ]
+  }
+}

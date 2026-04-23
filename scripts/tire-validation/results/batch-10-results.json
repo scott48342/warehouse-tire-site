@@ -1,0 +1,1003 @@
+{
+  "batchId": "10",
+  "processedAt": "2026-04-21T21:41:00.000Z",
+  "results": [
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet Premium Plus", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet Premium Plus (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet Prestige", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet Prestige (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Premium Plus", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Coupe Premium Plus (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Prestige", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Coupe Prestige (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet Premium Plus", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet Premium Plus (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet Prestige", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet Prestige (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Premium Plus", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Coupe Premium Plus (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Prestige", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Coupe Prestige (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Coupe Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Cabriolet", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"},
+        {"trim": "Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "S5",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 29}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2007 S5 not listed on tiresize.com, extrapolated from 2008"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 34}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 34}, "tireSize": "255/40R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 34}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 34}, "tireSize": "255/40R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 34}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2019 not explicitly listed, C8 generation started 2019"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 32}, "tireSize": "255/40R19"},
+        {"trim": "Premium Plus (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 32}, "tireSize": "255/35R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 32}, "tireSize": "255/40R19"},
+        {"trim": "Prestige (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 32}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 32}, "tireSize": "255/40R19"},
+        {"trim": "Premium Plus (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 32}, "tireSize": "255/35R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 32}, "tireSize": "255/40R19"},
+        {"trim": "Prestige (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 32}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 32}, "tireSize": "255/40R19"},
+        {"trim": "Premium Plus (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 32}, "tireSize": "255/35R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 32}, "tireSize": "255/40R19"},
+        {"trim": "Prestige (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 32}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 32}, "tireSize": "255/40R19"},
+        {"trim": "Base Model (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 32}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Sedan", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 32}, "tireSize": "255/40R19"},
+        {"trim": "Sedan (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 32}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Sedan", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 32}, "tireSize": "255/40R19"},
+        {"trim": "Sedan (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 32}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Sedan", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 32}, "tireSize": "255/40R19"},
+        {"trim": "Sedan (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 32}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2012 not explicitly listed, extrapolated from C7 generation"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 35}, "tireSize": "255/40R18"},
+        {"trim": "Sedan (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35}, "tireSize": "265/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 35}, "tireSize": "255/40R18"},
+        {"trim": "Sedan (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35}, "tireSize": "265/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 35}, "tireSize": "255/40R18"},
+        {"trim": "Sedan (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35}, "tireSize": "265/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 35}, "tireSize": "255/40R18"},
+        {"trim": "Sedan (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35}, "tireSize": "265/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 35}, "tireSize": "255/40R18"},
+        {"trim": "Sedan (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35}, "tireSize": "265/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Sedan", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 35}, "tireSize": "255/40R18"},
+        {"trim": "Sedan (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35}, "tireSize": "265/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2006 not explicitly listed, extrapolated from C6 generation"
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 37}, "tireSize": "255/40R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 37}, "tireSize": "255/40R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 37}, "tireSize": "255/40R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2001 not explicitly listed, extrapolated from C5 generation"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "S6",
+      "trims": [
+        {"trim": "Avant", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 37}, "tireSize": "255/40R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2000 not explicitly listed, extrapolated from C5 generation"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "S6 e-tron",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 38}, "tireSize": "265/40R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "audi.com/web research",
+      "confidence": "medium"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "S6 e-tron",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 38}, "tireSize": "265/40R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "audi.com/web research",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "S6 e-tron",
+      "trims": [],
+      "isStaggered": false,
+      "source": "n/a",
+      "confidence": "low",
+      "notes": "2024 S6 e-tron not officially released in most markets"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "L", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "L", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "L (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "L", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "L (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "L (21\" Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "L", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "L (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "L (21\" Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "L", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "L (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "L (21\" Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "L", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "L (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "L (21\" Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "L", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "L (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "L (21\" Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "L", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "L (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "L (21\" Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2019 not explicitly listed, D5 generation started 2019"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Plus", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Plus", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "Base Model (Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"},
+        {"trim": "Plus", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "Base Model (Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "Base Model (Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "Base Model (Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "Base Model (Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2012 not explicitly listed, extrapolated from D4 generation"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 36}, "tireSize": "265/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"},
+        {"trim": "New Model", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 36}, "tireSize": "265/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2006 not explicitly listed, extrapolated from D3 generation"
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 30}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 30}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 30}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "S8",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 30}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2000 not explicitly listed, extrapolated from D2 generation"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "S8L",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com/S8 data",
+      "confidence": "medium",
+      "notes": "S8L uses same fitment as S8 - long wheelbase version"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "S8L",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "Base (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com/S8 data",
+      "confidence": "medium",
+      "notes": "S8L uses same fitment as S8 - long wheelbase version"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "S8L",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "Base (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "Base (21\" Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com/S8 data",
+      "confidence": "medium",
+      "notes": "S8L uses same fitment as S8 - long wheelbase version"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "S8L",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "Base (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "Base (21\" Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com/S8 data",
+      "confidence": "medium",
+      "notes": "S8L uses same fitment as S8 - long wheelbase version"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "S8L",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "Base (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "Base (21\" Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com/S8 data",
+      "confidence": "medium",
+      "notes": "S8L uses same fitment as S8 - long wheelbase version"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "S8L",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 36}, "tireSize": "265/40R20"},
+        {"trim": "Base (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "265/35R21"},
+        {"trim": "Base (21\" Sport)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 36}, "tireSize": "275/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com/S8 data",
+      "confidence": "medium",
+      "notes": "S8L uses same fitment as S8 - long wheelbase version"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "SQ5",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Sportback (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "SQ5",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Sportback (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "SQ5",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Sportback (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "SQ5",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Sportback (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "SQ5",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Sportback (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "SQ5",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Sportback", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Sportback (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "SQ5",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "SQ5",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "SQ5",
+      "trims": [
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Premium Plus (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 39}, "tireSize": "255/45R20"},
+        {"trim": "Prestige (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 37}, "tireSize": "255/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "processed": 75,
+    "highConfidence": 60,
+    "mediumConfidence": 14,
+    "lowConfidence": 1,
+    "staggeredSetups": 0,
+    "notes": [
+      "All Audi S-models use square (non-staggered) wheel setups",
+      "S8L shares identical wheel/tire fitment with S8 - long wheelbase variant only affects cabin",
+      "S6 e-tron is a new EV model for 2025-2026, limited data for 2024 as it wasn't yet released",
+      "Older model years (pre-2006) extrapolated from known generation data",
+      "Wheel widths and offsets are typical OEM values for Audi sport models"
+    ]
+  }
+}

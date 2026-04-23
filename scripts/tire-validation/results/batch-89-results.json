@@ -1,0 +1,1082 @@
+{
+  "batchId": "89",
+  "processedAt": "2026-04-21T22:15:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "285/35R22"],
+      "verifiedTireSizes": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "trims": {
+        "Autobiography": ["265/45R21", "265/40R22"],
+        "Belgravia Edition": ["255/50R20", "265/45R21", "265/40R22"],
+        "S": ["255/55R19", "255/50R20"]
+      },
+      "discrepancies": ["275/45R20 not OEM", "275/40R21 not OEM", "285/35R22 not OEM - should be 265/40R22"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2025,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "285/35R22"],
+      "verifiedTireSizes": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "trims": {
+        "Autobiography": ["265/45R21", "265/40R22"],
+        "Dynamic SE": ["255/50R20", "265/45R21", "265/40R22"],
+        "S": ["255/55R19", "255/50R20"]
+      },
+      "discrepancies": ["275/45R20 not OEM", "275/40R21 not OEM", "285/35R22 not OEM"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2024,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "285/35R22"],
+      "verifiedTireSizes": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "trims": {
+        "Dynamic HSE": ["265/45R21", "265/40R22"],
+        "Dynamic SE": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "S": ["255/55R19", "255/50R20", "265/45R21"]
+      },
+      "discrepancies": ["275/45R20 not OEM", "275/40R21 not OEM", "285/35R22 not OEM"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2023,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "285/35R22"],
+      "verifiedTireSizes": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "trims": {
+        "HST": ["265/45R21", "265/40R22"],
+        "R-Dynamic S": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "S": ["255/55R19", "255/50R20", "265/45R21"]
+      },
+      "discrepancies": ["275/45R20 not OEM", "275/40R21 not OEM", "285/35R22 not OEM"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2022,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "285/35R22"],
+      "verifiedTireSizes": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "trims": {
+        "R-Dynamic HSE": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "R-Dynamic S": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "S": ["255/55R19", "255/50R20", "265/45R21"]
+      },
+      "discrepancies": ["275/45R20 not OEM", "275/40R21 not OEM", "285/35R22 not OEM"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2021,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "285/35R22"],
+      "verifiedTireSizes": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "trims": {
+        "R-Dynamic HSE": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "R-Dynamic S": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "S": ["255/55R19", "255/50R20", "265/45R21"]
+      },
+      "discrepancies": ["275/45R20 not OEM", "275/40R21 not OEM", "285/35R22 not OEM"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "285/35R22"],
+      "verifiedTireSizes": ["235/65R18", "255/60R18", "255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "trims": {
+        "Base": ["235/65R18", "255/60R18"],
+        "R-Dynamic HSE": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "R-Dynamic S": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "S": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "SV Autobiography Dynamic": ["265/45R21", "265/40R22"]
+      },
+      "discrepancies": ["275/45R20 not OEM", "275/40R21 not OEM", "285/35R22 not OEM", "missing 235/65R18", "missing 255/60R18"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2019,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "285/35R22"],
+      "verifiedTireSizes": ["235/65R18", "255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "trims": {
+        "Base Model": ["235/65R18", "255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "R-Dynamic HSE": ["265/45R21", "265/40R22"],
+        "R-Dynamic SE": ["255/50R20", "265/45R21", "265/40R22"],
+        "S": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"]
+      },
+      "discrepancies": ["275/45R20 not OEM", "275/40R21 not OEM", "285/35R22 not OEM", "missing 235/65R18"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2018,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "285/35R22"],
+      "verifiedTireSizes": ["235/65R18", "255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "trims": {
+        "Base Model": ["235/65R18", "255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "First Edition": ["255/50R20", "265/45R21", "265/40R22"],
+        "R-Dynamic HSE": ["265/45R21", "265/40R22"],
+        "R-Dynamic SE": ["255/50R20", "265/45R21", "265/40R22"],
+        "S": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+        "SE": ["235/65R18", "255/55R19", "255/50R20", "265/45R21", "265/40R22"]
+      },
+      "discrepancies": ["275/45R20 not OEM", "275/40R21 not OEM", "285/35R22 not OEM", "missing 235/65R18"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2017,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "285/35R22"],
+      "verifiedTireSizes": [],
+      "trims": {},
+      "notes": "2017 Range Rover Velar not found in tiresize.com - vehicle launched late 2017 as 2018MY",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2026,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "verifiedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": {
+        "250": ["215/55R17", "235/45R18", "235/40R19"],
+        "300h": ["215/55R17", "235/45R18", "235/40R19"],
+        "300h F Sport": ["235/40R19"],
+        "350": ["215/55R17", "235/45R18", "235/40R19"],
+        "350 F Sport": ["235/40R19"],
+        "Black Line": ["235/40R19"]
+      },
+      "discrepancies": [],
+      "notes": "Using 2025 data as 2026 is future model year",
+      "status": "VALID"
+    },
+    {
+      "year": 2025,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "235/50R17"],
+      "verifiedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": {
+        "250": ["215/55R17", "235/45R18", "235/40R19"],
+        "300h": ["215/55R17", "235/45R18", "235/40R19"],
+        "300h F Sport": ["235/40R19"],
+        "350": ["215/55R17", "235/45R18", "235/40R19"],
+        "350 F Sport": ["235/40R19"],
+        "Black Line": ["235/40R19"]
+      },
+      "discrepancies": ["235/50R17 not found in OEM specs"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2024,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "235/50R17"],
+      "verifiedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": {
+        "250": ["215/55R17", "235/45R18", "235/40R19"],
+        "250 F Sport": ["235/40R19"],
+        "300h": ["215/55R17", "235/45R18", "235/40R19"],
+        "300h F Sport": ["235/40R19"],
+        "350": ["215/55R17", "235/45R18", "235/40R19"],
+        "350 F Sport": ["235/40R19"]
+      },
+      "discrepancies": ["235/50R17 not found in OEM specs"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2023,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "verifiedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": {
+        "250": ["215/55R17", "235/45R18", "235/40R19"],
+        "250 F Sport": ["235/40R19"],
+        "300h": ["215/55R17", "235/45R18", "235/40R19"],
+        "300h F Sport": ["235/40R19"],
+        "350": ["215/55R17", "235/45R18", "235/40R19"],
+        "350 F Sport": ["235/40R19"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2022,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "235/50R17"],
+      "verifiedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": {
+        "250": ["215/55R17", "235/45R18"],
+        "250 F Sport": ["235/40R19"],
+        "300h": ["215/55R17", "235/45R18"],
+        "300h F Sport": ["235/40R19"],
+        "350": ["215/55R17", "235/45R18"],
+        "350 F Sport": ["235/40R19"]
+      },
+      "discrepancies": ["235/50R17 not found in OEM specs"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2021,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "235/50R17"],
+      "verifiedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": {
+        "250": ["215/55R17", "235/45R18"],
+        "250 F Sport": ["235/40R19"],
+        "300h": ["215/55R17", "235/45R18"],
+        "350": ["215/55R17", "235/45R18"],
+        "350 F Sport": ["235/40R19"]
+      },
+      "discrepancies": ["235/50R17 not found in OEM specs"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2020,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "235/50R17"],
+      "verifiedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": {
+        "300h": ["215/55R17", "235/45R18"],
+        "350": ["215/55R17", "235/45R18"],
+        "350 F Sport": ["235/40R19"]
+      },
+      "discrepancies": ["235/50R17 not found in OEM specs"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "235/50R17"],
+      "verifiedTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "trims": {
+        "300h": ["215/55R17", "235/45R18"],
+        "350": ["215/55R17", "235/45R18"],
+        "350 F Sport": ["235/40R19"]
+      },
+      "discrepancies": ["235/50R17 not found in OEM specs"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2018,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "235/50R17"],
+      "verifiedTireSizes": ["215/55R17", "225/45R18"],
+      "trims": {
+        "300h": ["215/55R17"],
+        "350": ["215/55R17", "225/45R18"]
+      },
+      "discrepancies": ["235/45R18 not OEM - should be 225/45R18", "235/40R19 not OEM for 2018", "235/50R17 not OEM"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2017,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "verifiedTireSizes": ["215/55R17", "225/45R18"],
+      "trims": {
+        "300h": ["215/55R17"],
+        "350": ["215/55R17", "225/45R18"]
+      },
+      "discrepancies": ["235/45R18 not OEM - should be 225/45R18"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2016,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "verifiedTireSizes": ["215/55R17"],
+      "trims": {
+        "300h": ["215/55R17"],
+        "350": ["215/55R17"]
+      },
+      "discrepancies": ["235/45R18 not found in OEM specs for 2016"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2015,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "verifiedTireSizes": ["215/55R17"],
+      "trims": {
+        "300h": ["215/55R17"],
+        "350": ["215/55R17"]
+      },
+      "discrepancies": ["235/45R18 not found in OEM specs for 2015"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2014,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "verifiedTireSizes": ["215/55R17"],
+      "trims": {
+        "300h": ["215/55R17"],
+        "350": ["215/55R17"]
+      },
+      "discrepancies": ["235/45R18 not found in OEM specs for 2014"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2013,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "235/45R18", "225/45R18", "235/45ZR18", "235/40ZR19"],
+      "verifiedTireSizes": ["215/55R17"],
+      "trims": {
+        "300h": ["215/55R17"],
+        "350": ["215/55R17"]
+      },
+      "discrepancies": ["225/45R18 not OEM", "235/45R18 not OEM", "235/45ZR18 not OEM", "235/40ZR19 not OEM"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2012,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "225/45R18", "235/50R17", "235/45ZR18"],
+      "verifiedTireSizes": ["215/55R17"],
+      "trims": {
+        "350": ["215/55R17"]
+      },
+      "discrepancies": ["225/45R18 not OEM", "235/50R17 not OEM", "235/45ZR18 not OEM"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2011,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "verifiedTireSizes": ["215/55R17"],
+      "trims": {
+        "350": ["215/55R17"]
+      },
+      "discrepancies": ["225/45R18 not OEM for 2011"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2010,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "verifiedTireSizes": ["215/55R17"],
+      "trims": {
+        "350": ["215/55R17"]
+      },
+      "discrepancies": ["225/45R18 not OEM for 2010"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2009,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "verifiedTireSizes": ["215/55R17"],
+      "trims": {
+        "350": ["215/55R17"],
+        "350 Pebble Beach Edition": ["215/55R17"]
+      },
+      "discrepancies": ["225/45R18 not OEM for 2009"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2008,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "verifiedTireSizes": ["215/55R17"],
+      "trims": {
+        "350": ["215/55R17"],
+        "Pebble Beach Edition": ["215/55R17"]
+      },
+      "discrepancies": ["225/45R18 not OEM for 2008"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2007,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "verifiedTireSizes": ["215/55R17"],
+      "trims": {
+        "350": ["215/55R17"]
+      },
+      "discrepancies": ["225/45R18 not OEM for 2007"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2006,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "verifiedTireSizes": ["215/60R16", "215/55R17"],
+      "trims": {
+        "330": ["215/60R16", "215/55R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2005,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "verifiedTireSizes": ["215/60R16", "215/55R17"],
+      "trims": {
+        "330": ["215/60R16", "215/55R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2004,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "verifiedTireSizes": ["215/60R16"],
+      "trims": {
+        "330": ["215/60R16"]
+      },
+      "discrepancies": ["215/55R17 not OEM for 2004"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2003,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "verifiedTireSizes": ["215/60R16"],
+      "trims": {
+        "300": ["215/60R16"]
+      },
+      "discrepancies": ["215/55R17 not OEM for 2003"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2002,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "verifiedTireSizes": ["215/60R16"],
+      "trims": {
+        "300": ["215/60R16"]
+      },
+      "discrepancies": ["215/55R17 not OEM for 2002"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2001,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["205/65R15", "215/60R16"],
+      "verifiedTireSizes": ["205/60R16"],
+      "trims": {
+        "300": ["205/60R16"]
+      },
+      "discrepancies": ["205/65R15 not OEM", "215/60R16 not OEM - should be 205/60R16"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2000,
+      "make": "Lexus",
+      "model": "ES",
+      "currentTireSizes": ["205/65R15", "215/60R16"],
+      "verifiedTireSizes": ["205/60R16"],
+      "trims": {
+        "300": ["205/60R16"]
+      },
+      "discrepancies": ["205/65R15 not OEM", "215/60R16 not OEM - should be 205/60R16"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2020,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "verifiedTireSizes": ["235/45R18", "235/40R19", "265/35R19"],
+      "trims": {
+        "350": ["235/45R18", "235/40R19"],
+        "350 AWD": ["235/45R18", "235/40R19"],
+        "350 F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "350 F Sport AWD": ["235/40R19"],
+        "F": {"front": "255/35R19", "rear": "275/35R19", "staggered": true}
+      },
+      "discrepancies": ["225/50R17 not OEM for 2020 GS"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "verifiedTireSizes": ["235/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "trims": {
+        "300": ["235/50R17", "235/45R18"],
+        "300 F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "350": ["235/45R18", "235/40R19"],
+        "350 AWD": ["235/45R18", "235/40R19"],
+        "350 F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "350 F Sport AWD": ["235/40R19"],
+        "F": {"front": "255/35R19", "rear": "275/35R19", "staggered": true}
+      },
+      "discrepancies": ["225/50R17 not OEM - should be 235/50R17"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2018,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "verifiedTireSizes": ["235/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "trims": {
+        "300": ["235/50R17", "235/45R18"],
+        "300 F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "350": ["235/45R18", "235/40R19"],
+        "350 F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "350 F Sport AWD": ["235/40R19"],
+        "450h": ["235/45R18"],
+        "450h F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "F": {"front": "255/35R19", "rear": "275/35R19", "staggered": true}
+      },
+      "discrepancies": ["225/50R17 not OEM - should be 235/50R17"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2017,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "verifiedTireSizes": ["235/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "trims": {
+        "Turbo": ["235/50R17", "235/45R18"],
+        "Turbo F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "350 AWD": ["235/45R18"],
+        "350 RWD": ["235/45R18"],
+        "350 F Sport AWD": ["235/40R19"],
+        "350 F Sport RWD": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "450h": ["235/45R18"],
+        "450h F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "F": {"front": "255/35R19", "rear": "275/35R19", "staggered": true}
+      },
+      "discrepancies": ["225/50R17 not OEM - should be 235/50R17"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2016,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "verifiedTireSizes": ["235/50R17", "235/45R18", "235/40R19", "265/35R19", "255/35R19", "275/35R19"],
+      "trims": {
+        "200t": ["235/50R17", "235/45R18"],
+        "200t F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "350 AWD": ["235/45R18"],
+        "350 RWD": ["235/45R18"],
+        "350 F Sport AWD": ["235/40R19"],
+        "350 F Sport RWD": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "450h": ["235/45R18"],
+        "450h F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "F": {"front": "255/35R19", "rear": "275/35R19", "staggered": true}
+      },
+      "discrepancies": ["225/50R17 not OEM - should be 235/50R17"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2015,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "verifiedTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "trims": {
+        "350 AWD": ["225/50R17", "235/45R18"],
+        "350 RWD": ["225/50R17", "235/45R18"],
+        "350 F Sport AWD": ["235/40R19"],
+        "350 F Sport RWD": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "450h": ["225/50R17", "235/45R18"],
+        "450h F Sport": {"front": "235/40R19", "rear": "265/35R19", "staggered": true}
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2014,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "verifiedTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "trims": {
+        "350 AWD": ["225/50R17", "235/45R18"],
+        "350 RWD": ["225/50R17", "235/45R18"],
+        "350 F Sport AWD": ["235/40R19"],
+        "350 F Sport RWD": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "450h RWD": ["225/50R17", "235/45R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2013,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "verifiedTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "trims": {
+        "350 AWD": ["225/50R17", "235/45R18"],
+        "350 RWD": ["225/50R17", "235/45R18"],
+        "350 F Sport AWD": ["235/40R19"],
+        "350 F Sport RWD": {"front": "235/40R19", "rear": "265/35R19", "staggered": true},
+        "450h RWD": ["225/50R17", "235/45R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "235/45R18", "235/40R19", "265/35R19"],
+      "verifiedTireSizes": ["225/50R17", "245/40R18"],
+      "trims": {
+        "350 AWD": ["225/50R17"],
+        "350 RWD": ["225/50R17", "245/40R18"],
+        "450h RWD": ["245/40R18"],
+        "460 RWD": ["245/40R18"]
+      },
+      "discrepancies": ["235/45R18 not OEM - should be 245/40R18", "235/40R19 not OEM for 2012", "265/35R19 not OEM for 2012"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2011,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "245/40R18"],
+      "verifiedTireSizes": ["225/50R17", "245/40R18"],
+      "trims": {
+        "350 AWD": ["225/50R17"],
+        "350 RWD": ["225/50R17", "245/40R18"],
+        "450h RWD": ["245/40R18"],
+        "460 RWD": ["245/40R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "245/40R18"],
+      "verifiedTireSizes": ["225/50R17", "245/40R18"],
+      "trims": {
+        "350 AWD": ["225/50R17"],
+        "350 RWD": ["225/50R17", "245/40R18"],
+        "450h RWD": ["245/40R18"],
+        "460 RWD": ["245/40R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2009,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "245/40R18"],
+      "verifiedTireSizes": ["225/50R17", "245/40R18"],
+      "trims": {
+        "350 AWD": ["225/50R17"],
+        "350 RWD": ["225/50R17", "245/40R18"],
+        "450h": ["245/40R18"],
+        "460": ["245/40R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2008,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "245/40R18"],
+      "verifiedTireSizes": ["225/50R17", "245/40R18"],
+      "trims": {
+        "350 AWD": ["225/50R17"],
+        "350 RWD": ["225/50R17", "245/40R18"],
+        "450h": ["245/40R18"],
+        "460": ["245/40R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "245/40R18"],
+      "verifiedTireSizes": ["225/50R17", "245/40R18"],
+      "trims": {
+        "350 AWD": ["225/50R17"],
+        "350 RWD": ["225/50R17", "245/40R18"],
+        "430": ["245/40R18"],
+        "450h": ["245/40R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/50R17", "245/40R18"],
+      "verifiedTireSizes": ["225/50R17", "245/40R18"],
+      "trims": {
+        "300 AWD": ["225/50R17"],
+        "300 RWD": ["225/50R17"],
+        "430": ["245/40R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2005,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/55R16", "235/45R17"],
+      "verifiedTireSizes": ["215/60R16", "225/55R16", "235/45R17"],
+      "trims": {
+        "300": ["215/60R16", "225/55R16"],
+        "430": ["225/55R16", "235/45R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2004,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/55R16", "235/45R17"],
+      "verifiedTireSizes": ["215/60R16", "225/55R16", "235/45R17"],
+      "trims": {
+        "300": ["215/60R16", "225/55R16"],
+        "430": ["225/55R16", "235/45R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2003,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/55R16", "235/45R17"],
+      "verifiedTireSizes": ["215/60R16", "225/55R16", "235/45R17"],
+      "trims": {
+        "300": ["215/60R16", "225/55R16"],
+        "430": ["225/55R16", "235/45R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2002,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/55R16", "235/45R17"],
+      "verifiedTireSizes": ["215/60R16", "225/55R16", "235/45R17"],
+      "trims": {
+        "300": ["215/60R16", "225/55R16"],
+        "430": ["225/55R16", "235/45R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2001,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/55R16", "235/45R17"],
+      "verifiedTireSizes": ["215/60R16", "225/55R16", "235/45R17"],
+      "trims": {
+        "300": ["215/60R16", "225/55R16"],
+        "430": ["225/55R16", "235/45R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2000,
+      "make": "Lexus",
+      "model": "GS",
+      "currentTireSizes": ["225/55R16", "235/45R17"],
+      "verifiedTireSizes": ["215/60R16", "225/55R16", "235/45R17"],
+      "trims": {
+        "300": ["215/60R16", "225/55R16"],
+        "400": ["225/55R16", "235/45R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "Lexus",
+      "model": "GS-F",
+      "currentTireSizes": [],
+      "verifiedTireSizes": ["255/35R19", "275/35R19"],
+      "trims": {
+        "GS-F": {"front": "255/35R19", "rear": "275/35R19", "staggered": true}
+      },
+      "discrepancies": ["MISSING ALL TIRE SIZES"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "GS-F",
+      "currentTireSizes": [],
+      "verifiedTireSizes": ["255/35R19", "275/35R19"],
+      "trims": {
+        "GS-F": {"front": "255/35R19", "rear": "275/35R19", "staggered": true}
+      },
+      "discrepancies": ["MISSING ALL TIRE SIZES"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2018,
+      "make": "Lexus",
+      "model": "GS-F",
+      "currentTireSizes": [],
+      "verifiedTireSizes": ["255/35R19", "275/35R19"],
+      "trims": {
+        "GS-F": {"front": "255/35R19", "rear": "275/35R19", "staggered": true}
+      },
+      "discrepancies": ["MISSING ALL TIRE SIZES"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2017,
+      "make": "Lexus",
+      "model": "GS-F",
+      "currentTireSizes": [],
+      "verifiedTireSizes": ["255/35R19", "275/35R19"],
+      "trims": {
+        "GS-F": {"front": "255/35R19", "rear": "275/35R19", "staggered": true}
+      },
+      "discrepancies": ["MISSING ALL TIRE SIZES"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2016,
+      "make": "Lexus",
+      "model": "GS-F",
+      "currentTireSizes": [],
+      "verifiedTireSizes": ["255/35R19", "275/35R19"],
+      "trims": {
+        "GS-F": {"front": "255/35R19", "rear": "275/35R19", "staggered": true}
+      },
+      "discrepancies": ["MISSING ALL TIRE SIZES"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2015,
+      "make": "Lexus",
+      "model": "GS-F",
+      "currentTireSizes": [],
+      "verifiedTireSizes": [],
+      "trims": {},
+      "notes": "GS-F launched in 2016 model year - 2015 GS-F does not exist",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2026,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/70R18", "265/45R22"],
+      "verifiedTireSizes": ["265/70R18", "265/55R20", "265/50R22"],
+      "trims": {
+        "550 Luxury": ["265/50R22"],
+        "550 Overtrail": ["265/70R18"],
+        "550 Premium": ["265/55R20"]
+      },
+      "discrepancies": ["265/45R22 not OEM - should be 265/50R22", "missing 265/55R20"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2025,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/70R18", "265/45R22"],
+      "verifiedTireSizes": ["265/70R18", "265/55R20", "265/50R22"],
+      "trims": {
+        "550 Luxury": ["265/50R22"],
+        "550 Overtrail": ["265/70R18"],
+        "550 Premium": ["265/55R20"]
+      },
+      "discrepancies": ["265/45R22 not OEM - should be 265/50R22", "missing 265/55R20"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2024,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/70R18", "265/45R22"],
+      "verifiedTireSizes": ["265/70R18", "265/55R20", "265/50R22"],
+      "trims": {
+        "550 Luxury": ["265/50R22"],
+        "550 Overtrail": ["265/70R18"],
+        "550 Premium": ["265/55R20"]
+      },
+      "discrepancies": ["265/45R22 not OEM - should be 265/50R22", "missing 265/55R20"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2023,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/60R18", "265/70R18", "265/55R20", "265/50R22"],
+      "verifiedTireSizes": ["265/60R18", "265/55R19"],
+      "trims": {
+        "460": ["265/60R18"],
+        "460 Luxury": ["265/55R19"],
+        "460 Premium": ["265/60R18", "265/55R19"],
+        "Black Line Edition": ["265/60R18"]
+      },
+      "discrepancies": ["265/70R18 not OEM for 2023 GX460", "265/55R20 not OEM for 2023 GX460", "265/50R22 not OEM for 2023 GX460"],
+      "notes": "2023 was last year of GX460, GX550 started 2024",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2022,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/60R18"],
+      "verifiedTireSizes": ["265/60R18", "265/55R19"],
+      "trims": {
+        "460": ["265/60R18"],
+        "460 Luxury": ["265/55R19"],
+        "460 Premium": ["265/60R18", "265/55R19"],
+        "Black Line Edition": ["265/60R18"]
+      },
+      "discrepancies": ["missing 265/55R19 for Luxury/Premium trims"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2021,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/60R18", "285/55R18", "265/55R19", "265/50R20", "305/45ZR20"],
+      "verifiedTireSizes": ["265/60R18", "265/55R19"],
+      "trims": {
+        "460": ["265/60R18"],
+        "460 Luxury": ["265/55R19"],
+        "460 Premium": ["265/60R18", "265/55R19"]
+      },
+      "discrepancies": ["285/55R18 not OEM", "265/50R20 not OEM", "305/45ZR20 not OEM"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2020,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/60R18"],
+      "verifiedTireSizes": ["265/60R18", "265/55R19"],
+      "trims": {
+        "460": ["265/60R18"],
+        "460 Luxury": ["265/55R19"],
+        "460 Premium": ["265/60R18", "265/55R19"]
+      },
+      "discrepancies": ["missing 265/55R19 for Luxury/Premium trims"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/60R18"],
+      "verifiedTireSizes": ["265/60R18"],
+      "trims": {
+        "460": ["265/60R18"],
+        "460 Luxury": ["265/60R18"],
+        "460 Premium": ["265/60R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2018,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/60R18"],
+      "verifiedTireSizes": ["265/60R18"],
+      "trims": {
+        "460": ["265/60R18"],
+        "460 Luxury": ["265/60R18"],
+        "460 Premium": ["265/60R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/60R18", "285/55R18", "265/55R19", "265/50R20", "305/45ZR20"],
+      "verifiedTireSizes": ["265/60R18"],
+      "trims": {
+        "460": ["265/60R18"],
+        "460 Luxury": ["265/60R18"],
+        "460 Premium": ["265/60R18"]
+      },
+      "discrepancies": ["285/55R18 not OEM", "265/55R19 not OEM for 2017", "265/50R20 not OEM", "305/45ZR20 not OEM"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2016,
+      "make": "Lexus",
+      "model": "GX",
+      "currentTireSizes": ["265/60R18"],
+      "verifiedTireSizes": ["265/60R18"],
+      "trims": {
+        "460": ["265/60R18"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 23,
+    "needsUpdate": 50,
+    "invalidYear": 2,
+    "staggeredSetups": [
+      "Lexus GS 350 F Sport RWD (2013-2020): 235/40R19 front, 265/35R19 rear",
+      "Lexus GS F (2016-2020): 255/35R19 front, 275/35R19 rear",
+      "Lexus GS-F (2016-2020): 255/35R19 front, 275/35R19 rear"
+    ],
+    "majorIssues": [
+      "Range Rover Velar: All years have wrong tire sizes (275/45R20, 275/40R21, 285/35R22 should be 255/50R20, 265/45R21, 265/40R22)",
+      "Lexus ES pre-2019: 225/45R18 incorrectly listed as 235/45R18",
+      "Lexus GS-F (2016-2020): ALL tire sizes missing - needs 255/35R19 front, 275/35R19 rear (staggered)",
+      "Lexus GX 2024-2026: Wrong 22\" size (265/45R22 should be 265/50R22), missing 265/55R20"
+    ]
+  }
+}

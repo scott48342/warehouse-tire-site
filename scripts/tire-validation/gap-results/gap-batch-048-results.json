@@ -1,0 +1,511 @@
+{
+  "batchId": 48,
+  "processedAt": "2026-04-21T23:59:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 36,
+    "usMarket": 14,
+    "notes": "Most vehicles in this batch are JDM/foreign market Mitsubishi models not sold in the US"
+  },
+  "vehicles": [
+    {
+      "year": 2014,
+      "make": "mitsubishi",
+      "model": "galant",
+      "notUS": true,
+      "reason": "Galant discontinued in US after 2012",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "gto",
+      "notUS": true,
+      "reason": "JDM name - US version was 3000GT (ended 1999)",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "i",
+      "notUS": true,
+      "reason": "JDM kei car - US only got i-MiEV (electric) starting 2012",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "i",
+      "notUS": true,
+      "reason": "JDM kei car - US only got i-MiEV (electric) starting 2012",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "i",
+      "notUS": true,
+      "reason": "JDM kei car - US only got i-MiEV (electric) starting 2012",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "i",
+      "notUS": true,
+      "reason": "JDM kei car - US only got i-MiEV (electric) starting 2012",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "i",
+      "notUS": true,
+      "reason": "JDM kei car - US only got i-MiEV (electric) starting 2012",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2010,
+      "make": "mitsubishi",
+      "model": "i",
+      "notUS": true,
+      "reason": "JDM kei car - US only got i-MiEV (electric) starting 2012",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2011,
+      "make": "mitsubishi",
+      "model": "i",
+      "notUS": true,
+      "reason": "JDM kei car - US only got i-MiEV (electric) starting 2012",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2012,
+      "make": "mitsubishi",
+      "model": "i",
+      "notUS": true,
+      "reason": "Wrong model name - US version was called i-MiEV (electric), not 'i'",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "i",
+      "notUS": true,
+      "reason": "Wrong model name - US version was called i-MiEV (electric), not 'i'",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "l400",
+      "notUS": true,
+      "reason": "JDM van not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "l400",
+      "notUS": true,
+      "reason": "JDM van not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "notUS": true,
+      "reason": "Lancer not sold in US until 2002",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "lancer",
+      "notUS": true,
+      "reason": "Lancer not sold in US until 2002",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "notUS": true,
+      "reason": "Lancer Evolution not sold in US until 2003 (Evo VIII)",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "notUS": true,
+      "reason": "Lancer Evolution not sold in US until 2003 (Evo VIII)",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "notUS": true,
+      "reason": "Lancer Evolution not sold in US until 2003 (Evo VIII)",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "notUS": true,
+      "reason": "No Evolution sold in US for 2007 (gap between Evo IX ending 2006 and Evo X arriving 2008)",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2016,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "notUS": true,
+      "reason": "Lancer Evolution discontinued in US after 2015 Final Edition",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2017,
+      "make": "mitsubishi",
+      "model": "lancer-evolution",
+      "notUS": true,
+      "reason": "Lancer Evolution discontinued in US after 2015 Final Edition",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "legnum",
+      "notUS": true,
+      "reason": "JDM wagon not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "legnum",
+      "notUS": true,
+      "reason": "JDM wagon not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "legnum",
+      "notUS": true,
+      "reason": "JDM wagon not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "magna",
+      "notUS": true,
+      "reason": "Australian market vehicle not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "magna",
+      "notUS": true,
+      "reason": "Australian market vehicle not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "magna",
+      "notUS": true,
+      "reason": "Australian market vehicle not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "magna",
+      "notUS": true,
+      "reason": "Australian market vehicle not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "magna",
+      "notUS": true,
+      "reason": "Australian market vehicle not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "magna",
+      "notUS": true,
+      "reason": "Australian market vehicle not sold in US",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "maven",
+      "notUS": true,
+      "reason": "Unknown model - not a recognized Mitsubishi vehicle in any market",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "maven",
+      "notUS": true,
+      "reason": "Unknown model - not a recognized Mitsubishi vehicle in any market",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "maven",
+      "notUS": true,
+      "reason": "Unknown model - not a recognized Mitsubishi vehicle in any market",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "maven",
+      "notUS": true,
+      "reason": "Unknown model - not a recognized Mitsubishi vehicle in any market",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "maven",
+      "notUS": true,
+      "reason": "Unknown model - not a recognized Mitsubishi vehicle in any market",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "mirage-asti",
+      "notUS": true,
+      "reason": "JDM coupe variant not sold in US",
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": true,
+      "reason": "Mirage G4 not sold in US until 2017 (2013-2016 was Philippines/other markets only)",
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2014,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": true,
+      "reason": "Mirage G4 not sold in US until 2017 (2013-2016 was Philippines/other markets only)",
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2015,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": true,
+      "reason": "Mirage G4 not sold in US until 2017 (2013-2016 was Philippines/other markets only)",
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2016,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": true,
+      "reason": "Mirage G4 not sold in US until 2017 (2013-2016 was Philippines/other markets only)",
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2017,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          {"trim": "ES", "tireSize": "165/65R14", "wheelDiameter": 14},
+          {"trim": "SE", "tireSize": "175/55R15", "wheelDiameter": 15}
+        ]
+      },
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2018,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          {"trim": "ES", "tireSize": "165/65R14", "wheelDiameter": 14},
+          {"trim": "SE", "tireSize": "175/55R15", "wheelDiameter": 15}
+        ]
+      },
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2019,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          {"trim": "ES", "tireSize": "165/65R14", "wheelDiameter": 14},
+          {"trim": "SE", "tireSize": "175/55R15", "wheelDiameter": 15}
+        ]
+      },
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2020,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          {"trim": "ES", "tireSize": "165/65R14", "wheelDiameter": 14},
+          {"trim": "LE", "tireSize": "175/55R15", "wheelDiameter": 15},
+          {"trim": "SE", "tireSize": "175/55R15", "wheelDiameter": 15}
+        ]
+      },
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2021,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          {"trim": "ES", "tireSize": "165/65R14", "wheelDiameter": 14},
+          {"trim": "LE", "tireSize": "175/55R15", "wheelDiameter": 15},
+          {"trim": "SE", "tireSize": "175/55R15", "wheelDiameter": 15}
+        ]
+      },
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2022,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          {"trim": "BE", "tireSize": "175/55R15", "wheelDiameter": 15},
+          {"trim": "ES", "tireSize": "165/65R14", "wheelDiameter": 14},
+          {"trim": "LE", "tireSize": "175/55R15", "wheelDiameter": 15},
+          {"trim": "SE", "tireSize": "175/55R15", "wheelDiameter": 15}
+        ]
+      },
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2023,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          {"trim": "BE", "tireSize": "175/55R15", "wheelDiameter": 15},
+          {"trim": "ES", "tireSize": "165/65R14", "wheelDiameter": 14},
+          {"trim": "LE", "tireSize": "175/55R15", "wheelDiameter": 15},
+          {"trim": "SE", "tireSize": "175/55R15", "wheelDiameter": 15}
+        ]
+      },
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2024,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          {"trim": "BE", "tireSize": "175/55R15", "wheelDiameter": 15},
+          {"trim": "ES", "tireSize": "165/65R14", "wheelDiameter": 14},
+          {"trim": "LE", "tireSize": "175/55R15", "wheelDiameter": 15},
+          {"trim": "SE", "tireSize": "175/55R15", "wheelDiameter": 15}
+        ]
+      },
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2025,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "notUS": true,
+      "reason": "Not yet listed on tiresize.com - 2025 model year data not available",
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "toppo-bj",
+      "notUS": true,
+      "reason": "JDM kei car not sold in US",
+      "missingWheels": true,
+      "missingTires": true
+    }
+  ]
+}

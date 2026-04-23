@@ -1,0 +1,1246 @@
+{
+  "batchId": "13",
+  "processedAt": "2026-04-21T20:55:00Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 44 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 44 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 44 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 44 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 43 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 43 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 43 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 43 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "c2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 124.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "lugNutThread": "M14x1.5",
+        "notes": "HD models use 8-lug pattern; light duty uses 6x139.7"
+      },
+      "source": "tirewheelguide.com, wheel-sizes.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "c3500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 124.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "lugNutThread": "M14x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "c3500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 124.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "lugNutThread": "M14x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "c3500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 124.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "lugNutThread": "M14x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "c3500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 124.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "lugNutThread": "M14x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "c3500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 124.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "lugNutThread": "M14x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "caprice",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Middle East/Australian export market; check specific market variant"
+      },
+      "source": "roadkillcustoms.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "caprice",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Middle East/Australian export market"
+      },
+      "source": "roadkillcustoms.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "caprice",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Middle East/Australian export market"
+      },
+      "source": "roadkillcustoms.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "caprice",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Middle East/Australian export market"
+      },
+      "source": "roadkillcustoms.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "caprice",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Middle East/Australian export market"
+      },
+      "source": "roadkillcustoms.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "caprice",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Middle East/Australian export market"
+      },
+      "source": "roadkillcustoms.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "caprice",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Middle East/Australian export market"
+      },
+      "source": "roadkillcustoms.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "caprice",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Middle East/Australian export market"
+      },
+      "source": "roadkillcustoms.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "caprice",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Middle East/Australian export market"
+      },
+      "source": "roadkillcustoms.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "caprice",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Middle East/Australian export market"
+      },
+      "source": "roadkillcustoms.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ],
+        "lugNutThread": "M14x1.5",
+        "notes": "Also known as Silverado/C/K series"
+      },
+      "source": "originalwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ],
+        "lugNutThread": "M14x1.5",
+        "notes": "Also known as Silverado/C/K series"
+      },
+      "source": "originalwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ],
+        "lugNutThread": "M14x1.5",
+        "notes": "Also known as Silverado/C/K series"
+      },
+      "source": "originalwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ],
+        "lugNutThread": "M14x1.5",
+        "notes": "Also known as Silverado/C/K series"
+      },
+      "source": "originalwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "colorado",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 66.9,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 7, "offset": 33 },
+          { "diameter": 17, "width": 7, "offset": 30 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "orionmotortech.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "colorado",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 66.9,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 7, "offset": 33 },
+          { "diameter": 17, "width": 7, "offset": 30 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "orionmotortech.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "colorado",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 66.9,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 7, "offset": 33 },
+          { "diameter": 17, "width": 7, "offset": 30 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "orionmotortech.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "colorado",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 66.9,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 7, "offset": 33 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "orionmotortech.com, hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 43 },
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Latin America market (Brazil, Argentina)"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 43 },
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Latin America market"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 43 },
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Latin America market"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 43 },
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Latin America market"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 43 },
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Latin America market"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 43 },
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Latin America market"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 43 },
+          { "diameter": 14, "width": 5.5, "offset": 43 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Latin America market"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 43 },
+          { "diameter": 14, "width": 5.5, "offset": 43 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Latin America market"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "cruze-limited",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 41 },
+          { "diameter": 17, "width": 7.5, "offset": 44 },
+          { "diameter": 18, "width": 7.5, "offset": 44 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "cruze-limited",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 41 },
+          { "diameter": 17, "width": 7.5, "offset": 44 },
+          { "diameter": 18, "width": 7.5, "offset": 44 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 41 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Brazil market vehicle"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 41 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Brazil market vehicle"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 41 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Brazil market vehicle"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 41 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Brazil market vehicle"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "wheelSpecs": {
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 41 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Brazil market vehicle"
+      },
+      "source": "multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7.5, "offset": 40 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7.5, "offset": 40 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7.5, "offset": 40 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7.5, "offset": 40 },
+          { "diameter": 19, "width": 7.5, "offset": 45 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7.5, "offset": 40 },
+          { "diameter": 19, "width": 7.5, "offset": 45 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7.5, "offset": 40 },
+          { "diameter": 19, "width": 7.5, "offset": 45 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7.5, "offset": 40 },
+          { "diameter": 19, "width": 7.5, "offset": 45 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7.5, "offset": 40 },
+          { "diameter": 19, "width": 7.5, "offset": 45 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7.5, "offset": 40 },
+          { "diameter": 19, "width": 7.5, "offset": 45 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7.5, "offset": 38 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7.5, "offset": 38 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7.5, "offset": 38 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7.5, "offset": 38 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "equinox",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7.5, "offset": 38 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "autofiles.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "evanda",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 44 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Based on Daewoo Magnus/Evanda platform"
+      },
+      "source": "tirewheelguide.com (Daewoo Evanda)",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "evanda",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 44 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Based on Daewoo Magnus/Evanda platform"
+      },
+      "source": "tirewheelguide.com (Daewoo Evanda)",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "evanda",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 44 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Based on Daewoo Magnus/Evanda platform"
+      },
+      "source": "tirewheelguide.com (Daewoo Evanda)",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "evanda",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 56.6,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 44 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "lugNutThread": "M12x1.5",
+        "notes": "Based on Daewoo Magnus/Evanda platform"
+      },
+      "source": "tirewheelguide.com (Daewoo Evanda)",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "hhr",
+      "wheelSpecs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 39 },
+          { "diameter": 17, "width": 6.5, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheelssize.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "hhr",
+      "wheelSpecs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 39 },
+          { "diameter": 17, "width": 6.5, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheelssize.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "hhr",
+      "wheelSpecs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 39 },
+          { "diameter": 17, "width": 6.5, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheelssize.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "hhr",
+      "wheelSpecs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 39 },
+          { "diameter": 17, "width": 6.5, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheelssize.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "hhr",
+      "wheelSpecs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 39 },
+          { "diameter": 17, "width": 6.5, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheelssize.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "hhr",
+      "wheelSpecs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 39 },
+          { "diameter": 17, "width": 6.5, "offset": 39 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheelssize.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "hhr-ss",
+      "wheelSpecs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 42 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com, hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "hhr-ss",
+      "wheelSpecs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 42 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com, hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "hhr-ss",
+      "wheelSpecs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 42 }
+        ],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com, hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "impala",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 52 },
+          { "diameter": 18, "width": 8, "offset": 40 },
+          { "diameter": 19, "width": 8.5, "offset": 32 },
+          { "diameter": 20, "width": 8.5, "offset": 29 }
+        ],
+        "lugNutThread": "M14x1.5"
+      },
+      "source": "wheelssize.com, car-bolts.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "processed": 75,
+    "successful": 75,
+    "failed": 0,
+    "highConfidence": 65,
+    "mediumConfidence": 10,
+    "lowConfidence": 0
+  },
+  "notes": [
+    "Caprice 2000-2010: These years represent Middle East/Australian export models or may need verification as US Caprice was discontinued 1996-2010",
+    "Corsa Classic: Latin America market only (Brazil, Argentina)",
+    "Cruze Sport6 RS: Brazil market only",
+    "Evanda: Based on Daewoo Magnus platform, sold as Chevrolet in some markets",
+    "C2500/C3500: Heavy-duty trucks use 8x165.1 bolt pattern"
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "batchId": "64",
+  "totalBatches": 65,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2004,
+      "make": "volkswagen",
+      "model": "sedan"
+    },
+    {
+      "year": 2003,
+      "make": "volkswagen",
+      "model": "sedan"
+    },
+    {
+      "year": 2002,
+      "make": "volkswagen",
+      "model": "sedan"
+    },
+    {
+      "year": 2001,
+      "make": "volkswagen",
+      "model": "sedan"
+    },
+    {
+      "year": 2000,
+      "make": "volkswagen",
+      "model": "sedan"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "sportvan"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "sportvan"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "sportvan"
+    },
+    {
+      "year": 2007,
+      "make": "volkswagen",
+      "model": "sportvan"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "tacqua"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "tacqua"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "tacqua"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "tacqua"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "tacqua"
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "taigo"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "taigo"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "taigo"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "taigo"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "taigo"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "taos"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "tayron-gte"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "tayron-gte"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "tayron-gte"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "tayron-gte"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "tharu-xr"
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "tharu-xr"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "tharu-xr"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "tiguan"
+    },
+    {
+      "year": 2007,
+      "make": "volkswagen",
+      "model": "tiguan"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "tiguan-limited"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "tiguan-limited"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "touareg"
+    },
+    {
+      "year": 2003,
+      "make": "volkswagen",
+      "model": "touareg"
+    },
+    {
+      "year": 2002,
+      "make": "volkswagen",
+      "model": "touareg"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "xl1"
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "xl1"
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "xl1"
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "xl1"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "c40"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "c40"
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "c40"
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "c40"
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "c40"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ec40"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ec40"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ec40"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "em90"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "em90"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "em90"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "es90"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "es90"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex30"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex30"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ex30"
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "ex30"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex30-cross-country"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex30-cross-country"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex40"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex40"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ex40"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex90"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex90"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ex90"
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "ex90"
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "s40"
+    },
+    {
+      "year": 2011,
+      "make": "volvo",
+      "model": "s40"
+    },
+    {
+      "year": 2010,
+      "make": "volvo",
+      "model": "s40"
+    },
+    {
+      "year": 2009,
+      "make": "volvo",
+      "model": "s40"
+    },
+    {
+      "year": 2008,
+      "make": "volvo",
+      "model": "s40"
+    },
+    {
+      "year": 2007,
+      "make": "volvo",
+      "model": "s40"
+    },
+    {
+      "year": 2006,
+      "make": "volvo",
+      "model": "s40"
+    },
+    {
+      "year": 2005,
+      "make": "volvo",
+      "model": "s40"
+    },
+    {
+      "year": 2004,
+      "make": "volvo",
+      "model": "s40"
+    },
+    {
+      "year": 2003,
+      "make": "volvo",
+      "model": "s40"
+    },
+    {
+      "year": 2002,
+      "make": "volvo",
+      "model": "s40"
+    }
+  ]
+}

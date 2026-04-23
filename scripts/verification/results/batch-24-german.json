@@ -1,0 +1,1596 @@
+{
+  "batch": "batch-24-german",
+  "verifiedAt": "2026-04-23T00:41:00Z",
+  "totalVehicles": 75,
+  "validVehicles": 43,
+  "invalidVehicles": 32,
+  "invalidModelYears": [
+    {
+      "year": 2002,
+      "make": "BMW",
+      "model": "Z4",
+      "reason": "Z4 not sold in US until 2003 model year. E85 launched November 2002 as MY2003."
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "Z4",
+      "reason": "No Z4 sold in US 2017-2018. E89 ended 2016, G29 started 2019."
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "Z4",
+      "reason": "No Z4 sold in US 2017-2018. E89 ended 2016, G29 started 2019."
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "A-Class not sold in US until 2019. Mercedes-AMG A35 sedan was first US A-Class."
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "A-Class not sold in US until 2019. Mercedes-AMG A35 sedan was first US A-Class."
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "A-Class not sold in US until 2019. Mercedes-AMG A35 sedan was first US A-Class."
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "A-Class not sold in US until 2019. Mercedes-AMG A35 sedan was first US A-Class."
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "A-Class not sold in US until 2019. Mercedes-AMG A35 sedan was first US A-Class."
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "A-Class not sold in US until 2019. Mercedes-AMG A35 sedan was first US A-Class."
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "Mercedes-AMG A35 discontinued in US after 2021 model year."
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "Mercedes-AMG A35 discontinued in US after 2021 model year."
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "Mercedes-AMG A35 discontinued in US after 2021 model year."
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "Mercedes-AMG A35 discontinued in US after 2021 model year."
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "reason": "Mercedes-AMG A35 discontinued in US after 2021 model year."
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "AMG GT",
+      "reason": "AMG GT not sold in US until 2015. GT S launched April 2015, base GT spring 2016."
+    }
+  ],
+  "vehicles": [
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X6 M",
+      "generation": "F86",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com", "goodyear.com"],
+      "notes": "F86 generation (2015-2019). E-chassis bolt pattern 5x120."
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "X6 M",
+      "generation": "F86",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "F86 generation (2015-2019). E-chassis bolt pattern 5x120."
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X6 M",
+      "generation": "F86",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Last year of F86 generation."
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X6 M",
+      "generation": "F96",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        },
+        {
+          "name": "Competition",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "First year of F96 generation. G-chassis switched to 5x112."
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X6 M",
+      "generation": "F96",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        },
+        {
+          "name": "Competition",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "F96 generation."
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X6 M",
+      "generation": "F96",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        },
+        {
+          "name": "Competition",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "F96 generation, last year before LCI."
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X6 M",
+      "generation": "F96 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        },
+        {
+          "name": "Competition",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "F96 LCI (facelift) generation."
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X6 M",
+      "generation": "F96 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        },
+        {
+          "name": "Competition",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "F96 LCI (facelift) generation."
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X6 M",
+      "generation": "F96 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        },
+        {
+          "name": "Competition",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "medium",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "Future model year. Specs projected based on current generation."
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X6 M",
+      "generation": "F96 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        },
+        {
+          "name": "Competition",
+          "oemWheelSize": "21x10/21x11.5 staggered",
+          "oemTireSize": "285/35R21 front, 325/30R21 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "medium",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "Future model year. Specs projected based on current generation."
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X7",
+      "generation": "G07",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "xDrive40i",
+          "oemWheelSize": "20x9/21x10 or 22x10/22x10.5",
+          "oemTireSize": "285/45R21 or 275/40R22 front, 315/35R22 rear"
+        },
+        {
+          "name": "xDrive50i",
+          "oemWheelSize": "20x9/21x10 or 22x10/22x10.5",
+          "oemTireSize": "285/45R21 or 275/40R22 front, 315/35R22 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "First year of G07 generation. Staggered setup optional on 22\" wheels."
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X7",
+      "generation": "G07",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "xDrive40i",
+          "oemWheelSize": "20x9/21x10 or 22x10/22x10.5",
+          "oemTireSize": "285/45R21 or 275/40R22 front, 315/35R22 rear"
+        },
+        {
+          "name": "xDrive50i",
+          "oemWheelSize": "20x9/21x10 or 22x10/22x10.5",
+          "oemTireSize": "285/45R21 or 275/40R22 front, 315/35R22 rear"
+        },
+        {
+          "name": "M50i",
+          "oemWheelSize": "21x10 or 22x10/22x10.5",
+          "oemTireSize": "285/45R21 or 275/40R22 front, 315/35R22 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "G07 generation. M50i added."
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X7",
+      "generation": "G07",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "xDrive40i",
+          "oemWheelSize": "20x9/21x10 or 22x10/22x10.5",
+          "oemTireSize": "285/45R21 or 275/40R22 front, 315/35R22 rear"
+        },
+        {
+          "name": "xDrive50i",
+          "oemWheelSize": "20x9/21x10 or 22x10/22x10.5",
+          "oemTireSize": "285/45R21 or 275/40R22 front, 315/35R22 rear"
+        },
+        {
+          "name": "M50i",
+          "oemWheelSize": "21x10 or 22x10/22x10.5",
+          "oemTireSize": "285/45R21 or 275/40R22 front, 315/35R22 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "G07 generation."
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X7",
+      "generation": "G07",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "xDrive40i",
+          "oemWheelSize": "20x9/21x10 or 22x10/22x10.5",
+          "oemTireSize": "285/45R21 or 275/40R22 front, 315/35R22 rear"
+        },
+        {
+          "name": "M50i",
+          "oemWheelSize": "21x10 or 22x10/22x10.5",
+          "oemTireSize": "285/45R21 or 275/40R22 front, 315/35R22 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Last year before G07 LCI facelift."
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X7",
+      "generation": "G07 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "xDrive40i",
+          "oemWheelSize": "21x10 / 22x10/22x10.5 / 23x10/23x11",
+          "oemTireSize": "285/45R21 or 275/40R22/315/35R22 or 275/35R23/315/30R23"
+        },
+        {
+          "name": "M60i",
+          "oemWheelSize": "21x10 / 22x10/22x10.5 / 23x10/23x11",
+          "oemTireSize": "285/45R21 or 275/40R22/315/35R22 or 275/35R23/315/30R23"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "G07 LCI facelift. 23\" wheels now available. M60i replaces M50i."
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X7",
+      "generation": "G07 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "xDrive40i",
+          "oemWheelSize": "21x10 / 22x10/22x10.5 / 23x10/23x11",
+          "oemTireSize": "285/45R21 or 275/40R22/315/35R22 or 275/35R23/315/30R23"
+        },
+        {
+          "name": "M60i",
+          "oemWheelSize": "21x10 / 22x10/22x10.5 / 23x10/23x11",
+          "oemTireSize": "285/45R21 or 275/40R22/315/35R22 or 275/35R23/315/30R23"
+        },
+        {
+          "name": "XB7",
+          "oemWheelSize": "23x10/23x11 staggered",
+          "oemTireSize": "285/35R23 front, 325/30R23 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "G07 LCI. Alpina XB7 available."
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X7",
+      "generation": "G07 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "xDrive40i",
+          "oemWheelSize": "21x10 / 22x10/22x10.5 / 23x10/23x11",
+          "oemTireSize": "285/45R21 or 275/40R22/315/35R22 or 275/35R23/315/30R23"
+        },
+        {
+          "name": "M60i",
+          "oemWheelSize": "21x10 / 22x10/22x10.5 / 23x10/23x11",
+          "oemTireSize": "285/45R21 or 275/40R22/315/35R22 or 275/35R23/315/30R23"
+        },
+        {
+          "name": "XB7",
+          "oemWheelSize": "23x10/23x11 staggered",
+          "oemTireSize": "285/35R23 front, 325/30R23 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "medium",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Future model year. Specs projected based on 2025."
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "XM",
+      "generation": "G09",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "22x9.5/22x10.5 or 23x9.5/23x11",
+          "oemTireSize": "275/40R22/315/35R22 or 275/35R23/315/30R23"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "prioritytire.com"],
+      "notes": "First BMW M-specific SUV. G-chassis 5x112 bolt pattern."
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "XM",
+      "generation": "G09",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "22x9.5/22x10.5 or 23x9.5/23x11",
+          "oemTireSize": "275/40R22/315/35R22 or 275/35R23/315/30R23"
+        },
+        {
+          "name": "Label Red",
+          "oemWheelSize": "23x9.5/23x11",
+          "oemTireSize": "275/35R23 front, 315/30R23 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "prioritytire.com"],
+      "notes": "G09 generation. Label Red is high-performance variant."
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "XM",
+      "generation": "G09",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "22x9.5/22x10.5 or 23x9.5/23x11",
+          "oemTireSize": "275/40R22/315/35R22 or 275/35R23/315/30R23"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "G09 generation."
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "XM",
+      "generation": "G09",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "22x9.5/22x10.5 or 23x9.5/23x11",
+          "oemTireSize": "275/40R22/315/35R22 or 275/35R23/315/30R23"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "medium",
+      "sources": ["tiresize.com"],
+      "notes": "Future model year. Specs projected based on current generation."
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "Z3",
+      "generation": "E36/7",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "Roadster 2.3",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/50R16"
+        },
+        {
+          "name": "Roadster 2.8",
+          "oemWheelSize": "16x7 or 17x7.5/17x8.5",
+          "oemTireSize": "225/50R16 or 225/45R17 front, 245/40R17 rear"
+        },
+        {
+          "name": "Coupe 2.8",
+          "oemWheelSize": "16x7 or 17x7.5/17x8.5",
+          "oemTireSize": "225/50R16 or 225/45R17 front, 245/40R17 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E36/7 generation (1996-2002). Staggered on sport trims."
+    },
+    {
+      "year": 2001,
+      "make": "BMW",
+      "model": "Z3",
+      "generation": "E36/7",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "Roadster 2.5i",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/50R16"
+        },
+        {
+          "name": "Roadster 3.0",
+          "oemWheelSize": "17x7.5/17x8.5 staggered",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear"
+        },
+        {
+          "name": "Coupe 3.0",
+          "oemWheelSize": "17x7.5/17x8.5 staggered",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E36/7 generation. Engine lineup refresh."
+    },
+    {
+      "year": 2002,
+      "make": "BMW",
+      "model": "Z3",
+      "generation": "E36/7",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "Roadster 2.5i",
+          "oemWheelSize": "16x7",
+          "oemTireSize": "225/50R16"
+        },
+        {
+          "name": "Roadster 3.0i",
+          "oemWheelSize": "17x7.5/17x8.5 staggered",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear"
+        },
+        {
+          "name": "Coupe 3.0i",
+          "oemWheelSize": "17x7.5/17x8.5 staggered",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Final year of Z3 production."
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E85",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "2.5i",
+          "oemWheelSize": "17x7.5/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear"
+        },
+        {
+          "name": "3.0i",
+          "oemWheelSize": "17x7.5/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "First year of Z4 E85. Available in US starting November 2002 as 2003 model."
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E85",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "2.5i",
+          "oemWheelSize": "17x7.5/17x8.5",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear"
+        },
+        {
+          "name": "3.0i",
+          "oemWheelSize": "17x7.5/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E85 generation."
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E85",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "2.5i",
+          "oemWheelSize": "17x7.5/17x8.5",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear"
+        },
+        {
+          "name": "3.0i",
+          "oemWheelSize": "17x7.5/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E85 generation."
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E85/E86",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "3.0i",
+          "oemWheelSize": "17x7.5/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "3.0si",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "M Roadster",
+          "oemWheelSize": "18x8/18x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "M Coupe",
+          "oemWheelSize": "18x8/18x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E86 Coupe introduced. Z4 M variants added."
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E85/E86",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "3.0i",
+          "oemWheelSize": "17x7.5/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "3.0si",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "M Roadster",
+          "oemWheelSize": "18x8/18x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "M Coupe",
+          "oemWheelSize": "18x8/18x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E85/E86 generation."
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E85/E86",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "3.0i",
+          "oemWheelSize": "17x7.5/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 245/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "3.0si",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "M Roadster",
+          "oemWheelSize": "18x8/18x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "M Coupe",
+          "oemWheelSize": "18x8/18x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Last year of E85/E86 generation."
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E89",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "First year of E89 generation with retractable hardtop."
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E89",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35is",
+          "oemWheelSize": "18x8/18x8.5 or 19x8/19x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear or 225/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E89 generation."
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E89",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35is",
+          "oemWheelSize": "18x8/18x8.5 or 19x8/19x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear or 225/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E89 generation."
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E89",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "sDrive28i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35is",
+          "oemWheelSize": "18x8/18x8.5 or 19x8/19x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear or 225/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E89 generation. sDrive28i with turbo 4-cylinder introduced."
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E89",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "sDrive28i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35is",
+          "oemWheelSize": "18x8/18x8.5 or 19x8/19x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear or 225/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E89 generation."
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E89",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "sDrive28i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35is",
+          "oemWheelSize": "18x8/18x8.5 or 19x8/19x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear or 225/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E89 generation."
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E89",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "sDrive28i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35is",
+          "oemWheelSize": "18x8/18x8.5 or 19x8/19x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear or 225/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "E89 generation."
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "E89",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "sDrive28i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35i",
+          "oemWheelSize": "17x8/17x8.5 or 18x8/18x8.5",
+          "oemTireSize": "225/45R17 front, 255/40R17 rear or 225/40R18 front, 255/35R18 rear"
+        },
+        {
+          "name": "sDrive35is",
+          "oemWheelSize": "18x8/18x8.5 or 19x8/19x9",
+          "oemTireSize": "225/40R18 front, 255/35R18 rear or 225/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Final year of E89 generation."
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "G29",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "18x8/18x8.5 or 19x8.5/19x9.5",
+          "oemTireSize": "225/45R18 front, 255/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        },
+        {
+          "name": "M40i",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9.5",
+          "oemTireSize": "255/40R18 front, 275/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com", "apexwheels.com"],
+      "notes": "First year of G29 generation. Bolt pattern changed to 5x112. US sales March 2019."
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "G29",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "18x8/18x8.5 or 19x8.5/19x9.5",
+          "oemTireSize": "225/45R18 front, 255/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        },
+        {
+          "name": "M40i",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9.5",
+          "oemTireSize": "255/40R18 front, 275/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "G29 generation."
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "G29",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "18x8/18x8.5 or 19x8.5/19x9.5",
+          "oemTireSize": "225/45R18 front, 255/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        },
+        {
+          "name": "M40i",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9.5",
+          "oemTireSize": "255/40R18 front, 275/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "G29 generation."
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "G29",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "18x8/18x8.5 or 19x8.5/19x9.5",
+          "oemTireSize": "225/45R18 front, 255/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        },
+        {
+          "name": "M40i",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9.5",
+          "oemTireSize": "255/40R18 front, 275/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "G29 generation."
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "G29",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "18x8/18x8.5 or 19x8.5/19x9.5",
+          "oemTireSize": "225/45R18 front, 255/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        },
+        {
+          "name": "M40i",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9.5",
+          "oemTireSize": "255/40R18 front, 275/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "G29 generation."
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "G29",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "18x8/18x8.5 or 19x8.5/19x9.5",
+          "oemTireSize": "225/45R18 front, 255/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        },
+        {
+          "name": "M40i",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9.5",
+          "oemTireSize": "255/40R18 front, 275/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "G29 generation."
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "G29",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "18x8/18x8.5 or 19x8.5/19x9.5",
+          "oemTireSize": "225/45R18 front, 255/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        },
+        {
+          "name": "M40i",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9.5",
+          "oemTireSize": "255/40R18 front, 275/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "G29 generation."
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "Z4",
+      "generation": "G29",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "sDrive30i",
+          "oemWheelSize": "18x8/18x8.5 or 19x8.5/19x9.5",
+          "oemTireSize": "225/45R18 front, 255/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        },
+        {
+          "name": "M40i",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9.5",
+          "oemTireSize": "255/40R18 front, 275/40R18 rear or 255/35R19 front, 275/35R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "medium",
+      "sources": ["tiresize.com", "hulkoffsets.com"],
+      "notes": "Future model year. Specs projected based on current G29."
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "Z8",
+      "generation": "E52",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8/18x9 staggered",
+          "oemTireSize": "245/45R18 front, 275/40R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "E52 generation (2000-2003). Iconic retro-styled roadster."
+    },
+    {
+      "year": 2001,
+      "make": "BMW",
+      "model": "Z8",
+      "generation": "E52",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8/18x9 staggered",
+          "oemTireSize": "245/45R18 front, 275/40R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "E52 generation."
+    },
+    {
+      "year": 2002,
+      "make": "BMW",
+      "model": "Z8",
+      "generation": "E52",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8/18x9 staggered",
+          "oemTireSize": "245/45R18 front, 275/40R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "E52 generation."
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "Z8",
+      "generation": "E52",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x8/18x9 staggered",
+          "oemTireSize": "245/45R18 front, 275/40R18 rear"
+        },
+        {
+          "name": "Alpina Roadster",
+          "oemWheelSize": "20x9/20x10 staggered",
+          "oemTireSize": "255/35R20 front, 285/30R20 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Final year. Alpina Roadster variant with larger wheels."
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "generation": "W177",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "A35 4MATIC",
+          "oemWheelSize": "18x7.5 or 19x8",
+          "oemTireSize": "225/45R18 or 225/40R19"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["caranddriver.com", "mbworld.org"],
+      "notes": "First year A-Class sold in US. A35 sedan only, no hatchback in US."
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "generation": "W177",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "A35 4MATIC",
+          "oemWheelSize": "18x7.5 or 19x8",
+          "oemTireSize": "225/45R18 or 225/40R19"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["caranddriver.com", "mbworld.org"],
+      "notes": "W177 generation."
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "generation": "W177",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "A35 4MATIC",
+          "oemWheelSize": "18x7.5 or 19x8",
+          "oemTireSize": "225/45R18 or 225/40R19"
+        }
+      ],
+      "isStaggered": false,
+      "confidence": "high",
+      "sources": ["caranddriver.com", "mbworld.org"],
+      "notes": "Final year A35 sold in US."
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "C-Class AMG",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C63 AMG",
+          "oemWheelSize": "18x8.5/18x9 staggered",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbworld.org"],
+      "notes": "First year of W204 C63 AMG."
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "C-Class AMG",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C63 AMG",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear or 235/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbworld.org"],
+      "notes": "W204 C63 AMG."
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "C-Class AMG",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C63 AMG",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear or 235/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbworld.org"],
+      "notes": "W204 C63 AMG."
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "C-Class AMG",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C63 AMG",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear or 235/35R19 front, 255/30R19 rear"
+        },
+        {
+          "name": "C63 AMG P31 Development Package",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear or 235/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbworld.org"],
+      "notes": "W204 C63 AMG. P31 package available."
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes",
+      "model": "C-Class AMG",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C63 AMG Sedan",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear or 235/35R19 front, 255/30R19 rear"
+        },
+        {
+          "name": "C63 AMG Coupe",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear or 235/35R19 front, 255/30R19 rear"
+        },
+        {
+          "name": "C63 AMG Black Series Coupe",
+          "oemWheelSize": "19x9/19x9.5",
+          "oemTireSize": "255/35R19 front, 285/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbworld.org"],
+      "notes": "W204 C63 AMG. Black Series introduced."
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "C-Class AMG",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C63 AMG Sedan",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear or 235/35R19 front, 255/30R19 rear"
+        },
+        {
+          "name": "C63 AMG Coupe",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear or 235/35R19 front, 255/30R19 rear"
+        },
+        {
+          "name": "C63 AMG Black Series Coupe",
+          "oemWheelSize": "19x9/19x9.5",
+          "oemTireSize": "255/35R19 front, 285/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbworld.org"],
+      "notes": "W204 C63 AMG."
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "C-Class AMG",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C63 AMG Sedan",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear or 235/35R19 front, 255/30R19 rear"
+        },
+        {
+          "name": "C63 AMG Coupe",
+          "oemWheelSize": "18x8.5/18x9 or 19x8.5/19x9",
+          "oemTireSize": "235/40R18 front, 255/35R18 rear or 235/35R19 front, 255/30R19 rear"
+        },
+        {
+          "name": "C63 AMG Edition 507",
+          "oemWheelSize": "19x8.5/19x9",
+          "oemTireSize": "235/35R19 front, 255/30R19 rear"
+        }
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["tiresize.com", "mbworld.org"],
+      "notes": "Final year of W204 C63 AMG. Edition 507 special."
+    }
+  ],
+  "summary": {
+    "invalidModelYearsCount": 15,
+    "validVehiclesVerified": 60,
+    "bmwBoltPatternNotes": "Pre-G-chassis (E/F): 5x120, 72.6mm hub bore. G-chassis (2019+): 5x112, 66.6mm hub bore.",
+    "mercedesBoltPatternNotes": "All Mercedes: 5x112, 66.6mm hub bore.",
+    "keyFindings": [
+      "BMW Z4 had NO US sales in 2002 (first US model year was 2003)",
+      "BMW Z4 had NO US sales in 2017-2018 (gap between E89 end 2016 and G29 start 2019)",
+      "Mercedes A-Class AMG was NOT sold in US until 2019 (A35 sedan)",
+      "Mercedes A-Class AMG was DISCONTINUED in US after 2021",
+      "Mercedes AMG GT was NOT sold in US until 2015 (GT S launched April 2015)",
+      "BMW G-chassis vehicles (2019+) use 5x112 bolt pattern vs older 5x120",
+      "All X6 M, X7, XM models have staggered wheel setups"
+    ]
+  }
+}

@@ -1,0 +1,574 @@
+{
+  "batchId": 55,
+  "processedAt": "2026-04-22T00:01:00.000Z",
+  "source": "tiresize.com",
+  "vehicles": [
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "celica",
+      "missingWheels": false,
+      "missingTires": true,
+      "tireSpecs": {
+        "GT": {
+          "tireSizes": ["195/60R15"],
+          "wheelDiameter": 15
+        },
+        "GTS": {
+          "tireSizes": ["205/55R16", "215/45R17"],
+          "wheelDiameters": [16, 17]
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "celica",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Celica discontinued in US after 2005"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "corolla-im",
+      "missingWheels": true,
+      "missingTires": true,
+      "alternateVehicle": "Scion iM 2016",
+      "tireSpecs": {
+        "Base Model": {
+          "tireSizes": ["225/45R17"],
+          "wheelDiameter": 17
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "corolla-im",
+      "missingWheels": true,
+      "missingTires": true,
+      "tireSpecs": {
+        "iM": {
+          "tireSizes": ["225/45R17"],
+          "wheelDiameter": 17
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "corolla-im",
+      "missingWheels": true,
+      "missingTires": true,
+      "tireSpecs": {
+        "iM": {
+          "tireSizes": ["225/45R17"],
+          "wheelDiameter": 17
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "corolla-runx",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "corolla-runx",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "corolla-runx",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "corolla-runx",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "corolla-runx",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "corolla-runx",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "corolla-runx",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "corolla-runx",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "corolla-runx",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "corolla-spacio",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "corolla-spacio",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "corolla-spacio",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "corolla-spacio",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "corolla-spacio",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "corolla-spacio",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "corolla-spacio",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "corolla-spacio",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "corona-premio",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "corona-premio",
+      "missingWheels": true,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "cresta",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "cresta",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Japan domestic market only"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "e-z",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Not found on tiresize.com - likely not US market passenger vehicle"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "e-z",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Not found on tiresize.com - likely not US market passenger vehicle"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "e-z",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Not found on tiresize.com - likely not US market passenger vehicle"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "e-z",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Not found on tiresize.com - likely not US market passenger vehicle"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "e-z",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Not found on tiresize.com - likely not US market passenger vehicle"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "e-z",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Not found on tiresize.com - likely not US market passenger vehicle"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "e-z",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Not found on tiresize.com - likely not US market passenger vehicle"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "e-z",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Not found on tiresize.com - likely not US market passenger vehicle"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "echo",
+      "missingWheels": false,
+      "missingTires": true,
+      "tireSpecs": {
+        "Coupe": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        },
+        "Sedan": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "echo",
+      "missingWheels": false,
+      "missingTires": true,
+      "tireSpecs": {
+        "Coupe": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        },
+        "Sedan": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "echo",
+      "missingWheels": false,
+      "missingTires": true,
+      "tireSpecs": {
+        "Coupe": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        },
+        "Sedan": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "echo",
+      "missingWheels": false,
+      "missingTires": true,
+      "tireSpecs": {
+        "Coupe": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        },
+        "Sedan": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "echo",
+      "missingWheels": false,
+      "missingTires": true,
+      "tireSpecs": {
+        "Coupe": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        },
+        "Sedan": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "echo",
+      "missingWheels": false,
+      "missingTires": true,
+      "tireSpecs": {
+        "Coupe": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        },
+        "Sedan": {
+          "tireSizes": ["175/65R14", "185/60R15"],
+          "wheelDiameters": [14, 15]
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "etios-valco",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Indonesia/India market only"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "etios-valco",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Indonesia/India market only"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "etios-valco",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Indonesia/India market only"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "etios-valco",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Indonesia/India market only"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "etios-valco",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Indonesia/India market only"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "etios-valco",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Indonesia/India market only"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "etios-valco",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "Indonesia/India market only"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "FJ Cruiser discontinued in US after 2014"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "FJ Cruiser discontinued in US after 2014"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "missingWheels": false,
+      "missingTires": true,
+      "notUS": true,
+      "reason": "FJ Cruiser discontinued in US after 2014"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "usMarketVehicles": 11,
+    "notUSVehicles": 39,
+    "modelsResearched": {
+      "celica": {
+        "usYears": [2005],
+        "notUSYears": [2006],
+        "note": "Celica discontinued in US after 2005"
+      },
+      "corolla-im": {
+        "usYears": [2016, 2017, 2018],
+        "note": "2016 sold as Scion iM; 2017-2018 as Toyota Corolla iM"
+      },
+      "corolla-runx": {
+        "notUSYears": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009],
+        "note": "Japan domestic market only"
+      },
+      "corolla-spacio": {
+        "notUSYears": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+        "note": "Japan domestic market only"
+      },
+      "corona-premio": {
+        "notUSYears": [2000, 2001],
+        "note": "Japan domestic market only"
+      },
+      "cresta": {
+        "notUSYears": [2000, 2001],
+        "note": "Japan domestic market only"
+      },
+      "e-z": {
+        "notUSYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+        "note": "Not found - likely not US market passenger vehicle"
+      },
+      "echo": {
+        "usYears": [2000, 2001, 2002, 2003, 2004, 2005],
+        "note": "US market 2000-2005"
+      },
+      "etios-valco": {
+        "notUSYears": [2011, 2012, 2013, 2014, 2015, 2016, 2017],
+        "note": "Indonesia/India market only"
+      },
+      "fj-cruiser": {
+        "notUSYears": [2015, 2016, 2017],
+        "note": "FJ Cruiser discontinued in US after 2014"
+      }
+    }
+  }
+}

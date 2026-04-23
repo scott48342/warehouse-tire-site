@@ -1,0 +1,2161 @@
+[
+  {
+    "id": "573b1d28-412a-4ae1-8315-467cf5d7b46a",
+    "year": 1994,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "500E",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8ccd3362-c03c-4a53-96b6-e6aa30a7a720",
+    "year": 1995,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "400E",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8cba039c-b6c6-45a4-ad48-d786a4f47163",
+    "year": 1995,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "300CE",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cabadfe5-d91f-46b7-af71-e0478a7985c6",
+    "year": 1995,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "300E",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "122477d3-8319-4407-ab3f-51f149314643",
+    "year": 1995,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "500E",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "09867635-4714-4ab8-a440-2b87f34a312e",
+    "year": 1995,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/65R15",
+      "205/55R16",
+      "225/55R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "83967e03-7bd3-4d24-b82f-7a625f69e932",
+    "year": 1996,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "225/55R16",
+      "225/50R17",
+      "245/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "9119a2e0-ae64-4a80-b78d-e23619aa02eb",
+    "year": 1996,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e9f5c238-a010-4e04-8a17-7b7fe2b7e1a4",
+    "year": 1996,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "71742deb-8ec4-4ca1-abf8-dbf94efdaf9f",
+    "year": 1996,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E430",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d627025c-2609-4607-9517-9ef3fcf1e42f",
+    "year": 1996,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "43d6ef78-4a16-40b2-bf9a-0fee0798829d",
+    "year": 1997,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ee6f8164-e6da-4f68-a018-7869aa544eb1",
+    "year": 1997,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "225/55R16",
+      "225/50R17",
+      "245/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "94977051-a5d4-47f7-a823-ec9bec178dd3",
+    "year": 1997,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "23fdd118-1151-4cd4-a3bf-c25b4f845b57",
+    "year": 1997,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "04a18e70-e8b8-4e6e-8395-af89bfd9dc5b",
+    "year": 1997,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E430",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f6c73a7b-dbf2-4e9c-8234-a917251445f2",
+    "year": 1998,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "225/55R16",
+      "225/50R17",
+      "245/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "da969de8-8bb8-4521-b8de-8a4940ec0bc2",
+    "year": 1998,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0f1c7241-1364-4eb5-a4c4-77b2a5b97db7",
+    "year": 1998,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0aa36cbc-88d2-437b-b697-03515b950f16",
+    "year": 1998,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E430",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "71b07ea0-d109-4f06-bd0f-a946d394655d",
+    "year": 1998,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7715c657-d9db-4728-ab5f-01995a5cb43f",
+    "year": 1999,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "225/55R16",
+      "225/50R17",
+      "245/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2f43d2f3-6522-4321-b2bd-9b2d3988290c",
+    "year": 1999,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c9f9428c-30b0-46f6-ae28-d7606302a89a",
+    "year": 1999,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E430",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bbde729f-81da-40a6-b2b4-01ead8210bbb",
+    "year": 1999,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "67cbcedf-76f8-48d9-9cc4-51aa03f3d7f1",
+    "year": 1999,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "75b8d465-6f1c-4523-b68b-129d9acbec8c",
+    "year": 2000,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "225/55R16",
+      "225/50R17",
+      "245/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "bc78f5bd-1934-4c58-9df0-c7e12eb48ee1",
+    "year": 2000,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b78127f7-cff9-4196-b42d-b1d0cd32b483",
+    "year": 2000,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "099c940c-cd86-4978-bdaf-fdfe3f8f8e95",
+    "year": 2000,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7e34e221-55b2-4eb9-9a98-37b627c85117",
+    "year": 2000,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E430",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a6fb0430-84dd-4b8d-8a5b-9895d3588a83",
+    "year": 2001,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f0136a01-fc36-4c9c-9897-3cf96715c94c",
+    "year": 2001,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E430",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "29791f1f-7748-4955-b4f5-c804fbeb56a8",
+    "year": 2001,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f35fdf7a-a093-48f3-9605-786f3087a81e",
+    "year": 2001,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e7ccc77d-ece5-4538-8e28-6ff5bf1e41b4",
+    "year": 2001,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "225/55R16",
+      "225/50R17",
+      "245/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7339f263-61c3-43e0-afd6-d43d916e0f24",
+    "year": 2002,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5e79e894-7224-4221-8507-3b8dc835d69f",
+    "year": 2002,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E430",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1798eef5-c73e-4bce-ba36-b18daf386c1a",
+    "year": 2002,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3ea89d09-3603-402f-8ab3-54ae627527a3",
+    "year": 2002,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dee60c56-ad01-4eca-9e7e-ee565c33ca37",
+    "year": 2002,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "225/55R16",
+      "225/50R17",
+      "245/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "13b9716d-06fa-48a4-a474-d96ecc58a502",
+    "year": 2003,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0a0e0ae5-5306-4ff4-a706-fb153da3a928",
+    "year": 2003,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f87554d2-5b44-4352-a9a3-8c9a62351f3d",
+    "year": 2003,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E500",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "935015b5-361f-412a-b924-0dc6821e78f6",
+    "year": 2003,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3210ea1d-6f9a-4fcd-a727-54e83b8af27a",
+    "year": 2003,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "aa776f5e-4c6c-46cd-b287-bcc1bb4d79f4",
+    "year": 2003,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E350",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "56d082f4-4b94-416a-9b13-4d7a69dfc12f",
+    "year": 2004,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4467d18a-b0e3-4a5e-864a-e0c03a06734a",
+    "year": 2004,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E500",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "068eb68e-f203-49db-a809-570013dc7f44",
+    "year": 2004,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E350",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e0655ba6-6989-48b9-8067-5e88bcd11deb",
+    "year": 2004,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "58ceda3e-8478-421c-9397-13cbe38cde74",
+    "year": 2004,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "dfdb5161-b75d-4777-ae55-f50b21eb87ca",
+    "year": 2004,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0c0b9f5d-5127-49d7-a748-8b3ca82d367a",
+    "year": 2005,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E500",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6b1ed3fc-866f-4963-83f6-c2ec0f99e05a",
+    "year": 2005,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a26337e1-9884-493f-a3bf-cc9e5be85bee",
+    "year": 2005,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "acc8aed7-ae96-471b-8176-b242758be3fb",
+    "year": 2005,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "562aebc7-af24-4820-a792-2493b43ae4d9",
+    "year": 2005,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ecb8e3de-2d7b-440b-bf20-f0b5743018c1",
+    "year": 2005,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E350",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "943ab08a-d2d5-4c08-9668-f26e8d95f148",
+    "year": 2006,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E500",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c56dbb3d-1ec7-49ca-bf98-2f57d4d6f41c",
+    "year": 2006,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "036aa15a-762c-473c-8e64-dc3f8e1ce846",
+    "year": 2006,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1e8d14bd-bcfb-4282-9377-411735b17fdc",
+    "year": 2006,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "19c8a53a-7d7b-4795-9064-a4afc457cfc2",
+    "year": 2006,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E350",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d4bc2dc1-f33c-462e-bc55-a256a983bc39",
+    "year": 2006,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2965ef87-391f-41fc-bc44-78c05f614dce",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c16f45ec-742e-45f8-a0a5-179a5d8a7510",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "66f05d9f-e1b4-4ed5-aac9-e1ab4218d0cd",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R16",
+      "245/45R17",
+      "245/40R18",
+      "255/40R18",
+      "255/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "fe9d2cd3-0a18-4aa5-a30a-e32449a58727",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E350",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "73ed9e26-c9e1-464d-939a-bf67a4fc0246",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E500",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a023a1a8-4b43-49a3-a37b-96e52c776dd3",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "058a60a0-66e3-4e7b-a796-7db1b8669829",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E350",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f527e46b-443d-427c-8048-1ba9a9c14dd9",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E55 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a80a47c5-1a08-40e7-8201-3835020349af",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E320",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b68bc9d4-df37-492b-a0b5-d5bffbc0acb9",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E500",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  }
+]

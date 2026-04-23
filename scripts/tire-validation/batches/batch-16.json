@@ -1,0 +1,838 @@
+{
+  "batchId": "16",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "m2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "m2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "245/40R18",
+        "265/40R18",
+        "255/35R19",
+        "275/35R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "245/40R18",
+        "265/40R18",
+        "255/35R19",
+        "275/35R19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "245/40R18",
+        "265/40R18",
+        "255/35R19",
+        "275/35R19"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "bmw",
+      "model": "m3",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "m4",
+      "currentTireSizes": [
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "255/40R19",
+        "285/35R19",
+        "265/35R20",
+        "295/30R20"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "255/40R19",
+        "285/35R19",
+        "265/35R20",
+        "295/30R20"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "bmw",
+      "model": "m5",
+      "currentTireSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "m6",
+      "currentTireSizes": []
+    }
+  ]
+}

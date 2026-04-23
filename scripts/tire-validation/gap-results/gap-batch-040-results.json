@@ -1,0 +1,532 @@
+{
+  "batchId": 40,
+  "researchDate": "2026-04-21",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "found": 30,
+    "notUS": 20,
+    "notFound": 0
+  },
+  "vehicles": [
+    {
+      "year": 2009,
+      "make": "mazda",
+      "model": "mazdaspeed-3",
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["Grand Touring", "Sport"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mazda",
+      "model": "mazdaspeed-3",
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["Grand Touring", "Sport"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mazda",
+      "model": "mazdaspeed-3",
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["Base Model"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mazda",
+      "model": "mazdaspeed-3",
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["Base Model"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mazda",
+      "model": "mazdaspeed-3",
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["Base Model"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "mazdaspeed-6",
+      "notUS": true,
+      "reason": "Mazdaspeed6 was only sold in US for 2006-2007 model years. 2005 not available in US market."
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "mazdaspeed-6",
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["Grand Touring", "Sport"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "mazdaspeed-6",
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["Grand Touring", "Sport"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "mazdaspeed-axela",
+      "notUS": true,
+      "reason": "Mazdaspeed Axela is the Japanese domestic market (JDM) name for Mazdaspeed3. Not sold under this name in US."
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "mazdaspeed-axela",
+      "notUS": true,
+      "reason": "Mazdaspeed Axela is the Japanese domestic market (JDM) name for Mazdaspeed3. Not sold under this name in US."
+    },
+    {
+      "year": 2008,
+      "make": "mazda",
+      "model": "mazdaspeed-axela",
+      "notUS": true,
+      "reason": "Mazdaspeed Axela is the Japanese domestic market (JDM) name for Mazdaspeed3. Not sold under this name in US."
+    },
+    {
+      "year": 2009,
+      "make": "mazda",
+      "model": "mazdaspeed-axela",
+      "notUS": true,
+      "reason": "Mazdaspeed Axela is the Japanese domestic market (JDM) name for Mazdaspeed3. Not sold under this name in US."
+    },
+    {
+      "year": 2010,
+      "make": "mazda",
+      "model": "mazdaspeed-axela",
+      "notUS": true,
+      "reason": "Mazdaspeed Axela is the Japanese domestic market (JDM) name for Mazdaspeed3. Not sold under this name in US."
+    },
+    {
+      "year": 2011,
+      "make": "mazda",
+      "model": "mazdaspeed-axela",
+      "notUS": true,
+      "reason": "Mazdaspeed Axela is the Japanese domestic market (JDM) name for Mazdaspeed3. Not sold under this name in US."
+    },
+    {
+      "year": 2012,
+      "make": "mazda",
+      "model": "mazdaspeed-axela",
+      "notUS": true,
+      "reason": "Mazdaspeed Axela is the Japanese domestic market (JDM) name for Mazdaspeed3. Not sold under this name in US."
+    },
+    {
+      "year": 2013,
+      "make": "mazda",
+      "model": "mazdaspeed-axela",
+      "notUS": true,
+      "reason": "Mazdaspeed Axela is the Japanese domestic market (JDM) name for Mazdaspeed3. Not sold under this name in US."
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "millenia",
+      "tireSizes": {
+        "Base Model": "215/55R16",
+        "S": "215/50R17"
+      },
+      "wheelDiameters": [16, 17],
+      "boltPattern": "5x114.3",
+      "trims": ["Base Model", "S"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "millenia",
+      "tireSizes": {
+        "Base Model": "215/55R16",
+        "S": "215/50R17"
+      },
+      "wheelDiameters": [16, 17],
+      "boltPattern": "5x114.3",
+      "trims": ["Base Model", "S"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "millenia",
+      "tireSizes": {
+        "Base Model": "215/55R16",
+        "S": "215/50R17"
+      },
+      "wheelDiameters": [16, 17],
+      "boltPattern": "5x114.3",
+      "trims": ["Base Model", "S"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "millenia",
+      "notUS": true,
+      "reason": "Millenia was discontinued after 2002 model year in US market."
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "mx-3",
+      "notUS": true,
+      "reason": "Mazda MX-3 was discontinued in US after 1996 model year. Not available in US market for 2000."
+    },
+    {
+      "year": 2017,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "tireSizes": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "wheelDiameter": 17,
+      "boltPattern": "4x100",
+      "trims": ["RF Club", "RF Grand Touring"],
+      "note": "RF trims are part of MX-5 Miata lineup with retractable fastback roof",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "tireSizes": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "wheelDiameter": 17,
+      "boltPattern": "4x100",
+      "trims": ["RF Club", "RF Grand Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "tireSizes": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "wheelDiameter": 17,
+      "boltPattern": "4x100",
+      "trims": ["RF Club", "RF Grand Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "tireSizes": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "wheelDiameter": 17,
+      "boltPattern": "4x100",
+      "trims": ["RF Club", "RF Grand Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "tireSizes": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "wheelDiameter": 17,
+      "boltPattern": "4x100",
+      "trims": ["RF Club", "RF Grand Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "tireSizes": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "wheelDiameter": 17,
+      "boltPattern": "4x100",
+      "trims": ["RF Club", "RF Grand Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "tireSizes": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "wheelDiameter": 17,
+      "boltPattern": "4x100",
+      "trims": ["RF Club", "RF Grand Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "tireSizes": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "wheelDiameter": 17,
+      "boltPattern": "4x100",
+      "trims": ["RF Club", "RF Grand Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "tireSizes": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "wheelDiameter": 17,
+      "boltPattern": "4x100",
+      "trims": ["RF Club", "RF Grand Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "protege",
+      "tireSizes": {
+        "DX": "185/65R14",
+        "LX": "185/65R14",
+        "ES": "195/55R15"
+      },
+      "wheelDiameters": [14, 15],
+      "boltPattern": "4x100",
+      "trims": ["DX", "ES", "LX"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "protege",
+      "tireSizes": {
+        "DX": "185/65R14",
+        "LX": "185/65R14",
+        "LX 2.0": "195/55R15",
+        "ES 2.0": "195/55R15",
+        "MP3": "205/50R16"
+      },
+      "wheelDiameters": [14, 15, 16],
+      "boltPattern": "4x100",
+      "trims": ["DX", "ES 2.0", "LX", "LX 2.0", "MP3"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "protege",
+      "tireSizes": {
+        "DX 2.0": "185/65R14",
+        "LX 2.0": "195/55R15",
+        "ES 2.0": "195/50R16",
+        "5": "195/50R16"
+      },
+      "wheelDiameters": [14, 15, 16],
+      "boltPattern": "4x100",
+      "trims": ["5", "DX 2.0", "ES 2.0", "LX 2.0"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "protege",
+      "tireSizes": {
+        "DX 2.0": "185/65R14",
+        "LX 2.0": "195/55R15",
+        "ES 2.0": "195/50R16",
+        "5": "195/50R16"
+      },
+      "wheelDiameters": [14, 15, 16],
+      "boltPattern": "4x100",
+      "trims": ["5", "DX 2.0", "ES 2.0", "LX 2.0"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "protege5",
+      "tireSize": "195/50R16",
+      "wheelDiameter": 16,
+      "boltPattern": "4x100",
+      "note": "Protege5 is same platform as Protege, sharing specs with Protege 5 trim",
+      "source": "tiresize.com (via Protege 5 trim)"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "protege5",
+      "tireSize": "195/50R16",
+      "wheelDiameter": 16,
+      "boltPattern": "4x100",
+      "source": "tiresize.com (via Protege 5 trim)"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "protege5",
+      "tireSize": "195/50R16",
+      "wheelDiameter": 16,
+      "boltPattern": "4x100",
+      "source": "tiresize.com (via Protege 5 trim)"
+    },
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "protege5",
+      "notUS": true,
+      "reason": "Protege5 was discontinued after 2003 model year. 2004 was not available in US market."
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "rx-7",
+      "notUS": true,
+      "reason": "Mazda RX-7 was discontinued in US after 1995 model year. Not available in US market for 2000+."
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "rx-7",
+      "notUS": true,
+      "reason": "Mazda RX-7 was discontinued in US after 1995 model year. Not available in US market for 2000+."
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "rx-7",
+      "notUS": true,
+      "reason": "Mazda RX-7 was discontinued in US after 1995 model year. Not available in US market for 2000+."
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "rx-7",
+      "notUS": true,
+      "reason": "Mazda RX-7 was discontinued in US after 1995 model year. Not available in US market for 2000+."
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "rx-8",
+      "notUS": true,
+      "reason": "RX-8 launched in US as 2004 model year. 2003 was not available in US market."
+    },
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "rx-8",
+      "tireSizes": {
+        "6-speed": "225/45R18",
+        "Automatic Sport Package": "225/45R18",
+        "Automatic Standard Model": "225/55R16",
+        "Automatic Touring Package": "225/45R18"
+      },
+      "wheelDiameters": [16, 18],
+      "boltPattern": "5x114.3",
+      "trims": ["6-speed", "Automatic Sport Package", "Automatic Standard Model", "Automatic Touring Package"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "rx-8",
+      "tireSizes": {
+        "6-speed": "225/45R18",
+        "Automatic Sport Package": "225/45R18",
+        "Automatic Standard Model": "225/55R16",
+        "Automatic Touring Package": "225/45R18"
+      },
+      "wheelDiameters": [16, 18],
+      "boltPattern": "5x114.3",
+      "trims": ["6-speed", "Automatic Sport Package", "Automatic Standard Model", "Automatic Touring Package"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "rx-8",
+      "tireSizes": {
+        "6-Speed Manual": "225/45R18",
+        "Automatic Sport Package": "225/45R18",
+        "Automatic Standard Model": "225/55R16",
+        "Automatic Touring Package": "225/45R18"
+      },
+      "wheelDiameters": [16, 18],
+      "boltPattern": "5x114.3",
+      "trims": ["6-Speed Manual", "Automatic Sport Package", "Automatic Standard Model", "Automatic Touring Package"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "rx-8",
+      "tireSize": "225/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["Grand Touring", "Sport Automatic Transmission", "Sport Manual Transmission", "Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mazda",
+      "model": "rx-8",
+      "tireSize": "225/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["40th Anniversary Edition", "Grand Touring", "Sport Automatic Transmission", "Sport Manual Transmission", "Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mazda",
+      "model": "rx-8",
+      "tireSize": "225/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["Grand Touring", "R3", "Sport", "Touring"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mazda",
+      "model": "rx-8",
+      "tireSize": "225/45R18",
+      "wheelDiameter": 18,
+      "boltPattern": "5x114.3",
+      "trims": ["Grand Touring", "R3", "Sport"],
+      "source": "tiresize.com"
+    }
+  ]
+}

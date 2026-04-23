@@ -1,0 +1,375 @@
+{
+  "batchId": 39,
+  "processedAt": "2026-04-21T23:55:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "usMarket": 17,
+    "notUS": 33
+  },
+  "vehicles": [
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "cx-7",
+      "notUS": true,
+      "notes": "CX-7 launched in US as 2007 model year; 2006 not sold in US"
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "cx-7",
+      "tireSizes": ["235/60R18"],
+      "wheelDiameters": [18],
+      "trims": ["Grand Touring", "Sport", "Touring"]
+    },
+    {
+      "year": 2008,
+      "make": "mazda",
+      "model": "cx-7",
+      "tireSizes": ["235/60R18"],
+      "wheelDiameters": [18],
+      "trims": ["Grand Touring", "Sport", "Touring"]
+    },
+    {
+      "year": 2009,
+      "make": "mazda",
+      "model": "cx-7",
+      "tireSizes": ["235/60R18"],
+      "wheelDiameters": [18],
+      "trims": ["Grand Touring", "Sport", "Touring"]
+    },
+    {
+      "year": 2010,
+      "make": "mazda",
+      "model": "cx-7",
+      "tireSizes": ["215/70R17", "235/60R18", "235/55R19"],
+      "wheelDiameters": [17, 18, 19],
+      "trims": ["i Sport", "i SV", "s Grand Touring", "s Touring"]
+    },
+    {
+      "year": 2011,
+      "make": "mazda",
+      "model": "cx-7",
+      "tireSizes": ["215/70R17", "235/60R18", "235/55R19"],
+      "wheelDiameters": [17, 18, 19],
+      "trims": ["i Sport", "i SV", "i Touring", "s Grand Touring", "s Touring"]
+    },
+    {
+      "year": 2012,
+      "make": "mazda",
+      "model": "cx-7",
+      "tireSizes": ["215/70R17", "235/60R18", "235/55R19"],
+      "wheelDiameters": [17, 18, 19],
+      "trims": ["i Sport", "i SV", "i Touring", "s Grand Touring", "s Touring"]
+    },
+    {
+      "year": 2014,
+      "make": "mazda",
+      "model": "cx-7",
+      "notUS": true,
+      "notes": "CX-7 discontinued in US after 2012 model year"
+    },
+    {
+      "year": 2015,
+      "make": "mazda",
+      "model": "cx-7",
+      "notUS": true,
+      "notes": "CX-7 discontinued in US after 2012 model year"
+    },
+    {
+      "year": 2016,
+      "make": "mazda",
+      "model": "cx-7",
+      "notUS": true,
+      "notes": "CX-7 discontinued in US after 2012 model year"
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "cx-70",
+      "notUS": true,
+      "notes": "CX-70 launched in US as 2025 model year; 2024 not sold in US"
+    },
+    {
+      "year": 2025,
+      "make": "mazda",
+      "model": "cx-70",
+      "tireSizes": ["265/55R19", "275/45R21"],
+      "wheelDiameters": [19, 21],
+      "trims": ["3.3 Turbo Preferred", "3.3 Turbo Premium", "3.3 Turbo Premium Plus", "3.3 Turbo S Premium", "3.3 Turbo S Premium Plus", "PHEV"]
+    },
+    {
+      "year": 2026,
+      "make": "mazda",
+      "model": "cx-70",
+      "tireSizes": ["265/55R19", "275/45R21"],
+      "wheelDiameters": [19, 21],
+      "trims": ["3.3 Turbo Preferred", "3.3 Turbo Premium", "3.3 Turbo Premium Plus", "3.3 Turbo S Premium", "3.3 Turbo S Premium Plus", "PHEV"]
+    },
+    {
+      "year": 2026,
+      "make": "mazda",
+      "model": "cx-90",
+      "tireSizes": ["265/55R19", "275/45R21"],
+      "wheelDiameters": [19, 21],
+      "trims": ["3.3 Turbo Preferred", "3.3 Turbo Premium Plus", "3.3 Turbo Premium Sport", "3.3 Turbo S Premium Plus", "3.3 Turbo S Premium Sport", "3.3 Turbo Select", "PHEV Preferred", "PHEV Premium Plus", "PHEV Premium Sport"]
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "laputa",
+      "notUS": true,
+      "notes": "Mazda Laputa was a JDM-only kei car (rebadged Suzuki Kei); never sold in US"
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "laputa",
+      "notUS": true,
+      "notes": "Mazda Laputa was a JDM-only kei car (rebadged Suzuki Kei); never sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "laputa",
+      "notUS": true,
+      "notes": "Mazda Laputa was a JDM-only kei car (rebadged Suzuki Kei); never sold in US"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "laputa",
+      "notUS": true,
+      "notes": "Mazda Laputa was a JDM-only kei car (rebadged Suzuki Kei); never sold in US"
+    },
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "laputa",
+      "notUS": true,
+      "notes": "Mazda Laputa was a JDM-only kei car (rebadged Suzuki Kei); never sold in US"
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "laputa",
+      "notUS": true,
+      "notes": "Mazda Laputa was a JDM-only kei car (rebadged Suzuki Kei); never sold in US"
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "laputa",
+      "notUS": true,
+      "notes": "Mazda Laputa was a JDM-only kei car (rebadged Suzuki Kei); never sold in US"
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "mazda2-hybrid",
+      "notUS": true,
+      "notes": "Mazda2 Hybrid is European market only (rebadged Toyota Yaris Hybrid); not sold in US"
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "mazda2-hybrid",
+      "notUS": true,
+      "notes": "Mazda2 Hybrid is European market only (rebadged Toyota Yaris Hybrid); not sold in US"
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "mazda2-hybrid",
+      "notUS": true,
+      "notes": "Mazda2 Hybrid is European market only (rebadged Toyota Yaris Hybrid); not sold in US"
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "mazda2-hybrid",
+      "notUS": true,
+      "notes": "Mazda2 Hybrid is European market only (rebadged Toyota Yaris Hybrid); not sold in US"
+    },
+    {
+      "year": 2025,
+      "make": "mazda",
+      "model": "mazda2-hybrid",
+      "notUS": true,
+      "notes": "Mazda2 Hybrid is European market only (rebadged Toyota Yaris Hybrid); not sold in US"
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "mazda3-mps",
+      "notUS": true,
+      "notes": "Mazda3 MPS is the European/Australian badge; US equivalent is MazdaSpeed3 (sold 2007-2013)"
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "mazda3-mps",
+      "notUS": true,
+      "notes": "Mazda3 MPS is the European/Australian badge; US equivalent is MazdaSpeed3"
+    },
+    {
+      "year": 2008,
+      "make": "mazda",
+      "model": "mazda3-mps",
+      "notUS": true,
+      "notes": "Mazda3 MPS is the European/Australian badge; US equivalent is MazdaSpeed3"
+    },
+    {
+      "year": 2009,
+      "make": "mazda",
+      "model": "mazda3-mps",
+      "notUS": true,
+      "notes": "Mazda3 MPS is the European/Australian badge; US equivalent is MazdaSpeed3"
+    },
+    {
+      "year": 2010,
+      "make": "mazda",
+      "model": "mazda3-mps",
+      "notUS": true,
+      "notes": "Mazda3 MPS is the European/Australian badge; US equivalent is MazdaSpeed3"
+    },
+    {
+      "year": 2011,
+      "make": "mazda",
+      "model": "mazda3-mps",
+      "notUS": true,
+      "notes": "Mazda3 MPS is the European/Australian badge; US equivalent is MazdaSpeed3"
+    },
+    {
+      "year": 2012,
+      "make": "mazda",
+      "model": "mazda3-mps",
+      "notUS": true,
+      "notes": "Mazda3 MPS is the European/Australian badge; US equivalent is MazdaSpeed3"
+    },
+    {
+      "year": 2013,
+      "make": "mazda",
+      "model": "mazda3-mps",
+      "notUS": true,
+      "notes": "Mazda3 MPS is the European/Australian badge; US equivalent is MazdaSpeed3"
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "mazda5",
+      "notUS": true,
+      "notes": "Mazda5 launched in US as 2006 model year; 2005 not sold in US"
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "mazda6-mps",
+      "notUS": true,
+      "notes": "Mazda6 MPS is the European/Australian badge; US equivalent is MazdaSpeed6 (sold 2006-2007)"
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "mazda6-mps",
+      "notUS": true,
+      "notes": "Mazda6 MPS is the European/Australian badge; US equivalent is MazdaSpeed6"
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "mazda6-mps",
+      "notUS": true,
+      "notes": "Mazda6 MPS is the European/Australian badge; US equivalent is MazdaSpeed6"
+    },
+    {
+      "year": 2008,
+      "make": "mazda",
+      "model": "mazda6-mps",
+      "notUS": true,
+      "notes": "Mazda6 MPS is the European/Australian badge; US equivalent is MazdaSpeed6"
+    },
+    {
+      "year": 2009,
+      "make": "mazda",
+      "model": "mazda6-ruiyi",
+      "notUS": true,
+      "notes": "Mazda6 Ruiyi is a Chinese market-only long-wheelbase variant; never sold in US"
+    },
+    {
+      "year": 2010,
+      "make": "mazda",
+      "model": "mazda6-ruiyi",
+      "notUS": true,
+      "notes": "Mazda6 Ruiyi is a Chinese market-only long-wheelbase variant; never sold in US"
+    },
+    {
+      "year": 2011,
+      "make": "mazda",
+      "model": "mazda6-ruiyi",
+      "notUS": true,
+      "notes": "Mazda6 Ruiyi is a Chinese market-only long-wheelbase variant; never sold in US"
+    },
+    {
+      "year": 2012,
+      "make": "mazda",
+      "model": "mazda6-ruiyi",
+      "notUS": true,
+      "notes": "Mazda6 Ruiyi is a Chinese market-only long-wheelbase variant; never sold in US"
+    },
+    {
+      "year": 2013,
+      "make": "mazda",
+      "model": "mazda6-ruiyi",
+      "notUS": true,
+      "notes": "Mazda6 Ruiyi is a Chinese market-only long-wheelbase variant; never sold in US"
+    },
+    {
+      "year": 2014,
+      "make": "mazda",
+      "model": "mazda6-ruiyi",
+      "notUS": true,
+      "notes": "Mazda6 Ruiyi is a Chinese market-only long-wheelbase variant; never sold in US"
+    },
+    {
+      "year": 2015,
+      "make": "mazda",
+      "model": "mazda6-ruiyi",
+      "notUS": true,
+      "notes": "Mazda6 Ruiyi is a Chinese market-only long-wheelbase variant; never sold in US"
+    },
+    {
+      "year": 2016,
+      "make": "mazda",
+      "model": "mazda6-ruiyi",
+      "notUS": true,
+      "notes": "Mazda6 Ruiyi is a Chinese market-only long-wheelbase variant; never sold in US"
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "mazdaspeed-3",
+      "notUS": true,
+      "notes": "MazdaSpeed3 launched in US as 2007 model year; 2006 not sold in US"
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "mazdaspeed-3",
+      "tireSizes": ["215/45R18"],
+      "wheelDiameters": [18],
+      "trims": ["Grand Touring", "Sport"],
+      "notes": "US model listed as 'MazdaSpeed3' on tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mazda",
+      "model": "mazdaspeed-3",
+      "tireSizes": ["215/45R18"],
+      "wheelDiameters": [18],
+      "trims": ["Grand Touring", "Sport"],
+      "notes": "US model listed as 'MazdaSpeed3' on tiresize.com"
+    }
+  ]
+}

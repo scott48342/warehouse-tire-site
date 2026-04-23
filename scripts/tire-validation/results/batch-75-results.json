@@ -1,0 +1,974 @@
+{
+  "batchId": "75",
+  "processedAt": "2026-04-21T22:11:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2004,
+      "make": "Infiniti",
+      "model": "Q45",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["225/55R17", "245/45R18"]},
+        {"trim": "Premium Package", "tireSizes": ["245/45R18"]}
+      ],
+      "allTireSizes": ["225/55R17", "245/45R18"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2003,
+      "make": "Infiniti",
+      "model": "Q45",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["225/55R17", "245/45R18"]},
+        {"trim": "Premium Package", "tireSizes": ["245/45R18"]},
+        {"trim": "Sport Package", "tireSizes": ["245/45R18"]}
+      ],
+      "allTireSizes": ["225/55R17", "245/45R18"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2002,
+      "make": "Infiniti",
+      "model": "Q45",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["225/55R17"]},
+        {"trim": "Premium Package", "tireSizes": ["245/45R18"]},
+        {"trim": "Sport Package", "tireSizes": ["245/45R18"]}
+      ],
+      "allTireSizes": ["225/55R17", "245/45R18"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2001,
+      "make": "Infiniti",
+      "model": "Q45",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["215/60R16"]},
+        {"trim": "T", "tireSizes": ["225/50R17"]}
+      ],
+      "allTireSizes": ["215/60R16", "225/50R17"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2000,
+      "make": "Infiniti",
+      "model": "Q45",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["215/60R16"]},
+        {"trim": "T", "tireSizes": ["225/50R17"]}
+      ],
+      "allTireSizes": ["215/60R16", "225/50R17"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2026,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["225/55R17"]},
+        {"trim": "Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Red Sport 400", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2025,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["225/55R17"]},
+        {"trim": "Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Red Sport 400", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2024,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["225/55R17"]},
+        {"trim": "Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Red Sport 400", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2023,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["225/55R17"]},
+        {"trim": "Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Red Sport 400", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2022,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["225/55R17"]},
+        {"trim": "Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Red Sport 400", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2021,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["225/55R17"]},
+        {"trim": "Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Red Sport 400", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2020,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "3.0t Pure", "tireSizes": ["225/55R17"]},
+        {"trim": "3.0t Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "3.0t Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Edition 30", "tireSizes": ["245/40R19"]},
+        {"trim": "Red Sport 400 RWD", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true},
+        {"trim": "Red Sport 400 AWD", "tireSizes": ["245/40R19"]}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2019,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["225/55R17"]},
+        {"trim": "Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Red Sport 400", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2018,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "2.0t Pure", "tireSizes": ["225/55R17"]},
+        {"trim": "2.0t Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "3.0t Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "3.0t Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Hybrid Luxe", "tireSizes": ["225/50R18"]},
+        {"trim": "Red Sport 400", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2017,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "2.0t", "tireSizes": ["225/55R17"]},
+        {"trim": "2.0t Premium", "tireSizes": ["225/50R18"]},
+        {"trim": "3.0t Premium", "tireSizes": ["225/50R18"]},
+        {"trim": "3.0t Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Red Sport 400", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2016,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "2.0t", "tireSizes": ["225/55R17"]},
+        {"trim": "2.0t Premium", "tireSizes": ["225/50R18"]},
+        {"trim": "3.0t Premium", "tireSizes": ["225/50R18"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19"]},
+        {"trim": "Red Sport 400", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2015,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "3.7", "tireSizes": ["225/55R17"]},
+        {"trim": "3.7 Premium", "tireSizes": ["225/50R18"]},
+        {"trim": "S 3.7", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true},
+        {"trim": "Hybrid Premium", "tireSizes": ["225/50R18"]}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2014,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "3.7", "tireSizes": ["225/55R17"]},
+        {"trim": "3.7 Premium", "tireSizes": ["225/50R18"]},
+        {"trim": "S 3.7", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true},
+        {"trim": "Hybrid Premium", "tireSizes": ["225/50R18"]}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "Q50",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["225/55R17"]},
+        {"trim": "Premium", "tireSizes": ["225/50R18"]},
+        {"trim": "Sport", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true,
+      "notes": "Q50 first model year was 2014, 2013 may be data error or pre-production"
+    },
+    {
+      "year": 2023,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "Luxe", "tireSizes": ["255/40R19"]},
+        {"trim": "Red Sport 400", "tireSizes": ["255/35R20", "275/30R20"], "staggered": true}
+      ],
+      "allTireSizes": ["255/40R19", "255/35R20", "275/30R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2022,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "Luxe", "tireSizes": ["255/40R19"]},
+        {"trim": "Red Sport 400 RWD", "tireSizes": ["255/35R20", "275/30R20"], "staggered": true},
+        {"trim": "Red Sport 400 AWD", "tireSizes": ["255/35R20"]}
+      ],
+      "allTireSizes": ["255/40R19", "255/35R20", "275/30R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2021,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "Luxe", "tireSizes": ["255/40R19"]},
+        {"trim": "Red Sport 400 RWD", "tireSizes": ["255/35R20", "275/30R20"], "staggered": true},
+        {"trim": "Red Sport 400 AWD", "tireSizes": ["255/35R20"]}
+      ],
+      "allTireSizes": ["255/40R19", "255/35R20", "275/30R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2020,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "Luxe", "tireSizes": ["255/40R19"]},
+        {"trim": "Red Sport 400 RWD", "tireSizes": ["255/35R20", "275/30R20"], "staggered": true},
+        {"trim": "Red Sport 400 AWD", "tireSizes": ["255/35R20"]}
+      ],
+      "allTireSizes": ["255/40R19", "255/35R20", "275/30R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2019,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "Luxe", "tireSizes": ["255/40R19"]},
+        {"trim": "Red Sport 400 RWD", "tireSizes": ["255/35R20", "275/30R20"], "staggered": true},
+        {"trim": "Red Sport 400 AWD", "tireSizes": ["255/35R20"]}
+      ],
+      "allTireSizes": ["255/40R19", "255/35R20", "275/30R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2018,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "2.0t Pure", "tireSizes": ["255/40R19"]},
+        {"trim": "2.0t Luxe", "tireSizes": ["255/40R19"]},
+        {"trim": "3.0t Luxe", "tireSizes": ["255/40R19"]},
+        {"trim": "3.0t Sport", "tireSizes": ["255/40R19"]},
+        {"trim": "Red Sport 400 RWD", "tireSizes": ["255/35R20", "275/30R20"], "staggered": true},
+        {"trim": "Red Sport 400 AWD", "tireSizes": ["255/35R20"]}
+      ],
+      "allTireSizes": ["255/40R19", "255/35R20", "275/30R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2017,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "2.0t", "tireSizes": ["255/40R19"]},
+        {"trim": "3.0t Premium", "tireSizes": ["255/40R19"]},
+        {"trim": "Red Sport 400 RWD", "tireSizes": ["255/35R20", "275/30R20"], "staggered": true},
+        {"trim": "Red Sport 400 AWD", "tireSizes": ["255/35R20"]}
+      ],
+      "allTireSizes": ["255/40R19", "255/35R20", "275/30R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2016,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "Coupe Base", "tireSizes": ["245/40R19"]},
+        {"trim": "Coupe Sport", "tireSizes": ["255/35R20", "275/35R20"], "staggered": true},
+        {"trim": "IPL Coupe", "tireSizes": ["245/40R19", "255/40R19"], "staggered": true}
+      ],
+      "allTireSizes": ["245/40R19", "255/40R19", "255/35R20", "275/35R20"],
+      "validatedOEM": true,
+      "notes": "2016 Q60 was the last year of G37 coupe-based model before redesign"
+    },
+    {
+      "year": 2015,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "Coupe Journey Base", "tireSizes": ["225/50R18"]},
+        {"trim": "Coupe Journey Sport", "tireSizes": ["225/45R19", "245/40R19"], "staggered": true},
+        {"trim": "Coupe AWD Base", "tireSizes": ["225/50R18"]},
+        {"trim": "Coupe AWD Sport", "tireSizes": ["225/45R19"]},
+        {"trim": "IPL Coupe", "tireSizes": ["225/45R19", "245/40R19"], "staggered": true},
+        {"trim": "Convertible Base", "tireSizes": ["225/50R18", "245/45R18"], "staggered": true},
+        {"trim": "Convertible Sport", "tireSizes": ["225/45R19", "245/40R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/50R18", "245/45R18", "225/45R19", "245/40R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2014,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "Coupe Journey Base", "tireSizes": ["225/50R18"]},
+        {"trim": "Coupe Journey Sport", "tireSizes": ["225/45R19", "245/40R19"], "staggered": true},
+        {"trim": "Coupe AWD Base", "tireSizes": ["225/50R18"]},
+        {"trim": "Coupe AWD Sport", "tireSizes": ["225/45R19"]},
+        {"trim": "IPL Coupe", "tireSizes": ["225/45R19", "245/40R19"], "staggered": true},
+        {"trim": "Convertible Base", "tireSizes": ["225/50R18", "245/45R18"], "staggered": true},
+        {"trim": "Convertible Sport", "tireSizes": ["225/45R19", "245/40R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/50R18", "245/45R18", "225/45R19", "245/40R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "Q60",
+      "trims": [
+        {"trim": "Coupe Base", "tireSizes": ["225/50R18"]},
+        {"trim": "Coupe Sport", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true},
+        {"trim": "IPL Coupe", "tireSizes": ["245/40R19", "265/35R19"], "staggered": true}
+      ],
+      "allTireSizes": ["225/50R18", "245/40R19", "265/35R19"],
+      "validatedOEM": true,
+      "notes": "First year of Q60 name (previously G37 Coupe)"
+    },
+    {
+      "year": 2021,
+      "make": "Infiniti",
+      "model": "Q70",
+      "trims": [
+        {"trim": "3.7 Luxe", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "5.6 Luxe", "tireSizes": ["245/50R18", "245/40R20"]}
+      ],
+      "allTireSizes": ["245/50R18", "245/40R20"],
+      "validatedOEM": true,
+      "notes": "Q70 discontinued after 2019, 2021 may be data anomaly"
+    },
+    {
+      "year": 2020,
+      "make": "Infiniti",
+      "model": "Q70",
+      "trims": [
+        {"trim": "3.7 Luxe", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "5.6 Luxe", "tireSizes": ["245/50R18", "245/40R20"]}
+      ],
+      "allTireSizes": ["245/50R18", "245/40R20"],
+      "validatedOEM": true,
+      "notes": "Q70 discontinued after 2019, 2020 may be data anomaly"
+    },
+    {
+      "year": 2019,
+      "make": "Infiniti",
+      "model": "Q70",
+      "trims": [
+        {"trim": "3.7 Luxe", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "5.6 Luxe", "tireSizes": ["245/50R18", "245/40R20"]}
+      ],
+      "allTireSizes": ["245/50R18", "245/40R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2018,
+      "make": "Infiniti",
+      "model": "Q70",
+      "trims": [
+        {"trim": "3.7 Luxe", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "5.6 Luxe", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "Hybrid Luxe", "tireSizes": ["245/50R18"]},
+        {"trim": "Premium Select Edition", "tireSizes": ["245/40R20"]},
+        {"trim": "Sport Package", "tireSizes": ["245/40R20"]}
+      ],
+      "allTireSizes": ["245/50R18", "245/40R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2017,
+      "make": "Infiniti",
+      "model": "Q70",
+      "trims": [
+        {"trim": "3.7", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "5.6", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "Hybrid", "tireSizes": ["245/50R18"]}
+      ],
+      "allTireSizes": ["245/50R18", "245/40R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2016,
+      "make": "Infiniti",
+      "model": "Q70",
+      "trims": [
+        {"trim": "3.7", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "5.6", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "Hybrid", "tireSizes": ["245/50R18"]}
+      ],
+      "allTireSizes": ["245/50R18", "245/40R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2015,
+      "make": "Infiniti",
+      "model": "Q70",
+      "trims": [
+        {"trim": "3.7", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "5.6", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "Hybrid", "tireSizes": ["245/50R18"]}
+      ],
+      "allTireSizes": ["245/50R18", "245/40R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2014,
+      "make": "Infiniti",
+      "model": "Q70",
+      "trims": [
+        {"trim": "3.7", "tireSizes": ["245/50R18", "245/40R20"]},
+        {"trim": "5.6", "tireSizes": ["245/50R18", "245/40R20"]}
+      ],
+      "allTireSizes": ["245/50R18", "245/40R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "Q70",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["245/50R18", "245/40R20"]}
+      ],
+      "allTireSizes": ["245/50R18", "245/40R20"],
+      "validatedOEM": true,
+      "notes": "Q70 was previously the M37/M56"
+    },
+    {
+      "year": 2026,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["235/55R19"]},
+        {"trim": "Luxe", "tireSizes": ["235/55R19", "255/45R20"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]},
+        {"trim": "Autograph", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["235/55R19", "255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2025,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["235/55R19"]},
+        {"trim": "Luxe", "tireSizes": ["235/55R19", "255/45R20"]},
+        {"trim": "Sport", "tireSizes": ["235/55R19"]}
+      ],
+      "allTireSizes": ["235/55R19", "255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2024,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["235/55R19"]},
+        {"trim": "Luxe", "tireSizes": ["235/55R19", "255/45R20"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]},
+        {"trim": "Sport", "tireSizes": ["255/45R20"]},
+        {"trim": "Autograph", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["235/55R19", "255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2023,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["235/55R19"]},
+        {"trim": "Luxe", "tireSizes": ["235/55R19", "255/45R20"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]},
+        {"trim": "Sport", "tireSizes": ["255/45R20"]},
+        {"trim": "Autograph", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["235/55R19", "255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2022,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["235/55R19"]},
+        {"trim": "Luxe", "tireSizes": ["235/55R19"]},
+        {"trim": "Essential", "tireSizes": ["235/55R19"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]},
+        {"trim": "Autograph", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["235/55R19", "255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2021,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["235/55R19"]},
+        {"trim": "Luxe", "tireSizes": ["235/55R19"]},
+        {"trim": "Essential", "tireSizes": ["235/55R19"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]},
+        {"trim": "Autograph", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["235/55R19", "255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2020,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["235/55R19"]},
+        {"trim": "Luxe", "tireSizes": ["235/55R19", "255/45R20"]},
+        {"trim": "Essential", "tireSizes": ["235/55R19"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]},
+        {"trim": "Autograph", "tireSizes": ["255/45R20"]},
+        {"trim": "Edition 30", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["235/55R19", "255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2019,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["235/55R19"]},
+        {"trim": "Luxe", "tireSizes": ["235/55R19"]},
+        {"trim": "Essential", "tireSizes": ["235/55R19", "255/45R20"]}
+      ],
+      "allTireSizes": ["235/55R19", "255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2018,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18", "245/45R19"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18", "245/45R19"]}
+      ],
+      "allTireSizes": ["225/55R18", "245/45R19"],
+      "validatedOEM": true,
+      "notes": "2018 was transition year - old EX-based and new QX50 both sold"
+    },
+    {
+      "year": 2017,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18", "245/45R19"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18", "245/45R19"]}
+      ],
+      "allTireSizes": ["225/55R18", "245/45R19"],
+      "validatedOEM": true,
+      "notes": "Old EX35/EX37 based model"
+    },
+    {
+      "year": 2016,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18", "245/45R19"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18", "245/45R19"]}
+      ],
+      "allTireSizes": ["225/55R18", "245/45R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2015,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18"]},
+        {"trim": "Journey AWD", "tireSizes": ["225/55R18", "245/45R19"]},
+        {"trim": "Journey RWD", "tireSizes": ["225/55R18", "245/45R19"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18"]}
+      ],
+      "allTireSizes": ["225/55R18", "245/45R19"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2014,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18"]},
+        {"trim": "Journey AWD", "tireSizes": ["225/55R18", "245/45R19"]},
+        {"trim": "Journey RWD", "tireSizes": ["225/55R18", "245/45R19"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18"]}
+      ],
+      "allTireSizes": ["225/55R18", "245/45R19"],
+      "validatedOEM": true,
+      "notes": "First year as QX50 (previously EX37)"
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18"]},
+        {"trim": "Journey", "tireSizes": ["225/55R18", "245/45R19"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18"]}
+      ],
+      "allTireSizes": ["225/55R18", "245/45R19"],
+      "validatedOEM": true,
+      "notes": "Sold as EX37 in 2013, QX50 was the rename"
+    },
+    {
+      "year": 2012,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18"]},
+        {"trim": "Journey", "tireSizes": ["225/55R18"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18"]}
+      ],
+      "allTireSizes": ["225/55R18"],
+      "validatedOEM": true,
+      "notes": "Sold as EX35 in 2012"
+    },
+    {
+      "year": 2011,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18"]},
+        {"trim": "Journey", "tireSizes": ["225/55R18"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18"]}
+      ],
+      "allTireSizes": ["225/55R18"],
+      "validatedOEM": true,
+      "notes": "Sold as EX35 in 2011"
+    },
+    {
+      "year": 2010,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18"]},
+        {"trim": "Journey", "tireSizes": ["225/55R18"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18"]}
+      ],
+      "allTireSizes": ["225/55R18"],
+      "validatedOEM": true,
+      "notes": "Sold as EX35 in 2010"
+    },
+    {
+      "year": 2009,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18"]},
+        {"trim": "Journey", "tireSizes": ["225/55R18"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18"]}
+      ],
+      "allTireSizes": ["225/55R18"],
+      "validatedOEM": true,
+      "notes": "Sold as EX35 in 2009"
+    },
+    {
+      "year": 2008,
+      "make": "Infiniti",
+      "model": "QX50",
+      "trims": [
+        {"trim": "AWD", "tireSizes": ["225/55R18"]},
+        {"trim": "Journey", "tireSizes": ["225/55R18"]},
+        {"trim": "RWD", "tireSizes": ["225/55R18"]}
+      ],
+      "allTireSizes": ["225/55R18"],
+      "validatedOEM": true,
+      "notes": "Sold as EX35 in 2008"
+    },
+    {
+      "year": 2025,
+      "make": "Infiniti",
+      "model": "QX55",
+      "trims": [
+        {"trim": "Essential", "tireSizes": ["255/45R20"]},
+        {"trim": "Luxe", "tireSizes": ["255/45R20"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2024,
+      "make": "Infiniti",
+      "model": "QX55",
+      "trims": [
+        {"trim": "Essential", "tireSizes": ["255/45R20"]},
+        {"trim": "Luxe", "tireSizes": ["255/45R20"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2023,
+      "make": "Infiniti",
+      "model": "QX55",
+      "trims": [
+        {"trim": "Essential", "tireSizes": ["255/45R20"]},
+        {"trim": "Luxe", "tireSizes": ["255/45R20"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2022,
+      "make": "Infiniti",
+      "model": "QX55",
+      "trims": [
+        {"trim": "Essential", "tireSizes": ["255/45R20"]},
+        {"trim": "Luxe", "tireSizes": ["255/45R20"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["255/45R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2021,
+      "make": "Infiniti",
+      "model": "QX55",
+      "trims": [
+        {"trim": "Essential", "tireSizes": ["255/45R20"]},
+        {"trim": "Luxe", "tireSizes": ["255/45R20"]},
+        {"trim": "Sensory", "tireSizes": ["255/45R20"]}
+      ],
+      "allTireSizes": ["255/45R20"],
+      "validatedOEM": true,
+      "notes": "QX55 first model year 2022, 2021 may be pre-production"
+    },
+    {
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "QX56",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "4WD", "tireSizes": ["275/60R20", "275/50R22"]}
+      ],
+      "allTireSizes": ["275/60R20", "275/50R22"],
+      "validatedOEM": true,
+      "notes": "Last year of QX56, renamed QX80 in 2014"
+    },
+    {
+      "year": 2012,
+      "make": "Infiniti",
+      "model": "QX56",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "4WD", "tireSizes": ["275/60R20", "275/50R22"]}
+      ],
+      "allTireSizes": ["275/60R20", "275/50R22"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2011,
+      "make": "Infiniti",
+      "model": "QX56",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "4WD", "tireSizes": ["275/60R20", "275/50R22"]}
+      ],
+      "allTireSizes": ["275/60R20", "275/50R22"],
+      "validatedOEM": true,
+      "notes": "Second generation QX56 (Z62)"
+    },
+    {
+      "year": 2010,
+      "make": "Infiniti",
+      "model": "QX56",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["275/60R20"]},
+        {"trim": "4WD", "tireSizes": ["275/60R20"]}
+      ],
+      "allTireSizes": ["275/60R20"],
+      "validatedOEM": true,
+      "notes": "Last year of first generation (JA60)"
+    },
+    {
+      "year": 2009,
+      "make": "Infiniti",
+      "model": "QX56",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["275/60R20"]},
+        {"trim": "4WD", "tireSizes": ["275/60R20"]}
+      ],
+      "allTireSizes": ["275/60R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2008,
+      "make": "Infiniti",
+      "model": "QX56",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["275/60R20"]},
+        {"trim": "4WD", "tireSizes": ["275/60R20"]}
+      ],
+      "allTireSizes": ["275/60R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2007,
+      "make": "Infiniti",
+      "model": "QX56",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["265/70R18"]},
+        {"trim": "4WD", "tireSizes": ["265/70R18"]}
+      ],
+      "allTireSizes": ["265/70R18"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2006,
+      "make": "Infiniti",
+      "model": "QX56",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["265/70R18"]},
+        {"trim": "4WD", "tireSizes": ["265/70R18"]}
+      ],
+      "allTireSizes": ["265/70R18"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2005,
+      "make": "Infiniti",
+      "model": "QX56",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["265/70R18"]},
+        {"trim": "4WD", "tireSizes": ["265/70R18"]}
+      ],
+      "allTireSizes": ["265/70R18"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2004,
+      "make": "Infiniti",
+      "model": "QX56",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["265/70R18"]},
+        {"trim": "4WD", "tireSizes": ["265/70R18"]}
+      ],
+      "allTireSizes": ["265/70R18"],
+      "validatedOEM": true,
+      "notes": "First year of QX56"
+    },
+    {
+      "year": 2026,
+      "make": "Infiniti",
+      "model": "QX60",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["255/50R20"]},
+        {"trim": "Luxe", "tireSizes": ["255/50R20"]},
+        {"trim": "Sport", "tireSizes": ["255/50R20"]},
+        {"trim": "Autograph", "tireSizes": ["255/50R20"]}
+      ],
+      "allTireSizes": ["255/50R20"],
+      "validatedOEM": true
+    },
+    {
+      "year": 2025,
+      "make": "Infiniti",
+      "model": "QX60",
+      "trims": [
+        {"trim": "Pure", "tireSizes": ["255/60R18"]},
+        {"trim": "Luxe", "tireSizes": ["255/50R20"]},
+        {"trim": "Sensory", "tireSizes": ["255/50R20"]},
+        {"trim": "Autograph", "tireSizes": ["255/50R20"]}
+      ],
+      "allTireSizes": ["255/60R18", "255/50R20"],
+      "validatedOEM": true
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 75,
+    "withStaggeredSetups": 18,
+    "models": {
+      "Q45": {"years": "2000-2004", "commonSizes": ["225/55R17", "245/45R18"]},
+      "Q50": {"years": "2013-2026", "commonSizes": ["225/55R17", "225/50R18", "245/40R19", "265/35R19"]},
+      "Q60": {"years": "2013-2023", "commonSizes": ["225/50R18", "255/40R19", "255/35R20", "275/30R20"]},
+      "Q70": {"years": "2013-2021", "commonSizes": ["245/50R18", "245/40R20"]},
+      "QX50": {"years": "2008-2026", "commonSizes": ["225/55R18", "235/55R19", "255/45R20"]},
+      "QX55": {"years": "2021-2025", "commonSizes": ["255/45R20"]},
+      "QX56": {"years": "2004-2013", "commonSizes": ["265/70R18", "275/60R20", "275/50R22"]},
+      "QX60": {"years": "2025-2026", "commonSizes": ["255/50R20", "255/60R18"]}
+    },
+    "staggeredVehicles": [
+      "Q50 Red Sport 400 (245/40R19 front, 265/35R19 rear)",
+      "Q60 Red Sport 400 RWD (255/35R20 front, 275/30R20 rear)",
+      "Q60 2013-2016 Coupe Sport/IPL models"
+    ]
+  }
+}

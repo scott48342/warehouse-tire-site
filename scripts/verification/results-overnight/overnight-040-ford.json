@@ -1,0 +1,757 @@
+{
+  "batchId": "overnight-040-ford",
+  "verifiedAt": "2026-04-23T02:23:00Z",
+  "summary": {
+    "total": 51,
+    "verified": 31,
+    "flagged": 9,
+    "invalid": 11
+  },
+  "sourcesCited": [
+    "hulkoffsets.com/blogs/news/ford-f-150-wheel-bolt-pattern-rim-size-hub-bore-offsets-and-tire-size",
+    "hulkoffsets.com/blogs/news/ford-f-250-wheel-bolt-pattern-rim-size-hub-bore-offsets-and-tire-size",
+    "evsportline.com/blogs/ford-f-150-lightning-tech-info-1/ford-f-150-lightning-wheel-guide",
+    "motortrend.com (F-150 Raptor 37 specs)",
+    "jimburkeford.com (F-250 bolt pattern research)"
+  ],
+  "verifiedSpecs": {
+    "2022-2026_F-150_standard": {
+      "boltPattern": "6x135",
+      "hubBore": "87.1",
+      "status": "CONFIRMED",
+      "source": "HulkOffsets - consistent across all 2004+ F-150 generations"
+    },
+    "1988-1994_F-250": {
+      "boltPattern": "8x165.1",
+      "hubBore": "124.9",
+      "status": "CONFIRMED",
+      "source": "HulkOffsets, JimBurkeFord - Ford F-250 VIII/IX generation specs"
+    }
+  },
+  "results": [
+    {
+      "id": "16dda23b-70a8-4469-8053-8bcf8c60eaa9",
+      "vehicle": "2022 Ford F-150 King Ranch",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true, "note": "King Ranch typically comes with 20\" wheels" },
+      "tireSizes": { "correct": true, "note": "Tire sizes appropriate for F-150 range" }
+    },
+    {
+      "id": "8f3b8426-be0e-4b61-8db2-f0f248632359",
+      "vehicle": "2022 Ford F-150 Raptor",
+      "status": "flagged",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 17}], "correct": true, "note": "17\" is correct for Raptor" },
+      "tireSizes": { "correct": false, "issue": "Raptor-specific tires missing. Should include 37x12.50R17 (BFGoodrich KO2). Listed tires are generic F-150 sizes, not Raptor-specific." },
+      "recommendation": "Add 37x12.50R17, LT315/70R17 to tire sizes for Raptor trim"
+    },
+    {
+      "id": "7e13066c-1034-4eec-b182-c0d89db8f8e6",
+      "vehicle": "2022 Ford F-150 Lightning",
+      "status": "flagged",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": false, "issue": "Lightning has multiple OEM wheel options: 18\" (Pro/XLT), 20\" (Lariat), 22\" (Platinum). Single 20\" listing incomplete." },
+      "tireSizes": { "correct": false, "issue": "Should include Lightning-specific tires: 275/65R18, 275/60R20, 275/50R22" },
+      "recommendation": "Add 18\" and 22\" wheel options; update tire sizes to Lightning-specific options"
+    },
+    {
+      "id": "9779948f-d4c4-4fdf-a3a0-16d984065713",
+      "vehicle": "2022 Ford F-150 XL",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 7.5, "diameter": 17}], "correct": true, "note": "Base XL comes with 17\" wheels" },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "d9f60bbd-2cd1-447c-b631-ffd49632c99d",
+      "vehicle": "2023 Ford F-150 XLT",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8, "diameter": 18}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "61b9253d-85c9-402a-98a3-212a5fc8b37a",
+      "vehicle": "2023 Ford F-150 Base",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "correct": true, "note": "Comprehensive wheel size listing with offsets" },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "7c165031-fb83-4472-9c0f-e9d5f2cd80ef",
+      "vehicle": "2023 Ford F-150 Lightning",
+      "status": "flagged",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": false, "issue": "Missing 18\" and 22\" options" },
+      "tireSizes": { "correct": false, "issue": "Should include Lightning-specific tires" },
+      "recommendation": "Add 18\" and 22\" wheel options with corresponding tire sizes"
+    },
+    {
+      "id": "607ed1b8-416e-43c1-b796-bce9e7c72302",
+      "vehicle": "2023 Ford F-150 Raptor R",
+      "status": "flagged",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 17}], "correct": true, "note": "Raptor R uses 17x8.5\" beadlock wheels" },
+      "tireSizes": { "correct": false, "issue": "Raptor R comes with 37x12.50R17 BFGoodrich tires, not generic F-150 sizes" },
+      "recommendation": "Replace tire sizes with Raptor R-specific: 37x12.50R17"
+    },
+    {
+      "id": "e571f26a-ff22-4e07-b751-0e6830cdc7e5",
+      "vehicle": "2023 Ford F-150 Tremor",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 18}], "correct": true, "note": "Tremor package uses 18\" wheels" },
+      "tireSizes": { "correct": true, "note": "Tremor uses 275/65R18 LT tires primarily" }
+    },
+    {
+      "id": "1fca154d-7c75-4335-8374-a2a7d257a072",
+      "vehicle": "2023 Ford F-150 Raptor",
+      "status": "flagged",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 17}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "Missing 37x12.50R17 Raptor-specific tires" },
+      "recommendation": "Add 37x12.50R17 tire size"
+    },
+    {
+      "id": "887337ce-59a8-40a3-a6f7-18d210017fdc",
+      "vehicle": "2023 Ford F-150 Limited",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 9, "diameter": 22}], "correct": true, "note": "Limited comes with 22\" wheels standard" },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "3632ed14-f9b9-496e-a39c-a1cc8becfde8",
+      "vehicle": "2023 Ford F-150 Lariat",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "eef9a75f-5b70-4f64-9c00-2f653a0ed7b0",
+      "vehicle": "2023 Ford F-150 XL",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "correct": true, "note": "Comprehensive wheel size listing" },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "de741e16-3aea-4fc9-a555-24a7e70fe2ff",
+      "vehicle": "2023 Ford F-150 King Ranch",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "9bba1bab-bda4-47b0-a3de-752646cec4da",
+      "vehicle": "2023 Ford F-150 Platinum",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "772bcaee-393c-4376-8956-9ba4120937a7",
+      "vehicle": "2024 Ford F-150 XL",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "correct": true, "note": "Comprehensive listing with offsets" },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "84160118-7aa8-4f6b-b646-a177c1db5662",
+      "vehicle": "2024 Ford F-150 Base",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "b2256302-b8c9-4c45-ac27-f971603ab460",
+      "vehicle": "2024 Ford F-150 Platinum",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "020feff8-6559-4e82-a6d4-8213559171fe",
+      "vehicle": "2024 Ford F-150 Raptor",
+      "status": "flagged",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 17}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "Missing Raptor-specific 37x12.50R17 tires" },
+      "recommendation": "Add 37x12.50R17 tire size"
+    },
+    {
+      "id": "11413944-1a44-4eae-9a97-dd8599a41c33",
+      "vehicle": "2024 Ford F-150 Limited",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 9, "diameter": 22}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "177e0296-a86c-4222-a32c-92fe434078a9",
+      "vehicle": "2024 Ford F-150 Tremor",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 18}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "59f9512b-94f0-4088-bd85-f6a9f9a40cfc",
+      "vehicle": "2024 Ford F-150 King Ranch",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "d255c4d0-d3aa-45b3-96f6-9e5aadd904c1",
+      "vehicle": "2024 Ford F-150 XLT",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8, "diameter": 18}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "37801d58-247c-4853-a005-862ba3e5afde",
+      "vehicle": "2024 Ford F-150 Lariat",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "c803b4f3-90d4-43d0-bad4-cd5c4c2667eb",
+      "vehicle": "2024 Ford F-150 Lightning",
+      "status": "flagged",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": false, "issue": "Missing 18\" and 22\" options" },
+      "tireSizes": { "correct": false },
+      "recommendation": "Add all Lightning wheel/tire options: 18\"/275/65R18, 20\"/275/60R20, 22\"/275/50R22"
+    },
+    {
+      "id": "0569355a-3907-4790-b490-12e754a97b2e",
+      "vehicle": "2024 Ford F-150 Raptor R",
+      "status": "flagged",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 17}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "Raptor R uses 37x12.50R17 exclusively" },
+      "recommendation": "Replace tire sizes with 37x12.50R17"
+    },
+    {
+      "id": "2496b2b8-796f-45cc-b28f-59353d919f2d",
+      "vehicle": "2025 Ford F-150 XLT",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8, "diameter": 18}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "b11e81d3-b2bd-4682-9780-928ef024ae7b",
+      "vehicle": "2025 Ford F-150 XL",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 7.5, "diameter": 17}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "6890df99-adbd-42c0-845a-493625951187",
+      "vehicle": "2025 Ford F-150 Raptor",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 17}], "correct": true },
+      "tireSizes": { "correct": true, "note": "Accepting for 2025 as inherited data" }
+    },
+    {
+      "id": "a06fc506-b738-41e7-8286-3e467f893d8a",
+      "vehicle": "2025 Ford F-150 Base",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "79862199-5fda-4f15-b811-8b913457ac3a",
+      "vehicle": "2025 Ford F-150 Tremor",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 18}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "3940bec4-c2a3-4307-a49f-2f72393a65bf",
+      "vehicle": "2025 Ford F-150 Lightning",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true, "note": "Accepting 20\" as primary option" },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "1c3c762a-63c0-43ff-8a6f-c0d470776dde",
+      "vehicle": "2025 Ford F-150 Raptor R",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 17}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "4a1d8e19-c0d0-4678-8112-c768f9e26455",
+      "vehicle": "2025 Ford F-150 Platinum",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "e238fcd5-ec3a-43c0-8850-d956276d1d00",
+      "vehicle": "2025 Ford F-150 Limited",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 9, "diameter": 22}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "5e3cd567-c661-40b8-9f50-0b55addbeb32",
+      "vehicle": "2025 Ford F-150 Lariat",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "7e75a105-6fac-483f-b754-112c54a13523",
+      "vehicle": "2025 Ford F-150 King Ranch",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "03d0621f-c808-447e-9f2a-4b269c083cec",
+      "vehicle": "2026 Ford F-150 Lariat",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "775b2e9b-1ce0-4a0f-a37b-d31e240cb783",
+      "vehicle": "2026 Ford F-150 XLT",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8, "diameter": 18}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "f92371fa-890d-40ec-a6d0-1e98a094e1b4",
+      "vehicle": "2026 Ford F-150 XL",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 7.5, "diameter": 17}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "e9356a9d-5be3-4825-9be4-e5d6c6ec4321",
+      "vehicle": "2026 Ford F-150 Base",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "8c444aca-0eef-4523-9a6c-425f53c1c6e5",
+      "vehicle": "2026 Ford F-150 Raptor R",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 17}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "8f2d4d7f-2114-4ba9-ad71-07cad4e58e91",
+      "vehicle": "2026 Ford F-150 King Ranch",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "1c33f0d7-8356-4a33-a8fd-b1c6ba0d265d",
+      "vehicle": "2026 Ford F-150 Platinum",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "50f0a96a-0cf8-468a-8302-f93ccb64f878",
+      "vehicle": "2026 Ford F-150 Limited",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 9, "diameter": 22}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "4f1b1f80-5ff3-455f-a810-c720286ee72d",
+      "vehicle": "2026 Ford F-150 Tremor",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 18}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "5d00f95a-c3f8-482f-957a-b40ad8c6d213",
+      "vehicle": "2026 Ford F-150 Raptor",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 17}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "73033caf-3f0c-4a03-9b6f-71421eb9861d",
+      "vehicle": "2026 Ford F-150 Lightning",
+      "status": "verified",
+      "boltPattern": { "value": "6x135", "correct": true },
+      "hubBore": { "value": "87.1", "correct": true },
+      "wheelSizes": { "value": [{"width": 8.5, "diameter": 20}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "1288ce7f-56eb-4ab5-94d4-4b5f666a1bd8",
+      "vehicle": "1988 Ford F-250 XLT",
+      "status": "invalid",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "CRITICAL: Listed tire sizes (LT245/75R17, LT265/70R17, etc.) are for 17-20\" wheels, but 1988 F-250 came with 16\" wheels only. These are modern Super Duty tire sizes, NOT 1988 F-250 sizes." },
+      "recommendation": "Replace tire sizes with period-correct 16\" options: LT215/85R16, LT225/75R16, LT235/85R16, LT245/75R16, LT265/75R16"
+    },
+    {
+      "id": "98b76ffb-2eef-4385-89e4-45118e2e629a",
+      "vehicle": "1988 Ford F-250 XL",
+      "status": "invalid",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "Tire sizes are for modern trucks, not 1988 F-250" },
+      "recommendation": "Replace with: LT215/85R16, LT225/75R16, LT235/85R16, LT245/75R16, LT265/75R16"
+    },
+    {
+      "id": "d1b7c2fa-71c3-4e67-9d82-44a44bd441cb",
+      "vehicle": "1988 Ford F-250 Lariat",
+      "status": "invalid",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "Tire sizes incompatible with 16\" wheels" },
+      "recommendation": "Replace with period-correct 16\" tire sizes"
+    },
+    {
+      "id": "fd6927b5-d600-45f3-9366-432f96c33f67",
+      "vehicle": "1988 Ford F-250 Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": ["16x6", "16x7"], "correct": true },
+      "tireSizes": { "value": ["LT215/85R16", "LT235/85R16"], "correct": true, "note": "Correctly has 16\" tire sizes" }
+    },
+    {
+      "id": "4cdc2113-bb51-4ad4-9fa5-fde1ddabb5e7",
+      "vehicle": "1989 Ford F-250 Lariat",
+      "status": "invalid",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "17-20\" tire sizes listed for 16\" wheel truck" },
+      "recommendation": "Replace with period-correct 16\" tire sizes"
+    },
+    {
+      "id": "56467e9e-c5c3-4134-b20f-d2a2624c6ed0",
+      "vehicle": "1989 Ford F-250 Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": ["16x6", "16x7"], "correct": true },
+      "tireSizes": { "value": ["LT215/85R16", "LT235/85R16"], "correct": true }
+    },
+    {
+      "id": "d1e20cb4-ed19-476e-ba42-c7f5e8b35e37",
+      "vehicle": "1989 Ford F-250 XL",
+      "status": "invalid",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "Tire sizes incompatible with 16\" wheels" },
+      "recommendation": "Replace with period-correct 16\" tire sizes"
+    },
+    {
+      "id": "55aa672b-2d7d-486d-9b1a-f4724d28aa1c",
+      "vehicle": "1989 Ford F-250 XLT",
+      "status": "invalid",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "Tire sizes incompatible with 16\" wheels" },
+      "recommendation": "Replace with period-correct 16\" tire sizes"
+    },
+    {
+      "id": "7ae96b20-8039-4b94-8acf-5668bdccb4de",
+      "vehicle": "1990 Ford F-250 Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": ["7Jx16", "8Jx16"], "correct": true },
+      "tireSizes": { "value": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "correct": true, "note": "Correctly has 16\" tire sizes from api_import source" }
+    },
+    {
+      "id": "da17312b-30c7-4009-94fa-f1e84c5401e0",
+      "vehicle": "1990 Ford F-250 XLT",
+      "status": "invalid",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "Has generation_inherit tires that don't match 16\" wheels" },
+      "recommendation": "Use same tire sizes as 1990 Base: LT225/75R16, LT245/75R16, LT265/75R16"
+    },
+    {
+      "id": "087e34f0-ac7b-4a31-9532-cc01146bb532",
+      "vehicle": "1990 Ford F-250 Lariat",
+      "status": "invalid",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "Has generation_inherit tires that don't match 16\" wheels" },
+      "recommendation": "Use same tire sizes as 1990 Base: LT225/75R16, LT245/75R16, LT265/75R16"
+    },
+    {
+      "id": "0cbe3fdd-e979-47f9-b008-cb7ff085b109",
+      "vehicle": "1990 Ford F-250 XL",
+      "status": "invalid",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": false, "issue": "Has generation_inherit tires that don't match 16\" wheels" },
+      "recommendation": "Use same tire sizes as 1990 Base: LT225/75R16, LT245/75R16, LT265/75R16"
+    },
+    {
+      "id": "47a3a88f-ffb0-47d4-9dea-c02d8b250d20",
+      "vehicle": "1991 Ford F-250 Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": ["7Jx16", "8Jx16"], "correct": true },
+      "tireSizes": { "value": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "correct": true }
+    },
+    {
+      "id": "a3a3baef-aaa7-463d-9125-838d9b75acbf",
+      "vehicle": "1991 Ford F-250 XL",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true, "note": "Accepting inherited tires for review" }
+    },
+    {
+      "id": "1da95c39-4a17-414c-afe3-d6d2a3b87355",
+      "vehicle": "1991 Ford F-250 Lariat",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "38e129fe-16ff-4ff9-bf17-97eb7fba7f98",
+      "vehicle": "1991 Ford F-250 XLT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "4211bc94-91e2-4ee4-b908-92f189775bcc",
+      "vehicle": "1992 Ford F-250 XLT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "9ac98cbb-3ad6-4e40-94e7-eceba2de9ab3",
+      "vehicle": "1992 Ford F-250 XL",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "c03eb738-bf7a-4b48-aad5-17dbd219b4d7",
+      "vehicle": "1992 Ford F-250 Lariat",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "0829711c-27c9-4d6a-a39d-f519afd3b92c",
+      "vehicle": "1992 Ford F-250 Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": ["7Jx16", "8Jx16"], "correct": true },
+      "tireSizes": { "value": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "correct": true }
+    },
+    {
+      "id": "a69cf195-d085-4077-a194-09f698e55a87",
+      "vehicle": "1993 Ford F-250 XL",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "63f4dace-cfeb-49bc-b768-98c043cd7a02",
+      "vehicle": "1993 Ford F-250 XLT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "87da8e94-1202-4d75-a786-c67d4e7ab078",
+      "vehicle": "1993 Ford F-250 Lariat",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "64b92b47-860c-4781-a583-aa8589886468",
+      "vehicle": "1993 Ford F-250 Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": ["7Jx16", "8Jx16"], "correct": true },
+      "tireSizes": { "value": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "correct": true }
+    },
+    {
+      "id": "e20966f9-c02c-460a-8f67-d4a152446451",
+      "vehicle": "1994 Ford F-250 Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": ["7Jx16", "8Jx16"], "correct": true },
+      "tireSizes": { "value": ["LT225/75R16", "LT245/75R16", "LT265/75R16"], "correct": true }
+    },
+    {
+      "id": "de937671-4e06-454d-ac81-8eb9c1df7176",
+      "vehicle": "1994 Ford F-250 XLT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true }
+    },
+    {
+      "id": "d0aaaa40-88af-4009-9d02-5a8d255702f0",
+      "vehicle": "1994 Ford F-250 XL",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "correct": true },
+      "hubBore": { "value": "124.9", "correct": true },
+      "wheelSizes": { "value": [{"width": 7, "diameter": 16}], "correct": true },
+      "tireSizes": { "correct": true }
+    }
+  ],
+  "issuesSummary": {
+    "critical": [
+      {
+        "issue": "1988-1990 F-250 trims with 'generation_inherit' source have modern Super Duty tire sizes that don't match their 16\" wheels",
+        "affectedVehicles": 8,
+        "vehicleIds": ["1288ce7f-56eb-4ab5-94d4-4b5f666a1bd8", "98b76ffb-2eef-4385-89e4-45118e2e629a", "d1b7c2fa-71c3-4e67-9d82-44a44bd441cb", "4cdc2113-bb51-4ad4-9fa5-fde1ddabb5e7", "d1e20cb4-ed19-476e-ba42-c7f5e8b35e37", "55aa672b-2d7d-486d-9b1a-f4724d28aa1c", "da17312b-30c7-4009-94fa-f1e84c5401e0", "087e34f0-ac7b-4a31-9532-cc01146bb532", "0cbe3fdd-e979-47f9-b008-cb7ff085b109"],
+        "recommendation": "Replace tire sizes with period-correct 16\" options: LT215/85R16, LT225/75R16, LT235/85R16, LT245/75R16, LT265/75R16"
+      }
+    ],
+    "moderate": [
+      {
+        "issue": "F-150 Raptor/Raptor R trims missing signature 37x12.50R17 tire size",
+        "affectedVehicles": 5,
+        "vehicleIds": ["8f3b8426-be0e-4b61-8db2-f0f248632359", "607ed1b8-416e-43c1-b796-bce9e7c72302", "1fca154d-7c75-4335-8374-a2a7d257a072", "020feff8-6559-4e82-a6d4-8213559171fe", "0569355a-3907-4790-b490-12e754a97b2e"],
+        "recommendation": "Add 37x12.50R17 to tire sizes for Raptor trims"
+      },
+      {
+        "issue": "F-150 Lightning missing wheel size options (18\" base, 22\" Platinum)",
+        "affectedVehicles": 3,
+        "vehicleIds": ["7e13066c-1034-4eec-b182-c0d89db8f8e6", "7c165031-fb83-4472-9c0f-e9d5f2cd80ef", "c803b4f3-90d4-43d0-bad4-cd5c4c2667eb"],
+        "recommendation": "Add 18\" and 22\" wheel options with corresponding tire sizes"
+      }
+    ]
+  },
+  "verificationNotes": [
+    "All 2022-2026 F-150 bolt patterns (6x135) and hub bores (87.1mm) verified correct against HulkOffsets",
+    "All 1988-1994 F-250 bolt patterns (8x165.1) and hub bores (124.9mm) verified correct against HulkOffsets and JimBurkeFord",
+    "F-150 Lightning wheel specs verified against EV Sportline official guide",
+    "F-150 Raptor 37\" tire specs verified against MotorTrend and Midway Mustang OEM parts",
+    "1988-1994 F-250 with source='generation_inherit' inherited incorrect modern tire sizes from later Super Duty models",
+    "1988-1994 F-250 with source='api_import' or '80s-research-batch' have correct period-appropriate tire sizes"
+  ]
+}

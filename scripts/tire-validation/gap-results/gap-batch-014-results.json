@@ -1,0 +1,487 @@
+{
+  "batchId": 14,
+  "researchedAt": "2026-04-21T23:47:00Z",
+  "source": "tiresize.com",
+  "vehicles": [
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "hhr",
+      "tireSizes": ["215/55R16", "215/50R17", "225/45R18"],
+      "trims": {
+        "LS Panel Sport Wagon": { "tires": ["215/55R16"] },
+        "LS Sport Wagon": { "tires": ["215/55R16"] },
+        "LT Panel Sport Wagon": { "tires": ["215/55R16", "215/50R17"] },
+        "LT Sport Wagon": { "tires": ["215/55R16", "215/50R17"] },
+        "SS": { "tires": ["225/45R18"] }
+      },
+      "wheelDiameters": [16, 17, 18],
+      "notes": "US market vehicle"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "hhr",
+      "tireSizes": ["215/55R16", "215/50R17", "225/45R18"],
+      "trims": {
+        "LS Panel Sport Wagon": { "tires": ["215/55R16"] },
+        "LS Sport Wagon": { "tires": ["215/55R16"] },
+        "LT Panel Sport Wagon": { "tires": ["215/55R16", "215/50R17"] },
+        "LT Sport Wagon": { "tires": ["215/55R16", "215/50R17"] },
+        "SS": { "tires": ["225/45R18"] }
+      },
+      "wheelDiameters": [16, 17, 18],
+      "notes": "US market vehicle"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "hhr",
+      "tireSizes": ["215/55R16", "215/50R17"],
+      "trims": {
+        "LS Panel Sport Wagon": { "tires": ["215/55R16"] },
+        "LS Sport Wagon": { "tires": ["215/55R16"] },
+        "LT Panel Sport Wagon": { "tires": ["215/55R16", "215/50R17"] },
+        "LT Sport Wagon": { "tires": ["215/55R16", "215/50R17"] }
+      },
+      "wheelDiameters": [16, 17],
+      "notes": "US market vehicle - SS trim discontinued"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "hhr-ss",
+      "tireSizes": ["225/45R18"],
+      "trims": {
+        "SS": { "tires": ["225/45R18"] }
+      },
+      "wheelDiameters": [18],
+      "notes": "US market vehicle - SS trim of HHR"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "hhr-ss",
+      "tireSizes": ["225/45R18"],
+      "trims": {
+        "SS": { "tires": ["225/45R18"] }
+      },
+      "wheelDiameters": [18],
+      "notes": "US market vehicle - SS trim of HHR"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "hhr-ss",
+      "tireSizes": ["225/45R18"],
+      "trims": {
+        "SS": { "tires": ["225/45R18"] }
+      },
+      "wheelDiameters": [18],
+      "notes": "US market vehicle - SS trim of HHR, final year"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "impala-limited",
+      "tireSizes": ["225/60R16", "235/55R17", "235/50R18"],
+      "trims": {
+        "Limited LS": { "tires": ["225/60R16"] },
+        "Limited LT": { "tires": ["225/60R16", "235/55R17"] },
+        "Limited LTZ": { "tires": ["235/50R18"] },
+        "Limited Police": { "tires": ["235/55R17"] }
+      },
+      "wheelDiameters": [16, 17, 18],
+      "notes": "US market vehicle - fleet continuation of 9th gen Impala"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "impala-limited",
+      "tireSizes": ["225/60R16", "235/55R17", "235/50R18"],
+      "trims": {
+        "Limited LS": { "tires": ["225/60R16"] },
+        "Limited LT": { "tires": ["225/60R16", "235/55R17"] },
+        "Limited LTZ": { "tires": ["235/50R18"] },
+        "Limited Police": { "tires": ["235/55R17"] }
+      },
+      "wheelDiameters": [16, 17, 18],
+      "notes": "US market vehicle - fleet continuation of 9th gen Impala"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "impala-limited",
+      "tireSizes": ["225/60R16", "225/55R17", "235/55R17", "235/50R18"],
+      "trims": {
+        "Limited LS": { "tires": ["225/60R16"] },
+        "Limited LT": { "tires": ["225/60R16", "225/55R17"] },
+        "Limited LTZ": { "tires": ["235/50R18"] },
+        "Limited Police": { "tires": ["235/55R17"] }
+      },
+      "wheelDiameters": [16, 17, 18],
+      "notes": "US market vehicle - final year of 9th gen Impala (fleet)"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "lova-rv",
+      "notUS": true,
+      "notes": "China market only - not sold in US"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "lova-rv",
+      "notUS": true,
+      "notes": "China market only - not sold in US"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "lova-rv",
+      "notUS": true,
+      "notes": "China market only - not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "luv",
+      "notUS": true,
+      "notes": "South America/Mexico market - not sold in US after 1982"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "luv",
+      "notUS": true,
+      "notes": "South America/Mexico market - not sold in US after 1982"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "luv",
+      "notUS": true,
+      "notes": "South America/Mexico market - not sold in US after 1982"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "luv",
+      "notUS": true,
+      "notes": "South America/Mexico market - not sold in US after 1982"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "luv",
+      "notUS": true,
+      "notes": "South America/Mexico market - not sold in US after 1982"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "luv",
+      "notUS": true,
+      "notes": "South America/Mexico market - not sold in US after 1982"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "malibu-limited",
+      "tireSizes": ["215/60R16", "225/55R17", "225/50R18"],
+      "trims": {
+        "Limited LS": { "tires": ["215/60R16"] },
+        "Limited LT": { "tires": ["215/60R16", "225/55R17"] },
+        "Limited LTZ": { "tires": ["225/50R18"] }
+      },
+      "wheelDiameters": [16, 17, 18],
+      "notes": "US market vehicle - fleet continuation of 8th gen Malibu"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "malibu-maxx",
+      "tireSizes": ["215/60R16"],
+      "trims": {
+        "Maxx": { "tires": ["215/60R16"] }
+      },
+      "wheelDiameters": [16],
+      "notes": "US market vehicle - hatchback variant of Malibu"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "malibu-maxx",
+      "tireSizes": ["215/60R16"],
+      "trims": {
+        "Maxx": { "tires": ["215/60R16"] }
+      },
+      "wheelDiameters": [16],
+      "notes": "US market vehicle - hatchback variant of Malibu"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "malibu-maxx",
+      "tireSizes": ["215/60R16", "225/50R17", "225/50R18"],
+      "trims": {
+        "Maxx LT": { "tires": ["215/60R16"] },
+        "Maxx LTZ": { "tires": ["225/50R17"] },
+        "Maxx SS": { "tires": ["225/50R18"] }
+      },
+      "wheelDiameters": [16, 17, 18],
+      "notes": "US market vehicle - hatchback variant of Malibu"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "malibu-maxx",
+      "tireSizes": ["215/60R16", "225/50R17", "225/50R18"],
+      "trims": {
+        "Maxx LT": { "tires": ["215/60R16"] },
+        "Maxx LTZ": { "tires": ["225/50R17"] },
+        "Maxx SS": { "tires": ["225/50R18"] }
+      },
+      "wheelDiameters": [16, 17, 18],
+      "notes": "US market vehicle - final year of Malibu Maxx"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "metro",
+      "tireSizes": ["155/80R13"],
+      "trims": {
+        "Base Model": { "tires": ["155/80R13"] },
+        "LSi": { "tires": ["155/80R13"] }
+      },
+      "wheelDiameters": [13],
+      "notes": "US market vehicle - rebadged Suzuki Swift"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "metro",
+      "tireSizes": ["155/80R13"],
+      "trims": {
+        "Base Model": { "tires": ["155/80R13"] },
+        "LSi": { "tires": ["155/80R13"] }
+      },
+      "wheelDiameters": [13],
+      "notes": "US market vehicle - final year of Metro"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "mw",
+      "notUS": true,
+      "notes": "Japan market only - rebadged Suzuki Wagon R/Solio kei car"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "mw",
+      "notUS": true,
+      "notes": "Japan market only - rebadged Suzuki Wagon R/Solio kei car"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "mw",
+      "notUS": true,
+      "notes": "Japan market only - rebadged Suzuki Wagon R/Solio kei car"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "mw",
+      "notUS": true,
+      "notes": "Japan market only - rebadged Suzuki Wagon R/Solio kei car"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "mw",
+      "notUS": true,
+      "notes": "Japan market only - rebadged Suzuki Wagon R/Solio kei car"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "mw",
+      "notUS": true,
+      "notes": "Japan market only - rebadged Suzuki Wagon R/Solio kei car"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "mw",
+      "notUS": true,
+      "notes": "Japan market only - rebadged Suzuki Wagon R/Solio kei car"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "mw",
+      "notUS": true,
+      "notes": "Japan market only - rebadged Suzuki Wagon R/Solio kei car"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "mw",
+      "notUS": true,
+      "notes": "Japan market only - rebadged Suzuki Wagon R/Solio kei car"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "onix-activ",
+      "notUS": true,
+      "notes": "South America market only - crossover variant of Onix"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "onix-activ",
+      "notUS": true,
+      "notes": "South America market only - crossover variant of Onix"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "onix-activ",
+      "notUS": true,
+      "notes": "South America market only - crossover variant of Onix"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "onix-joy",
+      "notUS": true,
+      "notes": "South America market only - budget variant of Onix"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "onix-joy",
+      "notUS": true,
+      "notes": "South America market only - budget variant of Onix"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "onix-joy",
+      "notUS": true,
+      "notes": "South America market only - budget variant of Onix"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "prisma-joy",
+      "notUS": true,
+      "notes": "South America market only - sedan variant of Onix (Prisma)"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "prisma-joy",
+      "notUS": true,
+      "notes": "South America market only - sedan variant of Onix (Prisma)"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "prisma-joy",
+      "notUS": true,
+      "notes": "South America market only - sedan variant of Onix (Prisma)"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "prizm",
+      "tireSizes": ["175/65R14", "185/65R14"],
+      "trims": {
+        "Base Model": { "tires": ["175/65R14", "185/65R14"] },
+        "LSi": { "tires": ["185/65R14"] }
+      },
+      "wheelDiameters": [14],
+      "notes": "US market vehicle - NUMMI-built Toyota Corolla rebadge"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "prizm",
+      "tireSizes": ["175/65R14", "185/65R14"],
+      "trims": {
+        "Base Model": { "tires": ["175/65R14"] },
+        "LSi": { "tires": ["185/65R14"] }
+      },
+      "wheelDiameters": [14],
+      "notes": "US market vehicle - NUMMI-built Toyota Corolla rebadge"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "prizm",
+      "tireSizes": ["175/65R14", "185/65R14"],
+      "trims": {
+        "Base Model": { "tires": ["175/65R14"] },
+        "LSi": { "tires": ["185/65R14"] }
+      },
+      "wheelDiameters": [14],
+      "notes": "US market vehicle - final year of Prizm"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "seeker",
+      "notUS": true,
+      "notes": "China market only - compact crossover SUV"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "seeker",
+      "notUS": true,
+      "notes": "China market only - compact crossover SUV"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "seeker",
+      "notUS": true,
+      "notes": "China market only - compact crossover SUV"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "seeker",
+      "notUS": true,
+      "notes": "China market only - compact crossover SUV"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "usVehicles": 22,
+    "nonUsVehicles": 28,
+    "modelsResearched": {
+      "hhr": "2009-2011 - US market, 16-18\" wheels",
+      "hhr-ss": "2008-2010 - US market, 18\" wheels only",
+      "impala-limited": "2014-2016 - US market fleet vehicle, 16-18\" wheels",
+      "malibu-limited": "2016 - US market fleet vehicle, 16-18\" wheels",
+      "malibu-maxx": "2004-2007 - US market hatchback, 16-18\" wheels",
+      "metro": "2000-2001 - US market, 13\" wheels",
+      "prizm": "2000-2002 - US market (Toyota Corolla rebadge), 14\" wheels"
+    },
+    "nonUsModels": {
+      "lova-rv": "China market only",
+      "luv": "South America/Mexico market (not US after 1982)",
+      "mw": "Japan market only (Suzuki kei car)",
+      "onix-activ": "South America market only",
+      "onix-joy": "South America market only",
+      "prisma-joy": "South America market only",
+      "seeker": "China market only"
+    }
+  }
+}

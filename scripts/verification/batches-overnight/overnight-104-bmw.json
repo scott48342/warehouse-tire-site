@@ -1,0 +1,4282 @@
+[
+  {
+    "id": "8bca5a23-e6d9-41a0-a839-72d7401398d8",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x4-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 31,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 35,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "9ab58baf-355f-404a-9a15-fb7f4b33b68d",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x4-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 31,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 35,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "ce0cb83a-c628-42c9-a97f-489f5efdd4b0",
+    "year": 2022,
+    "make": "bmw",
+    "model": "x4-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 31,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 35,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "72010f53-d1ba-4e8c-8f1a-3872603ca379",
+    "year": 2023,
+    "make": "bmw",
+    "model": "x4-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 31,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 10.5,
+        "offset": 37,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "8470d340-5b99-404a-8175-31cb876b578f",
+    "year": 2024,
+    "make": "bmw",
+    "model": "x4-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 31,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 10.5,
+        "offset": 37,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "4ca3e284-3458-422b-a39d-658149a6a612",
+    "year": 2025,
+    "make": "bmw",
+    "model": "x4-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 31,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 10.5,
+        "offset": 37,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "6e1f86ee-724c-4192-a58b-4d89bce2896d",
+    "year": 2026,
+    "make": "bmw",
+    "model": "x4-m",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 31,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 10.5,
+        "offset": 37,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "063bdd85-665a-41cf-89c3-c12dbf8981ff",
+    "year": 2000,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "255/50R19",
+      "275/40R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "0555665c-b172-46ca-8ae0-6f4a89af63a2",
+    "year": 2001,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "255/50R19",
+      "275/40R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "9fe504fa-f932-4b7b-96ae-0b9d4951a034",
+    "year": 2002,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "255/50R19",
+      "275/40R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8dff461d-0d8b-443c-b916-ac821d985aa2",
+    "year": 2003,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "255/50R19",
+      "275/40R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "fa3c5072-e830-4535-943c-069e2794fba5",
+    "year": 2004,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "255/50R19",
+      "275/40R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "43b5efe0-e898-4c1b-a15d-0607de8b3afa",
+    "year": 2005,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "255/50R19",
+      "275/40R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ad82d565-9e78-4161-9fc0-1e4472e9abfb",
+    "year": 2006,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "255/55R18",
+      "255/50R19",
+      "275/40R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4bfbaefc-8440-414a-9a6d-4419ac154e5a",
+    "year": 2007,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/40R20",
+      "295/35R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "d3e7f1fc-1af7-4275-828a-06a5c8cc7bb9",
+    "year": 2008,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/40R20",
+      "295/35R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "556baa05-7cbd-471c-b17f-d7d0070a10c4",
+    "year": 2009,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/40R20",
+      "295/35R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8cba6b14-3651-483f-9748-92a7072c64d0",
+    "year": 2010,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/40R20",
+      "295/35R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "538edb28-5924-434e-ab99-0dc10c0edef3",
+    "year": 2011,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 46,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 53,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/40R20",
+      "295/35R20",
+      "285/35R21",
+      "325/30R21",
+      "285/45R19",
+      "275/40ZR20",
+      "315/35ZR20",
+      "285/35ZR21",
+      "325/30ZR21",
+      "315/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f50eb806-c4ca-4e06-97fc-381659b21ae1",
+    "year": 2012,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/40R20",
+      "295/35R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6fb0a207-b810-45b0-823a-f0b44538ea7c",
+    "year": 2013,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 46,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 53,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/40R20",
+      "295/35R20",
+      "285/35R21",
+      "325/30R21",
+      "285/45R19",
+      "275/40ZR20",
+      "315/35ZR20",
+      "285/35ZR21",
+      "325/30ZR21",
+      "315/35R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e395d495-d1a3-4d3b-b69c-50f16bcf2c60",
+    "year": 2014,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R19",
+      "275/40R20",
+      "315/35R20",
+      "285/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a955801d-8b30-46c1-9ebf-f2db593114da",
+    "year": 2014,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "sDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "0317d17c-de1f-4a01-8e9c-3d291796a7be",
+    "year": 2014,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "fc3d9b04-9c59-4199-a1b6-744e65596a71",
+    "year": 2014,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "X5 M",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "73ff160e-b0d9-4cae-87c9-fbe1d1b2d7e4",
+    "year": 2014,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive40e",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ea3fea10-cd16-4deb-b532-daa33d1d5258",
+    "year": 2014,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive50i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "0d94d391-7cec-4be0-955d-c2ae097a6667",
+    "year": 2014,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive35d",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d8230c9b-aeb6-4128-b66f-f6707f7bae67",
+    "year": 2015,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive35d",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f07919ba-565e-4e18-9ecd-e16437b0b04e",
+    "year": 2015,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive40e",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "9f09f401-089b-4a77-9d9b-df7e94ed7cd0",
+    "year": 2015,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "sDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "799dd2c7-7fe5-46ba-977b-a890a2da7790",
+    "year": 2015,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "fa810c29-9e55-4e75-9036-67a85cf548b0",
+    "year": 2015,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "X5 M",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6f86c752-2fae-42a3-80fd-3df19a204df6",
+    "year": 2015,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive50i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c5c9b2f0-990d-4d19-8f92-40abe753ec4e",
+    "year": 2015,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R19",
+      "275/40R20",
+      "315/35R20",
+      "285/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7453565b-b3e0-4c19-9cf7-f54cdb42b50c",
+    "year": 2016,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5956ab24-7d83-474d-84a8-28d1257f638a",
+    "year": 2016,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive35d",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5f079f9c-fe2e-47ad-944d-42539e3c5275",
+    "year": 2016,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R19",
+      "275/40R20",
+      "315/35R20",
+      "285/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "0d02edb5-4786-4da6-a678-d9c43885fcda",
+    "year": 2016,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive50i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "16583260-a8ae-4c34-b2fd-ce03f2c4db22",
+    "year": 2016,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive40e",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "cea87c63-a2b4-4d2f-babb-580331271f8f",
+    "year": 2016,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "sDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e021b4f9-3345-4fc6-bafd-1f190a7641b3",
+    "year": 2016,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "X5 M",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c4ca4f41-3390-44fe-84a4-b6cc49356080",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive35d",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f924ce74-2a6a-4417-af0e-bcd9d8467379",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive50i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "df08bd9f-4e1a-4526-99c1-e6de1ba4a0ac",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "sDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "9be46ae1-09bd-4eb3-9760-0005e9e383a4",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive40e",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7f933aee-48fc-419f-b0b2-ec67d5364cd5",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "X5 M",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c411de0c-c3c6-43d1-b496-19110a50045b",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "36d18b72-2cdf-4e92-8089-3b85909dd374",
+    "year": 2017,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R19",
+      "275/40R20",
+      "315/35R20",
+      "285/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "3a805d99-69c0-4d0d-ad9b-0d587ad91801",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R19",
+      "275/40R20",
+      "315/35R20",
+      "285/35R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2fe885ff-4703-4466-869f-995f59facc8e",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "8b520cdd-9df8-4ef4-b83d-9870e43ca859",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "X5 M",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "275a0c99-da6a-46f6-9194-273f1e9aaa44",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive40e",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "951e48d2-ece0-4d1a-a226-130672202d25",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive50i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5e4fd7f5-3b3a-421c-bf80-4ef4a25cf5e2",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "sDrive35i",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4a9fafa6-6f46-40d7-8a65-ceccdd554206",
+    "year": 2018,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive35d",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "74.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "285/45R19",
+      "275/45R20",
+      "315/40R20",
+      "285/35R21",
+      "325/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5bef038e-a55c-4bc9-a6ee-a33248488249",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "X5 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "265/50ZR19",
+      "255/55ZR18",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22",
+      "255/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "97164bac-c6e0-4639-a33b-124c5071f859",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "M50i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "265/50ZR19",
+      "255/55ZR18",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22",
+      "255/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "0cdd7435-ee3c-434b-9fec-28eed499dc2e",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive45e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "265/50ZR19",
+      "255/55ZR18",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22",
+      "255/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ddd91d39-b786-41a4-a135-7b2a47e1de46",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "sDrive40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "265/50ZR19",
+      "255/55ZR18",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22",
+      "255/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2d9a43a9-0c64-4ca4-8a9a-c010f32f825d",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R19",
+      "275/45R20",
+      "315/35R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "265/50ZR19",
+      "255/55ZR18",
+      "265/50R19",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "10977dcf-d13a-4d38-a59a-7c1145b353ab",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "X5 M",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "265/50ZR19",
+      "255/55ZR18",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22",
+      "255/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "494918ed-5349-40af-95ae-9b6e6238e613",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive50i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "265/50ZR19",
+      "255/55ZR18",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22",
+      "255/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ded4ab9f-50ee-4d35-b24a-8bc7399afcf9",
+    "year": 2019,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "265/50ZR19",
+      "255/55ZR18",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22",
+      "255/55R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "3d4a7773-2d1d-4c6a-baa1-5418658ad28c",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "X5 M",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ecd9832e-6beb-413f-affe-c0008a9a9c63",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive50i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e6ff6732-fe9c-4299-9b31-b3737593cf71",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "275/45R19",
+      "275/45R20",
+      "315/35R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "3dc6e5f2-0005-4707-84d7-cc60ff73fdff",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6612ed6b-31d9-4981-81f7-d5ea414bdb60",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "M50i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a391347e-6489-49a9-ab1b-aeff9fcf893e",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "X5 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "fb2cc908-dd27-40aa-a6b8-74074a8c7298",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "sDrive40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a4b5d201-717b-416d-bb91-d699a9a55a13",
+    "year": 2020,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive45e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ee2746f3-7a70-4018-8df7-8fd66b1e3415",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "sDrive40i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "fa7f47d5-88f5-43d3-a93c-4a491cff0bcc",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "X5 M Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "edc44c08-f672-4699-a1c4-ab5e5da61d89",
+    "year": 2021,
+    "make": "bmw",
+    "model": "x5",
+    "trim": "xDrive45e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R19",
+      "275/45R20",
+      "305/40R20",
+      "275/40R21",
+      "315/35R21",
+      "285/35R22",
+      "315/30R22",
+      "275/45ZR20",
+      "305/40ZR20",
+      "275/40ZR21",
+      "315/35ZR21",
+      "275/35ZR22",
+      "315/30ZR22"
+    ],
+    "source": "generation-baseline"
+  }
+]

@@ -1,0 +1,2570 @@
+﻿[
+    {
+        "year":  2022,
+        "make":  "mazda",
+        "id":  "06e05f5d-1746-4e3f-9b39-ef052889e1d1",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Signature",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "mazda",
+        "id":  "65ddb08d-2b12-4442-9b56-33be59097187",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Sport",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "mazda",
+        "id":  "799b2b80-510a-4e50-ab4e-6526a33a74e7",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20",
+                                  "255/55R19",
+                                  "255/45R21"
+                              ],
+        "trim":  "Sport",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "mazda",
+        "id":  "7f5088b2-e7a2-4cc9-9506-2f5779b3cb62",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20",
+                                  "255/55R19",
+                                  "255/45R21"
+                              ],
+        "trim":  "Signature",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "mazda",
+        "id":  "3318ef28-0a67-446a-9c50-3ca81ed643c7",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20",
+                                  "255/55R19",
+                                  "255/45R21"
+                              ],
+        "trim":  "Touring",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "mazda",
+        "id":  "1cca05dd-4c52-4268-9655-cae541528f85",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20",
+                                  "255/55R19",
+                                  "255/45R21"
+                              ],
+        "trim":  "Grand Touring",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "mazda",
+        "id":  "9431bc4b-f4ff-4dbd-b175-d37053c624c2",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  45,
+                                       "isStock":  false,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20",
+                                  "255/55R19",
+                                  "255/45R21"
+                              ],
+        "trim":  "Carbon Edition",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "123060a3-bff4-4fe6-95bd-36289471485e",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Signature",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "26cd1d1d-a06e-43dc-b865-3976c196aca8",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Carbon Edition",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "6edd58f8-fc74-4ff5-9e12-e0cdd1b7c551",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Sport",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "9d347c3d-0b1d-4698-9adc-5b5dd013ab53",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Touring",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "79aa2619-d9f4-4fa3-b6ce-ae35b856e550",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Grand Touring",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "9f589821-a755-4f8c-a9c1-2ea8a38b2e14",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Carbon Edition",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "5746fd43-42d1-4ee7-8ed7-ff27b2abed08",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Signature",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "d138c6bf-a568-446d-8ca0-83a9485d9937",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Sport",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "9747c149-f4ce-4ab1-bd1c-b90c2fa7500d",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Touring",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "b503b82c-0922-4244-b753-aa4407e61cdb",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Grand Touring",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "mazda",
+        "id":  "9e655d18-e1f0-4752-a577-60d154238793",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Sport",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "mazda",
+        "id":  "a602dcec-af42-4f9d-a652-00b8640a0699",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Carbon Edition",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "mazda",
+        "id":  "fda5ef9a-d9c2-4973-8b21-96f9b61715e0",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Signature",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "mazda",
+        "id":  "878613d4-10ec-41a5-b088-400516a7827e",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Grand Touring",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "mazda",
+        "id":  "d0b31046-1cc5-4f8f-9b97-aa94ab4f1c13",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/60R18",
+                                  "255/50R20"
+                              ],
+        "trim":  "Touring",
+        "reason":  "mazda cx-9 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-9",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "mazda",
+        "id":  "26032d7d-721c-415b-912b-09dd8956e03a",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "square",
+                                       "width":  8.5,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "square",
+                                       "width":  9.5,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "275/40R21"
+                              ],
+        "trim":  "Base",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "5a6f3c49-fe32-4f09-a485-c3e6f852c575",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "S Preferred Plus",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "5c6c7985-3a57-409b-8c7a-daff20c70fd2",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "S Premium Plus",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "bea215ab-357e-42ea-84ac-9daf6e776cf1",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "S Select",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "753a7fa7-c84b-4d81-8280-2cfd56a9a9ca",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "PHEV Premium Plus",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "775535db-f79b-477f-abbf-b90819c80bc1",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "S Premium",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "9bdd5daa-082e-461c-83b6-1df96a6d796c",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "Turbo S",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "7a3925b4-594a-4aed-92df-f58574b23981",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "Turbo S Premium Plus",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "9efb8212-6a26-4436-b815-591fd5b480b6",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "S Preferred",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "3902041f-cf7f-4387-b435-934a987957e3",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "PHEV Premium",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "mazda",
+        "id":  "a13c53f5-f867-44fa-aaee-dfba2bb0fa00",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "Turbo S Premium",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "c04d139a-7095-48cb-a30d-9f2b050adee1",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "S Select",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "b8852940-0f29-43b6-be1e-ae2801544763",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "Turbo S Premium Plus",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "1cdd444c-7970-4b7d-882e-db134c7ada43",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "Turbo S Premium",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "6d15a65a-f302-4450-aca9-eb6d8a705154",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "PHEV Premium",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "4bd50e74-1c9b-4cfb-9d58-de81f16c9945",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "Turbo S",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "2925cf75-aa00-42c2-ae90-394c00dd3d3e",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "S Premium Plus",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "994bd500-0ff9-4025-a73f-3b0810b20c7f",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "S Preferred",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "9e985cbf-7dfe-4494-8083-b58bc3dde64a",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "S Preferred Plus",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "c4d24ed7-c910-4c18-8b7f-c878b2a78c9d",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "PHEV Premium Plus",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "mazda",
+        "id":  "ed9481f9-2b40-4547-923e-a3c7788971e4",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  9,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  21
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "255/55R19",
+                                  "265/45R21"
+                              ],
+        "trim":  "S Premium",
+        "reason":  "mazda cx-90 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "cx-90",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2003,
+        "make":  "mazda",
+        "id":  "0d8b5415-36a0-416c-8289-88cc3f56e31d",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "square",
+                                       "width":  6,
+                                       "isStock":  true,
+                                       "diameter":  15
+                                   },
+                                   {
+                                       "axle":  "square",
+                                       "width":  6.5,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/65R15",
+                                  "205/55R16"
+                              ],
+        "trim":  "Base",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2004,
+        "make":  "mazda",
+        "id":  "ceb7d44a-976e-4ca3-b149-451b98794dff",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5",
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16",
+                                  "205/50R17"
+                              ],
+        "trim":  "s",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2004,
+        "make":  "mazda",
+        "id":  "22afe31e-c73e-47c7-b824-005a12179ac8",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/65R15",
+                                  "205/55R16"
+                              ],
+        "trim":  "i",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "mazda",
+        "id":  "91fb69f0-c5db-4862-afff-e5a96cd0a546",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/65R15",
+                                  "205/55R16"
+                              ],
+        "trim":  "i",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "mazda",
+        "id":  "7e03a768-7aed-43dd-9342-a58225ed89e6",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5",
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16",
+                                  "205/50R17"
+                              ],
+        "trim":  "s",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "mazda",
+        "id":  "6d924d79-53ce-4131-ba39-8488d89ece57",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5",
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16",
+                                  "205/50R17"
+                              ],
+        "trim":  "s",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "mazda",
+        "id":  "4bba0e9e-6602-4f08-b7f7-3fcd48419437",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/65R15",
+                                  "205/55R16"
+                              ],
+        "trim":  "i",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "mazda",
+        "id":  "df7d5fa1-3e98-49bb-ad69-81b1a592b946",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5",
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16",
+                                  "205/50R17"
+                              ],
+        "trim":  "s",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "mazda",
+        "id":  "b585b95b-fcbc-49cf-a1b9-1841eaead3ea",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/65R15",
+                                  "205/55R16"
+                              ],
+        "trim":  "i",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "mazda",
+        "id":  "87184e04-2d60-4a55-8ee2-e2d52eefb449",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5",
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16",
+                                  "205/50R17"
+                              ],
+        "trim":  "s",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "mazda",
+        "id":  "ff51eac9-dfb4-4ef8-8be5-7dcdee2aa022",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/65R15",
+                                  "205/55R16"
+                              ],
+        "trim":  "i",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "mazda",
+        "id":  "6fe23e24-264d-426a-bc62-b0f571c67f39",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "15x6",
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "195/65R15",
+                                  "205/55R16"
+                              ],
+        "trim":  "i",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "mazda",
+        "id":  "1924ccda-b175-460d-8989-4ee4327bf663",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5",
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16",
+                                  "205/50R17"
+                              ],
+        "trim":  "s",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "mazda",
+        "id":  "755e0d43-c606-4b1a-ad65-185ff32996ee",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16"
+                              ],
+        "trim":  "i Sport/Touring/GT",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "mazda",
+        "id":  "5ebf6ccf-627e-40e2-a029-1253f7f3dcb0",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/50R17"
+                              ],
+        "trim":  "s Grand Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "mazda",
+        "id":  "1b88fdd7-6492-4e11-9e4a-4404e43fdf3e",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16"
+                              ],
+        "trim":  "i Sport/Touring/GT",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "mazda",
+        "id":  "bd9ee38a-b284-4fd6-88d1-8b9426cf072e",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/50R17"
+                              ],
+        "trim":  "s Grand Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "mazda",
+        "id":  "6da22fad-d2e0-4985-a97a-f468d49e2f76",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/50R17"
+                              ],
+        "trim":  "s Grand Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "mazda",
+        "id":  "4029f1ed-5f3c-4272-b9ad-7b6adfd409af",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16"
+                              ],
+        "trim":  "i Sport/Touring/GT",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "mazda",
+        "id":  "8244c43d-48dd-48cf-8ac7-cf3638711aae",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "16x6.5"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/55R16"
+                              ],
+        "trim":  "i Sport/Touring/GT",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "mazda",
+        "id":  "101bded9-45ba-47f8-90a7-17da7c11fdd3",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   "17x7"
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/50R17"
+                              ],
+        "trim":  "s Grand Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "mazda",
+        "id":  "2dc3b12b-7075-4b17-99ba-e09b7cf1c777",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "s Grand Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "mazda",
+        "id":  "5a7d3f2a-fc9c-4a8b-816e-d5380571c15f",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "i Grand Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "mazda",
+        "id":  "f83d6554-6ef8-40e8-9f4e-f755757777d3",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "s Sport",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "mazda",
+        "id":  "ad7a3697-d8bb-4656-9193-02d436a3f1a2",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "i Sport",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "mazda",
+        "id":  "6f49f8ab-38b7-4ae7-800c-48a9577bd174",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "s Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "mazda",
+        "id":  "0fb2378e-638d-4952-b4b2-7cc7f0921231",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "i Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "mazda",
+        "id":  "4e29b2aa-3421-40c4-817c-cbddd6fa4b45",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "s Grand Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "mazda",
+        "id":  "71479463-52ea-4c72-b594-066f37bae9ca",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "i Grand Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "mazda",
+        "id":  "69549267-ca3d-4562-9a74-7b655659c238",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "s Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "mazda",
+        "id":  "8fba3c8a-a0d9-41ab-b012-79c2e8d0b7bd",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "i Sport",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "mazda",
+        "id":  "0eb25a1b-1312-43cd-9fd6-1b960c1c8823",
+        "verifiedHubBore":  "67.1",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  6.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  16
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "205/60R16",
+                                  "215/45R18",
+                                  "205/55R17"
+                              ],
+        "trim":  "i Touring",
+        "reason":  "mazda mazda3 specs appear consistent with year/model. Bolt pattern and sizes verified.",
+        "model":  "mazda3",
+        "verifiedBoltPattern":  "5x114.3",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com",
+                        "manufacturer specs"
+                    ]
+    }
+]

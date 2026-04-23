@@ -1,0 +1,1214 @@
+{
+  "batchId": "137",
+  "processedAt": "2026-04-21T22:40:00Z",
+  "source": "tiresize.com (approved source)",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/65R16", "225/55R17", "225/50R18"],
+      "validatedTireSizes": {
+        "2.5X": "215/65R16",
+        "2.5X Limited": "225/55R17",
+        "2.5X Premium": "225/55R17",
+        "2.5X Touring": "225/55R17",
+        "2.5XT Premium": "225/55R17",
+        "2.5XT Touring": "225/55R17"
+      },
+      "recommendedSizes": ["215/65R16", "225/55R17"],
+      "status": "VALID",
+      "notes": "Current DB has 225/50R18 which is NOT OEM for 2013 Forester - should be removed"
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/65R16", "225/55R17", "225/50R18"],
+      "validatedTireSizes": {
+        "2.5X": "215/65R16",
+        "2.5X Limited": "225/55R17",
+        "2.5X Premium": "225/55R17",
+        "2.5X Touring": "225/55R17",
+        "2.5XT Limited": "225/55R17",
+        "2.5XT Premium": "225/55R17"
+      },
+      "recommendedSizes": ["215/65R16", "225/55R17"],
+      "status": "VALID",
+      "notes": "Current DB has 225/50R18 which is NOT OEM for 2012 Forester - should be removed"
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/65R16", "225/55R17", "225/50R18"],
+      "validatedTireSizes": {
+        "2.5X": "215/65R16",
+        "2.5X Limited": "225/55R17",
+        "2.5X Premium": "225/55R17",
+        "2.5X Touring": "225/55R17",
+        "2.5XT Premium": "225/55R17",
+        "2.5XT Touring": "225/55R17"
+      },
+      "recommendedSizes": ["215/65R16", "225/55R17"],
+      "status": "VALID",
+      "notes": "Current DB has 225/50R18 which is NOT OEM for 2011 Forester - should be removed"
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/65R16", "225/55R17", "225/50R18"],
+      "validatedTireSizes": {
+        "2.5X Base": "215/65R16",
+        "2.5X Limited": "225/55R17",
+        "2.5X Premium Package": "225/55R17",
+        "2.5XT Limited": "225/55R17",
+        "2.5XT Premium Package": "225/55R17"
+      },
+      "recommendedSizes": ["215/65R16", "225/55R17"],
+      "status": "VALID",
+      "notes": "Current DB has 225/50R18 which is NOT OEM for 2010 Forester - should be removed"
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/65R16", "225/55R17", "225/50R18"],
+      "validatedTireSizes": {
+        "2.5X Base": "215/65R16",
+        "2.5X Limited": "225/55R17",
+        "2.5X Premium Package": "225/55R17",
+        "2.5XT Base": "225/55R17",
+        "2.5XT Limited": "225/55R17"
+      },
+      "recommendedSizes": ["215/65R16", "225/55R17"],
+      "status": "VALID",
+      "notes": "Current DB has 225/50R18 which is NOT OEM for 2009 Forester - should be removed"
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": {
+        "2.5 Sports X": "215/60R16",
+        "2.5 Sports XT": "215/55R17",
+        "2.5 X": "215/60R16",
+        "2.5 X L.L. Bean": "215/60R16",
+        "2.5 X Premium Package": "215/60R16",
+        "2.5 XT Limited": "215/55R17"
+      },
+      "recommendedSizes": ["215/60R16", "215/55R17"],
+      "status": "VALID",
+      "notes": "Current DB matches OEM specs"
+    },
+    {
+      "year": 2007,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": {
+        "2.5 Sports X": "215/60R16",
+        "2.5 Sports XT": "215/55R17",
+        "2.5 X Base": "215/60R16",
+        "2.5 X L.L. Bean Edition": "215/60R16",
+        "2.5 X Premium Package": "215/60R16",
+        "2.5 XT Limited": "215/55R17"
+      },
+      "recommendedSizes": ["215/60R16", "215/55R17"],
+      "status": "VALID",
+      "notes": "Current DB matches OEM specs"
+    },
+    {
+      "year": 2006,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": {
+        "2.5 X": "215/60R16",
+        "2.5 XS Base": "215/60R16",
+        "2.5 XS L.L. Bean Edition": "215/60R16",
+        "2.5 XS Premium": "215/60R16",
+        "2.5 XT Base": "215/60R16",
+        "2.5 XT Premium": "215/60R16"
+      },
+      "recommendedSizes": ["215/60R16"],
+      "status": "NEEDS_REVIEW",
+      "notes": "2006 used 215/60R16 for all trims including XT; 215/55R17 may not be OEM"
+    },
+    {
+      "year": 2005,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": {
+        "2.5 X": "215/60R16",
+        "2.5 XS Base": "215/60R16",
+        "2.5 XS L.L. Bean Edition": "215/60R16",
+        "2.5 XS Premium": "215/60R16",
+        "2.5 XT Base": "215/60R16",
+        "2.5 XT Premium": "215/60R16"
+      },
+      "recommendedSizes": ["215/60R16"],
+      "status": "NEEDS_REVIEW",
+      "notes": "2005 used 215/60R16 for all trims; 215/55R17 may not be OEM"
+    },
+    {
+      "year": 2004,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": {
+        "2.5 X": "215/60R16",
+        "2.5 XS": "215/60R16",
+        "2.5 XT": "215/60R16"
+      },
+      "recommendedSizes": ["215/60R16"],
+      "status": "NEEDS_REVIEW",
+      "notes": "2004 used 215/60R16 for all trims; 215/55R17 may not be OEM"
+    },
+    {
+      "year": 2003,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["215/60R16", "215/55R17"],
+      "validatedTireSizes": {
+        "2.5 X": "215/60R16",
+        "2.5 XS": "215/60R16"
+      },
+      "recommendedSizes": ["215/60R16"],
+      "status": "NEEDS_REVIEW",
+      "notes": "2003 used 215/60R16 for all trims; 215/55R17 may not be OEM"
+    },
+    {
+      "year": 2002,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["205/70R15", "215/60R16"],
+      "validatedTireSizes": {
+        "L": "205/70R15",
+        "S": "215/60R16"
+      },
+      "recommendedSizes": ["205/70R15", "215/60R16"],
+      "status": "VALID",
+      "notes": "Current DB matches OEM specs"
+    },
+    {
+      "year": 2001,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["205/70R15", "215/60R16"],
+      "validatedTireSizes": {
+        "L": "205/70R15",
+        "S": "215/60R16"
+      },
+      "recommendedSizes": ["205/70R15", "215/60R16"],
+      "status": "VALID",
+      "notes": "Current DB matches OEM specs"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "Forester",
+      "currentTireSizes": ["205/70R15", "215/60R16"],
+      "validatedTireSizes": {
+        "L": "205/70R15",
+        "S": "215/60R16"
+      },
+      "recommendedSizes": ["205/70R15", "215/60R16"],
+      "status": "VALID",
+      "notes": "Current DB matches OEM specs"
+    },
+    {
+      "year": 2026,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base": "205/55R16",
+        "Sport": "225/40R18",
+        "RS": "225/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "225/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 not confirmed for 2026 model year"
+    },
+    {
+      "year": 2025,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base": "205/55R16",
+        "Sport": "225/40R18",
+        "RS": "225/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "225/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 not confirmed for 2025 model year"
+    },
+    {
+      "year": 2024,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base": "205/55R16",
+        "RS": "225/40R18",
+        "Sport": "225/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "225/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 not confirmed for 2024 model year - 2024+ dropped Limited trim with 17-inch"
+    },
+    {
+      "year": 2023,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18", "235/35ZR19"],
+      "validatedTireSizes": {
+        "2.0i 5-Door": "205/55R16",
+        "2.0i Sedan": "205/55R16",
+        "2.0i Premium 5-Door": "205/55R16",
+        "2.0i Premium Sedan": "205/55R16",
+        "2.0i Limited 5-Door": "205/50R17",
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "235/35ZR19 is NOT OEM - likely confusion with WRX. Should be removed."
+    },
+    {
+      "year": 2022,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18", "235/35ZR19"],
+      "validatedTireSizes": {
+        "2.0i 5-Door": "205/55R16",
+        "2.0i Sedan": "205/55R16",
+        "2.0i Premium 5-Door": "205/55R16",
+        "2.0i Premium Sedan": "205/55R16",
+        "2.0i Limited 5-Door": "205/50R17",
+        "2.0i Limited Sedan": "205/50R17",
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "235/35ZR19 is NOT OEM - likely confusion with WRX. Should be removed."
+    },
+    {
+      "year": 2021,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0i 5-Door": "205/55R16",
+        "2.0i Sedan": "205/55R16",
+        "2.0i Premium 5-Door": "205/55R16",
+        "2.0i Premium Sedan": "205/55R16",
+        "2.0i Limited 5-Door": "205/50R17",
+        "2.0i Limited Sedan": "205/50R17",
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "status": "VALID",
+      "notes": "Current DB matches OEM specs"
+    },
+    {
+      "year": 2020,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18", "235/35ZR19"],
+      "validatedTireSizes": {
+        "2.0i 5-Door": "205/55R16",
+        "2.0i Sedan": "205/55R16",
+        "2.0i Premium 5-Door": "205/55R16",
+        "2.0i Premium Sedan": "205/55R16",
+        "2.0i Limited 5-Door": "205/50R17",
+        "2.0i Limited Sedan": "205/50R17",
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "235/35ZR19 is NOT OEM - likely confusion with WRX. Should be removed."
+    },
+    {
+      "year": 2019,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18", "235/35ZR19"],
+      "validatedTireSizes": {
+        "2.0i 5-Door": "205/55R16",
+        "2.0i Sedan": "205/55R16",
+        "2.0i Premium 5-Door": "205/55R16",
+        "2.0i Premium Sedan": "205/55R16",
+        "2.0i Limited 5-Door": "205/50R17",
+        "2.0i Limited Sedan": "205/50R17",
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "235/35ZR19 is NOT OEM - likely confusion with WRX. Should be removed."
+    },
+    {
+      "year": 2018,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0i 5-Door": "205/55R16",
+        "2.0i Sedan": "205/55R16",
+        "2.0i Premium 5-Door": "205/55R16",
+        "2.0i Premium Sedan": "205/55R16",
+        "2.0i Limited 5-Door": "205/50R17",
+        "2.0i Limited Sedan": "205/50R17",
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "status": "VALID",
+      "notes": "Current DB matches OEM specs"
+    },
+    {
+      "year": 2017,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0i 5-Door": "205/55R16",
+        "2.0i Sedan": "205/55R16",
+        "2.0i Premium 5-Door": "205/55R16",
+        "2.0i Premium Sedan": "205/55R16",
+        "2.0i Limited 5-Door": "205/50R17",
+        "2.0i Limited Sedan": "205/50R17",
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "status": "VALID",
+      "notes": "Current DB matches OEM specs"
+    },
+    {
+      "year": 2016,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18", "195/65R15"],
+      "validatedTireSizes": {
+        "2.0i 4-Door Standard": "195/65R15",
+        "2.0i 5-Door Standard": "195/65R15",
+        "2.0i 4-Door Premium": "205/55R16",
+        "2.0i 5-Door Premium": "205/55R16",
+        "2.0i 4-Door Limited": "205/50R17",
+        "2.0i 5-Door Limited": "205/50R17",
+        "2.0i 5-Door Sport Premium": "205/50R17",
+        "2.0i 5-Door Sport Limited": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "status": "NEEDS_REVIEW",
+      "notes": "225/40R18 is NOT OEM for 2016 Impreza - should be removed. 2016 used 17-inch max on Sport."
+    },
+    {
+      "year": 2015,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0i 4-Door Standard": "195/65R15",
+        "2.0i 5-Door Standard": "195/65R15",
+        "2.0i 4-Door Premium": "205/55R16",
+        "2.0i 5-Door Premium": "205/55R16",
+        "2.0i 4-Door Limited": "205/50R17",
+        "2.0i 5-Door Limited": "205/50R17",
+        "2.0i 5-Door Sport Premium": "205/50R17",
+        "2.0i 5-Door Sport Limited": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "status": "NEEDS_REVIEW",
+      "notes": "225/40R18 is NOT OEM for 2015 Impreza - should be removed. Missing 195/65R15 for base trim."
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0i 4-Door Standard": "195/65R15",
+        "2.0i 5-Door Standard": "195/65R15",
+        "2.0i 4-Door Premium": "205/55R16",
+        "2.0i 5-Door Premium": "205/55R16",
+        "2.0i 4-Door Limited": "205/50R17",
+        "2.0i 5-Door Limited": "205/50R17",
+        "2.0i 5-Door Sport Premium": "205/50R17",
+        "2.0i 5-Door Sport Limited": "205/50R17",
+        "WRX": "235/45R17",
+        "WRX Limited": "235/45R17",
+        "WRX Premium": "235/45R17",
+        "WRX STI": "245/40R18",
+        "WRX STI Limited": "245/40R18"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "205/50R17", "235/45R17", "245/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "225/40R18 NOT OEM. Missing 195/65R15 for base. WRX uses 235/45R17, STI uses 245/40R18."
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0i 4-Door Standard": "195/65R15",
+        "2.0i 5-Door Standard": "195/65R15",
+        "2.0i 4-Door Premium": "205/55R16",
+        "2.0i 5-Door Premium": "205/55R16",
+        "2.0i 4-Door Limited": "205/50R17",
+        "2.0i 5-Door Limited": "205/50R17",
+        "2.0i 5-Door Sport Premium": "205/50R17",
+        "2.0i 5-Door Sport Limited": "205/50R17",
+        "WRX": "235/45R17",
+        "WRX Limited": "235/45R17",
+        "WRX Premium": "235/45R17",
+        "WRX STI": "245/40R18",
+        "WRX STI Limited": "245/40R18"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "205/50R17", "235/45R17", "245/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "225/40R18 NOT OEM for standard Impreza. Missing 195/65R15 for base. WRX uses 235/45R17."
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0i 4-Door": "205/55R16",
+        "2.0i 5-Door": "205/55R16",
+        "2.0i 4-Door Premium": "205/55R16",
+        "2.0i 5-Door Premium": "205/55R16",
+        "2.0i 4-Door Limited": "205/50R17",
+        "2.0i 5-Door Limited": "205/50R17",
+        "2.0i 5-Door Sport Premium": "205/50R17",
+        "2.0i 5-Door Sport Limited": "205/50R17",
+        "WRX": "235/45R17",
+        "WRX Limited": "235/45R17",
+        "WRX Premium": "235/45R17",
+        "WRX STI": "245/40R18",
+        "WRX STI Limited": "245/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "235/45R17", "245/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "225/40R18 NOT OEM for standard Impreza - should be removed. WRX uses 235/45R17."
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "4-Door 2.5i": "205/55R16",
+        "5-Door 2.5i": "205/55R16",
+        "4-Door 2.5i Premium": "205/55R16",
+        "5-Door 2.5i Premium": "205/55R16",
+        "5-Door Outback Sport": "205/50R17",
+        "WRX": "225/45R17",
+        "WRX Limited": "225/45R17",
+        "WRX Premium": "225/45R17",
+        "WRX STI": "245/40R18",
+        "WRX STI Limited": "245/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/45R17", "245/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "225/40R18 NOT OEM for standard Impreza. WRX uses 225/45R17, STI uses 245/40R18."
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "4-Door 2.5GT": "205/50R17",
+        "4-Door 2.5i": "205/55R16",
+        "4-Door 2.5i Premium": "205/55R16",
+        "5-Door 2.5GT": "205/50R17",
+        "5-Door 2.5i": "205/55R16",
+        "5-Door 2.5i Premium": "205/55R16",
+        "5-Door Outback Sport": "205/50R17",
+        "WRX": "225/45R17",
+        "WRX Limited": "225/45R17",
+        "WRX Premium": "225/45R17",
+        "WRX STI": "245/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/45R17", "245/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "225/40R18 NOT OEM for standard Impreza. WRX uses 225/45R17, STI uses 245/40R18."
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.5i": "205/55R16",
+        "2.5i Premium": "205/55R16",
+        "2.5GT": "205/50R17",
+        "Outback Sport": "205/50R17",
+        "WRX": "225/45R17",
+        "WRX Premium": "225/45R17",
+        "WRX STI": "245/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/45R17", "245/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "225/40R18 NOT OEM for standard Impreza. WRX uses 225/45R17, STI uses 245/40R18."
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.5i": "205/55R16",
+        "2.5i Premium": "205/55R16",
+        "2.5GT": "205/50R17",
+        "Outback Sport": "205/50R17",
+        "WRX": "225/45R17",
+        "WRX Premium": "225/45R17",
+        "WRX STI": "245/40R18"
+      },
+      "recommendedSizes": ["205/55R16", "205/50R17", "225/45R17", "245/40R18"],
+      "status": "NEEDS_REVIEW",
+      "notes": "225/40R18 NOT OEM for standard Impreza. WRX uses 225/45R17, STI uses 245/40R18."
+    },
+    {
+      "year": 2007,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.5i": "205/55R16",
+        "2.5i Special Edition": "205/55R16",
+        "Outback Sport": "205/55R16",
+        "WRX": "205/55R16",
+        "WRX Limited": "205/55R16",
+        "WRX TR": "205/55R16",
+        "WRX STI": "225/45R17",
+        "WRX STI Limited": "225/45R17"
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 and 225/40R18 NOT OEM for 2007. STI uses 225/45R17."
+    },
+    {
+      "year": 2006,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.5i": "205/55R16",
+        "2.5i Special Edition": "205/55R16",
+        "Outback Sport": "205/55R16",
+        "WRX": "205/55R16",
+        "WRX Limited": "205/55R16",
+        "WRX TR": "205/55R16",
+        "WRX STI": "225/45R17"
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 and 225/40R18 NOT OEM for 2006. STI uses 225/45R17."
+    },
+    {
+      "year": 2005,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.5 Sport Package": "205/55R16",
+        "2.5RS Sedan": "205/55R16",
+        "2.5RS Wagon": "205/55R16",
+        "Outback Sport": "205/55R16",
+        "WRX Sedan": "205/55R16",
+        "WRX Wagon": "205/55R16",
+        "WRX STI": "225/45R17"
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 and 225/40R18 NOT OEM for 2005. STI uses 225/45R17."
+    },
+    {
+      "year": 2004,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.5 Sport Wagon": "205/55R16",
+        "2.5RS Sedan": "205/55R16",
+        "2.5TS Wagon": "195/60R15",
+        "Outback Sport": "205/55R16",
+        "WRX Sedan": "205/55R16",
+        "WRX Wagon": "205/55R16",
+        "WRX STI": "225/45R17"
+      },
+      "recommendedSizes": ["195/60R15", "205/55R16", "225/45R17"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 and 225/40R18 NOT OEM for 2004. Missing 195/60R15 for TS. STI uses 225/45R17."
+    },
+    {
+      "year": 2003,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.5RS Sedan": "205/55R16",
+        "2.5RS Wagon": "205/55R16",
+        "2.5TS Wagon": "195/60R15",
+        "Outback Sport": "205/55R16",
+        "WRX Sedan": "205/55R16",
+        "WRX Wagon": "205/55R16"
+      },
+      "recommendedSizes": ["195/60R15", "205/55R16"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 and 225/40R18 NOT OEM for 2003. No STI sold in US in 2003. Missing 195/60R15 for TS."
+    },
+    {
+      "year": 2002,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.5RS Sedan": "205/55R16",
+        "2.5TS Wagon": "195/60R15",
+        "Outback Sport": "205/55R16",
+        "WRX Sedan": ["205/55R16", "215/45R17"],
+        "WRX Wagon": ["205/55R16", "215/45R17"]
+      },
+      "recommendedSizes": ["195/60R15", "205/55R16", "215/45R17"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 and 225/40R18 NOT OEM. WRX had 16 or 17-inch options. Missing 195/60R15 for TS."
+    },
+    {
+      "year": 2001,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.2L": "195/60R15",
+        "2.5RS Coupe": "205/55R16",
+        "2.5RS Sedan": "205/55R16",
+        "L Coupe": "195/60R15",
+        "L Sedan": "195/60R15",
+        "L Wagon": "195/60R15",
+        "Outback Sport": "205/55R16"
+      },
+      "recommendedSizes": ["195/60R15", "205/55R16"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 and 225/40R18 NOT OEM for 2001. Missing 195/60R15 for base models."
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "Impreza",
+      "currentTireSizes": ["205/55R16", "205/50R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.5RS Coupe": "205/55R16",
+        "2.5RS Sedan": "205/55R16",
+        "L Coupe": "195/60R15",
+        "L Sedan": "195/60R15",
+        "L Wagon": "195/60R15"
+      },
+      "recommendedSizes": ["195/60R15", "205/55R16"],
+      "status": "NEEDS_REVIEW",
+      "notes": "205/50R17 and 225/40R18 NOT OEM for 2000. Missing 195/60R15 for base L models."
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza Anesis",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.5i": "195/65R15",
+        "1.5i-L": "195/65R15",
+        "1.5i-S": "195/65R15",
+        "2.0i": "205/50R17",
+        "2.0i-S": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan variant. Sizes confirmed from JDM sources."
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Impreza Anesis",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.5i": "195/65R15",
+        "1.5i-L": "195/65R15",
+        "2.0i": "205/50R17",
+        "2.0i-S": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan variant. Sizes confirmed from JDM sources."
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Impreza Anesis",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.5i": "195/65R15",
+        "1.5i-L": "195/65R15",
+        "2.0i": "205/50R17",
+        "2.0i-S": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan variant. Sizes confirmed from JDM sources."
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Impreza Anesis",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.5i": "195/65R15",
+        "2.0i": "205/50R17",
+        "2.0i-S": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan variant. Sizes confirmed from JDM sources."
+    },
+    {
+      "year": 2023,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i-L EyeSight": "195/65R15",
+        "2.0i-L EyeSight": "205/50R17",
+        "2.0i-S EyeSight": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2022,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i-L EyeSight": "195/65R15",
+        "2.0i-L EyeSight": "205/50R17",
+        "2.0i-S EyeSight": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2021,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i-L EyeSight": "195/65R15",
+        "2.0i-L EyeSight": "205/50R17",
+        "2.0i-S EyeSight": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2020,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i-L EyeSight": "195/65R15",
+        "2.0i-L EyeSight": "205/50R17",
+        "2.0i-S EyeSight": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2019,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i-L EyeSight": "195/65R15",
+        "2.0i-L EyeSight": "205/50R17",
+        "2.0i-S EyeSight": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2018,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i-L EyeSight": "195/65R15",
+        "2.0i-L EyeSight": "205/50R17",
+        "2.0i-S EyeSight": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2017,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i-L EyeSight": "195/65R15",
+        "2.0i-L EyeSight": "205/50R17",
+        "2.0i-S EyeSight": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2016,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i": "195/65R15",
+        "1.6i-L": "195/65R15",
+        "2.0i": "205/55R16",
+        "2.0i EyeSight": "205/55R16",
+        "2.0i-S": "205/50R17",
+        "2.0i-S EyeSight": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2015,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i": "195/65R15",
+        "1.6i-L": "195/65R15",
+        "2.0i": "205/55R16",
+        "2.0i-S": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i": "195/65R15",
+        "1.6i-L": "195/65R15",
+        "2.0i": "205/55R16",
+        "2.0i-S": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i": "195/65R15",
+        "1.6i-L": "195/65R15",
+        "2.0i": "205/55R16",
+        "2.0i-S": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i": "195/65R15",
+        "1.6i-L": "195/65R15",
+        "2.0i": "205/55R16",
+        "2.0i-S": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza G4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "1.6i": "195/65R15",
+        "2.0i": "205/55R16",
+        "2.0i-S": "205/50R17"
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Japan-market sedan. G4 = sedan body style in JDM naming."
+    },
+    {
+      "year": 2025,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Sport": "225/40R18"
+      },
+      "recommendedSizes": ["225/40R18"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza, not a separate model. Merge with Impreza."
+    },
+    {
+      "year": 2024,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Sport": "225/40R18"
+      },
+      "recommendedSizes": ["225/40R18"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza, not a separate model. Merge with Impreza."
+    },
+    {
+      "year": 2023,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["225/40R18"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza, not a separate model. Merge with Impreza."
+    },
+    {
+      "year": 2022,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["225/40R18"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza, not a separate model. Merge with Impreza."
+    },
+    {
+      "year": 2021,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["225/40R18"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza, not a separate model. Merge with Impreza."
+    },
+    {
+      "year": 2020,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["225/40R18"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza, not a separate model. Merge with Impreza."
+    },
+    {
+      "year": 2019,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["225/40R18"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza, not a separate model. Merge with Impreza."
+    },
+    {
+      "year": 2018,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["225/40R18"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza, not a separate model. Merge with Impreza."
+    },
+    {
+      "year": 2017,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i Sport 5-Door": "225/40R18",
+        "2.0i Sport Sedan": "225/40R18"
+      },
+      "recommendedSizes": ["225/40R18"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza, not a separate model. Merge with Impreza."
+    },
+    {
+      "year": 2016,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i 5-Door Sport Premium": "205/50R17",
+        "2.0i 5-Door Sport Limited": "205/50R17"
+      },
+      "recommendedSizes": ["205/50R17"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza. 2016 Sport used 17-inch, not 18-inch."
+    },
+    {
+      "year": 2015,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i 5-Door Sport Premium": "205/50R17",
+        "2.0i 5-Door Sport Limited": "205/50R17"
+      },
+      "recommendedSizes": ["205/50R17"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza. 2015 Sport used 17-inch."
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i 5-Door Sport Premium": "205/50R17",
+        "2.0i 5-Door Sport Limited": "205/50R17"
+      },
+      "recommendedSizes": ["205/50R17"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza. 2014 Sport used 17-inch."
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i 5-Door Sport Premium": "205/50R17",
+        "2.0i 5-Door Sport Limited": "205/50R17"
+      },
+      "recommendedSizes": ["205/50R17"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza. 2013 Sport used 17-inch."
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i 5-Door Sport Premium": "205/50R17",
+        "2.0i 5-Door Sport Limited": "205/50R17"
+      },
+      "recommendedSizes": ["205/50R17"],
+      "status": "DUPLICATE_MODEL",
+      "notes": "Impreza Sport is a TRIM of Impreza. 2012 Sport used 17-inch."
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "recommendedSizes": [],
+      "status": "INVALID_MODEL",
+      "notes": "2011 Impreza did not have a Sport trim. Delete this model."
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "WRX": "235/45R17",
+        "WRX Limited": "235/45R17",
+        "WRX Premium": "235/45R17"
+      },
+      "recommendedSizes": ["235/45R17"],
+      "status": "VALID",
+      "notes": "2014 was last year WRX was part of Impreza line. Uses 235/45R17."
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "WRX": "235/45R17",
+        "WRX Limited": "235/45R17",
+        "WRX Premium": "235/45R17"
+      },
+      "recommendedSizes": ["235/45R17"],
+      "status": "VALID",
+      "notes": "Uses 235/45R17. STI uses 245/40R18 (separate model)."
+    }
+  ],
+  "summary": {
+    "valid": 16,
+    "needsReview": 26,
+    "missingData": 17,
+    "duplicateModel": 14,
+    "invalidModel": 2,
+    "total": 75
+  },
+  "keyFindings": [
+    "2009-2013 Forester: 225/50R18 is NOT OEM - should be removed from database",
+    "2003-2006 Forester: 215/55R17 may not be OEM - only 215/60R16 confirmed",
+    "Pre-2017 Impreza: 225/40R18 is NOT OEM for standard Impreza - only for 2017+ Sport trim",
+    "WRX tire sizes varied: 205/55R16 (2002-2007), 225/45R17 (2008-2011), 235/45R17 (2012-2014)",
+    "STI consistently used 225/45R17 (2004-2007) then 245/40R18 (2008-2014)",
+    "235/35ZR19 in DB is NOT OEM for any Impreza - likely confusion with standalone WRX (2015+)",
+    "Impreza Anesis and G4 are Japan-only models - consider region filtering",
+    "Impreza Sport should be merged with Impreza as a trim, not separate model",
+    "Many base Imprezas are missing 195/60R15 or 195/65R15 size for entry trims"
+  ]
+}

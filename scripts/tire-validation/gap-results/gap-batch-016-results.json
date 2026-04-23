@@ -1,0 +1,558 @@
+{
+  "batchId": 16,
+  "researchedAt": "2026-04-21T23:48:00Z",
+  "source": "tiresize.com",
+  "vehicles": [
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "ss",
+      "tireSpecs": {
+        "isStaggered": true,
+        "front": { "tireSize": "245/40R19", "wheelDiameter": 19 },
+        "rear": { "tireSize": "275/35R19", "wheelDiameter": 19 },
+        "alternates": [
+          { "front": "245/35R20", "rear": "275/30R20" }
+        ]
+      },
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9
+      },
+      "notes": "Holden Commodore rebadge, US performance sedan 2014-2017"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "ssr",
+      "tireSpecs": {
+        "isStaggered": true,
+        "front": { "tireSize": "255/45R19", "wheelDiameter": 19 },
+        "rear": { "tireSize": "295/40R20", "wheelDiameter": 20 }
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 77.8
+      },
+      "notes": "Retro pickup truck, staggered wheel sizes front/rear"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "ssr",
+      "tireSpecs": {
+        "isStaggered": true,
+        "front": { "tireSize": "255/45R19", "wheelDiameter": 19 },
+        "rear": { "tireSize": "295/40R20", "wheelDiameter": 20 }
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 77.8
+      }
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "ssr",
+      "tireSpecs": {
+        "isStaggered": true,
+        "front": { "tireSize": "255/45R19", "wheelDiameter": 19 },
+        "rear": { "tireSize": "295/40R20", "wheelDiameter": 20 }
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 77.8
+      }
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "ssr",
+      "tireSpecs": {
+        "isStaggered": true,
+        "front": { "tireSize": "255/45R19", "wheelDiameter": 19 },
+        "rear": { "tireSize": "295/40R20", "wheelDiameter": 20 }
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 77.8
+      }
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "notUS": true,
+      "notes": "European/Asian market only (Daewoo Tacuma rebadge). Not sold in USA."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "notUS": true,
+      "notes": "European/Asian market only (Daewoo Tacuma rebadge). Not sold in USA."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "notUS": true,
+      "notes": "European/Asian market only (Daewoo Tacuma rebadge). Not sold in USA."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "notUS": true,
+      "notes": "European/Asian market only (Daewoo Tacuma rebadge). Not sold in USA."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "notUS": true,
+      "notes": "European/Asian market only (Daewoo Tacuma rebadge). Not sold in USA."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "notUS": true,
+      "notes": "South American/Chinese market only. Produced in Brazil/Argentina for Latin America and by SAIC-GM for China."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "notUS": true,
+      "notes": "South American/Chinese market only. Produced in Brazil/Argentina for Latin America and by SAIC-GM for China."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "notUS": true,
+      "notes": "South American/Chinese market only. Produced in Brazil/Argentina for Latin America and by SAIC-GM for China."
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "notUS": true,
+      "notes": "South American/Chinese market only. Produced in Brazil/Argentina for Latin America and by SAIC-GM for China."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "245/65R17",
+        "wheelDiameter": 17
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 77.8,
+        "offset": 50,
+        "wheelWidth": 7
+      },
+      "notes": "Extended wheelbase version of Trailblazer"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "245/65R17",
+        "wheelDiameter": 17
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 77.8,
+        "offset": 50,
+        "wheelWidth": 7
+      }
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "245/65R17",
+        "wheelDiameter": 17
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 77.8,
+        "offset": 50,
+        "wheelWidth": 7
+      }
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "245/65R17",
+        "wheelDiameter": 17
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 77.8,
+        "offset": 50,
+        "wheelWidth": 7
+      }
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "245/65R17",
+        "wheelDiameter": 17
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 77.8,
+        "offset": 50,
+        "wheelWidth": 7
+      }
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "notUS": true,
+      "notes": "European market only. This was the European version of the Pontiac Trans Sport/Montana sold as Chevrolet. In the US, this was sold as Chevrolet Venture."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "notUS": true,
+      "notes": "European market only. This was the European version of the Pontiac Trans Sport/Montana sold as Chevrolet. In the US, this was sold as Chevrolet Venture."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "notUS": true,
+      "notes": "European market only. This was the European version of the Pontiac Trans Sport/Montana sold as Chevrolet. In the US, this was sold as Chevrolet Venture."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "notUS": true,
+      "notes": "European market only. This was the European version of the Pontiac Trans Sport/Montana sold as Chevrolet. In the US, this was sold as Chevrolet Venture."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "notUS": true,
+      "notes": "European market only. This was the European version of the Pontiac Trans Sport/Montana sold as Chevrolet. In the US, this was sold as Chevrolet Venture."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "notUS": true,
+      "notes": "European market only. This was the European version of the Pontiac Trans Sport/Montana sold as Chevrolet. In the US, this was sold as Chevrolet Venture."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "traverse-limited",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "255/65R18",
+        "wheelDiameter": 18,
+        "alternates": ["255/55R20"]
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x120"
+      },
+      "notes": "Traverse Limited is a trim level of the Traverse. May want to merge with standard Traverse data."
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "trax",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "225/60R17",
+        "wheelDiameter": 17,
+        "trims": {
+          "LS": "225/60R17",
+          "LT": "225/60R17",
+          "ACTIV": "225/55R18",
+          "RS": ["225/55R18", "245/45R19"]
+        }
+      },
+      "wheelSpecs": {
+        "boltPattern": "5x105"
+      },
+      "notes": "2nd gen Trax (2024+)"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "uplander",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "225/60R17",
+        "wheelDiameter": 17
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x115"
+      },
+      "notes": "Minivan, replaced Venture"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "uplander",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "225/60R17",
+        "wheelDiameter": 17
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x115"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "uplander",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "225/60R17",
+        "wheelDiameter": 17
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x115"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "uplander",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "225/60R17",
+        "wheelDiameter": 17
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x115"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "uplander",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "225/60R17",
+        "wheelDiameter": 17
+      },
+      "wheelSpecs": {
+        "boltPattern": "6x115"
+      }
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "utility",
+      "notUS": true,
+      "notes": "South African market only. Also sold as Chevrolet Montana in South America. Based on Opel Corsa platform."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "utility",
+      "notUS": true,
+      "notes": "South African market only. Also sold as Chevrolet Montana in South America. Based on Opel Corsa platform."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "utility",
+      "notUS": true,
+      "notes": "South African market only. Also sold as Chevrolet Montana in South America. Based on Opel Corsa platform."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "utility",
+      "notUS": true,
+      "notes": "South African market only. Also sold as Chevrolet Montana in South America. Based on Opel Corsa platform."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "utility",
+      "notUS": true,
+      "notes": "South African market only. Also sold as Chevrolet Montana in South America. Based on Opel Corsa platform."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "utility",
+      "notUS": true,
+      "notes": "South African market only. Also sold as Chevrolet Montana in South America. Based on Opel Corsa platform."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "utility",
+      "notUS": true,
+      "notes": "South African market only. Also sold as Chevrolet Montana in South America. Based on Opel Corsa platform."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "utility",
+      "notUS": true,
+      "notes": "South African market only. Also sold as Chevrolet Montana in South America. Based on Opel Corsa platform."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "utility",
+      "notUS": true,
+      "notes": "South African market only. Also sold as Chevrolet Montana in South America. Based on Opel Corsa platform."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "venture",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "215/70R15",
+        "wheelDiameter": 15
+      },
+      "wheelSpecs": {
+        "boltPattern": "5x115"
+      },
+      "notes": "Minivan"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "venture",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "215/70R15",
+        "wheelDiameter": 15
+      },
+      "wheelSpecs": {
+        "boltPattern": "5x115"
+      }
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "venture",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "215/70R15",
+        "wheelDiameter": 15,
+        "trims": {
+          "AWD": "215/60R16"
+        }
+      },
+      "wheelSpecs": {
+        "boltPattern": "5x115"
+      }
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "venture",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "215/70R15",
+        "wheelDiameter": 15,
+        "trims": {
+          "AWD": "225/60R16"
+        }
+      },
+      "wheelSpecs": {
+        "boltPattern": "5x115"
+      }
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "venture",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "215/70R15",
+        "wheelDiameter": 15,
+        "trims": {
+          "AWD": "225/60R16",
+          "LT": ["215/70R15", "225/60R16"]
+        }
+      },
+      "wheelSpecs": {
+        "boltPattern": "5x115"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "venture",
+      "tireSpecs": {
+        "isStaggered": false,
+        "tireSize": "215/70R15",
+        "wheelDiameter": 15,
+        "alternates": ["225/60R16"]
+      },
+      "wheelSpecs": {
+        "boltPattern": "5x115"
+      },
+      "notes": "Final year for Venture, replaced by Uplander"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "viva",
+      "notUS": true,
+      "notes": "UK/European market only. Based on Opel Corsa, sold as Vauxhall Viva in UK. Chevrolet withdrew from Europe in 2013."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "viva",
+      "notUS": true,
+      "notes": "UK/European market only. Based on Opel Corsa, sold as Vauxhall Viva in UK. Chevrolet withdrew from Europe in 2013."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "viva",
+      "notUS": true,
+      "notes": "UK/European market only. Based on Opel Corsa, sold as Vauxhall Viva in UK. Chevrolet withdrew from Europe in 2013."
+    }
+  ],
+  "summary": {
+    "total": 50,
+    "usMarket": 24,
+    "notUS": 26,
+    "withSpecs": 24,
+    "staggered": 5,
+    "nonUSModels": [
+      "tacuma (European/Daewoo rebadge)",
+      "tracker-rs (South America/China)",
+      "trans-sport (European market)",
+      "utility (South Africa)",
+      "viva (UK/Europe)"
+    ]
+  }
+}

@@ -1,0 +1,1050 @@
+{
+  "batchId": "100",
+  "processedAt": "2026-04-21T22:22:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["185/60R14", "195/50R15", "205/45R16"],
+      "validatedTireSizes": ["205/45R16", "205/40R17"],
+      "trims": {
+        "Base Model": "205/45R16",
+        "LS": "205/45R16",
+        "Mazdaspeed": "205/40R17"
+      },
+      "source": "tiresize.com",
+      "notes": "2004 dropped the 14-inch option; all trims get 16-inch or 17-inch wheels",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["185/60R14", "195/50R15", "205/45R16"],
+      "validatedTireSizes": ["195/50R15", "205/45R16"],
+      "trims": {
+        "Base Model": ["195/50R15", "205/45R16"],
+        "LS": "205/45R16",
+        "SE": "205/45R16",
+        "Shinsen": "205/45R16"
+      },
+      "source": "tiresize.com",
+      "notes": "No 185/60R14 for 2003; base comes with 195/50R15 or optional 205/45R16",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["185/60R14", "195/50R15", "205/45R16"],
+      "validatedTireSizes": ["195/50R15", "205/45R16"],
+      "trims": {
+        "Base Model": ["195/50R15", "205/45R16"],
+        "LS": "205/45R16",
+        "SE": "205/45R16"
+      },
+      "source": "tiresize.com",
+      "notes": "No 185/60R14 for 2002; base comes with 195/50R15 or optional 205/45R16",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["185/60R14", "195/50R15", "205/45R16"],
+      "validatedTireSizes": ["195/50R15", "205/45R16"],
+      "trims": {
+        "Base Model": ["195/50R15", "205/45R16"],
+        "LS": "205/45R16",
+        "SE": "205/45R16"
+      },
+      "source": "tiresize.com",
+      "notes": "No 185/60R14 for 2001; base comes with 195/50R15 or optional 205/45R16",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "currentTireSizes": ["185/60R14", "195/50R15", "205/45R16"],
+      "validatedTireSizes": ["185/60R14", "195/50R15"],
+      "trims": {
+        "Base Model": ["185/60R14", "195/50R15"],
+        "LS": "195/50R15",
+        "SE": "195/50R15"
+      },
+      "source": "tiresize.com",
+      "notes": "2000 had 14-inch standard on base; no 205/45R16 option this year",
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2025,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "notes": "All MX-5 Miata RF trims use 205/45R17",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2019,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2018,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2017,
+      "make": "mazda",
+      "model": "mx-5-miata-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "RF Club": "205/45R17",
+        "RF Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2025,
+      "make": "mazda",
+      "model": "mx-5-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": {
+        "Sport": "195/50R16",
+        "Club": "205/45R17",
+        "Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "notes": "MX-5 RF is alternate naming for MX-5 Miata RF",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "mx-5-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": {
+        "Sport": "195/50R16",
+        "Club": "205/45R17",
+        "Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "mx-5-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": {
+        "Sport": "195/50R16",
+        "Club": "205/45R17",
+        "Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "mx-5-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": {
+        "Sport": "195/50R16",
+        "Club": "205/45R17",
+        "Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "mx-5-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": {
+        "Sport": "195/50R16",
+        "Club": "205/45R17",
+        "Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "mx-5-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": {
+        "Sport": "195/50R16",
+        "Club": "205/45R17",
+        "Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2019,
+      "make": "mazda",
+      "model": "mx-5-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": {
+        "Sport": "195/50R16",
+        "Club": "205/45R17",
+        "Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2018,
+      "make": "mazda",
+      "model": "mx-5-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": {
+        "Sport": "195/50R16",
+        "Club": "205/45R17",
+        "Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2017,
+      "make": "mazda",
+      "model": "mx-5-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": {
+        "Sport": "195/50R16",
+        "Club": "205/45R17",
+        "Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2016,
+      "make": "mazda",
+      "model": "mx-5-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16", "205/45R17"],
+      "trims": {
+        "Sport": "195/50R16",
+        "Club": "205/45R17",
+        "Grand Touring": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "notes": "RF variant launched mid-2016",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "protege",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/55R15", "195/50R16"],
+      "trims": {
+        "DX 2.0": "195/55R15",
+        "ES 2.0": "195/50R16",
+        "LX 2.0": "195/55R15"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "protege",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "195/55R15", "195/50R16"],
+      "trims": {
+        "DX 2.0": "185/65R14",
+        "ES 2.0": "195/50R16",
+        "LX 2.0": "195/55R15"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "protege",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "195/55R15", "195/50R16", "205/45R17"],
+      "trims": {
+        "DX": "185/65R14",
+        "ES 2.0": "195/50R16",
+        "LX": "185/65R14",
+        "LX 2.0": "195/55R15",
+        "MP3": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "protege",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "195/55R15"],
+      "trims": {
+        "DX": "185/65R14",
+        "ES": "195/55R15",
+        "LX": "185/65R14"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "protege5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16"],
+      "trims": {
+        "Base": "195/50R16"
+      },
+      "source": "tiresize.com",
+      "notes": "Protege5 was only sold through 2003 model year in the US; 2004 data from JDM sources",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "protege5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16"],
+      "trims": {
+        "Base": "195/50R16"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "protege5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16"],
+      "trims": {
+        "Base": "195/50R16"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "protege5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R16"],
+      "trims": {
+        "Base": "195/50R16"
+      },
+      "source": "tiresize.com",
+      "notes": "Protege5 launched 2001 model year",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2025,
+      "make": "mazda",
+      "model": "roadster-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "All": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "notes": "Roadster RF is JDM name for MX-5 Miata RF",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "roadster-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "All": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "notes": "JDM naming",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "roadster-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "All": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "roadster-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "All": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "roadster-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "All": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "roadster-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "All": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2019,
+      "make": "mazda",
+      "model": "roadster-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "All": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2018,
+      "make": "mazda",
+      "model": "roadster-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "All": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2017,
+      "make": "mazda",
+      "model": "roadster-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "All": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2016,
+      "make": "mazda",
+      "model": "roadster-rf",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/45R17"],
+      "trims": {
+        "All": "205/45R17"
+      },
+      "source": "tiresize.com",
+      "notes": "JDM Roadster RF debuted late 2016",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "rx-7",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R16", "235/45R17", "255/40R17"],
+      "trims": {
+        "Base (FD)": "225/50R16",
+        "Type R/Spirit R": ["235/45R17", "255/40R17"]
+      },
+      "source": "various JDM sources",
+      "notes": "JDM-only 2000-2003; FD generation final years. Type R models had staggered 17-inch setup.",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "rx-7",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R16", "235/45R17", "255/40R17"],
+      "trims": {
+        "Base (FD)": "225/50R16",
+        "Type R/Spirit R": ["235/45R17", "255/40R17"]
+      },
+      "source": "various JDM sources",
+      "notes": "JDM-only; not sold in US after 1995",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "rx-7",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R16", "235/45R17", "255/40R17"],
+      "trims": {
+        "Base (FD)": "225/50R16",
+        "Type R/Spirit R": ["235/45R17", "255/40R17"]
+      },
+      "source": "various JDM sources",
+      "notes": "JDM-only",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "rx-7",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R16", "235/45R17", "255/40R17"],
+      "trims": {
+        "Base (FD)": "225/50R16",
+        "Type R/Spirit R": ["235/45R17", "255/40R17"]
+      },
+      "source": "various JDM sources",
+      "notes": "JDM-only",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2012,
+      "make": "mazda",
+      "model": "rx-8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R18", "225/40R19"],
+      "trims": {
+        "Sport": "225/45R18",
+        "Grand Touring": "225/45R18",
+        "R3": "225/40R19"
+      },
+      "source": "tiresize.com",
+      "notes": "Final year; US model ended 2011 but JDM continued to 2012",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2011,
+      "make": "mazda",
+      "model": "rx-8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R18", "225/40R19"],
+      "trims": {
+        "Sport": "225/45R18",
+        "Grand Touring": "225/45R18",
+        "R3": "225/40R19"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2010,
+      "make": "mazda",
+      "model": "rx-8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R18", "225/40R19"],
+      "trims": {
+        "Sport": "225/45R18",
+        "Grand Touring": "225/45R18",
+        "R3": "225/40R19"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2009,
+      "make": "mazda",
+      "model": "rx-8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R18", "225/40R19"],
+      "trims": {
+        "Sport": "225/45R18",
+        "Touring": "225/45R18",
+        "Grand Touring": "225/45R18",
+        "R3": "225/40R19"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2008,
+      "make": "mazda",
+      "model": "rx-8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R16", "225/45R18"],
+      "trims": {
+        "Sport Auto": ["225/55R16", "225/45R18"],
+        "Sport Manual": "225/45R18",
+        "Touring": "225/45R18",
+        "Grand Touring": "225/45R18",
+        "40th Anniversary": "225/45R18"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "rx-8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R16", "225/45R18"],
+      "trims": {
+        "Sport Auto": ["225/55R16", "225/45R18"],
+        "Sport Manual": "225/45R18",
+        "Touring": "225/45R18",
+        "Grand Touring": "225/45R18"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "rx-8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R16", "225/45R18"],
+      "trims": {
+        "Auto Standard": ["225/55R16", "225/45R18"],
+        "6-Speed Manual": "225/45R18",
+        "Auto Sport": "225/45R18",
+        "Auto Touring": "225/45R18"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "rx-8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R16", "225/45R18"],
+      "trims": {
+        "6-speed": "225/45R18",
+        "Auto Standard": ["225/55R16", "225/45R18"],
+        "Auto Sport": "225/45R18",
+        "Auto Touring": "225/45R18"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "rx-8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R16", "225/45R18"],
+      "trims": {
+        "6-speed": "225/45R18",
+        "Auto Standard": ["225/55R16", "225/45R18"],
+        "Auto Sport": "225/45R18",
+        "Auto Touring": "225/45R18"
+      },
+      "source": "tiresize.com",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "rx-8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R16", "225/45R18"],
+      "trims": {
+        "Base": ["225/55R16", "225/45R18"]
+      },
+      "source": "tiresize.com",
+      "notes": "RX-8 launched late 2003 in some markets; US model year was 2004",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2007,
+      "make": "mazda",
+      "model": "spiano",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "All": "155/65R13"
+      },
+      "source": "japanesecartrade.com, carfromjapan.com",
+      "notes": "JDM kei car; HF21S chassis",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2006,
+      "make": "mazda",
+      "model": "spiano",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "All": "155/65R13"
+      },
+      "source": "japanesecartrade.com",
+      "notes": "JDM kei car",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2005,
+      "make": "mazda",
+      "model": "spiano",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "All": "155/65R13"
+      },
+      "source": "japanesecartrade.com",
+      "notes": "JDM kei car",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "mazda",
+      "model": "spiano",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "All": "155/65R13"
+      },
+      "source": "japanesecartrade.com",
+      "notes": "JDM kei car",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "spiano",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "All": "155/65R13"
+      },
+      "source": "japanesecartrade.com",
+      "notes": "JDM kei car",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "spiano",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "Type M": "155/65R13"
+      },
+      "source": "japanesecartrade.com",
+      "notes": "JDM kei car; launched late 2002",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "mazda",
+      "model": "xedos-9",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": {
+        "Base": "215/55R16",
+        "S (Miller Cycle)": "215/50R17"
+      },
+      "source": "tiresize.com (Millenia equivalent)",
+      "notes": "Xedos 9 is European/JDM name for Millenia",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "mazda",
+      "model": "xedos-9",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": {
+        "Base": "215/55R16",
+        "S (Miller Cycle)": "215/50R17"
+      },
+      "source": "tiresize.com (Millenia)",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "mazda",
+      "model": "xedos-9",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": {
+        "Base": "215/55R16",
+        "S (Miller Cycle)": "215/50R17"
+      },
+      "source": "tiresize.com (Millenia)",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2000,
+      "make": "mazda",
+      "model": "xedos-9",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": {
+        "Base": "215/55R16",
+        "S (Miller Cycle)": "215/50R17"
+      },
+      "source": "tiresize.com (Millenia)",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2021,
+      "make": "mclaren",
+      "model": "570s",
+      "currentTireSizes": ["225/35ZR19", "285/35ZR20"],
+      "validatedTireSizes": ["225/35R19", "285/35R20"],
+      "trims": {
+        "Coupe": {"front": "225/35R19", "rear": "285/35R20"},
+        "Spider": {"front": "225/35R19", "rear": "285/35R20"}
+      },
+      "source": "tiresize.com",
+      "notes": "Staggered setup; current data is correct (ZR rating equivalent)",
+      "isStaggered": true,
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "mclaren",
+      "model": "570s",
+      "currentTireSizes": ["225/35ZR19", "285/35ZR20"],
+      "validatedTireSizes": ["225/35R19", "285/35R20"],
+      "trims": {
+        "Coupe": {"front": "225/35R19", "rear": "285/35R20"},
+        "Spider": {"front": "225/35R19", "rear": "285/35R20"}
+      },
+      "source": "tiresize.com",
+      "isStaggered": true,
+      "status": "VALID"
+    },
+    {
+      "year": 2019,
+      "make": "mclaren",
+      "model": "570s",
+      "currentTireSizes": ["225/35ZR19", "285/35ZR20"],
+      "validatedTireSizes": ["225/35R19", "285/35R20"],
+      "trims": {
+        "Coupe": {"front": "225/35R19", "rear": "285/35R20"},
+        "Spider": {"front": "225/35R19", "rear": "285/35R20"}
+      },
+      "source": "tiresize.com",
+      "isStaggered": true,
+      "status": "VALID"
+    },
+    {
+      "year": 2018,
+      "make": "mclaren",
+      "model": "570s",
+      "currentTireSizes": ["225/35ZR19", "285/35ZR20"],
+      "validatedTireSizes": ["225/35R19", "285/35R20"],
+      "trims": {
+        "Coupe": {"front": "225/35R19", "rear": "285/35R20"},
+        "Spider": {"front": "225/35R19", "rear": "285/35R20"}
+      },
+      "source": "tiresize.com",
+      "isStaggered": true,
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "mclaren",
+      "model": "570s",
+      "currentTireSizes": ["225/35ZR19", "285/35ZR20"],
+      "validatedTireSizes": ["225/35R19", "285/35R20"],
+      "trims": {
+        "Coupe": {"front": "225/35R19", "rear": "285/35R20"}
+      },
+      "source": "tiresize.com",
+      "isStaggered": true,
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "mclaren",
+      "model": "570s",
+      "currentTireSizes": ["225/35ZR19", "285/35ZR20"],
+      "validatedTireSizes": ["225/35R19", "285/35R20"],
+      "trims": {
+        "Base Model": {"front": "225/35R19", "rear": "285/35R20"}
+      },
+      "source": "tiresize.com",
+      "isStaggered": true,
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "mclaren",
+      "model": "570s",
+      "currentTireSizes": ["225/35ZR19", "285/35ZR20"],
+      "validatedTireSizes": ["225/35R19", "285/35R20"],
+      "trims": {
+        "Base Model": {"front": "225/35R19", "rear": "285/35R20"}
+      },
+      "source": "tiresize.com",
+      "notes": "570S launched late 2015",
+      "isStaggered": true,
+      "status": "VALID"
+    },
+    {
+      "year": 2023,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR20"],
+      "validatedTireSizes": ["245/35R19", "305/30R20"],
+      "trims": {
+        "Coupe": {"front": "245/35R19", "rear": "305/30R20"},
+        "Spider": {"front": "245/35R19", "rear": "305/30R20"}
+      },
+      "source": "tiresize.com, goodyear.com, autopadre.com",
+      "notes": "Staggered setup; current data is correct (ZR rating equivalent)",
+      "isStaggered": true,
+      "status": "VALID"
+    },
+    {
+      "year": 2022,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR20"],
+      "validatedTireSizes": ["245/35R19", "305/30R20"],
+      "trims": {
+        "Coupe": {"front": "245/35R19", "rear": "305/30R20"},
+        "Spider": {"front": "245/35R19", "rear": "305/30R20"}
+      },
+      "source": "tiresize.com, goodyear.com, autopadre.com",
+      "isStaggered": true,
+      "status": "VALID"
+    }
+  ],
+  "summary": {
+    "valid": 9,
+    "needsUpdate": 5,
+    "missingData": 61,
+    "totalProcessed": 75,
+    "notes": [
+      "MX-5 Miata 2000-2004: Current data includes sizes not available for all years - needs year-specific corrections",
+      "MX-5 Miata RF / MX-5 RF / Roadster RF: These are duplicate entries for the same vehicle (different regional names)",
+      "Protege and Protege5: Missing all tire data in current DB",
+      "RX-7 (2000-2003): JDM-only model, not sold in US",
+      "RX-8 (2003-2012): Missing all tire data in current DB",
+      "Spiano: JDM kei car, uses 155/65R13",
+      "Xedos 9: European/JDM equivalent of Millenia",
+      "McLaren 570S and 720S: Current data is valid (ZR equivalent to R for high-speed rating)"
+    ]
+  }
+}

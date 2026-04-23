@@ -1,0 +1,501 @@
+{
+  "batchId": 11,
+  "researchedAt": "2026-04-21T23:47:00.000Z",
+  "source": "tiresize.com",
+  "vehicles": [
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "cts-v",
+      "tireSpecs": {
+        "front": "265/35R19",
+        "rear": "295/30R19",
+        "isStaggered": true
+      },
+      "wheelSpecs": {
+        "front": { "diameter": 19 },
+        "rear": { "diameter": 19 }
+      },
+      "trims": ["Sedan"],
+      "notes": "Performance sedan with staggered setup"
+    },
+    {
+      "year": 2000,
+      "make": "cadillac",
+      "model": "eldorado",
+      "tireSpecs": [
+        { "trim": "ESC", "size": "225/60R16" },
+        { "trim": "ETC", "size": "235/60R16" }
+      ],
+      "wheelSpecs": { "diameter": 16 },
+      "trims": ["ESC", "ETC"]
+    },
+    {
+      "year": 2001,
+      "make": "cadillac",
+      "model": "eldorado",
+      "tireSpecs": [
+        { "trim": "ESC", "size": "225/60R16" },
+        { "trim": "ETC", "size": "235/60R16" }
+      ],
+      "wheelSpecs": { "diameter": 16 },
+      "trims": ["ESC", "ETC"]
+    },
+    {
+      "year": 2002,
+      "make": "cadillac",
+      "model": "eldorado",
+      "tireSpecs": [
+        { "trim": "ESC", "size": "225/60R16" },
+        { "trim": "ETC", "size": "235/60R16" }
+      ],
+      "wheelSpecs": { "diameter": 16 },
+      "trims": ["ESC", "ETC"]
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "elr",
+      "tireSpecs": { "size": "245/40R20" },
+      "wheelSpecs": { "diameter": 20 },
+      "trims": ["plug-in Hybrid"],
+      "notes": "Plug-in hybrid coupe"
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "elr",
+      "tireSpecs": { "size": "245/40R20" },
+      "wheelSpecs": { "diameter": 20 },
+      "trims": ["plug-in Hybrid"],
+      "notes": "Plug-in hybrid coupe"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "elr",
+      "tireSpecs": { "size": "245/40R20" },
+      "wheelSpecs": { "diameter": 20 },
+      "trims": ["plug-in Hybrid"],
+      "notes": "Plug-in hybrid coupe"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "escalade-iq",
+      "tireSpecs": { "size": "275/50R24" },
+      "wheelSpecs": { "diameter": 24 },
+      "trims": ["Luxury", "Luxury 2"],
+      "notes": "All-electric Escalade, 35-inch tires, available late 2024"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "escalade-iq",
+      "tireSpecs": { "size": "275/50R24" },
+      "wheelSpecs": { "diameter": 24 },
+      "trims": ["Luxury", "Luxury 2"],
+      "notes": "All-electric Escalade, 35-inch tires"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "escalade-iq",
+      "tireSpecs": { "size": "275/50R24" },
+      "wheelSpecs": { "diameter": 24 },
+      "trims": ["Luxury", "Luxury 2"],
+      "notes": "All-electric Escalade, 35-inch tires"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "tireSpecs": { "size": "275/50R22" },
+      "wheelSpecs": { "diameter": 22 },
+      "trims": ["V"],
+      "notes": "First model year for Escalade-V, supercharged V8"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "tireSpecs": { "size": "275/50R22" },
+      "wheelSpecs": { "diameter": 22 },
+      "trims": ["V"],
+      "notes": "Supercharged V8 variant"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "tireSpecs": { "size": "275/50R22" },
+      "wheelSpecs": { "diameter": 22 },
+      "trims": ["V"],
+      "notes": "Supercharged V8 variant"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "tireSpecs": { "size": "285/40R24" },
+      "wheelSpecs": { "diameter": 24 },
+      "trims": ["V"],
+      "notes": "Upgraded to 24-inch wheels for 2025"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "tireSpecs": { "size": "285/40R24" },
+      "wheelSpecs": { "diameter": 24 },
+      "trims": ["V"],
+      "notes": "24-inch wheels"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "gt4",
+      "notUS": true,
+      "notes": "China-only model, not sold in USA"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "gt4",
+      "notUS": true,
+      "notes": "China-only model, not sold in USA"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "gt4",
+      "notUS": true,
+      "notes": "China-only model, not sold in USA"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "lyriq",
+      "tireSpecs": [
+        { "size": "265/50R20", "wheelDiameter": 20 },
+        { "size": "275/40R22", "wheelDiameter": 22 }
+      ],
+      "wheelSpecs": { "diameter": [20, 22] },
+      "trims": ["Debut Edition", "Luxury", "Sport", "Tech"],
+      "notes": "First model year, limited Debut Edition"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "lyriq",
+      "tireSpecs": [
+        { "size": "265/50R20", "wheelDiameter": 20 },
+        { "size": "275/40R22", "wheelDiameter": 22 }
+      ],
+      "wheelSpecs": { "diameter": [20, 22] },
+      "trims": ["Luxury", "Sport", "Tech"]
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "lyriq",
+      "tireSpecs": [
+        { "size": "265/50R20", "wheelDiameter": 20 },
+        { "size": "275/40R22", "wheelDiameter": 22 }
+      ],
+      "wheelSpecs": { "diameter": [20, 22] },
+      "trims": ["Luxury", "Sport"]
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "lyriq",
+      "tireSpecs": [
+        { "size": "265/50R20", "wheelDiameter": 20 },
+        { "size": "275/40R22", "wheelDiameter": 22 }
+      ],
+      "wheelSpecs": { "diameter": [20, 22] },
+      "trims": ["Luxury", "Premium Luxury", "Premium Sport", "Signature Luxury", "Signature Sport", "Sport", "V"]
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "lyriq-v",
+      "tireSpecs": { "size": "275/40R22" },
+      "wheelSpecs": { "diameter": 22 },
+      "trims": ["V"],
+      "notes": "First V-Series electric SUV, available Spring/Summer 2025"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "lyriq-v",
+      "tireSpecs": { "size": "275/40R22" },
+      "wheelSpecs": { "diameter": 22 },
+      "trims": ["V"],
+      "notes": "V-Series electric SUV"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "optiq",
+      "notUS": true,
+      "notes": "China-only initially, US release starting 2025/2026"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "optiq",
+      "notUS": true,
+      "notes": "China-only initially, US release starting 2025/2026"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "optiq",
+      "tireSpecs": { "size": "TBD" },
+      "wheelSpecs": { "diameter": "TBD" },
+      "notes": "US release 2025, specs pending"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "optiq",
+      "tireSpecs": { "size": "TBD" },
+      "wheelSpecs": { "diameter": "TBD" },
+      "notes": "US market, specs pending"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "optiq-v",
+      "tireSpecs": { "size": "TBD" },
+      "wheelSpecs": { "diameter": "TBD" },
+      "notes": "US market if Optiq-V is released"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "optiq-v",
+      "tireSpecs": { "size": "TBD" },
+      "wheelSpecs": { "diameter": "TBD" },
+      "notes": "US market if Optiq-V is released"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "sls",
+      "notUS": true,
+      "notes": "China-only model (Seville Luxury Sedan), long-wheelbase STS variant manufactured by Shanghai-GM"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "sls",
+      "notUS": true,
+      "notes": "China-only model (Seville Luxury Sedan)"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "sls",
+      "notUS": true,
+      "notes": "China-only model (Seville Luxury Sedan)"
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "sls",
+      "notUS": true,
+      "notes": "China-only model (Seville Luxury Sedan), facelifted"
+    },
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "sls",
+      "notUS": true,
+      "notes": "China-only model (Seville Luxury Sedan)"
+    },
+    {
+      "year": 2012,
+      "make": "cadillac",
+      "model": "sls",
+      "notUS": true,
+      "notes": "China-only model (Seville Luxury Sedan)"
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "sls",
+      "notUS": true,
+      "notes": "China-only model (Seville Luxury Sedan), final year"
+    },
+    {
+      "year": 2004,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": {
+        "front": "235/65R17",
+        "rear": "255/60R17",
+        "isStaggered": true
+      },
+      "wheelSpecs": { "diameter": 17 },
+      "trims": ["2WD V6", "2WD V8", "AWD V6", "AWD V8"],
+      "notes": "First gen SRX with staggered setup"
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": {
+        "front": "235/65R17",
+        "rear": "255/60R17",
+        "isStaggered": true
+      },
+      "wheelSpecs": { "diameter": 17 },
+      "trims": ["2WD V6 Base Model", "2WD V6 Luxury Package", "2WD V8 Base Model", "AWD V6 Base Model", "AWD V8 Base Model"],
+      "notes": "First gen SRX with staggered setup"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": {
+        "front": "235/65R17",
+        "rear": "255/60R17",
+        "isStaggered": true
+      },
+      "wheelSpecs": { "diameter": 17 },
+      "trims": ["2WD V6 Base Model", "2WD V8 Base Model", "AWD V6 Base Model", "AWD V8 Base Model"],
+      "notes": "First gen SRX with staggered setup"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": [
+        { "trim": "V6 Base/Luxury", "front": "235/65R17", "rear": "255/60R17", "isStaggered": true },
+        { "trim": "V8 Base/Luxury", "front": "235/60R18", "rear": "255/55R18", "isStaggered": true },
+        { "trim": "Sport Package", "size": "255/50R20", "isStaggered": false }
+      ],
+      "wheelSpecs": { "diameter": [17, 18, 20] },
+      "trims": ["2WD V6 Base Model", "2WD V6 Luxury Package", "2WD V6 Sport Package", "2WD V8 Base Model", "2WD V8 Luxury Package", "2WD V8 Sport Package", "AWD V6 Base Model", "AWD V6 Luxury Package", "AWD V6 Sport Package", "AWD V8 Base Model", "AWD V8 Luxury Package", "AWD V8 Sport Package"]
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": [
+        { "trim": "V6 Base/Luxury", "front": "235/65R17", "rear": "255/60R17", "isStaggered": true },
+        { "trim": "V8 Base/Luxury", "front": "235/60R18", "rear": "255/55R18", "isStaggered": true },
+        { "trim": "Sport Package", "size": "255/50R20", "isStaggered": false }
+      ],
+      "wheelSpecs": { "diameter": [17, 18, 20] },
+      "trims": ["2WD V6 Base Model", "2WD V6 Luxury Package", "2WD V6 Sport Package", "2WD V8 Base Model", "2WD V8 Luxury Package", "2WD V8 Sport Package", "AWD V6 Base Model", "AWD V6 Luxury Package", "AWD V6 Sport Package", "AWD V8 Base Model", "AWD V8 Luxury Package", "AWD V8 Sport Package"]
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": [
+        { "trim": "V6 Base/Luxury", "front": "235/65R17", "rear": "255/60R17", "isStaggered": true },
+        { "trim": "V8 Base/Luxury", "front": "235/60R18", "rear": "255/55R18", "isStaggered": true },
+        { "trim": "Sport Package", "size": "255/50R20", "isStaggered": false }
+      ],
+      "wheelSpecs": { "diameter": [17, 18, 20] },
+      "trims": ["2WD V6 Base Model", "2WD V6 Luxury Package", "2WD V6 Sport Package", "2WD V8 Base Model", "2WD V8 Luxury Package", "2WD V8 Sport Package", "AWD V6 Base Model", "AWD V6 Luxury Package", "AWD V6 Sport Package", "AWD V8 Base Model", "AWD V8 Luxury Package", "AWD V8 Sport Package"],
+      "notes": "Last year of first gen SRX"
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": [
+        { "size": "235/65R18", "wheelDiameter": 18 },
+        { "size": "235/55R20", "wheelDiameter": 20 }
+      ],
+      "wheelSpecs": { "diameter": [18, 20] },
+      "trims": ["2.8L Turbo AWD Performance", "2.8L Turbo AWD Premium", "3.0L AWD Luxury", "3.0L AWD Performance", "3.0L AWD Premium", "3.0L FWD Base", "3.0L FWD Luxury", "3.0L FWD Performance", "3.0L FWD Premium"],
+      "notes": "Second gen SRX, non-staggered"
+    },
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": [
+        { "size": "235/65R18", "wheelDiameter": 18 },
+        { "size": "235/55R20", "wheelDiameter": 20 }
+      ],
+      "wheelSpecs": { "diameter": [18, 20] },
+      "trims": ["2.8L Turbo AWD Performance", "2.8L Turbo AWD Premium", "3.0L AWD Luxury", "3.0L AWD Performance", "3.0L AWD Premium", "3.0L FWD Base", "3.0L FWD Luxury", "3.0L FWD Performance", "3.0L FWD Premium"]
+    },
+    {
+      "year": 2012,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": [
+        { "size": "235/65R18", "wheelDiameter": 18 },
+        { "size": "235/55R20", "wheelDiameter": 20 }
+      ],
+      "wheelSpecs": { "diameter": [18, 20] },
+      "trims": ["AWD Luxury", "AWD Performance", "AWD Premium", "FWD Luxury", "FWD Performance", "FWD Premium", "FWD Standard"]
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": [
+        { "size": "235/65R18", "wheelDiameter": 18 },
+        { "size": "235/55R20", "wheelDiameter": 20 }
+      ],
+      "wheelSpecs": { "diameter": [18, 20] },
+      "trims": ["AWD Luxury", "AWD Performance", "AWD Premium", "FWD Luxury", "FWD Performance", "FWD Premium", "FWD Standard"]
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": [
+        { "size": "235/65R18", "wheelDiameter": 18 },
+        { "size": "235/55R20", "wheelDiameter": 20 }
+      ],
+      "wheelSpecs": { "diameter": [18, 20] },
+      "trims": ["AWD Luxury", "AWD Performance", "AWD Premium", "FWD Luxury", "FWD Performance", "FWD Premium", "FWD Standard"]
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": [
+        { "size": "235/65R18", "wheelDiameter": 18 },
+        { "size": "235/55R20", "wheelDiameter": 20 }
+      ],
+      "wheelSpecs": { "diameter": [18, 20] },
+      "trims": ["AWD Luxury", "AWD Performance", "AWD Premium", "FWD Luxury", "FWD Performance", "FWD Premium", "FWD Standard"]
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "srx",
+      "tireSpecs": [
+        { "size": "235/65R18", "wheelDiameter": 18 },
+        { "size": "235/55R20", "wheelDiameter": 20 }
+      ],
+      "wheelSpecs": { "diameter": [18, 20] },
+      "trims": ["AWD Luxury", "AWD Performance", "AWD Premium", "FWD Luxury", "FWD Performance", "FWD Premium", "FWD Standard"],
+      "notes": "Final year of SRX, replaced by XT5"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "usMarketVehicles": 40,
+    "nonUSVehicles": 10,
+    "vehiclesWithData": 40,
+    "vehiclesPendingSpecs": 4,
+    "nonUSModels": [
+      "sls (China-only, 2007-2013)",
+      "gt4 (China-only, 2024-2026)",
+      "optiq (China-only 2023-2024, US starting 2025)"
+    ]
+  }
+}

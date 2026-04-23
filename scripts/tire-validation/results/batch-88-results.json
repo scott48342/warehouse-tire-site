@@ -1,0 +1,1125 @@
+{
+  "batchId": "88",
+  "processedAt": "2026-04-21T22:15:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "LR3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "SE V6": { "tireSizes": ["255/60R18"] },
+        "SE V8": { "tireSizes": ["255/60R18"] },
+        "HSE": { "tireSizes": ["255/55R19"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2006,
+      "make": "Land Rover",
+      "model": "LR3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "Base Model": { "tireSizes": ["255/60R18"] },
+        "SE": { "tireSizes": ["255/60R18"] },
+        "HSE": { "tireSizes": ["255/55R19"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2005,
+      "make": "Land Rover",
+      "model": "LR3",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/70R17", "255/60R18", "255/55R19"],
+      "trims": {
+        "SE": { "tireSizes": ["235/70R17", "255/60R18"] },
+        "HSE": { "tireSizes": ["255/60R18", "255/55R19"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2016,
+      "make": "Land Rover",
+      "model": "LR4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "Base": { "tireSizes": ["255/55R19"] },
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "HSE LUX": { "tireSizes": ["255/55R19", "255/50R20"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2015,
+      "make": "Land Rover",
+      "model": "LR4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "Base": { "tireSizes": ["255/55R19"] },
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "HSE LUX": { "tireSizes": ["255/55R19", "255/50R20"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "LR4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "Base": { "tireSizes": ["255/55R19"] },
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "HSE LUX": { "tireSizes": ["255/55R19", "255/50R20"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2013,
+      "make": "Land Rover",
+      "model": "LR4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "Base": { "tireSizes": ["255/55R19"] },
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "HSE LUX": { "tireSizes": ["255/55R19", "255/50R20"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2012,
+      "make": "Land Rover",
+      "model": "LR4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "Base": { "tireSizes": ["255/55R19"] },
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "HSE LUX": { "tireSizes": ["255/55R19", "255/50R20"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "LR4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "Base": { "tireSizes": ["255/55R19"] },
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "HSE LUX": { "tireSizes": ["255/55R19", "255/50R20"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2010,
+      "make": "Land Rover",
+      "model": "LR4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R19"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R21", "285/45R22", "285/40R23"],
+      "trims": {
+        "SE": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "Autobiography": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "SV": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2025,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R21", "275/50R22", "275/45R23"],
+      "validatedTireSizes": ["275/50R21", "285/45R22", "285/40R23"],
+      "trims": {
+        "SE": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "Autobiography": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "SV": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes incorrect; actual OEM sizes are different wheel/tire specs"
+    },
+    {
+      "year": 2024,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R21", "275/50R22", "275/45R23"],
+      "validatedTireSizes": ["275/50R21", "285/45R22"],
+      "trims": {
+        "SE": { "tireSizes": ["275/50R21", "285/45R22"] },
+        "Autobiography": { "tireSizes": ["275/50R21", "285/45R22"] },
+        "SV": { "tireSizes": ["275/50R21", "285/45R22"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes appear incorrect; validated OEM is 275/50R21 and 285/45R22"
+    },
+    {
+      "year": 2023,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R21", "275/50R22", "275/45R23"],
+      "validatedTireSizes": ["275/50R21", "285/45R22"],
+      "trims": {
+        "SE": { "tireSizes": ["275/50R21", "285/45R22"] },
+        "Autobiography": { "tireSizes": ["275/50R21", "285/45R22"] },
+        "SV": { "tireSizes": ["275/50R21", "285/45R22"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes appear incorrect; validated OEM is 275/50R21 and 285/45R22"
+    },
+    {
+      "year": 2022,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R21", "275/50R22", "275/45R23"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "Base": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVAutobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Westminster Edition": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Plug-In Hybrid": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes appear incorrect; 2022 is last year of L405 generation"
+    },
+    {
+      "year": 2021,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R20", "275/45R21", "275/40R22"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "Base": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVAutobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Westminster Edition": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Plug-In Hybrid": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "Missing 235/65R19 option for base/HSE trims"
+    },
+    {
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R20", "275/45R21", "275/40R22"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "Base": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVAutobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "P525 HSE": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Plug-In Hybrid": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "Missing 235/65R19 option"
+    },
+    {
+      "year": 2019,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R20", "275/45R21", "275/40R22"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "Base": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVAutobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["275/45R21", "275/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "Missing 235/65R19 option"
+    },
+    {
+      "year": 2018,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R20", "275/45R21", "275/40R22"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "Base": { "tireSizes": ["235/65R19", "255/55R20"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVAutobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["275/45R21", "275/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "Missing 235/65R19 option"
+    },
+    {
+      "year": 2017,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R20", "275/45R21", "275/40R22"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "Base": { "tireSizes": ["235/65R19", "255/55R20"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVAutobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["275/45R21", "275/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "Missing 235/65R19 option"
+    },
+    {
+      "year": 2016,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R20", "275/45R21", "275/40R22"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "Base": { "tireSizes": ["235/65R19", "255/55R20"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVAutobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["275/45R21", "275/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "Missing 235/65R19 option"
+    },
+    {
+      "year": 2015,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R20", "275/45R21", "275/40R22"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "Base": { "tireSizes": ["235/65R19", "255/55R20"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Long Wheelbase Autobiography": { "tireSizes": ["255/55R20", "275/45R21"] },
+        "Long Wheelbase Supercharged": { "tireSizes": ["255/55R20", "275/45R21"] }
+      },
+      "status": "partial_match",
+      "notes": "Missing 235/65R19 option"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R20", "275/45R21"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "Base": { "tireSizes": ["235/65R19", "255/55R20"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Long Wheelbase Autobiography": { "tireSizes": ["255/55R20", "275/45R21"] },
+        "Long Wheelbase Supercharged": { "tireSizes": ["255/55R20", "275/45R21"] }
+      },
+      "status": "partial_match",
+      "notes": "Missing 235/65R19 and 275/40R22 options"
+    },
+    {
+      "year": 2013,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R20", "275/45R21"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "Base": { "tireSizes": ["235/65R19", "255/55R20"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["275/45R21", "275/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "2013 is first year of L405 generation; missing 235/65R19 and 275/40R22"
+    },
+    {
+      "year": 2012,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "HSE LUX": { "tireSizes": ["255/50R20"] },
+        "Supercharged": { "tireSizes": ["255/50R20"] },
+        "Autobiography": { "tireSizes": ["255/55R19", "255/50R20"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes incorrect; 2012 is L322 generation with different sizes"
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19"] },
+        "HSE LUX": { "tireSizes": ["255/50R20"] },
+        "Supercharged": { "tireSizes": ["255/50R20"] },
+        "Autobiography": { "tireSizes": ["255/50R20"] },
+        "Autobiography Black Ed": { "tireSizes": ["255/50R20"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes include non-OEM sizes; validated OEM is 255/55R19 and 255/50R20"
+    },
+    {
+      "year": 2010,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "Supercharged": { "tireSizes": ["255/50R20"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes include non-OEM sizes; validated OEM is 255/55R19 and 255/50R20"
+    },
+    {
+      "year": 2009,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "Supercharged": { "tireSizes": ["255/50R20"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes include non-OEM sizes; validated OEM is 255/55R19 and 255/50R20"
+    },
+    {
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "Supercharged": { "tireSizes": ["255/50R20"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes include non-OEM sizes; validated OEM is 255/55R19 and 255/50R20"
+    },
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "Supercharged": { "tireSizes": ["255/50R20"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes include non-OEM sizes; validated OEM is 255/55R19 and 255/50R20"
+    },
+    {
+      "year": 2006,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "Supercharged": { "tireSizes": ["255/50R20"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes include non-OEM sizes; validated OEM is 255/55R19 and 255/50R20"
+    },
+    {
+      "year": 2005,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "HSE Standard Model": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "HSE With TPMS": { "tireSizes": ["255/55R19", "255/50R20"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes include non-OEM sizes; validated OEM is 255/55R19 and 255/50R20"
+    },
+    {
+      "year": 2004,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "HSE Standard Model": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "HSE With TPMS": { "tireSizes": ["255/55R19", "255/50R20"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes include non-OEM sizes; validated OEM is 255/55R19 and 255/50R20"
+    },
+    {
+      "year": 2003,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R19", "255/50R20"],
+      "trims": {
+        "HSE Standard Model": { "tireSizes": ["255/55R19", "255/50R20"] },
+        "HSE With TPMS": { "tireSizes": ["255/55R19", "255/50R20"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes include non-OEM sizes; L322 generation uses 255/55R19 and 255/50R20"
+    },
+    {
+      "year": 2002,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": ["255/55R19", "275/45R20", "275/40R21", "305/35R22"],
+      "validatedTireSizes": ["255/55R18"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/55R18"] }
+      },
+      "status": "mismatch",
+      "notes": "2002 is last year of P38 generation; uses 255/55R18 only"
+    },
+    {
+      "year": 2001,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": {
+        "SE": { "tireSizes": ["255/65R16"] },
+        "HSE": { "tireSizes": ["255/55R18"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2000,
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": {
+        "Base Model": { "tireSizes": ["255/65R16"] },
+        "County": { "tireSizes": ["255/65R16"] },
+        "SE": { "tireSizes": ["255/65R16"] },
+        "HSE": { "tireSizes": ["255/55R18"] },
+        "HSK": { "tireSizes": ["255/55R18"] },
+        "Vitesse": { "tireSizes": ["255/55R18"] }
+      },
+      "status": "corrected"
+    },
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/45R20", "255/40R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"],
+      "trims": {
+        "S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "Dynamic SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes incorrect; 245/45R20 and 255/40R21 not OEM; actual is 235/50R20 and 245/45R21"
+    },
+    {
+      "year": 2025,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/50R19", "245/45R20", "255/40R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"],
+      "trims": {
+        "S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "Dynamic SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes mostly incorrect; actual OEM is 235-width tires up to 20\", then 245/45R21"
+    },
+    {
+      "year": 2024,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/50R19", "245/45R20", "255/40R21"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"],
+      "trims": {
+        "S": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] },
+        "Dynamic SE": { "tireSizes": ["235/60R18", "235/55R19", "235/50R20", "245/45R21"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes partially incorrect; should be 235/55R19 not 245/50R19"
+    },
+    {
+      "year": 2023,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/50R19", "245/45R20", "255/40R21"],
+      "validatedTireSizes": ["235/60R18", "235/50R20", "245/45R21"],
+      "trims": {
+        "S": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "R-Dynamic S": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "SE": { "tireSizes": ["235/50R20", "245/45R21"] },
+        "R-Dynamic SE": { "tireSizes": ["235/50R20", "245/45R21"] },
+        "R-Dynamic HST": { "tireSizes": ["235/50R20", "245/45R21"] }
+      },
+      "status": "mismatch",
+      "notes": "245/50R19 not OEM; uses 235-width across all wheel sizes"
+    },
+    {
+      "year": 2022,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/50R19", "245/45R20", "255/40R21"],
+      "validatedTireSizes": ["235/60R18", "235/50R20", "245/45R21"],
+      "trims": {
+        "S": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "R-Dynamic S": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "SE": { "tireSizes": ["235/50R20", "245/45R21"] },
+        "R-Dynamic SE": { "tireSizes": ["235/50R20", "245/45R21"] },
+        "R-Dynamic HST": { "tireSizes": ["235/50R20", "245/45R21"] }
+      },
+      "status": "mismatch",
+      "notes": "245/50R19 not OEM; uses 235-width across most sizes"
+    },
+    {
+      "year": 2021,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/50R19", "245/45R20", "255/40R21"],
+      "validatedTireSizes": ["235/60R18", "235/50R20", "245/45R21"],
+      "trims": {
+        "S": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "SE": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "R-Dynamic S": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "R-Dynamic SE": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "R-Dynamic HSE": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] }
+      },
+      "status": "mismatch",
+      "notes": "245/50R19 not OEM for 2021; 2nd-gen Evoque uses different sizes"
+    },
+    {
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/50R19", "245/45R20", "255/40R21"],
+      "validatedTireSizes": ["235/60R18", "235/50R20", "245/45R21"],
+      "trims": {
+        "S": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "SE": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "R-Dynamic S": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "R-Dynamic SE": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "R-Dynamic HSE": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] },
+        "First Edition": { "tireSizes": ["235/60R18", "235/50R20", "245/45R21"] }
+      },
+      "status": "mismatch",
+      "notes": "2020 is first year of 2nd-gen Evoque; sizes changed significantly"
+    },
+    {
+      "year": 2019,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/45R20", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "SE": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "SE Premium": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "HSE": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "HSE Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Autobiography": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Landmark Edition": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Convertible SE Dynamic": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "Convertible HSE Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] }
+      },
+      "status": "partial_match",
+      "notes": "255/45R20 not OEM; should be 245/45R20"
+    },
+    {
+      "year": 2018,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/45R20", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "SE": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "SE Premium": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "HSE": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "HSE Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Autobiography": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Landmark Edition": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Convertible SE Dynamic": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "Convertible HSE Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] }
+      },
+      "status": "partial_match",
+      "notes": "255/45R20 not OEM; missing 235/55R19"
+    },
+    {
+      "year": 2017,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/45R20", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "SE": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "SE Premium": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "HSE": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "HSE Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Autobiography": { "tireSizes": ["245/45R20"] },
+        "Convertible SE Dynamic": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "Convertible HSE Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] }
+      },
+      "status": "partial_match",
+      "notes": "255/45R20 not OEM; missing 235/55R19"
+    },
+    {
+      "year": 2016,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/45R20", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "SE": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "SE Premium": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "HSE": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "HSE Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Autobiography": { "tireSizes": ["235/55R19", "245/45R20"] }
+      },
+      "status": "partial_match",
+      "notes": "255/45R20 not OEM; missing 235/55R19"
+    },
+    {
+      "year": 2015,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/45R20", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "Pure": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "Pure Plus": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Pure Premium": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Prestige": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Autobiography Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] }
+      },
+      "status": "partial_match",
+      "notes": "255/45R20 not OEM; missing 235/55R19"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/45R20", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "245/45R20"],
+      "trims": {
+        "Pure": { "tireSizes": ["235/60R18", "235/55R19", "245/45R20"] },
+        "Pure Plus": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Pure Premium": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Prestige": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] }
+      },
+      "status": "partial_match",
+      "notes": "255/45R20 not OEM; missing 235/55R19"
+    },
+    {
+      "year": 2013,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/45R20", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "245/45R20"],
+      "trims": {
+        "Pure": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Prestige": { "tireSizes": ["235/55R19", "245/45R20"] }
+      },
+      "status": "mismatch",
+      "notes": "235/60R18 and 255/45R20 not OEM for 2013; uses 235/55R19 and 245/45R20"
+    },
+    {
+      "year": 2012,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/45R20", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "245/45R20"],
+      "trims": {
+        "Pure": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Prestige": { "tireSizes": ["235/55R19", "245/45R20"] }
+      },
+      "status": "mismatch",
+      "notes": "235/60R18 and 255/45R20 not OEM for 2012; uses 235/55R19 and 245/45R20"
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "Range Rover Evoque",
+      "currentTireSizes": ["235/60R18", "245/45R20", "255/40R21"],
+      "validatedTireSizes": ["235/55R19", "245/45R20"],
+      "trims": {
+        "Pure": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Dynamic": { "tireSizes": ["235/55R19", "245/45R20"] },
+        "Prestige": { "tireSizes": ["235/55R19", "245/45R20"] }
+      },
+      "status": "mismatch",
+      "notes": "2011 Evoque used same sizes as 2012 launch year; 255/40R21 not OEM"
+    },
+    {
+      "year": 2026,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["275/50R21", "285/45R22", "285/40R23"],
+      "trims": {
+        "SE": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "Dynamic SE": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "Autobiography": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "SV": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes incorrect; 3rd-gen Sport (2023+) uses different sizes"
+    },
+    {
+      "year": 2025,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["275/50R21", "285/45R22", "285/40R23"],
+      "trims": {
+        "SE": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "Dynamic SE": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "Autobiography": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "SV": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes incorrect; actual OEM is 275/50R21, 285/45R22, 285/40R23"
+    },
+    {
+      "year": 2024,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["275/50R21", "285/45R22", "285/40R23"],
+      "trims": {
+        "SE": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "Dynamic SE": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "Autobiography": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] }
+      },
+      "status": "mismatch",
+      "notes": "Current sizes incorrect; actual OEM is 275/50R21, 285/45R22, 285/40R23"
+    },
+    {
+      "year": 2023,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["275/50R21", "285/45R22", "285/40R23"],
+      "trims": {
+        "SE": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "Dynamic SE": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] },
+        "Autobiography": { "tireSizes": ["275/50R21", "285/45R22", "285/40R23"] }
+      },
+      "status": "mismatch",
+      "notes": "2023 is first year of 3rd-gen Sport; sizes changed significantly"
+    },
+    {
+      "year": 2022,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22", "285/40R22", "295/40R22"],
+      "trims": {
+        "SE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "HSE Dynamic": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "HST": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVR": { "tireSizes": ["275/45R21", "285/40R22", "295/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "255/55R19 and 285/35R23 not OEM; 2022 is last year of L494 generation"
+    },
+    {
+      "year": 2021,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22", "285/40R22", "295/40R22"],
+      "trims": {
+        "SE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE Silver Edition": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "HSE Dynamic": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "HST": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Autobiography Dynamic": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVR": { "tireSizes": ["275/45R21", "285/40R22", "295/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "255/55R19 and 285/35R23 not OEM"
+    },
+    {
+      "year": 2020,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22", "285/40R22", "295/40R22"],
+      "trims": {
+        "SE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "HSE Dynamic": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "HST": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Autobiography Dynamic": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVR": { "tireSizes": ["275/45R21", "285/40R22", "295/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "255/55R19 and 285/35R23 not OEM"
+    },
+    {
+      "year": 2019,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22", "285/40R22", "295/40R22"],
+      "trims": {
+        "SE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "HST": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Autobiography Dynamic": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Supercharged Dynamic": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVR": { "tireSizes": ["275/45R21", "285/40R22", "295/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "255/55R19 and 285/35R23 not OEM"
+    },
+    {
+      "year": 2018,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22", "295/40R22"],
+      "trims": {
+        "SE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "HSE Dynamic": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "Autobiography Dynamic": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Supercharged Dynamic": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "SVR": { "tireSizes": ["275/45R21", "295/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "255/55R19 and 285/35R23 not OEM"
+    },
+    {
+      "year": 2017,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22", "295/40R22"],
+      "trims": {
+        "SE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Dynamic": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Supercharged Dynamic": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "SVR": { "tireSizes": ["275/45R21", "295/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "255/55R19 and 285/35R23 not OEM"
+    },
+    {
+      "year": 2016,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22", "295/40R22"],
+      "trims": {
+        "SE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HST": { "tireSizes": ["275/45R21", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Dynamic": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Supercharged Dynamic": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "SVR": { "tireSizes": ["275/45R21", "295/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "255/55R19 and 285/35R23 not OEM"
+    },
+    {
+      "year": 2015,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "SE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "SVR": { "tireSizes": ["275/45R21"] }
+      },
+      "status": "partial_match",
+      "notes": "255/55R19 and 285/35R23 not OEM"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"],
+      "trims": {
+        "SE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "HSE": { "tireSizes": ["235/65R19", "255/55R20", "275/45R21", "275/40R22"] },
+        "Autobiography": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] },
+        "Supercharged": { "tireSizes": ["255/55R20", "275/45R21", "275/40R22"] }
+      },
+      "status": "partial_match",
+      "notes": "255/55R19 and 285/35R23 not OEM; 2014 is first year of L494 generation"
+    },
+    {
+      "year": 2013,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["255/50R19", "275/40R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/50R19"] },
+        "HSE LUX": { "tireSizes": ["255/50R19", "275/40R20"] },
+        "Autobiography": { "tireSizes": ["275/40R20"] },
+        "GT Limited Edition": { "tireSizes": ["275/40R20"] },
+        "Supercharged": { "tireSizes": ["255/50R19", "275/40R20"] }
+      },
+      "status": "mismatch",
+      "notes": "2013 is L320 generation; uses 255/50R19 and 275/40R20"
+    },
+    {
+      "year": 2012,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["255/50R19", "275/40R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/50R19"] },
+        "HSE LUX": { "tireSizes": ["255/50R19", "275/40R20"] },
+        "Autobiography": { "tireSizes": ["275/40R20"] },
+        "GT Limited Edition": { "tireSizes": ["275/40R20"] },
+        "Supercharged": { "tireSizes": ["255/50R19", "275/40R20"] }
+      },
+      "status": "mismatch",
+      "notes": "L320 generation uses 255/50R19 and 275/40R20"
+    },
+    {
+      "year": 2011,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["255/50R19", "275/40R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/50R19"] },
+        "HSE LUX": { "tireSizes": ["255/50R19", "275/40R20"] },
+        "Autobiography": { "tireSizes": ["275/40R20"] },
+        "GT Limited Edition": { "tireSizes": ["275/40R20"] },
+        "Supercharged": { "tireSizes": ["255/50R19", "275/40R20"] }
+      },
+      "status": "mismatch",
+      "notes": "L320 generation uses 255/50R19 and 275/40R20"
+    },
+    {
+      "year": 2010,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["255/50R19", "275/40R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/50R19", "275/40R20"] },
+        "Supercharged": { "tireSizes": ["275/40R20"] }
+      },
+      "status": "mismatch",
+      "notes": "L320 generation uses 255/50R19 and 275/40R20"
+    },
+    {
+      "year": 2009,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["255/50R19", "275/40R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/50R19", "275/40R20"] },
+        "Supercharged": { "tireSizes": ["275/40R20"] }
+      },
+      "status": "mismatch",
+      "notes": "L320 generation uses 255/50R19 and 275/40R20"
+    },
+    {
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["255/50R19", "275/40R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/50R19", "275/40R20"] },
+        "Limited Edition": { "tireSizes": ["275/40R20"] },
+        "Supercharged": { "tireSizes": ["275/40R20"] }
+      },
+      "status": "mismatch",
+      "notes": "L320 generation uses 255/50R19 and 275/40R20"
+    },
+    {
+      "year": 2007,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["255/50R19", "275/40R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/50R19", "275/40R20"] },
+        "Supercharged": { "tireSizes": ["275/40R20"] }
+      },
+      "status": "mismatch",
+      "notes": "L320 generation uses 255/50R19 and 275/40R20"
+    },
+    {
+      "year": 2006,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": ["255/50R19", "275/40R20"],
+      "trims": {
+        "HSE": { "tireSizes": ["255/50R19", "275/40R20"] },
+        "Supercharged": { "tireSizes": ["275/40R20"] }
+      },
+      "status": "mismatch",
+      "notes": "2006 is first year of Range Rover Sport; L320 generation uses 255/50R19 and 275/40R20"
+    },
+    {
+      "year": 2005,
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "currentTireSizes": ["255/55R19", "275/45R21", "285/40R22", "285/35R23"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "no_data",
+      "notes": "Range Rover Sport did not exist in 2005; first model year was 2006"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "validated": 10,
+    "corrected": 10,
+    "partial_match": 17,
+    "mismatch": 37,
+    "no_data": 1
+  }
+}

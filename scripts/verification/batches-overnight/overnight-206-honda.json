@@ -1,0 +1,740 @@
+[
+  {
+    "id": "5e665bce-6137-418a-b4f1-565c3062c3e7",
+    "year": 2025,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/50R20",
+      "255/45R21",
+      "255/60R18",
+      "265/60R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "46ce9ef1-08a4-402c-8576-d63f90790faa",
+    "year": 2026,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4eb63e67-7888-4147-84f1-59860bfe4400",
+    "year": 2025,
+    "make": "honda",
+    "model": "prelude",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": "[{\"diameter\":15,\"position\":\"both\"},{\"diameter\":16,\"position\":\"both\"},{\"diameter\":17,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "195/60R15",
+      "205/50R16",
+      "215/45R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c4de9936-4a97-4ded-b1ea-5e7755990b9b",
+    "year": 2006,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "58d32eb0-23ea-4a5f-9750-e25986b0697f",
+    "year": 2007,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "8533ee2a-dc4c-446c-ae20-d428a5c18f22",
+    "year": 2008,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "d0391e76-a9d8-4431-91e6-ecdc9b133d1a",
+    "year": 2009,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "e8d28433-e56a-4724-b934-18e8ec29ec9b",
+    "year": 2010,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "9cc96fa8-f80e-499d-aa60-7fe48a340c89",
+    "year": 2011,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "e0955694-3d8c-40c0-bb94-214cd9ff14e7",
+    "year": 2012,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "8346c76a-3a11-481e-8f28-6eba3fa9756e",
+    "year": 2013,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "79a88cf6-81fd-4a2e-b3f6-2b36e3b3c488",
+    "year": 2014,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "b3de3dae-01d1-40f9-a42f-a9de01fb76b4",
+    "year": 2015,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "56c0005d-78ac-49b9-99f5-964926d40986",
+    "year": 2016,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "aeb99747-7546-476b-b158-3be838807768",
+    "year": 2017,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "287ca5e2-55a0-4121-b481-cbb9bbb550c4",
+    "year": 2018,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "09901ee7-7721-44d5-b3d9-2131ba9d3a91",
+    "year": 2019,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "8a051a04-9338-4ac6-a1ae-7be7a98df6d5",
+    "year": 2020,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "5962ef9e-1d2c-4b9b-8d86-b912663da01a",
+    "year": 2021,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "9097a7f2-2f39-4bc5-b8ea-52021867d5a4",
+    "year": 2022,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "b01bb4f8-d6e9-4d79-8959-12c479cc0e87",
+    "year": 2023,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "f4f77cee-ba8d-4243-abcd-59fa4351242c",
+    "year": 2024,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "788670b2-afed-4267-b788-228768b2fc03",
+    "year": 2025,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "1a74ddea-0ae0-47ae-abda-cd65d186f533",
+    "year": 2026,
+    "make": "honda",
+    "model": "ridgeline",
+    "trim": "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "64.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "275/45R20"
+    ],
+    "source": "manual_seed_spec"
+  }
+]

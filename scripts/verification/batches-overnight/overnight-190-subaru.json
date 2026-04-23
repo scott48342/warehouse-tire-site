@@ -1,0 +1,1234 @@
+[
+  {
+    "id": "38623c39-5c68-4f67-aa59-fd1a2016000e",
+    "year": 2018,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX STI",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e3fbd875-7676-4c08-be90-cf768b4ce971",
+    "year": 2018,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5d900087-ec38-46fc-8058-5458402c6b7a",
+    "year": 2018,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX STI Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1d5ce377-49a9-4861-9bf4-f5570dc284b9",
+    "year": 2018,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f3d55837-36ea-4aad-a79c-6dbfea762a2d",
+    "year": 2018,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "20d547b8-86d7-431b-a5d8-2374c59ae985",
+    "year": 2019,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "Base, Premium, Limited, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18",
+      "245/35R19",
+      "235/45ZR17",
+      "245/40ZR18",
+      "245/35ZR19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b7d1b8d3-bbcf-46bb-9db3-85c98e6f6856",
+    "year": 2019,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d447676d-240d-48cf-a44a-dbba5db56d23",
+    "year": 2019,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "213d6b78-ccd1-4b68-b4df-296a4e5d2e94",
+    "year": 2019,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX STI",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6de856d2-d3d1-4dfa-a03b-f4407f2c401b",
+    "year": 2019,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX STI Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "01482bfe-3e42-408c-968c-aa2c3b48f241",
+    "year": 2019,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b38bb47f-d829-4f42-892f-e6bb5828bf96",
+    "year": 2020,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a60bcea6-455b-432d-be14-8362baf846e1",
+    "year": 2020,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "Base, Premium, Limited, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "023270fb-7603-4435-92cc-b5b0a7546aa0",
+    "year": 2020,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ea7ae2bd-baf2-4778-bc56-9a342e6d9e6f",
+    "year": 2020,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ec5f00c7-622e-43d9-ba5b-3d588955c12b",
+    "year": 2020,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX STI Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2d2a5726-d48c-4801-8307-88d16dd14b94",
+    "year": 2020,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX STI",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bde399a4-9ec1-456f-9676-6cd184d4ec89",
+    "year": 2021,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7050dd7c-33dc-42fb-b90c-ab45c0786622",
+    "year": 2021,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX STI",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b6544f0f-efe3-483d-b10f-956c05a830e6",
+    "year": 2021,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "Base, Premium, Limited, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "40a7ff41-acd7-4983-9159-8666cfbd478b",
+    "year": 2021,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX STI Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "99a2353e-32fb-4e18-8e6c-cb9913aa1ad5",
+    "year": 2021,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f2ba838c-1458-4956-acc8-e1fbac6feb75",
+    "year": 2021,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a678fed7-9837-46e3-8c64-6336e91a9324",
+    "year": 2022,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8c7b5a02-3d44-4187-8d86-e88af6a29419",
+    "year": 2022,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "Base, Premium, Limited, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5e0d2318-5265-4a9c-b378-8219865c8e40",
+    "year": 2022,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "19c93a0c-a72c-4832-a6dd-8b09e92b37be",
+    "year": 2022,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "01607ff3-7763-41af-b454-ebc35e1020ee",
+    "year": 2022,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c5b9f924-9e26-4da0-b0f1-ee9b1b6d5571",
+    "year": 2023,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6129628a-ee90-4fa5-8018-93fe0a4cd805",
+    "year": 2023,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1844a421-1e68-47d1-a1b2-16f174a58c4d",
+    "year": 2023,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8cab937a-d8fe-4aa5-b302-e3ee5c3b1a15",
+    "year": 2023,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "Base, Premium, Limited, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "425e2ad8-8600-4251-a6e5-ca6fccff2c95",
+    "year": 2023,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cacf69e9-28eb-4658-b239-19a9a58fd4a4",
+    "year": 2024,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4408e49d-eabd-4b10-aa7b-9e36f6160159",
+    "year": 2024,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "Base, Premium, Limited, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18",
+      "235/45ZR17",
+      "245/40ZR18",
+      "245/35ZR19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "eb663aff-ea40-42a4-81a4-7cf9ba27874a",
+    "year": 2024,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2e1d24af-c64c-452d-95fc-01879ef7a3a3",
+    "year": 2024,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "eca09ec2-a6bb-450e-8022-f4141496ce94",
+    "year": 2024,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "da60f243-7b56-48b0-a4ab-73122a233e15",
+    "year": 2025,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "Base, Premium, Limited, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5d7c48ec-99bc-4b84-a223-2dfc9e05846e",
+    "year": 2025,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5b0d8f92-352f-4294-a3b1-f9cfb955d81a",
+    "year": 2025,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b807836f-0dd5-4977-b467-921702edee36",
+    "year": 2025,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6e8d1799-9cfd-4ae3-ac9d-60b8d9cd94f5",
+    "year": 2025,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b4bf6171-0eb5-4901-bd7f-e010ffcd6ca2",
+    "year": 2026,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c3ba1b0c-a4ee-49c3-9dbf-77695ca8d1a4",
+    "year": 2026,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "57af9a12-73ae-4a52-9980-da9323e277da",
+    "year": 2026,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "Base, Premium, Limited, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "163d8f4c-2a12-4ef3-a020-c996689208c6",
+    "year": 2026,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9fa82d35-eb39-4d5e-918f-f5b837055fd1",
+    "year": 2026,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "31c345ac-d6e6-411f-9b84-cf3d8b94be72",
+    "year": 2014,
+    "make": "subaru",
+    "model": "wrx-sti",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "bd0ada6e-0c81-4ddf-80bf-80e5a0159b4b",
+    "year": 2015,
+    "make": "subaru",
+    "model": "wrx-sti",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "fad40523-707a-4bed-b889-ab900c414bc2",
+    "year": 2016,
+    "make": "subaru",
+    "model": "wrx-sti",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1b2625ea-09c9-4d73-8c68-2891ebed7312",
+    "year": 2017,
+    "make": "subaru",
+    "model": "wrx-sti",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "7bdb3e61-de8d-475e-abe0-b958266992a6",
+    "year": 2018,
+    "make": "subaru",
+    "model": "wrx-sti",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ac1778d9-66a2-4e03-a5fc-bb7e1b9c30d1",
+    "year": 2019,
+    "make": "subaru",
+    "model": "wrx-sti",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c2695848-7222-4569-b22b-45c69173cc0a",
+    "year": 2020,
+    "make": "subaru",
+    "model": "wrx-sti",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f28a5359-cd99-446f-b3ff-3d2d0a693d79",
+    "year": 2021,
+    "make": "subaru",
+    "model": "wrx-sti",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  }
+]

@@ -1,0 +1,1344 @@
+{
+  "batchId": "90s-batch-07",
+  "completedAt": "2026-04-22T12:35:00.000Z",
+  "results": [
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "C1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com", "performanceplustire.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GMT400 platform. 2WD 1/2 ton pickup. 454SS trim had 275/60R15 tires."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "C1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "454SS trim had 275/60R15 tires."
+    },
+    {
+      "year": 1992,
+      "make": "Chevrolet",
+      "model": "C1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "454SS trim had 275/60R15 tires."
+    },
+    {
+      "year": 1993,
+      "make": "Chevrolet",
+      "model": "C1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "454SS trim had 275/60R15 tires."
+    },
+    {
+      "year": 1994,
+      "make": "Chevrolet",
+      "model": "C1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "454SS trim had 275/60R15 tires."
+    },
+    {
+      "year": 1995,
+      "make": "Chevrolet",
+      "model": "C1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GMT400 platform continues."
+    },
+    {
+      "year": 1996,
+      "make": "Chevrolet",
+      "model": "C1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Chevrolet",
+      "model": "C1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Chevrolet",
+      "model": "C1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Chevrolet",
+      "model": "C1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of GMT400 platform for C/K series."
+    },
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "K1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "4WD 1/2 ton pickup. GMT400 platform."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "K1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Chevrolet",
+      "model": "K1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R16", "245/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z71 trim had 265/75R16 tires."
+    },
+    {
+      "year": 1993,
+      "make": "Chevrolet",
+      "model": "K1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R16", "245/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z71 trim had 265/75R16 tires."
+    },
+    {
+      "year": 1994,
+      "make": "Chevrolet",
+      "model": "K1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R16", "245/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z71 trim had 265/75R16 tires."
+    },
+    {
+      "year": 1995,
+      "make": "Chevrolet",
+      "model": "K1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R16", "245/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z71 trim had 265/75R16 tires."
+    },
+    {
+      "year": 1996,
+      "make": "Chevrolet",
+      "model": "K1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R16", "245/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z71 trim had 265/75R16 tires."
+    },
+    {
+      "year": 1997,
+      "make": "Chevrolet",
+      "model": "K1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R16", "245/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z71 trim had 265/75R16 tires."
+    },
+    {
+      "year": 1998,
+      "make": "Chevrolet",
+      "model": "K1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R16", "245/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z71 trim had 265/75R16 tires."
+    },
+    {
+      "year": 1999,
+      "make": "Chevrolet",
+      "model": "K1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R16", "245/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of C/K naming. Silverado name used from 1999+."
+    },
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "S-10",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 32 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "vehiclefixation.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "S/T platform compact pickup. 2WD uses 5x120.65; 4WD models 1982-1993 used 6x139.7."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "S-10",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 32 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "vehiclefixation.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "2WD uses 5x120.65; 4WD models used 6x139.7 until 1994."
+    },
+    {
+      "year": 1992,
+      "make": "Chevrolet",
+      "model": "S-10",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 32 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "vehiclefixation.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "Chevrolet",
+      "model": "S-10",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 32 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "vehiclefixation.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Chevrolet",
+      "model": "S-10",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 32 },
+          { "diameter": 15, "width": 7, "offset": 13 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "vehiclefixation.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "2nd gen S-10 began. All 2WD/4WD now use 5x120.65."
+    },
+    {
+      "year": 1995,
+      "make": "Chevrolet",
+      "model": "S-10",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 13 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "vehiclefixation.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Chevrolet",
+      "model": "S-10",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 13 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "vehiclefixation.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Chevrolet",
+      "model": "S-10",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 13 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "vehiclefixation.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Chevrolet",
+      "model": "S-10",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 13 },
+          { "diameter": 16, "width": 8, "offset": -6 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "vehiclefixation.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Chevrolet",
+      "model": "S-10",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 13 },
+          { "diameter": 16, "width": 8, "offset": -6 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "vehiclefixation.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 5 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "S-10 Blazer (compact). Full-size Blazer/K5 had 6x139.7."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 5 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of K5 Blazer. S-10 Blazer continues."
+    },
+    {
+      "year": 1992,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 5 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "S-10 Blazer only. K5 discontinued."
+    },
+    {
+      "year": 1993,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 5 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 5 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 5 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "New generation S-10 Blazer. Now simply 'Blazer'."
+    },
+    {
+      "year": 1996,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 5 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "ZR2 trim had 31X10.50R15 tires."
+    },
+    {
+      "year": 1997,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 5 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "ZR2 trim had 31X10.50R15 tires."
+    },
+    {
+      "year": 1998,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 5 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "ZR2 trim had 31X10.50R15 tires."
+    },
+    {
+      "year": 1999,
+      "make": "Chevrolet",
+      "model": "Blazer",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 5 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/75R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "ZR2 trim had 31X10.50R15 tires."
+    },
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "Tahoe",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. Tahoe was introduced in 1995."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "Tahoe",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. Tahoe was introduced in 1995."
+    },
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "245/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["performanceplustire.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GMT400 platform full-size SUV."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "235/75R15", "245/75R16"],
+        "staggered": false,
+        "lug_nut_thread": "M14x1.5"
+      },
+      "confidence": "high",
+      "sources": ["performanceplustire.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. Impala was discontinued 1985, revived as Impala SS 1994-1996, then new gen in 2000."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Impala made 1986-1993."
+    },
+    {
+      "year": 1992,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Impala made 1986-1993."
+    },
+    {
+      "year": 1993,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Impala made 1986-1993."
+    },
+    {
+      "year": 1997,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. Impala SS ended 1996, new gen Impala started 2000."
+    },
+    {
+      "year": 1998,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. Impala SS ended 1996, new gen Impala started 2000."
+    },
+    {
+      "year": 1999,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. Impala SS ended 1996, new gen Impala started 2000."
+    },
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "Cavalier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 38 },
+          { "diameter": 14, "width": 6, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/80R13", "195/70R14"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com", "j-body.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "J-body platform. Z24 had 215/60R14."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "Cavalier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 38 },
+          { "diameter": 15, "width": 6, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/70R14"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z24 had 205/60R15."
+    },
+    {
+      "year": 1992,
+      "make": "Chevrolet",
+      "model": "Cavalier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 38 },
+          { "diameter": 15, "width": 6, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/70R14"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z24 had 205/60R15."
+    },
+    {
+      "year": 1993,
+      "make": "Chevrolet",
+      "model": "Cavalier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 38 },
+          { "diameter": 15, "width": 6, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/70R14"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z24 had 205/60R15."
+    },
+    {
+      "year": 1994,
+      "make": "Chevrolet",
+      "model": "Cavalier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 38 },
+          { "diameter": 15, "width": 6, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/70R14"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z24 had 205/60R15."
+    },
+    {
+      "year": 1995,
+      "make": "Chevrolet",
+      "model": "Cavalier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 38 },
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6, "offset": 47 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "3rd gen Cavalier. Z24 had 205/55R16."
+    },
+    {
+      "year": 1996,
+      "make": "Chevrolet",
+      "model": "Cavalier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 38 },
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6, "offset": 47 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z24 had 205/55R16."
+    },
+    {
+      "year": 1997,
+      "make": "Chevrolet",
+      "model": "Cavalier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 38 },
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6, "offset": 47 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z24 had 205/55R16."
+    },
+    {
+      "year": 1998,
+      "make": "Chevrolet",
+      "model": "Cavalier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 38 },
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6, "offset": 47 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z24 had 205/55R16."
+    },
+    {
+      "year": 1999,
+      "make": "Chevrolet",
+      "model": "Cavalier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 38 },
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6, "offset": 47 }
+        ],
+        "oem_tire_sizes": ["195/70R14", "195/65R15"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z24 had 205/55R16."
+    },
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. Malibu was discontinued 1983, revived in 1997."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Malibu made 1984-1996."
+    },
+    {
+      "year": 1992,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Malibu made 1984-1996."
+    },
+    {
+      "year": 1993,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Malibu made 1984-1996."
+    },
+    {
+      "year": 1994,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Malibu made 1984-1996."
+    },
+    {
+      "year": 1995,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Malibu made 1984-1996."
+    },
+    {
+      "year": 1996,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. Malibu revived in 1997."
+    },
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "Monte Carlo",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. Monte Carlo was discontinued 1988, revived in 1995."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "Monte Carlo",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Monte Carlo made 1989-1994."
+    },
+    {
+      "year": 1992,
+      "make": "Chevrolet",
+      "model": "Monte Carlo",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Monte Carlo made 1989-1994."
+    },
+    {
+      "year": 1993,
+      "make": "Chevrolet",
+      "model": "Monte Carlo",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. No Monte Carlo made 1989-1994."
+    },
+    {
+      "year": 1994,
+      "make": "Chevrolet",
+      "model": "Monte Carlo",
+      "status": "failed",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DID NOT EXIST. Monte Carlo revived in 1995."
+    },
+    {
+      "year": 1995,
+      "make": "Chevrolet",
+      "model": "Monte Carlo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 43 },
+          { "diameter": 16, "width": 6.5, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "studpattern.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "W-body platform. Z34 had 225/60R16."
+    },
+    {
+      "year": 1996,
+      "make": "Chevrolet",
+      "model": "Monte Carlo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 43 },
+          { "diameter": 16, "width": 6.5, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false,
+        "lug_nut_thread": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "studpattern.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Z34 had 225/60R16."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 50,
+    "partial": 0,
+    "failed": 25,
+    "highConfidence": 50,
+    "needsReview": 0
+  },
+  "notes": "Batch contained several invalid vehicle years. Tahoe (1990-1991) did not exist until 1995. Impala (1990-1993, 1997-1999) had gap years - only Impala SS 1994-1996 existed. Malibu (1990-1996) did not exist until 1997 revival. Monte Carlo (1990-1994) did not exist until 1995 revival."
+}

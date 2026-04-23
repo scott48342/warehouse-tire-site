@@ -1,0 +1,683 @@
+{
+  "batchId": 58,
+  "processedAt": "2026-04-22T00:02:00Z",
+  "source": "tiresize.com",
+  "results": [
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "id-4-crozz",
+      "notUS": true,
+      "reason": "ID.4 Crozz is China-only (FAW-VW joint venture). US market has ID.4 (without 'Crozz')."
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "id-4-crozz",
+      "notUS": true,
+      "reason": "ID.4 Crozz is China-only (FAW-VW joint venture). US market has ID.4 (without 'Crozz')."
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "id-4-crozz",
+      "notUS": true,
+      "reason": "ID.4 Crozz is China-only (FAW-VW joint venture). US market has ID.4 (without 'Crozz')."
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "jetta-sportwagen",
+      "found": true,
+      "note": "Listed under Jetta as SportWagen variants on tiresize.com",
+      "trims": [
+        {
+          "name": "SportWagen S",
+          "tires": ["205/55R16"]
+        },
+        {
+          "name": "SportWagen SE",
+          "tires": ["205/55R16", "225/45R17", "225/40R18"]
+        },
+        {
+          "name": "SportWagen TDI",
+          "tires": ["205/55R16", "225/45R17", "225/40R18"]
+        }
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "jetta-sportwagen",
+      "found": true,
+      "note": "Listed under Jetta as SportWagen variants on tiresize.com",
+      "trims": [
+        {
+          "name": "SportWagen S",
+          "tires": ["205/55R16"]
+        },
+        {
+          "name": "SportWagen SE",
+          "tires": ["205/55R16", "225/45R17"]
+        },
+        {
+          "name": "SportWagen SEL",
+          "tires": ["225/45R17"]
+        },
+        {
+          "name": "SportWagen TDI",
+          "tires": ["205/55R16", "225/45R17"]
+        }
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "jetta-sportwagen",
+      "found": true,
+      "note": "Listed under Jetta as Sportwagen variants on tiresize.com",
+      "trims": [
+        {
+          "name": "Sportwagen S",
+          "tires": ["205/55R16"]
+        },
+        {
+          "name": "Sportwagen SE",
+          "tires": ["205/55R16", "225/45R17"]
+        },
+        {
+          "name": "Sportwagen TDI",
+          "tires": ["205/55R16", "225/45R17"]
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "jetta-sportwagen",
+      "found": true,
+      "note": "Listed under Jetta as Sportwagen variants on tiresize.com",
+      "trims": [
+        {
+          "name": "Sportwagen S",
+          "tires": ["205/55R16"]
+        },
+        {
+          "name": "Sportwagen SE",
+          "tires": ["205/55R16", "225/45R17"]
+        },
+        {
+          "name": "Sportwagen TDI",
+          "tires": ["205/55R16", "225/45R17"]
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "jetta-sportwagen",
+      "found": true,
+      "note": "Listed under Jetta as Sportwagen variants on tiresize.com",
+      "trims": [
+        {
+          "name": "S Sportwagen",
+          "tires": ["205/55R16"]
+        },
+        {
+          "name": "SE Sportwagen",
+          "tires": ["205/55R16", "225/45R17"]
+        },
+        {
+          "name": "TDI Sportwagen",
+          "tires": ["205/55R16", "225/45R17"]
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "r32",
+      "found": true,
+      "trims": [
+        {
+          "name": "Base Model",
+          "tires": ["225/40R18"]
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "tiguan-limited",
+      "found": true,
+      "note": "Listed under Tiguan as 'Limited' trim on tiresize.com",
+      "trims": [
+        {
+          "name": "Limited",
+          "tires": ["215/65R16", "235/55R17"]
+        },
+        {
+          "name": "Limited 4Motion",
+          "tires": ["215/65R16", "235/55R17"]
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "tiguan-limited",
+      "found": true,
+      "note": "Listed under Tiguan as 'Limited' trim on tiresize.com",
+      "trims": [
+        {
+          "name": "Limited",
+          "tires": ["215/65R16", "235/55R17"]
+        },
+        {
+          "name": "Limited 4Motion",
+          "tires": ["215/65R16", "235/55R17"]
+        }
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "volkswagen",
+      "model": "touareg",
+      "found": false,
+      "reason": "Year not available on tiresize.com. Touareg starts at 2003."
+    },
+    {
+      "year": 2003,
+      "make": "volkswagen",
+      "model": "touareg",
+      "found": true,
+      "trims": [
+        {
+          "name": "2.5 TDI Canadian Model",
+          "tires": ["235/65R17"]
+        }
+      ],
+      "note": "Only Canadian TDI model listed for 2003. V6/V8 models start 2004."
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "xl1",
+      "notUS": true,
+      "reason": "XL1 is Europe-only limited production hybrid. Never sold in US market."
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "xl1",
+      "notUS": true,
+      "reason": "XL1 is Europe-only limited production hybrid. Never sold in US market."
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "xl1",
+      "notUS": true,
+      "reason": "XL1 is Europe-only limited production hybrid. Never sold in US market."
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "xl1",
+      "notUS": true,
+      "reason": "XL1 is Europe-only limited production hybrid. Never sold in US market."
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ec40",
+      "found": true,
+      "note": "EC40 is renamed C40 Recharge (2024). Data available under C40.",
+      "staggered": true,
+      "trims": [
+        {
+          "name": "Recharge",
+          "frontTire": "235/50R19",
+          "rearTire": "255/45R19"
+        },
+        {
+          "name": "Recharge Plus",
+          "frontTire": "235/50R19",
+          "rearTire": "255/45R19",
+          "altFront": "235/45R20",
+          "altRear": "255/40R20"
+        },
+        {
+          "name": "Recharge Ultimate",
+          "frontTire": "235/45R20",
+          "rearTire": "255/40R20"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ec40",
+      "found": true,
+      "note": "EC40 is renamed C40 Recharge (2025). Data available under C40.",
+      "staggered": true,
+      "trims": [
+        {
+          "name": "Recharge",
+          "frontTire": "235/50R19",
+          "rearTire": "255/45R19"
+        },
+        {
+          "name": "Recharge Plus",
+          "frontTire": "235/50R19",
+          "rearTire": "255/45R19",
+          "altFront": "235/45R20",
+          "altRear": "255/40R20"
+        },
+        {
+          "name": "Recharge Ultimate",
+          "frontTire": "235/45R20",
+          "rearTire": "255/40R20"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ec40",
+      "found": false,
+      "reason": "2026 EC40/C40 not yet available on tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "em90",
+      "notUS": true,
+      "reason": "EM90 is China-only electric minivan. No US availability announced."
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "em90",
+      "notUS": true,
+      "reason": "EM90 is China-only electric minivan. No US availability announced."
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "em90",
+      "notUS": true,
+      "reason": "EM90 is China-only electric minivan. No US availability announced."
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "es90",
+      "notUS": true,
+      "reason": "ES90 no longer expected to be sold in US due to import tariffs on China-made vehicles (confirmed Sept 2025)."
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "es90",
+      "notUS": true,
+      "reason": "ES90 no longer expected to be sold in US due to import tariffs on China-made vehicles (confirmed Sept 2025)."
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "ex30",
+      "found": false,
+      "reason": "2023 EX30 not available on tiresize.com. Site only has 2025-2026."
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ex30",
+      "found": false,
+      "reason": "2024 EX30 not available on tiresize.com. Site only has 2025-2026."
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex30",
+      "found": true,
+      "trims": [
+        {
+          "name": "Plus",
+          "tires": ["245/45R19"]
+        },
+        {
+          "name": "Ultra",
+          "tires": ["245/45R19"]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex30",
+      "found": true,
+      "trims": [
+        {
+          "name": "Plus",
+          "tires": ["245/45R19"]
+        },
+        {
+          "name": "Plus Twin Motor",
+          "tires": ["245/45R19"]
+        },
+        {
+          "name": "Ultra",
+          "tires": ["245/45R19"]
+        },
+        {
+          "name": "Ultra Twin Motor",
+          "tires": ["245/45R19"]
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex30-cross-country",
+      "found": false,
+      "reason": "EX30 Cross Country not yet on tiresize.com. Model arrives late 2025 as 2026MY."
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex30-cross-country",
+      "found": false,
+      "reason": "EX30 Cross Country not yet on tiresize.com. New model arriving late 2025."
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ex40",
+      "found": false,
+      "reason": "2024 EX40 not on tiresize.com. Was sold as XC40 Recharge in 2024, renamed to EX40 for 2025+."
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex40",
+      "found": true,
+      "staggered": true,
+      "trims": [
+        {
+          "name": "Core",
+          "frontTire": "235/50R19",
+          "rearTire": "255/45R19"
+        },
+        {
+          "name": "Core Twin Motor",
+          "frontTire": "235/50R19",
+          "rearTire": "255/45R19"
+        },
+        {
+          "name": "Plus",
+          "frontTire": "235/50R19",
+          "rearTire": "255/45R19",
+          "altFront": "235/45R20",
+          "altRear": "255/40R20"
+        },
+        {
+          "name": "Plus Twin Motor",
+          "frontTire": "235/50R19",
+          "rearTire": "255/45R19",
+          "altFront": "235/45R20",
+          "altRear": "255/40R20"
+        },
+        {
+          "name": "Ultra",
+          "frontTire": "235/45R20",
+          "rearTire": "255/40R20"
+        },
+        {
+          "name": "Ultra Twin Motor",
+          "frontTire": "235/45R20",
+          "rearTire": "255/40R20"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex40",
+      "found": true,
+      "staggered": true,
+      "trims": [
+        {
+          "name": "Plus",
+          "frontTire": "235/50R19",
+          "rearTire": "255/45R19",
+          "altFront": "235/45R20",
+          "altRear": "255/40R20"
+        },
+        {
+          "name": "Plus Twin Motor",
+          "frontTire": "235/50R19",
+          "rearTire": "255/45R19",
+          "altFront": "235/45R20",
+          "altRear": "255/40R20"
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "ex90",
+      "found": false,
+      "reason": "2023 EX90 not on tiresize.com. Site only has 2025."
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "ex90",
+      "found": false,
+      "reason": "2024 EX90 not on tiresize.com. Site only has 2025."
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "ex90",
+      "found": true,
+      "trims": [
+        {
+          "name": "Twin Performance Plus",
+          "tires": ["255/50R20", "265/45R21", "265/40R22"]
+        },
+        {
+          "name": "Twin Performance Ultra",
+          "tires": ["265/45R21", "265/40R22"]
+        },
+        {
+          "name": "Twin Plus",
+          "tires": ["255/50R20", "265/45R21", "265/40R22"]
+        },
+        {
+          "name": "Twin Ultra",
+          "tires": ["265/45R21", "265/40R22"]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "ex90",
+      "found": false,
+      "reason": "2026 EX90 not yet available on tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "volvo",
+      "model": "s70",
+      "found": true,
+      "trims": [
+        {
+          "name": "AWD",
+          "tires": ["195/65R15"]
+        },
+        {
+          "name": "Base Model",
+          "tires": ["195/60R15"]
+        },
+        {
+          "name": "GLT",
+          "tires": ["195/60R15"]
+        },
+        {
+          "name": "T5",
+          "tires": ["205/50R16", "205/55R16"]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "v60",
+      "found": false,
+      "reason": "2026 V60 not yet available on tiresize.com. Site ends at 2024."
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "v90",
+      "found": false,
+      "reason": "2024 V90 not on tiresize.com. Wagon/sedan V90 ends at 2021 on site."
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "v90",
+      "found": false,
+      "reason": "2025 V90 not on tiresize.com. Wagon/sedan V90 ends at 2021 on site."
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "found": false,
+      "reason": "2016 V90 Cross Country not on tiresize.com. Site starts at 2018."
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "found": false,
+      "reason": "2017 V90 Cross Country not on tiresize.com. Site starts at 2018."
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "found": true,
+      "trims": [
+        {
+          "name": "T5 AWD",
+          "tires": ["235/55R18", "235/50R19", "245/45R20", "245/40R21"]
+        },
+        {
+          "name": "T6 AWD",
+          "tires": ["235/50R19", "245/45R20", "245/40R21"]
+        },
+        {
+          "name": "T6 AWD Ocean Race",
+          "tires": ["245/45R20", "245/40R21"]
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "found": true,
+      "trims": [
+        {
+          "name": "T5 AWD",
+          "tires": ["235/55R18", "235/50R19", "245/45R20", "245/40R21"]
+        },
+        {
+          "name": "T6 AWD",
+          "tires": ["235/50R19", "245/45R20", "245/40R21"]
+        },
+        {
+          "name": "T6 AWD Ocean Race",
+          "tires": ["245/45R20", "245/40R21"]
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "found": true,
+      "trims": [
+        {
+          "name": "T6 AWD",
+          "tires": ["235/50R19", "245/45R20", "245/40R21"]
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "found": true,
+      "trims": [
+        {
+          "name": "T6 AWD",
+          "tires": ["235/50R19", "245/45R20", "245/40R21"]
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "found": true,
+      "trims": [
+        {
+          "name": "B6 AWD",
+          "tires": ["235/50R19", "245/45R20", "245/40R21"]
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "found": true,
+      "trims": [
+        {
+          "name": "B6 AWD",
+          "tires": ["235/50R19", "245/45R20", "245/40R21"]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "notUS": 12,
+    "found": 26,
+    "notFound": 12,
+    "notUSVehicles": [
+      "volkswagen id-4-crozz (2023-2025) - China-only",
+      "volkswagen xl1 (2013-2016) - Europe-only",
+      "volvo em90 (2024-2026) - China-only",
+      "volvo es90 (2025-2026) - Not coming to US (tariffs)"
+    ],
+    "notFoundVehicles": [
+      "volkswagen touareg 2002 - Year not on tiresize.com",
+      "volvo ec40 2026 - Not yet available",
+      "volvo ex30 2023-2024 - Not yet available",
+      "volvo ex30-cross-country 2025-2026 - New model not yet listed",
+      "volvo ex40 2024 - Was XC40 Recharge, renamed in 2025",
+      "volvo ex90 2023-2024, 2026 - Only 2025 available",
+      "volvo v60 2026 - Not yet available",
+      "volvo v90 2024-2025 - Not on tiresize.com",
+      "volvo v90-cross-country 2016-2017 - Starts at 2018"
+    ]
+  }
+}

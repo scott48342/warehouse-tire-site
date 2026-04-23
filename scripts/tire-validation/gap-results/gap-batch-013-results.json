@@ -1,0 +1,412 @@
+{
+  "batchId": 13,
+  "researchedAt": "2026-04-21T23:45:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 43,
+    "usMarket": 7,
+    "notFound": 1
+  },
+  "vehicles": [
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "notUS": true,
+      "notes": "Aveo U-VA is European 3-door hatchback variant. Regular Aveo (4-door/5-door) was sold in US but not U-VA designation."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "notUS": true,
+      "notes": "Aveo U-VA is European 3-door hatchback variant. Regular Aveo (4-door/5-door) was sold in US but not U-VA designation."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "notUS": true,
+      "notes": "Aveo U-VA is European 3-door hatchback variant. Regular Aveo (4-door/5-door) was sold in US but not U-VA designation."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "notUS": true,
+      "notes": "Aveo U-VA is European 3-door hatchback variant. Regular Aveo (4-door/5-door) was sold in US but not U-VA designation."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "notUS": true,
+      "notes": "Aveo U-VA is European 3-door hatchback variant. Regular Aveo (4-door/5-door) was sold in US but not U-VA designation."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "notUS": true,
+      "notes": "Aveo U-VA is European 3-door hatchback variant. Regular Aveo (4-door/5-door) was sold in US but not U-VA designation."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "notUS": true,
+      "notes": "Aveo U-VA is European variant. 2012+ replaced by Sonic in US market."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "notUS": false,
+      "notFound": true,
+      "notes": "US market vehicle but 2024 not yet in tiresize.com database (ends at 2023). Use 2023 specs: 215/50R17 for all trims.",
+      "wheelSpecs": {
+        "estimatedFromPriorYear": true,
+        "tireSizes": ["215/50R17"],
+        "wheelDiameter": 17
+      }
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "c2500",
+      "notUS": false,
+      "wheelSpecs": {
+        "trims": [
+          {
+            "trim": "8-Lug Wheels",
+            "tireSizes": ["225/75R16", "245/75R16"]
+          },
+          {
+            "trim": "Pick-up 2wd",
+            "tireSizes": ["225/75R16", "245/75R16"]
+          }
+        ]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "c3500",
+      "notUS": false,
+      "notFound": true,
+      "notes": "404 on tiresize.com. C3500 was sold in US as heavy-duty truck through 2000 model year before transition to Silverado 3500."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "c3500",
+      "notUS": false,
+      "notFound": true,
+      "notes": "404 on tiresize.com. May have been rebadged as Silverado 3500 by this year."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "c3500",
+      "notUS": false,
+      "notFound": true,
+      "notes": "404 on tiresize.com. May have been rebadged as Silverado 3500 by this year."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "c3500",
+      "notUS": false,
+      "notFound": true,
+      "notes": "404 on tiresize.com. May have been rebadged as Silverado 3500 by this year."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "c3500",
+      "notUS": false,
+      "notFound": true,
+      "notes": "404 on tiresize.com. May have been rebadged as Silverado 3500 by this year."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "caprice",
+      "notUS": true,
+      "notes": "US Caprice ended in 1996, returned 2011-2017 as Police Patrol Vehicle (PPV) only. 2000-2010 Caprice is Australian market (Holden Statesman/WM)."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "caprice",
+      "notUS": true,
+      "notes": "US Caprice ended in 1996, returned 2011-2017 as PPV only. 2000-2010 is Australian/Middle East market."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "caprice",
+      "notUS": true,
+      "notes": "US Caprice ended in 1996, returned 2011-2017 as PPV only. 2000-2010 is Australian/Middle East market."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "caprice",
+      "notUS": true,
+      "notes": "US Caprice ended in 1996, returned 2011-2017 as PPV only. 2000-2010 is Australian/Middle East market."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "caprice",
+      "notUS": true,
+      "notes": "US Caprice ended in 1996, returned 2011-2017 as PPV only. 2000-2010 is Australian/Middle East market."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "caprice",
+      "notUS": true,
+      "notes": "US Caprice ended in 1996, returned 2011-2017 as PPV only. 2000-2010 is Australian/Middle East market."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "caprice",
+      "notUS": true,
+      "notes": "US Caprice ended in 1996, returned 2011-2017 as PPV only. 2000-2010 is Australian/Middle East market."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "caprice",
+      "notUS": true,
+      "notes": "US Caprice ended in 1996, returned 2011-2017 as PPV only. 2000-2010 is Australian/Middle East market."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "caprice",
+      "notUS": true,
+      "notes": "US Caprice ended in 1996, returned 2011-2017 as PPV only. 2000-2010 is Australian/Middle East market."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "caprice",
+      "notUS": true,
+      "notes": "US Caprice ended in 1996, returned 2011-2017 as PPV only. 2010 is Australian/Middle East market."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "notUS": true,
+      "notes": "Generic 'Chevy Pickup' name used in Mexico and South American markets. US market uses specific names (Silverado, C/K series)."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "notUS": true,
+      "notes": "Generic 'Chevy Pickup' name used in Mexico and South American markets. US market uses specific names (Silverado, C/K series)."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "notUS": true,
+      "notes": "Generic 'Chevy Pickup' name used in Mexico and South American markets. US market uses specific names (Silverado, C/K series)."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "notUS": true,
+      "notes": "Generic 'Chevy Pickup' name used in Mexico and South American markets. US market uses specific names (Silverado, C/K series)."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "notUS": true,
+      "notes": "South American market vehicle (Brazil, Argentina, Mexico). Based on Opel Corsa B, never sold in US."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "notUS": true,
+      "notes": "South American market vehicle (Brazil, Argentina, Mexico). Based on Opel Corsa B, never sold in US."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "notUS": true,
+      "notes": "South American market vehicle (Brazil, Argentina, Mexico). Based on Opel Corsa B, never sold in US."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "notUS": true,
+      "notes": "South American market vehicle (Brazil, Argentina, Mexico). Based on Opel Corsa B, never sold in US."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "notUS": true,
+      "notes": "South American market vehicle (Brazil, Argentina, Mexico). Based on Opel Corsa B, never sold in US."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "notUS": true,
+      "notes": "South American market vehicle (Brazil, Argentina, Mexico). Based on Opel Corsa B, never sold in US."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "notUS": true,
+      "notes": "South American market vehicle (Brazil, Argentina, Mexico). Based on Opel Corsa B, never sold in US."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "notUS": true,
+      "notes": "South American market vehicle (Brazil, Argentina, Mexico). Based on Opel Corsa B, never sold in US."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "cruze-limited",
+      "notUS": false,
+      "notes": "US market. Cruze Limited was the first-gen Cruze sold alongside new second-gen in 2016.",
+      "wheelSpecs": {
+        "trims": [
+          {"trim": "Limited Eco", "tireSizes": ["215/55R17"]},
+          {"trim": "Limited L", "tireSizes": ["215/60R16"]},
+          {"trim": "Limited LS", "tireSizes": ["215/60R16"]},
+          {"trim": "Limited LT", "tireSizes": ["215/60R16", "225/50R17"]},
+          {"trim": "Limited LTZ", "tireSizes": ["225/45R18"]}
+        ]
+      }
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "cruze-limited",
+      "notUS": true,
+      "notes": "Cruze Limited was 2016-only in US. 2017 Cruze Limited would be international market."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "notUS": true,
+      "notes": "Brazilian market vehicle. US Cruze discontinued after 2019 model year."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "notUS": true,
+      "notes": "Brazilian market vehicle. US Cruze discontinued after 2019 model year."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "notUS": true,
+      "notes": "Brazilian market vehicle. US Cruze discontinued after 2019 model year."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "notUS": true,
+      "notes": "Brazilian market vehicle. US Cruze discontinued after 2019 model year."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "cruze-sport6-rs",
+      "notUS": true,
+      "notes": "Brazilian market vehicle. US Cruze discontinued after 2019 model year."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "evanda",
+      "notUS": true,
+      "notes": "European market vehicle. Rebadged Daewoo Magnus sold as Chevrolet in Europe. Never sold in US."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "evanda",
+      "notUS": true,
+      "notes": "European market vehicle. Rebadged Daewoo Magnus sold as Chevrolet in Europe. Never sold in US."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "evanda",
+      "notUS": true,
+      "notes": "European market vehicle. Rebadged Daewoo Magnus sold as Chevrolet in Europe. Never sold in US."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "evanda",
+      "notUS": true,
+      "notes": "European market vehicle. Rebadged Daewoo Magnus sold as Chevrolet in Europe. Never sold in US."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "hhr",
+      "notUS": false,
+      "wheelSpecs": {
+        "trims": [
+          {"trim": "LS", "tireSizes": ["215/55R16"]},
+          {"trim": "LT", "tireSizes": ["215/55R16", "215/50R17"]}
+        ]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "hhr",
+      "notUS": false,
+      "wheelSpecs": {
+        "trims": [
+          {"trim": "LS", "tireSizes": ["215/55R16"]},
+          {"trim": "LT", "tireSizes": ["215/55R16", "215/50R17"]}
+        ]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "hhr",
+      "notUS": false,
+      "wheelSpecs": {
+        "trims": [
+          {"trim": "LS Panel Sport Wagon", "tireSizes": ["215/55R16"]},
+          {"trim": "LS Sport Wagon", "tireSizes": ["215/55R16"]},
+          {"trim": "LT Panel Sport Wagon", "tireSizes": ["215/55R16", "215/50R17"]},
+          {"trim": "LT Sport Wagon", "tireSizes": ["215/55R16", "215/50R17"]},
+          {"trim": "SS", "tireSizes": ["225/45R18"]}
+        ]
+      }
+    }
+  ]
+}

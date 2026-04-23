@@ -1,0 +1,1148 @@
+{
+  "batchId": "126",
+  "processedAt": "2026-04-21T22:33:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Platina",
+      "market": "Mexico",
+      "trims": [
+        { "trim": "Base", "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        { "trim": "K", "tireSize": "175/65R14", "wheelSize": "14x5.5" }
+      ],
+      "recommendedTireSizes": ["175/65R14"],
+      "source": "wheel-size.com",
+      "notes": "Mexico-market vehicle based on Renault platform"
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "Platina",
+      "market": "Mexico",
+      "trims": [
+        { "trim": "Base", "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        { "trim": "K", "tireSize": "175/65R14", "wheelSize": "14x5.5" }
+      ],
+      "recommendedTireSizes": ["175/65R14"],
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2007,
+      "make": "Nissan",
+      "model": "Platina",
+      "market": "Mexico",
+      "trims": [
+        { "trim": "Base", "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        { "trim": "K", "tireSize": "175/65R14", "wheelSize": "14x5.5" }
+      ],
+      "recommendedTireSizes": ["175/65R14"],
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2006,
+      "make": "Nissan",
+      "model": "Platina",
+      "market": "Mexico",
+      "trims": [
+        { "trim": "Base", "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        { "trim": "K", "tireSize": "175/65R14", "wheelSize": "14x5.5" }
+      ],
+      "recommendedTireSizes": ["175/65R14"],
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2005,
+      "make": "Nissan",
+      "model": "Platina",
+      "market": "Mexico",
+      "trims": [
+        { "trim": "Base", "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        { "trim": "K", "tireSize": "175/65R14", "wheelSize": "14x5.5" }
+      ],
+      "recommendedTireSizes": ["175/65R14"],
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2004,
+      "make": "Nissan",
+      "model": "Platina",
+      "market": "Mexico",
+      "trims": [
+        { "trim": "Base", "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        { "trim": "K", "tireSize": "175/65R14", "wheelSize": "14x5.5" }
+      ],
+      "recommendedTireSizes": ["175/65R14"],
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2003,
+      "make": "Nissan",
+      "model": "Platina",
+      "market": "Mexico",
+      "trims": [
+        { "trim": "Base", "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        { "trim": "K", "tireSize": "175/65R14", "wheelSize": "14x5.5" }
+      ],
+      "recommendedTireSizes": ["175/65R14"],
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "Platina",
+      "market": "Mexico",
+      "trims": [
+        { "trim": "Base", "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        { "trim": "K", "tireSize": "175/65R14", "wheelSize": "14x5.5" }
+      ],
+      "recommendedTireSizes": ["175/65R14"],
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Presea",
+      "market": "JDM",
+      "trims": [
+        { "trim": "1.5 Refina", "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        { "trim": "1.8 Ct II", "tireSize": "185/65R14", "wheelSize": "14x5.5" },
+        { "trim": "1.8 Ct II", "tireSize": "195/55R15", "wheelSize": "15x6" }
+      ],
+      "recommendedTireSizes": ["175/65R14", "185/65R14", "195/55R15"],
+      "source": "wheel-size.com",
+      "notes": "JDM vehicle, not sold in US"
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "235/55R18", "wheelSize": "18x7" },
+        { "trim": "Platinum", "tireSize": "235/55R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "235/55R18"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 215/70R15, 225/60R16, 235/55R18, 235/55R19 - 4th gen Quest (2011-2017) uses 16\" and 18\" wheels only, not 15\" or 19\""],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "235/55R18", "wheelSize": "18x7" },
+        { "trim": "Platinum", "tireSize": "235/55R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "235/55R18"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "235/55R18", "wheelSize": "18x7" },
+        { "trim": "Platinum", "tireSize": "235/55R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "235/55R18"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "235/55R18", "wheelSize": "18x7" },
+        { "trim": "LE", "tireSize": "235/55R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "235/55R18"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "235/55R18", "wheelSize": "18x7" },
+        { "trim": "LE", "tireSize": "235/55R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "235/55R18"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "235/55R18", "wheelSize": "18x7" },
+        { "trim": "LE", "tireSize": "235/55R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "235/55R18"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "235/55R18", "wheelSize": "18x7" },
+        { "trim": "LE", "tireSize": "235/55R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "235/55R18"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "3.5", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SL", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SE", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "225/60R17"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com",
+      "notes": "3rd gen Quest (2004-2009)"
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "3.5", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SL", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SE", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "225/60R17"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "3.5", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SL", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SE", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "225/60R17"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "3.5", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SL", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SE", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "225/60R17"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "3.5", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SL", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SE", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "225/60R17"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "3.5 S", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SL", "tireSize": "225/65R16", "wheelSize": "16x6.5" },
+        { "trim": "3.5 SE", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["225/65R16", "225/60R17"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "GXE", "tireSize": "215/65R16", "wheelSize": "16x6" },
+        { "trim": "GLE", "tireSize": "215/65R16", "wheelSize": "16x6" },
+        { "trim": "SE", "tireSize": "225/60R16", "wheelSize": "16x6.5" }
+      ],
+      "recommendedTireSizes": ["215/65R16", "225/60R16"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com",
+      "notes": "2nd gen Quest (1999-2003)"
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "GXE", "tireSize": "215/65R16", "wheelSize": "16x6" },
+        { "trim": "GLE", "tireSize": "215/65R16", "wheelSize": "16x6" },
+        { "trim": "SE", "tireSize": "225/60R16", "wheelSize": "16x6.5" }
+      ],
+      "recommendedTireSizes": ["215/65R16", "225/60R16"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "GXE", "tireSize": "215/65R16", "wheelSize": "16x6" },
+        { "trim": "GLE", "tireSize": "215/65R16", "wheelSize": "16x6" },
+        { "trim": "SE", "tireSize": "225/60R16", "wheelSize": "16x6.5" }
+      ],
+      "recommendedTireSizes": ["215/65R16", "225/60R16"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Quest",
+      "market": "US",
+      "trims": [
+        { "trim": "GXE", "tireSize": "215/70R15", "wheelSize": "15x6" },
+        { "trim": "GLE", "tireSize": "215/70R15", "wheelSize": "15x6" },
+        { "trim": "GLE", "tireSize": "225/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SE", "tireSize": "225/60R16", "wheelSize": "16x6.5" }
+      ],
+      "recommendedTireSizes": ["215/70R15", "225/60R16"],
+      "currentTireSizesValid": false,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "R-Nessa",
+      "market": "JDM",
+      "trims": [
+        { "trim": "2.0 Touring", "tireSize": "205/65R15", "wheelSize": "15x6" },
+        { "trim": "2.0 GT Cruiser", "tireSize": "215/60R16", "wheelSize": "16x6.5" }
+      ],
+      "recommendedTireSizes": ["205/65R15", "215/60R16"],
+      "source": "wheel-size.com",
+      "notes": "JDM vehicle, not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "R-Nessa",
+      "market": "JDM",
+      "trims": [
+        { "trim": "2.0 Touring", "tireSize": "205/65R15", "wheelSize": "15x6" },
+        { "trim": "2.0 GT Cruiser", "tireSize": "215/60R16", "wheelSize": "16x6.5" }
+      ],
+      "recommendedTireSizes": ["205/65R15", "215/60R16"],
+      "source": "wheel-size.com",
+      "notes": "JDM vehicle, not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Rasheen",
+      "market": "JDM",
+      "trims": [
+        { "trim": "1.5", "tireSize": "185/65R14", "wheelSize": "14x5.5" },
+        { "trim": "1.8", "tireSize": "175/65R15", "wheelSize": "15x5" },
+        { "trim": "1.8", "tireSize": "185/55R16", "wheelSize": "16x7" },
+        { "trim": "Forza 2.0", "tireSize": "185/65R14", "wheelSize": "14x5.5" }
+      ],
+      "recommendedTireSizes": ["185/65R14", "175/65R15", "185/55R16"],
+      "source": "avtoreference.com",
+      "notes": "JDM compact crossover SUV (1994-2000)"
+    },
+    {
+      "year": 2026,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "Rock Creek", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "235/60R18", "wheelSize": "18x7" },
+        { "trim": "SL", "tireSize": "235/55R19", "wheelSize": "19x7.5" },
+        { "trim": "Platinum", "tireSize": "235/55R19", "wheelSize": "19x7.5" },
+        { "trim": "Dark Armor", "tireSize": "235/55R19", "wheelSize": "19x7.5" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "235/60R18", "235/55R19"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "Rock Creek", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "235/60R18", "wheelSize": "18x7" },
+        { "trim": "SL", "tireSize": "235/55R19", "wheelSize": "19x7.5" },
+        { "trim": "Platinum", "tireSize": "235/55R19", "wheelSize": "19x7.5" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "235/60R18", "235/55R19"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "235/60R18", "wheelSize": "18x7" },
+        { "trim": "SL", "tireSize": "235/55R19", "wheelSize": "19x7.5" },
+        { "trim": "Platinum", "tireSize": "235/55R19", "wheelSize": "19x7.5" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "235/60R18", "235/55R19"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 225/60R18 but 2024 SV uses 235/60R18"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "Midnight Edition", "tireSize": "235/60R18", "wheelSize": "18x7" },
+        { "trim": "SV", "tireSize": "235/60R18", "wheelSize": "18x7" },
+        { "trim": "SL", "tireSize": "235/55R19", "wheelSize": "19x7.5" },
+        { "trim": "Platinum", "tireSize": "235/55R19", "wheelSize": "19x7.5" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "235/60R18", "235/55R19"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 225/60R18 but should be 235/60R18"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "235/60R18", "wheelSize": "18x7" },
+        { "trim": "SL", "tireSize": "235/55R19", "wheelSize": "19x7.5" },
+        { "trim": "Platinum", "tireSize": "235/55R19", "wheelSize": "19x7.5" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "235/60R18", "235/55R19"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has extra 235/65R17 which is not OEM"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "235/60R18", "wheelSize": "18x7" },
+        { "trim": "SL", "tireSize": "235/55R19", "wheelSize": "19x7.5" },
+        { "trim": "Platinum", "tireSize": "235/55R19", "wheelSize": "19x7.5" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "235/60R18", "235/55R19"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 225/60R18 but 2021+ uses 235/60R18"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "225/60R18", "wheelSize": "18x7" },
+        { "trim": "SL", "tireSize": "225/55R19", "wheelSize": "19x7" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "225/60R18", "wheelSize": "18x7" },
+        { "trim": "SL", "tireSize": "225/55R19", "wheelSize": "19x7" },
+        { "trim": "SL Hybrid", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV Hybrid", "tireSize": "225/65R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "Midnight Edition", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SL", "tireSize": "225/60R18", "wheelSize": "18x7" },
+        { "trim": "SL Platinum Package", "tireSize": "225/55R19", "wheelSize": "19x7" },
+        { "trim": "SL Hybrid", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV Hybrid", "tireSize": "225/65R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "Midnight Edition", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SL", "tireSize": "225/60R18", "wheelSize": "18x7" },
+        { "trim": "SL Hybrid", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV Hybrid", "tireSize": "225/65R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "225/60R18"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 225/55R19 but 2017 Rogue doesn't have 19\" option"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SL", "tireSize": "225/60R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "225/60R18"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 225/55R19 but 2016 Rogue doesn't have 19\" option"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SL", "tireSize": "225/60R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "225/60R18"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 225/55R19 but 2015 Rogue doesn't have 19\" option"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SV", "tireSize": "225/65R17", "wheelSize": "17x7" },
+        { "trim": "SL", "tireSize": "225/60R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["225/65R17", "225/60R18"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 225/55R19 but 2014 Rogue doesn't have 19\" option"],
+      "source": "tiresize.com",
+      "notes": "2nd gen Rogue starts 2014"
+    },
+    {
+      "year": 2013,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S (FWD/AWD)", "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        { "trim": "SV (FWD/AWD)", "tireSize": "225/60R17", "wheelSize": "17x7" },
+        { "trim": "SV (FWD/AWD)", "tireSize": "225/55R18", "wheelSize": "18x7" },
+        { "trim": "SL (FWD/AWD)", "tireSize": "225/55R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com",
+      "notes": "Last year of 1st gen Rogue"
+    },
+    {
+      "year": 2012,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S (FWD/AWD)", "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        { "trim": "SV (FWD/AWD)", "tireSize": "225/60R17", "wheelSize": "17x7" },
+        { "trim": "SV (FWD/AWD)", "tireSize": "225/55R18", "wheelSize": "18x7" },
+        { "trim": "SL (FWD/AWD)", "tireSize": "225/55R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S (FWD/AWD)", "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        { "trim": "S Krom Edition", "tireSize": "225/60R17", "wheelSize": "17x7" },
+        { "trim": "SV (FWD/AWD)", "tireSize": "225/60R17", "wheelSize": "17x7" },
+        { "trim": "SV (FWD/AWD)", "tireSize": "225/55R18", "wheelSize": "18x7" },
+        { "trim": "SL (FWD/AWD)", "tireSize": "225/55R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S (FWD/AWD)", "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        { "trim": "S Krom Edition", "tireSize": "225/60R17", "wheelSize": "17x7" },
+        { "trim": "SL (FWD/AWD)", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["215/70R16", "225/60R17"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 225/55R18 but 2010 Rogue doesn't have 18\" option"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S (FWD/AWD)", "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        { "trim": "S (FWD/AWD)", "tireSize": "225/60R17", "wheelSize": "17x7" },
+        { "trim": "SL (FWD/AWD)", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["215/70R16", "225/60R17"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 225/55R18 but 2009 Rogue doesn't have 18\" option"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "Rogue",
+      "market": "US",
+      "trims": [
+        { "trim": "S (FWD/AWD)", "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        { "trim": "S (FWD/AWD)", "tireSize": "225/60R17", "wheelSize": "17x7" },
+        { "trim": "SL (FWD/AWD)", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["215/70R16", "225/60R17"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 225/55R18 but 2008 Rogue doesn't have 18\" option"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "Nissan",
+      "model": "Rogue Select",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        { "trim": "S", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["215/70R16", "225/60R17"],
+      "source": "wheel-size.com",
+      "notes": "Rogue Select is 1st-gen Rogue sold alongside 2nd-gen"
+    },
+    {
+      "year": 2014,
+      "make": "Nissan",
+      "model": "Rogue Select",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        { "trim": "S", "tireSize": "225/60R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["215/70R16", "225/60R17"],
+      "source": "wheel-size.com",
+      "notes": "Rogue Select is 1st-gen Rogue sold alongside 2nd-gen"
+    },
+    {
+      "year": 2022,
+      "make": "Nissan",
+      "model": "Rogue Sport",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SV", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SL", "tireSize": "225/45R19", "wheelSize": "19x7" }
+      ],
+      "recommendedTireSizes": ["215/60R17", "225/45R19"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "Nissan",
+      "model": "Rogue Sport",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SV", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SL", "tireSize": "225/45R19", "wheelSize": "19x7" }
+      ],
+      "recommendedTireSizes": ["215/60R17", "225/45R19"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "Nissan",
+      "model": "Rogue Sport",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "215/65R16", "wheelSize": "16x6.5" },
+        { "trim": "S", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SV", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SL", "tireSize": "225/45R19", "wheelSize": "19x7" }
+      ],
+      "recommendedTireSizes": ["215/65R16", "215/60R17", "225/45R19"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "Nissan",
+      "model": "Rogue Sport",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "215/65R16", "wheelSize": "16x6.5" },
+        { "trim": "S", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SV", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SL", "tireSize": "225/45R19", "wheelSize": "19x7" }
+      ],
+      "recommendedTireSizes": ["215/65R16", "215/60R17", "225/45R19"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Rogue Sport",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "215/65R16", "wheelSize": "16x6.5" },
+        { "trim": "S", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SV", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SL", "tireSize": "225/45R19", "wheelSize": "19x7" }
+      ],
+      "recommendedTireSizes": ["215/65R16", "215/60R17", "225/45R19"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "Rogue Sport",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "215/65R16", "wheelSize": "16x6.5" },
+        { "trim": "S", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SV", "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        { "trim": "SL", "tireSize": "225/45R19", "wheelSize": "19x7" }
+      ],
+      "recommendedTireSizes": ["215/65R16", "215/60R17", "225/45R19"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "Nissan",
+      "model": "Sakura",
+      "market": "JDM",
+      "trims": [
+        { "trim": "S", "tireSize": "155/65R14", "wheelSize": "14x4.5" },
+        { "trim": "X", "tireSize": "155/65R14", "wheelSize": "14x4.5" },
+        { "trim": "G", "tireSize": "155/65R14", "wheelSize": "14x4.5" }
+      ],
+      "recommendedTireSizes": ["155/65R14"],
+      "source": "wheel-size.com",
+      "notes": "JDM electric kei car, not sold in US"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Sakura",
+      "market": "JDM",
+      "trims": [
+        { "trim": "S", "tireSize": "155/65R14", "wheelSize": "14x4.5" },
+        { "trim": "X", "tireSize": "155/65R14", "wheelSize": "14x4.5" },
+        { "trim": "G", "tireSize": "155/65R14", "wheelSize": "14x4.5" }
+      ],
+      "recommendedTireSizes": ["155/65R14"],
+      "source": "wheel-size.com",
+      "notes": "JDM electric kei car"
+    },
+    {
+      "year": 2023,
+      "make": "Nissan",
+      "model": "Sakura",
+      "market": "JDM",
+      "trims": [
+        { "trim": "S", "tireSize": "155/65R14", "wheelSize": "14x4.5" },
+        { "trim": "X", "tireSize": "155/65R14", "wheelSize": "14x4.5" },
+        { "trim": "G", "tireSize": "155/65R14", "wheelSize": "14x4.5" }
+      ],
+      "recommendedTireSizes": ["155/65R14"],
+      "source": "wheel-size.com",
+      "notes": "JDM electric kei car"
+    },
+    {
+      "year": 2022,
+      "make": "Nissan",
+      "model": "Sakura",
+      "market": "JDM",
+      "trims": [
+        { "trim": "S", "tireSize": "155/65R14", "wheelSize": "14x4.5" },
+        { "trim": "X", "tireSize": "155/65R14", "wheelSize": "14x4.5" },
+        { "trim": "G", "tireSize": "155/65R14", "wheelSize": "14x4.5" }
+      ],
+      "recommendedTireSizes": ["155/65R14"],
+      "source": "wheel-size.com",
+      "notes": "JDM electric kei car, launched May 2022"
+    },
+    {
+      "year": 2026,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "205/50R17", "wheelSize": "17x7" },
+        { "trim": "SR", "tireSize": "215/45R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["205/60R16", "205/50R17", "215/45R18"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 215/50R17 instead of 205/50R17 for SL trim"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "215/50R17", "wheelSize": "17x7" },
+        { "trim": "SR", "tireSize": "215/45R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["205/60R16", "215/50R17", "215/45R18"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "215/50R17", "wheelSize": "17x7" },
+        { "trim": "SR", "tireSize": "215/45R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["205/60R16", "215/50R17", "215/45R18"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "215/50R17", "wheelSize": "17x7" },
+        { "trim": "Midnight Edition", "tireSize": "215/45R18", "wheelSize": "18x7" },
+        { "trim": "SR", "tireSize": "215/45R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["205/60R16", "215/50R17", "215/45R18"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 215/45ZR18 which should be 215/45R18"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "215/50R17", "wheelSize": "17x7" },
+        { "trim": "Midnight Edition", "tireSize": "215/45R18", "wheelSize": "18x7" },
+        { "trim": "SR", "tireSize": "215/45R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["205/60R16", "215/50R17", "215/45R18"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "215/50R17", "wheelSize": "17x7" },
+        { "trim": "SR", "tireSize": "215/45R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["205/60R16", "215/50R17", "215/45R18"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/60R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "215/50R17", "wheelSize": "17x7" },
+        { "trim": "Nismo", "tireSize": "215/45R18", "wheelSize": "18x7" },
+        { "trim": "SR", "tireSize": "215/45R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["205/60R16", "215/50R17", "215/45R18"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com",
+      "notes": "New 8th gen Sentra starts 2020"
+    },
+    {
+      "year": 2019,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "SR", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "SR Turbo", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "Nismo", "tireSize": "215/45R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["205/55R16", "205/50R17", "215/45R18"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB missing 215/45R18 (Nismo)"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "SR", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "SR Turbo", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "Nismo", "tireSize": "215/45R18", "wheelSize": "18x7" }
+      ],
+      "recommendedTireSizes": ["205/55R16", "205/50R17", "215/45R18"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB missing 215/45R18 (Nismo)"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "SR", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "SR Turbo", "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      ],
+      "recommendedTireSizes": ["205/55R16", "205/50R17"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "FE-S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "SR", "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      ],
+      "recommendedTireSizes": ["205/55R16", "205/50R17"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "FE-S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "FE-SV", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "SR", "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      ],
+      "recommendedTireSizes": ["205/55R16", "205/50R17"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "FE-S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "FE-SV", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "SR", "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      ],
+      "recommendedTireSizes": ["205/55R16", "205/50R17"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has 205/60R15 which is not standard for 2014"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "FE-S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "FE-SV", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SV", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SL", "tireSize": "205/50R17", "wheelSize": "17x6.5" },
+        { "trim": "SR", "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      ],
+      "recommendedTireSizes": ["205/55R16", "205/50R17"],
+      "currentTireSizesValid": true,
+      "source": "tiresize.com",
+      "notes": "7th gen Sentra starts 2013"
+    },
+    {
+      "year": 2012,
+      "make": "Nissan",
+      "model": "Sentra",
+      "market": "US",
+      "trims": [
+        { "trim": "2.0", "tireSize": "205/60R15", "wheelSize": "15x6" },
+        { "trim": "2.0 S", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "2.0 SL", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "2.0 SR", "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        { "trim": "SE-R", "tireSize": "225/45R17", "wheelSize": "17x7" },
+        { "trim": "SE-R Spec V", "tireSize": "225/45R17", "wheelSize": "17x7" }
+      ],
+      "recommendedTireSizes": ["205/60R15", "205/55R16", "225/45R17"],
+      "currentTireSizesValid": false,
+      "issues": ["Current DB has extra sizes 195/65R15, 215/45R17, 225/50R16 that are not OEM for 2012"],
+      "source": "tiresize.com",
+      "notes": "Last year of 6th gen Sentra"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "usMarket": 54,
+    "jdmMarket": 13,
+    "mexicoMarket": 8,
+    "vehiclesWithIssues": 31,
+    "vehiclesValid": 44,
+    "keyFindings": [
+      "Nissan Quest (2000-2017): Current DB has incorrect tire sizes - uses generic list instead of generation-specific sizes",
+      "Nissan Rogue (2008-2013): Current DB shows 18\" options for years that didn't offer them",
+      "Nissan Rogue (2014-2017): Current DB incorrectly shows 19\" options; 19\" wheels only available from 2018+",
+      "Nissan Rogue (2021+): Width changed from 225mm to 235mm for 18\" and 19\" options",
+      "Nissan Sentra (2018-2019): Missing Nismo trim's 215/45R18 tire size",
+      "JDM/Mexico models (Platina, Presea, R-Nessa, Rasheen, Sakura): These are not US market vehicles"
+    ]
+  }
+}

@@ -1,0 +1,936 @@
+{
+  "batchId": "overnight-024-chevrolet",
+  "verificationDate": "2026-04-23T02:12:00Z",
+  "summary": {
+    "totalVehicles": 68,
+    "verified": 44,
+    "flagged": 24,
+    "invalid": 0,
+    "verificationRate": "64.7%"
+  },
+  "sourcesConsulted": [
+    "thedriveradviser.com - Silverado 2500HD bolt pattern guide",
+    "wheelssize.com - Chevrolet Silverado 2500HD wheel specs",
+    "hulkoffsets.com - Silverado wheel fitment guide",
+    "tiresize.com - 2023 Chevrolet Silverado tire sizes"
+  ],
+  "vehicleModel": "Chevrolet Silverado 2500HD",
+  "yearRange": "2011-2023",
+  "confirmedSpecs": {
+    "boltPattern": {
+      "value": "8x180",
+      "verified": true,
+      "note": "All 2011+ Silverado 2500HD SRW use 8x180mm (changed from 8x165.1 in 2011)"
+    },
+    "hubBore": {
+      "value": "124.1",
+      "verified": true,
+      "note": "Confirmed across all sources for 2011+ model years"
+    },
+    "wheelSizes": {
+      "gen3_2011_2019": {
+        "oem": ["7.5Jx17 ET28/ET44", "8Jx18 ET44", "8Jx20 ET44"],
+        "verified": true
+      },
+      "gen4_2020_plus": {
+        "oem": ["7.5Jx17 ET28", "8Jx18 ET44", "8.5Jx20 ET47", "9Jx22 ET47"],
+        "verified": true
+      }
+    },
+    "tireSizes": {
+      "gen3_2011_2019": {
+        "oem": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+        "verified": true,
+        "note": "Batch shows LT245/70R17 but OEM is LT245/75R17 (aspect ratio)"
+      },
+      "gen4_2020_plus": {
+        "oem": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+        "verified": true
+      }
+    }
+  },
+  "findings": [
+    {
+      "type": "minor_discrepancy",
+      "issue": "Tire size aspect ratio mismatch",
+      "detail": "All vehicles list LT245/70R17 but OEM spec is LT245/75R17",
+      "affectedVehicles": 68,
+      "recommendation": "Update tire size from LT245/70R17 to LT245/75R17"
+    },
+    {
+      "type": "incomplete_data",
+      "issue": "Z71 trims have minimal wheel size data",
+      "detail": "Z71 trims only show 8x18 wheel option, missing 17\" and 20\" options",
+      "affectedVehicles": 9,
+      "recommendation": "Apply full template wheel sizes to Z71 trims"
+    },
+    {
+      "type": "incomplete_data",
+      "issue": "2011-2014 vehicles missing complete wheel options",
+      "detail": "Early vehicles only show 8x18 instead of full 17/18/20 range",
+      "affectedVehicles": 19,
+      "recommendation": "Apply gm_hd_gen3_2011_2019 template to all 2011-2014 trims"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "3bebb225-a351-4a71-bd09-08f042d49c8a",
+      "year": 2011,
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "d3cc6c01-7a75-4aeb-9438-0103bf102298",
+      "year": 2011,
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "81e75dd1-e29d-4410-b28d-06c5d93f81ef",
+      "year": 2011,
+      "trim": "Base",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "8b53ac5d-a2b9-4c05-a44d-9a0f23079fb6",
+      "year": 2011,
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "848ae8f0-3b79-4963-8766-f21249a78633",
+      "year": 2012,
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "1b0dd66c-5170-46a4-a03e-aa8d81be187d",
+      "year": 2012,
+      "trim": "Base",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "23dec969-64ef-42b8-a010-347e168bdba0",
+      "year": 2012,
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "767bccf1-5572-41d2-8ce5-094bb18ef060",
+      "year": 2012,
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "e1e2bc45-cf3d-4cd0-ae6f-e49351155da5",
+      "year": 2012,
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "c9be1a07-5910-4aba-a1a3-a54276b817f0",
+      "year": 2013,
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "f7e66d58-6f12-469c-a9a3-0f5c5b745dd0",
+      "year": 2013,
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "7ce8c42c-e02a-4361-a6a7-3fcb1596c1d9",
+      "year": 2013,
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "033e2a72-264e-4d2d-a160-1b7cb2c62096",
+      "year": 2013,
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "d2cb1717-ac19-4831-8db5-6d24725f582d",
+      "year": 2013,
+      "trim": "Base",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "150ddfbc-c49c-4760-9e94-7690b2a92802",
+      "year": 2014,
+      "trim": "Base",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "4950532a-9965-4865-a816-f1c075e0801b",
+      "year": 2014,
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "976dc210-e3a0-43bc-a491-000a819452a4",
+      "year": 2014,
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "cc4a4e19-0916-41c8-8007-ce10aeb44908",
+      "year": 2014,
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "fc55f4d8-a76b-47e0-bb7e-ac8bbbe1c916",
+      "year": 2014,
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": false,
+      "tireSizesOk": false,
+      "issues": ["Wheel sizes incomplete (missing 17\", 20\")", "LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "252628a9-4c36-4524-8ff3-5670dd6da910",
+      "year": 2015,
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": false,
+      "issues": ["LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "99c7fbeb-5e22-4a4e-911e-0bee6f594fb3",
+      "year": 2015,
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": false,
+      "issues": ["LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "2157640c-d0c7-42e0-a1a2-31de9b4cbff1",
+      "year": 2015,
+      "trim": "High Country",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": false,
+      "issues": ["LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "c6c6ae10-78c5-4deb-8160-794c5b233c83",
+      "year": 2015,
+      "trim": "Base",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": false,
+      "issues": ["LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "825a5b44-f1ef-415b-acdb-e3b52ff8b5f6",
+      "year": 2015,
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": false,
+      "issues": ["LT245/70R17 should be LT245/75R17"]
+    },
+    {
+      "id": "cc397ee1-540f-4b2f-9552-1fe91eb2df24",
+      "year": 2015,
+      "trim": "Z71",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "8031fda8-8c4f-44fe-84fd-fc38ef950a39",
+      "year": 2016,
+      "trim": "Z71",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "307bde67-fdc6-47d4-b0b2-969884a9e0c5",
+      "year": 2016,
+      "trim": "LT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "b8e32192-e952-4fce-a443-346694c786bc",
+      "year": 2016,
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "2ee8574e-0a99-45bb-a1e9-e23782e0eb4b",
+      "year": 2016,
+      "trim": "High Country",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "433e8ed1-042e-41c4-ac57-f9057a28389d",
+      "year": 2016,
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "8ff6f508-0f86-4aca-9a21-e0ee0d08ca6f",
+      "year": 2016,
+      "trim": "Custom",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "ec6ee7db-a408-4b55-8bbf-42a16a381754",
+      "year": 2016,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "ebd948ea-f666-4246-8154-5334f3e2c2f4",
+      "year": 2017,
+      "trim": "High Country",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "07da4bc9-7304-4fd5-bbb3-6ec2da8f20ad",
+      "year": 2017,
+      "trim": "LT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "818fbee8-5006-49a0-9a6c-0c845f02b1b1",
+      "year": 2017,
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "f6ca871c-8e54-4afe-b208-a4a1506bccd7",
+      "year": 2017,
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "0de79114-d651-4a36-9f61-c8ac4f906b9c",
+      "year": 2017,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "db3e8176-e0be-4aa5-8ece-b9929fc4980d",
+      "year": 2017,
+      "trim": "Z71",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "917bc5e9-f140-49ee-8a42-342989bf75a7",
+      "year": 2017,
+      "trim": "Custom",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "13e98612-c5a8-4624-a645-66ea2d58ef5e",
+      "year": 2018,
+      "trim": "Z71",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "9f10af54-21e2-414f-acc1-1384d4e861e8",
+      "year": 2018,
+      "trim": "LT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "1f442e34-7103-466f-a3db-96509220c9c4",
+      "year": 2018,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "9a842bc5-1204-47f5-92a3-305218a9c272",
+      "year": 2018,
+      "trim": "High Country",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "3fad1c3a-b0aa-40f6-9b69-d7d2af51c26d",
+      "year": 2018,
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "c0e07700-8d56-41f8-ac34-d73682b79e20",
+      "year": 2018,
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "6152aa9c-55e5-4a15-ac27-4a6aa7f06665",
+      "year": 2018,
+      "trim": "Custom",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "2d648b81-cb61-46be-be29-63cc58c78b8b",
+      "year": 2019,
+      "trim": "Custom",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "7a73a734-2e58-4d59-8d76-785704388aa4",
+      "year": 2019,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "872f0467-f124-4b6b-b642-bca2d13d5f45",
+      "year": 2019,
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "c0d1bc47-21d7-42fc-ac4c-bd3cdfe23658",
+      "year": 2019,
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "2f13c6a4-22fa-43d2-a8c4-c75339bd2784",
+      "year": 2019,
+      "trim": "Z71",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "2d8e7792-98e0-489c-8432-80c700ce7094",
+      "year": 2019,
+      "trim": "LT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "39fd661f-f2f8-4ef7-8748-5b71e578423e",
+      "year": 2019,
+      "trim": "High Country",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "a4660523-23bf-4968-8a5e-f15df7712814",
+      "year": 2020,
+      "trim": "High Country",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "300d1307-fcdf-424b-b428-ed6aff67a4d4",
+      "year": 2020,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "57020764-6aed-4907-9281-e6389e94442f",
+      "year": 2020,
+      "trim": "Custom",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "c0168686-5416-4def-ae0f-83f536c0a86a",
+      "year": 2020,
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "2aa5d3c7-a7ae-49b6-9faa-ca061bbc10b0",
+      "year": 2020,
+      "trim": "LT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "762810ee-9129-46ae-99c6-d31c63b6ad77",
+      "year": 2020,
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "569a17d6-27e3-4fa0-80a1-505cd24a3544",
+      "year": 2021,
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "afd191aa-b5a9-41c2-bd6f-af2afa737a58",
+      "year": 2021,
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "a31a4c11-bb0c-40d0-b0bb-86b8aaf177e3",
+      "year": 2021,
+      "trim": "High Country",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "ddb2d259-c2f6-43ba-8f03-c5c5b851c76f",
+      "year": 2021,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "54bf3c1c-51cb-4223-ba4c-09056d2f983e",
+      "year": 2021,
+      "trim": "Custom",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "1ee37230-c2be-4358-942d-95694b84b3ae",
+      "year": 2021,
+      "trim": "LT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "544219b4-7c01-49a1-bd12-0f7b313a01d1",
+      "year": 2022,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "f89a3ecc-4dbd-4ff9-b8f8-3a74abd819ac",
+      "year": 2022,
+      "trim": "Custom",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "a8220400-6853-4e4a-9be7-480a3b0f21f6",
+      "year": 2022,
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "26e0886d-2045-417e-9090-11c3e4d05a25",
+      "year": 2022,
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "a3450377-5b1c-4f77-99bd-ee51d10c08f5",
+      "year": 2022,
+      "trim": "High Country",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "ac7e4332-8c07-4137-b60a-916589b217db",
+      "year": 2022,
+      "trim": "LT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "deabfe8f-4796-4f64-9897-bcbf6807e62c",
+      "year": 2023,
+      "trim": "LT",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "d7a3e2d8-be6b-4227-97fa-9a4ebf424b51",
+      "year": 2023,
+      "trim": "Custom",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "2ce2d6c8-9b68-4060-b013-19452efd5aac",
+      "year": 2023,
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    },
+    {
+      "id": "cb92683f-f252-41a1-a82d-601e0e5099e1",
+      "year": 2023,
+      "trim": "High Country",
+      "status": "verified",
+      "boltPatternOk": true,
+      "hubBoreOk": true,
+      "wheelSizesOk": true,
+      "tireSizesOk": true,
+      "issues": []
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "medium",
+      "action": "Fix tire size aspect ratio",
+      "detail": "Update LT245/70R17 to LT245/75R17 across all 68 vehicles",
+      "sql": "UPDATE vehicle_fitments SET tire_sizes = REPLACE(tire_sizes::text, 'LT245/70R17', 'LT245/75R17')::jsonb WHERE model = 'silverado-2500hd' AND year BETWEEN 2011 AND 2023"
+    },
+    {
+      "priority": "low",
+      "action": "Apply complete wheel templates to 2011-2014 vehicles",
+      "detail": "19 vehicles from 2011-2014 only have 18\" wheel option; should include 17\" and 20\" options",
+      "affectedIds": [
+        "3bebb225-a351-4a71-bd09-08f042d49c8a",
+        "d3cc6c01-7a75-4aeb-9438-0103bf102298",
+        "81e75dd1-e29d-4410-b28d-06c5d93f81ef",
+        "8b53ac5d-a2b9-4c05-a44d-9a0f23079fb6",
+        "848ae8f0-3b79-4963-8766-f21249a78633",
+        "1b0dd66c-5170-46a4-a03e-aa8d81be187d",
+        "23dec969-64ef-42b8-a010-347e168bdba0",
+        "767bccf1-5572-41d2-8ce5-094bb18ef060",
+        "e1e2bc45-cf3d-4cd0-ae6f-e49351155da5",
+        "c9be1a07-5910-4aba-a1a3-a54276b817f0",
+        "f7e66d58-6f12-469c-a9a3-0f5c5b745dd0",
+        "7ce8c42c-e02a-4361-a6a7-3fcb1596c1d9",
+        "033e2a72-264e-4d2d-a160-1b7cb2c62096",
+        "d2cb1717-ac19-4831-8db5-6d24725f582d",
+        "150ddfbc-c49c-4760-9e94-7690b2a92802",
+        "4950532a-9965-4865-a816-f1c075e0801b",
+        "976dc210-e3a0-43bc-a491-000a819452a4",
+        "cc4a4e19-0916-41c8-8007-ce10aeb44908",
+        "fc55f4d8-a76b-47e0-bb7e-ac8bbbe1c916"
+      ]
+    }
+  ]
+}

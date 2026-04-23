@@ -1,0 +1,2120 @@
+[
+  {
+    "id": "d2ebbef8-71e6-473d-ba00-f5bce262034c",
+    "year": 1992,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "235/75R15",
+      "255/70R15",
+      "255/70R16",
+      "265/70R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "1f3bb45c-c82a-4ba1-8c41-0ee38d52083b",
+    "year": 1992,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "XL",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "36717f5f-b57c-40cf-b2e1-cbcdf7ae2eb0",
+    "year": 1993,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Eddie Bauer",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "75d33cba-e877-4aa3-90a2-ae822d207c50",
+    "year": 1993,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "XLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9dde1180-2649-45b8-a155-327b95f15dac",
+    "year": 1993,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "XL",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "24b17d34-6b8b-4e94-ae79-50b19cd00a97",
+    "year": 1993,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "235/75R15",
+      "255/70R15",
+      "255/70R16",
+      "265/70R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f3e975e4-e004-405e-9dcf-8167e5a63485",
+    "year": 1994,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "235/75R15",
+      "255/70R15",
+      "255/70R16",
+      "265/70R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4be6c362-b4c8-4953-b60b-3307721875cd",
+    "year": 1994,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "XLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b75bd966-123b-4aa7-b106-5ca4a1e7bf7b",
+    "year": 1994,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Eddie Bauer",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e1411e42-df1a-4e5a-b144-2372a7c1f483",
+    "year": 1994,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "XL",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3f876d3d-f618-4d01-b33f-eeac11fdb36c",
+    "year": 1995,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "235/75R15",
+      "255/70R15",
+      "255/70R16",
+      "265/70R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ff052d2c-53e1-4243-b7a1-f8a660de4561",
+    "year": 1995,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "XLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2a669673-948f-468a-9983-d68bfbe9b0b5",
+    "year": 1995,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Eddie Bauer",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1f18d23d-7f66-426b-b1f7-d7d3ebdb5532",
+    "year": 1995,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "XL",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b55a0aaa-fa42-4146-a832-426a511419c5",
+    "year": 1996,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "XLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6c37f536-4a5f-467b-b2f4-9289e747d7ee",
+    "year": 1996,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Eddie Bauer",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "32e7c354-2088-4913-a130-d9eb70c0de0c",
+    "year": 1996,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "XL",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "255/70R16",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "47ed0bc0-b9fe-48b8-b137-d8bc40eecf8c",
+    "year": 1996,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "235/75R15",
+      "255/70R15",
+      "255/70R16",
+      "265/70R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8a9631db-ffc5-4a42-9104-834901dd20dd",
+    "year": 2021,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "6481af12-5933-40a7-bd0f-d27752b7b655",
+    "year": 2021,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Badlands",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "f67b6042-27fa-42a0-ab78-43d94edfe3f3",
+    "year": 2021,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "7b9c7768-e640-4746-8259-c9a5aebf59b5",
+    "year": 2021,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Outer Banks",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "0ada572f-0093-4a24-8cfd-8b1ce3325c92",
+    "year": 2021,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Black Diamond",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "dc62a415-722c-4b04-b2bf-0986b6960801",
+    "year": 2021,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Big Bend",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "b401f122-1e71-4efd-acdc-b7c8781487e4",
+    "year": 2021,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Wildtrak",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "5a559d8d-a3dd-4107-9bda-093ab994b37c",
+    "year": 2022,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Outer Banks",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "a57dc049-c21e-4b2d-9de7-a0bb52a97728",
+    "year": 2022,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "1e2c6b99-436c-495a-b9a4-a085968a9fde",
+    "year": 2022,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Big Bend",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "89abd9bf-f721-4ae4-907f-35b95c7685b3",
+    "year": 2022,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Black Diamond",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "44b96812-a329-4187-8ecc-9462e89858b3",
+    "year": 2022,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Badlands",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "f65914d6-9626-45e4-b11d-088ac0ff4731",
+    "year": 2022,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "36a93f4a-defc-4b5e-9fee-be5632bfb5ef",
+    "year": 2022,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Wildtrak",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "4cad2966-2bf6-4f7a-bea3-f0a6d553aa36",
+    "year": 2023,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Wildtrak",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "cf218593-d719-459e-8dce-0e7017865b94",
+    "year": 2023,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Big Bend",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "69960088-db5c-4c44-87b5-606216d49d07",
+    "year": 2023,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "0c39adc8-c2cd-4be7-bb47-d72264709644",
+    "year": 2023,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Badlands",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "6882de52-aeec-4c08-8128-1bf1df49ce1c",
+    "year": 2023,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "cb7af77c-ad50-4d9c-a041-509af541b1ab",
+    "year": 2023,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Black Diamond",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "5cc79bd3-f091-4f46-8089-bf3964874e79",
+    "year": 2023,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Outer Banks",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "e178d8e8-0261-4fc4-a4f7-d66437139a10",
+    "year": 2024,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "240d74bc-ccaa-455b-b083-dab9faa80c1e",
+    "year": 2024,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Outer Banks",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "f817878e-c68f-4564-ace8-0cd982d82945",
+    "year": 2024,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Badlands",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "325ebc06-8b94-4df4-b729-46f8e6f64ac7",
+    "year": 2024,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "d4d73906-db08-4d9e-bb40-8d3170aaf394",
+    "year": 2024,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Wildtrak",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "2f35254e-15ac-4b3a-a639-5598ca3d0e44",
+    "year": 2024,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Big Bend",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "d1ac2613-f7ed-49a0-8a63-3cd244683947",
+    "year": 2024,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Black Diamond",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "7aa013ab-feb7-47db-9c10-3cbd26d06eb6",
+    "year": 2025,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Outer Banks",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "5a0eabae-18cf-4a47-8121-7387f585e87e",
+    "year": 2025,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Badlands",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "072a595a-035e-4777-829b-56747bfb0604",
+    "year": 2025,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Wildtrak",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "adaaf1f7-9812-48c3-bc07-23ccd9e2b28f",
+    "year": 2025,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "cfa45cd5-2b0c-41bf-92e0-4cd74b44bcb4",
+    "year": 2025,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Big Bend",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "df4a1641-867d-451d-886e-186219da558a",
+    "year": 2025,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "727f6979-638b-4f8f-86aa-34d012c0ce41",
+    "year": 2025,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Black Diamond",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "11970075-c7d7-4d74-b158-782f156327a8",
+    "year": 2026,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Outer Banks",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "f0de4c70-e4f0-4d32-a508-48ae9c9d1330",
+    "year": 2026,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "4a4d5004-e952-40d2-be94-fed108012b13",
+    "year": 2026,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Black Diamond",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "3a778c70-ef1b-4c53-bb48-94d1a85a9bc4",
+    "year": 2026,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Badlands",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "6ddc0dae-2e6a-429b-b9c9-a158863c1efa",
+    "year": 2026,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "952fcf5b-73f7-45db-98fe-41472b27bde6",
+    "year": 2026,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Wildtrak",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "dd3f5768-b288-4b6e-8a29-e94bc76596de",
+    "year": 2026,
+    "make": "ford",
+    "model": "bronco",
+    "trim": "Big Bend",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "93.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/75R17",
+      "275/65R18",
+      "285/65R18",
+      "285/70R17",
+      "LT285/70R17",
+      "315/70R17",
+      "LT315/70R17",
+      "LT265/70R17",
+      "255/70R18"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "30d20b66-d25d-41b1-b740-a354a211b4ea",
+    "year": 2025,
+    "make": "ford",
+    "model": "bronco-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": "[{\"diameter\":17,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "225/65R17",
+      "235/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c7cf4d8a-67ef-42b6-9e9f-be44e486a471",
+    "year": 2026,
+    "make": "ford",
+    "model": "bronco-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": "[{\"diameter\":17,\"position\":\"both\"},{\"diameter\":18,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "225/65R17",
+      "235/65R17",
+      "225/60R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "aea8eb8e-f6d8-4311-84bf-9e9c1bd8362a",
+    "year": 2000,
+    "make": "ford",
+    "model": "crown-victoria",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "1b426dba-5306-40e8-9f2b-36a4b28594c9",
+    "year": 2001,
+    "make": "ford",
+    "model": "crown-victoria",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "0c9497b2-c82a-47af-8fae-165e771e0db6",
+    "year": 2002,
+    "make": "ford",
+    "model": "crown-victoria",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "10ec83be-518a-4565-88e7-84739fe20f17",
+    "year": 2003,
+    "make": "ford",
+    "model": "crown-victoria",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "11f82a47-214c-49c6-9915-588dbb8f326e",
+    "year": 2004,
+    "make": "ford",
+    "model": "crown-victoria",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "9172ea20-b49d-436b-9c9a-0256e2b1b26e",
+    "year": 2005,
+    "make": "ford",
+    "model": "crown-victoria",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "61b1c699-197a-47d1-b820-84ff2a4130cc",
+    "year": 2006,
+    "make": "ford",
+    "model": "crown-victoria",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "e1b2598b-164c-4d41-9857-a3226bfd3fb6",
+    "year": 2007,
+    "make": "ford",
+    "model": "crown-victoria",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "70.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 54,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 44,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "848eb3ab-cc24-4698-a2a5-55c32e1423a1",
+    "year": 2000,
+    "make": "ford",
+    "model": "e-150-econoline",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.0",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 14,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 12,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "9cc5916f-15f2-4ea3-bbf2-ae08c31a7f15",
+    "year": 2001,
+    "make": "ford",
+    "model": "e-150-econoline",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.0",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 14,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 11,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "69903538-8633-4a61-8717-2bdf76a5359c",
+    "year": 2002,
+    "make": "ford",
+    "model": "e-150-econoline",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.0",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 11,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "ac9129c8-3d09-41a1-954c-676bc4ce151a",
+    "year": 2003,
+    "make": "ford",
+    "model": "e-150-econoline",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.0",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 11,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "6ce125f9-3d04-4f51-8af1-99ca8d328fcc",
+    "year": 2004,
+    "make": "ford",
+    "model": "e-150-econoline",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "87.0",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 11,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  }
+]

@@ -1,0 +1,1260 @@
+{
+  "batchId": "overnight-020-chevrolet",
+  "verificationDate": "2026-04-23T02:15:00.000Z",
+  "summary": {
+    "totalVehicles": 76,
+    "verified": 24,
+    "flagged": 46,
+    "invalid": 6,
+    "verifiedPercent": 31.6,
+    "flaggedPercent": 60.5,
+    "invalidPercent": 7.9
+  },
+  "verifiedSpecs": {
+    "boltPattern": {
+      "allGenerations": "6x139.7",
+      "source": "hulkoffsets.com, arkonoffroad.com, mrwheeldeal.com",
+      "status": "CONFIRMED"
+    },
+    "hubBore": {
+      "allGenerations": "78.1mm",
+      "source": "hulkoffsets.com, thewheelshop.ca",
+      "status": "CONFIRMED"
+    },
+    "factoryTireSizes": {
+      "gen1_1999_2006": {
+        "wheelSizes": ["16", "17", "20"],
+        "tireSizes": ["235/75R16", "245/70R16", "245/75R16", "245/70R17", "265/70R17", "275/55R20"],
+        "source": "tiresize.com"
+      },
+      "gen2_2007_2013": {
+        "wheelSizes": ["17", "18", "20"],
+        "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"],
+        "source": "tiresize.com, ahgautoservice.com"
+      },
+      "gen3_2014_2018": {
+        "wheelSizes": ["17", "18", "20", "22"],
+        "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+        "source": "tiresize.com"
+      }
+    }
+  },
+  "commonIssues": [
+    {
+      "issue": "R15_TIRES_INVALID",
+      "description": "Silverado 1500 NEVER came with 15-inch wheels from factory. 225/75R15 and 235/75R15 are invalid OEM sizes.",
+      "affectedCount": 31,
+      "severity": "HIGH"
+    },
+    {
+      "issue": "TIRE_WHEEL_MISMATCH",
+      "description": "Tire sizes don't match wheel diameters (e.g., R16/R18 tires with incompatible wheel sizes)",
+      "affectedCount": 15,
+      "severity": "MEDIUM"
+    },
+    {
+      "issue": "SS_TRIM_WRONG_TIRES",
+      "description": "SS trim should have 275/55R20 only, inherited wrong tire sizes",
+      "affectedCount": 3,
+      "severity": "HIGH"
+    },
+    {
+      "issue": "MISSING_COMMON_SIZES",
+      "description": "Missing common OEM sizes for trim level",
+      "affectedCount": 12,
+      "severity": "LOW"
+    }
+  ],
+  "results": [
+    {
+      "id": "84e9b5df-32d9-4cd5-89b6-65e7887bf598",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15 tires (225/75R15, 235/75R15) are INVALID - Silverado 1500 never had 15\" wheels",
+        "Correct OEM sizes should be: 245/70R16, 245/70R17, 265/70R17 for this trim"
+      ],
+      "recommendedTireSizes": ["245/70R16", "245/70R17", "265/70R17"]
+    },
+    {
+      "id": "23a2ca5f-d096-4aff-97eb-9808bad4933e",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15 tires (225/75R15, 235/75R15) are INVALID",
+        "245/75R16 is valid but 17\" wheel listed - should have 265/70R17"
+      ],
+      "recommendedTireSizes": ["265/70R17"]
+    },
+    {
+      "id": "162c582c-0b1b-4bb5-b4e9-4fe2cbaa9870",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "SS",
+      "status": "invalid",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "SS came ONLY with 275/55R20 tires on 8x20 wheels",
+        "All listed tire sizes (225/75R15, 235/75R15, 245/75R16, 265/75R16) are WRONG",
+        "R15 and R16 tires cannot fit on 20\" wheels"
+      ],
+      "recommendedTireSizes": ["275/55R20"]
+    },
+    {
+      "id": "e158469e-a495-4f26-ad18-43a971f4d2dc",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "partial",
+      "issues": [
+        "245/75R16, 265/75R16 valid for some configs",
+        "265/70R17 valid",
+        "265/65R17, 265/65R18, 275/55R20 - need to verify wheel options",
+        "16\" wheel listed but R17/R18/R20 tires included"
+      ],
+      "recommendedTireSizes": ["245/70R16", "245/75R16", "265/70R17"]
+    },
+    {
+      "id": "241ce075-d3ac-433c-85b7-72fd5326494f",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "partial",
+      "issues": [
+        "Same issues as 2005 Base - tire/wheel diameter mismatch"
+      ],
+      "recommendedTireSizes": ["245/70R16", "245/75R16", "265/70R17"]
+    },
+    {
+      "id": "b6517ef2-601a-4296-bcdb-4b3c82b4a860",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15 tires invalid - Z71 typically had 17\" wheels with 265/70R17 or 245/75R16"
+      ],
+      "recommendedTireSizes": ["245/75R16", "265/70R17"]
+    },
+    {
+      "id": "61aeca62-d44b-415c-899c-17f76c602230",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/70R17"]
+    },
+    {
+      "id": "fd18ae8d-0322-4085-85d1-e96f5feca584",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R16", "245/70R17", "265/70R17"]
+    },
+    {
+      "id": "d03a9bd7-2606-43a7-9859-86f6ad8c8c8c",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "SS",
+      "status": "invalid",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "SS ONLY had 275/55R20 - all listed R15/R16 sizes are completely wrong"
+      ],
+      "recommendedTireSizes": ["275/55R20"]
+    },
+    {
+      "id": "8b4f0f78-2d3b-4a1b-822e-bf87415388c8",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15 tires invalid - WT typically had 245/70R16 or 235/75R16"
+      ],
+      "recommendedTireSizes": ["235/75R16", "245/70R16"]
+    },
+    {
+      "id": "473c87a2-91a5-4f0e-b31c-579dbd9916be",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid for 2007+ Gen2",
+        "20\" wheels should have 275/55R20 only",
+        "LTZ could also have 265/65R18 option"
+      ],
+      "recommendedTireSizes": ["265/65R18", "275/55R20"]
+    },
+    {
+      "id": "414a1634-b25b-4d56-aa27-b6a00cda3c94",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid for Gen2 - should have 245/70R17 or 265/70R17"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "c84202fb-9fb8-436e-9afe-bcfbaf2629e0",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "All tire sizes valid for Gen2: 265/70R17, 265/65R17, 265/65R18, 275/55R20, 285/45R22"
+    },
+    {
+      "id": "92977a9a-13ed-4242-97ae-68a662b9e777",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid - Z71 typically had 265/65R18 with 18\" wheels"
+      ],
+      "recommendedTireSizes": ["265/70R17", "265/65R18"]
+    },
+    {
+      "id": "0a162153-1cea-4ca2-adfe-5679630f59d9",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid - 18\" wheels should have 265/65R18"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "05df20b8-1ad2-4713-b113-78e4f0b94f21",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid - WT should have 245/70R17 or 265/70R17"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "dfad47bd-c9cb-4c77-adca-0f1ba6bf2336",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "862c51f6-a66b-4c01-acc1-140d70378591",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Railway import with correct tire sizes: 265/70R17, 265/65R18, 275/55R20, 265/60R19"
+    },
+    {
+      "id": "d47f7836-960e-4bd8-a9a6-11ee8502370f",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen2 tire sizes"
+    },
+    {
+      "id": "3c0f5fba-c098-4dba-a598-984193e57439",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid for LTZ with 20\" wheels"
+      ],
+      "recommendedTireSizes": ["275/55R20"]
+    },
+    {
+      "id": "92fb7df2-c51a-49e7-9122-264785a43420",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "8b32bd03-6a71-489d-a3bf-036cf8639e46",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "a76f5f27-4477-4e73-b54e-d3335bcfedad",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "003b22f8-9c28-484d-917f-9d6622d8d48e",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT, LS, LT",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid tire sizes: 245/70R17, 265/65R18"
+    },
+    {
+      "id": "1539ff2e-2b91-419e-bdae-13717bc1009c",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "33e4aa79-0c3a-43e0-a94c-c56ecb2ce983",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "8137cdff-e641-4688-aea7-29e127a8ee19",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "d8856a84-2ce1-4c99-97d7-e8875a19b328",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen2 tire sizes"
+    },
+    {
+      "id": "6bc01f81-7ba9-410c-94fa-8e6b140531a7",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "ba7f84a8-8ec1-46d1-9446-578bb8720f60",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid - LTZ with 20\" should have 275/55R20"
+      ],
+      "recommendedTireSizes": ["275/55R20"]
+    },
+    {
+      "id": "414d6d7c-b48d-4a60-b18a-4e90733a1e71",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "6eb8e1e9-3bb4-4b8b-b205-91c1347bb57a",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["275/55R20"]
+    },
+    {
+      "id": "59ff083f-8b21-4b82-bef1-a9991b7367fd",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "c5b11ee0-b578-4ee3-b2dc-cc9e0a8470a1",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "29557ba7-fecb-4d94-80c0-eb40db5ffeb7",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "84019f47-5002-42e0-a19d-9ed174938682",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen2 tire sizes"
+    },
+    {
+      "id": "5ea21dbe-385e-4353-8021-c56aef07fac0",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Railway import with correct tire sizes"
+    },
+    {
+      "id": "582d99ba-8a64-4bec-82f3-97aa120062c0",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen2 tire sizes"
+    },
+    {
+      "id": "dbca1ad3-9df4-49e1-ad93-257a6aac753f",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "145562a7-4d91-41d1-9713-eb3b46214232",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["275/55R20"]
+    },
+    {
+      "id": "0b9bc3d7-a7ab-48f3-b2bc-9dd7b61b4156",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "6689427a-2111-4bfb-b132-720073e20216",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "78c2423d-216c-44ba-87fd-25ef473b07c5",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "8c58369f-1f22-4126-8125-35c60db0aa3a",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Railway import with correct tire sizes"
+    },
+    {
+      "id": "74295293-1745-4636-ae83-6812eccae8e9",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "d6c33f74-46ad-456e-99f8-78107a421173",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["275/55R20"]
+    },
+    {
+      "id": "e89cddf9-9337-4f33-bfda-5728b0a210b1",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Railway import with correct tire sizes"
+    },
+    {
+      "id": "a55d0dac-9131-4f08-8bf5-0caf60a01ced",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "0914a9fa-683e-4787-a858-bf78ecddd341",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "b521c630-d676-42f9-ac95-c3248d348a64",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen2 tire sizes"
+    },
+    {
+      "id": "a5e565f4-b968-41fb-aced-9644b29f9621",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "2772f3e1-d740-451d-9aac-ee94ce7283e1",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["275/55R20"]
+    },
+    {
+      "id": "bb0c8228-5ce4-4971-bbdd-de8f8e8886bd",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT, LS, LT",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid tire sizes: 245/70R17, 265/65R18"
+    },
+    {
+      "id": "98b065e5-8056-4904-bd80-37d3f97e1bca",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen2 tire sizes"
+    },
+    {
+      "id": "2c5bdc23-e7d2-439a-9d6c-2f21d6d3f053",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "eb3d442a-6c8d-4969-9ff5-dc9293afa27d",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Z71",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["265/65R18"]
+    },
+    {
+      "id": "a0df02ee-8fc0-4d85-bb87-b2963f0d2ef7",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "06c74309-7112-4349-bb95-1d2cce589c18",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "invalid",
+      "issues": [
+        "R15/R16 tires invalid"
+      ],
+      "recommendedTireSizes": ["245/70R17", "265/70R17"]
+    },
+    {
+      "id": "424ad483-e965-4909-9c5d-e59ba6889624",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen3 tire sizes: 265/70R17, 275/65R18, 275/55R20, 285/45R22"
+    },
+    {
+      "id": "4bd8367b-bb36-47ff-905a-721112960c10",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen3 tire sizes"
+    },
+    {
+      "id": "b29f454c-0853-4d65-b1be-dfefc4797a1e",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen3 tire sizes with 20\" wheels"
+    },
+    {
+      "id": "c1d5bac9-9449-4df3-8e09-3129aa754ad2",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT Z71",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen3 tire sizes with 18\" wheels"
+    },
+    {
+      "id": "3c5ff038-e226-4c33-a8bb-50f5bdcdd230",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT, LS, LT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "partial",
+      "tireSizeStatus": "partial",
+      "issues": [
+        "22\" wheel size valid but tire sizes should include 285/45R22",
+        "245/70R17 and 265/65R18 valid for 17\"/18\" options",
+        "275/55R20 valid for 20\" option"
+      ],
+      "recommendedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]
+    },
+    {
+      "id": "0e33e3ec-b19d-4a17-80a2-f767cc0f1ed0",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen3 tire sizes"
+    },
+    {
+      "id": "f249cfa2-026d-4bc9-aa89-14b0ca8d7454",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "partial",
+      "tireSizeStatus": "partial",
+      "issues": [
+        "22\" wheel is highest option - good",
+        "275/65R18 should be 265/65R18",
+        "275/60R20 should be 275/55R20"
+      ],
+      "recommendedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]
+    },
+    {
+      "id": "96fabdac-93db-4781-afa4-165e9431edd2",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "High Country",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "High Country came with 22\" wheels standard, valid tire sizes"
+    },
+    {
+      "id": "1575e8f3-6d8c-4f91-ba22-bfd4ddf4978f",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT Z71",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen3 tire sizes"
+    },
+    {
+      "id": "0efdea1c-eb17-4702-b00a-482b867d0c47",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "invalid",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "partial",
+      "tireSizeStatus": "partial",
+      "issues": [
+        "Wheel sizes only show front axle - missing rear",
+        "No 17\" wheel option which was standard for Base",
+        "Missing 265/70R17 tire size option"
+      ],
+      "recommendedTireSizes": ["265/70R17", "265/65R18", "275/55R20", "285/45R22"]
+    },
+    {
+      "id": "33afcdf8-0036-456d-8467-5b4c63f8825f",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Valid Gen3 tire sizes"
+    },
+    {
+      "id": "5d464504-0f43-41ec-aabe-adb0da4645a2",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LS",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "partial",
+      "issues": [
+        "17\" wheel should have 265/70R17 tire, not R18/R20/R22 sizes",
+        "Tire sizes listed don't match wheel diameter"
+      ],
+      "recommendedTireSizes": ["265/70R17"]
+    },
+    {
+      "id": "8ab44400-aa24-48d2-a4eb-a7568f37aff0",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "flagged",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "partial",
+      "issues": [
+        "17\" wheel should have 265/70R17 tire, not R18/R20/R22 sizes"
+      ],
+      "recommendedTireSizes": ["265/70R17"]
+    },
+    {
+      "id": "53c2ef0c-b99c-406f-b76a-d59a3ac8b395",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "High Country",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "22\" wheels standard for High Country"
+    },
+    {
+      "id": "76674f20-2528-4553-b408-4dafd004989e",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "20\" wheels for LTZ, valid tire sizes"
+    },
+    {
+      "id": "7f591ffb-c3b1-4bcb-8db5-f9038a681ce0",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "Railway import with comprehensive wheel/tire options"
+    },
+    {
+      "id": "c5449935-59d0-43be-8916-1e326628a9ed",
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPatternStatus": "correct",
+      "hubBoreStatus": "correct",
+      "wheelSizeStatus": "correct",
+      "tireSizeStatus": "correct",
+      "issues": [],
+      "notes": "20\" wheels for LTZ, valid tire sizes"
+    }
+  ],
+  "recommendations": {
+    "highPriority": [
+      "Remove ALL R15 tire sizes (225/75R15, 235/75R15) - Silverado 1500 never had 15\" factory wheels",
+      "Fix SS trim tire sizes (2005-2006) - should ONLY have 275/55R20",
+      "Fix 2015 Base entry - wheel data incomplete"
+    ],
+    "mediumPriority": [
+      "Update Gen2 (2007-2013) tire sizes to: 245/70R17, 265/70R17, 265/65R18, 275/55R20",
+      "Fix wheel/tire diameter mismatches where 16\" tires listed for 17\"+ wheels",
+      "Ensure tire sizes match wheel diameters consistently"
+    ],
+    "lowPriority": [
+      "Add 285/45R22 to vehicles with 22\" wheel option",
+      "Add 265/65R17 where applicable (some Gen2 trims)",
+      "Consider adding aftermarket wheel size options (19\" etc.)"
+    ]
+  },
+  "sources": [
+    "https://tiresize.com/tires/Chevrolet/Silverado/",
+    "https://hulkoffsets.com/blogs/news/silverado-wheel-fitment-guide",
+    "https://www.arkonoffroad.com/blogs/732/what-fits-a-2014-2018-silverado",
+    "https://www.mrwheeldeal.com/blogs/1340/2014-2018-chevrolet-silverado-fitment-guide",
+    "https://www.ahgautoservice.com/what-size-tires-fit-on-a-chevy-silverado-1500/"
+  ]
+}

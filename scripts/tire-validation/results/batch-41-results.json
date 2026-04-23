@@ -1,0 +1,1047 @@
+{
+  "batchId": "41",
+  "processedAt": "2026-04-21T21:54:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "300C",
+      "trims": [
+        { "trim": "AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "RWD", "tireSizes": ["225/60R18"] },
+        { "trim": "SRT-8", "tireSizes": ["245/45R20", "255/45R20"], "isStaggered": true, "front": "245/45R20", "rear": "255/45R20" }
+      ],
+      "allTireSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "currentTireSizes": ["225/60R18", "245/45R20"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Missing 255/45R20 rear size for SRT-8 staggered setup"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "300C",
+      "trims": [
+        { "trim": "AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "RWD", "tireSizes": ["225/60R18"] },
+        { "trim": "SRT-8", "tireSizes": ["245/45R20", "255/45R20"], "isStaggered": true, "front": "245/45R20", "rear": "255/45R20" }
+      ],
+      "allTireSizes": ["225/60R18", "245/45R20", "255/45R20"],
+      "currentTireSizes": ["225/60R18", "245/45R20", "255/45R20", "215/65R17", "235/55R19", "245/45ZR20"],
+      "validationStatus": "NEEDS_REVIEW",
+      "notes": "Has extra sizes not matching OEM spec (215/65R17, 235/55R19). 245/45ZR20 should normalize to 245/45R20"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "300C",
+      "trims": [
+        { "trim": "AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "RWD", "tireSizes": ["225/60R18"] }
+      ],
+      "allTireSizes": ["225/60R18"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Missing all tire sizes. Note: 2004 300C only available in limited markets as 2005 model year preview"
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [
+        { "trim": "SRT8", "tireSizes": ["245/45R20"], "isStaggered": false }
+      ],
+      "allTireSizes": ["245/45R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "2012-2014 300 SRT8 uses 245/45R20 square setup (not staggered)"
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [
+        { "trim": "SRT8", "tireSizes": ["245/45R20"], "isStaggered": false }
+      ],
+      "allTireSizes": ["245/45R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "2012-2014 300 SRT8 uses 245/45R20 square setup"
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [
+        { "trim": "SRT8", "tireSizes": ["245/45R20"], "isStaggered": false }
+      ],
+      "allTireSizes": ["245/45R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "2012-2014 300 SRT8 uses 245/45R20 square setup"
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [],
+      "allTireSizes": [],
+      "currentTireSizes": [],
+      "validationStatus": "INVALID_YEAR",
+      "notes": "No 300C SRT-8 produced in 2011 (gap between generations)"
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [
+        { "trim": "SRT8", "tireSizes": ["245/45R20", "255/45R20"], "isStaggered": true, "front": "245/45R20", "rear": "255/45R20" }
+      ],
+      "allTireSizes": ["245/45R20", "255/45R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "First-gen 300C SRT-8 uses staggered setup"
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [
+        { "trim": "SRT8", "tireSizes": ["245/45R20", "255/45R20"], "isStaggered": true, "front": "245/45R20", "rear": "255/45R20" }
+      ],
+      "allTireSizes": ["245/45R20", "255/45R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "First-gen 300C SRT-8 staggered setup"
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [
+        { "trim": "SRT8", "tireSizes": ["245/45R20", "255/45R20"], "isStaggered": true, "front": "245/45R20", "rear": "255/45R20" }
+      ],
+      "allTireSizes": ["245/45R20", "255/45R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "First-gen 300C SRT-8 staggered setup"
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [
+        { "trim": "SRT8", "tireSizes": ["245/45R20", "255/45R20"], "isStaggered": true, "front": "245/45R20", "rear": "255/45R20" }
+      ],
+      "allTireSizes": ["245/45R20", "255/45R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "First-gen 300C SRT-8 staggered setup"
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [
+        { "trim": "SRT8", "tireSizes": ["245/45R20"] },
+        { "trim": "SRT8 Performance Tires", "tireSizes": ["245/45R20", "255/45R20"], "isStaggered": true, "front": "245/45R20", "rear": "255/45R20" }
+      ],
+      "allTireSizes": ["245/45R20", "255/45R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Standard SRT8 is square 245/45R20, Performance Tires option is staggered"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [
+        { "trim": "SRT-8", "tireSizes": ["245/45R20", "255/45R20"], "isStaggered": true, "front": "245/45R20", "rear": "255/45R20" }
+      ],
+      "allTireSizes": ["245/45R20", "255/45R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "First year of 300C SRT-8, staggered setup"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "300C-SRT-8",
+      "trims": [],
+      "allTireSizes": [],
+      "currentTireSizes": [],
+      "validationStatus": "INVALID_YEAR",
+      "notes": "No 300C SRT-8 in 2004 - model started 2005"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "300M",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["225/55R17"] },
+        { "trim": "Special Edition", "tireSizes": ["225/55R17", "245/45R18"] }
+      ],
+      "allTireSizes": ["225/55R17", "245/45R18"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Last year of 300M production"
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "300M",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["225/55R17"] },
+        { "trim": "Special Edition", "tireSizes": ["245/45R18"] }
+      ],
+      "allTireSizes": ["225/55R17", "245/45R18"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "300M",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["225/60R16", "225/55R17"] },
+        { "trim": "Special Edition", "tireSizes": ["245/45R18"] }
+      ],
+      "allTireSizes": ["225/60R16", "225/55R17", "245/45R18"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "300M",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["225/60R16", "225/55R17"] }
+      ],
+      "allTireSizes": ["225/60R16", "225/55R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "300M",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["225/60R16", "225/55R17"] }
+      ],
+      "allTireSizes": ["225/60R16", "225/55R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Aspen",
+      "trims": [
+        { "trim": "Limited 2WD", "tireSizes": ["265/60R18", "265/50R20"] },
+        { "trim": "Limited 4WD", "tireSizes": ["265/60R18", "265/50R20"] },
+        { "trim": "Limited Hybrid", "tireSizes": ["265/60R18"] }
+      ],
+      "allTireSizes": ["265/60R18", "265/50R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Last year of Aspen production"
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Aspen",
+      "trims": [
+        { "trim": "Limited 2WD", "tireSizes": ["265/60R18", "265/50R20"] },
+        { "trim": "Limited 4WD", "tireSizes": ["265/60R18", "265/50R20"] }
+      ],
+      "allTireSizes": ["265/60R18", "265/50R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Aspen",
+      "trims": [
+        { "trim": "Limited 2WD", "tireSizes": ["265/60R18", "265/50R20"] },
+        { "trim": "Limited 4WD", "tireSizes": ["265/60R18", "265/50R20"] }
+      ],
+      "allTireSizes": ["265/60R18", "265/50R20"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "First year of Aspen production"
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Aspen",
+      "trims": [],
+      "allTireSizes": [],
+      "currentTireSizes": [],
+      "validationStatus": "INVALID_YEAR",
+      "notes": "Chrysler Aspen production started 2007"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Cirrus",
+      "trims": [
+        { "trim": "LX", "tireSizes": ["195/65R15"] },
+        { "trim": "LXi", "tireSizes": ["195/65R15"] }
+      ],
+      "allTireSizes": ["195/65R15"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Last year of Cirrus production"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["225/55R17"] },
+        { "trim": "LX", "tireSizes": ["225/60R16"] },
+        { "trim": "LXi", "tireSizes": ["225/60R16", "225/55R17"] }
+      ],
+      "allTireSizes": ["225/60R16", "225/55R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Last year of Concorde production"
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["225/55R17"] },
+        { "trim": "LX", "tireSizes": ["225/60R16"] },
+        { "trim": "LXi", "tireSizes": ["225/60R16", "225/55R17"] }
+      ],
+      "allTireSizes": ["225/60R16", "225/55R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "trims": [
+        { "trim": "Limited", "tireSizes": ["225/55R17"] },
+        { "trim": "LX", "tireSizes": ["205/70R15", "225/60R16"] },
+        { "trim": "LXi", "tireSizes": ["225/60R16", "225/55R17"] }
+      ],
+      "allTireSizes": ["205/70R15", "225/60R16", "225/55R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "trims": [
+        { "trim": "LX", "tireSizes": ["205/70R15", "225/60R16"] },
+        { "trim": "LXi", "tireSizes": ["225/60R16"] }
+      ],
+      "allTireSizes": ["205/70R15", "225/60R16"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "trims": [
+        { "trim": "LX", "tireSizes": ["205/70R15", "225/60R16"] },
+        { "trim": "LXi", "tireSizes": ["225/60R16"] }
+      ],
+      "allTireSizes": ["205/70R15", "225/60R16"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "trims": [
+        { "trim": "Coupe", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Roadster", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" }
+      ],
+      "allTireSizes": ["225/40R18", "255/35R19"],
+      "currentTireSizes": ["225/40R18", "255/35R19"],
+      "validationStatus": "VALID",
+      "notes": "All Crossfire models use staggered setup. Last year of production."
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "trims": [
+        { "trim": "Coupe Base Model", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Coupe Limited", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Roadster Base Model", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Roadster Limited", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" }
+      ],
+      "allTireSizes": ["225/40R18", "255/35R19"],
+      "currentTireSizes": ["225/40R18", "255/35R19"],
+      "validationStatus": "VALID",
+      "notes": "All Crossfire models use staggered setup"
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "trims": [
+        { "trim": "Coupe Base Model", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Coupe Limited", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Coupe SRT-6", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Roadster Base Model", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Roadster Limited", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Roadster SRT-6", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" }
+      ],
+      "allTireSizes": ["225/40R18", "255/35R19"],
+      "currentTireSizes": ["225/40R18", "255/35R19"],
+      "validationStatus": "VALID",
+      "notes": "All Crossfire models use staggered setup"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "trims": [
+        { "trim": "Coupe Base Model", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Coupe Limited", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Coupe SRT-6", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Roadster Base Model", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Roadster Limited", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" },
+        { "trim": "Roadster SRT-6", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" }
+      ],
+      "allTireSizes": ["225/40R18", "255/35R19"],
+      "currentTireSizes": ["225/40R18", "255/35R19"],
+      "validationStatus": "VALID",
+      "notes": "All Crossfire models use staggered setup"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "trims": [
+        { "trim": "Coupe", "tireSizes": ["225/40R18", "255/35R19"], "isStaggered": true, "front": "225/40R18", "rear": "255/35R19" }
+      ],
+      "allTireSizes": ["225/40R18", "255/35R19"],
+      "currentTireSizes": ["225/40R18", "255/35R19"],
+      "validationStatus": "VALID",
+      "notes": "First year of Crossfire production. All models use staggered setup."
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "trims": [],
+      "allTireSizes": [],
+      "currentTireSizes": ["225/40R18", "255/35R19"],
+      "validationStatus": "INVALID_YEAR",
+      "notes": "Chrysler Crossfire production started 2004. Remove this year."
+    },
+    {
+      "year": 2026,
+      "make": "Chrysler",
+      "model": "Grand-Caravan",
+      "trims": [
+        { "trim": "SE", "tireSizes": ["235/65R17"] },
+        { "trim": "SXT", "tireSizes": ["235/65R17"] }
+      ],
+      "allTireSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Canada-only model based on Voyager platform"
+    },
+    {
+      "year": 2025,
+      "make": "Chrysler",
+      "model": "Grand-Caravan",
+      "trims": [
+        { "trim": "SE", "tireSizes": ["235/65R17"] },
+        { "trim": "SXT", "tireSizes": ["235/65R17"] }
+      ],
+      "allTireSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Canada-only model"
+    },
+    {
+      "year": 2024,
+      "make": "Chrysler",
+      "model": "Grand-Caravan",
+      "trims": [
+        { "trim": "SE", "tireSizes": ["235/65R17"] },
+        { "trim": "SXT", "tireSizes": ["235/65R17"] }
+      ],
+      "allTireSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Canada-only model"
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "Grand-Caravan",
+      "trims": [
+        { "trim": "SE", "tireSizes": ["235/65R17"] },
+        { "trim": "SXT", "tireSizes": ["235/65R17"] }
+      ],
+      "allTireSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Canada-only model"
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "Grand-Caravan",
+      "trims": [
+        { "trim": "SE", "tireSizes": ["235/65R17"] },
+        { "trim": "SXT", "tireSizes": ["235/65R17"] }
+      ],
+      "allTireSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Canada-only model"
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "Grand-Caravan",
+      "trims": [
+        { "trim": "SE", "tireSizes": ["235/65R17"] },
+        { "trim": "SXT", "tireSizes": ["235/65R17"] }
+      ],
+      "allTireSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "First year of Chrysler Grand Caravan (Canada). Based on Voyager platform."
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["225/65R16", "225/65R17"] }
+      ],
+      "allTireSizes": ["225/65R16", "225/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "European market Grand Voyager (RT platform)"
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["225/65R16", "225/65R17"] }
+      ],
+      "allTireSizes": ["225/65R16", "225/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "European market Grand Voyager"
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["225/65R16", "225/65R17"] }
+      ],
+      "allTireSizes": ["225/65R16", "225/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "European market Grand Voyager"
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["225/65R16", "225/65R17"] }
+      ],
+      "allTireSizes": ["225/65R16", "225/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "European market Grand Voyager"
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["225/65R16", "225/65R17"] }
+      ],
+      "allTireSizes": ["225/65R16", "225/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "European market Grand Voyager"
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["225/65R16", "225/65R17"] }
+      ],
+      "allTireSizes": ["225/65R16", "225/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "European market Grand Voyager"
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["225/65R16", "225/65R17"] }
+      ],
+      "allTireSizes": ["225/65R16", "225/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "European market Grand Voyager"
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["225/65R16", "225/65R17"] }
+      ],
+      "allTireSizes": ["225/65R16", "225/65R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "European market Grand Voyager (RT platform starts)"
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "LX", "tireSizes": ["215/70R15", "215/65R16"] },
+        { "trim": "Limited", "tireSizes": ["215/65R16", "225/60R16"] }
+      ],
+      "allTireSizes": ["215/70R15", "215/65R16", "225/60R16"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "RG platform Grand Voyager"
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "LX", "tireSizes": ["215/70R15", "215/65R16"] },
+        { "trim": "Limited", "tireSizes": ["215/65R16", "225/60R16"] }
+      ],
+      "allTireSizes": ["215/70R15", "215/65R16", "225/60R16"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "RG platform Grand Voyager"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "LX", "tireSizes": ["215/70R15", "215/65R16"] },
+        { "trim": "Limited", "tireSizes": ["215/65R16", "225/60R16"] }
+      ],
+      "allTireSizes": ["215/70R15", "215/65R16", "225/60R16"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "RG platform Grand Voyager"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "LX", "tireSizes": ["215/70R15", "215/65R16"] },
+        { "trim": "Limited", "tireSizes": ["215/65R16", "225/60R16"] }
+      ],
+      "allTireSizes": ["215/70R15", "215/65R16", "225/60R16"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "RG platform Grand Voyager"
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "LX", "tireSizes": ["215/70R15", "215/65R16"] },
+        { "trim": "Limited", "tireSizes": ["215/65R16"] }
+      ],
+      "allTireSizes": ["215/70R15", "215/65R16"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Base", "tireSizes": ["215/70R15"] },
+        { "trim": "LX", "tireSizes": ["215/70R15", "215/65R16"] }
+      ],
+      "allTireSizes": ["215/70R15", "215/65R16"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Base", "tireSizes": ["215/70R15"] },
+        { "trim": "LX", "tireSizes": ["215/70R15"] }
+      ],
+      "allTireSizes": ["215/70R15"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Grand-Voyager",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["205/75R14", "215/65R15"] },
+        { "trim": "SE", "tireSizes": ["215/65R15"] }
+      ],
+      "allTireSizes": ["205/75R14", "215/65R15"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "LHS",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["225/55R17"] }
+      ],
+      "allTireSizes": ["225/55R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Last year of LHS production"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "LHS",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["225/55R17"] }
+      ],
+      "allTireSizes": ["225/55R17"],
+      "currentTireSizes": [],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": ""
+    },
+    {
+      "year": 2026,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Select", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Select", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Select Premium", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Pinnacle", "tireSizes": ["235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/55R18", "235/50R20"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Current sizes don't match OEM spec. Should use 235/65R17, 235/60R18, 245/60R18, 245/50R20"
+    },
+    {
+      "year": 2026,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Select", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Select", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Pinnacle", "tireSizes": ["235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/65R17"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Missing 235/60R18, 245/60R18, 245/50R20"
+    },
+    {
+      "year": 2025,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Select", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Select", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid S", "tireSizes": ["235/60R18"] },
+        { "trim": "Hybrid Pinnacle", "tireSizes": ["235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/55R18", "235/50R20"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Current sizes don't match OEM spec"
+    },
+    {
+      "year": 2025,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Select", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Select", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Pinnacle", "tireSizes": ["235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/65R17"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Missing 235/60R18, 245/60R18, 245/50R20"
+    },
+    {
+      "year": 2024,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Select", "tireSizes": ["235/65R17"] },
+        { "trim": "Hybrid S", "tireSizes": ["235/60R18"] },
+        { "trim": "Hybrid Road Tripper", "tireSizes": ["235/60R18"] },
+        { "trim": "Hybrid Premium S", "tireSizes": ["235/60R18"] },
+        { "trim": "Hybrid Pinnacle", "tireSizes": ["235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/55R18", "235/50R20"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Current sizes don't match OEM spec"
+    },
+    {
+      "year": 2024,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Select", "tireSizes": ["235/65R17"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/65R17"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Missing higher trim sizes"
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17", "245/60R18"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Touring L", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Limited", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Pinnacle", "tireSizes": ["235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/65R17"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Missing 235/60R18, 245/60R18, 245/50R20"
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17", "245/60R18"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Touring L", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Limited", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Pinnacle", "tireSizes": ["235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/55R18", "235/50R20"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Current 235/55R18 and 235/50R20 are NOT OEM sizes"
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17", "245/60R18"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Touring L", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Limited", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Pinnacle", "tireSizes": ["235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/65R17"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Missing higher trim sizes"
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17", "245/60R18"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/55R18", "235/50R20"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Current sizes don't match OEM spec"
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17", "245/60R18"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Touring L", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Limited", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Pinnacle", "tireSizes": ["235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/55R18", "235/50R20"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Current sizes don't match OEM spec"
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17", "245/60R18"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "245/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["245/60R18", "245/50R20"] },
+        { "trim": "Pinnacle", "tireSizes": ["245/50R20"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/60R18", "245/50R20"],
+      "currentTireSizes": ["235/65R17"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Missing higher trim sizes"
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17", "235/60R18", "245/50R20"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "235/60R18", "245/50R20"] },
+        { "trim": "Touring L Plus", "tireSizes": ["235/65R17", "235/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["235/60R18", "245/50R20"] },
+        { "trim": "Red S", "tireSizes": ["245/50R20"] },
+        { "trim": "Hybrid Touring", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Touring L", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Limited", "tireSizes": ["235/65R17", "235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/50R20"],
+      "currentTireSizes": ["235/65R17"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "Missing 235/60R18, 245/50R20"
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17", "235/60R18", "245/50R20"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "235/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["235/60R18", "245/50R20"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/50R20"],
+      "currentTireSizes": ["235/55R18", "235/50R20"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "235/55R18 is NOT an OEM size. Should be 235/60R18"
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "Touring", "tireSizes": ["235/65R17", "235/60R18", "245/50R20"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "235/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["235/60R18", "245/50R20"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/50R20"],
+      "currentTireSizes": ["235/65R17", "235/60R18", "245/55R19", "245/50R20", "245/60R18"],
+      "validationStatus": "NEEDS_REVIEW",
+      "notes": "Has extra sizes (245/55R19) not matching OEM spec. 245/60R18 is valid for 2021+"
+    },
+    {
+      "year": 2019,
+      "make": "Chrysler",
+      "model": "Pacifica",
+      "trims": [
+        { "trim": "L", "tireSizes": ["235/65R17"] },
+        { "trim": "LX", "tireSizes": ["235/65R17"] },
+        { "trim": "Touring Plus", "tireSizes": ["235/65R17", "235/60R18", "245/50R20"] },
+        { "trim": "Touring L", "tireSizes": ["235/65R17", "235/60R18", "245/50R20"] },
+        { "trim": "Touring L Plus", "tireSizes": ["235/65R17", "235/60R18", "245/50R20"] },
+        { "trim": "Limited", "tireSizes": ["235/60R18", "245/50R20"] },
+        { "trim": "Hybrid Touring Plus", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Touring L", "tireSizes": ["235/65R17", "235/60R18"] },
+        { "trim": "Hybrid Limited", "tireSizes": ["235/65R17", "235/60R18"] }
+      ],
+      "allTireSizes": ["235/65R17", "235/60R18", "245/50R20"],
+      "currentTireSizes": ["235/55R18", "235/50R20"],
+      "validationStatus": "NEEDS_UPDATE",
+      "notes": "235/55R18 and 235/50R20 are NOT OEM sizes. Should use 235/65R17, 235/60R18, 245/50R20"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "valid": 5,
+    "needsUpdate": 61,
+    "needsReview": 3,
+    "invalidYear": 6,
+    "staggeredSetups": 15
+  },
+  "criticalFindings": [
+    "Chrysler Crossfire (all years 2004-2008): STAGGERED setup - front 225/40R18, rear 255/35R19",
+    "Chrysler 300C SRT-8 (2005-2010): STAGGERED setup - front 245/45R20, rear 255/45R20",
+    "Chrysler 300C SRT-8 (2012-2014): SQUARE setup - 245/45R20 all around",
+    "Chrysler Pacifica: Current DB has 235/55R18 which is NOT an OEM size - should be 235/60R18",
+    "Chrysler Pacifica: Current DB has 235/50R20 which is NOT an OEM size - should be 245/50R20",
+    "Chrysler Grand Caravan: Canada-only model, uses Voyager platform - 235/65R17",
+    "Chrysler Grand Voyager (2008-2015): European market only, uses 225/65R16 or 225/65R17",
+    "Invalid years: 2003 Crossfire (started 2004), 2004 300C SRT-8 (started 2005), 2006 Aspen (started 2007), 2011 300C SRT-8 (gap year)"
+  ]
+}

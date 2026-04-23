@@ -1,0 +1,1339 @@
+{
+  "batchId": "57",
+  "processedAt": "2026-04-21T21:17:00Z",
+  "totalVehicles": 75,
+  "successCount": 75,
+  "failureCount": 0,
+  "results": [
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "e-z",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 39 }
+        ],
+        "tireSizes": ["205/60R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Chinese market sedan based on Corolla platform"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "e-z",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 39 }
+        ],
+        "tireSizes": ["205/60R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Chinese market sedan based on Corolla platform"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "echo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14", "185/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "echo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14", "185/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "echo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14", "185/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "echo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14", "185/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "echo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "echo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "etios-valco",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6, "offset": 40 }
+        ],
+        "tireSizes": ["175/65R14", "185/60R15", "185/55R16", "185/50R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Indonesian market hatchback"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "etios-valco",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 5.5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14", "185/60R15", "185/55R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Indonesian market hatchback"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "etios-valco",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14", "185/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Indonesian market hatchback"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "etios-valco",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14", "185/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Indonesian market hatchback"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "etios-valco",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14", "185/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Indonesian market hatchback"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "etios-valco",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Indonesian market hatchback"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "etios-valco",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Indonesian market hatchback"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 15 },
+          { "diameter": 20, "width": 7, "offset": 15 }
+        ],
+        "tireSizes": ["265/70R17", "245/60R20"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Middle East/JDM continued production"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 15 },
+          { "diameter": 20, "width": 7, "offset": 15 }
+        ],
+        "tireSizes": ["265/70R17", "245/60R20"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 15 },
+          { "diameter": 20, "width": 7, "offset": 15 }
+        ],
+        "tireSizes": ["265/70R17", "245/60R20"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 15 },
+          { "diameter": 20, "width": 7, "offset": 15 }
+        ],
+        "tireSizes": ["265/70R17", "245/60R20"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 15 },
+          { "diameter": 20, "width": 7, "offset": 15 }
+        ],
+        "tireSizes": ["265/70R17", "245/60R20"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 15 },
+          { "diameter": 20, "width": 7, "offset": 15 }
+        ],
+        "tireSizes": ["265/70R17", "245/60R20"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 15 },
+          { "diameter": 20, "width": 7, "offset": 15 }
+        ],
+        "tireSizes": ["265/70R17", "245/60R20"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 15 },
+          { "diameter": 20, "width": 7, "offset": 15 }
+        ],
+        "tireSizes": ["265/70R17", "245/60R20"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7.5, "offset": 15 },
+          { "diameter": 20, "width": 7, "offset": 15 }
+        ],
+        "tireSizes": ["265/70R17", "245/60R20"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 15 },
+          { "diameter": 16, "width": 7.5, "offset": 15 },
+          { "diameter": 17, "width": 7.5, "offset": 15 },
+          { "diameter": 20, "width": 7, "offset": 15 }
+        ],
+        "tireSizes": ["265/75R16", "265/70R17", "275/70R17", "245/60R20"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 15 },
+          { "diameter": 17, "width": 7.5, "offset": 15 }
+        ],
+        "tireSizes": ["265/75R16", "265/70R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 15 },
+          { "diameter": 17, "width": 7.5, "offset": 15 }
+        ],
+        "tireSizes": ["265/75R16", "265/70R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 15 },
+          { "diameter": 17, "width": 7.5, "offset": 15 }
+        ],
+        "tireSizes": ["265/75R16", "265/70R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 15 },
+          { "diameter": 17, "width": 7.5, "offset": 15 }
+        ],
+        "tireSizes": ["265/75R16", "265/70R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 15 },
+          { "diameter": 17, "width": 7.5, "offset": 15 }
+        ],
+        "tireSizes": ["265/75R16", "265/70R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 15 },
+          { "diameter": 17, "width": 7.5, "offset": 15 }
+        ],
+        "tireSizes": ["265/75R16", "265/70R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 15 },
+          { "diameter": 17, "width": 7.5, "offset": 15 }
+        ],
+        "tireSizes": ["265/75R16", "265/70R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "funcargo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "tireSizes": ["175/65R14", "175/60R15", "185/60R15", "165/75R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM market compact MPV"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "funcargo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "tireSizes": ["175/65R14", "175/60R15", "185/60R15", "165/75R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM market compact MPV"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "funcargo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "tireSizes": ["175/65R14", "175/60R15", "185/60R15", "165/75R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM market compact MPV"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "funcargo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "tireSizes": ["175/65R14", "175/60R15", "185/60R15", "165/75R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM market compact MPV"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "funcargo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14", "175/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM market compact MPV"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "funcargo",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ],
+        "tireSizes": ["175/65R14", "175/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM market compact MPV"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "gaia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "tireSizes": ["195/65R14", "195/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market minivan"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "gaia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "tireSizes": ["195/65R14", "195/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market minivan"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "gaia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "tireSizes": ["195/65R14", "195/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market minivan"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "gaia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "tireSizes": ["195/65R14", "195/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market minivan"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "gaia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "tireSizes": ["195/65R14", "195/60R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market minivan"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "grand-hiace",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 29 },
+          { "diameter": 15, "width": 6, "offset": 30 }
+        ],
+        "tireSizes": ["205/70R15", "215/65R15", "215/70R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market luxury van"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "grand-hiace",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 29 },
+          { "diameter": 15, "width": 6, "offset": 30 }
+        ],
+        "tireSizes": ["205/70R15", "215/65R15", "215/70R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market luxury van"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "grand-hiace",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 29 },
+          { "diameter": 15, "width": 6, "offset": 30 }
+        ],
+        "tireSizes": ["205/70R15", "215/65R15", "215/70R15"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market luxury van"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "gt-86",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 48 },
+          { "diameter": 18, "width": 7, "offset": 48 },
+          { "diameter": 18, "width": 7.5, "offset": 48 }
+        ],
+        "tireSizes": ["205/55R16", "215/45R17", "215/40R18"],
+        "lugNutThread": "M12x1.25"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "gt-86",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 48 },
+          { "diameter": 18, "width": 7, "offset": 48 }
+        ],
+        "tireSizes": ["205/55R16", "215/45R17", "215/40R18"],
+        "lugNutThread": "M12x1.25"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "gt-86",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 48 },
+          { "diameter": 18, "width": 7, "offset": 48 }
+        ],
+        "tireSizes": ["205/55R16", "215/45R17", "215/40R18"],
+        "lugNutThread": "M12x1.25"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "gt-86",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 48 },
+          { "diameter": 18, "width": 7, "offset": 48 }
+        ],
+        "tireSizes": ["205/55R16", "215/45R17", "215/40R18"],
+        "lugNutThread": "M12x1.25"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "gt-86",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 48 },
+          { "diameter": 18, "width": 7, "offset": 48 }
+        ],
+        "tireSizes": ["205/55R16", "215/45R17", "215/40R18"],
+        "lugNutThread": "M12x1.25"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "gt-86",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ],
+        "tireSizes": ["205/55R16", "215/45R17"],
+        "lugNutThread": "M12x1.25"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "gt-86",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ],
+        "tireSizes": ["205/55R16", "215/45R17"],
+        "lugNutThread": "M12x1.25"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "gt-86",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ],
+        "tireSizes": ["205/55R16", "215/45R17"],
+        "lugNutThread": "M12x1.25"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "gt-86",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ],
+        "tireSizes": ["205/55R16", "215/45R17"],
+        "lugNutThread": "M12x1.25"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "highlander",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 35 },
+          { "diameter": 17, "width": 7.5, "offset": 30 },
+          { "diameter": 19, "width": 7.5, "offset": 35 }
+        ],
+        "tireSizes": ["225/65R17", "245/55R19"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "2nd generation XU40"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "highlander",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 35 },
+          { "diameter": 17, "width": 7.5, "offset": 30 },
+          { "diameter": 19, "width": 7.5, "offset": 35 }
+        ],
+        "tireSizes": ["225/65R17", "245/55R19"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "2nd generation XU40"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "highlander",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 5.5, "offset": 25 },
+          { "diameter": 17, "width": 7.5, "offset": 30 },
+          { "diameter": 18, "width": 7.5, "offset": 40 }
+        ],
+        "tireSizes": ["225/70R15", "245/80R16", "215/65R17", "215/75R18"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "1st generation XU20 final year"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "highlander",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 35 }
+        ],
+        "tireSizes": ["225/70R16", "225/65R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "1st generation XU20"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "highlander",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 35 }
+        ],
+        "tireSizes": ["225/70R16", "225/65R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "1st generation XU20"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "highlander",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 35 }
+        ],
+        "tireSizes": ["225/70R16", "225/65R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "1st generation XU20"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "highlander",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 35 }
+        ],
+        "tireSizes": ["225/70R16", "225/65R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "1st generation XU20"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "highlander",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "tireSizes": ["225/70R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "1st generation XU20"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "highlander",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "tireSizes": ["225/70R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "1st generation XU20"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "hilux-champ",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 16, "width": 6.5, "offset": 30 }
+        ],
+        "tireSizes": ["205/70R15", "215/65R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheel-size.com (inferred from Hilux IMV platform)",
+      "confidence": "medium",
+      "notes": "Thai market pickup based on Hilux IMV platform"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "hilux-champ",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 16, "width": 6.5, "offset": 30 }
+        ],
+        "tireSizes": ["205/70R15", "215/65R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheel-size.com (inferred from Hilux IMV platform)",
+      "confidence": "medium",
+      "notes": "Thai market pickup based on Hilux IMV platform"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "hilux-champ",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 16, "width": 6.5, "offset": 30 }
+        ],
+        "tireSizes": ["205/70R15", "215/65R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheel-size.com (inferred from Hilux IMV platform)",
+      "confidence": "medium",
+      "notes": "Thai market pickup based on Hilux IMV platform"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "hilux-rangga",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 16, "width": 6.5, "offset": 30 }
+        ],
+        "tireSizes": ["205/70R15", "215/65R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheel-size.com (inferred from Hilux IMV platform)",
+      "confidence": "medium",
+      "notes": "Indonesian market chassis-cab based on Hilux IMV platform"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "hilux-rangga",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 16, "width": 6.5, "offset": 30 }
+        ],
+        "tireSizes": ["205/70R15", "215/65R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheel-size.com (inferred from Hilux IMV platform)",
+      "confidence": "medium",
+      "notes": "Indonesian market chassis-cab based on Hilux IMV platform"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "hilux-stout",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 16, "width": 6.5, "offset": 30 }
+        ],
+        "tireSizes": ["205/70R15", "215/65R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheel-size.com (inferred from Hilux IMV platform)",
+      "confidence": "medium",
+      "notes": "Latin American market pickup based on Hilux IMV platform"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "hilux-stout",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 30 },
+          { "diameter": 16, "width": 6.5, "offset": 30 }
+        ],
+        "tireSizes": ["205/70R15", "215/65R16"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "wheel-size.com (inferred from Hilux IMV platform)",
+      "confidence": "medium",
+      "notes": "Latin American market pickup based on Hilux IMV platform"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "hilux-surf",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "tireSizes": ["265/70R16", "265/65R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market 4Runner equivalent"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "hilux-surf",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "tireSizes": ["265/70R16", "265/65R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market 4Runner equivalent"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "hilux-surf",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "tireSizes": ["265/70R16", "265/65R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market 4Runner equivalent"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "hilux-surf",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "tireSizes": ["265/70R16", "265/65R17"],
+        "lugNutThread": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM market 4Runner equivalent, 4th gen N210"
+    }
+  ]
+}

@@ -1,0 +1,1275 @@
+{
+  "batchId": "90s-batch-12",
+  "completedAt": "2026-04-22T12:45:00.000Z",
+  "results": [
+    {
+      "year": 1997,
+      "make": "Infiniti",
+      "model": "Q45",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false,
+        "notes": "Gen II FY33. 4.1L V8 VH41DE engine."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Infiniti",
+      "model": "Q45",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false,
+        "notes": "Gen II FY33. Same specs as 1997."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Infiniti",
+      "model": "Q45",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false,
+        "notes": "Gen II FY33. Same specs as 1997-1998."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Infiniti",
+      "model": "J30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "J30 was not produced until 1993. Model years: 1993-1997 only."
+    },
+    {
+      "year": 1991,
+      "make": "Infiniti",
+      "model": "J30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "J30 was not produced until 1993. Model years: 1993-1997 only."
+    },
+    {
+      "year": 1992,
+      "make": "Infiniti",
+      "model": "J30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "J30 was not produced until 1993. Model years: 1993-1997 only."
+    },
+    {
+      "year": 1993,
+      "make": "Infiniti",
+      "model": "J30",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false,
+        "notes": "Y32 platform. 3.0L V6 VG30DE engine."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Infiniti",
+      "model": "J30",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false,
+        "notes": "Y32 platform. Same specs as 1993."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Infiniti",
+      "model": "J30",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false,
+        "notes": "Y32 platform. Same specs as 1993-1994."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Infiniti",
+      "model": "J30",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false,
+        "notes": "Y32 platform. Same specs as 1993-1995."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Infiniti",
+      "model": "J30",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false,
+        "notes": "Y32 platform. Final model year."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Infiniti",
+      "model": "J30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "J30 production ended in 1997. Model years: 1993-1997 only."
+    },
+    {
+      "year": 1999,
+      "make": "Infiniti",
+      "model": "J30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "J30 production ended in 1997. Model years: 1993-1997 only."
+    },
+    {
+      "year": 1990,
+      "make": "Infiniti",
+      "model": "I30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "I30 was not produced until 1996. Model years: 1996-2001 only."
+    },
+    {
+      "year": 1991,
+      "make": "Infiniti",
+      "model": "I30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "I30 was not produced until 1996. Model years: 1996-2001 only."
+    },
+    {
+      "year": 1992,
+      "make": "Infiniti",
+      "model": "I30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "I30 was not produced until 1996. Model years: 1996-2001 only."
+    },
+    {
+      "year": 1993,
+      "make": "Infiniti",
+      "model": "I30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "I30 was not produced until 1996. Model years: 1996-2001 only."
+    },
+    {
+      "year": 1994,
+      "make": "Infiniti",
+      "model": "I30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "I30 was not produced until 1996. Model years: 1996-2001 only."
+    },
+    {
+      "year": 1995,
+      "make": "Infiniti",
+      "model": "I30",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "I30 was not produced until 1996. Model years: 1996-2001 only."
+    },
+    {
+      "year": 1996,
+      "make": "Infiniti",
+      "model": "I30",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false,
+        "notes": "Gen I A32 platform. First model year."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Infiniti",
+      "model": "I30",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false,
+        "notes": "Gen I A32 platform. Same specs as 1996."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Infiniti",
+      "model": "I30",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/55R16"],
+        "staggered": false,
+        "notes": "Gen I A32 platform. Touring trim gets 16\" wheels."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Infiniti",
+      "model": "I30",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/55R16"],
+        "staggered": false,
+        "notes": "Gen I A32 platform. Same as 1998."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Infiniti",
+      "model": "G20",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["tiresize.com", "g20.net"],
+      "notes": "G20 was not produced until 1991. Model years: 1991-1996 (Gen I), 1999-2002 (Gen II)."
+    },
+    {
+      "year": 1991,
+      "make": "Infiniti",
+      "model": "G20",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R14"],
+        "staggered": false,
+        "notes": "Gen I P10 platform. First model year. Based on Nissan Primera."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "g20.net", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Infiniti",
+      "model": "G20",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R14"],
+        "staggered": false,
+        "notes": "Gen I P10 platform. Same as 1991."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "g20.net", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "Infiniti",
+      "model": "G20",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R14", "195/65R14"],
+        "staggered": false,
+        "notes": "Gen I P10 platform. Touring trim available with 195/65R14."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "g20.net"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Infiniti",
+      "model": "G20",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R14", "195/65R14"],
+        "staggered": false,
+        "notes": "Gen I P10 platform. Same as 1993."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "g20.net"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Infiniti",
+      "model": "G20",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/65R14"],
+        "staggered": false,
+        "notes": "Gen I P10 platform."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "g20.net"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Infiniti",
+      "model": "G20",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/65R14"],
+        "staggered": false,
+        "notes": "Gen I P10 platform. Final year of first generation."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "g20.net"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Infiniti",
+      "model": "G20",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "G20 was not produced 1997-1998. Production gap between Gen I (1991-1996) and Gen II (1999-2002)."
+    },
+    {
+      "year": 1998,
+      "make": "Infiniti",
+      "model": "G20",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "G20 was not produced 1997-1998. Production gap between Gen I and Gen II."
+    },
+    {
+      "year": 1999,
+      "make": "Infiniti",
+      "model": "G20",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "195/65R15"],
+        "staggered": false,
+        "notes": "Gen II P11 platform. First year of second generation."
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "g20.net", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Infiniti",
+      "model": "QX4",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "QX4 was not produced until 1997. Model years: 1997-2003 only."
+    },
+    {
+      "year": 1991,
+      "make": "Infiniti",
+      "model": "QX4",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "QX4 was not produced until 1997. Model years: 1997-2003 only."
+    },
+    {
+      "year": 1992,
+      "make": "Infiniti",
+      "model": "QX4",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "QX4 was not produced until 1997. Model years: 1997-2003 only."
+    },
+    {
+      "year": 1993,
+      "make": "Infiniti",
+      "model": "QX4",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "QX4 was not produced until 1997. Model years: 1997-2003 only."
+    },
+    {
+      "year": 1994,
+      "make": "Infiniti",
+      "model": "QX4",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "QX4 was not produced until 1997. Model years: 1997-2003 only."
+    },
+    {
+      "year": 1995,
+      "make": "Infiniti",
+      "model": "QX4",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "QX4 was not produced until 1997. Model years: 1997-2003 only."
+    },
+    {
+      "year": 1996,
+      "make": "Infiniti",
+      "model": "QX4",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "QX4 was not produced until 1997. Model years: 1997-2003 only."
+    },
+    {
+      "year": 1997,
+      "make": "Infiniti",
+      "model": "QX4",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["245/70R16"],
+        "staggered": false,
+        "notes": "JR50 platform. 3.3L V6 VG33E engine. Based on Nissan Pathfinder."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Infiniti",
+      "model": "QX4",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["245/70R16"],
+        "staggered": false,
+        "notes": "JR50 platform. Same specs as 1997."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Infiniti",
+      "model": "QX4",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["245/70R16"],
+        "staggered": false,
+        "notes": "JR50 platform. Same specs as 1997-1998."
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "BMW",
+      "model": "3 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 20 },
+          { "diameter": 15, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["195/65R14", "205/60R15"],
+        "staggered": false,
+        "notes": "E30 chassis. Last year of E30 in US. 4-lug bolt pattern."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1991,
+      "make": "BMW",
+      "model": "3 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 20 },
+          { "diameter": 15, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["195/65R14", "205/60R15"],
+        "staggered": false,
+        "notes": "E30 chassis continuing production. Some markets transitioned to E36."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "BMW",
+      "model": "3 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 47 }
+        ],
+        "oem_tire_sizes": ["185/65R15", "205/60R15"],
+        "staggered": false,
+        "notes": "E36 chassis begins. Changed to 5-lug bolt pattern."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "BMW",
+      "model": "3 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 47 }
+        ],
+        "oem_tire_sizes": ["185/65R15", "205/60R15"],
+        "staggered": false,
+        "notes": "E36 chassis. Same specs as 1992."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "BMW",
+      "model": "3 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 47 }
+        ],
+        "oem_tire_sizes": ["185/65R15", "205/60R15"],
+        "staggered": false,
+        "notes": "E36 chassis. Same specs as 1992-1993."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "BMW",
+      "model": "3 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 47 },
+          { "diameter": 16, "width": 7, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["185/65R15", "205/60R15", "205/55R16"],
+        "staggered": false,
+        "notes": "E36 chassis. 16\" wheels available on some trims."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "BMW",
+      "model": "3 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 47 },
+          { "diameter": 16, "width": 7, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["185/65R15", "205/60R15", "205/55R16"],
+        "staggered": false,
+        "notes": "E36 chassis. Same as 1995."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "BMW",
+      "model": "3 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 47 },
+          { "diameter": 16, "width": 7, "offset": 46 },
+          { "diameter": 17, "width": 7.5, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["185/65R15", "205/60R15", "205/55R16", "225/45R17"],
+        "staggered": false,
+        "notes": "E36 chassis. 17\" wheels available on sport package."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "BMW",
+      "model": "3 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 47 },
+          { "diameter": 16, "width": 7, "offset": 46 },
+          { "diameter": 17, "width": 7.5, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["185/65R15", "205/60R15", "205/55R16", "225/45R17"],
+        "staggered": false,
+        "notes": "E36 chassis. Same as 1997."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "BMW",
+      "model": "3 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 47 },
+          { "diameter": 16, "width": 7, "offset": 46 },
+          { "diameter": 17, "width": 7.5, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["185/65R15", "205/60R15", "205/55R16", "225/45R17"],
+        "staggered": false,
+        "notes": "E36 chassis final year. E46 also introduced this year (some overlap). E46 has same bolt pattern."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "BMW",
+      "model": "5 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 },
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "225/60R16"],
+        "staggered": false,
+        "notes": "E34 chassis."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1991,
+      "make": "BMW",
+      "model": "5 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 },
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "225/60R16"],
+        "staggered": false,
+        "notes": "E34 chassis. Same as 1990."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "BMW",
+      "model": "5 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 },
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "225/60R16"],
+        "staggered": false,
+        "notes": "E34 chassis. Same as 1990-1991."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "BMW",
+      "model": "5 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 },
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "225/60R16"],
+        "staggered": false,
+        "notes": "E34 chassis."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "BMW",
+      "model": "5 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 },
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "225/60R16"],
+        "staggered": false,
+        "notes": "E34 chassis."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "BMW",
+      "model": "5 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 },
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "225/60R16"],
+        "staggered": false,
+        "notes": "E34 chassis."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "BMW",
+      "model": "5 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 },
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "225/60R16"],
+        "staggered": false,
+        "notes": "E34 chassis final year (some markets). E39 began in EU."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "BMW",
+      "model": "5 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 74.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 20 },
+          { "diameter": 17, "width": 8, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["225/55R16", "235/45R17"],
+        "staggered": false,
+        "notes": "E39 chassis. IMPORTANT: Hub bore increased to 74.1mm (from 72.6mm on E34)."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "apexwheels.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "BMW",
+      "model": "5 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 74.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 20 },
+          { "diameter": 17, "width": 8, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["225/55R16", "235/45R17"],
+        "staggered": false,
+        "notes": "E39 chassis. Same as 1997."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "BMW",
+      "model": "5 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 74.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 20 },
+          { "diameter": 17, "width": 8, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["225/55R16", "235/45R17"],
+        "staggered": false,
+        "notes": "E39 chassis. Same as 1997-1998."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "BMW",
+      "model": "7 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/65R15", "225/60R15"],
+        "staggered": false,
+        "notes": "E32 chassis."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "automobile-catalog.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1991,
+      "make": "BMW",
+      "model": "7 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/65R15", "225/60R15"],
+        "staggered": false,
+        "notes": "E32 chassis. Same as 1990."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "BMW",
+      "model": "7 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/65R15", "225/60R15"],
+        "staggered": false,
+        "notes": "E32 chassis."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "BMW",
+      "model": "7 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/65R15", "225/60R15"],
+        "staggered": false,
+        "notes": "E32 chassis."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "BMW",
+      "model": "7 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 20 },
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "225/60R16"],
+        "staggered": false,
+        "notes": "E32/E38 transition year. E38 introduced mid-year."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "BMW",
+      "model": "7 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["225/60R16", "235/60R16"],
+        "staggered": false,
+        "notes": "E38 chassis."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "BMW",
+      "model": "7 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["225/60R16", "235/60R16"],
+        "staggered": false,
+        "notes": "E38 chassis."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "BMW",
+      "model": "7 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["225/60R16", "235/60R16"],
+        "staggered": false,
+        "notes": "E38 chassis."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "BMW",
+      "model": "7 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["225/60R16", "235/60R16"],
+        "staggered": false,
+        "notes": "E38 chassis phase II."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "automobile-catalog.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "BMW",
+      "model": "7 Series",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["225/60R16", "235/60R16"],
+        "staggered": false,
+        "notes": "E38 chassis phase II."
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "BMW",
+      "model": "Z3",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "Z3 was not produced until 1996. Model years: 1996-2002 only."
+    },
+    {
+      "year": 1991,
+      "make": "BMW",
+      "model": "Z3",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["multiple"],
+      "notes": "Z3 was not produced until 1996. Model years: 1996-2002 only."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 47,
+    "partial": 0,
+    "not_produced": 28,
+    "highConfidence": 47,
+    "needsReview": 0
+  },
+  "notes": {
+    "infiniti_models": {
+      "Q45": "1997-1999 researched. 5x114.3 bolt pattern, 66.1mm hub bore.",
+      "J30": "Only 1993-1997 produced. 5x114.3, 66.1mm hub bore.",
+      "I30": "Only 1996-1999 produced. 5x114.3, 66.1mm hub bore.",
+      "G20": "1991-1996 and 1999 produced. 4x114.3 (4-lug), 66.1mm hub bore.",
+      "QX4": "Only 1997-1999 produced. 6x139.7, 100.1mm hub bore (SUV)."
+    },
+    "bmw_models": {
+      "3_Series": "E30 (1990-1991) uses 4x100, E36 (1992-1999) uses 5x120. Both have 72.6mm hub bore (E36).",
+      "5_Series": "E34 (1990-1996) has 72.6mm hub bore. E39 (1997+) has 74.1mm hub bore - different!",
+      "7_Series": "E32 (1990-1994) and E38 (1994-2001) both use 5x120, 72.6mm hub bore.",
+      "Z3": "Only 1996-1999 in scope. 5x120, 72.6mm hub bore. Some trims have staggered setup."
+    },
+    "important_changes": [
+      "BMW 3 Series: Bolt pattern changed from 4x100 (E30) to 5x120 (E36) in 1992",
+      "BMW 5 Series: Hub bore changed from 72.6mm (E34) to 74.1mm (E39) in 1997",
+      "Infiniti G20: 4-lug (4x114.3) unlike other Infiniti sedans which are 5-lug"
+    ]
+  }
+}

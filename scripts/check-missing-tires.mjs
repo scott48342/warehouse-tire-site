@@ -1,34 +1,32 @@
-import pg from 'pg';
-import fs from 'fs';
+import postgres from 'postgres';
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
 
-const env = fs.readFileSync('.env.local', 'utf-8');
-const url = env.match(/POSTGRES_URL="?([^"\s]+)/)[1];
-const pool = new pg.Pool({ connectionString: url, ssl: { rejectUnauthorized: false } });
+const sql = postgres(process.env.POSTGRES_URL);
 
-const result = await pool.query(`
-  SELECT year, make, model, COUNT(*) as trims
+// Check what's missing tires
+const missing = await sql`
+  SELECT make, model, COUNT(*) as cnt
   FROM vehicle_fitments 
-  WHERE (oem_tire_sizes IS NULL OR oem_tire_sizes::text = '[]')
-    AND year BETWEEN 2010 AND 2024
-    AND make IN ('Ford', 'Chevrolet', 'Toyota', 'Honda', 'Dodge', 'Ram', 'GMC', 'Jeep')
-  GROUP BY year, make, model
-  ORDER BY trims DESC, year DESC
-  LIMIT 20
-`);
+  WHERE oem_tire_sizes IS NULL OR oem_tire_sizes = '[]' OR oem_tire_sizes::text = '[]'
+  GROUP BY make, model
+  ORDER BY cnt DESC
+  LIMIT 30
+`;
 
-console.log('Vehicles with most trims missing tire sizes:');
-result.rows.forEach(r => console.log(`  ${r.year} ${r.make} ${r.model}: ${r.trims} trims`));
+console.log('Top models missing tire sizes:\n');
+console.log('Make | Model | Count');
+console.log('-'.repeat(50));
+missing.forEach(m => console.log(`${m.make} | ${m.model} | ${m.cnt}`));
 
-console.log('\n--- By Make ---');
-const byMake = await pool.query(`
-  SELECT make, COUNT(DISTINCT(year || make || model)) as vehicles, COUNT(*) as total_trims
+// Check a sample record to see data format
+const sample = await sql`
+  SELECT year, make, model, oem_wheel_sizes, oem_tire_sizes 
   FROM vehicle_fitments 
-  WHERE (oem_tire_sizes IS NULL OR oem_tire_sizes::text = '[]')
-    AND year BETWEEN 2000 AND 2024
-  GROUP BY make
-  ORDER BY total_trims DESC
-  LIMIT 15
-`);
-byMake.rows.forEach(r => console.log(`  ${r.make}: ${r.vehicles} vehicles (${r.total_trims} trims)`));
+  WHERE (oem_tire_sizes IS NULL OR oem_tire_sizes = '[]')
+  LIMIT 5
+`;
+console.log('\nSample records missing tires:');
+sample.forEach(s => console.log(`  ${s.year} ${s.make} ${s.model}: wheels=${JSON.stringify(s.oem_wheel_sizes)}, tires=${JSON.stringify(s.oem_tire_sizes)}`));
 
-pool.end();
+await sql.end();

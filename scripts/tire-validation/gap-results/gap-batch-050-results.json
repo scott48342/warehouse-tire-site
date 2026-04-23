@@ -1,0 +1,539 @@
+{
+  "batchId": 50,
+  "researchedAt": "2026-04-21T23:58:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 39,
+    "usMarket": 11,
+    "withSpecs": 11
+  },
+  "vehicles": [
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "dualis-2",
+      "notUS": true,
+      "notes": "JDM only - Nissan Dualis is Japan-market name for Qashqai. Not sold in US."
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "dualis-2",
+      "notUS": true,
+      "notes": "JDM only - Nissan Dualis is Japan-market name for Qashqai. Not sold in US."
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "dualis-2",
+      "notUS": true,
+      "notes": "JDM only - Nissan Dualis is Japan-market name for Qashqai. Not sold in US."
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "dualis-2",
+      "notUS": true,
+      "notes": "JDM only - Nissan Dualis is Japan-market name for Qashqai. Not sold in US."
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "gt-r",
+      "notUS": true,
+      "notes": "JDM only - R35 GT-R launched in Japan Dec 2007. US sales started 2008 model year."
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "gt-r",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          {
+            "name": "Base Model",
+            "tires": {
+              "front": "255/40R20",
+              "rear": "285/35R20"
+            },
+            "isStaggered": true
+          },
+          {
+            "name": "Premium",
+            "tires": {
+              "front": "255/40R20",
+              "rear": "285/35R20"
+            },
+            "isStaggered": true
+          }
+        ],
+        "wheelDiameter": 20,
+        "boltPattern": "5x114.3"
+      }
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "kicks",
+      "notUS": true,
+      "notes": "South America only (Brazil launch 2016). US sales began with 2018 model year."
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "kix",
+      "notUS": true,
+      "notes": "JDM only - Compact SUV sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "kix",
+      "notUS": true,
+      "notes": "JDM only - Compact SUV sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "kix",
+      "notUS": true,
+      "notes": "JDM only - Compact SUV sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "kix",
+      "notUS": true,
+      "notes": "JDM only - Compact SUV sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "kix",
+      "notUS": true,
+      "notes": "JDM only - Compact SUV sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "kubistar",
+      "notUS": true,
+      "notes": "Europe only - Rebadged Renault Kangoo sold in Europe. Never sold in US."
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "kubistar",
+      "notUS": true,
+      "notes": "Europe only - Rebadged Renault Kangoo sold in Europe. Never sold in US."
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "kubistar",
+      "notUS": true,
+      "notes": "Europe only - Rebadged Renault Kangoo sold in Europe. Never sold in US."
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "kubistar",
+      "notUS": true,
+      "notes": "Europe only - Rebadged Renault Kangoo sold in Europe. Never sold in US."
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "kubistar",
+      "notUS": true,
+      "notes": "Europe only - Rebadged Renault Kangoo sold in Europe. Never sold in US."
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "kubistar",
+      "notUS": true,
+      "notes": "Europe only - Rebadged Renault Kangoo sold in Europe. Never sold in US."
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "leaf",
+      "notUS": true,
+      "notes": "JDM only for 2010 MY - Leaf launched in Japan Dec 2010. US sales began with 2011 model year."
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "leopard",
+      "notUS": true,
+      "notes": "JDM only - Luxury sedan sold exclusively in Japan (ended 1999, may appear as 2000 carryover)."
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "lucino",
+      "notUS": true,
+      "notes": "JDM only - Compact car sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "n7",
+      "notUS": true,
+      "notes": "China only - Electric sedan sold exclusively in Chinese market."
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "n7",
+      "notUS": true,
+      "notes": "China only - Electric sedan sold exclusively in Chinese market."
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "notUS": true,
+      "notes": "JDM only - Commercial van sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "notUS": true,
+      "notes": "JDM only - Commercial van sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "notUS": true,
+      "notes": "JDM only - Commercial van sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "notUS": true,
+      "notes": "JDM only - Commercial van sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "notUS": true,
+      "notes": "JDM only - Commercial van sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "notUS": true,
+      "notes": "JDM only - Commercial van sold exclusively in Japan. Never sold in US."
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "nv1500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "nv1500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "nv1500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "nv1500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "nv1500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "nv1500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "nv1500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "nv1500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "nv1500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "nv1500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      },
+      "notes": "Final model year for NV1500 (discontinued after 2021)"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "nv2500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "nv2500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "nv2500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "nv2500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SL", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "nv2500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SL", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "nv2500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SL", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "nv2500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SL", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "nv2500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SL", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "nv2500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "SL", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "nv2500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false },
+          { "name": "HD SV", "tires": { "front": "245/70R17", "rear": "245/70R17" }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      },
+      "notes": "Final model year for NV2500 (discontinued after 2021)"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "nv3500",
+      "notUS": false,
+      "specs": {
+        "trims": [
+          { "name": "HD S", "tires": { "options": ["245/70R17", "245/75R17"] }, "isStaggered": false },
+          { "name": "HD SL", "tires": { "options": ["245/70R17", "245/75R17"] }, "isStaggered": false },
+          { "name": "HD SV", "tires": { "options": ["245/70R17", "245/75R17"] }, "isStaggered": false }
+        ],
+        "wheelDiameter": 17,
+        "boltPattern": "6x139.7"
+      }
+    }
+  ]
+}

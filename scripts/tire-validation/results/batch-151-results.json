@@ -1,0 +1,522 @@
+{
+  "batchId": "151",
+  "validatedAt": "2026-04-21T22:58:00Z",
+  "source": "tiresize.com",
+  "totalVehicles": 75,
+  "summary": {
+    "validated": 34,
+    "discrepancies": 18,
+    "notFound": 23,
+    "noDataInBatch": 23
+  },
+  "oemReference": {
+    "sienna": {
+      "2021-2026": {
+        "sizes": ["235/65R17", "235/60R18", "235/50R20"],
+        "notes": "Generation 4 - NO 235/55R19 option"
+      },
+      "2020": {
+        "sizes": ["235/60R17", "235/55R18", "235/50R19"],
+        "notes": "Last year of Gen 3"
+      },
+      "2011-2019": {
+        "sizes": ["235/60R17", "235/55R18", "235/50R19"],
+        "notes": "Generation 3 - SE trim uses 19 inch"
+      },
+      "2004-2010": {
+        "sizes": ["215/65R16", "225/60R17", "235/55R18"],
+        "notes": "Generation 2"
+      },
+      "2000-2003": {
+        "sizes": ["205/70R15", "215/65R15"],
+        "notes": "Generation 1 - CE/LE use 205/70R15, XLE uses 215/65R15"
+      }
+    },
+    "supra": {
+      "2020-2026": {
+        "2.0_turbo": {
+          "front": "255/40R18",
+          "rear": "275/40R18"
+        },
+        "3.0_premium_45th": {
+          "front": "255/35R19",
+          "rear": "275/35R19"
+        },
+        "notes": "GR Supra - staggered fitment standard on 3.0 models"
+      }
+    },
+    "solara": {
+      "2004-2008": {
+        "sizes": ["215/60R16", "215/55R17"],
+        "notes": "Generation 2"
+      },
+      "2000-2003": {
+        "sizes": ["205/65R15", "205/60R16", "225/45R17"],
+        "notes": "Generation 1 - 225/45R17 for TRD only"
+      }
+    }
+  },
+  "discrepancies": [
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R18", "235/50R20"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/50R20"],
+      "issue": "MISSING_SIZE",
+      "details": "Missing 235/65R17 (LE trim base size)"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R18", "235/50R20"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/50R20"],
+      "issue": "MISSING_SIZE",
+      "details": "Missing 235/65R17 (LE trim base size)"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R18", "235/50R20"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/50R20"],
+      "issue": "MISSING_SIZE",
+      "details": "Missing 235/65R17 (LE trim base size)"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R18", "235/50R20", "235/65R17", "235/55R19"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/50R20"],
+      "issue": "EXTRA_SIZE",
+      "details": "235/55R19 is NOT an OEM size for Gen 4 Sienna (2021+). This size was Gen 3 (2011-2020)."
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R18", "235/50R20", "235/65R17", "235/55R19"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/50R20"],
+      "issue": "EXTRA_SIZE",
+      "details": "235/55R19 is NOT an OEM size for Gen 4 Sienna (2021+). This size was Gen 3 (2011-2020)."
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R18", "235/50R20", "235/65R17", "235/55R19"],
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/50R20"],
+      "issue": "EXTRA_SIZE",
+      "details": "235/55R19 is NOT an OEM size for Gen 4 Sienna (2021+). Gen 4 went from 17/18/20 inch options."
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R17", "235/55R18", "245/50R19"],
+      "oemTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+      "issue": "WRONG_SIZE",
+      "details": "245/50R19 should be 235/50R19 (OEM SE trim uses 235 width, not 245)"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R17", "235/55R18", "245/50R19"],
+      "oemTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+      "issue": "WRONG_SIZE",
+      "details": "245/50R19 should be 235/50R19 (OEM SE trim uses 235 width, not 245)"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R17", "235/55R18", "245/50R19"],
+      "oemTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+      "issue": "WRONG_SIZE",
+      "details": "245/50R19 should be 235/50R19 (OEM SE trim uses 235 width, not 245)"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R17", "235/55R18", "245/50R19"],
+      "oemTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+      "issue": "WRONG_SIZE",
+      "details": "245/50R19 should be 235/50R19 (OEM SE trim uses 235 width, not 245)"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R17", "235/55R18", "245/50R19"],
+      "oemTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+      "issue": "WRONG_SIZE",
+      "details": "245/50R19 should be 235/50R19 (OEM SE trim uses 235 width, not 245)"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R17", "235/55R18", "245/50R19"],
+      "oemTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+      "issue": "WRONG_SIZE",
+      "details": "245/50R19 should be 235/50R19 (OEM SE trim uses 235 width, not 245)"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R17", "235/55R18", "245/50R19"],
+      "oemTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+      "issue": "WRONG_SIZE",
+      "details": "245/50R19 should be 235/50R19 (OEM SE trim uses 235 width, not 245)"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["205/65R15", "215/65R15"],
+      "oemTireSizes": ["205/70R15", "215/65R15"],
+      "issue": "WRONG_SIZE",
+      "details": "205/65R15 should be 205/70R15 (OEM CE/LE trims use 205/70R15)"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["205/65R15", "215/65R15"],
+      "oemTireSizes": ["205/70R15", "215/65R15"],
+      "issue": "WRONG_SIZE",
+      "details": "205/65R15 should be 205/70R15 (OEM CE/LE trims use 205/70R15)"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["205/65R15", "215/65R15"],
+      "oemTireSizes": ["205/70R15", "215/65R15"],
+      "issue": "WRONG_SIZE",
+      "details": "205/65R15 should be 205/70R15 (OEM CE/LE trims use 205/70R15)"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["205/65R15", "215/65R15"],
+      "oemTireSizes": ["205/70R15", "215/65R15"],
+      "issue": "WRONG_SIZE",
+      "details": "205/65R15 should be 205/70R15 (OEM CE/LE trims use 205/70R15)"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/35R19", "275/35R19", "275/30R20", "295/30R20"],
+      "oemTireSizes": ["255/35R19 front", "275/35R19 rear"],
+      "issue": "EXTRA_SIZE",
+      "details": "275/30R20 and 295/30R20 are NOT OEM sizes for 2019 Supra. These are aftermarket upgrade sizes."
+    }
+  ],
+  "validated": [
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/50R20"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/50R20"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/50R20"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["215/65R16", "225/60R17", "235/55R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["215/65R16", "225/60R17", "235/55R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["215/65R16", "225/60R17", "235/55R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["215/65R16", "225/60R17", "235/55R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["215/65R16", "225/60R17", "235/55R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["215/65R16", "225/60R17", "235/55R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "sienna",
+      "currentTireSizes": ["215/65R16", "225/60R17", "235/55R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/40R18"],
+      "oemTireSizes": ["255/40R18 front", "275/40R18 rear"],
+      "status": "PARTIAL_MATCH",
+      "notes": "2.0 Turbo trim - missing rear size 275/40R18"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/35R19 front", "275/35R19 rear"],
+      "status": "MATCH",
+      "notes": "3.0 Premium/45th Anniversary trims"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/40R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "2.0 Turbo trim - missing rear size 275/40R18"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/35R19 front", "275/35R19 rear"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/40R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "2.0 Turbo trim - missing rear size 275/40R18"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/35R19 front", "275/35R19 rear"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/40R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "2.0 Turbo trim - missing rear size 275/40R18"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/35R19 front", "275/35R19 rear"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/40R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "2.0 Turbo trim - missing rear size 275/40R18"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/35R19 front", "275/35R19 rear"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/40R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "2.0 Turbo trim - missing rear size 275/40R18"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/35R19 front", "275/35R19 rear"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "supra",
+      "currentTireSizes": ["255/35R19 front", "275/35R19 rear"],
+      "status": "MATCH"
+    }
+  ],
+  "notFoundInSource": [
+    {
+      "model": "soarer",
+      "years": [2000, 2001, 2002, 2003, 2004, 2005],
+      "reason": "JDM-only vehicle not available in US market. tiresize.com does not cover JDM vehicles.",
+      "currentTireSizes": [],
+      "recommendation": "Consider removing or sourcing from JDM-specific database"
+    },
+    {
+      "model": "solara",
+      "years": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008],
+      "reason": "Empty tire sizes in batch data",
+      "oemSizesFound": {
+        "2004-2008": ["215/60R16", "215/55R17"],
+        "2000-2003": ["205/65R15", "205/60R16", "225/45R17"]
+      },
+      "recommendation": "Populate with OEM sizes from oemReference"
+    },
+    {
+      "model": "soluna",
+      "years": [2000, 2001, 2002, 2003],
+      "reason": "Southeast Asian market vehicle (Thailand) not available in US. Not in tiresize.com.",
+      "currentTireSizes": [],
+      "recommendation": "Consider removing or sourcing from regional database"
+    },
+    {
+      "model": "sprinter",
+      "years": [2000, 2001, 2002],
+      "reason": "JDM-only vehicle not available in US market",
+      "currentTireSizes": [],
+      "recommendation": "Consider removing or sourcing from JDM-specific database"
+    },
+    {
+      "model": "sprinter-carib",
+      "years": [2000, 2001, 2002],
+      "reason": "JDM-only vehicle not available in US market",
+      "currentTireSizes": [],
+      "recommendation": "Consider removing or sourcing from JDM-specific database"
+    },
+    {
+      "model": "sprinter-trueno",
+      "years": [2000],
+      "reason": "JDM-only vehicle not available in US market",
+      "currentTireSizes": [],
+      "recommendation": "Consider removing or sourcing from JDM-specific database"
+    },
+    {
+      "model": "starlet-cross",
+      "years": [2024, 2025],
+      "reason": "International market vehicle (Africa, Middle East, Latin America). Not sold in US.",
+      "currentTireSizes": [],
+      "recommendation": "Consider removing or sourcing from regional database"
+    }
+  ],
+  "corrections": [
+    {
+      "model": "sienna",
+      "years": [2021, 2022, 2023],
+      "action": "REMOVE",
+      "size": "235/55R19",
+      "reason": "Gen 4 Sienna (2021+) does not have 19-inch option. Wheel options are 17/18/20 only."
+    },
+    {
+      "model": "sienna",
+      "years": [2011, 2012, 2013, 2014, 2015, 2017, 2018],
+      "action": "REPLACE",
+      "from": "245/50R19",
+      "to": "235/50R19",
+      "reason": "OEM SE trim uses 235 width, not 245"
+    },
+    {
+      "model": "sienna",
+      "years": [2000, 2001, 2002, 2003],
+      "action": "REPLACE",
+      "from": "205/65R15",
+      "to": "205/70R15",
+      "reason": "OEM CE/LE trims use 205/70R15, not 205/65R15"
+    },
+    {
+      "model": "supra",
+      "years": [2019],
+      "action": "REMOVE",
+      "sizes": ["275/30R20", "295/30R20"],
+      "reason": "Not OEM sizes - these are aftermarket upgrade sizes"
+    },
+    {
+      "model": "supra",
+      "years": [2021, 2022, 2023, 2024, 2025, 2026],
+      "action": "ADD",
+      "size": "275/40R18",
+      "reason": "2.0 Turbo trim uses staggered 255/40R18 front + 275/40R18 rear"
+    },
+    {
+      "model": "solara",
+      "years": [2004, 2005, 2006, 2007, 2008],
+      "action": "ADD",
+      "sizes": ["215/60R16", "215/55R17"],
+      "reason": "Empty in batch - these are OEM sizes for Gen 2 Solara"
+    },
+    {
+      "model": "solara",
+      "years": [2000, 2001, 2002, 2003],
+      "action": "ADD",
+      "sizes": ["205/65R15", "205/60R16", "225/45R17"],
+      "reason": "Empty in batch - these are OEM sizes for Gen 1 Solara (225/45R17 for TRD)"
+    }
+  ]
+}

@@ -1,0 +1,2130 @@
+[
+  {
+    "id": "fef24fde-4c23-4d63-a9db-0dc7735395d7",
+    "year": 2020,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "XD",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "278af975-ff32-498a-a89e-c8e3c51aac7e",
+    "year": 2020,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SL",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "53d5d939-781b-443d-9106-8728d85f38b9",
+    "year": 2020,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S, SV, SL, Platinum Reserve, PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R18",
+      "275/65R18",
+      "275/55R20",
+      "275/60R20",
+      "285/45R22"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2f52d8b0-a491-42e5-9ca2-c9806508cdf2",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S, SV, SL, Platinum Reserve, PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R18",
+      "275/65R18",
+      "275/55R20",
+      "275/60R20",
+      "285/45R22"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2261492a-38ae-421b-98fa-05de184ebb69",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cfbdca47-529b-45ed-81ed-74ca1008fbe3",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SL",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dcbac820-1958-4f01-a9e5-477771e646c6",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ab9d344d-f30a-4273-842d-1b5fb075f6cf",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c81fefaa-0c03-4545-872d-aea526fd29db",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Pro-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7a45dae6-32cc-4d78-9c7e-6106cd5dedfb",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "XD",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "20b18de3-92f3-450b-b57a-d1b86a2d4291",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6e59eec2-d1a8-40c2-b18d-8acdd5d60a4e",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "242e4e3b-c0aa-4021-86ab-402123b5f04b",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Pro-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "63ff1e88-3d7f-4dc4-843e-76466f745c91",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SL",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a65bf35b-5019-493f-b4b9-bce6be0577b8",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e7bbb522-a2bc-4252-8d03-c83554cfb952",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "XD",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f0c00846-daff-47e8-85df-72781dde7013",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S, SV, SL, Platinum Reserve, PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R18",
+      "275/65R18",
+      "275/55R20",
+      "275/60R20",
+      "285/45R22"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6aa13b85-1cf1-4460-9d66-568c40169de1",
+    "year": 2023,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Pro-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3a577deb-c01b-4b0f-a7f2-3737df5cca28",
+    "year": 2023,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5b6c8ce1-22d1-4edb-84a7-38fd2fa1bb48",
+    "year": 2023,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "226f97f3-ffaf-4ce5-bf42-14566e76d4f4",
+    "year": 2023,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "645ec4c4-e84e-41e9-a840-9754181170f5",
+    "year": 2023,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SL",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cd69d507-3523-425a-84e7-1b1c68ec24db",
+    "year": 2023,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S, SV, SL, Platinum Reserve, PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 23,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 23,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R18",
+      "275/65R18",
+      "275/55R20",
+      "275/60R20",
+      "285/45R22",
+      "275/70R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "3d7624de-df26-4cec-9ad6-90be187ce2aa",
+    "year": 2023,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "XD",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6508c064-9c41-4568-a35b-6265afceb8f0",
+    "year": 2024,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "125ff7cb-975c-4b9a-b420-cba30c2df4ea",
+    "year": 2024,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "987172cc-7842-4aaa-95f2-49e426d731f5",
+    "year": 2024,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "XD",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cdf0d37c-22de-4b66-9f44-53e1595ce9dc",
+    "year": 2024,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S, SV, SL, Platinum Reserve, PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 23,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 23,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R18",
+      "275/65R18",
+      "275/55R20",
+      "275/60R20",
+      "285/45R22",
+      "275/70R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "1d2c59bf-3e0a-4106-bb5e-d5b92778f1bd",
+    "year": 2024,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Pro-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2f4b8094-0e76-4d9c-9de3-8663f8d61f21",
+    "year": 2024,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SL",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "07749b4a-1b7d-49a5-96c8-1fc143e286a9",
+    "year": 2024,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7c736b4f-f1e0-4af8-b8d8-b4bfd36d738d",
+    "year": 2025,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b7c0903f-02da-4e2f-b1d9-4b2387691b30",
+    "year": 2025,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Pro-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "913f208a-7213-4d2a-8b0b-7fb47f8ae643",
+    "year": 2025,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SL",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cb25986f-5288-4459-a45b-c3df1cd9343e",
+    "year": 2025,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "31759a4e-0644-4671-99fc-290efa52ed24",
+    "year": 2025,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S, SV, SL, Platinum Reserve, PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R18",
+      "275/65R18",
+      "275/55R20",
+      "275/60R20",
+      "285/45R22"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c0747e10-87e6-4bb8-85d2-18110222d901",
+    "year": 2025,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4c2eaa90-50a4-4345-9621-0e1a6ad3ed30",
+    "year": 2025,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "XD",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "32420d10-f2a4-4014-ab8d-993dec16fc54",
+    "year": 2026,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cdd4e10c-1d84-40b5-adbc-b703c613a8d5",
+    "year": 2026,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "S, SV, SL, Platinum Reserve, PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R18",
+      "275/65R18",
+      "275/55R20",
+      "275/60R20",
+      "285/45R22"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "4ae7f99e-8897-48a8-a8d0-1d0a96c4f9c0",
+    "year": 2026,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e0488410-1b79-48c1-a35b-2f83f85f3460",
+    "year": 2026,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Pro-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5be5de75-4951-4327-b233-8131a790af32",
+    "year": 2026,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "SL",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "16378e7c-9663-4e45-9c49-e234a37d1402",
+    "year": 2026,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1479c59b-677e-4067-b60b-0eb9c60bd6b3",
+    "year": 2026,
+    "make": "nissan",
+    "model": "titan",
+    "trim": "XD",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "275/70R17",
+      "265/70R18",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cad5f5e3-edfe-42b5-807d-2457e2f2a1da",
+    "year": 2016,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "5bd4c96d-f0af-4735-9131-fba15c393b1e",
+    "year": 2016,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "b4607aef-8737-48a0-a1ca-daed0853a7af",
+    "year": 2016,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "0cfb8e31-d55e-4cd6-8d40-0636b1bb6f56",
+    "year": 2016,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "ff0ee5e1-ca59-40b6-9be3-066412cff74b",
+    "year": 2017,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "72db8659-5b77-46bb-8767-f800f93fa7d9",
+    "year": 2017,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "1f95f63b-07d4-488e-b33b-d0c1ddaa1879",
+    "year": 2017,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "7c505a2b-a6a6-4962-a95c-596bab440cc5",
+    "year": 2017,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "98aa8f0b-13a6-477f-b1af-6e5ded4b59dc",
+    "year": 2018,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "221e0327-1974-4eed-8547-4231fa56837e",
+    "year": 2018,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "55c981e8-4c34-46f4-9a57-d94546f5e5be",
+    "year": 2018,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "37110d75-b919-46e0-97b1-894a98ce5f54",
+    "year": 2018,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "61991609-1165-400c-a18b-063b9090ec97",
+    "year": 2019,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "f22bd6f9-9617-46b5-b646-c9e085443b95",
+    "year": 2019,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "9fa5777b-b990-44bb-aee7-b2290ea96b0b",
+    "year": 2019,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "b7c3017d-945f-4320-bc02-c349f0ca9ae6",
+    "year": 2019,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "f4739184-f2ce-462b-9985-56452c959d27",
+    "year": 2020,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "035a314e-8311-4582-ae03-07fac4039b43",
+    "year": 2020,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "0ad45cb6-9d1a-4c32-9ad0-1907dbced15b",
+    "year": 2020,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "d956d514-a702-4b06-b4f3-90da856d7ff2",
+    "year": 2020,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "2538f5ee-7d94-467b-8e3a-c364acc11a1f",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "b328c3ce-d835-4014-a6b7-b21ae55fb288",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "c3dc4ef7-30aa-4de0-9094-4fcea13661c7",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "ade6fd50-160e-4ab1-9fc3-97fc13007996",
+    "year": 2021,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "6ad9af9a-e60d-472f-9f1f-8fc8705a7596",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "77f5e7a6-9f27-4093-ab47-c190d4f09586",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "SV",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "34561d4a-0d8f-4c41-8e04-710846b7578f",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "9cb0156b-d6ba-418f-afc3-cc89784ee645",
+    "year": 2022,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "Platinum Reserve",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]"
+  },
+  {
+    "id": "d82a8ee3-4f76-423c-97c1-1e6047654079",
+    "year": 2023,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "PRO-4X",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a9d455d0-6c19-4073-bcf1-19dab6863cdd",
+    "year": 2023,
+    "make": "nissan",
+    "model": "titan-xd",
+    "trim": "S",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/60R20",
+      "275/65R20",
+      "LT275/65R20"
+    ],
+    "source": "generation-baseline"
+  }
+]

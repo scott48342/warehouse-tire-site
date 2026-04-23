@@ -1,0 +1,789 @@
+{
+  "batchId": "overnight-061",
+  "make": "Mercedes-Benz",
+  "model": "E-Class",
+  "verifiedAt": "2026-04-23T02:35:00Z",
+  "summary": {
+    "total": 71,
+    "verified": 61,
+    "flagged": 5,
+    "invalid": 5
+  },
+  "notes": [
+    "All vehicles verified against known Mercedes E-Class specifications",
+    "Bolt pattern 5x112 and hub bore 66.6mm confirmed correct for all entries",
+    "INVALID: 2009 E55 AMG - E55 AMG production ended 2006, replaced by E63 AMG in 2007",
+    "INVALID: 2010-2013 E63 S AMG - E63 S variant first produced for 2014 model year",
+    "FLAGGED: Some tire size lists include sizes that don't match available wheel diameters"
+  ],
+  "referenceSpecs": {
+    "boltPattern": "5x112",
+    "hubBore": "66.6",
+    "generations": {
+      "W211": { "years": "2003-2009", "oemWheels": "16-18 inch" },
+      "W212": { "years": "2010-2016", "oemWheels": "17-19 inch" },
+      "W213": { "years": "2017-2023", "oemWheels": "17-20 inch" }
+    }
+  },
+  "vehicles": [
+    {
+      "id": "12afdf02-cce5-4b9c-86ec-f8582792601d",
+      "year": 2008,
+      "trim": "E63 AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 AMG correct for 2008 W211. OEM 18\" wheels confirmed."
+    },
+    {
+      "id": "3f1cd80a-3d84-4720-bf8e-2369b6e7e96f",
+      "year": 2008,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2008 W211."
+    },
+    {
+      "id": "8ed3d8fe-0db5-40a5-b187-9c5a1a8b686d",
+      "year": 2009,
+      "trim": "E350",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E350 specs correct for 2009 W211."
+    },
+    {
+      "id": "d6b214a8-f8b8-4d8d-8468-04099554b60e",
+      "year": 2009,
+      "trim": "E63 AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 AMG correct for 2009 W211."
+    },
+    {
+      "id": "457284ca-418a-48a9-8993-1da7930e3361",
+      "year": 2009,
+      "trim": "E55 AMG",
+      "status": "invalid",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": false,
+      "issues": ["TRIM_DOES_NOT_EXIST"],
+      "notes": "INVALID: E55 AMG production ended in 2006. No 2009 E55 AMG exists. Replace with E63 AMG or remove."
+    },
+    {
+      "id": "97cdd072-6806-4931-8b5c-98d0dc702e93",
+      "year": 2009,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2009 W211."
+    },
+    {
+      "id": "5bcce7b6-2d0b-4fba-8833-e6f894123cf4",
+      "year": 2009,
+      "trim": "E320",
+      "status": "flagged",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": false,
+      "issues": ["TRIM_QUESTIONABLE"],
+      "notes": "E320 was available as BlueTec diesel in US for 2009. Verify trim name accuracy."
+    },
+    {
+      "id": "3923fb75-93bd-4971-97af-9d87ef9e584e",
+      "year": 2009,
+      "trim": "E500",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E500 available in 2009 W211 (non-US market). Specs correct."
+    },
+    {
+      "id": "1409c30d-5ee6-4e5f-aaa7-bf6863619441",
+      "year": 2010,
+      "trim": "E400",
+      "status": "flagged",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": false,
+      "issues": ["TRIM_QUESTIONABLE"],
+      "notes": "E400 introduced later in W212 lifecycle. Verify if available for 2010 MY in target market."
+    },
+    {
+      "id": "a1e5e101-95f3-430d-b981-59a161aaef8e",
+      "year": 2010,
+      "trim": "E63 AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 AMG W212 correct. Staggered 19\" wheels (9x19 front, 10x19 rear) confirmed."
+    },
+    {
+      "id": "5e45bbbd-45de-4dbf-88e0-218f9846799d",
+      "year": 2010,
+      "trim": "E550",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E550 specs correct for 2010 W212."
+    },
+    {
+      "id": "86c37417-cae8-408a-ae68-434cea01b358",
+      "year": 2010,
+      "trim": "E350",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E350 specs correct for 2010 W212."
+    },
+    {
+      "id": "0f5b0e42-b8de-4074-85b4-d03dacf97738",
+      "year": 2010,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2010 W212."
+    },
+    {
+      "id": "5574f758-0ab4-447f-bb34-ed20d7a48146",
+      "year": 2010,
+      "trim": "E63 S AMG",
+      "status": "invalid",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": false,
+      "issues": ["TRIM_DOES_NOT_EXIST"],
+      "notes": "INVALID: E63 S AMG first produced for 2014 model year. No 2010 E63 S exists. Remove or change to E63 AMG."
+    },
+    {
+      "id": "e12668b6-e0e9-401c-a447-c7c39ac984d0",
+      "year": 2011,
+      "trim": "E350",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E350 specs correct for 2011 W212."
+    },
+    {
+      "id": "0455ac37-494a-4256-b2d2-48edd6eb4c88",
+      "year": 2011,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2011 W212."
+    },
+    {
+      "id": "17040893-38bb-477d-acaa-bd6fc80cd79d",
+      "year": 2011,
+      "trim": "E63 AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 AMG specs correct for 2011 W212."
+    },
+    {
+      "id": "6c5ae1a5-f045-4c12-a811-312a739d6f5e",
+      "year": 2011,
+      "trim": "E400",
+      "status": "flagged",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": false,
+      "issues": ["TRIM_QUESTIONABLE"],
+      "notes": "E400 introduced later in W212 lifecycle. Verify if available for 2011 MY."
+    },
+    {
+      "id": "cc176467-fbd1-459b-aa94-0fe55c3eddcb",
+      "year": 2011,
+      "trim": "E550",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E550 specs correct for 2011 W212."
+    },
+    {
+      "id": "b7af30ba-8d26-4667-8f8f-ca3a8a2f2129",
+      "year": 2011,
+      "trim": "E63 S AMG",
+      "status": "invalid",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": false,
+      "issues": ["TRIM_DOES_NOT_EXIST"],
+      "notes": "INVALID: E63 S AMG first produced for 2014 model year. No 2011 E63 S exists."
+    },
+    {
+      "id": "9b743114-3868-4ea1-bf1d-aa7c3b3538ab",
+      "year": 2012,
+      "trim": "E63 S AMG",
+      "status": "invalid",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": false,
+      "issues": ["TRIM_DOES_NOT_EXIST"],
+      "notes": "INVALID: E63 S AMG first produced for 2014 model year. No 2012 E63 S exists."
+    },
+    {
+      "id": "894d896a-d07b-49e9-9278-a90bbb37dae3",
+      "year": 2012,
+      "trim": "E400",
+      "status": "flagged",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": false,
+      "issues": ["TRIM_QUESTIONABLE"],
+      "notes": "E400 introduced later in W212 lifecycle. Verify availability for 2012 MY."
+    },
+    {
+      "id": "9fd3f2e1-4b27-4400-bc09-6083c34fdbab",
+      "year": 2012,
+      "trim": "E350",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E350 specs correct for 2012 W212."
+    },
+    {
+      "id": "74b95d87-badc-49c4-a3a4-64f34bd5a065",
+      "year": 2012,
+      "trim": "E63 AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 AMG specs correct for 2012 W212."
+    },
+    {
+      "id": "3a79528f-86f9-4723-ab48-38c183e21881",
+      "year": 2012,
+      "trim": "E550",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E550 specs correct for 2012 W212."
+    },
+    {
+      "id": "23371c51-20b2-463f-ba3d-08b9603e27f1",
+      "year": 2012,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2012 W212."
+    },
+    {
+      "id": "29e3f403-1586-4a65-9ac2-af5e248749a6",
+      "year": 2013,
+      "trim": "E63 S AMG",
+      "status": "invalid",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": false,
+      "issues": ["TRIM_DOES_NOT_EXIST"],
+      "notes": "INVALID: E63 S AMG first produced for 2014 model year. No 2013 E63 S exists."
+    },
+    {
+      "id": "62886261-b256-4a1c-957d-305d0c1d96fb",
+      "year": 2013,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2013 W212."
+    },
+    {
+      "id": "1b8648b3-923a-49cc-9756-b84d41b396c2",
+      "year": 2013,
+      "trim": "E63 AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 AMG specs correct for 2013 W212."
+    },
+    {
+      "id": "4813ad7d-77e8-4728-b26d-43dbcdeeb4fd",
+      "year": 2013,
+      "trim": "E550",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E550 specs correct for 2013 W212."
+    },
+    {
+      "id": "b47146dd-9362-4656-b321-b40d51142fc5",
+      "year": 2013,
+      "trim": "E400",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E400 available from 2013 W212 facelift. Specs correct."
+    },
+    {
+      "id": "8f6d69e5-bcbb-4eb9-b520-9662a7e0325c",
+      "year": 2013,
+      "trim": "E350",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E350 specs correct for 2013 W212."
+    },
+    {
+      "id": "ed374832-04da-40a7-b2ea-cefaba70b5c8",
+      "year": 2014,
+      "trim": "E63 AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 AMG specs correct for 2014 W212."
+    },
+    {
+      "id": "3adf682c-e023-4eae-af60-3b2eb00c70ba",
+      "year": 2014,
+      "trim": "E63 S AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 S AMG first year correct (2014). Staggered 19\" wheels confirmed."
+    },
+    {
+      "id": "834aa09d-a7ff-4151-ac9f-bbf18d851649",
+      "year": 2014,
+      "trim": "E550",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E550 specs correct for 2014 W212."
+    },
+    {
+      "id": "3ebf5291-bfdd-499e-85b4-20a5a23ba229",
+      "year": 2014,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2014 W212."
+    },
+    {
+      "id": "6b2594ac-cd62-4457-a223-2581989adc05",
+      "year": 2014,
+      "trim": "E350",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E350 specs correct for 2014 W212."
+    },
+    {
+      "id": "e84bc4ef-d15b-424a-8ddb-41bfd0101c96",
+      "year": 2014,
+      "trim": "E400",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E400 specs correct for 2014 W212."
+    },
+    {
+      "id": "fe68ea9e-4249-41bf-815c-64cb28eff71f",
+      "year": 2015,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2015 W212."
+    },
+    {
+      "id": "7160ed6f-de90-4a7c-bc48-91dd2dd9cc12",
+      "year": 2015,
+      "trim": "E400",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E400 specs correct for 2015 W212."
+    },
+    {
+      "id": "0ef97707-aba9-42ad-9b4c-4dd13856ba6a",
+      "year": 2015,
+      "trim": "E63 S AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 S AMG specs correct for 2015 W212."
+    },
+    {
+      "id": "01145c08-5437-4775-84e1-518c6866bb49",
+      "year": 2015,
+      "trim": "E63 AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 AMG specs correct for 2015 W212."
+    },
+    {
+      "id": "79c2039c-2f28-4e0b-9c15-0feaa32b408b",
+      "year": 2015,
+      "trim": "E550",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E550 specs correct for 2015 W212."
+    },
+    {
+      "id": "ff8c0805-3afc-47b0-9e95-9242072cb4b1",
+      "year": 2015,
+      "trim": "E350",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E350 specs correct for 2015 W212."
+    },
+    {
+      "id": "3cab855a-8148-418c-afb8-47cade67882b",
+      "year": 2016,
+      "trim": "E400",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E400 specs correct for 2016 W212."
+    },
+    {
+      "id": "aae9c053-5808-41a7-bd1f-34f91cba2783",
+      "year": 2016,
+      "trim": "E350",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E350 specs correct for 2016 W212."
+    },
+    {
+      "id": "dab6c771-e0b1-40c8-a682-f8c77ab82d71",
+      "year": 2016,
+      "trim": "E63 S AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 S AMG specs correct for 2016 W212."
+    },
+    {
+      "id": "54ce3690-e05e-451b-bcc9-020c820ad28e",
+      "year": 2016,
+      "trim": "E63 AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 AMG specs correct for 2016 W212."
+    },
+    {
+      "id": "e618be2c-61d1-4a21-b438-06762b8ec95f",
+      "year": 2016,
+      "trim": "E550",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E550 specs correct for 2016 W212."
+    },
+    {
+      "id": "a469c9df-1d59-4019-b61f-fae642b5eee1",
+      "year": 2016,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2016 W212."
+    },
+    {
+      "id": "98e323b8-e182-4978-ad84-5bae3fc80388",
+      "year": 2017,
+      "trim": "E350",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E350 available in 2017 W213 (non-US). Specs correct."
+    },
+    {
+      "id": "83023463-0842-433d-b4ee-411afb63d0db",
+      "year": 2017,
+      "trim": "E63 AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 AMG W213 specs correct. Note: US got AMG E63 naming."
+    },
+    {
+      "id": "59339249-b85f-442b-80ef-f0a2d5e4f60e",
+      "year": 2017,
+      "trim": "AMG E 63",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "AMG E 63 correct naming for 2017 W213."
+    },
+    {
+      "id": "c28f90f2-649d-4675-8d29-3a8fadc130d7",
+      "year": 2017,
+      "trim": "E 350 4MATIC",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 350 4MATIC specs correct for 2017 W213."
+    },
+    {
+      "id": "c157f374-e3f3-4aa4-b5e8-feb4478045e5",
+      "year": 2017,
+      "trim": "E 450 4MATIC",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 450 4MATIC specs correct for 2017 W213."
+    },
+    {
+      "id": "43ec8b16-e31e-48bf-ba56-7b9e24b7a281",
+      "year": 2017,
+      "trim": "E 300",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 300 specs correct for 2017 W213."
+    },
+    {
+      "id": "22f400fb-bc2f-4780-99e8-1aaa4079fcf4",
+      "year": 2017,
+      "trim": "E63 S AMG",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E63 S AMG specs correct for 2017 W213."
+    },
+    {
+      "id": "933d3503-7e2a-4837-8744-9df9682d7b79",
+      "year": 2017,
+      "trim": "E550",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E550 available in early 2017 before E450 transition."
+    },
+    {
+      "id": "a70e658a-861d-47c5-8601-0f742698b4c8",
+      "year": 2017,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2017 W213."
+    },
+    {
+      "id": "70b1b237-db3b-45c5-8a07-a7a27146c901",
+      "year": 2017,
+      "trim": "E400",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E400 available in early 2017 W213."
+    },
+    {
+      "id": "ec858d42-b6da-4de7-99a5-ace718307215",
+      "year": 2017,
+      "trim": "AMG E 63 S",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "AMG E 63 S correct naming for 2017 W213."
+    },
+    {
+      "id": "4c8afd88-9ecd-4a73-acee-77ba8ae548df",
+      "year": 2017,
+      "trim": "AMG E 53 4MATIC+",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "AMG E 53 4MATIC+ specs correct for 2017 W213."
+    },
+    {
+      "id": "d47e779f-bc58-4824-89bd-fb3585628d1c",
+      "year": 2017,
+      "trim": "E 300 4MATIC",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 300 4MATIC specs correct for 2017 W213."
+    },
+    {
+      "id": "d86e6368-75f1-4cd2-9b19-8f27279f2d8b",
+      "year": 2017,
+      "trim": "E 400 4MATIC",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 400 4MATIC specs correct for 2017 W213."
+    },
+    {
+      "id": "229161ef-463d-4a77-9a80-687edae15c7a",
+      "year": 2018,
+      "trim": "E 350 4MATIC",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 350 4MATIC specs correct for 2018 W213."
+    },
+    {
+      "id": "25e15cf1-c3a8-4c6f-8033-6d76d33b7831",
+      "year": 2018,
+      "trim": "AMG E 63 S",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "AMG E 63 S specs correct for 2018 W213."
+    },
+    {
+      "id": "50d3b84b-5f23-4be7-a7f3-259edc5a1ca2",
+      "year": 2018,
+      "trim": "E 300",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 300 specs correct for 2018 W213."
+    },
+    {
+      "id": "c85c48a3-0d8c-404b-99f9-a29e77115b26",
+      "year": 2018,
+      "trim": "E 400 4MATIC",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 400 4MATIC specs correct for 2018 W213."
+    },
+    {
+      "id": "05e5e1e9-261f-4d1a-ab63-5b16f371792b",
+      "year": 2018,
+      "trim": "E 300 4MATIC",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 300 4MATIC specs correct for 2018 W213."
+    },
+    {
+      "id": "93ddab99-f1d6-4c0c-ae52-31f6319e3092",
+      "year": 2018,
+      "trim": "AMG E 63",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "AMG E 63 specs correct for 2018 W213."
+    },
+    {
+      "id": "2bb7a6ed-93ac-4081-bb9c-7c2f651eeea9",
+      "year": 2018,
+      "trim": "AMG E 53 4MATIC+",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "AMG E 53 4MATIC+ specs correct for 2018 W213."
+    },
+    {
+      "id": "af9b0a76-69e9-4128-aa25-c76a8d8c2968",
+      "year": 2018,
+      "trim": "E 450 4MATIC",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 450 4MATIC specs correct for 2018 W213."
+    },
+    {
+      "id": "5e9db531-4470-430c-8247-35f241446d4b",
+      "year": 2018,
+      "trim": "Base",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "Base trim specs correct for 2018 W213."
+    },
+    {
+      "id": "f2ef1520-9603-4fda-812e-b3357ddd9a28",
+      "year": 2019,
+      "trim": "E 300 4MATIC",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 300 4MATIC specs correct for 2019 W213."
+    },
+    {
+      "id": "f44ce6e3-5756-4381-bc54-f34ec29ec381",
+      "year": 2019,
+      "trim": "E 450 4MATIC",
+      "status": "verified",
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "wheelSizesVerified": true,
+      "notes": "E 450 4MATIC specs correct for 2019 W213."
+    }
+  ]
+}

@@ -1,0 +1,1543 @@
+[
+  {
+    "id": "26abefb2-2d64-4e6a-8b80-6f3af8f119df",
+    "year": 1992,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "7Jx15",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "P215/65R15",
+      "P235/55R16",
+      "P245/50ZR16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "db8bbbb9-6155-4d03-99a4-971c6b1f9d18",
+    "year": 1992,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0bb6e0bf-2633-4efe-91e0-7e7eb9bbc5fa",
+    "year": 1992,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am GTA",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "88ca462c-98d5-4fea-ba13-aa7d67c0fd0b",
+    "year": 1992,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Formula",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6aeb25f5-4b13-4f14-bbae-63a6b51384b8",
+    "year": 1992,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "SE",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d4571324-c9bc-4be1-986c-fe9805c87899",
+    "year": 1993,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am WS6",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f261aac8-55d4-4b25-812e-bb2a4d749a1b",
+    "year": 1993,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17"
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "797b4354-2814-46f4-9965-4dda912e5a12",
+    "year": 1993,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Formula",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5ddeba1e-3dba-4985-8fe3-34eb5c7ce47e",
+    "year": 1993,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "81ab08d2-d648-4659-af24-31ee2a8166d9",
+    "year": 1993,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Firehawk",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a7330d62-e284-4eda-b03b-ef691500d8a2",
+    "year": 1994,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17"
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "e42dac2d-0541-456a-a22e-5eaa41c6c3d8",
+    "year": 1994,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Formula",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5195992b-28df-4f75-9b1c-e90745eb5519",
+    "year": 1994,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4bb9bb62-ab05-4a24-a440-421ce98133e7",
+    "year": 1994,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Firehawk",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b0aa7507-4019-4c8c-b750-75fdaa4a56b8",
+    "year": 1994,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am WS6",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "71703d28-d248-4356-84bd-57a7b7f87959",
+    "year": 1995,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am WS6",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "410a5838-fcf2-4c59-b4d5-a0b2730101d2",
+    "year": 1995,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Formula",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "994d2266-2fed-4336-b0c8-ef460ac2f76a",
+    "year": 1995,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4706f7bb-10cd-4621-a76c-5b5672394424",
+    "year": 1995,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Firehawk",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fbbb23bf-402d-47c1-8d65-f6dd3bd3724a",
+    "year": 1995,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17"
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "a2d798ab-ac86-4e93-9a1e-4869faf72173",
+    "year": 1996,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Formula",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "294328cf-55c3-4394-90cd-b79725652e1e",
+    "year": 1996,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17"
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "699088e9-300b-42f3-aeb9-3edc0113d183",
+    "year": 1996,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Firehawk",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d52460ae-ca46-4e7a-b263-1e64f79ff8f9",
+    "year": 1996,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am WS6",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "226782c1-4f67-4a45-9f59-a5c24be856c2",
+    "year": 1996,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b8318a1a-2870-4aa2-a50e-b7676b9dcb00",
+    "year": 1997,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Firehawk",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c5a42f7c-7024-4b76-aea9-3e1380b286f8",
+    "year": 1997,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0a0aee2d-3e5b-47ed-ab83-48f1673cee46",
+    "year": 1997,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17"
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "fa0757ce-202a-4b49-8b12-da99e2029230",
+    "year": 1997,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Formula",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "51d443a9-7e49-4f39-a805-ea15110f21a5",
+    "year": 1997,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am WS6",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0f1172c6-4ab3-45fc-ac79-d2d169b1c078",
+    "year": 1998,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am WS6",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2489098c-8248-487d-b974-c7aa03bef6ed",
+    "year": 1998,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17"
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "be447f50-b6a2-4088-b263-45c78ee41098",
+    "year": 1998,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Formula",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "92929afb-5d63-4466-b74e-94ed43b4126d",
+    "year": 1998,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Firehawk",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fc8a2aa9-0d8d-4b6b-baee-912c9a259562",
+    "year": 1998,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "32e6a21a-c993-48e5-995e-1a084cd89d6a",
+    "year": 1999,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Firehawk",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "de21f35f-ad7b-43e2-8148-26d4c5672e7f",
+    "year": 1999,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Formula",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6049f25e-defc-4f01-bdc3-af069ee6ca7e",
+    "year": 1999,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7a6ae581-af0f-4adf-8454-4e916a2596c9",
+    "year": 1999,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17"
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "7168c4d3-0e4b-4f21-8a90-32a132483d48",
+    "year": 1999,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Trans Am WS6",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P205/70R14",
+      "P215/65R15",
+      "P225/70R15",
+      "P245/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e8e9667b-fac3-4fec-9d41-116278f448e2",
+    "year": 2000,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template [filled from 1999 firebird]"
+  },
+  {
+    "id": "d8aaf846-3bb8-428c-94de-d616f2e6e8fd",
+    "year": 2001,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template [filled from 2000 firebird]"
+  },
+  {
+    "id": "5b62d224-ead7-4043-abe0-0a9e59659ec1",
+    "year": 2002,
+    "make": "pontiac",
+    "model": "firebird",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template [filled from 2001 firebird]"
+  },
+  {
+    "id": "f04cbf0e-4c38-44d5-9c09-4a15207f7b52",
+    "year": 2005,
+    "make": "pontiac",
+    "model": "g6",
+    "trim": "Base",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7Jx17",
+      "7Jx18"
+    ],
+    "currentTireSizes": [
+      "P215/60R16",
+      "P225/50R17",
+      "P225/45R18"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "226d0c79-45e3-437d-be78-6ff0fba9618c",
+    "year": 2006,
+    "make": "pontiac",
+    "model": "g6",
+    "trim": "Base",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7Jx17",
+      "7Jx18"
+    ],
+    "currentTireSizes": [
+      "P215/60R16",
+      "P225/50R17",
+      "P225/45R18"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "8dff6e0b-528c-49ba-a18c-1b246e91e76f",
+    "year": 2007,
+    "make": "pontiac",
+    "model": "g6",
+    "trim": "Base",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7Jx17",
+      "7Jx18"
+    ],
+    "currentTireSizes": [
+      "P215/60R16",
+      "P225/50R17",
+      "P225/45R18"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "f61f5a3b-55b0-4466-adef-0ed4801d66bd",
+    "year": 2008,
+    "make": "pontiac",
+    "model": "g6",
+    "trim": "Base",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7Jx17",
+      "7Jx18"
+    ],
+    "currentTireSizes": [
+      "P215/60R16",
+      "P225/50R17",
+      "P225/45R18"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "eb7c4c3f-376a-4879-8ece-fe2829cfcd0a",
+    "year": 2009,
+    "make": "pontiac",
+    "model": "g6",
+    "trim": "Base",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7Jx17",
+      "7Jx18"
+    ],
+    "currentTireSizes": [
+      "P215/60R16",
+      "P225/50R17",
+      "P225/45R18"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "673aa56f-4dbf-410f-99ea-06a67982d652",
+    "year": 2010,
+    "make": "pontiac",
+    "model": "g6",
+    "trim": "Base",
+    "currentBoltPattern": "5x110",
+    "currentHubBore": "65.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7Jx17",
+      "7Jx18"
+    ],
+    "currentTireSizes": [
+      "P215/60R16",
+      "P225/50R17",
+      "P225/45R18"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "4058a9c4-fabf-4a31-870e-7cadc578b75f",
+    "year": 2008,
+    "make": "pontiac",
+    "model": "g8",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "8Jx18",
+      "8Jx19"
+    ],
+    "currentTireSizes": [
+      "P245/45R18",
+      "P245/40R19"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "a75a31f0-2517-4d60-b9c8-c281f59e2e39",
+    "year": 2009,
+    "make": "pontiac",
+    "model": "g8",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "8Jx18",
+      "8Jx19"
+    ],
+    "currentTireSizes": [
+      "P245/45R18",
+      "P245/40R19"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "c6096d54-0301-4707-9c53-f3e8a659b215",
+    "year": 1985,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "5.5Jx14",
+      "6Jx15"
+    ],
+    "currentTireSizes": [
+      "P185/75R14",
+      "P195/65R15",
+      "P205/55R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "6a0f7ddc-4cbd-4fc3-8f20-7749e05389de",
+    "year": 1986,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "5.5Jx14",
+      "6Jx15"
+    ],
+    "currentTireSizes": [
+      "P185/75R14",
+      "P195/65R15",
+      "P205/55R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "b648cd76-813e-4469-bc26-28af69a328a8",
+    "year": 1987,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "5.5Jx14",
+      "6Jx15"
+    ],
+    "currentTireSizes": [
+      "P185/75R14",
+      "P195/65R15",
+      "P205/55R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "682b43f8-6fd1-445e-b328-e6f9d5d06b14",
+    "year": 1988,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "5.5Jx14",
+      "6Jx15"
+    ],
+    "currentTireSizes": [
+      "P185/75R14",
+      "P195/65R15",
+      "P205/55R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "e06b38b6-0425-4f4e-8172-3373ca7f26b8",
+    "year": 1989,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "5.5Jx14",
+      "6Jx15"
+    ],
+    "currentTireSizes": [
+      "P185/75R14",
+      "P195/65R15",
+      "P205/55R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "34f387d2-83a2-4e5e-b68c-0c1f856d7ac6",
+    "year": 1990,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "5.5Jx14",
+      "6Jx15"
+    ],
+    "currentTireSizes": [
+      "P185/75R14",
+      "P195/65R15",
+      "P205/55R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "7515c458-f6ed-47d0-8cac-e96bc8dbfebc",
+    "year": 1991,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "5.5Jx14",
+      "6Jx15"
+    ],
+    "currentTireSizes": [
+      "P185/75R14",
+      "P195/65R15",
+      "P205/55R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "43bd3850-9f00-426a-ba3b-2447a707d308",
+    "year": 1992,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "6Jx14",
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P195/70R14",
+      "P205/65R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "88ee511d-b404-4a1d-b33e-1069f8d0b9fb",
+    "year": 1993,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "6Jx14",
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P195/70R14",
+      "P205/65R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "3a8fd363-7ed4-4d91-8fc5-7398891b2d69",
+    "year": 1994,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "6Jx14",
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P195/70R14",
+      "P205/65R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "d3bcabcf-493b-44b1-b65f-687549ad336c",
+    "year": 1995,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "6Jx14",
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P195/70R14",
+      "P205/65R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "f3b6f32d-8c25-4c0e-8259-21f40764fd94",
+    "year": 1996,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "6Jx14",
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P195/70R14",
+      "P205/65R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "3980039f-845e-42c5-aff8-cba11b010d53",
+    "year": 1997,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "6Jx14",
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P195/70R14",
+      "P205/65R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "d79e48e1-e7c2-44c0-bad5-d9b7d54869f4",
+    "year": 1998,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      "6Jx14",
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P195/70R14",
+      "P205/65R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "306f28b3-e0b1-4f10-a8e7-acd0851a2ade",
+    "year": 1999,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P215/60R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "166d388d-02a8-4652-9f79-8ca6074c98a5",
+    "year": 2000,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P215/60R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "41b6a3af-9cd2-4fc2-b9ae-3cd75bbafe78",
+    "year": 2001,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P215/60R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "ee19a899-a498-4e4e-af70-798a345d3aff",
+    "year": 2002,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P215/60R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "a047418d-739d-467d-b6de-e6221b57bfb2",
+    "year": 2003,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P215/60R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "44171a06-9bfc-45fa-97cb-0a57548fa441",
+    "year": 2004,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P215/60R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "9bca69cd-fce0-447f-945e-297db54eafb4",
+    "year": 2005,
+    "make": "pontiac",
+    "model": "grand-am",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P215/60R15",
+      "P225/50R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "39660bd7-74e5-4844-9f36-69f5373505e4",
+    "year": 1978,
+    "make": "pontiac",
+    "model": "grand-prix",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx14",
+      "7Jx15"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15",
+      "P225/70R15"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "fdb96cb2-faee-4c91-8ec1-054ae337cb35",
+    "year": 1979,
+    "make": "pontiac",
+    "model": "grand-prix",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx14",
+      "7Jx15"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15",
+      "P225/70R15"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "f5a92032-26e4-436b-ab0d-379c7160634b",
+    "year": 1980,
+    "make": "pontiac",
+    "model": "grand-prix",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx14",
+      "7Jx15"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15",
+      "P225/70R15"
+    ],
+    "source": "generation_template"
+  }
+]

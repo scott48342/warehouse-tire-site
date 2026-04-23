@@ -1,0 +1,1017 @@
+{
+  "batchId": "105",
+  "processedAt": "2026-04-21T22:23:00Z",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 75,
+    "issues": 28,
+    "passed": 47
+  },
+  "results": [
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18", "245/35R19", "275/30R19"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 Sedan 4MATIC": ["245/45R17", "245/40R18"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"],
+        "E350 Cabriolet": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"],
+        "E350 Coupe": ["235/40R18 (F)", "255/35R18 (R)"],
+        "E550 Sedan": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["225/55R16 not OEM for 2014 W212 E-Class (W210 carryover size)", "245/35R19 and 275/30R19 are larger aftermarket sizes, not OEM"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 Sedan 4MATIC": ["245/45R17", "245/40R18"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["Most listed sizes are aftermarket/plus-sizing, not OEM. OEM maxes at 18\" for 2014 E-Class non-AMG"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 Sedan 4MATIC": ["245/45R17", "245/40R18"],
+        "E350 Sport/Luxury": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket, not OEM for standard E-Class"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18", "245/35R19", "275/30R19"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 Sedan 4MATIC": ["245/45R17", "245/40R18"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["225/55R16 not OEM for W212. 19\" sizes are aftermarket"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 4MATIC": ["245/45R17", "245/40R18"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket for 2012 E-Class"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18", "245/35R19", "275/30R19"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 4MATIC": ["245/45R17", "245/40R18"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["225/55R16 not OEM for W212. 19\" sizes are aftermarket"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 4MATIC": ["245/45R17", "245/40R18"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18", "245/35R19", "275/30R19"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 4MATIC": ["245/45R17", "245/40R18"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["225/55R16 not OEM for W212"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "265/35R18", "245/35R19", "275/30R19"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 Sedan 4MATIC": ["245/45R17", "245/40R18"],
+        "E350 BlueTEC": ["245/45R17"],
+        "E350 Wagon 4MATIC": ["245/45R17", "245/40R18"],
+        "E350 Coupe": ["235/45R17 (F)", "255/40R17 (R)", "235/40R18 (F)", "255/35R18 (R)"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["225/55R16 not OEM for 2010 W212 (first year of W212)"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket for 2010 E-Class"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 4MATIC": ["245/45R17"],
+        "E350 Sport Package": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket for W211"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "255/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 4MATIC": ["245/45R17"],
+        "E350 Sport Package": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["225/55R16 is W210 size, not W211. 255/40R18 and 255/35R19 need verification"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 4MATIC": ["245/45R17"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "255/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 4MATIC": ["245/45R17"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for W211"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 4MATIC": ["245/45R17"],
+        "E550 Sedan": ["245/45R17"],
+        "E550 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "255/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["245/45R17"],
+        "E350 4MATIC": ["245/45R17"],
+        "E350 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["225/55R16 not OEM for W211"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "255/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E350 Sedan": ["225/55R16", "245/45R17"],
+        "E350 4MATIC": ["225/55R16", "245/45R17"],
+        "E350 Sport Package": ["245/40R18 (F)", "265/35R18 (R)"],
+        "E500 Sedan": ["245/45R17"],
+        "E500 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E350/E500 Standard": ["245/45R17"],
+        "E350/E500 Sport": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E320 Sedan": ["225/55R16", "245/45R17"],
+        "E500 Sedan": ["245/45R17"],
+        "Sport Package": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "255/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E320 Sedan": ["225/55R16", "245/45R17"],
+        "E320 4MATIC": ["225/55R16"],
+        "E320 Appearance Package": ["245/45R17"],
+        "E320 Sport Package": ["245/40R18 (F)", "265/35R18 (R)"],
+        "E500 Sedan": ["245/45R17"],
+        "E500 Sport Package": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E320/E500 Sedan": ["245/45R17"],
+        "Sport Package": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "255/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E320 Sedan": ["225/55R16"],
+        "E500 Sedan": ["245/45R17"],
+        "E500 4MATIC": ["245/45R17"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R16", "245/45R17", "245/40R18", "255/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E320 Sedan": ["225/55R16"],
+        "E500 Sedan": ["245/45R17"],
+        "E500 Sport Package": ["245/45R17"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E320/E500 Standard": ["225/55R16", "245/45R17"]
+      },
+      "issues": ["19\"-20\" sizes are aftermarket"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["215/55R16", "225/55R16", "225/50R17", "245/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "E320 Sedan": ["215/55R16"],
+        "E320 4-Matic Sedan": ["215/55R16"],
+        "E320 Wagon": ["215/55R16"],
+        "E320 4-Matic Wagon": ["215/55R16"],
+        "E320 Sport Package": ["235/45R17"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E320 All trims": ["215/55R16", "235/45R17"]
+      },
+      "issues": ["Most sizes are aftermarket. OEM max is 17\" for 2002 E320"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["215/55R16", "225/55R16", "225/50R17", "245/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "E320 Sedan": ["215/55R16"],
+        "E320 4-Matic Sedan": ["215/55R16"],
+        "E320 Wagon": ["215/55R16"],
+        "E430 Sedan": ["215/55R16"],
+        "E55 AMG": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E320/E430 All trims": ["215/55R16"]
+      },
+      "issues": ["Most sizes are aftermarket. OEM max is 16\"-18\" for W210"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["215/55R16", "225/55R16", "225/50R17", "245/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "E320 Sedan": ["215/55R16"],
+        "E320 4-Matic Sedan": ["215/55R16"],
+        "E320 Wagon": ["215/55R16"],
+        "E430 Sedan": ["215/55R16"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "e-class",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "275/30R20", "265/35R20", "295/30R20"],
+      "validatedTireSizes": {
+        "E320/E430 All trims": ["215/55R16"]
+      },
+      "issues": ["Most sizes are aftermarket. OEM is 215/55R16 for 2000 W210"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "E450 4MATIC All-Terrain Wagon": ["255/45R19", "255/40R20", "255/40R20 (F) + 285/35R20 (R)"]
+      },
+      "issues": ["Empty current sizes - needs population"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "E450 4MATIC All-Terrain Wagon": ["255/45R19", "255/40R20", "255/40R20 (F) + 285/35R20 (R)"]
+      },
+      "issues": ["Empty current sizes - needs population"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "E450 4MATIC All-Terrain Wagon": ["255/45R19", "255/40R20", "255/40R20 (F) + 285/35R20 (R)"]
+      },
+      "issues": ["Empty current sizes - needs population"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "E450 4MATIC All-Terrain Wagon": ["245/45R19", "245/40R20"]
+      },
+      "issues": ["Empty current sizes - needs population"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "E450 4MATIC All-Terrain Wagon": ["245/45R19", "245/40R20"]
+      },
+      "issues": ["Empty current sizes - needs population"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "E450 4MATIC All-Terrain Wagon": ["245/45R19", "245/40R20"]
+      },
+      "issues": ["Empty current sizes - needs population"],
+      "status": "tiresize.com, motor1.com"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "E450 All-Terrain": ["245/45R19", "245/40R20"]
+      },
+      "issues": ["Empty current sizes - needs population"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "E450 All-Terrain": ["245/45R19", "245/40R20"]
+      },
+      "issues": ["Empty current sizes - needs population"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "E400 All-Terrain": ["245/45R19", "245/40R20"]
+      },
+      "issues": ["Empty current sizes - needs population"],
+      "status": "issues",
+      "source": "estimated from model data"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "E400 All-Terrain": ["245/45R19", "245/40R20"]
+      },
+      "issues": ["Empty current sizes - needs population. Note: E-Class All-Terrain launched 2017 in EU"],
+      "status": "issues",
+      "source": "estimated from model data"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "AMG E53": ["245/40R19 (F)", "275/35R19 (R)", "245/35R20 (F)", "275/30R20 (R)"],
+        "AMG E63 S": ["265/35R20 (F)", "295/30R20 (R)"]
+      },
+      "issues": ["Empty current sizes - needs population"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E53": ["245/40R19 (F)", "275/35R19 (R)", "245/35R20 (F)", "275/30R20 (R)"],
+        "AMG E63 S": ["265/35R20 (F)", "295/30R20 (R)"]
+      },
+      "issues": ["245/40R18 and 255/35R19 appear to be older generation sizes"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E53": ["245/40R19 (F)", "275/35R19 (R)", "245/35R20 (F)", "275/30R20 (R)"],
+        "AMG E63 S": ["265/35R20 (F)", "295/30R20 (R)"]
+      },
+      "issues": ["Need to add E63 S sizes: 265/35R20 (F), 295/30R20 (R)"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E53": ["245/40R19", "275/35R19"],
+        "AMG E63 S Sedan": ["265/35R20 (F)", "295/30R20 (R)"],
+        "AMG E63 S Wagon": ["265/35R20 (F)", "295/30R20 (R)"]
+      },
+      "issues": ["Missing E63 S sizes: 265/35R20, 295/30R20"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E53": ["245/40R19", "275/35R19"],
+        "AMG E63 S Sedan": ["265/35R20 (F)", "295/30R20 (R)"],
+        "AMG E63 S Wagon": ["265/35R20 (F)", "295/30R20 (R)"]
+      },
+      "issues": ["Missing E63 S sizes: 265/35R20, 295/30R20"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E53": ["245/40R19", "275/35R19"],
+        "AMG E63 S Sedan": ["265/35R20 (F)", "295/30R20 (R)"]
+      },
+      "issues": ["Missing E63 S sizes"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E53": ["245/40R19", "275/35R19"],
+        "AMG E63 S Sedan": ["265/35R20 (F)", "295/30R20 (R)"],
+        "AMG E63 S Wagon": ["265/35R20 (F)", "295/30R20 (R)"]
+      },
+      "issues": ["Missing E63 S sizes"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E53": ["245/40R19", "275/35R19"],
+        "AMG E63 S Sedan": ["265/35R20 (F)", "295/30R20 (R)"],
+        "AMG E63 S Wagon": ["265/35R20 (F)", "295/30R20 (R)"]
+      },
+      "issues": ["Missing E63 S sizes"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 Sedan": ["265/40R19 (F)", "295/35R19 (R)", "265/35R20 (F)", "295/30R20 (R)"],
+        "AMG E63 S Sedan": ["265/35R20 (F)", "295/30R20 (R)"],
+        "AMG E63 S Wagon": ["265/35R20 (F)", "295/30R20 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E43": ["245/40R18", "245/35R19 (F)", "275/30R19 (R)"]
+      },
+      "issues": ["2017 had E43 AMG, not E63. E63 W213 started 2018"],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 S 4MATIC Sedan": ["255/35R19 (F)", "285/30R19 (R)"],
+        "AMG E63 S 4MATIC Wagon": ["255/35R19 (F)", "285/30R19 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 4MATIC Sedan": ["255/35R19 (F)", "285/30R19 (R)"],
+        "AMG E63 S 4MATIC Sedan": ["255/35R19 (F)", "285/30R19 (R)"],
+        "AMG E63 S 4MATIC Wagon": ["255/35R19 (F)", "285/30R19 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 4MATIC Sedan": ["255/35R19 (F)", "285/30R19 (R)"],
+        "AMG E63 S 4MATIC Sedan": ["255/35R19 (F)", "285/30R19 (R)"],
+        "AMG E63 S 4MATIC Wagon": ["255/35R19 (F)", "285/30R19 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 Sedan": ["255/35R19 (F)", "285/30R19 (R)"],
+        "AMG E63 Wagon": ["255/35R19 (F)", "285/30R19 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 Sedan": ["255/35R19 (F)", "285/30R19 (R)"],
+        "AMG E63 Wagon": ["255/35R19 (F)", "285/30R19 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 Sedan": ["255/40R18 (F)", "285/35R18 (R)"]
+      },
+      "issues": ["2011 E63 used 18\" wheels, not 19\""],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 Sedan": ["255/40R18 (F)", "285/35R18 (R)"]
+      },
+      "issues": ["2010 E63 used 18\" wheels, not 19\""],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 Sedan": ["245/40R18 (F)", "265/35R18 (R)"],
+        "AMG E63 Wagon": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 Sedan": ["245/40R18 (F)", "265/35R18 (R)"],
+        "AMG E63 Wagon": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E63 Sedan": ["245/40R18 (F)", "265/35R18 (R)"],
+        "AMG E63 Wagon": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E55 Sedan": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": ["2006 was E55 AMG, E63 started 2007"],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E55 Sedan": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E55 Sedan": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E55 Sedan": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "currentTireSizes": ["245/40R18", "255/35R19", "265/35R19", "275/30R20"],
+      "validatedTireSizes": {
+        "AMG E55 Sedan": ["245/40R18 (F)", "265/35R18 (R)"]
+      },
+      "issues": [],
+      "status": "pass",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E450 4MATIC Cabriolet": ["245/45R18", "245/40R19"],
+        "E450 4MATIC Cabriolet (staggered)": ["245/45R18 (F)", "275/40R18 (R)", "245/40R19 (F)", "275/35R19 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for W213 Cabriolet"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E450 4MATIC Cabriolet": ["245/45R18", "245/40R19"],
+        "E450 4MATIC Cabriolet (staggered)": ["245/45R18 (F)", "275/40R18 (R)", "245/40R19 (F)", "275/35R19 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for Cabriolet"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E450 4MATIC Cabriolet": ["245/45R18", "245/40R19"],
+        "E450 Cabriolet (RWD staggered)": ["245/45R18 (F)", "275/40R18 (R)", "245/40R19 (F)", "275/35R19 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for Cabriolet"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E450 4MATIC Cabriolet": ["245/45R18", "245/40R19"],
+        "E450 Cabriolet (RWD staggered)": ["245/45R18 (F)", "275/40R18 (R)", "245/40R19 (F)", "275/35R19 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for Cabriolet"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E450 4MATIC Cabriolet": ["245/45R18", "245/40R19"],
+        "E450 Cabriolet (RWD staggered)": ["245/45R18 (F)", "275/40R18 (R)", "245/40R19 (F)", "275/35R19 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for Cabriolet"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E400 4MATIC Cabriolet": ["245/45R18", "245/40R19"],
+        "E400 Cabriolet (RWD staggered)": ["245/45R18 (F)", "275/40R18 (R)", "245/40R19 (F)", "275/35R19 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for Cabriolet"],
+      "status": "issues",
+      "source": "tiresize.com, goodyear.com"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E400 Cabriolet": ["245/45R18", "245/40R19"],
+        "E400 Cabriolet (staggered option)": ["245/45R18 (F)", "275/40R18 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for W213 Cabriolet"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E400 Cabriolet": ["235/40R18 (F)", "255/35R18 (R)"],
+        "E550 Cabriolet": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for W212 Cabriolet"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E400 Cabriolet": ["235/40R18 (F)", "255/35R18 (R)"],
+        "E550 Cabriolet": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for Cabriolet"],
+      "status": "issues",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "e-class-cabriolet",
+      "currentTireSizes": ["225/55R16", "245/40R18", "255/35R19"],
+      "validatedTireSizes": {
+        "E350 Cabriolet": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"],
+        "E550 Cabriolet": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"]
+      },
+      "issues": ["225/55R16 is not OEM for Cabriolet"],
+      "status": "issues",
+      "source": "tiresize.com"
+    }
+  ],
+  "recommendations": {
+    "e-class": "W210 (2000-2002): 215/55R16 standard. W211 (2003-2009): 225/55R16 base, 245/45R17 standard, 245/40R18+265/35R18 sport. W212 (2010-2016): 245/45R17 base, 245/40R18+265/35R18 sport. Remove 225/55R16 from W212+ years. Remove 19\"+ aftermarket sizes from non-AMG models.",
+    "e-class-amg": "W211 E55/E63 (2003-2009): 245/40R18+265/35R18. W212 E63 (2010-2011): 255/40R18+285/35R18. W212 E63 (2012-2016): 255/35R19+285/30R19. W213 E63 (2018+): 265/35R20+295/30R20. Add missing E63 S sizes to 2019-2024.",
+    "e-class-all-terrain": "Populate empty sizes: 2017-2023: 245/45R19, 245/40R20. 2024-2026: 255/45R19, 255/40R20, staggered 255/40R20+285/35R20 option.",
+    "e-class-cabriolet": "Remove 225/55R16 from all years (not OEM for Cabriolet). W212 (2014-2016): 235/40R18+255/35R18, 235/35R19+255/30R19. W213 (2017+): 245/45R18, 245/40R19, staggered options with 275mm rear."
+  }
+}

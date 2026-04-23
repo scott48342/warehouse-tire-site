@@ -1,0 +1,503 @@
+{
+  "batchId": 34,
+  "researchedAt": "2026-04-21T23:54:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "found": 26,
+    "notUS": 24
+  },
+  "vehicles": [
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "found": true,
+      "trims": [
+        { "name": "Base Model", "tireSize": "275/55R20", "wheelDiameter": 20 },
+        { "name": "Obsidian", "tireSize": "285/45R22", "wheelDiameter": 22 },
+        { "name": "Series II", "tireSize": "285/45R22", "wheelDiameter": 22 },
+        { "name": "Series III", "tireSize": "285/45R22", "wheelDiameter": 22 }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "found": true,
+      "trims": [
+        { "name": "Base Model", "tireSize": "275/55R20", "wheelDiameter": 20 },
+        { "name": "Obsidian", "tireSize": "285/45R22", "wheelDiameter": 22 },
+        { "name": "Series II", "tireSize": "285/45R22", "wheelDiameter": 22 },
+        { "name": "Series III", "tireSize": "285/45R22", "wheelDiameter": 22 }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "found": true,
+      "trims": [
+        { "name": "Base Model", "tireSize": "285/45R22", "wheelDiameter": 22 },
+        { "name": "Obsidian", "tireSize": "285/45R22", "wheelDiameter": 22 },
+        { "name": "Series III", "tireSize": "285/45R22", "wheelDiameter": 22 },
+        { "name": "Series III Obsidian", "tireSize": "285/45R22", "wheelDiameter": 22 }
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Liberty",
+      "found": false,
+      "notUS": true,
+      "reason": "Jeep Liberty was not sold in 2001 - US production started 2002"
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Liberty",
+      "found": false,
+      "notUS": true,
+      "reason": "Jeep Liberty was not sold in 2013 - US production ended 2012"
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Liberty",
+      "found": false,
+      "notUS": true,
+      "reason": "Jeep Liberty was not sold in 2014 - US production ended 2012"
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Base", "tireSize": "205/70R16", "wheelDiameter": 16 },
+        { "name": "Sport/Limited", "tireSize": "215/60R17", "wheelDiameter": 17 }
+      ],
+      "note": "Minimal data on page - specs inferred from 2008 model"
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Sport", "tireSizes": ["205/70R16", "215/65R17"], "wheelDiameters": [16, 17] },
+        { "name": "Limited", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] },
+        { "name": "North Edition", "tireSizes": ["205/70R16", "215/60R17"], "wheelDiameters": [16, 17] }
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Sport", "tireSize": "205/70R16", "wheelDiameter": 16 },
+        { "name": "Latitude/Limited", "tireSize": "215/60R17", "wheelDiameter": 17 }
+      ],
+      "note": "Minimal data on page - specs inferred from adjacent years"
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Sport", "tireSize": "205/70R16", "wheelDiameter": 16 },
+        { "name": "Latitude/Limited", "tireSize": "215/60R17", "wheelDiameter": 17 }
+      ],
+      "note": "Minimal data on page - specs inferred from adjacent years"
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Sport", "tireSizes": ["205/70R16", "215/65R17"], "wheelDiameters": [16, 17] },
+        { "name": "Latitude", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] },
+        { "name": "Latitude X", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] }
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Sport", "tireSizes": ["205/70R16", "215/65R17"], "wheelDiameters": [16, 17] },
+        { "name": "Latitude", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] },
+        { "name": "Limited", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] }
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Sport", "tireSizes": ["205/70R16", "215/65R17"], "wheelDiameters": [16, 17] },
+        { "name": "Latitude", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] },
+        { "name": "Limited", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] }
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Sport", "tireSizes": ["205/70R16", "215/65R17"], "wheelDiameters": [16, 17] },
+        { "name": "Latitude", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] },
+        { "name": "Limited", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] }
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Sport", "tireSizes": ["205/70R16", "215/65R17"], "wheelDiameters": [16, 17] },
+        { "name": "Altitude", "tireSize": "215/60R17", "wheelDiameter": 17 },
+        { "name": "High Altitude", "tireSize": "215/60R17", "wheelDiameter": 17 },
+        { "name": "Latitude", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] },
+        { "name": "Limited", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] }
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Sport", "tireSizes": ["205/70R16", "215/65R17"], "wheelDiameters": [16, 17] },
+        { "name": "75th Anniversary", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] },
+        { "name": "High Altitude", "tireSize": "215/60R17", "wheelDiameter": 17 },
+        { "name": "Latitude", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] },
+        { "name": "Limited", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] }
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "Jeep",
+      "model": "Patriot",
+      "found": true,
+      "trims": [
+        { "name": "Sport", "tireSizes": ["205/70R16", "215/65R17"], "wheelDiameters": [16, 17] },
+        { "name": "75th Anniversary Edition", "tireSize": "215/65R17", "wheelDiameter": 17 },
+        { "name": "High Altitude", "tireSize": "215/60R17", "wheelDiameter": 17 },
+        { "name": "Latitude", "tireSizes": ["215/60R17", "215/65R17"], "wheelDiameters": [17] },
+        { "name": "Sport SE", "tireSize": "215/65R17", "wheelDiameter": 17 }
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Renegade",
+      "found": false,
+      "notUS": true,
+      "reason": "Jeep Renegade was not sold in 2014 - US production started 2015"
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "found": false,
+      "notUS": true,
+      "reason": "Jeep Wagoneer was not sold in 2021 - US production started 2022"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "found": true,
+      "trims": [
+        { "name": "Carbide", "tireSize": "285/45R22", "wheelDiameter": 22 },
+        { "name": "Series I", "tireSizes": ["275/65R18", "275/55R20"], "wheelDiameters": [18, 20] },
+        { "name": "Series II", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] },
+        { "name": "Series III", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] }
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "found": true,
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["275/65R18", "275/55R20"], "wheelDiameters": [18, 20] },
+        { "name": "Carbide", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] },
+        { "name": "Series II", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] },
+        { "name": "Series III", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "found": true,
+      "trims": [
+        { "name": "Base Model", "tireSizes": ["275/65R18", "275/55R20"], "wheelDiameters": [18, 20] },
+        { "name": "Carbide", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] },
+        { "name": "Series II", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] },
+        { "name": "Series III", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "found": true,
+      "trims": [
+        { "name": "Base Model", "tireSize": "275/55R20", "wheelDiameter": 20 },
+        { "name": "Carbide", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] },
+        { "name": "Series II", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] },
+        { "name": "Series III", "tireSizes": ["275/55R20", "285/45R22"], "wheelDiameters": [20, 22] }
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "300e",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia 300e was not sold in the US market"
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "300e",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia 300e was not sold in the US market"
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "300e",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia 300e was not sold in the US market"
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "300e",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia 300e was not sold in the US market"
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "300e",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia 300e was not sold in the US market"
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Amanti",
+      "found": true,
+      "trims": [
+        { "name": "Base", "tireSize": "225/60R16", "wheelDiameter": 16, "note": "Inferred from model specs" }
+      ],
+      "note": "Page exists but minimal trim data"
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Amanti",
+      "found": true,
+      "trims": [
+        { "name": "Base", "tireSize": "225/60R16", "wheelDiameter": 16, "note": "Inferred from model specs" }
+      ],
+      "note": "Page exists but minimal trim data"
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Amanti",
+      "found": true,
+      "trims": [
+        { "name": "Base", "tireSize": "225/60R16", "wheelDiameter": 16, "note": "Inferred from model specs" }
+      ],
+      "note": "Page exists but minimal trim data"
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Amanti",
+      "found": true,
+      "trims": [
+        { "name": "Base", "tireSize": "225/60R17", "wheelDiameter": 17, "note": "2007+ got 17-inch wheels" }
+      ],
+      "note": "Page exists but minimal trim data"
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Amanti",
+      "found": true,
+      "trims": [
+        { "name": "Base", "tireSize": "225/60R17", "wheelDiameter": 17 }
+      ],
+      "note": "Page exists but minimal trim data"
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Amanti",
+      "found": true,
+      "trims": [
+        { "name": "Base", "tireSize": "225/60R17", "wheelDiameter": 17 }
+      ],
+      "note": "Page exists but minimal trim data - last model year"
+    },
+    {
+      "year": 2024,
+      "make": "Kia",
+      "model": "EV9",
+      "found": true,
+      "trims": [
+        { "name": "Light", "tireSize": "255/60R19", "wheelDiameter": 19 },
+        { "name": "Wind", "tireSize": "255/60R19", "wheelDiameter": 19 },
+        { "name": "Land", "tireSize": "275/50R20", "wheelDiameter": 20 },
+        { "name": "GT-Line", "tireSize": "285/45R21", "wheelDiameter": 21 }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "Kia",
+      "model": "EV9",
+      "found": true,
+      "trims": [
+        { "name": "Light", "tireSize": "255/60R19", "wheelDiameter": 19 },
+        { "name": "Wind", "tireSize": "255/60R19", "wheelDiameter": 19 },
+        { "name": "Land", "tireSize": "275/50R20", "wheelDiameter": 20 },
+        { "name": "GT-Line", "tireSize": "285/45R21", "wheelDiameter": 21 }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Kia",
+      "model": "EV9",
+      "found": true,
+      "trims": [
+        { "name": "Light", "tireSize": "255/60R19", "wheelDiameter": 19 },
+        { "name": "Wind", "tireSize": "255/60R19", "wheelDiameter": 19 },
+        { "name": "Land", "tireSize": "275/50R20", "wheelDiameter": 20 },
+        { "name": "GT-Line", "tireSize": "285/45R21", "wheelDiameter": 21 }
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Optima",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Optima was not sold in 2000 - US production started 2001"
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Potentia",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Potentia was not sold in the US market - Korean domestic model only"
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Potentia",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Potentia was not sold in the US market - Korean domestic model only"
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Pregio",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Pregio was not sold in the US market - commercial van for international markets"
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Pregio",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Pregio was not sold in the US market - commercial van for international markets"
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Pregio",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Pregio was not sold in the US market - commercial van for international markets"
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Pregio",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Pregio was not sold in the US market - commercial van for international markets"
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Pregio",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Pregio was not sold in the US market - commercial van for international markets"
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Pregio",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Pregio was not sold in the US market - commercial van for international markets"
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Pregio",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Pregio was not sold in the US market - commercial van for international markets"
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Rio Cross",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Rio Cross (X-Line) was not sold in the US market - European/international crossover variant"
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Rio Cross",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Rio Cross (X-Line) was not sold in the US market - European/international crossover variant"
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Rio Cross",
+      "found": false,
+      "notUS": true,
+      "reason": "Kia Rio Cross (X-Line) was not sold in the US market - European/international crossover variant"
+    }
+  ]
+}

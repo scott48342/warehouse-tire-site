@@ -1,0 +1,1165 @@
+{
+  "batchId": "135",
+  "validatedAt": "2026-04-21T22:37:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2020,
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "currentTireSizes": ["255/45R22", "265/40R22"],
+      "validatedTireSizes": {
+        "Base Model": {
+          "front": ["255/50R21", "255/45R22"],
+          "rear": ["285/45R21", "285/40R22"],
+          "isStaggered": true
+        },
+        "Extended Wheelbase": {
+          "front": ["255/50R21", "255/45R22"],
+          "rear": ["285/45R21", "285/40R22"],
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["255/50R21", "285/45R21", "255/45R22", "285/40R22"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Database missing 255/50R21 and 285/45R21 (21\" option). Has incorrect 265/40R22 - should be 285/40R22"
+    },
+    {
+      "year": 2019,
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "currentTireSizes": ["255/45R22", "265/40R22"],
+      "validatedTireSizes": {
+        "Base Model": {
+          "front": ["255/50R21", "255/45R22"],
+          "rear": ["285/45R21", "285/40R22"],
+          "isStaggered": true
+        },
+        "Extended Wheelbase": {
+          "front": ["255/50R21", "255/45R22"],
+          "rear": ["285/45R21", "285/40R22"],
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["255/50R21", "285/45R21", "255/45R22", "285/40R22"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Database missing 255/50R21 and 285/45R21 (21\" option). Has incorrect 265/40R22 - should be 285/40R22"
+    },
+    {
+      "year": 2018,
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "currentTireSizes": ["255/45R22", "265/40R22"],
+      "validatedTireSizes": {
+        "Base Model": {
+          "front": ["255/50R21", "255/45R22"],
+          "rear": ["285/45R21", "285/40R22"],
+          "isStaggered": true
+        },
+        "Extended Wheelbase": {
+          "front": ["255/50R21", "255/45R22"],
+          "rear": ["285/45R21", "285/40R22"],
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["255/50R21", "285/45R21", "255/45R22", "285/40R22"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Database missing 255/50R21 and 285/45R21 (21\" option). Has incorrect 265/40R22 - should be 285/40R22"
+    },
+    {
+      "year": 2017,
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "currentTireSizes": ["255/45R22", "265/40R22"],
+      "validatedTireSizes": {
+        "Coupe": {
+          "front": ["255/50R21"],
+          "rear": ["285/45R21"],
+          "isStaggered": true
+        },
+        "Drophead Coupe": {
+          "front": ["255/50R21"],
+          "rear": ["285/45R21"],
+          "isStaggered": true
+        },
+        "Sedan": {
+          "front": ["255/50R21"],
+          "rear": ["285/45R21"],
+          "isStaggered": true
+        }
+      },
+      "recommendedSizes": ["255/50R21", "285/45R21"],
+      "status": "NEEDS_UPDATE",
+      "notes": "2017 Phantom only had 21\" wheels. Current DB has 22\" sizes which weren't offered until 2018"
+    },
+    {
+      "year": 2012,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Convertible Aero": {"sizes": ["225/45R17"]},
+        "Convertible Turbo4": {"sizes": ["205/55R16"]},
+        "Sedan Aero FWD": {"sizes": ["225/45R17"]},
+        "Sedan Aero XWD": {"sizes": ["225/45R17"]},
+        "Sedan Turbo4 FWD": {"sizes": ["205/55R16"]},
+        "Sedan Turbo4 XWD": {"sizes": ["205/55R16"]},
+        "SportCombi Aero": {"sizes": ["225/45R17"]},
+        "SportCombi Turbo4": {"sizes": ["205/55R16"]}
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "2012 9-3 did not have 215/45R17 or 225/40R18 as standard. Remove these sizes"
+    },
+    {
+      "year": 2011,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Convertible Aero": {"sizes": ["225/45R17"]},
+        "Convertible Turbo4": {"sizes": ["205/55R16"]},
+        "Sedan Aero FWD": {"sizes": ["225/45R17"]},
+        "Sedan Aero XWD": {"sizes": ["225/45R17"]},
+        "Sedan Turbo4 FWD": {"sizes": ["205/55R16"]},
+        "Sedan Turbo4 XWD": {"sizes": ["205/55R16"]},
+        "SportCombi Aero": {"sizes": ["225/45R17"]},
+        "SportCombi Turbo4": {"sizes": ["205/55R16"]}
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "2011 9-3 did not have 215/45R17 or 225/40R18 as standard. Remove these sizes"
+    },
+    {
+      "year": 2010,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0T Convertible": {"sizes": ["205/55R16"]},
+        "Aero Convertible": {"sizes": ["225/45R17"]},
+        "2.0T Sedan FWD": {"sizes": ["205/55R16"]},
+        "2.0T Sedan XWD": {"sizes": ["205/55R16"]},
+        "Aero Sedan FWD": {"sizes": ["225/45R17"]},
+        "Aero Sedan XWD": {"sizes": ["225/45R17"]},
+        "2.0T SportCombi FWD": {"sizes": ["205/55R16"]},
+        "2.0T SportCombi XWD": {"sizes": ["205/55R16"]},
+        "Aero SportCombi": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "2010 9-3 did not have 215/45R17 or 225/40R18 as standard. Remove these sizes"
+    },
+    {
+      "year": 2009,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0T Convertible": {"sizes": ["205/55R16"]},
+        "Aero Convertible": {"sizes": ["225/45R17"]},
+        "2.0T Sedan": {"sizes": ["205/55R16"]},
+        "Aero Sedan": {"sizes": ["225/45R17"]},
+        "2.0T SportCombi": {"sizes": ["205/55R16"]},
+        "Aero SportCombi": {"sizes": ["225/45R17"]},
+        "Turbo X Sedan": {"sizes": ["235/45R17"]},
+        "Turbo X SportCombi": {"sizes": ["235/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17", "235/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 215/45R17 and 225/40R18. Add 235/45R17 for Turbo X trims"
+    },
+    {
+      "year": 2008,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0T Convertible": {"sizes": ["205/55R16"]},
+        "2.0T Sedan": {"sizes": ["205/55R16"]},
+        "2.0T SportCombi": {"sizes": ["205/55R16"]},
+        "Aero Convertible": {"sizes": ["225/45R17"]},
+        "Aero Sedan FWD": {"sizes": ["225/45R17"]},
+        "Aero Sedan XWD": {"sizes": ["225/45R17"]},
+        "Aero SportCombi FWD": {"sizes": ["225/45R17"]},
+        "Aero SportCombi XWD": {"sizes": ["225/45R17"]},
+        "Turbo X Sedan": {"sizes": ["235/45R17"]},
+        "Turbo X SportCombi": {"sizes": ["235/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17", "235/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 215/45R17 and 225/40R18. Add 235/45R17 for Turbo X trims"
+    },
+    {
+      "year": 2007,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0T Convertible": {"sizes": ["205/55R16"]},
+        "2.0T Sedan": {"sizes": ["205/55R16"]},
+        "2.0T SportCombi": {"sizes": ["205/55R16"]},
+        "Aero Convertible": {"sizes": ["225/45R17"]},
+        "Aero Sedan": {"sizes": ["225/45R17"]},
+        "Aero SportCombi": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 215/45R17 and 225/40R18"
+    },
+    {
+      "year": 2006,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2.0T Convertible": {"sizes": ["205/55R16"]},
+        "2.0T Sedan": {"sizes": ["205/55R16"]},
+        "2.0T SportCombi": {"sizes": ["205/55R16"]},
+        "Aero Convertible": {"sizes": ["215/45R17", "225/45R17"]},
+        "Aero Sedan": {"sizes": ["215/45R17", "225/45R17"]},
+        "Aero SportCombi": {"sizes": ["215/45R17", "225/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "215/45R17", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/40R18 - not standard OEM"
+    },
+    {
+      "year": 2005,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Linear 2.0T Convertible": {"sizes": ["205/55R16"]},
+        "Linear 2.0T Sedan": {"sizes": ["205/55R16"]},
+        "Arc 2.0T Convertible": {"sizes": ["205/55R16", "215/45R17"]},
+        "Arc 2.0T Sedan": {"sizes": ["205/55R16", "215/45R17"]},
+        "Aero 2.0T Convertible": {"sizes": ["215/45R17"]},
+        "Aero 2.0T Sedan": {"sizes": ["215/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "215/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/45R17 and 225/40R18 - not standard OEM for 2005"
+    },
+    {
+      "year": 2004,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Linear 2.0T Sedan": {"sizes": ["205/55R16"]},
+        "Arc 2.0T Convertible": {"sizes": ["205/55R16", "215/45R17"]},
+        "Arc 2.0T Sedan": {"sizes": ["205/55R16", "215/45R17"]},
+        "Aero 2.0T Convertible": {"sizes": ["215/45R17"]},
+        "Aero 2.0T Sedan": {"sizes": ["215/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "215/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/45R17 and 225/40R18 - not standard OEM for 2004"
+    },
+    {
+      "year": 2003,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Linear": {"sizes": ["205/65R15", "225/45R17"]},
+        "Arc": {"sizes": ["215/55R16", "225/45R17"]},
+        "Linear 2.0T Sport": {"sizes": ["225/45R17"]},
+        "SE Convertible": {"sizes": ["205/55R16"]},
+        "SE Convertible Sport": {"sizes": ["215/45R17"]},
+        "Vector": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["205/65R15", "205/55R16", "215/55R16", "215/45R17", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 205/65R15 and 215/55R16. Remove 225/40R18"
+    },
+    {
+      "year": 2002,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "SE Convertible": {"sizes": ["205/55R16"]},
+        "SE Sedan": {"sizes": ["205/55R16"]},
+        "Viggen Convertible": {"sizes": ["225/45R17"]},
+        "Viggen Coupe": {"sizes": ["225/45R17"]},
+        "Viggen Sedan": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 215/45R17 and 225/40R18 - not standard OEM for 2002"
+    },
+    {
+      "year": 2001,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2-door": {"sizes": ["205/55R16"]},
+        "4-door": {"sizes": ["205/55R16"]},
+        "SE 2-door": {"sizes": ["205/55R16"]},
+        "SE 4-door": {"sizes": ["205/55R16"]},
+        "SE Convertible": {"sizes": ["205/55R16"]},
+        "Viggen 2-door": {"sizes": ["225/45R17"]},
+        "Viggen 4-door": {"sizes": ["225/45R17"]},
+        "Viggen Convertible": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 215/45R17 and 225/40R18 - not standard OEM for 2001"
+    },
+    {
+      "year": 2000,
+      "make": "Saab",
+      "model": "9-3",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "2-door": {"sizes": ["205/55R16"]},
+        "4-door": {"sizes": ["205/55R16"]},
+        "SE 2-door": {"sizes": ["205/55R16"]},
+        "SE 4-door": {"sizes": ["205/55R16"]},
+        "SE Convertible": {"sizes": ["205/55R16"]},
+        "Viggen Coupe": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 215/45R17 and 225/40R18 - not standard OEM for 2000"
+    },
+    {
+      "year": 2012,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "note": "2012 Saab 9-5 data limited - Saab ceased operations in 2011"
+      },
+      "recommendedSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "status": "NEEDS_UPDATE",
+      "notes": "2012 model years very limited. Based on 2011 specs: Turbo4: 225/55R17, Turbo4 Premium/Turbo6 XWD: 245/45R18, Aero: 245/45R18 or 245/40R19. Current DB sizes are incorrect"
+    },
+    {
+      "year": 2011,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "Turbo4": {"sizes": ["225/55R17"]},
+        "Turbo4 Premium": {"sizes": ["245/45R18"]},
+        "Turbo6 XWD": {"sizes": ["245/45R18"]},
+        "Aero Turbo6 XWD": {"sizes": ["245/45R18", "245/40R19"]}
+      },
+      "recommendedSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "status": "NEEDS_UPDATE",
+      "notes": "2011 was a new generation 9-5. Replace all sizes with correct OEM: 225/55R17, 245/45R18, 245/40R19"
+    },
+    {
+      "year": 2010,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "Aero Sedan": {"sizes": ["245/45R18", "245/40R19"]}
+      },
+      "recommendedSizes": ["245/45R18", "245/40R19"],
+      "status": "NEEDS_UPDATE",
+      "notes": "2010 was transition year to new generation. Only Aero available with 245/45R18 or 245/40R19"
+    },
+    {
+      "year": 2009,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "2.3T Sedan": {"sizes": ["235/45R17"]},
+        "2.3T Sedan Aero": {"sizes": ["235/45R17"]},
+        "2.3T SportCombi": {"sizes": ["235/45R17"]},
+        "2.3T SportCombi Aero": {"sizes": ["235/45R17"]}
+      },
+      "recommendedSizes": ["235/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "All 2009 9-5 trims used 235/45R17. Replace current sizes"
+    },
+    {
+      "year": 2008,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "2.3T Sedan": {"sizes": ["235/45R17"]},
+        "2.3T Sedan Aero": {"sizes": ["235/45R17"]},
+        "2.3T SportCombi": {"sizes": ["235/45R17"]},
+        "2.3T SportCombi Aero": {"sizes": ["235/45R17"]}
+      },
+      "recommendedSizes": ["235/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "All 2008 9-5 trims used 235/45R17. Replace current sizes"
+    },
+    {
+      "year": 2007,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "2.3T Sedan": {"sizes": ["235/45R17"]},
+        "2.3T SportCombi": {"sizes": ["235/45R17"]}
+      },
+      "recommendedSizes": ["235/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "All 2007 9-5 trims used 235/45R17. Replace current sizes"
+    },
+    {
+      "year": 2006,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "2.3T Sedan": {"sizes": ["235/45R17"]},
+        "2.3T Sedan Sport Suspension": {"sizes": ["235/45R17"]},
+        "2.3T SportCombi": {"sizes": ["235/45R17"]},
+        "2.3T SportCombi Sport Suspension": {"sizes": ["235/45R17"]}
+      },
+      "recommendedSizes": ["235/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "All 2006 9-5 trims used 235/45R17. Replace current sizes"
+    },
+    {
+      "year": 2005,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "Linear 2.3T Wagon": {"sizes": ["215/55R16", "225/45R17"]},
+        "Arc 2.3T Sedan": {"sizes": ["215/55R16", "225/45R17"]},
+        "Arc 2.3T Wagon": {"sizes": ["215/55R16", "225/45R17"]},
+        "Aero Sedan": {"sizes": ["225/45R17"]},
+        "Aero Wagon": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["215/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/50R17 and 235/45R18. Correct sizes are 215/55R16 and 225/45R17"
+    },
+    {
+      "year": 2004,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "Linear 2.3T Sedan": {"sizes": ["215/55R16", "225/45R17"]},
+        "Linear 2.3T Wagon": {"sizes": ["215/55R16", "225/45R17"]},
+        "Arc 2.3T Sedan": {"sizes": ["215/55R16", "225/45R17"]},
+        "Arc 2.3T Wagon": {"sizes": ["215/55R16", "225/45R17"]},
+        "Aero Sedan": {"sizes": ["225/45R17"]},
+        "Aero Wagon": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["215/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/50R17 and 235/45R18. Correct sizes are 215/55R16 and 225/45R17"
+    },
+    {
+      "year": 2003,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "Linear 2.3T Sedan": {"sizes": ["215/55R16", "225/45R17"]},
+        "Linear 2.3T Wagon": {"sizes": ["215/55R16", "225/45R17"]},
+        "Arc 3.0T Sedan": {"sizes": ["215/55R16", "225/45R17"]},
+        "Arc 3.0T Wagon": {"sizes": ["215/55R16", "225/45R17"]},
+        "Aero Sedan": {"sizes": ["225/45R17"]},
+        "Aero Wagon": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["215/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/50R17 and 235/45R18. Correct sizes are 215/55R16 and 225/45R17"
+    },
+    {
+      "year": 2002,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "Linear 2.3T Sedan": {"sizes": ["215/55R16", "225/45R17"]},
+        "Linear 2.3T Wagon": {"sizes": ["215/55R16", "225/45R17"]},
+        "Arc 3.0T Sedan": {"sizes": ["215/55R16", "225/45R17"]},
+        "Arc 3.0T Wagon": {"sizes": ["215/55R16", "225/45R17"]},
+        "Aero Sedan": {"sizes": ["225/45R17"]},
+        "Aero Wagon": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["215/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/50R17 and 235/45R18. Correct sizes are 215/55R16 and 225/45R17"
+    },
+    {
+      "year": 2001,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "2.3T Sedan": {"sizes": ["215/55R16", "225/45R17"]},
+        "2.3T Wagon": {"sizes": ["215/55R16", "225/45R17"]},
+        "SE 3.0T Sedan": {"sizes": ["215/55R16", "225/45R17"]},
+        "SE 3.0T Wagon": {"sizes": ["215/55R16", "225/45R17"]},
+        "Aero Sedan": {"sizes": ["225/45R17"]},
+        "Aero Wagon": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["215/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/50R17 and 235/45R18. Correct sizes are 215/55R16 and 225/45R17"
+    },
+    {
+      "year": 2000,
+      "make": "Saab",
+      "model": "9-5",
+      "currentTireSizes": ["215/55R16", "225/50R17", "235/45R18"],
+      "validatedTireSizes": {
+        "Sedan": {"sizes": ["215/55R16"]},
+        "Wagon": {"sizes": ["215/55R16"]},
+        "Aero Sedan": {"sizes": ["225/45R17"]},
+        "Aero Wagon": {"sizes": ["225/45R17"]}
+      },
+      "recommendedSizes": ["215/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/50R17 and 235/45R18. Correct sizes are 215/55R16 and 225/45R17"
+    },
+    {
+      "year": 2007,
+      "make": "Saturn",
+      "model": "Ion",
+      "currentTireSizes": ["P195/65R15", "P205/55R16", "P215/45R17"],
+      "validatedTireSizes": {
+        "Ion 2": {"sizes": ["195/60R15", "205/55R16"]},
+        "Ion 2 Quad Coupe": {"sizes": ["195/60R15"]},
+        "Ion 3": {"sizes": ["205/55R16"]},
+        "Ion 3 Quad Coupe": {"sizes": ["205/55R16"]},
+        "Redline": {"sizes": ["215/45R17"]}
+      },
+      "recommendedSizes": ["195/60R15", "205/55R16", "215/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Change 195/65R15 to 195/60R15 - aspect ratio is 60, not 65"
+    },
+    {
+      "year": 2006,
+      "make": "Saturn",
+      "model": "Ion",
+      "currentTireSizes": ["P195/65R15", "P205/55R16", "P215/45R17"],
+      "validatedTireSizes": {
+        "Ion 2": {"sizes": ["195/60R15", "205/55R16"]},
+        "Ion 2 Quad Coupe": {"sizes": ["195/60R15"]},
+        "Ion 3": {"sizes": ["205/55R16"]},
+        "Ion 3 Quad Coupe": {"sizes": ["205/55R16"]},
+        "Redline": {"sizes": ["215/45R17"]}
+      },
+      "recommendedSizes": ["195/60R15", "205/55R16", "215/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Change 195/65R15 to 195/60R15 - aspect ratio is 60, not 65"
+    },
+    {
+      "year": 2005,
+      "make": "Saturn",
+      "model": "Ion",
+      "currentTireSizes": ["P195/65R15", "P205/55R16", "P215/45R17"],
+      "validatedTireSizes": {
+        "Ion 1": {"sizes": ["185/70R14"]},
+        "Ion 2": {"sizes": ["195/60R15"]},
+        "Ion 2 Quad Coupe": {"sizes": ["195/60R15"]},
+        "Ion 3": {"sizes": ["205/55R16"]},
+        "Ion 3 Quad Coupe": {"sizes": ["205/55R16"]},
+        "Redline": {"sizes": ["215/45R17"]}
+      },
+      "recommendedSizes": ["185/70R14", "195/60R15", "205/55R16", "215/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 185/70R14 for Ion 1. Change 195/65R15 to 195/60R15"
+    },
+    {
+      "year": 2004,
+      "make": "Saturn",
+      "model": "Ion",
+      "currentTireSizes": ["P195/65R15", "P205/55R16", "P215/45R17"],
+      "validatedTireSizes": {
+        "Ion 1": {"sizes": ["185/70R14"]},
+        "Ion 2": {"sizes": ["195/60R15"]},
+        "Ion 2 Quad Coupe": {"sizes": ["195/60R15"]},
+        "Ion 3": {"sizes": ["205/55R16"]},
+        "Ion 3 Quad Coupe": {"sizes": ["205/55R16"]},
+        "Redline": {"sizes": ["215/45R17"]}
+      },
+      "recommendedSizes": ["185/70R14", "195/60R15", "205/55R16", "215/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 185/70R14 for Ion 1. Change 195/65R15 to 195/60R15"
+    },
+    {
+      "year": 2003,
+      "make": "Saturn",
+      "model": "Ion",
+      "currentTireSizes": ["P195/65R15", "P205/55R16", "P215/45R17"],
+      "validatedTireSizes": {
+        "Ion 1": {"sizes": ["185/70R14"]},
+        "Ion 2": {"sizes": ["195/60R15"]},
+        "Ion 3": {"sizes": ["205/55R16"]}
+      },
+      "recommendedSizes": ["185/70R14", "195/60R15", "205/55R16"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 185/70R14 for Ion 1. Change 195/65R15 to 195/60R15. Remove 215/45R17 (Redline not available in 2003)"
+    },
+    {
+      "year": 2005,
+      "make": "Saturn",
+      "model": "L-Series",
+      "currentTireSizes": ["P205/55R16"],
+      "validatedTireSizes": {
+        "L300 Sedan": {"sizes": ["205/55R16"]},
+        "L300 Wagon": {"sizes": ["205/55R16"]}
+      },
+      "recommendedSizes": ["205/55R16"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2004,
+      "make": "Saturn",
+      "model": "L-Series",
+      "currentTireSizes": ["P205/55R16"],
+      "validatedTireSizes": {
+        "L300 Level 1 Sedan": {"sizes": ["205/55R16"]},
+        "L300 Level 2 Sedan": {"sizes": ["205/55R16"]},
+        "L300 Level 3 Sedan": {"sizes": ["205/55R16"]},
+        "LW300 Level 1": {"sizes": ["205/55R16"]},
+        "LW300 Level 2": {"sizes": ["205/55R16"]}
+      },
+      "recommendedSizes": ["205/55R16"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2003,
+      "make": "Saturn",
+      "model": "L-Series",
+      "currentTireSizes": ["P205/55R16"],
+      "validatedTireSizes": {
+        "L200 Sedan": {"sizes": ["205/55R16"]},
+        "L300 Sedan": {"sizes": ["205/55R16"]},
+        "LW200 Wagon": {"sizes": ["205/55R16"]},
+        "LW300 Wagon": {"sizes": ["205/55R16"]}
+      },
+      "recommendedSizes": ["205/55R16"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2002,
+      "make": "Saturn",
+      "model": "L-Series",
+      "currentTireSizes": ["P195/65R15", "P205/55R16"],
+      "validatedTireSizes": {
+        "L100 Sedan": {"sizes": ["195/65R15"]},
+        "L200 Sedan": {"sizes": ["205/55R16"]},
+        "L300 Sedan": {"sizes": ["205/55R16"]},
+        "LW200 Wagon": {"sizes": ["205/55R16"]},
+        "LW300 Wagon": {"sizes": ["205/55R16"]}
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2001,
+      "make": "Saturn",
+      "model": "L-Series",
+      "currentTireSizes": ["P195/65R15", "P205/55R16"],
+      "validatedTireSizes": {
+        "L100": {"sizes": ["195/65R15"]},
+        "L200": {"sizes": ["205/55R16"]},
+        "L300": {"sizes": ["205/55R16"]},
+        "LW200": {"sizes": ["205/55R16"]},
+        "LW300": {"sizes": ["205/55R16"]}
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2000,
+      "make": "Saturn",
+      "model": "L-Series",
+      "currentTireSizes": ["P195/65R15", "P205/55R16"],
+      "validatedTireSizes": {
+        "LS": {"sizes": ["195/65R15", "205/55R16"]},
+        "LS1": {"sizes": ["195/65R15", "205/55R16"]},
+        "LS2": {"sizes": ["205/55R16"]},
+        "LW1": {"sizes": ["195/65R15", "205/55R16"]},
+        "LW2": {"sizes": ["205/55R16"]}
+      },
+      "recommendedSizes": ["195/65R15", "205/55R16"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2002,
+      "make": "Saturn",
+      "model": "S-Series",
+      "currentTireSizes": ["P185/65R15"],
+      "validatedTireSizes": {
+        "SC1": {"sizes": ["185/65R15"]},
+        "SC2": {"sizes": ["185/65R15"]},
+        "SL": {"sizes": ["185/65R15"]},
+        "SL1": {"sizes": ["185/65R15"]},
+        "SL2": {"sizes": ["185/65R15"]},
+        "SW2": {"sizes": ["185/65R15"]}
+      },
+      "recommendedSizes": ["185/65R15"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2001,
+      "make": "Saturn",
+      "model": "S-Series",
+      "currentTireSizes": ["P185/65R15"],
+      "validatedTireSizes": {
+        "SC1": {"sizes": ["185/65R15"]},
+        "SC2": {"sizes": ["185/65R15"]},
+        "SL": {"sizes": ["185/65R15"]},
+        "SL1": {"sizes": ["185/65R15"]},
+        "SL2": {"sizes": ["185/65R15"]},
+        "SW2": {"sizes": ["185/65R15"]}
+      },
+      "recommendedSizes": ["185/65R15"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2000,
+      "make": "Saturn",
+      "model": "S-Series",
+      "currentTireSizes": ["P185/65R15"],
+      "validatedTireSizes": {
+        "SC1": {"sizes": ["185/65R15"]},
+        "SC2": {"sizes": ["185/65R15"]},
+        "SL": {"sizes": ["185/65R15"]},
+        "SL1": {"sizes": ["185/65R15"]},
+        "SL2": {"sizes": ["185/65R15"]},
+        "SW2": {"sizes": ["185/65R15"]}
+      },
+      "recommendedSizes": ["185/65R15"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2010,
+      "make": "Saturn",
+      "model": "Sky",
+      "currentTireSizes": ["P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["245/45R18"]},
+        "Red Line": {"sizes": ["245/45R18"]}
+      },
+      "recommendedSizes": ["245/45R18"],
+      "status": "VALID",
+      "notes": "Current data is correct - 2010 was final year"
+    },
+    {
+      "year": 2009,
+      "make": "Saturn",
+      "model": "Sky",
+      "currentTireSizes": ["P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["245/45R18"]},
+        "Red Line": {"sizes": ["245/45R18"]}
+      },
+      "recommendedSizes": ["245/45R18"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2008,
+      "make": "Saturn",
+      "model": "Sky",
+      "currentTireSizes": ["P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["245/45R18"]},
+        "Red Line": {"sizes": ["245/45R18"]}
+      },
+      "recommendedSizes": ["245/45R18"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2007,
+      "make": "Saturn",
+      "model": "Sky",
+      "currentTireSizes": ["P245/45R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["245/45R18"]},
+        "Red Line": {"sizes": ["245/45R18"]}
+      },
+      "recommendedSizes": ["245/45R18"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2010,
+      "make": "Saturn",
+      "model": "Vue",
+      "currentTireSizes": ["P235/60R17", "P235/55R18"],
+      "validatedTireSizes": {
+        "XE": {"sizes": ["235/65R16"]},
+        "XR": {"sizes": ["235/60R17"]}
+      },
+      "recommendedSizes": ["235/65R16", "235/60R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 235/65R16 for XE trim. Remove 235/55R18 (Red Line discontinued)"
+    },
+    {
+      "year": 2009,
+      "make": "Saturn",
+      "model": "Vue",
+      "currentTireSizes": ["P235/60R17", "P235/55R18"],
+      "validatedTireSizes": {
+        "XE": {"sizes": ["235/65R16"]},
+        "XR 4cyl": {"sizes": ["235/60R17"]},
+        "XR V6": {"sizes": ["235/60R17"]},
+        "Hybrid": {"sizes": ["225/60R17"]},
+        "Red Line": {"sizes": ["235/55R18"]}
+      },
+      "recommendedSizes": ["225/60R17", "235/65R16", "235/60R17", "235/55R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 235/65R16 for XE and 225/60R17 for Hybrid"
+    },
+    {
+      "year": 2008,
+      "make": "Saturn",
+      "model": "Vue",
+      "currentTireSizes": ["P235/60R17", "P235/55R18"],
+      "validatedTireSizes": {
+        "XE": {"sizes": ["235/65R16"]},
+        "XR": {"sizes": ["235/60R17"]},
+        "Green Line": {"sizes": ["225/60R17"]},
+        "Red Line": {"sizes": ["235/55R18"]}
+      },
+      "recommendedSizes": ["225/60R17", "235/65R16", "235/60R17", "235/55R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 235/65R16 for XE and 225/60R17 for Green Line"
+    },
+    {
+      "year": 2007,
+      "make": "Saturn",
+      "model": "Vue",
+      "currentTireSizes": ["P215/70R16", "P235/60R17"],
+      "validatedTireSizes": {
+        "FWD 4cyl": {"sizes": ["215/70R16", "235/65R16"]},
+        "FWD V6": {"sizes": ["235/65R16", "235/60R17"]},
+        "AWD V6": {"sizes": ["235/60R17"]},
+        "Green Line": {"sizes": ["215/70R16"]},
+        "Red Line": {"sizes": ["245/50R18"]}
+      },
+      "recommendedSizes": ["215/70R16", "235/65R16", "235/60R17", "245/50R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 235/65R16 and 245/50R18 for Red Line"
+    },
+    {
+      "year": 2006,
+      "make": "Saturn",
+      "model": "Vue",
+      "currentTireSizes": ["P215/70R16", "P235/60R17"],
+      "validatedTireSizes": {
+        "FWD 4cyl": {"sizes": ["215/70R16", "235/65R16"]},
+        "AWD 4cyl": {"sizes": ["235/65R16"]},
+        "FWD V6": {"sizes": ["215/70R16", "235/60R17"]},
+        "AWD V6": {"sizes": ["235/60R17"]},
+        "Red Line": {"sizes": ["245/50R18"]}
+      },
+      "recommendedSizes": ["215/70R16", "235/65R16", "235/60R17", "245/50R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 235/65R16 and 245/50R18 for Red Line"
+    },
+    {
+      "year": 2005,
+      "make": "Saturn",
+      "model": "Vue",
+      "currentTireSizes": ["P215/70R16", "P235/60R17"],
+      "validatedTireSizes": {
+        "FWD 4cyl": {"sizes": ["215/70R16", "235/65R16"]},
+        "AWD 4cyl": {"sizes": ["235/65R16"]},
+        "FWD V6": {"sizes": ["215/70R16", "235/60R17"]},
+        "AWD V6": {"sizes": ["235/60R17"]},
+        "Red Line": {"sizes": ["245/50R18"]}
+      },
+      "recommendedSizes": ["215/70R16", "235/65R16", "235/60R17", "245/50R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 235/65R16 and 245/50R18 for Red Line"
+    },
+    {
+      "year": 2004,
+      "make": "Saturn",
+      "model": "Vue",
+      "currentTireSizes": ["P215/70R16", "P235/60R17"],
+      "validatedTireSizes": {
+        "FWD 4cyl": {"sizes": ["215/70R16", "235/65R16"]},
+        "AWD 4cyl": {"sizes": ["235/65R16"]},
+        "FWD V6": {"sizes": ["215/70R16", "235/60R17"]},
+        "AWD V6": {"sizes": ["235/60R17"]},
+        "Red Line": {"sizes": ["245/50R18"]}
+      },
+      "recommendedSizes": ["215/70R16", "235/65R16", "235/60R17", "245/50R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 235/65R16 and 245/50R18 for Red Line"
+    },
+    {
+      "year": 2003,
+      "make": "Saturn",
+      "model": "Vue",
+      "currentTireSizes": ["P215/70R16", "P235/60R17"],
+      "validatedTireSizes": {
+        "FWD": {"sizes": ["215/70R16", "235/65R16"]},
+        "AWD": {"sizes": ["235/65R16"]}
+      },
+      "recommendedSizes": ["215/70R16", "235/65R16"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 235/60R17 - not offered in 2003. Add 235/65R16"
+    },
+    {
+      "year": 2002,
+      "make": "Saturn",
+      "model": "Vue",
+      "currentTireSizes": ["P215/70R16", "P235/60R17"],
+      "validatedTireSizes": {
+        "FWD": {"sizes": ["215/70R16"]},
+        "AWD": {"sizes": ["235/65R16"]}
+      },
+      "recommendedSizes": ["215/70R16", "235/65R16"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 235/60R17 - not offered in 2002. Add 235/65R16 for AWD"
+    },
+    {
+      "year": 2016,
+      "make": "Scion",
+      "model": "FR-S",
+      "currentTireSizes": ["215/45R17"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["215/45R17"]}
+      },
+      "recommendedSizes": ["215/45R17"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2015,
+      "make": "Scion",
+      "model": "FR-S",
+      "currentTireSizes": ["215/45R17"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["215/45R17"]}
+      },
+      "recommendedSizes": ["215/45R17"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2014,
+      "make": "Scion",
+      "model": "FR-S",
+      "currentTireSizes": ["215/45R17"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["215/45R17"]}
+      },
+      "recommendedSizes": ["215/45R17"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2013,
+      "make": "Scion",
+      "model": "FR-S",
+      "currentTireSizes": ["215/45R17"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["215/45R17"]}
+      },
+      "recommendedSizes": ["215/45R17"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2016,
+      "make": "Scion",
+      "model": "iA",
+      "currentTireSizes": ["185/60R15", "185/55R16"],
+      "validatedTireSizes": {
+        "Base": {"sizes": ["185/60R16"]}
+      },
+      "recommendedSizes": ["185/60R16"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Correct size is 185/60R16 (16\" wheels standard). Current DB has 185/60R15 and 185/55R16 which are incorrect"
+    },
+    {
+      "year": 2016,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["225/45R18", "225/40R19"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["225/45R18"]}
+      },
+      "recommendedSizes": ["225/45R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/40R19 - not standard OEM for 2016 tC"
+    },
+    {
+      "year": 2015,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["225/45R18", "225/40R19"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["225/45R18"]}
+      },
+      "recommendedSizes": ["225/45R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/40R19 - not standard OEM"
+    },
+    {
+      "year": 2014,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["225/45R18", "225/40R19"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["225/45R18"]}
+      },
+      "recommendedSizes": ["225/45R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/40R19 - not standard OEM"
+    },
+    {
+      "year": 2013,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["225/45R18", "225/40R19"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["225/45R18"]}
+      },
+      "recommendedSizes": ["225/45R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/40R19 - not standard OEM"
+    },
+    {
+      "year": 2012,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["225/45R18", "225/40R19"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["225/45R18"]}
+      },
+      "recommendedSizes": ["225/45R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/40R19 - not standard OEM"
+    },
+    {
+      "year": 2011,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["225/45R18", "225/40R19"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["225/45R18"]}
+      },
+      "recommendedSizes": ["225/45R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Remove 225/40R19 - not standard OEM"
+    },
+    {
+      "year": 2010,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["215/45R17", "225/40R18"]}
+      },
+      "recommendedSizes": ["215/45R17", "225/40R18"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2009,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["215/45R17", "225/40R18"]}
+      },
+      "recommendedSizes": ["215/45R17", "225/40R18"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2008,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["215/45R17", "225/40R18"]},
+        "Spec Package": {"sizes": ["205/55R16", "225/40R18"]}
+      },
+      "recommendedSizes": ["205/55R16", "215/45R17", "225/40R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 205/55R16 for Spec Package"
+    },
+    {
+      "year": 2007,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["215/45R17", "225/40R18"]},
+        "Spec Package": {"sizes": ["205/55R16", "225/40R18"]}
+      },
+      "recommendedSizes": ["205/55R16", "215/45R17", "225/40R18"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Add 205/55R16 for Spec Package"
+    },
+    {
+      "year": 2006,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["215/45R17", "225/40R18"]}
+      },
+      "recommendedSizes": ["215/45R17", "225/40R18"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2005,
+      "make": "Scion",
+      "model": "tC",
+      "currentTireSizes": ["215/45R17", "225/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["215/45R17", "225/40R18"]}
+      },
+      "recommendedSizes": ["215/45R17", "225/40R18"],
+      "status": "VALID",
+      "notes": "Current data is correct"
+    },
+    {
+      "year": 2015,
+      "make": "Scion",
+      "model": "xB",
+      "currentTireSizes": ["205/55R16", "215/40R18"],
+      "validatedTireSizes": {
+        "Base Model": {"sizes": ["205/55R16", "225/45R17"]}
+      },
+      "recommendedSizes": ["205/55R16", "225/45R17"],
+      "status": "NEEDS_UPDATE",
+      "notes": "Change 215/40R18 to 225/45R17 - 18\" was not standard OEM"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "valid": 22,
+    "needsUpdate": 53,
+    "criticalIssues": [
+      "Rolls-Royce Phantom 2017-2020: Wrong tire sizes - missing staggered fitment options",
+      "Saab 9-5 2006-2012: Wrong tire sizes - should be 235/45R17 for most years",
+      "Saturn Ion: Aspect ratio error (195/65R15 should be 195/60R15)",
+      "Scion iA: Wrong tire size (should be 185/60R16, not 185/60R15)",
+      "Scion tC 2011-2016: 225/40R19 not a standard OEM size"
+    ]
+  }
+}

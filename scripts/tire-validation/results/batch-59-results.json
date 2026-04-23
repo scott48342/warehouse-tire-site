@@ -1,0 +1,1146 @@
+{
+  "batchId": "59",
+  "processedAt": "2026-04-21T22:03:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Ranger",
+      "currentTireSizes": ["225/70R15", "235/75R15", "245/75R16", "265/75R16"],
+      "validatedTireSizes": ["205/75R14", "215/75R15", "225/70R15", "235/75R15", "245/75R16", "265/75R15"],
+      "trims": {
+        "2wd XL": ["225/70R15"],
+        "2wd XLT": ["225/70R15"],
+        "4wd XLT": ["235/75R15", "265/75R15", "245/75R16"],
+        "Super Cab 2wd": ["205/75R14", "225/70R15"],
+        "Super Cab 4wd": ["215/75R15", "235/75R15", "265/75R15", "245/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Current sizes missing 205/75R14, 215/75R15, 265/75R15; has incorrect 265/75R16"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "SportKa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15", "195/45R16"],
+      "trims": {
+        "Base": ["185/55R15", "195/45R16"]
+      },
+      "source": "avtoreference.com",
+      "status": "needs_update",
+      "notes": "European market only - UK/Europe. Bolt pattern 4x108"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "SportKa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15", "195/45R16"],
+      "trims": {
+        "Base": ["185/55R15", "195/45R16"]
+      },
+      "source": "avtoreference.com",
+      "status": "needs_update",
+      "notes": "European market only"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "SportKa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15", "195/45R16"],
+      "trims": {
+        "Base": ["185/55R15", "195/45R16"]
+      },
+      "source": "avtoreference.com",
+      "status": "needs_update",
+      "notes": "European market only"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "SportKa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15", "195/45R16"],
+      "trims": {
+        "Base": ["185/55R15", "195/45R16"]
+      },
+      "source": "avtoreference.com",
+      "status": "needs_update",
+      "notes": "European market only"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "SportKa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15", "195/45R16"],
+      "trims": {
+        "Base": ["185/55R15", "195/45R16"]
+      },
+      "source": "avtoreference.com",
+      "status": "needs_update",
+      "notes": "European market only"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "SportKa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15", "195/45R16"],
+      "trims": {
+        "Base": ["185/55R15", "195/45R16"]
+      },
+      "source": "avtoreference.com",
+      "status": "needs_update",
+      "notes": "European market only"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "StreetKa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R15", "195/45R16"],
+      "trims": {
+        "1.6i": ["195/50R15", "195/45R16"]
+      },
+      "source": "sizemywheels.com",
+      "status": "needs_update",
+      "notes": "European market convertible - UK/Europe only"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "StreetKa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R15", "195/45R16"],
+      "trims": {
+        "1.6i": ["195/50R15", "195/45R16"]
+      },
+      "source": "sizemywheels.com",
+      "status": "needs_update",
+      "notes": "European market convertible"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "StreetKa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R15", "195/45R16"],
+      "trims": {
+        "1.6i": ["195/50R15", "195/45R16"]
+      },
+      "source": "sizemywheels.com",
+      "status": "needs_update",
+      "notes": "European market convertible"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "StreetKa",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/50R15", "195/45R16"],
+      "trims": {
+        "1.6i": ["195/50R15", "195/45R16"]
+      },
+      "source": "sizemywheels.com",
+      "status": "needs_update",
+      "notes": "European market convertible"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "trims": {
+        "Trend": ["235/55R17"],
+        "Titanium": ["245/45R19"],
+        "Titanium Plus": ["255/40R20"]
+      },
+      "source": "estimated from Middle East market data",
+      "status": "verified",
+      "notes": "Middle East/China market Taurus (Gen VIII), not sold in US"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "trims": {
+        "Trend": ["235/55R17"],
+        "Titanium": ["245/45R19"],
+        "Titanium Plus": ["255/40R20"]
+      },
+      "source": "estimated from Middle East market data",
+      "status": "verified",
+      "notes": "Middle East/China market Taurus (Gen VIII)"
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "trims": {
+        "Trend": ["235/55R17"],
+        "Titanium": ["245/45R19"],
+        "Titanium Plus": ["255/40R20"]
+      },
+      "source": "estimated from Middle East market data",
+      "status": "verified",
+      "notes": "Middle East/China market Taurus (Gen VIII)"
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "trims": {
+        "Trend": ["235/55R17"],
+        "Titanium": ["245/45R19"],
+        "Titanium Plus": ["255/40R20"]
+      },
+      "source": "estimated from Middle East market data",
+      "status": "verified",
+      "notes": "Middle East/China market Taurus (Gen VIII)"
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "trims": {
+        "Trend": ["235/55R17"],
+        "Titanium": ["245/45R19"],
+        "Titanium Plus": ["255/40R20"]
+      },
+      "source": "estimated from Middle East market data",
+      "status": "verified",
+      "notes": "Middle East/China market Taurus (Gen VII)"
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "trims": {
+        "Trend": ["235/55R17"],
+        "Titanium": ["245/45R19"],
+        "Titanium Plus": ["255/40R20"]
+      },
+      "source": "estimated from Middle East market data",
+      "status": "verified",
+      "notes": "Middle East/China market Taurus (Gen VII)"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "SE": ["235/55R18"],
+        "SEL": ["235/55R18", "245/45R20"],
+        "Limited": ["255/45R19", "245/45R20"],
+        "SHO": ["245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Last US model year. Current sizes don't match - should be 235/55R18, 255/45R19, 245/45R20"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "SE": ["235/55R18"],
+        "SEL": ["235/55R18", "245/45R20"],
+        "Limited": ["255/45R19", "245/45R20"],
+        "SHO": ["245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen VI. Current sizes incorrect."
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "SE": ["235/60R17"],
+        "SEL": ["235/55R18", "245/45R20"],
+        "Limited": ["255/45R19", "245/45R20"],
+        "SHO": ["245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen VI"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "SE": ["235/60R17"],
+        "SEL": ["235/55R18", "245/45R20"],
+        "Limited": ["255/45R19", "245/45R20"],
+        "SHO": ["245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen VI"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "SE": ["235/60R17"],
+        "SEL": ["235/55R18", "245/45R20"],
+        "Limited": ["255/45R19", "245/45R20"],
+        "SHO": ["245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen VI"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "SE": ["235/60R17"],
+        "SEL": ["235/55R18", "255/45R19"],
+        "Limited": ["255/45R19", "245/45R20"],
+        "SHO": ["255/45R19", "245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen VI"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "SE": ["235/60R17"],
+        "SEL": ["235/55R18", "255/45R19"],
+        "Limited": ["255/45R19", "245/45R20"],
+        "SHO": ["255/45R19", "245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen VI"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "SE": ["235/60R17"],
+        "SEL": ["235/55R18", "255/45R19"],
+        "Limited": ["255/45R19"],
+        "SHO": ["255/45R19", "245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen VI"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "SE": ["235/60R17"],
+        "SEL": ["235/55R18", "255/45R19"],
+        "Limited": ["255/45R19"],
+        "SHO": ["255/45R19", "245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen VI"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["235/60R17", "235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "SE": ["235/60R17"],
+        "SEL": ["235/55R18", "255/45R19"],
+        "Limited": ["255/45R19"],
+        "SHO": ["255/45R19", "245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen VI - first year of sixth gen"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": {
+        "SE FWD": ["215/60R17"],
+        "SEL AWD": ["215/60R17", "225/55R18"],
+        "SEL FWD": ["215/60R17", "225/55R18"],
+        "Limited AWD": ["225/55R18"],
+        "Limited FWD": ["225/55R18"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen V. Current sizes completely wrong"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": {
+        "SEL AWD": ["215/60R17", "225/55R18"],
+        "SEL FWD": ["215/60R17", "225/55R18"],
+        "Limited AWD": ["225/55R18"],
+        "Limited FWD": ["225/55R18"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen V. Current sizes completely wrong"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": {
+        "SE Sedan": ["215/60R16"],
+        "SEL Sedan": ["215/60R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen IV. Current sizes completely wrong - single size only"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": {
+        "SE Sedan": ["215/60R16"],
+        "SEL Sedan": ["215/60R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen IV"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": {
+        "SE Sedan": ["215/60R16"],
+        "SE Wagon": ["215/60R16"],
+        "SEL Sedan": ["215/60R16"],
+        "SEL Wagon": ["215/60R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen IV"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": {
+        "LX Sedan": ["215/60R16"],
+        "SE Sedan": ["215/60R16"],
+        "SE Wagon": ["215/60R16"],
+        "SEL Sedan": ["215/60R16"],
+        "SEL Wagon": ["215/60R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen IV"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": {
+        "LX Sedan": ["215/60R16"],
+        "SE Sedan": ["215/60R16"],
+        "SE Wagon": ["215/60R16"],
+        "SEL Sedan": ["215/60R16"],
+        "SEL Wagon": ["215/60R16"],
+        "SES Sedan": ["215/60R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen IV"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": {
+        "LX Sedan": ["215/60R16"],
+        "SE Sedan": ["215/60R16"],
+        "SE Wagon": ["215/60R16"],
+        "SEL Sedan": ["215/60R16"],
+        "SES Sedan": ["215/60R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen IV"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": {
+        "LX Sedan": ["215/60R16"],
+        "SE Sedan": ["215/60R16"],
+        "SE Wagon": ["215/60R16"],
+        "SEL Sedan": ["215/60R16"],
+        "SES Sedan": ["215/60R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen IV"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Taurus",
+      "currentTireSizes": ["235/55R17", "245/45R19", "255/40R20"],
+      "validatedTireSizes": ["215/60R16"],
+      "trims": {
+        "LX Sedan": ["215/60R16"],
+        "SE Comfort Sedan": ["215/60R16"],
+        "SE Sedan": ["215/60R16"],
+        "SE SVG Sedan": ["215/60R16"],
+        "SE Wagon": ["215/60R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market Gen IV"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Taurus-SHO",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R20"],
+      "trims": {
+        "SHO": ["245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Recommend consolidating with Taurus model, SHO as trim"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Taurus-SHO",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R20"],
+      "trims": {
+        "SHO": ["245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Recommend consolidating with Taurus model"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Taurus-SHO",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R20"],
+      "trims": {
+        "SHO": ["245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Recommend consolidating with Taurus model"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Taurus-SHO",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R20"],
+      "trims": {
+        "SHO": ["245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Recommend consolidating with Taurus model"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Taurus-SHO",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R20"],
+      "trims": {
+        "SHO": ["245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Recommend consolidating with Taurus model"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Taurus-SHO",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "245/45R20"],
+      "trims": {
+        "SHO": ["255/45R19", "245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Recommend consolidating with Taurus model"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Taurus-SHO",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "245/45R20"],
+      "trims": {
+        "SHO": ["255/45R19", "245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Recommend consolidating with Taurus model"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Taurus-SHO",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "245/45R20"],
+      "trims": {
+        "SHO": ["255/45R19", "245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Recommend consolidating with Taurus model"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Taurus-SHO",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "245/45R20"],
+      "trims": {
+        "SHO": ["255/45R19", "245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Recommend consolidating with Taurus model"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Taurus-SHO",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "245/45R20"],
+      "trims": {
+        "SHO": ["255/45R19", "245/45R20"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "First year of modern SHO. Recommend consolidating with Taurus model"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Taurus-X",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R17", "225/60R18"],
+      "trims": {
+        "SEL AWD": ["215/65R17"],
+        "SEL FWD": ["215/65R17"],
+        "Eddie Bauer AWD": ["225/60R18"],
+        "Eddie Bauer FWD": ["225/60R18"],
+        "Limited AWD": ["225/60R18"],
+        "Limited FWD": ["225/60R18"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Crossover wagon based on Taurus platform"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Taurus-X",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R17", "225/60R18"],
+      "trims": {
+        "SEL AWD": ["215/65R17"],
+        "SEL FWD": ["215/65R17"],
+        "Eddie Bauer AWD": ["225/60R18"],
+        "Eddie Bauer FWD": ["225/60R18"],
+        "Limited AWD": ["225/60R18"],
+        "Limited FWD": ["225/60R18"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Crossover wagon based on Taurus platform"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R17"],
+      "trims": {
+        "Base": ["235/50R17"],
+        "Deluxe": ["235/50R17"],
+        "Premium": ["235/50R17"],
+        "50th Anniversary": ["235/50R17"]
+      },
+      "source": "goodyear.com, thunderbirdnest.com",
+      "status": "needs_update",
+      "notes": "Retro 11th gen Thunderbird. Final model year."
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R17"],
+      "trims": {
+        "Base": ["235/50R17"],
+        "Deluxe": ["235/50R17"],
+        "Premium": ["235/50R17"]
+      },
+      "source": "goodyear.com, thunderbirdnest.com",
+      "status": "needs_update",
+      "notes": "Retro 11th gen Thunderbird"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R17"],
+      "trims": {
+        "Base": ["235/50R17"],
+        "Deluxe": ["235/50R17"],
+        "Premium": ["235/50R17"]
+      },
+      "source": "goodyear.com, thunderbirdnest.com",
+      "status": "needs_update",
+      "notes": "Retro 11th gen Thunderbird"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R17"],
+      "trims": {
+        "Base": ["235/50R17"]
+      },
+      "source": "goodyear.com, thunderbirdnest.com",
+      "status": "needs_update",
+      "notes": "Retro 11th gen Thunderbird. First year."
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/65R16", "195/75R16", "205/75R16"],
+      "trims": {
+        "Connect Van": ["215/55R16"],
+        "Connect Wagon": ["215/55R16", "215/50R17"],
+        "T150/T250/T350 Van SRW": ["235/65R16"],
+        "T350 Van DRW": ["195/75R16", "205/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market full-size van"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/65R16", "195/75R16", "205/75R16"],
+      "trims": {
+        "Connect Van": ["215/55R16"],
+        "Connect Wagon": ["215/55R16", "215/50R17"],
+        "T150/T250/T350 Van SRW": ["235/65R16"],
+        "T350 Van DRW": ["195/75R16", "205/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market full-size van"
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/65R16", "195/75R16", "205/75R16"],
+      "trims": {
+        "Connect Van": ["215/55R16"],
+        "Connect Wagon": ["215/55R16", "215/50R17"],
+        "T150/T250/T350 Van SRW": ["235/65R16"],
+        "T350 Van DRW": ["195/75R16", "205/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market full-size van"
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/65R16", "195/75R16", "205/75R16"],
+      "trims": {
+        "Connect Van": ["215/55R16"],
+        "Connect Wagon": ["215/55R16", "215/50R17"],
+        "T150/T250/T350 Van SRW": ["235/65R16"],
+        "T350 Van DRW": ["195/75R16", "205/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market full-size van"
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/65R16", "195/75R16", "205/75R16"],
+      "trims": {
+        "Connect Van": ["215/55R16"],
+        "Connect Wagon": ["215/55R16", "215/50R17"],
+        "T150/T250/T350 Van SRW": ["235/65R16"],
+        "T350 Van DRW": ["195/75R16", "205/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market full-size van"
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "235/65R16", "195/75R16", "205/75R16"],
+      "trims": {
+        "Connect Van": ["215/55R16"],
+        "Connect Wagon": ["215/55R16"],
+        "T150 Van": ["235/65R16"],
+        "T150 Van AWD": ["235/65R16"],
+        "T250 Van": ["235/65R16"],
+        "T250 Van AWD": ["235/65R16"],
+        "T350 Van": ["235/65R16"],
+        "T350 Van AWD": ["235/65R16"],
+        "T350 Van Dually": ["195/75R16", "205/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market full-size van"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/65R16", "195/75R16"],
+      "trims": {
+        "Connect Van": ["215/55R16"],
+        "Connect Wagon": ["215/55R16", "215/50R17"],
+        "Van SRW": ["235/65R16"],
+        "Van DRW": ["195/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market full-size van"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/65R16", "195/75R16"],
+      "trims": {
+        "Connect Van": ["215/55R16"],
+        "Connect Wagon": ["215/55R16", "215/50R17"],
+        "Van SRW": ["235/65R16"],
+        "Van DRW": ["195/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market full-size van"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/65R16", "195/75R16"],
+      "trims": {
+        "Connect Van": ["215/55R16"],
+        "Connect Wagon": ["215/55R16", "215/50R17"],
+        "T150/T250 Van": ["235/65R16"],
+        "T350 Van SRW": ["235/65R16"],
+        "T350 Van DRW": ["195/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market full-size van"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/65R16", "195/75R16"],
+      "trims": {
+        "Connect Van": ["215/55R16"],
+        "Connect Wagon": ["215/55R16", "215/50R17"],
+        "T150 Van": ["235/65R16"],
+        "T150 Wagon": ["235/65R16"],
+        "T250 Van": ["235/65R16"],
+        "T350 Van SRW": ["235/65R16"],
+        "T350 Van DRW": ["195/75R16"],
+        "T350 Wagon SRW": ["235/65R16"],
+        "T350 Wagon DRW": ["195/75R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "US market full-size van"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/65R16", "195/75R16"],
+      "trims": {
+        "Connect Van LWB": ["215/55R16"],
+        "Connect Van SWB": ["215/55R16"],
+        "Connect Wagon 5-Pass SWB": ["215/55R16", "215/50R17"],
+        "Connect Wagon 7-Pass LWB": ["215/55R16", "215/50R17"],
+        "Van DRW": ["195/75R16"],
+        "Van SRW": ["235/65R16"],
+        "Wagon DRW": ["195/75R16"],
+        "Wagon SRW": ["235/65R16"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "First US model year for full-size Transit"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": {
+        "Connect Van LWB": ["215/55R16"],
+        "Connect Van SWB": ["215/55R16"],
+        "Connect Wagon 5-Pass SWB": ["215/55R16", "215/50R17"],
+        "Connect Wagon 7-Pass LWB": ["215/55R16", "215/50R17"]
+      },
+      "source": "tiresize.com",
+      "status": "needs_update",
+      "notes": "Transit Connect only in US for 2014"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Van (Europe)": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"]
+      },
+      "source": "car-us.com",
+      "status": "needs_update",
+      "notes": "European market Transit (Gen III Facelift)"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Van (Europe)": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"]
+      },
+      "source": "car-us.com",
+      "status": "needs_update",
+      "notes": "European market Transit (Gen III Facelift)"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Van (Europe)": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"]
+      },
+      "source": "car-us.com",
+      "status": "needs_update",
+      "notes": "European market Transit (Gen III Facelift)"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Van (Europe)": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"]
+      },
+      "source": "car-us.com",
+      "status": "needs_update",
+      "notes": "European market Transit (Gen III Facelift)"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Van (Europe)": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"]
+      },
+      "source": "car-us.com",
+      "status": "needs_update",
+      "notes": "European market Transit (Gen III Facelift)"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Van (Europe)": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"]
+      },
+      "source": "car-us.com",
+      "status": "needs_update",
+      "notes": "European market Transit (Gen III Facelift)"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Van (Europe)": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"]
+      },
+      "source": "car-us.com",
+      "status": "needs_update",
+      "notes": "European market Transit (Gen III Facelift)"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Van (Europe)": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"]
+      },
+      "source": "car-us.com",
+      "status": "needs_update",
+      "notes": "European market Transit (Gen III Facelift starts this year)"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Van (Europe)": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"]
+      },
+      "source": "car-us.com",
+      "status": "needs_update",
+      "notes": "European market Transit (Gen III)"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Van (Europe)": ["195/70R15", "205/65R15", "215/65R16", "225/60R16"]
+      },
+      "source": "car-us.com",
+      "status": "needs_update",
+      "notes": "European market Transit (Gen III)"
+    }
+  ],
+  "summary": {
+    "verified": 6,
+    "needs_update": 69,
+    "total": 75,
+    "keyFindings": [
+      "Ford Taurus 2000-2007: All had 215/60R16 only - current DB has wrong sizes (235/55R17, etc)",
+      "Ford Taurus 2008-2009: 215/60R17 and 225/55R18 - current sizes wrong",
+      "Ford Taurus 2010-2019: Correct sizes are 235/60R17, 235/55R18, 255/45R19, 245/45R20",
+      "Ford Taurus 2020-2025: Middle East market - current sizes appear reasonable",
+      "Ford Taurus-SHO: Should be merged as trim under Taurus model",
+      "Ford Taurus-X: Should be separate model with 215/65R17 and 225/60R18",
+      "Ford SportKa/StreetKa: European market only - 185/55R15, 195/45R16, 195/50R15",
+      "Ford Thunderbird 2002-2005: All use 235/50R17",
+      "Ford Transit 2004-2014: European market - 195/70R15 to 225/60R16",
+      "Ford Transit 2015-2025: US market - varies by body style (Connect vs Full-size)"
+    ]
+  }
+}

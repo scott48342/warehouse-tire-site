@@ -1,0 +1,1071 @@
+{
+  "batch": "batch-26-german",
+  "verifiedAt": "2025-01-21T04:30:00Z",
+  "totalVehicles": 75,
+  "validVehicles": 68,
+  "invalidVehicles": 7,
+  "summary": {
+    "invalidYears": [
+      {"year": 2024, "make": "mercedes", "model": "cls-class", "reason": "Production ended August 2023 - no 2024 model year exists"},
+      {"year": 2004, "make": "mercedes", "model": "cls-class-amg", "reason": "CLS launched in US as 2006 model year - 2004 was Europe only"},
+      {"year": 2005, "make": "mercedes", "model": "cls-class-amg", "reason": "CLS launched in US as 2006 model year - 2005 was Europe only"},
+      {"year": 2024, "make": "mercedes", "model": "cls-class-amg", "reason": "CLS production ended August 2023 - no 2024 model year exists"},
+      {"year": 2009, "make": "mercedes", "model": "e-class-cabriolet", "reason": "E-Class Cabriolet (A207) launched in US as 2011 model year"},
+      {"year": 2010, "make": "mercedes", "model": "e-class-cabriolet", "reason": "E-Class Cabriolet (A207) launched in US as 2011 model year"},
+      {"year": 2009, "make": "mercedes", "model": "e-class-coupe", "reason": "E-Class Coupe (C207) launched in US as 2010 model year"}
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class",
+      "status": "valid",
+      "generation": "C257 (3rd gen, 2019-2023)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 450 4MATIC", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com", "caranddriver.com"],
+      "notes": "Final model year - production ended August 31, 2023"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class",
+      "status": "invalid",
+      "reason": "Production ended August 2023 - no 2024 model year exists",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "mercedesblog.com", "wikipedia"]
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "invalid",
+      "reason": "CLS launched in US as 2006 model year (January 2005 sales start). 2004 was European market only.",
+      "confidence": "high",
+      "sources": ["jdpower.com", "wikipedia"]
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "invalid",
+      "reason": "CLS launched in US as 2006 model year. 2005 calendar year sales were 2006 MY vehicles.",
+      "confidence": "high",
+      "sources": ["jdpower.com", "wikipedia"]
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C219 (1st gen, 2006-2010 US)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 55 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "255/40R18 / 285/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com", "hulkoffsets.com"],
+      "notes": "First US model year for CLS AMG"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C219 (1st gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 55 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "255/40R18 / 285/35R18", "staggered": true},
+        {"name": "CLS 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C219 (1st gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C219 (1st gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C219 (1st gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Final year of 1st gen"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C218 (2nd gen, 2011-2018)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "wikipedia"]
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C218 (2nd gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C218 (2nd gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C218 (2nd gen, facelift)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true},
+        {"name": "CLS 63 AMG S", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C218 (2nd gen, facelift)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG S", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C218 (2nd gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG S", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C218 (2nd gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG S", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C218 (2nd gen, final year)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "CLS 63 AMG S", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "autoevolution.com"],
+      "notes": "Final year of CLS 63 AMG"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C257 (3rd gen, 2019-2023)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG CLS 53", "oemWheelSize": "20x8/20x9", "oemTireSize": "255/40R20 / 285/35R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com", "hulkoffsets.com"],
+      "notes": "3rd gen uses AMG CLS 53 instead of CLS 63"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C257 (3rd gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG CLS 53", "oemWheelSize": "20x8/20x9", "oemTireSize": "255/40R20 / 285/35R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C257 (3rd gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG CLS 53", "oemWheelSize": "20x8/20x9", "oemTireSize": "255/40R20 / 285/35R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C257 (3rd gen)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG CLS 53", "oemWheelSize": "20x8/20x9", "oemTireSize": "255/40R20 / 285/35R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "valid",
+      "generation": "C257 (3rd gen, final year)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG CLS 53", "oemWheelSize": "20x8/20x9", "oemTireSize": "255/40R20 / 285/35R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com", "caranddriver.com"],
+      "notes": "Final model year - production ended August 31, 2023"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "status": "invalid",
+      "reason": "CLS production ended August 2023 - no 2024 model year exists",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "mercedesblog.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W210 (1995-2002)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 55 AMG", "oemWheelSize": "18x8/18x9", "oemTireSize": "245/40R18 / 275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia", "carbuzz.com"],
+      "notes": "Final year of W210 generation"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W211 (2003-2009)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 55 AMG", "oemWheelSize": "18x8/18x9", "oemTireSize": "245/40R18 / 275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia", "carbuzz.com"],
+      "notes": "First year of W211 generation"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 55 AMG", "oemWheelSize": "18x8/18x9", "oemTireSize": "245/40R18 / 275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 55 AMG", "oemWheelSize": "18x8/18x9", "oemTireSize": "245/40R18 / 275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 55 AMG", "oemWheelSize": "18x8/18x9", "oemTireSize": "245/40R18 / 275/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Final year of E 55 AMG"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 63 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "255/35R18 / 285/30R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["carbuzz.com"],
+      "notes": "First year of E 63 AMG"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 63 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "255/35R18 / 285/30R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W211 (final year)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 63 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "255/35R18 / 285/30R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W212 (2010-2016)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["carbuzz.com"],
+      "notes": "First year of W212 generation"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W212 (facelift)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true},
+        {"name": "E 63 AMG S", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["carbuzz.com"],
+      "notes": "Twin-turbo 5.5L V8 replaced NA 6.2L"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 63 AMG S", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W212 (final year)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 63 AMG S", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W213 (2017-present)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG E 63", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true},
+        {"name": "AMG E 63 S", "oemWheelSize": "20x9/20x10", "oemTireSize": "265/35R20 / 295/30R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia", "carbuzz.com"],
+      "notes": "First year of W213 generation"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG E 63", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/35R19 / 285/30R19", "staggered": true},
+        {"name": "AMG E 63 S", "oemWheelSize": "20x9/20x10", "oemTireSize": "265/35R20 / 295/30R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG E 63 S", "oemWheelSize": "20x9/20x10", "oemTireSize": "265/35R20 / 295/30R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG E 63 S", "oemWheelSize": "20x9/20x10", "oemTireSize": "265/35R20 / 295/30R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W213 (facelift)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG E 63 S", "oemWheelSize": "20x9/20x10", "oemTireSize": "265/35R20 / 295/30R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG E 63 S", "oemWheelSize": "20x9/20x10", "oemTireSize": "265/35R20 / 295/30R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG E 63 S", "oemWheelSize": "20x9/20x10", "oemTireSize": "265/35R20 / 295/30R20", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W213/W214",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG E 53", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20 / 285/30R20", "staggered": true}
+      ],
+      "confidence": "medium",
+      "sources": ["mbusa.com"],
+      "notes": "W214 E-Class launched, E 63 may be discontinued or delayed"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "status": "valid",
+      "generation": "W214",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "AMG E 53", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20 / 285/30R20", "staggered": true}
+      ],
+      "confidence": "medium",
+      "sources": ["mbusa.com"],
+      "notes": "Current model year"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "invalid",
+      "reason": "E-Class Cabriolet (A207) launched in US as 2011 model year. The A207 was unveiled at 2010 NAIAS with US sales starting June 2010 for MY2011.",
+      "confidence": "high",
+      "sources": ["wikipedia", "media.mbusa.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "invalid",
+      "reason": "E-Class Cabriolet (A207) launched in US as 2011 model year. Sales began June 2010 for 2011 MY.",
+      "confidence": "high",
+      "sources": ["wikipedia", "media.mbusa.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A207 (2011-2017)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 350 Cabriolet", "oemWheelSize": "17x8.5", "oemTireSize": "245/45R17"},
+        {"name": "E 550 Cabriolet", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia", "mbusa.com"],
+      "notes": "First US model year"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A207",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 350 Cabriolet", "oemWheelSize": "17x8.5", "oemTireSize": "245/45R17"},
+        {"name": "E 550 Cabriolet", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A207",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 350 Cabriolet", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"},
+        {"name": "E 550 Cabriolet", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A207 (facelift)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 350 Cabriolet", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"},
+        {"name": "E 550 Cabriolet", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A207",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 400 Cabriolet", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A207",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 400 Cabriolet", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A207 (final year)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 400 Cabriolet", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A238 (2018-2023)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 400 Cabriolet 4MATIC", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"],
+      "notes": "First year of W213-based A238"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A238",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 450 Cabriolet 4MATIC", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A238",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 450 Cabriolet 4MATIC", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A238 (facelift)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 450 Cabriolet", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "E 450 Cabriolet 4MATIC", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A238",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 450 Cabriolet", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "status": "valid",
+      "generation": "A238 (final year)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 450 Cabriolet", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "mbusa.com"],
+      "notes": "Coupe/Cabriolet discontinued for W214"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "invalid",
+      "reason": "E-Class Coupe (C207) launched in US as 2010 model year. The C207 was shown at 2009 Geneva Motor Show but US sales were MY2010.",
+      "confidence": "high",
+      "sources": ["wikipedia", "classic.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C207 (2010-2017)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 350 Coupe", "oemWheelSize": "17x8.5", "oemTireSize": "245/45R17"},
+        {"name": "E 550 Coupe", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "255/40R18 / 285/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["classic.com", "wikipedia"],
+      "notes": "First US model year"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C207",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 350 Coupe", "oemWheelSize": "17x8.5", "oemTireSize": "245/45R17"},
+        {"name": "E 550 Coupe", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "255/40R18 / 285/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C207",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 350 Coupe", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"},
+        {"name": "E 550 Coupe", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "255/40R18 / 285/35R18", "staggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C207",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 350 Coupe", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"},
+        {"name": "E 550 Coupe", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C207 (facelift)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 350 Coupe", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"},
+        {"name": "E 550 Coupe", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C207",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 400 Coupe", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C207",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 400 Coupe", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C207 (final year of C207) / C238 (debut)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 400 Coupe", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["carbuzz.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C238 (2018-2023)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 400 Coupe 4MATIC", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"],
+      "notes": "First year of W213-based C238"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C238",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 450 Coupe 4MATIC", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C238",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 450 Coupe 4MATIC", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "status": "valid",
+      "generation": "C238 (facelift)",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "E 450 Coupe", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "E 450 Coupe 4MATIC", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["mbusa.com"]
+    }
+  ]
+}

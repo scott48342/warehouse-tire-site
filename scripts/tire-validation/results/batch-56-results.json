@@ -1,0 +1,951 @@
+{
+  "batchId": "56",
+  "processedAt": "2026-04-21T22:02:00.000Z",
+  "source": "tiresize.com, sizemytires.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["215/60R16"],
+      "validatedTireSizes": ["215/60R16", "235/50R17"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["215/60R16", "235/50R17"]},
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]},
+        {"trim": "Titanium", "tireSizes": ["235/45R18", "235/40R19"]},
+        {"trim": "Sport", "tireSizes": ["235/40R19"]},
+        {"trim": "Platinum", "tireSizes": ["235/40R19"]},
+        {"trim": "Hybrid S", "tireSizes": ["225/50R17"]},
+        {"trim": "Hybrid SE", "tireSizes": ["225/50R17", "235/45R18"]},
+        {"trim": "Hybrid Titanium", "tireSizes": ["235/45R18"]},
+        {"trim": "Hybrid Platinum", "tireSizes": ["235/45R18"]},
+        {"trim": "Energi SE", "tireSizes": ["225/50R17", "235/45R18"]},
+        {"trim": "Energi Titanium", "tireSizes": ["225/50R17", "235/45R18"]},
+        {"trim": "Energi Platinum", "tireSizes": ["225/50R17", "235/45R18"]}
+      ],
+      "status": "VALID",
+      "notes": "215/60R16 is valid for S trim"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/50R17"],
+      "validatedTireSizes": ["235/50R17"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["215/60R16", "235/50R17"]},
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]}
+      ],
+      "status": "VALID",
+      "notes": "235/50R17 is valid for S and SE trims"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/50R17"],
+      "validatedTireSizes": ["235/50R17"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["215/60R16", "235/50R17", "235/45R18"]},
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/45R18", "235/40R19"],
+      "validatedTireSizes": ["235/45R18", "235/40R19"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]},
+        {"trim": "Titanium", "tireSizes": ["235/45R18", "235/40R19"]},
+        {"trim": "Sport", "tireSizes": ["235/40R19"]},
+        {"trim": "Platinum", "tireSizes": ["235/40R19"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["215/60R16"],
+      "validatedTireSizes": ["215/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["215/60R16", "235/50R17", "235/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/50R17"],
+      "validatedTireSizes": ["235/50R17"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/45R18", "235/40R19"],
+      "validatedTireSizes": ["235/45R18", "235/40R19"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["215/60R16", "235/45R18"]},
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]},
+        {"trim": "Hybrid", "tireSizes": ["225/50R17", "235/45R18"]},
+        {"trim": "Titanium", "tireSizes": ["235/45R18", "235/40R19"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["215/60R16"],
+      "validatedTireSizes": ["215/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["215/60R16", "235/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["215/60R16"],
+      "validatedTireSizes": ["215/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["215/60R16"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/50R17"],
+      "validatedTireSizes": ["235/50R17"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/45R18", "235/40R19"],
+      "validatedTireSizes": ["235/45R18", "235/40R19"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]},
+        {"trim": "Hybrid", "tireSizes": ["225/50R17", "235/45R18"]},
+        {"trim": "Titanium", "tireSizes": ["235/45R18", "235/40R19"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/45R18", "235/40R19"],
+      "validatedTireSizes": ["235/45R18", "235/40R19"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]},
+        {"trim": "Hybrid", "tireSizes": ["225/50R17", "235/45R18"]},
+        {"trim": "Titanium", "tireSizes": ["235/45R18", "235/40R19"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["215/60R16"],
+      "validatedTireSizes": ["215/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["215/60R16"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/50R17"],
+      "validatedTireSizes": ["235/50R17"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/50R17"],
+      "validatedTireSizes": ["235/50R17"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]},
+        {"trim": "Hybrid", "tireSizes": ["235/50R17", "235/45R18"]},
+        {"trim": "Energi", "tireSizes": ["235/50R17"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["215/60R16"],
+      "validatedTireSizes": ["215/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["215/60R16"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["235/45R18", "235/40R19"],
+      "validatedTireSizes": ["235/45R18", "235/40R19"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["235/50R17", "235/45R18"]},
+        {"trim": "Hybrid", "tireSizes": ["235/50R17", "235/45R18"]},
+        {"trim": "Titanium", "tireSizes": ["235/45R18", "235/40R19"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/45R18"],
+      "validatedTireSizes": ["225/45R18"],
+      "trimData": [
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]},
+        {"trim": "Sport", "tireSizes": ["225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18"],
+      "validatedTireSizes": ["205/60R16", "225/50R17", "225/45R18"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]},
+        {"trim": "SE", "tireSizes": ["225/50R17"]},
+        {"trim": "Hybrid", "tireSizes": ["225/50R17"]},
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]},
+        {"trim": "Sport", "tireSizes": ["225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17"],
+      "validatedTireSizes": ["225/50R17"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["225/50R17"]},
+        {"trim": "Hybrid", "tireSizes": ["225/50R17"]},
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": ["205/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17"],
+      "validatedTireSizes": ["225/50R17"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["225/50R17"]},
+        {"trim": "Hybrid", "tireSizes": ["225/50R17"]},
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/45R18"],
+      "validatedTireSizes": ["225/45R18"],
+      "trimData": [
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]},
+        {"trim": "Sport", "tireSizes": ["225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18"],
+      "validatedTireSizes": ["205/60R16", "225/50R17", "225/45R18"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]},
+        {"trim": "SE", "tireSizes": ["225/50R17"]},
+        {"trim": "Hybrid", "tireSizes": ["225/50R17"]},
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]},
+        {"trim": "Sport", "tireSizes": ["225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": ["205/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/45R18"],
+      "validatedTireSizes": ["225/45R18"],
+      "trimData": [
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]},
+        {"trim": "Sport", "tireSizes": ["225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17"],
+      "validatedTireSizes": ["225/50R17"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["225/50R17"]},
+        {"trim": "Hybrid", "tireSizes": ["225/50R17"]},
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": ["205/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17"],
+      "validatedTireSizes": ["225/50R17"],
+      "trimData": [
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": ["205/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]},
+        {"trim": "SE", "tireSizes": ["205/60R16", "225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/45R18"],
+      "validatedTireSizes": ["225/45R18"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["205/60R16", "225/45R18"]},
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": ["205/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]},
+        {"trim": "SE", "tireSizes": ["205/60R16", "225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/45R18"],
+      "validatedTireSizes": ["225/45R18"],
+      "trimData": [
+        {"trim": "SE", "tireSizes": ["205/60R16", "225/45R18"]},
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17"],
+      "validatedTireSizes": ["225/50R17"],
+      "trimData": [
+        {"trim": "SEL", "tireSizes": ["225/50R17", "225/45R18"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17"],
+      "validatedTireSizes": ["225/50R17"],
+      "trimData": [
+        {"trim": "SEL", "tireSizes": ["225/50R17"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": ["205/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]},
+        {"trim": "SE", "tireSizes": ["205/60R16"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/45R18"],
+      "validatedTireSizes": [],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]},
+        {"trim": "SE", "tireSizes": ["205/60R16"]},
+        {"trim": "SEL", "tireSizes": ["225/50R17"]}
+      ],
+      "status": "INVALID",
+      "notes": "225/45R18 NOT a factory size for 2007 Fusion. Only 205/60R16 and 225/50R17 were OEM."
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17"],
+      "validatedTireSizes": ["225/50R17"],
+      "trimData": [
+        {"trim": "SEL", "tireSizes": ["225/50R17"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": ["205/60R16"],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]},
+        {"trim": "SE", "tireSizes": ["205/60R16"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/45R18"],
+      "validatedTireSizes": [],
+      "trimData": [
+        {"trim": "S", "tireSizes": ["205/60R16"]},
+        {"trim": "SE", "tireSizes": ["205/60R16"]},
+        {"trim": "SEL", "tireSizes": ["225/50R17"]}
+      ],
+      "status": "INVALID",
+      "notes": "225/45R18 NOT a factory size for 2006 Fusion. Only 205/60R16 and 225/50R17 were OEM."
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "INVALID_YEAR",
+      "notes": "Ford Fusion did not exist in 2005. First model year was 2006."
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "INVALID_YEAR",
+      "notes": "Ford Fusion did not exist in 2004. First model year was 2006."
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "INVALID_YEAR",
+      "notes": "Ford Fusion did not exist in 2003. First model year was 2006."
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Fusion",
+      "currentTireSizes": ["225/50R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "INVALID_YEAR",
+      "notes": "Ford Fusion did not exist in 2002. First model year was 2006."
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "GT",
+      "currentTireSizes": ["235/35R20", "325/30R20"],
+      "validatedTireSizes": ["245/35R20", "325/30R20"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["245/35R20 (front)", "325/30R20 (rear)"]}
+      ],
+      "isStaggered": true,
+      "status": "MISMATCH",
+      "notes": "Front tire should be 245/35R20, not 235/35R20. Rear 325/30R20 is correct. Ford GT uses staggered setup."
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "GT",
+      "currentTireSizes": ["235/35R20", "325/30R20"],
+      "validatedTireSizes": ["245/35R20", "325/30R20"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["245/35R20 (front)", "325/30R20 (rear)"]}
+      ],
+      "isStaggered": true,
+      "status": "MISMATCH",
+      "notes": "Front tire should be 245/35R20, not 235/35R20. Rear 325/30R20 is correct."
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "GT",
+      "currentTireSizes": ["235/35R20", "325/30R20"],
+      "validatedTireSizes": ["245/35R20", "325/30R20"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["245/35R20 (front)", "325/30R20 (rear)"]}
+      ],
+      "isStaggered": true,
+      "status": "MISMATCH",
+      "notes": "Front tire should be 245/35R20, not 235/35R20. Rear 325/30R20 is correct."
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "GT",
+      "currentTireSizes": ["235/35R20", "325/30R20"],
+      "validatedTireSizes": ["245/35R20", "325/30R20"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["245/35R20 (front)", "325/30R20 (rear)"]}
+      ],
+      "isStaggered": true,
+      "status": "MISMATCH",
+      "notes": "Front tire should be 245/35R20, not 235/35R20. Rear 325/30R20 is correct."
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "GT",
+      "currentTireSizes": ["235/35R20", "325/30R20"],
+      "validatedTireSizes": ["245/35R20", "325/30R20"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["245/35R20 (front)", "325/30R20 (rear)"]}
+      ],
+      "isStaggered": true,
+      "status": "MISMATCH",
+      "notes": "Front tire should be 245/35R20, not 235/35R20. Rear 325/30R20 is correct."
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "GT",
+      "currentTireSizes": ["235/35R20", "325/30R20"],
+      "validatedTireSizes": ["245/35R20", "325/30R20"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["245/35R20 (front)", "325/30R20 (rear)"]}
+      ],
+      "isStaggered": true,
+      "status": "MISMATCH",
+      "notes": "Front tire should be 245/35R20, not 235/35R20. Rear 325/30R20 is correct."
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "GT",
+      "currentTireSizes": ["235/35R20", "325/30R20"],
+      "validatedTireSizes": ["235/45R18", "315/40R19"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["235/45R18 (front)", "315/40R19 (rear)"]}
+      ],
+      "isStaggered": true,
+      "status": "MISMATCH",
+      "notes": "First-gen Ford GT (2005-2006) used different sizes: 235/45R18 front, 315/40R19 rear. Current data is from 2nd gen (2017+)."
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "GT",
+      "currentTireSizes": ["235/35R20", "325/30R20"],
+      "validatedTireSizes": ["235/45R18", "315/40R19"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["235/45R18 (front)", "315/40R19 (rear)"]}
+      ],
+      "isStaggered": true,
+      "status": "MISMATCH",
+      "notes": "First-gen Ford GT (2005-2006) used different sizes: 235/45R18 front, 315/40R19 rear. Current data is from 2nd gen (2017+)."
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Ka-Freestyle",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R15"],
+      "trimData": [
+        {"trim": "All", "tireSizes": ["185/60R15"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "South American market vehicle (Brazil). OEM tire size is 185/60R15. Not sold in USA."
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Ka-Freestyle",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R15"],
+      "trimData": [
+        {"trim": "All", "tireSizes": ["185/60R15"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "South American market vehicle (Brazil). OEM tire size is 185/60R15. Not sold in USA."
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Ka-Freestyle",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R15"],
+      "trimData": [
+        {"trim": "All", "tireSizes": ["185/60R15"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "South American market vehicle (Brazil). OEM tire size is 185/60R15. Not sold in USA."
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Ka-Freestyle",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R15"],
+      "trimData": [
+        {"trim": "All", "tireSizes": ["185/60R15"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "South American market vehicle (Brazil). OEM tire size is 185/60R15. Not sold in USA."
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Ka-Freestyle",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R15"],
+      "trimData": [
+        {"trim": "All", "tireSizes": ["185/60R15"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "South American market vehicle (Brazil). OEM tire size is 185/60R15. Not sold in USA."
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "LTD",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R17"],
+      "trimData": [
+        {"trim": "All (Australia)", "tireSizes": ["235/45R17"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (Ford Australia BA/BF series). Not sold in USA. Typical tire size 235/45R17."
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "LTD",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R17"],
+      "trimData": [
+        {"trim": "All (Australia)", "tireSizes": ["235/45R17"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (Ford Australia BF series). Not sold in USA."
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "LTD",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R17"],
+      "trimData": [
+        {"trim": "All (Australia)", "tireSizes": ["235/45R17"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (Ford Australia BA series). Not sold in USA."
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "LTD",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R17"],
+      "trimData": [
+        {"trim": "All (Australia)", "tireSizes": ["235/45R17"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (Ford Australia BA series). Not sold in USA."
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "LTD",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R17"],
+      "trimData": [
+        {"trim": "All (Australia)", "tireSizes": ["235/45R17"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (Ford Australia AU/BA series). Not sold in USA."
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "LTD",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R17"],
+      "trimData": [
+        {"trim": "All (Australia)", "tireSizes": ["235/45R17"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (Ford Australia AU series). Not sold in USA."
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "LTD",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R17"],
+      "trimData": [
+        {"trim": "All (Australia)", "tireSizes": ["235/45R17"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (Ford Australia AU series). Not sold in USA."
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "LTD",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/45R17"],
+      "trimData": [
+        {"trim": "All (Australia)", "tireSizes": ["235/45R17"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (Ford Australia AU series). Not sold in USA."
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "Maverick",
+      "currentTireSizes": ["225/55R19", "225/65R17"],
+      "validatedTireSizes": ["225/65R17", "225/55R19"],
+      "trimData": [
+        {"trim": "XL", "tireSizes": ["225/65R17"]},
+        {"trim": "XLT", "tireSizes": ["225/65R17", "225/55R19"]},
+        {"trim": "Lariat", "tireSizes": ["225/55R19"]},
+        {"trim": "Lobo", "tireSizes": ["225/55R19"]},
+        {"trim": "Tremor", "tireSizes": ["225/65R17"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Maverick",
+      "currentTireSizes": ["225/55R19", "225/65R17"],
+      "validatedTireSizes": ["225/65R17", "225/55R19", "235/65R17"],
+      "trimData": [
+        {"trim": "XL", "tireSizes": ["225/65R17"]},
+        {"trim": "XLT", "tireSizes": ["225/65R17", "225/55R19"]},
+        {"trim": "Lariat", "tireSizes": ["225/55R19"]},
+        {"trim": "Lobo", "tireSizes": ["225/55R19"]},
+        {"trim": "Tremor", "tireSizes": ["235/65R17"]}
+      ],
+      "status": "VALID"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Maverick",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "XL", "tireSizes": ["225/65R17"]},
+        {"trim": "XLT", "tireSizes": ["225/65R17", "235/65R17", "225/60R18"]},
+        {"trim": "Lariat", "tireSizes": ["225/65R17", "235/65R17", "225/60R18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "No tire sizes in current data, but OEM sizes found: 225/65R17, 235/65R17, 225/60R18"
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Maverick",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "XL", "tireSizes": ["225/65R17"]},
+        {"trim": "XLT", "tireSizes": ["225/65R17", "235/65R17", "225/60R18"]},
+        {"trim": "Lariat", "tireSizes": ["225/65R17", "235/65R17", "225/60R18"]}
+      ],
+      "status": "MISSING_DATA",
+      "notes": "No tire sizes in current data, but OEM sizes found: 225/65R17, 235/65R17, 225/60R18"
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Maverick",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/65R17", "235/60R18", "235/55R19", "225/55R19", "245/50R19"],
+      "validatedTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "XL", "tireSizes": ["225/65R17"]},
+        {"trim": "XLT", "tireSizes": ["225/65R17", "235/65R17", "225/60R18"]},
+        {"trim": "Lariat", "tireSizes": ["225/65R17", "235/65R17", "225/60R18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current data includes non-OEM sizes. Validated OEM: 225/65R17, 235/65R17, 225/60R18. Remove: 235/60R18, 235/55R19, 225/55R19, 245/50R19"
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Maverick",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/65R17", "235/60R18", "235/55R19", "225/55R19", "245/50R19"],
+      "validatedTireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "XL", "tireSizes": ["225/65R17"]},
+        {"trim": "XLT", "tireSizes": ["225/65R17", "235/65R17", "225/60R18"]},
+        {"trim": "Lariat", "tireSizes": ["225/65R17", "235/65R17", "225/60R18"]}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current data includes non-OEM sizes. 2022 was the first model year for the new Maverick - 2021 data likely erroneous."
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Maverick",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "INVALID_MARKET",
+      "notes": "2007 Ford Maverick was only sold in Australia/international markets, not USA. Consider removing or marking as international-only."
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Maverick",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "INVALID_MARKET",
+      "notes": "2006 Ford Maverick was only sold in Australia/international markets, not USA. Consider removing or marking as international-only."
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Maverick",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "INVALID_MARKET",
+      "notes": "2005 Ford Maverick was only sold in Australia/international markets, not USA. Consider removing or marking as international-only."
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Maverick",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "INVALID_MARKET",
+      "notes": "2004 Ford Maverick was only sold in Australia/international markets, not USA. Consider removing or marking as international-only."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 35,
+    "mismatch": 10,
+    "invalid_year": 4,
+    "invalid_market": 4,
+    "missing_data": 22,
+    "issues": [
+      "Ford Fusion 2002-2005: Model did not exist. Remove from database.",
+      "Ford GT 2017-2022: Front tire should be 245/35R20, not 235/35R20",
+      "Ford GT 2005-2006: Wrong tire sizes - should be 235/45R18 front, 315/40R19 rear (not 20-inch)",
+      "Ford Fusion 2006-2007: 225/45R18 was NOT an OEM option - only 205/60R16 and 225/50R17",
+      "Ford Maverick 2021: First model year was 2022, not 2021",
+      "Ford Maverick 2022: Contains non-OEM tire sizes (235/60R18, 235/55R19, 225/55R19, 245/50R19)",
+      "Ford Ka-Freestyle: South American market only - consider removing or flagging as international",
+      "Ford LTD 2000-2007: Australian market only - consider removing or flagging as international",
+      "Ford Maverick 2004-2007: International market only - consider removing or flagging as international"
+    ]
+  }
+}

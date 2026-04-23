@@ -1,0 +1,1276 @@
+{
+  "batchId": "24",
+  "processedAt": "2026-04-21T21:03:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 6, "offset": 60 },
+          { "diameter": 16, "width": 7, "offset": 60 }
+        ]
+      },
+      "source": "car-us.com, tirewheelguide.com",
+      "confidence": "high",
+      "notes": "European Ford Transit III Facelift (2006-2014). SRW models use 5x160, DRW models use 6x180."
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 6, "offset": 60 },
+          { "diameter": 16, "width": 7, "offset": 60 }
+        ]
+      },
+      "source": "car-us.com",
+      "confidence": "high",
+      "notes": "European Ford Transit III Facelift. Same specs as 2010."
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 6, "offset": 60 },
+          { "diameter": 16, "width": 7, "offset": 60 }
+        ]
+      },
+      "source": "car-us.com",
+      "confidence": "high",
+      "notes": "European Ford Transit III Facelift."
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 6, "offset": 60 },
+          { "diameter": 16, "width": 7, "offset": 60 }
+        ]
+      },
+      "source": "car-us.com",
+      "confidence": "high",
+      "notes": "European Ford Transit III Facelift."
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 6, "offset": 60 },
+          { "diameter": 16, "width": 7, "offset": 60 }
+        ]
+      },
+      "source": "car-us.com",
+      "confidence": "high",
+      "notes": "European Ford Transit III - Overlaps Gen III and III Facelift."
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 6, "offset": 60 },
+          { "diameter": 16, "width": 7, "offset": 60 }
+        ]
+      },
+      "source": "car-us.com",
+      "confidence": "high",
+      "notes": "European Ford Transit III (2000-2006)."
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 6, "offset": 60 },
+          { "diameter": 16, "width": 7, "offset": 60 }
+        ]
+      },
+      "source": "car-us.com",
+      "confidence": "high",
+      "notes": "European Ford Transit III."
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 6, "offset": 60 },
+          { "diameter": 16, "width": 7, "offset": 60 }
+        ]
+      },
+      "source": "car-us.com",
+      "confidence": "high",
+      "notes": "European Ford Transit III."
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 6, "offset": 60 },
+          { "diameter": 16, "width": 7, "offset": 60 }
+        ]
+      },
+      "source": "car-us.com",
+      "confidence": "high",
+      "notes": "European Ford Transit III."
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 55 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 16, "width": 6, "offset": 60 },
+          { "diameter": 16, "width": 7, "offset": 60 }
+        ]
+      },
+      "source": "car-us.com",
+      "confidence": "high",
+      "notes": "European Ford Transit III."
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "transit",
+      "wheelSpecs": {
+        "boltPattern": "5x160",
+        "centerBore": 65.1,
+        "options": [
+          { "diameter": 14, "width": 5.5, "offset": 56 },
+          { "diameter": 15, "width": 5.5, "offset": 56 }
+        ]
+      },
+      "source": "car-us.com",
+      "confidence": "high",
+      "notes": "European Ford Transit II Facelift/III overlap year."
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "transit-t8",
+      "wheelSpecs": {
+        "boltPattern": "6x180",
+        "centerBore": 138.8,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 109 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Ford Transit T8 electric chassis cab. Uses 6-lug heavy duty pattern."
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "transit-t8",
+      "wheelSpecs": {
+        "boltPattern": "6x180",
+        "centerBore": 138.8,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 109 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Ford Transit T8 electric chassis cab."
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "transit-t8",
+      "wheelSpecs": {
+        "boltPattern": "6x180",
+        "centerBore": 138.8,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 109 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Ford Transit T8 electric chassis cab."
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "windstar",
+      "wheelSpecs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ]
+      },
+      "source": "tirewheelguide.com, partsgeek.com",
+      "confidence": "high",
+      "notes": "Ford Windstar II (1998-2003). Final year of production."
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "windstar",
+      "wheelSpecs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Ford Windstar II."
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "windstar",
+      "wheelSpecs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Ford Windstar II."
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "windstar",
+      "wheelSpecs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Ford Windstar II."
+    },
+    {
+      "year": 2018,
+      "make": "genesis",
+      "model": "eq900",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8, "offset": 45 },
+          { "diameter": 19, "width": 8.5, "offset": 40 },
+          { "diameter": 19, "width": 9, "offset": 35 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Genesis EQ900 is the Korean market name for Genesis G90. Same specs as G90."
+    },
+    {
+      "year": 2017,
+      "make": "genesis",
+      "model": "eq900",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8, "offset": 45 },
+          { "diameter": 19, "width": 8.5, "offset": 40 },
+          { "diameter": 19, "width": 9, "offset": 35 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Genesis EQ900 = Korean G90."
+    },
+    {
+      "year": 2016,
+      "make": "genesis",
+      "model": "eq900",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8, "offset": 45 },
+          { "diameter": 19, "width": 8.5, "offset": 40 },
+          { "diameter": 19, "width": 9, "offset": 35 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Genesis EQ900 = Korean G90."
+    },
+    {
+      "year": 2015,
+      "make": "genesis",
+      "model": "eq900",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8, "offset": 45 },
+          { "diameter": 19, "width": 8.5, "offset": 40 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Genesis EQ900. Early model year - verify availability in this year."
+    },
+    {
+      "year": 2018,
+      "make": "genesis",
+      "model": "g70",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8, "offset": 48 },
+          { "diameter": 19, "width": 8, "offset": 35, "position": "front" },
+          { "diameter": 19, "width": 8.5, "offset": 46, "position": "rear" }
+        ],
+        "isStaggered": true
+      },
+      "source": "reddit.com/r/GenesisG70, genesisowners.com",
+      "confidence": "high",
+      "notes": "Genesis G70 first generation. Sport trims have staggered setup."
+    },
+    {
+      "year": 2017,
+      "make": "genesis",
+      "model": "g70",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8, "offset": 48 },
+          { "diameter": 19, "width": 8, "offset": 35, "position": "front" },
+          { "diameter": 19, "width": 8.5, "offset": 46, "position": "rear" }
+        ],
+        "isStaggered": true
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Genesis G70 - verify 2017 availability in target market."
+    },
+    {
+      "year": 2016,
+      "make": "genesis",
+      "model": "g80",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 48 },
+          { "diameter": 18, "width": 8, "offset": 45 },
+          { "diameter": 19, "width": 8, "offset": 35, "position": "front" },
+          { "diameter": 19, "width": 8.5, "offset": 30, "position": "rear" }
+        ],
+        "isStaggered": true
+      },
+      "source": "wheel-size.com, genesisowners.com",
+      "confidence": "high",
+      "notes": "Genesis G80 I (DH) generation. 3.3T Sport has staggered setup."
+    },
+    {
+      "year": 2016,
+      "make": "genesis",
+      "model": "g90",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 8, "offset": 45 },
+          { "diameter": 19, "width": 8.5, "offset": 40 },
+          { "diameter": 19, "width": 9, "offset": 35 }
+        ]
+      },
+      "source": "wheel-size.com, tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Genesis G90 I (HI) generation. Flagship sedan."
+    },
+    {
+      "year": 2021,
+      "make": "genesis",
+      "model": "gv70",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 19, "width": 8, "offset": 39 },
+          { "diameter": 21, "width": 9, "offset": 35 }
+        ]
+      },
+      "source": "wheel-size.com, go-parts.com, gvforums.com",
+      "confidence": "high",
+      "notes": "Genesis GV70 compact luxury SUV."
+    },
+    {
+      "year": 2020,
+      "make": "genesis",
+      "model": "gv70",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 19, "width": 8, "offset": 39 },
+          { "diameter": 21, "width": 9, "offset": 35 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Genesis GV70 - verify 2020 availability (may be 2021+ in US market)."
+    },
+    {
+      "year": 2020,
+      "make": "genesis",
+      "model": "gv80",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 20, "width": 8.5, "offset": 40 },
+          { "diameter": 22, "width": 9.5, "offset": 35 }
+        ]
+      },
+      "source": "wheel-size.com, go-parts.com",
+      "confidence": "high",
+      "notes": "Genesis GV80 JX1 mid-size luxury SUV."
+    },
+    {
+      "year": 2001,
+      "make": "geo",
+      "model": "metro",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 13, "width": 4.5, "offset": 45 },
+          { "diameter": 14, "width": 4.5, "offset": 45 },
+          { "diameter": 14, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com, roadkillcustoms.com",
+      "confidence": "high",
+      "notes": "GEO Metro GM M Facelift. Last year of production."
+    },
+    {
+      "year": 2000,
+      "make": "geo",
+      "model": "metro",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 13, "width": 4.5, "offset": 45 },
+          { "diameter": 14, "width": 4.5, "offset": 45 },
+          { "diameter": 14, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "GEO Metro GM M Facelift."
+    },
+    {
+      "year": 2002,
+      "make": "geo",
+      "model": "prizm",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 14, "width": 5.5, "offset": 39 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ]
+      },
+      "source": "wheel-size.com, tirewheelguide.com",
+      "confidence": "high",
+      "notes": "GEO Prizm III (last year of production). Based on Toyota Corolla platform."
+    },
+    {
+      "year": 2001,
+      "make": "geo",
+      "model": "prizm",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 14, "width": 5.5, "offset": 39 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "GEO Prizm III."
+    },
+    {
+      "year": 2000,
+      "make": "geo",
+      "model": "prizm",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 14, "width": 5.5, "offset": 39 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "GEO Prizm III."
+    },
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "acadia-limited",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 67.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 42 },
+          { "diameter": 19, "width": 7.5, "offset": 42 },
+          { "diameter": 20, "width": 8, "offset": 38 }
+        ]
+      },
+      "source": "wheel-size.com, thedriveradviser.com",
+      "confidence": "high",
+      "notes": "GMC Acadia Limited GMT968 - one-year only continuation of first-gen Acadia."
+    },
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "canyon",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 33 },
+          { "diameter": 17, "width": 8, "offset": 35 },
+          { "diameter": 18, "width": 8.5, "offset": 31 },
+          { "diameter": 20, "width": 8.5, "offset": 28 }
+        ]
+      },
+      "source": "originalwheels.com, tirewheelguide.com",
+      "confidence": "high",
+      "notes": "GMC Canyon II (2015-2022). Mid-size truck."
+    },
+    {
+      "year": 2016,
+      "make": "gmc",
+      "model": "canyon",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 33 },
+          { "diameter": 17, "width": 8, "offset": 35 },
+          { "diameter": 18, "width": 8.5, "offset": 31 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high",
+      "notes": "GMC Canyon II."
+    },
+    {
+      "year": 2015,
+      "make": "gmc",
+      "model": "canyon",
+      "wheelSpecs": {
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 33 },
+          { "diameter": 17, "width": 8, "offset": 35 },
+          { "diameter": 18, "width": 8.5, "offset": 31 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high",
+      "notes": "GMC Canyon II first year."
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "canyon",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 100.3,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 33 },
+          { "diameter": 15, "width": 6.5, "offset": 23 },
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "GMC Canyon I (GMT355). Last year of first generation."
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "canyon",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 100.3,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 33 },
+          { "diameter": 15, "width": 6.5, "offset": 23 },
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "GMC Canyon I."
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "canyon",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 100.3,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 33 },
+          { "diameter": 15, "width": 6.5, "offset": 23 },
+          { "diameter": 15, "width": 7, "offset": 33 },
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "avtoreference.com, originalwheels.com",
+      "confidence": "high",
+      "notes": "GMC Canyon I."
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "canyon",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 100.3,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 33 },
+          { "diameter": 15, "width": 6.5, "offset": 23 },
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "GMC Canyon I first year."
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "envoy",
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 35 },
+          { "diameter": 20, "width": 8, "offset": 30 }
+        ]
+      },
+      "source": "originalwheels.com, tirewheelguide.com",
+      "confidence": "high",
+      "notes": "GMC Envoy GMT360 - last year of production."
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "envoy",
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 35 },
+          { "diameter": 20, "width": 8, "offset": 30 }
+        ]
+      },
+      "source": "originalwheels.com, wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Envoy GMT360."
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "envoy",
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 35 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high",
+      "notes": "GMC Envoy GMT360."
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "envoy",
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 35 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high",
+      "notes": "GMC Envoy GMT360."
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "envoy",
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 35 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high",
+      "notes": "GMC Envoy GMT360."
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "envoy",
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 35 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high",
+      "notes": "GMC Envoy GMT360."
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "envoy",
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 50 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high",
+      "notes": "GMC Envoy GMT360."
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "envoy",
+      "wheelSpecs": {
+        "boltPattern": "6x127",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 50 }
+        ]
+      },
+      "source": "originalwheels.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "GMC Envoy GMT360 - first year of second generation (6-lug)."
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "envoy",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 50 },
+          { "diameter": 16, "width": 7, "offset": 50 },
+          { "diameter": 16, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "GMC Envoy GMT330 - first generation (5-lug). Based on S-10 Blazer platform."
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "hummer-ev-suv",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 116.7,
+        "options": [
+          { "diameter": 18, "width": 9, "offset": 33 },
+          { "diameter": 22, "width": 10, "offset": 30 }
+        ]
+      },
+      "source": "wheel-size.com, hummerchat.com",
+      "confidence": "high",
+      "notes": "GMC Hummer EV SUV. Uses 8-lug heavy duty bolt pattern with 35-inch tires."
+    },
+    {
+      "year": 2023,
+      "make": "gmc",
+      "model": "hummer-ev-suv",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 116.7,
+        "options": [
+          { "diameter": 18, "width": 9, "offset": 33 },
+          { "diameter": 22, "width": 10, "offset": 30 }
+        ]
+      },
+      "source": "wheel-size.com, hummerchat.com",
+      "confidence": "high",
+      "notes": "GMC Hummer EV SUV."
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "hummer-ev-suv",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 116.7,
+        "options": [
+          { "diameter": 18, "width": 9, "offset": 33 },
+          { "diameter": 22, "width": 10, "offset": 30 }
+        ]
+      },
+      "source": "wheel-size.com, hummerchat.com",
+      "confidence": "high",
+      "notes": "GMC Hummer EV SUV first year."
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "jimmy",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 31 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ]
+      },
+      "source": "wheel-size.com, avtoreference.com",
+      "confidence": "high",
+      "notes": "GMC Jimmy GMT300 - last year of production."
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "jimmy",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 31 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "GMC Jimmy GMT300."
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "jimmy",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 31 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "GMC Jimmy GMT300."
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "jimmy",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 31 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "GMC Jimmy GMT300."
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "jimmy",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 31 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ]
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "GMC Jimmy GMT300."
+    },
+    {
+      "year": 2014,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "wheel-sizes.com, hubcaphaven.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500 - last year of 1500 variant."
+    },
+    {
+      "year": 2013,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2012,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2011,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "savana-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high",
+      "notes": "GMC Savana 1500."
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 18, "width": 8, "offset": 24 },
+          { "diameter": 20, "width": 9, "offset": 24 },
+          { "diameter": 22, "width": 9, "offset": 28 }
+        ]
+      },
+      "source": "wheel-size.com, factorywheelreplacement.com",
+      "confidence": "high",
+      "notes": "GMC Sierra 1500 GMTT1 Facelift. Full-size truck with multiple wheel options."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "highConfidence": 72,
+    "mediumConfidence": 3,
+    "lowConfidence": 0,
+    "uniqueBoltPatterns": [
+      "4x100",
+      "4x114.3",
+      "5x108",
+      "5x114.3",
+      "5x120.65",
+      "5x160",
+      "6x120",
+      "6x127",
+      "6x139.7",
+      "6x180",
+      "8x165.1"
+    ],
+    "notes": [
+      "Ford Transit (2000-2010) is European market - verify target market",
+      "Genesis EQ900 is Korean market name for G90",
+      "GMC Envoy changed from 5-lug (2000) to 6-lug (2002+) between generations",
+      "GMC Canyon changed from 6x139.7 (2004-2012) to 6x120 (2015+) between generations",
+      "Genesis G70, G80 Sport variants may have staggered setups"
+    ]
+  }
+}

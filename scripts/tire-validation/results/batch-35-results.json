@@ -1,0 +1,1005 @@
+{
+  "batchId": "35",
+  "processedAt": "2026-04-21T21:52:00Z",
+  "vehicleCount": 75,
+  "source": "tiresize.com",
+  "results": [
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20"],
+      "trims": {
+        "SRW (All Trims)": ["LT275/70R18", "LT275/65R20"],
+        "DRW/Dually": ["235/80R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "Current sizes incorrect. 2020+ gen uses 275/70R18 and 275/65R20 for SRW, 235/80R17 for DRW."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20"],
+      "trims": {
+        "SRW (All Trims)": ["LT275/70R18", "LT275/65R20"],
+        "DRW/Dually": ["235/80R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "Current sizes incorrect. 2020+ gen uses 275/70R18 and 275/65R20 for SRW, 235/80R17 for DRW."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20"],
+      "trims": {
+        "SRW (All Trims)": ["LT275/70R18", "LT275/65R20"],
+        "DRW/Dually": ["235/80R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "Current sizes incorrect. 2020+ gen uses 275/70R18 and 275/65R20 for SRW, 235/80R17 for DRW."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "2wd SRW": ["LT265/70R18"],
+        "4wd SRW": ["LT265/70R18"],
+        "Dually (2wd/4wd)": ["235/80R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2019 uses 265/70R18 for SRW, 235/80R17 for DRW. Current list has incorrect sizes."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "2wd SRW": ["LT265/70R18"],
+        "4wd SRW": ["LT265/70R18"],
+        "Dually (2wd/4wd)": ["235/80R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2018 uses 265/70R18 for SRW, 235/80R17 for DRW."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "SRW": ["LT265/70R18"],
+        "Dually": ["235/80R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2015-2018 gen uses 265/70R18 for SRW."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "SRW": ["LT265/70R18"],
+        "Dually": ["235/80R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2015-2018 gen uses 265/70R18 for SRW."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "SRW": ["LT265/70R18"],
+        "Dually": ["235/80R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2015-2018 gen uses 265/70R18 for SRW."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "2wd Single Rear Wheel": ["LT265/70R18"],
+        "4wd Single Rear Wheel": ["LT265/70R18"],
+        "2wd Dual Rear Wheels": ["235/80R17"],
+        "4wd Dual Rear Wheels": ["235/80R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2014 uses 265/70R18 for SRW. Current has incorrect sizes."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["225/75R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "2011-2013 gen. 265/70R17 matches. Add 265/75R16 option."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["225/75R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R17 matches."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["225/75R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R17 matches."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "2wd/4wd SRW Crew Cab": ["LT265/75R16", "LT265/70R17"],
+        "2wd/4wd SRW Extended Cab": ["LT265/75R16", "LT265/70R17"],
+        "2wd/4wd SRW Regular Cab": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["225/75R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R17 matches."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["225/75R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R17 matches."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["215/85R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "Current size LT245/75R17 not standard OEM for 2008 3500HD."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["215/85R16"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Duplicate entry. 265/70R17 matches."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-3500-hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "2wd Crew Cab": ["LT265/75R16", "LT265/70R17"],
+        "2wd Extended Cab": ["LT265/75R16", "LT265/70R17"],
+        "2wd Regular Cab": ["LT265/75R16", "LT265/70R17"],
+        "4wd Crew Cab": ["LT265/75R16", "LT265/70R17"],
+        "4wd Extended Cab": ["LT265/75R16", "LT265/70R17"],
+        "4wd Regular Cab": ["LT265/75R16", "LT265/70R17"],
+        "Dually (all cabs)": ["215/85R16"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R17 matches. Replace 245/75R16 with 265/75R16."
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20"],
+      "trims": {
+        "SRW (WT/LT/LTZ/High Country)": ["LT275/70R18", "LT275/65R20"],
+        "DRW/Dually": ["235/80R17", "235/80R18"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "275/70R18 and 275/65R20 match. Remove 245/70R17 and 265/70R18."
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20"],
+      "trims": {
+        "SRW (WT/LT/LTZ/High Country)": ["LT275/70R18", "LT275/65R20"],
+        "DRW/Dually": ["235/80R17", "235/80R18"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "275/70R18 and 275/65R20 match. Remove 245/70R17 and 265/70R18."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20"],
+      "trims": {
+        "SRW (WT/LT/LTZ/High Country)": ["LT275/70R18", "LT275/65R20"],
+        "DRW/Dually": ["235/80R17", "235/80R18"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "275/70R18 and 275/65R20 match. Remove 245/70R17 and 265/70R18."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20"],
+      "trims": {
+        "SRW (WT/LT/LTZ/High Country)": ["LT275/70R18", "LT275/65R20"],
+        "DRW/Dually": ["235/80R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "275/70R18 and 275/65R20 match. Remove 245/70R17 and 265/70R18."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20"],
+      "trims": {
+        "SRW": ["LT275/70R18", "LT275/65R20"],
+        "Dually": ["235/80R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "275/70R18 and 275/65R20 match."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20"],
+      "trims": {
+        "SRW": ["LT275/70R18", "LT275/65R20"],
+        "Dually": ["235/80R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "275/70R18 and 275/65R20 match."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20"],
+      "trims": {
+        "SRW": ["LT275/70R18", "LT275/65R20"],
+        "Dually": ["235/80R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "275/70R18 and 275/65R20 match. 2020 is redesign year."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "SRW (2wd/4wd)": ["LT265/70R18"],
+        "Dually": ["235/80R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R18 matches. Remove 245/70R17 and 265/60R20."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "2wd SRW": ["LT265/70R18"],
+        "4wd SRW": ["LT265/70R18"],
+        "2wd Dually": ["235/80R17"],
+        "4wd Dually": ["235/80R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R18 matches."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "SRW": ["LT265/70R18"],
+        "Dually": ["235/80R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R18 matches."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "SRW": ["LT265/70R18"],
+        "Dually": ["235/80R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R18 matches."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "SRW": ["LT265/70R18"],
+        "Dually": ["235/80R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R18 matches."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/70R18"],
+      "trims": {
+        "2wd/4wd Single Rear Wheel": ["LT265/70R18"],
+        "2wd/4wd Dual Rear Wheels": ["235/80R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/70R18 matches."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["225/75R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2013 is pre-redesign. Uses 265/75R16 and 265/70R17, not 265/70R18."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["225/75R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "Pre-redesign. Uses 265/75R16 and 265/70R17."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["225/75R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "Pre-redesign. Uses 265/75R16 and 265/70R17."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "2wd/4wd SRW Crew Cab": ["LT265/75R16", "LT265/70R17"],
+        "2wd/4wd SRW Extended Cab": ["LT265/75R16", "LT265/70R17"],
+        "2wd/4wd SRW Regular Cab": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["225/75R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/75R16 and 265/70R17 match. Remove 245/75R16, 245/70R17, 265/65R18."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["225/75R17"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/75R16 and 265/70R17 match."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["215/85R16"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/75R16 and 265/70R17 match."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "2wd/4wd Crew Cab SRW": ["LT265/75R16", "LT265/70R17"],
+        "2wd/4wd Extended Cab SRW": ["LT265/75R16", "LT265/70R17"],
+        "2wd/4wd Regular Cab SRW": ["LT265/75R16", "LT265/70R17"],
+        "Dually": ["215/85R16"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "265/75R16 and 265/70R17 match."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "Dually": ["215/85R16"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Classic body style. Most sizes match."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "Dually": ["215/85R16"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Classic body style."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "Dually": ["215/85R16"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Classic body style."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "Dually": ["215/85R16"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Classic body style."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "Dually": ["215/85R16"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Classic body style."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": {
+        "SRW": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+        "Dually": ["215/85R16"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Classic body style."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+      "trims": {
+        "Base/LS": ["LT225/75R16", "LT245/75R16", "LT265/75R16"]
+      },
+      "status": "MATCH",
+      "notes": "All sizes validated."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "sonora",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16", "265/70R17"],
+      "trims": {
+        "5.3L V8": ["245/75R16", "265/70R17"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Mexico-market SUV based on GMT800 Tahoe platform. Uses Tahoe/Suburban tire sizes."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "sonora",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16", "265/70R17"],
+      "trims": {
+        "5.3L V8": ["245/75R16", "265/70R17"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Mexico-market SUV based on GMT800 Tahoe platform."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "sonora",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16", "265/70R17"],
+      "trims": {
+        "5.3L V8": ["245/75R16", "265/70R17"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Mexico-market SUV based on GMT800 Tahoe platform."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "sonora",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16", "265/70R17"],
+      "trims": {
+        "5.3L V8": ["245/75R16", "265/70R17"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Mexico-market SUV based on GMT800 Tahoe platform."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "sonora",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16", "265/70R17"],
+      "trims": {
+        "5.3L V8": ["245/75R16", "265/70R17"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Mexico-market SUV based on GMT800 Tahoe platform."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "sonora",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16", "265/70R17"],
+      "trims": {
+        "5.3L V8": ["245/75R16", "265/70R17"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Mexico-market SUV based on GMT800 Tahoe platform."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "sonora",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R16", "265/70R17"],
+      "trims": {
+        "5.3L V8": ["245/75R16", "265/70R17"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "Mexico-market SUV based on GMT800 Tahoe platform."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15", "195/50R16"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"],
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "185/55R15 matches. 195/50R16 not standard OEM - may be aftermarket or upgrade."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"],
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "MATCH",
+      "notes": "Validated."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"],
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "MATCH",
+      "notes": "Validated."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"],
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "MATCH",
+      "notes": "Validated."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"],
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "MATCH",
+      "notes": "Validated."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"],
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "MATCH",
+      "notes": "Validated."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"]
+      },
+      "status": "MATCH",
+      "notes": "Validated."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"],
+        "EV (front)": ["185/55R15"],
+        "EV (rear)": ["195/55R15"]
+      },
+      "status": "MATCH",
+      "notes": "Validated. EV has staggered setup."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"],
+        "EV (front)": ["185/55R15"],
+        "EV (rear)": ["195/55R15"]
+      },
+      "status": "MATCH",
+      "notes": "Validated."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"],
+        "EV (front)": ["185/55R15"],
+        "EV (rear)": ["195/55R15"]
+      },
+      "status": "MATCH",
+      "notes": "Validated."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": ["185/55R15"],
+        "LT": ["185/55R15"]
+      },
+      "status": "MATCH",
+      "notes": "Validated."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15", "195/50R16"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Base": ["185/55R15"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Pre-US market. 185/55R15 is standard. 195/50R16 may be optional wheel package."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15", "195/50R16"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Base": ["185/55R15"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Pre-US market (international). 185/55R15 standard."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15", "195/50R16"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Base": ["185/55R15"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "Pre-US market (international). 185/55R15 standard."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15", "195/50R16"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Base": ["185/55R15"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "International market. 185/55R15 standard."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15", "195/50R16"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Base": ["185/55R15"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "International market. 185/55R15 standard."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15", "195/50R16"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Base": ["185/55R15"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "International market. 185/55R15 standard."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15", "195/50R16"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Base": ["185/55R15"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "International market. 185/55R15 standard."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "spark",
+      "currentTireSizes": ["185/55R15", "195/50R16"],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Base": ["185/55R15"]
+      },
+      "status": "PARTIAL_MATCH",
+      "notes": "First gen international market. 185/55R15 standard."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "spark-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "ACTIV is a trim of the standard Spark, uses same 185/55R15 tires."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "spark-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "ACTIV is a trim of the standard Spark, uses same 185/55R15 tires."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "spark-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "ACTIV is a trim of the standard Spark, uses same 185/55R15 tires."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "spark-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "ACTIV is a trim of the standard Spark, uses same 185/55R15 tires."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "spark-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "ACTIV": ["185/55R15"]
+      },
+      "status": "NEEDS_DATA",
+      "notes": "ACTIV is a trim of the standard Spark, uses same 185/55R15 tires."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "match": 12,
+    "partialMatch": 40,
+    "mismatch": 11,
+    "needsData": 12,
+    "issues": [
+      "Silverado 3500 HD (2019-2022 with -hd suffix): Current sizes incorrect for new gen - should be 275/70R18, 275/65R20",
+      "Silverado 3500HD (silverado-3500hd model): Many have extra sizes (245/70R17, 265/70R18) that are not OEM for that generation",
+      "Silverado 3500 HD older years (2007-2013): Some sizes like 245/75R17 and 265/60R18 are not OEM",
+      "Sonora: Mexico-market vehicle - all entries missing tire data - should use Tahoe-compatible 245/75R16, 265/70R17",
+      "Spark Activ: Separate model entries but is actually a trim of Spark - should consolidate with Spark or add 185/55R15"
+    ]
+  }
+}

@@ -1,0 +1,2462 @@
+﻿{
+    "batchId":  "overnight-121-gmc",
+    "totalVehicles":  75,
+    "processedAt":  "2026-04-22T22:03:39.0814992-04:00",
+    "failed":  0,
+    "verified":  75,
+    "vehicles":  [
+                     {
+                         "year":  1994,
+                         "make":  "gmc",
+                         "id":  "80044c91-b77d-45a8-b592-7261b57d4cf7",
+                         "source":  "90s-research-batch",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "offset":  28,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "Suburban",
+                         "verifiedAt":  "2026-04-22T22:03:39.0950019-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1995,
+                         "make":  "gmc",
+                         "id":  "577a4cd8-6332-46e6-b1bd-63c517977bc9",
+                         "source":  "90s-research-batch",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "offset":  28,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "Suburban",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1996,
+                         "make":  "gmc",
+                         "id":  "29a83cc2-06db-4b95-a638-fa49f4fb6dce",
+                         "source":  "90s-research-batch",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "offset":  28,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "Suburban",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1997,
+                         "make":  "gmc",
+                         "id":  "38cf8561-3130-4312-bd9c-8a4b20aa277d",
+                         "source":  "90s-research-batch",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "offset":  28,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "Suburban",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1998,
+                         "make":  "gmc",
+                         "id":  "f8e4c743-c2cd-4785-a44e-75c3f73843f1",
+                         "source":  "90s-research-batch",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "offset":  28,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "Suburban",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1999,
+                         "make":  "gmc",
+                         "id":  "661138d8-af20-4202-8784-6b2e9e98b8de",
+                         "source":  "90s-research-batch",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "offset":  28,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "Suburban",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2006,
+                         "make":  "gmc",
+                         "id":  "f529068a-8cff-4fc9-9f16-885964dc6e86",
+                         "source":  "catalog-gap-fill",
+                         "wheelSizes":  [
+                                            {
+                                                "axle":  "square",
+                                                "width":  7.5,
+                                                "isStock":  true,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "square",
+                                                "width":  8.5,
+                                                "isStock":  true,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "square",
+                                                "width":  9,
+                                                "isStock":  true,
+                                                "diameter":  21
+                                            }
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "235/65R17",
+                                           "255/55R20",
+                                           "275/45R21"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2007,
+                         "make":  "gmc",
+                         "id":  "b87883fc-3094-4d34-8b84-aab96766eff2",
+                         "source":  "generation_template [filled from 2008 acadia]",
+                         "wheelSizes":  [
+                                            {
+                                                "axle":  "front",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  true,
+                                                "diameter":  18,
+                                                "tireSize":  "255/65R18"
+                                            },
+                                            {
+                                                "axle":  "front",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  true,
+                                                "diameter":  19,
+                                                "tireSize":  "255/60R19"
+                                            },
+                                            {
+                                                "axle":  "front",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  true,
+                                                "diameter":  20,
+                                                "tireSize":  "255/55R20"
+                                            },
+                                            {
+                                                "axle":  "front",
+                                                "width":  8.5,
+                                                "offset":  45,
+                                                "isStock":  false,
+                                                "diameter":  19,
+                                                "tireSize":  "275/55R19"
+                                            },
+                                            {
+                                                "axle":  "front",
+                                                "width":  9,
+                                                "offset":  40,
+                                                "isStock":  false,
+                                                "diameter":  20,
+                                                "tireSize":  "285/50R20"
+                                            },
+                                            {
+                                                "axle":  "front",
+                                                "width":  8,
+                                                "offset":  48,
+                                                "isStock":  false,
+                                                "diameter":  18,
+                                                "tireSize":  "275/60R18"
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "255/65R18",
+                                           "255/55R19",
+                                           "255/50R20"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x132",
+                         "hubBore":  "74.5"
+                     },
+                     {
+                         "year":  2008,
+                         "make":  "gmc",
+                         "id":  "249ce961-80ea-4d4c-9d02-ed7208782849",
+                         "source":  "wheelsize",
+                         "wheelSizes":  [
+                                            {
+                                                "axle":  "front",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  true,
+                                                "diameter":  18,
+                                                "tireSize":  "255/65R18"
+                                            },
+                                            {
+                                                "axle":  "front",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  true,
+                                                "diameter":  19,
+                                                "tireSize":  "255/60R19"
+                                            },
+                                            {
+                                                "axle":  "front",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  true,
+                                                "diameter":  20,
+                                                "tireSize":  "255/55R20"
+                                            },
+                                            {
+                                                "axle":  "front",
+                                                "width":  8.5,
+                                                "offset":  45,
+                                                "isStock":  false,
+                                                "diameter":  19,
+                                                "tireSize":  "275/55R19"
+                                            },
+                                            {
+                                                "axle":  "front",
+                                                "width":  9,
+                                                "offset":  40,
+                                                "isStock":  false,
+                                                "diameter":  20,
+                                                "tireSize":  "285/50R20"
+                                            },
+                                            {
+                                                "axle":  "front",
+                                                "width":  8,
+                                                "offset":  48,
+                                                "isStock":  false,
+                                                "diameter":  18,
+                                                "tireSize":  "275/60R18"
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "255/65R18",
+                                           "255/60R19",
+                                           "255/55R20",
+                                           "275/55R19",
+                                           "285/50R20",
+                                           "275/60R18"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x132",
+                         "hubBore":  "74.5"
+                     },
+                     {
+                         "year":  2009,
+                         "make":  "gmc",
+                         "id":  "2933d8a6-6a50-498f-ae6a-ee131a80861e",
+                         "source":  "generation_template [filled from 2008 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "7.5Jx19",
+                                            "7.5Jx20",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  45,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  40,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  48,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "255/65R18",
+                                           "255/55R19",
+                                           "255/50R20"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x132",
+                         "hubBore":  "74.5"
+                     },
+                     {
+                         "year":  2010,
+                         "make":  "gmc",
+                         "id":  "b7f4c763-edd2-47ce-a8a2-acd64d626dba",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "7.5Jx19",
+                                            "7.5Jx20",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  48,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  40,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  45,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "255/65R18",
+                                           "255/55R19",
+                                           "255/50R20",
+                                           "255/60R19",
+                                           "255/55R20",
+                                           "265/65R18",
+                                           "285/50R20",
+                                           "275/55R19"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x132",
+                         "hubBore":  "74.5"
+                     },
+                     {
+                         "year":  2011,
+                         "make":  "gmc",
+                         "id":  "9cc88ef3-52a9-42db-ab88-1b231493d072",
+                         "source":  "generation_template [filled from 2012 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "7.5Jx19",
+                                            "7.5Jx20",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  48,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  40,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  45,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "255/65R18",
+                                           "255/55R19",
+                                           "255/50R20"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x132",
+                         "hubBore":  "74.5"
+                     },
+                     {
+                         "year":  2012,
+                         "make":  "gmc",
+                         "id":  "f4ef5790-e92d-4553-bba4-9fb47d5f5093",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "7.5Jx19",
+                                            "7.5Jx20",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  48,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  40,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  45,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "255/65R18",
+                                           "255/55R19",
+                                           "255/50R20",
+                                           "255/60R19",
+                                           "255/55R20",
+                                           "265/65R18",
+                                           "285/50R20",
+                                           "275/55R19"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x132",
+                         "hubBore":  "74.5"
+                     },
+                     {
+                         "year":  2013,
+                         "make":  "gmc",
+                         "id":  "0833f71a-6d3e-4a3c-b363-9ec349a8cfeb",
+                         "source":  "generation_template [filled from 2012 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "7.5Jx19",
+                                            "7.5Jx20",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  48,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  40,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  45,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "255/65R18",
+                                           "255/55R19",
+                                           "255/50R20"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x132",
+                         "hubBore":  "74.5"
+                     },
+                     {
+                         "year":  2014,
+                         "make":  "gmc",
+                         "id":  "49b47ba4-a87d-46da-9c38-9efca0cb95f7",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "7.5Jx19",
+                                            "7.5Jx20",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  48,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  40,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  45,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "255/65R18",
+                                           "255/55R19",
+                                           "255/50R20",
+                                           "255/60R19",
+                                           "255/55R20",
+                                           "265/65R18",
+                                           "285/50R20",
+                                           "275/55R19"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x132",
+                         "hubBore":  "74.5"
+                     },
+                     {
+                         "year":  2015,
+                         "make":  "gmc",
+                         "id":  "71a13db6-4314-45c5-abd5-583b9230793a",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "7.5Jx19",
+                                            "7.5Jx20",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  48,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  40,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  45,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "255/65R18",
+                                           "255/55R19",
+                                           "255/50R20",
+                                           "255/60R19",
+                                           "255/55R20",
+                                           "265/65R18",
+                                           "285/50R20",
+                                           "275/55R19"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x132",
+                         "hubBore":  "74.5"
+                     },
+                     {
+                         "year":  2016,
+                         "make":  "gmc",
+                         "id":  "0feedfb2-b7ee-49f8-a9a6-e91e849177e8",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "7.5Jx19",
+                                            "7.5Jx20",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  48,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  40,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  45,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "255/65R18",
+                                           "255/55R19",
+                                           "255/50R20",
+                                           "255/60R19",
+                                           "255/55R20",
+                                           "265/65R18",
+                                           "285/50R20",
+                                           "275/55R19"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1090464-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x132",
+                         "hubBore":  "74.5"
+                     },
+                     {
+                         "year":  2017,
+                         "make":  "gmc",
+                         "id":  "f78152eb-8829-47ad-9f0e-113dd9e15d79",
+                         "source":  "generation_template [filled from 2020 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "8Jx20",
+                                            "8.5Jx21",
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "245/60R18",
+                                           "255/55R20",
+                                           "275/45R21"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2018,
+                         "make":  "gmc",
+                         "id":  "62d7ed1e-ab88-49fa-b379-474b9691debc",
+                         "source":  "generation_template [filled from 2017 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "8Jx20",
+                                            "8.5Jx21",
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "245/60R18",
+                                           "255/55R20",
+                                           "275/45R21"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2019,
+                         "make":  "gmc",
+                         "id":  "46437508-c0a3-4afc-a9c3-3ab8e2facff1",
+                         "source":  "generation_template [filled from 2018 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "8Jx20",
+                                            "8.5Jx21",
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "245/60R18",
+                                           "255/55R20",
+                                           "275/45R21"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2020,
+                         "make":  "gmc",
+                         "id":  "a09f0230-b2a7-4396-ae71-3b5fb5f340e5",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "8Jx20",
+                                            "8.5Jx21",
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "245/60R18",
+                                           "255/55R20",
+                                           "275/45R21",
+                                           "235/65R18",
+                                           "235/60R19",
+                                           "235/55R20"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2021,
+                         "make":  "gmc",
+                         "id":  "84585320-f724-4eae-9f0f-37a7df280b37",
+                         "source":  "generation_template [filled from 2020 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "8Jx20",
+                                            "8.5Jx21",
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "245/60R18",
+                                           "255/55R20",
+                                           "275/45R21"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2022,
+                         "make":  "gmc",
+                         "id":  "58539fc7-e48d-486a-9f50-63f46b0cf99e",
+                         "source":  "generation_template [filled from 2023 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "8Jx20",
+                                            "8.5Jx21",
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "245/60R18",
+                                           "255/55R20",
+                                           "275/45R21"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2023,
+                         "make":  "gmc",
+                         "id":  "243b27e9-83dd-4c44-b8bc-b7d8fe7ed323",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "8Jx20",
+                                            "8.5Jx21",
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "245/60R18",
+                                           "255/55R20",
+                                           "275/45R21",
+                                           "235/65R18",
+                                           "235/55R20",
+                                           "235/60R19"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2024,
+                         "make":  "gmc",
+                         "id":  "d2b8df66-0422-4833-a8c9-e5fb27cf3cfd",
+                         "source":  "generation_template [filled from 2023 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "8Jx20",
+                                            "8.5Jx21",
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "245/60R18",
+                                           "255/55R20",
+                                           "275/45R21"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2025,
+                         "make":  "gmc",
+                         "id":  "f8dc7ce4-674f-4633-836f-9a13da10b769",
+                         "source":  "generation_template [filled from 2024 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "8Jx20",
+                                            "8.5Jx21",
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "245/60R18",
+                                           "255/55R20",
+                                           "275/45R21"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2026,
+                         "make":  "gmc",
+                         "id":  "d666bd21-18af-4d3a-ae85-f1960d34705b",
+                         "source":  "generation_template [filled from 2025 acadia]",
+                         "wheelSizes":  [
+                                            "7.5Jx18",
+                                            "8Jx20",
+                                            "8.5Jx21",
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  50,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "SL, SLE, SLT, AT4, Denali",
+                         "tireSizes":  [
+                                           "245/60R18",
+                                           "255/55R20",
+                                           "275/45R21"
+                                       ],
+                         "model":  "acadia",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2004,
+                         "make":  "gmc",
+                         "id":  "d25304fc-98dc-46f5-b3ba-bf1c5904c854",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "6Jx15",
+                                            "7Jx16",
+                                            "7.5Jx17"
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "215/70R15",
+                                           "235/75R15",
+                                           "245/65R17"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2005,
+                         "make":  "gmc",
+                         "id":  "9f668a62-68c4-4560-8edb-c624d244a542",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "6Jx15",
+                                            "7Jx16",
+                                            "7.5Jx17"
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "215/70R15",
+                                           "235/75R15",
+                                           "245/65R17"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2006,
+                         "make":  "gmc",
+                         "id":  "6237bee2-606d-48e4-99fc-2b8a6b2c559d",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "6Jx15",
+                                            "7Jx16",
+                                            "7.5Jx17"
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "215/70R15",
+                                           "235/75R15",
+                                           "245/65R17"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2007,
+                         "make":  "gmc",
+                         "id":  "130384ec-afdb-4b2c-916d-44cce0f1a72c",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "6Jx15",
+                                            "7Jx16",
+                                            "7.5Jx17"
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "215/70R15",
+                                           "235/75R15",
+                                           "245/65R17"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2008,
+                         "make":  "gmc",
+                         "id":  "04a3c96a-3a9d-4866-9351-e799430f2693",
+                         "source":  "generation_template [filled from 2010 canyon]",
+                         "wheelSizes":  [
+                                            "6Jx15",
+                                            "7Jx16",
+                                            "7.5Jx17",
+                                            {
+                                                "axle":  "both",
+                                                "width":  6.5,
+                                                "offset":  23,
+                                                "isStock":  true,
+                                                "diameter":  16
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  7,
+                                                "offset":  25,
+                                                "isStock":  false,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  25,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "215/70R15",
+                                           "235/75R15",
+                                           "245/65R17"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2009,
+                         "make":  "gmc",
+                         "id":  "dd9f2476-da19-4f57-950e-bb82d30d1bea",
+                         "source":  "generation_template [filled from 2008 canyon]",
+                         "wheelSizes":  [
+                                            "6Jx15",
+                                            "7Jx16",
+                                            "7.5Jx17",
+                                            {
+                                                "axle":  "both",
+                                                "width":  6.5,
+                                                "offset":  23,
+                                                "isStock":  true,
+                                                "diameter":  16
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  7,
+                                                "offset":  25,
+                                                "isStock":  false,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  25,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "215/70R15",
+                                           "235/75R15",
+                                           "245/65R17"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2010,
+                         "make":  "gmc",
+                         "id":  "fa4bf3a4-6d83-426a-a98e-455780113cee",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "6Jx15",
+                                            "7Jx16",
+                                            "7.5Jx17",
+                                            {
+                                                "axle":  "both",
+                                                "width":  6.5,
+                                                "offset":  23,
+                                                "isStock":  true,
+                                                "diameter":  16
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  7,
+                                                "offset":  25,
+                                                "isStock":  false,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  25,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "215/70R15",
+                                           "235/75R15",
+                                           "245/65R17",
+                                           "215/70R16",
+                                           "235/70R16",
+                                           "235/65R17",
+                                           "245/55R18"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2011,
+                         "make":  "gmc",
+                         "id":  "8db8b028-e5e5-41ca-8c5d-911f3f99754d",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "6Jx15",
+                                            "7Jx16",
+                                            "7.5Jx17",
+                                            {
+                                                "axle":  "both",
+                                                "width":  6.5,
+                                                "offset":  23,
+                                                "isStock":  true,
+                                                "diameter":  16
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  7,
+                                                "offset":  25,
+                                                "isStock":  false,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  25,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "215/70R15",
+                                           "235/75R15",
+                                           "245/65R17",
+                                           "215/70R16",
+                                           "235/70R16",
+                                           "235/65R17",
+                                           "245/55R18"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2012,
+                         "make":  "gmc",
+                         "id":  "46acdb79-2f0d-4ed9-82b4-b3c96cdc6240",
+                         "source":  "generation_template [filled from 2011 canyon]",
+                         "wheelSizes":  [
+                                            "6Jx15",
+                                            "7Jx16",
+                                            "7.5Jx17",
+                                            {
+                                                "axle":  "both",
+                                                "width":  6.5,
+                                                "offset":  23,
+                                                "isStock":  true,
+                                                "diameter":  16
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  7,
+                                                "offset":  25,
+                                                "isStock":  false,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  7.5,
+                                                "offset":  25,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "215/70R15",
+                                           "235/75R15",
+                                           "245/65R17"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2015,
+                         "make":  "gmc",
+                         "id":  "676d0fef-04e4-4085-aa15-c01a611aae5c",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18"
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2016,
+                         "make":  "gmc",
+                         "id":  "0089da7b-0a9b-4a62-840d-ad5bf5f5e3b7",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18"
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2017,
+                         "make":  "gmc",
+                         "id":  "47483aff-2f9d-4fe2-910c-922f7b08332d",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18"
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2018,
+                         "make":  "gmc",
+                         "id":  "b77066a8-1a84-4c9f-8b7d-5b0f5aeb4a26",
+                         "source":  "generation_template [filled from 2020 canyon]",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  33,
+                                                "isStock":  true,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2019,
+                         "make":  "gmc",
+                         "id":  "1670ae9d-38c9-43a7-a09f-49e8172b75b7",
+                         "source":  "generation_template [filled from 2018 canyon]",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  33,
+                                                "isStock":  true,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2020,
+                         "make":  "gmc",
+                         "id":  "019823d0-e6a6-4236-a041-a3fc9ef6484e",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  33,
+                                                "isStock":  true,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18",
+                                           "265/70R16",
+                                           "255/55R20",
+                                           "265/65R17",
+                                           "265/55R19"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2021,
+                         "make":  "gmc",
+                         "id":  "c5944f61-6440-4b67-9c49-7db344d481c6",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  true,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18",
+                                           "265/70R16",
+                                           "255/55R20",
+                                           "265/65R17",
+                                           "265/55R19"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1110519-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2022,
+                         "make":  "gmc",
+                         "id":  "f28035ac-0d69-4195-a066-c8fccb961633",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  true,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  33,
+                                                "isStock":  false,
+                                                "diameter":  19
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18",
+                                           "265/70R16",
+                                           "255/55R20",
+                                           "265/65R17",
+                                           "265/55R19"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2023,
+                         "make":  "gmc",
+                         "id":  "6b6fe171-8011-48af-a799-26d768b3f2f9",
+                         "source":  "generation_template [filled from 2024 canyon]",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  24,
+                                                "isStock":  true,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  26,
+                                                "isStock":  true,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  28,
+                                                "isStock":  true,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  28,
+                                                "isStock":  false,
+                                                "diameter":  22
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2024,
+                         "make":  "gmc",
+                         "id":  "2f08dc7e-a305-4400-9894-159706a6e3ef",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  24,
+                                                "isStock":  true,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  26,
+                                                "isStock":  true,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  28,
+                                                "isStock":  true,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  28,
+                                                "isStock":  false,
+                                                "diameter":  22
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18",
+                                           "265/70R17",
+                                           "265/65R18",
+                                           "275/60R20",
+                                           "LT285/70R17",
+                                           "275/50R22",
+                                           "LT275/65R18",
+                                           "LT315/70R17"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2025,
+                         "make":  "gmc",
+                         "id":  "ea4ec7bd-0269-40e4-8372-1dedbb6ec32b",
+                         "source":  "generation_template [filled from 2024 canyon]",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  24,
+                                                "isStock":  true,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  26,
+                                                "isStock":  true,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  28,
+                                                "isStock":  true,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  28,
+                                                "isStock":  false,
+                                                "diameter":  22
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2026,
+                         "make":  "gmc",
+                         "id":  "6f4dd6d2-a86e-43d3-a191-b58035568301",
+                         "source":  "generation_template [filled from 2025 canyon]",
+                         "wheelSizes":  [
+                                            "7Jx16",
+                                            "7Jx17",
+                                            "8Jx18",
+                                            {
+                                                "axle":  "both",
+                                                "width":  8,
+                                                "offset":  24,
+                                                "isStock":  true,
+                                                "diameter":  17
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  8.5,
+                                                "offset":  26,
+                                                "isStock":  true,
+                                                "diameter":  18
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  28,
+                                                "isStock":  true,
+                                                "diameter":  20
+                                            },
+                                            {
+                                                "axle":  "both",
+                                                "width":  9,
+                                                "offset":  28,
+                                                "isStock":  false,
+                                                "diameter":  22
+                                            }
+                                        ],
+                         "trim":  "Elevation, AT4, AT4X, Denali",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "255/65R17",
+                                           "265/60R18"
+                                       ],
+                         "model":  "canyon",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x120",
+                         "hubBore":  "67.1"
+                     },
+                     {
+                         "year":  2022,
+                         "make":  "gmc",
+                         "id":  "b4e06815-8436-4790-9459-4186555e9ca8",
+                         "source":  "manual_backfill",
+                         "wheelSizes":  [
+                                            "9Jx18",
+                                            "9.5Jx22"
+                                        ],
+                         "trim":  "Edition 1",
+                         "tireSizes":  [
+                                           "LT305/70R18",
+                                           "LT305/55R22"
+                                       ],
+                         "model":  "hummer-ev-suv",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "8x165.1",
+                         "hubBore":  "116.7"
+                     },
+                     {
+                         "year":  2023,
+                         "make":  "gmc",
+                         "id":  "a7f9c027-3655-4e35-9977-b5c3da63e8a6",
+                         "source":  "manual_backfill",
+                         "wheelSizes":  [
+                                            "9Jx18",
+                                            "9.5Jx22"
+                                        ],
+                         "trim":  "EV3X",
+                         "tireSizes":  [
+                                           "LT305/70R18",
+                                           "LT305/55R22"
+                                       ],
+                         "model":  "hummer-ev-suv",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "8x165.1",
+                         "hubBore":  "116.7"
+                     },
+                     {
+                         "year":  2023,
+                         "make":  "gmc",
+                         "id":  "8e6a3e0a-4afe-45d5-9b0a-1d925463f636",
+                         "source":  "manual_backfill",
+                         "wheelSizes":  [
+                                            "9Jx18",
+                                            "9.5Jx22"
+                                        ],
+                         "trim":  "EV2X",
+                         "tireSizes":  [
+                                           "LT305/70R18",
+                                           "LT305/55R22"
+                                       ],
+                         "model":  "hummer-ev-suv",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "8x165.1",
+                         "hubBore":  "116.7"
+                     },
+                     {
+                         "year":  2023,
+                         "make":  "gmc",
+                         "id":  "059cadfd-9d95-4070-8ce7-bf1989f37f1d",
+                         "source":  "manual_backfill",
+                         "wheelSizes":  [
+                                            "9Jx18",
+                                            "9.5Jx22"
+                                        ],
+                         "trim":  "Edition 1",
+                         "tireSizes":  [
+                                           "LT305/70R18",
+                                           "LT305/55R22"
+                                       ],
+                         "model":  "hummer-ev-suv",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "8x165.1",
+                         "hubBore":  "116.7"
+                     },
+                     {
+                         "year":  2024,
+                         "make":  "gmc",
+                         "id":  "1eb983aa-4f81-4a3a-bb58-dac12d81d848",
+                         "source":  "manual_backfill",
+                         "wheelSizes":  [
+                                            "9Jx18",
+                                            "9.5Jx22"
+                                        ],
+                         "trim":  "EV2X",
+                         "tireSizes":  [
+                                           "LT305/70R18",
+                                           "LT305/55R22"
+                                       ],
+                         "model":  "hummer-ev-suv",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "8x165.1",
+                         "hubBore":  "116.7"
+                     },
+                     {
+                         "year":  2024,
+                         "make":  "gmc",
+                         "id":  "500504ed-6d63-4cd0-910b-760dd26747cf",
+                         "source":  "manual_backfill",
+                         "wheelSizes":  [
+                                            "9Jx18",
+                                            "9.5Jx22"
+                                        ],
+                         "trim":  "EV3X",
+                         "tireSizes":  [
+                                           "LT305/70R18",
+                                           "LT305/55R22"
+                                       ],
+                         "model":  "hummer-ev-suv",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "8x165.1",
+                         "hubBore":  "116.7"
+                     },
+                     {
+                         "year":  1988,
+                         "make":  "gmc",
+                         "id":  "97599b82-3fba-4a58-a17e-d15503e09939",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "6.5Jx15",
+                                            "7Jx15",
+                                            "7Jx16",
+                                            "8Jx16"
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x127",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1988,
+                         "make":  "gmc",
+                         "id":  "c08f4d8b-2b9b-4f68-801d-4bb86f036cfb",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "diameter":  15
+                                            }
+                                        ],
+                         "trim":  "SL",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1988,
+                         "make":  "gmc",
+                         "id":  "a6b0e442-d5c4-441a-b8f4-6aebf9d64306",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "SLE",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1988,
+                         "make":  "gmc",
+                         "id":  "7d8a9c4e-3f35-47e0-bfec-d0448dc814b6",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "SLT",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1989,
+                         "make":  "gmc",
+                         "id":  "2c51639d-be2d-40a2-bed3-086cafa5418f",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "SLT",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1989,
+                         "make":  "gmc",
+                         "id":  "b9771eec-8089-41f7-89e8-e10aed8f791b",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "SLE",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1989,
+                         "make":  "gmc",
+                         "id":  "7069d51e-aeb1-4c62-b6d6-41001f46d6f9",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "diameter":  15
+                                            }
+                                        ],
+                         "trim":  "SL",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  1989,
+                         "make":  "gmc",
+                         "id":  "09b9f3af-7168-4d03-9122-321bdb89e1b9",
+                         "source":  "generation_template",
+                         "wheelSizes":  [
+                                            "6.5Jx15",
+                                            "7Jx15",
+                                            "7Jx16",
+                                            "8Jx16"
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "5x127",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2000,
+                         "make":  "gmc",
+                         "id":  "e9c574fb-5219-4f9d-bbbe-3cbfccc288d1",
+                         "source":  "generation_template [filled from 2000 sierra-1500]",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7.5,
+                                                "diameter":  17
+                                            }
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "265/75R16",
+                                           "265/70R17",
+                                           "265/65R17",
+                                           "265/65R18",
+                                           "275/55R20"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2000,
+                         "make":  "gmc",
+                         "id":  "cfb49dee-c7a3-407f-bc9c-66bdcef63563",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7.5,
+                                                "diameter":  17
+                                            }
+                                        ],
+                         "trim":  "SLE",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2000,
+                         "make":  "gmc",
+                         "id":  "ece7f4ad-5ece-46e3-baed-16001c42e889",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7.5,
+                                                "diameter":  17
+                                            }
+                                        ],
+                         "trim":  "SLT",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2000,
+                         "make":  "gmc",
+                         "id":  "3705da68-ea17-4de3-a1a4-e58552dc72ca",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "SL",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2001,
+                         "make":  "gmc",
+                         "id":  "e6362b8a-3fb7-4773-a3ba-9ac1ebdd4dfc",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7.5,
+                                                "diameter":  17
+                                            }
+                                        ],
+                         "trim":  "SLE",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2001,
+                         "make":  "gmc",
+                         "id":  "12d2e8d1-af3f-4a79-9c8d-a0e226aed5de",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7.5,
+                                                "diameter":  17
+                                            }
+                                        ],
+                         "trim":  "SLT",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2001,
+                         "make":  "gmc",
+                         "id":  "13dbb74b-a6b4-486b-b3e1-1e71038010a2",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "SL",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2001,
+                         "make":  "gmc",
+                         "id":  "7ce5032f-bf5a-44d2-aa29-d09770f03afd",
+                         "source":  "generation_template [filled from 2001 sierra-1500]",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7.5,
+                                                "diameter":  17
+                                            }
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "265/75R16",
+                                           "265/70R17",
+                                           "265/65R17",
+                                           "265/65R18",
+                                           "275/55R20"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2002,
+                         "make":  "gmc",
+                         "id":  "c0f259d7-feab-4b14-aede-42168b53662b",
+                         "source":  "generation_template [filled from 2002 sierra-1500]",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7.5,
+                                                "diameter":  17
+                                            }
+                                        ],
+                         "trim":  "Base",
+                         "tireSizes":  [
+                                           "245/75R16",
+                                           "265/75R16",
+                                           "265/70R17",
+                                           "265/65R17",
+                                           "265/65R18",
+                                           "275/55R20"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2002,
+                         "make":  "gmc",
+                         "id":  "d290fedc-f933-463a-8d2f-a22eaa2e0bf6",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7.5,
+                                                "diameter":  17
+                                            }
+                                        ],
+                         "trim":  "SLT",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2002,
+                         "make":  "gmc",
+                         "id":  "6c2643a7-a732-436c-9bf5-5d1189c3efdb",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7.5,
+                                                "diameter":  17
+                                            }
+                                        ],
+                         "trim":  "SLE",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2002,
+                         "make":  "gmc",
+                         "id":  "78411068-8d8b-4cb6-98d2-191ccfe14f92",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7,
+                                                "diameter":  16
+                                            }
+                                        ],
+                         "trim":  "SL",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     },
+                     {
+                         "year":  2002,
+                         "make":  "gmc",
+                         "id":  "b647823b-79ba-4a97-8060-ccbef9f197ae",
+                         "source":  "generation_inherit",
+                         "wheelSizes":  [
+                                            {
+                                                "width":  7.5,
+                                                "diameter":  17
+                                            }
+                                        ],
+                         "trim":  "Denali",
+                         "tireSizes":  [
+                                           "225/75R15",
+                                           "235/75R15",
+                                           "245/75R16",
+                                           "265/75R16"
+                                       ],
+                         "model":  "sierra-1500",
+                         "verifiedAt":  "2026-04-22T22:03:39.1132321-04:00",
+                         "status":  "verified",
+                         "boltPattern":  "6x139.7",
+                         "hubBore":  "78.1"
+                     }
+                 ]
+}

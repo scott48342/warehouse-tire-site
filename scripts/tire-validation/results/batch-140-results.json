@@ -1,0 +1,749 @@
+{
+  "batchId": "140",
+  "validatedAt": "2026-04-21T22:55:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "vehiclesValidated": 75,
+    "vehiclesWithDiscrepancies": 36,
+    "vehiclesWithEmptyTireSizes": 10,
+    "vehiclesMatched": 29
+  },
+  "discrepancies": [
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "tribeca",
+      "currentTireSizes": ["255/55R18", "255/50R19"],
+      "oemTireSizes": ["255/55R18"],
+      "status": "DISCREPANCY",
+      "issue": "255/50R19 not found in OEM data - only 255/55R18 available for all Tribeca trims"
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "tribeca",
+      "currentTireSizes": ["255/55R18", "255/50R19"],
+      "oemTireSizes": ["255/55R18"],
+      "status": "DISCREPANCY",
+      "issue": "255/50R19 not found in OEM data - only 255/55R18 available for all Tribeca trims"
+    },
+    {
+      "year": 2010,
+      "make": "subaru",
+      "model": "tribeca",
+      "currentTireSizes": ["255/55R18", "255/50R19"],
+      "oemTireSizes": ["255/55R18"],
+      "status": "DISCREPANCY",
+      "issue": "255/50R19 not found in OEM data - only 255/55R18 available for all Tribeca trims"
+    },
+    {
+      "year": 2009,
+      "make": "subaru",
+      "model": "tribeca",
+      "currentTireSizes": ["255/55R18", "255/50R19"],
+      "oemTireSizes": ["255/55R18"],
+      "status": "DISCREPANCY",
+      "issue": "255/50R19 not found in OEM data - only 255/55R18 available for all Tribeca trims"
+    },
+    {
+      "year": 2008,
+      "make": "subaru",
+      "model": "tribeca",
+      "currentTireSizes": ["255/55R18", "255/50R19"],
+      "oemTireSizes": ["255/55R18"],
+      "status": "DISCREPANCY",
+      "issue": "255/50R19 not found in OEM data - only 255/55R18 available for all Tribeca trims"
+    },
+    {
+      "year": 2010,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["225/45R17", "245/40R18"],
+      "status": "DISCREPANCY",
+      "issue": "2010 WRX base uses 225/45R17 (not 235/45R17). STI uses 245/40R18."
+    },
+    {
+      "year": 2009,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["225/45R17", "245/40R18"],
+      "status": "DISCREPANCY",
+      "issue": "Pre-2011 WRX likely uses 225/45R17 (based on 2010 data). Verify against 2009 specific data."
+    },
+    {
+      "year": 2008,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["225/45R17", "245/40R18"],
+      "status": "DISCREPANCY",
+      "issue": "Pre-2011 WRX likely uses 225/45R17 (based on 2010 data). Verify against 2008 specific data."
+    },
+    {
+      "year": 2007,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["205/55R16", "225/45R17"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "MATCHED",
+      "issue": null
+    },
+    {
+      "year": 2007,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "DISCREPANCY",
+      "issue": "2007 WRX used 205/55R16 and 225/45R17, not 235/45R17 or 245/40R18. Data may be for STI trim."
+    },
+    {
+      "year": 2006,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["205/55R16", "225/45R17"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "MATCHED",
+      "issue": null
+    },
+    {
+      "year": 2006,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "DISCREPANCY",
+      "issue": "2006 WRX used 205/55R16 and 225/45R17, not 235/45R17 or 245/40R18. Data may be for STI trim."
+    },
+    {
+      "year": 2005,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["205/55R16", "225/45R17"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "MATCHED",
+      "issue": null
+    },
+    {
+      "year": 2005,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "DISCREPANCY",
+      "issue": "2005 WRX used 205/55R16 and 225/45R17. 235/45R17 and 245/40R18 are likely STI sizes."
+    },
+    {
+      "year": 2004,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "DISCREPANCY",
+      "issue": "2004 WRX used 205/55R16 and 225/45R17. 235/45R17 and 245/40R18 are likely STI sizes."
+    },
+    {
+      "year": 2004,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["205/55R16", "225/45R17"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "MATCHED",
+      "issue": null
+    },
+    {
+      "year": 2003,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "DISCREPANCY",
+      "issue": "2003 WRX used 205/55R16 and 225/45R17. 235/45R17 and 245/40R18 are likely STI sizes."
+    },
+    {
+      "year": 2003,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["205/55R16", "225/45R17"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "MATCHED",
+      "issue": null
+    },
+    {
+      "year": 2002,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "DISCREPANCY",
+      "issue": "2002 WRX used 205/55R16 and 225/45R17. 235/45R17 and 245/40R18 are likely STI sizes."
+    },
+    {
+      "year": 2002,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["205/55R16", "225/45R17"],
+      "oemTireSizes": ["205/55R16", "225/45R17"],
+      "status": "MATCHED",
+      "issue": null
+    },
+    {
+      "year": 2005,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "oemTireSizes": ["235/60R16"],
+      "status": "DISCREPANCY",
+      "issue": "2005 Grand Vitara (2004 body) uses 235/60R16. Batch shows 215/70R16, 225/65R17 which doesn't match."
+    },
+    {
+      "year": 2004,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "oemTireSizes": ["235/60R16"],
+      "status": "DISCREPANCY",
+      "issue": "2004 Grand Vitara uses 235/60R16. Batch shows 215/70R16, 225/65R17 which doesn't match."
+    },
+    {
+      "year": 2003,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "oemTireSizes": ["235/60R16"],
+      "status": "DISCREPANCY",
+      "issue": "2003 Grand Vitara uses 235/60R16. Batch shows 215/70R16, 225/65R17 which doesn't match."
+    },
+    {
+      "year": 2002,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "oemTireSizes": ["235/60R16"],
+      "status": "DISCREPANCY",
+      "issue": "2002 Grand Vitara uses 235/60R16. Batch shows 215/70R16, 225/65R17 which doesn't match."
+    },
+    {
+      "year": 2001,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "oemTireSizes": ["235/60R16"],
+      "status": "DISCREPANCY",
+      "issue": "2001 Grand Vitara uses 235/60R16. Batch shows 215/70R16, 225/65R17 which doesn't match."
+    },
+    {
+      "year": 2000,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "oemTireSizes": ["235/60R16"],
+      "status": "DISCREPANCY",
+      "issue": "2000 Grand Vitara uses 235/60R16. Batch shows 215/70R16, 225/65R17 which doesn't match."
+    },
+    {
+      "year": 2013,
+      "make": "suzuki",
+      "model": "kizashi",
+      "currentTireSizes": ["225/55R17", "235/45R18"],
+      "oemTireSizes": ["215/55R17", "235/45R18"],
+      "status": "DISCREPANCY",
+      "issue": "2013 Kizashi SE/Base uses 215/55R17, not 225/55R17. Sport trims use 235/45R18 correctly."
+    },
+    {
+      "year": 2012,
+      "make": "suzuki",
+      "model": "kizashi",
+      "currentTireSizes": ["225/55R17", "235/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "status": "DISCREPANCY",
+      "issue": "2012 Kizashi S uses 215/60R16, SE uses 215/55R17, Sport uses 235/45R18. 225/55R17 not OEM."
+    },
+    {
+      "year": 2011,
+      "make": "suzuki",
+      "model": "kizashi",
+      "currentTireSizes": ["225/55R17", "235/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "status": "DISCREPANCY",
+      "issue": "2011 Kizashi S uses 215/60R16, SE uses 215/55R17, Sport uses 235/45R18. 225/55R17 not OEM."
+    },
+    {
+      "year": 2010,
+      "make": "suzuki",
+      "model": "kizashi",
+      "currentTireSizes": ["225/55R17", "235/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "status": "DISCREPANCY",
+      "issue": "2010 Kizashi S uses 215/60R16, SE uses 215/55R17, GTS/SLS uses 235/45R18. 225/55R17 not OEM."
+    },
+    {
+      "year": 2013,
+      "make": "suzuki",
+      "model": "sx4",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["195/65R15", "205/60R16", "205/50R17"],
+      "status": "DISCREPANCY",
+      "issue": "SX4 uses 205/50R17 for Sport trims, not 215/55R17. Crossover uses 205/60R16. Sedan uses 195/65R15."
+    },
+    {
+      "year": 2012,
+      "make": "suzuki",
+      "model": "sx4",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["195/65R15", "205/60R16", "205/50R17"],
+      "status": "DISCREPANCY",
+      "issue": "SX4 uses 205/50R17 for Sport trims, not 215/55R17. Crossover uses 205/60R16. Sedan uses 195/65R15."
+    },
+    {
+      "year": 2011,
+      "make": "suzuki",
+      "model": "sx4",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["195/65R15", "205/60R16", "205/50R17"],
+      "status": "DISCREPANCY",
+      "issue": "SX4 uses 205/50R17 for Sport trims, not 215/55R17. Crossover uses 205/60R16. Sedan uses 195/65R15."
+    }
+  ],
+  "emptyTireSizes": [
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "EMPTY",
+      "issue": "WRX STI was discontinued after 2021. No 2022-2023 STI exists. Remove from database."
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "EMPTY",
+      "issue": "WRX STI was discontinued after 2021. No 2022 STI exists. Remove from database."
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "currentTireSizes": [],
+      "oemTireSizes": ["245/35R19"],
+      "status": "MISSING_DATA",
+      "issue": "2021 WRX STI OEM size is 245/35R19. Should be added to currentTireSizes."
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "currentTireSizes": [],
+      "oemTireSizes": ["245/35R19"],
+      "status": "MISSING_DATA",
+      "issue": "2020 WRX STI OEM size is 245/35R19. Should be added to currentTireSizes."
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "currentTireSizes": [],
+      "oemTireSizes": ["245/35R19"],
+      "status": "MISSING_DATA",
+      "issue": "2019 WRX STI OEM size is 245/35R19. Should be added to currentTireSizes."
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "currentTireSizes": [],
+      "oemTireSizes": ["245/35R19"],
+      "status": "MISSING_DATA",
+      "issue": "2018 WRX STI OEM size is 245/35R19. Should be added to currentTireSizes."
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "currentTireSizes": [],
+      "oemTireSizes": ["245/40R18"],
+      "status": "MISSING_DATA",
+      "issue": "2017 WRX STI OEM size is 245/40R18. Should be added to currentTireSizes."
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "currentTireSizes": [],
+      "oemTireSizes": ["245/40R18"],
+      "status": "MISSING_DATA",
+      "issue": "2016 WRX STI OEM size is 245/40R18. Should be added to currentTireSizes."
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "currentTireSizes": [],
+      "oemTireSizes": ["245/40R18"],
+      "status": "MISSING_DATA",
+      "issue": "2015 WRX STI OEM size is 245/40R18. Should be added to currentTireSizes."
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "currentTireSizes": [],
+      "oemTireSizes": ["245/40R18"],
+      "status": "MISSING_DATA",
+      "issue": "2014 WRX STI (Impreza WRX STI) OEM size is 245/40R18. Should be added to currentTireSizes."
+    }
+  ],
+  "matched": [
+    {
+      "year": 2026,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "PARTIAL_MATCH",
+      "note": "2026 not yet on tiresize.com. Using 2025 data extrapolation. Consider adding 245/35R19 for tS/TR trims."
+    },
+    {
+      "year": 2025,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["245/40R18", "245/35R19"],
+      "status": "PARTIAL_MATCH",
+      "note": "2025 WRX has no 17\" option per tiresize.com. Premium/Limited/GT use 245/40R18, tS uses 245/35R19. 235/45R17 may be outdated."
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "MATCHED",
+      "note": "Correct. TR trim uses 245/35R19."
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18", "235/45ZR17", "245/40ZR18", "245/35ZR19"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "MATCHED",
+      "note": "ZR variants are speed-rated equivalents. All sizes valid."
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "MATCHED",
+      "note": "Correct."
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "MATCHED",
+      "note": "Correct."
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "MATCHED",
+      "note": "Correct. 245/35R19 for STI."
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "MATCHED",
+      "note": "Correct for non-STI trims."
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "MATCHED",
+      "note": "Correct."
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "MATCHED",
+      "note": "Correct for non-STI trims."
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18", "245/35R19", "235/45ZR17", "245/40ZR18", "245/35ZR19"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "MATCHED",
+      "note": "Correct. ZR variants are speed-rated equivalents."
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "MATCHED",
+      "note": "Correct for non-STI trims."
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "MATCHED",
+      "note": "Correct."
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "status": "MATCHED",
+      "note": "Correct for non-STI trims."
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18", "245/35R19", "235/45ZR17", "245/40ZR18", "245/35ZR19"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "2017 STI used 245/40R18, not 245/35R19. Remove 245/35R19 for 2017."
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "MATCHED",
+      "note": "Correct."
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18", "245/35R19", "235/45ZR17", "245/40ZR18", "245/35ZR19"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "2016 STI used 245/40R18, not 245/35R19. Remove 245/35R19 for 2016."
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "MATCHED",
+      "note": "Correct."
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "MATCHED",
+      "note": "Correct."
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18", "245/35R19"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "2015 STI used 245/40R18, not 245/35R19. Remove 245/35R19 for 2015."
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "MATCHED",
+      "note": "Correct. WRX uses 235/45R17, STI uses 245/40R18."
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "MATCHED",
+      "note": "Correct. WRX uses 235/45R17, STI uses 245/40R18."
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "MATCHED",
+      "note": "Correct. WRX uses 235/45R17, STI uses 245/40R18."
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "wrx",
+      "currentTireSizes": ["235/45R17", "245/40R18"],
+      "oemTireSizes": ["235/45R17", "245/40R18"],
+      "status": "MATCHED",
+      "note": "Correct. WRX uses 235/45R17, STI uses 245/40R18."
+    },
+    {
+      "year": 2013,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "oemTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "status": "MATCHED",
+      "note": "Correct (2013 data inferred from 2012 pattern)."
+    },
+    {
+      "year": 2012,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "oemTireSizes": ["225/70R16", "225/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "2012 shows Base/Premium: 225/70R16, Limited/UAEdition: 225/60R18. No 225/65R17 on tiresize.com for 2012."
+    },
+    {
+      "year": 2011,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "oemTireSizes": ["225/70R16", "225/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "2011 shows Base/Premium: 225/70R16, Limited: 225/60R18. No 225/65R17 on tiresize.com for 2011."
+    },
+    {
+      "year": 2010,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "oemTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "status": "MATCHED",
+      "note": "Correct. 4cyl variants use 225/70R16 and 225/65R17, V6 uses 225/65R17 and 225/60R18."
+    },
+    {
+      "year": 2009,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "oemTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "status": "MATCHED",
+      "note": "Correct."
+    },
+    {
+      "year": 2008,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "oemTireSizes": ["225/70R16", "225/65R17"],
+      "status": "PARTIAL_MATCH",
+      "note": "2008 shows 225/70R16 and 225/65R17 only. No 225/60R18 for 2008."
+    },
+    {
+      "year": 2007,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "oemTireSizes": ["225/70R16", "225/65R17"],
+      "status": "PARTIAL_MATCH",
+      "note": "2007 shows 225/70R16 and 225/65R17 only. No 225/60R18 for 2007."
+    },
+    {
+      "year": 2006,
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "currentTireSizes": ["225/70R16", "225/65R17", "225/60R18"],
+      "oemTireSizes": ["225/70R16", "225/65R17"],
+      "status": "PARTIAL_MATCH",
+      "note": "2006 shows 225/70R16 and 225/65R17 only. No 225/60R18 for 2006."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "REMOVE",
+      "vehicles": "Subaru WRX-STI 2022-2023",
+      "reason": "Model discontinued after 2021. These years do not exist."
+    },
+    {
+      "priority": "HIGH",
+      "action": "ADD_TIRE_SIZES",
+      "vehicles": "Subaru WRX-STI 2014-2021",
+      "reason": "Empty tire sizes. Add 245/40R18 (2014-2017) or 245/35R19 (2018-2021)."
+    },
+    {
+      "priority": "HIGH",
+      "action": "CORRECT_SIZES",
+      "vehicles": "Suzuki Grand Vitara 2000-2005",
+      "reason": "OEM size is 235/60R16, not 215/70R16 or 225/65R17."
+    },
+    {
+      "priority": "HIGH",
+      "action": "CORRECT_SIZES",
+      "vehicles": "Suzuki Kizashi 2010-2013",
+      "reason": "225/55R17 is not OEM. Should be 215/55R17 or 215/60R16 depending on trim."
+    },
+    {
+      "priority": "HIGH",
+      "action": "CORRECT_SIZES",
+      "vehicles": "Suzuki SX4 2011-2013",
+      "reason": "215/55R17 is not OEM. Sport trims use 205/50R17."
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "CORRECT_SIZES",
+      "vehicles": "Subaru Tribeca 2008-2012",
+      "reason": "255/50R19 not found as OEM. Only 255/55R18 confirmed. May be aftermarket plus-size option."
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "CORRECT_SIZES",
+      "vehicles": "Subaru WRX 2002-2010 (older body)",
+      "reason": "Pre-2011 WRX used 225/45R17, not 235/45R17. STI sizes are separate."
+    },
+    {
+      "priority": "LOW",
+      "action": "REVIEW",
+      "vehicles": "Subaru WRX 2015-2017 with 245/35R19",
+      "reason": "245/35R19 started on STI in 2018, not earlier. Remove for 2015-2017 entries."
+    },
+    {
+      "priority": "LOW",
+      "action": "REVIEW",
+      "vehicles": "Suzuki Grand Vitara 2006-2008",
+      "reason": "225/60R18 option may not be available for these years (introduced 2009)."
+    }
+  ]
+}

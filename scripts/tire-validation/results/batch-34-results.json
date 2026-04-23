@@ -1,0 +1,1019 @@
+{
+  "batchId": "34",
+  "processedAt": "2026-04-21T21:51:00.000Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "2WD Crew Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "2WD Extended Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "2WD Regular Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "4WD Crew Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "4WD Extended Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "4WD Regular Cab", "tireSizes": ["LT245/75R16", "LT265/70R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Current sizes show 17\"/18\" wheels but OEM for 2009 2500 HD (old style) was 16\"/17\" only. LT265/60R18 not OEM for this model."
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "2WD/4WD Crew Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "2WD/4WD Extended Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "Regular Cab", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Current sizes show LT245/75R17 and LT265/60R18 but OEM was 16\"/17\" wheels only. Check if this entry conflates old-gen vs new-gen."
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R17"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "LT245/75R17 not standard OEM - OEM was 16\" base."
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "2WD Crew Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "2WD Extended Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "2WD Regular Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "4WD Crew Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "4WD Extended Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "4WD Regular Cab", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Missing LT265/75R16 from current sizes."
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "2006 model year consistent with prior gen. Missing optional 17\" sizes."
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "2500 Heavy Duty 2WD Crew Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "2500 Heavy Duty 2WD Extended Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "2500 Heavy Duty 2WD Regular Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "2500 Heavy Duty 4WD Crew Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "2500 Heavy Duty 4WD Extended Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "2500 Heavy Duty 4WD Regular Cab", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2005 2500 HD only came with LT245/75R16 per tiresize.com. LT265/75R16 may be incorrect or aftermarket."
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims (2500 Heavy Duty)", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2004 2500 HD OEM was LT245/75R16 only."
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2003 2500 HD OEM was LT245/75R16 only."
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2002 2500 HD OEM was LT245/75R16 only."
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2001 2500 HD OEM was LT245/75R16 only."
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "2WD", "tireSizes": ["LT245/75R16"] },
+        { "trim": "4WD", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2000 2500/3500 was LT245/75R16 only. LT265/75R16 not standard."
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD Classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "Classic C2500 HD Crew Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "Classic C2500 HD Extended Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "Classic C2500 HD Regular Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "Classic K2500 HD Crew Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "Classic K2500 HD Extended Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "Classic K2500 HD Regular Cab", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISSING",
+      "notes": "No tire sizes in DB. Add LT245/75R16 as OEM."
+    },
+    {
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"],
+      "trims": [
+        { "trim": "WT", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18"] },
+        { "trim": "Custom", "tireSizes": ["LT275/65R20"] },
+        { "trim": "LT", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"] },
+        { "trim": "LTZ", "tireSizes": ["LT275/70R18", "LT275/65R20", "LT265/60R22"] },
+        { "trim": "High Country", "tireSizes": ["LT275/70R18", "LT275/65R20", "LT265/60R22"] },
+        { "trim": "ZR2", "tireSizes": ["LT305/70R18"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Current sizes differ from validated OEM. LT245/70R17 should be LT245/75R17; LT265/70R18 should be LT275/70R18; LT265/60R20 should be LT275/65R20."
+    },
+    {
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "LT275/70R18 and LT275/65R20 correct. LT245/70R17 should be LT245/75R17. Missing LT265/70R17."
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"],
+      "trims": [
+        { "trim": "WT", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18"] },
+        { "trim": "Custom", "tireSizes": ["LT275/65R20"] },
+        { "trim": "LT", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"] },
+        { "trim": "LTZ", "tireSizes": ["LT275/70R18", "LT275/65R20", "LT265/60R22"] },
+        { "trim": "High Country", "tireSizes": ["LT275/65R20", "LT265/60R22"] },
+        { "trim": "ZR2", "tireSizes": ["LT305/70R18"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Multiple size discrepancies. LT265/60R20 not OEM - should be LT275/65R20."
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "LT275/70R18 and LT275/65R20 correct. Check other sizes."
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"],
+      "trims": [
+        { "trim": "WT", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18"] },
+        { "trim": "Custom", "tireSizes": ["LT275/65R20"] },
+        { "trim": "LT", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"] },
+        { "trim": "LTZ", "tireSizes": ["LT275/70R18", "LT275/65R20", "LT265/60R22"] },
+        { "trim": "High Country", "tireSizes": ["LT275/70R18", "LT275/65R20", "LT265/60R22"] },
+        { "trim": "ZR2", "tireSizes": ["LT305/70R18"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Current sizes incorrect. LT265/60R20 not OEM."
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20", "LT265/60R22"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "18\" and 20\" sizes correct. 17\" size aspect ratio should be 75 not 70."
+    },
+    {
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+      "trims": [
+        { "trim": "WT", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18"] },
+        { "trim": "Custom", "tireSizes": ["LT275/65R20"] },
+        { "trim": "LT", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"] },
+        { "trim": "LTZ", "tireSizes": ["LT275/70R18", "LT275/65R20"] },
+        { "trim": "High Country", "tireSizes": ["LT275/70R18", "LT275/65R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "LT275/70R18 and LT275/65R20 correct. LT265/70R18 should be LT275/70R18 or LT265/70R17."
+    },
+    {
+      "year": 2022,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+      "trims": [
+        { "trim": "WT", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18"] },
+        { "trim": "Custom", "tireSizes": ["LT275/65R20"] },
+        { "trim": "LT/LTZ/High Country", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2023. Check 17\" and 18\" sizes."
+    },
+    {
+      "year": 2021,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "2020+ gen HD trucks. Same size patterns."
+    },
+    {
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"],
+      "trims": [
+        { "trim": "2WD/4WD Crew Cab", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"] },
+        { "trim": "2WD/4WD Double Cab", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"] },
+        { "trim": "2WD/4WD Regular Cab", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "New gen started 2020. LT275/70R18 and LT275/65R20 correct. 17\" should be LT245/75R17."
+    },
+    {
+      "year": 2019,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "All trims (pre-refresh)", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "2019 was last year of previous gen. LT265/60R20 valid. LT245/70R17 should be LT245/75R17."
+    },
+    {
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "2015-2019 gen. LT265/60R20 valid for this gen."
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2018."
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2017-2018."
+    },
+    {
+      "year": 2015,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "2WD/4WD Crew Cab", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] },
+        { "trim": "2WD/4WD Extended Cab", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] },
+        { "trim": "2WD/4WD Regular Cab", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "New gen started 2015. LT265/60R20 valid. Check 17\" size."
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "2014 was refresh of 2011-2014 gen. LT265/60R20 valid."
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2014."
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same as 2013-2014."
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "New gen started 2011. LT265/60R20 valid for 2011+."
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2010 was transition year - older body. LT245/70R17 and LT265/65R18 not standard OEM."
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2010 2500HD still old gen. 18\" and 20\" not OEM for this year."
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "2WD Crew Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "2WD Extended Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "2WD Regular Cab", "tireSizes": ["LT245/75R16"] },
+        { "trim": "4WD Crew Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "4WD Extended Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "4WD Regular Cab", "tireSizes": ["LT245/75R16", "LT265/70R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "LT245/70R17 and LT265/65R18 not standard OEM for 2009 2500HD."
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "18\" and 20\" not OEM for 2009 2500HD. Possible data entry for wrong generation."
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2008 2500HD was old gen. 18\" and 20\" not OEM."
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "LT245/70R17 and LT265/65R18 not standard OEM."
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "2WD/4WD Crew Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "2WD/4WD Extended Cab", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] },
+        { "trim": "Regular Cab", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2007 new gen started but 2500HD still had 16\"/17\" only. 18\"/20\" not OEM."
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16", "LT265/75R16", "LT265/70R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "LT245/70R17 and LT265/65R18 not standard OEM."
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16", "LT265/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2006 2500HD was 16\" only. 17\"/18\"/20\" not OEM."
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16", "LT265/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "17\" and 18\" not standard OEM for 2006."
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "2500 Heavy Duty (all cabs/drivetrains)", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2005 2500 Heavy Duty was LT245/75R16 only. Other sizes not OEM."
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "17\"/18\"/20\" not OEM for 2005 2500HD."
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2004 2500HD was 16\" only."
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Only LT245/75R16 was OEM."
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2003 2500HD was 16\" only."
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Only LT245/75R16 was OEM."
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2002 2500HD was 16\" only."
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Only LT245/75R16 was OEM."
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2001 2500HD was 16\" only."
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17", "LT265/65R18"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "All trims", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Only LT245/75R16 was OEM."
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Silverado 2500HD",
+      "currentTireSizes": ["LT245/70R17", "LT265/70R18", "LT265/60R20"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": [
+        { "trim": "2WD/4WD", "tireSizes": ["LT245/75R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2000 2500 was 16\" only."
+    },
+    {
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2018 3500 was 2015-2019 gen. LT245/75R16 incorrect - should be 17\". LT275/70R18 should be LT265/70R18."
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Same as 2018."
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT245/75R17", "LT265/70R17", "LT265/70R18", "LT265/60R20"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Same as 2017-2018."
+    },
+    {
+      "year": 2015,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT235/80R17", "LT265/70R18"],
+      "trims": [
+        { "trim": "3500 HD 2WD Single Rear Wheel", "tireSizes": ["LT265/70R18"] },
+        { "trim": "3500 HD 4WD Single Rear Wheel", "tireSizes": ["LT265/70R18"] },
+        { "trim": "3500 HD DRW", "tireSizes": ["LT235/80R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2015+ 3500 HD SRW was 18\" (LT265/70R18). 16\" not OEM. DRW uses narrower LT235/80R17."
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT225/75R17"],
+      "trims": [
+        { "trim": "3500 HD SRW", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 HD DRW", "tireSizes": ["LT225/75R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2014 was 2011-2014 gen. LT245/75R16 not OEM - should be LT265/75R16. LT275/70R18 not standard."
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT225/75R17"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "DRW", "tireSizes": ["LT225/75R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Same as 2014."
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT225/75R17"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "DRW", "tireSizes": ["LT225/75R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Same as 2013-2014."
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT225/75R17"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "DRW", "tireSizes": ["LT225/75R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "New gen started 2011."
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT225/75R17"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "DRW", "tireSizes": ["LT225/75R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2007-2010 gen 3500 HD."
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT225/75R17"],
+      "trims": [
+        { "trim": "3500 HD 2WD Crew Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 HD 2WD Crew Cab Dually", "tireSizes": ["LT225/75R17"] },
+        { "trim": "3500 HD 2WD Extended Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 HD 4WD all cabs", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 HD DRW", "tireSizes": ["LT225/75R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "LT245/75R16 not OEM. LT275/70R18 not available in 2009."
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT225/75R17"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "DRW", "tireSizes": ["LT225/75R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Same as 2009."
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT215/85R16"],
+      "trims": [
+        { "trim": "3500 HD 2WD/4WD Crew Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 HD 2WD/4WD Extended Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 HD Regular Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 HD Dually", "tireSizes": ["LT215/85R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "New gen 3500 HD (2007+) used LT265/75R16 base, not LT245/75R16."
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT215/85R16"],
+      "trims": [
+        { "trim": "3500 4WD Crew Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 4WD Extended Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 4WD Regular Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 Dually", "tireSizes": ["LT215/85R16"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "LT265/75R16 correct. LT245/75R16 may be for 2WD base only."
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/75R16"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT215/85R16"],
+      "trims": [
+        { "trim": "3500 4WD Crew Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 4WD Extended Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 4WD Regular Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "3500 2WD Dually", "tireSizes": ["LT215/85R16"] },
+        { "trim": "3500 4WD Dually", "tireSizes": ["LT215/85R16"] }
+      ],
+      "status": "PARTIAL_MATCH",
+      "notes": "LT265/75R16 correct. Missing 17\" option."
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT215/85R16"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "DRW", "tireSizes": ["LT215/85R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "LT245/75R16 not standard. LT275/70R18 not available 2004."
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT215/85R16"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "DRW", "tireSizes": ["LT215/85R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Same as 2004."
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT215/85R16"],
+      "trims": [
+        { "trim": "SRW", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "DRW", "tireSizes": ["LT215/85R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Same as 2003-2004."
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "currentTireSizes": ["LT245/75R16", "LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["LT245/75R16", "LT215/85R16"],
+      "trims": [
+        { "trim": "3500 2WD/4WD", "tireSizes": ["LT245/75R16"] },
+        { "trim": "3500 Dually", "tireSizes": ["LT215/85R16"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "2001 3500 SRW was LT245/75R16. 17\" and 18\" not OEM."
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 Classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["LT265/75R16", "LT265/70R17", "LT215/85R16"],
+      "trims": [
+        { "trim": "Classic K3500 Crew Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "Classic K3500 Extended Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "Classic K3500 Regular Cab", "tireSizes": ["LT265/75R16", "LT265/70R17"] },
+        { "trim": "Classic C3500/K3500 Dually", "tireSizes": ["LT215/85R16"] }
+      ],
+      "status": "MISSING",
+      "notes": "No tire sizes in DB. Add validated sizes."
+    },
+    {
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "currentTireSizes": ["245/75R17", "265/70R18", "275/65R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17", "LT235/80R18"],
+      "trims": [
+        { "trim": "3500 HD SRW", "tireSizes": ["LT275/70R18", "LT275/65R20"] },
+        { "trim": "3500 HD Dually", "tireSizes": ["LT235/80R17", "LT235/80R18"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Sizes missing LT prefix. 245/75R17 and 265/70R18 not standard for 2024+ 3500HD. SRW uses 18\"/20\" only."
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17", "LT235/80R18"],
+      "trims": [
+        { "trim": "3500 HD SRW", "tireSizes": ["LT275/70R18", "LT275/65R20"] },
+        { "trim": "3500 HD Dually", "tireSizes": ["LT235/80R17", "LT235/80R18"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Current sizes don't match OEM. 3500 HD SRW uses LT275 series, not LT265."
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17", "LT235/80R18"],
+      "trims": [
+        { "trim": "3500 HD SRW", "tireSizes": ["LT275/70R18", "LT275/65R20"] },
+        { "trim": "3500 HD Dually", "tireSizes": ["LT235/80R17", "LT235/80R18"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Same issues as 2025. SRW was 18\"/20\" starting 2020 refresh."
+    },
+    {
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "validatedTireSizes": ["LT275/70R18", "LT275/65R20", "LT235/80R17"],
+      "trims": [
+        { "trim": "3500 HD 2WD/4WD SRW", "tireSizes": ["LT275/70R18", "LT275/65R20"] },
+        { "trim": "3500 HD Dually", "tireSizes": ["LT235/80R17"] }
+      ],
+      "status": "MISMATCH",
+      "notes": "Same as 2024-2025. 17\" not OEM for SRW."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "matched": 0,
+    "partialMatch": 15,
+    "mismatch": 58,
+    "missing": 2,
+    "commonIssues": [
+      "Older 2500 HD (2000-2006) only had 16\" wheels OEM, but DB shows 17\"/18\"/20\" options",
+      "2007-2010 2500 HD had 16\"/17\" only, not 18\"/20\"",
+      "2011+ gen introduced larger wheel options",
+      "2020+ gen 2500HD uses LT245/75R17 (not LT245/70R17) and LT275 series for 18\"/20\"",
+      "3500 series consistently shows LT245/75R16 base but OEM was often LT265/75R16",
+      "3500 HD SRW (2020+) uses 18\"/20\" only, 17\" is DRW only",
+      "DRW tires are narrower (LT215/85R16, LT225/75R17, LT235/80R17)"
+    ],
+    "recommendations": [
+      "Update 2000-2006 2500 HD to 16\" only options",
+      "Update 2007-2010 2500 HD to remove 18\"/20\" options",
+      "Correct aspect ratios: LT245/70R17 → LT245/75R17 for 2020+ HD trucks",
+      "Distinguish SRW vs DRW fitments for 3500 series",
+      "Add missing tire sizes for 2007 Classic variants"
+    ]
+  }
+}

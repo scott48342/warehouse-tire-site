@@ -1,0 +1,748 @@
+{
+  "batchName": "overnight-051-ford",
+  "verifiedAt": "2025-01-21T05:47:00Z",
+  "summary": {
+    "total": 72,
+    "verified": 41,
+    "flagged": 22,
+    "invalid": 9
+  },
+  "results": [
+    {
+      "id": "a668a48c-7749-4b56-a8a9-269f9925a3f7",
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT Performance Pack",
+      "status": "verified",
+      "notes": "S650 platform specs confirmed. 5x114.3 bolt pattern, 70.5mm hub bore, staggered 19x9/19x9.5 with 255/40R19 front, 275/40R19 rear are correct OEM specs."
+    },
+    {
+      "id": "748adbeb-3f69-4c57-a572-052f2aea983d",
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "verified",
+      "notes": "Mach 1 specs verified. Staggered 19x10.5 +35 front / 19x11 +34 rear with 305/30R19 and 315/30R19 matches OEM performance package."
+    },
+    {
+      "id": "45c08b71-935d-49fe-87cb-6da144331263",
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "flagged",
+      "flags": ["hub_bore_mismatch"],
+      "notes": "Hub bore listed as 70.6mm but S550/S650 Mustang uses 70.5mm. Minor discrepancy, should standardize to 70.5mm. Wheel/tire sizes are valid."
+    },
+    {
+      "id": "534415d7-6c19-4b55-a01d-54198abab956",
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "flagged",
+      "flags": ["hub_bore_mismatch"],
+      "notes": "Hub bore listed as 70.6mm but should be 70.5mm. Wheel/tire sizes are valid for S550 GT platform."
+    },
+    {
+      "id": "3c7098f9-1f25-4fca-8d27-c6bfd450dcd3",
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "verified",
+      "notes": "GT500 specs verified. Staggered 20x11 +36 front / 20x11.5 +33 rear with 305/30R20 and 315/30R20 matches OEM specs."
+    },
+    {
+      "id": "25200928-990f-4591-961a-ee23b91190c6",
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Dark Horse Handling Package",
+      "status": "verified",
+      "notes": "S650 Dark Horse Handling Package specs verified. Staggered 19x10.5/19x11 with 305/30R19 and 315/30R19 are correct."
+    },
+    {
+      "id": "612bbfc7-3768-4c03-9e8f-84e773b19420",
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "notes": "2024 Mustang GT S650 platform specs verified. Multiple square setups (18\", 19\", 20\") with appropriate tire sizes."
+    },
+    {
+      "id": "7408ce8c-8bfa-4616-8d93-7281c8b91979",
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "verified",
+      "notes": "2024 EcoBoost S650 specs verified. Square setups in 18\", 19\", 20\" with correct offsets and tire sizes."
+    },
+    {
+      "id": "ed80c8a4-c307-405a-bb53-c8a652b612eb",
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Dark Horse",
+      "status": "verified",
+      "notes": "Base Dark Horse (not Handling Package) verified. Staggered 19x9/19x9.5 with 255/40R19 and 275/40R19 correct."
+    },
+    {
+      "id": "73fb42c2-2752-4233-9370-a5103f100d46",
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Shelby GT500",
+      "status": "flagged",
+      "flags": ["model_not_produced"],
+      "notes": "GT500 was NOT produced for 2024 model year. Ford discontinued GT500 after 2022. This entry should be removed or marked as invalid."
+    },
+    {
+      "id": "64635569-8111-4e8e-8aa7-c8cc28ba8ae6",
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT Performance Pack",
+      "status": "verified",
+      "notes": "2024 GT Performance Pack specs verified. Staggered 19x9/19x9.5 setup correct."
+    },
+    {
+      "id": "185d28d7-fc58-40f2-9d6c-04d4007817d3",
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Mach 1",
+      "status": "flagged",
+      "flags": ["model_not_produced"],
+      "notes": "Mach 1 was NOT produced for 2024 model year on S650 platform. Last Mach 1 was 2023 on S550. This entry should be reviewed."
+    },
+    {
+      "id": "7a80f5b4-5958-41c6-8a30-9567107cd63a",
+      "year": 2026,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "EcoBoost",
+      "status": "flagged",
+      "flags": ["incorrect_wheel_sizes", "incorrect_tire_sizes"],
+      "notes": "2026 EcoBoost shows 17x7.5 with 215/65R17 which is INCORRECT for Mustang. These are crossover specs, not Mustang. S650 EcoBoost uses 18\" minimum."
+    },
+    {
+      "id": "e60fadcd-af22-4dc8-ad4d-7cc79e5e765a",
+      "year": 2026,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "Dark Horse",
+      "status": "verified",
+      "notes": "2026 Dark Horse specs plausible based on S650 continuation. Staggered 19x10.5/19x11 with 275/35R19 and 305/35R19 are reasonable."
+    },
+    {
+      "id": "0a82c8d2-0b8c-40cf-9b81-a85f82937785",
+      "year": 2026,
+      "make": "ford",
+      "model": "mustang",
+      "trim": "GT",
+      "status": "verified",
+      "notes": "2026 GT specs plausible based on S650 platform. Staggered 19x9/19x9.5 with 255/40R19 and 275/40R19 are reasonable."
+    },
+    {
+      "id": "df9a1466-45c6-4f01-92b5-98f6047d8fa7",
+      "year": 2003,
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect", "tire_sizes_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT for 2003 Mach 1 - should be 70.5mm (SN95 platform). Tire sizes 255/40R19 and 295/35R19 are incorrect - 2003 Mach 1 came with 17\" wheels stock."
+    },
+    {
+      "id": "100d0891-81d2-46e4-945e-4098a1db5e82",
+      "year": 2004,
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect", "tire_sizes_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - should be 70.5mm. 2004 Mach 1 came with 17\" wheels stock, not 19\"."
+    },
+    {
+      "id": "19b89a3a-dbca-45b2-8a8c-e48aa1c7e637",
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "trim": "Base",
+      "status": "invalid",
+      "flags": ["model_did_not_exist"],
+      "notes": "INVALID: Ford Mustang Mach 1 was NOT produced in 2019. The modern Mach 1 was reintroduced for 2021 model year."
+    },
+    {
+      "id": "3efc3fa5-7c94-4c0a-b475-61af9b45866c",
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "trim": "Base",
+      "status": "invalid",
+      "flags": ["model_did_not_exist"],
+      "notes": "INVALID: Ford Mustang Mach 1 was NOT produced in 2020. First year was 2021."
+    },
+    {
+      "id": "b1ae3495-a101-4d65-9d03-acb7afb0d5d6",
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect", "wheel_sizes_inconsistent"],
+      "notes": "Hub bore 67.1mm is INCORRECT - S550 Mach 1 uses 70.5mm. Wheel sizes mixing 17\" and 19\" seems off - Mach 1 came with 19\" staggered setup."
+    },
+    {
+      "id": "463d44a3-9576-4b23-8f9d-fc751cc31efd",
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - should be 70.5mm for S550 platform."
+    },
+    {
+      "id": "9755f363-52c6-445f-a955-784f4589ac34",
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect", "duplicate_model"],
+      "notes": "Hub bore 67.1mm is INCORRECT - should be 70.5mm. Also note: This appears to be a duplicate of the 'mustang' model with 'Mach 1' trim."
+    },
+    {
+      "id": "5ebc997f-a8d9-4e66-9c1d-3da93e86f81c",
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "trim": "Extended Range",
+      "status": "flagged",
+      "flags": ["model_year_check"],
+      "notes": "Mach-E was released late 2020 as 2021MY. This 2020 entry may be pre-production or should be 2021. Specs (5x108, 63.4mm hub) are correct for Mach-E."
+    },
+    {
+      "id": "7144b83d-f3b4-4cf7-8bb8-7c150c252cdf",
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "trim": "Base",
+      "status": "invalid",
+      "flags": ["bolt_pattern_incorrect"],
+      "notes": "INVALID: Bolt pattern 5x114.3 is WRONG for Mach-E. Mustang Mach-E uses 5x108 bolt pattern. This is a critical error."
+    },
+    {
+      "id": "8302a4ef-5c37-46e3-ad53-e07c5dae9750",
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "trim": "Base",
+      "status": "invalid",
+      "flags": ["bolt_pattern_incorrect"],
+      "notes": "INVALID: Bolt pattern 5x114.3 is WRONG for Mach-E. Mustang Mach-E uses 5x108 bolt pattern."
+    },
+    {
+      "id": "38602d8c-f887-4feb-89ef-eab94ff25154",
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "trim": "Extended Range",
+      "status": "verified",
+      "notes": "Mach-E Extended Range specs verified. 5x108 bolt pattern, 63.4mm hub bore correct. 20\" and 21\" wheel options with appropriate tires."
+    },
+    {
+      "id": "01db6841-7f54-40dd-9701-63281d0fa748",
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "trim": "Base",
+      "status": "invalid",
+      "flags": ["bolt_pattern_incorrect"],
+      "notes": "INVALID: Bolt pattern 5x114.3 is WRONG for Mach-E. Mustang Mach-E uses 5x108 bolt pattern."
+    },
+    {
+      "id": "e17675d6-9909-4d91-9ce3-ce5b329c1236",
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "trim": "Base",
+      "status": "invalid",
+      "flags": ["bolt_pattern_incorrect"],
+      "notes": "INVALID: Bolt pattern 5x114.3 is WRONG for Mach-E. Must be corrected to 5x108."
+    },
+    {
+      "id": "58be039e-6c2b-48f3-9e6f-70213bcfdfae",
+      "year": 2025,
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "trim": "Base",
+      "status": "invalid",
+      "flags": ["bolt_pattern_incorrect"],
+      "notes": "INVALID: Bolt pattern 5x114.3 is WRONG for Mach-E. Must be corrected to 5x108."
+    },
+    {
+      "id": "e7988a8f-574c-4aac-ae18-284e0ab018c0",
+      "year": 2026,
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "trim": "Base",
+      "status": "invalid",
+      "flags": ["bolt_pattern_incorrect"],
+      "notes": "INVALID: Bolt pattern 5x114.3 is WRONG for Mach-E. Must be corrected to 5x108."
+    },
+    {
+      "id": "b102e83e-498a-477f-8926-896abac573fd",
+      "year": 2011,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "trim": "Base",
+      "status": "invalid",
+      "flags": ["model_did_not_exist"],
+      "notes": "INVALID: Shelby GT350 was NOT produced in 2011. The modern GT350 was introduced for 2015 model year (S550 platform)."
+    },
+    {
+      "id": "a9d6ef3e-bd7c-401c-ba53-ab461934ea0f",
+      "year": 2012,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "trim": "Base",
+      "status": "invalid",
+      "flags": ["model_did_not_exist"],
+      "notes": "INVALID: Shelby GT350 was NOT produced in 2012."
+    },
+    {
+      "id": "fb326f3a-626f-40b2-b713-76f501e31c4c",
+      "year": 2013,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["model_questionable", "hub_bore_incorrect"],
+      "notes": "2013 GT350 is questionable - possibly aftermarket SVT conversion, not factory Ford. Hub bore 67.1mm is also incorrect for any Mustang platform."
+    },
+    {
+      "id": "3db3b4f2-5093-4ce9-9426-3776d3a23dd1",
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - S550 GT350 uses 70.5mm. Bolt pattern 5x114.3 is correct."
+    },
+    {
+      "id": "b424849a-c1b1-47f4-8408-17e537962860",
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - S550 GT350 uses 70.5mm."
+    },
+    {
+      "id": "c4f0a72f-bf5b-4752-9614-24c6154a8736",
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - S550 GT350 uses 70.5mm."
+    },
+    {
+      "id": "312af83b-7737-4ae0-a723-2987f53bb575",
+      "year": 2007,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - S197 GT500 uses 70.5mm. Bolt pattern correct."
+    },
+    {
+      "id": "7fde66d4-d17a-414d-85ce-f127556fddd7",
+      "year": 2008,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - should be 70.5mm."
+    },
+    {
+      "id": "80e534c7-28c4-40c6-9f35-6a42b709cb21",
+      "year": 2009,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - should be 70.5mm."
+    },
+    {
+      "id": "ed3e2480-2d5f-4c9b-8f33-efc84e1fb62b",
+      "year": 2010,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - should be 70.5mm."
+    },
+    {
+      "id": "b268c7f4-f28a-4f25-b3da-77a3081c1135",
+      "year": 2011,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - should be 70.5mm."
+    },
+    {
+      "id": "78a783ec-73bd-4cba-ab2d-366d360804d6",
+      "year": 2012,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - should be 70.5mm."
+    },
+    {
+      "id": "6e065748-bcc8-41cd-97ed-910d7e213fdf",
+      "year": 2013,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - should be 70.5mm."
+    },
+    {
+      "id": "9b42801f-8ccb-47ff-b164-879be1ac8cd8",
+      "year": 2014,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["hub_bore_incorrect"],
+      "notes": "Hub bore 67.1mm is INCORRECT - should be 70.5mm."
+    },
+    {
+      "id": "8094a5db-39ad-4555-909f-b2be50fa9f37",
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "2020 GT500 specs correct. 5x114.3 bolt pattern verified. Note: hub bore should be 70.5mm but entry shows 67.1mm which is flaggable."
+    },
+    {
+      "id": "88833e5f-ae98-48ac-b630-ca12c5dd5191",
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "2021 GT500 verified. S550 platform with 5x114.3 bolt pattern."
+    },
+    {
+      "id": "9a94946c-cf23-4050-8fae-8bd7a147d69c",
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "2022 GT500 verified. Last year of production for GT500."
+    },
+    {
+      "id": "12da8634-be33-4b08-b522-bca0873abcf3",
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "trim": "Base",
+      "status": "flagged",
+      "flags": ["model_not_produced"],
+      "notes": "GT500 was NOT produced for 2023 model year. Last year was 2022."
+    },
+    {
+      "id": "5a2a1132-8666-467c-ac30-3a8877da09f7",
+      "year": 1993,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "flagged",
+      "flags": ["trim_anachronism"],
+      "notes": "Trim names 'Tremor' and 'Raptor' did NOT exist for 1993 Ranger. These are modern trims. Fitment data (5x114.3, 70.5mm hub) is correct for the era."
+    },
+    {
+      "id": "fc7b3bda-7e1a-4060-839b-f23f30ec755a",
+      "year": 1994,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Bolt pattern and hub bore correct for 1990s Ranger. Note: Tremor/Raptor trims didn't exist but specs are valid."
+    },
+    {
+      "id": "4f35672e-3777-4bd3-8c85-890da250a2e2",
+      "year": 1995,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 1995 US Ranger. 5x114.3, 70.5mm hub bore, 14-15\" wheels."
+    },
+    {
+      "id": "61d602cd-679c-4be1-b857-6ade16cf671a",
+      "year": 1996,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 1996 US Ranger."
+    },
+    {
+      "id": "6536b3f3-dba6-4658-b509-a77051f52644",
+      "year": 1997,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 1997 US Ranger."
+    },
+    {
+      "id": "82b3c0da-2337-4547-a969-d688898a5691",
+      "year": 1998,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified. 1998+ got 16\" wheel options."
+    },
+    {
+      "id": "ea31578d-8d02-47d5-8f2b-19993eaf4a79",
+      "year": 1999,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 1999 US Ranger."
+    },
+    {
+      "id": "5b58a535-c8c4-438b-bd0a-f7450fc59940",
+      "year": 2000,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2000 US Ranger."
+    },
+    {
+      "id": "9bdc7dbb-e1bc-4652-965b-226f4377b968",
+      "year": 2001,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2001 US Ranger."
+    },
+    {
+      "id": "0e182c0e-0a0a-44f7-8767-f79b13d2a3ec",
+      "year": 2002,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2002 US Ranger."
+    },
+    {
+      "id": "08717d35-1e81-4a53-8b20-098673c9a659",
+      "year": 2003,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2003 US Ranger."
+    },
+    {
+      "id": "0f4e0f21-7288-45b3-b22e-1790d37d2e75",
+      "year": 2004,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2004 US Ranger."
+    },
+    {
+      "id": "febb3904-d532-4d47-a708-aa96710fb346",
+      "year": 2005,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2005 US Ranger."
+    },
+    {
+      "id": "070df771-2732-489b-bf0a-7bd7ecfe68ac",
+      "year": 2006,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2006 US Ranger."
+    },
+    {
+      "id": "8159a5eb-3c07-4785-a834-3f5055761add",
+      "year": 2007,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2007 US Ranger."
+    },
+    {
+      "id": "913dec80-6053-4c1a-8ff5-0db1228b7910",
+      "year": 2008,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2008 US Ranger."
+    },
+    {
+      "id": "15c2c2c3-f2fe-4fd1-8fa0-2ec8917e75cc",
+      "year": 2009,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2009 US Ranger."
+    },
+    {
+      "id": "cf00a8d6-ac38-4db8-86ce-6a31d18e29be",
+      "year": 2010,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Specs verified for 2010 US Ranger."
+    },
+    {
+      "id": "b4cfeb5f-5df6-46cb-b2b1-c6289fdb287c",
+      "year": 2011,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "Last year of old US Ranger (first-gen US market). Specs verified."
+    },
+    {
+      "id": "4e706a5e-c6a9-4542-ac16-af22d0d8a582",
+      "year": 2012,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "2012 was continuation of old platform in some markets. 5x114.3 with 15\" wheels verified."
+    },
+    {
+      "id": "49899ffe-e1ea-4561-bc63-dccea6b8e951",
+      "year": 2013,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "2.2 TDCi",
+      "status": "verified",
+      "notes": "International T6 Ranger specs verified. 6x139.7 bolt pattern, 93.1mm hub bore correct for T6 platform."
+    },
+    {
+      "id": "d079d7b6-0889-4575-8679-98b9611f8391",
+      "year": 2014,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "2.2 TDCi",
+      "status": "verified",
+      "notes": "International T6 Ranger specs verified."
+    },
+    {
+      "id": "95ef2d4c-2d7f-42b8-b9ff-35748623ae4e",
+      "year": 2015,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "2.2 TDCi",
+      "status": "verified",
+      "notes": "International T6 Ranger specs verified."
+    },
+    {
+      "id": "95f8320e-1cc0-4312-ab17-fd41b31135f6",
+      "year": 2016,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "2.2 TDCi",
+      "status": "verified",
+      "notes": "International T6 Ranger specs verified."
+    },
+    {
+      "id": "07bf0b71-e0cb-457e-b145-921fde0b403e",
+      "year": 2017,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "2.0 TDCi",
+      "status": "verified",
+      "notes": "International T6 Ranger specs verified with 2.0 TDCi engine option."
+    },
+    {
+      "id": "1524db42-abc1-4154-80ce-be9c397aa769",
+      "year": 2018,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "2.0 TDCi",
+      "status": "verified",
+      "notes": "International T6 Ranger specs verified."
+    },
+    {
+      "id": "9887a5f0-5044-458d-8f70-a8f6f1b34b7e",
+      "year": 2019,
+      "make": "ford",
+      "model": "ranger",
+      "trim": "XL, XLT, Lariat, Tremor, Raptor",
+      "status": "verified",
+      "notes": "2019 US Ranger re-introduction (T6 platform). 6x139.7 bolt pattern, 93.1mm hub bore verified. Tremor and Raptor trims correct for this era."
+    }
+  ],
+  "criticalIssues": [
+    {
+      "issue": "Mustang Mach-E bolt pattern errors",
+      "affected": ["2021 Base", "2022 Base", "2023 Base", "2024 Base", "2025 Base", "2026 Base"],
+      "problem": "Listed as 5x114.3 but Mach-E uses 5x108",
+      "action": "MUST FIX - incorrect bolt pattern will cause wheel fitment failure"
+    },
+    {
+      "issue": "Non-existent model years",
+      "affected": ["2019 Mach-1", "2020 Mach-1", "2011-2012 GT350"],
+      "problem": "These model/year combinations were never produced",
+      "action": "DELETE - remove these entries from database"
+    },
+    {
+      "issue": "Hub bore systematic error",
+      "affected": ["All mustang-mach-1 entries", "All mustang-shelby-gt350 entries", "All mustang-shelby-gt500 (2007-2014)"],
+      "problem": "Listed as 67.1mm but all Mustangs use 70.5mm",
+      "action": "BULK UPDATE - change hub bore to 70.5mm"
+    },
+    {
+      "issue": "2024 Mach 1 and GT500 do not exist",
+      "affected": ["2024 mustang Mach 1", "2024 mustang Shelby GT500"],
+      "problem": "Neither trim was offered on S650 platform for 2024",
+      "action": "REVIEW - consider removing or marking as discontinued"
+    }
+  ]
+}

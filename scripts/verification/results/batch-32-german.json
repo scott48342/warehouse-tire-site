@@ -1,0 +1,1233 @@
+{
+  "batch": "batch-32-german",
+  "verifiedAt": "2025-01-26T22:45:00Z",
+  "verifiedBy": "subagent:verify-de-32",
+  "totalVehicles": 75,
+  "validVehicles": 67,
+  "invalidVehicles": 8,
+  "summary": {
+    "invalidModelYears": [
+      {"year": 2026, "make": "mercedes-benz", "model": "glc", "reason": "2026 model year not yet available in US market"},
+      {"year": 2026, "make": "mercedes-benz", "model": "gle", "reason": "2026 model year not yet available in US market"},
+      {"year": 2026, "make": "mercedes-benz", "model": "s-class", "reason": "2026 model year not yet available in US market"},
+      {"year": 2002, "make": "porsche", "model": "cayenne", "reason": "Porsche Cayenne US launch was 2003 model year (debuted in North America 2003)"},
+      {"year": 2005, "make": "porsche", "model": "cayman", "reason": "Porsche Cayman US launch was 2006 model year (launched late 2005 as 2006 MY)"},
+      {"year": 2015, "make": "mini", "model": "clubman", "reason": "Mini Clubman was not sold in US for 2015. R55 ended 2014, F54 started 2016 MY in US"},
+      {"year": 2017, "make": "volkswagen", "model": "arteon", "reason": "VW Arteon US launch was April 2019, first US MY was 2019"},
+      {"year": 2018, "make": "volkswagen", "model": "arteon", "reason": "VW Arteon US launch was April 2019, first US MY was 2019"}
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "X254 (2023-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "apexwheels.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLC 300", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "GLC 300 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "AMG GLC 43", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"},
+        {"name": "AMG GLC 63", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/40R20/285/35R20"}
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "X254 (2023-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "apexwheels.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLC 300", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "GLC 300 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "AMG GLC 43", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"},
+        {"name": "AMG GLC 63", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/40R20/285/35R20"}
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "X254 (2023-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "apexwheels.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLC 300", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "GLC 300 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "AMG GLC 43", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"}
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "status": "INVALID",
+      "reason": "2026 model year not yet available in US market",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W166 (2015-2019) - First year replacing ML-Class",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com", "edmunds.com"],
+      "notes": "2015 was transitional year - sold as GLE in some markets, ML in others. US officially GLE.",
+      "trims": [
+        {"name": "GLE 350", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"},
+        {"name": "GLE 400", "oemWheelSize": "19x8", "oemTireSize": "255/50R19"},
+        {"name": "AMG GLE 63", "oemWheelSize": "21x10", "oemTireSize": "285/40R21"}
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W166 (2015-2019)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLE 350", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"},
+        {"name": "GLE 400", "oemWheelSize": "19x8", "oemTireSize": "255/50R19"},
+        {"name": "GLE 450", "oemWheelSize": "19x8", "oemTireSize": "255/50R19"},
+        {"name": "AMG GLE 63", "oemWheelSize": "21x10", "oemTireSize": "285/40R21"}
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W166 (2015-2019)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLE 350", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"},
+        {"name": "GLE 550e", "oemWheelSize": "20x9", "oemTireSize": "275/45R20"},
+        {"name": "AMG GLE 43", "oemWheelSize": "21x9/21x10", "oemTireSize": "275/40R21/315/35R21"},
+        {"name": "AMG GLE 63", "oemWheelSize": "21x10", "oemTireSize": "285/40R21"}
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W166 (2015-2019)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLE 350", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"},
+        {"name": "GLE 550e", "oemWheelSize": "20x9", "oemTireSize": "275/45R20"},
+        {"name": "AMG GLE 43", "oemWheelSize": "21x9/21x10", "oemTireSize": "275/40R21/315/35R21"},
+        {"name": "AMG GLE 63", "oemWheelSize": "21x10", "oemTireSize": "285/40R21"}
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W166/V167 transition year",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLE 400 4MATIC", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "AMG GLE 43", "oemWheelSize": "21x9/21x10", "oemTireSize": "275/40R21/315/35R21"}
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "V167 (2020-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLE 350", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "GLE 450", "oemWheelSize": "20x9", "oemTireSize": "275/45R20"},
+        {"name": "GLE 580", "oemWheelSize": "21x10", "oemTireSize": "285/40R21"},
+        {"name": "AMG GLE 53", "oemWheelSize": "21x9.5/21x10", "oemTireSize": "275/40R21/315/35R21"},
+        {"name": "AMG GLE 63 S", "oemWheelSize": "22x10/22x11", "oemTireSize": "285/35R22/325/30R22"}
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "V167 (2020-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLE 350", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "GLE 450", "oemWheelSize": "20x9", "oemTireSize": "275/45R20"},
+        {"name": "GLE 580", "oemWheelSize": "21x10", "oemTireSize": "285/40R21"},
+        {"name": "AMG GLE 53", "oemWheelSize": "21x9.5/21x10", "oemTireSize": "275/40R21/315/35R21"},
+        {"name": "AMG GLE 63 S", "oemWheelSize": "22x10/22x11", "oemTireSize": "285/35R22/325/30R22"}
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "V167 (2020-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLE 350", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "GLE 450", "oemWheelSize": "20x9", "oemTireSize": "275/45R20"},
+        {"name": "GLE 580", "oemWheelSize": "21x10", "oemTireSize": "285/40R21"},
+        {"name": "AMG GLE 53", "oemWheelSize": "21x9.5/21x10", "oemTireSize": "275/40R21/315/35R21"},
+        {"name": "AMG GLE 63 S", "oemWheelSize": "22x10/22x11", "oemTireSize": "285/35R22/325/30R22"}
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "V167 Facelift (2023-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLE 350", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "GLE 450", "oemWheelSize": "20x9", "oemTireSize": "275/45R20"},
+        {"name": "GLE 580", "oemWheelSize": "21x10", "oemTireSize": "285/40R21"},
+        {"name": "AMG GLE 53", "oemWheelSize": "21x9.5/21x10", "oemTireSize": "275/40R21/315/35R21"},
+        {"name": "AMG GLE 63 S", "oemWheelSize": "22x10/22x11", "oemTireSize": "285/35R22/325/30R22"}
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "V167 Facelift (2023-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLE 350", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "GLE 450", "oemWheelSize": "20x9", "oemTireSize": "275/45R20"},
+        {"name": "AMG GLE 53", "oemWheelSize": "21x9.5/21x10", "oemTireSize": "275/40R21/315/35R21"},
+        {"name": "AMG GLE 63 S", "oemWheelSize": "22x10/22x11", "oemTireSize": "285/35R22/325/30R22"}
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "V167 Facelift (2023-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "GLE 350", "oemWheelSize": "19x8.5", "oemTireSize": "255/50R19"},
+        {"name": "GLE 450", "oemWheelSize": "20x9", "oemTireSize": "275/45R20"},
+        {"name": "AMG GLE 53", "oemWheelSize": "21x9.5/21x10", "oemTireSize": "275/40R21/315/35R21"}
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "status": "INVALID",
+      "reason": "2026 model year not yet available in US market",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W220 (2000-2006)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com", "hulkoffsets.com"],
+      "trims": [
+        {"name": "S 430", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "S 500", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"}
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W220 (2000-2006)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 430", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "S 500", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "S 55 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "245/45R18/275/40R18"}
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W220 (2000-2006)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 430", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "S 500", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "S 55 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "245/45R18/275/40R18"}
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W220 (2000-2006)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 430", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "S 500", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "S 55 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "245/45R18/275/40R18"}
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W220 (2000-2006)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 430", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "S 500", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "S 55 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "245/45R18/275/40R18"}
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W220 (2000-2006)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 430", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "S 500", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "S 55 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "245/45R18/275/40R18"},
+        {"name": "S 65 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"}
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W220/W221 transition year",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 430", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "S 500", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "S 55 AMG", "oemWheelSize": "18x8.5/18x9.5", "oemTireSize": "245/45R18/275/40R18"}
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W221 (2007-2013)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 600", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/275/35R19"},
+        {"name": "S 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/275/35R19"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/275/30R20"}
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W221 (2007-2013)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 600", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/275/35R19"},
+        {"name": "S 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/275/35R19"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/275/30R20"}
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W221 (2007-2013)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 600", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/275/35R19"},
+        {"name": "S 63 AMG", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/275/35R19"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/275/30R20"}
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W221 Facelift (2010-2013)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 400 Hybrid", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 600", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/275/35R19"},
+        {"name": "S 63 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/275/30R20"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/275/30R20"}
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W221 Facelift (2010-2013)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 400 Hybrid", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 600", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/275/35R19"},
+        {"name": "S 63 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/275/30R20"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/275/30R20"}
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W221 Facelift (2010-2013)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 400 Hybrid", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 600", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/275/35R19"},
+        {"name": "S 63 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/275/30R20"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/275/30R20"}
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W221 Facelift (2010-2013)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 400 Hybrid", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "255/45R18"},
+        {"name": "S 63 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/275/30R20"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/275/30R20"}
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W222 (2014-2020)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "245/50R18"},
+        {"name": "S 63 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"}
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W222 (2014-2020)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "245/50R18"},
+        {"name": "S 550e Plug-In Hybrid", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "S 600", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "S 63 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"}
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W222 (2014-2020)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "245/50R18"},
+        {"name": "S 550e Plug-In Hybrid", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "S 600", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "S 63 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"}
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W222 (2014-2020)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 550", "oemWheelSize": "18x8.5", "oemTireSize": "245/50R18"},
+        {"name": "S 550e Plug-In Hybrid", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "S 63 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "S 65 AMG", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"}
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W222 Facelift (2018-2020)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 450", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "S 560", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "S 560e", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "AMG S 63", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "AMG S 65", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"}
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W222 Facelift (2018-2020)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 450", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "S 560", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "AMG S 63", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "AMG S 65", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"}
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W222 Facelift (2018-2020)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 450", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "S 560", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "AMG S 63", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "AMG S 65", "oemWheelSize": "20x8.5/20x9.5", "oemTireSize": "255/35R20/285/30R20"}
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W223 (2021-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 500 4MATIC", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "S 580 4MATIC", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"}
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W223 (2021-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 500 4MATIC", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "S 580 4MATIC", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "AMG S 63", "oemWheelSize": "21x9.5/21x10.5", "oemTireSize": "265/35R21/295/30R21"}
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W223 (2021-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 500 4MATIC", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "S 580 4MATIC", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "AMG S 63 E PERFORMANCE", "oemWheelSize": "21x9.5/21x10.5", "oemTireSize": "265/35R21/295/30R21"}
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W223 (2021-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 500 4MATIC", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "S 580 4MATIC", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"},
+        {"name": "AMG S 63 E PERFORMANCE", "oemWheelSize": "21x9.5/21x10.5", "oemTireSize": "265/35R21/295/30R21"}
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "VALID",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "generation": "W223 (2021-present)",
+      "confidence": "high",
+      "sources": ["mbusa.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "S 500 4MATIC", "oemWheelSize": "19x8.5/19x9.5", "oemTireSize": "255/40R19/285/35R19"},
+        {"name": "S 580 4MATIC", "oemWheelSize": "20x9/20x10", "oemTireSize": "255/35R20/285/30R20"}
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "status": "INVALID",
+      "reason": "2026 model year not yet available in US market",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mini",
+      "model": "Clubman",
+      "status": "INVALID",
+      "reason": "Mini Clubman was not sold in US for 2015. R55 1st gen ended 2014, F54 2nd gen started as 2016 MY in US",
+      "confidence": "high",
+      "sources": ["cars.com", "jdpower.com", "bmwgroup press"]
+    },
+    {
+      "year": 2012,
+      "make": "Mini",
+      "model": "Roadster",
+      "status": "VALID",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "generation": "R59 (2012-2015)",
+      "confidence": "high",
+      "sources": ["minimania.com", "minicooper.fandom.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "Cooper", "oemWheelSize": "16x6.5", "oemTireSize": "195/55R16"},
+        {"name": "Cooper S", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"}
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "Mini",
+      "model": "Roadster",
+      "status": "VALID",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "generation": "R59 (2012-2015)",
+      "confidence": "high",
+      "sources": ["minimania.com", "minicooper.fandom.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "Cooper", "oemWheelSize": "16x6.5", "oemTireSize": "195/55R16"},
+        {"name": "Cooper S", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"},
+        {"name": "John Cooper Works", "oemWheelSize": "18x7", "oemTireSize": "205/40R18"}
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "Mini",
+      "model": "Roadster",
+      "status": "VALID",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "generation": "R59 (2012-2015)",
+      "confidence": "high",
+      "sources": ["minimania.com", "minicooper.fandom.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "Cooper", "oemWheelSize": "16x6.5", "oemTireSize": "195/55R16"},
+        {"name": "Cooper S", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"},
+        {"name": "John Cooper Works", "oemWheelSize": "18x7", "oemTireSize": "205/40R18"}
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "Mini",
+      "model": "Roadster",
+      "status": "VALID",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "generation": "R59 (2012-2015) - Final year",
+      "confidence": "high",
+      "sources": ["minimania.com", "minicooper.fandom.com", "hubcentric-rings.com"],
+      "trims": [
+        {"name": "Cooper", "oemWheelSize": "16x6.5", "oemTireSize": "195/55R16"},
+        {"name": "Cooper S", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"},
+        {"name": "John Cooper Works", "oemWheelSize": "18x7", "oemTireSize": "205/40R18"}
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "Porsche",
+      "model": "718",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "982 (2017-present) - First year",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com", "taycanforum.com"],
+      "notes": "718 Boxster/Cayman replaced the 981 generation with new turbocharged 4-cylinder engines",
+      "trims": [
+        {"name": "718 Boxster", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Boxster S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Cayman S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"}
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "Porsche",
+      "model": "718",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "982 (2017-present)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "718 Boxster", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Boxster S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Boxster GTS", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Cayman S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Cayman GTS", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"}
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "Porsche",
+      "model": "718",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "982 (2017-present)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "718 Boxster", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Boxster S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Boxster GTS", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Cayman S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Cayman GTS", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman GT4", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Spyder", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"}
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "Porsche",
+      "model": "718",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "982 (2017-present)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "718 Boxster", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Boxster S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Boxster GTS 4.0", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Cayman S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Cayman GTS 4.0", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman GT4", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Spyder", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"}
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "Porsche",
+      "model": "718",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "982 (2017-present)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "718 Boxster", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Boxster S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Boxster GTS 4.0", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Cayman S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Cayman GTS 4.0", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman GT4", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Spyder", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"}
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "Porsche",
+      "model": "718",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "982 (2017-present)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "718 Boxster", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Boxster S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Boxster GTS 4.0", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Cayman S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Cayman GTS 4.0", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman GT4", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Cayman GT4 RS", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Spyder", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"}
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "Porsche",
+      "model": "718",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "982 (2017-present)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "718 Boxster", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Boxster S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Boxster GTS 4.0", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Cayman S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Cayman GTS 4.0", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman GT4", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Cayman GT4 RS", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Spyder", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Spyder RS", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"}
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "Porsche",
+      "model": "718",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "982 (2017-present)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "718 Boxster", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Boxster S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Boxster GTS 4.0", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Cayman S", "oemWheelSize": "19x8/19x10", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "718 Cayman GTS 4.0", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "718 Cayman GT4", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Cayman GT4 RS", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Spyder", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"},
+        {"name": "718 Spyder RS", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"}
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "Porsche",
+      "model": "718",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "982 (2017-present) - Expected final year before replacement",
+      "confidence": "medium",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "notes": "2025 may be final year for 718 before electric replacement",
+      "trims": [
+        {"name": "718 Boxster", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "718 Cayman GT4 RS", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"}
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "Porsche",
+      "model": "918",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "918 Spyder (2013-2015)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com", "hubcentric-rings.com"],
+      "notes": "Hybrid hypercar, only 918 units produced. Center-lock wheels standard.",
+      "trims": [
+        {"name": "918 Spyder", "oemWheelSize": "20x9.5/21x12.5", "oemTireSize": "265/35ZR20/325/30ZR21"},
+        {"name": "918 Spyder Weissach Package", "oemWheelSize": "20x9.5/21x12.5", "oemTireSize": "265/35ZR20/325/30ZR21"}
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "Porsche",
+      "model": "918",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "918 Spyder (2013-2015) - Final year",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com", "hubcentric-rings.com"],
+      "notes": "Hybrid hypercar, only 918 units produced. Center-lock wheels standard.",
+      "trims": [
+        {"name": "918 Spyder", "oemWheelSize": "20x9.5/21x12.5", "oemTireSize": "265/35ZR20/325/30ZR21"},
+        {"name": "918 Spyder Weissach Package", "oemWheelSize": "20x9.5/21x12.5", "oemTireSize": "265/35ZR20/325/30ZR21"}
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "Porsche",
+      "model": "Cayenne",
+      "status": "INVALID",
+      "reason": "Porsche Cayenne US launch was 2003 model year. First Cayenne (955) debuted in North America 2003.",
+      "confidence": "high",
+      "sources": ["stuttcars.com", "carbuzz.com", "porsche.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "987 (2006-2012) - First year",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com", "stuttcars.com"],
+      "notes": "Cayman S launched late 2005 as 2006 MY. Base Cayman added July 2006.",
+      "trims": [
+        {"name": "Cayman S", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/40ZR18/265/40ZR18"}
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "987 (2006-2012)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "Cayman", "oemWheelSize": "17x6.5/17x8", "oemTireSize": "205/55ZR17/235/50ZR17"},
+        {"name": "Cayman S", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/40ZR18/265/40ZR18"}
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "987 (2006-2012)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "Cayman", "oemWheelSize": "17x6.5/17x8", "oemTireSize": "205/55ZR17/235/50ZR17"},
+        {"name": "Cayman S", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/40ZR18/265/40ZR18"}
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "987.2 Facelift (2009-2012)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "Cayman", "oemWheelSize": "17x6.5/17x8", "oemTireSize": "205/55ZR17/235/50ZR17"},
+        {"name": "Cayman S", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/40ZR18/265/40ZR18"}
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "987.2 Facelift (2009-2012)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "Cayman", "oemWheelSize": "17x6.5/17x8", "oemTireSize": "205/55ZR17/235/50ZR17"},
+        {"name": "Cayman S", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/40ZR18/265/40ZR18"}
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "987.2 Facelift (2009-2012)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "Cayman", "oemWheelSize": "17x6.5/17x8", "oemTireSize": "205/55ZR17/235/50ZR17"},
+        {"name": "Cayman S", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/40ZR18/265/40ZR18"},
+        {"name": "Cayman R", "oemWheelSize": "19x8/19x9.5", "oemTireSize": "235/35ZR19/265/35ZR19"}
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "987.2 Facelift (2009-2012) - Final year",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "Cayman", "oemWheelSize": "17x6.5/17x8", "oemTireSize": "205/55ZR17/235/50ZR17"},
+        {"name": "Cayman S", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/40ZR18/265/40ZR18"},
+        {"name": "Cayman R", "oemWheelSize": "19x8/19x9.5", "oemTireSize": "235/35ZR19/265/35ZR19"},
+        {"name": "Cayman S Black Edition", "oemWheelSize": "19x8/19x9.5", "oemTireSize": "235/35ZR19/265/35ZR19"}
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "981 (2013-2016)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "Cayman S", "oemWheelSize": "19x8/19x9.5", "oemTireSize": "235/40ZR19/265/40ZR19"}
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "981 (2013-2016)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "Cayman S", "oemWheelSize": "19x8/19x9.5", "oemTireSize": "235/40ZR19/265/40ZR19"}
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "981 (2013-2016)",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "Cayman S", "oemWheelSize": "19x8/19x9.5", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "Cayman GTS", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "Cayman GT4", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"}
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "981 (2013-2016) - Final year before 718 rebrand",
+      "confidence": "high",
+      "sources": ["porsche.com", "apexwheels.com"],
+      "trims": [
+        {"name": "Cayman", "oemWheelSize": "18x8/18x9.5", "oemTireSize": "235/45ZR18/265/45ZR18"},
+        {"name": "Cayman S", "oemWheelSize": "19x8/19x9.5", "oemTireSize": "235/40ZR19/265/40ZR19"},
+        {"name": "Cayman GTS", "oemWheelSize": "20x8.5/20x10.5", "oemTireSize": "235/35ZR20/265/35ZR20"},
+        {"name": "Cayman GT4", "oemWheelSize": "20x8.5/20x11", "oemTireSize": "245/35ZR20/295/30ZR20"}
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "Porsche",
+      "model": "Cayman",
+      "status": "INVALID",
+      "reason": "Porsche Cayman US launch was 2006 model year. Cayman S launched late 2005 as a 2006 MY.",
+      "confidence": "high",
+      "sources": ["stuttcars.com", "porschefortmyers.com", "wikipedia.org"]
+    },
+    {
+      "year": 2025,
+      "make": "Porsche",
+      "model": "Taycan",
+      "status": "VALID",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "generation": "J1 Facelift (2025-present)",
+      "confidence": "high",
+      "sources": ["porsche.com", "taycanforum.com", "apexwheels.com"],
+      "notes": "2025 brings significant refresh with updated range and performance",
+      "trims": [
+        {"name": "Taycan", "oemWheelSize": "19x8/19x10", "oemTireSize": "225/55R19/275/45R19"},
+        {"name": "Taycan 4S", "oemWheelSize": "20x9/20x11", "oemTireSize": "245/45ZR20/285/40ZR20"},
+        {"name": "Taycan GTS", "oemWheelSize": "20x9/20x11", "oemTireSize": "245/45ZR20/285/40ZR20"},
+        {"name": "Taycan Turbo", "oemWheelSize": "21x9.5/21x11.5", "oemTireSize": "265/35ZR21/305/30ZR21"},
+        {"name": "Taycan Turbo S", "oemWheelSize": "21x9.5/21x11.5", "oemTireSize": "265/35ZR21/305/30ZR21"}
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "Volkswagen",
+      "model": "Arteon",
+      "status": "INVALID",
+      "reason": "VW Arteon US launch was April 2019. First US model year was 2019. 2017-2018 were Europe-only.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "motortrend.com", "automobile.fandom.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Volkswagen",
+      "model": "Arteon",
+      "status": "INVALID",
+      "reason": "VW Arteon US launch was April 2019. First US model year was 2019. 2017-2018 were Europe-only.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "motortrend.com", "automobile.fandom.com"]
+    }
+  ]
+}

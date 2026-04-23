@@ -1,0 +1,228 @@
+{
+  "batchId": "overnight-077-toyota",
+  "verifiedAt": "2025-01-21T05:00:00Z",
+  "totalVehicles": 77,
+  "verified": 68,
+  "issues": 9,
+  "summary": {
+    "Land Cruiser 1990-1997 (J80)": "VERIFIED - 6x139.7, 106.1mm hub bore correct",
+    "Land Cruiser 1998-1999 (J100)": "VERIFIED - 5x150, 110.0mm hub bore correct (platform change)",
+    "Sienna 1998-1999": "VERIFIED - 5x114.3, 60.1mm correct",
+    "Supra 1990-1992 (A70)": "VERIFIED - 5x114.3, 60.1mm, staggered options correct",
+    "Supra 1993-1998 (A80)": "VERIFIED - 5x114.3, 60.1mm, staggered setups correct",
+    "T100 1993-1998": "VERIFIED - 6x139.7, 106.1mm correct",
+    "Tercel 1990-1999": "VERIFIED - 4x100, 54.1mm correct",
+    "Avalon 2008-2022": "VERIFIED - 5x114.3, 60.1mm correct across generations",
+    "Avalon 2023-2025": "ISSUE - Toyota discontinued Avalon after 2022",
+    "bZ4X 2022-2025": "ISSUE - Tire sizes incorrect"
+  },
+  "issues": [
+    {
+      "id": "405d5e65-c775-4458-9ee6-987710f3a108",
+      "vehicle": "2023 Toyota Avalon Base",
+      "issue": "MODEL_DISCONTINUED",
+      "severity": "high",
+      "details": "Toyota discontinued the Avalon after the 2022 model year. This vehicle year does not exist.",
+      "recommendation": "DELETE - Remove from database"
+    },
+    {
+      "id": "d80d1e15-c8d8-4bb4-bd40-6e760695d6b2",
+      "vehicle": "2024 Toyota Avalon Base",
+      "issue": "MODEL_DISCONTINUED",
+      "severity": "high",
+      "details": "Toyota discontinued the Avalon after the 2022 model year. This vehicle year does not exist.",
+      "recommendation": "DELETE - Remove from database"
+    },
+    {
+      "id": "dfc5d7ee-a1c3-478c-b7fa-d717be69646f",
+      "vehicle": "2025 Toyota Avalon Base",
+      "issue": "MODEL_DISCONTINUED",
+      "severity": "high",
+      "details": "Toyota discontinued the Avalon after the 2022 model year. This vehicle year does not exist.",
+      "recommendation": "DELETE - Remove from database"
+    },
+    {
+      "id": "a7aebf87-7886-4da5-aa2c-e152dabf90e3",
+      "vehicle": "2022 Toyota bZ4X Base",
+      "issue": "INCORRECT_TIRE_SIZE",
+      "severity": "medium",
+      "details": "Listed tire size 225/45R18 is incorrect. OEM tire sizes are 235/60R18 (18\") and 235/50R20 (20\").",
+      "currentValue": ["225/45R18"],
+      "correctValue": ["235/60R18", "235/50R20"],
+      "recommendation": "UPDATE tire sizes"
+    },
+    {
+      "id": "3392be8a-1777-4f53-a8b9-6688a0e6a99a",
+      "vehicle": "2023 Toyota bZ4X Base",
+      "issue": "INCORRECT_TIRE_SIZE",
+      "severity": "medium",
+      "details": "Listed tire size 225/45R18 is incorrect. OEM tire sizes are 235/60R18 (18\") and 235/50R20 (20\").",
+      "currentValue": ["225/45R18"],
+      "correctValue": ["235/60R18", "235/50R20"],
+      "recommendation": "UPDATE tire sizes"
+    },
+    {
+      "id": "63210c4d-2a0c-4e92-afd9-c7759eb79845",
+      "vehicle": "2024 Toyota bZ4X Base",
+      "issue": "INCORRECT_TIRE_SIZE",
+      "severity": "medium",
+      "details": "Listed tire size 225/45R18 is incorrect. OEM tire sizes are 235/60R18 (18\") and 235/50R20 (20\").",
+      "currentValue": ["225/45R18"],
+      "correctValue": ["235/60R18", "235/50R20"],
+      "recommendation": "UPDATE tire sizes"
+    },
+    {
+      "id": "866b3e06-cdbb-4c33-9c29-4baca7aed3bc",
+      "vehicle": "2025 Toyota bZ4X Base",
+      "issue": "INCORRECT_TIRE_SIZE",
+      "severity": "medium",
+      "details": "Listed tire size 225/45R18 is incorrect. OEM tire sizes are 235/60R18 (18\") and 235/50R20 (20\").",
+      "currentValue": ["225/45R18"],
+      "correctValue": ["235/60R18", "235/50R20"],
+      "recommendation": "UPDATE tire sizes"
+    },
+    {
+      "id": "585611ed-1b68-425d-bab4-f23adc082c7b",
+      "vehicle": "2016 Toyota Avalon XL/XLE",
+      "issue": "DUPLICATE_ENTRY",
+      "severity": "low",
+      "details": "Duplicate entry - same vehicle exists as id 44e64594-a4fa-4538-aba0-959f337b77d4 with identical specs",
+      "recommendation": "DELETE - Remove duplicate"
+    },
+    {
+      "id": "44e64594-a4fa-4538-aba0-959f337b77d4",
+      "vehicle": "2016 Toyota Avalon XL/XLE",
+      "issue": "DUPLICATE_KEEP",
+      "severity": "info",
+      "details": "This is the entry to keep (other duplicate should be removed)",
+      "recommendation": "KEEP"
+    }
+  ],
+  "verifiedModels": [
+    {
+      "model": "Land Cruiser",
+      "years": "1990-1997",
+      "generation": "J80/FJ80",
+      "boltPattern": "6x139.7",
+      "hubBore": "106.1",
+      "status": "VERIFIED",
+      "notes": "Full-size SUV, shared platform with Lexus LX450"
+    },
+    {
+      "model": "Land Cruiser",
+      "years": "1998-1999",
+      "generation": "J100",
+      "boltPattern": "5x150",
+      "hubBore": "110.0",
+      "status": "VERIFIED",
+      "notes": "Platform change - new bolt pattern and larger hub bore"
+    },
+    {
+      "model": "Sienna",
+      "years": "1998-1999",
+      "generation": "XL10 (1st gen)",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "status": "VERIFIED",
+      "notes": "Camry-based minivan"
+    },
+    {
+      "model": "Supra",
+      "years": "1990-1992",
+      "generation": "A70 (Mk3)",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "status": "VERIFIED",
+      "notes": "Third generation, staggered option for Turbo variants"
+    },
+    {
+      "model": "Supra",
+      "years": "1993-1998",
+      "generation": "A80 (Mk4)",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "status": "VERIFIED",
+      "notes": "Fourth generation, iconic sports car. NA: 16\" staggered, Turbo: 17\" staggered"
+    },
+    {
+      "model": "T100",
+      "years": "1993-1998",
+      "generation": "Single gen",
+      "boltPattern": "6x139.7",
+      "hubBore": "106.1",
+      "status": "VERIFIED",
+      "notes": "Mid-size pickup, predecessor to Tundra"
+    },
+    {
+      "model": "Tercel",
+      "years": "1990-1999",
+      "generation": "L40/L50",
+      "boltPattern": "4x100",
+      "hubBore": "54.1",
+      "status": "VERIFIED",
+      "notes": "Subcompact economy car, small 13-14\" wheels standard"
+    },
+    {
+      "model": "Avalon",
+      "years": "2008-2012",
+      "generation": "XX30 (3rd gen)",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "status": "VERIFIED",
+      "notes": "Full-size sedan, Camry-based"
+    },
+    {
+      "model": "Avalon",
+      "years": "2013-2018",
+      "generation": "XX40 (4th gen)",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "status": "VERIFIED",
+      "notes": "Redesigned with sportier styling"
+    },
+    {
+      "model": "Avalon",
+      "years": "2019-2022",
+      "generation": "XX50 (5th gen)",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "status": "VERIFIED",
+      "notes": "TNGA platform, final generation - DISCONTINUED AFTER 2022"
+    },
+    {
+      "model": "bZ4X",
+      "years": "2022-2025",
+      "generation": "EA10",
+      "boltPattern": "5x114.3",
+      "hubBore": "60.1",
+      "status": "PARTIAL - TIRE SIZES INCORRECT",
+      "notes": "Electric crossover SUV. Bolt pattern and hub bore correct, but tire sizes need correction."
+    }
+  ],
+  "actionRequired": {
+    "deleteVehicles": [
+      "405d5e65-c775-4458-9ee6-987710f3a108",
+      "d80d1e15-c8d8-4bb4-bd40-6e760695d6b2",
+      "dfc5d7ee-a1c3-478c-b7fa-d717be69646f",
+      "585611ed-1b68-425d-bab4-f23adc082c7b"
+    ],
+    "updateTireSizes": [
+      {
+        "id": "a7aebf87-7886-4da5-aa2c-e152dabf90e3",
+        "correctTires": ["235/60R18", "235/50R20"]
+      },
+      {
+        "id": "3392be8a-1777-4f53-a8b9-6688a0e6a99a",
+        "correctTires": ["235/60R18", "235/50R20"]
+      },
+      {
+        "id": "63210c4d-2a0c-4e92-afd9-c7759eb79845",
+        "correctTires": ["235/60R18", "235/50R20"]
+      },
+      {
+        "id": "866b3e06-cdbb-4c33-9c29-4baca7aed3bc",
+        "correctTires": ["235/60R18", "235/50R20"]
+      }
+    ]
+  }
+}

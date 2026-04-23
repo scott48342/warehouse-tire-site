@@ -1,0 +1,1143 @@
+{
+  "batchId": "44",
+  "processedAt": "2026-04-21T21:10:00Z",
+  "totalVehicles": 75,
+  "successCount": 75,
+  "failureCount": 0,
+  "results": [
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W206",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.0, 7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.0, 7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.0, 7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.0, 7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.0, 7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.0, 7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.0, 7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W203",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W203",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W203",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W203",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W203",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W203",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W203",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W202",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [15, 16],
+        "oemWidths": [6.5, 7.0],
+        "offsetRange": { "min": 35, "max": 42 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 38, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 38, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 38, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 38, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 38, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 38, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 38, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W214",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W214",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W214",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19, 20],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [8.0, 8.5, 9.0],
+        "offsetRange": { "min": 40, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17, 18],
+        "oemWidths": [7.5, 8.0, 8.5],
+        "offsetRange": { "min": 35, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W210",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17],
+        "oemWidths": [7.5, 8.0],
+        "offsetRange": { "min": 37, "max": 43 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W210",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17],
+        "oemWidths": [7.5, 8.0],
+        "offsetRange": { "min": 37, "max": 43 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W210",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [16, 17],
+        "oemWidths": [7.5, 8.0],
+        "offsetRange": { "min": 37, "max": 43 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19],
+        "oemWidths": [7.5, 8.0],
+        "offsetRange": { "min": 40, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19],
+        "oemWidths": [7.5, 8.0],
+        "offsetRange": { "min": 40, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19],
+        "oemWidths": [7.5, 8.0],
+        "offsetRange": { "min": 40, "max": 50 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19],
+        "oemWidths": [7.5, 8.0],
+        "offsetRange": { "min": 38, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19],
+        "oemWidths": [7.5, 8.0],
+        "offsetRange": { "min": 38, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19],
+        "oemWidths": [7.5, 8.0],
+        "offsetRange": { "min": 38, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [18, 19],
+        "oemWidths": [7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 48 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 38, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 38, "max": 45 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 42 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 42 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameters": [17, 18, 19],
+        "oemWidths": [7.0, 7.5, 8.0],
+        "offsetRange": { "min": 35, "max": 42 }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    }
+  ],
+  "notes": {
+    "commonSpecs": "All Mercedes-Benz vehicles in this batch use 5x112 bolt pattern and 66.6mm center bore",
+    "generations": {
+      "C-Class": "W202 (2000), W203 (2001-2007), W204 (2008-2014), W205 (2015-2021), W206 (2022+)",
+      "CLA": "C117 (2014-2019), C118 (2020+)",
+      "E-Class": "W210 (2000-2002), W211 (2003-2009), W212 (2010-2016), W213 (2017-2023), W214 (2024+)",
+      "GLA": "X156 (2015-2019), H247 (2020+)"
+    }
+  }
+}

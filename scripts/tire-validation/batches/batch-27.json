@@ -1,0 +1,641 @@
+{
+  "batchId": "27",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/55R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/55R20",
+        "265/45R21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/55R18",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R18",
+        "235/55R20",
+        "265/45R21",
+        "235/60R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "265/40R21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "265/40R21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/55R18",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "265/40R21"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/55R18",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/55R18",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "265/40R21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R18",
+        "235/55R20",
+        "265/45R21",
+        "235/60R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/55R18",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "265/40R21"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R18",
+        "235/55R20",
+        "265/45R21",
+        "235/60R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "265/40R21"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "225/75R15",
+        "235/70R16",
+        "235/75R15"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "blazer",
+      "currentTireSizes": [
+        "235/65R17",
+        "255/55R20",
+        "275/45R21"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "205/55R17",
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "205/55R17",
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "215/50R17",
+        "215/45R18"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "215/50R17",
+        "215/45R18"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "215/50R17",
+        "215/45R18"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "currentTireSizes": [
+        "215/50R17"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "c2500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "c3500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "c3500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "c3500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "c3500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "c3500",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "305/30R19",
+        "325/30R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "245/50R18",
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "245/50R18"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "285/30R20",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "245/40R20",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "P245/50R18",
+        "P245/40R19",
+        "P275/35R19",
+        "P245/40R20",
+        "P275/35R20",
+        "P285/30R20",
+        "P305/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "285/30R20",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "305/30R19",
+        "325/30R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "P245/50R18",
+        "P245/40R19",
+        "P275/35R19",
+        "P245/40R20",
+        "P275/35R20",
+        "P285/30R20",
+        "P305/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "245/50R18"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "245/40R20",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "245/50R18",
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "camaro",
+      "currentTireSizes": [
+        "245/40R20"
+      ]
+    }
+  ]
+}

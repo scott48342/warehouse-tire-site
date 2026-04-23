@@ -1,0 +1,1151 @@
+{
+  "batchId": "41",
+  "processedAt": "2026-04-21T21:10:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "EQS-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 21, "max": 22 },
+        "width": { "front": 9.5, "rear": 10.5 },
+        "offset": { "min": 32, "max": 42 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "EQS-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 21, "max": 22 },
+        "width": { "front": 9.5, "rear": 10.5 },
+        "offset": { "min": 30, "max": 40 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "EQS-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 21, "max": 22 },
+        "width": { "front": 9, "rear": 10.5 },
+        "offset": { "min": 30, "max": 40 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "EQS-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 21, "max": 21 },
+        "width": { "front": 9.5, "rear": 10.5 },
+        "offset": { "min": 32, "max": 42 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "EQS-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 21 },
+        "width": { "front": 9, "rear": 10 },
+        "offset": { "min": 35, "max": 40 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "EQS-SUV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "min": 9, "max": 11 },
+        "offset": { "min": 30, "max": 40 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "EQS-SUV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "min": 9, "max": 11 },
+        "offset": { "min": 30, "max": 40 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "EQS-SUV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "min": 9, "max": 11 },
+        "offset": { "min": 30, "max": 40 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "EQS-SUV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "min": 9, "max": 11 },
+        "offset": { "min": 30, "max": 40 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "EQS-SUV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "min": 9, "max": 11 },
+        "offset": { "min": 30, "max": 40 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "EQT",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "oemDiameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.5 },
+        "offset": { "min": 35, "max": 45 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "EQT",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "oemDiameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.5 },
+        "offset": { "min": 35, "max": 45 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "EQT",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "oemDiameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.5 },
+        "offset": { "min": 35, "max": 45 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "EQT",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 66.1,
+        "oemDiameter": { "min": 16, "max": 18 },
+        "width": { "min": 6.5, "max": 7.5 },
+        "offset": { "min": 35, "max": 45 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "EQV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 17, "max": 17 },
+        "width": { "min": 7, "max": 7 },
+        "offset": { "min": 51, "max": 51 },
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "EQV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 17, "max": 17 },
+        "width": { "min": 7, "max": 7 },
+        "offset": { "min": 51, "max": 51 },
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "EQV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 17, "max": 17 },
+        "width": { "min": 7, "max": 7 },
+        "offset": { "min": 51, "max": 51 },
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "EQV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 17, "max": 17 },
+        "width": { "min": 7, "max": 7 },
+        "offset": { "min": 51, "max": 51 },
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "EQV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 17, "max": 17 },
+        "width": { "min": 7, "max": 7 },
+        "offset": { "min": 51, "max": 51 },
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "EQV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 17, "max": 17 },
+        "width": { "min": 7, "max": 7 },
+        "offset": { "min": 51, "max": 51 },
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "EQV",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 17, "max": 17 },
+        "width": { "min": 7, "max": 7 },
+        "offset": { "min": 51, "max": 51 },
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "G-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x130",
+        "centerBore": 84.1,
+        "oemDiameter": { "min": 18, "max": 19 },
+        "width": { "min": 8, "max": 9.5 },
+        "offset": { "min": 55, "max": 70 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "G-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x130",
+        "centerBore": 84.1,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "min": 9, "max": 10 },
+        "offset": { "min": 5, "max": 25 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 22 },
+        "width": { "min": 8.5, "max": 10 },
+        "offset": { "min": 33, "max": 48 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 22 },
+        "width": { "min": 8.5, "max": 10 },
+        "offset": { "min": 33, "max": 48 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 22 },
+        "width": { "min": 8.5, "max": 10 },
+        "offset": { "min": 33, "max": 48 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 22 },
+        "width": { "min": 8.5, "max": 10 },
+        "offset": { "min": 33, "max": 48 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 21 },
+        "width": { "min": 8, "max": 9.5 },
+        "offset": { "min": 35, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 21 },
+        "width": { "min": 8, "max": 9.5 },
+        "offset": { "min": 35, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 21 },
+        "width": { "min": 8, "max": 9.5 },
+        "offset": { "min": 35, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 21 },
+        "width": { "min": 8, "max": 9.5 },
+        "offset": { "min": 35, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 21 },
+        "width": { "min": 8, "max": 9.5 },
+        "offset": { "min": 35, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 21 },
+        "width": { "min": 8, "max": 9.5 },
+        "offset": { "min": 35, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "GL-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 21 },
+        "width": { "min": 8, "max": 9.5 },
+        "offset": { "min": 35, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GL-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "min": 9, "max": 10 },
+        "offset": { "min": 40, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "GL-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "min": 9, "max": 10 },
+        "offset": { "min": 40, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "GL-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "min": 9, "max": 10 },
+        "offset": { "min": 40, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "GL-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "min": 9, "max": 10 },
+        "offset": { "min": 40, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "GLB-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 21 },
+        "width": { "min": 8.5, "max": 9.5 },
+        "offset": { "min": 40, "max": 48 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "GLB-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 21 },
+        "width": { "min": 8.5, "max": 9.5 },
+        "offset": { "min": 40, "max": 48 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "GLB-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 21 },
+        "width": { "min": 8.5, "max": 9.5 },
+        "offset": { "min": 40, "max": 48 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "GLB-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 20 },
+        "width": { "min": 8, "max": 8.5 },
+        "offset": { "min": 38, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "GLB-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 20 },
+        "width": { "min": 8, "max": 8.5 },
+        "offset": { "min": 38, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "GLB-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 20 },
+        "width": { "min": 8, "max": 8.5 },
+        "offset": { "min": 38, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "GLB-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 20 },
+        "width": { "min": 8, "max": 8.5 },
+        "offset": { "min": 38, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "GLB-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 20 },
+        "width": { "min": 8, "max": 8.5 },
+        "offset": { "min": 38, "max": 50 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 8, "max": 9 },
+        "offset": { "min": 30, "max": 44 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 8, "max": 9 },
+        "offset": { "min": 30, "max": 44 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 8, "max": 9 },
+        "offset": { "min": 30, "max": 44 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 8, "max": 9 },
+        "offset": { "min": 30, "max": 44 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 8, "max": 9 },
+        "offset": { "min": 35, "max": 42 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 8, "max": 9 },
+        "offset": { "min": 35, "max": 42 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 8, "max": 9 },
+        "offset": { "min": 35, "max": 45 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 7.5, "max": 9.5 },
+        "offset": { "min": 35, "max": 42 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 7.5, "max": 9.5 },
+        "offset": { "min": 35, "max": 42 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 7.5, "max": 9.5 },
+        "offset": { "min": 35, "max": 42 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 7.5, "max": 9.5 },
+        "offset": { "min": 35, "max": 42 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 18, "max": 20 },
+        "width": { "min": 7.5, "max": 9.5 },
+        "offset": { "min": 35, "max": 42 },
+        "isStaggered": false
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 21 },
+        "width": { "front": 9, "rear": 10 },
+        "offset": { "min": 20, "max": 35 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 21 },
+        "width": { "front": 9, "rear": 10 },
+        "offset": { "min": 20, "max": 35 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 21 },
+        "width": { "front": 9, "rear": 10 },
+        "offset": { "min": 20, "max": 35 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 21 },
+        "width": { "front": 8.5, "rear": 10 },
+        "offset": { "min": 25, "max": 40 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 21 },
+        "width": { "front": 8.5, "rear": 10 },
+        "offset": { "min": 25, "max": 40 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 21 },
+        "width": { "front": 8.5, "rear": 10 },
+        "offset": { "min": 25, "max": 40 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 21 },
+        "width": { "front": 8.5, "rear": 10 },
+        "offset": { "min": 25, "max": 40 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 20 },
+        "width": { "front": 8.5, "rear": 9.5 },
+        "offset": { "min": 30, "max": 45 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 20 },
+        "width": { "front": 8.5, "rear": 9.5 },
+        "offset": { "min": 30, "max": 45 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 20 },
+        "width": { "front": 8.5, "rear": 9.5 },
+        "offset": { "min": 30, "max": 45 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 20 },
+        "width": { "front": 8.5, "rear": 9.5 },
+        "offset": { "min": 30, "max": 45 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "GLC-Class-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 20 },
+        "width": { "front": 8.5, "rear": 9.5 },
+        "offset": { "min": 30, "max": 45 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "GLC-Class-Coupe-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "front": 9, "rear": 10.5 },
+        "offset": { "min": 35, "max": 50 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "GLC-Class-Coupe-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "front": 9, "rear": 10.5 },
+        "offset": { "min": 35, "max": 50 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "GLC-Class-Coupe-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 20, "max": 22 },
+        "width": { "front": 9, "rear": 10.5 },
+        "offset": { "min": 35, "max": 50 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "GLC-Class-Coupe-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 21 },
+        "width": { "front": 8.5, "rear": 10 },
+        "offset": { "min": 38, "max": 45 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "GLC-Class-Coupe-AMG",
+      "wheelSpecs": {
+        "boltPattern": "5x112",
+        "centerBore": 66.6,
+        "oemDiameter": { "min": 19, "max": 21 },
+        "width": { "front": 8.5, "rear": 10 },
+        "offset": { "min": 38, "max": 45 },
+        "isStaggered": true
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "successCount": 75,
+    "failureCount": 0,
+    "modelGroups": {
+      "EQS-AMG": { "count": 5, "boltPattern": "5x112", "centerBore": 66.6 },
+      "EQS-SUV": { "count": 5, "boltPattern": "5x112", "centerBore": 66.6 },
+      "EQT": { "count": 4, "boltPattern": "5x114.3", "centerBore": 66.1 },
+      "EQV": { "count": 7, "boltPattern": "5x112", "centerBore": 66.6 },
+      "G-Class": { "count": 1, "boltPattern": "5x130", "centerBore": 84.1 },
+      "G-Class-AMG": { "count": 1, "boltPattern": "5x130", "centerBore": 84.1 },
+      "GL-Class": { "count": 11, "boltPattern": "5x112", "centerBore": 66.6 },
+      "GL-Class-AMG": { "count": 4, "boltPattern": "5x112", "centerBore": 66.6 },
+      "GLB-Class-AMG": { "count": 8, "boltPattern": "5x112", "centerBore": 66.6 },
+      "GLC-Class": { "count": 12, "boltPattern": "5x112", "centerBore": 66.6 },
+      "GLC-Class-AMG": { "count": 12, "boltPattern": "5x112", "centerBore": 66.6 },
+      "GLC-Class-Coupe-AMG": { "count": 5, "boltPattern": "5x112", "centerBore": 66.6 }
+    }
+  }
+}

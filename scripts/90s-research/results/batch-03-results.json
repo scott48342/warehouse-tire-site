@@ -1,0 +1,1267 @@
+{
+  "batchId": "90s-batch-03",
+  "completedAt": "2026-04-22T12:45:00.000Z",
+  "results": [
+    {
+      "year": 1990,
+      "make": "Nissan",
+      "model": "Maxima",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/65R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "3rd gen J30 (1988-1994). V6 engine."
+    },
+    {
+      "year": 1991,
+      "make": "Nissan",
+      "model": "Maxima",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/65R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "3rd gen J30 (1988-1994). Same specs as 1990."
+    },
+    {
+      "year": 1992,
+      "make": "Nissan",
+      "model": "Maxima",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/65R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "3rd gen J30 (1988-1994). Same specs as 1990."
+    },
+    {
+      "year": 1993,
+      "make": "Nissan",
+      "model": "Maxima",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/65R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "3rd gen J30 (1988-1994). Same specs as 1990."
+    },
+    {
+      "year": 1994,
+      "make": "Nissan",
+      "model": "Maxima",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/65R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "3rd gen J30 (1988-1994). Last year of this generation."
+    },
+    {
+      "year": 1990,
+      "make": "Nissan",
+      "model": "Altima",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["usa.nissannews.com", "beforward.jp"],
+      "notes": "DNE - Nissan Altima first introduced for 1993 model year, replacing Stanza."
+    },
+    {
+      "year": 1991,
+      "make": "Nissan",
+      "model": "Altima",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["usa.nissannews.com", "beforward.jp"],
+      "notes": "DNE - Nissan Altima first introduced for 1993 model year."
+    },
+    {
+      "year": 1992,
+      "make": "Nissan",
+      "model": "Altima",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["usa.nissannews.com", "beforward.jp"],
+      "notes": "DNE - Nissan Altima first introduced for 1993 model year."
+    },
+    {
+      "year": 1993,
+      "make": "Nissan",
+      "model": "Altima",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/60R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com", "nissanforums.com"],
+      "notes": "First gen (1993-1997). Note: Some sources say 5x114.3 but forum and tirewheelguide confirm 4x114.3 for first gen. Verify before use."
+    },
+    {
+      "year": 1994,
+      "make": "Nissan",
+      "model": "Altima",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/60R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com", "nissanforums.com"],
+      "notes": "First gen (1993-1997). Same specs as 1993."
+    },
+    {
+      "year": 1995,
+      "make": "Nissan",
+      "model": "Altima",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/60R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com", "nissanforums.com"],
+      "notes": "First gen (1993-1997). Same specs as 1993."
+    },
+    {
+      "year": 1996,
+      "make": "Nissan",
+      "model": "Altima",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/60R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com", "nissanforums.com"],
+      "notes": "First gen (1993-1997). Same specs as 1993."
+    },
+    {
+      "year": 1997,
+      "make": "Nissan",
+      "model": "Altima",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/60R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com", "nissanforums.com"],
+      "notes": "First gen (1993-1997). Last year of first gen."
+    },
+    {
+      "year": 1990,
+      "make": "Nissan",
+      "model": "Sentra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 59.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 37 },
+          { "diameter": 14, "width": 6, "offset": 37 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "avtoreference.com"],
+      "notes": "2nd gen B12 (1985-1990). Last year of this generation."
+    },
+    {
+      "year": 1991,
+      "make": "Nissan",
+      "model": "Sentra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 59.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 37 },
+          { "diameter": 14, "width": 5.5, "offset": 37 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "avtoreference.com"],
+      "notes": "3rd gen B13 (1991-1994)."
+    },
+    {
+      "year": 1992,
+      "make": "Nissan",
+      "model": "Sentra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 59.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 37 },
+          { "diameter": 14, "width": 5.5, "offset": 37 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "avtoreference.com"],
+      "notes": "3rd gen B13 (1991-1994). Same specs."
+    },
+    {
+      "year": 1993,
+      "make": "Nissan",
+      "model": "Sentra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 59.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 37 },
+          { "diameter": 14, "width": 5.5, "offset": 37 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "avtoreference.com"],
+      "notes": "3rd gen B13 (1991-1994). Same specs."
+    },
+    {
+      "year": 1994,
+      "make": "Nissan",
+      "model": "Sentra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 59.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 37 },
+          { "diameter": 14, "width": 5.5, "offset": 37 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "avtoreference.com"],
+      "notes": "3rd gen B13 (1991-1994). Last year of this gen."
+    },
+    {
+      "year": 1990,
+      "make": "Nissan",
+      "model": "240SX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com", "240sxforums.com"],
+      "notes": "S13 generation (1989-1994). 4-lug model."
+    },
+    {
+      "year": 1991,
+      "make": "Nissan",
+      "model": "240SX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "S13 generation (1989-1994). Same specs."
+    },
+    {
+      "year": 1992,
+      "make": "Nissan",
+      "model": "240SX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "S13 generation (1989-1994). Same specs."
+    },
+    {
+      "year": 1993,
+      "make": "Nissan",
+      "model": "240SX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "S13 generation (1989-1994). Same specs."
+    },
+    {
+      "year": 1994,
+      "make": "Nissan",
+      "model": "240SX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "S13 generation (1989-1994). Last year of S13."
+    },
+    {
+      "year": 1995,
+      "make": "Nissan",
+      "model": "240SX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "S14 generation (1995-1998). Base model is 4-lug. SE model has 5x114.3 with 16x6.5 ET45 and 205/55R16."
+    },
+    {
+      "year": 1996,
+      "make": "Nissan",
+      "model": "240SX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "S14 generation. Base is 4-lug. SE has 5x114.3 with 16x6.5 ET45."
+    },
+    {
+      "year": 1997,
+      "make": "Nissan",
+      "model": "240SX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "S14 generation. Base is 4-lug. SE has 5x114.3 with 16x6.5 ET45."
+    },
+    {
+      "year": 1998,
+      "make": "Nissan",
+      "model": "240SX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "S14 generation. Last year of 240SX. Base is 4-lug. SE has 5x114.3."
+    },
+    {
+      "year": 1999,
+      "make": "Nissan",
+      "model": "240SX",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "notes": "DNE - 240SX ended production in 1998 in US market."
+    },
+    {
+      "year": 1990,
+      "make": "Nissan",
+      "model": "300ZX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 8.5, "offset": 35, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/45R16"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "z31.com"],
+      "notes": "Z32 generation (1990-1996). STAGGERED setup - front/rear different. NA and TT have same base specs. Turbo also available with 17\" option: F:17x8 ET40, R:17x9 ET30."
+    },
+    {
+      "year": 1991,
+      "make": "Nissan",
+      "model": "300ZX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 8.5, "offset": 35, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/45R16"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "z31.com"],
+      "notes": "Z32 generation. Same staggered specs as 1990."
+    },
+    {
+      "year": 1992,
+      "make": "Nissan",
+      "model": "300ZX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 8.5, "offset": 35, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/45R16"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "z31.com"],
+      "notes": "Z32 generation. Same staggered specs."
+    },
+    {
+      "year": 1993,
+      "make": "Nissan",
+      "model": "300ZX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 8.5, "offset": 35, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/45R16"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "z31.com"],
+      "notes": "Z32 generation. Same staggered specs."
+    },
+    {
+      "year": 1994,
+      "make": "Nissan",
+      "model": "300ZX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 8.5, "offset": 35, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/45R16"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "z31.com"],
+      "notes": "Z32 generation. Same staggered specs."
+    },
+    {
+      "year": 1995,
+      "make": "Nissan",
+      "model": "300ZX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 8.5, "offset": 35, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/45R16"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "z31.com"],
+      "notes": "Z32 generation. Same staggered specs."
+    },
+    {
+      "year": 1996,
+      "make": "Nissan",
+      "model": "300ZX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 8.5, "offset": 35, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "245/45R16"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "z31.com"],
+      "notes": "Z32 generation. Last year of 300ZX in US."
+    },
+    {
+      "year": 1997,
+      "make": "Nissan",
+      "model": "300ZX",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "notes": "DNE - 300ZX Z32 ended US production in 1996."
+    },
+    {
+      "year": 1998,
+      "make": "Nissan",
+      "model": "300ZX",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "notes": "DNE - 300ZX Z32 ended US production in 1996."
+    },
+    {
+      "year": 1999,
+      "make": "Nissan",
+      "model": "300ZX",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia"],
+      "notes": "DNE - 300ZX Z32 ended US production in 1996."
+    },
+    {
+      "year": 1990,
+      "make": "Nissan",
+      "model": "Pathfinder",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "31/10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "originalwheels.com"],
+      "notes": "WD21 generation (1987-1995). 6-lug truck pattern."
+    },
+    {
+      "year": 1991,
+      "make": "Nissan",
+      "model": "Pathfinder",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "31/10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "originalwheels.com"],
+      "notes": "WD21 generation. Same specs."
+    },
+    {
+      "year": 1992,
+      "make": "Nissan",
+      "model": "Pathfinder",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "31/10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "originalwheels.com"],
+      "notes": "WD21 generation. Same specs."
+    },
+    {
+      "year": 1993,
+      "make": "Nissan",
+      "model": "Pathfinder",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "31/10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "originalwheels.com"],
+      "notes": "WD21 generation. Same specs."
+    },
+    {
+      "year": 1994,
+      "make": "Nissan",
+      "model": "Pathfinder",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "31/10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "originalwheels.com"],
+      "notes": "WD21 generation. Same specs."
+    },
+    {
+      "year": 1995,
+      "make": "Nissan",
+      "model": "Pathfinder",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 7, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["215/75R15", "235/75R15", "31/10.50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "originalwheels.com"],
+      "notes": "WD21 generation. Last year of this gen."
+    },
+    {
+      "year": 1990,
+      "make": "Nissan",
+      "model": "Frontier",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "carsforsale.com"],
+      "notes": "DNE - Nissan Frontier first introduced 1998 MY. Prior pickup was 'Nissan Pickup' or 'Hardbody'."
+    },
+    {
+      "year": 1991,
+      "make": "Nissan",
+      "model": "Frontier",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "carsforsale.com"],
+      "notes": "DNE - Nissan Frontier first introduced 1998 MY."
+    },
+    {
+      "year": 1992,
+      "make": "Nissan",
+      "model": "Frontier",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "carsforsale.com"],
+      "notes": "DNE - Nissan Frontier first introduced 1998 MY."
+    },
+    {
+      "year": 1993,
+      "make": "Nissan",
+      "model": "Frontier",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "carsforsale.com"],
+      "notes": "DNE - Nissan Frontier first introduced 1998 MY."
+    },
+    {
+      "year": 1994,
+      "make": "Nissan",
+      "model": "Frontier",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "carsforsale.com"],
+      "notes": "DNE - Nissan Frontier first introduced 1998 MY."
+    },
+    {
+      "year": 1995,
+      "make": "Nissan",
+      "model": "Frontier",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "carsforsale.com"],
+      "notes": "DNE - Nissan Frontier first introduced 1998 MY."
+    },
+    {
+      "year": 1996,
+      "make": "Nissan",
+      "model": "Frontier",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "carsforsale.com"],
+      "notes": "DNE - Nissan Frontier first introduced 1998 MY."
+    },
+    {
+      "year": 1997,
+      "make": "Nissan",
+      "model": "Frontier",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "carsforsale.com"],
+      "notes": "DNE - Nissan Frontier first introduced 1998 MY."
+    },
+    {
+      "year": 1998,
+      "make": "Nissan",
+      "model": "Frontier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 18 },
+          { "diameter": 15, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["215/65R15", "215/75R15", "235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "D22 generation (1998-2000 first gen). First year of Frontier nameplate."
+    },
+    {
+      "year": 1999,
+      "make": "Nissan",
+      "model": "Frontier",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 18 },
+          { "diameter": 15, "width": 7, "offset": 20 }
+        ],
+        "oem_tire_sizes": ["215/65R15", "215/75R15", "235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "D22 generation. Same specs as 1998."
+    },
+    {
+      "year": 1990,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "cars.com"],
+      "notes": "DNE - Nissan Quest first introduced 1993 MY (production started April 1992)."
+    },
+    {
+      "year": 1991,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "cars.com"],
+      "notes": "DNE - Nissan Quest first introduced 1993 MY."
+    },
+    {
+      "year": 1992,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "cars.com"],
+      "notes": "DNE - Nissan Quest first introduced 1993 MY."
+    },
+    {
+      "year": 1993,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "First gen (1993-1998). Joint venture with Ford (Mercury Villager)."
+    },
+    {
+      "year": 1994,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "First gen (1993-1998). Same specs."
+    },
+    {
+      "year": 1995,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "First gen (1993-1998). Same specs."
+    },
+    {
+      "year": 1996,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "First gen (1993-1998). Same specs."
+    },
+    {
+      "year": 1997,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "First gen (1993-1998). Same specs."
+    },
+    {
+      "year": 1998,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "First gen (1993-1998). Last year of first gen."
+    },
+    {
+      "year": 1999,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 66.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["215/70R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Second gen started 1999. Minor spec changes may apply."
+    },
+    {
+      "year": 1990,
+      "make": "Nissan",
+      "model": "Pickup",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": null },
+          { "diameter": 15, "width": 7.5, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "215/75R14", "215/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com", "ebay.com"],
+      "notes": "D21 Hardbody (1986-1997). 2WD uses 14\" wheels, 4WD uses 15\" wheels."
+    },
+    {
+      "year": 1991,
+      "make": "Nissan",
+      "model": "Pickup",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": null },
+          { "diameter": 15, "width": 7.5, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "215/75R14", "215/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "D21 Hardbody. Same specs."
+    },
+    {
+      "year": 1992,
+      "make": "Nissan",
+      "model": "Pickup",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": null },
+          { "diameter": 15, "width": 7.5, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "215/75R14", "215/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "D21 Hardbody. Same specs."
+    },
+    {
+      "year": 1993,
+      "make": "Nissan",
+      "model": "Pickup",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": null },
+          { "diameter": 15, "width": 7.5, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "215/75R14", "215/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "D21 Hardbody. Same specs."
+    },
+    {
+      "year": 1994,
+      "make": "Nissan",
+      "model": "Pickup",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": null },
+          { "diameter": 15, "width": 7.5, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "215/75R14", "215/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "D21 Hardbody. Same specs."
+    },
+    {
+      "year": 1995,
+      "make": "Nissan",
+      "model": "Pickup",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": null },
+          { "diameter": 15, "width": 7.5, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "215/75R14", "215/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "D21 Hardbody. Same specs."
+    },
+    {
+      "year": 1996,
+      "make": "Nissan",
+      "model": "Pickup",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": null },
+          { "diameter": 15, "width": 7.5, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "215/75R14", "215/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "D21 Hardbody. Same specs."
+    },
+    {
+      "year": 1997,
+      "make": "Nissan",
+      "model": "Pickup",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 100.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": null },
+          { "diameter": 15, "width": 7.5, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "215/75R14", "215/75R15", "235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "nicoclub.com"],
+      "notes": "D21 Hardbody. Last year (replaced by Frontier in 1998)."
+    },
+    {
+      "year": 1998,
+      "make": "Nissan",
+      "model": "Pickup",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia"],
+      "notes": "DNE - Nissan Pickup (D21 Hardbody) replaced by Frontier nameplate for 1998."
+    },
+    {
+      "year": 1999,
+      "make": "Nissan",
+      "model": "Pickup",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia"],
+      "notes": "DNE - Nissan Pickup replaced by Frontier nameplate."
+    },
+    {
+      "year": 1990,
+      "make": "Mazda",
+      "model": "Miata",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 14, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 15, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/65R14", "185/60R14", "185/55R15", "195/50R15", "205/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "konigwheels.com", "miata.net"],
+      "notes": "NA generation (1990-1997). First year of MX-5 Miata. Also sold as 'MX-5'."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 49,
+    "dne": 26,
+    "partial": 0,
+    "failed": 0,
+    "highConfidence": 44,
+    "mediumConfidence": 5,
+    "needsReview": 5
+  },
+  "researchNotes": {
+    "vehiclesDNE": [
+      "Nissan Altima 1990-1992 (first gen started 1993)",
+      "Nissan Quest 1990-1992 (first gen started 1993)",
+      "Nissan Frontier 1990-1997 (first gen started 1998)",
+      "Nissan 300ZX 1997-1999 (Z32 ended 1996)",
+      "Nissan 240SX 1999 (S14 ended 1998)",
+      "Nissan Pickup 1998-1999 (replaced by Frontier)"
+    ],
+    "staggeredSetups": [
+      "Nissan 300ZX Z32 (1990-1996) - F: 16x7.5 ET45, R: 16x8.5 ET35"
+    ],
+    "trimVariants": [
+      "Nissan 240SX S14 (1995-1998): Base is 4x114.3, SE is 5x114.3 with 16\" wheels"
+    ],
+    "uncertainSpecs": [
+      "Nissan Altima 1993-1997: Some sources say 5x114.3, but forum/tirewheelguide confirm 4x114.3. Marked medium confidence."
+    ]
+  }
+}

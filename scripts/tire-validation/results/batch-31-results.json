@@ -1,0 +1,1059 @@
+{
+  "batchId": "31",
+  "validatedAt": "2026-04-21T21:50:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "LTZ": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "LTZ": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "LTZ": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["225/60R16", "235/50ZR18", "225/55R17"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "LTZ": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs (ZR speed rating variant acceptable)"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "LTZ": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "LTZ": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "LTZ": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "LTZ": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "Base": ["225/60R16"],
+        "LS": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "MISMATCH",
+      "notes": "Missing 235/50R18 for SS trim"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "Base": ["225/60R16"],
+        "LS": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "MISMATCH",
+      "notes": "Missing 235/50R18 for SS trim"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "Base": ["225/60R16"],
+        "LS": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "MISMATCH",
+      "notes": "Missing 235/50R18 for SS trim"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "Base": ["225/60R16"],
+        "LS": ["225/55R17"]
+      },
+      "allSizes": ["225/60R16", "225/55R17"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs (no SS trim this year)"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "Base": ["225/60R16"],
+        "LS": ["225/55R17"]
+      },
+      "allSizes": ["225/60R16", "225/55R17"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "impala",
+      "currentTireSizes": ["P225/60R16", "P225/55R17"],
+      "validatedTireSizes": {
+        "Base": ["225/60R16"],
+        "LS": ["225/55R17"]
+      },
+      "allSizes": ["225/60R16", "225/55R17"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "impala-limited",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/60R16", "225/55R17"],
+        "LTZ": ["235/50R18"],
+        "Police": ["235/55R17"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18", "235/55R17"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes - data needs to be populated"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "impala-limited",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/60R16", "225/55R17"],
+        "LTZ": ["235/50R18"],
+        "Police": ["235/55R17"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18", "235/55R17"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes - data needs to be populated"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "impala-limited",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/60R16", "225/55R17"],
+        "LTZ": ["235/50R18"],
+        "Police": ["235/55R17"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18", "235/55R17"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes - data needs to be populated"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "lova-rv",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["185/65R15", "195/55R16"]
+      },
+      "allSizes": ["185/65R15", "195/55R16"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "China market vehicle - 185/65R15 or 195/55R16"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "lova-rv",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["185/65R15", "195/55R16"]
+      },
+      "allSizes": ["185/65R15", "195/55R16"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "China market vehicle - 185/65R15 or 195/55R16"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "lova-rv",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["185/65R15", "195/55R16"]
+      },
+      "allSizes": ["185/65R15", "195/55R16"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "China market vehicle - 185/65R15 or 195/55R16"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "lumina",
+      "currentTireSizes": ["P205/70R15", "P225/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["205/70R15"]
+      },
+      "allSizes": ["205/70R15"],
+      "status": "MISMATCH",
+      "notes": "225/60R16 not available for 2001 - only 205/70R15 (16\" option discontinued)"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "lumina",
+      "currentTireSizes": ["P205/70R15", "P225/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["205/70R15", "225/60R16"]
+      },
+      "allSizes": ["205/70R15", "225/60R16"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "luv",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/75R15", "225/70R16"]
+      },
+      "allSizes": ["205/75R15", "225/70R16"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Mexico/Latin America market (Isuzu rebadge) - 205/75R15 or 225/70R16"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "luv",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/75R15", "225/70R16"]
+      },
+      "allSizes": ["205/75R15", "225/70R16"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Mexico/Latin America market (Isuzu rebadge) - 205/75R15 or 225/70R16"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "luv",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/75R15", "225/70R16"]
+      },
+      "allSizes": ["205/75R15", "225/70R16"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Mexico/Latin America market (Isuzu rebadge) - 205/75R15 or 225/70R16"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "luv",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/75R15", "225/70R16"]
+      },
+      "allSizes": ["205/75R15", "225/70R16"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Mexico/Latin America market (Isuzu rebadge) - 205/75R15 or 225/70R16"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "luv",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/75R15", "225/70R16"]
+      },
+      "allSizes": ["205/75R15", "225/70R16"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Mexico/Latin America market (Isuzu rebadge) - 205/75R15 or 225/70R16"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "luv",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["205/75R15", "225/70R16"]
+      },
+      "allSizes": ["205/75R15", "225/70R16"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Mexico/Latin America market (Isuzu rebadge) - 205/75R15 or 225/70R16"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "LS": ["205/65R16"],
+        "LT": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+        "RS": ["245/45R18"],
+        "2LT": ["245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "LS": ["205/65R16"],
+        "LT": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+        "RS": ["245/45R18"],
+        "2LT": ["245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "LS": ["205/65R16"],
+        "LT": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+        "RS": ["245/45R18"],
+        "2LT": ["245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19", "205/60R16", "245/40ZR19"],
+      "validatedTireSizes": {
+        "LS": ["205/65R16"],
+        "LT": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+        "RS": ["245/45R18"],
+        "2LT": ["245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "MISMATCH",
+      "notes": "205/60R16 not OEM - should be 205/65R16. ZR speed rating variant acceptable."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19", "245/40ZR19"],
+      "validatedTireSizes": {
+        "LS": ["205/65R16"],
+        "LT": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+        "RS": ["245/45R18"],
+        "2LT": ["245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs (ZR speed rating variant acceptable)"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "L": ["205/65R16"],
+        "LS": ["205/65R16"],
+        "RS": ["245/45R18"],
+        "LT": ["225/55R17", "245/45R18"],
+        "Premier": ["245/45R18", "245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "L": ["205/65R16"],
+        "LS": ["205/65R16"],
+        "RS": ["245/45R18"],
+        "LT": ["225/55R17", "245/45R18"],
+        "Premier": ["245/45R18", "245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "L": ["205/65R16"],
+        "LS": ["205/65R16"],
+        "RS": ["245/45R18"],
+        "LT": ["225/55R17", "245/45R18"],
+        "Premier": ["245/45R18", "245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "L": ["205/65R16"],
+        "LS": ["205/65R16"],
+        "LT": ["225/55R17", "245/45R18"],
+        "Premier": ["245/45R18", "245/40R19"],
+        "Hybrid": ["225/55R17", "245/45R18", "245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19", "245/40ZR19"],
+      "validatedTireSizes": {
+        "L": ["205/65R16"],
+        "LS": ["205/65R16"],
+        "LT": ["225/55R17", "245/45R18"],
+        "Premier": ["245/45R18", "245/40R19"],
+        "Hybrid": ["225/55R17", "245/45R18", "245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs (ZR speed rating variant acceptable)"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19", "245/40ZR19"],
+      "validatedTireSizes": {
+        "L": ["205/65R16"],
+        "LS": ["205/65R16"],
+        "LT": ["225/55R17", "245/45R18"],
+        "Premier": ["245/45R18", "245/40R19"],
+        "Hybrid": ["225/55R17", "245/45R18", "245/40R19"]
+      },
+      "allSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs (ZR speed rating variant acceptable)"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "235/50R18", "245/40ZR19"],
+      "validatedTireSizes": {
+        "LS": ["215/60R16"],
+        "LT": ["215/60R16", "225/55R17", "225/50R18"],
+        "LTZ": ["235/50R18", "245/40R19"]
+      },
+      "allSizes": ["215/60R16", "225/55R17", "225/50R18", "235/50R18", "245/40R19"],
+      "status": "MISMATCH",
+      "notes": "Missing 215/60R16 and 225/50R18. 245/45R18 not OEM for this year."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": {
+        "LS": ["215/60R16"],
+        "LT": ["215/60R16", "225/55R17", "225/50R18"],
+        "LTZ": ["235/50R18", "245/40R19"]
+      },
+      "allSizes": ["215/60R16", "225/55R17", "225/50R18", "235/50R18", "245/40R19"],
+      "status": "MISMATCH",
+      "notes": "Missing 215/60R16, 225/50R18, 235/50R18. 245/45R18 not OEM for this year."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "235/50R18", "245/40ZR19"],
+      "validatedTireSizes": {
+        "Eco": ["225/55R17"],
+        "LS": ["215/60R16"],
+        "LT": ["215/60R16", "225/55R17", "225/50R18"],
+        "LTZ": ["235/50R18", "245/40R19"]
+      },
+      "allSizes": ["215/60R16", "225/55R17", "225/50R18", "235/50R18", "245/40R19"],
+      "status": "MISMATCH",
+      "notes": "Missing 215/60R16, 225/50R18. 245/45R18 not OEM for this year."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["225/50R17", "225/45R18", "215/60R16", "225/50R18", "215/55R17"],
+      "validatedTireSizes": {
+        "LS": ["215/60R16"],
+        "LT": ["225/50R17"],
+        "LTZ": ["225/50R17", "225/45R18"]
+      },
+      "allSizes": ["215/60R16", "225/50R17", "225/45R18"],
+      "status": "MISMATCH",
+      "notes": "225/50R18 and 215/55R17 are not OEM for this year"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["225/50R17", "225/45R18"],
+      "validatedTireSizes": {
+        "LS": ["215/60R16"],
+        "LT": ["225/50R17"],
+        "LTZ": ["225/50R17", "225/45R18"]
+      },
+      "allSizes": ["215/60R16", "225/50R17", "225/45R18"],
+      "status": "MISMATCH",
+      "notes": "Missing 215/60R16 for LS trim"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["225/50R17", "225/45R18"],
+      "validatedTireSizes": {
+        "LS": ["215/60R16"],
+        "LT": ["225/50R17"],
+        "LTZ": ["225/50R17", "225/45R18"]
+      },
+      "allSizes": ["215/60R16", "225/50R17", "225/45R18"],
+      "status": "MISMATCH",
+      "notes": "Missing 215/60R16 for LS trim"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["225/50R17", "225/45R18"],
+      "validatedTireSizes": {
+        "LS": ["215/60R16"],
+        "LT": ["225/50R17"],
+        "LTZ": ["225/50R17", "225/45R18"],
+        "Hybrid": ["215/60R16"]
+      },
+      "allSizes": ["215/60R16", "225/50R17", "225/45R18"],
+      "status": "MISMATCH",
+      "notes": "Missing 215/60R16 for LS and Hybrid trims"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["225/50R17", "225/45R18"],
+      "validatedTireSizes": {
+        "Classic LS": ["205/65R15"],
+        "Classic LT": ["215/60R16"],
+        "LS": ["215/60R16"],
+        "LT": ["225/50R17"],
+        "LTZ": ["225/50R17"],
+        "Hybrid": ["215/60R16"]
+      },
+      "allSizes": ["205/65R15", "215/60R16", "225/50R17"],
+      "status": "MISMATCH",
+      "notes": "Missing 205/65R15 and 215/60R16. 225/45R18 was optional upgrade, not base OEM."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["215/60R16", "225/50R17"],
+      "validatedTireSizes": {
+        "LS": ["205/65R15"],
+        "LT": ["215/60R16"],
+        "LTZ": ["225/50R17"],
+        "Maxx LT": ["215/60R16"],
+        "Maxx LTZ": ["225/50R17"],
+        "Maxx SS": ["225/50R18"],
+        "SS": ["225/50R18"]
+      },
+      "allSizes": ["205/65R15", "215/60R16", "225/50R17", "225/50R18"],
+      "status": "MISMATCH",
+      "notes": "Missing 205/65R15 for LS and 225/50R18 for SS trims"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["215/60R16", "225/50R17"],
+      "validatedTireSizes": {
+        "LS": ["205/65R15"],
+        "LT": ["215/60R16"],
+        "LTZ": ["225/50R17"],
+        "Maxx LT": ["215/60R16"],
+        "Maxx LTZ": ["225/50R17"],
+        "Maxx SS": ["225/50R18"],
+        "SS": ["225/50R18"]
+      },
+      "allSizes": ["205/65R15", "215/60R16", "225/50R17", "225/50R18"],
+      "status": "MISMATCH",
+      "notes": "Missing 205/65R15 for LS and 225/50R18 for SS trims"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["215/60R16", "225/50R17"],
+      "validatedTireSizes": {
+        "Base": ["215/60R16"],
+        "LS": ["215/60R16"],
+        "LT": ["225/50R17"],
+        "Maxx LS": ["215/60R16"],
+        "Maxx LT": ["225/50R17"]
+      },
+      "allSizes": ["215/60R16", "225/50R17"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["215/60R16", "225/50R17"],
+      "validatedTireSizes": {
+        "Base": ["215/60R16"],
+        "LS": ["215/60R16"],
+        "LT": ["225/50R17"],
+        "Maxx LS": ["215/60R16"],
+        "Maxx LT": ["225/50R17"]
+      },
+      "allSizes": ["215/60R16", "225/50R17"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/70R15", "215/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["215/60R15"],
+        "LS": ["215/60R15"]
+      },
+      "allSizes": ["215/60R15"],
+      "status": "MISMATCH",
+      "notes": "Incorrect sizes - should be 215/60R15 (15\" wheels), not 205/70R15 or 215/60R16"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/70R15", "215/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["215/60R15"],
+        "LS": ["215/60R15"]
+      },
+      "allSizes": ["215/60R15"],
+      "status": "MISMATCH",
+      "notes": "Incorrect sizes - should be 215/60R15 (15\" wheels), not 205/70R15 or 215/60R16"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/70R15", "215/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["215/60R15"],
+        "LS": ["215/60R15"]
+      },
+      "allSizes": ["215/60R15"],
+      "status": "MISMATCH",
+      "notes": "Incorrect sizes - should be 215/60R15 (15\" wheels), not 205/70R15 or 215/60R16"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "malibu",
+      "currentTireSizes": ["205/70R15", "215/60R16"],
+      "validatedTireSizes": {
+        "Base Model": ["215/60R15"],
+        "LS": ["215/60R15"]
+      },
+      "allSizes": ["215/60R15"],
+      "status": "MISMATCH",
+      "notes": "Incorrect sizes - should be 215/60R15 (15\" wheels), not 205/70R15 or 215/60R16"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "malibu-limited",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS": ["215/60R16"],
+        "LT": ["215/60R16", "225/55R17"],
+        "LTZ": ["225/50R18"]
+      },
+      "allSizes": ["215/60R16", "225/55R17", "225/50R18"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes - data needs to be populated (continuation of 2013-2015 Malibu)"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "malibu-maxx",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LT": ["215/60R16"],
+        "LTZ": ["225/50R17"],
+        "SS": ["225/50R18"]
+      },
+      "allSizes": ["215/60R16", "225/50R17", "225/50R18"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes - data needs to be populated"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "malibu-maxx",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LT": ["215/60R16"],
+        "LTZ": ["225/50R17"],
+        "SS": ["225/50R18"]
+      },
+      "allSizes": ["215/60R16", "225/50R17", "225/50R18"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes - data needs to be populated"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "malibu-maxx",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS": ["215/60R16"],
+        "LT": ["225/50R17"]
+      },
+      "allSizes": ["215/60R16", "225/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes - data needs to be populated"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "malibu-maxx",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LS": ["215/60R16"],
+        "LT": ["225/50R17"]
+      },
+      "allSizes": ["215/60R16", "225/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes - data needs to be populated"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "metro",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["155/80R13"],
+        "LSi": ["155/80R13"]
+      },
+      "allSizes": ["155/80R13"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes - data needs to be populated"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "metro",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base Model": ["155/80R13"],
+        "LSi": ["155/80R13"]
+      },
+      "allSizes": ["155/80R13"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes - data needs to be populated"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "currentTireSizes": ["P225/60R16", "P225/55R17", "P235/50R18"],
+      "validatedTireSizes": {
+        "LS": ["225/60R16"],
+        "LT": ["225/55R17"],
+        "SS": ["235/50R18"]
+      },
+      "allSizes": ["225/60R16", "225/55R17", "235/50R18"],
+      "status": "VERIFIED",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "move-n300",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/70R14", "175/70R14"]
+      },
+      "allSizes": ["165/70R14", "175/70R14"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Latin America market commercial van"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "move-n300",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/70R14", "175/70R14"]
+      },
+      "allSizes": ["165/70R14", "175/70R14"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Latin America market commercial van"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "move-n300",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/70R14", "175/70R14"]
+      },
+      "allSizes": ["165/70R14", "175/70R14"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Latin America market commercial van"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "move-n300",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/70R14", "175/70R14"]
+      },
+      "allSizes": ["165/70R14", "175/70R14"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Latin America market commercial van"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "move-n300",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["165/70R14", "175/70R14"]
+      },
+      "allSizes": ["165/70R14", "175/70R14"],
+      "status": "INTERNATIONAL_MARKET",
+      "notes": "Latin America market commercial van"
+    }
+  ],
+  "summary": {
+    "verified": 36,
+    "mismatch": 18,
+    "missingData": 12,
+    "internationalMarket": 9,
+    "total": 75
+  }
+}

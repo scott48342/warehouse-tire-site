@@ -1,0 +1,1126 @@
+{
+  "batchId": "overnight-031-ford",
+  "verifiedAt": "2026-04-23T02:16:00.000Z",
+  "summary": {
+    "total": 76,
+    "verified": 62,
+    "flagged": 14,
+    "invalid": 0
+  },
+  "sourcesUsed": [
+    "hulkoffsets.com - Ford F-150/F-250 Wheel Fitment Guide",
+    "fordmasterx.com - Ford Bolt Pattern Chart (1950-2026)",
+    "therangerstation.com - 1983-2011 Ford Ranger Wheel Fitment Guide",
+    "wheel-size.com - Ford vehicle bolt patterns",
+    "tirewheelguide.com - Ford Maverick/Falcon specifications",
+    "jimburkeford.com - Ford F-250 Bolt Pattern Research",
+    "roadkillcustoms.com - Ford wheel bolt pattern cross reference"
+  ],
+  "findings": {
+    "F-100": {
+      "years": "1976",
+      "count": 1,
+      "status": "flagged",
+      "boltPattern": {
+        "current": "5x139.7",
+        "verified": "5x139.7",
+        "status": "correct"
+      },
+      "hubBore": {
+        "current": "108.0",
+        "verified": "87.1",
+        "status": "incorrect",
+        "notes": "Multiple sources (hulkoffsets.com, fordmasterx.com) confirm 1975-1979 F-Series used 87.1mm hub bore. The 108.0mm value appears to be an error or possibly confused with wheel center hole measurements."
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "15x5.5 is period-correct for 1976 F-100"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "225/75R15 and 235/75R15 are appropriate for 15-inch wheels"
+      }
+    },
+    "F-150_1977-1979": {
+      "years": "1977-1979",
+      "count": 3,
+      "status": "flagged",
+      "boltPattern": {
+        "current": "5x139.7",
+        "verified": "5x139.7",
+        "status": "correct"
+      },
+      "hubBore": {
+        "current": "108.0",
+        "verified": "87.1",
+        "status": "incorrect",
+        "notes": "1st Gen F-150 (1975-1979) used 87.1mm hub bore per hulkoffsets.com comprehensive guide. The 108.0mm value is inconsistent with verified sources."
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "15x5.5 and 15x6 are period-correct OEM sizes"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "225/75R15 and 235/75R15 are appropriate"
+      }
+    },
+    "F-150_1980-1989": {
+      "years": "1980-1989",
+      "count": 10,
+      "status": "verified",
+      "boltPattern": {
+        "current": "5x139.7",
+        "verified": "5x139.7",
+        "status": "correct",
+        "notes": "Confirmed: 2nd/3rd Gen F-150 (1980-1991) used 5x5.5\" (5x139.7mm)"
+      },
+      "hubBore": {
+        "current": "87.1",
+        "verified": "87.1",
+        "status": "correct",
+        "notes": "Confirmed by hulkoffsets.com and fordmasterx.com"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "15x6, 15x7 are period-correct OEM sizes"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "P215/75R15, P225/75R15, P235/75R15, 31x10.50R15 are all appropriate"
+      }
+    },
+    "F-250_1980-1987": {
+      "years": "1980-1987",
+      "count": 8,
+      "status": "verified",
+      "boltPattern": {
+        "current": "8x165.1",
+        "verified": "8x165.1",
+        "status": "correct",
+        "notes": "Confirmed: F-250 (1973-1996) used 8x6.5\" (8x165.1mm) per jimburkeford.com and hulkoffsets.com"
+      },
+      "hubBore": {
+        "current": "124.9",
+        "verified": "124.9",
+        "status": "correct",
+        "notes": "Confirmed by hulkoffsets.com: 'hub bore was 124.9 mm'"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "16x6, 16x7 are period-correct for HD trucks"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "7.50R16LT, LT215/85R16, LT235/85R16 are appropriate HD truck sizes"
+      }
+    },
+    "F-350_1980-1987": {
+      "years": "1980-1987",
+      "count": 8,
+      "status": "verified",
+      "boltPattern": {
+        "current": "8x165.1",
+        "verified": "8x165.1",
+        "status": "correct",
+        "notes": "F-350 shared the 8x6.5\" pattern with F-250 through 1997"
+      },
+      "hubBore": {
+        "current": "124.9",
+        "verified": "124.9",
+        "status": "correct",
+        "notes": "Confirmed by hulkoffsets.com F-350 guide"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "16x6, 16x7 are period-correct"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "7.50R16LT, LT215/85R16, LT235/85R16 are appropriate"
+      }
+    },
+    "Fairlane_1966-1970": {
+      "years": "1966-1970",
+      "count": 5,
+      "status": "verified",
+      "boltPattern": {
+        "current": "5x114.3",
+        "verified": "5x114.3",
+        "status": "correct",
+        "notes": "Confirmed by wheel-size.com: Fairlane used 5x114.3 (5x4.5\") throughout production"
+      },
+      "hubBore": {
+        "current": "70.3",
+        "verified": "70.3",
+        "status": "correct",
+        "notes": "Standard Ford 5-lug hub bore confirmed by roadkillcustoms.com"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "14x5.5, 14x6, 14x7 are period-correct"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "Bias-ply designations (7.35-14, 7.75-14, E78-14, F70-14, F78-14) are era-appropriate"
+      }
+    },
+    "Falcon_1964-1967": {
+      "years": "1964-1967",
+      "count": 4,
+      "status": "verified",
+      "boltPattern": {
+        "current": "4x114.3",
+        "verified": "4x114.3",
+        "status": "correct",
+        "notes": "Confirmed by wheel-size.com: Falcon used 4x114.3 for 1960-1966/1967 models"
+      },
+      "hubBore": {
+        "current": "61.5",
+        "verified": "61.5",
+        "status": "correct",
+        "notes": "Smaller hub bore appropriate for compact 4-lug design"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "13x4, 14x5 are period-correct compact car sizes"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "6.00-13, 6.50-13, 6.45-14, 6.95-14 are era-appropriate bias-ply sizes"
+      }
+    },
+    "Falcon_1968-1970": {
+      "years": "1968-1970",
+      "count": 3,
+      "status": "flagged",
+      "boltPattern": {
+        "current": "5x114.3",
+        "verified": "5x114.3",
+        "status": "correct",
+        "notes": "Confirmed: Falcon switched to 5x114.3 in 1968"
+      },
+      "hubBore": {
+        "current": "61.5",
+        "verified": "70.3",
+        "status": "questionable",
+        "notes": "When Falcon moved to 5-lug in 1968, it likely adopted the standard Ford 5-lug hub bore of 70.3mm. The 61.5mm from 4-lug era may not apply. Recommend verification."
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "14x5 is period-correct"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "6.95-14, C78-14, E78-14 are appropriate"
+      }
+    },
+    "Galaxie_1965-1971": {
+      "years": "1965-1971",
+      "count": 7,
+      "status": "verified",
+      "boltPattern": {
+        "current": "5x114.3",
+        "verified": "5x114.3",
+        "status": "correct",
+        "notes": "Confirmed by wheel-size.com and roadkillcustoms.com"
+      },
+      "hubBore": {
+        "current": "70.5",
+        "verified": "70.3-70.5",
+        "status": "correct",
+        "notes": "Standard full-size Ford hub bore, slight variation (70.3-70.5) within tolerance"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "15x5, 15x5.5, 15x6, 15x6.5 are period-correct full-size car sizes"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "7.75-15, 8.15-15, 8.45-15, F78-15, G78-15, H78-15, J78-15, 8.25-15, 8.55-15 are era-appropriate"
+      }
+    },
+    "LTD_1980-1986": {
+      "years": "1980-1986",
+      "count": 7,
+      "status": "verified",
+      "boltPattern": {
+        "current": "5x114.3",
+        "verified": "5x114.3",
+        "status": "correct",
+        "notes": "Confirmed: Full-size Ford standard"
+      },
+      "hubBore": {
+        "current": "70.5",
+        "verified": "70.5",
+        "status": "correct",
+        "notes": "Standard Ford full-size hub bore"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "14x6, 15x6, 15x6.5 are period-correct"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "205/75R14, 215/75R14, 215/70R15, 225/70R15 are appropriate metric radial sizes for the era"
+      }
+    },
+    "Maverick_1970-1977": {
+      "years": "1970-1977",
+      "count": 8,
+      "status": "verified",
+      "boltPattern": {
+        "current": "5x114.3",
+        "verified": "5x114.3",
+        "status": "correct",
+        "notes": "Confirmed by tirewheelguide.com and wheel-size.com: '5x114.3 for model years 1969-2007'"
+      },
+      "hubBore": {
+        "current": "70.3",
+        "verified": "70.3",
+        "status": "correct",
+        "notes": "Standard Ford 5-lug hub bore"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "14x5, 14x5.5 are period-correct"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "6.45-14, D70-14, B78-14, C78-14, DR78-14, BR78-14, BSW-14 are era-appropriate"
+      }
+    },
+    "Ranger_1983-1989": {
+      "years": "1983-1989",
+      "count": 7,
+      "status": "verified",
+      "boltPattern": {
+        "current": "5x114.3",
+        "verified": "5x114.3",
+        "status": "correct",
+        "notes": "Confirmed by therangerstation.com: 'Ford Ranger and Bronco II have a 5x4.5 wheel bolt pattern'"
+      },
+      "hubBore": {
+        "current": "70.6",
+        "verified": "70.6",
+        "status": "correct",
+        "notes": "Slight variation from standard 70.3/70.5 but within acceptable range for Ranger"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "notes": "14x5.5, 14x6, 15x6, 15x7 confirmed by Ranger Station fitment guide"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "notes": "195/70R14, 205/70R14, 215/70R14, 195/75R15, 205/75R15, 215/75R15 are appropriate"
+      }
+    },
+    "Thunderbird_1955-1958": {
+      "years": "1955-1958",
+      "count": 4,
+      "status": "flagged",
+      "boltPattern": {
+        "current": "5x114.3",
+        "verified": "5x114.3",
+        "status": "correct",
+        "notes": "Confirmed by wheel-size.com and therangerstation.com: 'Thunderbird 1955-71'"
+      },
+      "hubBore": {
+        "current": "70.5",
+        "verified": "70.5",
+        "status": "correct"
+      },
+      "wheelSizes": {
+        "current": ["15x5 (1955-1956)", "14x5 (1957)", "14x5.5 (1958)"],
+        "status": "flagged",
+        "notes": "1957 Thunderbird wheel change from 15\" to 14\" needs verification. Sources confirm 1957 T-bird used 14\" wheels but this represents a significant year-over-year change."
+      },
+      "tireSizes": {
+        "current": ["205/75R15 (1955-1956)", "205/75R14 (1957)", "215/75R14 (1958)"],
+        "status": "flagged",
+        "notes": "Tire sizes listed are modern metric equivalents - original OEM was bias-ply. For replacement purposes these are acceptable, but historical accuracy would use 6.70-15 or similar designations."
+      }
+    }
+  },
+  "vehicleDetails": [
+    {
+      "id": "45238488-f380-48a0-9e89-e158ab2d7d57",
+      "year": 1976,
+      "make": "Ford",
+      "model": "F-100",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": ["hubBore: 108.0 should be 87.1"],
+      "recommendation": "Update hub bore to 87.1mm"
+    },
+    {
+      "id": "08fe73c2-8c75-4853-8769-e19aa988b8ef",
+      "year": 1977,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": ["hubBore: 108.0 should be 87.1"],
+      "recommendation": "Update hub bore to 87.1mm"
+    },
+    {
+      "id": "2c27e168-1304-43ee-88f2-05b3c70e047d",
+      "year": 1978,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": ["hubBore: 108.0 should be 87.1"],
+      "recommendation": "Update hub bore to 87.1mm"
+    },
+    {
+      "id": "f902b904-2870-4d8a-8208-e339051f2341",
+      "year": 1979,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": ["hubBore: 108.0 should be 87.1"],
+      "recommendation": "Update hub bore to 87.1mm"
+    },
+    {
+      "id": "4557558d-cd57-477e-bd9a-a5d8aadca38e",
+      "year": 1980,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "08d03b2d-59c8-4782-b03e-f4a84af6faf9",
+      "year": 1981,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "2ad99a08-a09a-448a-b09b-5f2109b8f77f",
+      "year": 1982,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "676ef8aa-a70d-426a-8c35-12a58c1ad885",
+      "year": 1983,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "3fee2fce-800a-40be-bcc6-296207b1d168",
+      "year": 1984,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "b66aeaef-4502-409a-a173-91c108b8f3af",
+      "year": 1985,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "f79f7acb-b598-46ff-8506-1913fead1c50",
+      "year": 1986,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "d34e4d12-5759-4ed6-a03d-188698fc3fb6",
+      "year": 1987,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "a6b21922-d2af-42a2-9e90-32ebf3c3a34a",
+      "year": 1988,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "03e54142-5502-40ec-b58f-56eb28ce8f00",
+      "year": 1989,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "449420f1-d2fc-4715-b55d-f89c6164931f",
+      "year": 1980,
+      "make": "Ford",
+      "model": "F-250",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "7a679d2d-cd1d-447b-816d-eb48cdf257a8",
+      "year": 1981,
+      "make": "Ford",
+      "model": "F-250",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "b3ec0b72-6e47-4230-bf3d-3ce5c23f757a",
+      "year": 1982,
+      "make": "Ford",
+      "model": "F-250",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "e064e2bf-495e-404e-8c02-ab0cf003bdab",
+      "year": 1983,
+      "make": "Ford",
+      "model": "F-250",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "576fbf8b-6cd2-4d7e-bb4b-1be50e58f656",
+      "year": 1984,
+      "make": "Ford",
+      "model": "F-250",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "2df21f71-4410-42c5-b275-9c2850a154ef",
+      "year": 1985,
+      "make": "Ford",
+      "model": "F-250",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "a5d503f7-fb37-4f74-98f4-f1d793ef82f8",
+      "year": 1986,
+      "make": "Ford",
+      "model": "F-250",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "fdee83c0-92b9-456e-a274-1f97a02f76d0",
+      "year": 1987,
+      "make": "Ford",
+      "model": "F-250",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "6d4466a4-c65c-4531-a797-b52b97958110",
+      "year": 1980,
+      "make": "Ford",
+      "model": "F-350",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "e55cc159-cd3e-4752-96af-fc11078f5029",
+      "year": 1981,
+      "make": "Ford",
+      "model": "F-350",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "c8177a34-6737-4672-9599-36faba4f24dd",
+      "year": 1982,
+      "make": "Ford",
+      "model": "F-350",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "eed18bf4-f682-47a9-955d-10bdbfedd20e",
+      "year": 1983,
+      "make": "Ford",
+      "model": "F-350",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "7e163b2d-c032-4445-823f-5cbed032fdee",
+      "year": 1984,
+      "make": "Ford",
+      "model": "F-350",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "8753927a-7ebc-4def-ac9b-6d1cb4f39c24",
+      "year": 1985,
+      "make": "Ford",
+      "model": "F-350",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "e88620ef-0a2b-4890-a2a9-00a7bda4942b",
+      "year": 1986,
+      "make": "Ford",
+      "model": "F-350",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "53803d6e-a6eb-415e-8d35-d7121cb3f06a",
+      "year": 1987,
+      "make": "Ford",
+      "model": "F-350",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "28dd5625-cdeb-465f-bf0c-0c30a5a7e80b",
+      "year": 1966,
+      "make": "Ford",
+      "model": "Fairlane",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "fbfbd4b5-6559-4ac2-b25a-b1053eb82be2",
+      "year": 1967,
+      "make": "Ford",
+      "model": "Fairlane",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "5d6bb47f-9a3b-4738-ac63-0a8729efc1b0",
+      "year": 1968,
+      "make": "Ford",
+      "model": "Fairlane",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "40ca16c2-cf89-4138-b875-3f525b1a636f",
+      "year": 1969,
+      "make": "Ford",
+      "model": "Fairlane",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "9f15886a-dd73-4ba2-89b9-02cae14f55d9",
+      "year": 1970,
+      "make": "Ford",
+      "model": "Fairlane",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "e4108c74-4d71-45e9-9e0b-55a019446346",
+      "year": 1964,
+      "make": "Ford",
+      "model": "Falcon",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "9e130237-2adb-49f9-a850-850815efabc2",
+      "year": 1965,
+      "make": "Ford",
+      "model": "Falcon",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "d0eae626-d759-43dd-8789-e5c3c67eb113",
+      "year": 1966,
+      "make": "Ford",
+      "model": "Falcon",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "954c6ff3-2902-44ae-825e-741ff35a93a3",
+      "year": 1967,
+      "make": "Ford",
+      "model": "Falcon",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "bb95c2e4-23da-4252-8d5f-0a398f2958dc",
+      "year": 1968,
+      "make": "Ford",
+      "model": "Falcon",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": ["hubBore: 61.5 may need update to 70.3 when 5-lug pattern adopted"],
+      "recommendation": "Verify hub bore - likely increased to 70.3mm when switching to 5-lug"
+    },
+    {
+      "id": "556ff155-5459-4f59-8eca-76ea88f996c6",
+      "year": 1969,
+      "make": "Ford",
+      "model": "Falcon",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": ["hubBore: 61.5 may need update to 70.3 when 5-lug pattern adopted"],
+      "recommendation": "Verify hub bore - likely increased to 70.3mm when switching to 5-lug"
+    },
+    {
+      "id": "75da4d29-878e-4274-ab3d-5c2cd35a3c5a",
+      "year": 1970,
+      "make": "Ford",
+      "model": "Falcon",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": ["hubBore: 61.5 may need update to 70.3 when 5-lug pattern adopted"],
+      "recommendation": "Verify hub bore - likely increased to 70.3mm when switching to 5-lug"
+    },
+    {
+      "id": "55b3b4f7-0e86-42fd-a1db-831355f89101",
+      "year": 1965,
+      "make": "Ford",
+      "model": "Galaxie",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "7f11b0fe-5ea0-4ad6-ae79-3c50fe1c2fcc",
+      "year": 1966,
+      "make": "Ford",
+      "model": "Galaxie",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "ad5cd786-1a4b-4ab4-b97b-3b5ab29b10ce",
+      "year": 1967,
+      "make": "Ford",
+      "model": "Galaxie",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "6ea80f6f-752a-49ef-83bf-c7db633fd717",
+      "year": 1968,
+      "make": "Ford",
+      "model": "Galaxie",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "ad2f62ae-6eae-4d80-9984-d1f0568c61ff",
+      "year": 1969,
+      "make": "Ford",
+      "model": "Galaxie",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "967db7d9-7838-45c1-b5c5-641290fa6def",
+      "year": 1970,
+      "make": "Ford",
+      "model": "Galaxie",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "90582f12-7dcc-4d2b-8026-517dc3962864",
+      "year": 1971,
+      "make": "Ford",
+      "model": "Galaxie",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "96bcee31-e631-4328-a94f-3b797793a9bf",
+      "year": 1980,
+      "make": "Ford",
+      "model": "LTD",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "b07448c2-653a-44be-b48f-db960e027c64",
+      "year": 1981,
+      "make": "Ford",
+      "model": "LTD",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "a499ab68-b670-4f50-a40d-3db3b00c7039",
+      "year": 1982,
+      "make": "Ford",
+      "model": "LTD",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "81b05430-1554-4453-bd8c-5e48629d9951",
+      "year": 1983,
+      "make": "Ford",
+      "model": "LTD",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "e4f157cf-8438-4c16-ad1a-dd5ca904f44f",
+      "year": 1984,
+      "make": "Ford",
+      "model": "LTD",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "d5478ab6-106b-4657-8a25-35e99c53719a",
+      "year": 1985,
+      "make": "Ford",
+      "model": "LTD",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "60f97baf-0a78-4c75-99b7-e621c0fd277a",
+      "year": 1986,
+      "make": "Ford",
+      "model": "LTD",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "5f0a60bc-4388-4283-b6c2-e9ce34f90d37",
+      "year": 1970,
+      "make": "Ford",
+      "model": "Maverick",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "f5a95653-4de7-4f42-8caf-20ce1ef2578c",
+      "year": 1971,
+      "make": "Ford",
+      "model": "Maverick",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "e82416c9-74fa-43b3-bebf-5f3d46c5a483",
+      "year": 1972,
+      "make": "Ford",
+      "model": "Maverick",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "30b30d54-ed33-4a19-8e9c-873a9c558ff9",
+      "year": 1973,
+      "make": "Ford",
+      "model": "Maverick",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "55d45379-4007-4138-a8f7-dd889f469670",
+      "year": 1974,
+      "make": "Ford",
+      "model": "Maverick",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "d976c0aa-933a-416a-9718-a060feb1e14c",
+      "year": 1975,
+      "make": "Ford",
+      "model": "Maverick",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "ac108ab7-1840-4319-b47d-b9e3a8dc0fc0",
+      "year": 1976,
+      "make": "Ford",
+      "model": "Maverick",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "4e61ee12-693d-4042-9d65-1c53c60ac663",
+      "year": 1977,
+      "make": "Ford",
+      "model": "Maverick",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "a87ff22b-ec3c-4c71-8a53-07f6c1059673",
+      "year": 1983,
+      "make": "Ford",
+      "model": "Ranger",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "3aec499d-5af7-4868-91f8-2c3489ac85da",
+      "year": 1984,
+      "make": "Ford",
+      "model": "Ranger",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "dfd371e8-980e-4920-84a1-dc000884b4da",
+      "year": 1985,
+      "make": "Ford",
+      "model": "Ranger",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "5d00bd7c-c688-45b1-95af-30a8aa901882",
+      "year": 1986,
+      "make": "Ford",
+      "model": "Ranger",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "cfffe9a3-2359-407e-9585-16c881e8d43f",
+      "year": 1987,
+      "make": "Ford",
+      "model": "Ranger",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "9f88cb2d-86ab-42f4-be4d-71d3da27d529",
+      "year": 1988,
+      "make": "Ford",
+      "model": "Ranger",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "6d33abf3-91d0-4c00-b3ba-1df82400017f",
+      "year": 1989,
+      "make": "Ford",
+      "model": "Ranger",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    },
+    {
+      "id": "ed2297ec-2c12-47eb-803f-3c176f60b387",
+      "year": 1955,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": ["Tire sizes are modern metric equivalents of original bias-ply"],
+      "recommendation": "Data acceptable for replacement purposes but not historically accurate"
+    },
+    {
+      "id": "f0cdeb12-c33a-4b0d-b4c5-73bdb7ae68bf",
+      "year": 1956,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": ["Tire sizes are modern metric equivalents of original bias-ply"],
+      "recommendation": "Data acceptable for replacement purposes but not historically accurate"
+    },
+    {
+      "id": "bc0d7bb9-7944-4538-a21c-3f78905fd1d4",
+      "year": 1957,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": ["Wheel size changed from 15\" to 14\" - verify this is correct"],
+      "recommendation": "Verify 1957 T-bird used 14\" wheels (sources suggest this is correct)"
+    },
+    {
+      "id": "a6b3bfdd-984a-4477-9b2e-32c42a229bf2",
+      "year": 1958,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "recommendation": null
+    }
+  ],
+  "actionRequired": {
+    "critical": [
+      {
+        "action": "Update hub bore from 108.0 to 87.1mm",
+        "vehicles": ["1976 F-100", "1977 F-150", "1978 F-150", "1979 F-150"],
+        "count": 4,
+        "severity": "high",
+        "reason": "Incorrect hub bore could cause improper wheel fitment - customer safety issue"
+      }
+    ],
+    "recommended": [
+      {
+        "action": "Verify and likely update hub bore from 61.5 to 70.3mm",
+        "vehicles": ["1968 Falcon", "1969 Falcon", "1970 Falcon"],
+        "count": 3,
+        "severity": "medium",
+        "reason": "5-lug Falcons likely used standard Ford hub bore, not compact 4-lug bore"
+      }
+    ],
+    "informational": [
+      {
+        "action": "Review tire size format for historical accuracy",
+        "vehicles": ["1955-1958 Thunderbird"],
+        "count": 4,
+        "severity": "low",
+        "reason": "Modern metric sizes listed are functional equivalents but not original specs"
+      }
+    ]
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "batchId": 24,
+  "researchedAt": "2026-04-21T23:51:00Z",
+  "source": "tiresize.com",
+  "vehicles": [
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "tireSizes": {
+        "front": "255/40R19",
+        "rear": "285/35R19"
+      },
+      "wheelDiameters": {
+        "front": 19,
+        "rear": 19
+      },
+      "isStaggered": true,
+      "notes": "Staggered setup - same wheel diameter, different tire widths"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "tireSizes": {
+        "front": "255/40R19",
+        "rear": "285/35R19"
+      },
+      "wheelDiameters": {
+        "front": 19,
+        "rear": 19
+      },
+      "isStaggered": true,
+      "notes": "Staggered setup - same wheel diameter, different tire widths"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "tireSizes": {
+        "front": "265/40R19",
+        "rear": "285/35R20"
+      },
+      "wheelDiameters": {
+        "front": 19,
+        "rear": 20
+      },
+      "isStaggered": true,
+      "notes": "Staggered setup - DIFFERENT wheel diameters (19F/20R)"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "tireSizes": {
+        "front": "265/40R19",
+        "rear": "285/35R20"
+      },
+      "wheelDiameters": {
+        "front": 19,
+        "rear": 20
+      },
+      "isStaggered": true,
+      "notes": "Staggered setup - DIFFERENT wheel diameters (19F/20R)"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "sportka",
+      "notUS": true,
+      "notes": "European market only - never sold in USA"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "sportka",
+      "notUS": true,
+      "notes": "European market only - never sold in USA"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "sportka",
+      "notUS": true,
+      "notes": "European market only - never sold in USA"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "sportka",
+      "notUS": true,
+      "notes": "European market only - never sold in USA"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "sportka",
+      "notUS": true,
+      "notes": "European market only - never sold in USA"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "sportka",
+      "notUS": true,
+      "notes": "European market only - never sold in USA"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "streetka",
+      "notUS": true,
+      "notes": "European market only - never sold in USA"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "streetka",
+      "notUS": true,
+      "notes": "European market only - never sold in USA"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "streetka",
+      "notUS": true,
+      "notes": "European market only - never sold in USA"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "streetka",
+      "notUS": true,
+      "notes": "European market only - never sold in USA"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "taurus-sho",
+      "tireSizes": ["255/45R19", "245/45R20"],
+      "wheelDiameters": [19, 20],
+      "isStaggered": false,
+      "notes": "Two OEM size options available"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "taurus-sho",
+      "tireSizes": ["255/45R19", "245/45R20"],
+      "wheelDiameters": [19, 20],
+      "isStaggered": false,
+      "notes": "Two OEM size options available"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "taurus-sho",
+      "tireSizes": ["255/45R19", "245/45R20"],
+      "wheelDiameters": [19, 20],
+      "isStaggered": false,
+      "notes": "Two OEM size options available"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "taurus-sho",
+      "tireSizes": ["255/45R19", "245/45R20"],
+      "wheelDiameters": [19, 20],
+      "isStaggered": false,
+      "notes": "Two OEM size options available"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "taurus-sho",
+      "tireSizes": ["255/45R19", "245/45R20"],
+      "wheelDiameters": [19, 20],
+      "isStaggered": false,
+      "notes": "Two OEM size options available"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "taurus-sho",
+      "tireSizes": ["245/45R20"],
+      "wheelDiameters": [20],
+      "isStaggered": false,
+      "notes": "20-inch wheels only for 2015+"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "taurus-sho",
+      "tireSizes": ["245/45R20"],
+      "wheelDiameters": [20],
+      "isStaggered": false,
+      "notes": "20-inch wheels only for 2015+"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "taurus-sho",
+      "tireSizes": ["245/45R20"],
+      "wheelDiameters": [20],
+      "isStaggered": false,
+      "notes": "20-inch wheels only for 2015+"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "taurus-sho",
+      "tireSizes": ["245/45R20"],
+      "wheelDiameters": [20],
+      "isStaggered": false,
+      "notes": "20-inch wheels only for 2015+"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "taurus-sho",
+      "tireSizes": ["245/45R20"],
+      "wheelDiameters": [20],
+      "isStaggered": false,
+      "notes": "20-inch wheels only for 2015+ (final year)"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "taurus-x",
+      "tireSizes": ["215/65R17", "225/60R18"],
+      "wheelDiameters": [17, 18],
+      "isStaggered": false,
+      "notes": "SEL trim: 215/65R17; Eddie Bauer/Limited: 225/60R18"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "taurus-x",
+      "tireSizes": ["215/65R17", "225/60R18"],
+      "wheelDiameters": [17, 18],
+      "isStaggered": false,
+      "notes": "SEL trim: 215/65R17; Eddie Bauer/Limited: 225/60R18 (final year)"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "thunderbird",
+      "tireSizes": ["235/50R17"],
+      "wheelDiameters": [17],
+      "isStaggered": false,
+      "notes": "Retro 11th generation Thunderbird"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "thunderbird",
+      "tireSizes": ["235/50R17"],
+      "wheelDiameters": [17],
+      "isStaggered": false,
+      "notes": "Retro 11th generation Thunderbird"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "thunderbird",
+      "tireSizes": ["235/50R17"],
+      "wheelDiameters": [17],
+      "isStaggered": false,
+      "notes": "Retro 11th generation Thunderbird"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "thunderbird",
+      "tireSizes": ["235/50R17"],
+      "wheelDiameters": [17],
+      "isStaggered": false,
+      "notes": "Retro 11th generation Thunderbird (final year)"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "transit",
+      "notUS": true,
+      "notes": "Pre-2015 Transit was European market only - US got Transit starting 2015"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": {
+        "connectVan": "215/55R16",
+        "connectWagon": ["215/55R16", "215/50R17"],
+        "vanSingleRearWheel": "235/65R16",
+        "vanDualRearWheel": "195/75R16",
+        "wagonSingleRearWheel": "235/65R16",
+        "wagonDualRearWheel": "195/75R16"
+      },
+      "wheelDiameters": [16, 17],
+      "isStaggered": false,
+      "notes": "First US market year - multiple configurations"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": {
+        "connectVan": "215/55R16",
+        "connectWagon": ["215/55R16", "215/50R17"],
+        "vanSingleRearWheel": "235/65R16",
+        "vanDualRearWheel": "195/75R16",
+        "wagonSingleRearWheel": "235/65R16",
+        "wagonDualRearWheel": "195/75R16"
+      },
+      "wheelDiameters": [16, 17],
+      "isStaggered": false,
+      "notes": "US market - multiple configurations"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": {
+        "connectVan": "215/55R16",
+        "connectWagon": ["215/55R16", "215/50R17"],
+        "vanSingleRearWheel": "235/65R16",
+        "vanDualRearWheel": "195/75R16",
+        "wagonSingleRearWheel": "235/65R16",
+        "wagonDualRearWheel": "195/75R16"
+      },
+      "wheelDiameters": [16, 17],
+      "isStaggered": false,
+      "notes": "US market - multiple configurations"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": {
+        "connectVan": "215/55R16",
+        "connectWagon": ["215/55R16", "215/50R17"],
+        "vanSingleRearWheel": "235/65R16",
+        "vanDualRearWheel": "195/75R16",
+        "wagonSingleRearWheel": "235/65R16",
+        "wagonDualRearWheel": "195/75R16"
+      },
+      "wheelDiameters": [16, 17],
+      "isStaggered": false,
+      "notes": "US market - multiple configurations"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "transit",
+      "tireSizes": {
+        "connectVan": "215/55R16",
+        "connectWagon": ["215/55R16", "215/50R17"],
+        "vanSingleRearWheel": "235/65R16",
+        "vanDualRearWheel": "195/75R16",
+        "wagonSingleRearWheel": "235/65R16",
+        "wagonDualRearWheel": "195/75R16"
+      },
+      "wheelDiameters": [16, 17],
+      "isStaggered": false,
+      "notes": "US market - multiple configurations"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "usMarket": 24,
+    "notUS": 26,
+    "staggeredSetups": 4,
+    "modelsResearched": [
+      "Mustang Shelby GT500 (2011-2014) - staggered performance tires",
+      "Taurus SHO (2010-2019) - high-performance sedan",
+      "Taurus X (2008-2009) - crossover SUV",
+      "Thunderbird (2002-2005) - retro roadster",
+      "Transit (2015-2019) - commercial van"
+    ],
+    "notUSModels": [
+      "SportKa (2003-2008) - European market only",
+      "StreetKa (2003-2006) - European market only", 
+      "Transit (2000-2014) - European market only"
+    ]
+  }
+}

@@ -1,0 +1,1318 @@
+{
+  "batchId": "90s-batch-10",
+  "completedAt": "2026-04-22T12:35:00.000Z",
+  "results": [
+    {
+      "year": 1996,
+      "make": "GMC",
+      "model": "Sonoma",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmc-wheels.com", "bbwheelsonline.com", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Same platform as Chevy S-10. 2WD and 4WD share bolt pattern."
+    },
+    {
+      "year": 1997,
+      "make": "GMC",
+      "model": "Sonoma",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmc-wheels.com", "bbwheelsonline.com", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Same platform as Chevy S-10. 2WD and 4WD share bolt pattern."
+    },
+    {
+      "year": 1998,
+      "make": "GMC",
+      "model": "Sonoma",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmc-wheels.com", "bbwheelsonline.com", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "16\" wheels optional on higher trims."
+    },
+    {
+      "year": 1999,
+      "make": "GMC",
+      "model": "Sonoma",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 },
+          { "diameter": 16, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "235/70R15", "235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmc-wheels.com", "bbwheelsonline.com", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "16\" wheels optional on higher trims."
+    },
+    {
+      "year": 1990,
+      "make": "GMC",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["235/75R15", "245/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["crawlpedia.com", "bbwheelsonline.com", "justanswer.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "R/V series Suburban (before GMT400 platform). 6-lug 1500 models."
+    },
+    {
+      "year": 1991,
+      "make": "GMC",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["235/75R15", "245/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["crawlpedia.com", "bbwheelsonline.com", "justanswer.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "R/V series Suburban (before GMT400 platform). 6-lug 1500 models."
+    },
+    {
+      "year": 1992,
+      "make": "GMC",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 },
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["crawlpedia.com", "originalwheels.com", "justanswer.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GMT400 platform introduced. 6-lug 1500 series. Some 2500 models use 8-lug."
+    },
+    {
+      "year": 1993,
+      "make": "GMC",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 },
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["crawlpedia.com", "originalwheels.com", "justanswer.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GMT400 platform. 6-lug 1500 series."
+    },
+    {
+      "year": 1994,
+      "make": "GMC",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["crawlpedia.com", "originalwheels.com", "justanswer.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GMT400 platform. 6-lug 1500 series."
+    },
+    {
+      "year": 1995,
+      "make": "GMC",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["crawlpedia.com", "originalwheels.com", "justanswer.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GMT400 platform. 6-lug 1500 series."
+    },
+    {
+      "year": 1996,
+      "make": "GMC",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["crawlpedia.com", "originalwheels.com", "justanswer.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GMT400 platform. 6-lug 1500 series."
+    },
+    {
+      "year": 1997,
+      "make": "GMC",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["crawlpedia.com", "originalwheels.com", "justanswer.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GMT400 platform. 6-lug 1500 series."
+    },
+    {
+      "year": 1998,
+      "make": "GMC",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["crawlpedia.com", "originalwheels.com", "justanswer.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GMT400 platform. 6-lug 1500 series."
+    },
+    {
+      "year": 1999,
+      "make": "GMC",
+      "model": "Suburban",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["crawlpedia.com", "originalwheels.com", "justanswer.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of GMT400 platform. 6-lug 1500 series."
+    },
+    {
+      "year": 1990,
+      "make": "Acura",
+      "model": "Integra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com", "amazon.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second generation (DA). 4x100 bolt pattern through all 90s."
+    },
+    {
+      "year": 1991,
+      "make": "Acura",
+      "model": "Integra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com", "amazon.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second generation (DA). GS-R trim available with slightly different specs."
+    },
+    {
+      "year": 1992,
+      "make": "Acura",
+      "model": "Integra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com", "nsxprime.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second generation (DA). GS-R introduced."
+    },
+    {
+      "year": 1993,
+      "make": "Acura",
+      "model": "Integra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com", "nsxprime.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of second generation (DA)."
+    },
+    {
+      "year": 1994,
+      "make": "Acura",
+      "model": "Integra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/65R14", "195/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com", "amazon.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Third generation (DC). GS-R gets 15\" wheels."
+    },
+    {
+      "year": 1995,
+      "make": "Acura",
+      "model": "Integra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/65R14", "195/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com", "amazon.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Third generation (DC). GS-R gets 15\" wheels."
+    },
+    {
+      "year": 1996,
+      "make": "Acura",
+      "model": "Integra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/65R14", "195/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com", "nsxprime.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Third generation (DC). GS-R has 15\" wheels."
+    },
+    {
+      "year": 1997,
+      "make": "Acura",
+      "model": "Integra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["185/65R14", "195/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com", "nsxprime.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Type R (US) introduced - uses 5x114.3. Base/GS/GS-R still 4x100."
+    },
+    {
+      "year": 1998,
+      "make": "Acura",
+      "model": "Integra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com", "nsxprime.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Base trims standardized to 15\". Type R uses 5x114.3 with 64.1mm hub bore."
+    },
+    {
+      "year": 1999,
+      "make": "Acura",
+      "model": "Integra",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com", "nsxprime.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Base trims use 4x100. Type R uses 5x114.3 with 64.1mm hub bore."
+    },
+    {
+      "year": 1990,
+      "make": "Acura",
+      "model": "NSX",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["nsxprime.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "NSX was not sold in US until 1991 (1990 was Japan-only as Honda NSX)."
+    },
+    {
+      "year": 1991,
+      "make": "Acura",
+      "model": "NSX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "position": "front", "diameter": 15, "width": 6.5, "offset": 50 },
+          { "position": "rear", "diameter": 16, "width": 8, "offset": 50 }
+        ],
+        "oem_tire_sizes": {
+          "front": "205/50ZR15",
+          "rear": "225/50ZR16"
+        },
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["nsxprime.com", "avtoreference.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "STAGGERED setup. Forged aluminum wheels. Mid-engine supercar."
+    },
+    {
+      "year": 1992,
+      "make": "Acura",
+      "model": "NSX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "position": "front", "diameter": 15, "width": 6.5, "offset": 50 },
+          { "position": "rear", "diameter": 16, "width": 8, "offset": 50 }
+        ],
+        "oem_tire_sizes": {
+          "front": "205/50ZR15",
+          "rear": "225/50ZR16"
+        },
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["nsxprime.com", "avtoreference.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "STAGGERED setup. Forged aluminum wheels."
+    },
+    {
+      "year": 1993,
+      "make": "Acura",
+      "model": "NSX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "position": "front", "diameter": 15, "width": 6.5, "offset": 50 },
+          { "position": "rear", "diameter": 16, "width": 8, "offset": 50 }
+        ],
+        "oem_tire_sizes": {
+          "front": "205/50ZR15",
+          "rear": "225/50ZR16"
+        },
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["nsxprime.com", "avtoreference.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "STAGGERED setup. Forged aluminum wheels."
+    },
+    {
+      "year": 1994,
+      "make": "Acura",
+      "model": "NSX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "position": "front", "diameter": 16, "width": 7, "offset": 55 },
+          { "position": "rear", "diameter": 17, "width": 8.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": {
+          "front": "215/45ZR16",
+          "rear": "245/40ZR17"
+        },
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["nsxprime.com", "avtoreference.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "STAGGERED setup. Wheel upgrade from 1991-93 specs."
+    },
+    {
+      "year": 1995,
+      "make": "Acura",
+      "model": "NSX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "position": "front", "diameter": 16, "width": 7, "offset": 55 },
+          { "position": "rear", "diameter": 17, "width": 8.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": {
+          "front": "215/45ZR16",
+          "rear": "245/40ZR17"
+        },
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["nsxprime.com", "avtoreference.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "STAGGERED setup. NSX-T (targa) introduced."
+    },
+    {
+      "year": 1996,
+      "make": "Acura",
+      "model": "NSX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "position": "front", "diameter": 16, "width": 7, "offset": 55 },
+          { "position": "rear", "diameter": 17, "width": 8.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": {
+          "front": "215/45ZR16",
+          "rear": "245/40ZR17"
+        },
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["nsxprime.com", "avtoreference.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "STAGGERED setup."
+    },
+    {
+      "year": 1997,
+      "make": "Acura",
+      "model": "NSX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "position": "front", "diameter": 16, "width": 7, "offset": 55 },
+          { "position": "rear", "diameter": 17, "width": 8.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": {
+          "front": "215/40ZR17",
+          "rear": "255/40ZR17"
+        },
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["nsxprime.com", "avtoreference.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "STAGGERED setup. Upgraded engine to 3.2L."
+    },
+    {
+      "year": 1998,
+      "make": "Acura",
+      "model": "NSX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "position": "front", "diameter": 16, "width": 7, "offset": 55 },
+          { "position": "rear", "diameter": 17, "width": 8.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": {
+          "front": "215/40ZR17",
+          "rear": "255/40ZR17"
+        },
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["nsxprime.com", "avtoreference.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "STAGGERED setup."
+    },
+    {
+      "year": 1999,
+      "make": "Acura",
+      "model": "NSX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "position": "front", "diameter": 17, "width": 7, "offset": 55 },
+          { "position": "rear", "diameter": 17, "width": 9, "offset": 55 }
+        ],
+        "oem_tire_sizes": {
+          "front": "215/40ZR17",
+          "rear": "255/40ZR17"
+        },
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["nsxprime.com", "avtoreference.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "STAGGERED setup. Alex Zanardi Edition available (limited)."
+    },
+    {
+      "year": 1990,
+      "make": "Acura",
+      "model": "Legend",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "acura-legend.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation Legend. Uses 4x114.3 bolt pattern (not 5-lug)."
+    },
+    {
+      "year": 1991,
+      "make": "Acura",
+      "model": "Legend",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/60R15", "215/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "acura-legend.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second generation Legend starts. Changed to 5x114.3 bolt pattern."
+    },
+    {
+      "year": 1992,
+      "make": "Acura",
+      "model": "Legend",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/60R15", "215/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "acura-legend.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second generation Legend. 5x114.3 bolt pattern."
+    },
+    {
+      "year": 1993,
+      "make": "Acura",
+      "model": "Legend",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/60R15", "215/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "acura-legend.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second generation Legend. 5x114.3 bolt pattern."
+    },
+    {
+      "year": 1994,
+      "make": "Acura",
+      "model": "Legend",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/60R15", "215/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "acura-legend.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second generation Legend. 5x114.3 bolt pattern."
+    },
+    {
+      "year": 1995,
+      "make": "Acura",
+      "model": "Legend",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/60R15", "215/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "acura-legend.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of Legend production. Replaced by RL in 1996."
+    },
+    {
+      "year": 1996,
+      "make": "Acura",
+      "model": "Legend",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "Legend discontinued after 1995. Replaced by Acura RL starting 1996."
+    },
+    {
+      "year": 1997,
+      "make": "Acura",
+      "model": "Legend",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "Legend discontinued after 1995. Replaced by Acura RL."
+    },
+    {
+      "year": 1998,
+      "make": "Acura",
+      "model": "Legend",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "Legend discontinued after 1995. Replaced by Acura RL."
+    },
+    {
+      "year": 1999,
+      "make": "Acura",
+      "model": "Legend",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "Legend discontinued after 1995. Replaced by Acura RL."
+    },
+    {
+      "year": 1990,
+      "make": "Acura",
+      "model": "TL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "TL was not produced until 1996 model year (first sold 1995)."
+    },
+    {
+      "year": 1991,
+      "make": "Acura",
+      "model": "TL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "TL was not produced until 1996 model year."
+    },
+    {
+      "year": 1992,
+      "make": "Acura",
+      "model": "TL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "TL was not produced until 1996 model year."
+    },
+    {
+      "year": 1993,
+      "make": "Acura",
+      "model": "TL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "TL was not produced until 1996 model year."
+    },
+    {
+      "year": 1994,
+      "make": "Acura",
+      "model": "TL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "TL was not produced until 1996 model year."
+    },
+    {
+      "year": 1995,
+      "make": "Acura",
+      "model": "TL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "TL was introduced as 1996 model year (2.5TL released late 1995)."
+    },
+    {
+      "year": 1996,
+      "make": "Acura",
+      "model": "TL",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation TL. Based on Honda Accord platform. 2.5TL and 3.2TL trims."
+    },
+    {
+      "year": 1997,
+      "make": "Acura",
+      "model": "TL",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation TL. 16\" wheels on 3.2TL."
+    },
+    {
+      "year": 1998,
+      "make": "Acura",
+      "model": "TL",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["195/65R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "bbwheelsonline.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of first generation TL."
+    },
+    {
+      "year": 1990,
+      "make": "Acura",
+      "model": "CL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "CL was not produced until 1997 model year."
+    },
+    {
+      "year": 1991,
+      "make": "Acura",
+      "model": "CL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "CL was not produced until 1997 model year."
+    },
+    {
+      "year": 1992,
+      "make": "Acura",
+      "model": "CL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "CL was not produced until 1997 model year."
+    },
+    {
+      "year": 1993,
+      "make": "Acura",
+      "model": "CL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "CL was not produced until 1997 model year."
+    },
+    {
+      "year": 1994,
+      "make": "Acura",
+      "model": "CL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "CL was not produced until 1997 model year."
+    },
+    {
+      "year": 1995,
+      "make": "Acura",
+      "model": "CL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "CL was not produced until 1997 model year."
+    },
+    {
+      "year": 1996,
+      "make": "Acura",
+      "model": "CL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "CL was introduced as 1997 model year."
+    },
+    {
+      "year": 1997,
+      "make": "Acura",
+      "model": "CL",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "wheelssize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation CL. Based on Accord platform. 2.2CL and 3.0CL trims."
+    },
+    {
+      "year": 1998,
+      "make": "Acura",
+      "model": "CL",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "wheelssize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation CL. 2.3CL and 3.0CL trims."
+    },
+    {
+      "year": 1999,
+      "make": "Acura",
+      "model": "CL",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "wheelssize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation CL. Last year before 2001 redesign."
+    },
+    {
+      "year": 1990,
+      "make": "Acura",
+      "model": "RL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "RL was not produced until 1996 model year. Legend was sold during this period."
+    },
+    {
+      "year": 1991,
+      "make": "Acura",
+      "model": "RL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "RL was not produced until 1996 model year."
+    },
+    {
+      "year": 1992,
+      "make": "Acura",
+      "model": "RL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "RL was not produced until 1996 model year."
+    },
+    {
+      "year": 1993,
+      "make": "Acura",
+      "model": "RL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "RL was not produced until 1996 model year."
+    },
+    {
+      "year": 1994,
+      "make": "Acura",
+      "model": "RL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "RL was not produced until 1996 model year."
+    },
+    {
+      "year": 1995,
+      "make": "Acura",
+      "model": "RL",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["acura.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "RL was introduced as 1996 model year (first sold early 1996)."
+    },
+    {
+      "year": 1996,
+      "make": "Acura",
+      "model": "RL",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "wheel-sizes.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation RL (3.5RL). Replaced Legend. Flagship sedan."
+    },
+    {
+      "year": 1997,
+      "make": "Acura",
+      "model": "RL",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "wheel-sizes.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation RL (3.5RL)."
+    },
+    {
+      "year": 1998,
+      "make": "Acura",
+      "model": "RL",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "wheel-sizes.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation RL (3.5RL)."
+    },
+    {
+      "year": 1999,
+      "make": "Acura",
+      "model": "RL",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "wheel-sizes.com", "wheelssize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation RL (3.5RL)."
+    },
+    {
+      "year": 1990,
+      "make": "Lexus",
+      "model": "LS400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["clublexus.com", "goodyear.com", "selected.pl", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation LS400 (UCF10). First Lexus ever produced. Flagship sedan."
+    },
+    {
+      "year": 1991,
+      "make": "Lexus",
+      "model": "LS400",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 60.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 35 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/65R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["clublexus.com", "goodyear.com", "selected.pl", "bbwheelsonline.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation LS400 (UCF10). 16\" wheels optional."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 43,
+    "partial": 0,
+    "not_produced": 31,
+    "failed": 0,
+    "highConfidence": 43,
+    "needsReview": 1
+  },
+  "notes": {
+    "notProducedVehicles": [
+      "Acura NSX 1990 - Japan-only as Honda NSX in 1990",
+      "Acura Legend 1996-1999 - Discontinued after 1995, replaced by RL",
+      "Acura TL 1990-1995 - First produced as 1996 model year",
+      "Acura CL 1990-1996 - First produced as 1997 model year",
+      "Acura RL 1990-1995 - First produced as 1996 model year"
+    ],
+    "importantChanges": [
+      "Acura Legend: Changed from 4x114.3 (1990) to 5x114.3 (1991+)",
+      "Acura Integra Type R (1997+): Uses 5x114.3 unlike base 4x100",
+      "Acura NSX: STAGGERED wheels throughout production",
+      "GMC Suburban: Switched from R/V platform to GMT400 in 1992"
+    ],
+    "reviewFlags": [
+      "Acura Legend 1990 uses 4x114.3, verify compatibility in system"
+    ]
+  }
+}

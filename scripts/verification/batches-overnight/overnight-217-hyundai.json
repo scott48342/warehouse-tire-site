@@ -1,0 +1,2963 @@
+[
+  {
+    "id": "05101ffb-8d6b-4970-a620-07f42b7b931f",
+    "year": 2024,
+    "make": "hyundai",
+    "model": "palisade",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "245/50R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "1e7b0b0d-af4a-4ce4-a1a1-9c415a996914",
+    "year": 2025,
+    "make": "hyundai",
+    "model": "palisade",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "245/50R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a9cfce33-72d0-4f45-bbe5-fce7492d36f6",
+    "year": 2026,
+    "make": "hyundai",
+    "model": "palisade",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "245/50R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f311c5f9-2346-4db7-953a-bad377efa478",
+    "year": 2000,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b77d39be-14f5-430a-bf06-84fb7a7d29bc",
+    "year": 2001,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "Base/GLS/LX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16"
+    ],
+    "source": "batch4-suvs-sedans [web_research]"
+  },
+  {
+    "id": "899f378d-1c66-4b86-8292-bb64ab0389bb",
+    "year": 2002,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "Base/GLS/LX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16"
+    ],
+    "source": "batch4-suvs-sedans [web_research]"
+  },
+  {
+    "id": "8563ba9a-a7e2-494c-a302-1bc523ca04bd",
+    "year": 2003,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "Base/GLS/LX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16"
+    ],
+    "source": "batch4-suvs-sedans [web_research]"
+  },
+  {
+    "id": "812a0ebd-b997-4547-94a6-0b36a646075c",
+    "year": 2004,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "Base/GLS/LX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16"
+    ],
+    "source": "batch4-suvs-sedans [web_research]"
+  },
+  {
+    "id": "5265819d-7f60-4432-9579-2bf400a3c0c6",
+    "year": 2005,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "Base/GLS/LX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16"
+    ],
+    "source": "batch4-suvs-sedans [web_research]"
+  },
+  {
+    "id": "b5629c42-462e-4a0e-b8e7-076fc99f34a8",
+    "year": 2006,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "Base/GLS/LX",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 41,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16"
+    ],
+    "source": "batch4-suvs-sedans [web_research]"
+  },
+  {
+    "id": "17f99671-b53b-499d-8df6-58b5e11355fd",
+    "year": 2007,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "887175a6-6565-431d-a46b-92fda959540f",
+    "year": 2008,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "93d7be94-fe4d-4434-88ac-c94e31ad9e2c",
+    "year": 2009,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "1aa95955-e353-47c1-b9a1-2dd494964eed",
+    "year": 2010,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "bf6997b9-5615-433e-bb6f-1c5f8b2df889",
+    "year": 2011,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/70R16",
+      "235/65R17",
+      "235/60R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e2470a1e-d32d-466e-bd2f-954e9d721562",
+    "year": 2012,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 41,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 41,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "81cbdf40-3b2e-4b5f-a53f-aed43aa1890d",
+    "year": 2013,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "3.3 GDi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "32796a9d-ac0a-4e50-8e54-647dfa508300",
+    "year": 2013,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "344579e3-8806-46a4-aeb0-00660b55e216",
+    "year": 2014,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8432d46a-6f8f-459d-abf2-c6f5157e958e",
+    "year": 2014,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "3.3 GDi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "324d734f-a05c-4ed5-8649-51c1544349d1",
+    "year": 2015,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "3.3 GDi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "36dab763-f82a-4eb1-93dd-8f4022ccc5d7",
+    "year": 2015,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c79c25bc-d5b3-4569-ab62-9353d06d364f",
+    "year": 2016,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "27a37d53-68f0-41e5-8166-985f76e040b1",
+    "year": 2016,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "3.3 GDi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "d6cc31dd-cb95-400c-974d-e7a5a0891ef1",
+    "year": 2017,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "3.3 GDi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "b5873377-351a-4085-baa9-3ce54eb79c49",
+    "year": 2017,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "3ed6a2b9-59a3-49e8-b167-8c94bcb744f2",
+    "year": 2018,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "3.3 GDi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "5965dd76-dad5-4dff-869c-d04f49b64c29",
+    "year": 2018,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "3a5c73c6-33d6-4902-83be-b591e3053fb9",
+    "year": 2019,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b1f28ce5-1626-4fe7-a0b4-72abf6032fe2",
+    "year": 2019,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "2.0 T-GDi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 51,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "995b456e-d726-4ab9-a2d8-b8813e80a20a",
+    "year": 2020,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b17083c9-597c-4d37-810f-44d56c443636",
+    "year": 2021,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "15f18b8f-8a9c-4c8a-80b9-e1cba7d40703",
+    "year": 2022,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "1.6 T-GDi HEV",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 47,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 54,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/65R17",
+      "235/55R19",
+      "255/55R18",
+      "255/50R19",
+      "255/45R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "e8dd25df-9757-413a-84c0-8e01fc891a3b",
+    "year": 2022,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "df97ce36-dada-4e3c-8c78-1318b08a071c",
+    "year": 2023,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "35cfea52-2c2d-4df4-af5b-affa2e6faec3",
+    "year": 2024,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5788d2bd-1a32-4a3c-b818-47e5dca04bed",
+    "year": 2024,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "1.6 T-GDi HEV",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 54,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 52,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20",
+      "245/45R21",
+      "245/60R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "1582f361-ea4c-4317-8237-7e11eaf935b3",
+    "year": 2025,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "1.6 T-GDi HEV",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 54,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 52,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20",
+      "245/45R21",
+      "245/60R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "f9164568-d624-481c-a514-bd29222342d5",
+    "year": 2025,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5624c72c-0a84-4d86-b198-3f4b03659479",
+    "year": 2026,
+    "make": "hyundai",
+    "model": "santa-fe",
+    "trim": "SE, SEL, XRT, Limited, Calligraphy",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/55R19",
+      "255/45R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "78a84eef-8959-425c-8ea3-bcba5d8cd9a6",
+    "year": 2007,
+    "make": "hyundai",
+    "model": "santa-fe-classic",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "603b52b1-166a-41f8-b498-8132b678a0ad",
+    "year": 2008,
+    "make": "hyundai",
+    "model": "santa-fe-classic",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "98751ca4-7c29-48da-98bd-b866b265a832",
+    "year": 2009,
+    "make": "hyundai",
+    "model": "santa-fe-classic",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "c2b392c2-f69e-4cec-9ddf-140291916179",
+    "year": 2010,
+    "make": "hyundai",
+    "model": "santa-fe-classic",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "795356b3-49ae-475d-a675-9be828fb600f",
+    "year": 2011,
+    "make": "hyundai",
+    "model": "santa-fe-classic",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "8375cfe4-7ff7-47a8-aa4c-b1e9cdcde4de",
+    "year": 2012,
+    "make": "hyundai",
+    "model": "santa-fe-classic",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 46,
+        "diameter": 17,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "63c80135-1095-4819-9fcf-0df76af25c60",
+    "year": 2013,
+    "make": "hyundai",
+    "model": "santa-fe-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 47,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "3e8ee3b0-dabe-4675-b9c9-240d4325c9e4",
+    "year": 2014,
+    "make": "hyundai",
+    "model": "santa-fe-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 47,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "516167cf-626e-4c7c-bfe1-210e7b09445f",
+    "year": 2015,
+    "make": "hyundai",
+    "model": "santa-fe-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 47,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "2fa59a1f-eb63-4276-8e39-bf5c04b737e2",
+    "year": 2016,
+    "make": "hyundai",
+    "model": "santa-fe-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 47,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "6db2a845-942f-4cee-a519-53507ac08f5f",
+    "year": 2017,
+    "make": "hyundai",
+    "model": "santa-fe-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 47,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 50,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "ab4ab0c6-6864-49c2-a6a6-4ad238613873",
+    "year": 2018,
+    "make": "hyundai",
+    "model": "santa-fe-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 47,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 50,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 49.5,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "48323dac-ec2f-4b5a-8abd-e8881c4649a1",
+    "year": 2006,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4cfaae39-4cd4-4270-abec-e887703092e7",
+    "year": 2007,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "32324b23-c9f8-4111-9e3a-2488a3830445",
+    "year": 2008,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "227059ac-2c23-4e89-bdf1-abbf6b389ffa",
+    "year": 2009,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "54f02172-64fe-4ecd-8f24-99404e72e12d",
+    "year": 2010,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a23328ea-3c64-423a-86b2-70357b93e844",
+    "year": 2011,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7a9b4641-a61a-42c8-a252-aa7d065195c3",
+    "year": 2012,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "16e3ebdc-042a-4ac3-a060-6cbd073759e2",
+    "year": 2013,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f428d072-50d7-4b2f-8dc2-d5edaf5de2c8",
+    "year": 2014,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a66ea68d-c397-40c6-b520-d37ade379ec2",
+    "year": 2015,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6acc5ad2-0f12-4856-a530-97091916352b",
+    "year": 2016,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "1c4f51d2-558e-4835-b0d2-851639a34b78",
+    "year": 2017,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "600160b2-6557-4c2b-a2ed-762354342852",
+    "year": 2018,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "71ad6552-3a5f-42d9-b7b6-e6da12c9ea04",
+    "year": 2019,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "3817ec01-e1a8-4758-af61-7f7b465f330b",
+    "year": 2020,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "d1037e77-9405-4ded-840b-58858581ec51",
+    "year": 2021,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2218f14e-ed7f-4a87-acc6-4402416eb471",
+    "year": 2022,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b86f8467-677c-4058-aa97-0cf4e2e4a5fa",
+    "year": 2023,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6abfbad2-34cb-45c0-980a-a777a46be845",
+    "year": 2024,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6cdaf96a-d2f6-4fe0-8e85-83ad2d0e0013",
+    "year": 2025,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7d9edc31-6753-4da1-bf86-81e48d853a71",
+    "year": 2026,
+    "make": "hyundai",
+    "model": "sonata",
+    "trim": "SE, SEL, SEL Plus, Limited, N Line",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "215/55R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4ef8445e-cf04-43ed-aca2-67833da2f5e9",
+    "year": 2000,
+    "make": "hyundai",
+    "model": "tiburon-turbulence",
+    "trim": "Base",
+    "currentBoltPattern": "4x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 51,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 38,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "c01e4e58-9972-441a-97a1-194e78315c8d",
+    "year": 2001,
+    "make": "hyundai",
+    "model": "tiburon-turbulence",
+    "trim": "Base",
+    "currentBoltPattern": "4x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 51,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 38,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  }
+]

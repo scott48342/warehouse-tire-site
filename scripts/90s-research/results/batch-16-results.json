@@ -1,0 +1,433 @@
+{
+  "batchId": "90s-batch-16",
+  "completedAt": "2026-04-22T12:45:00.000Z",
+  "results": [
+    {
+      "year": 1995,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "autofiles.com", "300mclub.org", "allusedrims.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation LH platform. Base model has 15\" steel wheels, optional 16\" alloy available."
+    },
+    {
+      "year": 1996,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "autofiles.com", "allusedrims.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation LH platform. 16\" standard for 1996."
+    },
+    {
+      "year": 1997,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "autofiles.com", "allusedrims.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of first generation LH platform."
+    },
+    {
+      "year": 1998,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "autofiles.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second generation LH platform. LX trim has 15\" option, LXi has 16\" standard."
+    },
+    {
+      "year": 1999,
+      "make": "Chrysler",
+      "model": "Concorde",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "autofiles.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second generation LH platform. LX trim has 15\" option, LXi has 16\" standard."
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "LHS",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler LHS production started in 1994 (first model year)."
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "LHS",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler LHS production started in 1994 (first model year)."
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "LHS",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler LHS production started in 1994 (first model year)."
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "LHS",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler LHS production started in 1994 (first model year)."
+    },
+    {
+      "year": 1994,
+      "make": "Chrysler",
+      "model": "LHS",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "300mclub.org", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "First year of first generation LHS. LH platform flagship sedan. 16\" alloy standard."
+    },
+    {
+      "year": 1995,
+      "make": "Chrysler",
+      "model": "LHS",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "300mclub.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation LHS. LH platform flagship sedan."
+    },
+    {
+      "year": 1996,
+      "make": "Chrysler",
+      "model": "LHS",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "allusedrims.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation LHS. LH platform flagship sedan."
+    },
+    {
+      "year": 1997,
+      "make": "Chrysler",
+      "model": "LHS",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "allusedrims.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of first generation LHS."
+    },
+    {
+      "year": 1998,
+      "make": "Chrysler",
+      "model": "LHS",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "automobile.fandom.com"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. 1998 was a production gap year for the LHS between first gen (1994-1997) and second gen (1999-2001)."
+    },
+    {
+      "year": 1999,
+      "make": "Chrysler",
+      "model": "LHS",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 7, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["225/55R17"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "First year of second generation LHS. Upgraded to 17\" wheels. Same specs as 300M."
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "300M",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler 300M was introduced in 1999 as a replacement for the Eagle Vision."
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "300M",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler 300M was introduced in 1999 as a replacement for the Eagle Vision."
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "300M",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler 300M was introduced in 1999 as a replacement for the Eagle Vision."
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "300M",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler 300M was introduced in 1999 as a replacement for the Eagle Vision."
+    },
+    {
+      "year": 1994,
+      "make": "Chrysler",
+      "model": "300M",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler 300M was introduced in 1999 as a replacement for the Eagle Vision."
+    },
+    {
+      "year": 1995,
+      "make": "Chrysler",
+      "model": "300M",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler 300M was introduced in 1999 as a replacement for the Eagle Vision."
+    },
+    {
+      "year": 1996,
+      "make": "Chrysler",
+      "model": "300M",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler 300M was introduced in 1999 as a replacement for the Eagle Vision."
+    },
+    {
+      "year": 1997,
+      "make": "Chrysler",
+      "model": "300M",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler 300M was introduced in 1999 as a replacement for the Eagle Vision."
+    },
+    {
+      "year": 1998,
+      "make": "Chrysler",
+      "model": "300M",
+      "status": "invalid",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "tiresize.com"],
+      "verifiedBy": "historical-verification",
+      "notes": "VEHICLE DID NOT EXIST. Chrysler 300M was introduced in 1999 as a replacement for the Eagle Vision."
+    },
+    {
+      "year": 1999,
+      "make": "Chrysler",
+      "model": "300M",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 42 },
+          { "diameter": 17, "width": 7, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["225/60R16", "225/55R17"],
+        "staggered": false,
+        "lug_type": "lug_nut",
+        "thread_size": "M12x1.5"
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "autorimshop.com", "300mclub.org", "wikipedia.org"],
+      "verifiedBy": "cross-reference",
+      "notes": "First year of 300M. LH platform. Replaced Eagle Vision. 17x7 wheel has confirmed +43mm offset (OE part LG40RAV)."
+    }
+  ],
+  "summary": {
+    "total": 25,
+    "complete": 12,
+    "partial": 0,
+    "invalid": 13,
+    "failed": 0,
+    "highConfidence": 25,
+    "needsReview": 0
+  },
+  "platformNotes": {
+    "platform": "Chrysler LH Platform",
+    "description": "All vehicles share the same 'cab-forward' LH platform architecture with longitudinally-mounted FWD drivetrain.",
+    "commonSpecs": {
+      "bolt_pattern": "5x114.3 (5x4.5 inch)",
+      "hub_bore": "71.5mm",
+      "thread_size": "M12x1.5",
+      "offset_range": "+40 to +45mm typical",
+      "wheelbase": "113 inches (2,870mm)"
+    },
+    "generations": {
+      "first_gen_1993-1997": "Concorde, Intrepid, Vision, LHS, New Yorker",
+      "second_gen_1998-2004": "Concorde, Intrepid, LHS (1999+), 300M (1999+)"
+    },
+    "notes": [
+      "LHS had no 1998 model year (production gap)",
+      "300M introduced 1999 to replace discontinued Eagle Vision",
+      "All LH cars share wheel interchangeability within same diameter"
+    ]
+  },
+  "invalidVehicles": {
+    "count": 13,
+    "reason": "Vehicles in batch did not exist for those model years",
+    "details": [
+      "Chrysler LHS 1990-1993: LHS introduced 1994",
+      "Chrysler LHS 1998: Production gap year",
+      "Chrysler 300M 1990-1998: 300M introduced 1999"
+    ]
+  }
+}

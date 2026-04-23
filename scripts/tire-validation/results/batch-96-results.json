@@ -1,0 +1,917 @@
+{
+  "batchId": "96",
+  "processedAt": "2026-04-21T22:19:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "121",
+      "status": "non-US-market",
+      "notes": "Mazda 121 was sold in Australia/Europe, not US market. Based on CarsGuide AU data: 165/70R13 for base, 175/65R14 for higher trims. Market: Australia/Europe only.",
+      "trims": [
+        { "trim": "Base", "tireSize": "165/70R13" },
+        { "trim": "Metro", "tireSize": "175/65R14" }
+      ],
+      "oeTireSizes": ["165/70R13", "175/65R14"]
+    },
+    {
+      "year": 2002,
+      "make": "Mazda",
+      "model": "626",
+      "trims": [
+        { "trim": "ES", "tireSize": "205/60R15" },
+        { "trim": "ES V6", "tireSize": "205/55R16" },
+        { "trim": "LX", "tireSize": "205/60R15" },
+        { "trim": "LX V6", "tireSize": ["205/60R15", "205/55R16"] }
+      ],
+      "oeTireSizes": ["205/60R15", "205/55R16"]
+    },
+    {
+      "year": 2001,
+      "make": "Mazda",
+      "model": "626",
+      "trims": [
+        { "trim": "ES", "tireSize": "205/60R15" },
+        { "trim": "ES V6", "tireSize": "205/55R16" },
+        { "trim": "LX", "tireSize": "205/60R15" },
+        { "trim": "LX V6", "tireSize": ["205/60R15", "205/55R16"] }
+      ],
+      "oeTireSizes": ["205/60R15", "205/55R16"]
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "626",
+      "trims": [
+        { "trim": "ES", "tireSize": "205/60R15" },
+        { "trim": "ES V6", "tireSize": "205/55R16" },
+        { "trim": "LX", "tireSize": "205/60R15" },
+        { "trim": "LX V6", "tireSize": ["205/60R15", "205/55R16"] }
+      ],
+      "oeTireSizes": ["205/60R15", "205/55R16"]
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Carbon Edition", "tireSize": "225/45R19" },
+        { "trim": "Grand Touring", "tireSize": "225/45R19" },
+        { "trim": "Grand Touring Reserve", "tireSize": "225/45R19" },
+        { "trim": "Signature", "tireSize": "225/45R19" },
+        { "trim": "Sport", "tireSize": "225/55R17" },
+        { "trim": "Touring", "tireSize": "225/45R19" }
+      ],
+      "oeTireSizes": ["225/55R17", "225/45R19"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["205/60R16 is NOT valid for 2021 Mazda6 - this is an older generation size"]
+      }
+    },
+    {
+      "year": 2020,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/45R19" },
+        { "trim": "Grand Touring Reserve", "tireSize": "225/45R19" },
+        { "trim": "Signature", "tireSize": "225/45R19" },
+        { "trim": "Sport", "tireSize": "225/55R17" },
+        { "trim": "Touring", "tireSize": "225/45R19" }
+      ],
+      "oeTireSizes": ["225/55R17", "225/45R19"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["205/60R16 is NOT valid for 2020 Mazda6 - this is an older generation size"]
+      }
+    },
+    {
+      "year": 2019,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/45R19" },
+        { "trim": "Grand Touring Reserve", "tireSize": "225/45R19" },
+        { "trim": "Signature", "tireSize": "225/45R19" },
+        { "trim": "Sport", "tireSize": "225/55R17" },
+        { "trim": "Touring", "tireSize": "225/45R19" }
+      ],
+      "oeTireSizes": ["225/55R17", "225/45R19"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["205/60R16 is NOT valid for 2019 Mazda6 - this is an older generation size"]
+      }
+    },
+    {
+      "year": 2018,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/45R19" },
+        { "trim": "Grand Touring Reserve", "tireSize": "225/45R19" },
+        { "trim": "Signature", "tireSize": "225/45R19" },
+        { "trim": "Sport", "tireSize": "225/55R17" },
+        { "trim": "Touring", "tireSize": "225/45R19" }
+      ],
+      "oeTireSizes": ["225/55R17", "225/45R19"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["205/60R16 is NOT valid for 2018 Mazda6 - this is an older generation size"]
+      }
+    },
+    {
+      "year": 2017,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/45R19" },
+        { "trim": "Sport", "tireSize": "225/55R17" },
+        { "trim": "Touring", "tireSize": "225/45R19" }
+      ],
+      "oeTireSizes": ["225/55R17", "225/45R19"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["205/60R16 is NOT valid for 2017 Mazda6"]
+      }
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/45R19" },
+        { "trim": "Sport", "tireSize": "225/55R17" },
+        { "trim": "Touring", "tireSize": "225/45R19" }
+      ],
+      "oeTireSizes": ["225/55R17", "225/45R19"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["205/60R16 is NOT valid for 2016 Mazda6"]
+      }
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/45R19" },
+        { "trim": "Sport", "tireSize": "225/55R17" },
+        { "trim": "Touring", "tireSize": "225/45R19" }
+      ],
+      "oeTireSizes": ["225/55R17", "225/45R19"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["205/60R16 is NOT valid for 2015 Mazda6"]
+      }
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/45R19" },
+        { "trim": "Sport", "tireSize": "225/55R17" },
+        { "trim": "Touring", "tireSize": "225/45R19" }
+      ],
+      "oeTireSizes": ["225/55R17", "225/45R19"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["205/60R16 is NOT valid for 2014 Mazda6"]
+      }
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "i Grand Touring", "tireSize": "215/55R17" },
+        { "trim": "i Sport", "tireSize": "205/65R16" },
+        { "trim": "i Touring", "tireSize": "215/55R17" },
+        { "trim": "i Touring Plus", "tireSize": "215/55R17" },
+        { "trim": "s Grand Touring", "tireSize": "235/45R18" }
+      ],
+      "oeTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["Current sizes are WRONG. Should be 205/65R16, 215/55R17, 235/45R18"]
+      }
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "i Grand Touring", "tireSize": "215/55R17" },
+        { "trim": "i Sport", "tireSize": "205/65R16" },
+        { "trim": "i Touring", "tireSize": "215/55R17" },
+        { "trim": "i Touring Plus", "tireSize": "215/55R17" },
+        { "trim": "s Grand Touring", "tireSize": "235/45R18" },
+        { "trim": "s Touring Plus", "tireSize": "215/55R17" }
+      ],
+      "oeTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["Current sizes are WRONG. Should be 205/65R16, 215/55R17, 235/45R18"]
+      }
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Sport Sedan i Grand Touring", "tireSize": "215/55R17" },
+        { "trim": "Sport Sedan i Sport", "tireSize": "205/65R16" },
+        { "trim": "Sport Sedan i Touring", "tireSize": "215/55R17" },
+        { "trim": "Sport Sedan i Touring Plus", "tireSize": "215/55R17" },
+        { "trim": "Sport Sedan s Grand Touring", "tireSize": "235/45R18" },
+        { "trim": "Sport Sedan s Touring Plus", "tireSize": "215/55R17" }
+      ],
+      "oeTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["Current sizes are WRONG. Should be 205/65R16, 215/55R17, 235/45R18"]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Sport Sedan i Grand Touring", "tireSize": "215/55R17" },
+        { "trim": "Sport Sedan i Sport", "tireSize": "205/65R16" },
+        { "trim": "Sport Sedan i SV", "tireSize": "205/65R16" },
+        { "trim": "Sport Sedan i Touring", "tireSize": "215/55R17" },
+        { "trim": "Sport Sedan i Touring Plus", "tireSize": "215/55R17" },
+        { "trim": "Sport Sedan s Grand Touring", "tireSize": "235/45R18" },
+        { "trim": "Sport Sedan s Touring Plus", "tireSize": "215/55R17" }
+      ],
+      "oeTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["Current sizes are WRONG. Should be 205/65R16, 215/55R17, 235/45R18"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "Sport Sedan i Grand Touring", "tireSize": "215/55R17" },
+        { "trim": "Sport Sedan i Sport", "tireSize": "205/65R16" },
+        { "trim": "Sport Sedan i SV", "tireSize": "205/65R16" },
+        { "trim": "Sport Sedan i Touring", "tireSize": "215/55R17" },
+        { "trim": "Sport Sedan s Grand Touring", "tireSize": "235/45R18" },
+        { "trim": "Sport Sedan s Sport", "tireSize": "215/55R17" },
+        { "trim": "Sport Sedan s Touring", "tireSize": "235/45R18" }
+      ],
+      "oeTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["Current sizes are WRONG. Should be 205/65R16, 215/55R17, 235/45R18"]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "5-Door i Grand Touring", "tireSize": "215/50R17" },
+        { "trim": "5-Door i Sport VE", "tireSize": "215/50R17" },
+        { "trim": "5-Door i Touring", "tireSize": "215/50R17" },
+        { "trim": "5-Door s Grand Touring", "tireSize": "215/45R18" },
+        { "trim": "5-Door s Sport VE", "tireSize": "215/50R17" },
+        { "trim": "5-Door s Touring", "tireSize": "215/50R17" },
+        { "trim": "Sport Sedan i Grand Touring", "tireSize": "215/50R17" },
+        { "trim": "Sport Sedan i Sport", "tireSize": "215/50R17" },
+        { "trim": "Sport Sedan i Sport VE", "tireSize": "215/50R17" },
+        { "trim": "Sport Sedan i Touring", "tireSize": "215/50R17" },
+        { "trim": "Sport Sedan s Grand Touring", "tireSize": "215/45R18" },
+        { "trim": "Sport Sedan s Sport VE", "tireSize": "215/50R17" },
+        { "trim": "Sport Sedan s Touring", "tireSize": "215/50R17" }
+      ],
+      "oeTireSizes": ["215/50R17", "215/45R18"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["Current sizes are WRONG. Should be 215/50R17, 215/45R18"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "i 5-Door", "tireSize": "215/50R17" },
+        { "trim": "i Sedan", "tireSize": ["205/60R16", "215/50R17"] },
+        { "trim": "s 5-Door", "tireSize": ["215/50R17", "215/45R18"] },
+        { "trim": "s Sedan", "tireSize": ["215/50R17", "215/45R18"] },
+        { "trim": "s Wagon", "tireSize": "215/50R17" }
+      ],
+      "oeTireSizes": ["205/60R16", "215/50R17", "215/45R18"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["225/55R17 and 225/45R19 are NOT valid. Should include 215/50R17, 215/45R18"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "i 5-Door", "tireSize": "215/50R17" },
+        { "trim": "i Sedan", "tireSize": ["205/60R16", "215/50R17"] },
+        { "trim": "s 5-Door", "tireSize": ["215/50R17", "215/45R18"] },
+        { "trim": "s Sedan", "tireSize": ["215/50R17", "215/45R18"] },
+        { "trim": "s Wagon", "tireSize": "215/50R17" }
+      ],
+      "oeTireSizes": ["205/60R16", "215/50R17", "215/45R18"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["225/55R17 and 225/45R19 are NOT valid. Should include 215/50R17, 215/45R18"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "i 5-Door", "tireSize": "215/50R17" },
+        { "trim": "i Sedan", "tireSize": ["205/60R16", "215/50R17"] },
+        { "trim": "s 5-Door", "tireSize": "215/50R17" },
+        { "trim": "s Sedan", "tireSize": "215/50R17" },
+        { "trim": "s Wagon", "tireSize": "215/50R17" }
+      ],
+      "oeTireSizes": ["205/60R16", "215/50R17"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["225/55R17 and 225/45R19 are NOT valid. Should be 205/60R16, 215/50R17"]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "i 5-Door", "tireSize": "215/50R17" },
+        { "trim": "i Sedan", "tireSize": ["205/60R16", "215/50R17"] },
+        { "trim": "s 5-Door", "tireSize": "215/50R17" },
+        { "trim": "s Sedan", "tireSize": "215/50R17" },
+        { "trim": "s Wagon", "tireSize": ["205/60R16", "215/50R17"] }
+      ],
+      "oeTireSizes": ["205/60R16", "215/50R17"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["225/55R17 and 225/45R19 are NOT valid. Should be 205/60R16, 215/50R17"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "trims": [
+        { "trim": "i Sedan", "tireSize": ["205/60R16", "215/50R17"] },
+        { "trim": "s Sedan", "tireSize": "215/50R17" }
+      ],
+      "oeTireSizes": ["205/60R16", "215/50R17"],
+      "currentSizesValidation": {
+        "current": ["205/60R16", "225/55R17", "225/45R19"],
+        "issues": ["225/55R17 and 225/45R19 are NOT valid. Should be 205/60R16, 215/50R17"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Allegro",
+      "status": "non-US-market",
+      "notes": "Mazda Allegro was sold in Central/South America (Colombia, etc.). It was a rebadged Mazda 323/Protege. OEM tire size: 185/65R14 or 195/55R15",
+      "trims": [
+        { "trim": "Base", "tireSize": "185/65R14" },
+        { "trim": "HB", "tireSize": "195/55R15" }
+      ],
+      "oeTireSizes": ["185/65R14", "195/55R15"]
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Allegro",
+      "status": "non-US-market",
+      "notes": "Mazda Allegro - Latin American market only",
+      "oeTireSizes": ["185/65R14", "195/55R15"]
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Allegro",
+      "status": "non-US-market",
+      "notes": "Mazda Allegro - Latin American market only",
+      "oeTireSizes": ["185/65R14", "195/55R15"]
+    },
+    {
+      "year": 2004,
+      "make": "Mazda",
+      "model": "Allegro",
+      "status": "non-US-market",
+      "notes": "Mazda Allegro - Latin American market only",
+      "oeTireSizes": ["185/65R14", "195/55R15"]
+    },
+    {
+      "year": 2003,
+      "make": "Mazda",
+      "model": "Allegro",
+      "status": "non-US-market",
+      "notes": "Mazda Allegro - Latin American market only",
+      "oeTireSizes": ["185/65R14", "195/55R15"]
+    },
+    {
+      "year": 2002,
+      "make": "Mazda",
+      "model": "Allegro",
+      "status": "non-US-market",
+      "notes": "Mazda Allegro - Latin American market only",
+      "oeTireSizes": ["185/65R14", "195/55R15"]
+    },
+    {
+      "year": 2001,
+      "make": "Mazda",
+      "model": "Allegro",
+      "status": "non-US-market",
+      "notes": "Mazda Allegro - Latin American market only",
+      "oeTireSizes": ["185/65R14", "195/55R15"]
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "Allegro",
+      "status": "non-US-market",
+      "notes": "Mazda Allegro - Latin American market only",
+      "oeTireSizes": ["185/65R14", "195/55R15"]
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "CX-30",
+      "trims": [
+        { "trim": "2.5 S", "tireSize": "215/65R16" },
+        { "trim": "2.5 S Carbon Edition", "tireSize": "215/55R18" },
+        { "trim": "2.5 S Preferred", "tireSize": "215/55R18" },
+        { "trim": "2.5 S Premium", "tireSize": "215/55R18" },
+        { "trim": "2.5 Turbo", "tireSize": "215/55R18" }
+      ],
+      "oeTireSizes": ["215/65R16", "215/55R18"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2025,
+      "make": "Mazda",
+      "model": "CX-30",
+      "trims": [
+        { "trim": "2.5 S", "tireSize": "215/65R16" },
+        { "trim": "2.5 S Carbon Edition", "tireSize": "215/55R18" },
+        { "trim": "2.5 S Preferred", "tireSize": "215/55R18" },
+        { "trim": "2.5 S Premium", "tireSize": "215/55R18" },
+        { "trim": "2.5 Turbo", "tireSize": "215/55R18" }
+      ],
+      "oeTireSizes": ["215/65R16", "215/55R18"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "CX-30",
+      "trims": [
+        { "trim": "2.5 S", "tireSize": "215/65R16" },
+        { "trim": "2.5 S Carbon Edition", "tireSize": "215/55R18" },
+        { "trim": "2.5 S Preferred", "tireSize": "215/55R18" },
+        { "trim": "2.5 S Premium", "tireSize": "215/55R18" },
+        { "trim": "2.5 S Select", "tireSize": "215/55R18" },
+        { "trim": "2.5 Turbo", "tireSize": "215/55R18" }
+      ],
+      "oeTireSizes": ["215/65R16", "215/55R18"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "CX-30",
+      "oeTireSizes": ["215/65R16", "215/55R18"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "CX-30",
+      "oeTireSizes": ["215/65R16", "215/55R18"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "CX-30",
+      "oeTireSizes": ["215/65R16", "215/55R18"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2020,
+      "make": "Mazda",
+      "model": "CX-30",
+      "trims": [
+        { "trim": "Base", "tireSize": "215/65R16" },
+        { "trim": "Preferred", "tireSize": "215/55R18" },
+        { "trim": "Premium", "tireSize": "215/55R18" },
+        { "trim": "Select", "tireSize": "215/55R18" }
+      ],
+      "oeTireSizes": ["215/65R16", "215/55R18"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2019,
+      "make": "Mazda",
+      "model": "CX-30",
+      "status": "invalid-year",
+      "notes": "CX-30 was not sold in 2019. First model year was 2020.",
+      "oeTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "CX-30-EV",
+      "status": "likely-mx30",
+      "notes": "CX-30 EV may refer to Mazda MX-30 EV. MX-30 EV uses 215/55R18.",
+      "oeTireSizes": ["215/55R18"]
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "CX-30-EV",
+      "status": "likely-mx30",
+      "notes": "CX-30 EV may refer to Mazda MX-30 EV. MX-30 EV uses 215/55R18.",
+      "oeTireSizes": ["215/55R18"]
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "CX-30-EV",
+      "status": "likely-mx30",
+      "notes": "MX-30 EV first sold in US in 2022. Uses 215/55R18.",
+      "oeTireSizes": ["215/55R18"]
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "CX-30-EV",
+      "status": "likely-mx30",
+      "notes": "MX-30 EV was launched in 2021 in some markets. Uses 215/55R18.",
+      "oeTireSizes": ["215/55R18"]
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "CX-4",
+      "status": "china-only",
+      "notes": "Mazda CX-4 is a China-only model. Tire sizes: 225/65R17, 225/55R19",
+      "oeTireSizes": ["225/65R17", "225/55R19"]
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "CX-4",
+      "status": "china-only",
+      "notes": "Mazda CX-4 is a China-only model. Tire sizes: 225/65R17, 225/55R19",
+      "oeTireSizes": ["225/65R17", "225/55R19"]
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "CX-4",
+      "status": "china-only",
+      "oeTireSizes": ["225/65R17", "225/55R19"]
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "CX-4",
+      "status": "china-only",
+      "oeTireSizes": ["225/65R17", "225/55R19"]
+    },
+    {
+      "year": 2020,
+      "make": "Mazda",
+      "model": "CX-4",
+      "status": "china-only",
+      "oeTireSizes": ["225/65R17", "225/55R19"]
+    },
+    {
+      "year": 2019,
+      "make": "Mazda",
+      "model": "CX-4",
+      "status": "china-only",
+      "oeTireSizes": ["225/65R17", "225/55R19"]
+    },
+    {
+      "year": 2018,
+      "make": "Mazda",
+      "model": "CX-4",
+      "status": "china-only",
+      "oeTireSizes": ["225/65R17", "225/55R19"]
+    },
+    {
+      "year": 2017,
+      "make": "Mazda",
+      "model": "CX-4",
+      "status": "china-only",
+      "oeTireSizes": ["225/65R17", "225/55R19"]
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "CX-4",
+      "status": "china-only",
+      "notes": "First year of CX-4 production for China market",
+      "oeTireSizes": ["225/65R17", "225/55R19"]
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "CX-5",
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2025,
+      "make": "Mazda",
+      "model": "CX-5",
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "CX-5",
+      "trims": [
+        { "trim": "2.5 S Carbon Edition", "tireSize": "225/55R19" },
+        { "trim": "2.5 S Preferred", "tireSize": "225/65R17" },
+        { "trim": "2.5 S Premium", "tireSize": "225/55R19" },
+        { "trim": "2.5 S Premium Plus", "tireSize": "225/55R19" },
+        { "trim": "2.5 S Select", "tireSize": "225/65R17" },
+        { "trim": "2.5 Turbo", "tireSize": "225/55R19" }
+      ],
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": {
+        "current": ["225/65R17", "225/55R19", "245/50R19", "225/60R18"],
+        "issues": ["245/50R19 and 225/60R18 not confirmed OEM for 2024 CX-5"]
+      }
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "CX-5",
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "CX-5",
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "CX-5",
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2020,
+      "make": "Mazda",
+      "model": "CX-5",
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2019,
+      "make": "Mazda",
+      "model": "CX-5",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/55R19" },
+        { "trim": "Grand Touring Reserve", "tireSize": "225/55R19" },
+        { "trim": "Signature", "tireSize": "225/55R19" },
+        { "trim": "Sport", "tireSize": "225/65R17" },
+        { "trim": "Touring", "tireSize": "225/65R17" }
+      ],
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": {
+        "current": ["225/65R17", "225/55R19", "225/60R18", "245/50R19"],
+        "issues": ["225/60R18 and 245/50R19 not confirmed OEM for 2019 CX-5"]
+      }
+    },
+    {
+      "year": 2018,
+      "make": "Mazda",
+      "model": "CX-5",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/55R19" },
+        { "trim": "Sport", "tireSize": "225/65R17" },
+        { "trim": "Touring", "tireSize": "225/55R19" }
+      ],
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": {
+        "current": ["225/65R17", "225/55R19", "245/50R19", "245/45ZR20"],
+        "issues": ["245/50R19 and 245/45ZR20 not confirmed OEM for 2018 CX-5"]
+      }
+    },
+    {
+      "year": 2017,
+      "make": "Mazda",
+      "model": "CX-5",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/55R19" },
+        { "trim": "Sport", "tireSize": "225/65R17" },
+        { "trim": "Touring", "tireSize": "225/65R17" }
+      ],
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": {
+        "current": ["225/65R17", "225/55R19", "245/50R19", "225/60R18"],
+        "issues": ["245/50R19 and 225/60R18 not confirmed OEM for 2017 CX-5"]
+      }
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "CX-5",
+      "trims": [
+        { "trim": "Grand Touring", "tireSize": "225/55R19" },
+        { "trim": "Sport", "tireSize": "225/65R17" },
+        { "trim": "Touring", "tireSize": "225/65R17" }
+      ],
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "CX-5",
+      "trims": [
+        { "trim": "Grand Touring AWD", "tireSize": "225/55R19" },
+        { "trim": "Grand Touring FWD", "tireSize": "225/55R19" },
+        { "trim": "Sport AWD", "tireSize": "225/65R17" },
+        { "trim": "Sport FWD", "tireSize": "225/65R17" },
+        { "trim": "Touring AWD", "tireSize": "225/65R17" },
+        { "trim": "Touring FWD", "tireSize": "225/65R17" }
+      ],
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": {
+        "current": ["225/65R17", "225/55R19", "225/60R18"],
+        "issues": ["225/60R18 not confirmed OEM for 2015 CX-5"]
+      }
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "CX-5",
+      "trims": [
+        { "trim": "Grand Touring AWD", "tireSize": "225/55R19" },
+        { "trim": "Grand Touring FWD", "tireSize": "225/55R19" },
+        { "trim": "Sport AWD", "tireSize": "225/65R17" },
+        { "trim": "Sport FWD", "tireSize": "225/65R17" },
+        { "trim": "Touring AWD", "tireSize": "225/65R17" },
+        { "trim": "Touring FWD", "tireSize": "225/65R17" }
+      ],
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "CX-5",
+      "trims": [
+        { "trim": "Grand Touring AWD", "tireSize": "225/55R19" },
+        { "trim": "Grand Touring FWD", "tireSize": "225/55R19" },
+        { "trim": "Sport AWD", "tireSize": "225/65R17" },
+        { "trim": "Sport FWD", "tireSize": "225/65R17" },
+        { "trim": "Touring AWD", "tireSize": "225/65R17" },
+        { "trim": "Touring FWD", "tireSize": "225/65R17" }
+      ],
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "CX-5",
+      "status": "invalid-year",
+      "notes": "CX-5 first model year was 2013 in US market",
+      "oeTireSizes": []
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "CX-5",
+      "status": "invalid-year",
+      "notes": "CX-5 first model year was 2013 in US market",
+      "oeTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "CX-50",
+      "oeTireSizes": ["225/65R17", "225/60R18", "245/45R20"],
+      "currentSizesValidation": {
+        "current": ["225/60R18", "225/65R17", "245/45R20"],
+        "status": "VALID"
+      }
+    },
+    {
+      "year": 2025,
+      "make": "Mazda",
+      "model": "CX-50",
+      "oeTireSizes": ["225/65R17", "225/55R19", "235/50R20"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "CX-50",
+      "trims": [
+        { "trim": "2.5 S Preferred", "tireSize": "225/65R17" },
+        { "trim": "2.5 S Premium", "tireSize": "225/65R17" },
+        { "trim": "2.5 S Premium Plus", "tireSize": "245/45R20" },
+        { "trim": "2.5 S Select", "tireSize": "225/65R17" },
+        { "trim": "2.5 Turbo", "tireSize": "245/45R20" },
+        { "trim": "2.5 Turbo Meridian Edition", "tireSize": "225/60R18" }
+      ],
+      "oeTireSizes": ["225/65R17", "225/60R18", "245/45R20"],
+      "currentSizesValidation": {
+        "current": ["225/65R17", "225/55R19", "235/50R20"],
+        "issues": ["Current sizes don't match 2024 OEM. Should include 225/60R18 and 245/45R20 instead of 225/55R19 and 235/50R20"]
+      }
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "CX-50",
+      "trims": [
+        { "trim": "2.5 S", "tireSize": "225/65R17" },
+        { "trim": "2.5 S Carbon Edition", "tireSize": "225/55R19" },
+        { "trim": "2.5 S Preferred", "tireSize": "225/65R17" },
+        { "trim": "2.5 S Premium", "tireSize": "225/55R19" },
+        { "trim": "2.5 S Premium Plus", "tireSize": "225/55R19" },
+        { "trim": "2.5 S Select", "tireSize": "225/65R17" },
+        { "trim": "2.5 Turbo", "tireSize": "225/55R19" }
+      ],
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": {
+        "current": ["225/65R17", "225/55R19", "235/50R20", "245/50R19", "245/45ZR20", "225/60R18"],
+        "issues": ["235/50R20, 245/50R19, 245/45ZR20, 225/60R18 not confirmed OEM for 2023 CX-50"]
+      }
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "CX-50",
+      "status": "first-year",
+      "notes": "First model year of CX-50",
+      "oeTireSizes": ["225/65R17", "225/55R19"],
+      "currentSizesValidation": { "status": "VALID" }
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "CX-7",
+      "status": "discontinued",
+      "notes": "CX-7 was discontinued after 2012 in US market. May exist in other markets through 2016.",
+      "oeTireSizes": ["215/70R17", "235/60R18", "235/55R19"]
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "CX-7",
+      "status": "discontinued",
+      "notes": "CX-7 was discontinued after 2012 in US market",
+      "oeTireSizes": ["215/70R17", "235/60R18", "235/55R19"]
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validSizes": 35,
+    "sizeIssues": 20,
+    "nonUsMarket": 10,
+    "invalidYears": 5,
+    "discontinued": 2,
+    "chinaOnly": 9,
+    "keyFindings": [
+      "Mazda6 2003-2008: Current sizes are WRONG - using newer generation sizes",
+      "Mazda6 2009-2013: Current sizes include incorrect newer generation sizes",
+      "Mazda6 2014-2021: 205/60R16 is NOT valid for these years",
+      "Mazda CX-5 2011-2012: Invalid years - CX-5 started 2013",
+      "Mazda CX-30 2019: Invalid year - CX-30 started 2020",
+      "Mazda CX-4: China-only model, not sold in US",
+      "Mazda Allegro: Latin America only (Colombia, etc.)",
+      "Mazda 121: Australia/Europe only",
+      "Mazda CX-7: Discontinued after 2012 in US",
+      "CX-30-EV: Likely refers to MX-30 EV"
+    ]
+  }
+}

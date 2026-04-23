@@ -1,0 +1,624 @@
+{
+  "batch": "batch-46-korean",
+  "verifiedAt": "2026-04-23T00:10:00Z",
+  "vehicleCount": 45,
+  "results": [
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["215/70R15"],
+      "oemWheelSizes": ["15x6"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com", "thedriveradviser.com"],
+      "notes": "First generation Sedona (2002-2005)"
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "6x139.7",
+      "hubBore": 92.3,
+      "oemTireSizes": ["225/70R16", "235/60R17"],
+      "oemWheelSizes": ["16x6.5", "17x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com", "thedriveradviser.com", "caranddriver.com"],
+      "notes": "Second generation starts 2006 with 6-lug pattern. LX gets 16\", EX gets 17\"."
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "6x139.7",
+      "hubBore": 92.3,
+      "oemTireSizes": ["225/70R16", "235/60R17"],
+      "oemWheelSizes": ["16x6.5", "17x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com", "caranddriver.com"],
+      "notes": "Second generation. LX/Base gets 225/70R16, EX gets 235/60R17."
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "6x139.7",
+      "hubBore": 92.3,
+      "oemTireSizes": ["225/70R16", "235/60R17"],
+      "oemWheelSizes": ["16x6.5", "17x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com", "caranddriver.com"],
+      "notes": "Second generation. LX/Base gets 225/70R16, EX gets 235/60R17."
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "6x139.7",
+      "hubBore": 92.3,
+      "oemTireSizes": ["225/70R16", "235/60R17"],
+      "oemWheelSizes": ["16x6.5", "17x7"],
+      "confidence": "high",
+      "sources": ["tiresize.com", "thedriveradviser.com"],
+      "notes": "Second generation. LX/Base gets 225/70R16, EX gets 235/60R17."
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "6x139.7",
+      "hubBore": 92.3,
+      "oemTireSizes": ["225/70R16", "235/60R17"],
+      "oemWheelSizes": ["16x6.5", "17x7"],
+      "confidence": "high",
+      "sources": ["tiresize.com", "thedriveradviser.com"],
+      "notes": "Second generation facelift (2010-2014). Same specs as 2006-2009."
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "6x139.7",
+      "hubBore": 92.3,
+      "oemTireSizes": ["225/70R16", "235/60R17"],
+      "oemWheelSizes": ["16x6.5", "17x7"],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "Second generation facelift. P225/70R16 confirmed from Car and Driver."
+    },
+    {
+      "year": 2012,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "6x139.7",
+      "hubBore": 92.3,
+      "oemTireSizes": ["225/70R16", "235/60R17"],
+      "oemWheelSizes": ["16x6.5", "17x7"],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "Second generation facelift. Confirmed 16x6.5 steel wheels with P225/70R16 from C&D specs."
+    },
+    {
+      "year": 2013,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "6x139.7",
+      "hubBore": 92.3,
+      "oemTireSizes": ["225/70R16", "235/60R17"],
+      "oemWheelSizes": ["16x6.5", "17x7"],
+      "confidence": "medium",
+      "sources": ["thedriveradviser.com", "tiresize.com"],
+      "notes": "Sedona skipped 2013 model year in some markets. Verify availability."
+    },
+    {
+      "year": 2014,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "6x139.7",
+      "hubBore": 92.3,
+      "oemTireSizes": ["225/70R16", "235/60R17"],
+      "oemWheelSizes": ["16x6.5", "17x7"],
+      "confidence": "high",
+      "sources": ["tiresize.com", "thedriveradviser.com"],
+      "notes": "Final year of second generation."
+    },
+    {
+      "year": 2015,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "oemWheelSizes": ["17x6.5", "18x6.5", "19x7"],
+      "confidence": "high",
+      "sources": ["kia.com", "tiresize.com", "thedriveradviser.com", "caranddriver.com"],
+      "notes": "Third generation redesign. Returns to 5-lug pattern. L/LX gets 17\", EX/SX gets 18\", SXL gets 19\"."
+    },
+    {
+      "year": 2016,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "oemWheelSizes": ["17x6.5", "18x6.5", "19x7"],
+      "confidence": "high",
+      "sources": ["kia.com", "tiresize.com", "caranddriver.com"],
+      "notes": "Third generation. Confirmed 18x6.5J alloy with P235/60R18 from C&D for EX trim."
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "oemWheelSizes": ["17x6.5", "18x6.5", "19x7"],
+      "confidence": "high",
+      "sources": ["kia.com", "tiresize.com"],
+      "notes": "Third generation. L/LX gets 17\", EX/SX gets 18\", SXL gets 19\"."
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "oemWheelSizes": ["17x6.5", "18x6.5", "19x7"],
+      "confidence": "high",
+      "sources": ["kia.com", "tiresize.com"],
+      "notes": "Third generation. L/LX gets 17\", EX/SX gets 18\", SXL gets 19\"."
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Sedona",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["235/65R17", "235/60R18"],
+      "oemWheelSizes": ["17x6.5", "18x6.5"],
+      "confidence": "high",
+      "sources": ["kia.com", "tiresize.com"],
+      "notes": "Third generation. SXL trim discontinued for 2019, no 19\" option."
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "Seltos",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["215/55R17", "235/45R18"],
+      "oemWheelSizes": ["17x6.5", "18x7"],
+      "confidence": "high",
+      "sources": ["tiresize.com", "thedriveradviser.com"],
+      "notes": "First generation. LX/EX/S get 17\", S Turbo/SX Turbo get 18\"."
+    },
+    {
+      "year": 2023,
+      "make": "Kia",
+      "model": "Seltos",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["215/55R17", "235/45R18"],
+      "oemWheelSizes": ["17x6.5", "18x7"],
+      "confidence": "high",
+      "sources": ["tiresize.com", "thedriveradviser.com"],
+      "notes": "First generation facelift. LX/EX/S get 17\", Nightfall/SX get 18\"."
+    },
+    {
+      "year": 2024,
+      "make": "Kia",
+      "model": "Seltos",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["215/55R17", "235/45R18"],
+      "oemWheelSizes": ["17x6.5", "18x7"],
+      "confidence": "high",
+      "sources": ["tiresize.com", "thedriveradviser.com"],
+      "notes": "First generation. LX/EX/S get 17\", SX/X-Line get 18\"."
+    },
+    {
+      "year": 2025,
+      "make": "Kia",
+      "model": "Seltos",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["215/55R17", "235/45R18"],
+      "oemWheelSizes": ["17x6.5", "18x7"],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First generation. LX/EX/S get 17\", SX/X-Line get 18\"."
+    },
+    {
+      "year": 2026,
+      "make": "Kia",
+      "model": "Seltos",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["215/55R17", "235/45R18"],
+      "oemWheelSizes": ["17x6.5", "18x7"],
+      "confidence": "medium",
+      "sources": ["tiresize.com"],
+      "notes": "First generation (projected). Specs likely same as 2025. Verify when released."
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Sorento",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["245/70R16"],
+      "oemWheelSizes": ["16x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "thedriveradviser.com", "kia-forums.com"],
+      "notes": "First generation body-on-frame SUV. All trims use 245/70R16."
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Sorento",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["245/70R16"],
+      "oemWheelSizes": ["16x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "thedriveradviser.com"],
+      "notes": "First generation. All trims use 245/70R16."
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Sorento",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["245/70R16"],
+      "oemWheelSizes": ["16x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "thedriveradviser.com"],
+      "notes": "First generation. All trims use 245/70R16."
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Sorento",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["245/70R16"],
+      "oemWheelSizes": ["16x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "thedriveradviser.com"],
+      "notes": "First generation. All trims use 245/70R16."
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Sorento",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["245/70R16"],
+      "oemWheelSizes": ["16x7"],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com"],
+      "notes": "First generation facelift (2006-2009). Still uses 245/70R16."
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Sorento",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["245/70R16", "245/65R17"],
+      "oemWheelSizes": ["16x7", "17x7"],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com"],
+      "notes": "First generation facelift. Added optional 17\" wheels with 245/65R17."
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Sorento",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["245/70R16", "245/65R17"],
+      "oemWheelSizes": ["16x7", "17x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "thedriveradviser.com"],
+      "notes": "First generation facelift. Base gets 16\", upper trims get 17\"."
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Sorento",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["245/70R16", "245/65R17"],
+      "oemWheelSizes": ["16x7", "17x7"],
+      "confidence": "high",
+      "sources": ["thedriveradviser.com"],
+      "notes": "Final year of first generation. Second gen (2010+) uses 5x114.3."
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Spectra5",
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["195/60R15", "205/50R16"],
+      "oemWheelSizes": ["15x6", "16x6"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com", "caranddriver.com", "motortrend.com"],
+      "notes": "Hatchback variant of Spectra. Base/EX/LX get 15\", SX/Spectra5 get 16\"."
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Spectra5",
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["205/50R16"],
+      "oemWheelSizes": ["16x6"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com", "caranddriver.com"],
+      "notes": "Spectra5 hatchback comes standard with 16\" alloy wheels and 205/50R16."
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Spectra5",
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["205/50R16"],
+      "oemWheelSizes": ["16x6"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com", "caranddriver.com"],
+      "notes": "Spectra5 SX gets 16\" alloy wheels with 205/50R16."
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Spectra5",
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["205/50R16"],
+      "oemWheelSizes": ["16x6"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com", "caranddriver.com"],
+      "notes": "Spectra5 SX gets 16\" alloy wheels with 205/50R16."
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Spectra5",
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["205/50R16"],
+      "oemWheelSizes": ["16x6"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com", "caranddriver.com"],
+      "notes": "Final year for Spectra5. Replaced by Forte5 in 2010."
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Sportage",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["205/75R15"],
+      "oemWheelSizes": ["15x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "michelinman.com"],
+      "notes": "First generation compact SUV. P205/75R15 97S confirmed by Michelin."
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Sportage",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["205/75R15"],
+      "oemWheelSizes": ["15x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com"],
+      "notes": "First generation compact SUV. All trims use 205/75R15."
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Sportage",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["205/75R15"],
+      "oemWheelSizes": ["15x7"],
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "autopadre.com"],
+      "notes": "First generation compact SUV. Final year before discontinuation."
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Sportage",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["205/75R15"],
+      "oemWheelSizes": ["15x7"],
+      "confidence": "medium",
+      "sources": ["roadkillcustoms.com"],
+      "notes": "Sportage was NOT sold in US for 2003-2004. Only available in other markets. Second gen started 2005."
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Sportage",
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3,
+      "oemTireSizes": ["205/75R15"],
+      "oemWheelSizes": ["15x7"],
+      "confidence": "medium",
+      "sources": ["roadkillcustoms.com"],
+      "notes": "Sportage was NOT sold in US for 2003-2004. Only available in other markets. Second gen started 2005."
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Stinger",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "oemWheelSizes": ["18x8", "19x8 (front)", "19x8.5 (rear)"],
+      "confidence": "medium",
+      "sources": ["stingerforum.org"],
+      "notes": "Stinger was announced in 2017 but not sold in US until 2018 model year. Pre-production specs."
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Stinger",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "oemWheelSizes": ["18x8", "19x8 (front)", "19x8.5 (rear)"],
+      "confidence": "high",
+      "sources": ["tiresize.com", "stingerforum.org", "thedriveradviser.com"],
+      "notes": "GT trims have staggered 19\" setup (front 225/40R19, rear 255/35R19). Base/Premium get 18\"."
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Stinger",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "oemWheelSizes": ["18x8", "19x8 (front)", "19x8.5 (rear)"],
+      "confidence": "high",
+      "sources": ["tiresize.com", "stingerforum.org"],
+      "notes": "GT/GT1/GT2 have staggered 19\" setup. 2.0L/Premium get 18\"."
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Stinger",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "oemWheelSizes": ["18x8", "19x8 (front)", "19x8.5 (rear)"],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "GT-Line gets 18\". GT/GT1/GT2 have staggered 19\" setup."
+    },
+    {
+      "year": 2022,
+      "make": "Kia",
+      "model": "Stinger",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "oemWheelSizes": ["18x8", "19x8 (front)", "19x8.5 (rear)"],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Facelift model. GT-Line gets 18\". GT1/GT2 have staggered 19\" setup."
+    },
+    {
+      "year": 2023,
+      "make": "Kia",
+      "model": "Stinger",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "oemWheelSizes": ["18x8", "19x8 (front)", "19x8.5 (rear)"],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Final years of Stinger production. GT-Line gets 18\", GT2 gets staggered 19\"."
+    },
+    {
+      "year": 2024,
+      "make": "Kia",
+      "model": "Stinger",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "oemTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "oemWheelSizes": ["18x8", "19x8 (front)", "19x8.5 (rear)"],
+      "confidence": "medium",
+      "sources": ["thedriveradviser.com"],
+      "notes": "Stinger may be discontinued after 2024. Verify availability. Same specs as 2023."
+    }
+  ],
+  "summary": {
+    "sedona": {
+      "generations": {
+        "first_2002_2005": {
+          "boltPattern": "5x114.3",
+          "hubBore": 67.1
+        },
+        "second_2006_2014": {
+          "boltPattern": "6x139.7",
+          "hubBore": 92.3
+        },
+        "third_2015_2021": {
+          "boltPattern": "5x114.3",
+          "hubBore": 67.1
+        }
+      }
+    },
+    "seltos": {
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1
+    },
+    "sorento_first_gen_2002_2009": {
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3
+    },
+    "spectra5": {
+      "boltPattern": "4x114.3",
+      "hubBore": 67.1
+    },
+    "sportage_first_gen_2000_2004": {
+      "boltPattern": "5x139.7",
+      "hubBore": 95.3
+    },
+    "stinger": {
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "isStaggered": true,
+      "staggeredNote": "GT trims use staggered setup: front 19x8 with 225/40R19, rear 19x8.5 with 255/35R19"
+    }
+  },
+  "flags": [
+    {
+      "years": [2003, 2004],
+      "make": "Kia",
+      "model": "Sportage",
+      "issue": "NOT_SOLD_IN_US",
+      "note": "First gen Sportage was discontinued in US after 2002. Second gen didn't arrive until 2005. These years only available in other markets."
+    },
+    {
+      "year": 2013,
+      "make": "Kia",
+      "model": "Sedona",
+      "issue": "VERIFY_AVAILABILITY",
+      "note": "Sedona may have skipped 2013 model year in some markets."
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Stinger",
+      "issue": "PRE_PRODUCTION",
+      "note": "Stinger announced 2017, US sales started 2018 model year."
+    },
+    {
+      "year": 2024,
+      "make": "Kia",
+      "model": "Stinger",
+      "issue": "VERIFY_AVAILABILITY",
+      "note": "Stinger may be discontinued. Verify production status."
+    },
+    {
+      "year": 2026,
+      "make": "Kia",
+      "model": "Seltos",
+      "issue": "FUTURE_MODEL",
+      "note": "2026 specs projected from 2025. Verify when officially released."
+    }
+  ]
+}

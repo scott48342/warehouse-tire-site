@@ -1,0 +1,1031 @@
+{
+  "batchId": "84",
+  "validatedAt": "2026-04-21T22:15:00Z",
+  "vehicleCount": 75,
+  "summary": {
+    "validated": 75,
+    "issues": 27,
+    "models": ["Kia Sedona", "Kia Seltos", "Kia Sorento", "Kia Soul"]
+  },
+  "vehicles": [
+    {
+      "year": 2013,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 225/70R16 for Base/LX trims"
+    },
+    {
+      "year": 2012,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, should be 235/60R17 for EX trim"
+    },
+    {
+      "year": 2012,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 225/70R16 for Base/LX trims"
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, should be 235/60R17 for EX trim"
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 225/70R16"
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, should be 235/60R17"
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 225/70R16"
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 225/70R16"
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, should be 235/60R17"
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, should be 235/60R17"
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 225/70R16"
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 225/70R16"
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "Base/LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, should be 235/60R17"
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 225/70R16"
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["225/70R16", "235/60R17"],
+      "trims": {
+        "LX": { "tireSize": "225/70R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "235/60R17", "wheelSize": "17\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, should be 235/60R17"
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["215/70R15"],
+      "trims": {
+        "LX": { "tireSize": "215/70R15", "wheelSize": "15\"" },
+        "EX": { "tireSize": "215/70R15", "wheelSize": "15\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, 2005 Sedona was 215/70R15 only"
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["215/70R15"],
+      "trims": {
+        "LX": { "tireSize": "215/70R15", "wheelSize": "15\"" },
+        "EX": { "tireSize": "215/70R15", "wheelSize": "15\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 215/70R15 (15-inch wheels)"
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["215/70R15"],
+      "trims": {
+        "LX": { "tireSize": "215/70R15", "wheelSize": "15\"" },
+        "EX": { "tireSize": "215/70R15", "wheelSize": "15\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 215/70R15"
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["215/70R15"],
+      "trims": {
+        "LX": { "tireSize": "215/70R15", "wheelSize": "15\"" },
+        "EX": { "tireSize": "215/70R15", "wheelSize": "15\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, 2004 Sedona was 215/70R15 only"
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["215/70R15"],
+      "trims": {
+        "LX": { "tireSize": "215/70R15", "wheelSize": "15\"" },
+        "EX": { "tireSize": "215/70R15", "wheelSize": "15\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, 2003 Sedona was 215/70R15 only"
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["215/70R15"],
+      "trims": {
+        "LX": { "tireSize": "215/70R15", "wheelSize": "15\"" },
+        "EX": { "tireSize": "215/70R15", "wheelSize": "15\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 215/70R15"
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": ["215/70R15"],
+      "trims": {
+        "LX": { "tireSize": "215/70R15", "wheelSize": "15\"" },
+        "EX": { "tireSize": "215/70R15", "wheelSize": "15\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 225/60R17, 2002 Sedona was 215/70R15 only"
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": ["215/70R15"],
+      "trims": {
+        "LX": { "tireSize": "215/70R15", "wheelSize": "15\"" },
+        "EX": { "tireSize": "215/70R15", "wheelSize": "15\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 215/70R16, should be 215/70R15"
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15"],
+      "trims": {
+        "LX": { "tireSize": "215/70R15", "wheelSize": "15\"" },
+        "EX": { "tireSize": "215/70R15", "wheelSize": "15\"" }
+      },
+      "status": "MISSING",
+      "notes": "No tire sizes in DB - should be 215/70R15"
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15"],
+      "trims": {
+        "All": { "tireSize": "215/70R15", "wheelSize": "15\"" }
+      },
+      "status": "MISSING",
+      "notes": "No tire sizes in DB - should be 215/70R15 (limited US availability in 2000)"
+    },
+    {
+      "year": 2026,
+      "make": "Kia",
+      "model": "Seltos",
+      "currentTireSizes": ["215/55R17"],
+      "validatedTireSizes": ["215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S/EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "SX/Nightfall": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "PARTIAL",
+      "notes": "DB missing 235/45R18 for SX/Nightfall trims"
+    },
+    {
+      "year": 2025,
+      "make": "Kia",
+      "model": "Seltos",
+      "currentTireSizes": ["215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S/EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "SX/SX Turbo/Nightfall": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2024,
+      "make": "Kia",
+      "model": "Seltos",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S/EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "SX/SX Turbo/Nightfall": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "MISSING",
+      "notes": "No tire sizes in DB"
+    },
+    {
+      "year": 2023,
+      "make": "Kia",
+      "model": "Seltos",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S/EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "SX/Nightfall": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "MISSING",
+      "notes": "No tire sizes in DB"
+    },
+    {
+      "year": 2022,
+      "make": "Kia",
+      "model": "Seltos",
+      "currentTireSizes": ["235/45R18", "235/40ZR19", "215/55R17"],
+      "validatedTireSizes": ["215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S/EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "SX Turbo/Nightfall": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 235/40ZR19 which is NOT OEM for US Seltos"
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "Seltos",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S/EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "S Turbo/SX Turbo": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "MISSING",
+      "notes": "No tire sizes in DB"
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Seltos",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S/EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "S Turbo/SX Turbo": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "MISSING",
+      "notes": "No tire sizes in DB (2020 was first US model year)"
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Seltos",
+      "currentTireSizes": ["205/65R16", "215/60R17", "215/55R18", "225/50R18"],
+      "validatedTireSizes": ["205/65R16", "215/60R17", "215/55R18", "225/50R18"],
+      "trims": {
+        "HTE/HTK": { "tireSize": "205/65R16", "wheelSize": "16\"" },
+        "HTK+": { "tireSize": "215/60R17", "wheelSize": "17\"" },
+        "HTX/GTX": { "tireSize": "215/55R18", "wheelSize": "18\"" },
+        "GTX+": { "tireSize": "225/50R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "2019 was international market only - correct sizes for Korean/Indian market"
+    },
+    {
+      "year": 2026,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "S/EX": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "EX Hybrid/SX": { "tireSize": "235/55R19", "wheelSize": "19\"" },
+        "X-Line/SX Prestige": { "tireSize": "255/45R20", "wheelSize": "20\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2025,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "S/EX": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "EX Hybrid/SX": { "tireSize": "235/55R19", "wheelSize": "19\"" },
+        "X-Line/SX Prestige": { "tireSize": "255/45R20", "wheelSize": "20\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2024,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "S/EX": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "EX Hybrid/SX": { "tireSize": "235/55R19", "wheelSize": "19\"" },
+        "EX X-Line/SX Prestige": { "tireSize": "255/45R20", "wheelSize": "20\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2023,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "EX Hybrid": { "tireSize": "235/55R19", "wheelSize": "19\"" },
+        "EX X-Line/SX Prestige": { "tireSize": "255/45R20", "wheelSize": "20\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2022,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "LX/EX Hybrid": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "S/EX": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "SX": { "tireSize": "235/55R19", "wheelSize": "19\"" },
+        "EX X-Line/SX Prestige": { "tireSize": "255/45R20", "wheelSize": "20\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": {
+        "LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "S/EX/EX Hybrid": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "SX/SX Prestige": { "tireSize": "235/55R19", "wheelSize": "19\"" },
+        "EX X-Line": { "tireSize": "255/45R20", "wheelSize": "20\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/55R19"],
+      "trims": {
+        "L/LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX/S V6/SX": { "tireSize": "235/55R19", "wheelSize": "19\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 235/60R18 which was NOT offered in 2020 Sorento (Gen 3 final year)"
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "L/LX/LX V6": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX V6": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "SX/SX Limited": { "tireSize": "235/55R19", "wheelSize": "19\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "L/LX/LX V6": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX 2.0T/EX V6": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "SX/SX Limited": { "tireSize": "235/55R19", "wheelSize": "19\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "L/LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "SX/SXL": { "tireSize": "235/55R19", "wheelSize": "19\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 255/45R20 which was NOT OEM for 2017 Sorento"
+    },
+    {
+      "year": 2016,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "L/LX/LX V6": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX/EX V6": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "SX/SX Limited": { "tireSize": "235/55R19", "wheelSize": "19\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2015,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "SX/Limited": { "tireSize": "235/55R19", "wheelSize": "19\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2014,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "LX/LX V6": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX/EX V6": { "tireSize": "235/60R18", "wheelSize": "18\"" },
+        "SX": { "tireSize": "235/55R19", "wheelSize": "19\"" }
+      },
+      "status": "PARTIAL",
+      "notes": "DB missing 235/55R19 for SX trim"
+    },
+    {
+      "year": 2013,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX/EX V6/LX V6/SX": { "tireSize": "235/60R18", "wheelSize": "18\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 235/55R19 but 2013 Sorento didn't offer 19\" OEM wheels"
+    },
+    {
+      "year": 2012,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "Base/LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX/SX/Limited": { "tireSize": "235/60R18", "wheelSize": "18\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 235/55R19 but 2012 Sorento didn't offer 19\" OEM wheels"
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "Base/LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX/SX": { "tireSize": "235/60R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["235/65R17", "235/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "LX": { "tireSize": "235/65R17", "wheelSize": "17\"" },
+        "EX/SX": { "tireSize": "235/60R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes (2010 was Gen 2 XM debut)"
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/65R17"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trims": {
+        "LX/EX/LX Luxury": { "tireSize": "245/70R16", "wheelSize": "16\"" },
+        "LX Sport": { "tireSize": "245/65R17", "wheelSize": "17\"" }
+      },
+      "status": "PARTIAL",
+      "notes": "DB missing 245/70R16 for base trims"
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/70R16"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trims": {
+        "LX/EX/LX Luxury": { "tireSize": "245/70R16", "wheelSize": "16\"" },
+        "LX Sport": { "tireSize": "245/65R17", "wheelSize": "17\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire size for base trims"
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/70R16"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" },
+        "LX Sport": { "tireSize": "245/65R17", "wheelSize": "17\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire size"
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/65R17"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" },
+        "LX Sport": { "tireSize": "245/65R17", "wheelSize": "17\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire size for Sport trim"
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/65R17"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" },
+        "LX Sport": { "tireSize": "245/65R17", "wheelSize": "17\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire size for Sport trim"
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/70R16"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" },
+        "LX Sport": { "tireSize": "245/65R17", "wheelSize": "17\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire size"
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/70R16"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire size"
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/65R17"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 245/65R17 but 2006 Sorento was 245/70R16 only"
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/65R17"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 245/65R17 but 2005 Sorento was 245/70R16 only"
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/70R16"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire size"
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/65R17"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 245/65R17 but 2004 Sorento was 245/70R16 only"
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/70R16"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire size"
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/70R16"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire size"
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["245/65R17"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": {
+        "LX/EX": { "tireSize": "245/70R16", "wheelSize": "16\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 245/65R17 but 2003 Sorento was 245/70R16 only"
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Sorento",
+      "currentTireSizes": ["225/75R16", "245/70R16"],
+      "validatedTireSizes": ["225/75R16", "245/70R16"],
+      "trims": {
+        "Base": { "tireSize": "225/75R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "245/70R16", "wheelSize": "16\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2026,
+      "make": "Kia",
+      "model": "Soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S": { "tireSize": "205/60R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "GT-Line": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2025,
+      "make": "Kia",
+      "model": "Soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S": { "tireSize": "205/60R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "GT-Line": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2024,
+      "make": "Kia",
+      "model": "Soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S": { "tireSize": "205/60R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "GT-Line": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2023,
+      "make": "Kia",
+      "model": "Soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18", "235/40ZR19", "235/50R17"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S": { "tireSize": "205/60R16", "wheelSize": "16\"" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "GT-Line": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "MISMATCH",
+      "notes": "DB has 235/40ZR19 and 235/50R17 which are NOT OEM for US Soul"
+    },
+    {
+      "year": 2022,
+      "make": "Kia",
+      "model": "Soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S": { "tireSize": "205/60R16", "wheelSize": "16\"" },
+        "EX/X-Line": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "GT-Line/Turbo": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "Soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S": { "tireSize": "205/60R16", "wheelSize": "16\"" },
+        "EX/X-Line": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "GT-Line/Turbo": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "LX/S": { "tireSize": "205/60R16", "wheelSize": "16\"" },
+        "EX/X-Line": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "GT-Line/GT-Line Turbo": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "Base/EV": { "tireSize": "205/60R16", "wheelSize": "16\"" },
+        "Plus": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "!": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "Base/EV": { "tireSize": "205/60R16", "wheelSize": "16\"" },
+        "Plus": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "!": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "Base/EV": { "tireSize": "205/60R16", "wheelSize": "16\"" },
+        "Plus": { "tireSize": "215/55R17", "wheelSize": "17\"" },
+        "!": { "tireSize": "235/45R18", "wheelSize": "18\"" }
+      },
+      "status": "OK",
+      "notes": "Correct tire sizes"
+    }
+  ],
+  "issuesSummary": {
+    "MISMATCH": 27,
+    "MISSING": 7,
+    "PARTIAL": 3,
+    "OK": 38,
+    "criticalIssues": [
+      {
+        "model": "Kia Sedona",
+        "years": "2002-2013",
+        "issue": "All Sedona tire sizes appear incorrect in DB. 2002-2005 should be 215/70R15 (15\"), 2006-2013 should be 225/70R16 (Base/LX) or 235/60R17 (EX). DB has 215/70R16 and 225/60R17 which don't match any OEM spec."
+      },
+      {
+        "model": "Kia Seltos",
+        "years": "2020-2024",
+        "issue": "Missing tire sizes for multiple years. 2022 has incorrect 235/40ZR19 which is not US OEM."
+      },
+      {
+        "model": "Kia Sorento",
+        "years": "2003-2006",
+        "issue": "Some entries show 245/65R17 but Gen 1 Sorento only had 16\" wheels with 245/70R16"
+      }
+    ]
+  }
+}

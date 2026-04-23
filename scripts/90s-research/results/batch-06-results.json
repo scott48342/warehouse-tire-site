@@ -1,0 +1,1330 @@
+{
+  "batchId": "90s-batch-06",
+  "completedAt": "2026-04-22T12:35:00.000Z",
+  "results": [
+    {
+      "year": 1993,
+      "make": "Subaru",
+      "model": "SVX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["subaru-svx.net forum", "martiniworks.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "SVX production 1992-1997 only. All years identical specs."
+    },
+    {
+      "year": 1994,
+      "make": "Subaru",
+      "model": "SVX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["subaru-svx.net forum", "martiniworks.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Subaru",
+      "model": "SVX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["subaru-svx.net forum", "martiniworks.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Subaru",
+      "model": "SVX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["subaru-svx.net forum", "martiniworks.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Subaru",
+      "model": "SVX",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["subaru-svx.net forum", "martiniworks.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Subaru",
+      "model": "SVX",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Subaru SVX production ended in 1997."
+    },
+    {
+      "year": 1999,
+      "make": "Subaru",
+      "model": "SVX",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Subaru SVX production ended in 1997."
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Ranger",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 31, "notes": "2WD base" },
+          { "diameter": 14, "width": 6, "offset": 25, "notes": "2WD optional" },
+          { "diameter": 15, "width": 6, "offset": 25, "notes": "4WD" },
+          { "diameter": 15, "width": 7, "offset": 12, "notes": "4WD optional" }
+        ],
+        "oem_tire_sizes": ["195/70R14", "205/70R14", "215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "feoa.net forum"],
+      "verifiedBy": "cross-reference",
+      "notes": "2WD uses 14\" wheels, 4WD uses 15\" wheels."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Ranger",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 31, "notes": "2WD base" },
+          { "diameter": 14, "width": 6, "offset": 25, "notes": "2WD optional" },
+          { "diameter": 15, "width": 6, "offset": 25, "notes": "4WD" },
+          { "diameter": 15, "width": 7, "offset": 12, "notes": "4WD optional" }
+        ],
+        "oem_tire_sizes": ["195/70R14", "205/70R14", "215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "feoa.net forum"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Ranger",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.6,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 31, "notes": "2WD base" },
+          { "diameter": 14, "width": 6, "offset": 25, "notes": "2WD optional" },
+          { "diameter": 15, "width": 6, "offset": 25, "notes": "4WD" },
+          { "diameter": 15, "width": 7, "offset": 12, "notes": "4WD optional" }
+        ],
+        "oem_tire_sizes": ["195/70R14", "205/70R14", "215/75R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["avtoreference.com", "feoa.net forum"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "F-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 0, "notes": "Base" },
+          { "diameter": 15, "width": 7, "offset": 12, "notes": "Optional" },
+          { "diameter": 16, "width": 7, "offset": 12, "notes": "Heavy duty" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["samlemanford.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Pre-1997 F-150 uses 5x139.7 (5x5.5\"). 8th generation (1987-1991)."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "F-150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 0, "notes": "Base" },
+          { "diameter": 15, "width": 7, "offset": 12, "notes": "Optional" },
+          { "diameter": 16, "width": 7, "offset": 12, "notes": "Heavy duty" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["samlemanford.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Explorer",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Explorer production started in 1991 (for 1991 MY)."
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Expedition",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Expedition production started in 1997."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Expedition",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Expedition production started in 1997."
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Expedition",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Expedition production started in 1997."
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "Expedition",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Expedition production started in 1997."
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "Expedition",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Expedition production started in 1997."
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Expedition",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Expedition production started in 1997."
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Expedition",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Expedition production started in 1997."
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Bronco",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 15, "width": 8, "offset": 0, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["31x10.50R15", "P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["lmr.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "4th generation (1987-1991). Full-size Bronco."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Bronco",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 87.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 15, "width": 8, "offset": 0, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["31x10.50R15", "P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["lmr.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Bronco",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Full-size Ford Bronco production ended in 1996. Next Bronco was 2021."
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "Bronco",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Full-size Ford Bronco production ended in 1996."
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "Bronco",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Full-size Ford Bronco production ended in 1996."
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["205/70R14", "205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "1st generation (1986-1991)."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["205/70R14", "205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["205/70R14", "205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "2nd generation started 1992."
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["205/70R14", "205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["205/70R14", "205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["205/70R14", "205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "3rd generation started 1996 with new styling."
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "wheel-sizes.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["215/70R15", "P215/70R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com", "r/CrownVictoria"],
+      "verifiedBy": "cross-reference",
+      "notes": "1990-1991 are less documented but specs match 1992+ model."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["215/70R15", "P215/70R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com", "r/CrownVictoria"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Handling Package" }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com", "r/CrownVictoria"],
+      "verifiedBy": "cross-reference",
+      "notes": "1992 started new body style. Offset is ~+6mm for pre-2003 models."
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Handling Package" }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Handling Package" }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Handling Package" }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Handling Package" }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Handling Package/Police" }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "LX/Police" }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "1998 refresh with updated front end."
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "LX/Police" }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Contour",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Contour production started in 1995."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Contour",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Contour production started in 1995."
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Contour",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Contour production started in 1995."
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "Contour",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Contour production started in 1995."
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "Contour",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": [],
+      "verifiedBy": "n/a",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Contour production started in 1995."
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Contour",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 43, "notes": "SE trim" }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/65R14", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com", "avtoreference.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Based on Ford Mondeo. 4x108 bolt pattern (not 5-lug)."
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Contour",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 43, "notes": "SE trim" }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/65R14", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Contour",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 43, "notes": "SE/Sport" }
+        ],
+        "oem_tire_sizes": ["185/70R14", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "Contour",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 43, "notes": "SE/Sport" },
+          { "diameter": 16, "width": 6.5, "offset": 43, "notes": "SVT" }
+        ],
+        "oem_tire_sizes": ["185/70R14", "205/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com", "sizemywheels.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "SVT model introduced with 16\" wheels."
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "Contour",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 43 },
+          { "diameter": 15, "width": 6, "offset": 43, "notes": "SE/Sport" },
+          { "diameter": 16, "width": 6.5, "offset": 43, "notes": "SVT" }
+        ],
+        "oem_tire_sizes": ["185/70R14", "205/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Ford",
+      "model": "Escort",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x108",
+        "hub_bore": 63.6,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["feoa.net forum", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "1990 is 1st generation (1981-1990). Different bolt pattern than 1991+."
+    },
+    {
+      "year": 1991,
+      "make": "Ford",
+      "model": "Escort",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 40, "notes": "LX/Wagon base" },
+          { "diameter": 15, "width": 6, "offset": 40, "notes": "GT" }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14", "185/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["feoa.net forum", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "2nd generation started 1991 with 4x100 pattern. Shared platform with Mazda 323/Protege."
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Escort",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 40, "notes": "LX/Wagon" },
+          { "diameter": 14, "width": 5, "offset": 40, "notes": "LX optional" },
+          { "diameter": 15, "width": 6, "offset": 40, "notes": "GT" }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/65R14", "185/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["feoa.net forum", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "Ford",
+      "model": "Escort",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 40, "notes": "LX/Wagon" },
+          { "diameter": 14, "width": 5, "offset": 40, "notes": "LX optional" },
+          { "diameter": 15, "width": 6, "offset": 40, "notes": "GT" }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/65R14", "185/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["feoa.net forum", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Ford",
+      "model": "Escort",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 40, "notes": "LX/Wagon" },
+          { "diameter": 14, "width": 5, "offset": 40, "notes": "LX optional" },
+          { "diameter": 15, "width": 6, "offset": 40, "notes": "GT" }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/65R14", "185/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["feoa.net forum", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Ford",
+      "model": "Escort",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40, "notes": "GT" }
+        ],
+        "oem_tire_sizes": ["185/65R14", "185/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["feoa.net forum", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Ford",
+      "model": "Escort",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40, "notes": "GT" }
+        ],
+        "oem_tire_sizes": ["185/65R14", "185/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["feoa.net forum", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Ford",
+      "model": "Escort",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["feoa.net forum", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "GT model discontinued after 1996."
+    },
+    {
+      "year": 1998,
+      "make": "Ford",
+      "model": "Escort",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["feoa.net forum", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1999,
+      "make": "Ford",
+      "model": "Escort",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["feoa.net forum", "tirewheelguide.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1990,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmt400.com forum", "performancelifts.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Note: 'Silverado' was a TRIM LEVEL on Chevy C/K trucks until 1999. Correct nomenclature is C1500/K1500 Silverado. GMT400 platform (1988-1998)."
+    },
+    {
+      "year": 1991,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmt400.com forum", "performancelifts.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "C/K 1500 Silverado trim. GMT400 platform."
+    },
+    {
+      "year": 1992,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmt400.com forum", "performancelifts.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1993,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmt400.com forum", "performancelifts.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1994,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmt400.com forum", "performancelifts.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1995,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmt400.com forum", "performancelifts.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1996,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmt400.com forum", "performancelifts.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1997,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmt400.com forum", "performancelifts.com"],
+      "verifiedBy": "cross-reference"
+    },
+    {
+      "year": 1998,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 },
+          { "diameter": 16, "width": 7, "offset": 6, "notes": "Optional" }
+        ],
+        "oem_tire_sizes": ["P235/75R15", "P245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["gmt400.com forum", "performancelifts.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Last year of GMT400 platform before all-new 1999 Silverado 1500."
+    },
+    {
+      "year": 1999,
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 31, "notes": "Z71/LT" }
+        ],
+        "oem_tire_sizes": ["P245/75R16", "P265/70R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["performancelifts.com", "hulkoffsets.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First year of 'Silverado' as standalone model name (GMT800 platform). New body style with different wheel offsets."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 55,
+    "invalid": 20,
+    "failed": 0,
+    "highConfidence": 53,
+    "mediumConfidence": 2,
+    "needsReview": 2
+  },
+  "invalidVehiclesExplanation": {
+    "Subaru SVX 1998-1999": "SVX production ended 1997",
+    "Ford Explorer 1990": "Explorer started production in 1991",
+    "Ford Expedition 1990-1996": "Expedition started production in 1997",
+    "Ford Bronco 1997-1999": "Full-size Bronco ended production in 1996",
+    "Ford Contour 1990-1994": "Contour started production in 1995"
+  },
+  "researchNotes": {
+    "chevroletSilverado": "1990-1998 'Silverado' was a trim level on C/K trucks, not a standalone model. The actual vehicle is C1500/K1500. Silverado became its own nameplate in 1999 with the GMT800 platform.",
+    "fordEscort": "1990 model uses 4x108 bolt pattern (63.6mm hub bore). 1991+ models switched to 4x100 (54.1mm hub bore) with new platform shared with Mazda 323/Protege.",
+    "fordRanger": "2WD models have smaller wheels (14\") while 4WD models have larger wheels (15\"). All use 5x114.3 bolt pattern.",
+    "fordF150": "Pre-1997 models use 5x139.7 (5x5.5\"). 1997+ switched to 5x135."
+  }
+}

@@ -1,0 +1,1173 @@
+{
+  "batchId": "86",
+  "processedAt": "2026-04-21T22:15:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "x-trek",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "205/60R15"],
+      "trims": [
+        {"trim": "2.0 CRDi", "tireSizes": ["185/65R14", "205/60R15"]}
+      ],
+      "notes": "European/international market vehicle (2003-2006). Not sold in US.",
+      "status": "UPDATED",
+      "isStaggered": false
+    },
+    {
+      "year": 2022,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/30ZR20", "355/25ZR21"],
+      "trims": [
+        {"trim": "LP780-4 Ultimae Coupe", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "LP780-4 Ultimae Roadster", "front": "255/30ZR20", "rear": "355/25ZR21"}
+      ],
+      "notes": "Final year. 2022 only LP780-4 Ultimae trim. Remove 255/35R19 and 335/30R20 (pre-2018 sizes).",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/30ZR20", "355/25ZR21"],
+      "trims": [
+        {"trim": "S", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "S Roadster", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "SVJ", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "SVJ Roadster", "front": "255/30ZR20", "rear": "355/25ZR21"}
+      ],
+      "notes": "2018+ use 20/21 inch combo. Remove 19/20 sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2020,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/30ZR20", "355/25ZR21"],
+      "trims": [
+        {"trim": "S", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "S Roadster", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "SVJ", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "SVJ Roadster", "front": "255/30ZR20", "rear": "355/25ZR21"}
+      ],
+      "notes": "2018+ use 20/21 inch combo only.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2019,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/30ZR20", "355/25ZR21"],
+      "trims": [
+        {"trim": "S Coupe", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "S Roadster", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "SVJ", "front": "255/30ZR20", "rear": "355/25ZR21"}
+      ],
+      "notes": "2018+ use 20/21 inch combo only.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/30ZR20", "355/25ZR21"],
+      "trims": [
+        {"trim": "S Coupe", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "S Roadster", "front": "255/30ZR20", "rear": "355/25ZR21"}
+      ],
+      "notes": "S-series switched to 20/21 combo. Remove 19/20 sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2017,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "trims": [
+        {"trim": "LP700-4 Coupe", "options": [{"front": "255/35ZR19", "rear": "335/30ZR20"}, {"front": "255/30ZR20", "rear": "355/25ZR21"}]},
+        {"trim": "LP700-4 Roadster", "options": [{"front": "255/35ZR19", "rear": "335/30ZR20"}, {"front": "255/30ZR20", "rear": "355/25ZR21"}]},
+        {"trim": "LP750-4 Superveloce Coupe", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "LP750-4 Superveloce Roadster", "front": "255/30ZR20", "rear": "355/25ZR21"}
+      ],
+      "notes": "Transition year with both 19/20 and 20/21 options.",
+      "status": "VALID",
+      "isStaggered": true
+    },
+    {
+      "year": 2016,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "trims": [
+        {"trim": "LP700-4 Coupe", "front": "255/35ZR19", "rear": "335/30ZR20"},
+        {"trim": "LP700-4 Roadster", "front": "255/35ZR19", "rear": "335/30ZR20"},
+        {"trim": "LP750-4 Superveloce Coupe", "front": "255/30ZR20", "rear": "355/25ZR21"},
+        {"trim": "LP750-4 Superveloce Roadster", "front": "255/30ZR20", "rear": "355/25ZR21"}
+      ],
+      "notes": "LP700-4 uses 19/20, SV uses 20/21.",
+      "status": "VALID",
+      "isStaggered": true
+    },
+    {
+      "year": 2015,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/35ZR19", "335/30ZR20"],
+      "trims": [
+        {"trim": "LP700-4 Coupe", "front": "255/35ZR19", "rear": "335/30ZR20"},
+        {"trim": "LP700-4 Roadster", "front": "255/35ZR19", "rear": "335/30ZR20"}
+      ],
+      "notes": "2015 only LP700-4 trims. Remove 20/21 sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2014,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/35ZR19", "335/30ZR20"],
+      "trims": [
+        {"trim": "LP700-4 Coupe", "front": "255/35ZR19", "rear": "335/30ZR20"},
+        {"trim": "LP700-4 Roadster", "front": "255/35ZR19", "rear": "335/30ZR20"}
+      ],
+      "notes": "Only LP700-4 trims. Remove 20/21 sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2013,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "trims": [
+        {"trim": "50th Anniversario", "front": "255/35ZR19", "rear": "335/30ZR20"},
+        {"trim": "LP700-4 Coupe", "front": "255/35ZR19", "rear": "335/30ZR20"},
+        {"trim": "LP700-4 Roadster", "front": "255/30ZR20", "rear": "355/25ZR21"}
+      ],
+      "notes": "2013 Roadster introduced 20/21 setup. All sizes valid.",
+      "status": "VALID",
+      "isStaggered": true
+    },
+    {
+      "year": 2012,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/35ZR19", "335/30ZR20"],
+      "trims": [
+        {"trim": "LP700-4", "front": "255/35ZR19", "rear": "335/30ZR20"}
+      ],
+      "notes": "2012 only LP700-4. Remove 20/21 sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2011,
+      "make": "lamborghini",
+      "model": "aventador",
+      "currentTireSizes": ["255/35ZR19", "335/30ZR20", "255/30ZR20", "355/25ZR21"],
+      "validatedTireSizes": ["255/35ZR19", "335/30ZR20"],
+      "trims": [
+        {"trim": "LP700-4", "front": "255/35ZR19", "rear": "335/30ZR20"}
+      ],
+      "notes": "First year. Only 19/20 combo. Remove 20/21 sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2024,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "EVO Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "Sterrato", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "STO", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "Tecnica", "front": "245/30ZR20", "rear": "305/30ZR20"}
+      ],
+      "notes": "2024 all trims use 20\" wheels. Remove 19\" sizes and 235/285 sizes (likely error).",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2023,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "EVO", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "EVO RWD", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "EVO RWD Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "EVO Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "Sterrato", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "STO", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "Tecnica", "front": "245/30ZR20", "rear": "305/30ZR20"}
+      ],
+      "notes": "2023 all trims use 20\" wheels. Remove 19\" sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2022,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "EVO", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "EVO RWD", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "EVO RWD Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "EVO Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "Fluo Capsule", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "STO", "front": "245/30ZR20", "rear": "305/30ZR20"}
+      ],
+      "notes": "2022 all trims 20\". Remove 19\" sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "EVO", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "EVO RWD", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "EVO Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "Fluo Capsule", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "STO", "front": "245/30ZR20", "rear": "305/30ZR20"}
+      ],
+      "notes": "2021 all trims 20\". Remove 19\" sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2020,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "EVO", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "EVO RWD", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "EVO Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"}
+      ],
+      "notes": "2020 EVO series all 20\". Remove 19\" sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2019,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/35ZR19", "305/35ZR19", "245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "EVO", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "Performante", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "Performante Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "RWD Coupe", "front": "245/35ZR19", "rear": "305/35ZR19"},
+        {"trim": "RWD Spyder", "front": "245/35ZR19", "rear": "305/35ZR19"},
+        {"trim": "Spyder", "front": "245/35ZR19", "rear": "305/30ZR20"}
+      ],
+      "notes": "2019 has both 19\" (RWD) and 20\" options. Remove 235/40R19 & 285/40R19 (invalid). Note 305/30R19 should be 305/35R19.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/35ZR19", "305/35ZR19", "245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "Coupe", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "Performante", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "RWD Coupe", "front": "245/35ZR19", "rear": "305/35ZR19"},
+        {"trim": "RWD Spyder", "front": "245/35ZR19", "rear": "305/35ZR19"},
+        {"trim": "Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"}
+      ],
+      "notes": "Remove 235/285 sizes. RWD uses 19\", others 20\".",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2017,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/35ZR19", "305/35ZR19", "245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "LP 580-2 Coupe", "options": [{"front": "245/35ZR19", "rear": "305/35ZR19"}, {"front": "245/30ZR20", "rear": "305/30ZR20"}]},
+        {"trim": "LP 580-2 Spyder", "options": [{"front": "245/35ZR19", "rear": "305/35ZR19"}, {"front": "245/30ZR20", "rear": "305/30ZR20"}]},
+        {"trim": "LP 610-4 Coupe", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "LP 610-4 Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"}
+      ],
+      "notes": "Remove 235/285 sizes. Note 305/30R19 should be 305/35R19.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2016,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/35ZR19", "305/35ZR19", "245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "LP 580-2", "front": "245/35ZR19", "rear": "305/35ZR19"},
+        {"trim": "LP 610-4 Coupe", "front": "245/30ZR20", "rear": "305/30ZR20"},
+        {"trim": "LP 610-4 Spyder", "front": "245/30ZR20", "rear": "305/30ZR20"}
+      ],
+      "notes": "Remove 235/285 sizes. LP 580-2 uses 19\", LP 610-4 uses 20\".",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2015,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "LP 610-4", "front": "245/30ZR20", "rear": "305/30ZR20"}
+      ],
+      "notes": "2015 only LP 610-4. Only 20\" sizes. Remove all 19\" sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2014,
+      "make": "lamborghini",
+      "model": "huracan",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR19", "245/30ZR20", "305/30ZR20", "235/40R19", "285/40R19"],
+      "validatedTireSizes": ["245/30ZR20", "305/30ZR20"],
+      "trims": [
+        {"trim": "LP 610-4", "front": "245/30ZR20", "rear": "305/30ZR20"}
+      ],
+      "notes": "2014 Huracan launch year (LP 610-4 only). tiresize.com shows 2015 as first year - may be late 2014 model year. Only 20\" sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2026,
+      "make": "lamborghini",
+      "model": "urus",
+      "currentTireSizes": ["285/45R21", "285/40R22", "285/35R23", "325/30R23", "295/35R22"],
+      "validatedTireSizes": ["285/45R21", "315/40R21", "285/40R22", "325/35R22", "285/35R23", "325/30R23"],
+      "trims": [
+        {"trim": "S", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}]},
+        {"trim": "SE", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}]},
+        {"trim": "Performante", "options": [{"front": "285/40R22", "rear": "325/35R22"}, {"front": "285/35R23", "rear": "325/30R23"}]}
+      ],
+      "notes": "Staggered F/R. Remove 295/35R22 (not OEM). Add missing rear sizes 315/40R21, 325/35R22.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2025,
+      "make": "lamborghini",
+      "model": "urus",
+      "currentTireSizes": ["285/45R21", "285/40R22", "285/35R23", "325/30R23", "295/35R22"],
+      "validatedTireSizes": ["285/45R21", "315/40R21", "285/40R22", "325/35R22", "285/35R23", "325/30R23"],
+      "trims": [
+        {"trim": "S", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}]},
+        {"trim": "SE", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}]},
+        {"trim": "Performante", "options": [{"front": "285/40R22", "rear": "325/35R22"}, {"front": "285/35R23", "rear": "325/30R23"}]}
+      ],
+      "notes": "Remove 295/35R22. Add rear sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2024,
+      "make": "lamborghini",
+      "model": "urus",
+      "currentTireSizes": ["285/45R21", "285/40R22", "285/35R23", "325/30R23", "295/35R22"],
+      "validatedTireSizes": ["285/45R21", "315/40R21", "285/40R22", "325/35R22", "285/35R23", "325/30R23"],
+      "trims": [
+        {"trim": "S", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}]},
+        {"trim": "SE", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}]},
+        {"trim": "Performante", "options": [{"front": "285/40R22", "rear": "325/35R22"}, {"front": "285/35R23", "rear": "325/30R23"}]}
+      ],
+      "notes": "Remove 295/35R22. Add rear sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2023,
+      "make": "lamborghini",
+      "model": "urus",
+      "currentTireSizes": ["285/45R21", "285/40R22", "285/35R23", "325/30R23", "295/35R22"],
+      "validatedTireSizes": ["285/45R21", "315/40R21", "285/40R22", "325/35R22", "285/35R23", "325/30R23"],
+      "trims": [
+        {"trim": "S", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}, {"front": "285/35R23", "rear": "325/30R23"}]},
+        {"trim": "Performante", "options": [{"front": "285/40R22", "rear": "325/35R22"}, {"front": "285/35R23", "rear": "325/30R23"}]}
+      ],
+      "notes": "First year for S and Performante trims. Remove 295/35R22.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2022,
+      "make": "lamborghini",
+      "model": "urus",
+      "currentTireSizes": ["285/45R21", "285/40R22", "285/35R23", "325/30R23", "295/35R22"],
+      "validatedTireSizes": ["285/45R21", "315/40R21", "285/40R22", "325/35R22", "285/35R23", "325/30R23"],
+      "trims": [
+        {"trim": "Base Model", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}, {"front": "285/35R23", "rear": "325/30R23"}]}
+      ],
+      "notes": "Remove 295/35R22. Add rear sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "lamborghini",
+      "model": "urus",
+      "currentTireSizes": ["285/45R21", "285/40R22", "285/35R23", "325/30R23", "295/35R22"],
+      "validatedTireSizes": ["285/45R21", "315/40R21", "285/40R22", "325/35R22", "285/35R23", "325/30R23"],
+      "trims": [
+        {"trim": "Base Model", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}, {"front": "285/35R23", "rear": "325/30R23"}]}
+      ],
+      "notes": "Remove 295/35R22. Add rear sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2020,
+      "make": "lamborghini",
+      "model": "urus",
+      "currentTireSizes": ["285/45R21", "285/40R22", "285/35R23", "325/30R23", "295/35R22"],
+      "validatedTireSizes": ["285/45R21", "315/40R21", "285/40R22", "325/35R22", "285/35R23", "325/30R23"],
+      "trims": [
+        {"trim": "Base Model", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}, {"front": "285/35R23", "rear": "325/30R23"}]}
+      ],
+      "notes": "Remove 295/35R22. Add rear sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2019,
+      "make": "lamborghini",
+      "model": "urus",
+      "currentTireSizes": ["285/45R21", "285/40R22", "285/35R23", "325/30R23", "295/35R22"],
+      "validatedTireSizes": ["285/45R21", "315/40R21", "285/40R22", "325/35R22", "285/35R23", "325/30R23"],
+      "trims": [
+        {"trim": "Base Model", "options": [{"front": "285/45R21", "rear": "315/40R21"}, {"front": "285/40R22", "rear": "325/35R22"}, {"front": "285/35R23", "rear": "325/30R23"}]}
+      ],
+      "notes": "Remove 295/35R22. Add rear sizes.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "lamborghini",
+      "model": "urus",
+      "currentTireSizes": ["285/45R21", "285/40R22", "285/35R23", "325/30R23", "295/35R22"],
+      "validatedTireSizes": ["285/45R21", "315/40R21"],
+      "trims": [
+        {"trim": "Base Model", "front": "285/45R21", "rear": "315/40R21"}
+      ],
+      "notes": "2018 first year - only 21\" option. Remove 22\"/23\" and 295/35R22.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": true
+    },
+    {
+      "year": 2026,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/65R19", "255/60R20", "275/45R22"],
+      "trims": [
+        {"trim": "110 S", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "110 Octa", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "110 Trophy Edition", "tireSizes": ["255/60R20"]},
+        {"trim": "110 X-Dynamic SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "130 S", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "130 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "130 Outbound", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "90 V8", "tireSizes": ["255/60R20", "275/45R22"]}
+      ],
+      "notes": "Current has wrong sizes: 255/65R18 should be 255/65R19, 275/50R22 should be 275/45R22. Modern Defender (2020+).",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2025,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "validatedTireSizes": ["255/65R19", "255/60R20", "275/45R22"],
+      "trims": [
+        {"trim": "110 S", "tireSizes": ["255/65R19", "255/60R20"]},
+        {"trim": "110 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "110 Octa", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "110 X-Dynamic SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "130 S", "tireSizes": ["255/65R19", "255/60R20"]},
+        {"trim": "130 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "130 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "130 Outbound", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "130 X-Dynamic SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 S", "tireSizes": ["255/65R19", "255/60R20"]},
+        {"trim": "90 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "90 X-Dynamic SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]}
+      ],
+      "notes": "Remove 255/70R18 (not in 2025 trims per tiresize.com).",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2024,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "validatedTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "trims": [
+        {"trim": "110 S", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "110 X-Dynamic SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "130 S", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "130 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "130 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "130 Outbound", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "130 X-Dynamic SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 S", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "90 X-Dynamic SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]}
+      ],
+      "notes": "All sizes valid for 2024.",
+      "status": "VALID",
+      "isStaggered": false
+    },
+    {
+      "year": 2023,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "validatedTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 S", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 SE", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "110", "tireSizes": ["255/70R18", "255/65R19", "255/60R20"]},
+        {"trim": "110 S", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "130", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "130 S", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "130 SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "130 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]}
+      ],
+      "notes": "All sizes valid. 2023 introduced 130 variant.",
+      "status": "VALID",
+      "isStaggered": false
+    },
+    {
+      "year": 2022,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "validatedTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["255/70R18", "255/65R19", "255/60R20"]},
+        {"trim": "90 S", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 V8", "tireSizes": ["255/60R20", "275/45R22"]},
+        {"trim": "110", "tireSizes": ["255/70R18", "255/65R19", "255/60R20"]},
+        {"trim": "110 S", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 V8", "tireSizes": ["255/60R20", "275/45R22"]}
+      ],
+      "notes": "All sizes valid.",
+      "status": "VALID",
+      "isStaggered": false
+    },
+    {
+      "year": 2021,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "validatedTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["255/70R18", "255/65R19", "255/60R20"]},
+        {"trim": "90 S", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110", "tireSizes": ["255/70R18", "255/65R19", "255/60R20"]},
+        {"trim": "110 S", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]}
+      ],
+      "notes": "All sizes valid.",
+      "status": "VALID",
+      "isStaggered": false
+    },
+    {
+      "year": 2020,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "validatedTireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"],
+      "trims": [
+        {"trim": "S", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "90 First Edition", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110", "tireSizes": ["255/70R18", "255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 First Edition", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 SE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 HSE", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]},
+        {"trim": "110 X", "tireSizes": ["255/65R19", "255/60R20", "275/45R22"]}
+      ],
+      "notes": "First year of modern Defender. All sizes valid.",
+      "status": "VALID",
+      "isStaggered": false
+    },
+    {
+      "year": 2019,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "NO PRODUCTION IN 2019. Classic Defender ended 2016, modern started 2020. Invalid year entry.",
+      "status": "INVALID_YEAR",
+      "isStaggered": false
+    },
+    {
+      "year": 2016,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER (final year). Current sizes are WRONG - these are modern Defender sizes on classic. Should be 235/85R16 or 265/75R16.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2015,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied. Should be 235/85R16 or 265/75R16.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2014,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2013,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2012,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2010,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2008,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2007,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2006,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2005,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2004,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2003,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2002,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2001,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2000,
+      "make": "land-rover",
+      "model": "defender",
+      "currentTireSizes": ["255/65R18", "255/60R20", "275/50R22"],
+      "validatedTireSizes": ["235/85R16", "265/75R16"],
+      "trims": [
+        {"trim": "90", "tireSizes": ["235/85R16", "265/75R16"]},
+        {"trim": "110", "tireSizes": ["235/85R16", "265/75R16"]}
+      ],
+      "notes": "CLASSIC DEFENDER. Wrong sizes applied.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2025,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": [
+        {"trim": "S", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "Dynamic SE", "tireSizes": ["275/45R21", "285/40R22"]},
+        {"trim": "Metropolitan Edition", "tireSizes": ["275/45R21", "285/40R22"]}
+      ],
+      "notes": "Remove 255/60R19 - not available for 2025.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2024,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": [
+        {"trim": "S", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "Dynamic SE", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "Metropolitan Edition", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]}
+      ],
+      "notes": "Remove 255/60R19 - not available for 2024.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2023,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": [
+        {"trim": "S", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "R-Dynamic S", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "R-Dynamic HSE", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]}
+      ],
+      "notes": "Remove 255/60R19 - not available for 2023.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2022,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": [
+        {"trim": "S", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "R-Dynamic S", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "R-Dynamic HSE", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]}
+      ],
+      "notes": "Remove 255/60R19 - not available for 2022.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2021,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "validatedTireSizes": ["255/55R20", "275/45R21", "285/40R22"],
+      "trims": [
+        {"trim": "S", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "R-Dynamic S", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "R-Dynamic HSE", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]}
+      ],
+      "notes": "Remove 255/60R19 - not available for 2021. New gen started 2021.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2020,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "validatedTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "trims": [
+        {"trim": "SE", "tireSizes": ["255/60R19", "255/55R20", "275/45R21"]},
+        {"trim": "HSE", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "HSE Luxury", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]}
+      ],
+      "notes": "All sizes valid for 2020. SE has 19\", others 20\"+.",
+      "status": "VALID",
+      "isStaggered": false
+    },
+    {
+      "year": 2019,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "validatedTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "trims": [
+        {"trim": "SE", "tireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "HSE", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "HSE Luxury", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]}
+      ],
+      "notes": "All sizes valid.",
+      "status": "VALID",
+      "isStaggered": false
+    },
+    {
+      "year": 2018,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "validatedTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "trims": [
+        {"trim": "SE", "tireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "HSE", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "HSE Luxury", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]}
+      ],
+      "notes": "All sizes valid.",
+      "status": "VALID",
+      "isStaggered": false
+    },
+    {
+      "year": 2017,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R19", "255/55R20", "275/45R21"],
+      "validatedTireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"],
+      "trims": [
+        {"trim": "SE", "tireSizes": ["255/60R19", "255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "HSE", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "HSE Luxury", "tireSizes": ["255/55R20", "275/45R21", "285/40R22"]},
+        {"trim": "First Edition", "tireSizes": ["275/45R21", "285/40R22"]}
+      ],
+      "notes": "Add 285/40R22 - available on 2017.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2016,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": [
+        {"trim": "4.6 S", "tireSizes": ["255/65R16", "255/55R18"]},
+        {"trim": "4.6 SE", "tireSizes": ["255/55R18"]},
+        {"trim": "4.6 HSE", "tireSizes": ["255/55R18"]}
+      ],
+      "notes": "2016 is Discovery 4 (LR4 in US). Current sizes WRONG - 255/60R18, 255/55R19, 275/45R20 don't exist. Correct: 255/65R16, 255/55R18.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2015,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": [
+        {"trim": "4.6 S", "tireSizes": ["255/65R16", "255/55R18"]},
+        {"trim": "4.6 SE", "tireSizes": ["255/55R18"]},
+        {"trim": "4.6 HSE", "tireSizes": ["255/55R18"]}
+      ],
+      "notes": "Discovery 4 / LR4. Wrong sizes in DB.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2014,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": [
+        {"trim": "4.6 S", "tireSizes": ["255/65R16", "255/55R18"]},
+        {"trim": "4.6 SE", "tireSizes": ["255/55R18"]},
+        {"trim": "4.6 HSE", "tireSizes": ["255/55R18"]}
+      ],
+      "notes": "Discovery 4 / LR4. Wrong sizes in DB.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2013,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": [
+        {"trim": "4.6 S", "tireSizes": ["255/65R16", "255/55R18"]},
+        {"trim": "4.6 SE", "tireSizes": ["255/55R18"]},
+        {"trim": "4.6 HSE", "tireSizes": ["255/55R18"]}
+      ],
+      "notes": "Discovery 4 / LR4. Wrong sizes in DB.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2012,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": [
+        {"trim": "Series II", "tireSizes": ["255/65R16", "255/55R18"]},
+        {"trim": "Series II SD", "tireSizes": ["255/65R16", "255/55R18"]},
+        {"trim": "Series II SE", "tireSizes": ["255/65R16", "255/55R18"]}
+      ],
+      "notes": "Discovery 4 / LR4. Wrong sizes in DB.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": [
+        {"trim": "Series II", "tireSizes": ["255/65R16", "255/55R18"]},
+        {"trim": "Series II SD", "tireSizes": ["255/65R16", "255/55R18"]},
+        {"trim": "Series II SE", "tireSizes": ["255/65R16", "255/55R18"]}
+      ],
+      "notes": "Discovery 4 / LR4. Wrong sizes in DB.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2010,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": [
+        {"trim": "Series II", "tireSizes": ["255/65R16", "255/55R18"]},
+        {"trim": "Series II SD", "tireSizes": ["255/65R16", "255/55R18"]},
+        {"trim": "Series II SE", "tireSizes": ["255/65R16", "255/55R18"]}
+      ],
+      "notes": "Discovery 4 / LR4. Wrong sizes in DB.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "discovery",
+      "currentTireSizes": ["255/60R18", "255/55R19", "275/45R20"],
+      "validatedTireSizes": ["255/65R16", "255/55R18"],
+      "trims": [
+        {"trim": "Series II", "tireSizes": ["255/65R16", "255/55R18"]}
+      ],
+      "notes": "Discovery 3 / LR3 final year transitioning to Disco 4. Tire sizes from Disco Series II era.",
+      "status": "NEEDS_CORRECTION",
+      "isStaggered": false
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 15,
+    "needsCorrection": 58,
+    "invalidYear": 1,
+    "updated": 1,
+    "criticalIssues": [
+      "Land Rover Defender 2000-2016 have COMPLETELY WRONG tire sizes (modern Defender sizes applied to classic)",
+      "Land Rover Defender 2019 is INVALID - no production that year",
+      "Kia X-Trek exists but had no tire data - now populated",
+      "Lamborghini Urus missing rear tire sizes (staggered setup)",
+      "Lamborghini Huracan has invalid 235/40R19 and 285/40R19 sizes",
+      "Land Rover Discovery 2009-2016 have wrong tire sizes (next-gen sizes applied to older model)"
+    ]
+  }
+}

@@ -1,0 +1,612 @@
+{
+  "batchId": "muscle-mopar-a-body",
+  "description": "Mopar A-body: Dart, Duster, Demon, Valiant (1964-1976)",
+  "researchedAt": "2026-04-22",
+  "notes": [
+    "⚠️ CRITICAL: Bolt pattern changed in 1973!",
+    "1960-1972: Small bolt pattern 5x4\" (5x101.6mm)",
+    "1973-1976: Large bolt pattern 5x4.5\" (5x114.3mm)",
+    "Hub bore: 71.1mm (all years)",
+    "Performance models (340, GTS) got wider 5.5\" wheels",
+    "Tire sizes listed are OEM bias-ply designations; modern equivalents provided in notes"
+  ],
+  "sources": [
+    "valiant.org/stats.html",
+    "valiant.org/power.html",
+    "forabodiesonly.com (multiple threads)",
+    "slantsix.org",
+    "over-drive-magazine.com (Dart fact sheets)",
+    "hemmings.com",
+    "moparconnectionmagazine.com"
+  ],
+  "vehicles": [
+    {
+      "year": 1964,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Base 170/225 slant six models."
+    },
+    {
+      "year": 1965,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13", "195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). 14\" wheels became optional with 273 V8."
+    },
+    {
+      "year": 1966,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13", "195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Last year of first A-body generation."
+    },
+    {
+      "year": 1967,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13", "195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). First year of redesigned A-body. 273 V8 optional."
+    },
+    {
+      "year": 1968,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14", "D70-14", "E70-14"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13", "195/75R14", "205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). GTS with 340/383 got 14x5.5\" wheels with E70-14 wide-ovals. First year for 340 V8."
+    },
+    {
+      "year": 1969,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14", "D70-14", "E70-14"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13", "195/75R14", "205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). GTS with 340/383/440 got 14x5.5\" wheels with E70-14 redline tires. Swinger 340 introduced with D70-14 tires."
+    },
+    {
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14", "D70-14", "E70-14"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13", "195/75R14", "205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). 340 and 383 V8s got wider tires."
+    },
+    {
+      "year": 1971,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "D70-14", "E70-14"],
+      "modern_tire_equiv": ["195/75R14", "205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). 14\" wheels standard. 340 cars got 14x5.5\" wheels."
+    },
+    {
+      "year": 1972,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "D70-14", "E70-14"],
+      "modern_tire_equiv": ["195/75R14", "205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Last year for 340 V8 and small bolt pattern."
+    },
+    {
+      "year": 1973,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "E70-14", "E78-14"],
+      "modern_tire_equiv": ["185/75R14", "215/70R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "⚠️ LARGE bolt pattern (5x4.5\") starting this year. 340 V8 cars got 14x5.5\" wheels."
+    },
+    {
+      "year": 1974,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "DR78-14", "E70-14", "E78-14"],
+      "modern_tire_equiv": ["185/75R14", "195/75R14", "215/70R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Large bolt pattern (5x4.5\"). First year for radials (DR78-14). 360 V8 got 14x5.5\" wheels."
+    },
+    {
+      "year": 1975,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "DR78-14", "E78-14", "ER78-14"],
+      "modern_tire_equiv": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Large bolt pattern (5x4.5\"). 360 V8 available."
+    },
+    {
+      "year": 1976,
+      "make": "Dodge",
+      "model": "Dart",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "DR78-14", "E78-14", "ER78-14"],
+      "modern_tire_equiv": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Large bolt pattern (5x4.5\"). Final year for Dart. 360 V8 got 14x5.5\" wheels."
+    },
+    {
+      "year": 1971,
+      "make": "Dodge",
+      "model": "Demon",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D70-14", "E70-14"],
+      "modern_tire_equiv": ["205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Demon 340 got 14x5.5\" Rallye wheels with E70-14 wide-ovals. Based on Duster platform."
+    },
+    {
+      "year": 1972,
+      "make": "Dodge",
+      "model": "Demon",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D70-14", "E70-14"],
+      "modern_tire_equiv": ["205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Demon 340 got 14x5.5\" Rallye wheels. Final year for Demon nameplate."
+    },
+    {
+      "year": 1970,
+      "make": "Plymouth",
+      "model": "Duster",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "E70-14"],
+      "modern_tire_equiv": ["185/75R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). First year for Duster. Duster 340 got 14x5.5\" Rallye wheels with E70-14 wide-ovals. 0-60 in 6.2 sec per Car Life."
+    },
+    {
+      "year": 1971,
+      "make": "Plymouth",
+      "model": "Duster",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "E70-14"],
+      "modern_tire_equiv": ["185/75R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Duster 340 got 14x5.5\" Rallye wheels."
+    },
+    {
+      "year": 1972,
+      "make": "Plymouth",
+      "model": "Duster",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "E70-14"],
+      "modern_tire_equiv": ["185/75R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Last year for 340 V8 and small bolt pattern."
+    },
+    {
+      "year": 1973,
+      "make": "Plymouth",
+      "model": "Duster",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "E70-14", "E78-14"],
+      "modern_tire_equiv": ["185/75R14", "215/70R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "⚠️ LARGE bolt pattern (5x4.5\") starting this year. 340 V8 got 14x5.5\" wheels."
+    },
+    {
+      "year": 1974,
+      "make": "Plymouth",
+      "model": "Duster",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "DR78-14", "E70-14"],
+      "modern_tire_equiv": ["185/75R14", "195/75R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Large bolt pattern (5x4.5\"). First year for radials. 318 got DR78-14, 360 got E70-14 on 14x5.5\" Rallye wheels."
+    },
+    {
+      "year": 1975,
+      "make": "Plymouth",
+      "model": "Duster",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "DR78-14", "E78-14", "ER78-14"],
+      "modern_tire_equiv": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Large bolt pattern (5x4.5\"). 360 V8 available with 14x5.5\" wheels."
+    },
+    {
+      "year": 1976,
+      "make": "Plymouth",
+      "model": "Duster",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "DR78-14", "E78-14", "ER78-14"],
+      "modern_tire_equiv": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Large bolt pattern (5x4.5\"). Final year for Duster."
+    },
+    {
+      "year": 1964,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Base 170/225 slant six models."
+    },
+    {
+      "year": 1965,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13", "195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). 14\" wheels optional with 273 V8."
+    },
+    {
+      "year": 1966,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13", "195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Last year of first A-body generation."
+    },
+    {
+      "year": 1967,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Redesigned A-body. 273 V8 optional."
+    },
+    {
+      "year": 1968,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14", "D70-14", "E70-14"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13", "195/75R14", "205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). 340 and 383 V8 available with wider tires."
+    },
+    {
+      "year": 1969,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14", "D70-14", "E70-14"],
+      "modern_tire_equiv": ["185/75R13", "195/75R13", "195/75R14", "205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Performance models got wider tires."
+    },
+    {
+      "year": 1970,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "D70-14", "E70-14"],
+      "modern_tire_equiv": ["195/75R14", "205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). 14\" wheels standard."
+    },
+    {
+      "year": 1971,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "D70-14", "E70-14"],
+      "modern_tire_equiv": ["195/75R14", "205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\")."
+    },
+    {
+      "year": 1972,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "D70-14", "E70-14"],
+      "modern_tire_equiv": ["195/75R14", "205/70R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Small bolt pattern (5x4\"). Last year for small bolt pattern."
+    },
+    {
+      "year": 1973,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "D78-14", "E70-14", "E78-14"],
+      "modern_tire_equiv": ["195/75R14", "185/75R14", "215/70R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "⚠️ LARGE bolt pattern (5x4.5\") starting this year."
+    },
+    {
+      "year": 1974,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "DR78-14", "E78-14", "ER78-14"],
+      "modern_tire_equiv": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Large bolt pattern (5x4.5\"). First year for radials."
+    },
+    {
+      "year": 1975,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "DR78-14", "E78-14", "ER78-14"],
+      "modern_tire_equiv": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Large bolt pattern (5x4.5\")."
+    },
+    {
+      "year": 1976,
+      "make": "Plymouth",
+      "model": "Valiant",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["D78-14", "DR78-14", "E78-14", "ER78-14"],
+      "modern_tire_equiv": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Large bolt pattern (5x4.5\"). Final year for Valiant."
+    }
+  ],
+  "boltPatternSummary": {
+    "1964-1972": {
+      "pattern": "5x101.6",
+      "patternInches": "5x4",
+      "name": "Small Bolt Pattern",
+      "hubBore": 71.1
+    },
+    "1973-1976": {
+      "pattern": "5x114.3",
+      "patternInches": "5x4.5",
+      "name": "Large Bolt Pattern",
+      "hubBore": 71.1
+    }
+  },
+  "tireSizeConversions": {
+    "6.50-13": "185/75R13",
+    "7.00-13": "195/75R13",
+    "6.95-14": "195/75R14",
+    "D70-14": "205/70R14",
+    "D78-14": "185/75R14",
+    "DR78-14": "195/75R14",
+    "E70-14": "215/70R14",
+    "E78-14": "205/75R14",
+    "ER78-14": "205/75R14"
+  }
+}

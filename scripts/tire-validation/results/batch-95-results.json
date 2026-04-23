@@ -1,0 +1,1481 @@
+{
+  "batchId": "95",
+  "validatedAt": "2026-04-21T22:18:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2020,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "400",
+          "tires": { "front": "235/35R19", "rear": "285/30R20" },
+          "isStaggered": true
+        },
+        {
+          "trim": "GT",
+          "tires": { "front": "235/35R19", "rear": "285/30R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["235/35R19", "285/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current DB has 225/40R18, 275/35R19, 235/35R19, 285/30R20 - should only be 235/35R19 (F) and 285/30R20 (R)"
+    },
+    {
+      "year": 2019,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "400",
+          "tires": { "front": "235/35R19", "rear": "285/30R20" },
+          "isStaggered": true
+        },
+        {
+          "trim": "Sport 410",
+          "tires": { "front": "235/35R19", "rear": "285/30R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["235/35R19", "285/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current DB has 225/40R18, 275/35R19, 235/35R19, 285/30R20 - should only be 235/35R19 (F) and 285/30R20 (R)"
+    },
+    {
+      "year": 2018,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "400",
+          "tires": { "front": "235/35R19", "rear": "285/30R20" },
+          "isStaggered": true
+        },
+        {
+          "trim": "Sport 410",
+          "tires": { "front": "235/35R19", "rear": "285/30R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["235/35R19", "285/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current DB has 225/40R18, 275/35R19, 235/35R19, 285/30R20 - should only be 235/35R19 (F) and 285/30R20 (R)"
+    },
+    {
+      "year": 2017,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "400",
+          "tires": { "front": "235/35R19", "rear": "285/30R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["235/35R19", "285/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current DB has 225/40R18, 275/35R19, 235/35R19, 285/30R20 - should only be 235/35R19 (F) and 285/30R20 (R)"
+    },
+    {
+      "year": 2016,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "Base (400 assumed)",
+          "tires": { "front": "235/35R19", "rear": "285/30R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["235/35R19", "285/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Gap year in tiresize.com, assumed 400 spec. Current DB has 225/40R18, 275/35R19, 235/35R19, 285/30R20"
+    },
+    {
+      "year": 2015,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "Base",
+          "tires": { "front": "225/40R18", "rear": "255/35R19" },
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tires": { "front": "235/35R19", "rear": "275/30R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["225/40R18", "255/35R19", "235/35R19", "275/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Gap year, assumed 2014 spec. Current has 275/35R19 - should be 255/35R19 or 275/30R20"
+    },
+    {
+      "year": 2014,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tires": { "front": "225/40R18", "rear": "255/35R19" },
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tires": { "front": "235/35R19", "rear": "275/30R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["225/40R18", "255/35R19", "235/35R19", "275/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 275/35R19 - should be 255/35R19 or 275/30R20"
+    },
+    {
+      "year": 2013,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tires": { "front": "225/40R18", "rear": "255/35R19" },
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tires": { "front": "235/35R19", "rear": "275/30R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["225/40R18", "255/35R19", "235/35R19", "275/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 275/35R19 - should be 255/35R19 or 275/30R20"
+    },
+    {
+      "year": 2012,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tires": { "front": "225/40R18", "rear": "255/35R19" },
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tires": { "front": "235/35R19", "rear": "275/30R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["225/40R18", "255/35R19", "235/35R19", "275/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 275/35R19 - should be 255/35R19 or 275/30R20"
+    },
+    {
+      "year": 2011,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tires": { "front": "225/40R18", "rear": "255/35R19" },
+          "isStaggered": true
+        },
+        {
+          "trim": "S",
+          "tires": { "front": "235/35R19", "rear": "275/30R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["225/40R18", "255/35R19", "235/35R19", "275/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 275/35R19 - should be 255/35R19 or 275/30R20"
+    },
+    {
+      "year": 2010,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tires": { "front": "225/40R18", "rear": "255/35R19" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["225/40R18", "255/35R19"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 275/35R19, 235/35R19, 285/30R20 - 2010 only had base model"
+    },
+    {
+      "year": 2009,
+      "make": "Lotus",
+      "model": "Evora",
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tires": { "front": "225/40R18", "rear": "255/35R19" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["225/40R18", "255/35R19"],
+      "currentSizesCorrect": false,
+      "notes": "2009 was launch year, same as 2010 base spec"
+    },
+    {
+      "year": 2024,
+      "make": "Lucid",
+      "model": "Air",
+      "trims": [
+        {
+          "trim": "Pure",
+          "tires": [
+            { "option": "19in", "size": "245/45R19", "isStaggered": false },
+            { "option": "20in", "front": "245/40R20", "rear": "265/40R20", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Touring",
+          "tires": [
+            { "option": "19in", "size": "245/45R19", "isStaggered": false },
+            { "option": "20in", "front": "245/40R20", "rear": "265/40R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "265/35R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Grand Touring",
+          "tires": [
+            { "option": "19in", "size": "245/45R19", "isStaggered": false },
+            { "option": "20in", "front": "245/40R20", "rear": "265/40R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "265/35R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Sapphire",
+          "tires": { "front": "265/35R20", "rear": "295/30R21" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/45R19", "245/40R20", "265/40R20", "245/35R21", "265/35R21", "265/35R20", "295/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current DB missing rear staggered sizes (265/40R20, 265/35R21) and Sapphire sizes"
+    },
+    {
+      "year": 2023,
+      "make": "Lucid",
+      "model": "Air",
+      "trims": [
+        {
+          "trim": "Pure",
+          "tires": [
+            { "option": "19in", "size": "245/45R19", "isStaggered": false },
+            { "option": "20in", "front": "245/40R20", "rear": "265/40R20", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Touring",
+          "tires": [
+            { "option": "19in", "size": "245/45R19", "isStaggered": false },
+            { "option": "20in", "front": "245/40R20", "rear": "265/40R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "265/35R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Grand Touring",
+          "tires": [
+            { "option": "19in", "size": "245/45R19", "isStaggered": false },
+            { "option": "20in", "front": "245/40R20", "rear": "265/40R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "265/35R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Sapphire",
+          "tires": { "front": "265/35R20", "rear": "295/30R21" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/45R19", "245/40R20", "265/40R20", "245/35R21", "265/35R21", "265/35R20", "295/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current DB missing staggered rear sizes"
+    },
+    {
+      "year": 2022,
+      "make": "Lucid",
+      "model": "Air",
+      "trims": [
+        {
+          "trim": "Dream Edition",
+          "tires": { "front": "245/35R21", "rear": "265/35R21" },
+          "isStaggered": true
+        },
+        {
+          "trim": "Grand Touring",
+          "tires": [
+            { "option": "19in", "size": "245/45R19", "isStaggered": false },
+            { "option": "20in", "front": "245/40R20", "rear": "265/40R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "265/35R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Pure",
+          "tires": [
+            { "option": "19in", "size": "245/45R19", "isStaggered": false },
+            { "option": "20in", "front": "245/40R20", "rear": "265/40R20", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Touring",
+          "tires": [
+            { "option": "19in", "size": "245/45R19", "isStaggered": false },
+            { "option": "20in", "front": "245/40R20", "rear": "265/40R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "265/35R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "245/40R20", "265/40R20", "245/35R21", "265/35R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current DB missing staggered rear sizes"
+    },
+    {
+      "year": 2024,
+      "make": "Lucid",
+      "model": "Gravity",
+      "trims": [
+        {
+          "trim": "Grand Touring",
+          "tires": [
+            { "option": "20/21in", "front": "265/50R20", "rear": "285/45R21", "isStaggered": true },
+            { "option": "21/22in", "front": "265/45R21", "rear": "285/40R22", "isStaggered": true },
+            { "option": "22/23in", "front": "265/40R22", "rear": "285/35R23", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["265/50R20", "285/45R21", "265/45R21", "285/40R22", "265/40R22", "285/35R23"],
+      "currentSizesCorrect": false,
+      "notes": "Current DB has 265/45R21, 275/40R22 - missing many sizes and wrong rear sizes"
+    },
+    {
+      "year": 2023,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "GT",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Modena",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Modena Q4",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Trofeo",
+          "tires": [
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18, 275/45R18 - should be 245/45R19, 275/40R19"
+    },
+    {
+      "year": 2022,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "GT/Modena/Modena Q4",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Trofeo",
+          "tires": [
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18, 275/45R18 - should be 245/45R19, 275/40R19"
+    },
+    {
+      "year": 2021,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "S/S Q4/Standard Model",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Trofeo",
+          "tires": [
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18, 275/45R18 - should be 245/45R19, 275/40R19"
+    },
+    {
+      "year": 2020,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "S/S Q4/Standard Model",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18, 275/45R18 - should be 245/45R19, 275/40R19"
+    },
+    {
+      "year": 2019,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "S/S Q4/Standard Model",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18, 275/45R18 - should be 245/45R19, 275/40R19"
+    },
+    {
+      "year": 2018,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "S/S Q4",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Standard Model",
+          "tires": [
+            { "option": "18in", "size": "235/50R18", "isStaggered": false },
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["235/50R18", "245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18, 275/45R18 - should be 235/50R18 (square) or 245/45R19, 275/40R19 (staggered)"
+    },
+    {
+      "year": 2017,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "S/S Q4",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Standard Model",
+          "tires": [
+            { "option": "18in", "size": "235/50R18", "isStaggered": false },
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["235/50R18", "245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18, 275/45R18 - incorrect 18in sizes"
+    },
+    {
+      "year": 2016,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "S/S Q4",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Standard Model",
+          "tires": [
+            { "option": "18in", "size": "235/50R18", "isStaggered": false },
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["235/50R18", "245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18, 275/45R18 - incorrect 18in sizes"
+    },
+    {
+      "year": 2015,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "S Q4/Standard Model",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18, 275/45R18 - incorrect sizes"
+    },
+    {
+      "year": 2014,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "S Q4",
+          "tires": [
+            { "option": "18in", "front": "235/50R18", "rear": "275/45R18", "isStaggered": true },
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Standard Model",
+          "tires": [
+            { "option": "18in", "size": "235/50R18", "isStaggered": false },
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["235/50R18", "275/45R18", "245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18 - should be 235/50R18 or 275/45R18"
+    },
+    {
+      "year": 2013,
+      "make": "Maserati",
+      "model": "Ghibli",
+      "trims": [
+        {
+          "trim": "All",
+          "tires": [
+            { "option": "18in", "front": "235/50R18", "rear": "275/45R18", "isStaggered": true },
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["235/50R18", "275/45R18", "245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/45R18 - should be 235/50R18 front or 275/45R18 rear"
+    },
+    {
+      "year": 2026,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Base/Folgore/Trofeo",
+          "tires": { "front": "265/30R20", "rear": "295/30R21" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["265/30R20", "295/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 255/35R20, 295/30R20 - front should be 265/30R20, rear should be 295/30R21"
+    },
+    {
+      "year": 2025,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Folgore/Modena/Trofeo",
+          "tires": { "front": "265/30R20", "rear": "295/30R21" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["265/30R20", "295/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 255/35R20, 295/30R20 - incorrect sizes"
+    },
+    {
+      "year": 2024,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Folgore",
+          "tires": { "front": "265/35R20", "rear": "295/30R21" },
+          "isStaggered": true
+        },
+        {
+          "trim": "Modena/Trofeo",
+          "tires": { "front": "265/30R20", "rear": "295/30R21" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["265/35R20", "265/30R20", "295/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 255/35R20 - should be 265/35R20 or 265/30R20"
+    },
+    {
+      "year": 2023,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Gen 2 (Modena/Trofeo/Folgore)",
+          "tires": { "front": "265/30R20", "rear": "295/30R21" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["265/30R20", "295/30R21"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 255/35R20, 295/30R20 - Gen 2 specs differ"
+    },
+    {
+      "year": 2022,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Production Gap",
+          "tires": null,
+          "isStaggered": null
+        }
+      ],
+      "validatedSizes": [],
+      "currentSizesCorrect": false,
+      "notes": "No 2022 GranTurismo was produced - gap between Gen 1 (ended 2019) and Gen 2 (started 2023)"
+    },
+    {
+      "year": 2021,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Production Gap",
+          "tires": null,
+          "isStaggered": null
+        }
+      ],
+      "validatedSizes": [],
+      "currentSizesCorrect": false,
+      "notes": "No 2021 GranTurismo was produced - gap between Gen 1 and Gen 2"
+    },
+    {
+      "year": 2020,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Production Gap",
+          "tires": null,
+          "isStaggered": null
+        }
+      ],
+      "validatedSizes": [],
+      "currentSizesCorrect": false,
+      "notes": "No 2020 GranTurismo was produced - gap between Gen 1 and Gen 2"
+    },
+    {
+      "year": 2019,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Convertible MC/Convertible Sport/Coupe MC/Coupe Sport",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/35R20", "285/35R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/40R19, 285/35R19 - 2019 was 20in only"
+    },
+    {
+      "year": 2018,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Convertible MC/Convertible Sport/Coupe MC/Coupe Sport",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/35R20", "285/35R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/40R19, 285/35R19 - 2018 was 20in only"
+    },
+    {
+      "year": 2017,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "All Trims",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/35R20", "285/35R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/40R19, 285/35R19 - 2017 was 20in only"
+    },
+    {
+      "year": 2016,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "All Trims",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/35R20", "285/35R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/40R19, 285/35R19 - 2016 was 20in only"
+    },
+    {
+      "year": 2015,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Sport/Standard Model",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        },
+        {
+          "trim": "MC/MC Centennial",
+          "tires": { "front": "255/35R20", "rear": "295/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/35R20", "285/35R20", "255/35R20", "295/35R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/40R19, 285/35R19 - 2015 was 20in only"
+    },
+    {
+      "year": 2014,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Sport/Standard Model",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        },
+        {
+          "trim": "MC",
+          "tires": { "front": "255/35R20", "rear": "295/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/35R20", "285/35R20", "255/35R20", "295/35R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/40R19, 285/35R19 - 2014 was 20in only"
+    },
+    {
+      "year": 2013,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Convertible/Convertible Sport/Coupe Sport/MC/S",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/35R20", "285/35R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 245/40R19, 285/35R19 - 2013 was 20in only"
+    },
+    {
+      "year": 2012,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Coupe",
+          "tires": [
+            { "option": "19in", "front": "245/40R19", "rear": "285/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/35R20", "rear": "285/35R20", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Convertible/Convertible Sport/Coupe Sport/MC/S",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/40R19", "285/40R19", "245/35R20", "285/35R20"],
+      "currentSizesCorrect": true,
+      "notes": "Current has correct 19in option"
+    },
+    {
+      "year": 2011,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Coupe",
+          "tires": [
+            { "option": "19in", "front": "245/40R19", "rear": "285/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/35R20", "rear": "285/35R20", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Convertible/S",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/40R19", "285/40R19", "245/35R20", "285/35R20"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2010,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Coupe",
+          "tires": [
+            { "option": "19in", "front": "245/40R19", "rear": "285/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/35R20", "rear": "285/35R20", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Convertible/S",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/40R19", "285/40R19", "245/35R20", "285/35R20"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2009,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tires": [
+            { "option": "19in", "front": "245/40R19", "rear": "285/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/35R20", "rear": "285/35R20", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "S",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/40R19", "285/40R19", "245/35R20", "285/35R20"],
+      "currentSizesCorrect": true,
+      "notes": "Current has 285/35R19 but should be 285/40R19"
+    },
+    {
+      "year": 2008,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tires": [
+            { "option": "19in", "front": "245/40R19", "rear": "285/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/35R20", "rear": "285/35R20", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "S",
+          "tires": { "front": "245/35R20", "rear": "285/35R20" },
+          "isStaggered": true
+        }
+      ],
+      "validatedSizes": ["245/40R19", "285/40R19", "245/35R20", "285/35R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 285/35R19 but should be 285/40R19"
+    },
+    {
+      "year": 2007,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tires": [
+            { "option": "19in", "front": "245/40R19", "rear": "285/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/35R20", "rear": "285/35R20", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/40R19", "285/40R19", "245/35R20", "285/35R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 285/35R19 but should be 285/40R19"
+    },
+    {
+      "year": 2023,
+      "make": "Maserati",
+      "model": "Levante",
+      "trims": [
+        {
+          "trim": "GT",
+          "tires": [
+            { "option": "20in", "size": "265/45R20", "isStaggered": false },
+            { "option": "21in", "size": "265/40R21", "isStaggered": false }
+          ]
+        },
+        {
+          "trim": "Modena",
+          "tires": [
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Modena S",
+          "tires": [
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true },
+            { "option": "22in", "front": "265/35R22", "rear": "295/30R22", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Trofeo",
+          "tires": [
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true },
+            { "option": "22in", "front": "265/35R22", "rear": "295/30R22", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["265/45R20", "295/40R20", "265/40R21", "295/35R21", "265/35R22", "295/30R22"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 265/50R19, 295/45R19 - should not have 19in option for 2023"
+    },
+    {
+      "year": 2022,
+      "make": "Maserati",
+      "model": "Levante",
+      "trims": [
+        {
+          "trim": "GT",
+          "tires": [
+            { "option": "20in", "size": "265/45R20", "isStaggered": false },
+            { "option": "21in", "size": "265/40R21", "isStaggered": false }
+          ]
+        },
+        {
+          "trim": "Modena/Modena S",
+          "tires": [
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true },
+            { "option": "22in", "front": "265/35R22", "rear": "295/30R22", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Trofeo",
+          "tires": [
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true },
+            { "option": "22in", "front": "265/35R22", "rear": "295/30R22", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["265/45R20", "295/40R20", "265/40R21", "295/35R21", "265/35R22", "295/30R22"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 265/50R19, 295/45R19 - no 19in option for 2022"
+    },
+    {
+      "year": 2021,
+      "make": "Maserati",
+      "model": "Levante",
+      "trims": [
+        {
+          "trim": "Base/S (Square)",
+          "tires": [
+            { "option": "19in", "size": "265/50R19", "isStaggered": false },
+            { "option": "20in", "size": "265/45R20", "isStaggered": false },
+            { "option": "21in", "size": "265/40R21", "isStaggered": false }
+          ]
+        },
+        {
+          "trim": "Base/S (Staggered)",
+          "tires": [
+            { "option": "19in", "front": "265/50R19", "rear": "295/45R19", "isStaggered": true },
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "GTS",
+          "tires": [
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true },
+            { "option": "22in", "front": "265/35R22", "rear": "295/30R22", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Trofeo",
+          "tires": [
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true },
+            { "option": "22in", "front": "265/35R22", "rear": "295/30R22", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["265/50R19", "295/45R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21", "265/35R22", "295/30R22"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2020,
+      "make": "Maserati",
+      "model": "Levante",
+      "trims": [
+        {
+          "trim": "Base/S",
+          "tires": [
+            { "option": "19in", "front": "265/50R19", "rear": "295/45R19", "isStaggered": true },
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "GTS",
+          "tires": [
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true },
+            { "option": "22in", "front": "265/35R22", "rear": "295/30R22", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Trofeo",
+          "tires": [
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true },
+            { "option": "22in", "front": "265/35R22", "rear": "295/30R22", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["265/50R19", "295/45R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21", "265/35R22", "295/30R22"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2019,
+      "make": "Maserati",
+      "model": "Levante",
+      "trims": [
+        {
+          "trim": "Base/S",
+          "tires": [
+            { "option": "19in", "front": "265/50R19", "rear": "295/45R19", "isStaggered": true },
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "GTS/Trofeo",
+          "tires": [
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true },
+            { "option": "22in", "front": "265/35R22", "rear": "295/30R22", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["265/50R19", "295/45R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21", "265/35R22", "295/30R22"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2018,
+      "make": "Maserati",
+      "model": "Levante",
+      "trims": [
+        {
+          "trim": "Base/S",
+          "tires": [
+            { "option": "19in", "front": "265/50R19", "rear": "295/45R19", "isStaggered": true },
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["265/50R19", "295/45R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2017,
+      "make": "Maserati",
+      "model": "Levante",
+      "trims": [
+        {
+          "trim": "Base/S",
+          "tires": [
+            { "option": "19in", "front": "265/50R19", "rear": "295/45R19", "isStaggered": true },
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["265/50R19", "295/45R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2016,
+      "make": "Maserati",
+      "model": "Levante",
+      "trims": [
+        {
+          "trim": "Base/S",
+          "tires": [
+            { "option": "19in", "front": "265/50R19", "rear": "295/45R19", "isStaggered": true },
+            { "option": "20in", "front": "265/45R20", "rear": "295/40R20", "isStaggered": true },
+            { "option": "21in", "front": "265/40R21", "rear": "295/35R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["265/50R19", "295/45R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2023,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "GT/Modena/Modena Q4",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "Trofeo",
+          "tires": [
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "295/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21", "295/30R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2022,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "All Trims",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2021,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "All Trims",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2020,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "All Trims",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2019,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "S/S Q4",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        },
+        {
+          "trim": "GTS",
+          "tires": [
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2018,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "S/S Q4/GTS",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2017,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "S/S Q4/GTS",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2016,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "S/S Q4/GTS",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2015,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "S Q4/GTS",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2014,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "V6/V8/S Q4/GTS",
+          "tires": [
+            { "option": "19in", "front": "245/45R19", "rear": "275/40R19", "isStaggered": true },
+            { "option": "20in", "front": "245/40R20", "rear": "285/35R20", "isStaggered": true },
+            { "option": "21in", "front": "245/35R21", "rear": "285/30R21", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/45R19", "275/40R19", "245/40R20", "285/35R20", "245/35R21", "285/30R21"],
+      "currentSizesCorrect": true,
+      "notes": "Current sizes appear correct"
+    },
+    {
+      "year": 2013,
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "trims": [
+        {
+          "trim": "S/Sport GT S",
+          "tires": [
+            { "option": "19in", "front": "245/40R19", "rear": "285/35R19", "isStaggered": true },
+            { "option": "20in", "front": "245/35R20", "rear": "295/30R20", "isStaggered": true }
+          ]
+        }
+      ],
+      "validatedSizes": ["245/40R19", "285/35R19", "245/35R20", "295/30R20"],
+      "currentSizesCorrect": false,
+      "notes": "Current has 275/40R19 - should be 285/35R19"
+    },
+    {
+      "year": 2002,
+      "make": "Mazda",
+      "model": "121",
+      "trims": [
+        {
+          "trim": "Base",
+          "tires": [
+            { "size": "155/70R13", "isStaggered": false },
+            { "size": "165/70R13", "isStaggered": false },
+            { "size": "175/65R13", "isStaggered": false },
+            { "size": "185/60R13", "isStaggered": false },
+            { "size": "175/65R14", "isStaggered": false },
+            { "size": "195/45R15", "isStaggered": false }
+          ]
+        }
+      ],
+      "validatedSizes": ["155/70R13", "165/70R13", "175/65R13", "185/60R13", "175/65R14", "195/45R15"],
+      "currentSizesCorrect": false,
+      "notes": "Current DB has no sizes. This vehicle was NOT sold in US market (Europe/Australia only)."
+    },
+    {
+      "year": 2001,
+      "make": "Mazda",
+      "model": "121",
+      "trims": [
+        {
+          "trim": "Base",
+          "tires": [
+            { "size": "155/70R13", "isStaggered": false },
+            { "size": "165/70R13", "isStaggered": false },
+            { "size": "175/65R13", "isStaggered": false },
+            { "size": "185/60R13", "isStaggered": false },
+            { "size": "175/65R14", "isStaggered": false },
+            { "size": "195/45R15", "isStaggered": false }
+          ]
+        }
+      ],
+      "validatedSizes": ["155/70R13", "165/70R13", "175/65R13", "185/60R13", "175/65R14", "195/45R15"],
+      "currentSizesCorrect": false,
+      "notes": "Current DB has no sizes. This vehicle was NOT sold in US market (Europe/Australia only)."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "correctSizes": 19,
+    "incorrectSizes": 53,
+    "productionGaps": 3,
+    "keyFindings": [
+      "Lotus Evora: DB has incorrect sizes - 275/35R19 should be 255/35R19 (base) or 275/30R20 (S trim)",
+      "Lucid Air: Missing rear staggered sizes (265/40R20, 265/35R21) - all 20/21in options are staggered",
+      "Lucid Gravity: 2024 tire specs need correction - different sizes than DB shows",
+      "Maserati Ghibli: Current DB has 245/45R18, 275/45R18 but should be 245/45R19, 275/40R19 for most years",
+      "Maserati GranTurismo 2020-2022: These years had NO PRODUCTION (gap between Gen 1 and Gen 2)",
+      "Maserati GranTurismo 2007-2011: Rear 19in should be 285/40R19, not 285/35R19",
+      "Maserati GranTurismo 2023-2026: Gen 2 uses 265/30R20 front, 295/30R21 rear (different from Gen 1)",
+      "Maserati Levante: Most years correct, but 2022-2023 should not have 19in option",
+      "Maserati Quattroporte: Most years correct, 2013 needs rear 19in correction",
+      "Mazda 121: Not sold in US market - European/Australian vehicle only"
+    ]
+  }
+}

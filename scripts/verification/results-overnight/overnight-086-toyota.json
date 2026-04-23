@@ -1,0 +1,1983 @@
+[
+  {
+    "id": "6917356f-fdc0-4aad-84e1-95a07f8f1689",
+    "year": 1999,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "verifiedTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "769eb5e0-8f45-44cb-8814-4446268b7ab2",
+    "year": 1999,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "S-Runner",
+    "status": "corrected",
+    "reason": "S-Runner uses 5x114.3 bolt pattern (street performance variant)",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "60.1",
+    "verifiedWheelSizes": [
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "235/55R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "fd465496-f96e-43f3-b180-9c3aff206576",
+    "year": 1999,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "PreRunner",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "verifiedTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "65e20fd1-725b-475d-8003-6f17c73f4104",
+    "year": 2009,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "b65a1dd4-a793-4a08-9b87-68611d9f476e",
+    "year": 2009,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "3c030388-a8e6-40ac-ae8e-3f4851907ce1",
+    "year": 2009,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "X-Runner",
+    "status": "corrected",
+    "reason": "X-Runner uses 5x114.3 bolt pattern (street sport variant)",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "60.1",
+    "verifiedWheelSizes": [
+      "18x8"
+    ],
+    "verifiedTireSizes": [
+      "255/45R18"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "34c111d3-ed34-4ef5-81b7-b68c242181e0",
+    "year": 2009,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "8afad6b5-a336-477a-80ca-3dc61b924877",
+    "year": 2009,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "PreRunner",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "cc80d6be-dd78-43de-9d2c-429a73da903e",
+    "year": 2009,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "a22ac11b-11fc-43a5-a7ca-ba57b714caf9",
+    "year": 2010,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "253c6bcf-5d6d-4bae-9493-a4d7e242a444",
+    "year": 2010,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "b9c90372-f26a-4d8f-bd29-0c117d80e30f",
+    "year": 2010,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "d81d3ece-2b18-40d0-9fd9-55ddf339dd4f",
+    "year": 2010,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "d282e71b-17b5-4639-b2b7-6e48701ee6e1",
+    "year": 2010,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "X-Runner",
+    "status": "corrected",
+    "reason": "X-Runner uses 5x114.3 bolt pattern (street sport variant)",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "60.1",
+    "verifiedWheelSizes": [
+      "18x8"
+    ],
+    "verifiedTireSizes": [
+      "255/45R18"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "1728d37f-0468-494d-9bed-291d96c722e4",
+    "year": 2010,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "PreRunner",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "681a4428-7ea1-4c5a-91ed-cc3dda0a9cef",
+    "year": 2011,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "PreRunner",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "b36b0854-da77-48cb-93b1-6e4b53b576d8",
+    "year": 2011,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "a89e924b-15dd-47ce-b4ae-745ca570b164",
+    "year": 2011,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "3f9c9204-3504-4304-998e-7cdd5ff091b3",
+    "year": 2011,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "X-Runner",
+    "status": "corrected",
+    "reason": "X-Runner uses 5x114.3 bolt pattern (street sport variant)",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "60.1",
+    "verifiedWheelSizes": [
+      "18x8"
+    ],
+    "verifiedTireSizes": [
+      "255/45R18"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "44fa9738-0530-4c0b-8fd9-6e8532c4599a",
+    "year": 2011,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "9acdaf28-4fbc-4485-99b9-cd68a10a8656",
+    "year": 2011,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "ceb66fac-2a67-4adf-a735-ce62f30db8bb",
+    "year": 2012,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "c318932e-955c-43ea-956a-74f341c79db9",
+    "year": 2012,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "PreRunner",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "11907b01-b2c6-46db-baa8-18b1c2a51471",
+    "year": 2012,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "X-Runner",
+    "status": "corrected",
+    "reason": "X-Runner uses 5x114.3 bolt pattern (street sport variant)",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "60.1",
+    "verifiedWheelSizes": [
+      "18x8"
+    ],
+    "verifiedTireSizes": [
+      "255/45R18"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "9f77fa06-8c77-42cc-b91c-0c3d1bb4e073",
+    "year": 2012,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "331741b8-bf17-47bb-b229-f96982420b04",
+    "year": 2012,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "d762b2b6-d4bd-460b-a2d7-7e72fe0aacf3",
+    "year": 2012,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "6daab747-a3fa-4646-a7e4-55776c0fb240",
+    "year": 2013,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "X-Runner",
+    "status": "corrected",
+    "reason": "X-Runner uses 5x114.3 bolt pattern (street sport variant)",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "60.1",
+    "verifiedWheelSizes": [
+      "18x8"
+    ],
+    "verifiedTireSizes": [
+      "255/45R18"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "0108e6e2-92ca-4b04-b24d-b572ad9977e9",
+    "year": 2013,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "PreRunner",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "efa69943-d2a1-48e8-970d-5a500ec73c46",
+    "year": 2013,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "5e496bbd-31f1-48a2-8462-8aa4d268e2f0",
+    "year": 2013,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "5178c236-693a-47c2-b097-7419e3360e28",
+    "year": 2013,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "e89f297b-4afa-4a29-b97b-1ed5dd624ff3",
+    "year": 2013,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "bc0ee6a7-cb80-4c6a-9085-437f89004c07",
+    "year": 2014,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "3af85430-f69a-4897-b477-99b542fb7e9f",
+    "year": 2014,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "X-Runner",
+    "status": "corrected",
+    "reason": "X-Runner uses 5x114.3 bolt pattern (street sport variant)",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "60.1",
+    "verifiedWheelSizes": [
+      "18x8"
+    ],
+    "verifiedTireSizes": [
+      "255/45R18"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "fc792161-6d2a-4df9-825e-7ebaa9e0685e",
+    "year": 2014,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "f6ed7f1b-415d-4eca-8c24-c8210ef5d78f",
+    "year": 2014,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "da08874d-4a4a-4a5a-9acb-6c9cfa77e62e",
+    "year": 2014,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "23e30c9b-f2f8-4626-ad64-b0942f466e6d",
+    "year": 2014,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "PreRunner",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "d4353def-2bbb-4f20-afa7-fd5cb32cf86c",
+    "year": 2015,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "PreRunner",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "812f60d3-e8e0-4e6f-97a1-34350ded3d16",
+    "year": 2015,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "3d231f5b-97e7-47f0-9f6f-e117e8ebb10b",
+    "year": 2015,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "9b1fca24-bb52-464f-8bb6-97df44d3362b",
+    "year": 2015,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "28f65058-4477-4328-92c4-7eacfafd6df2",
+    "year": 2015,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "X-Runner",
+    "status": "corrected",
+    "reason": "X-Runner uses 5x114.3 bolt pattern (street sport variant)",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "60.1",
+    "verifiedWheelSizes": [
+      "18x8"
+    ],
+    "verifiedTireSizes": [
+      "255/45R18"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "aa35abf9-2b8e-4476-b97f-97dadc8cc021",
+    "year": 2015,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "215/70R15"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "41472b96-c8a5-4b50-8a4a-71212c12ad3b",
+    "year": 2016,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "95f7edf1-8b92-46e6-ba01-71ee80183a5e",
+    "year": 2016,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "35eb1c96-9c9e-4228-91c5-f2a6df7c839d",
+    "year": 2016,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Pro",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "e5b6ca6a-969f-423f-b362-b622473a9990",
+    "year": 2016,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "77b5ccce-c17c-42a8-af72-5bcfee589064",
+    "year": 2016,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "cdbd65e4-8e32-4aae-a80d-618e4c896145",
+    "year": 2016,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "87c7991d-8b27-44a3-8d59-b0ede0c21dab",
+    "year": 2017,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Pro",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "2802e611-de4d-4332-a3e7-becb9ea308b9",
+    "year": 2017,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "814eb28a-84fa-4f05-a1fd-b3f77db5f128",
+    "year": 2017,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "efe9ff99-f34e-449e-b4db-8e0347c3f725",
+    "year": 2017,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "d62f4e5b-8110-4827-b1e4-4e6e695aee81",
+    "year": 2017,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "60de0b75-e84a-42e3-882b-68b9e580ea5f",
+    "year": 2017,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "0f4fb0b8-542c-4f6d-95f2-2c500bfabba6",
+    "year": 2018,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "628e2e10-5dfe-4a31-b323-17d1a767e90f",
+    "year": 2018,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Pro",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "f35a849a-f9fd-4993-8457-84b66ba40860",
+    "year": 2018,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "35c99115-5316-4601-a83a-6a3e2fd2b4c2",
+    "year": 2018,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "33c12eb6-92f9-481c-ae9b-025e5c82ec98",
+    "year": 2018,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "f57fa44a-1a4f-4632-b2f5-dec162bb4884",
+    "year": 2018,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "9195aee5-1392-48c3-afba-8276dfc6bc05",
+    "year": 2019,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Pro",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "fd5fbe37-29cb-4f9d-8fa7-bb4d4b16c3de",
+    "year": 2019,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "a6863eea-722c-4d51-9e00-49501c741697",
+    "year": 2019,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "533beceb-b49c-4dd2-bf82-296221072f96",
+    "year": 2019,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "6086ae92-4433-4aaf-a4c9-a339790dfc26",
+    "year": 2019,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "f19d2bfa-94c9-427f-8d1c-7fd1e471a510",
+    "year": 2019,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "89f334d7-1aae-4350-a346-8fb64220871e",
+    "year": 2020,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "2091d647-63b9-420d-a3f5-34225a389350",
+    "year": 2020,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "Limited",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "a44d7f96-8d42-408d-be36-e4d3c72160c4",
+    "year": 2020,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Sport",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "97d64b59-a278-41e4-9f25-f11a38feb7bd",
+    "year": 2020,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "SR5",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "9a64aed8-f361-4d48-91c8-52cd2c105ce7",
+    "year": 2020,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Off-Road",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  },
+  {
+    "id": "d6b77200-37a8-4137-b2da-685747bc4b01",
+    "year": 2020,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "trim": "TRD Pro",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": "106.1",
+    "verifiedWheelSizes": [
+      "16x7",
+      "17x7.5",
+      "18x7.5"
+    ],
+    "verifiedTireSizes": [
+      "245/75R16",
+      "265/65R17",
+      "265/60R18",
+      "265/70R16"
+    ],
+    "sources": [
+      "stocktonwheel.com/toyota-tacoma-bolt-pattern",
+      "orionmotortech.com",
+      "runnin4tacos.com"
+    ]
+  }
+]

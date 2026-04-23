@@ -1,0 +1,582 @@
+{
+  "batchId": 53,
+  "processedAt": "2026-04-22T00:00:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "found": 32,
+    "notUS": 18,
+    "needsMapping": 0
+  },
+  "notes": {
+    "imprezaSport": "Impreza Sport is NOT a separate model - it's a trim of Impreza. Map to Impreza with Sport trim specs.",
+    "b9Tribeca": "B9 Tribeca (2006-2007) was sold in US but tiresize.com only has 'Tribeca' starting 2008. Map to Tribeca or mark as legacy name.",
+    "imprezaAnesis": "Japan-domestic-market only (JDM). Never sold in US.",
+    "imprezaWrx": "WRX wasn't sold in US until 2002. 2000-2001 are JDM.",
+    "imprezaWrxSti": "WRX STI wasn't sold in US until 2004. 2000-2003 are JDM."
+  },
+  "vehicles": [
+    {
+      "year": 2006,
+      "make": "subaru",
+      "model": "b9-tribeca",
+      "status": "needs-mapping",
+      "notes": "B9 Tribeca sold in US 2006-2007, renamed to Tribeca in 2008. tiresize.com only has Tribeca 2008+. Use Tribeca 2008 specs: 255/55R18, 5x114.3 bolt pattern.",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x114.3",
+        "tireSize": "255/55R18"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "subaru",
+      "model": "b9-tribeca",
+      "status": "needs-mapping",
+      "notes": "B9 Tribeca sold in US 2006-2007, renamed to Tribeca in 2008. Use Tribeca 2008 specs: 255/55R18, 5x114.3 bolt pattern.",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x114.3",
+        "tireSize": "255/55R18"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "subaru",
+      "model": "impreza-anesis",
+      "notUS": true,
+      "status": "skip",
+      "notes": "Impreza Anesis is Japan-domestic-market only (JDM). Never sold in US."
+    },
+    {
+      "year": 2009,
+      "make": "subaru",
+      "model": "impreza-anesis",
+      "notUS": true,
+      "status": "skip",
+      "notes": "Impreza Anesis is Japan-domestic-market only (JDM). Never sold in US."
+    },
+    {
+      "year": 2010,
+      "make": "subaru",
+      "model": "impreza-anesis",
+      "notUS": true,
+      "status": "skip",
+      "notes": "Impreza Anesis is Japan-domestic-market only (JDM). Never sold in US."
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "impreza-anesis",
+      "notUS": true,
+      "status": "skip",
+      "notes": "Impreza Anesis is Japan-domestic-market only (JDM). Never sold in US."
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "needs-mapping",
+      "notes": "No 'Sport' trim existed for 2011 Impreza in US. Sport trims started 2012. Map to base Impreza 2011: 205/55R16 or 205/50R17.",
+      "wheelSpecs": {
+        "diameter": [16, 17],
+        "boltPattern": "5x100",
+        "tireSizes": ["205/55R16", "205/50R17"]
+      }
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i 5-Door Sport Premium",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "205/50R17"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i 5-Door Sport Premium",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "205/50R17"
+      }
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i 5-Door Sport Premium",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "205/50R17"
+      }
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i 5-Door Sport Premium",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "205/50R17"
+      }
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i 5-Door Sport Premium",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "205/50R17"
+      }
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i Sport 5-Door",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x100",
+        "tireSize": "225/40R18"
+      }
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i Sport 5-Door",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x100",
+        "tireSize": "225/40R18"
+      }
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i Sport 5-Door",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x100",
+        "tireSize": "225/40R18"
+      }
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i Sport 5-Door",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x100",
+        "tireSize": "225/40R18"
+      }
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i Sport 5-Door",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x100",
+        "tireSize": "225/40R18"
+      }
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i Sport 5-Door",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x100",
+        "tireSize": "225/40R18"
+      }
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza 2.0i Sport 5-Door",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x100",
+        "tireSize": "225/40R18"
+      }
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza Sport",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x100",
+        "tireSize": "225/40R18"
+      }
+    },
+    {
+      "year": 2025,
+      "make": "subaru",
+      "model": "impreza-sport",
+      "status": "found",
+      "mappedTo": "Impreza Sport",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x100",
+        "tireSize": "225/40R18"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "notUS": true,
+      "status": "skip",
+      "notes": "WRX was not sold in US until 2002. 2000 WRX is JDM only."
+    },
+    {
+      "year": 2001,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "notUS": true,
+      "status": "skip",
+      "notes": "WRX was not sold in US until 2002. 2001 WRX is JDM only."
+    },
+    {
+      "year": 2002,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX Sedan",
+      "wheelSpecs": {
+        "diameter": [16, 17],
+        "boltPattern": "5x100",
+        "tireSizes": ["205/55R16", "215/45R17"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX Sedan",
+      "wheelSpecs": {
+        "diameter": [16, 17],
+        "boltPattern": "5x100",
+        "tireSizes": ["205/55R16", "215/45R17"]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX Sedan",
+      "wheelSpecs": {
+        "diameter": [16, 17],
+        "boltPattern": "5x100",
+        "tireSizes": ["205/55R16", "215/45R17"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX Sedan",
+      "wheelSpecs": {
+        "diameter": 16,
+        "boltPattern": "5x100",
+        "tireSize": "205/55R16"
+      }
+    },
+    {
+      "year": 2006,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX Sedan",
+      "wheelSpecs": {
+        "diameter": 16,
+        "boltPattern": "5x100",
+        "tireSize": "205/55R16"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX Sedan",
+      "wheelSpecs": {
+        "diameter": 16,
+        "boltPattern": "5x100",
+        "tireSize": "205/55R16"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "235/45R17"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "235/45R17"
+      }
+    },
+    {
+      "year": 2010,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "235/45R17"
+      }
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "235/45R17"
+      }
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "235/45R17"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "235/45R17"
+      }
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "impreza-wrx",
+      "status": "found",
+      "mappedTo": "Impreza WRX",
+      "notes": "Last year WRX was under Impreza. 2015+ WRX is standalone model.",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x100",
+        "tireSize": "235/45R17"
+      }
+    },
+    {
+      "year": 2000,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "notUS": true,
+      "status": "skip",
+      "notes": "WRX STI was not sold in US until 2004. 2000 STI is JDM only."
+    },
+    {
+      "year": 2001,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "notUS": true,
+      "status": "skip",
+      "notes": "WRX STI was not sold in US until 2004. 2001 STI is JDM only."
+    },
+    {
+      "year": 2002,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "notUS": true,
+      "status": "skip",
+      "notes": "WRX STI was not sold in US until 2004. 2002 STI is JDM only."
+    },
+    {
+      "year": 2003,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "notUS": true,
+      "status": "skip",
+      "notes": "WRX STI was not sold in US until 2004. 2003 STI is JDM only."
+    },
+    {
+      "year": 2004,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "status": "found",
+      "mappedTo": "Impreza WRX STI",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x114.3",
+        "tireSize": "225/45R17"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "status": "found",
+      "mappedTo": "Impreza WRX STI",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x114.3",
+        "tireSize": "225/45R17"
+      }
+    },
+    {
+      "year": 2006,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "status": "found",
+      "mappedTo": "Impreza WRX STI",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x114.3",
+        "tireSize": "225/45R17"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "status": "found",
+      "mappedTo": "Impreza WRX STI",
+      "wheelSpecs": {
+        "diameter": 17,
+        "boltPattern": "5x114.3",
+        "tireSize": "225/45R17"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "status": "found",
+      "mappedTo": "Impreza WRX STI",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x114.3",
+        "tireSize": "245/40R18"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "status": "found",
+      "mappedTo": "Impreza WRX STI",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x114.3",
+        "tireSize": "245/40R18"
+      }
+    },
+    {
+      "year": 2010,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "status": "found",
+      "mappedTo": "Impreza WRX STI",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x114.3",
+        "tireSize": "245/40R18"
+      }
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "status": "found",
+      "mappedTo": "Impreza WRX STI",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x114.3",
+        "tireSize": "245/40R18"
+      }
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "status": "found",
+      "mappedTo": "Impreza WRX STI",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x114.3",
+        "tireSize": "245/40R18"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "impreza-wrx-sti",
+      "status": "found",
+      "mappedTo": "Impreza WRX STI",
+      "notes": "Last year STI was under Impreza. 2015+ WRX STI is standalone model.",
+      "wheelSpecs": {
+        "diameter": 18,
+        "boltPattern": "5x114.3",
+        "tireSize": "245/40R18"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1066 @@
+{
+  "batchId": "53",
+  "processedAt": "2026-04-21T21:15:00Z",
+  "vehicleCount": 75,
+  "successCount": 75,
+  "failedCount": 0,
+  "sources": [
+    "fastwrx.com/pages/subaru-wrx-and-sti-wheel-information",
+    "rs25.com/threads/master-thread-of-oem-subaru-wheel-specs",
+    "subaruxvforum.com/threads/subaru-xv-oem-wheel-specs",
+    "subaruoutback.org/threads/new-wheel-specs"
+  ],
+  "results": [
+    {
+      "year": 2023,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "5th gen Impreza (2017-2023)"
+    },
+    {
+      "year": 2022,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "5th gen Impreza (2017-2023)"
+    },
+    {
+      "year": 2021,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "5th gen Impreza (2017-2023)"
+    },
+    {
+      "year": 2020,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "5th gen Impreza (2017-2023)"
+    },
+    {
+      "year": 2019,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "5th gen Impreza (2017-2023)"
+    },
+    {
+      "year": 2018,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "5th gen Impreza (2017-2023)"
+    },
+    {
+      "year": 2017,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "5th gen Impreza (2017-2023), confirmed RS25 thread"
+    },
+    {
+      "year": 2016,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "4th gen Impreza (2012-2016)"
+    },
+    {
+      "year": 2015,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "4th gen Impreza (2012-2016)"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "4th gen Impreza (2012-2016)"
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "4th gen Impreza (2012-2016)"
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "4th gen Impreza (2012-2016), confirmed RS25 thread"
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza Sport",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "medium",
+      "notes": "3rd gen Impreza (2008-2011), Sport trim may share base specs"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "Last year of Impreza WRX nameplate, confirmed FastWRX"
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2011-2014 WRX specs confirmed FastWRX"
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2011-2014 WRX specs confirmed FastWRX"
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2011-2014 WRX specs confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2009-2010 WRX confirmed FastWRX"
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2009-2010 WRX confirmed FastWRX"
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2008 WRX confirmed FastWRX, new GR chassis"
+    },
+    {
+      "year": 2007,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2006-2007 WRX confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2006,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2006-2007 WRX confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2005,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2002-2005 WRX confirmed FastWRX"
+    },
+    {
+      "year": 2004,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2002-2005 WRX confirmed FastWRX"
+    },
+    {
+      "year": 2003,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2002-2005 WRX confirmed FastWRX"
+    },
+    {
+      "year": 2002,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "First USDM WRX year, confirmed FastWRX"
+    },
+    {
+      "year": 2001,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 53 }
+        ]
+      },
+      "confidence": "medium",
+      "notes": "JDM model only, GD chassis, specs similar to 2002 USDM"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "Impreza WRX",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 53 }
+        ]
+      },
+      "confidence": "medium",
+      "notes": "JDM model only, GD chassis, specs similar to 2002 USDM"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "Last Impreza WRX STI year, confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2008-2014 STI specs confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2008-2014 STI specs confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2008-2014 STI specs confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2008-2014 STI specs confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2008-2014 STI specs confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "New GR chassis STI, confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2007,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2005-2007 STI confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2006,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2005-2007 STI confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2005,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "First year of 5x114.3 for STI, confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2004,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 53 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "First USDM STI, still 5x100, confirmed FastWRX/RS25"
+    },
+    {
+      "year": 2003,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 53 }
+        ]
+      },
+      "confidence": "medium",
+      "notes": "JDM STI Version 8, GD chassis 5x100"
+    },
+    {
+      "year": 2002,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 53 }
+        ]
+      },
+      "confidence": "medium",
+      "notes": "JDM STI Version 7, GD chassis 5x100"
+    },
+    {
+      "year": 2001,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 53 }
+        ]
+      },
+      "confidence": "medium",
+      "notes": "JDM STI, GD chassis 5x100"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 53 }
+        ]
+      },
+      "confidence": "medium",
+      "notes": "JDM STI Version 6, GC chassis 5x100"
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Impreza XV",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "Predecessor to Crosstrek, confirmed subaruxvforum"
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Impreza XV",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "Predecessor to Crosstrek, confirmed subaruxvforum"
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Impreza XV",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "Predecessor to Crosstrek, confirmed subaruxvforum"
+    },
+    {
+      "year": 2020,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BN chassis 2015-2020 uses 5x114.3"
+    },
+    {
+      "year": 2019,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BN chassis"
+    },
+    {
+      "year": 2018,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BN chassis"
+    },
+    {
+      "year": 2017,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BN chassis"
+    },
+    {
+      "year": 2016,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BN chassis"
+    },
+    {
+      "year": 2015,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, first year BN chassis 5x114.3"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BM chassis last year"
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BM chassis"
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BM chassis"
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BM chassis"
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BM chassis first year"
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BL chassis"
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BL chassis"
+    },
+    {
+      "year": 2007,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BL chassis"
+    },
+    {
+      "year": 2006,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BL chassis"
+    },
+    {
+      "year": 2005,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BL chassis"
+    },
+    {
+      "year": 2004,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BL chassis first year"
+    },
+    {
+      "year": 2003,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BE chassis"
+    },
+    {
+      "year": 2002,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BE chassis"
+    },
+    {
+      "year": 2001,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BE chassis"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "Legacy B4",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "JDM Legacy sedan, BE chassis first B4 year"
+    },
+    {
+      "year": 2019,
+      "make": "Subaru",
+      "model": "Legacy Outback",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2015+ Outback uses 5x114.3, confirmed RS25/subaruoutback.org"
+    },
+    {
+      "year": 2018,
+      "make": "Subaru",
+      "model": "Legacy Outback",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2015+ Outback uses 5x114.3"
+    },
+    {
+      "year": 2017,
+      "make": "Subaru",
+      "model": "Legacy Outback",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2015+ Outback uses 5x114.3"
+    },
+    {
+      "year": 2016,
+      "make": "Subaru",
+      "model": "Legacy Outback",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "2015+ Outback uses 5x114.3, confirmed RS25"
+    },
+    {
+      "year": 2015,
+      "make": "Subaru",
+      "model": "Legacy Outback",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 55 },
+          { "diameter": 18, "width": 7, "offset": 55 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "First year 5x114.3 for Outback, confirmed subaruoutback.org"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Legacy Outback",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "BR chassis last year, 5x100"
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Legacy Outback",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "BR chassis, 5x100"
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Legacy Outback",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 56.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ]
+      },
+      "confidence": "high",
+      "notes": "BR chassis facelift, 5x100"
+    }
+  ]
+}

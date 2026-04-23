@@ -1,0 +1,412 @@
+{
+  "batchId": "145",
+  "validatedAt": "2026-04-21T22:55:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 16,
+    "discrepancies": 16,
+    "notOnSource": 10,
+    "jdmModelsSkipped": 49,
+    "severity": "CRITICAL"
+  },
+  "notes": "Most US market vehicles have COMPLETELY WRONG tire sizes. Corolla Cross sizes appear to be copy-pasted from regular Corolla. 2000-2002 Corolla shows 15-18\" sizes when OEM is 14\". Many JDM models (Runx, Spacio, Duet, etc.) not available on tiresize.com.",
+  "discrepancies": [
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "oemSizes": ["185/65R15", "195/65R15", "195/55R16"],
+      "oemByTrim": {
+        "CE": ["185/65R15"],
+        "LE": ["195/65R15"],
+        "S": ["195/65R15", "195/55R16"]
+      },
+      "issues": [
+        "Missing OEM size: 185/65R15",
+        "Wrong size: 205/55R16 should be 195/55R16",
+        "Non-OEM size included: 215/45R17",
+        "Non-OEM size included: 225/40R18"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "oemSizes": ["185/65R15", "195/65R15", "195/55R16"],
+      "oemByTrim": {
+        "CE": ["185/65R15"],
+        "LE": ["195/65R15"],
+        "S": ["195/65R15", "195/55R16"]
+      },
+      "issues": [
+        "Missing OEM size: 185/65R15",
+        "Wrong size: 205/55R16 should be 195/55R16",
+        "Non-OEM size included: 215/45R17",
+        "Non-OEM size included: 225/40R18"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "oemSizes": ["185/65R15", "195/65R15", "195/55R16"],
+      "oemByTrim": {
+        "CE": ["185/65R15"],
+        "LE": ["195/65R15"],
+        "S": ["195/65R15"],
+        "XRS": ["195/55R16"]
+      },
+      "issues": [
+        "Missing OEM size: 185/65R15",
+        "Wrong size: 205/55R16 should be 195/55R16",
+        "Non-OEM size included: 215/45R17",
+        "Non-OEM size included: 225/40R18"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "oemSizes": ["185/65R15", "195/65R15", "195/55R16"],
+      "oemByTrim": {
+        "CE": ["185/65R15"],
+        "LE": ["195/65R15"],
+        "S": ["195/65R15"],
+        "XRS": ["195/55R16"]
+      },
+      "issues": [
+        "Missing OEM size: 185/65R15",
+        "Wrong size: 205/55R16 should be 195/55R16",
+        "Non-OEM size included: 215/45R17",
+        "Non-OEM size included: 225/40R18"
+      ],
+      "severity": "HIGH",
+      "note": "Inferred from 2005 (same generation)"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "oemSizes": ["185/65R15", "195/65R15", "195/55R16"],
+      "issues": [
+        "Missing OEM size: 185/65R15",
+        "Wrong size: 205/55R16 should be 195/55R16",
+        "Non-OEM size included: 215/45R17",
+        "Non-OEM size included: 225/40R18"
+      ],
+      "severity": "HIGH",
+      "note": "Inferred from 2005 (same generation)"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "oemSizes": ["175/65R14", "185/65R14"],
+      "oemByTrim": {
+        "CE": ["175/65R14", "185/65R14"],
+        "LE": ["185/65R14"],
+        "S": ["185/65R14"]
+      },
+      "issues": [
+        "COMPLETELY WRONG: 2002 Corolla uses 14-inch wheels, not 15-18 inch",
+        "All sizes are non-OEM"
+      ],
+      "severity": "CRITICAL",
+      "note": "2000-2002 is different generation with 14\" wheels"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "oemSizes": ["175/65R14", "185/65R14"],
+      "issues": [
+        "COMPLETELY WRONG: 2001 Corolla uses 14-inch wheels, not 15-18 inch",
+        "All sizes are non-OEM"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "oemSizes": ["175/65R14", "185/65R14"],
+      "oemByTrim": {
+        "CE": ["175/65R14", "185/65R14"],
+        "LE": ["185/65R14"],
+        "VE": ["175/65R14", "185/65R14"]
+      },
+      "issues": [
+        "COMPLETELY WRONG: 2000 Corolla uses 14-inch wheels, not 15-18 inch",
+        "All sizes are non-OEM"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "corolla-cross",
+      "currentTireSizes": ["215/65R17", "225/55R18"],
+      "oemSizes": ["215/65R17", "225/55R18"],
+      "status": "CORRECT",
+      "issues": [],
+      "severity": "NONE"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "corolla-cross",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "oemSizes": ["215/65R17", "225/55R18"],
+      "oemByTrim": {
+        "L": ["215/65R17"],
+        "LE": ["215/65R17"],
+        "XLE": ["225/55R18"],
+        "Hybrid S": ["215/65R17"],
+        "Hybrid SE": ["215/65R17"],
+        "Hybrid XSE": ["225/55R18"],
+        "Hybrid Nightshade": ["225/55R18"]
+      },
+      "issues": [
+        "COMPLETELY WRONG: Sizes appear to be from regular Corolla",
+        "All listed sizes are non-OEM for Corolla Cross",
+        "Missing correct OEM sizes: 215/65R17, 225/55R18"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "corolla-cross",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "oemSizes": ["215/65R17", "225/55R18"],
+      "oemByTrim": {
+        "L": ["215/65R17"],
+        "LE": ["215/65R17"],
+        "XLE": ["225/55R18"],
+        "Hybrid S": ["215/65R17"],
+        "Hybrid SE": ["215/65R17"],
+        "Hybrid XSE": ["225/55R18"],
+        "Hybrid Nightshade": ["225/55R18"]
+      },
+      "issues": [
+        "COMPLETELY WRONG: Sizes appear to be from regular Corolla",
+        "All listed sizes are non-OEM for Corolla Cross"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "corolla-cross",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "oemSizes": ["215/65R17", "225/55R18"],
+      "issues": [
+        "COMPLETELY WRONG: Sizes appear to be from regular Corolla",
+        "All listed sizes are non-OEM for Corolla Cross"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "corolla-cross",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "oemSizes": ["215/65R17", "225/55R18"],
+      "oemByTrim": {
+        "L": ["215/65R17"],
+        "LE": ["215/65R17"],
+        "XLE": ["225/55R18"]
+      },
+      "issues": [
+        "COMPLETELY WRONG: Sizes appear to be from regular Corolla",
+        "All listed sizes are non-OEM for Corolla Cross"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "corolla-cross",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "oemSizes": ["215/65R17", "225/55R18"],
+      "issues": [
+        "COMPLETELY WRONG: Sizes appear to be from regular Corolla",
+        "Corolla Cross debuted in 2022 for US market - may be international variant"
+      ],
+      "severity": "CRITICAL",
+      "note": "2021 Corolla Cross was sold in some international markets before US launch"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "corolla-cross",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "oemSizes": null,
+      "issues": [
+        "Corolla Cross not sold in 2020 in US market",
+        "Sizes are wrong for any Corolla Cross variant"
+      ],
+      "severity": "CRITICAL",
+      "note": "Vehicle may not exist for this year"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": ["265/70R17", "285/70R17"],
+      "oemSizes": ["265/75R16", "265/70R17"],
+      "oemByTrim": {
+        "Base Model": ["265/75R16", "265/70R17"],
+        "TRD": ["265/75R16"]
+      },
+      "issues": [
+        "Missing OEM size: 265/75R16",
+        "Non-OEM size included: 285/70R17"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "missingData": [
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": [],
+      "note": "FJ Cruiser discontinued in US after 2014. May be international market vehicle."
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": [],
+      "note": "FJ Cruiser discontinued in US after 2014"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": [],
+      "note": "FJ Cruiser discontinued in US after 2014"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": [],
+      "note": "FJ Cruiser discontinued in US after 2014"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": [],
+      "note": "FJ Cruiser discontinued in US after 2014"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": [],
+      "note": "FJ Cruiser discontinued in US after 2014"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": [],
+      "note": "FJ Cruiser discontinued in US after 2014"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": [],
+      "note": "FJ Cruiser discontinued in US after 2014"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": [],
+      "note": "FJ Cruiser discontinued in US after 2014"
+    }
+  ],
+  "notOnSource": [
+    {
+      "model": "corolla-im",
+      "years": [2016, 2017, 2018],
+      "note": "Corolla iM returns 404 on tiresize.com. May be listed under Scion iM (2016) or need different URL format."
+    },
+    {
+      "model": "echo",
+      "years": [2000, 2001, 2002, 2003, 2004, 2005],
+      "note": "Page exists but trim data not extractable. Needs browser scrape or different approach."
+    }
+  ],
+  "jdmModelsSkipped": [
+    {
+      "model": "corolla-runx",
+      "years": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009],
+      "note": "JDM only - not available on tiresize.com"
+    },
+    {
+      "model": "corolla-spacio",
+      "years": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007],
+      "note": "JDM only - not available on tiresize.com"
+    },
+    {
+      "model": "corona-premio",
+      "years": [2000, 2001],
+      "note": "JDM only - not available on tiresize.com"
+    },
+    {
+      "model": "cresta",
+      "years": [2000, 2001],
+      "note": "JDM only - not available on tiresize.com"
+    },
+    {
+      "model": "duet",
+      "years": [2000, 2001, 2002, 2003, 2004],
+      "note": "JDM only - not available on tiresize.com"
+    },
+    {
+      "model": "e-z",
+      "years": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+      "note": "Unknown model - may be electric/golf cart or international variant"
+    },
+    {
+      "model": "etios-valco",
+      "years": [2011, 2012, 2013, 2014, 2015, 2016, 2017],
+      "note": "Indonesian market vehicle - not available on tiresize.com"
+    }
+  ],
+  "correctSizes": {
+    "toyota_corolla_2003-2007": ["185/65R15", "195/65R15", "195/55R16"],
+    "toyota_corolla_2000-2002": ["175/65R14", "185/65R14"],
+    "toyota_corolla-cross_2022-2026": ["215/65R17", "225/55R18"],
+    "toyota_fj-cruiser_2007-2014": ["265/75R16", "265/70R17"]
+  },
+  "recommendations": [
+    "URGENT: Fix Corolla Cross 2020-2025 sizes - currently showing Corolla sedan sizes",
+    "URGENT: Fix Corolla 2000-2002 sizes - uses 14\" wheels, not 15-18\"",
+    "Remove non-OEM sizes (215/45R17, 225/40R18) from 2003-2007 Corolla unless intentionally offering plus-sizes",
+    "Fix 205/55R16 to 195/55R16 for Corolla (or verify if intentional plus-size)",
+    "Add 185/65R15 to Corolla 2003-2007 (CE trim size)",
+    "Add 265/75R16 to FJ Cruiser 2014",
+    "Remove 285/70R17 from FJ Cruiser 2014 (not OEM)",
+    "Review FJ Cruiser 2015-2023 entries - vehicle discontinued in US in 2014",
+    "Consider removing JDM-only models or sourcing fitment data from Japanese sources"
+  ]
+}

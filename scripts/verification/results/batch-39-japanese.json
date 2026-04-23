@@ -1,0 +1,1055 @@
+{
+  "batch": "batch-39-japanese",
+  "verifiedAt": "2026-04-23T00:30:00Z",
+  "verifiedBy": "subagent-verify-jp-39",
+  "sources": ["tiresize.com", "caranddriver.com", "wikipedia.org", "cosmisusa.com", "subaru.com"],
+  "summary": {
+    "totalInBatch": 75,
+    "valid": 44,
+    "invalid": 31,
+    "invalidYears": [
+      "Mitsubishi Montero 2010-2021 (12 years) - DISCONTINUED in US after 2006",
+      "Nissan Quest 2003 - NO PRODUCTION (gap between Gen 2 and Gen 3)",
+      "Subaru Baja 2002 - MODEL STARTED 2003",
+      "Subaru Baja 2007 - MODEL ENDED 2006",
+      "Subaru Solterra 2022 - MODEL STARTED 2023"
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2010,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "status": "INVALID",
+      "reason": "Montero discontinued in US after 2006 model year",
+      "sources": ["cars.com", "wikipedia.org/wiki/Mitsubishi_Pajero"],
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "GLE", "oemTireSize": "215/70R15"},
+        {"name": "GXE", "oemTireSize": "215/70R15"},
+        {"name": "SE", "oemTireSize": "225/60R16"}
+      ],
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "GLE", "oemTireSize": "215/65R16"},
+        {"name": "GXE", "oemTireSize": "215/65R16"},
+        {"name": "SE", "oemTireSize": "225/60R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "GLE", "oemTireSize": "215/65R16"},
+        {"name": "GXE", "oemTireSize": "215/65R16"},
+        {"name": "SE", "oemTireSize": "225/60R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "INVALID",
+      "reason": "No Quest models were marketed for 2003 model year (gap between Gen 2 ending 2002 and Gen 3 starting 2004)",
+      "sources": ["wikipedia.org/wiki/Nissan_Quest", "cars.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "3.5 S", "oemTireSize": "225/65R16"},
+        {"name": "3.5 SE", "oemTireSize": "225/60R17"},
+        {"name": "3.5 SL", "oemTireSize": "225/65R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high",
+      "notes": "Third generation Quest debut"
+    },
+    {
+      "year": 2005,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "3.5 S", "oemTireSize": "225/65R16"},
+        {"name": "3.5 SE", "oemTireSize": "225/60R17"},
+        {"name": "3.5 SL", "oemTireSize": "225/65R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "3.5 S", "oemTireSize": "225/65R16"},
+        {"name": "3.5 SE", "oemTireSize": "225/60R17"},
+        {"name": "3.5 SL", "oemTireSize": "225/65R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "3.5 S", "oemTireSize": "225/65R16"},
+        {"name": "3.5 SE", "oemTireSize": "225/60R17"},
+        {"name": "3.5 SL", "oemTireSize": "225/65R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "3.5 S", "oemTireSize": "225/65R16"},
+        {"name": "3.5 SE", "oemTireSize": "225/60R17"},
+        {"name": "3.5 SL", "oemTireSize": "225/65R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "3.5 S", "oemTireSize": "225/65R16"},
+        {"name": "3.5 SE", "oemTireSize": "225/60R17"},
+        {"name": "3.5 SL", "oemTireSize": "225/65R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high",
+      "notes": "Last year of third generation"
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "S", "oemTireSize": "225/65R16"},
+        {"name": "SV", "oemTireSize": "225/65R16"},
+        {"name": "SL", "oemTireSize": "235/55R18"},
+        {"name": "LE", "oemTireSize": "235/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high",
+      "notes": "Fourth generation Quest debut"
+    },
+    {
+      "year": 2012,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "S", "oemTireSize": "225/65R16"},
+        {"name": "SV", "oemTireSize": "225/65R16"},
+        {"name": "SL", "oemTireSize": "235/55R18"},
+        {"name": "LE", "oemTireSize": "235/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "S", "oemTireSize": "225/65R16"},
+        {"name": "SV", "oemTireSize": "225/65R16"},
+        {"name": "SL", "oemTireSize": "235/55R18"},
+        {"name": "LE", "oemTireSize": "235/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "S", "oemTireSize": "225/65R16"},
+        {"name": "SV", "oemTireSize": "225/65R16"},
+        {"name": "SL", "oemTireSize": "235/55R18"},
+        {"name": "LE", "oemTireSize": "235/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "S", "oemTireSize": "225/65R16"},
+        {"name": "SV", "oemTireSize": "225/65R16"},
+        {"name": "SL", "oemTireSize": "235/55R18"},
+        {"name": "Platinum", "oemTireSize": "235/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "S", "oemTireSize": "225/65R16"},
+        {"name": "SV", "oemTireSize": "225/65R16"},
+        {"name": "SL", "oemTireSize": "235/55R18"},
+        {"name": "Platinum", "oemTireSize": "235/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "Quest",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "S", "oemTireSize": "225/65R16"},
+        {"name": "SV", "oemTireSize": "225/65R16"},
+        {"name": "SL", "oemTireSize": "235/55R18"},
+        {"name": "Platinum", "oemTireSize": "235/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high",
+      "notes": "Final model year - Quest discontinued after 2017"
+    },
+    {
+      "year": 2002,
+      "make": "Subaru",
+      "model": "Baja",
+      "status": "INVALID",
+      "reason": "Subaru Baja production started 2003 model year (manufactured July 2002)",
+      "sources": ["wikipedia.org/wiki/Subaru_Baja", "tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Subaru",
+      "model": "Baja",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemTireSize": "225/60R16"},
+        {"name": "Sport", "oemTireSize": "225/60R16"}
+      ],
+      "sources": ["tiresize.com", "wikipedia.org"],
+      "confidence": "high",
+      "notes": "First model year"
+    },
+    {
+      "year": 2004,
+      "make": "Subaru",
+      "model": "Baja",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "225/60R16"},
+        {"name": "Turbo", "oemTireSize": "225/60R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Subaru",
+      "model": "Baja",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Sport AWD", "oemTireSize": "225/60R16"},
+        {"name": "Turbo AWD", "oemTireSize": "225/60R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Subaru",
+      "model": "Baja",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Sport AWD", "oemTireSize": "225/60R16"},
+        {"name": "Turbo AWD", "oemTireSize": "225/60R16"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high",
+      "notes": "Final model year - production ended April 2006"
+    },
+    {
+      "year": 2007,
+      "make": "Subaru",
+      "model": "Baja",
+      "status": "INVALID",
+      "reason": "Subaru Baja production ended April 2006, no 2007 model year",
+      "sources": ["wikipedia.org/wiki/Subaru_Baja", "tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Impreza WRX STI",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Limited", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"}
+      ],
+      "sources": ["wheel-size.com", "cosmisusa.com"],
+      "confidence": "high",
+      "notes": "Last year under Impreza name; 2015+ became standalone WRX STI"
+    },
+    {
+      "year": 2022,
+      "make": "Subaru",
+      "model": "Solterra",
+      "status": "INVALID",
+      "reason": "Subaru Solterra debuted for 2023 model year (first Subaru EV)",
+      "sources": ["kbb.com", "subaru.com", "tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Subaru",
+      "model": "Solterra",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Premium", "oemTireSize": "235/60R18"},
+        {"name": "Limited", "oemTireSize": "235/50R20"},
+        {"name": "Touring", "oemTireSize": "235/50R20"}
+      ],
+      "sources": ["tiresize.com", "subaru.com"],
+      "confidence": "high",
+      "notes": "First Subaru EV; shares platform with Toyota bZ4X"
+    },
+    {
+      "year": 2024,
+      "make": "Subaru",
+      "model": "Solterra",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Premium", "oemTireSize": "235/60R18"},
+        {"name": "Limited", "oemTireSize": "235/50R20"},
+        {"name": "Touring", "oemTireSize": "235/50R20"}
+      ],
+      "sources": ["tiresize.com", "subaru.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Subaru",
+      "model": "Solterra",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Premium", "oemTireSize": "235/60R18"},
+        {"name": "Limited", "oemTireSize": "235/50R20"},
+        {"name": "Touring", "oemTireSize": "235/50R20"},
+        {"name": "Touring Onyx Edition", "oemTireSize": "235/50R20"}
+      ],
+      "sources": ["tiresize.com", "subaru.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Subaru",
+      "model": "Solterra",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Premium", "oemTireSize": "235/60R18"},
+        {"name": "Limited", "oemTireSize": "235/50R20"},
+        {"name": "Limited XT", "oemTireSize": "235/50R20"},
+        {"name": "Touring XT", "oemTireSize": "235/50R20"}
+      ],
+      "sources": ["tiresize.com", "subaru.com", "caranddriver.com"],
+      "confidence": "high",
+      "notes": "Refreshed model with XT performance trims (338hp)"
+    },
+    {
+      "year": 2008,
+      "make": "Subaru",
+      "model": "Tribeca",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemTireSize": "255/55R18"},
+        {"name": "Limited", "oemTireSize": "255/55R18"},
+        {"name": "Premiere", "oemTireSize": "255/55R18"}
+      ],
+      "sources": ["tiresize.com", "wheel-size.com"],
+      "confidence": "high",
+      "notes": "Facelift year with 3.6L EZ36 engine, dropped B9 name"
+    },
+    {
+      "year": 2009,
+      "make": "Subaru",
+      "model": "Tribeca",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemTireSize": "255/55R18"},
+        {"name": "Limited", "oemTireSize": "255/55R18"},
+        {"name": "Premiere", "oemTireSize": "255/55R18"},
+        {"name": "Special Edition", "oemTireSize": "255/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Subaru",
+      "model": "Tribeca",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Premium", "oemTireSize": "255/55R18"},
+        {"name": "Limited", "oemTireSize": "255/55R18"},
+        {"name": "Touring", "oemTireSize": "255/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Subaru",
+      "model": "Tribeca",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "3.6R Premium", "oemTireSize": "255/55R18"},
+        {"name": "3.6R Limited", "oemTireSize": "255/55R18"},
+        {"name": "3.6R Touring", "oemTireSize": "255/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Subaru",
+      "model": "Tribeca",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "3.6R Premium", "oemTireSize": "255/55R18"},
+        {"name": "3.6R Limited", "oemTireSize": "255/55R18"},
+        {"name": "3.6R Touring", "oemTireSize": "255/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Subaru",
+      "model": "Tribeca",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "3.6R Limited", "oemTireSize": "255/55R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high",
+      "notes": "Trim lineup reduced to Limited only"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "Tribeca",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "3.6R Limited", "oemTireSize": "255/55R18"}
+      ],
+      "sources": ["tiresize.com", "motortrend.com"],
+      "confidence": "high",
+      "notes": "Final model year - production ended January 2014"
+    },
+    {
+      "year": 2014,
+      "make": "Subaru",
+      "model": "WRX STI",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"}
+      ],
+      "sources": ["cosmisusa.com", "fastwrx.com"],
+      "confidence": "medium",
+      "notes": "Transitional year - 2014 was last year as 'Impreza WRX STI'; same specs as Impreza WRX STI 2014"
+    },
+    {
+      "year": 2015,
+      "make": "Subaru",
+      "model": "WRX STI",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Limited", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Launch Edition", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"}
+      ],
+      "sources": ["cosmisusa.com", "fastwrx.com", "wheel-size.com"],
+      "confidence": "high",
+      "notes": "First year as standalone model (VA chassis)"
+    },
+    {
+      "year": 2016,
+      "make": "Subaru",
+      "model": "WRX STI",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Limited", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Series.HyperBlue", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"}
+      ],
+      "sources": ["cosmisusa.com", "fastwrx.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Subaru",
+      "model": "WRX STI",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Limited", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"}
+      ],
+      "sources": ["cosmisusa.com", "fastwrx.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Subaru",
+      "model": "WRX STI",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"},
+        {"name": "Limited", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"}
+      ],
+      "sources": ["cosmisusa.com", "fastwrx.com"],
+      "confidence": "high",
+      "notes": "Updated Brembo brakes on 2018+ STI"
+    },
+    {
+      "year": 2019,
+      "make": "Subaru",
+      "model": "WRX STI",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"},
+        {"name": "Limited", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"},
+        {"name": "S209", "oemWheelSize": "19x9", "oemTireSize": "265/35R19"}
+      ],
+      "sources": ["cosmisusa.com", "fastwrx.com"],
+      "confidence": "high",
+      "notes": "S209 limited edition with wider wheels/tires"
+    },
+    {
+      "year": 2020,
+      "make": "Subaru",
+      "model": "WRX STI",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"},
+        {"name": "Limited", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"}
+      ],
+      "sources": ["cosmisusa.com", "fastwrx.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Subaru",
+      "model": "WRX STI",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"},
+        {"name": "Limited", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"}
+      ],
+      "sources": ["cosmisusa.com", "fastwrx.com", "wikipedia.org"],
+      "confidence": "high",
+      "notes": "Final model year - STI discontinued after 2021"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "205/55R16"}
+      ],
+      "sources": ["wheel-size.com", "cosmisusa.com"],
+      "confidence": "medium",
+      "notes": "Sold as Scion FR-S in USA 2012-2016; rebranded Toyota 86 from 2017"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "sources": ["wheel-size.com", "cosmisusa.com"],
+      "confidence": "medium",
+      "notes": "Sold as Scion FR-S in USA"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "sources": ["wheel-size.com"],
+      "confidence": "medium",
+      "notes": "Sold as Scion FR-S in USA"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "sources": ["wheel-size.com"],
+      "confidence": "medium",
+      "notes": "Sold as Scion FR-S in USA"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "sources": ["wheel-size.com"],
+      "confidence": "medium",
+      "notes": "Last year as Scion FR-S; Scion discontinued August 2016"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "sources": ["tiresize.com", "wheel-size.com"],
+      "confidence": "high",
+      "notes": "First year as Toyota 86 in USA"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"},
+        {"name": "GT", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"},
+        {"name": "GT Black", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"},
+        {"name": "GT", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"},
+        {"name": "TRD Special Edition", "oemWheelSize": "18x7.5", "oemTireSize": "215/40R18"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemTireSize": "215/45R17"},
+        {"name": "GT", "oemWheelSize": "18x7.5", "oemTireSize": "215/40R18"},
+        {"name": "Hakone Edition", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"},
+        {"name": "GT", "oemWheelSize": "18x7.5", "oemTireSize": "215/40R18"}
+      ],
+      "sources": ["wheel-size.com", "goodcarbadcar.net"],
+      "confidence": "high",
+      "notes": "Last year of first generation; 1,044 units sold in USA"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "86",
+      "status": "VALID",
+      "boltPattern": "5x100",
+      "hubBore": 56.1,
+      "trims": [
+        {"name": "Base (GR86)", "oemWheelSize": "17x7", "oemTireSize": "215/45R17"},
+        {"name": "Premium (GR86)", "oemWheelSize": "18x7.5", "oemTireSize": "215/40R18"}
+      ],
+      "sources": ["wheel-size.com"],
+      "confidence": "medium",
+      "notes": "Second generation launched as GR86; same bolt pattern 5x100"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemTireSize": "205/65R15"},
+        {"name": "XLS", "oemTireSize": "205/65R15"}
+      ],
+      "sources": ["tiresize.com", "wheel-size.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemTireSize": "205/65R15"},
+        {"name": "XLS", "oemTireSize": "205/65R15"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemTireSize": "205/65R15"},
+        {"name": "XLS", "oemTireSize": "205/65R15"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemTireSize": "205/65R15"},
+        {"name": "XLS", "oemTireSize": "205/65R15"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemTireSize": "205/65R15"},
+        {"name": "XLS", "oemTireSize": "205/65R15"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high",
+      "notes": "Last year of third generation"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemTireSize": "215/60R16"},
+        {"name": "XLS", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemTireSize": "215/55R17"},
+        {"name": "Touring", "oemTireSize": "215/55R17"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high",
+      "notes": "Fourth generation debut with new platform"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemTireSize": "215/60R16"},
+        {"name": "XLS", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemTireSize": "215/55R17"},
+        {"name": "Touring", "oemTireSize": "215/55R17"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Avalon",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemTireSize": "215/60R16"},
+        {"name": "XLS", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemTireSize": "215/55R17"},
+        {"name": "Touring", "oemTireSize": "215/55R17"}
+      ],
+      "sources": ["tiresize.com"],
+      "confidence": "high"
+    }
+  ]
+}

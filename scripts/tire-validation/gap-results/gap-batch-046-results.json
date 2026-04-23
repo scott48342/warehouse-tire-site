@@ -1,0 +1,539 @@
+{
+  "batchId": 46,
+  "processedAt": "2026-04-21T23:58:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "found": 26,
+    "notUS": 24
+  },
+  "results": [
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class-cabrio",
+      "tiresizeModel": "S560",
+      "trim": "Cabriolet",
+      "tires": [
+        { "front": "245/45R19", "rear": "275/40R19" },
+        { "front": "245/40R20", "rear": "275/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S560/2019/"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class-cabrio",
+      "tiresizeModel": "S560",
+      "trim": "Cabriolet",
+      "tires": [
+        { "front": "245/45R19", "rear": "275/40R19" },
+        { "front": "245/40R20", "rear": "275/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S560/2020/"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class-cabrio",
+      "tiresizeModel": "S560",
+      "trim": "Cabriolet",
+      "tires": [
+        { "front": "245/45R19", "rear": "275/40R19" },
+        { "front": "245/40R20", "rear": "275/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S560/2021/"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "s-class-cabrio-amg",
+      "notUS": true,
+      "reason": "S63/S65 AMG Cabriolet not available until 2017 in US market"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "s-class-cabrio-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG 4MATIC Cabriolet",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2017/"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "s-class-cabrio-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG Cabriolet",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2018/"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class-cabrio-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG Cabriolet",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2019/"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class-cabrio-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG Cabriolet",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2020/"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class-cabrio-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG Cabriolet",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2021/"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class-coupe-amg",
+      "notUS": true,
+      "reason": "S63/S65 AMG Coupe not available until 2015 in US market (2014 only had sedan)"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "s-class-coupe-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG 4MATIC Coupe",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2015/"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "s-class-coupe-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG 4MATIC Coupe",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2016/"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "s-class-coupe-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG 4MATIC Coupe",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2017/"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "s-class-coupe-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG Coupe",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2018/"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "s-class-coupe-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG Coupe",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2019/"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "s-class-coupe-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG Coupe",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2020/"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "s-class-coupe-amg",
+      "tiresizeModel": "S63",
+      "trim": "AMG Coupe",
+      "tires": [
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/S63/2021/"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "sl-class-amg",
+      "tiresizeModel": "SL63",
+      "trim": "AMG Roadster",
+      "tires": [
+        { "front": "265/40R20", "rear": "295/35R20" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/SL63/2026/"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "slc-class-amg",
+      "notUS": true,
+      "reason": "SLC43 AMG not available until 2017 in US market"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "slc-class-amg",
+      "tiresizeModel": "SLC43",
+      "trim": "AMG",
+      "tires": [
+        { "front": "235/40R18", "rear": "255/35R18" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/SLC43/2017/"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "slc-class-amg",
+      "tiresizeModel": "SLC43",
+      "trim": "AMG",
+      "tires": [
+        { "front": "235/40R18", "rear": "255/35R18" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/SLC43/2018/"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "slc-class-amg",
+      "tiresizeModel": "SLC43",
+      "trim": "AMG",
+      "tires": [
+        { "front": "235/40R18", "rear": "255/35R18" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/SLC43/2019/"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "slc-class-amg",
+      "tiresizeModel": "SLC43",
+      "trim": "AMG",
+      "tires": [
+        { "front": "235/40R18", "rear": "255/35R18" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/SLC43/2020/"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "notUS": true,
+      "reason": "SLR McLaren not available in 2004 on tiresize.com (starts 2005)"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "tiresizeModel": "SLR",
+      "trim": "McLaren",
+      "tires": [
+        { "front": "255/35R19", "rear": "295/30R19" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/SLR/2005/"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "tiresizeModel": "SLR",
+      "trim": "McLaren",
+      "tires": [
+        { "front": "255/35R19", "rear": "295/30R19" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/SLR/2006/"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "tiresizeModel": "SLR",
+      "trim": "McLaren",
+      "tires": [
+        { "front": "255/35R19", "rear": "295/30R19" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/SLR/2007/"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "tiresizeModel": "SLR",
+      "trim": "McLaren",
+      "tires": [
+        { "front": "255/35R19", "rear": "295/30R19" }
+      ],
+      "staggered": true,
+      "boltPattern": "5x112",
+      "source": "https://tiresize.com/tires/Mercedes-Benz/SLR/2008/"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "notUS": true,
+      "reason": "SLR McLaren not available in 2009 on tiresize.com (production ended 2008 for US)"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "notUS": true,
+      "reason": "SLR McLaren not available in 2010 on tiresize.com (production ended)"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "notUS": true,
+      "reason": "SLS AMG not found on tiresize.com - rare exotic, limited aftermarket tire data"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "notUS": true,
+      "reason": "SLS AMG not found on tiresize.com - rare exotic, limited aftermarket tire data"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "notUS": true,
+      "reason": "SLS AMG not found on tiresize.com - rare exotic, limited aftermarket tire data"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "notUS": true,
+      "reason": "SLS AMG not found on tiresize.com - rare exotic, limited aftermarket tire data"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "notUS": true,
+      "reason": "SLS AMG not found on tiresize.com - rare exotic, limited aftermarket tire data"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "notUS": true,
+      "reason": "SLS AMG not found on tiresize.com - rare exotic, limited aftermarket tire data"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "t-class",
+      "notUS": true,
+      "reason": "Mercedes T-Class is Europe-only market vehicle, not sold in US"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "t-class",
+      "notUS": true,
+      "reason": "Mercedes T-Class is Europe-only market vehicle, not sold in US"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "t-class",
+      "notUS": true,
+      "reason": "Mercedes T-Class is Europe-only market vehicle, not sold in US"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "t-class",
+      "notUS": true,
+      "reason": "Mercedes T-Class is Europe-only market vehicle, not sold in US"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "t-class",
+      "notUS": true,
+      "reason": "Mercedes T-Class is Europe-only market vehicle, not sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "vaneo",
+      "notUS": true,
+      "reason": "Mercedes Vaneo is Europe-only market vehicle, not sold in US"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "vaneo",
+      "notUS": true,
+      "reason": "Mercedes Vaneo is Europe-only market vehicle, not sold in US"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "vaneo",
+      "notUS": true,
+      "reason": "Mercedes Vaneo is Europe-only market vehicle, not sold in US"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "vaneo",
+      "notUS": true,
+      "reason": "Mercedes Vaneo is Europe-only market vehicle, not sold in US"
+    },
+    {
+      "year": 2007,
+      "make": "mini",
+      "model": "clubman",
+      "notUS": true,
+      "reason": "Mini Clubman not available until 2008 model year"
+    },
+    {
+      "year": 2005,
+      "make": "mini",
+      "model": "convertible",
+      "tiresizeModel": "Cooper",
+      "trim": "Convertible",
+      "tires": [
+        { "size": "175/65R15" },
+        { "size": "195/55R16" },
+        { "size": "205/45R17" }
+      ],
+      "staggered": false,
+      "boltPattern": "4x100",
+      "source": "https://tiresize.com/tires/Mini/Cooper/2005/"
+    },
+    {
+      "year": 2006,
+      "make": "mini",
+      "model": "convertible",
+      "tiresizeModel": "Cooper",
+      "trim": "Convertible",
+      "tires": [
+        { "size": "175/65R15" },
+        { "size": "195/55R16" },
+        { "size": "205/45R17" }
+      ],
+      "staggered": false,
+      "boltPattern": "4x100",
+      "source": "https://tiresize.com/tires/Mini/Cooper/2006/"
+    },
+    {
+      "year": 2007,
+      "make": "mini",
+      "model": "convertible",
+      "tiresizeModel": "Cooper",
+      "trim": "Convertible",
+      "tires": [
+        { "size": "175/65R15" },
+        { "size": "195/55R16" }
+      ],
+      "staggered": false,
+      "boltPattern": "4x100",
+      "source": "https://tiresize.com/tires/Mini/Cooper/2007/"
+    },
+    {
+      "year": 2008,
+      "make": "mini",
+      "model": "convertible",
+      "tiresizeModel": "Cooper",
+      "trim": "Convertible",
+      "tires": [
+        { "size": "195/55R16" },
+        { "size": "205/45R17" }
+      ],
+      "staggered": false,
+      "boltPattern": "4x100",
+      "source": "https://tiresize.com/tires/Mini/Cooper/2008/"
+    }
+  ]
+}

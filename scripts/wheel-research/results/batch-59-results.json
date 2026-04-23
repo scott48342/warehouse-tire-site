@@ -1,0 +1,1280 @@
+{
+  "batchId": "59",
+  "processedAt": "2026-04-21T21:27:00.000Z",
+  "results": [
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "lite-ace-noah",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "size-tire.com, fitment databases",
+      "confidence": "medium",
+      "notes": "JDM van. Some trims use 5x114.3 instead of 4x114.3. Verify trim-specific bolt pattern."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "lite-ace-noah",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "4x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "size-tire.com, fitment databases",
+      "confidence": "medium",
+      "notes": "JDM van. Some trims use 5x114.3 instead of 4x114.3. Verify trim-specific bolt pattern."
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "majesty",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 35 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "zigwheels.co.th, wheel-size.com",
+      "confidence": "high",
+      "notes": "Thailand market luxury MPV based on Granvia H300 platform. Uses 235/60R17 tires."
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "majesty",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 35 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "zigwheels.co.th, wheel-size.com",
+      "confidence": "high",
+      "notes": "Thailand market luxury MPV based on Granvia H300 platform."
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "majesty",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 35 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "zigwheels.co.th, wheel-size.com",
+      "confidence": "high",
+      "notes": "Thailand market luxury MPV based on Granvia H300 platform."
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "majesty",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 35 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "zigwheels.co.th, wheel-size.com",
+      "confidence": "high",
+      "notes": "Thailand market luxury MPV."
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "majesty",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 35 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "zigwheels.co.th, wheel-size.com",
+      "confidence": "high",
+      "notes": "Thailand market luxury MPV."
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "majesty",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 35 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "zigwheels.co.th, wheel-size.com",
+      "confidence": "high",
+      "notes": "Thailand market luxury MPV."
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "majesty",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 35 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "zigwheels.co.th, wheel-size.com",
+      "confidence": "high",
+      "notes": "Thailand market luxury MPV. Launch year for H300 Majesty."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mark-ii-qualis",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, JDM fitment databases",
+      "confidence": "high",
+      "notes": "JDM wagon based on Camry/Windom platform."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mark-ii-qualis",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, JDM fitment databases",
+      "confidence": "high",
+      "notes": "JDM wagon based on Camry/Windom platform."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mark-ii-qualis",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, JDM fitment databases",
+      "confidence": "high",
+      "notes": "JDM wagon based on Camry/Windom platform."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mega-cruiser",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17.5, "width": 8.25, "offset": 60 }
+        ],
+        "boltPattern": "6x222.2",
+        "centerBore": 165.1,
+        "isStaggered": false
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM military-style vehicle. Very unusual bolt pattern (6x222.2). Limited aftermarket wheel availability."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mega-cruiser",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17.5, "width": 8.25, "offset": 60 }
+        ],
+        "boltPattern": "6x222.2",
+        "centerBore": 165.1,
+        "isStaggered": false
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM military-style vehicle. Very unusual bolt pattern (6x222.2). Limited aftermarket wheel availability."
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "mr-s",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org, wheel-size.com",
+      "confidence": "high",
+      "notes": "JDM name for MR2 Spyder. Facelift model (2003+) has staggered setup 15/16 inch."
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr-s",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org, wheel-size.com",
+      "confidence": "high",
+      "notes": "JDM name for MR2 Spyder. Facelift model with staggered setup."
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr-s",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org, wheel-size.com",
+      "confidence": "high",
+      "notes": "JDM name for MR2 Spyder. Facelift model with staggered setup."
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr-s",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org, wheel-size.com",
+      "confidence": "high",
+      "notes": "JDM name for MR2 Spyder. Facelift model with staggered setup."
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr-s",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org, wheel-size.com",
+      "confidence": "high",
+      "notes": "JDM name for MR2 Spyder. First year of facelift with staggered wheels."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr-s",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 15, "width": 6.5, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "midshiprunabout.org, wheel-size.com",
+      "confidence": "high",
+      "notes": "JDM name for MR2 Spyder. Pre-facelift has same wheel diameter F/R but staggered tires."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr-s",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 15, "width": 6.5, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "midshiprunabout.org, wheel-size.com",
+      "confidence": "high",
+      "notes": "JDM name for MR2 Spyder. Pre-facelift model."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr-s",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 15, "width": 6.5, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "midshiprunabout.org, wheel-size.com",
+      "confidence": "high",
+      "notes": "JDM name for MR2 Spyder. Pre-facelift model."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 15, "width": 6.5, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "W30 generation MR2. Same as MR2 Spyder/MR-S."
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "UK market name for MR2 Spyder. Facelift model with staggered setup."
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "UK market name for MR2 Spyder."
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "UK market name for MR2 Spyder."
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "UK market name for MR2 Spyder."
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "UK market name for MR2 Spyder. First year of facelift."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 15, "width": 6.5, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "UK market name for MR2 Spyder. Pre-facelift model."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 15, "width": 6.5, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "UK market name for MR2 Spyder."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 15, "width": 6.5, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "UK market name for MR2 Spyder."
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "US market name. Facelift model with staggered 15/16 inch setup."
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "US market name. Facelift model with staggered setup."
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "US market name. Facelift model."
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 16, "width": 7, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": true
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "US market name. First year of facelift with staggered wheels."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 15, "width": 6.5, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "US market name. Pre-facelift model."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 15, "width": 6.5, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "US market name. Pre-facelift model."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45, "position": "front" },
+          { "diameter": 15, "width": 6.5, "offset": 45, "position": "rear" }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "midshiprunabout.org",
+      "confidence": "high",
+      "notes": "US market name. Pre-facelift model."
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "nav1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Indonesian market MPV based on Noah/Voxy platform."
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "nav1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Indonesian market MPV."
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "nav1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Indonesian market MPV."
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "nav1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Indonesian market MPV."
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "nav1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Indonesian market MPV."
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "nav1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Indonesian market MPV."
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "nav1",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Indonesian market MPV. Launch year."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "origin",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, JDM fitment databases",
+      "confidence": "medium",
+      "notes": "JDM limited edition retro-styled luxury sedan based on Progres. Very rare vehicle."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "origin",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, JDM fitment databases",
+      "confidence": "medium",
+      "notes": "JDM limited edition retro-styled luxury sedan. Only ~1000 made."
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "picnic",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, toyotanation.com",
+      "confidence": "high",
+      "notes": "European market MPV. Also known as Avensis Verso/Ipsum in other markets."
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "picnic",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "European market MPV."
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "picnic",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "European market MPV."
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "picnic",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "European market MPV."
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "picnic",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "European market MPV."
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "picnic",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "European market MPV."
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "picnic",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "European market MPV."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "picnic",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "European market MPV."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "picnic",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "European market MPV. XM20 generation."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "picnic",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "European market MPV."
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "prius",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com, avtoreference.com",
+      "confidence": "high",
+      "notes": "First generation (XW10). 2003+ can be either XW10 or XW20 (5x100 bolt pattern)."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "prius",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com, avtoreference.com",
+      "confidence": "high",
+      "notes": "First generation (XW10)."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "prius",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com, avtoreference.com",
+      "confidence": "high",
+      "notes": "First generation (XW10)."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "prius",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com, avtoreference.com",
+      "confidence": "high",
+      "notes": "First generation (XW10). Some markets had 13-inch base wheels."
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 47 },
+          { "diameter": 17, "width": 7, "offset": 44 },
+          { "diameter": 18, "width": 7, "offset": 44 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "European market van based on PSA/Stellantis platform (Peugeot Rifter/Citroen Berlingo)."
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 47 },
+          { "diameter": 17, "width": 7, "offset": 44 },
+          { "diameter": 18, "width": 7, "offset": 44 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "European market van based on PSA/Stellantis platform."
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 47 },
+          { "diameter": 17, "width": 7, "offset": 44 },
+          { "diameter": 18, "width": 7, "offset": 44 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "European market van."
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 47 },
+          { "diameter": 17, "width": 7, "offset": 44 },
+          { "diameter": 18, "width": 7, "offset": 44 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "European market van."
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 47 },
+          { "diameter": 17, "width": 7, "offset": 44 },
+          { "diameter": 18, "width": 7, "offset": 44 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "European market van."
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "proace-city-verso",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 47 },
+          { "diameter": 17, "width": 7, "offset": 44 },
+          { "diameter": 18, "width": 7, "offset": 44 }
+        ],
+        "boltPattern": "5x108",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "European market van. Launch year."
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "proace-max",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 68 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "boltPattern": "5x118",
+        "centerBore": 71.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com (Fiat Ducato platform)",
+      "confidence": "medium",
+      "notes": "European large van based on Stellantis platform (Fiat Ducato). Some variants may use 5x130."
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "proace-max",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 68 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "boltPattern": "5x118",
+        "centerBore": 71.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com (Fiat Ducato platform)",
+      "confidence": "medium",
+      "notes": "European large van. Launch year. Based on Fiat Ducato/Peugeot Boxer platform."
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "pronard",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com (Avalon XX10 specs)",
+      "confidence": "high",
+      "notes": "JDM name for Toyota Avalon. Uses same platform/specs as Avalon XX10."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "pronard",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com (Avalon XX10 specs)",
+      "confidence": "high",
+      "notes": "JDM name for Toyota Avalon."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "pronard",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com (Avalon XX10 specs)",
+      "confidence": "high",
+      "notes": "JDM name for Toyota Avalon."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "pronard",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com (Avalon XX10 specs)",
+      "confidence": "high",
+      "notes": "JDM name for Toyota Avalon. Launch year."
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "quantum",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com (HiAce platform specs)",
+      "confidence": "high",
+      "notes": "South African market HiAce-based minibus. Also called Ses'fikile."
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "quantum",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com (HiAce platform specs)",
+      "confidence": "high",
+      "notes": "South African market HiAce-based minibus."
+    }
+  ]
+}

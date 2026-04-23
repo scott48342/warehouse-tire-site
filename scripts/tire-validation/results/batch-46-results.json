@@ -1,0 +1,1120 @@
+{
+  "batchId": "46",
+  "processedAt": "2026-04-21T21:59:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2012,
+      "make": "dodge",
+      "model": "dart",
+      "currentTireSizes": ["195/65R15", "225/45R17", "225/40R18"],
+      "validatedTireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "trims": {
+        "SE": ["205/55R16"],
+        "SXT": ["225/45R17"],
+        "Limited": ["225/45R17"],
+        "Ralleye": ["225/45R17"],
+        "GT": ["225/45R17", "225/40R18"],
+        "R/T": ["225/40R18"]
+      },
+      "discrepancies": ["195/65R15 not found as OEM size - should be 205/55R16 for SE trim"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2026,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "GT": ["265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"],
+        "SRT/Hellcat": ["295/45R20"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2025,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20", "265/55R19", "275/50R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "GT": ["265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"],
+        "SRT/Hellcat": ["295/45R20"]
+      },
+      "discrepancies": ["265/55R19 and 275/50R20 not standard OEM - may be plus-size options or errors"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2024,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20", "265/55R19", "275/50R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "GT": ["265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"],
+        "SRT/Hellcat": ["295/45R20"]
+      },
+      "discrepancies": ["265/55R19 and 275/50R20 not standard OEM - may be plus-size options or errors"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2023,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "GT": ["265/50R20"],
+        "R/T": ["265/50R20"],
+        "R/T Tow N Go": ["295/45R20"],
+        "Citadel": ["265/50R20"],
+        "SRT/Hellcat": ["295/45R20"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2022,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "GT": ["265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"],
+        "SRT/Hellcat": ["295/45R20"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2021,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "GT": ["265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"],
+        "SRT/Hellcat": ["295/45R20"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20", "265/55R19", "275/50R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "GT": ["265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"],
+        "SRT": ["295/45R20"]
+      },
+      "discrepancies": ["265/55R19 and 275/50R20 not standard OEM"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2019,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20", "265/55R19", "275/50R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "GT": ["265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"],
+        "SRT": ["295/45R20"]
+      },
+      "discrepancies": ["265/55R19 and 275/50R20 not standard OEM"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2018,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "GT": ["265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"],
+        "SRT": ["295/45R20"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "GT": ["265/60R18", "265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"]
+      },
+      "discrepancies": ["295/45R20 not available in 2017 - SRT trim started 2018"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2016,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20", "265/55R19", "275/50R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"]
+      },
+      "discrepancies": ["295/45R20, 265/55R19, 275/50R20 not standard OEM for 2016"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2015,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20", "265/55R19", "275/50R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"]
+      },
+      "discrepancies": ["295/45R20, 265/55R19, 275/50R20 not standard OEM for 2015"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2014,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"]
+      },
+      "discrepancies": ["295/45R20 not standard OEM for 2014"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2013,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "Crew": ["265/60R18"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"]
+      },
+      "discrepancies": ["295/45R20 not standard OEM for 2013"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2012,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "SXT": ["265/60R18"],
+        "Crew": ["265/60R18"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"]
+      },
+      "discrepancies": ["295/45R20 not standard OEM for 2012"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2011,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20", "295/45R20", "265/55R19", "275/50R20"],
+      "validatedTireSizes": ["265/60R18", "265/50R20"],
+      "trims": {
+        "Express": ["265/60R18"],
+        "Crew": ["265/60R18"],
+        "Crew Lux": ["265/60R18"],
+        "R/T": ["265/50R20"],
+        "Citadel": ["265/50R20"]
+      },
+      "discrepancies": ["295/45R20, 265/55R19, 275/50R20 not standard OEM for 2011"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["265/60R18", "265/50R20"],
+      "validatedTireSizes": ["245/70R17", "265/60R18", "265/50R20", "275/55R20"],
+      "trims": {
+        "SE": ["245/70R17", "265/60R18"],
+        "SLT": ["265/60R18", "265/50R20"],
+        "Limited": ["265/50R20"]
+      },
+      "discrepancies": ["Missing 245/70R17 and 275/55R20 options for some trims"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["245/70R17", "265/60R18", "275/55R20"],
+      "validatedTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "trims": {
+        "SE": ["245/70R17", "265/60R18"],
+        "SLT": ["265/60R18", "265/50R20"],
+        "Limited": ["265/50R20"],
+        "Limited Hybrid": ["265/60R18"]
+      },
+      "discrepancies": ["275/55R20 should be 265/50R20"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["245/70R17", "265/60R18", "275/55R20"],
+      "validatedTireSizes": ["245/70R17", "265/65R17", "265/60R18", "265/50R20"],
+      "trims": {
+        "Adventurer": ["265/65R17"],
+        "SLT": ["265/60R18", "265/50R20"],
+        "Limited": ["265/60R18", "265/50R20"]
+      },
+      "discrepancies": ["275/55R20 should be 265/50R20; Missing 265/65R17"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2007,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["245/70R17", "265/60R18", "275/55R20"],
+      "validatedTireSizes": ["245/70R17", "265/60R18"],
+      "trims": {
+        "SXT": ["245/70R17", "265/60R18"],
+        "SLT": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18"]
+      },
+      "discrepancies": ["275/55R20 not standard OEM for 2007"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["245/70R17", "265/60R18", "275/55R20"],
+      "validatedTireSizes": ["245/70R17", "265/65R17", "265/60R18"],
+      "trims": {
+        "Adventurer": ["245/70R17", "265/65R17"],
+        "SLT": ["245/70R17", "265/65R17", "265/60R18"],
+        "Limited": ["265/60R18"]
+      },
+      "discrepancies": ["275/55R20 not standard OEM for 2006"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["245/70R17", "265/60R18", "275/55R20"],
+      "validatedTireSizes": ["245/70R17", "265/65R17"],
+      "trims": {
+        "SLT": ["245/70R17", "265/65R17"],
+        "Limited 2WD": ["245/70R17", "265/65R17"],
+        "Limited 4WD": ["265/65R17"]
+      },
+      "discrepancies": ["265/60R18 and 275/55R20 not standard OEM for 2005"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["245/70R17", "265/60R18", "275/55R20"],
+      "validatedTireSizes": ["245/70R17", "265/65R17"],
+      "trims": {
+        "SLT": ["245/70R17", "265/65R17"],
+        "Limited 2WD": ["245/70R17", "265/65R17"],
+        "Limited 4WD": ["265/65R17"]
+      },
+      "discrepancies": ["265/60R18 and 275/55R20 not standard OEM for 2004"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["235/75R15", "245/70R16", "265/70R16", "265/65R17"],
+      "validatedTireSizes": ["245/70R16", "265/70R16", "275/60R17"],
+      "trims": {
+        "2WD": ["245/70R16", "265/70R16"],
+        "4WD": ["245/70R16", "265/70R16"],
+        "R/T": ["275/60R17"],
+        "Sport": ["245/70R16", "265/70R16"]
+      },
+      "discrepancies": ["235/75R15 and 265/65R17 not found; R/T uses 275/60R17"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["235/75R15", "245/70R16", "265/70R16", "265/65R17"],
+      "validatedTireSizes": ["235/75R15", "255/65R16", "265/70R16", "275/60R17"],
+      "trims": {
+        "2WD": ["235/75R15", "255/65R16"],
+        "4WD": ["235/75R15", "265/70R16"],
+        "R/T": ["275/60R17"],
+        "Sport": ["265/70R16"]
+      },
+      "discrepancies": ["245/70R16 and 265/65R17 not found as OEM"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["235/75R15", "245/70R16", "265/70R16", "265/65R17"],
+      "validatedTireSizes": ["235/75R15", "255/65R16", "265/70R16", "275/60R17"],
+      "trims": {
+        "2WD": ["235/75R15", "255/65R16"],
+        "4WD": ["235/75R15", "255/65R16", "265/70R16"],
+        "R/T": ["275/60R17"],
+        "Sport": ["265/70R16"]
+      },
+      "discrepancies": ["245/70R16 and 265/65R17 not found as OEM"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "durango",
+      "currentTireSizes": ["235/75R15", "245/70R16", "265/70R16", "265/65R17"],
+      "validatedTireSizes": ["235/75R15", "31x10.50R15", "275/60R17"],
+      "trims": {
+        "Base": ["235/75R15", "31x10.50R15"],
+        "SLT": ["235/75R15", "31x10.50R15"],
+        "R/T": ["275/60R17"]
+      },
+      "discrepancies": ["245/70R16, 265/70R16, 265/65R17 not found as OEM for 2000"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2020,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trims": {
+        "SE": ["225/65R17"],
+        "SE Plus": ["225/65R17"],
+        "SXT": ["225/65R17"]
+      },
+      "discrepancies": ["225/65R16 not standard OEM for 2020 - all trims use 225/65R17"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2019,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trims": {
+        "SE": ["225/65R17"],
+        "SE Plus": ["225/65R17"],
+        "SXT": ["225/65R17"],
+        "GT": ["225/65R17"]
+      },
+      "discrepancies": ["225/65R16 not standard OEM for 2019"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2018,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trims": {
+        "SE": ["225/65R17"],
+        "SE Plus": ["225/65R17"],
+        "SXT": ["225/65R17"],
+        "GT": ["225/65R17"]
+      },
+      "discrepancies": ["225/65R16 not standard OEM for 2018"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2017,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trims": {
+        "SE": ["225/65R17"],
+        "SE Plus": ["225/65R17"],
+        "SXT": ["225/65R17"],
+        "GT": ["225/65R17"]
+      },
+      "discrepancies": ["225/65R16 not standard OEM for 2017"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2016,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trims": {
+        "AVP": ["225/65R17"],
+        "SE": ["225/65R17"],
+        "SE Plus": ["225/65R17"],
+        "SXT": ["225/65R17"],
+        "R/T": ["225/65R17"]
+      },
+      "discrepancies": ["225/65R16 not standard OEM for 2016"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2015,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R17", "225/55R19", "225/60R18", "245/50R19", "245/45R20"],
+      "validatedTireSizes": ["225/65R17"],
+      "trims": {
+        "AVP": ["225/65R17"],
+        "SE": ["225/65R17"],
+        "SXT": ["225/65R17"],
+        "R/T": ["225/65R17"]
+      },
+      "discrepancies": ["225/55R19, 225/60R18, 245/50R19, 245/45R20 not standard OEM - may be mixed with Journey data"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2014,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R17"],
+      "trims": {
+        "AVP": ["225/65R17"],
+        "SE": ["225/65R17"],
+        "SXT": ["225/65R17"],
+        "R/T": ["225/65R17"]
+      },
+      "discrepancies": ["225/65R16 not standard OEM for 2014"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2013,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17", "235/60R16"],
+      "trims": {
+        "AVP": ["225/65R17"],
+        "SE": ["235/60R16"],
+        "SXT": ["225/65R16", "225/65R17"],
+        "R/T": ["225/65R17"],
+        "Crew": ["225/65R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17", "235/60R16"],
+      "trims": {
+        "SE": ["235/60R16"],
+        "SXT": ["225/65R16", "225/65R17"],
+        "R/T": ["225/65R17"],
+        "Crew": ["225/65R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2011,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17", "235/60R16"],
+      "trims": {
+        "C/V Cargo": ["225/65R17"],
+        "Express": ["225/65R16", "225/65R17"],
+        "Mainstreet": ["225/65R17"],
+        "Mainstreet R/T": ["225/65R17"],
+        "Crew": ["225/65R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trims": {
+        "SE": ["225/65R16"],
+        "SXT": ["225/65R16"],
+        "Crew": ["225/65R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trims": {
+        "SE": ["225/65R16"],
+        "SXT": ["225/65R16", "225/65R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "validatedTireSizes": ["225/65R16", "225/65R17"],
+      "trims": {
+        "SE": ["225/65R16"],
+        "SXT": ["225/65R16", "225/65R17"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["215/65R16", "225/60R16", "225/55R17"],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trims": {
+        "Cargo": ["215/65R16"],
+        "SE": ["215/70R15", "215/65R16"],
+        "SXT": ["215/65R16"]
+      },
+      "discrepancies": ["225/60R16 and 225/55R17 not found as OEM sizes for 2007"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["215/65R16", "225/60R16", "225/55R17"],
+      "validatedTireSizes": ["215/65R16", "215/70R15"],
+      "trims": {
+        "SE": ["215/65R16"],
+        "SXT": ["215/65R16"]
+      },
+      "discrepancies": ["225/60R16 and 225/55R17 not found as OEM sizes"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["215/65R16", "225/60R16", "225/55R17"],
+      "validatedTireSizes": ["215/65R16"],
+      "trims": {
+        "SE": ["215/65R16"],
+        "SXT": ["215/65R16"]
+      },
+      "discrepancies": ["225/60R16 and 225/55R17 not found as OEM sizes"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["215/65R16", "225/60R16", "225/55R17"],
+      "validatedTireSizes": ["215/65R16", "215/70R15"],
+      "trims": {
+        "SE": ["215/65R16"],
+        "SXT": ["215/65R16"]
+      },
+      "discrepancies": ["225/60R16 and 225/55R17 not found as OEM sizes"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["215/65R16", "225/60R16", "225/55R17"],
+      "validatedTireSizes": ["215/65R16", "215/60R17"],
+      "trims": {
+        "SE": ["215/65R16"],
+        "Sport": ["215/65R16"],
+        "ES": ["215/65R16"]
+      },
+      "discrepancies": ["225/60R16 and 225/55R17 not found as OEM sizes"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["215/65R16", "225/60R16", "225/55R17"],
+      "validatedTireSizes": ["215/65R16", "215/70R15"],
+      "trims": {
+        "SE": ["215/65R16"],
+        "Sport": ["215/65R16"],
+        "ES": ["215/65R16"]
+      },
+      "discrepancies": ["225/60R16 and 225/55R17 not found as OEM sizes"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["215/65R16", "225/60R16", "225/55R17"],
+      "validatedTireSizes": ["215/65R16", "215/70R15"],
+      "trims": {
+        "SE": ["215/65R16"],
+        "Sport": ["215/65R16"],
+        "ES": ["215/65R16"]
+      },
+      "discrepancies": ["225/60R16 and 225/55R17 not found as OEM sizes"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "grand-caravan",
+      "currentTireSizes": ["205/70R15", "215/65R15", "215/65R16"],
+      "validatedTireSizes": ["205/70R15", "215/65R15", "215/65R16"],
+      "trims": {
+        "Base": ["205/70R15"],
+        "SE": ["215/65R15", "215/65R16"],
+        "Sport": ["215/65R16"]
+      },
+      "discrepancies": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2026,
+      "make": "dodge",
+      "model": "hornet",
+      "currentTireSizes": ["225/55R17", "235/50R18", "235/40R20"],
+      "validatedTireSizes": ["215/60R17", "225/55R18", "235/40R20"],
+      "trims": {
+        "GT": ["215/60R17", "225/55R18", "235/40R20"],
+        "GT Plus": ["215/60R17", "225/55R18", "235/40R20"],
+        "R/T": ["225/55R18", "235/40R20"],
+        "R/T Plus": ["225/55R18", "235/40R20"]
+      },
+      "discrepancies": ["225/55R17 should be 215/60R17; 235/50R18 should be 225/55R18"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2025,
+      "make": "dodge",
+      "model": "hornet",
+      "currentTireSizes": ["225/55R17", "235/50R18", "235/40R20", "225/55R18", "235/45R19", "215/60R17"],
+      "validatedTireSizes": ["215/60R17", "225/55R18", "235/40R20"],
+      "trims": {
+        "GT": ["215/60R17", "225/55R18", "235/40R20"],
+        "GT Plus": ["215/60R17", "225/55R18", "235/40R20"],
+        "R/T": ["225/55R18", "235/40R20"],
+        "R/T Plus": ["225/55R18", "235/40R20"]
+      },
+      "discrepancies": ["225/55R17 should be 215/60R17; 235/50R18 should be 225/55R18; 235/45R19 not found as OEM"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2024,
+      "make": "dodge",
+      "model": "hornet",
+      "currentTireSizes": ["225/55R17", "235/50R18", "235/40R20"],
+      "validatedTireSizes": ["215/60R17", "225/55R18", "235/40R20"],
+      "trims": {
+        "GT": ["215/60R17", "225/55R18", "235/40R20"],
+        "GT Plus": ["215/60R17", "225/55R18", "235/40R20"],
+        "R/T": ["225/55R18", "235/40R20"],
+        "R/T Plus": ["225/55R18", "235/40R20"]
+      },
+      "discrepancies": ["225/55R17 should be 215/60R17; 235/50R18 should be 225/55R18"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2023,
+      "make": "dodge",
+      "model": "hornet",
+      "currentTireSizes": ["225/55R17", "235/50R18", "235/40R20"],
+      "validatedTireSizes": ["215/60R17", "225/55R18", "235/40R20"],
+      "trims": {
+        "GT": ["215/60R17", "225/55R18", "235/40R20"],
+        "GT Plus": ["215/60R17", "225/55R18", "235/40R20"],
+        "R/T": ["225/55R18", "235/40R20"],
+        "R/T Plus": ["225/55R18", "235/40R20"]
+      },
+      "discrepancies": ["225/55R17 should be 215/60R17; 235/50R18 should be 225/55R18"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2022,
+      "make": "dodge",
+      "model": "hornet",
+      "currentTireSizes": ["215/60R17", "235/50R18", "235/45R19", "225/55R18", "235/40R20"],
+      "validatedTireSizes": ["215/60R17", "225/55R18", "235/40R20"],
+      "trims": {
+        "GT": ["215/60R17", "225/55R18", "235/40R20"],
+        "R/T": ["225/55R18", "235/40R20"]
+      },
+      "discrepancies": ["235/50R18 should be 225/55R18; 235/45R19 not found as OEM"],
+      "status": "NEEDS_REVIEW",
+      "notes": "Note: 2022 is early - Hornet launched late 2022 as 2023MY"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "intrepid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "SE": ["225/60R16"],
+        "ES": ["225/60R16"],
+        "SXT": ["225/60R16"]
+      },
+      "discrepancies": ["Missing tire sizes - should be 225/60R16"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "intrepid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "SE": ["225/60R16"],
+        "ES": ["225/60R16"],
+        "SXT": ["225/60R16"]
+      },
+      "discrepancies": ["Missing tire sizes - should be 225/60R16"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "intrepid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "SE": ["225/60R16"],
+        "ES": ["225/60R16"],
+        "SXT": ["225/60R16"],
+        "R/T": ["225/55R17"]
+      },
+      "discrepancies": ["Missing tire sizes - should be 225/60R16, 225/55R17"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "intrepid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "SE": ["225/60R16"],
+        "ES": ["225/60R16"],
+        "R/T": ["225/55R17"]
+      },
+      "discrepancies": ["Missing tire sizes - should be 225/60R16, 225/55R17"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "intrepid",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "Base": ["225/60R16"],
+        "ES": ["225/60R16"],
+        "R/T": ["225/55R17"]
+      },
+      "discrepancies": ["Missing tire sizes - should be 225/60R16, 225/55R17"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2011,
+      "make": "dodge",
+      "model": "jc",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16", "225/65R17", "225/55R19"],
+      "trims": {
+        "Express": ["225/70R16", "225/65R17"],
+        "SE": ["225/70R16", "225/65R17"],
+        "SXT": ["225/65R17"],
+        "Mainstreet": ["225/65R17", "225/55R19"],
+        "Crew": ["225/55R19"],
+        "Lux": ["225/55R19"],
+        "R/T": ["225/55R19"]
+      },
+      "discrepancies": ["Missing tire sizes - this is Dodge Journey (JC platform code)"],
+      "status": "MISSING_DATA",
+      "notes": "JC is the platform code for Dodge Journey"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "jc",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16", "225/65R17", "225/55R19"],
+      "trims": {
+        "SE": ["225/70R16"],
+        "SXT FWD": ["225/65R17", "225/55R19"],
+        "SXT AWD": ["225/55R19"],
+        "R/T FWD": ["225/55R19"],
+        "R/T AWD": ["225/55R19"]
+      },
+      "discrepancies": ["Missing tire sizes - this is Dodge Journey (JC platform code)"],
+      "status": "MISSING_DATA",
+      "notes": "JC is the platform code for Dodge Journey"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "jc",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16", "225/65R17", "225/55R19"],
+      "trims": {
+        "SE": ["225/70R16"],
+        "SXT FWD": ["225/65R17", "225/55R19"],
+        "SXT AWD": ["225/55R19"],
+        "R/T FWD": ["225/55R19"],
+        "R/T AWD": ["225/55R19"]
+      },
+      "discrepancies": ["Missing tire sizes - this is Dodge Journey (JC platform code)"],
+      "status": "MISSING_DATA",
+      "notes": "JC is the platform code for Dodge Journey"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "magnum",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "discrepancies": ["2009 Dodge Magnum does not exist - production ended 2008"],
+      "status": "INVALID_VEHICLE",
+      "notes": "Magnum discontinued after 2008 model year"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "magnum",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "245/45R20", "255/45R20"],
+      "trims": {
+        "SE": ["215/65R17"],
+        "SXT RWD": ["215/65R17", "225/60R18"],
+        "SXT AWD": ["225/60R18"],
+        "R/T RWD": ["225/60R18", "245/45R20"],
+        "R/T AWD": ["225/60R18"],
+        "SRT8": ["245/45R20 front", "255/45R20 rear"]
+      },
+      "discrepancies": ["225/60R17 should be 225/60R18; 225/55R18 and 235/55R18 not found; SRT8 is staggered"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2007,
+      "make": "dodge",
+      "model": "magnum",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "245/45R20", "255/45R20"],
+      "trims": {
+        "SE": ["215/65R17"],
+        "SXT": ["215/65R17", "225/60R18"],
+        "R/T": ["225/60R18", "245/45R20"],
+        "SRT8": ["245/45R20 front", "255/45R20 rear"]
+      },
+      "discrepancies": ["225/60R17 should be 225/60R18; 225/55R18 and 235/55R18 not found; SRT8 is staggered"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "magnum",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18", "245/45R20", "255/45R20"],
+      "trims": {
+        "SE": ["215/65R17", "225/60R18"],
+        "SXT": ["215/65R17", "225/60R18"],
+        "R/T": ["225/60R18"],
+        "SRT8": ["245/45R20 front", "255/45R20 rear"]
+      },
+      "discrepancies": ["225/60R17 should be 225/60R18; 225/55R18 and 235/55R18 not found; SRT8 is staggered"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "magnum",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "245/45R20"],
+      "validatedTireSizes": ["215/65R17", "225/60R18"],
+      "trims": {
+        "SE": ["215/65R17"],
+        "SXT AWD": ["225/60R18"],
+        "SXT RWD": ["215/65R17", "225/60R18"],
+        "R/T AWD": ["225/60R18"],
+        "R/T RWD": ["225/60R18"]
+      },
+      "discrepancies": ["225/60R17 should be 225/60R18; 225/55R18, 235/55R18, 245/45R20 not standard 2005 OEM"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "magnum",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "discrepancies": ["2004 Dodge Magnum does not exist - production started 2005"],
+      "status": "INVALID_VEHICLE",
+      "notes": "Magnum production started 2005 model year"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "discrepancies": ["2009 Dodge Magnum SRT does not exist - production ended 2008"],
+      "status": "INVALID_VEHICLE",
+      "notes": "Magnum SRT discontinued after 2008"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R20", "255/45R20"],
+      "trims": {
+        "SRT8": ["245/45R20 front", "255/45R20 rear"]
+      },
+      "discrepancies": ["Missing tire sizes - SRT8 uses staggered 245/45R20 front, 255/45R20 rear"],
+      "status": "MISSING_DATA",
+      "notes": "Staggered setup"
+    },
+    {
+      "year": 2007,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R20", "255/45R20"],
+      "trims": {
+        "SRT8": ["245/45R20 front", "255/45R20 rear"]
+      },
+      "discrepancies": ["Missing tire sizes - SRT8 uses staggered 245/45R20 front, 255/45R20 rear"],
+      "status": "MISSING_DATA",
+      "notes": "Staggered setup"
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R20", "255/45R20"],
+      "trims": {
+        "SRT8": ["245/45R20 front", "255/45R20 rear"]
+      },
+      "discrepancies": ["Missing tire sizes - SRT8 uses staggered 245/45R20 front, 255/45R20 rear"],
+      "status": "MISSING_DATA",
+      "notes": "Staggered setup"
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "neon-srt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/50R17", "225/45R16"],
+      "trims": {
+        "SRT4": ["205/50R17"],
+        "ACR SRT4": ["225/45R16"]
+      },
+      "discrepancies": ["Missing tire sizes - should be 205/50R17 for SRT4, 225/45R16 for ACR"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "neon-srt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/50R17"],
+      "trims": {
+        "SRT4": ["205/50R17"]
+      },
+      "discrepancies": ["Missing tire sizes - should be 205/50R17"],
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "neon-srt",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/50R17"],
+      "trims": {
+        "SRT4": ["205/50R17"]
+      },
+      "discrepancies": ["Missing tire sizes - should be 205/50R17"],
+      "status": "MISSING_DATA"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 12,
+    "needsReview": 49,
+    "missingData": 12,
+    "invalidVehicle": 2
+  },
+  "notes": [
+    "JC model entries are actually Dodge Journey (JC is the platform code) - should be renamed",
+    "Magnum SRT entries should be merged with regular Magnum as SRT8 trim",
+    "Neon SRT entries should be merged with regular Neon as SRT4 trim",
+    "Several Durango years have incorrect 295/45R20 or 275/55R20 sizes for years before SRT existed",
+    "Grand Caravan 2015 appears to have Journey tire sizes mixed in",
+    "2004 and 2009 Magnum are invalid years - production was 2005-2008 only",
+    "Hornet tire sizes have minor discrepancies in width (225/55R17 vs 215/60R17, 235/50R18 vs 225/55R18)"
+  ]
+}

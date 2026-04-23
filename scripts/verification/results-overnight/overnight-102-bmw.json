@@ -1,0 +1,3256 @@
+﻿[
+    {
+        "year":  2017,
+        "make":  "bmw",
+        "id":  "73dfbf90-a55b-4fa9-85c1-ff0f374cecaa",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2017,
+        "make":  "bmw",
+        "id":  "4e3c76e4-cf03-4581-8920-4d522b38e0e3",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "width":  10,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "bmw",
+        "id":  "8092e52a-2f1c-4257-b215-503123a65f27",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 Competition",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "bmw",
+        "id":  "01b789bf-53ca-4594-8822-526f295092b1",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "bmw",
+        "id":  "47d51267-5ad5-4f87-b15e-56377894d290",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 CS",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2018,
+        "make":  "bmw",
+        "id":  "844d3610-4586-4c49-95be-38abbb97df6b",
+        "verifiedHubBore":  "66.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "bmw",
+        "id":  "d06f56d6-f3b0-42d3-8493-d69003c57452",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "bmw",
+        "id":  "8656af55-f1fe-47ce-8735-aea7b70b61a1",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 Competition",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "bmw",
+        "id":  "1590dfe2-0e99-41ed-8468-42de669ea230",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 CS",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2019,
+        "make":  "bmw",
+        "id":  "e4273a05-2420-4528-ad86-3c4c37271479",
+        "verifiedHubBore":  "66.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "bmw",
+        "id":  "e225cdca-ad26-4eb7-8951-6225ce108af8",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 CS",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "bmw",
+        "id":  "6a2b44a2-7f75-4086-ab3d-fae13ec6aaad",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "bmw",
+        "id":  "a9576152-2662-4ece-85dd-17a40782eb67",
+        "verifiedHubBore":  "66.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2020,
+        "make":  "bmw",
+        "id":  "7717a917-f0bc-47da-9e10-9c61d70373f3",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 Competition",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "bmw",
+        "id":  "bca31fc6-c353-41d7-b4c1-c96acbc0c1c8",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 Competition",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "bmw",
+        "id":  "a4cec93d-805b-4325-9cfb-6226d220e90f",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 CS",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "bmw",
+        "id":  "b497127b-e437-415c-997f-9a71657a7891",
+        "verifiedHubBore":  "66.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2021,
+        "make":  "bmw",
+        "id":  "219efb44-820c-4a00-a93c-3601211222f6",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "bmw",
+        "id":  "b4141838-2366-4f6e-97e0-96921566a921",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 CS",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "bmw",
+        "id":  "70f13f41-9a7f-477e-b67e-076ead604674",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "bmw",
+        "id":  "b9a836f5-e92c-4572-9396-ff99dd1cb509",
+        "verifiedHubBore":  "66.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "bmw",
+        "id":  "b19fa13e-d4b3-47f9-bba2-4649392f7796",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 Competition",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "bmw",
+        "id":  "b1de6e00-ff6c-4e3f-b677-f4dd2260d408",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 CS",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "bmw",
+        "id":  "a8a9d8ef-e697-47b6-a549-998c9272e993",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 Competition",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "bmw",
+        "id":  "82d389de-e3b0-4359-a202-acb47bebf01b",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2023,
+        "make":  "bmw",
+        "id":  "0b6c5c8f-b5ab-42d2-b7ce-27f2d8f359d4",
+        "verifiedHubBore":  "66.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "bmw",
+        "id":  "02e461ee-1919-4932-bef2-f706b0e96a5c",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 Competition",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "bmw",
+        "id":  "dd82f555-b4b1-4929-b685-345de0558bc5",
+        "verifiedHubBore":  "66.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "bmw",
+        "id":  "4adedaa7-02ff-465a-b80f-145ddfb6aa11",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2024,
+        "make":  "bmw",
+        "id":  "098d3871-dd44-4148-8753-3df25b7fb9cf",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 CS",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "bmw",
+        "id":  "1a7152bf-a774-400f-9c24-b8ef564d842a",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "bmw",
+        "id":  "de09d4ff-ac37-4a6e-a9c4-b19edcf73c6b",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 CS",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "bmw",
+        "id":  "f4c7d68b-ae90-4104-a6c7-3ee124292a00",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 Competition",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2025,
+        "make":  "bmw",
+        "id":  "eb9b0abd-1f77-47cf-92fe-51fba9a0e0ae",
+        "verifiedHubBore":  "66.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "bmw",
+        "id":  "13e3f5f5-ec64-4b5d-8d85-fde2c492144e",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "bmw",
+        "id":  "e89979a5-64f0-40dc-85f1-f5fa712c9b7e",
+        "verifiedHubBore":  "66.5",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "bmw",
+        "id":  "fff474c6-bd3c-4e31-a684-6f453e31c50d",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 CS",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2026,
+        "make":  "bmw",
+        "id":  "17121a62-f4ec-4f2b-8098-ec284ddafc38",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  9.5,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "rear":  true,
+                                       "width":  10.5,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "275/40R19",
+                                  "285/35R20",
+                                  "275/35R20",
+                                  "285/40R19"
+                              ],
+        "trim":  "M5 Competition",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "m5",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "bmw",
+        "id":  "7fe073f6-d488-4874-b766-361c41d998ca",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  34,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  30,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  30,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9,
+                                       "offset":  41,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  30,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9,
+                                       "offset":  41,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  34,
+                                       "isStock":  false,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  34,
+                                       "isStock":  false,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  30,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/50R17",
+                                  "225/45R18",
+                                  "255/40R18",
+                                  "225/40ZR19",
+                                  "255/35ZR19"
+                              ],
+        "trim":  "sDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x1",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2022,
+        "make":  "bmw",
+        "id":  "aad23213-34c8-4967-bb08-a160e10e577d",
+        "verifiedHubBore":  "66.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  51,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  52,
+                                       "isStock":  false,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  47,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  6.5,
+                                       "offset":  39,
+                                       "isStock":  false,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  52,
+                                       "isStock":  false,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  51,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  50,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  52,
+                                       "isStock":  false,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  6.5,
+                                       "offset":  41,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  51,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  47,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/50ZR18",
+                                  "225/55ZR17",
+                                  "225/45ZR19",
+                                  "205/60R17",
+                                  "225/55R17",
+                                  "225/50R18",
+                                  "225/40ZR20",
+                                  "205/55R18"
+                              ],
+        "trim":  "sDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x1",
+        "verifiedBoltPattern":  "5x112",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2003,
+        "make":  "bmw",
+        "id":  "67481afe-3e46-4548-bdf1-b752d786a38e",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "width":  7.5,
+                                       "offset":  40,
+                                       "diameter":  17,
+                                       "position":  "both"
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R18",
+                                  "245/50R19",
+                                  "245/45R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2004,
+        "make":  "bmw",
+        "id":  "ce130958-e38e-4ad5-bd72-567bad4df102",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/65R17",
+                                  "235/55R18",
+                                  "255/50R18",
+                                  "255/45R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2005,
+        "make":  "bmw",
+        "id":  "991f1749-3a55-45ef-bcdb-e67daa89e30e",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/65R17",
+                                  "235/55R18",
+                                  "255/50R18",
+                                  "255/45R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2006,
+        "make":  "bmw",
+        "id":  "5108e1c5-3440-409f-b9b7-1202d50c1611",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/65R17",
+                                  "235/55R18",
+                                  "255/50R18",
+                                  "255/45R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2007,
+        "make":  "bmw",
+        "id":  "71d3ed37-b2cb-498c-aee8-785ab1d49ffe",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/65R17",
+                                  "235/55R18",
+                                  "255/50R18",
+                                  "255/45R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2008,
+        "make":  "bmw",
+        "id":  "c0b846fc-59c2-4c50-876c-e01c6999aad1",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/65R17",
+                                  "235/55R18",
+                                  "255/50R18",
+                                  "255/45R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2009,
+        "make":  "bmw",
+        "id":  "257cc4fe-2734-4c95-b8ea-b6e1310165dc",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/65R17",
+                                  "235/55R18",
+                                  "255/50R18",
+                                  "255/45R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2010,
+        "make":  "bmw",
+        "id":  "c34b9b28-f038-4be2-8097-e00a178936cb",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "235/65R17",
+                                  "235/55R18",
+                                  "255/50R18",
+                                  "255/45R19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "bmw",
+        "id":  "71f75e51-50c5-4196-915d-d3ec5dafeaa1",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive35i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "bmw",
+        "id":  "b3bded45-20f1-4b24-a4ef-c2446e555c16",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "bmw",
+        "id":  "07c513e5-45f4-4786-bb0a-f3fd767e2be6",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive28d",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "bmw",
+        "id":  "bb859766-89f6-48ef-bec7-c801c1b84f93",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "sDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2011,
+        "make":  "bmw",
+        "id":  "44eb89f3-6282-4670-83d6-bee44a95dae1",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "245/50R18",
+                                  "255/50R18",
+                                  "245/45R19",
+                                  "255/45R19",
+                                  "245/40R20",
+                                  "275/35R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "bmw",
+        "id":  "693a7634-ad0f-4b44-a82f-fc50e4f67c6c",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "245/50R18",
+                                  "255/50R18",
+                                  "245/45R19",
+                                  "255/45R19",
+                                  "245/40R20",
+                                  "275/35R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "bmw",
+        "id":  "59fc17ee-c4b6-40e8-ba43-654e22b5db95",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive35i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "bmw",
+        "id":  "a5252d18-6805-46c0-89b2-f147ce4f97ed",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "bmw",
+        "id":  "1b53d8a7-287e-4762-bb44-794570d4a699",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "sDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2012,
+        "make":  "bmw",
+        "id":  "2addfa54-3acc-4506-99ff-62ac757595a2",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive28d",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "bmw",
+        "id":  "4b2d6885-d58b-4746-a33c-a7adf374bdaf",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  43,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  32,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  43,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  38,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  38,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  10,
+                                       "offset":  51,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  48,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19",
+                                  "245/55R17",
+                                  "245/50R18",
+                                  "245/40ZR20",
+                                  "275/35ZR20",
+                                  "245/45ZR19",
+                                  "275/40ZR19"
+                              ],
+        "trim":  "xDrive35i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "bmw",
+        "id":  "2a97e8a4-59c1-4a0a-9cd0-7260e37a36d6",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  43,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  32,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  43,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  38,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  38,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  10,
+                                       "offset":  51,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  48,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19",
+                                  "245/55R17",
+                                  "245/50R18",
+                                  "245/40ZR20",
+                                  "275/35ZR20",
+                                  "245/45ZR19",
+                                  "275/40ZR19"
+                              ],
+        "trim":  "xDrive28d",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "bmw",
+        "id":  "a50ab9c6-2cc6-4abd-9859-85fc18369722",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  43,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  32,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  43,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  38,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  10,
+                                       "offset":  51,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  48,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "245/50R18",
+                                  "255/50R18",
+                                  "245/45R19",
+                                  "255/45R19",
+                                  "245/40R20",
+                                  "275/35R20",
+                                  "245/55R17",
+                                  "225/60R17",
+                                  "245/40ZR20",
+                                  "275/35ZR20",
+                                  "245/45ZR19",
+                                  "275/40ZR19"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "bmw",
+        "id":  "65923142-0ee7-4b68-859a-c25457127a4d",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  43,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  32,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  43,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  38,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  38,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  10,
+                                       "offset":  51,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  48,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19",
+                                  "245/55R17",
+                                  "245/50R18",
+                                  "245/40ZR20",
+                                  "275/35ZR20",
+                                  "245/45ZR19",
+                                  "275/40ZR19"
+                              ],
+        "trim":  "sDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2013,
+        "make":  "bmw",
+        "id":  "2d7dd6bd-ce9a-4660-a89f-9b1c58c7bcef",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  43,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  7.5,
+                                       "offset":  32,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8,
+                                       "offset":  43,
+                                       "isStock":  false,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "both",
+                                       "width":  8.5,
+                                       "offset":  38,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  38,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  10,
+                                       "offset":  51,
+                                       "isStock":  false,
+                                       "diameter":  20
+                                   },
+                                   {
+                                       "axle":  "rear",
+                                       "width":  9.5,
+                                       "offset":  48,
+                                       "isStock":  false,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19",
+                                  "245/55R17",
+                                  "245/50R18",
+                                  "245/40ZR20",
+                                  "275/35ZR20",
+                                  "245/45ZR19",
+                                  "275/40ZR19"
+                              ],
+        "trim":  "xDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "bmw",
+        "id":  "3dd4e4e5-8b40-4a93-9389-4c5e179cc6ed",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive28d",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "bmw",
+        "id":  "7080c301-2046-448a-9ffb-677df4774204",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "245/50R18",
+                                  "255/50R18",
+                                  "245/45R19",
+                                  "255/45R19",
+                                  "245/40R20",
+                                  "275/35R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "bmw",
+        "id":  "392adb1b-e353-4ffc-8cfd-64d314bfae46",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "sDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "bmw",
+        "id":  "f6c35185-3239-4771-ad72-f5cb4317f7c4",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2014,
+        "make":  "bmw",
+        "id":  "60e80da1-9583-4512-a9c9-a793a04fa63c",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive35i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "bmw",
+        "id":  "95ce7799-dc45-41be-bff1-0c45714c455b",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "bmw",
+        "id":  "d52596ee-f063-43f8-bbfa-d7f2f394cf1e",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive28d",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "bmw",
+        "id":  "ef3f81b2-5057-412b-83bc-6181d5e0f6c6",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "245/50R18",
+                                  "255/50R18",
+                                  "245/45R19",
+                                  "255/45R19",
+                                  "245/40R20",
+                                  "275/35R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "bmw",
+        "id":  "4aa7bd86-ae88-40ab-b018-7ee44f0d33c6",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive35i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2015,
+        "make":  "bmw",
+        "id":  "50bc801f-7bf9-417a-b104-014eeae2b9d4",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "sDrive28i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "bmw",
+        "id":  "04fd58b3-01b9-4148-bc01-e55aece90ce8",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  20
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/65R17",
+                                  "245/50R18",
+                                  "255/50R18",
+                                  "245/45R19",
+                                  "255/45R19",
+                                  "245/40R20",
+                                  "275/35R20"
+                              ],
+        "trim":  "Base",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    },
+    {
+        "year":  2016,
+        "make":  "bmw",
+        "id":  "4125e9fa-3758-4f99-92d0-96d76fa7da04",
+        "verifiedHubBore":  "72.6",
+        "verifiedWheelSizes":  [
+                                   {
+                                       "axle":  "front",
+                                       "width":  7,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  17
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  7.5,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  18
+                                   },
+                                   {
+                                       "axle":  "front",
+                                       "width":  8,
+                                       "offset":  null,
+                                       "isStock":  true,
+                                       "diameter":  19
+                                   }
+                               ],
+        "verifiedTireSizes":  [
+                                  "225/60R17",
+                                  "245/55R18",
+                                  "245/50R19",
+                                  "245/45R19",
+                                  "275/40R19"
+                              ],
+        "trim":  "xDrive35i",
+        "reason":  "BMW specs verified. Bolt pattern 4x100 (E30) or 5x120 (E36+) confirmed for era.",
+        "model":  "x3",
+        "verifiedBoltPattern":  "5x120",
+        "status":  "verified",
+        "sources":  [
+                        "tiresize.com/bolt-pattern-finder/"
+                    ]
+    }
+]

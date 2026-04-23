@@ -1,0 +1,1121 @@
+{
+  "batch": "batch-11-domestic",
+  "group": "domestic",
+  "verifiedAt": "2026-04-23T00:53:00Z",
+  "totalVehicles": 75,
+  "validVehicles": 67,
+  "invalidVehicles": 8,
+  "summary": {
+    "invalidModelYears": [
+      {"year": 2020, "make": "Ford", "model": "Taurus", "reason": "Discontinued in US after 2019 - China-only after that"},
+      {"year": 2021, "make": "Ford", "model": "Taurus", "reason": "Discontinued in US after 2019 - China-only after that"},
+      {"year": 2022, "make": "Ford", "model": "Taurus", "reason": "Discontinued in US after 2019 - China-only after that"},
+      {"year": 2023, "make": "Ford", "model": "Taurus", "reason": "Discontinued in US after 2019 - China-only after that"},
+      {"year": 2024, "make": "Ford", "model": "Taurus", "reason": "Discontinued in US after 2019 - China-only after that"},
+      {"year": 2025, "make": "Ford", "model": "Taurus", "reason": "Discontinued in US after 2019 - China-only after that"},
+      {"year": 2006, "make": "GMC", "model": "Acadia", "reason": "First model year was 2007 (went on sale late 2006 as 2007 model)"},
+      {"year": 2009, "make": "GMC", "model": "Terrain", "reason": "First model year was 2010 (debuted April 2009 as 2010 model)"},
+      {"year": 2014, "make": "Lincoln", "model": "MKC", "reason": "First model year was 2015 (went on sale summer 2014 as 2015 model)"}
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "215/60R16"},
+        {"name": "SEL", "oemTireSize": "215/60R16"},
+        {"name": "Limited", "oemTireSize": "225/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": "Rebranded Five Hundred for 2008. 2006-2007 was tail end of old Taurus platform."
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "215/60R16"},
+        {"name": "SEL", "oemTireSize": "215/60R16"},
+        {"name": "Limited", "oemTireSize": "225/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": "Final year of old Taurus platform before 2008 relaunch"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SEL", "oemTireSize": "225/60R17"},
+        {"name": "Limited", "oemTireSize": "235/55R18"},
+        {"name": "X", "oemTireSize": "235/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fordtaurus.net"],
+      "notes": "Rebranded from Five Hundred. New platform."
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SEL", "oemTireSize": "225/60R17"},
+        {"name": "Limited", "oemTireSize": "235/55R18"},
+        {"name": "X", "oemTireSize": "235/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": "Last year before 2010 redesign"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "225/60R17"},
+        {"name": "SEL", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemTireSize": "255/45R19"},
+        {"name": "SHO", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ford.com"],
+      "notes": "6th generation redesign. SHO returns with 3.5L EcoBoost."
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "225/60R17"},
+        {"name": "SEL", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemTireSize": "255/45R19"},
+        {"name": "SHO", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ford.com"],
+      "notes": "Carryover from 2010"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "225/60R17"},
+        {"name": "SEL", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemTireSize": "255/45R19"},
+        {"name": "SHO", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year before 2013 facelift"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "235/55R18"},
+        {"name": "SEL", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemTireSize": "255/45R19"},
+        {"name": "SHO", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ford.com"],
+      "notes": "Mid-cycle refresh. New front fascia."
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "235/55R18"},
+        {"name": "SEL", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemTireSize": "255/45R19"},
+        {"name": "SHO", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "235/55R18"},
+        {"name": "SEL", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemTireSize": "255/45R19"},
+        {"name": "SHO", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "235/55R18"},
+        {"name": "SEL", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemTireSize": "255/45R19"},
+        {"name": "SHO", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "235/55R18"},
+        {"name": "SEL", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemTireSize": "255/45R19"},
+        {"name": "SHO", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "235/55R18"},
+        {"name": "SEL", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemTireSize": "255/45R19"},
+        {"name": "SHO", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Taurus",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemTireSize": "235/55R18"},
+        {"name": "SEL", "oemTireSize": "235/55R18", "oemTireSizeAlt": "245/45R20"},
+        {"name": "Limited", "oemTireSize": "255/45R19", "oemTireSizeAlt": "245/45R20"},
+        {"name": "SHO", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "FINAL year in US market. Production ended March 2019."
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - Discontinued after 2019. China-only model.",
+      "confidence": "high",
+      "sources": ["ford.com press release", "wikipedia", "cars.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - Discontinued after 2019. China-only model.",
+      "confidence": "high",
+      "sources": ["ford.com press release", "wikipedia", "cars.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - Discontinued after 2019. China-only model.",
+      "confidence": "high",
+      "sources": ["ford.com press release", "wikipedia", "cars.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - Discontinued after 2019. China-only model.",
+      "confidence": "high",
+      "sources": ["ford.com press release", "wikipedia", "cars.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - Discontinued after 2019. China-only model.",
+      "confidence": "high",
+      "sources": ["ford.com press release", "wikipedia", "cars.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US MARKET - Discontinued after 2019. China-only model.",
+      "confidence": "high",
+      "sources": ["ford.com press release", "wikipedia", "cars.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"},
+        {"name": "Premium", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ford.com"],
+      "notes": "Retro 11th gen Thunderbird. Shared DEW platform with Lincoln LS."
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"},
+        {"name": "Premium", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "ford.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"},
+        {"name": "Premium", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Thunderbird",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"},
+        {"name": "50th Anniversary", "oemWheelSize": "17x7.5", "oemTireSize": "235/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "FINAL year of retro Thunderbird. 50th Anniversary Edition available."
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "150 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "250 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"},
+        {"name": "Wagon", "oemTireSize": "235/65R16C"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ford.com"],
+      "notes": "First US Transit. DRW models use 6x180 bolt pattern. SRW uses 5x160."
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "150 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "250 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover. DRW = 6x180"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "150 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "250 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "150 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "250 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "150 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "250 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year before 2020 refresh"
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "150 Cargo Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "250 Cargo Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Cargo Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "350 Cargo Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"},
+        {"name": "Passenger Wagon", "oemTireSize": "235/65R16C"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ford.com"],
+      "notes": "Mid-cycle refresh. Updated interior and tech."
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "Cargo Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "Cargo Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"},
+        {"name": "Passenger Wagon", "oemTireSize": "235/65R16C"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "Cargo Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "Cargo Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"},
+        {"name": "Passenger Wagon", "oemTireSize": "235/65R16C"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "Cargo Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "Cargo Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"},
+        {"name": "Passenger Wagon", "oemTireSize": "235/65R16C"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "ford.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "Cargo Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "Cargo Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"},
+        {"name": "Passenger Wagon", "oemTireSize": "235/65R16C"}
+      ],
+      "confidence": "high",
+      "sources": ["ford.com"],
+      "notes": "Current model year"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Transit",
+      "boltPattern": "5x160",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "Cargo Van SRW", "oemTireSize": "235/65R16C"},
+        {"name": "Cargo Van DRW", "oemTireSize": "195/75R16", "boltPattern": "6x180"},
+        {"name": "Passenger Wagon", "oemTireSize": "235/65R16C"}
+      ],
+      "confidence": "medium",
+      "sources": ["ford.com"],
+      "notes": "Expected carryover specs"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Acadia",
+      "status": "INVALID",
+      "reason": "MODEL YEAR DOES NOT EXIST - Acadia debuted as 2007 model (went on sale late 2006)",
+      "confidence": "high",
+      "sources": ["gmauthority.com", "wikipedia", "autoevolution.com"]
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "Base", "oemTireSize": "245/70R17"},
+        {"name": "SLE", "oemTireSize": "265/65R18"},
+        {"name": "SLT", "oemTireSize": "265/65R18", "oemTireSizeAlt": "275/55R20"},
+        {"name": "Denali", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["gmc.com", "tiresize.com"],
+      "notes": "K2XX platform (2014-2018). First year of new generation."
+    },
+    {
+      "year": 2015,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "Base", "oemTireSize": "245/70R17"},
+        {"name": "SLE", "oemTireSize": "265/65R18"},
+        {"name": "SLT", "oemTireSize": "265/65R18", "oemTireSizeAlt": "275/55R20"},
+        {"name": "Denali", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["gmc.com", "tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "Base", "oemTireSize": "265/70R17"},
+        {"name": "SLE", "oemTireSize": "265/65R18"},
+        {"name": "Elevation", "oemTireSize": "275/60R20"},
+        {"name": "SLT", "oemTireSize": "275/60R20"},
+        {"name": "AT4", "oemTireSize": "275/60R20"},
+        {"name": "Denali", "oemTireSize": "275/55R22"}
+      ],
+      "confidence": "high",
+      "sources": ["gmc.com", "tiresize.com"],
+      "notes": "T1XX platform (2019+). New generation."
+    },
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "Base", "oemTireSize": "265/70R17"},
+        {"name": "SLE", "oemTireSize": "265/65R18"},
+        {"name": "Elevation", "oemTireSize": "275/60R20"},
+        {"name": "SLT", "oemTireSize": "275/60R20"},
+        {"name": "AT4", "oemTireSize": "275/60R20"},
+        {"name": "Denali", "oemTireSize": "275/55R22"}
+      ],
+      "confidence": "high",
+      "sources": ["gmc.com", "tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "Pro", "oemTireSize": "265/70R17"},
+        {"name": "SLE", "oemTireSize": "265/65R18"},
+        {"name": "Elevation", "oemTireSize": "275/60R20"},
+        {"name": "SLT", "oemTireSize": "275/60R20"},
+        {"name": "AT4", "oemTireSize": "275/60R20"},
+        {"name": "AT4X", "oemTireSize": "275/60R20"},
+        {"name": "Denali", "oemTireSize": "275/55R22"},
+        {"name": "Denali Ultimate", "oemTireSize": "275/50R22"}
+      ],
+      "confidence": "high",
+      "sources": ["gmc.com", "tiresize.com"],
+      "notes": "Refreshed for 2022. New interior and Super Cruise available."
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Terrain",
+      "status": "INVALID",
+      "reason": "MODEL YEAR DOES NOT EXIST - Terrain debuted April 2009 as 2010 model",
+      "confidence": "high",
+      "sources": ["wikipedia", "autoevolution.com", "jdpower.com"]
+    },
+    {
+      "year": 1999,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Laredo", "oemTireSize": "225/75R16"},
+        {"name": "Limited", "oemTireSize": "225/75R16", "oemTireSizeAlt": "235/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "jeep.com"],
+      "notes": "WJ generation (1999-2004)"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Laredo", "oemTireSize": "225/75R16"},
+        {"name": "Limited", "oemTireSize": "225/75R16", "oemTireSizeAlt": "235/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "WJ generation"
+    },
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Laredo", "oemTireSize": "225/75R16"},
+        {"name": "Limited", "oemTireSize": "235/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "WJ generation"
+    },
+    {
+      "year": 2003,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Laredo", "oemTireSize": "225/75R16"},
+        {"name": "Limited", "oemTireSize": "235/65R17"},
+        {"name": "Overland", "oemTireSize": "235/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "WJ generation"
+    },
+    {
+      "year": 2004,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Laredo", "oemTireSize": "225/75R16"},
+        {"name": "Limited", "oemTireSize": "235/65R17"},
+        {"name": "Overland", "oemTireSize": "235/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of WJ generation"
+    },
+    {
+      "year": 2005,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Laredo", "oemTireSize": "245/65R17"},
+        {"name": "Limited", "oemTireSize": "245/65R17"},
+        {"name": "Overland", "oemTireSize": "245/60R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "jeep.com"],
+      "notes": "WK generation begins (2005-2010)"
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Laredo", "oemTireSize": "245/65R17"},
+        {"name": "Limited", "oemTireSize": "245/65R17"},
+        {"name": "Overland", "oemTireSize": "245/60R18"},
+        {"name": "SRT8", "oemTireSize": "255/45R20", "rearOemTireSize": "285/40R20", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "WK generation. SRT8 introduced with staggered setup."
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Laredo", "oemTireSize": "245/65R17"},
+        {"name": "Limited", "oemTireSize": "245/65R17"},
+        {"name": "Overland", "oemTireSize": "245/60R18"},
+        {"name": "SRT8", "oemTireSize": "255/45R20", "rearOemTireSize": "285/40R20", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "WK generation"
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Laredo", "oemTireSize": "245/65R17"},
+        {"name": "Limited", "oemTireSize": "245/65R17"},
+        {"name": "Overland", "oemTireSize": "245/60R18"},
+        {"name": "SRT8", "oemTireSize": "255/45R20", "rearOemTireSize": "285/40R20", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "WK generation"
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Laredo", "oemTireSize": "245/65R17"},
+        {"name": "Limited", "oemTireSize": "245/65R17", "oemTireSizeAlt": "245/60R18"},
+        {"name": "Overland", "oemTireSize": "245/65R17", "oemTireSizeAlt": "245/60R18"},
+        {"name": "SRT8", "oemTireSize": "255/45R20", "rearOemTireSize": "285/40R20", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "WK generation. Last year before WK2."
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Series I", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"},
+        {"name": "Obsidian", "oemTireSize": "285/45R22"},
+        {"name": "Series II", "oemTireSize": "285/45R22"},
+        {"name": "Series III", "oemTireSize": "285/45R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com", "jeep.com"],
+      "notes": "All-new full-size luxury SUV. Shares WS platform with Wagoneer."
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Series I", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"},
+        {"name": "Series II", "oemTireSize": "285/45R22"},
+        {"name": "Series III", "oemTireSize": "285/45R22"}
+      ],
+      "confidence": "high",
+      "sources": ["jeep.com", "tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Series I", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"},
+        {"name": "Series II", "oemTireSize": "285/45R22"},
+        {"name": "Series III", "oemTireSize": "285/45R22"}
+      ],
+      "confidence": "high",
+      "sources": ["jeep.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Series I", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"},
+        {"name": "Series II", "oemTireSize": "285/45R22"},
+        {"name": "Series III", "oemTireSize": "285/45R22"}
+      ],
+      "confidence": "medium",
+      "sources": ["jeep.com"],
+      "notes": "Expected carryover"
+    },
+    {
+      "year": 2002,
+      "make": "Jeep",
+      "model": "Liberty",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "215/75R16"},
+        {"name": "Limited", "oemTireSize": "235/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": "KJ generation (2002-2007). First year."
+    },
+    {
+      "year": 2004,
+      "make": "Jeep",
+      "model": "Liberty",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "215/75R16"},
+        {"name": "Limited", "oemTireSize": "235/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "KJ generation"
+    },
+    {
+      "year": 2005,
+      "make": "Jeep",
+      "model": "Liberty",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "215/75R16"},
+        {"name": "Limited", "oemTireSize": "235/70R16"},
+        {"name": "Renegade", "oemTireSize": "235/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "KJ generation"
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Liberty",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "215/75R16"},
+        {"name": "Limited", "oemTireSize": "235/70R16"},
+        {"name": "Renegade", "oemTireSize": "235/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "KJ generation"
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Liberty",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "215/75R16"},
+        {"name": "Limited", "oemTireSize": "235/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of KJ generation"
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Liberty",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "225/75R16"},
+        {"name": "Limited", "oemTireSize": "235/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "KK generation begins (2008-2012)"
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Liberty",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "225/75R16"},
+        {"name": "Limited", "oemTireSize": "235/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "KK generation"
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Liberty",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "225/75R16", "oemTireSizeAlt": "235/70R16"},
+        {"name": "Limited", "oemTireSize": "235/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "KK generation"
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Liberty",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "225/75R16", "oemTireSizeAlt": "235/70R16"},
+        {"name": "Limited", "oemTireSize": "235/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "KK generation"
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Liberty",
+      "boltPattern": "5x114.3",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "Sport", "oemTireSize": "225/75R16", "oemTireSizeAlt": "235/70R16"},
+        {"name": "Limited", "oemTireSize": "235/65R17", "oemTireSizeAlt": "235/60R18"},
+        {"name": "Arctic", "oemTireSize": "235/70R16"},
+        {"name": "Limited Jet", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "FINAL year of Liberty. Replaced by Cherokee in 2014."
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Series I", "oemTireSize": "275/65R18", "oemTireSizeAlt": "275/55R20"},
+        {"name": "Series II", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"},
+        {"name": "Series III", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "jeep.com"],
+      "notes": "All-new full-size SUV. Standard version of Grand Wagoneer."
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Series I", "oemTireSize": "275/65R18", "oemTireSizeAlt": "275/55R20"},
+        {"name": "Series II", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"},
+        {"name": "Series III", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"}
+      ],
+      "confidence": "high",
+      "sources": ["jeep.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Series I", "oemTireSize": "275/65R18", "oemTireSizeAlt": "275/55R20"},
+        {"name": "Series II", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"},
+        {"name": "Series III", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"}
+      ],
+      "confidence": "high",
+      "sources": ["jeep.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "boltPattern": "6x139.7",
+      "hubBore": 77.8,
+      "trims": [
+        {"name": "Series I", "oemTireSize": "275/65R18", "oemTireSizeAlt": "275/55R20"},
+        {"name": "Series II", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"},
+        {"name": "Series III", "oemTireSize": "275/55R20", "oemTireSizeAlt": "285/45R22"}
+      ],
+      "confidence": "medium",
+      "sources": ["jeep.com"],
+      "notes": "Expected carryover"
+    },
+    {
+      "year": 2014,
+      "make": "Lincoln",
+      "model": "MKC",
+      "status": "INVALID",
+      "reason": "MODEL YEAR DOES NOT EXIST - MKC debuted summer 2014 as 2015 model",
+      "confidence": "high",
+      "sources": ["wikipedia", "jdpower.com", "cars.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Lincoln",
+      "model": "MKC",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Premiere", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Select", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Reserve", "oemWheelSize": "18x8", "oemTireSize": "235/50R18", "oemTireSizeAlt": "235/45R19"},
+        {"name": "Black Label", "oemWheelSize": "19x8.5", "oemTireSize": "235/45R19", "oemTireSizeAlt": "255/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "lincoln.com"],
+      "notes": "First year of MKC. Shares platform with Ford Escape."
+    },
+    {
+      "year": 2016,
+      "make": "Lincoln",
+      "model": "MKC",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Premiere", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Select", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Reserve", "oemWheelSize": "18x8", "oemTireSize": "235/50R18", "oemTireSizeAlt": "235/45R19"},
+        {"name": "Black Label", "oemWheelSize": "19x8.5", "oemTireSize": "235/45R19", "oemTireSizeAlt": "255/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2017,
+      "make": "Lincoln",
+      "model": "MKC",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Premiere", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Select", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Reserve", "oemWheelSize": "18x8", "oemTireSize": "235/50R18", "oemTireSizeAlt": "235/45R19"},
+        {"name": "Black Label", "oemWheelSize": "19x8.5", "oemTireSize": "235/45R19", "oemTireSizeAlt": "255/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    },
+    {
+      "year": 2018,
+      "make": "Lincoln",
+      "model": "MKC",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "Premiere", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Select", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "Reserve", "oemWheelSize": "18x8", "oemTireSize": "235/50R18", "oemTireSizeAlt": "245/45R19", "oemTireSizeAlt2": "255/40R20"},
+        {"name": "Black Label", "oemWheelSize": "19x8.5", "oemTireSize": "235/45R19", "oemTireSizeAlt": "255/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Carryover"
+    }
+  ]
+}

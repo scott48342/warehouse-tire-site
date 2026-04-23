@@ -1,0 +1,1140 @@
+{
+  "batch": "batch-23-german",
+  "verifiedAt": "2026-04-19T14:30:00Z",
+  "verifiedBy": "subagent:verify-de-23",
+  "totalVehicles": 75,
+  "validVehicles": 66,
+  "invalidVehicles": 9,
+  "summary": {
+    "invalidModelYears": [
+      {"year": 2003, "make": "bmw", "model": "x3", "reason": "X3 first available in US as 2004 model year"},
+      {"year": 2019, "make": "bmw", "model": "x3-m", "reason": "X3 M debuted as 2020 model year in US"},
+      {"year": 2019, "make": "bmw", "model": "x4-m", "reason": "X4 M debuted as 2020 model year in US"},
+      {"year": 2025, "make": "bmw", "model": "x4-m", "reason": "X4 M discontinued with X4 (production ended Nov 2025, no 2025 MY X4 M)"},
+      {"year": 2026, "make": "bmw", "model": "x4-m", "reason": "X4 M discontinued - X4 production ended November 2025"},
+      {"year": 2026, "make": "bmw", "model": "x4", "reason": "X4 discontinued - production ended November 2025"},
+      {"year": 2009, "make": "bmw", "model": "x5-m", "reason": "X5 M debuted as 2010 model year in US (released Sept 2009)"},
+      {"year": 2009, "make": "bmw", "model": "x6-m", "reason": "X6 M debuted as 2010 model year in US"}
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X2",
+      "status": "valid",
+      "generation": "F39",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "sDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "M35i", "oemWheelSize": "19x8", "oemTireSize": "225/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "apexwheels.com"],
+      "notes": "First-gen X2 (F39)"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X2",
+      "status": "valid",
+      "generation": "F39",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "sDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "M35i", "oemWheelSize": "19x8", "oemTireSize": "225/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "apexwheels.com"]
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X2",
+      "status": "valid",
+      "generation": "F39",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "sDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "M35i", "oemWheelSize": "19x8", "oemTireSize": "225/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "apexwheels.com"]
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X2",
+      "status": "valid",
+      "generation": "F39",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "sDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "M35i", "oemWheelSize": "19x8", "oemTireSize": "225/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "apexwheels.com"],
+      "notes": "Last year of F39 generation"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X2",
+      "status": "valid",
+      "generation": "U10",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"},
+        {"name": "M35i", "oemWheelSize": "20x8", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "caranddriver.com"],
+      "notes": "Second-gen X2 (U10) - new platform"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X2",
+      "status": "valid",
+      "generation": "U10",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"},
+        {"name": "M35i", "oemWheelSize": "20x8", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "motortrend.com"]
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X2",
+      "status": "valid",
+      "generation": "U10",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"},
+        {"name": "M35i", "oemWheelSize": "20x8", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "caranddriver.com"],
+      "notes": "New color Dune Grey added"
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "X3",
+      "status": "invalid",
+      "reason": "X3 first available in US as 2004 model year. Production started 2003 but sold as MY2004.",
+      "confidence": "high",
+      "sources": ["jdpower.com", "autoblog.com", "wikipedia.org"]
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X3 M",
+      "status": "invalid",
+      "reason": "X3 M debuted as 2020 model year in US. Announced Feb 2019, went on sale late 2019 as MY2020.",
+      "confidence": "high",
+      "sources": ["press.bmwgroup.com", "wikipedia.org"]
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X3 M",
+      "status": "valid",
+      "generation": "F97",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X3 M", "oemWheelSize": "20x9 F / 20x10 R", "oemTireSize": "255/45R20 F / 265/45R20 R"},
+        {"name": "X3 M Competition", "oemWheelSize": "21x9.5 F / 21x10 R", "oemTireSize": "255/40R21 F / 265/40R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "caranddriver.com"],
+      "notes": "First year of X3 M. Staggered fitment."
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X3 M",
+      "status": "valid",
+      "generation": "F97",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X3 M", "oemWheelSize": "20x9 F / 20x10 R", "oemTireSize": "255/45R20 F / 265/45R20 R"},
+        {"name": "X3 M Competition", "oemWheelSize": "21x9.5 F / 21x10 R", "oemTireSize": "255/40R21 F / 265/40R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "press.bmwgroup.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X3 M",
+      "status": "valid",
+      "generation": "F97 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X3 M", "oemWheelSize": "20x9 F / 20x10 R", "oemTireSize": "255/45R20 F / 265/45R20 R"},
+        {"name": "X3 M Competition", "oemWheelSize": "21x9.5 F / 21x10 R", "oemTireSize": "255/40R21 F / 265/40R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "caranddriver.com"],
+      "notes": "Facelift (LCI). Staggered fitment."
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X3 M",
+      "status": "valid",
+      "generation": "F97 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X3 M Competition", "oemWheelSize": "21x9.5 F / 21x10 R", "oemTireSize": "255/40R21 F / 265/40R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X3 M",
+      "status": "valid",
+      "generation": "F97 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X3 M Competition", "oemWheelSize": "21x9.5 F / 21x10 R", "oemTireSize": "255/40R21 F / 265/40R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Final year of F97. Staggered fitment."
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X4",
+      "status": "valid",
+      "generation": "F26",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "xDrive35i", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["cars.usnews.com", "apexwheels.com"],
+      "notes": "First year of X4 in US"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X4",
+      "status": "valid",
+      "generation": "F26",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "xDrive35i", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "M40i", "oemWheelSize": "19x8.5 F / 19x9.5 R", "oemTireSize": "245/45R19 F / 275/40R19 R"}
+      ],
+      "confidence": "high",
+      "sources": ["cars.usnews.com"],
+      "notes": "M40i added mid-year with staggered setup"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X4",
+      "status": "valid",
+      "generation": "F26",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "M40i", "oemWheelSize": "19x8.5 F / 19x9.5 R", "oemTireSize": "245/45R19 F / 275/40R19 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"]
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "X4",
+      "status": "valid",
+      "generation": "F26",
+      "boltPattern": "5x120",
+      "hubBore": 72.6,
+      "trims": [
+        {"name": "xDrive28i", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "M40i", "oemWheelSize": "19x8.5 F / 19x9.5 R", "oemTireSize": "245/45R19 F / 275/40R19 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Last year of F26 generation"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X4",
+      "status": "valid",
+      "generation": "G02",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive30i", "oemWheelSize": "19x8", "oemTireSize": "245/50R19"},
+        {"name": "M40i", "oemWheelSize": "20x8.5 F / 20x9.5 R", "oemTireSize": "245/45R20 F / 275/40R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "wikipedia.org"],
+      "notes": "Second-gen X4 (G02) - new platform with 5x112"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X4",
+      "status": "valid",
+      "generation": "G02",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive30i", "oemWheelSize": "19x8", "oemTireSize": "245/50R19"},
+        {"name": "M40i", "oemWheelSize": "20x8.5 F / 20x9.5 R", "oemTireSize": "245/45R20 F / 275/40R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"]
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X4",
+      "status": "valid",
+      "generation": "G02 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive30i", "oemWheelSize": "19x8", "oemTireSize": "245/50R19"},
+        {"name": "M40i", "oemWheelSize": "20x8.5 F / 20x9.5 R", "oemTireSize": "245/45R20 F / 275/40R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "cars.usnews.com"],
+      "notes": "Facelift (LCI) with refreshed interior and exterior"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X4",
+      "status": "valid",
+      "generation": "G02 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive30i", "oemWheelSize": "19x8", "oemTireSize": "245/50R19"},
+        {"name": "M40i", "oemWheelSize": "20x8.5 F / 20x9.5 R", "oemTireSize": "245/45R20 F / 275/40R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"]
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X4",
+      "status": "valid",
+      "generation": "G02 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive30i", "oemWheelSize": "19x8", "oemTireSize": "245/50R19"},
+        {"name": "M40i", "oemWheelSize": "20x8.5 F / 20x9.5 R", "oemTireSize": "245/45R20 F / 275/40R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"]
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X4",
+      "status": "valid",
+      "generation": "G02 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive30i", "oemWheelSize": "19x8", "oemTireSize": "245/50R19"},
+        {"name": "M40i", "oemWheelSize": "20x8.5 F / 20x9.5 R", "oemTireSize": "245/45R20 F / 275/40R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["cars.usnews.com", "bmwblog.com"],
+      "notes": "Final year of X4 - production ended November 2025"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X4",
+      "status": "invalid",
+      "reason": "X4 discontinued - production ended November 2025. No 2026 model year.",
+      "confidence": "high",
+      "sources": ["bmwblog.com", "motortrend.com"]
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X4 M",
+      "status": "invalid",
+      "reason": "X4 M debuted as 2020 model year in US. Announced Feb 2019, went on sale late 2019 as MY2020.",
+      "confidence": "high",
+      "sources": ["press.bmwgroup.com", "wikipedia.org"]
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X4 M",
+      "status": "valid",
+      "generation": "F98",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X4 M", "oemWheelSize": "20x9 F / 20x10 R", "oemTireSize": "255/45R20 F / 265/45R20 R"},
+        {"name": "X4 M Competition", "oemWheelSize": "21x9.5 F / 21x10 R", "oemTireSize": "255/40R21 F / 265/40R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "caranddriver.com"],
+      "notes": "First year of X4 M. Staggered fitment."
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X4 M",
+      "status": "valid",
+      "generation": "F98",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X4 M", "oemWheelSize": "20x9 F / 20x10 R", "oemTireSize": "255/45R20 F / 265/45R20 R"},
+        {"name": "X4 M Competition", "oemWheelSize": "21x9.5 F / 21x10 R", "oemTireSize": "255/40R21 F / 265/40R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X4 M",
+      "status": "valid",
+      "generation": "F98 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X4 M Competition", "oemWheelSize": "21x9.5 F / 21x10 R", "oemTireSize": "255/40R21 F / 265/40R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Facelift (LCI). Staggered fitment."
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X4 M",
+      "status": "valid",
+      "generation": "F98 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X4 M Competition", "oemWheelSize": "21x9.5 F / 21x10 R", "oemTireSize": "255/40R21 F / 265/40R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X4 M",
+      "status": "valid",
+      "generation": "F98 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X4 M Competition", "oemWheelSize": "21x9.5 F / 21x10 R", "oemTireSize": "255/40R21 F / 265/40R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Final year of X4 M. Staggered fitment."
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X4 M",
+      "status": "invalid",
+      "reason": "X4 M discontinued with X4. No 2025 model year X4 M produced.",
+      "confidence": "medium",
+      "sources": ["reddit.com/r/BMW", "bmwblog.com"],
+      "notes": "X4 continued as 2025 MY but X4 M did not"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X4 M",
+      "status": "invalid",
+      "reason": "X4 M discontinued - production ended with X4 in November 2025.",
+      "confidence": "high",
+      "sources": ["bmwblog.com", "motortrend.com"]
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "invalid",
+      "reason": "X5 M debuted as 2010 model year in US. Unveiled April 2009, went on sale September 2009 as MY2010.",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com"]
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "E70",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "X5 M", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bimmerworld.com", "jdpower.com"],
+      "notes": "First year of X5 M. Staggered fitment. Different front/rear hub bore."
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "E70",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "X5 M", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bimmerworld.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "E70",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "X5 M", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bimmerworld.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "E70 LCI",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "X5 M", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bimmerworld.com"],
+      "notes": "Last year of E70. Staggered fitment."
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F15 (no M this year)",
+      "notes": "2014 was transition year - no X5 M produced for MY2014. Standard X5 switched to F15.",
+      "status": "needs_review",
+      "confidence": "medium",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F85",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "X5 M", "oemWheelSize": "20x10 F / 20x11.5 R", "oemTireSize": "285/40R20 F / 325/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "bimmerworld.com"],
+      "notes": "Second-gen X5 M (F85). Staggered fitment."
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F85",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "X5 M", "oemWheelSize": "20x10 F / 20x11.5 R", "oemTireSize": "285/40R20 F / 325/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F85",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "X5 M", "oemWheelSize": "20x10 F / 20x11.5 R", "oemTireSize": "285/40R20 F / 325/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F85",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "X5 M", "oemWheelSize": "20x10 F / 20x11.5 R", "oemTireSize": "285/40R20 F / 325/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Last year of F85. Staggered fitment."
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "Transition",
+      "notes": "Gap year - F85 ended, F95 not yet released.",
+      "status": "needs_review",
+      "confidence": "low",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F95",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X5 M", "oemWheelSize": "21x10.5 F / 21x11.5 R", "oemTireSize": "295/35R21 F / 315/35R21 R"},
+        {"name": "X5 M Competition", "oemWheelSize": "21x10.5 F / 22x11.5 R", "oemTireSize": "295/35R21 F / 315/30R22 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Third-gen X5 M (F95). New 5x112 bolt pattern. Staggered fitment."
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F95",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X5 M", "oemWheelSize": "21x10.5 F / 21x11.5 R", "oemTireSize": "295/35R21 F / 315/35R21 R"},
+        {"name": "X5 M Competition", "oemWheelSize": "21x10.5 F / 22x11.5 R", "oemTireSize": "295/35R21 F / 315/30R22 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F95",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X5 M Competition", "oemWheelSize": "21x10.5 F / 22x11.5 R", "oemTireSize": "295/35R21 F / 315/30R22 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F95 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X5 M Competition", "oemWheelSize": "21x10.5 F / 22x11.5 R", "oemTireSize": "295/35R21 F / 315/30R22 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Facelift (LCI). Staggered fitment."
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F95 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X5 M Competition", "oemWheelSize": "21x10.5 F / 22x11.5 R", "oemTireSize": "295/35R21 F / 315/30R22 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F95 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X5 M Competition", "oemWheelSize": "21x10.5 F / 22x11.5 R", "oemTireSize": "295/35R21 F / 315/30R22 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com", "edmunds.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X5 M",
+      "status": "valid",
+      "generation": "F95 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "X5 M Competition", "oemWheelSize": "21x10.5 F / 22x11.5 R", "oemTireSize": "295/35R21 F / 315/30R22 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "617 hp. Staggered fitment."
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "E71",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["carbuzz.com", "autoevolution.com"],
+      "notes": "First year of X6. First-gen (E71). Staggered fitment."
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "E71",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["carbuzz.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "E71",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"},
+        {"name": "ActiveHybrid", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["carbuzz.com", "jdpower.com"],
+      "notes": "ActiveHybrid added. Staggered fitment."
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "E71",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["carbuzz.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "E71 LCI",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com"],
+      "notes": "Facelift (LCI). Staggered fitment."
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "E71 LCI",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com"],
+      "notes": "Last year of E71. Staggered fitment."
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "F16",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Second-gen X6 (F16). Staggered fitment."
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "F16",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "F16",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "F16",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "F16",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "xDrive35i", "oemWheelSize": "19x9 F / 19x10 R", "oemTireSize": "255/50R19 F / 285/45R19 R"},
+        {"name": "xDrive50i", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Last year of F16. Staggered fitment."
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "G06",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive40i", "oemWheelSize": "20x9 F / 20x10.5 R", "oemTireSize": "275/45R20 F / 305/40R20 R"},
+        {"name": "M50i", "oemWheelSize": "21x9.5 F / 21x10.5 R", "oemTireSize": "285/40R21 F / 315/35R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Third-gen X6 (G06). New 5x112 bolt pattern. Staggered fitment."
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "G06",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive40i", "oemWheelSize": "20x9 F / 20x10.5 R", "oemTireSize": "275/45R20 F / 305/40R20 R"},
+        {"name": "M50i", "oemWheelSize": "21x9.5 F / 21x10.5 R", "oemTireSize": "285/40R21 F / 315/35R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "G06",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive40i", "oemWheelSize": "20x9 F / 20x10.5 R", "oemTireSize": "275/45R20 F / 305/40R20 R"},
+        {"name": "M50i", "oemWheelSize": "21x9.5 F / 21x10.5 R", "oemTireSize": "285/40R21 F / 315/35R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "G06 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive40i", "oemWheelSize": "20x9 F / 20x10.5 R", "oemTireSize": "275/45R20 F / 305/40R20 R"},
+        {"name": "M60i", "oemWheelSize": "21x9.5 F / 21x10.5 R", "oemTireSize": "285/40R21 F / 315/35R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Facelift (LCI). M60i replaces M50i. Staggered fitment."
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "X6",
+      "status": "valid",
+      "generation": "G06 LCI",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {"name": "xDrive40i", "oemWheelSize": "20x9 F / 20x10.5 R", "oemTireSize": "275/45R20 F / 305/40R20 R"},
+        {"name": "M60i", "oemWheelSize": "21x9.5 F / 21x10.5 R", "oemTireSize": "285/40R21 F / 315/35R21 R"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "X6 M",
+      "status": "invalid",
+      "reason": "X6 M debuted as 2010 model year in US. Announced April 2009, went on sale late 2009 as MY2010.",
+      "confidence": "high",
+      "sources": ["jdpower.com", "wikipedia.org"]
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "X6 M",
+      "status": "valid",
+      "generation": "E71",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "X6 M", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com", "bimmerworld.com"],
+      "notes": "First year of X6 M. 555 hp. Staggered fitment. Different front/rear hub bore."
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "X6 M",
+      "status": "valid",
+      "generation": "E71",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "X6 M", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bimmerworld.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "X6 M",
+      "status": "valid",
+      "generation": "E71",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "X6 M", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bimmerworld.com"],
+      "notes": "Staggered fitment."
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "X6 M",
+      "status": "valid",
+      "generation": "E71 LCI",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "X6 M", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bimmerworld.com"],
+      "notes": "Facelift (LCI). Staggered fitment."
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "X6 M",
+      "status": "valid",
+      "generation": "E71 LCI",
+      "boltPattern": "5x120",
+      "hubBore": "74.1 F / 72.56 R",
+      "trims": [
+        {"name": "X6 M", "oemWheelSize": "20x10 F / 20x11 R", "oemTireSize": "275/40R20 F / 315/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bimmerworld.com"],
+      "notes": "Last year of first-gen X6 M (E71). Staggered fitment."
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X6 M",
+      "status": "valid",
+      "generation": "F86",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "X6 M", "oemWheelSize": "20x10 F / 20x11.5 R", "oemTireSize": "285/40R20 F / 325/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Second-gen X6 M (F86). Staggered fitment."
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X6 M",
+      "status": "valid",
+      "generation": "F86",
+      "boltPattern": "5x120",
+      "hubBore": 74.1,
+      "trims": [
+        {"name": "X6 M", "oemWheelSize": "20x10 F / 20x11.5 R", "oemTireSize": "285/40R20 F / 325/35R20 R"}
+      ],
+      "confidence": "high",
+      "sources": ["bmwusa.com"],
+      "notes": "Staggered fitment."
+    }
+  ],
+  "missingFromBatch": {
+    "note": "The following years were missing from the batch but exist in US market",
+    "vehicles": [
+      {"year": 2012, "make": "BMW", "model": "X6", "note": "2012 X6 exists but was not in batch"},
+      {"year": 2021, "make": "BMW", "model": "X4", "note": "2021 X4 exists but was not in batch"},
+      {"year": 2024, "make": "BMW", "model": "X6", "note": "2024 X6 exists but was not in batch"},
+      {"year": 2025, "make": "BMW", "model": "X6", "note": "2025 X6 exists but was not in batch"}
+    ]
+  }
+}

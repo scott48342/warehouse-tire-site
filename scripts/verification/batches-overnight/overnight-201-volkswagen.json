@@ -1,0 +1,2878 @@
+[
+  {
+    "id": "e9fab014-3bec-496f-b953-431c337d0775",
+    "year": 2024,
+    "make": "volkswagen",
+    "model": "gti",
+    "trim": "S, SE, Autobahn",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18",
+      "235/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "92e81474-f94c-4f99-8ba8-2a300f34bb1b",
+    "year": 2025,
+    "make": "volkswagen",
+    "model": "gti",
+    "trim": "S, SE, Autobahn",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18",
+      "235/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5f7846fb-5e6e-41cf-9979-0d42360a2ad0",
+    "year": 2026,
+    "make": "volkswagen",
+    "model": "gti",
+    "trim": "S, SE, Autobahn",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18",
+      "235/35R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "edcfdbe4-0e28-463b-a2d2-c248470a00f6",
+    "year": 2020,
+    "make": "volkswagen",
+    "model": "id-4",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "255/45R20",
+      "255/40R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ab59a08c-2b90-479b-b7a7-5ef6dc129451",
+    "year": 2021,
+    "make": "volkswagen",
+    "model": "id.4",
+    "trim": "Standard, Pro, Pro S, AWD Pro, AWD Pro S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "f27e7992-d384-44fb-be7f-38b807ef2904",
+    "year": 2022,
+    "make": "volkswagen",
+    "model": "id.4",
+    "trim": "Standard, Pro, Pro S, AWD Pro, AWD Pro S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "8ce5b8bc-7a07-4d22-a2d9-bae70f2e3a06",
+    "year": 2023,
+    "make": "volkswagen",
+    "model": "id.4",
+    "trim": "Standard, Pro, Pro S, AWD Pro, AWD Pro S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "c21fa27e-0850-4e3f-abbe-5907be3c599a",
+    "year": 2024,
+    "make": "volkswagen",
+    "model": "id.4",
+    "trim": "Standard, Pro, Pro S, AWD Pro, AWD Pro S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "41f018fa-e80c-4562-bc2a-4325eaa5d9dd",
+    "year": 2025,
+    "make": "volkswagen",
+    "model": "id.4",
+    "trim": "Standard, Pro, Pro S, AWD Pro, AWD Pro S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "0393153f-8881-47ef-9384-fec96eef5296",
+    "year": 2026,
+    "make": "volkswagen",
+    "model": "id.4",
+    "trim": "Standard, Pro, Pro S, AWD Pro, AWD Pro S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "4dceb88e-c1c3-4c8d-be25-933622de8265",
+    "year": 1999,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "06732fb1-4b2d-4d3e-a30a-99d34e4a2c41",
+    "year": 2000,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5b7e48ac-0107-4803-984c-4ea7ef0fcb3e",
+    "year": 2001,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2714cdbc-195b-40bb-bb81-2edfb88678ff",
+    "year": 2002,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5b0e2055-85f6-4e59-8fba-0337fb9ce65b",
+    "year": 2003,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "330855ab-cc03-4d0f-9667-ecad3dd951aa",
+    "year": 2004,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ce8a0502-be46-47ee-b261-f2a04308e011",
+    "year": 2005,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "317eb3fe-cfcb-4c42-8682-bc4c5c9a5441",
+    "year": 2006,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "da06b281-0188-49a8-8c92-423da1a565dc",
+    "year": 2007,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "3d847eee-5ed4-43ff-a38f-50cbf920f06e",
+    "year": 2008,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4ec7de1a-2166-4115-a618-3c003c9b1b50",
+    "year": 2009,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ce2f095c-6267-4ea0-ad62-69d0f65e1ecb",
+    "year": 2010,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "989b2696-cf09-4b9c-a3f8-fb16f19ec450",
+    "year": 2011,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8c0b85d0-7c5d-482c-a560-7e0cd87e579f",
+    "year": 2012,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6bcc4839-f256-4f91-996d-97b4a97bb992",
+    "year": 2013,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "affda169-f053-4333-a2f0-7be2cc662a65",
+    "year": 2014,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "205/50R17",
+      "215/50R17",
+      "215/40ZR18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "be9f927d-14d4-4c9c-b253-b76eb930aa53",
+    "year": 2015,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "205/50R17",
+      "215/50R17",
+      "215/40ZR18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b8ba8351-43e4-4a1a-b0e4-19195e095a72",
+    "year": 2016,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "515b428f-c52a-4af5-ba6c-afd9436a4fc7",
+    "year": 2017,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "31f78759-0ab6-49d2-b8da-e62251b52a7a",
+    "year": 2018,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17",
+      "225/40R18",
+      "205/60R16",
+      "205/55R17",
+      "225/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "caa07984-b72b-4aa5-b740-1e9489a5c824",
+    "year": 2019,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "205/60R16",
+      "205/55R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b041c5e8-1499-44da-948e-fe3f8d11145e",
+    "year": 2020,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "205/60R16",
+      "205/55R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "bc0e2915-269f-4260-94d5-082571e042cb",
+    "year": 2021,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "205/60R16",
+      "205/55R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "872c64e6-1fcc-4e5f-9833-d681b2e59688",
+    "year": 2022,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "205/60R16",
+      "205/55R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "0e4bb02f-87c5-43f8-bd35-f28caf1ea4c3",
+    "year": 2023,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "205/60R16",
+      "205/55R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "76c9e5f1-19b4-44fd-b61b-f059c11429a3",
+    "year": 2024,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "205/60R16",
+      "205/55R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e5102425-c7e9-44b1-81a5-02c45b08d000",
+    "year": 2025,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "205/60R16",
+      "205/55R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b84e4cfb-e30d-49d3-8789-d90e0dcc4212",
+    "year": 2026,
+    "make": "volkswagen",
+    "model": "jetta",
+    "trim": "S, Sport, SE, SEL, GLI",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R16",
+      "205/60R16",
+      "205/55R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5ca9f534-d977-4e3c-aa30-c5e47687c81b",
+    "year": 2012,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "55c32061-d8f8-44f8-8246-dd45812d63f7",
+    "year": 2013,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "533ced6b-41d4-4476-9781-6158079ac802",
+    "year": 2014,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a8134a86-a05d-4c31-86a7-b6952bb4fdb5",
+    "year": 2015,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a5174d45-ae6e-4c8c-956a-1b8d532aaf71",
+    "year": 2016,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a59ecd6d-23e4-4c1a-844b-5c46de589324",
+    "year": 2017,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f35b5a79-7256-4acc-bfa0-3960a0fa19a0",
+    "year": 2018,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f9cdf9eb-d39e-4fee-b194-2308b97bf1d6",
+    "year": 2019,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "749eb9e4-eadc-4678-8802-754014bd208e",
+    "year": 2020,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e8d1f038-6c43-4170-9599-6e1a38a9dab4",
+    "year": 2021,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "04faaf8d-bb9f-4a09-8666-06477d3d922a",
+    "year": 2022,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8f181823-8f5f-45d5-a0df-0c835ae53cb1",
+    "year": 2023,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4e9667cb-58f8-400e-abd0-575d93de2b5e",
+    "year": 2024,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a761a34f-7933-4511-8889-d3544e3466c1",
+    "year": 2025,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "68c4455c-d509-4bcd-8f44-d19ac849a47d",
+    "year": 2026,
+    "make": "volkswagen",
+    "model": "jetta-gli",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R17",
+      "225/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a4119eaa-c2a9-49b9-a91e-a5a3dc653ff7",
+    "year": 1998,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "235/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6f2f35ed-7b0b-4e9f-a2eb-9cee17e5f183",
+    "year": 1999,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "235/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "afa8e013-6185-4118-932a-96f392048f30",
+    "year": 2000,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5e82c22d-3e07-4f7c-afb6-b627de214a62",
+    "year": 2001,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "62e5db00-d8b5-4d8e-9e19-0338e5bf0cb0",
+    "year": 2002,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e82c8e89-3016-429d-9931-57a4860fdf34",
+    "year": 2003,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "be434459-59c7-4ca5-b631-a03745c692a4",
+    "year": 2004,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e19ef890-ac48-4593-a334-3c440fa3057b",
+    "year": 2005,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15",
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "030908e6-1be0-4aa7-a12c-eb0835a88e4d",
+    "year": 2006,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "235/45R17",
+      "235/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "831b3d20-7804-4e8d-91a5-c5861e37a678",
+    "year": 2007,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "235/45R17",
+      "235/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4f8c9a39-71b5-4b7d-8c55-129137b0c570",
+    "year": 2008,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "235/45R17",
+      "235/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e15a3ed7-3079-4f5d-898d-d7bc34635799",
+    "year": 2009,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "235/45R17",
+      "235/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a667d6e0-1a05-482f-b810-5d5d8689054f",
+    "year": 2010,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "235/45R17",
+      "235/40R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "70360913-d66b-48eb-b983-1680a40ef6e9",
+    "year": 2011,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S/SE/SEL",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 42,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 45,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 47,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "235/45R17",
+      "235/40R18"
+    ],
+    "source": "batch6-minivans-evs [web_research]"
+  },
+  {
+    "id": "39c53092-8764-42d7-9b97-9ff974043578",
+    "year": 2012,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "215/55R17",
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "43c92d10-d33a-4082-93c3-1b7fa65efcc5",
+    "year": 2013,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "215/55R17",
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "520b7170-2ee6-4df3-b2d5-838d9e7a1187",
+    "year": 2014,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "215/60R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "01eb30c9-2dc8-4d70-84b6-f96dd5fa25b0",
+    "year": 2015,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "215/60R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a7aed0ec-2bc6-44e0-a3dc-9b2f25c8d9ff",
+    "year": 2016,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "215/55R17",
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b51980ec-0dbe-401e-a90d-5d1b9f185bd1",
+    "year": 2017,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "215/55R17",
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c005a883-320c-40cf-bb70-7ceb2cb32822",
+    "year": 2018,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "215/55R17",
+      "235/45R18",
+      "235/40R19",
+      "215/60R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "18037b61-b50a-48f4-bbe2-2ed91f4debb3",
+    "year": 2019,
+    "make": "volkswagen",
+    "model": "passat",
+    "trim": "S, SE, R-Line, SEL Premium",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "57.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R16",
+      "215/55R17",
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "cache-import"
+  }
+]

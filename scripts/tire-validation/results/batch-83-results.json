@@ -1,0 +1,1078 @@
+{
+  "batchId": "83",
+  "processedAt": "2026-04-21T22:15:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2012,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/65R16", "215/55R17"],
+      "validatedTireSizes": {
+        "EX": ["215/55R17", "225/45R18"],
+        "EX Turbo": ["215/55R17", "225/45R18"],
+        "Hybrid": ["205/65R16", "215/55R17"],
+        "LX": ["205/65R16", "215/55R17"],
+        "SX": ["215/55R17", "225/45R18"],
+        "SX Limited": ["225/45R18"]
+      },
+      "allSizes": ["205/65R16", "215/55R17", "225/45R18"],
+      "status": "VALID",
+      "notes": "Current sizes match LX/Hybrid trims"
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/65R16", "215/55R17"],
+      "validatedTireSizes": {
+        "EX": ["215/55R17"],
+        "EX Turbo": ["215/55R17", "225/45R18"],
+        "Hybrid": ["205/65R16", "215/55R17"],
+        "LX": ["205/65R16"],
+        "SX": ["225/45R18"]
+      },
+      "allSizes": ["205/65R16", "215/55R17", "225/45R18"],
+      "status": "VALID",
+      "notes": "Current sizes match LX/Hybrid trims"
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "validatedTireSizes": {
+        "EX": ["215/55R17"],
+        "EX Turbo": ["215/55R17", "225/45R18"],
+        "Hybrid": ["205/65R16", "215/55R17"],
+        "LX": ["205/65R16"],
+        "SX": ["225/45R18"]
+      },
+      "allSizes": ["205/65R16", "215/55R17", "225/45R18"],
+      "status": "VALID",
+      "notes": "Current sizes match EX Turbo/SX trims"
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["215/55R17"],
+      "validatedTireSizes": {
+        "EX": ["205/60R16", "215/50R17"],
+        "EX V6": ["205/60R16", "215/50R17"],
+        "LX": ["205/60R16"],
+        "SX": ["215/50R17"],
+        "SX V6": ["215/50R17"]
+      },
+      "allSizes": ["205/60R16", "215/50R17"],
+      "status": "MISMATCH",
+      "notes": "Database has 215/55R17 but OEM should be 215/50R17. Lower aspect ratio."
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": {
+        "EX": ["205/60R16", "215/50R17"],
+        "EX V6": ["205/60R16", "215/50R17"],
+        "LX": ["205/60R16"],
+        "SX": ["215/50R17"],
+        "SX V6": ["215/50R17"]
+      },
+      "allSizes": ["205/60R16", "215/50R17"],
+      "status": "VALID",
+      "notes": "Matches LX and EX base trims"
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": {
+        "EX": ["205/60R16", "215/50R17"],
+        "EX V6": ["205/60R16", "215/50R17"],
+        "LX": ["205/60R16"],
+        "SX": ["215/50R17"],
+        "SX V6": ["215/50R17"]
+      },
+      "allSizes": ["205/60R16", "215/50R17"],
+      "status": "VALID",
+      "notes": "Matches LX and EX base trims"
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["215/55R17"],
+      "validatedTireSizes": {
+        "EX": ["205/60R16", "215/50R17"],
+        "EX V6": ["205/60R16", "215/50R17"],
+        "LX": ["205/60R16"],
+        "SX": ["215/50R17"],
+        "SX V6": ["215/50R17"]
+      },
+      "allSizes": ["205/60R16", "215/50R17"],
+      "status": "MISMATCH",
+      "notes": "Database has 215/55R17 but OEM should be 215/50R17"
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["215/55R17"],
+      "validatedTireSizes": {
+        "EX 4cyl": ["205/60R16"],
+        "EX V6": ["205/60R16", "215/50R17"],
+        "LX 4cyl": ["205/60R16"],
+        "LX V6": ["205/60R16", "215/50R17"]
+      },
+      "allSizes": ["205/60R16", "215/50R17"],
+      "status": "MISMATCH",
+      "notes": "Database has 215/55R17 but OEM should be 215/50R17"
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": {
+        "EX 4cyl": ["205/60R16"],
+        "EX V6": ["205/60R16", "215/50R17"],
+        "LX 4cyl": ["205/60R16"],
+        "LX V6": ["205/60R16", "215/50R17"]
+      },
+      "allSizes": ["205/60R16", "215/50R17"],
+      "status": "VALID",
+      "notes": "Matches all 4cyl trims"
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["215/55R17"],
+      "validatedTireSizes": {
+        "EX": ["205/60R16"],
+        "EX V6": ["205/60R16", "215/50R17"],
+        "LX": ["205/60R16"],
+        "LX V6": ["205/60R16", "215/50R17"]
+      },
+      "allSizes": ["205/60R16", "215/50R17"],
+      "status": "MISMATCH",
+      "notes": "Database has 215/55R17 but OEM should be 215/50R17"
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/60R16"],
+      "validatedTireSizes": {
+        "EX": ["205/60R16"],
+        "EX V6": ["205/60R16", "215/50R17"],
+        "LX": ["205/60R16"],
+        "LX V6": ["205/60R16", "215/50R17"]
+      },
+      "allSizes": ["205/60R16", "215/50R17"],
+      "status": "VALID",
+      "notes": "Matches EX and LX base trims"
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["195/70R14", "205/60R15"],
+      "validatedTireSizes": {
+        "2006.5 EX": ["205/60R16", "215/50R17"],
+        "2006.5 LX": ["205/60R16", "215/50R17"],
+        "EX": ["205/60R15"],
+        "EX V6": ["205/55R16"],
+        "LX": ["205/60R15"],
+        "LX V6": ["205/55R16"]
+      },
+      "allSizes": ["205/60R15", "205/55R16", "205/60R16", "215/50R17"],
+      "status": "PARTIAL_MATCH",
+      "notes": "195/70R14 not found in OEM data - may be invalid or aftermarket. 205/60R15 valid for EX/LX"
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/60R15", "205/55R16"],
+      "validatedTireSizes": {
+        "2006.5 EX": ["205/60R16", "215/50R17"],
+        "2006.5 LX": ["205/60R16", "215/50R17"],
+        "EX": ["205/60R15"],
+        "EX V6": ["205/55R16"],
+        "LX": ["205/60R15"],
+        "LX V6": ["205/55R16"]
+      },
+      "allSizes": ["205/60R15", "205/55R16", "205/60R16", "215/50R17"],
+      "status": "VALID",
+      "notes": "Matches EX/LX base and V6 trims"
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/60R15", "205/55R16"],
+      "validatedTireSizes": {
+        "EX": ["205/60R15", "205/55R16"],
+        "LX": ["205/60R15", "205/55R16"]
+      },
+      "allSizes": ["205/60R15", "205/55R16"],
+      "status": "VALID",
+      "notes": "Exact match for all trims"
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["195/70R14", "205/60R15"],
+      "validatedTireSizes": {
+        "EX": ["205/60R15", "205/55R16"],
+        "LX": ["205/60R15", "205/55R16"]
+      },
+      "allSizes": ["205/60R15", "205/55R16"],
+      "status": "PARTIAL_MATCH",
+      "notes": "195/70R14 not found in OEM data. 205/60R15 is valid."
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["195/70R14", "205/60R15"],
+      "validatedTireSizes": {
+        "EX": ["205/60R15", "205/55R16"],
+        "LX": ["205/60R15", "205/55R16"]
+      },
+      "allSizes": ["205/60R15", "205/55R16"],
+      "status": "PARTIAL_MATCH",
+      "notes": "195/70R14 not found in OEM data. 205/60R15 is valid."
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/60R15", "205/55R16"],
+      "validatedTireSizes": {
+        "EX": ["205/60R15", "205/55R16"],
+        "LX": ["205/60R15", "205/55R16"]
+      },
+      "allSizes": ["205/60R15", "205/55R16"],
+      "status": "VALID",
+      "notes": "Exact match for all trims"
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/60R15", "205/55R16"],
+      "validatedTireSizes": {
+        "LX": ["195/70R14", "205/60R15"],
+        "SE": ["205/60R15"]
+      },
+      "allSizes": ["195/70R14", "205/60R15"],
+      "status": "PARTIAL_MATCH",
+      "notes": "205/55R16 not in OEM data for 2003. Valid sizes are 195/70R14 and 205/60R15"
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["195/70R14", "205/60R15"],
+      "validatedTireSizes": {
+        "LX": ["195/70R14", "205/60R15"],
+        "SE": ["205/60R15"]
+      },
+      "allSizes": ["195/70R14", "205/60R15"],
+      "status": "VALID",
+      "notes": "Exact match for LX trim"
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["195/70R14", "205/60R15"],
+      "validatedTireSizes": {
+        "LX": ["195/70R14", "205/60R15"],
+        "SE": ["205/60R15"]
+      },
+      "allSizes": ["195/70R14", "205/60R15"],
+      "status": "VALID",
+      "notes": "Exact match for LX trim"
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/60R15", "205/55R16"],
+      "validatedTireSizes": {
+        "LX": ["195/70R14", "205/60R15"],
+        "SE": ["205/60R15"]
+      },
+      "allSizes": ["195/70R14", "205/60R15"],
+      "status": "PARTIAL_MATCH",
+      "notes": "205/55R16 not in OEM data for 2002"
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["195/70R14", "205/60R15"],
+      "validatedTireSizes": {
+        "LX": ["195/70R14", "205/60R15"],
+        "SE": ["205/60R15"]
+      },
+      "allSizes": ["195/70R14", "205/60R15"],
+      "status": "VALID",
+      "notes": "Exact match for LX trim"
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": ["205/60R15", "205/55R16"],
+      "validatedTireSizes": {
+        "LX": ["195/70R14", "205/60R15"],
+        "SE": ["205/60R15"]
+      },
+      "allSizes": ["195/70R14", "205/60R15"],
+      "status": "PARTIAL_MATCH",
+      "notes": "205/55R16 not in OEM data for 2001"
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Optima",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LX": ["195/70R14", "205/60R15"],
+        "SE": ["205/60R15"]
+      },
+      "allSizes": ["195/70R14", "205/60R15"],
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in database. OEM sizes: 195/70R14, 205/60R15"
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Potentia",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i HB": ["205/55R16"]
+      },
+      "allSizes": ["205/55R16"],
+      "status": "MISSING_DATA",
+      "notes": "Non-US market vehicle. OEM: 205/55R16. Korean domestic model."
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Potentia",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "2.0i HB": ["205/55R16"]
+      },
+      "allSizes": ["205/55R16"],
+      "status": "MISSING_DATA",
+      "notes": "Non-US market vehicle. OEM: 205/55R16. Korean domestic model."
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Pregio",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Van": ["195/70R15", "205/70R15"]
+      },
+      "allSizes": ["195/70R15", "205/70R15"],
+      "status": "MISSING_DATA",
+      "notes": "Non-US market commercial van. Not sold in North America."
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Pregio",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Van": ["195/70R15", "205/70R15"]
+      },
+      "allSizes": ["195/70R15", "205/70R15"],
+      "status": "MISSING_DATA",
+      "notes": "Non-US market commercial van. Not sold in North America."
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Pregio",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Van": ["195/70R15", "205/70R15"]
+      },
+      "allSizes": ["195/70R15", "205/70R15"],
+      "status": "MISSING_DATA",
+      "notes": "Non-US market commercial van. Not sold in North America."
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Pregio",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Van": ["195/70R15", "205/70R15"]
+      },
+      "allSizes": ["195/70R15", "205/70R15"],
+      "status": "MISSING_DATA",
+      "notes": "Non-US market commercial van. Not sold in North America."
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Pregio",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Van": ["195/70R15", "205/70R15"]
+      },
+      "allSizes": ["195/70R15", "205/70R15"],
+      "status": "MISSING_DATA",
+      "notes": "Non-US market commercial van. Not sold in North America."
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Pregio",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Van": ["195/70R15", "205/70R15"]
+      },
+      "allSizes": ["195/70R15", "205/70R15"],
+      "status": "MISSING_DATA",
+      "notes": "Non-US market commercial van. Not sold in North America."
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Pregio",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Van": ["195/70R15", "205/70R15"]
+      },
+      "allSizes": ["195/70R15", "205/70R15"],
+      "status": "MISSING_DATA",
+      "notes": "Non-US market commercial van. Not sold in North America."
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "GT": ["225/40R18"],
+        "GT-Line": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "European market only. Not sold in North America."
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "GT": ["225/40R18"],
+        "GT-Line": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "European market only. Not sold in North America."
+    },
+    {
+      "year": 2016,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "GT": ["225/40R18"],
+        "GT-Line": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "European market only. Not sold in North America."
+    },
+    {
+      "year": 2015,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "GT": ["225/40R18"],
+        "GT-Line": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "European market only. Not sold in North America."
+    },
+    {
+      "year": 2014,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "GT": ["225/40R18"],
+        "GT-Line": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+      "status": "MISSING_DATA",
+      "notes": "European market only. Not sold in North America."
+    },
+    {
+      "year": 2013,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "GT": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "status": "MISSING_DATA",
+      "notes": "European market only (2nd gen). Not sold in North America."
+    },
+    {
+      "year": 2012,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "Sport": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "status": "MISSING_DATA",
+      "notes": "European market only (1st gen). Not sold in North America."
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "Sport": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "status": "MISSING_DATA",
+      "notes": "European market only. Not sold in North America."
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "Sport": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "status": "MISSING_DATA",
+      "notes": "European market only. Not sold in North America."
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "Sport": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "status": "MISSING_DATA",
+      "notes": "European market only. Not sold in North America."
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"],
+        "Sport": ["225/45R17"]
+      },
+      "allSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "status": "MISSING_DATA",
+      "notes": "European market only (1st gen launched 2008). Not sold in North America."
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["195/65R15", "205/55R16"]
+      },
+      "allSizes": ["195/65R15", "205/55R16"],
+      "status": "MISSING_DATA",
+      "notes": "European market only (concept/pre-production). Not sold in North America."
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Pro-Cee'd",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "allSizes": [],
+      "status": "NO_DATA",
+      "notes": "Pro-Cee'd not produced in 2006 - launched 2008. Possible data error."
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Rio-Cross",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["185/65R15", "195/55R16"]
+      },
+      "allSizes": ["185/65R15", "195/55R16"],
+      "status": "MISSING_DATA",
+      "notes": "Russian market crossover variant of Rio. Not sold in North America."
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Rio-Cross",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["185/65R15", "195/55R16"]
+      },
+      "allSizes": ["185/65R15", "195/55R16"],
+      "status": "MISSING_DATA",
+      "notes": "Russian market crossover variant of Rio. Not sold in North America."
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Rio-Cross",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["185/65R15", "195/55R16"]
+      },
+      "allSizes": ["185/65R15", "195/55R16"],
+      "status": "MISSING_DATA",
+      "notes": "Russian market crossover variant of Rio. Launched 2018. Not sold in North America."
+    },
+    {
+      "year": 2022,
+      "make": "Kia",
+      "model": "Rio-X",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["185/65R15", "195/55R16"]
+      },
+      "allSizes": ["185/65R15", "195/55R16"],
+      "status": "MISSING_DATA",
+      "notes": "Russian market X-Line variant. Replaced Rio-Cross. Not sold in North America."
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "Rio-X",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["185/65R15", "195/55R16"]
+      },
+      "allSizes": ["185/65R15", "195/55R16"],
+      "status": "MISSING_DATA",
+      "notes": "Russian market X-Line variant. Not sold in North America."
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Rio-X",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": ["185/65R15", "195/55R16"]
+      },
+      "allSizes": ["185/65R15", "195/55R16"],
+      "status": "MISSING_DATA",
+      "notes": "Russian market X-Line variant. Launched 2020. Not sold in North America."
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Rio5",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LX": ["185/65R14", "195/55R15"],
+        "SX": ["205/45R16"]
+      },
+      "allSizes": ["185/65R14", "195/55R15", "205/45R16"],
+      "status": "MISSING_DATA",
+      "notes": "Rio5 is the hatchback variant of Rio (2nd gen). Same platform as Rio sedan."
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Rio5",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LX": ["185/65R14", "195/55R15"],
+        "SX": ["205/45R16"]
+      },
+      "allSizes": ["185/65R14", "195/55R15", "205/45R16"],
+      "status": "MISSING_DATA",
+      "notes": "Rio5 hatchback. OEM sizes match Rio sedan trims."
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Rio5",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LX": ["185/65R14"],
+        "SX": ["195/55R15", "205/45R16"]
+      },
+      "allSizes": ["185/65R14", "195/55R15", "205/45R16"],
+      "status": "MISSING_DATA",
+      "notes": "Rio5 hatchback."
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Rio5",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "LX": ["185/65R14"],
+        "SX": ["195/55R15", "205/45R16"]
+      },
+      "allSizes": ["185/65R14", "195/55R15", "205/45R16"],
+      "status": "MISSING_DATA",
+      "notes": "Rio5 hatchback."
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Rio5",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SX": ["195/55R15", "205/45R16"]
+      },
+      "allSizes": ["195/55R15", "205/45R16"],
+      "status": "MISSING_DATA",
+      "notes": "Rio5 hatchback SX trim."
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Rio5",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "5 Hatchback": ["195/55R15"]
+      },
+      "allSizes": ["195/55R15"],
+      "status": "MISSING_DATA",
+      "notes": "First year for Rio5 (2nd gen Rio hatchback). Single tire size option."
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/60R18"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"]
+      },
+      "allSizes": ["235/65R17", "235/60R18"],
+      "status": "VALID",
+      "notes": "Matches EX/SX trims. Final year for Sedona before Carnival rebrand."
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/65R17"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"]
+      },
+      "allSizes": ["235/65R17", "235/60R18"],
+      "status": "VALID",
+      "notes": "Matches LX trim"
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/65R17"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"]
+      },
+      "allSizes": ["235/65R17", "235/60R18"],
+      "status": "VALID",
+      "notes": "Matches L/LX trims"
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/60R18"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"]
+      },
+      "allSizes": ["235/65R17", "235/60R18"],
+      "status": "VALID",
+      "notes": "Matches EX/SX trims"
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/60R18"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"]
+      },
+      "allSizes": ["235/65R17", "235/60R18"],
+      "status": "VALID",
+      "notes": "Matches EX/SX trims"
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/65R17"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"]
+      },
+      "allSizes": ["235/65R17", "235/60R18"],
+      "status": "VALID",
+      "notes": "Matches L/LX trims"
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/65R17"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"],
+        "SXL": ["235/55R19"]
+      },
+      "allSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "status": "VALID",
+      "notes": "Matches L/LX trims"
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/60R18"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"],
+        "SXL": ["235/55R19"]
+      },
+      "allSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "status": "VALID",
+      "notes": "Matches EX/SX trims"
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/60R18"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"],
+        "SXL": ["235/55R19"]
+      },
+      "allSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "status": "VALID",
+      "notes": "Matches EX/SX trims"
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/65R17"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"],
+        "SXL": ["235/55R19"]
+      },
+      "allSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "status": "VALID",
+      "notes": "Matches L/LX trims"
+    },
+    {
+      "year": 2016,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/60R18"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"],
+        "SXL": ["235/55R19"]
+      },
+      "allSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "status": "VALID",
+      "notes": "Matches EX/SX trims"
+    },
+    {
+      "year": 2016,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/65R17"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"],
+        "SXL": ["235/55R19"]
+      },
+      "allSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "status": "VALID",
+      "notes": "Matches L/LX trims"
+    },
+    {
+      "year": 2015,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/60R18"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"],
+        "SXL": ["235/55R19"]
+      },
+      "allSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "status": "VALID",
+      "notes": "Matches EX/SX trims. First year of 3rd gen (YP)."
+    },
+    {
+      "year": 2015,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["235/65R17"],
+      "validatedTireSizes": {
+        "EX": ["235/60R18"],
+        "L": ["235/65R17"],
+        "LX": ["235/65R17"],
+        "SX": ["235/60R18"],
+        "SXL": ["235/55R19"]
+      },
+      "allSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "status": "VALID",
+      "notes": "Matches L/LX trims"
+    },
+    {
+      "year": 2014,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["215/70R16"],
+      "validatedTireSizes": {
+        "EX": ["235/60R17"],
+        "LX": ["225/70R16"]
+      },
+      "allSizes": ["225/70R16", "235/60R17"],
+      "status": "MISMATCH",
+      "notes": "Database has 215/70R16 but OEM is 225/70R16 for LX. Width difference."
+    },
+    {
+      "year": 2014,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": {
+        "EX": ["235/60R17"],
+        "LX": ["225/70R16"]
+      },
+      "allSizes": ["225/70R16", "235/60R17"],
+      "status": "MISMATCH",
+      "notes": "Database has 225/60R17 but OEM for EX is 235/60R17. Width difference."
+    },
+    {
+      "year": 2013,
+      "make": "Kia",
+      "model": "Sedona",
+      "currentTireSizes": ["225/60R17"],
+      "validatedTireSizes": {
+        "EX": ["235/60R17"],
+        "LX": ["225/70R16"]
+      },
+      "allSizes": ["225/70R16", "235/60R17"],
+      "status": "MISMATCH",
+      "notes": "Database has 225/60R17 but OEM for EX is 235/60R17. Width difference."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "valid": 34,
+    "mismatch": 9,
+    "partialMatch": 7,
+    "missingData": 24,
+    "noData": 1,
+    "issues": [
+      {
+        "issue": "2007-2010 Optima has 215/55R17 in database but OEM is 215/50R17",
+        "severity": "HIGH",
+        "affectedVehicles": 6,
+        "recommendation": "Update tire sizes to 215/50R17 for V6/SX trims"
+      },
+      {
+        "issue": "2001-2006 Optima has 195/70R14 which may not be valid OEM size for all years",
+        "severity": "MEDIUM",
+        "affectedVehicles": 6,
+        "recommendation": "Verify 195/70R14 against OEM documentation - appears only valid for 2001-2003 LX"
+      },
+      {
+        "issue": "2013-2014 Sedona tire widths off by 10mm",
+        "severity": "MEDIUM",
+        "affectedVehicles": 3,
+        "recommendation": "Update 215/70R16 to 225/70R16 and 225/60R17 to 235/60R17"
+      },
+      {
+        "issue": "Multiple non-US market vehicles (Pregio, Pro-Cee'd, Rio-Cross, Rio-X, Potentia) have no tire data",
+        "severity": "LOW",
+        "affectedVehicles": 24,
+        "recommendation": "Consider removing non-US vehicles from database or adding international tire sizes"
+      },
+      {
+        "issue": "Rio5 (hatchback) missing tire data - same as Rio sedan",
+        "severity": "MEDIUM",
+        "affectedVehicles": 6,
+        "recommendation": "Copy tire sizes from Kia Rio of same year"
+      }
+    ]
+  }
+}

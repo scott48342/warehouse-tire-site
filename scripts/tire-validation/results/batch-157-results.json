@@ -1,0 +1,528 @@
+{
+  "batchId": "157",
+  "validationDate": "2026-04-21T23:00:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 15,
+    "notFoundOnSource": 8,
+    "emptyInDatabase": 49,
+    "discrepanciesFound": 12,
+    "matchesFound": 3
+  },
+  "discrepancies": [
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R17", "235/55R18", "255/45R19", "255/40R20"],
+      "oemTireSizes": ["215/65R17", "235/55R18", "235/50R19", "255/40R20"],
+      "missing": ["235/50R19"],
+      "extra": ["255/45R19"],
+      "notes": "Database has 255/45R19 but tiresize.com shows 235/50R19 for SE trim"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R17", "235/55R18", "255/45R19", "255/40R20"],
+      "oemTireSizes": ["215/65R17", "235/55R18", "235/50R19", "255/45R19", "255/40R20"],
+      "missing": ["235/50R19"],
+      "extra": [],
+      "notes": "Database missing 235/50R19 (SE R-Line Black option)"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "taos",
+      "currentTireSizes": ["215/55R17", "215/50R18"],
+      "oemTireSizes": ["215/55R17", "225/55R17", "215/50R18", "225/50R18", "225/45R19"],
+      "missing": ["225/55R17", "225/50R18", "225/45R19"],
+      "extra": [],
+      "notes": "Database missing 4Motion variant sizes (225-series)"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "passat",
+      "currentTireSizes": ["215/55R16", "215/55R17", "235/45R18", "235/40R19"],
+      "oemTireSizes": ["235/40R19", "215/60R16"],
+      "missing": ["215/60R16"],
+      "extra": ["215/55R16", "215/55R17", "235/45R18"],
+      "notes": "Tiresize.com has limited 2019 trims (only SE R-Line, Wolfsburg). Database sizes may be from other trims or carry-over."
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "passat",
+      "currentTireSizes": ["215/55R16", "215/55R17", "235/45R18", "235/40R19", "215/60R16"],
+      "oemTireSizes": ["235/40R19", "215/60R16", "215/55R17", "235/45R18"],
+      "missing": [],
+      "extra": ["215/55R16"],
+      "notes": "Database has 215/55R16 but tiresize.com does not list it for 2018"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "passat",
+      "currentTireSizes": ["215/55R16", "215/55R17", "235/45R18", "235/40R19"],
+      "oemTireSizes": ["235/40R19", "215/60R16", "215/55R17", "235/45R18"],
+      "missing": ["215/60R16"],
+      "extra": ["215/55R16"],
+      "notes": "Database has 215/55R16, should be 215/60R16 per tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "passat",
+      "currentTireSizes": ["215/55R16", "235/45R17", "235/40R18"],
+      "oemTireSizes": ["235/45R17", "235/40R18"],
+      "missing": [],
+      "extra": ["215/55R16"],
+      "notes": "Database has 215/55R16 but tiresize.com doesn't list it for 2010"
+    },
+    {
+      "year": 2005,
+      "make": "volkswagen",
+      "model": "passat",
+      "currentTireSizes": ["195/65R15", "205/55R16", "235/45R17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "missing": [],
+      "extra": ["235/45R17"],
+      "notes": "Database has 235/45R17, tiresize.com shows 225/45R17 - possible width discrepancy"
+    },
+    {
+      "year": 2004,
+      "make": "volkswagen",
+      "model": "passat",
+      "currentTireSizes": ["195/65R15", "205/55R16", "235/45R17"],
+      "oemTireSizes": null,
+      "missing": [],
+      "extra": [],
+      "notes": "Likely same issue as 2005 - should probably be 225/45R17 not 235/45R17"
+    },
+    {
+      "year": 2003,
+      "make": "volkswagen",
+      "model": "passat",
+      "currentTireSizes": ["195/65R15", "205/55R16", "235/45R17"],
+      "oemTireSizes": null,
+      "missing": [],
+      "extra": [],
+      "notes": "Likely same issue as 2005 - should probably be 225/45R17 not 235/45R17"
+    },
+    {
+      "year": 2002,
+      "make": "volkswagen",
+      "model": "passat",
+      "currentTireSizes": ["195/65R15", "205/55R16", "235/45R17"],
+      "oemTireSizes": null,
+      "missing": [],
+      "extra": [],
+      "notes": "Likely same issue as 2005 - should probably be 225/45R17 not 235/45R17"
+    },
+    {
+      "year": 2001,
+      "make": "volkswagen",
+      "model": "passat",
+      "currentTireSizes": ["195/65R15", "205/55R16", "235/45R17"],
+      "oemTireSizes": null,
+      "missing": [],
+      "extra": [],
+      "notes": "Likely same issue as 2005 - should probably be 225/45R17 not 235/45R17"
+    }
+  ],
+  "emptyInDatabaseNeedData": [
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "r32",
+      "oemTireSizes": null,
+      "notes": "No data found on tiresize.com for R32"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "rabbit",
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "notes": "OEM sizes found - should populate database"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "rabbit",
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "notes": "Assumed same as 2009"
+    },
+    {
+      "year": 2007,
+      "make": "volkswagen",
+      "model": "rabbit",
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "notes": "Assumed same as 2009"
+    },
+    {
+      "year": 2006,
+      "make": "volkswagen",
+      "model": "rabbit",
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/45R17"],
+      "notes": "Assumed same as 2009"
+    },
+    {
+      "year": 2014,
+      "make": "volkswagen",
+      "model": "routan",
+      "oemTireSizes": ["225/65R16", "225/65R17"],
+      "notes": "OEM sizes from 2012 reference"
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "routan",
+      "oemTireSizes": ["225/65R16", "225/65R17"],
+      "notes": "OEM sizes from 2012 reference"
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "routan",
+      "oemTireSizes": ["225/65R16", "225/65R17"],
+      "notes": "Validated from tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "routan",
+      "oemTireSizes": ["225/65R16", "225/65R17"],
+      "notes": "Assumed same as 2012"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "routan",
+      "oemTireSizes": ["225/65R16", "225/65R17"],
+      "notes": "Assumed same as 2012"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "routan",
+      "oemTireSizes": ["225/65R16", "225/65R17"],
+      "notes": "Assumed same as 2012"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "routan",
+      "oemTireSizes": ["225/65R16", "225/65R17"],
+      "notes": "Assumed same as 2012"
+    },
+    {
+      "year": 2004,
+      "make": "volkswagen",
+      "model": "sedan",
+      "oemTireSizes": null,
+      "notes": "Unknown model - may be regional/non-US"
+    },
+    {
+      "year": 2003,
+      "make": "volkswagen",
+      "model": "sedan",
+      "oemTireSizes": null,
+      "notes": "Unknown model - may be regional/non-US"
+    },
+    {
+      "year": 2002,
+      "make": "volkswagen",
+      "model": "sedan",
+      "oemTireSizes": null,
+      "notes": "Unknown model - may be regional/non-US"
+    },
+    {
+      "year": 2001,
+      "make": "volkswagen",
+      "model": "sedan",
+      "oemTireSizes": null,
+      "notes": "Unknown model - may be regional/non-US"
+    },
+    {
+      "year": 2000,
+      "make": "volkswagen",
+      "model": "sedan",
+      "oemTireSizes": null,
+      "notes": "Unknown model - may be regional/non-US"
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "sportvan",
+      "oemTireSizes": null,
+      "notes": "Unknown model - may be regional/non-US"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "sportvan",
+      "oemTireSizes": null,
+      "notes": "Unknown model - may be regional/non-US"
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "sportvan",
+      "oemTireSizes": null,
+      "notes": "Unknown model - may be regional/non-US"
+    },
+    {
+      "year": 2007,
+      "make": "volkswagen",
+      "model": "sportvan",
+      "oemTireSizes": null,
+      "notes": "Unknown model - may be regional/non-US"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "tacqua",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "tacqua",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "tacqua",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "tacqua",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "tacqua",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "taigo",
+      "oemTireSizes": null,
+      "notes": "Europe-market vehicle - not in US database"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "taigo",
+      "oemTireSizes": null,
+      "notes": "Europe-market vehicle - not in US database"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "taigo",
+      "oemTireSizes": null,
+      "notes": "Europe-market vehicle - not in US database"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "taigo",
+      "oemTireSizes": null,
+      "notes": "Europe-market vehicle - not in US database"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "taigo",
+      "oemTireSizes": null,
+      "notes": "Europe-market vehicle - not in US database"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "taos",
+      "oemTireSizes": null,
+      "notes": "Taos didn't launch until 2022 model year in US"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "tayron-gte",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "tayron-gte",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "tayron-gte",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "tayron-gte",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "tharu-xr",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "tharu-xr",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "tharu-xr",
+      "oemTireSizes": null,
+      "notes": "China-market vehicle - not in US database"
+    }
+  ],
+  "notFoundOnTiresizeCom": [
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "passat",
+      "notes": "404 - Year not yet in database"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "passat",
+      "notes": "404 - Year not yet in database"
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "passat",
+      "notes": "404 - Generation gap (2011 NMS model not in tiresize.com)"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "taos",
+      "notes": "404 - Early model year not in database"
+    }
+  ],
+  "validated": [
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R17", "235/55R18", "255/45R19", "255/40R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "See discrepancies"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "currentTireSizes": ["215/65R17", "235/55R18", "255/45R19", "255/40R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "See discrepancies"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "taos",
+      "currentTireSizes": ["215/55R17", "215/50R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same issue as 2022 - missing 4Motion variants"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "taos",
+      "currentTireSizes": ["215/55R17", "215/50R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same issue as 2022 - missing 4Motion variants"
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "taos",
+      "currentTireSizes": ["215/55R17", "215/50R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same issue as 2022 - missing 4Motion variants"
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "taos",
+      "currentTireSizes": ["215/55R17", "215/50R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Same issue as 2022 - missing 4Motion variants"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Fix Passat 2000-2005 tire size",
+      "details": "Change 235/45R17 to 225/45R17 - incorrect width in database"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Fix Passat 2016 tire size",
+      "details": "Change 215/55R16 to 215/60R16 - incorrect aspect ratio"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Add Taos 4Motion sizes",
+      "details": "Add 225/55R17, 225/50R18, 225/45R19 for AWD variants"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Add Tiguan 235/50R19",
+      "details": "Missing SE trim option"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Populate Rabbit data",
+      "details": "Add 195/65R15, 205/55R16, 225/45R17 for 2006-2009"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Populate Routan data",
+      "details": "Add 225/65R16, 225/65R17 for 2008-2014"
+    },
+    {
+      "priority": "LOW",
+      "action": "Review non-US vehicles",
+      "details": "Consider removing tacqua, taigo, tayron-gte, tharu-xr, sedan, sportvan if not serving international markets"
+    },
+    {
+      "priority": "LOW",
+      "action": "Review Passat 2010 extra size",
+      "details": "215/55R16 may be valid from prior generation - verify if intentional"
+    }
+  ]
+}

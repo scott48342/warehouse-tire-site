@@ -1,0 +1,936 @@
+{
+  "batchId": "05",
+  "processedAt": "2026-04-21T21:37:00.000Z",
+  "results": [
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "A5",
+      "trims": [
+        {"trim": "Coupe 2.0T Premium", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Coupe 2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Coupe 2.0T Premium Plus (19\" opt)", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 33}, "tireSize": "255/35R19"},
+        {"trim": "Coupe 2.0T Prestige", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Coupe 2.0T Prestige (19\" opt)", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 33}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet 2.0T FrontTrak Premium", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet 2.0T FrontTrak Premium Plus", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet 2.0T FrontTrak Prestige", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet 2.0T quattro Premium", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet 2.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet 2.0T quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "A5",
+      "trims": [
+        {"trim": "Coupe 2.0T Premium", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Coupe 2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Coupe 2.0T Prestige", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Coupe 2.0T S-Line", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 33}, "tireSize": "255/35R19"},
+        {"trim": "Cabriolet 2.0T FrontTrak Premium", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet 2.0T quattro Premium", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "Cabriolet 2.0T quattro S-Line", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 33}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "A5",
+      "trims": [
+        {"trim": "2.0T Premium", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "2.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "2.0T Prestige", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "2.0T S-Line", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 33}, "tireSize": "255/35R19"},
+        {"trim": "3.2 quattro", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "3.2 quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "3.2 quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "3.2 quattro S-Line", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 33}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "A5",
+      "trims": [
+        {"trim": "3.2 quattro", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "3.2 quattro (18\" opt)", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "3.2 quattro S-Line", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 33}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "A5",
+      "trims": [
+        {"trim": "3.2 quattro", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "3.2 quattro (18\" opt)", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "3.2 quattro S-Line", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 33}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "A5",
+      "trims": [
+        {"trim": "3.2 quattro", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "3.2 quattro (18\" opt)", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 29}, "tireSize": "245/40R18"},
+        {"trim": "3.2 quattro S-Line", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 33}, "tireSize": "255/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium Plus (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"},
+        {"trim": "Allroad", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium Plus (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"},
+        {"trim": "Allroad", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium Plus (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Allroad", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "245/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.0T FWD Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T FWD Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "2.0T quattro Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T quattro Sport", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.0T FWD", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Competition", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "255/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.0T FWD Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0 TDI quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0 TDI quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.0T FWD Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0 TDI quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0 TDI quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.0T FWD Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T quattro Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0 TDI quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0 TDI quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "3.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.0T FWD Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T quattro Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.0T FWD Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T quattro Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "225/55R17"},
+        {"trim": "2.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/45R18"},
+        {"trim": "3.0T quattro Prestige (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "3.2 Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "3.2 Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "4.2 Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "4.2 Prestige (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/35R19"},
+        {"trim": "Avant 3.0T Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "Avant 3.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "Avant 3.0T Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "3.0T Quattro Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "3.0T Quattro Premium (18\" opt)", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "3.0T Quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "3.0T Quattro Premium Plus (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/35R19"},
+        {"trim": "3.0T Quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "3.0T Quattro Prestige (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/35R19"},
+        {"trim": "3.2 FrontTrak Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "3.2 FrontTrak Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "4.2 Quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "Avant 3.0T Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "Avant 3.0T Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "Avant 3.0T Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "3.0T Quattro Premium", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "3.0T Quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "3.0T Quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "3.0T Quattro Prestige (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/35R19"},
+        {"trim": "4.2 Quattro Prestige", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "3.2 FWD", "wheelSize": {"diameter": 16, "width": 7.5, "offset": 35}, "tireSize": "225/55R16"},
+        {"trim": "3.2 Quattro", "wheelSize": {"diameter": 16, "width": 7.5, "offset": 35}, "tireSize": "225/55R16"},
+        {"trim": "3.2 Quattro S-Line", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "4.2 Quattro", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "4.2 Quattro S-Line", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "3.2 FWD", "wheelSize": {"diameter": 16, "width": 7.5, "offset": 35}, "tireSize": "225/55R16"},
+        {"trim": "3.2 Quattro", "wheelSize": {"diameter": 16, "width": 7.5, "offset": 35}, "tireSize": "225/55R16"},
+        {"trim": "3.2 Quattro S-Line", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "4.2 Quattro", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "4.2 Quattro S-Line", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "Avant 3.2 Quattro", "wheelSize": {"diameter": 16, "width": 7.5, "offset": 35}, "tireSize": "225/55R16"},
+        {"trim": "Avant 3.2 Quattro S-Line", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "3.2 FWD", "wheelSize": {"diameter": 16, "width": 7.5, "offset": 35}, "tireSize": "225/55R16"},
+        {"trim": "3.2 Quattro", "wheelSize": {"diameter": 16, "width": 7.5, "offset": 35}, "tireSize": "225/55R16"},
+        {"trim": "3.2 Quattro S-Line", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "4.2 Quattro", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "4.2 Quattro S-Line", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "Avant 3.2 Quattro", "wheelSize": {"diameter": 16, "width": 7.5, "offset": 35}, "tireSize": "225/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "3.2 Quattro", "wheelSize": {"diameter": 16, "width": 7.5, "offset": 35}, "tireSize": "225/55R16"},
+        {"trim": "3.2 Quattro (17\" opt)", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "3.2 Quattro (18\" opt)", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"},
+        {"trim": "3.2 Quattro Sport Package", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "4.2 Quattro", "wheelSize": {"diameter": 17, "width": 8.0, "offset": 26}, "tireSize": "245/45R17"},
+        {"trim": "4.2 Quattro Sport Package", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.7T Quattro", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 35}, "tireSize": "205/55R16"},
+        {"trim": "2.7T Quattro (17\" opt)", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "225/50R17"},
+        {"trim": "3.0 Quattro", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 35}, "tireSize": "205/55R16"},
+        {"trim": "3.0 Quattro (17\" opt)", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "225/50R17"},
+        {"trim": "4.2 Quattro", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "235/45R17"},
+        {"trim": "4.2 Quattro (18\" opt)", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.7T Quattro", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 35}, "tireSize": "205/55R16"},
+        {"trim": "2.7T Quattro (17\" opt)", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "225/50R17"},
+        {"trim": "3.0 Quattro", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 35}, "tireSize": "205/55R16"},
+        {"trim": "4.2 Quattro", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "235/45R17"},
+        {"trim": "4.2 Quattro (18\" opt)", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.7T Quattro", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 35}, "tireSize": "205/55R16"},
+        {"trim": "2.7T Quattro (17\" opt)", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "225/50R17"},
+        {"trim": "3.0 Quattro", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 35}, "tireSize": "205/55R16"},
+        {"trim": "4.2 Quattro", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "235/45R17"},
+        {"trim": "4.2 Quattro (18\" opt)", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.7T Quattro", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 35}, "tireSize": "205/55R16"},
+        {"trim": "2.7T Quattro (17\" opt)", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "225/50R17"},
+        {"trim": "2.8 Quattro", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 35}, "tireSize": "205/55R16"},
+        {"trim": "4.2 Quattro", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "235/45R17"},
+        {"trim": "4.2 Quattro (18\" opt)", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "A6",
+      "trims": [
+        {"trim": "2.7T Quattro", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 35}, "tireSize": "205/55R16"},
+        {"trim": "2.7T Quattro (17\" opt)", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "225/50R17"},
+        {"trim": "2.8 Quattro", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 35}, "tireSize": "205/55R16"},
+        {"trim": "4.2 Quattro", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 35}, "tireSize": "235/45R17"},
+        {"trim": "4.2 Quattro (18\" opt)", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 26}, "tireSize": "245/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "A6 e-tron",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "frontTireSize": "235/45R19", "rearTireSize": "265/40R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 40}, "frontTireSize": "235/45R20", "rearTireSize": "265/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 40}, "frontTireSize": "235/45R20", "rearTireSize": "265/40R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A6 e-tron",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "frontTireSize": "235/45R19", "rearTireSize": "265/40R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 40}, "frontTireSize": "235/45R20", "rearTireSize": "265/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 40}, "frontTireSize": "235/45R20", "rearTireSize": "265/40R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A6 e-tron",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "frontTireSize": "235/45R19", "rearTireSize": "265/40R19"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 40}, "frontTireSize": "235/45R20", "rearTireSize": "265/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 40}, "frontTireSize": "235/45R20", "rearTireSize": "265/40R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2024 A6 e-tron data based on 2025 model - not officially released in US until late 2024"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus PHEV", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"},
+        {"trim": "Prestige PHEV", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus PHEV", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"},
+        {"trim": "Prestige PHEV", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium Plus (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Premium Plus (20\" opt)", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "Prestige (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Premium Plus (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Prestige (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Premium Plus (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Prestige (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"},
+        {"trim": "3.0T Competition", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0 TDI Premium Plus (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0 TDI Premium Plus (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "3.0 TDI Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0 TDI Premium Plus (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"},
+        {"trim": "3.0 TDI Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "3.0T Premium", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 30}, "tireSize": "255/45R18"},
+        {"trim": "3.0T Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Sport Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0T Sport Package (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "3.0 Premium", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 30}, "tireSize": "255/45R18"},
+        {"trim": "3.0 Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0 Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0 Sport Package", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0 Sport Package (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/35R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "3.0 Premium", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 30}, "tireSize": "255/45R18"},
+        {"trim": "3.0 Premium Plus", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"},
+        {"trim": "3.0 Prestige", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "2011 A7 was only available outside US (EU/other markets); US sales began 2012"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "A7",
+      "trims": [
+        {"trim": "3.0 TFSI", "wheelSize": {"diameter": 18, "width": 8.5, "offset": 30}, "tireSize": "255/45R18"},
+        {"trim": "3.0 TFSI (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "255/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "low",
+      "notes": "2010 A7 pre-production year; limited data available"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A7L",
+      "trims": [
+        {"trim": "45 TFSi", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 40}, "tireSize": "225/55R18"},
+        {"trim": "45 TFSi (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "45 TFSi (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "45 TFSi quattro", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 40}, "tireSize": "225/55R18"},
+        {"trim": "45 TFSi quattro (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "55 TFSi quattro", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "55 TFSi quattro (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "A7L is China-exclusive long wheelbase variant"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A7L",
+      "trims": [
+        {"trim": "45 TFSi", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 40}, "tireSize": "225/55R18"},
+        {"trim": "45 TFSi (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "45 TFSi (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "45 TFSi quattro", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 40}, "tireSize": "225/55R18"},
+        {"trim": "55 TFSi quattro", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "55 TFSi quattro (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "A7L is China-exclusive long wheelbase variant"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "A7L",
+      "trims": [
+        {"trim": "45 TFSi", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 40}, "tireSize": "225/55R18"},
+        {"trim": "45 TFSi (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "45 TFSi (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "45 TFSi quattro", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 40}, "tireSize": "225/55R18"},
+        {"trim": "55 TFSi quattro", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "55 TFSi quattro (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "A7L is China-exclusive long wheelbase variant"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "A7L",
+      "trims": [
+        {"trim": "45 TFSi", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 40}, "tireSize": "225/55R18"},
+        {"trim": "45 TFSi (19\" opt)", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "45 TFSi (20\" opt)", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 40}, "tireSize": "255/40R20"},
+        {"trim": "45 TFSi quattro", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 40}, "tireSize": "225/55R18"},
+        {"trim": "55 TFSi quattro", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 40}, "tireSize": "245/45R19"},
+        {"trim": "55 TFSi quattro (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 40}, "tireSize": "255/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "A7L is China-exclusive long wheelbase variant; first model year"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "A8",
+      "trims": [
+        {"trim": "L", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/40R20"},
+        {"trim": "L (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 40}, "tireSize": "265/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A8",
+      "trims": [
+        {"trim": "L", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 37}, "tireSize": "265/40R20"},
+        {"trim": "L (21\" opt)", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 40}, "tireSize": "265/35R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "uniqueYearMakeModels": 55,
+    "staggeredSetups": 3,
+    "chinaOnlyModels": ["A7L"],
+    "dataQuality": {
+      "high": 52,
+      "medium": 2,
+      "low": 1
+    }
+  }
+}

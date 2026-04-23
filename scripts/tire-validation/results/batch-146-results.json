@@ -1,0 +1,582 @@
+{
+  "batchId": "146",
+  "validatedAt": "2026-04-21T22:56:00Z",
+  "source": "tiresize.com",
+  "totalVehicles": 75,
+  "summary": {
+    "validated": 41,
+    "discrepancies": 23,
+    "notOnTiresize": 20,
+    "modelNameMismatch": 9
+  },
+  "discrepancies": [
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "tiresizeOEM": ["265/75R16", "265/70R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 245 should be 265"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "tiresizeOEM": ["265/75R16", "265/70R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 245 should be 265"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "tiresizeOEM": ["265/75R16", "265/70R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 245 should be 265"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "tiresizeOEM": ["265/75R16", "265/70R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 245 should be 265"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "tiresizeOEM": ["265/75R16", "265/70R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 245 should be 265"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "tiresizeOEM": ["265/75R16", "265/70R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 245 should be 265"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "fj-cruiser",
+      "currentTireSizes": ["245/75R16", "265/70R17"],
+      "tiresizeOEM": ["265/75R16", "265/70R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 245 should be 265"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "gr-corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "tiresizeOEM": ["235/40R18", "245/40R18"],
+      "issue": "COMPLETELY_WRONG",
+      "details": "All sizes wrong. 195/65R15 and 205/55R16 are regular Corolla sizes, not GR Corolla. 225/40R18 should be 235/40R18"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "gr-corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "tiresizeOEM": ["235/40R18"],
+      "issue": "COMPLETELY_WRONG",
+      "details": "All sizes wrong. 195/65R15 and 205/55R16 are regular Corolla sizes, not GR Corolla. 225/40R18 should be 235/40R18"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "gr-corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "tiresizeOEM": ["235/40R18", "245/40R18"],
+      "issue": "COMPLETELY_WRONG",
+      "details": "All sizes wrong. 195/65R15 and 205/55R16 are regular Corolla sizes, not GR Corolla. 225/40R18 should be 235/40R18 or 245/40R18 (Morizo)"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "gr-corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "tiresizeOEM": ["235/40R18"],
+      "issue": "COMPLETELY_WRONG",
+      "details": "Note: GR Corolla started in 2023 model year. 2022 may not exist as GR Corolla"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "grand-highlander",
+      "currentTireSizes": ["255/65R18", "255/55R20"],
+      "tiresizeOEM": ["255/65R18", "255/55R20"],
+      "issue": "VALIDATED",
+      "details": "2026 sizes match (likely copied from 2024/2025 which have same)"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "grand-highlander",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "tiresizeOEM": ["255/65R18", "255/55R20"],
+      "issue": "WRONG_WIDTH",
+      "details": "Width 235 should be 255"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "grand-highlander",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "tiresizeOEM": ["255/65R18", "255/55R20"],
+      "issue": "WRONG_WIDTH",
+      "details": "Width 235 should be 255"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["245/60R18"],
+      "tiresizeOEM": ["245/60R18", "245/55R19"],
+      "issue": "MISSING_SIZE",
+      "details": "Missing 245/55R19 for Limited/Platinum trims"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["245/60R18"],
+      "tiresizeOEM": ["245/60R18", "245/55R19"],
+      "issue": "MISSING_SIZE",
+      "details": "Missing 245/55R19 for Limited trims (likely)"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["245/60R18"],
+      "tiresizeOEM": ["245/60R18", "245/55R19"],
+      "issue": "MISSING_SIZE",
+      "details": "Missing 245/55R19 for Limited trims (likely)"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["225/65R17", "245/55R19"],
+      "tiresizeOEM": ["245/65R17", "245/55R19"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 225/65R17 should be 245/65R17"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["225/65R17", "245/55R19"],
+      "tiresizeOEM": ["245/65R17", "245/55R19"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 225/65R17 should be 245/65R17"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "tiresizeOEM": ["225/70R16", "225/65R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 215/70R16 should be 225/70R16"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "tiresizeOEM": ["225/70R16", "225/65R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 215/70R16 should be 225/70R16"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "tiresizeOEM": ["225/70R16", "225/65R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 215/70R16 should be 225/70R16"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "tiresizeOEM": ["225/70R16", "225/65R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 215/70R16 should be 225/70R16"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "tiresizeOEM": ["225/70R16", "225/65R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 215/70R16 should be 225/70R16"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "tiresizeOEM": ["225/70R16", "225/65R17"],
+      "issue": "WRONG_WIDTH",
+      "details": "First size 215/70R16 should be 225/70R16"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "tiresizeOEM": ["225/70R16"],
+      "issue": "WRONG_WIDTH_AND_EXTRA",
+      "details": "First size 215/70R16 should be 225/70R16. Second size 225/65R17 not OEM for 2001"
+    }
+  ],
+  "validated": [
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "gr-corolla",
+      "currentTireSizes": ["235/40R18"],
+      "tiresizeOEM": ["235/40R18"],
+      "status": "OK"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "gr86",
+      "currentTireSizes": ["215/45ZR17", "215/40ZR18"],
+      "tiresizeOEM": ["215/45R17", "215/40R18"],
+      "status": "OK",
+      "note": "ZR speed rating equivalent"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "gr86",
+      "currentTireSizes": ["215/45ZR17", "215/40ZR18"],
+      "tiresizeOEM": ["215/45R17", "215/40R18"],
+      "status": "OK"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "gr86",
+      "currentTireSizes": ["215/45ZR17", "215/40ZR18"],
+      "tiresizeOEM": ["215/45R17", "215/40R18"],
+      "status": "OK"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "gr86",
+      "currentTireSizes": ["215/45ZR17", "215/40ZR18"],
+      "tiresizeOEM": ["215/45R17", "215/40R18"],
+      "status": "OK"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "gr86",
+      "currentTireSizes": ["215/45ZR17", "215/40ZR18"],
+      "tiresizeOEM": ["215/45R17", "215/40R18"],
+      "status": "OK"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "grand-highlander",
+      "currentTireSizes": ["255/65R18", "255/55R20"],
+      "tiresizeOEM": ["255/65R18", "255/55R20"],
+      "status": "OK"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "tiresizeOEM": ["235/65R18", "235/55R20"],
+      "status": "OK"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "tiresizeOEM": ["235/65R18", "235/55R20"],
+      "status": "OK"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "tiresizeOEM": ["235/65R18", "235/55R20"],
+      "status": "OK"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "tiresizeOEM": ["235/65R18", "235/55R20"],
+      "status": "OK"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "tiresizeOEM": ["235/65R18", "235/55R20"],
+      "status": "OK"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "tiresizeOEM": ["235/65R18", "235/55R20"],
+      "status": "OK"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "tiresizeOEM": ["235/65R18", "235/55R20"],
+      "status": "OK"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["245/60R18", "245/55R19"],
+      "tiresizeOEM": ["245/60R18", "245/55R19"],
+      "status": "OK"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["245/60R18", "245/55R19"],
+      "tiresizeOEM": ["245/60R18", "245/55R19"],
+      "status": "OK"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["245/60R18", "245/55R19"],
+      "tiresizeOEM": ["245/60R18", "245/55R19"],
+      "status": "OK"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["245/65R17", "245/55R19"],
+      "tiresizeOEM": ["245/65R17", "245/55R19"],
+      "status": "OK"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["245/65R17", "245/55R19"],
+      "tiresizeOEM": ["245/65R17", "245/55R19"],
+      "status": "OK"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["245/65R17", "245/55R19"],
+      "tiresizeOEM": ["245/65R17", "245/55R19"],
+      "status": "OK"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "highlander",
+      "currentTireSizes": ["245/65R17", "245/55R19"],
+      "tiresizeOEM": ["245/65R17", "245/55R19"],
+      "status": "OK"
+    }
+  ],
+  "notOnTiresize": [
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "funcargo",
+      "reason": "JDM vehicle (Japan Domestic Market) - not sold in US"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "funcargo",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "funcargo",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "funcargo",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "funcargo",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "funcargo",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "gaia",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "gaia",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "gaia",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "gaia",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "gaia",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "grand-hiace",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "grand-hiace",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "grand-hiace",
+      "reason": "JDM vehicle"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "hilux-champ",
+      "reason": "International market vehicle (Thailand)"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "hilux-champ",
+      "reason": "International market vehicle (Thailand)"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "hilux-champ",
+      "reason": "International market vehicle (Thailand)"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "hilux-rangga",
+      "reason": "International market vehicle (Indonesia)"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "hilux-rangga",
+      "reason": "International market vehicle (Indonesia)"
+    }
+  ],
+  "modelNameMismatch": [
+    {
+      "years": "2012-2020",
+      "batchModel": "gt-86",
+      "tiresizeModel": "86",
+      "note": "Sold as 'Toyota 86' in US market, 'GT86' in Europe. All 9 years have empty tire sizes in batch",
+      "tiresizeOEM": ["215/45R17", "215/40R18"],
+      "recommendation": "Rename model to '86' and add correct tire sizes"
+    },
+    {
+      "year": 2021,
+      "batchModel": "gr86",
+      "note": "GR86 started in 2022, not 2021. 2021 was still 'Toyota 86'"
+    }
+  ],
+  "criticalIssues": [
+    {
+      "severity": "HIGH",
+      "issue": "FJ Cruiser all years (2007-2013): 245/75R16 should be 265/75R16",
+      "impact": "20mm tire width difference - customers get wrong fitment"
+    },
+    {
+      "severity": "HIGH", 
+      "issue": "GR Corolla (2022-2025): Has regular Corolla sizes instead of GR Corolla",
+      "impact": "GR Corolla is a performance car with specific tire requirements. 195/65R15 and 205/55R16 are completely wrong"
+    },
+    {
+      "severity": "HIGH",
+      "issue": "Grand Highlander (2024-2025): 235mm width should be 255mm",
+      "impact": "20mm tire width difference"
+    },
+    {
+      "severity": "MEDIUM",
+      "issue": "Highlander 2001-2007: 215/70R16 should be 225/70R16",
+      "impact": "10mm tire width difference"
+    },
+    {
+      "severity": "MEDIUM",
+      "issue": "Highlander 2008-2009: 225/65R17 should be 245/65R17",
+      "impact": "20mm tire width difference"
+    },
+    {
+      "severity": "LOW",
+      "issue": "GT-86 (2012-2020): Model should be renamed to '86' for US market",
+      "impact": "Empty tire sizes need to be populated: 215/45R17, 215/40R18"
+    }
+  ]
+}

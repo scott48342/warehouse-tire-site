@@ -1,0 +1,1311 @@
+{
+  "batchId": "25",
+  "processedAt": "2026-04-21T21:01:00Z",
+  "totalVehicles": 75,
+  "successCount": 75,
+  "failureCount": 0,
+  "results": [
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 24 },
+          { "diameter": 18, "width": 8.5, "offset": 26 },
+          { "diameter": 20, "width": 9, "offset": 28 },
+          { "diameter": 22, "width": 9, "offset": 28 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMTT1 2019-2022",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 24 },
+          { "diameter": 18, "width": 8.5, "offset": 26 },
+          { "diameter": 20, "width": 9, "offset": 28 },
+          { "diameter": 22, "width": 9, "offset": 28 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMTT1 2019-2022",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 17, "width": 8, "offset": 24 },
+          { "diameter": 18, "width": 8, "offset": 24 },
+          { "diameter": 20, "width": 9, "offset": 24 },
+          { "diameter": 22, "width": 9, "offset": 24 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMTK2 2014-2018",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 17, "width": 8, "offset": 24 },
+          { "diameter": 18, "width": 8, "offset": 24 },
+          { "diameter": 20, "width": 9, "offset": 24 },
+          { "diameter": 22, "width": 9, "offset": 24 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMTK2 2014-2015",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Sierra 1500 Classic",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "generation": "GMT800 Classic",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Sierra 1500 Limited",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 24 },
+          { "diameter": 18, "width": 8.5, "offset": 26 },
+          { "diameter": 20, "width": 9, "offset": 28 },
+          { "diameter": 22, "width": 9, "offset": 28 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMTT1 Limited (carryover)",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Sierra 1500 Limited",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 17, "width": 8, "offset": 24 },
+          { "diameter": 18, "width": 8, "offset": 24 },
+          { "diameter": 20, "width": 9, "offset": 24 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMTK2 Limited (carryover)",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Sierra 2500HD Classic",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "wheel-sizes.com, wheelssize.com",
+      "generation": "GMT800 Classic",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Sierra 3500 Classic",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "wheelssize.com, performancelifts.com",
+      "generation": "GMT800 Classic",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Sonoma",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 50 },
+          { "diameter": 16, "width": 8, "offset": -6 }
+        ]
+      },
+      "source": "detroitwheelandtire.com, factorywheelreplacement.com",
+      "generation": "1994-2004",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Sonoma",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 50 },
+          { "diameter": 16, "width": 8, "offset": -6 }
+        ]
+      },
+      "source": "detroitwheelandtire.com, factorywheelreplacement.com",
+      "generation": "1994-2004",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Sonoma",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 50 },
+          { "diameter": 16, "width": 8, "offset": -6 }
+        ]
+      },
+      "source": "detroitwheelandtire.com, factorywheelreplacement.com",
+      "generation": "1994-2004",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Sonoma",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 50 },
+          { "diameter": 16, "width": 8, "offset": -6 }
+        ]
+      },
+      "source": "detroitwheelandtire.com, factorywheelreplacement.com",
+      "generation": "1994-2004",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Sonoma",
+      "wheelSpecs": {
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 50 },
+          { "diameter": 16, "width": 8, "offset": -6 }
+        ]
+      },
+      "source": "detroitwheelandtire.com, factorywheelreplacement.com",
+      "generation": "1994-2004",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "GMC-badged Suburban (rare)"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "GMC-badged Suburban (rare)"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "GMC-badged Suburban (rare)"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "GMC-badged Suburban (rare)"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "GMC-badged Suburban (rare)"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "GMC-badged Suburban (rare)"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Suburban 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "GMC-badged Suburban (rare)"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, buytruckwheels.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, buytruckwheels.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, buytruckwheels.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, buytruckwheels.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, buytruckwheels.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, buytruckwheels.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Suburban 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, buytruckwheels.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2026,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 41 },
+          { "diameter": 18, "width": 7, "offset": 43 },
+          { "diameter": 19, "width": 7.5, "offset": 46 },
+          { "diameter": 20, "width": 8, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM D2XX 2018+",
+      "confidence": "medium",
+      "note": "Projected based on 2022-2025 specs"
+    },
+    {
+      "year": 2025,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 41 },
+          { "diameter": 18, "width": 7, "offset": 43 },
+          { "diameter": 19, "width": 7.5, "offset": 46 },
+          { "diameter": 20, "width": 8, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM D2XX 2018+",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 41 },
+          { "diameter": 18, "width": 7, "offset": 43 },
+          { "diameter": 19, "width": 7.5, "offset": 46 },
+          { "diameter": 20, "width": 8, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM D2XX 2018+",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 41 },
+          { "diameter": 18, "width": 7, "offset": 43 },
+          { "diameter": 19, "width": 7.5, "offset": 46 },
+          { "diameter": 20, "width": 8, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM D2XX 2018+",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 41 },
+          { "diameter": 18, "width": 7, "offset": 43 },
+          { "diameter": 19, "width": 7.5, "offset": 46 },
+          { "diameter": 20, "width": 8, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM D2XX 2018+",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 41 },
+          { "diameter": 18, "width": 7, "offset": 43 },
+          { "diameter": 19, "width": 7.5, "offset": 46 },
+          { "diameter": 20, "width": 8, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM D2XX 2018-2021",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 41 },
+          { "diameter": 18, "width": 7, "offset": 43 },
+          { "diameter": 19, "width": 7.5, "offset": 46 },
+          { "diameter": 20, "width": 8, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com, wheelsynergy.com",
+      "generation": "GM D2XX 2018-2021",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 41 },
+          { "diameter": 18, "width": 7, "offset": 43 },
+          { "diameter": 19, "width": 7.5, "offset": 46 },
+          { "diameter": 20, "width": 8, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM D2XX 2018-2021",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 41 },
+          { "diameter": 18, "width": 7, "offset": 43 },
+          { "diameter": 19, "width": 7.5, "offset": 46 },
+          { "diameter": 20, "width": 8, "offset": 46 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM D2XX 2018-2021",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 43 },
+          { "diameter": 18, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7.5, "offset": 43 },
+          { "diameter": 20, "width": 7.5, "offset": 43 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM Theta 2010-2017",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 43 },
+          { "diameter": 18, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7.5, "offset": 43 },
+          { "diameter": 20, "width": 7.5, "offset": 43 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM Theta 2010-2017",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 43 },
+          { "diameter": 18, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7.5, "offset": 43 },
+          { "diameter": 20, "width": 7.5, "offset": 43 }
+        ]
+      },
+      "source": "tirewheelguide.com, hubcaphaven.com",
+      "generation": "GM Theta 2010-2017",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 43 },
+          { "diameter": 18, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7.5, "offset": 43 },
+          { "diameter": 20, "width": 7.5, "offset": 43 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM Theta 2010-2017",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 43 },
+          { "diameter": 18, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7.5, "offset": 43 },
+          { "diameter": 20, "width": 7.5, "offset": 43 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM Theta 2010-2017",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 43 },
+          { "diameter": 18, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7.5, "offset": 43 },
+          { "diameter": 20, "width": 7.5, "offset": 43 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM Theta 2010-2017",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 43 },
+          { "diameter": 18, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7.5, "offset": 43 },
+          { "diameter": 20, "width": 7.5, "offset": 43 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM Theta 2010-2017",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Terrain",
+      "wheelSpecs": {
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 43 },
+          { "diameter": 18, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7, "offset": 46 },
+          { "diameter": 19, "width": 7.5, "offset": 43 },
+          { "diameter": 20, "width": 7.5, "offset": 43 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GM Theta 2010-2017",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Yukon XL",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 26 },
+          { "diameter": 20, "width": 9, "offset": 28 },
+          { "diameter": 22, "width": 9, "offset": 28 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMTT1 2021+",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Yukon XL",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 26 },
+          { "diameter": 20, "width": 9, "offset": 28 },
+          { "diameter": 22, "width": 9, "offset": 28 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMTT1 2021-2023",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Yukon XL",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 26 },
+          { "diameter": 20, "width": 9, "offset": 28 },
+          { "diameter": 22, "width": 9, "offset": 28 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMTT1 2021-2023",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "GMC",
+      "model": "Yukon XL",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 18, "width": 8.5, "offset": 26 },
+          { "diameter": 20, "width": 9, "offset": 28 },
+          { "diameter": 22, "width": 9, "offset": 28 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMTT1 2021-2023",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 18, "width": 8, "offset": 31 },
+          { "diameter": 20, "width": 8.5, "offset": 31 },
+          { "diameter": 22, "width": 9, "offset": 25 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT900 2007-2014",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 18, "width": 8, "offset": 31 },
+          { "diameter": 20, "width": 8.5, "offset": 31 },
+          { "diameter": 22, "width": 9, "offset": 25 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT900 2007-2014",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 18, "width": 8, "offset": 31 },
+          { "diameter": 20, "width": 8.5, "offset": 31 },
+          { "diameter": 22, "width": 9, "offset": 25 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT900 2007-2014",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 18, "width": 8, "offset": 31 },
+          { "diameter": 20, "width": 8.5, "offset": 31 },
+          { "diameter": 22, "width": 9, "offset": 25 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT900 2007-2014",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 18, "width": 8, "offset": 31 },
+          { "diameter": 20, "width": 8.5, "offset": 31 },
+          { "diameter": 22, "width": 9, "offset": 25 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT900 2007-2014",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 18, "width": 8, "offset": 31 },
+          { "diameter": 20, "width": 8.5, "offset": 31 },
+          { "diameter": 22, "width": 9, "offset": 25 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT900 2007-2014",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 18, "width": 8, "offset": 31 },
+          { "diameter": 20, "width": 8.5, "offset": 31 },
+          { "diameter": 22, "width": 9, "offset": 25 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT900 2007-2014",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 17, "width": 7.5, "offset": 31 },
+          { "diameter": 18, "width": 8, "offset": 31 },
+          { "diameter": 20, "width": 8.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT900 2007-2014",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Yukon XL 1500",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 31 },
+          { "diameter": 16, "width": 7, "offset": 31 },
+          { "diameter": 17, "width": 7.5, "offset": 31 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, originalwheels.com",
+      "generation": "GMT900 2007-2013",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, originalwheels.com",
+      "generation": "GMT900 2007-2013",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, originalwheels.com",
+      "generation": "GMT900 2007-2013",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, originalwheels.com",
+      "generation": "GMT900 2007-2013",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, originalwheels.com",
+      "generation": "GMT900 2007-2013",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, originalwheels.com",
+      "generation": "GMT900 2007-2013",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com, originalwheels.com",
+      "generation": "GMT900 2007-2013",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Yukon XL 2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 17, "width": 7.5, "offset": 44 }
+        ]
+      },
+      "source": "vehiclefixation.com",
+      "generation": "GMT800 2000-2006",
+      "confidence": "high",
+      "note": "8-lug heavy duty"
+    }
+  ]
+}

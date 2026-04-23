@@ -1,0 +1,1220 @@
+{
+  "batchId": "78",
+  "processedAt": "2026-04-21T22:12:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "XF",
+      "currentTireSizes": ["225/55R17", "255/45R18", "275/35R20"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "staggeredSizes": [{"front": "255/35R20", "rear": "285/30R20"}],
+      "trims": [
+        {"trim": "Luxury", "sizes": ["245/45R18", "245/40R19", "255/35R20"]},
+        {"trim": "Premium Luxury", "sizes": ["245/40R19", "255/35R20"]},
+        {"trim": "Supercharged", "sizes": [{"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "XF launched as 2009 model year. 2007 may be incorrect - XF production started late 2007 for 2008 model year in some markets. Using 2009 data as reference.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2025,
+      "make": "Jaguar",
+      "model": "XFL",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "255/35R20"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "R-Dynamic SE", "sizes": ["245/40R19", "255/35R20"]}
+      ],
+      "notes": "XFL is China-market long wheelbase XF. Uses same tire sizes as standard XF.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2024,
+      "make": "Jaguar",
+      "model": "XFL",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "255/35R20"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "R-Dynamic SE", "sizes": ["245/40R19", "255/35R20"]}
+      ],
+      "notes": "XFL is China-market long wheelbase XF. Uses same tire sizes as standard XF.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2023,
+      "make": "Jaguar",
+      "model": "XFL",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "255/35R20"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "R-Dynamic SE", "sizes": ["245/40R19", "255/35R20"]},
+        {"trim": "S", "sizes": ["245/45R18"]},
+        {"trim": "SE", "sizes": ["245/40R19", "255/35R20"]}
+      ],
+      "notes": "XFL is China-market long wheelbase XF. Uses same tire sizes as standard XF.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2022,
+      "make": "Jaguar",
+      "model": "XFL",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "245/45R18", "255/35R20"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "R-Dynamic SE", "sizes": ["245/40R19", "255/35R20"]},
+        {"trim": "S", "sizes": ["245/45R18"]},
+        {"trim": "SE", "sizes": ["245/40R19", "255/35R20"]}
+      ],
+      "notes": "XFL is China-market long wheelbase XF. Uses same tire sizes as standard XF.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "XFL",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "245/45R18", "255/35R20"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "R-Dynamic SE", "sizes": ["245/40R19", "255/35R20"]},
+        {"trim": "S", "sizes": ["245/45R18"]},
+        {"trim": "SE", "sizes": ["245/40R19", "255/35R20"]}
+      ],
+      "notes": "XFL is China-market long wheelbase XF. Uses same tire sizes as standard XF.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "XFL",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "245/45R18", "255/35R20"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Checkered Flag", "sizes": ["245/40R19", "255/35R20"]},
+        {"trim": "Premium", "sizes": ["245/45R18", "245/40R19"]},
+        {"trim": "Prestige", "sizes": ["245/40R19", "255/35R20"]},
+        {"trim": "S", "sizes": ["255/35R20"]}
+      ],
+      "notes": "XFL is China-market long wheelbase XF. Uses same tire sizes as standard XF.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2022,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/45R18", "275/35R20", "275/30R21"],
+      "validatedTireSizes": [],
+      "staggeredSizes": [],
+      "trims": [],
+      "notes": "XJ production ended in 2019. 2022 XJ does not exist. Invalid year.",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/45R18", "275/35R20", "275/30R21"],
+      "validatedTireSizes": [],
+      "staggeredSizes": [],
+      "trims": [],
+      "notes": "XJ production ended in 2019. 2021 XJ does not exist. Invalid year.",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/45R18", "275/35R20", "275/30R21"],
+      "validatedTireSizes": [],
+      "staggeredSizes": [],
+      "trims": [],
+      "notes": "XJ production ended in 2019. Limited 2020 inventory may exist. Unable to verify.",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2019,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/50R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "staggeredSizes": [
+        {"front": "245/45R19", "rear": "275/40R19"},
+        {"front": "245/40R20", "rear": "275/35R20"}
+      ],
+      "trims": [
+        {"trim": "R-Sport", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supercharged", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]}
+      ],
+      "notes": "All XJ 2010-2019 trims use staggered setups. Current data shows non-staggered sizes which is incorrect.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2018,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/50R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "staggeredSizes": [
+        {"front": "245/45R19", "rear": "275/40R19"},
+        {"front": "245/40R20", "rear": "275/35R20"}
+      ],
+      "trims": [
+        {"trim": "R-Sport AWD", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "R-Sport RWD", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supercharged", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]}
+      ],
+      "notes": "All trims use staggered setups (wider rear). Current data shows non-staggered sizes.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2017,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/50R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "staggeredSizes": [
+        {"front": "245/45R19", "rear": "275/40R19"},
+        {"front": "245/40R20", "rear": "275/35R20"}
+      ],
+      "trims": [
+        {"trim": "R-Sport AWD", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "R-Sport RWD", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supercharged", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]}
+      ],
+      "notes": "All trims use staggered setups. Current data shows non-staggered sizes.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2016,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/50R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "staggeredSizes": [
+        {"front": "245/45R19", "rear": "275/40R19"},
+        {"front": "245/40R20", "rear": "275/35R20"}
+      ],
+      "trims": [
+        {"trim": "R-Sport AWD", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "R-Sport RWD", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supercharged", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]}
+      ],
+      "notes": "All trims use staggered setups. Current data shows non-staggered sizes.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2015,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/50R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "staggeredSizes": [
+        {"front": "245/45R19", "rear": "275/40R19"},
+        {"front": "245/40R20", "rear": "275/35R20"}
+      ],
+      "trims": [
+        {"trim": "AWD", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Base Model", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supercharged", "sizes": [{"front": "245/40R20", "rear": "275/35R20"}]}
+      ],
+      "notes": "All trims use staggered setups. Current data shows non-staggered sizes.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2014,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/50R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "staggeredSizes": [
+        {"front": "245/45R19", "rear": "275/40R19"},
+        {"front": "245/40R20", "rear": "275/35R20"}
+      ],
+      "trims": [
+        {"trim": "AWD", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Base Model", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supercharged", "sizes": [{"front": "245/40R20", "rear": "275/35R20"}]}
+      ],
+      "notes": "All trims use staggered setups. Current data shows non-staggered sizes.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2013,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/50R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "staggeredSizes": [
+        {"front": "245/45R19", "rear": "275/40R19"},
+        {"front": "245/40R20", "rear": "275/35R20"}
+      ],
+      "trims": [
+        {"trim": "AWD", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Base Model", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supercharged", "sizes": [{"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supersport", "sizes": [{"front": "245/40R20", "rear": "275/35R20"}]}
+      ],
+      "notes": "All trims use staggered setups. Current data shows non-staggered sizes.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2012,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/50R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "staggeredSizes": [
+        {"front": "245/45R19", "rear": "275/40R19"},
+        {"front": "245/40R20", "rear": "275/35R20"}
+      ],
+      "trims": [
+        {"trim": "Base Model", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supercharged", "sizes": [{"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supersport", "sizes": [{"front": "245/40R20", "rear": "275/35R20"}]}
+      ],
+      "notes": "All trims use staggered setups. Current data shows non-staggered sizes.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2011,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/50R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "staggeredSizes": [
+        {"front": "245/45R19", "rear": "275/40R19"},
+        {"front": "245/40R20", "rear": "275/35R20"}
+      ],
+      "trims": [
+        {"trim": "Base Model", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supercharged", "sizes": [{"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supersport", "sizes": [{"front": "245/40R20", "rear": "275/35R20"}]}
+      ],
+      "notes": "New X351 platform started 2010. All trims use staggered setups.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2010,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/50R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "staggeredSizes": [
+        {"front": "245/45R19", "rear": "275/40R19"},
+        {"front": "245/40R20", "rear": "275/35R20"}
+      ],
+      "trims": [
+        {"trim": "Base Model", "sizes": [{"front": "245/45R19", "rear": "275/40R19"}, {"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supercharged", "sizes": [{"front": "245/40R20", "rear": "275/35R20"}]},
+        {"trim": "Supersport", "sizes": [{"front": "245/40R20", "rear": "275/35R20"}]}
+      ],
+      "notes": "New X351 platform. All trims use staggered setups.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2009,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["235/55R17", "245/45R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["255/40R19", "255/35R20"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Super V8", "sizes": ["255/40R19", "255/35R20"]},
+        {"trim": "Super V8 Portfolio", "sizes": ["255/35R20"]},
+        {"trim": "Vanden Plas", "sizes": ["255/40R19"]}
+      ],
+      "notes": "Final year of X350 platform. Current data contains sizes that don't match - 235/55R17 and 245/45R18 not standard for 2009.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["235/55R17", "245/45R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["235/50R18", "255/40R19"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Vanden Plas", "sizes": ["235/50R18", "255/40R19"]},
+        {"trim": "Super V8", "sizes": ["255/40R19"]}
+      ],
+      "notes": "X350 platform. Current data partially matches but includes sizes not standard for this year.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["235/55R17", "245/45R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["235/50R18", "255/40R19"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Vanden Plas", "sizes": ["235/50R18", "255/40R19"]},
+        {"trim": "Super V8", "sizes": ["255/40R19"]}
+      ],
+      "notes": "X350 platform. 275/35R20 not a standard OEM size for 2007.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["235/55R17", "245/45R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["235/50R18", "255/40R19"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Vanden Plas", "sizes": ["235/50R18", "255/40R19"]},
+        {"trim": "Super V8", "sizes": ["255/40R19"]}
+      ],
+      "notes": "X350 platform.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["235/55R17", "245/45R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["235/50R18", "255/40R19"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Super V8", "sizes": ["255/40R19"]},
+        {"trim": "Vanden Plas", "sizes": ["235/50R18", "255/40R19"]}
+      ],
+      "notes": "X350 platform.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["235/55R17", "245/45R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["235/50R18", "255/40R19"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Vanden Plas", "sizes": ["235/50R18", "255/40R19"]},
+        {"trim": "XJR", "sizes": ["255/40R19"]}
+      ],
+      "notes": "New X350 aluminum platform started 2004.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/45R18", "275/35R20", "275/30R21"],
+      "validatedTireSizes": ["235/50R17", "255/40R18"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Sport", "sizes": ["255/40R18"]},
+        {"trim": "Super", "sizes": ["235/50R17"]}
+      ],
+      "notes": "Final year X308 platform. Current data shows sizes from later X350/X351 generation - completely incorrect.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/45R18", "275/35R20", "275/30R21"],
+      "validatedTireSizes": ["235/50R17", "255/40R18"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Sport", "sizes": ["255/40R18"]},
+        {"trim": "Super", "sizes": ["235/50R17"]}
+      ],
+      "notes": "X308 platform. Current data shows sizes from later generation - incorrect.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2001,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/45R18", "275/35R20", "275/30R21"],
+      "validatedTireSizes": ["235/50R17", "255/40R18"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "XJ8", "sizes": ["235/50R17"]},
+        {"trim": "XJR", "sizes": ["255/40R18"]},
+        {"trim": "Vanden Plas", "sizes": ["235/50R17"]}
+      ],
+      "notes": "X308 platform. Current data shows future generation sizes - completely incorrect.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "XJ",
+      "currentTireSizes": ["245/45R18", "275/35R20", "275/30R21"],
+      "validatedTireSizes": ["235/50R17", "255/40R18"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "XJ8", "sizes": ["235/50R17"]},
+        {"trim": "XJR", "sizes": ["255/40R18"]},
+        {"trim": "Vanden Plas", "sizes": ["235/50R17"]}
+      ],
+      "notes": "X308 platform. Current data shows future generation sizes - completely incorrect.",
+      "status": "MISMATCH"
+    },
+    {
+      "year": 2015,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/35R20", "285/30R20"],
+      "staggeredSizes": [{"front": "255/35R20", "rear": "285/30R20"}],
+      "trims": [
+        {"trim": "XKR Convertible", "sizes": [{"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "Final year of XK production. All use staggered setup.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2014,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/35R20", "285/30R20"],
+      "staggeredSizes": [{"front": "255/35R20", "rear": "285/30R20"}],
+      "trims": [
+        {"trim": "XKR Convertible", "sizes": [{"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "All XKR trims use staggered 20\" setup.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2013,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/40R19", "rear": "275/35R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "XKR available with 19\" or 20\" staggered setups.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2012,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/40R19", "rear": "275/35R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "XKR available with 19\" or 20\" staggered setups.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2011,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/40R19", "rear": "275/35R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XKR 175", "sizes": [{"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "XKR 175 special edition available.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2010,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/40R19", "rear": "275/35R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "X150 generation XKR.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2009,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/40R19", "rear": "275/35R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Portfolio", "sizes": [{"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "Portfolio edition with 20\" wheels.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/40R19", "rear": "275/35R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "X150 generation.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/40R19", "rear": "275/35R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/40R19", "rear": "275/35R19"}, {"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "New X150 generation started 2007.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "255/45R18", "245/40R19", "255/40R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/45R18", "rear": "255/45R18"},
+        {"front": "245/40R19", "rear": "255/40R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XK8 Convertible", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "245/40R19", "rear": "255/40R19"}]},
+        {"trim": "XK8 Coupe", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "245/40R19", "rear": "255/40R19"}]},
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "Final year of X100 generation XK8/XKR.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "255/45R18", "245/40R19", "255/40R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/45R18", "rear": "255/45R18"},
+        {"front": "245/40R19", "rear": "255/40R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XK8 Convertible", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "245/40R19", "rear": "255/40R19"}]},
+        {"trim": "XK8 Coupe", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "245/40R19", "rear": "255/40R19"}]},
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "X100 generation XK8/XKR.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "255/45R18", "245/40R19", "255/40R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/45R18", "rear": "255/45R18"},
+        {"front": "245/40R19", "rear": "255/40R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XK8 Convertible", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "245/40R19", "rear": "255/40R19"}]},
+        {"trim": "XK8 Coupe", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "245/40R19", "rear": "255/40R19"}]},
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "X100 generation XK8/XKR.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R18", "255/45R18", "245/40R19", "255/40R19", "255/35R20", "285/30R20"],
+      "staggeredSizes": [
+        {"front": "245/45R18", "rear": "255/45R18"},
+        {"front": "245/40R19", "rear": "255/40R19"},
+        {"front": "255/35R20", "rear": "285/30R20"}
+      ],
+      "trims": [
+        {"trim": "XK8 Convertible", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "245/40R19", "rear": "255/40R19"}]},
+        {"trim": "XK8 Coupe", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "245/40R19", "rear": "255/40R19"}]},
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "255/35R20", "rear": "285/30R20"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}, {"front": "255/35R20", "rear": "285/30R20"}]}
+      ],
+      "notes": "X100 generation XK8/XKR.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R17", "245/45R18", "255/45R18"],
+      "staggeredSizes": [
+        {"front": "245/45R18", "rear": "255/45R18"}
+      ],
+      "trims": [
+        {"trim": "XK8 Convertible", "sizes": ["245/50R17", {"front": "245/45R18", "rear": "255/45R18"}]},
+        {"trim": "XK8 Coupe", "sizes": ["245/50R17", {"front": "245/45R18", "rear": "255/45R18"}]},
+        {"trim": "XKR Convertible", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}]},
+        {"trim": "XKR Coupe", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}]}
+      ],
+      "notes": "X100 generation.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R17", "245/45R18", "255/45R18"],
+      "staggeredSizes": [
+        {"front": "245/45R18", "rear": "255/45R18"}
+      ],
+      "trims": [
+        {"trim": "XK8 Base", "sizes": ["245/50R17", {"front": "245/45R18", "rear": "255/45R18"}]},
+        {"trim": "XKR Base", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}]},
+        {"trim": "XKR Brembo Option", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}]}
+      ],
+      "notes": "X100 generation.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "XK",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R17", "245/45R18", "255/45R18"],
+      "staggeredSizes": [
+        {"front": "245/45R18", "rear": "255/45R18"}
+      ],
+      "trims": [
+        {"trim": "XK8 Base", "sizes": ["245/50R17", {"front": "245/45R18", "rear": "255/45R18"}]},
+        {"trim": "XKR Base", "sizes": [{"front": "245/45R18", "rear": "255/45R18"}]}
+      ],
+      "notes": "X100 generation.",
+      "status": "NO_CURRENT_DATA"
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19"],
+      "validatedTireSizes": [],
+      "staggeredSizes": [],
+      "trims": [],
+      "notes": "Cherokee production ended in 2023. 2026 Cherokee does not exist.",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19"],
+      "validatedTireSizes": [],
+      "staggeredSizes": [],
+      "trims": [],
+      "notes": "Cherokee production ended in 2023. 2025 Cherokee does not exist.",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19", "245/65R17"],
+      "validatedTireSizes": [],
+      "staggeredSizes": [],
+      "trims": [],
+      "notes": "Cherokee production ended in 2023. 2024 Cherokee does not exist.",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/60R18", "225/65R17", "245/65R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "245/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Altitude Lux", "sizes": ["225/65R17", "225/60R18"]},
+        {"trim": "Trailhawk", "sizes": ["245/65R17"]}
+      ],
+      "notes": "Final year of KL Cherokee. Current data matches validated sizes.",
+      "status": "VALID"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19", "235/50ZR19", "215/60R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R17", "225/55R18", "225/60R18", "235/50R19", "245/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Latitude 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude FWD", "sizes": ["225/60R17"]},
+        {"trim": "Latitude Plus 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude Plus FWD", "sizes": ["225/60R17"]},
+        {"trim": "Latitude Lux 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Limited 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Limited FWD", "sizes": ["225/55R18"]},
+        {"trim": "Altitude 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Altitude FWD", "sizes": ["225/55R18"]},
+        {"trim": "High Altitude", "sizes": ["235/50R19"]},
+        {"trim": "Trailhawk", "sizes": ["245/65R17"]}
+      ],
+      "notes": "Current data includes some sizes not standard OEM (245/55R18, 245/45R19, 215/60R17). Valid sizes depend on trim.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19", "235/50ZR19", "215/60R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R17", "225/55R18", "225/60R18", "235/50R19", "245/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "80th Anniversary Edition", "sizes": ["235/50R19"]},
+        {"trim": "Altitude 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Altitude FWD", "sizes": ["225/55R18"]},
+        {"trim": "Freedom 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Freedom FWD", "sizes": ["225/55R18"]},
+        {"trim": "High Altitude", "sizes": ["235/50R19"]},
+        {"trim": "Latitude 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude FWD", "sizes": ["225/60R17"]},
+        {"trim": "Latitude Lux 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude Lux FWD", "sizes": ["225/60R17"]},
+        {"trim": "Latitude Plus 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude Plus FWD", "sizes": ["225/60R17"]},
+        {"trim": "Limited 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Limited FWD", "sizes": ["225/55R18"]},
+        {"trim": "Trailhawk", "sizes": ["245/65R17"]}
+      ],
+      "notes": "Current data has some non-OEM sizes. 215/60R17 and 245/55R18 not standard.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2020,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19", "235/50ZR19", "215/60R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R17", "225/55R18", "225/60R18", "235/50R19", "245/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Altitude 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Altitude FWD", "sizes": ["225/55R18"]},
+        {"trim": "High Altitude", "sizes": ["235/50R19"]},
+        {"trim": "Latitude 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude FWD", "sizes": ["225/60R17"]},
+        {"trim": "Latitude Plus 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude Plus FWD", "sizes": ["225/60R17"]},
+        {"trim": "Limited 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Limited FWD", "sizes": ["225/55R18"]},
+        {"trim": "Trailhawk", "sizes": ["245/65R17"]},
+        {"trim": "Trailhawk Elite", "sizes": ["245/65R17"]},
+        {"trim": "Upland", "sizes": ["225/60R18"]}
+      ],
+      "notes": "Current data has some non-OEM sizes.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2019,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19", "235/50ZR19", "215/60R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R17", "225/55R18", "225/60R18", "235/50R19", "245/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Altitude 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Altitude FWD", "sizes": ["225/55R18"]},
+        {"trim": "High Altitude", "sizes": ["235/50R19"]},
+        {"trim": "Latitude 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude FWD", "sizes": ["225/60R17"]},
+        {"trim": "Latitude Plus 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude Plus FWD", "sizes": ["225/60R17"]},
+        {"trim": "Limited 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Limited FWD", "sizes": ["225/55R18"]},
+        {"trim": "Overland", "sizes": ["235/50R19"]},
+        {"trim": "Trailhawk", "sizes": ["245/65R17"]},
+        {"trim": "Trailhawk Elite", "sizes": ["245/65R17"]}
+      ],
+      "notes": "First year of facelift. Current data has some non-OEM sizes.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19", "225/50R19", "235/45R20", "215/60R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R17", "225/55R18", "225/60R18", "245/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Latitude 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude FWD", "sizes": ["225/60R17"]},
+        {"trim": "Limited 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Limited FWD", "sizes": ["225/55R18"]},
+        {"trim": "Overland 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Overland FWD", "sizes": ["225/55R18"]},
+        {"trim": "Trailhawk", "sizes": ["245/65R17"]}
+      ],
+      "notes": "Pre-facelift. Current data has many non-OEM sizes (225/50R19, 235/45R20, etc).",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2017,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19", "225/50R19", "235/45R20", "215/60R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R17", "225/55R18", "225/60R18", "245/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "4X4 75th Anniversary", "sizes": ["225/60R18"]},
+        {"trim": "4X4 High Altitude", "sizes": ["225/60R18"]},
+        {"trim": "4X4 Latitude", "sizes": ["225/65R17"]},
+        {"trim": "4X4 Limited", "sizes": ["225/60R18"]},
+        {"trim": "4X4 Overland", "sizes": ["225/60R18"]},
+        {"trim": "4X4 Sport", "sizes": ["225/65R17"]},
+        {"trim": "4X4 Sport Altitude", "sizes": ["225/60R18"]},
+        {"trim": "4X4 Trailhawk", "sizes": ["245/65R17"]},
+        {"trim": "FWD 75th Anniversary", "sizes": ["225/55R18"]},
+        {"trim": "FWD High Altitude", "sizes": ["225/55R18"]},
+        {"trim": "FWD Latitude", "sizes": ["225/60R17"]},
+        {"trim": "FWD Limited", "sizes": ["225/55R18"]},
+        {"trim": "FWD Overland", "sizes": ["225/55R18"]},
+        {"trim": "FWD Sport", "sizes": ["225/60R17"]},
+        {"trim": "FWD Sport Altitude", "sizes": ["225/55R18"]}
+      ],
+      "notes": "Current data has many non-OEM sizes.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2016,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19", "225/50R19", "235/45R20", "215/60R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R17", "225/55R18", "225/60R18", "245/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Latitude 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude FWD", "sizes": ["225/60R17"]},
+        {"trim": "Limited 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Limited FWD", "sizes": ["225/55R18"]},
+        {"trim": "Overland 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Trailhawk", "sizes": ["245/65R17"]}
+      ],
+      "notes": "KL generation. Current data has non-OEM sizes.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2015,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19", "225/50R19", "235/45R20", "215/60R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R17", "225/55R18", "225/60R18", "245/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Latitude 4X4", "sizes": ["225/65R17"]},
+        {"trim": "Latitude FWD", "sizes": ["225/60R17"]},
+        {"trim": "Limited 4X4", "sizes": ["225/60R18"]},
+        {"trim": "Limited FWD", "sizes": ["225/55R18"]},
+        {"trim": "Trailhawk", "sizes": ["245/65R17"]}
+      ],
+      "notes": "KL generation.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/65R17", "225/60R17", "225/55R18", "245/55R18", "245/45R19", "225/50R19", "235/45R20", "215/60R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R17", "225/55R18", "225/60R18", "245/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Latitude", "sizes": ["225/65R17"]},
+        {"trim": "Limited", "sizes": ["225/60R18"]},
+        {"trim": "Trailhawk", "sizes": ["245/65R17"]}
+      ],
+      "notes": "First year of new KL generation Cherokee.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/70R16", "245/50R20"],
+      "validatedTireSizes": [],
+      "staggeredSizes": [],
+      "trims": [],
+      "notes": "No US-market Cherokee in 2013. This was sold as 'Liberty' in US (2002-2012). International 'Cherokee' was Liberty in US. No 2013 Liberty either - gap year before 2014 KL Cherokee.",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/75R16", "235/65R17", "235/60R18", "235/70R16", "245/50R20"],
+      "validatedTireSizes": ["225/75R16", "235/70R16", "235/65R17", "235/60R18", "245/50R20"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty Arctic", "sizes": ["235/70R16"]},
+        {"trim": "Liberty Limited", "sizes": ["235/65R17", "235/60R18"]},
+        {"trim": "Liberty Limited Jet", "sizes": ["245/50R20"]},
+        {"trim": "Liberty Sport", "sizes": ["225/75R16", "235/70R16"]}
+      ],
+      "notes": "In US, this was Jeep Liberty. Final year of Liberty production. Current data matches Liberty specs - vehicle name mismatch.",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/75R16", "235/65R17", "235/60R18", "235/70R16", "245/50R20"],
+      "validatedTireSizes": ["225/75R16", "235/70R16", "235/65R17", "235/60R18"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty Limited", "sizes": ["235/65R17", "235/60R18"]},
+        {"trim": "Liberty Renegade", "sizes": ["235/70R16"]},
+        {"trim": "Liberty Sport", "sizes": ["225/75R16", "235/70R16"]}
+      ],
+      "notes": "In US, this was Jeep Liberty. 245/50R20 was 2012-only option.",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/75R16", "235/65R17", "235/60R18", "235/70R16", "245/50R20"],
+      "validatedTireSizes": ["225/75R16", "235/70R16", "235/65R17", "235/60R18"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty Limited", "sizes": ["235/65R17", "235/60R18"]},
+        {"trim": "Liberty Renegade", "sizes": ["235/65R17", "235/60R18"]},
+        {"trim": "Liberty Sport", "sizes": ["225/75R16", "235/70R16"]}
+      ],
+      "notes": "In US, this was Jeep Liberty. 245/50R20 not OEM for 2010.",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/75R16", "235/65R17"],
+      "validatedTireSizes": ["225/75R16", "235/70R16", "235/65R17", "235/60R18"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty Limited", "sizes": ["235/65R17", "235/60R18"]},
+        {"trim": "Liberty Sport", "sizes": ["225/75R16", "235/70R16"]}
+      ],
+      "notes": "In US, this was Jeep Liberty. Current data missing some sizes.",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/75R16", "235/65R17"],
+      "validatedTireSizes": ["225/75R16", "235/70R16", "235/65R17", "235/60R18"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty Limited", "sizes": ["235/65R17", "235/60R18"]},
+        {"trim": "Liberty Sport", "sizes": ["225/75R16", "235/70R16"]}
+      ],
+      "notes": "In US, this was Jeep Liberty (KK generation started 2008).",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["215/75R16", "225/75R16", "235/65R17"],
+      "validatedTireSizes": ["225/75R16", "235/70R16", "235/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty Latitude", "sizes": ["225/75R16", "235/70R16"]},
+        {"trim": "Liberty Limited", "sizes": ["235/65R17"]},
+        {"trim": "Liberty Sport", "sizes": ["225/75R16", "235/70R16"]}
+      ],
+      "notes": "In US, this was Jeep Liberty. 215/75R16 not standard OEM for 2007 Liberty.",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["215/75R16", "225/75R16", "235/65R17"],
+      "validatedTireSizes": ["225/75R16", "235/70R16", "235/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty 65th Anniversary", "sizes": ["225/75R16", "235/70R16"]},
+        {"trim": "Liberty Limited 2WD", "sizes": ["235/65R17"]},
+        {"trim": "Liberty Limited 4WD 2.8L Diesel", "sizes": ["225/75R16"]},
+        {"trim": "Liberty Limited 4WD 3.7L V6", "sizes": ["235/65R17"]},
+        {"trim": "Liberty Renegade", "sizes": ["225/75R16", "235/70R16"]},
+        {"trim": "Liberty Sport", "sizes": ["225/75R16", "235/70R16"]}
+      ],
+      "notes": "In US, this was Jeep Liberty.",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2005,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["215/75R16", "225/75R16", "235/65R17"],
+      "validatedTireSizes": ["225/75R16", "235/70R16", "235/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty Limited 2WD", "sizes": ["235/65R17"]},
+        {"trim": "Liberty Limited 4WD Diesel", "sizes": ["225/75R16"]},
+        {"trim": "Liberty Limited 4WD V6", "sizes": ["235/65R17"]},
+        {"trim": "Liberty Renegade", "sizes": ["225/75R16", "235/70R16"]},
+        {"trim": "Liberty Rocky Mountain", "sizes": ["225/75R16"]},
+        {"trim": "Liberty Sport", "sizes": ["225/75R16", "235/70R16"]}
+      ],
+      "notes": "In US, this was Jeep Liberty. 215/75R16 not standard.",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2004,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["215/75R16", "225/75R16", "235/65R17"],
+      "validatedTireSizes": ["215/75R16", "235/70R16", "235/65R17"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty Limited", "sizes": ["235/70R16", "235/65R17"]},
+        {"trim": "Liberty Renegade", "sizes": ["235/70R16"]},
+        {"trim": "Liberty Sport", "sizes": ["215/75R16", "235/70R16"]}
+      ],
+      "notes": "In US, this was Jeep Liberty.",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2003,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["215/75R16", "225/75R16", "235/65R17"],
+      "validatedTireSizes": ["215/75R16", "235/70R16"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty Limited", "sizes": ["235/70R16"]},
+        {"trim": "Liberty Renegade", "sizes": ["235/70R16"]},
+        {"trim": "Liberty Sport", "sizes": ["215/75R16", "235/70R16"]}
+      ],
+      "notes": "In US, this was Jeep Liberty. 235/65R17 became available 2004+.",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2002,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["215/75R16", "225/75R16", "235/65R17"],
+      "validatedTireSizes": ["215/75R16", "235/70R16"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Liberty Limited", "sizes": ["235/70R16"]},
+        {"trim": "Liberty Renegade", "sizes": ["235/70R16"]},
+        {"trim": "Liberty Sport", "sizes": ["215/75R16", "235/70R16"]}
+      ],
+      "notes": "First year of Jeep Liberty in US (replaced Cherokee). 235/65R17 not OEM for 2002.",
+      "status": "NAME_MISMATCH"
+    },
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["215/75R15", "225/75R15"],
+      "validatedTireSizes": ["215/75R15", "225/70R15", "225/75R15", "225/70R16"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Classic", "sizes": ["225/70R16"]},
+        {"trim": "Limited", "sizes": ["225/70R16"]},
+        {"trim": "SE", "sizes": ["215/75R15", "225/75R15"]},
+        {"trim": "Sport", "sizes": ["225/70R15", "225/75R15"]}
+      ],
+      "notes": "Final year of XJ Cherokee. Current data only shows 15\" sizes, missing 16\" options for Classic/Limited trims.",
+      "status": "PARTIAL_MATCH"
+    },
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/70R15", "225/75R15"],
+      "validatedTireSizes": ["215/75R15", "225/70R15", "225/75R15", "225/70R16"],
+      "staggeredSizes": [],
+      "trims": [
+        {"trim": "Classic", "sizes": ["225/70R16"]},
+        {"trim": "Limited", "sizes": ["225/70R16"]},
+        {"trim": "SE", "sizes": ["215/75R15", "225/75R15"]},
+        {"trim": "Sport", "sizes": ["225/70R15", "225/75R15"]}
+      ],
+      "notes": "Final year of XJ Cherokee. Duplicate entry in batch with slightly different current data.",
+      "status": "PARTIAL_MATCH"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 1,
+    "mismatch": 17,
+    "partialMatch": 17,
+    "noCurrentData": 22,
+    "invalidYear": 9,
+    "nameMismatch": 11,
+    "issues": [
+      "Jaguar XFL (2020-2025): China-only long-wheelbase XF. DB has no tire data - should use XF tire sizes.",
+      "Jaguar XJ (2020-2022): Production ended 2019. Invalid years in database.",
+      "Jaguar XJ (2010-2019): All use staggered tire setups. Current DB shows non-staggered sizes.",
+      "Jaguar XJ (2000-2003): Current data shows future generation sizes (20\", 21\"). These are X308 platform using 17\"/18\" wheels.",
+      "Jaguar XK (2000-2015): All entries missing current data despite being sold in US.",
+      "Jaguar XF (2007): XF production started 2008 MY in most markets. Year may be incorrect.",
+      "Jeep Cherokee (2024-2026): Production ended 2023. Invalid years.",
+      "Jeep Cherokee (2002-2012): US-market name was 'Liberty'. Database uses international name.",
+      "Jeep Cherokee (2014-2022): Current data includes non-OEM aftermarket sizes."
+    ]
+  }
+}

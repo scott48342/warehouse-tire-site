@@ -1,0 +1,1178 @@
+{
+  "batchId": "55",
+  "processedAt": "2026-04-21T21:16:00Z",
+  "totalVehicles": 75,
+  "successCount": 74,
+  "failedCount": 1,
+  "results": [
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Allex",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 39},
+          {"diameter": 14, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Altezza",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Altezza",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Altezza",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Altezza",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Altezza",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Altezza",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Altezza Gita",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7.5, "offset": 55}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Altezza Gita",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7.5, "offset": 55}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Altezza Gita",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7.5, "offset": 55}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Altezza Gita",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7.5, "offset": 55}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Altezza Gita",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 17, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7.5, "offset": 55}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Aristo",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "wheelfitment.eu",
+      "status": "success"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Aristo",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "wheelfitment.eu",
+      "status": "success"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Aristo",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "wheelfitment.eu",
+      "status": "success"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Aristo",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "wheelfitment.eu",
+      "status": "success"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Aristo",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 50},
+          {"diameter": 17, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "wheelfitment.eu",
+      "status": "success"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 40},
+          {"diameter": 18, "width": 8, "offset": 45},
+          {"diameter": 19, "width": 8, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 40},
+          {"diameter": 18, "width": 8, "offset": 45},
+          {"diameter": 19, "width": 8, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 40},
+          {"diameter": 18, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 8, "offset": 45},
+          {"diameter": 19, "width": 8, "offset": 45},
+          {"diameter": 19, "width": 8.5, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 40},
+          {"diameter": 18, "width": 8, "offset": 45},
+          {"diameter": 19, "width": 8, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 40},
+          {"diameter": 18, "width": 7.5, "offset": 40}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 40},
+          {"diameter": 18, "width": 7.5, "offset": 40}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 40},
+          {"diameter": 18, "width": 7.5, "offset": 40}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 40},
+          {"diameter": 18, "width": 7.5, "offset": 40}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 40},
+          {"diameter": 18, "width": 7.5, "offset": 40}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 40},
+          {"diameter": 18, "width": 7.5, "offset": 40}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 16, "width": 6, "offset": 45},
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 16, "width": 6, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 16, "width": 6, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 16, "width": 6, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 16, "width": 6, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Avalon",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 16, "width": 6, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Avensis Verso",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 39}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Avensis Verso",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 39}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Avensis Verso",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 39}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Avensis Verso",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 39}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Avensis Verso",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 39}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Avensis Verso",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 39}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Avensis Verso",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 39}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Avensis Verso",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 39}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Avensis Verso",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 39}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Avensis Verso",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 39}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Blade",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Blade",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Blade",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Blade",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Blade",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Blade",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Blade",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "avtoreference.com",
+      "status": "success"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "bZ",
+      "specs": null,
+      "source": null,
+      "status": "not_found",
+      "notes": "No data available - appears to be placeholder/future model"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "bZ4X",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 40},
+          {"diameter": 20, "width": 8, "offset": 40}
+        ]
+      },
+      "source": "bzforums.com",
+      "status": "success"
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "bZ4X",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 40},
+          {"diameter": 20, "width": 8, "offset": 40}
+        ]
+      },
+      "source": "bzforums.com",
+      "status": "success"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "bZ4X",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 40},
+          {"diameter": 20, "width": 8, "offset": 40}
+        ]
+      },
+      "source": "bzforums.com",
+      "status": "success"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "bZ4X",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 40},
+          {"diameter": 20, "width": 8, "offset": 40}
+        ]
+      },
+      "source": "bzforums.com",
+      "status": "success"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "bZ4X",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 7.5, "offset": 40},
+          {"diameter": 20, "width": 8, "offset": 40}
+        ]
+      },
+      "source": "bzforums.com",
+      "status": "success"
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "C-HR",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 45},
+          {"diameter": 18, "width": 7, "offset": 50},
+          {"diameter": 19, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "C-HR",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 45},
+          {"diameter": 18, "width": 7, "offset": 50},
+          {"diameter": 19, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "C-HR",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 45},
+          {"diameter": 18, "width": 7, "offset": 50},
+          {"diameter": 19, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "C-HR",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 45},
+          {"diameter": 18, "width": 7, "offset": 50},
+          {"diameter": 19, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "C-HR",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 45},
+          {"diameter": 18, "width": 7, "offset": 50},
+          {"diameter": 19, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "C-HR",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 45},
+          {"diameter": 18, "width": 7, "offset": 50},
+          {"diameter": 19, "width": 7.5, "offset": 50}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "C-HR",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 45},
+          {"diameter": 18, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "C-HR",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 45},
+          {"diameter": 18, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "C-HR",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 45},
+          {"diameter": 18, "width": 7, "offset": 50}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "C-Pod",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 4, "offset": 30}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "C-Pod",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 4, "offset": 30}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "C-Pod",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 4, "offset": 30}
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "status": "success"
+    }
+  ]
+}

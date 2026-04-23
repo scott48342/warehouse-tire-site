@@ -1,0 +1,658 @@
+{
+  "batchId": "150",
+  "validatedAt": "2026-04-21T22:58:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 53,
+    "discrepancies": 30,
+    "notFoundOnSource": 22,
+    "matches": 23
+  },
+  "discrepancies": [
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "oemTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "issue": "extra_size",
+      "details": "245/45R20 not found in OEM data"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "oemTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "issue": "extra_size",
+      "details": "245/45R20 not found in OEM data - same generation as 2024"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "oemTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "issue": "extra_size",
+      "details": "245/45R20 not found in OEM data - same generation as 2024"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "oemTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "issue": "extra_size",
+      "details": "245/45R20 not found in OEM data - same generation as 2024"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "oemTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "issue": "extra_size",
+      "details": "245/45R20 not found in OEM data - same generation as 2024"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19", "245/45R20"],
+      "oemTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "issue": "extra_size",
+      "details": "245/45R20 not found in OEM data - 2019+ is 5th gen RAV4"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18"],
+      "oemTireSizes": ["215/70R16", "225/65R17", "235/55R18"],
+      "issue": "missing_size",
+      "details": "Missing 215/70R16 (Base Model trims)"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18"],
+      "oemTireSizes": ["215/70R16", "225/65R17", "235/55R18"],
+      "issue": "missing_size",
+      "details": "Missing 215/70R16 (Base Model trims) - same as 2006"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18"],
+      "oemTireSizes": ["215/70R16", "225/65R17", "235/55R18"],
+      "issue": "missing_size",
+      "details": "Missing 215/70R16 - same generation as 2006"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18"],
+      "oemTireSizes": ["215/70R16", "225/65R17", "235/55R18"],
+      "issue": "missing_size",
+      "details": "Missing 215/70R16 - same generation as 2006"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["215/70R16"],
+      "oemTireSizes": ["215/70R16", "235/60R16", "195/80R16"],
+      "issue": "missing_size",
+      "details": "Missing 235/60R16 (4wd trims), 195/80R16 (EV)"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R18", "275/60R20"],
+      "oemTireSizes": ["265/50R22", "265/70R18", "265/60R20", "285/65R18"],
+      "issue": "wrong_size",
+      "details": "275/60R20 should be 265/60R20 (wrong width). Missing 265/50R22 (Capstone), 285/65R18 (TRD Pro)"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R18", "275/60R20"],
+      "oemTireSizes": ["265/50R22", "265/70R18", "265/60R20", "285/65R18"],
+      "issue": "wrong_size",
+      "details": "275/60R20 should be 265/60R20 (wrong width). Missing 265/50R22 (Capstone), 285/65R18 (TRD Pro)"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R18", "275/60R20"],
+      "oemTireSizes": ["265/50R22", "265/70R18", "265/60R20", "285/65R18"],
+      "issue": "wrong_size",
+      "details": "275/60R20 should be 265/60R20 (wrong width). Missing 265/50R22 (Capstone), 285/65R18 (TRD Pro)"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R18", "275/60R20"],
+      "oemTireSizes": ["265/50R22", "265/70R18", "265/60R20", "285/65R18"],
+      "issue": "wrong_size",
+      "details": "275/60R20 should be 265/60R20 (wrong width). Missing 265/50R22 (Capstone), 285/65R18 (TRD Pro)"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "issue": "extra_size",
+      "details": "285/45R22 not found in OEM data"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17", "295/45R20"],
+      "issue": "missing_size",
+      "details": "Missing 245/70R16 (SR5 2wd only), 295/45R20 (Limited/SR5 upgrade)"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17", "295/45R20"],
+      "issue": "missing_size",
+      "details": "Missing 245/70R16, 295/45R20 - same generation as 2007"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17", "295/45R20"],
+      "issue": "missing_size",
+      "details": "Missing 245/70R16, 295/45R20 - same generation as 2007"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17", "295/45R20"],
+      "issue": "missing_size",
+      "details": "Missing 245/70R16, 295/45R20 - same generation as 2007"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17", "295/45R20"],
+      "issue": "missing_size",
+      "details": "Missing 245/70R16, 295/45R20 - same generation as 2007"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17", "295/45R20"],
+      "issue": "missing_size",
+      "details": "Missing 245/70R16, 295/45R20 - same generation as 2007"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17", "295/45R20"],
+      "issue": "missing_size",
+      "details": "Missing 245/70R16, 295/45R20 - same generation as 2007"
+    }
+  ],
+  "matches": [
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "status": "valid",
+      "note": "Exact match with tiresize.com (no 245/45R20 in 2026)"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18"],
+      "oemTireSizes": ["225/65R17", "235/55R18"],
+      "status": "valid"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18"],
+      "oemTireSizes": ["225/65R17", "235/55R18"],
+      "status": "valid"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18"],
+      "oemTireSizes": ["225/65R17", "235/55R18"],
+      "status": "valid"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18"],
+      "oemTireSizes": ["225/65R17", "235/55R18"],
+      "status": "valid"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18"],
+      "oemTireSizes": ["225/65R17", "235/55R18"],
+      "status": "valid"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18"],
+      "oemTireSizes": ["225/65R17", "235/55R18"],
+      "status": "valid"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18", "215/70R16"],
+      "oemTireSizes": ["225/65R17", "235/55R18", "215/70R16"],
+      "status": "valid"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18", "215/70R16"],
+      "oemTireSizes": ["225/65R17", "235/55R18", "215/70R16"],
+      "status": "valid"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "rav4",
+      "currentTireSizes": ["225/65R17", "235/55R18", "215/70R16"],
+      "oemTireSizes": ["225/65R17", "235/55R18", "215/70R16"],
+      "status": "valid"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "sequoia",
+      "currentTireSizes": ["275/65R18", "275/55R20"],
+      "oemTireSizes": ["275/65R18", "275/55R20"],
+      "status": "valid"
+    }
+  ],
+  "notFoundOnSource": [
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "pronard",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - Japan market vehicle"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "pronard",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - Japan market vehicle"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "pronard",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - Japan market vehicle"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "pronard",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - Japan market vehicle"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "quantum",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - may be commercial/South Africa market"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "quantum",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - may be commercial/South Africa market"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "quantum",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - may be commercial/South Africa market"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "quantum",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - may be commercial/South Africa market"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "quantum",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - may be commercial/South Africa market"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "quantum",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - may be commercial/South Africa market"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "quantum",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - may be commercial/South Africa market"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "rav4-prime",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Listed under RAV4 Prime trims on tiresize.com, not separate model"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "rav4-prime",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Listed under RAV4 Prime trims on tiresize.com, not separate model"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "rav4-prime",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Listed under RAV4 Prime trims on tiresize.com, not separate model"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "rav4-prime",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Listed under RAV4 Prime trims on tiresize.com, not separate model"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "rav4-prime",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Listed under RAV4 Prime trims on tiresize.com, not separate model"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "rukus",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - Australia market vehicle"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "rukus",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - Australia market vehicle"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "rukus",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - Australia market vehicle"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "rukus",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - Australia market vehicle"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "rukus",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - Australia market vehicle"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "rukus",
+      "currentTireSizes": [],
+      "status": "not_found",
+      "note": "Model not found on tiresize.com - Australia market vehicle"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "issue": "Wrong tire width on 2023-2026 Sequoia",
+      "currentSize": "275/60R20",
+      "correctSize": "265/60R20",
+      "vehiclesAffected": 4,
+      "action": "Update tire size from 275/60R20 to 265/60R20"
+    },
+    {
+      "priority": "high",
+      "issue": "Missing 2023-2026 Sequoia trim sizes",
+      "missingSize": "265/50R22",
+      "trim": "Capstone",
+      "vehiclesAffected": 4,
+      "action": "Add 265/50R22 for Capstone trim"
+    },
+    {
+      "priority": "high",
+      "issue": "Missing 2023-2026 Sequoia TRD Pro size",
+      "missingSize": "285/65R18",
+      "trim": "TRD Pro",
+      "vehiclesAffected": 4,
+      "action": "Add 285/65R18 for TRD Pro trim"
+    },
+    {
+      "priority": "medium",
+      "issue": "245/45R20 may not be OEM for 2019-2024 RAV4",
+      "action": "Verify if this is aftermarket/upgrade option or remove from OEM list",
+      "vehiclesAffected": 6
+    },
+    {
+      "priority": "medium",
+      "issue": "285/45R22 listed for 2020 Sequoia but not in OEM data",
+      "action": "Verify if aftermarket or remove",
+      "vehiclesAffected": 1
+    },
+    {
+      "priority": "low",
+      "issue": "Missing base trim sizes on older RAV4 (2006-2009)",
+      "missingSize": "215/70R16",
+      "action": "Add 215/70R16 for Base Model trims",
+      "vehiclesAffected": 4
+    },
+    {
+      "priority": "low",
+      "issue": "Missing upgrade wheel sizes on 2001-2007 Sequoia",
+      "missingSize": "295/45R20",
+      "action": "Add 295/45R20 for Limited/SR5 upgrade option",
+      "vehiclesAffected": 7
+    },
+    {
+      "priority": "info",
+      "issue": "Non-US market vehicles in database",
+      "models": ["pronard", "quantum", "rukus"],
+      "action": "Consider flagging as non-US market or sourcing fitment from regional databases",
+      "vehiclesAffected": 17
+    },
+    {
+      "priority": "info",
+      "issue": "RAV4 Prime should merge with RAV4",
+      "action": "RAV4 Prime sizes (225/60R18, 235/55R19) are included in RAV4 trims on tiresize.com. Consider consolidating.",
+      "vehiclesAffected": 5
+    }
+  ]
+}

@@ -1,0 +1,1154 @@
+{
+  "batchId": "overnight-058-mercedes-benz",
+  "verifiedAt": "2026-04-23T02:32:00.000Z",
+  "summary": {
+    "totalVehicles": 67,
+    "verified": 32,
+    "flagged": 7,
+    "invalid": 28,
+    "verificationRate": "47.8%"
+  },
+  "sources": [
+    "tiresize.com",
+    "hulkoffsets.com",
+    "hubcentric-rings.com",
+    "mercedescla.org forums",
+    "autopadre.com"
+  ],
+  "criticalIssues": [
+    {
+      "issue": "Wrong bolt pattern for CLA-Class AMG and CLS-Class",
+      "description": "All 'cla-class-amg' (14 records) and 'cls-class' (16 records) entries use 5x114.3/67.1 which is a Japanese/Asian bolt pattern (Honda, Toyota). Mercedes-Benz universally uses 5x112/66.6mm.",
+      "affectedRecords": 30,
+      "correctValue": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      }
+    },
+    {
+      "issue": "2013 CLA-Class doesn't exist in US market",
+      "description": "The Mercedes-Benz CLA was first sold in the US as a 2014 model year (introduced late 2013). The 2013 'cla-class' entry is invalid.",
+      "affectedRecords": 1
+    }
+  ],
+  "results": [
+    {
+      "id": "78e8e055-c609-425d-8931-656e8ae7da72",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true, "notes": "16-19\" correct for CLA 250" },
+        "tireSizes": { "verified": true, "notes": "Tire sizes align with OEM options" }
+      }
+    },
+    {
+      "id": "731e828d-578d-42ad-97c6-b194eed9690f",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "412078fa-0073-40a3-bd33-30b2d74b0d1e",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "58f9e232-5183-4fd3-8a86-6aa24875a415",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 45 4MATIC",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { 
+          "verified": false, 
+          "issue": "AMG CLA 45 should only have 18\" and 19\" wheels. 16\" and 17\" are incorrect for this performance trim.",
+          "expected": ["18\"", "19\""],
+          "current": ["16\"", "17\"", "18\"", "19\""]
+        },
+        "tireSizes": { 
+          "verified": false, 
+          "issue": "AMG CLA 45 uses 235/40R18 and 235/35R19. Base CLA sizes (205/55R16, 225/45R17) are incorrect.",
+          "expected": ["235/40R18", "235/35R19"],
+          "current": ["205/55R16", "225/45R17", "225/40R18", "235/35R19", "255/30R19"]
+        }
+      }
+    },
+    {
+      "id": "1e5c4fa7-483e-452c-83eb-8f7dde42a5b6",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "fc5a8d62-f403-40e0-aff1-939f82aab7fe",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 45 4MATIC",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { 
+          "verified": false, 
+          "issue": "AMG CLA 45 should only have 18\" and 19\" wheels",
+          "expected": ["18\"", "19\""]
+        },
+        "tireSizes": { 
+          "verified": false, 
+          "issue": "Should be 235/40R18 and 235/35R19 only",
+          "expected": ["235/40R18", "235/35R19"]
+        }
+      }
+    },
+    {
+      "id": "2af54b84-fa75-4f69-a91b-54c1d1be8a63",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "5ecb6b4c-1d98-489e-8b28-dd0e5fc156f2",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true, "notes": "17-19\" correct for 2020+ CLA 250" },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "43cdb4c8-a2e1-454d-acf8-1357e3842e81",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "22f2e70b-3668-47e6-83fc-74a20cc39009",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 35 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true, "notes": "AMG CLA 35 uses 18-19\" which is correct" },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "747cd814-b1ac-4eeb-b909-c4651f551b95",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 45 4MATIC+",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { 
+          "verified": false, 
+          "issue": "AMG CLA 45 (2020+) should only have 18\" and 19\" wheels",
+          "expected": ["18\"", "19\""]
+        },
+        "tireSizes": { 
+          "verified": false, 
+          "issue": "2020+ AMG CLA 45 uses 245/40R18 and 255/35R19",
+          "expected": ["245/40R18", "255/35R19"],
+          "current": ["225/45R17", "225/40R18", "235/40R18", "235/35R19", "255/30R19"]
+        }
+      }
+    },
+    {
+      "id": "bcc6894d-1a11-4933-aa2b-45fb39ceb204",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "0bd6db37-d674-445a-8a3a-43e4808b6710",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 35 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "e50b5079-b9a4-47da-ad02-8971ea384a41",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "6f63789d-df01-4563-b213-8c146f3abf7e",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 45 4MATIC+",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": false, "issue": "17\" not available on AMG CLA 45" },
+        "tireSizes": { "verified": false, "issue": "Should be 245/40R18 and 255/35R19" }
+      }
+    },
+    {
+      "id": "a93b7292-fddc-4169-80db-23be0ad0c2aa",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 45 4MATIC+",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": false, "issue": "17\" not available on AMG CLA 45" },
+        "tireSizes": { "verified": false, "issue": "Should be 245/40R18 and 255/35R19" }
+      }
+    },
+    {
+      "id": "48ca4b5a-9587-493a-8833-26faeb256deb",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "d8bcb538-6feb-4a69-8786-9d1cc2e2b930",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "6e46dda5-c926-4b78-8aeb-d783fa7c5b81",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 35 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "6f84947c-4032-4939-87bd-8a5853069bbb",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "5d43738f-1b36-4664-80bf-a770225fec86",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "9687f3bf-75cf-4d5b-a1a5-81f75bc8b234",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 45 4MATIC+",
+      "status": "flagged",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": false, "issue": "17\" not available on AMG CLA 45" },
+        "tireSizes": { "verified": false, "issue": "Should be 245/40R18 and 255/35R19" }
+      }
+    },
+    {
+      "id": "fcd6e329-e262-45a9-a0bf-822d6b98ad7d",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 35 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "c8ef9153-dcaf-49ac-b1e4-ce86af035a7a",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "bd82bd00-f0fb-4fd6-a770-a73972e9244a",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "6ee1cd7f-a318-4cbd-9a17-4c963865ea14",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 45 4MATIC+",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true, "notes": "17-19\" acceptable range for newer AMG models" },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "7c2e4036-3384-493a-b7e6-02d8495a9262",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 35 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "b80bb5f7-e445-45d1-ba03-ff0f1fd35010",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "fc752a28-b5c4-4dd3-9f2e-85e3e35dd885",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 45 4MATIC+",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "69979948-eb44-4d84-8a0f-7fdddd3d3128",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "CLA 250",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "e880ca89-82c3-4f62-b119-2683608cc64f",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cla",
+      "trim": "AMG CLA 35 4MATIC",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "3a4c827a-2610-44ce-af0f-58c3055389bf",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { 
+          "current": "5x114.3", 
+          "expected": "5x112", 
+          "match": false,
+          "issue": "CRITICAL: 5x114.3 is a Japanese/Asian bolt pattern. All Mercedes-Benz use 5x112."
+        },
+        "hubBore": { 
+          "current": "67.1", 
+          "expected": "66.6", 
+          "match": false,
+          "issue": "67.1mm is wrong. Mercedes uses 66.6mm hub bore."
+        },
+        "modelYear": {
+          "issue": "CLA was not sold in the US as a 2013 model. First US model year was 2014."
+        }
+      },
+      "recommendation": "DELETE this record - vehicle doesn't exist in this configuration"
+    },
+    {
+      "id": "07106650-c595-4898-bd2e-2f5a39c4b96b",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "e4837bd1-67a8-4c5f-8033-a0e3245b8058",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "06f1027b-f82e-4bc0-b503-ad3fa7f53838",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "704b6c99-1516-4451-a062-79f4cb8d91f4",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "3b217b1a-24d5-4f04-bd91-1c26e73f93ee",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "7b1d60fa-0174-491c-87cb-df062bc8f30b",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "4c58befa-8524-456b-92b6-75f20c8e1af7",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "430a1c8e-3ce2-4b71-92c3-560559fca6ca",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "ad6bae37-7b35-4230-8ea0-bcc56911c685",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "02d23e91-df53-4efa-adcd-27fecf2d0675",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "f48662ae-d313-4696-810b-7c1f5e32b857",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "d4be6955-c389-408c-afb4-abf1f8ab739a",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true }
+      }
+    },
+    {
+      "id": "752505cc-d3e7-4971-8d2c-9b59cf467387",
+      "year": 2026,
+      "make": "mercedes",
+      "model": "cla-class",
+      "trim": "Base",
+      "status": "verified",
+      "findings": {
+        "boltPattern": { "current": "5x112", "expected": "5x112", "match": true },
+        "hubBore": { "current": "66.6", "expected": "66.6", "match": true },
+        "wheelSizes": { "verified": true },
+        "tireSizes": { "verified": true, "notes": "Forward-looking model year - specs based on current gen" }
+      }
+    },
+    {
+      "id": "b693ef6e-42b1-4f16-aadd-d5cf20cf7a82",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { 
+          "current": "5x114.3", 
+          "expected": "5x112", 
+          "match": false,
+          "issue": "CRITICAL: Wrong bolt pattern. Mercedes uses 5x112, not 5x114.3"
+        },
+        "hubBore": { 
+          "current": "67.1", 
+          "expected": "66.6", 
+          "match": false 
+        },
+        "modelYear": {
+          "issue": "AMG CLA 45 was not sold in 2013. First model year was 2014."
+        }
+      },
+      "recommendation": "DELETE - vehicle doesn't exist and bolt pattern/hub bore are completely wrong"
+    },
+    {
+      "id": "916c6868-7a45-4183-b001-71919de09138",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "9f744dd7-100a-45b9-ae8b-fb193c3df79d",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "1e669615-55bd-4794-af81-9fe5828a6a30",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "023867d6-1125-468c-81e1-3fd61649f648",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "f48146a9-cf32-48c5-9b67-fcb9da178200",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "b77a85d5-7816-4ed7-9900-ea4464c5c4d5",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "9dbe5bf0-169e-4a97-8f2a-536a938c42c8",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "c49c450b-c836-4889-9bab-343c176e36a1",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "16a7be09-eab8-43cb-8354-be3ea4ebcead",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "fe140b55-f08f-45b6-9ff6-feda44ee4c94",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "988893fe-f3e8-42e1-b798-c4c5f32f0272",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "00d53c68-a2a5-4fc6-ad74-c00fe6d25852",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "dac01196-9b1f-4dbd-8e57-b5af0ec9c592",
+      "year": 2026,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "f819cb94-f147-41d6-8f04-3352c8209454",
+      "year": 2004,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { 
+          "current": "5x114.3", 
+          "expected": "5x112", 
+          "match": false,
+          "issue": "CRITICAL: Wrong bolt pattern. Mercedes CLS uses 5x112"
+        },
+        "hubBore": { 
+          "current": "67.1", 
+          "expected": "66.6", 
+          "match": false 
+        }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "5affad0a-9d72-4476-9707-a25373f06606",
+      "year": 2005,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "f475e10b-3814-4a64-82ac-0194b15af52e",
+      "year": 2006,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "4cb03033-e82e-4a12-ab9c-887dfe56b7fc",
+      "year": 2007,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "7bfa2613-f169-4f86-afcd-6ca58acf784c",
+      "year": 2008,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "68d583d2-fdb8-4e20-90b0-f6d585edb6e6",
+      "year": 2009,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "69d27bcd-5d27-450a-9f02-0e1be081bc8f",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "506c92a1-4712-4145-8f3b-cd2cd67d4229",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "76490fbe-08aa-4973-9301-b714bccbe832",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "a96853b3-0571-4a3f-92f1-6d53b3c89590",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "7172e778-8f95-4bc2-89de-d50d18fc8d5c",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "f39b422a-1b94-44b5-b60b-0ea80c02a3e9",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "c93c05a3-783d-4fc2-afb9-ddf56ae9b495",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "030d15df-4d56-47c8-a91f-e71ee101ccac",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "83d866fb-19ec-428d-bb06-be9216b5ee0c",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    },
+    {
+      "id": "09d75038-a09e-4ac8-88f1-57aebe1e592b",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cls-class",
+      "trim": "Base",
+      "status": "invalid",
+      "findings": {
+        "boltPattern": { "current": "5x114.3", "expected": "5x112", "match": false },
+        "hubBore": { "current": "67.1", "expected": "66.6", "match": false }
+      },
+      "recommendation": "FIX bolt pattern to 5x112 and hub bore to 66.6"
+    }
+  ],
+  "correctSpecs": {
+    "mercedesBenzUniversal": {
+      "boltPattern": "5x112",
+      "hubBore": "66.6mm",
+      "note": "All modern Mercedes-Benz vehicles use 5x112 bolt pattern with 66.6mm hub bore"
+    },
+    "claClass": {
+      "firstGen_C117_2014_2019": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6mm",
+        "wheelSizes": "16-19\"",
+        "offsetRange": "+35 to +50mm"
+      },
+      "secondGen_C118_2020_present": {
+        "boltPattern": "5x112", 
+        "hubBore": "66.6mm",
+        "wheelSizes": "17-19\"",
+        "offsetRange": "+38 to +50mm"
+      }
+    },
+    "cla45Amg": {
+      "firstGen_2014_2019": {
+        "wheelSizes": ["18\"", "19\""],
+        "tireSizes": ["235/40R18", "235/35R19"]
+      },
+      "secondGen_2020_present": {
+        "wheelSizes": ["18\"", "19\""],
+        "tireSizes": ["245/40R18", "255/35R19"]
+      }
+    },
+    "clsClass": {
+      "allGenerations": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6mm",
+        "note": "All CLS generations (C219, C218, C257) use 5x112/66.6mm"
+      }
+    }
+  }
+}

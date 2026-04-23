@@ -1,0 +1,696 @@
+{
+  "batchId": "overnight-074-toyota",
+  "verifiedAt": "2025-01-21T05:30:00Z",
+  "vehicleCount": 77,
+  "summary": {
+    "passed": 74,
+    "warnings": 3,
+    "failed": 0
+  },
+  "notes": [
+    "Toyota 4Runner and Land Cruiser 1980-2011 batch",
+    "All vehicles use 6x139.7 bolt pattern (Toyota truck standard)",
+    "Hub bore 106.0/106.1mm - both values acceptable (Toyota spec is 106.1)",
+    "Minor capitalization inconsistencies in make/model fields from different import sources"
+  ],
+  "results": [
+    {
+      "id": "dc909132-5059-45a4-8548-b6f0bf235681",
+      "vehicle": "1984 Toyota 4Runner Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["225/75R15"], "verified": true }
+    },
+    {
+      "id": "578132b6-0b37-4146-9205-b8e4f71f56da",
+      "vehicle": "1985 Toyota 4Runner Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["225/75R15"], "verified": true }
+    },
+    {
+      "id": "8b5dafea-af98-41aa-8011-3c9863714bfa",
+      "vehicle": "1986 Toyota 4Runner Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["225/75R15"], "verified": true }
+    },
+    {
+      "id": "81915d22-53ff-45ce-87f2-7af1143a1de3",
+      "vehicle": "1987 Toyota 4Runner Base",
+      "status": "WARNING",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6", "16x7"], "verified": false, "issue": "16x7 unlikely for 1st gen 4Runner; OEM was 15\" only" },
+      "tireSizes": { "value": ["225/75R15", "265/70R16"], "verified": false, "issue": "265/70R16 would require aftermarket 16\" wheels" },
+      "recommendation": "Remove 16x7 and 265/70R16 unless this represents aftermarket upgrades"
+    },
+    {
+      "id": "8478d7d3-1293-4f7a-b78b-4160fc06ea67",
+      "vehicle": "1988 Toyota 4Runner Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["225/75R15"], "verified": true }
+    },
+    {
+      "id": "7de18b72-5ad5-4447-83ae-6a060b78f46a",
+      "vehicle": "1980 Toyota Land Cruiser Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["H78-15", "235/75R15"], "verified": true, "note": "H78-15 is period-correct bias-ply designation" }
+    },
+    {
+      "id": "0cea223b-e09d-45fd-a020-7ed78687af0b",
+      "vehicle": "1981 Toyota Land Cruiser Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["H78-15", "235/75R15"], "verified": true }
+    },
+    {
+      "id": "7e28ba06-f513-4983-a700-aa5cbf21bb05",
+      "vehicle": "1982 Toyota Land Cruiser Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["H78-15", "235/75R15"], "verified": true }
+    },
+    {
+      "id": "1069eec1-ca1e-48c8-815f-754e42dcd1c4",
+      "vehicle": "1983 Toyota Land Cruiser Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["H78-15", "235/75R15"], "verified": true }
+    },
+    {
+      "id": "776b7720-1db3-43b6-99a5-446120a1f4a7",
+      "vehicle": "1984 Toyota Land Cruiser Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["235/75R15"], "verified": true }
+    },
+    {
+      "id": "b99d7356-d9f0-4937-98a5-34d0e4159f41",
+      "vehicle": "1985 Toyota Land Cruiser Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["235/75R15"], "verified": true }
+    },
+    {
+      "id": "a28edf81-5290-4fcb-82c9-e2cb170e3912",
+      "vehicle": "1986 Toyota Land Cruiser Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["235/75R15"], "verified": true }
+    },
+    {
+      "id": "8d273c8f-9be2-4f4c-8d5a-41c0bcf0fe09",
+      "vehicle": "1987 Toyota Land Cruiser Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["235/75R15"], "verified": true }
+    },
+    {
+      "id": "297b364f-6895-4e16-9cf5-de152954e784",
+      "vehicle": "1988 Toyota Land Cruiser Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["235/75R15"], "verified": true }
+    },
+    {
+      "id": "3593c90d-29c0-48eb-a94a-7d4e4d7887f2",
+      "vehicle": "1989 Toyota Land Cruiser Base",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6"], "verified": true },
+      "tireSizes": { "value": ["235/75R15"], "verified": true }
+    },
+    {
+      "id": "ac686573-afec-4ab5-93bf-a8143f3555c0",
+      "vehicle": "1989 Toyota 4Runner Limited",
+      "status": "WARNING",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": false, "issue": "16x7 unlikely OEM for 1st gen; 2nd gen started 1990" },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": false, "issue": "265/70R16 not OEM for 1989" },
+      "recommendation": "Verify if 16\" options are aftermarket or incorrect year attribution"
+    },
+    {
+      "id": "350c5179-9f37-4418-bd84-5425e82762e6",
+      "vehicle": "1989 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.0", "verified": true },
+      "wheelSizes": { "value": ["15x6", "15x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "31X10.50R15"], "verified": true, "note": "31X10.50R15 is valid LT/off-road option" }
+    },
+    {
+      "id": "b31a3abd-8374-42ff-b706-acdfbd5b979b",
+      "vehicle": "1990 Toyota 4Runner Limited",
+      "status": "WARNING",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": false, "issue": "16x7 came later in 2nd gen; early 1990 had 15\" only" },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": false, "issue": "265/70R16 unlikely for 1990 model year" },
+      "recommendation": "Consider limiting to 15\" options for 1990-1995"
+    },
+    {
+      "id": "690404f1-43d9-43bb-bdad-baeef7caa068",
+      "vehicle": "1990 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true, "note": "16x7 may be late-production or aftermarket upgrade option" },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "884a1996-3c96-4361-9071-327d1df0e0ed",
+      "vehicle": "1991 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "8fd2c578-3fcb-422d-9cf4-88ba0c5a6830",
+      "vehicle": "1991 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "0ca7b292-5a1a-457f-bce8-b07fb1bb4710",
+      "vehicle": "1992 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "e0eb65c2-6fd2-4c01-ae7e-a301fd0f15ce",
+      "vehicle": "1992 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "d2390f33-8dfb-4e0b-8598-791af9238ea7",
+      "vehicle": "1993 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "0a91115e-7542-4f7d-8286-e4b6c6922cd4",
+      "vehicle": "1993 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "4885f957-5b89-45f7-9320-a3d59a38ea2b",
+      "vehicle": "1994 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "a49d5be6-46f5-4178-9ace-ef0f11087694",
+      "vehicle": "1994 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "012e0424-23e5-4d9c-b647-6d86cab8c68e",
+      "vehicle": "1995 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "a8a7f848-ff55-4743-95ec-6ac45173b97c",
+      "vehicle": "1995 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["15x7", "16x7"], "verified": true },
+      "tireSizes": { "value": ["225/75R15", "235/75R15", "265/70R16"], "verified": true }
+    },
+    {
+      "id": "299bdb75-68b5-4c27-b457-510780887757",
+      "vehicle": "1996 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true, "note": "3rd gen introduced 16\" standard, 17\" option" },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "788ffc37-efe5-4e2e-87b9-bc52f8936127",
+      "vehicle": "1996 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "f86cb805-faf3-4199-8924-ea2ea0a28555",
+      "vehicle": "1997 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "a9d680f0-e171-4e23-9469-5d94fc986626",
+      "vehicle": "1997 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "e92c1352-8a6d-4f8e-a5b2-b80e50a883a2",
+      "vehicle": "1998 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "f8373f37-9523-453c-96b4-6ca603bc8404",
+      "vehicle": "1998 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "b70e070c-a7e4-44fa-b022-a9b269d42337",
+      "vehicle": "1999 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "b4279109-7595-44cf-889d-e2e6127a8fbc",
+      "vehicle": "1999 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "860f556a-73f5-4481-9873-bc3451eacfd5",
+      "vehicle": "2000 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "21730032-1535-4ba0-81b1-93c6cd63fb61",
+      "vehicle": "2000 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "ecf7bd1e-0567-4dca-8d03-68503a3c6d39",
+      "vehicle": "2001 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "eb91a1d7-e2c5-4b38-9780-df83b0b3adab",
+      "vehicle": "2001 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "7444062c-2ff3-455a-b661-00293b50e9e0",
+      "vehicle": "2002 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "a4253522-837a-4fa0-a813-f9b48f9782dd",
+      "vehicle": "2002 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17"], "verified": true }
+    },
+    {
+      "id": "60c8a073-f7b5-4f79-8906-381cb9d9f4f1",
+      "vehicle": "2003 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true, "note": "4th gen introduced 18\" option" },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "f430188c-7314-49d4-8dbc-07c293c4b4c6",
+      "vehicle": "2003 Toyota 4Runner Sport Edition",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "4e3041df-cebb-4ea5-8d27-c01656680ea7",
+      "vehicle": "2003 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "1346a844-60f6-4e11-8929-f5b33e1e8d75",
+      "vehicle": "2004 Toyota 4Runner Sport Edition",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "82bb4256-bfde-433b-a1cf-1f0097e6c321",
+      "vehicle": "2004 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "ee5499b5-acfa-4e3f-8794-2e9296fccdda",
+      "vehicle": "2004 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "900bce03-af46-4e45-b544-a0134fb2ba74",
+      "vehicle": "2005 Toyota 4Runner Sport Edition",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "2d536567-4d61-426e-a083-1b642058ff42",
+      "vehicle": "2005 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "142aa7e1-0351-40b4-bb34-5d484cc9c45b",
+      "vehicle": "2005 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "a1587a4a-174c-44cf-bcbb-5771fd243ff1",
+      "vehicle": "2006 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "1a5561e9-a5d8-442e-9d68-f2e844b74ad0",
+      "vehicle": "2006 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "2d476289-597f-4217-949b-cc8f5f4633b7",
+      "vehicle": "2006 Toyota 4Runner Sport Edition",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "c38e5e81-e95c-42d8-9b10-5433863e0e8e",
+      "vehicle": "2007 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "ec86cd4d-5d27-46a1-b317-511f31dcbf3a",
+      "vehicle": "2007 Toyota 4Runner Sport Edition",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "08a19e1b-de88-45e1-a464-540217a767f4",
+      "vehicle": "2007 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "671aae61-2914-4ce7-976b-e024572722a2",
+      "vehicle": "2008 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "12f1cbdd-c9bd-41c7-beb8-a8a2cf141525",
+      "vehicle": "2008 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "0fc98513-3eb3-4ca8-b687-a20705d76383",
+      "vehicle": "2008 Toyota 4Runner Sport Edition",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "bc515a20-9e80-4ea6-9b2b-0478c898acce",
+      "vehicle": "2009 Toyota 4Runner Sport Edition",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "b8777bfa-6a77-47ce-99e1-8f39da020290",
+      "vehicle": "2009 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "fd747f78-a5a0-4211-88d2-39cd121853dc",
+      "vehicle": "2009 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["16x7", "17x7.5", "18x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R16", "265/65R17", "265/60R18"], "verified": true }
+    },
+    {
+      "id": "3aaa1153-5c3b-4ccb-b8e2-f673f14449be",
+      "vehicle": "2010 Toyota 4Runner Trail",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true, "note": "5th gen introduced 20\" option" },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    },
+    {
+      "id": "a8220c9d-ce43-4f82-a49b-d52841069668",
+      "vehicle": "2010 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    },
+    {
+      "id": "699a438a-44a5-472e-a4a7-64cacfac2bc3",
+      "vehicle": "2010 Toyota 4Runner SR5 Premium",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    },
+    {
+      "id": "354ab7c3-5b84-4b5c-8e6b-1a8f8c0ff3c0",
+      "vehicle": "2010 Toyota 4Runner TRD Off-Road",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    },
+    {
+      "id": "2f8cae96-9c1d-44b5-9fd0-e969da3be294",
+      "vehicle": "2010 Toyota 4Runner TRD Off-Road Premium",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    },
+    {
+      "id": "4620960c-acca-41a1-a7fe-89f0460b71b5",
+      "vehicle": "2010 Toyota 4Runner TRD Pro",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    },
+    {
+      "id": "d0ccc276-9035-4cb2-b658-28ce49f2de56",
+      "vehicle": "2010 Toyota 4Runner Limited",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    },
+    {
+      "id": "66799d30-f93c-40f1-9a40-e4ef7f5d5c88",
+      "vehicle": "2010 Toyota 4Runner Nightshade",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    },
+    {
+      "id": "9d93c279-6d70-45be-b1af-04bff9738ee9",
+      "vehicle": "2011 Toyota 4Runner SR5",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    },
+    {
+      "id": "46116ef4-be70-484d-81f1-8346994caa66",
+      "vehicle": "2011 Toyota 4Runner SR5 Premium",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    },
+    {
+      "id": "bf084eca-3279-4588-a99e-a345dd80d68d",
+      "vehicle": "2011 Toyota 4Runner Trail",
+      "status": "PASS",
+      "boltPattern": { "value": "6x139.7", "verified": true },
+      "hubBore": { "value": "106.1", "verified": true },
+      "wheelSizes": { "value": ["17x7", "17x7.5", "20x7.5"], "verified": true },
+      "tireSizes": { "value": ["265/70R17", "265/65R17", "245/60R20"], "verified": true }
+    }
+  ]
+}

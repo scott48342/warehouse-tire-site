@@ -1,0 +1,1840 @@
+{
+  "batch": "batch-30-german",
+  "verifiedAt": "2026-04-22T20:41:00Z",
+  "verifiedBy": "subagent:verify-de-30",
+  "totalVehicles": 75,
+  "validCount": 63,
+  "invalidCount": 12,
+  "vehicles": [
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL 450",
+          "oemWheelSizes": ["18x8.5", "19x8.5/19x9.5"],
+          "oemTireSizes": ["255/40R18", "255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "SL 550",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "notes": "R231 Facelift generation (2016-2020)"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL 450",
+          "oemWheelSizes": ["18x8.5", "19x8.5/19x9.5"],
+          "oemTireSizes": ["255/40R18", "255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "SL 550",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "notes": "Final year of R231 generation. SL-Class discontinued after 2020 until R232 in 2022."
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "invalid",
+      "invalidReason": "NOT_SOLD_US_MARKET",
+      "confidence": "high",
+      "sources": ["exoticcarhacks.com", "wikipedia.org"],
+      "notes": "SL55 AMG R230 was not sold in US until 2003 model year. 2001-2002 were Europe-only."
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "invalid",
+      "invalidReason": "NOT_SOLD_US_MARKET",
+      "confidence": "high",
+      "sources": ["exoticcarhacks.com", "wikipedia.org"],
+      "notes": "SL55 AMG R230 was not sold in US until 2003 model year. 2001-2002 were Europe-only."
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL55 AMG",
+          "oemWheelSizes": ["18x9/18x9.5"],
+          "oemTireSizes": ["255/40R18 front / 285/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "exoticcarhacks.com"],
+      "notes": "First year SL55 AMG available in US market (R230)"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL55 AMG",
+          "oemWheelSizes": ["18x9/18x9.5"],
+          "oemTireSizes": ["255/40R18 front / 285/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R230 generation"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL55 AMG",
+          "oemWheelSizes": ["18x9/18x9.5"],
+          "oemTireSizes": ["255/40R18 front / 285/35R18 rear"]
+        },
+        {
+          "name": "SL65 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R230 generation. SL65 AMG added."
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL55 AMG",
+          "oemWheelSizes": ["18x9/18x9.5"],
+          "oemTireSizes": ["255/40R18 front / 285/35R18 rear"]
+        },
+        {
+          "name": "SL65 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R230 Facelift"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL55 AMG",
+          "oemWheelSizes": ["18x9/18x9.5"],
+          "oemTireSizes": ["255/40R18 front / 285/35R18 rear"]
+        },
+        {
+          "name": "SL65 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R230 Facelift"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL55 AMG",
+          "oemWheelSizes": ["18x9/18x9.5"],
+          "oemTireSizes": ["255/40R18 front / 285/35R18 rear"]
+        },
+        {
+          "name": "SL65 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R230 Facelift"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL63 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "SL65 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R230 Facelift. SL55 replaced by SL63 with 6.2L V8."
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL63 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "SL65 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R230 Facelift"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL63 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "SL65 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Final year R230"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL63 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Transition year - new R231 introduced mid-year"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL63 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "SL65 AMG",
+          "oemWheelSizes": ["20x9/20x10"],
+          "oemTireSizes": ["255/30R20 front / 285/25R20 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R231 generation"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL63 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "SL65 AMG",
+          "oemWheelSizes": ["20x9/20x10"],
+          "oemTireSizes": ["255/30R20 front / 285/25R20 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R231 generation"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SL63 AMG",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "SL65 AMG",
+          "oemWheelSizes": ["20x9/20x10"],
+          "oemTireSizes": ["255/30R20 front / 285/25R20 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R231 generation"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "AMG SL63",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "AMG SL65",
+          "oemWheelSizes": ["20x9/20x10"],
+          "oemTireSizes": ["255/30R20 front / 285/25R20 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R231 Facelift. Naming changed to AMG SL63/SL65."
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "AMG SL63",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "AMG SL65",
+          "oemWheelSizes": ["20x9/20x10"],
+          "oemTireSizes": ["255/30R20 front / 285/25R20 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R231 Facelift"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "AMG SL63",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        },
+        {
+          "name": "AMG SL65",
+          "oemWheelSizes": ["20x9/20x10"],
+          "oemTireSizes": ["255/30R20 front / 285/25R20 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R231 Facelift"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "AMG SL63",
+          "oemWheelSizes": ["19x8.5/19x9.5"],
+          "oemTireSizes": ["255/35R19 front / 285/30R19 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "motorauthority.com"],
+      "notes": "Final year R231 AMG. SL65 discontinued. SL63 discontinued after 2019."
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "AMG SL55",
+          "oemWheelSizes": ["19x9/19x10.5", "20x9/20x10.5", "21x9.5/21x11"],
+          "oemTireSizes": ["265/40R19 front / 295/35R19 rear", "265/35R20 front / 295/30R20 rear", "265/35R21 front / 295/30R21 rear"]
+        },
+        {
+          "name": "AMG SL63",
+          "oemWheelSizes": ["20x9/20x10.5", "21x9.5/21x11"],
+          "oemTireSizes": ["265/35R20 front / 295/30R20 rear", "265/35R21 front / 295/30R21 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["automotiveaddicts.com", "motortrend.com"],
+      "notes": "All-new R232 generation. 2+2 seating. Production by AMG only (no non-AMG SL)."
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "AMG SL55",
+          "oemWheelSizes": ["19x9/19x10.5", "20x9/20x10.5", "21x9.5/21x11"],
+          "oemTireSizes": ["265/40R19 front / 295/35R19 rear", "265/35R20 front / 295/30R20 rear", "265/35R21 front / 295/30R21 rear"]
+        },
+        {
+          "name": "AMG SL63",
+          "oemWheelSizes": ["20x9/20x10.5", "21x9.5/21x11"],
+          "oemTireSizes": ["265/35R20 front / 295/30R20 rear", "265/35R21 front / 295/30R21 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["motortrend.com"],
+      "notes": "R232 generation"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "AMG SL55",
+          "oemWheelSizes": ["19x9/19x10.5", "20x9/20x10.5", "21x9.5/21x11"],
+          "oemTireSizes": ["265/40R19 front / 295/35R19 rear", "265/35R20 front / 295/30R20 rear", "265/35R21 front / 295/30R21 rear"]
+        },
+        {
+          "name": "AMG SL63",
+          "oemWheelSizes": ["20x9/20x10.5", "21x9.5/21x11"],
+          "oemTireSizes": ["265/35R20 front / 295/30R20 rear", "265/35R21 front / 295/30R21 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["motortrend.com"],
+      "notes": "R232 generation"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "sl-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "AMG SL55",
+          "oemWheelSizes": ["19x9/19x10.5", "20x9/20x10.5", "21x9.5/21x11"],
+          "oemTireSizes": ["265/40R19 front / 295/35R19 rear", "265/35R20 front / 295/30R20 rear", "265/35R21 front / 295/30R21 rear"]
+        },
+        {
+          "name": "AMG SL63",
+          "oemWheelSizes": ["20x9/20x10.5", "21x9.5/21x11"],
+          "oemTireSizes": ["265/35R20 front / 295/30R20 rear", "265/35R21 front / 295/30R21 rear"]
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["motortrend.com"],
+      "notes": "R232 generation. 2025 specs assumed to continue from 2024."
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "SLC-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slc-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLC 180",
+          "oemWheelSizes": ["17x7.5"],
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "name": "SLC 300",
+          "oemWheelSizes": ["17x7.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17", "225/40R18 front / 245/35R18 rear"]
+        },
+        {
+          "name": "AMG SLC 43",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["235/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "R172 - rebranded from SLK to SLC"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "SLC-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slc-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLC 300",
+          "oemWheelSizes": ["17x7.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17", "225/40R18 front / 245/35R18 rear"]
+        },
+        {
+          "name": "AMG SLC 43",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["235/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R172"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "SLC-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slc-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLC 300",
+          "oemWheelSizes": ["17x7.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17", "225/40R18 front / 245/35R18 rear"]
+        },
+        {
+          "name": "AMG SLC 43",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["235/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R172"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "SLC-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slc-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLC 300",
+          "oemWheelSizes": ["17x7.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17", "225/40R18 front / 245/35R18 rear"]
+        },
+        {
+          "name": "AMG SLC 43",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["235/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R172"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "SLC-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slc-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLC 300 Final Edition",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 255/35R19 rear"]
+        },
+        {
+          "name": "AMG SLC 43 Final Edition",
+          "oemWheelSizes": ["18x7.5/18x8.5", "19x8/19x9"],
+          "oemTireSizes": ["235/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Final year. SLC-Class discontinued after 2020."
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 230 Kompressor",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 320",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["mbworld.org", "hulkoffsets.com"],
+      "notes": "R170 facelift"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 230 Kompressor",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 320",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R170"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 230 Kompressor",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 320",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R170"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 230 Kompressor",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 320",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R170"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 230 Kompressor",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 320",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Final year R170"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "New R171 generation"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 280",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R171"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 280",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R171"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 280",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R171 Facelift"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 300",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R171 Facelift. SLK 280 renamed to SLK 300."
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 300",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R171 Facelift"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 300",
+          "oemWheelSizes": ["16x7", "17x7.5/17x8.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17 front / 245/40R17 rear"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Final year R171"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 250",
+          "oemWheelSizes": ["17x7.5"],
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear", "225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "New R172 generation"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 250",
+          "oemWheelSizes": ["17x7.5"],
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear", "225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R172"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 250",
+          "oemWheelSizes": ["17x7.5"],
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear", "225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R172"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 250",
+          "oemWheelSizes": ["17x7.5"],
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear", "225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "R172"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK 300",
+          "oemWheelSizes": ["17x7.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17", "225/40R18 front / 245/35R18 rear"]
+        },
+        {
+          "name": "SLK 350",
+          "oemWheelSizes": ["17x7.5/17x8.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear", "225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Final year R172. Rebranded to SLC for 2017."
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "invalid",
+      "invalidReason": "NOT_SOLD_US_MARKET",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "classic.com", "slkworld.com"],
+      "notes": "SLK32 AMG not available in US until 2002 model year. Production started Jan 2001 in Germany, sold in US as 2002 MY."
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "invalid",
+      "invalidReason": "NOT_SOLD_US_MARKET",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "classic.com", "slkworld.com"],
+      "notes": "SLK32 AMG not available in US until 2002 model year. 2001 was Europe-only."
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK32 AMG",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "hagerty.com"],
+      "notes": "First year SLK32 AMG in US market (R170)"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK32 AMG",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "R170"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK32 AMG",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year SLK32 AMG (R170)"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "New R171 generation. SLK55 AMG replaces SLK32 AMG."
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "R171"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "R171"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "R171 Facelift"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "R171 Facelift"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "R171 Facelift"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 245/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year R171"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x8/18x9"],
+          "oemTireSizes": ["235/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "New R172 generation"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x8/18x9"],
+          "oemTireSizes": ["235/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "R172"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x8/18x9"],
+          "oemTireSizes": ["235/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "R172"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x8/18x9"],
+          "oemTireSizes": ["235/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "R172"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "originalMake": "mercedes",
+      "originalModel": "slk-class-amg",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "SLK55 AMG",
+          "oemWheelSizes": ["18x8/18x9"],
+          "oemTireSizes": ["235/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year. Rebranded to AMG SLC 43 for 2017."
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C230 Kompressor",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C280",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "lionharttires.com"],
+      "notes": "W203 generation"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C230 Kompressor",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C240",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C320",
+          "oemWheelSizes": ["16x7", "17x7.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "lionharttires.com"],
+      "notes": "W203"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C230 Kompressor",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C240",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C320",
+          "oemWheelSizes": ["16x7", "17x7.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17"]
+        },
+        {
+          "name": "C32 AMG",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "lionharttires.com"],
+      "notes": "W203. C32 AMG added."
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C230 Kompressor",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C240",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C320",
+          "oemWheelSizes": ["16x7", "17x7.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17"]
+        },
+        {
+          "name": "C32 AMG",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "W203"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C230",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C240",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C320",
+          "oemWheelSizes": ["16x7", "17x7.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17"]
+        },
+        {
+          "name": "C32 AMG",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "W203"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C230",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C240",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C320",
+          "oemWheelSizes": ["16x7", "17x7.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17"]
+        },
+        {
+          "name": "C55 AMG",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "W203. C55 AMG replaces C32 AMG."
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C230",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C280",
+          "oemWheelSizes": ["16x7", "17x7.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17"]
+        },
+        {
+          "name": "C350",
+          "oemWheelSizes": ["17x7.5"],
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "name": "C55 AMG",
+          "oemWheelSizes": ["17x7.5/17x8.5"],
+          "oemTireSizes": ["225/45R17 front / 245/40R17 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "W203"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C230",
+          "oemWheelSizes": ["16x7"],
+          "oemTireSizes": ["205/55R16"]
+        },
+        {
+          "name": "C280",
+          "oemWheelSizes": ["16x7", "17x7.5"],
+          "oemTireSizes": ["205/55R16", "225/45R17"]
+        },
+        {
+          "name": "C350",
+          "oemWheelSizes": ["17x7.5"],
+          "oemTireSizes": ["225/45R17"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Final year W203"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C300",
+          "oemWheelSizes": ["17x7.5"],
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "name": "C350",
+          "oemWheelSizes": ["17x7.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17", "225/40R18 front / 255/35R18 rear"]
+        },
+        {
+          "name": "C63 AMG",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "New W204 generation"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C300",
+          "oemWheelSizes": ["17x7.5"],
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "name": "C350",
+          "oemWheelSizes": ["17x7.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17", "225/40R18 front / 255/35R18 rear"]
+        },
+        {
+          "name": "C63 AMG",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "W204"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "originalMake": "mercedes-benz",
+      "originalModel": "c-class",
+      "status": "valid",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "C300",
+          "oemWheelSizes": ["17x7.5"],
+          "oemTireSizes": ["225/45R17"]
+        },
+        {
+          "name": "C350",
+          "oemWheelSizes": ["17x7.5", "18x7.5/18x8.5"],
+          "oemTireSizes": ["225/45R17", "225/40R18 front / 255/35R18 rear"]
+        },
+        {
+          "name": "C63 AMG",
+          "oemWheelSizes": ["18x7.5/18x8.5"],
+          "oemTireSizes": ["225/40R18 front / 255/35R18 rear"]
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "W204"
+    }
+  ],
+  "summary": {
+    "allMercedesBoltPattern": "5x112",
+    "allMercedesHubBore": 66.6,
+    "invalidYears": [
+      {
+        "model": "SL-Class AMG",
+        "years": [2001, 2002],
+        "reason": "SL55 AMG R230 not sold in US until 2003 MY (2001-2002 Europe only)"
+      },
+      {
+        "model": "SLK-Class AMG",
+        "years": [2000, 2001],
+        "reason": "SLK32 AMG not sold in US until 2002 MY (production started Jan 2001 in Germany)"
+      }
+    ],
+    "productionGaps": [
+      {
+        "model": "SL-Class AMG",
+        "gap": "2020-2021",
+        "reason": "R231 AMG discontinued after 2019, new R232 launched 2022"
+      }
+    ],
+    "makeNormalization": {
+      "mercedes": "Mercedes-Benz",
+      "mercedes-benz": "Mercedes-Benz"
+    }
+  }
+}

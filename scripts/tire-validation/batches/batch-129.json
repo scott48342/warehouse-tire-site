@@ -1,0 +1,707 @@
+{
+  "batchId": "129",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": [
+        "225/50R17",
+        "235/50R17",
+        "225/45R18",
+        "245/45R18",
+        "245/40R19",
+        "275/35R19"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": [
+        "225/50R17",
+        "235/50R17",
+        "225/45R18",
+        "245/45R18",
+        "245/40R19",
+        "275/35R19"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": [
+        "225/50R17",
+        "235/50R17",
+        "225/45R18",
+        "245/45R18",
+        "245/40R19",
+        "275/35R19"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": [
+        "225/50R17",
+        "235/50R17",
+        "225/45R18",
+        "245/45R18",
+        "245/40R19",
+        "275/35R19"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": [
+        "225/50R17",
+        "235/50R17",
+        "225/45R18",
+        "245/45R18",
+        "245/40R19",
+        "275/35R19"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "oldsmobile",
+      "model": "alero",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P215/55R16"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "oldsmobile",
+      "model": "alero",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P215/55R16"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "oldsmobile",
+      "model": "alero",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P215/55R16"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "oldsmobile",
+      "model": "alero",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P215/55R16"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "oldsmobile",
+      "model": "alero",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P215/55R16"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "oldsmobile",
+      "model": "bravada",
+      "currentTireSizes": [
+        "P245/65R17",
+        "P255/55R18"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "oldsmobile",
+      "model": "bravada",
+      "currentTireSizes": [
+        "P245/65R17",
+        "P255/55R18"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "oldsmobile",
+      "model": "bravada",
+      "currentTireSizes": [
+        "P245/65R17",
+        "P255/55R18"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "oldsmobile",
+      "model": "bravada",
+      "currentTireSizes": [
+        "P235/70R16"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "oldsmobile",
+      "model": "bravada",
+      "currentTireSizes": [
+        "P235/70R16"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "oldsmobile",
+      "model": "intrigue",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "oldsmobile",
+      "model": "intrigue",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "oldsmobile",
+      "model": "intrigue",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "plymouth",
+      "model": "prowler",
+      "currentTireSizes": [
+        "225/45R17",
+        "295/40R20"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "plymouth",
+      "model": "prowler",
+      "currentTireSizes": [
+        "225/45R17",
+        "295/40R20"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "plymouth",
+      "model": "prowler",
+      "currentTireSizes": [
+        "225/45R17",
+        "295/40R20"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "plymouth",
+      "model": "voyager",
+      "currentTireSizes": [
+        "205/70R15",
+        "215/65R16",
+        "215/70R15"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "polestar",
+      "model": "polestar-1",
+      "currentTireSizes": [
+        "275/30R21",
+        "295/30R21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "polestar",
+      "model": "polestar-1",
+      "currentTireSizes": [
+        "275/30R21",
+        "295/30R21"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": [
+        "245/45R19",
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "polestar",
+      "model": "polestar-2",
+      "currentTireSizes": [
+        "245/45ZR19",
+        "245/40ZR20"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P235/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P235/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P235/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P235/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P235/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "pontiac",
+      "model": "bonneville",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P235/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "pontiac",
+      "model": "firebird",
+      "currentTireSizes": [
+        "P235/55R16",
+        "P245/50ZR16",
+        "P275/40ZR17",
+        "P305/35ZR17"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "pontiac",
+      "model": "firebird",
+      "currentTireSizes": [
+        "P235/55R16",
+        "P245/50ZR16",
+        "P275/40ZR17",
+        "P305/35ZR17"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "pontiac",
+      "model": "firebird",
+      "currentTireSizes": [
+        "P235/55R16",
+        "P245/50ZR16",
+        "P275/40ZR17",
+        "P305/35ZR17"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": [
+        "P215/60R16",
+        "P225/50R17",
+        "P225/45R18"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": [
+        "P215/60R16",
+        "P225/50R17",
+        "P225/45R18"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": [
+        "P215/60R16",
+        "P225/50R17",
+        "P225/45R18"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": [
+        "P215/60R16",
+        "P225/50R17",
+        "P225/45R18"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": [
+        "P215/60R16",
+        "P225/50R17",
+        "P225/45R18"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "g6",
+      "currentTireSizes": [
+        "P215/60R16",
+        "P225/50R17",
+        "P225/45R18"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "pontiac",
+      "model": "g8",
+      "currentTireSizes": [
+        "P245/45R18",
+        "P245/40R19"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "pontiac",
+      "model": "g8",
+      "currentTireSizes": [
+        "P245/45R18",
+        "P245/40R19"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P225/50R16"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P225/50R16"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P225/50R16"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P225/50R16"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P225/50R16"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "pontiac",
+      "model": "grand-am",
+      "currentTireSizes": [
+        "P215/60R15",
+        "P225/50R16"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17",
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "currentTireSizes": [
+        "P225/60R16",
+        "P225/55R17"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "pontiac",
+      "model": "gto",
+      "currentTireSizes": [
+        "P245/45ZR17",
+        "P245/40ZR18"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "gto",
+      "currentTireSizes": [
+        "P245/45ZR17",
+        "P245/40ZR18"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "pontiac",
+      "model": "gto",
+      "currentTireSizes": [
+        "P245/45ZR17",
+        "P245/40ZR18"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "pontiac",
+      "model": "solstice",
+      "currentTireSizes": [
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "pontiac",
+      "model": "solstice",
+      "currentTireSizes": [
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "pontiac",
+      "model": "solstice",
+      "currentTireSizes": [
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "pontiac",
+      "model": "solstice",
+      "currentTireSizes": [
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "pontiac",
+      "model": "solstice",
+      "currentTireSizes": [
+        "P245/45R18"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "porsche",
+      "model": "718",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "porsche",
+      "model": "718",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "porsche",
+      "model": "718",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "porsche",
+      "model": "718",
+      "currentTireSizes": []
+    }
+  ]
+}

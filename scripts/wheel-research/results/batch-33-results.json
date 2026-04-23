@@ -1,0 +1,1251 @@
+{
+  "batchId": "33",
+  "processedAt": "2026-04-21T21:06:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Besta",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.0,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 30 },
+          { "diameter": 15, "width": 6, "offset": 30 }
+        ],
+        "notes": "Commercial van, Korean market. 6-lug pattern typical for light commercial vehicles."
+      },
+      "confidence": "medium",
+      "sources": ["kipardoracing.com", "wheel-size.com (search results only)"]
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Carstar",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "notes": "Korean market vehicle. Based on shared platform with early Optima/Magentis."
+      },
+      "confidence": "low",
+      "sources": ["platform analysis"]
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Carstar",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "notes": "Korean market vehicle. Based on shared platform with early Optima/Magentis."
+      },
+      "confidence": "low",
+      "sources": ["platform analysis"]
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Carstar",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "notes": "Korean market vehicle. Based on shared platform with early Optima/Magentis."
+      },
+      "confidence": "low",
+      "sources": ["platform analysis"]
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Enterprise",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Korean market full-size sedan. Platform shared with Hyundai Grandeur."
+      },
+      "confidence": "low",
+      "sources": ["platform analysis"]
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Enterprise",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Korean market full-size sedan. Platform shared with Hyundai Grandeur."
+      },
+      "confidence": "low",
+      "sources": ["platform analysis"]
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Enterprise",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Korean market full-size sedan. Platform shared with Hyundai Grandeur."
+      },
+      "confidence": "low",
+      "sources": ["platform analysis"]
+    },
+    {
+      "year": 2026,
+      "make": "Kia",
+      "model": "EV9",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 53.5 },
+          { "diameter": 20, "width": 8.5, "offset": 55 },
+          { "diameter": 21, "width": 9, "offset": 58.5 }
+        ],
+        "notes": "Electric SUV. Wind trim: 19\", Land: 20\", GT-Line: 21\". Same specs as Telluride."
+      },
+      "confidence": "high",
+      "sources": ["kiaevforums.com", "orleanskia.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Kia",
+      "model": "EV9",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 53.5 },
+          { "diameter": 20, "width": 8.5, "offset": 55 },
+          { "diameter": 21, "width": 9, "offset": 58.5 }
+        ],
+        "notes": "Electric SUV. Wind trim: 19\", Land: 20\", GT-Line: 21\"."
+      },
+      "confidence": "high",
+      "sources": ["kiaevforums.com", "orleanskia.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Kia",
+      "model": "EV9",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 53.5 },
+          { "diameter": 20, "width": 8.5, "offset": 55 },
+          { "diameter": 21, "width": 9, "offset": 58.5 }
+        ],
+        "notes": "Electric SUV. Wind trim: 19\", Land: 20\", GT-Line: 21\"."
+      },
+      "confidence": "high",
+      "sources": ["kiaevforums.com", "orleanskia.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Kia",
+      "model": "EV9",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 53.5 },
+          { "diameter": 20, "width": 8.5, "offset": 55 },
+          { "diameter": 21, "width": 9, "offset": 58.5 }
+        ],
+        "notes": "Electric SUV. Wind trim: 19\", Land: 20\", GT-Line: 21\"."
+      },
+      "confidence": "high",
+      "sources": ["kiaevforums.com", "orleanskia.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Forte",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ],
+        "notes": "First generation Forte/Cerato. Standard Kia compact car specs."
+      },
+      "confidence": "high",
+      "sources": ["kipardoracing.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Forte",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 48 }
+        ],
+        "notes": "First generation Forte/Cerato (TD platform)."
+      },
+      "confidence": "high",
+      "sources": ["kipardoracing.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Kia",
+      "model": "K5",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 47 },
+          { "diameter": 18, "width": 7.5, "offset": 50.5 },
+          { "diameter": 19, "width": 8, "offset": 45 }
+        ],
+        "notes": "Successor to Optima. Standard trims 16-17\", GT-Line/EX 18\", GT 19\"."
+      },
+      "confidence": "high",
+      "sources": ["wheelership.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Kia",
+      "model": "K5",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 47 },
+          { "diameter": 18, "width": 7.5, "offset": 50.5 },
+          { "diameter": 19, "width": 8, "offset": 45 }
+        ],
+        "notes": "Successor to Optima. GT-Line and EX get 18\" wheels."
+      },
+      "confidence": "high",
+      "sources": ["wheelership.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Kia",
+      "model": "K5",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 47 },
+          { "diameter": 18, "width": 7.5, "offset": 50.5 },
+          { "diameter": 19, "width": 8, "offset": 45 }
+        ],
+        "notes": "Successor to Optima."
+      },
+      "confidence": "high",
+      "sources": ["wheelership.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Kia",
+      "model": "K5",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 47 },
+          { "diameter": 18, "width": 7.5, "offset": 50.5 },
+          { "diameter": 19, "width": 8, "offset": 45 }
+        ],
+        "notes": "Successor to Optima."
+      },
+      "confidence": "high",
+      "sources": ["wheelership.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "K5",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 47 },
+          { "diameter": 18, "width": 7.5, "offset": 50.5 },
+          { "diameter": 19, "width": 8, "offset": 45 }
+        ],
+        "notes": "First year of K5 (replaced Optima name in US)."
+      },
+      "confidence": "high",
+      "sources": ["wheelership.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 47 },
+          { "diameter": 18, "width": 7.5, "offset": 50 },
+          { "diameter": 19, "width": 8, "offset": 45 }
+        ],
+        "notes": "Final year of Optima name. Same platform as K5."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 47 },
+          { "diameter": 18, "width": 7.5, "offset": 50 }
+        ],
+        "notes": "Fourth generation Optima (JF)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 47 },
+          { "diameter": 18, "width": 7.5, "offset": 50 }
+        ],
+        "notes": "Fourth generation Optima (JF)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 47 },
+          { "diameter": 18, "width": 7.5, "offset": 50 }
+        ],
+        "notes": "Fourth generation Optima (JF)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 47 },
+          { "diameter": 18, "width": 7.5, "offset": 50 }
+        ],
+        "notes": "Fourth generation Optima (JF), first year."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 50 }
+        ],
+        "notes": "Third generation Optima (TF)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 50 }
+        ],
+        "notes": "Third generation Optima (TF)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 50 }
+        ],
+        "notes": "Third generation Optima (TF)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 50 }
+        ],
+        "notes": "Third generation Optima (TF)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 50 }
+        ],
+        "notes": "Third generation Optima (TF), first year with 5-lug."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "Second generation Optima (MG). Final year of 2nd gen."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "Second generation Optima (MG)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "Second generation Optima (MG)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "Second generation Optima (MG), first year."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "notes": "First generation Optima (MS). Last year of 4-lug pattern."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "wheelssize.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "notes": "First generation Optima (MS)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "wheelssize.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "notes": "First generation Optima (MS)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "wheelssize.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "notes": "First generation Optima (MS)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "wheelssize.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "notes": "First generation Optima (MS)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "wheelssize.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "notes": "First generation Optima (MS), first year in US."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "wheelssize.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Optima",
+      "wheelSpecs": {
+        "boltPattern": "4x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 44 }
+        ],
+        "notes": "First generation Optima (MS)."
+      },
+      "confidence": "high",
+      "sources": ["wheel-sizes.com", "wheelssize.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Potentia",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.5, "offset": 45 },
+          { "diameter": 16, "width": 7, "offset": 45 }
+        ],
+        "notes": "Korean market full-size sedan. Platform shared with Hyundai Grandeur."
+      },
+      "confidence": "medium",
+      "sources": ["platform analysis"]
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Potentia",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6.5, "offset": 45 },
+          { "diameter": 16, "width": 7, "offset": 45 }
+        ],
+        "notes": "Korean market full-size sedan. Platform shared with Hyundai Grandeur."
+      },
+      "confidence": "medium",
+      "sources": ["platform analysis"]
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Pregio",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.0,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Commercial van. 6-lug pattern (6x5.5 inches)."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Pregio",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.0,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Commercial van. 6-lug pattern."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Pregio",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.0,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Commercial van. 6-lug pattern."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Pregio",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.0,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Commercial van. 6-lug pattern."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Pregio",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.0,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Commercial van. 6-lug pattern."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Pregio",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.0,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Commercial van. 6-lug pattern."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "Pregio",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.0,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Commercial van. 6-lug pattern."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. Based on Cee'd platform."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. Based on Cee'd platform."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2016,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. Based on Cee'd platform."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2015,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. Based on Cee'd platform."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2014,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. Second generation."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2013,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. Second generation first year."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2012,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. First generation facelift."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. First generation."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. First generation."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. First generation."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. First generation first year."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. First generation."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Pro-cee'd",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "European market sporty hatchback. First generation debut."
+      },
+      "confidence": "high",
+      "sources": ["wheel-size.com (search)"]
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Rio-Cross",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Rio variant with crossover styling. Russian/Korean market."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)", "Rio platform specs"]
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "Rio-Cross",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Rio variant with crossover styling. Russian/Korean market."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)", "Rio platform specs"]
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "Rio-Cross",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Rio variant with crossover styling. Russian/Korean market."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)", "Rio platform specs"]
+    },
+    {
+      "year": 2022,
+      "make": "Kia",
+      "model": "Rio-X",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Rio variant (X-Line/crossover styling). Based on standard Rio platform."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)", "Rio platform specs"]
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "Rio-X",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Rio variant (X-Line/crossover styling). Based on standard Rio platform."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)", "Rio platform specs"]
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Rio-X",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Rio variant (X-Line/crossover styling). Based on standard Rio platform."
+      },
+      "confidence": "medium",
+      "sources": ["wheel-size.com (search)", "Rio platform specs"]
+    },
+    {
+      "year": 2011,
+      "make": "Kia",
+      "model": "Rio5",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 5.5, "offset": 46 },
+          { "diameter": 16, "width": 6, "offset": 46 }
+        ],
+        "notes": "Hatchback version of Rio (JB platform)."
+      },
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Kia",
+      "model": "Rio5",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 5.5, "offset": 46 },
+          { "diameter": 16, "width": 6, "offset": 46 }
+        ],
+        "notes": "Hatchback version of Rio (JB facelift)."
+      },
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Rio5",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 5.5, "offset": 46 }
+        ],
+        "notes": "Hatchback version of Rio (JB platform)."
+      },
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Rio5",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 5.5, "offset": 46 }
+        ],
+        "notes": "Hatchback version of Rio (JB platform)."
+      },
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Rio5",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 5.5, "offset": 46 }
+        ],
+        "notes": "Hatchback version of Rio (JB platform)."
+      },
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Rio5",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 15, "width": 5.5, "offset": 46 }
+        ],
+        "notes": "Hatchback version of Rio (JB platform), first year."
+      },
+      "confidence": "high",
+      "sources": ["hubcaphaven.com", "kipardoracing.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "Sedona",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 45 },
+          { "diameter": 18, "width": 7, "offset": 51.5 },
+          { "diameter": 19, "width": 7.5, "offset": 45 }
+        ],
+        "notes": "Final year of Sedona name. Replaced by Carnival."
+      },
+      "confidence": "high",
+      "sources": ["wheelssize.com", "originalwheels.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Sedona",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 45 },
+          { "diameter": 18, "width": 7, "offset": 51.5 },
+          { "diameter": 19, "width": 7.5, "offset": 45 }
+        ],
+        "notes": "Third generation Sedona minivan."
+      },
+      "confidence": "high",
+      "sources": ["wheelssize.com", "originalwheels.com"]
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "highConfidence": 55,
+    "mediumConfidence": 16,
+    "lowConfidence": 4,
+    "commonPatterns": {
+      "5x114.3": "Most common - used on EV9, K5, Optima (2007+), Sedona, Forte, Pro-cee'd, Potentia, Enterprise",
+      "4x114.3": "Early Optima (2000-2006), Carstar",
+      "4x100": "Rio5, Rio-Cross, Rio-X compact vehicles",
+      "6x139.7": "Commercial vans - Besta, Pregio"
+    }
+  }
+}

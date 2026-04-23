@@ -1,0 +1,1411 @@
+{
+  "batch": "batch-43-japanese",
+  "verifiedAt": "2026-04-23T00:31:00Z",
+  "verifier": "subagent-verify-jp-43",
+  "summary": {
+    "totalVehicles": 75,
+    "verified": 67,
+    "invalid": 4,
+    "flagged": 4,
+    "notes": "Toyota Soluna NOT sold in USA - flagged as INVALID. Some 2025/2026 model years need ongoing verification."
+  },
+  "invalidVehicles": [
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Soluna",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Toyota Soluna was only sold in Thailand, Indonesia, and other Asian markets. Never available in the US market."
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Soluna",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Toyota Soluna was only sold in Thailand, Indonesia, and other Asian markets. Never available in the US market."
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Soluna",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Toyota Soluna was only sold in Thailand, Indonesia, and other Asian markets. Never available in the US market."
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Soluna",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Toyota Soluna was only sold in Thailand, Indonesia, and other Asian markets. Never available in the US market."
+    }
+  ],
+  "flaggedVehicles": [
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Supra",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2025 model year - verify specs when officially released"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Supra",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2026 model year - specs based on current production, verify when released"
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2025 model year - verify specs when officially released"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2026 model year - specs based on current production, verify when released"
+    }
+  ],
+  "vehicles": [
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "1st (XK30/XK40)",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "SR5 2WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"},
+        {"name": "SR5 2WD", "oemWheelSize": "20x8", "oemTireSize": "295/45R20"},
+        {"name": "SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "SR5 4WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"},
+        {"name": "SR5 4WD", "oemWheelSize": "20x8", "oemTireSize": "295/45R20"},
+        {"name": "Limited 2WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"},
+        {"name": "Limited 2WD", "oemWheelSize": "20x8", "oemTireSize": "295/45R20"},
+        {"name": "Limited 4WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"},
+        {"name": "Limited 4WD", "oemWheelSize": "20x8", "oemTireSize": "295/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "trailbuiltoffroad.com"],
+      "notes": "Last year of 1st generation. Uses 6-lug truck pattern."
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "trailbuiltoffroad.com"],
+      "notes": "First year of 2nd generation with new 5x150 bolt pattern"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60) Facelift",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "TRD Sport", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2018 facelift added TRD Sport trim"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60) Facelift",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "TRD Sport", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation facelift continuation"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60) Facelift",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Nightshade Edition", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "TRD Sport", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year before 3rd generation redesign"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "2nd (XK60) Facelift",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "Nightshade Edition", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "TRD Sport", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Final 2nd gen year (early 2022); 3rd gen also introduced mid-2022"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "3rd (XK80)",
+      "boltPattern": "6x139.7",
+      "hubBore": 95.0,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "265/70R18"},
+        {"name": "SR5", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "265/70R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "285/65R18"},
+        {"name": "TRD Off-Road Package", "oemWheelSize": "18x8", "oemTireSize": "265/70R18"},
+        {"name": "TRD Sport Package", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Capstone", "oemWheelSize": "22x8", "oemTireSize": "265/50R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com", "fnwheels.com"],
+      "notes": "All-new 3rd generation on TNGA-F platform with 6x139.7 bolt pattern"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "3rd (XK80)",
+      "boltPattern": "6x139.7",
+      "hubBore": 95.0,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "265/70R18"},
+        {"name": "SR5", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "265/70R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "285/65R18"},
+        {"name": "TRD Off-Road Package", "oemWheelSize": "18x8", "oemTireSize": "265/70R18"},
+        {"name": "TRD Sport Package", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Capstone", "oemWheelSize": "22x8", "oemTireSize": "265/50R22"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "3rd generation continuation"
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "3rd (XK80)",
+      "boltPattern": "6x139.7",
+      "hubBore": 95.0,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "265/70R18"},
+        {"name": "SR5", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "265/70R18"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "1794 Edition", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "285/65R18"},
+        {"name": "TRD Off-Road Package", "oemWheelSize": "18x8", "oemTireSize": "265/70R18"},
+        {"name": "TRD Sport Package", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Capstone", "oemWheelSize": "22x8", "oemTireSize": "265/50R22"}
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com"],
+      "notes": "FLAGGED: Future model year - verify when officially released"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "generation": "3rd (XK80)",
+      "boltPattern": "6x139.7",
+      "hubBore": 95.0,
+      "trims": [
+        {"name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "265/70R18"},
+        {"name": "SR5", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "1794 Edition", "oemWheelSize": "20x8", "oemTireSize": "265/60R20"},
+        {"name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "285/65R18"},
+        {"name": "Capstone", "oemWheelSize": "22x8", "oemTireSize": "265/50R22"}
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "FLAGGED: Future model year - verify when officially released"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "1st (XL10)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "15x6", "oemTireSize": "205/70R15"},
+        {"name": "LE", "oemWheelSize": "15x6", "oemTireSize": "205/70R15"},
+        {"name": "XLE", "oemWheelSize": "15x6.5", "oemTireSize": "215/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "siennachat.com"],
+      "notes": "1st generation Sienna"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "1st (XL10)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "15x6", "oemTireSize": "205/70R15"},
+        {"name": "LE", "oemWheelSize": "15x6", "oemTireSize": "205/70R15"},
+        {"name": "XLE", "oemWheelSize": "15x6.5", "oemTireSize": "215/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "1st generation Sienna"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "1st (XL10)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "15x6", "oemTireSize": "205/70R15"},
+        {"name": "LE", "oemWheelSize": "15x6", "oemTireSize": "205/70R15"},
+        {"name": "XLE", "oemWheelSize": "15x6.5", "oemTireSize": "215/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "1st generation Sienna"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "1st (XL10)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "15x6", "oemTireSize": "205/70R15"},
+        {"name": "LE", "oemWheelSize": "15x6", "oemTireSize": "205/70R15"},
+        {"name": "XLE", "oemWheelSize": "15x6.5", "oemTireSize": "215/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of 1st generation"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "2nd (XL20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "XLE", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "XLE Limited", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autopadre.com", "factorywheelreplacement.com"],
+      "notes": "First year of 2nd generation with new platform"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "2nd (XL20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "XLE", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "XLE Limited", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autopadre.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "2nd (XL20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "XLE", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "XLE Limited", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "size-tire.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "2nd (XL20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "XLE", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "XLE Limited", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "2nd (XL20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "XLE", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "XLE Limited", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autopadre.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "2nd (XL20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "XLE", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "XLE Limited", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autopadre.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "2nd (XL20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "215/65R16"},
+        {"name": "XLE", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"},
+        {"name": "XLE Limited", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "autopadre.com"],
+      "notes": "Last year of 2nd generation"
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "3rd (XL30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base Model", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE FWD", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE AWD", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "XLE FWD", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "XLE AWD", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "Limited FWD", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "Limited AWD", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "SE", "oemWheelSize": "19x7", "oemTireSize": "235/50R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First year of 3rd generation with available AWD"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "3rd (XL30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base Model", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE AWD", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "SE", "oemWheelSize": "19x7", "oemTireSize": "235/50R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "3rd generation continuation"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "3rd (XL30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base Model", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE AWD", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "SE", "oemWheelSize": "19x7", "oemTireSize": "235/50R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "3rd generation continuation"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "3rd (XL30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base Model", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE AWD", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "SE", "oemWheelSize": "19x7", "oemTireSize": "235/50R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "3rd generation continuation"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "3rd (XL30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base Model", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE AWD", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "SE", "oemWheelSize": "19x7", "oemTireSize": "235/50R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "3rd generation continuation"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "3rd (XL30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE AWD", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "XLE", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "SE", "oemWheelSize": "19x7", "oemTireSize": "235/50R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "3rd generation continuation"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Sienna",
+      "generation": "3rd (XL30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE", "oemWheelSize": "17x7", "oemTireSize": "235/60R17"},
+        {"name": "LE AWD", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "XLE", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "235/55R18"},
+        {"name": "SE", "oemWheelSize": "19x7", "oemTireSize": "235/50R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "3rd generation continuation"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Solara",
+      "generation": "1st (XV20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "SE Convertible", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SE Convertible", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "SLE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SLE", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "SLE Convertible", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SLE Convertible", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "1st generation Solara based on Camry platform"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Solara",
+      "generation": "1st (XV20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "SLE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SLE", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "TRD", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "1st generation Solara"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Solara",
+      "generation": "1st (XV20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "SLE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SLE", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "TRD", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "1st generation Solara"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Solara",
+      "generation": "1st (XV20)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "SLE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SLE", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "TRD", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of 1st generation"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Solara",
+      "generation": "2nd (XV30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SE Sport", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "SE V6", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "SLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SLE V6", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First year of 2nd generation"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Solara",
+      "generation": "2nd (XV30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SE Sport", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "SE V6", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SE V6", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "SLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SLE V6", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Solara",
+      "generation": "2nd (XV30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SE Sport", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "SE V6", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SLE V6", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Solara",
+      "generation": "2nd (XV30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SE V6", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SE V6", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "SLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SLE V6", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Sport", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Sport V6", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Solara",
+      "generation": "2nd (XV30)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SE V6", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SLE V6", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Sport", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Sport V6", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "Last year of Solara production"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Supra",
+      "generation": "A90",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "isStaggered": true,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "3.0 Premium", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "Launch Edition", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com", "motortrend.com"],
+      "notes": "First year of revived Supra (A90). Staggered wheel/tire setup. BMW Z4 platform."
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Supra",
+      "generation": "A90",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "isStaggered": true,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "3.0 Premium", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "Launch Edition", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com", "motortrend.com"],
+      "notes": "A90 continuation. All trims staggered."
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Supra",
+      "generation": "A90",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "isStaggered": true,
+      "trims": [
+        {"name": "2.0", "oemWheelSize": "F: 18x9 / R: 18x10", "oemTireSize": "F: 255/40R18 / R: 275/40R18"},
+        {"name": "3.0", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "3.0 Premium", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "A91 Edition", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "Added 4-cylinder 2.0 model with 18-inch staggered wheels. Power increased to 382hp on 3.0."
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Supra",
+      "generation": "A90",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "isStaggered": true,
+      "trims": [
+        {"name": "2.0", "oemWheelSize": "F: 18x9 / R: 18x10", "oemTireSize": "F: 255/40R18 / R: 275/40R18"},
+        {"name": "3.0", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "3.0 Premium", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "A91-CF Edition", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "A90 continuation. All trims staggered."
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Supra",
+      "generation": "A90",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "isStaggered": true,
+      "trims": [
+        {"name": "2.0", "oemWheelSize": "F: 18x9 / R: 18x10", "oemTireSize": "F: 255/40R18 / R: 275/40R18"},
+        {"name": "3.0", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "3.0 Premium", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Manual transmission option added. All trims staggered."
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Supra",
+      "generation": "A90",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "isStaggered": true,
+      "trims": [
+        {"name": "2.0", "oemWheelSize": "F: 18x9 / R: 18x10", "oemTireSize": "F: 255/40R18 / R: 275/40R18"},
+        {"name": "3.0 Premium", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "45th Anniversary", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "All trims staggered. 45th Anniversary special edition."
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Supra",
+      "generation": "A90",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "isStaggered": true,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "3.0 Premium", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"}
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com"],
+      "notes": "FLAGGED: Future model year. Verify specs when released."
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Supra",
+      "generation": "A90",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "isStaggered": true,
+      "trims": [
+        {"name": "3.0", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "3.0 Premium", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"},
+        {"name": "MkV Final Edition", "oemWheelSize": "F: 19x9 / R: 19x10", "oemTireSize": "F: 255/35R19 / R: 275/35R19"}
+      ],
+      "confidence": "medium",
+      "sources": ["tiresize.com"],
+      "notes": "FLAGGED: Future model year. Final edition announced."
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "generation": "1st (N100)",
+      "boltPattern": "6x139.7",
+      "boltPatternAlt": "5x114.3",
+      "hubBore": 106.1,
+      "hubBoreAlt": 60.1,
+      "trims": [
+        {"name": "2WD Regular Cab", "oemWheelSize": "14x5.5", "oemTireSize": "205/75R14", "boltPattern": "5x114.3"},
+        {"name": "2WD Regular Cab", "oemWheelSize": "15x6", "oemTireSize": "215/70R15", "boltPattern": "5x114.3"},
+        {"name": "4WD Regular Cab", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"},
+        {"name": "4WD Extra Cab", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"},
+        {"name": "PreRunner", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fifteen52.com", "highcountryoffroad.com"],
+      "notes": "2WD uses 5x114.3, 4WD/PreRunner uses 6x139.7"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "generation": "1st (N100)",
+      "boltPattern": "6x139.7",
+      "boltPatternAlt": "5x114.3",
+      "hubBore": 106.1,
+      "hubBoreAlt": 60.1,
+      "trims": [
+        {"name": "2WD Regular Cab", "oemWheelSize": "14x5.5", "oemTireSize": "205/75R14", "boltPattern": "5x114.3"},
+        {"name": "2WD Regular Cab", "oemWheelSize": "15x6", "oemTireSize": "215/70R15", "boltPattern": "5x114.3"},
+        {"name": "4WD Regular Cab", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"},
+        {"name": "4WD Extra Cab", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"},
+        {"name": "PreRunner", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "fifteen52.com"],
+      "notes": "2WD uses 5x114.3, 4WD/PreRunner uses 6x139.7"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "generation": "1st (N100)",
+      "boltPattern": "6x139.7",
+      "boltPatternAlt": "5x114.3",
+      "hubBore": 106.1,
+      "hubBoreAlt": 60.1,
+      "trims": [
+        {"name": "2WD Regular Cab", "oemWheelSize": "14x5.5", "oemTireSize": "205/75R14", "boltPattern": "5x114.3"},
+        {"name": "2WD Regular Cab", "oemWheelSize": "15x6", "oemTireSize": "215/70R15", "boltPattern": "5x114.3"},
+        {"name": "4WD Regular Cab", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"},
+        {"name": "4WD Extra Cab", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"},
+        {"name": "PreRunner", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2WD uses 5x114.3, 4WD/PreRunner uses 6x139.7"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "generation": "1st (N100)",
+      "boltPattern": "6x139.7",
+      "boltPatternAlt": "5x114.3",
+      "hubBore": 106.1,
+      "hubBoreAlt": 60.1,
+      "trims": [
+        {"name": "2WD Regular Cab", "oemWheelSize": "14x5.5", "oemTireSize": "205/75R14", "boltPattern": "5x114.3"},
+        {"name": "2WD Regular Cab", "oemWheelSize": "15x6", "oemTireSize": "215/70R15", "boltPattern": "5x114.3"},
+        {"name": "4WD Regular Cab", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"},
+        {"name": "4WD Extra Cab", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"},
+        {"name": "PreRunner", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2WD uses 5x114.3, 4WD/PreRunner uses 6x139.7"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "generation": "1st (N100)",
+      "boltPattern": "6x139.7",
+      "boltPatternAlt": "5x114.3",
+      "hubBore": 106.1,
+      "hubBoreAlt": 60.1,
+      "trims": [
+        {"name": "2WD Regular Cab", "oemWheelSize": "14x5.5", "oemTireSize": "205/75R14", "boltPattern": "5x114.3"},
+        {"name": "2WD Regular Cab", "oemWheelSize": "15x6", "oemTireSize": "215/70R15", "boltPattern": "5x114.3"},
+        {"name": "4WD Regular Cab", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"},
+        {"name": "4WD Extra Cab", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"},
+        {"name": "PreRunner", "oemWheelSize": "15x7", "oemTireSize": "265/75R15", "boltPattern": "6x139.7"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of 1st gen. 2WD uses 5x114.3, 4WD/PreRunner uses 6x139.7"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "generation": "2nd (N200)",
+      "boltPattern": "6x139.7",
+      "boltPatternAlt": "5x114.3",
+      "hubBore": 106.1,
+      "hubBoreAlt": 60.1,
+      "trims": [
+        {"name": "2WD Regular Cab", "oemWheelSize": "15x6", "oemTireSize": "215/70R15", "boltPattern": "5x114.3"},
+        {"name": "2WD Access Cab", "oemWheelSize": "15x6", "oemTireSize": "215/70R15", "boltPattern": "5x114.3"},
+        {"name": "4WD Regular Cab", "oemWheelSize": "16x7", "oemTireSize": "245/75R16", "boltPattern": "6x139.7"},
+        {"name": "4WD Access Cab", "oemWheelSize": "16x7", "oemTireSize": "245/75R16", "boltPattern": "6x139.7"},
+        {"name": "4WD Access Cab", "oemWheelSize": "16x7", "oemTireSize": "265/70R16", "boltPattern": "6x139.7"},
+        {"name": "4WD Access Cab", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17", "boltPattern": "6x139.7"},
+        {"name": "4WD Double Cab", "oemWheelSize": "16x7", "oemTireSize": "245/75R16", "boltPattern": "6x139.7"},
+        {"name": "PreRunner", "oemWheelSize": "16x7", "oemTireSize": "245/75R16", "boltPattern": "6x139.7"},
+        {"name": "X-Runner", "oemWheelSize": "18x8", "oemTireSize": "255/45R18", "boltPattern": "5x114.3"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First year of 2nd gen. 2WD uses 5x114.3, 4WD/PreRunner uses 6x139.7. X-Runner is 2WD with sport suspension."
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "generation": "2nd (N200)",
+      "boltPattern": "6x139.7",
+      "boltPatternAlt": "5x114.3",
+      "hubBore": 106.1,
+      "hubBoreAlt": 60.1,
+      "trims": [
+        {"name": "2WD Regular Cab", "oemWheelSize": "15x6", "oemTireSize": "215/70R15", "boltPattern": "5x114.3"},
+        {"name": "4WD Regular Cab", "oemWheelSize": "16x7", "oemTireSize": "245/75R16", "boltPattern": "6x139.7"},
+        {"name": "4WD Access Cab", "oemWheelSize": "16x7", "oemTireSize": "265/70R16", "boltPattern": "6x139.7"},
+        {"name": "4WD Double Cab", "oemWheelSize": "16x7", "oemTireSize": "265/70R16", "boltPattern": "6x139.7"},
+        {"name": "PreRunner", "oemWheelSize": "16x7", "oemTireSize": "245/75R16", "boltPattern": "6x139.7"},
+        {"name": "X-Runner", "oemWheelSize": "18x8", "oemTireSize": "255/45R18", "boltPattern": "5x114.3"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation. 2WD uses 5x114.3, 4WD/PreRunner uses 6x139.7."
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "generation": "2nd (N200)",
+      "boltPattern": "6x139.7",
+      "boltPatternAlt": "5x114.3",
+      "hubBore": 106.1,
+      "hubBoreAlt": 60.1,
+      "trims": [
+        {"name": "2WD Regular Cab", "oemWheelSize": "15x6", "oemTireSize": "215/70R15", "boltPattern": "5x114.3"},
+        {"name": "4WD Regular Cab", "oemWheelSize": "16x7", "oemTireSize": "245/75R16", "boltPattern": "6x139.7"},
+        {"name": "4WD Access Cab", "oemWheelSize": "16x7", "oemTireSize": "265/70R16", "boltPattern": "6x139.7"},
+        {"name": "4WD Double Cab", "oemWheelSize": "16x7", "oemTireSize": "265/70R16", "boltPattern": "6x139.7"},
+        {"name": "PreRunner", "oemWheelSize": "16x7", "oemTireSize": "245/75R16", "boltPattern": "6x139.7"},
+        {"name": "X-Runner", "oemWheelSize": "18x8", "oemTireSize": "255/45R18", "boltPattern": "5x114.3"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "generation": "2nd (N200)",
+      "boltPattern": "6x139.7",
+      "boltPatternAlt": "5x114.3",
+      "hubBore": 106.1,
+      "hubBoreAlt": 60.1,
+      "trims": [
+        {"name": "2WD Regular Cab", "oemWheelSize": "15x6", "oemTireSize": "215/70R15", "boltPattern": "5x114.3"},
+        {"name": "4WD Regular Cab", "oemWheelSize": "16x7", "oemTireSize": "245/75R16", "boltPattern": "6x139.7"},
+        {"name": "4WD Access Cab", "oemWheelSize": "16x7", "oemTireSize": "265/70R16", "boltPattern": "6x139.7"},
+        {"name": "4WD Double Cab", "oemWheelSize": "16x7", "oemTireSize": "265/70R16", "boltPattern": "6x139.7"},
+        {"name": "PreRunner", "oemWheelSize": "16x7", "oemTireSize": "245/75R16", "boltPattern": "6x139.7"},
+        {"name": "X-Runner", "oemWheelSize": "18x8", "oemTireSize": "255/45R18", "boltPattern": "5x114.3"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2nd generation continuation"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "1st (XK30)",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "Regular Cab 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Regular Cab 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab Limited 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Access Cab Limited 4WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "carclubsusa.com"],
+      "notes": "1st generation Tundra with 6x139.7 bolt pattern"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "1st (XK30)",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "Regular Cab 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Regular Cab 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab Limited 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Access Cab Limited 4WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "1st generation continuation"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "1st (XK30)",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "Regular Cab 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Regular Cab 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab Limited 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Access Cab Limited 4WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "1st generation continuation"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "1st (XK30)",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "Regular Cab 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Regular Cab 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab Limited 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Access Cab Limited 4WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "1st generation continuation"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "1st (XK30)",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "Regular Cab 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Regular Cab 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab Limited 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Access Cab Limited 4WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Double Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Double Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Double Cab Limited 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Double Cab Limited 4WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Double Cab body style added"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "1st (XK30)",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Access Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Access Cab SR5 4WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "Access Cab Limited 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Access Cab Limited 2WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"},
+        {"name": "Access Cab Limited 4WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"},
+        {"name": "Double Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Double Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Double Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Double Cab Limited 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Double Cab Limited 2WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"},
+        {"name": "Double Cab Limited 4WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Double Cab Limited 4WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "17-inch wheel option added"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "1st (XK30)",
+      "boltPattern": "6x139.7",
+      "hubBore": 106.1,
+      "trims": [
+        {"name": "2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Access Cab Limited 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Access Cab Limited 2WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"},
+        {"name": "Access Cab Limited 4WD", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17"},
+        {"name": "Double Cab SR5 2WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Double Cab SR5 4WD", "oemWheelSize": "16x7", "oemTireSize": "245/70R16"},
+        {"name": "Double Cab Limited 2WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "Double Cab Limited 4WD", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"},
+        {"name": "DW Double Cab 2WD", "oemWheelSize": "18x8", "oemTireSize": "275/55R18"},
+        {"name": "DW Double Cab 4WD", "oemWheelSize": "18x8", "oemTireSize": "275/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "DW (Darrell Waltrip) edition added with 18-inch wheels"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd (XK50)",
+      "boltPattern": "5x150",
+      "hubBore": 110.1,
+      "trims": [
+        {"name": "Regular Cab", "oemWheelSize": "18x8", "oemTireSize": "255/70R18"},
+        {"name": "Double Cab", "oemWheelSize": "18x8", "oemTireSize": "255/70R18"},
+        {"name": "Double Cab SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "Double Cab Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"},
+        {"name": "CrewMax", "oemWheelSize": "18x8", "oemTireSize": "275/65R18"},
+        {"name": "CrewMax Limited", "oemWheelSize": "20x8", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "First year of 2nd generation with new 5x150 bolt pattern"
+    }
+  ]
+}

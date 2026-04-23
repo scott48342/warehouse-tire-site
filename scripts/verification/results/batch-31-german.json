@@ -1,0 +1,1318 @@
+{
+  "batch": "batch-31-german",
+  "verifiedAt": "2026-04-23T00:41:00.000Z",
+  "verifiedBy": "subagent-verify-de-31",
+  "protocol": "VERIFICATION_PROTOCOL.md",
+  "summary": {
+    "totalVehicles": 75,
+    "verified": 75,
+    "flagged": 0,
+    "invalidModelYears": 0,
+    "notes": "All 75 Mercedes-Benz vehicles verified. All model years valid for US market as of April 2026."
+  },
+  "commonSpecs": {
+    "boltPattern": "5x112",
+    "hubBore": 66.6,
+    "lugBoltThread": "M14x1.5 (W206), M12x1.5 (older)",
+    "sources": ["hulkoffsets.com", "mbusa.com", "caranddriver.com", "edmunds.com"]
+  },
+  "vehicles": [
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C350", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C63 AMG", "oemWheelSize": "18x8.5F/18x9R", "oemTireSize": "235/40R18F/255/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C250", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C350", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C63 AMG", "oemWheelSize": "18x8.5F/18x9R", "oemTireSize": "235/40R18F/255/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C250", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C350", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C63 AMG", "oemWheelSize": "18x8.5F/18x9R", "oemTireSize": "235/40R18F/255/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W204",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C250", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C350", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "C63 AMG", "oemWheelSize": "18x8.5F/18x9R", "oemTireSize": "235/40R18F/255/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C400 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C63 AMG", "oemWheelSize": "18x8F/18x9R", "oemTireSize": "245/40R18F/265/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C450 AMG 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C63 AMG", "oemWheelSize": "18x8F/18x9R", "oemTireSize": "245/40R18F/265/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C43 AMG 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C63 AMG", "oemWheelSize": "18x8F/18x9R", "oemTireSize": "245/40R18F/265/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C43 AMG 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C63 AMG", "oemWheelSize": "19x8.5F/19x9.5R", "oemTireSize": "245/35R19F/265/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C43 AMG 4MATIC", "oemWheelSize": "18x7.5F/18x8.5R", "oemTireSize": "225/45R18F/245/40R18R" },
+        { "name": "C63 AMG", "oemWheelSize": "19x8.5F/19x9.5R", "oemTireSize": "245/35R19F/265/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C43 AMG 4MATIC", "oemWheelSize": "18x7.5F/18x8.5R", "oemTireSize": "225/45R18F/245/40R18R" },
+        { "name": "C63 AMG", "oemWheelSize": "19x8.5F/19x9.5R", "oemTireSize": "245/35R19F/265/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W205",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C300 4MATIC", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" },
+        { "name": "C43 AMG 4MATIC", "oemWheelSize": "18x7.5F/18x8.5R", "oemTireSize": "225/45R18F/245/40R18R" },
+        { "name": "C63 AMG", "oemWheelSize": "19x8.5F/19x9.5R", "oemTireSize": "245/35R19F/265/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W206",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C300 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C43 AMG 4MATIC", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/40R19F/265/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W206",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C300 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C43 AMG 4MATIC", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/40R19F/265/35R19R" },
+        { "name": "C63 S E Performance", "oemWheelSize": "19x8.5F/19x10R", "oemTireSize": "265/35R19F/275/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W206",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C300 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C43 AMG 4MATIC", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/40R19F/265/35R19R" },
+        { "name": "C63 S E Performance", "oemWheelSize": "19x8.5F/19x10R", "oemTireSize": "265/35R19F/275/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W206",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C300 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C43 AMG 4MATIC", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/40R19F/265/35R19R" },
+        { "name": "C63 S E Performance", "oemWheelSize": "19x8.5F/19x10R", "oemTireSize": "265/35R19F/275/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "generation": "W206",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "C300", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C300 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "C43 AMG 4MATIC", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/40R19F/265/35R19R" },
+        { "name": "C63 S E Performance", "oemWheelSize": "19x8.5F/19x10R", "oemTireSize": "265/35R19F/275/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 45 AMG", "oemWheelSize": "18x7.5F/18x8R", "oemTireSize": "235/40R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "caranddriver.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 45 AMG", "oemWheelSize": "18x7.5F/18x8R", "oemTireSize": "235/40R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "caranddriver.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 45 AMG", "oemWheelSize": "18x7.5F/18x8R", "oemTireSize": "235/40R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "caranddriver.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 45 AMG", "oemWheelSize": "19x7.5F/19x8R", "oemTireSize": "235/35R19F/255/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "caranddriver.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 45 AMG", "oemWheelSize": "19x7.5F/19x8R", "oemTireSize": "235/35R19F/255/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "caranddriver.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C117",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "225/45R17" },
+        { "name": "CLA 45 AMG", "oemWheelSize": "19x7.5F/19x8R", "oemTireSize": "235/35R19F/255/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "caranddriver.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 35 AMG 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/40R18" },
+        { "name": "CLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/35R19F/255/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "kbb.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 35 AMG 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/40R18" },
+        { "name": "CLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/35R19F/255/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 35 AMG 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/40R18" },
+        { "name": "CLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/35R19F/255/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 35 AMG 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/40R18" },
+        { "name": "CLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/35R19F/255/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 35 AMG 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/40R18" },
+        { "name": "CLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/35R19F/255/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 35 AMG 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/40R18" },
+        { "name": "CLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/35R19F/255/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "generation": "C118",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "CLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18" },
+        { "name": "CLA 35 AMG 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/40R18" },
+        { "name": "CLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "245/35R19F/255/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W210",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E320", "oemWheelSize": "16x7.5", "oemTireSize": "215/55R16" },
+        { "name": "E320 4MATIC", "oemWheelSize": "16x7.5", "oemTireSize": "215/55R16" },
+        { "name": "E430", "oemWheelSize": "17x7.5", "oemTireSize": "235/45R17" },
+        { "name": "E55 AMG", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W210",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E320", "oemWheelSize": "16x7.5", "oemTireSize": "215/55R16" },
+        { "name": "E320 4MATIC", "oemWheelSize": "16x7.5", "oemTireSize": "215/55R16" },
+        { "name": "E430", "oemWheelSize": "17x7.5", "oemTireSize": "235/45R17" },
+        { "name": "E55 AMG", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W210",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E320", "oemWheelSize": "16x7.5", "oemTireSize": "215/55R16" },
+        { "name": "E320 4MATIC", "oemWheelSize": "16x7.5", "oemTireSize": "215/55R16" },
+        { "name": "E430", "oemWheelSize": "17x7.5", "oemTireSize": "235/45R17" },
+        { "name": "E55 AMG", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E320", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E500", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E55 AMG", "oemWheelSize": "18x8F/18x9R", "oemTireSize": "245/40R18F/265/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E320", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E320 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E500", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E55 AMG", "oemWheelSize": "18x8F/18x9R", "oemTireSize": "245/40R18F/265/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E320", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E320 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E500", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E55 AMG", "oemWheelSize": "18x8F/18x9R", "oemTireSize": "245/40R18F/265/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E500", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E55 AMG", "oemWheelSize": "18x8F/18x9R", "oemTireSize": "245/40R18F/265/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E550", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E63 AMG", "oemWheelSize": "18x8F/18x9R", "oemTireSize": "245/40R18F/265/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E550", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E63 AMG", "oemWheelSize": "18x8F/18x9R", "oemTireSize": "245/40R18F/265/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W211",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x7.5", "oemTireSize": "245/45R17" },
+        { "name": "E550", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E63 AMG", "oemWheelSize": "18x8F/18x9R", "oemTireSize": "245/40R18F/265/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E550", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18" },
+        { "name": "E63 AMG", "oemWheelSize": "18x8.5F/18x9.5R", "oemTireSize": "255/40R18F/285/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E550", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18" },
+        { "name": "E63 AMG", "oemWheelSize": "18x8.5F/18x9.5R", "oemTireSize": "255/40R18F/285/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E550", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18" },
+        { "name": "E63 AMG", "oemWheelSize": "18x8.5F/18x9.5R", "oemTireSize": "255/40R18F/285/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E550", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18" },
+        { "name": "E63 AMG", "oemWheelSize": "18x8.5F/18x9.5R", "oemTireSize": "255/40R18F/285/35R18R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E250 BlueTEC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E350", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E550", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18" },
+        { "name": "E63 AMG", "oemWheelSize": "19x8.5F/19x9.5R", "oemTireSize": "255/35R19F/285/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E250 BlueTEC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E350", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E550", "oemWheelSize": "18x8.5", "oemTireSize": "255/40R18" },
+        { "name": "E63 AMG", "oemWheelSize": "19x8.5F/19x9.5R", "oemTireSize": "255/35R19F/285/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W212",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E350 4MATIC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E400", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E63 AMG S", "oemWheelSize": "19x8.5F/19x9.5R", "oemTireSize": "255/35R19F/285/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E300", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E300 4MATIC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E400 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E43 AMG 4MATIC", "oemWheelSize": "19x8.5F/19x9R", "oemTireSize": "245/35R19F/275/30R19R" },
+        { "name": "E63 S AMG 4MATIC+", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/35R20F/295/30R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E300", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E300 4MATIC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E400 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E43 AMG 4MATIC", "oemWheelSize": "19x8.5F/19x9R", "oemTireSize": "245/35R19F/275/30R19R" },
+        { "name": "E63 S AMG 4MATIC+", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/35R20F/295/30R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E300", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E300 4MATIC", "oemWheelSize": "17x8", "oemTireSize": "245/45R17" },
+        { "name": "E450 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E53 AMG 4MATIC+", "oemWheelSize": "19x8.5F/19x9R", "oemTireSize": "245/35R19F/275/30R19R" },
+        { "name": "E63 S AMG 4MATIC+", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/35R20F/295/30R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E350 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E450 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E53 AMG 4MATIC+", "oemWheelSize": "19x8.5F/19x9R", "oemTireSize": "245/35R19F/275/30R19R" },
+        { "name": "E63 S AMG 4MATIC+", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/35R20F/295/30R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E350 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E450 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E53 AMG 4MATIC+", "oemWheelSize": "19x8.5F/19x9R", "oemTireSize": "245/35R19F/275/30R19R" },
+        { "name": "E63 S AMG 4MATIC+", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/35R20F/295/30R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E350 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E450 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E53 AMG 4MATIC+", "oemWheelSize": "19x8.5F/19x9R", "oemTireSize": "245/35R19F/275/30R19R" },
+        { "name": "E63 S AMG 4MATIC+", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/35R20F/295/30R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "edmunds.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W213",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E350 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E450 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/40R18" },
+        { "name": "E53 AMG 4MATIC+", "oemWheelSize": "19x8.5F/19x9R", "oemTireSize": "245/35R19F/275/30R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W214",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E350 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E450 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" },
+        { "name": "E53 AMG 4MATIC+", "oemWheelSize": "19x8F/19x9R", "oemTireSize": "245/40R19F/275/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W214",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E350 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E450 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" },
+        { "name": "E53 AMG 4MATIC+", "oemWheelSize": "19x8F/19x9R", "oemTireSize": "245/40R19F/275/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "generation": "W214",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "E350", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E350 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "245/45R18" },
+        { "name": "E450 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "245/40R19" },
+        { "name": "E53 AMG 4MATIC+", "oemWheelSize": "19x8F/19x9R", "oemTireSize": "245/40R19F/275/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 45 AMG", "oemWheelSize": "19x7.5F/19x8R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 45 AMG", "oemWheelSize": "19x7.5F/19x8R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 45 AMG", "oemWheelSize": "19x7.5F/19x8R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 45 AMG", "oemWheelSize": "19x7.5F/19x8R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 45 AMG", "oemWheelSize": "19x7.5F/19x8R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "X156",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true,
+      "notes": "Final year of X156 generation"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 35 AMG 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/45R19" },
+        { "name": "GLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true,
+      "notes": "New H247 generation with taller stance"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 35 AMG 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/45R19" },
+        { "name": "GLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 35 AMG 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/45R19" },
+        { "name": "GLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 35 AMG 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/45R19" },
+        { "name": "GLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 35 AMG 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/45R19" },
+        { "name": "GLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "generation": "H247",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLA 250", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 250 4MATIC", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18" },
+        { "name": "GLA 35 AMG 4MATIC", "oemWheelSize": "19x8", "oemTireSize": "235/45R19" },
+        { "name": "GLA 45 AMG 4MATIC+", "oemWheelSize": "19x8F/19x8.5R", "oemTireSize": "235/40R19F/255/35R19R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "generation": "X253",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLC 300", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 300 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 43 AMG 4MATIC", "oemWheelSize": "19x8F/19x9R", "oemTireSize": "235/55R19F/255/50R19R" },
+        { "name": "GLC 63 AMG", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/45R20F/295/40R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "generation": "X253",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLC 300", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 300 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 43 AMG 4MATIC", "oemWheelSize": "19x8F/19x9R", "oemTireSize": "235/55R19F/255/50R19R" },
+        { "name": "GLC 63 AMG", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/45R20F/295/40R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "generation": "X253",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLC 300", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 300 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 43 AMG 4MATIC", "oemWheelSize": "19x8F/19x9R", "oemTireSize": "235/55R19F/255/50R19R" },
+        { "name": "GLC 63 AMG", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/45R20F/295/40R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "generation": "X253",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLC 300", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 300 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 43 AMG 4MATIC", "oemWheelSize": "19x8F/19x9R", "oemTireSize": "235/55R19F/255/50R19R" },
+        { "name": "GLC 63 AMG", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/45R20F/295/40R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "generation": "X253",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLC 300", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 300 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 43 AMG 4MATIC", "oemWheelSize": "20x8F/20x9R", "oemTireSize": "255/45R20F/275/40R20R" },
+        { "name": "GLC 63 AMG", "oemWheelSize": "20x9F/20x10R", "oemTireSize": "265/45R20F/295/40R20R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "generation": "X253",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLC 300", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 300 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 43 AMG 4MATIC", "oemWheelSize": "20x8F/20x9R", "oemTireSize": "255/45R20F/275/40R20R" },
+        { "name": "GLC 63 AMG S", "oemWheelSize": "21x9F/21x10R", "oemTireSize": "265/40R21F/295/35R21R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "generation": "X253",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        { "name": "GLC 300", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 300 4MATIC", "oemWheelSize": "18x8", "oemTireSize": "235/60R18" },
+        { "name": "GLC 43 AMG 4MATIC", "oemWheelSize": "20x8F/20x9R", "oemTireSize": "255/45R20F/275/40R20R" },
+        { "name": "GLC 63 AMG S", "oemWheelSize": "21x9F/21x10R", "oemTireSize": "265/40R21F/295/35R21R" }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "usMarketValid": true,
+      "notes": "Final year of X253 generation in US. X254 started 2023."
+    }
+  ],
+  "generationNotes": {
+    "C-Class": {
+      "W204": "2008-2014 in US. Bolt: 5x112, Hub: 66.6mm. OEM wheels 16-18 inch.",
+      "W205": "2015-2021 in US. Bolt: 5x112, Hub: 66.6mm. OEM wheels 17-19 inch.",
+      "W206": "2022-present in US. Bolt: 5x112, Hub: 66.6mm. Lug bolt M14x1.5 (changed from M12x1.5). OEM wheels 18-20 inch."
+    },
+    "CLA": {
+      "C117": "2014-2019 in US (launched 2014 as Mercedes' entry-level sedan). Bolt: 5x112, Hub: 66.6mm. OEM wheels 17-19 inch.",
+      "C118": "2020-present in US. Bolt: 5x112, Hub: 66.6mm. OEM wheels 18-20 inch."
+    },
+    "E-Class": {
+      "W210": "2000-2002 in US. Bolt: 5x112, Hub: 66.6mm. OEM wheels 16-18 inch.",
+      "W211": "2003-2009 in US. Bolt: 5x112, Hub: 66.6mm. OEM wheels 16-18 inch.",
+      "W212": "2010-2016 in US. Bolt: 5x112, Hub: 66.6mm. OEM wheels 17-19 inch.",
+      "W213": "2017-2023 in US. Bolt: 5x112, Hub: 66.6mm. OEM wheels 17-20 inch.",
+      "W214": "2024-present in US. Bolt: 5x112, Hub: 66.6mm. OEM wheels 18-20 inch."
+    },
+    "GLA": {
+      "X156": "2015-2020 in US (launched as 2015 MY). Bolt: 5x112, Hub: 66.6mm. OEM wheels 17-19 inch.",
+      "H247": "2021-present in US. New generation with taller stance. Bolt: 5x112, Hub: 66.6mm. OEM wheels 18-19 inch."
+    },
+    "GLC": {
+      "X253": "2016-2022 in US (replaced GLK). Bolt: 5x112, Hub: 66.6mm. OEM wheels 18-21 inch.",
+      "X254": "2023-present in US (not in this batch)."
+    }
+  }
+}

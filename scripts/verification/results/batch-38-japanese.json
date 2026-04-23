@@ -1,0 +1,919 @@
+{
+  "batch": "batch-38-japanese",
+  "verifiedAt": "2026-04-23T00:30:00Z",
+  "verifiedBy": "subagent-verify-jp-38",
+  "summary": {
+    "total": 75,
+    "valid": 29,
+    "invalid": 46,
+    "invalidReasons": {
+      "notSoldInUSA": 32,
+      "modelYearNotExist": 10,
+      "futureModelYear": 4
+    }
+  },
+  "validVehicles": [
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "NC (2006-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16" },
+        { "name": "Touring/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"],
+      "notes": "NC generation (2006-2015)"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "NC (2006-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16" },
+        { "name": "Touring/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "NC (2006-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16" },
+        { "name": "Touring/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "NC (2006-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16" },
+        { "name": "Touring/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "NC (2006-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16" },
+        { "name": "Touring/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "NC (2006-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16" },
+        { "name": "Club/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "ND (2016+)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "195/50R16" },
+        { "name": "Club/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"],
+      "notes": "ND generation started 2016 - new bolt pattern 4x100"
+    },
+    {
+      "year": 2017,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "ND (2016+)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "195/50R16" },
+        { "name": "Club/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "ND (2016+)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "195/50R16" },
+        { "name": "Club/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "ND (2016+)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "195/50R16" },
+        { "name": "Club/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "ND (2016+)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "195/50R16" },
+        { "name": "Club/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "ND (2016+)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "195/50R16" },
+        { "name": "Club/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "ND (2016+)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "195/50R16" },
+        { "name": "Club/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "ND (2016+)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "195/50R16" },
+        { "name": "Club/Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "generation": "ND (2016+)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "195/50R16" },
+        { "name": "Club", "oemWheelSize": "17x7", "oemTireSize": "205/45R17" }
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "mazdausa.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "Diamante",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "15x6", "oemTireSize": "205/65R15" },
+        { "name": "LS", "oemWheelSize": "16x6", "oemTireSize": "215/60R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2001,
+      "make": "Mitsubishi",
+      "model": "Diamante",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "15x6", "oemTireSize": "205/65R15" },
+        { "name": "LS", "oemWheelSize": "16x6", "oemTireSize": "215/60R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Mitsubishi",
+      "model": "Diamante",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "15x6", "oemTireSize": "205/65R15" },
+        { "name": "LS/VR-X", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Mitsubishi",
+      "model": "Diamante",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "15x6", "oemTireSize": "205/65R15" },
+        { "name": "LS/VR-X", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Mitsubishi",
+      "model": "Diamante",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "15x6", "oemTireSize": "205/65R15" },
+        { "name": "LS/VR-X", "oemWheelSize": "17x7", "oemTireSize": "225/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "media.mitsubishicars.com"],
+      "notes": "Final US model year"
+    },
+    {
+      "year": 2018,
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "LE/SE", "oemWheelSize": "18x7", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mitsubishicars.com"],
+      "notes": "First US model year"
+    },
+    {
+      "year": 2019,
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "LE/SE/SEL", "oemWheelSize": "18x7", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mitsubishicars.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "LE/SE/SEL", "oemWheelSize": "18x7", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mitsubishicars.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "LE/SE/SEL", "oemWheelSize": "18x7", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mitsubishicars.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "LE/SE/SEL", "oemWheelSize": "18x7", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mitsubishicars.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "LE/SE/SEL", "oemWheelSize": "18x7", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mitsubishicars.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "16x6.5", "oemTireSize": "215/70R16" },
+        { "name": "LE/SE/SEL", "oemWheelSize": "18x7", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "mitsubishicars.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Mitsubishi",
+      "model": "Eclipse Spyder",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "GS", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16" },
+        { "name": "GT", "oemWheelSize": "17x6.5", "oemTireSize": "215/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["club3g.com", "caranddriver.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Mitsubishi",
+      "model": "Eclipse Spyder",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "GS", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16" },
+        { "name": "GT", "oemWheelSize": "17x6.5", "oemTireSize": "215/50R17" }
+      ],
+      "confidence": "high",
+      "sources": ["club3g.com", "caranddriver.com"],
+      "notes": "Last year of 3rd gen Eclipse Spyder"
+    }
+  ],
+  "invalidVehicles": [
+    {
+      "year": 2025,
+      "make": "Mazda",
+      "model": "MX-5",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2025 model year may exist but requires verification; 2026 MX-5 announced per mazdausa.com"
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "MX-5",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2026 model announced on mazdausa.com - may be valid but future model year"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "3000-GT",
+      "reason": "MODEL_YEAR_NOT_SOLD_IN_USA",
+      "notes": "US sales ended 1999; 2000 was JDM only"
+    },
+    {
+      "year": 2001,
+      "make": "Mitsubishi",
+      "model": "3000-GT",
+      "reason": "MODEL_YEAR_NOT_SOLD_IN_USA",
+      "notes": "US sales ended 1999; final JDM year was 2000"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "Chariot Grandis",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Never sold in USA under this name. Sold as Dodge/Plymouth Colt Vista in earlier generations."
+    },
+    {
+      "year": 2001,
+      "make": "Mitsubishi",
+      "model": "Chariot Grandis",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "JDM only"
+    },
+    {
+      "year": 2002,
+      "make": "Mitsubishi",
+      "model": "Chariot Grandis",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "JDM only"
+    },
+    {
+      "year": 2003,
+      "make": "Mitsubishi",
+      "model": "Chariot Grandis",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "JDM only - replaced by Grandis in 2003"
+    },
+    {
+      "year": 2025,
+      "make": "Mitsubishi",
+      "model": "Destinator",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Destinator sold only in emerging markets (Southeast Asia, Latin America, Middle East, Africa). Not available in USA."
+    },
+    {
+      "year": 2026,
+      "make": "Mitsubishi",
+      "model": "Destinator",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Destinator sold only in emerging markets. Not available in USA."
+    },
+    {
+      "year": 2017,
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "reason": "MODEL_YEAR_NOT_SOLD_IN_USA",
+      "notes": "US sales began 2018 model year. 2017 was JDM/other markets only."
+    },
+    {
+      "year": 2026,
+      "make": "Mitsubishi",
+      "model": "Eclipse Cross",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2026 Eclipse Cross announced on mitsubishicars.com - valid but future"
+    },
+    {
+      "year": 2006,
+      "make": "Mitsubishi",
+      "model": "Eclipse Spyder",
+      "reason": "MODEL_YEAR_NOT_EXIST",
+      "notes": "No 2006 Eclipse Spyder existed. 3rd gen ended 2005, 4th gen Spyder started 2007."
+    },
+    {
+      "year": 2005,
+      "make": "Mitsubishi",
+      "model": "i",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Mitsubishi i sold in Japan 2006-2013. US version (i-MiEV) started 2012 model year."
+    },
+    {
+      "year": 2006,
+      "make": "Mitsubishi",
+      "model": "i",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Japanese market only"
+    },
+    {
+      "year": 2007,
+      "make": "Mitsubishi",
+      "model": "i",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Japanese market only"
+    },
+    {
+      "year": 2008,
+      "make": "Mitsubishi",
+      "model": "i",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Japanese market only"
+    },
+    {
+      "year": 2009,
+      "make": "Mitsubishi",
+      "model": "i",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Japanese market only"
+    },
+    {
+      "year": 2010,
+      "make": "Mitsubishi",
+      "model": "i",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Japanese market only"
+    },
+    {
+      "year": 2011,
+      "make": "Mitsubishi",
+      "model": "i",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Japanese market only"
+    },
+    {
+      "year": 2012,
+      "make": "Mitsubishi",
+      "model": "i",
+      "reason": "NEEDS_CORRECTION",
+      "notes": "Should be listed as 'i-MiEV' for US market. First US year.",
+      "correctedModel": "i-MiEV",
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": "56.1mm front / 54.1mm rear",
+        "tireSizes": ["145/65R15 front", "175/60R15 rear"],
+        "wheelSizes": ["15x4 front", "15x5 rear"]
+      }
+    },
+    {
+      "year": 2013,
+      "make": "Mitsubishi",
+      "model": "i",
+      "reason": "NEEDS_CORRECTION",
+      "notes": "Should be listed as 'i-MiEV' for US market.",
+      "correctedModel": "i-MiEV"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "L400",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Mitsubishi Delica L400 was never officially sold in USA. JDM imports only (25-year rule)."
+    },
+    {
+      "year": 2001,
+      "make": "Mitsubishi",
+      "model": "L400",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Never sold in USA"
+    },
+    {
+      "year": 2005,
+      "make": "Mitsubishi",
+      "model": "Maven",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Maven was rebadged Suzuki APV sold only in Indonesia 2005-2009. Never sold in USA."
+    },
+    {
+      "year": 2006,
+      "make": "Mitsubishi",
+      "model": "Maven",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Indonesian market only"
+    },
+    {
+      "year": 2007,
+      "make": "Mitsubishi",
+      "model": "Maven",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Indonesian market only"
+    },
+    {
+      "year": 2008,
+      "make": "Mitsubishi",
+      "model": "Maven",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Indonesian market only"
+    },
+    {
+      "year": 2009,
+      "make": "Mitsubishi",
+      "model": "Maven",
+      "reason": "NOT_SOLD_IN_USA",
+      "notes": "Indonesian market only (final year)"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "VALID_WITH_SPECS",
+      "notes": "This is actually valid - moving to valid list",
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": 56.1,
+        "tireSizes": ["175/70R13", "185/65R14"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "VALID_WITH_SPECS",
+      "notes": "This is actually valid - moving to valid list",
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": 56.1,
+        "tireSizes": ["175/70R13", "185/65R14"]
+      }
+    },
+    {
+      "year": 2012,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "MODEL_YEAR_NOT_SOLD_IN_USA",
+      "notes": "6th gen Mirage launched in Thailand/Asia 2012. US sales began 2014 model year."
+    },
+    {
+      "year": 2013,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "MODEL_YEAR_NOT_SOLD_IN_USA",
+      "notes": "US sales began 2014 model year"
+    },
+    {
+      "year": 2018,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "VALID_WITH_SPECS",
+      "notes": "Valid - moving to valid list",
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": 56.1,
+        "tireSizes": ["165/65R14", "175/55R15"]
+      }
+    },
+    {
+      "year": 2019,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "VALID_WITH_SPECS",
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": 56.1,
+        "tireSizes": ["165/65R14", "175/55R15"]
+      }
+    },
+    {
+      "year": 2020,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "VALID_WITH_SPECS",
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": 56.1,
+        "tireSizes": ["165/65R14"]
+      }
+    },
+    {
+      "year": 2021,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "VALID_WITH_SPECS",
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": 56.1,
+        "tireSizes": ["165/65R14"]
+      }
+    },
+    {
+      "year": 2022,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "VALID_WITH_SPECS",
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": 56.1,
+        "tireSizes": ["165/65R14"]
+      }
+    },
+    {
+      "year": 2023,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "VALID_WITH_SPECS",
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": 56.1,
+        "tireSizes": ["165/65R14"]
+      }
+    },
+    {
+      "year": 2024,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "VALID_WITH_SPECS",
+      "correctedData": {
+        "boltPattern": "4x100",
+        "hubBore": 56.1,
+        "tireSizes": ["165/65R14"]
+      }
+    },
+    {
+      "year": 2025,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "May be discontinued - verify if 2025 Mirage exists"
+    },
+    {
+      "year": 2026,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "May be discontinued - verify if 2026 Mirage exists"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "reason": "VALID_WITH_SPECS",
+      "notes": "Valid - moving to valid list",
+      "correctedData": {
+        "boltPattern": "6x139.7",
+        "hubBore": 67.1,
+        "tireSizes": ["265/70R16", "265/65R17"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "reason": "MODEL_YEAR_NOT_SOLD_IN_USA",
+      "notes": "US sales ended 2006. Montero continued in other markets as Pajero."
+    },
+    {
+      "year": 2008,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "reason": "MODEL_YEAR_NOT_SOLD_IN_USA",
+      "notes": "US sales ended 2006"
+    },
+    {
+      "year": 2009,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "reason": "MODEL_YEAR_NOT_SOLD_IN_USA",
+      "notes": "US sales ended 2006"
+    }
+  ],
+  "additionalValidVehicles": [
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "DE/ES", "oemWheelSize": "14x5.5", "oemTireSize": "185/65R14" },
+        { "name": "LS", "oemWheelSize": "15x6", "oemTireSize": "195/55R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "5th gen Mirage (1996-2002 US)"
+    },
+    {
+      "year": 2001,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "DE/ES", "oemWheelSize": "14x5.5", "oemTireSize": "185/65R14" },
+        { "name": "LS", "oemWheelSize": "15x6", "oemTireSize": "195/55R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "14x4.5", "oemTireSize": "165/65R14" },
+        { "name": "SE", "oemWheelSize": "15x5.5", "oemTireSize": "175/55R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "14x4.5", "oemTireSize": "165/65R14" },
+        { "name": "SE", "oemWheelSize": "15x5.5", "oemTireSize": "175/55R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "14x4.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "14x4.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "14x4.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "14x4.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "boltPattern": "4x100",
+      "hubBore": 56.1,
+      "trims": [
+        { "name": "ES", "oemWheelSize": "14x4.5", "oemTireSize": "165/65R14" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "caranddriver.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "boltPattern": "6x139.7",
+      "hubBore": 67.1,
+      "trims": [
+        { "name": "Base/XLS", "oemWheelSize": "16x7", "oemTireSize": "265/70R16" },
+        { "name": "Limited", "oemWheelSize": "17x7.5", "oemTireSize": "265/65R17" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "3rd gen Montero V60 (1999-2006 US)"
+    }
+  ]
+}

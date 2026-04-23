@@ -1,0 +1,363 @@
+{
+  "batchId": 8,
+  "processedAt": "2026-04-21T23:41:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 50,
+    "found": 17,
+    "notUS": 33
+  },
+  "results": [
+    {
+      "year": 2010,
+      "make": "buick",
+      "model": "allure",
+      "note": "Canadian name for LaCrosse - use LaCrosse specs",
+      "tireSizes": ["225/55R17", "235/50R18", "245/40R19"],
+      "wheelSizes": [17, 18, 19]
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "cascada",
+      "tireSizes": ["245/40R20"],
+      "wheelSizes": [20]
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "cascada",
+      "tireSizes": ["245/40R20"],
+      "wheelSizes": [20]
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "cascada",
+      "tireSizes": ["245/40R20"],
+      "wheelSizes": [20]
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "cascada",
+      "tireSizes": ["245/40R20"],
+      "wheelSizes": [20]
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "electra-e4",
+      "notUS": true,
+      "note": "China-only EV model"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "electra-e4",
+      "notUS": true,
+      "note": "China-only EV model"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "electra-e4",
+      "notUS": true,
+      "note": "China-only EV model"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "electra-e4-gs",
+      "notUS": true,
+      "note": "China-only EV model"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "electra-e4-gs",
+      "notUS": true,
+      "note": "China-only EV model"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "electra-e4-gs",
+      "notUS": true,
+      "note": "China-only EV model"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "electra-e5",
+      "notUS": true,
+      "note": "China-only EV model"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "electra-e5",
+      "notUS": true,
+      "note": "China-only EV model"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "electra-e5",
+      "notUS": true,
+      "note": "China-only EV model"
+    },
+    {
+      "year": 2026,
+      "make": "buick",
+      "model": "electra-e5",
+      "notUS": true,
+      "note": "China-only EV model"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "envision-s",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "envision-s",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "envision-s",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "envision-s",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "envision-s",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "envision-s",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2026,
+      "make": "buick",
+      "model": "envision-s",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "envision-s-gs",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "envision-s-gs",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "envision-s-gs",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "envision-s-gs",
+      "notUS": true,
+      "note": "China-only variant - US has standard Envision"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "envista",
+      "tireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "wheelSizes": [17, 18, 19]
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "envista",
+      "tireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "wheelSizes": [17, 18, 19]
+    },
+    {
+      "year": 2026,
+      "make": "buick",
+      "model": "envista",
+      "tireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "wheelSizes": [17, 18, 19]
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "envista-gs",
+      "notUS": true,
+      "note": "China-only GS variant - US has standard Envista"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "envista-gs",
+      "notUS": true,
+      "note": "China-only GS variant - US has standard Envista"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "envista-gs",
+      "notUS": true,
+      "note": "China-only GS variant - US has standard Envista"
+    },
+    {
+      "year": 2025,
+      "make": "buick",
+      "model": "envista-gs",
+      "notUS": true,
+      "note": "China-only GS variant - US has standard Envista"
+    },
+    {
+      "year": 2010,
+      "make": "buick",
+      "model": "excelle-xt",
+      "notUS": true,
+      "note": "China-only model"
+    },
+    {
+      "year": 2011,
+      "make": "buick",
+      "model": "excelle-xt",
+      "notUS": true,
+      "note": "China-only model"
+    },
+    {
+      "year": 2012,
+      "make": "buick",
+      "model": "excelle-xt",
+      "notUS": true,
+      "note": "China-only model"
+    },
+    {
+      "year": 2013,
+      "make": "buick",
+      "model": "excelle-xt",
+      "notUS": true,
+      "note": "China-only model"
+    },
+    {
+      "year": 2014,
+      "make": "buick",
+      "model": "excelle-xt",
+      "notUS": true,
+      "note": "China-only model"
+    },
+    {
+      "year": 2015,
+      "make": "buick",
+      "model": "excelle-xt",
+      "notUS": true,
+      "note": "China-only model"
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "excelle-xt",
+      "notUS": true,
+      "note": "China-only model"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "lucerne",
+      "tireSizes": ["225/60R16", "235/55R17", "245/50R18"],
+      "wheelSizes": [16, 17, 18]
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "lucerne",
+      "tireSizes": ["225/60R16", "235/55R17", "245/50R18"],
+      "wheelSizes": [16, 17, 18]
+    },
+    {
+      "year": 2008,
+      "make": "buick",
+      "model": "lucerne",
+      "tireSizes": ["225/60R16", "235/55R17", "245/50R18"],
+      "wheelSizes": [16, 17, 18]
+    },
+    {
+      "year": 2009,
+      "make": "buick",
+      "model": "lucerne",
+      "tireSizes": ["225/60R16", "235/55R17", "245/50R18"],
+      "wheelSizes": [16, 17, 18]
+    },
+    {
+      "year": 2010,
+      "make": "buick",
+      "model": "lucerne",
+      "tireSizes": ["225/60R16", "235/55R17", "245/50R18"],
+      "wheelSizes": [16, 17, 18]
+    },
+    {
+      "year": 2011,
+      "make": "buick",
+      "model": "lucerne",
+      "tireSizes": ["225/60R16", "235/55R17", "245/50R18"],
+      "wheelSizes": [16, 17, 18]
+    },
+    {
+      "year": 2000,
+      "make": "buick",
+      "model": "park-avenue",
+      "tireSizes": ["225/60R16"],
+      "wheelSizes": [16]
+    },
+    {
+      "year": 2001,
+      "make": "buick",
+      "model": "park-avenue",
+      "tireSizes": ["225/60R16"],
+      "wheelSizes": [16]
+    },
+    {
+      "year": 2002,
+      "make": "buick",
+      "model": "park-avenue",
+      "tireSizes": ["225/60R16"],
+      "wheelSizes": [16]
+    },
+    {
+      "year": 2003,
+      "make": "buick",
+      "model": "park-avenue",
+      "tireSizes": ["225/60R16"],
+      "wheelSizes": [16]
+    }
+  ]
+}

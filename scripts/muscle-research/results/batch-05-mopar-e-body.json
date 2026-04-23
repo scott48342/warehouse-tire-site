@@ -1,0 +1,443 @@
+{
+  "batchId": "muscle-mopar-e-body",
+  "researchDate": "2026-04-22",
+  "researcher": "subagent:muscle-05-mopar-e",
+  "summary": {
+    "totalVehicles": 18,
+    "verified": 18,
+    "criticalFinding": "1964-1969 Barracuda is A-BODY platform with different bolt pattern (5x101.6), NOT E-body! Only 1970-1974 Barracuda/Cuda is E-body."
+  },
+  "platformNotes": {
+    "E-body": {
+      "years": "1970-1974",
+      "models": ["Dodge Challenger", "Plymouth Barracuda", "Plymouth 'Cuda"],
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "notes": "All E-body uses same bolt pattern regardless of engine/rear-end"
+    },
+    "A-body_early": {
+      "years": "1964-1969",
+      "models": ["Plymouth Barracuda", "Plymouth Valiant", "Dodge Dart"],
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "notes": "Small Mopar bolt pattern (5x4\"). Very different from E-body! Many owners convert to 5x114.3 via disc brake upgrade or adapters."
+    }
+  },
+  "vehicles": [
+    {
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Challenger",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Base 225/318 models" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "340/383/440 models, Rallye wheels" },
+        { "diameter": 15, "width": 7, "offset": 0, "notes": "Optional performance package" }
+      ],
+      "oem_tire_sizes": ["E78-14", "E70-14", "F70-14", "F60-15"],
+      "trim_variations": [
+        { "trim": "Base/225/318", "tires": ["E78-14", "E70-14"], "wheels": "14x5.5" },
+        { "trim": "340", "tires": ["E60-15"], "wheels": "15x7" },
+        { "trim": "383/440", "tires": ["F70-14"], "wheels": "14x6" },
+        { "trim": "426 Hemi", "tires": ["F60-15"], "wheels": "15x7" },
+        { "trim": "T/A", "tires": ["E60-15 front", "G60-15 rear"], "wheels": "15x7", "staggered": true }
+      ],
+      "staggered": false,
+      "staggered_trims": ["T/A"],
+      "sources": ["cokertire.com", "forebodiesonly.com", "challengertalk.com"],
+      "confidence": "high",
+      "notes": "First year E-body. T/A package is staggered setup for Trans-Am racing homologation."
+    },
+    {
+      "year": 1971,
+      "make": "Dodge",
+      "model": "Challenger",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Base models" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "Performance models" },
+        { "diameter": 15, "width": 7, "offset": 0, "notes": "Hemi/R/T package" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "F70-14", "F60-15"],
+      "trim_variations": [
+        { "trim": "318", "tires": ["E78-14", "F78-14"], "wheels": "14x5.5" },
+        { "trim": "340/383", "tires": ["F78-14", "F70-14"], "wheels": "14x6" },
+        { "trim": "R/T", "tires": ["F70-14"], "wheels": "14x6" },
+        { "trim": "426 Hemi", "tires": ["F60-15"], "wheels": "15x7" },
+        { "trim": "T/A", "tires": ["E60-15 front", "G60-15 rear"], "wheels": "15x7", "staggered": true }
+      ],
+      "staggered": false,
+      "staggered_trims": ["T/A"],
+      "sources": ["cokertire.com", "forebodiesonly.com"],
+      "confidence": "high",
+      "notes": "Last year for T/A package and Hemi option."
+    },
+    {
+      "year": 1972,
+      "make": "Dodge",
+      "model": "Challenger",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Base models" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "340 models" }
+      ],
+      "oem_tire_sizes": ["735-14", "F78-14", "F70-14"],
+      "trim_variations": [
+        { "trim": "225/318", "tires": ["735-14", "F78-14"], "wheels": "14x5.5" },
+        { "trim": "340", "tires": ["F70-14"], "wheels": "14x6" }
+      ],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "high",
+      "notes": "Detuned engines due to emissions, no Hemi option."
+    },
+    {
+      "year": 1973,
+      "make": "Dodge",
+      "model": "Challenger",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Base models" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "340 models" }
+      ],
+      "oem_tire_sizes": ["735-14", "F78-14", "F70-14"],
+      "trim_variations": [
+        { "trim": "318", "tires": ["735-14", "F78-14"], "wheels": "14x5.5" },
+        { "trim": "340", "tires": ["F70-14"], "wheels": "14x6" }
+      ],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "high",
+      "notes": "Penultimate year."
+    },
+    {
+      "year": 1974,
+      "make": "Dodge",
+      "model": "Challenger",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Base models" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "360 models" }
+      ],
+      "oem_tire_sizes": ["735-14", "F78-14", "F70-14"],
+      "trim_variations": [
+        { "trim": "318", "tires": ["735-14", "F78-14"], "wheels": "14x5.5" },
+        { "trim": "360", "tires": ["F70-14"], "wheels": "14x6" }
+      ],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "high",
+      "notes": "Final year of original E-body Challenger."
+    },
+    {
+      "year": 1964,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "A-body",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0, "notes": "Standard steel" }
+      ],
+      "oem_tire_sizes": ["6.50-13"],
+      "staggered": false,
+      "sources": ["forabodiesonly.com", "classicindustries.com", "conceptcarz.com"],
+      "confidence": "high",
+      "notes": "FIRST YEAR BARRACUDA - A-BODY PLATFORM! Uses 5x4\" (5x101.6mm) small Mopar bolt pattern, NOT 5x114.3! Based on Valiant."
+    },
+    {
+      "year": 1965,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "A-body",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0, "notes": "Slant-6 base" },
+        { "diameter": 13, "width": 5, "offset": 0, "notes": "V8 base" },
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Formula S" }
+      ],
+      "oem_tire_sizes": ["6.50-13", "7.00-13", "6.95-14"],
+      "trim_variations": [
+        { "trim": "Slant-6", "tires": ["6.50-13"], "wheels": "13x4.5" },
+        { "trim": "V8", "tires": ["7.00-13"], "wheels": "13x5" },
+        { "trim": "Formula S", "tires": ["6.95-14"], "wheels": "14x5.5" }
+      ],
+      "staggered": false,
+      "sources": ["over-drive-magazine.com", "conceptcarz.com", "forabodiesonly.com"],
+      "confidence": "high",
+      "notes": "A-BODY - 5x4\" bolt pattern! Formula S package added Commando V8, suspension upgrades, larger wheels/tires."
+    },
+    {
+      "year": 1966,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "A-body",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0, "notes": "Base" },
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Formula S" }
+      ],
+      "oem_tire_sizes": ["6.50-13", "6.95-14", "7.35-14"],
+      "staggered": false,
+      "sources": ["forabodiesonly.com", "classicindustries.com"],
+      "confidence": "high",
+      "notes": "A-BODY - 5x4\" bolt pattern! Last year of 1st gen body style."
+    },
+    {
+      "year": 1967,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "A-body",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Standard/Formula S" }
+      ],
+      "oem_tire_sizes": ["7.35-14", "D70-14", "E70-14"],
+      "staggered": false,
+      "sources": ["forabodiesonly.com", "barracudarestoration.com"],
+      "confidence": "high",
+      "notes": "A-BODY - 5x4\" bolt pattern! 2nd gen body redesign but still A-body platform."
+    },
+    {
+      "year": 1968,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "A-body",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Standard/Formula S" }
+      ],
+      "oem_tire_sizes": ["7.35-14", "D70-14", "E70-14"],
+      "staggered": false,
+      "sources": ["forabodiesonly.com", "barracudarestoration.com"],
+      "confidence": "high",
+      "notes": "A-BODY - 5x4\" bolt pattern!"
+    },
+    {
+      "year": 1969,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "A-body",
+      "bolt_pattern": "5x101.6",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Standard/Formula S" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "383 models" }
+      ],
+      "oem_tire_sizes": ["7.35-14", "D70-14", "E70-14", "F70-14"],
+      "staggered": false,
+      "sources": ["forabodiesonly.com", "barracudarestoration.com"],
+      "confidence": "high",
+      "notes": "A-BODY - 5x4\" bolt pattern! Last year of A-body Barracuda. 383 option available."
+    },
+    {
+      "year": 1970,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Base 225/318" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "383/440 models" },
+        { "diameter": 15, "width": 7, "offset": 0, "notes": "426 Hemi" }
+      ],
+      "oem_tire_sizes": ["E78-14", "E70-14", "F70-14", "F60-15"],
+      "trim_variations": [
+        { "trim": "225/318", "tires": ["E78-14", "E70-14"], "wheels": "14x5.5" },
+        { "trim": "383/440", "tires": ["F70-14"], "wheels": "14x6" },
+        { "trim": "426 Hemi", "tires": ["F60-15"], "wheels": "15x7" }
+      ],
+      "staggered": false,
+      "sources": ["cokertire.com", "forebodiesonly.com"],
+      "confidence": "high",
+      "notes": "FIRST YEAR E-BODY! All-new platform shared with Challenger. Bolt pattern changed from 5x101.6 to 5x114.3!"
+    },
+    {
+      "year": 1971,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Base models" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "Performance models" },
+        { "diameter": 15, "width": 7, "offset": 0, "notes": "Hemi" }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "F70-14", "F60-15"],
+      "trim_variations": [
+        { "trim": "198/225/318", "tires": ["E78-14", "F78-14"], "wheels": "14x5.5" },
+        { "trim": "340/383/440", "tires": ["F78-14", "F70-14"], "wheels": "14x6" },
+        { "trim": "426 Hemi", "tires": ["F60-15"], "wheels": "15x7" }
+      ],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "high",
+      "notes": "E-body platform."
+    },
+    {
+      "year": 1972,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Base models" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "340 models" }
+      ],
+      "oem_tire_sizes": ["735-14", "F78-14", "F70-14"],
+      "trim_variations": [
+        { "trim": "225/318", "tires": ["735-14", "F78-14"], "wheels": "14x5.5" },
+        { "trim": "340", "tires": ["F70-14", "F78-14"], "wheels": "14x6" }
+      ],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "high",
+      "notes": "E-body platform. No Hemi available."
+    },
+    {
+      "year": 1973,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Standard" }
+      ],
+      "oem_tire_sizes": ["735-14", "F78-14"],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "high",
+      "notes": "E-body. Emissions-era, reduced engine options."
+    },
+    {
+      "year": 1974,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0, "notes": "Standard" },
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "360 models" }
+      ],
+      "oem_tire_sizes": ["735-14", "F78-14", "F70-14"],
+      "trim_variations": [
+        { "trim": "Standard", "tires": ["735-14", "F78-14"], "wheels": "14x5.5" },
+        { "trim": "360", "tires": ["F70-14", "F78-14"], "wheels": "14x6" }
+      ],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "high",
+      "notes": "Final year E-body Barracuda."
+    },
+    {
+      "year": 1970,
+      "make": "Plymouth",
+      "model": "Cuda",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "340/383/440" },
+        { "diameter": 15, "width": 7, "offset": 0, "notes": "AAR/426 Hemi" }
+      ],
+      "oem_tire_sizes": ["F70-14", "F60-15", "E60-15", "G60-15"],
+      "trim_variations": [
+        { "trim": "340/383/440", "tires": ["F70-14"], "wheels": "14x6" },
+        { "trim": "426 Hemi", "tires": ["F60-15"], "wheels": "15x7" },
+        { "trim": "AAR", "tires": ["E60-15 front", "G60-15 rear"], "wheels": "15x7", "staggered": true }
+      ],
+      "staggered": false,
+      "staggered_trims": ["AAR"],
+      "sources": ["cokertire.com", "forebodiesonly.com"],
+      "confidence": "high",
+      "notes": "'Cuda is the performance version of E-body Barracuda. AAR (All-American Racers) package is staggered for Trans-Am homologation."
+    },
+    {
+      "year": 1971,
+      "make": "Plymouth",
+      "model": "Cuda",
+      "platform": "E-body",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0, "notes": "340/383/440" },
+        { "diameter": 15, "width": 7, "offset": 0, "notes": "426 Hemi" }
+      ],
+      "oem_tire_sizes": ["F78-14", "F70-14", "F60-15"],
+      "trim_variations": [
+        { "trim": "340/383/440", "tires": ["F78-14", "F70-14"], "wheels": "14x6" },
+        { "trim": "426 Hemi", "tires": ["F60-15"], "wheels": "15x7" },
+        { "trim": "AAR", "tires": ["E60-15 front", "G60-15 rear"], "wheels": "15x7", "staggered": true }
+      ],
+      "staggered": false,
+      "staggered_trims": ["AAR"],
+      "sources": ["cokertire.com"],
+      "confidence": "high",
+      "notes": "Last year for AAR option and 426 Hemi."
+    }
+  ],
+  "tireConversions": {
+    "note": "1960s-70s bias-ply sizes to modern radial equivalents",
+    "conversions": [
+      { "original": "6.50-13", "modern": "175/80R13", "notes": "Early A-body base" },
+      { "original": "7.00-13", "modern": "185/80R13", "notes": "Early A-body V8" },
+      { "original": "6.95-14", "modern": "195/75R14", "notes": "Formula S" },
+      { "original": "7.35-14", "modern": "195/75R14", "notes": "A-body performance" },
+      { "original": "735-14", "modern": "195/75R14", "notes": "Same as 7.35-14" },
+      { "original": "E78-14", "modern": "195/75R14", "notes": "Base E-body" },
+      { "original": "F78-14", "modern": "205/75R14", "notes": "E-body standard" },
+      { "original": "E70-14", "modern": "195/70R14 or ER70-14", "notes": "E-body" },
+      { "original": "F70-14", "modern": "215/70R14 or FR70-14", "notes": "E-body performance" },
+      { "original": "D70-14", "modern": "185/70R14", "notes": "A-body" },
+      { "original": "E60-15", "modern": "235/60R15", "notes": "T/A/AAR front" },
+      { "original": "F60-15", "modern": "255/60R15 or FR60-15", "notes": "Hemi" },
+      { "original": "G60-15", "modern": "275/60R15", "notes": "T/A/AAR rear" }
+    ]
+  },
+  "staggeredSetups": {
+    "note": "Trans-Am homologation packages came with staggered tires",
+    "packages": [
+      {
+        "name": "1970 Dodge Challenger T/A",
+        "front": { "tire": "E60-15", "wheel": "15x7" },
+        "rear": { "tire": "G60-15", "wheel": "15x7" },
+        "notes": "Side-exit exhaust, matte black hood"
+      },
+      {
+        "name": "1970-1971 Plymouth AAR 'Cuda",
+        "front": { "tire": "E60-15", "wheel": "15x7" },
+        "rear": { "tire": "G60-15", "wheel": "15x7" },
+        "notes": "340 Six-Pack engine, side exhaust"
+      }
+    ]
+  },
+  "commonModifications": {
+    "E-body_popular": {
+      "front": "15x7 with 3.75\" backspace, 235/60R15",
+      "rear": "15x8 with 4.5\" backspace, 275/60R15 or 295/50R15",
+      "notes": "Popular resto-mod setup. May require fender lip roll on rear."
+    },
+    "A-body_conversion": {
+      "note": "Many A-body owners convert to 5x114.3 via disc brake upgrade (rotors have both patterns) or billet adapters to access wider wheel selection."
+    }
+  }
+}

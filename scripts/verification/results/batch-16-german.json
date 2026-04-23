@@ -1,0 +1,1116 @@
+{
+  "batch": "batch-16-german",
+  "verifiedAt": "2026-04-23T00:36:00Z",
+  "verifier": "subagent:verify-de-16",
+  "totalVehicles": 75,
+  "validUSMarket": 64,
+  "invalidUSMarket": 11,
+  "sources": ["hulkoffsets.com", "audiusa.com (press releases)", "wikipedia.org", "caranddriver.com", "motortrend.com"],
+  "vehicles": [
+    {
+      "year": 2004,
+      "make": "Audi",
+      "model": "A3",
+      "usMarketValid": false,
+      "invalidReason": "A3 not sold in US until 2006 model year (arrived in showrooms late 2005)",
+      "confidence": "high",
+      "sources": ["media.audiusa.com", "wikipedia.org"]
+    },
+    {
+      "year": 2005,
+      "make": "Audi",
+      "model": "A3",
+      "usMarketValid": false,
+      "invalidReason": "A3 not sold in US until 2006 model year (arrived in showrooms late 2005)",
+      "confidence": "high",
+      "sources": ["media.audiusa.com", "wikipedia.org"]
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "A5",
+      "usMarketValid": false,
+      "invalidReason": "A5 not sold in US until 2008 model year (global debut June 2007, US sales 2008 MY)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "classic.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "lltek.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "2.0T", "oemWheelSize": "17x8", "oemTireSize": "225/50R17"},
+        {"name": "3.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "lltek.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "2.0T Premium", "oemWheelSize": "17x8", "oemTireSize": "225/50R17"},
+        {"name": "2.0T Premium Plus", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "2.0T Premium", "oemWheelSize": "17x8", "oemTireSize": "225/50R17"},
+        {"name": "2.0T Premium Plus", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "2.0T Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "2.0T Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Last year of B8/B9 transition"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"},
+        {"name": "Prestige", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Second generation (B9)"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"},
+        {"name": "Prestige", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"},
+        {"name": "Prestige", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"},
+        {"name": "Prestige", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"},
+        {"name": "Prestige", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"},
+        {"name": "Prestige", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"},
+        {"name": "Prestige", "oemWheelSize": "19x9", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "notes": "New generation, specs may vary by trim"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "A5",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/40R18"},
+        {"name": "Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/35R19"}
+      ],
+      "confidence": "low",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Future model year - specs projected from current generation"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A6 e-tron",
+      "usMarketValid": false,
+      "invalidReason": "A6 e-tron not sold in US as 2024 model year - US launch is 2025 model year (deliveries summer 2025)",
+      "confidence": "high",
+      "sources": ["motortrend.com", "insideevs.com", "caranddriver.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A6 e-tron",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "A6 e-tron", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "A6 e-tron quattro", "oemWheelSize": "20x9", "oemTireSize": "255/40R20"},
+        {"name": "S6 e-tron", "oemWheelSize": "21x9", "oemTireSize": "265/35R21"}
+      ],
+      "confidence": "high",
+      "sources": ["motortrend.com", "caranddriver.com", "hulkoffsets.com"],
+      "notes": "First US model year, deliveries starting summer 2025"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "A6 e-tron",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "A6 e-tron", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "A6 e-tron quattro", "oemWheelSize": "20x9", "oemTireSize": "255/40R20"}
+      ],
+      "confidence": "low",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Future model year - specs projected"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "A7",
+      "usMarketValid": false,
+      "invalidReason": "A7 not sold in US until 2012 model year (global debut 2010, US sales began May 2011 as 2012 MY)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoweb.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.0T Premium", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "3.0T Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "3.0T Prestige", "oemWheelSize": "20x9", "oemTireSize": "265/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "fifteen52.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.0T Premium", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "3.0T Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "3.0T Prestige", "oemWheelSize": "20x9", "oemTireSize": "265/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.0T Premium", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "3.0T Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "3.0T Prestige", "oemWheelSize": "20x9", "oemTireSize": "265/35R20"},
+        {"name": "3.0 TDI", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.0T Premium", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "3.0T Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "3.0T Prestige", "oemWheelSize": "20x9", "oemTireSize": "265/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.0T Premium", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "3.0T Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "3.0T Prestige", "oemWheelSize": "20x9", "oemTireSize": "265/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.0T Premium", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "3.0T Premium Plus", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "3.0T Prestige", "oemWheelSize": "20x9", "oemTireSize": "265/35R20"},
+        {"name": "Competition", "oemWheelSize": "20x9", "oemTireSize": "265/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.0T Premium", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "3.0T Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/35R20"},
+        {"name": "3.0T Prestige", "oemWheelSize": "20x9", "oemTireSize": "255/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Last year of first generation"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/35R20"},
+        {"name": "Prestige", "oemWheelSize": "21x8.5", "oemTireSize": "255/35R21"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Second generation debut"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/35R20"},
+        {"name": "Prestige", "oemWheelSize": "21x8.5", "oemTireSize": "255/35R21"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/35R20"},
+        {"name": "Prestige", "oemWheelSize": "21x8.5", "oemTireSize": "255/35R21"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/35R20"},
+        {"name": "Prestige", "oemWheelSize": "21x8.5", "oemTireSize": "255/35R21"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/35R20"},
+        {"name": "Prestige", "oemWheelSize": "21x8.5", "oemTireSize": "255/35R21"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/35R20"},
+        {"name": "Prestige", "oemWheelSize": "21x8.5", "oemTireSize": "255/35R21"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/35R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "A7",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "255/40R19"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/35R20"}
+      ],
+      "confidence": "low",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Future model year - specs projected"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "4.2 Quattro", "oemWheelSize": "17x8", "oemTireSize": "225/55R17"},
+        {"name": "4.2 Quattro LWB", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D2 generation"
+    },
+    {
+      "year": 2001,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "4.2 Quattro", "oemWheelSize": "17x8", "oemTireSize": "225/55R17"},
+        {"name": "4.2 Quattro LWB", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D2 generation"
+    },
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "4.2 Quattro", "oemWheelSize": "17x8", "oemTireSize": "225/55R17"},
+        {"name": "4.2 Quattro LWB", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D2 generation, last year"
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "A8",
+      "usMarketValid": false,
+      "invalidReason": "No 2003 A8 sold in US - transition year between D2 (ended 2002) and D3 (started 2004)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "hulkoffsets.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "4.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "W12 Quattro", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D3 generation debut"
+    },
+    {
+      "year": 2005,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "4.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "W12 Quattro", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D3 generation"
+    },
+    {
+      "year": 2006,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "4.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "W12 Quattro", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D3 generation"
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "4.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "W12 Quattro", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"},
+        {"name": "S8", "oemWheelSize": "20x9", "oemTireSize": "265/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D3 generation with S8 addition"
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "4.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "W12 Quattro", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D3 generation"
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "4.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "W12 Quattro", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D3 generation"
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "A8",
+      "usMarketValid": false,
+      "invalidReason": "Limited 2010 availability - transition year between D3 and D4 generation",
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D3/D4 transition, verify US availability"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "4.2 Quattro", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"},
+        {"name": "W12 Quattro", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D4 generation debut in US"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.0T Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "4.0T Quattro", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"},
+        {"name": "W12 Quattro", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D4 generation"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.0T Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "4.0T Quattro", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"},
+        {"name": "W12 Quattro", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"},
+        {"name": "3.0 TDI Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D4 generation with diesel option"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "3.0T Quattro", "oemWheelSize": "18x8", "oemTireSize": "245/50R18"},
+        {"name": "4.0T Quattro", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"},
+        {"name": "4.0T Sport Quattro", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D4 generation"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "A8",
+      "usMarketValid": false,
+      "invalidReason": "Skipped model year in US - D4 ended 2017, D5 began 2019 MY",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "hulkoffsets.com"],
+      "notes": "Transition year between D4 and D5 generation"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "55 TFSI Quattro", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"},
+        {"name": "60 TFSI e Quattro", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"},
+        {"name": "L 60 TFSI Quattro", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D5 generation"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "55 TFSI Quattro", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"},
+        {"name": "60 TFSI e Quattro", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"},
+        {"name": "L 60 TFSI Quattro", "oemWheelSize": "21x9", "oemTireSize": "265/35R21"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D5 generation"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "55 TFSI Quattro", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"},
+        {"name": "60 TFSI e Quattro", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D5 generation - final year?"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "55 TFSI Quattro", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"},
+        {"name": "60 TFSI e Quattro", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "medium",
+      "sources": ["hulkoffsets.com"],
+      "notes": "D5 generation continuation"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "A8",
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "55 TFSI Quattro", "oemWheelSize": "19x8.5", "oemTireSize": "255/45R19"}
+      ],
+      "confidence": "low",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Future model year - specs projected"
+    },
+    {
+      "year": 2001,
+      "make": "Audi",
+      "model": "Allroad",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "2.7T Quattro", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "First generation allroad (C5 platform)"
+    },
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "Allroad",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "2.7T Quattro", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "4.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "First generation allroad"
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "Allroad",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "2.7T Quattro", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "4.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "First generation allroad"
+    },
+    {
+      "year": 2004,
+      "make": "Audi",
+      "model": "Allroad",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "2.7T Quattro", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "4.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "First generation allroad"
+    },
+    {
+      "year": 2005,
+      "make": "Audi",
+      "model": "Allroad",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "2.7T Quattro", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "4.2 Quattro", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "First generation allroad, last year"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "Allroad",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Premium Plus", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Prestige", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "lltek.com"],
+      "notes": "A4 Allroad (B8 platform)"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "Allroad",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Premium Plus", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Prestige", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "A4 Allroad"
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "Allroad",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Premium Plus", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Prestige", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "A4 Allroad"
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "Allroad",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Premium Plus", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "Prestige", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "A4 Allroad, last year of B8-based model"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "Cabriolet",
+      "usMarketValid": false,
+      "invalidReason": "Audi Cabriolet was discontinued in US after 1998 model year. 1999-2000 only sold in Europe.",
+      "confidence": "high",
+      "sources": ["secret-classics.com", "kbb.com", "classic.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "e-tron",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/50R20"},
+        {"name": "Prestige", "oemWheelSize": "21x9.5", "oemTireSize": "265/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "First e-tron SUV in US"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "e-tron",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "20x9", "oemTireSize": "255/50R20"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/50R20"},
+        {"name": "Prestige", "oemWheelSize": "21x9.5", "oemTireSize": "265/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "e-tron",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "20x9", "oemTireSize": "255/50R20"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/50R20"},
+        {"name": "Prestige", "oemWheelSize": "21x9.5", "oemTireSize": "265/45R21"},
+        {"name": "S", "oemWheelSize": "21x9.5", "oemTireSize": "285/40R21"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "e-tron",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "usMarketValid": true,
+      "trims": [
+        {"name": "Premium", "oemWheelSize": "20x9", "oemTireSize": "255/50R20"},
+        {"name": "Premium Plus", "oemWheelSize": "20x9", "oemTireSize": "255/50R20"},
+        {"name": "Prestige", "oemWheelSize": "21x9.5", "oemTireSize": "265/45R21"},
+        {"name": "S", "oemWheelSize": "22x10", "oemTireSize": "285/40R22"}
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Renamed to Q8 e-tron for 2024+"
+    }
+  ],
+  "summary": {
+    "invalidUSMarketVehicles": [
+      {"year": 2004, "make": "Audi", "model": "A3", "reason": "US debut was 2006 MY"},
+      {"year": 2005, "make": "Audi", "model": "A3", "reason": "US debut was 2006 MY"},
+      {"year": 2007, "make": "Audi", "model": "A5", "reason": "US debut was 2008 MY"},
+      {"year": 2011, "make": "Audi", "model": "A7", "reason": "US debut was 2012 MY"},
+      {"year": 2024, "make": "Audi", "model": "A6 e-tron", "reason": "US debut is 2025 MY"},
+      {"year": 2003, "make": "Audi", "model": "A8", "reason": "Transition year, no US sales"},
+      {"year": 2010, "make": "Audi", "model": "A8", "reason": "Transition year between D3/D4"},
+      {"year": 2018, "make": "Audi", "model": "A8", "reason": "Transition year between D4/D5"},
+      {"year": 2000, "make": "Audi", "model": "Cabriolet", "reason": "US sales ended 1998"}
+    ],
+    "lowConfidenceVehicles": [
+      {"year": 2026, "make": "Audi", "model": "A5", "reason": "Future model year"},
+      {"year": 2026, "make": "Audi", "model": "A6 e-tron", "reason": "Future model year"},
+      {"year": 2026, "make": "Audi", "model": "A7", "reason": "Future model year"},
+      {"year": 2026, "make": "Audi", "model": "A8", "reason": "Future model year"}
+    ],
+    "commonSpecs": {
+      "boltPattern": "5x112 (all Audi models)",
+      "hubBore": "66.5-66.6mm (larger models/newer platforms)",
+      "threadPitch": "M14x1.5"
+    }
+  }
+}

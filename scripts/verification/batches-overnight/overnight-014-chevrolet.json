@@ -1,0 +1,1687 @@
+[
+  {
+    "id": "e86cbb5e-6e50-4b58-a43f-793be01825bf",
+    "year": 1969,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "L88",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7cfd68f6-e918-4eae-83d0-80259be1a72d",
+    "year": 1969,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx15"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "37724633-06d2-495f-820d-c17a32a07514",
+    "year": 1969,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "F70-15",
+      "205/75R15",
+      "225/70R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "609cbb8a-2bd4-41a5-8bf8-7076435a2f0e",
+    "year": 1970,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "LT-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "F70-15",
+      "205/75R15",
+      "225/70R15",
+      "255/60R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "f673c8dd-54a0-4a59-9dc9-7b8d0c9a11e6",
+    "year": 1970,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx15"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "76c6a1a0-b3d1-4f4f-a5c9-a9016d13b4b4",
+    "year": 1970,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f31c8574-610f-481a-977c-8fba27b5cc68",
+    "year": 1971,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx15"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "7fc562af-fe67-4def-9287-33da2650bc39",
+    "year": 1971,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "LT-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "F70-15",
+      "205/75R15",
+      "225/70R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "304d96d0-11a2-4483-91aa-eb530d82ae4c",
+    "year": 1971,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dac1b0a0-52d0-4383-bdd3-e5bf8048b7ea",
+    "year": 1972,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8bac6909-61c8-46c8-959c-5c5f96801dd9",
+    "year": 1972,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "LT-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "F70-15",
+      "GR70-15",
+      "205/75R15",
+      "225/70R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "3d2bec95-2bbf-46a9-bb00-eafd646f7822",
+    "year": 1972,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx15"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "c72a4314-f588-475a-b4d9-28405020f6bd",
+    "year": 1973,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "L82",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "GR70-15",
+      "205/75R15",
+      "225/70R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "3846b005-1802-4b23-b363-eef3c39af935",
+    "year": 1973,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx15"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "5c2ea777-117b-4fcc-929a-10455632a77e",
+    "year": 1974,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx15"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "07bc3fea-10fb-4666-abd7-eaaedb92f8b3",
+    "year": 1974,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "L82",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "GR70-15",
+      "205/75R15",
+      "225/70R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "8b7d2c9f-c07f-4712-b3cd-c4fbd72e565a",
+    "year": 1975,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "GR70-15",
+      "205/70R15",
+      "225/70R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "7abfbe30-b530-4e55-9f62-a6c99c136ebe",
+    "year": 1975,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "L82",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7a2f3fc6-ff3e-4b64-a68a-ffe2fc057705",
+    "year": 1976,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "L82",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "GR70-15",
+      "205/70R15",
+      "225/70R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "7271b909-8206-474d-9264-9254a2d01fa7",
+    "year": 1976,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx15"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "ceb64720-365b-40ce-81ee-df1e4c63d10a",
+    "year": 1977,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "GR70-15",
+      "205/70R15",
+      "225/70R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "96b9d5f1-c1ae-4369-8885-e9db69878830",
+    "year": 1977,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "L82",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d2d2800c-0905-4790-a4d5-8b6a6efd34a8",
+    "year": 1978,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "98cd56fe-82a3-450e-a2ab-0142bbe11d8c",
+    "year": 1978,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "L82",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c982f8af-36e4-4da4-bab0-70c6d87d5ba7",
+    "year": 1979,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "L82",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6034f2cb-2d1c-4c39-960e-93044c23cd5d",
+    "year": 1979,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": -2,
+        "diameter": 15
+      },
+      {
+        "width": 8,
+        "offset": -1,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "ca2bf212-e845-4493-9816-da535fd61761",
+    "year": 1980,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "15x8"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "11347a3a-af33-4de9-adfb-f48b918bf4c5",
+    "year": 1980,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "L82",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e459cf84-794e-495f-966b-e811cb1c490f",
+    "year": 1981,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "15x8"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "ca11098d-945d-4d43-a151-f26cf293e421",
+    "year": 1981,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "L81",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7446130a-116a-4ec8-9026-08fae9d05578",
+    "year": 1982,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Collector Edition",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9426ca4d-14b3-4770-970a-b6efe39e73af",
+    "year": 1982,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "15x8"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "ab872e16-3d76-4c42-9248-9e2deffbaccc",
+    "year": 1984,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "16x8.5"
+    ],
+    "currentTireSizes": [
+      "P255/50VR16"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "c53c0508-4b27-4248-85c1-c4fa62c8746c",
+    "year": 1984,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c92fba5e-f6e5-4ecc-8aea-d1bbc0738ce1",
+    "year": 1984,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e181d759-5c15-423c-aecf-618416f92e60",
+    "year": 1985,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "77d414c0-27a1-451b-b074-4ca80006359d",
+    "year": 1985,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5c9f0791-841f-46b5-a300-2f8945222b78",
+    "year": 1985,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "16x8.5"
+    ],
+    "currentTireSizes": [
+      "P255/50VR16"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "d91bed0f-a81a-45da-9960-d1609e1d4856",
+    "year": 1986,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "4ec84ef6-5f1e-4a56-b1dd-bc3b61442c02",
+    "year": 1986,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b2ca4a0b-a6e6-4bbd-8fd9-9cbb40358004",
+    "year": 1986,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "16x8.5"
+    ],
+    "currentTireSizes": [
+      "P255/50VR16"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "100fc8b6-a0d4-4d6b-9625-09256da5f235",
+    "year": 1987,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "df85eff8-6275-46d6-8169-5813cff48291",
+    "year": 1987,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b248b2fc-5eb8-4eff-9592-012abdb6e62d",
+    "year": 1987,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "16x8.5"
+    ],
+    "currentTireSizes": [
+      "P255/50VR16"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "9e84adba-3c9f-4a9b-ada0-a5c4610140b4",
+    "year": 1988,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "16x8.5",
+      "17x9.5"
+    ],
+    "currentTireSizes": [
+      "P255/50VR16",
+      "P275/40ZR17"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "4fe0b987-c906-4edc-9b1f-22df13110e4a",
+    "year": 1988,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "523ef57e-f53b-44eb-a75e-01dec0529ff0",
+    "year": 1988,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "c8b6892c-fb5a-4218-9e79-b87b1d670573",
+    "year": 1989,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "17x9.5"
+    ],
+    "currentTireSizes": [
+      "P275/40ZR17"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "4b3cd2f2-97ea-4826-8933-36b5be2dfe42",
+    "year": 1989,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "985a2631-79fa-4fd0-8093-00700d3ca65d",
+    "year": 1989,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "73d0931c-e694-4380-8791-5ad9828d43fe",
+    "year": 1990,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "77835211-f7dd-475d-adaa-b718b0754233",
+    "year": 1990,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6b3f1027-99a9-4347-a326-7d08affd4704",
+    "year": 1990,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f772a289-0acc-405b-bd0f-c79da695556f",
+    "year": 1990,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "363ec822-4b00-4b43-a46e-3df046559349",
+    "year": 1991,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "69ec6007-7566-492e-98ee-bdfd1708f6d7",
+    "year": 1991,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "09833ec1-be2c-4f40-8eac-fd52c92dd36b",
+    "year": 1991,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dd06d5d2-436c-47ad-bc6c-9c04c140213f",
+    "year": 1991,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "0f5dd10c-c61a-457f-ac84-5c530ad0fdf6",
+    "year": 1992,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dc06b6dd-86dd-4621-a0f2-0e49fdfe250b",
+    "year": 1992,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8bf919a9-3854-4af4-b37b-24403792a06c",
+    "year": 1992,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "78c4d72d-375f-454e-9dc5-89fa4ccd44ed",
+    "year": 1992,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "783dd1cd-dc5a-4dba-9f76-1d341d8cfe77",
+    "year": 1993,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "c54414c7-b12a-4c4c-9619-af9ec22d621f",
+    "year": 1993,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ce3c3068-edd4-4583-8c76-1047a5af83fd",
+    "year": 1993,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f68bf3a8-917e-4f7d-bc40-d0f7fc228ac7",
+    "year": 1993,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1d3d0db0-1f6e-4d9f-80bf-ffa984359110",
+    "year": 1994,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5723a0c3-50b0-49f3-ad64-8a5d8c94d21e",
+    "year": 1994,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "30d48af2-be99-4094-833b-71b8c1677fb7",
+    "year": 1994,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2b72de81-3bda-4d7a-af55-996b9c503108",
+    "year": 1994,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8720329e-7f53-4c37-b29c-bbceecd0e309",
+    "year": 1995,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P255/45ZR17"
+      },
+      {
+        "axle": "rear",
+        "width": 12,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "P315/35ZR17"
+      }
+    ],
+    "currentTireSizes": [
+      "P255/45ZR17",
+      "P275/40ZR17",
+      "P315/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "a2c17bf9-e021-46ef-814b-7454cf53a43a",
+    "year": 1995,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z52",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "548788ba-2e40-4abf-b328-9d3b4116aa9d",
+    "year": 1995,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5eecd62e-c59e-4af0-bc1a-767f39a2875d",
+    "year": 1995,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "ZR-1",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 17
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0405e77e-6c1a-4dd7-a4fc-488f9cb86d30",
+    "year": 1996,
+    "make": "chevrolet",
+    "model": "corvette",
+    "trim": "Z51",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P255/60R15"
+    ],
+    "source": "generation_inherit"
+  }
+]

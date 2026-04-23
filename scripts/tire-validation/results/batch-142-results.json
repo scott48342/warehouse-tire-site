@@ -1,0 +1,476 @@
+{
+  "batchId": "142",
+  "validatedAt": "2026-04-21T22:55:00Z",
+  "source": "tiresize.com",
+  "totalVehicles": 75,
+  "summary": {
+    "validated": 26,
+    "discrepancies": 22,
+    "noDataAvailable": 27,
+    "discrepancyRate": "84.6%"
+  },
+  "discrepancies": [
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R18"],
+      "oemTireSizes": ["245/70R17", "265/55R20", "265/70R18"],
+      "issues": [
+        "MISSING: 245/70R17 (SR5 trim)",
+        "MISSING: 265/55R20 (Limited/Platinum/TRD Sport)",
+        "MISSING: 265/70R18 (TRD/Trailhunter trims)",
+        "EXTRA: 265/70R17 (not in 2026 model)",
+        "EXTRA: 265/65R18 (not in 2026 model)"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R18"],
+      "oemTireSizes": ["245/70R17", "265/55R20", "265/70R18"],
+      "issues": [
+        "MISSING: 245/70R17 (SR5 trim)",
+        "MISSING: 265/55R20 (Limited/Platinum/TRD Sport)",
+        "MISSING: 265/70R18 (TRD/Trailhunter trims)",
+        "EXTRA: 265/70R17 (not in 2025 model)",
+        "EXTRA: 265/65R18 (not in 2025 model)"
+      ],
+      "severity": "HIGH",
+      "note": "2025+ 4Runner is a new generation with different sizes"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option for 2024)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option for 2023)"
+      ],
+      "severity": "MEDIUM",
+      "note": "Same generation as 2024 (5th gen, 2010-2024)"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R17", "265/65R17", "245/60R20"],
+      "oemTireSizes": ["265/70R17", "245/60R20"],
+      "issues": [
+        "EXTRA: 265/65R17 (not a factory option)"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "oemTireSizes": ["225/75R15", "265/70R16"],
+      "issues": [
+        "MISSING: 225/75R15 (SR5 base option)",
+        "EXTRA: 265/65R17 (not available until 2003)"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "oemTireSizes": ["225/75R15", "265/70R16"],
+      "issues": [
+        "MISSING: 225/75R15 (SR5 base option)",
+        "EXTRA: 265/65R17 (not available until 2003)"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "oemTireSizes": ["225/75R15", "265/70R16"],
+      "issues": [
+        "MISSING: 225/75R15 (SR5 base option)",
+        "EXTRA: 265/65R17 (not available until 2003)"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "86",
+      "currentTireSizes": ["205/55R16", "215/45R17", "215/40R18"],
+      "oemTireSizes": ["215/45R17", "215/40R18"],
+      "issues": [
+        "EXTRA: 205/55R16 (2022 is GR86 with only 17/18 inch wheels)",
+        "NOTE: 2022 Toyota 86 renamed to GR86 - check if model name should change"
+      ],
+      "severity": "MEDIUM"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "86",
+      "currentTireSizes": ["205/55R16", "215/45R17", "215/40R18"],
+      "oemTireSizes": ["215/45R17", "215/40R18"],
+      "issues": [
+        "EXTRA: 205/55R16 (not a factory option for US-spec 86)"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "validated": [
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "4runner",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["235/45R18", "235/40R19"],
+      "oemTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "status": "PARTIAL_MATCH",
+      "note": "Missing 215/55R17 for XLE/Hybrid XLE trims"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["235/45R18", "235/40R19"],
+      "oemTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "status": "PARTIAL_MATCH",
+      "note": "Missing 215/55R17 for XLE/Hybrid XLE trims"
+    }
+  ],
+  "noDataAvailable": [
+    {
+      "year": 2012,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "reason": "No data on tiresize.com for Tesla Roadster"
+    },
+    {
+      "year": 2011,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "reason": "No data on tiresize.com for Tesla Roadster"
+    },
+    {
+      "year": 2010,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "reason": "No data on tiresize.com for Tesla Roadster"
+    },
+    {
+      "year": 2009,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "reason": "No data on tiresize.com for Tesla Roadster"
+    },
+    {
+      "year": 2008,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "reason": "No data on tiresize.com for Tesla Roadster"
+    },
+    {
+      "year": 2007,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "reason": "No data on tiresize.com for Tesla Roadster"
+    },
+    {
+      "year": 2006,
+      "make": "tesla",
+      "model": "roadster",
+      "currentTireSizes": [],
+      "reason": "No data on tiresize.com for Tesla Roadster (not released until 2008)"
+    },
+    {
+      "years": "2001-2006",
+      "make": "toyota",
+      "model": "allex",
+      "currentTireSizes": [],
+      "reason": "JDM-only model, not in tiresize.com database",
+      "vehicleCount": 6
+    },
+    {
+      "years": "2000-2005",
+      "make": "toyota",
+      "model": "altezza",
+      "currentTireSizes": [],
+      "reason": "JDM-only model (US version sold as Lexus IS), not in tiresize.com database",
+      "vehicleCount": 6
+    },
+    {
+      "years": "2001-2005",
+      "make": "toyota",
+      "model": "altezza-gita",
+      "currentTireSizes": [],
+      "reason": "JDM-only model, not in tiresize.com database",
+      "vehicleCount": 5
+    },
+    {
+      "years": "2000-2004",
+      "make": "toyota",
+      "model": "aristo",
+      "currentTireSizes": [],
+      "reason": "JDM-only model (US version sold as Lexus GS), not in tiresize.com database",
+      "vehicleCount": 5
+    },
+    {
+      "years": "2012-2017",
+      "make": "toyota",
+      "model": "86",
+      "currentTireSizes": ["205/55R16", "215/45R17", "215/40R18"],
+      "reason": "Incomplete data on tiresize.com for early 86 years",
+      "note": "2012-2016 sold as Scion FR-S in US",
+      "vehicleCount": 6
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Update 2025-2026 4Runner tire sizes",
+      "details": "New generation uses completely different sizes: 245/70R17 (SR5), 265/55R20 (Limited/Sport), 265/70R18 (TRD/Trailhunter)",
+      "affectedVehicles": 2
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Remove 265/65R17 from 2010-2024 4Runner",
+      "details": "This size was never a factory option for 5th gen 4Runner. Only 265/70R17 and 245/60R20 were offered.",
+      "affectedVehicles": 15
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Add 225/75R15 to 2000-2002 4Runner",
+      "details": "SR5 base models came with 15-inch wheels as standard",
+      "affectedVehicles": 3
+    },
+    {
+      "priority": "LOW",
+      "action": "Remove 205/55R16 from Toyota 86",
+      "details": "Not a US-spec factory option; may be aftermarket or JDM data",
+      "affectedVehicles": 11
+    },
+    {
+      "priority": "LOW",
+      "action": "Consider renaming 2022 Toyota 86 to GR86",
+      "details": "Toyota renamed the 86 to GR86 for 2022+",
+      "affectedVehicles": 1
+    },
+    {
+      "priority": "LOW",
+      "action": "Remove JDM-only models from US database",
+      "details": "Allex, Altezza, Altezza Gita, Aristo were never sold in US market",
+      "affectedVehicles": 22
+    }
+  ]
+}

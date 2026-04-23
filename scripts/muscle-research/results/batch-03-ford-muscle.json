@@ -1,0 +1,899 @@
+{
+  "batchId": "muscle-ford",
+  "completedAt": "2026-04-22T14:05:00Z",
+  "totalVehicles": 53,
+  "vehicles": [
+    {
+      "year": 1965,
+      "make": "Ford",
+      "model": "Mustang",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 19 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "6.50-14", "6.95-14"],
+      "staggered": false,
+      "sources": ["performanceplustire.com", "ecklers.com", "vintage-mustang.com"],
+      "confidence": "high",
+      "notes": "6-cyl models use 4x114.3. V8 models use 5x114.3. Thread: 1/2\"-20 UNF."
+    },
+    {
+      "year": 1966,
+      "make": "Ford",
+      "model": "Mustang",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 19 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "7.35-14"],
+      "staggered": false,
+      "sources": ["performanceplustire.com", "ecklers.com", "mustangforums.com"],
+      "confidence": "high",
+      "notes": "6-cyl models use 4x114.3. V8 models use 5x114.3. Styled Steel wheels optional."
+    },
+    {
+      "year": 1967,
+      "make": "Ford",
+      "model": "Mustang",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 19 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "7.35-14", "E70-14", "F70-14"],
+      "staggered": false,
+      "sources": ["performanceplustire.com", "ecklers.com", "vintage-mustang.com"],
+      "confidence": "high",
+      "notes": "6-cyl models use 4x114.3. Last year for 4-lug 6-cyl option. GT package came with F70-14."
+    },
+    {
+      "year": 1968,
+      "make": "Ford",
+      "model": "Mustang",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 19 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["C78-14", "E78-14", "E70-14", "F70-14"],
+      "staggered": false,
+      "sources": ["performanceplustire.com", "ecklers.com"],
+      "confidence": "high",
+      "notes": "All 1968+ are 5-lug. Styled Steel optional. 14x6 standard on 428 cars."
+    },
+    {
+      "year": 1969,
+      "make": "Ford",
+      "model": "Mustang",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 19 },
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["C78-14", "E78-14", "E70-14", "F70-14", "F60-15"],
+      "staggered": false,
+      "sources": ["performanceplustire.com", "ecklers.com", "semomustang.com"],
+      "confidence": "high",
+      "notes": "Boss 302/429 use 15x7 Magnum 500 with F60-15 Polyglas. Chrome Magnum 500s standard on Boss 429."
+    },
+    {
+      "year": 1970,
+      "make": "Ford",
+      "model": "Mustang",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "E70-14", "F70-14", "F60-15"],
+      "staggered": false,
+      "sources": ["performanceplustire.com", "ecklers.com"],
+      "confidence": "high",
+      "notes": "14x7 standard on 351/4V and 428. Boss 302/429 use 15x7 chrome Magnum 500s with F60-15."
+    },
+    {
+      "year": 1971,
+      "make": "Ford",
+      "model": "Mustang",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "E70-14", "F70-14", "F60-15"],
+      "staggered": false,
+      "sources": ["ecklers.com", "7173mustangs.com"],
+      "confidence": "high",
+      "notes": "All 5-lug now (4-lug 6-cyl discontinued). Boss 351 uses F60-15. Mach I standard with E70-14."
+    },
+    {
+      "year": 1972,
+      "make": "Ford",
+      "model": "Mustang",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "E70-14", "F70-14", "F60-15"],
+      "staggered": false,
+      "sources": ["ecklers.com", "7173mustangs.com"],
+      "confidence": "high",
+      "notes": "351 HO carries F60-15 standard. Mach I uses E70-14 standard."
+    },
+    {
+      "year": 1973,
+      "make": "Ford",
+      "model": "Mustang",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "E70-14", "F70-14", "GR78-14"],
+      "staggered": false,
+      "sources": ["ecklers.com", "performanceplustire.com"],
+      "confidence": "high",
+      "notes": "Last year of first-gen Mustang. F60-15 discontinued. GR78-14 new for 1973. Optional forged aluminum 5-hole wheels."
+    },
+    {
+      "year": 1966,
+      "make": "Ford",
+      "model": "Fairlane",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.35-14", "7.75-14"],
+      "staggered": false,
+      "sources": ["cokertire.com", "conceptcarz.com"],
+      "confidence": "high",
+      "notes": "Ford intermediate. Same platform continued through 1970. 5x4.5\" (small Ford pattern)."
+    },
+    {
+      "year": 1967,
+      "make": "Ford",
+      "model": "Fairlane",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.35-14", "7.75-14"],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "high",
+      "notes": "Ford intermediate platform. Same specs as 1966."
+    },
+    {
+      "year": 1968,
+      "make": "Ford",
+      "model": "Fairlane",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.35-14", "E78-14", "F70-14"],
+      "staggered": false,
+      "sources": ["conceptcarz.com", "tireswheels.org"],
+      "confidence": "high",
+      "notes": "Torino introduced as Fairlane sub-model. 7.35x14 tubeless blackwall standard."
+    },
+    {
+      "year": 1969,
+      "make": "Ford",
+      "model": "Fairlane",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F78-14"],
+      "staggered": false,
+      "sources": ["tireswheels.org", "fordmuscleforums.com"],
+      "confidence": "high",
+      "notes": "Last year as separate model from Torino. Same platform/specs."
+    },
+    {
+      "year": 1970,
+      "make": "Ford",
+      "model": "Fairlane",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F78-14"],
+      "staggered": false,
+      "sources": ["tireswheels.org", "fordmuscleforums.com"],
+      "confidence": "high",
+      "notes": "Fairlane name phased out in favor of Torino. Same platform/specs."
+    },
+    {
+      "year": 1968,
+      "make": "Ford",
+      "model": "Torino",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.35-14", "E78-14", "F70-14"],
+      "staggered": false,
+      "sources": ["tireswheels.org", "conceptcarz.com"],
+      "confidence": "high",
+      "notes": "Introduced as Fairlane Torino. 7.35x14 tubeless blackwall standard."
+    },
+    {
+      "year": 1969,
+      "make": "Ford",
+      "model": "Torino",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F78-14"],
+      "staggered": false,
+      "sources": ["tireswheels.org", "grantorinosport.org"],
+      "confidence": "high",
+      "notes": "Ford intermediate muscle car. GT and Cobra models available."
+    },
+    {
+      "year": 1970,
+      "make": "Ford",
+      "model": "Torino",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F78-14", "F60-15"],
+      "staggered": false,
+      "sources": ["tireswheels.org", "fordmuscleforums.com"],
+      "confidence": "high",
+      "notes": "Cobra 429 available. 15x7/8 aftermarket common. 275/60-15 fits rear."
+    },
+    {
+      "year": 1971,
+      "make": "Ford",
+      "model": "Torino",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F78-14", "G78-14"],
+      "staggered": false,
+      "sources": ["tireswheels.org", "grantorinosport.org"],
+      "confidence": "high",
+      "notes": "Restyled body. GT available with 351 or 429 CJ."
+    },
+    {
+      "year": 1972,
+      "make": "Ford",
+      "model": "Torino",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "G78-14"],
+      "staggered": false,
+      "sources": ["tireswheels.org"],
+      "confidence": "high",
+      "notes": "Performance options declining. Gran Torino Sport available."
+    },
+    {
+      "year": 1973,
+      "make": "Ford",
+      "model": "Torino",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-14", "G78-14", "HR78-15"],
+      "staggered": false,
+      "sources": ["tireswheels.org"],
+      "confidence": "medium",
+      "notes": "Energy crisis era. Radials becoming more common."
+    },
+    {
+      "year": 1974,
+      "make": "Ford",
+      "model": "Torino",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-14", "G78-14", "HR78-15"],
+      "staggered": false,
+      "sources": ["tireswheels.org"],
+      "confidence": "medium",
+      "notes": "Last full year of Torino production."
+    },
+    {
+      "year": 1975,
+      "make": "Ford",
+      "model": "Torino",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["FR78-14", "GR78-14", "HR78-15"],
+      "staggered": false,
+      "sources": ["tireswheels.org"],
+      "confidence": "medium",
+      "notes": "Limited production. Radial tires now standard."
+    },
+    {
+      "year": 1976,
+      "make": "Ford",
+      "model": "Torino",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["FR78-14", "GR78-14", "HR78-15"],
+      "staggered": false,
+      "sources": ["tireswheels.org"],
+      "confidence": "medium",
+      "notes": "Final year of Torino. Replaced by LTD II for 1977."
+    },
+    {
+      "year": 1965,
+      "make": "Ford",
+      "model": "Galaxie",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.5,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.75-15", "8.15-15"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com", "cokertire.com"],
+      "confidence": "high",
+      "notes": "Full-size Ford. 5x4.5\" bolt pattern. 15x5.5\" on T-birds and 7-Litre."
+    },
+    {
+      "year": 1966,
+      "make": "Ford",
+      "model": "Galaxie",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.5,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5.5, "offset": 0 },
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.75-15", "8.15-15", "8.45-15"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com"],
+      "confidence": "high",
+      "notes": "15x6\" on R-codes, wagons, and police packages. 7-Litre used 15x5.5\" with Kelsey Hayes disc brakes."
+    },
+    {
+      "year": 1967,
+      "make": "Ford",
+      "model": "Galaxie",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.5,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5.5, "offset": 0 },
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.75-15", "8.15-15", "8.45-15"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com"],
+      "confidence": "high",
+      "notes": "Full-size Ford. 500XL and 7-Litre high-performance models available."
+    },
+    {
+      "year": 1968,
+      "make": "Ford",
+      "model": "Galaxie",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.5,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-15", "G78-15", "H78-15"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com"],
+      "confidence": "high",
+      "notes": "Full-size Ford. New tire sizing introduced."
+    },
+    {
+      "year": 1969,
+      "make": "Ford",
+      "model": "Galaxie",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.5,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 6.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-15", "G78-15", "H78-15"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com"],
+      "confidence": "high",
+      "notes": "15x6.5\" introduced on some models."
+    },
+    {
+      "year": 1970,
+      "make": "Ford",
+      "model": "Galaxie",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.5,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 6.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-15", "G78-15", "H78-15", "8.25-15", "8.55-15"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com"],
+      "confidence": "high",
+      "notes": "15x6\" standard on T-birds and large tire options. Hub bore 70-71mm."
+    },
+    {
+      "year": 1971,
+      "make": "Ford",
+      "model": "Galaxie",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.5,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 6.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-15", "H78-15", "J78-15"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com"],
+      "confidence": "high",
+      "notes": "Last year as Galaxie nameplate. Continued as LTD."
+    },
+    {
+      "year": 1970,
+      "make": "Ford",
+      "model": "Maverick",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.45-14", "D70-14"],
+      "staggered": false,
+      "sources": ["fordmaverick.com", "hemmings.com"],
+      "confidence": "high",
+      "notes": "Compact car. 4x114.3 on some 6-cyl base models. Thread: 1/2\"-20 UNF. Grabber package had D70-14."
+    },
+    {
+      "year": 1971,
+      "make": "Ford",
+      "model": "Maverick",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.45-14", "B78-14", "D70-14"],
+      "staggered": false,
+      "sources": ["fordmaverick.com", "hemmings.com"],
+      "confidence": "high",
+      "notes": "4-door sedan added. Grabber package with D70-14 Wide Oval, hub caps with trim rings, deck spoiler."
+    },
+    {
+      "year": 1972,
+      "make": "Ford",
+      "model": "Maverick",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.45-14", "C78-14", "D70-14", "DR78-14"],
+      "staggered": false,
+      "sources": ["fordmaverick.com"],
+      "confidence": "high",
+      "notes": "Luxury Decor Option available. Steel belted radials now optional (DR78-14)."
+    },
+    {
+      "year": 1973,
+      "make": "Ford",
+      "model": "Maverick",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.45-14", "D70-14", "DR78-14"],
+      "staggered": false,
+      "sources": ["fordmaverick.com"],
+      "confidence": "high",
+      "notes": "New energy absorbing bumper. Grabber has D70-14 raised white letter standard. Forged aluminum wheels optional."
+    },
+    {
+      "year": 1974,
+      "make": "Ford",
+      "model": "Maverick",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["BSW-14", "D70-14", "DR78-14"],
+      "staggered": false,
+      "sources": ["fordmaverick.com"],
+      "confidence": "high",
+      "notes": "Impact resistant bumpers. Grabber continues with D70-14 raised white letters. Manual front disc brakes optional."
+    },
+    {
+      "year": 1975,
+      "make": "Ford",
+      "model": "Maverick",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["BR78-14", "DR78-14"],
+      "staggered": false,
+      "sources": ["fordmaverick.com", "hemmings.com"],
+      "confidence": "medium",
+      "notes": "Grabber package continues. Radial tires becoming standard."
+    },
+    {
+      "year": 1976,
+      "make": "Ford",
+      "model": "Maverick",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["BR78-14", "DR78-14"],
+      "staggered": false,
+      "sources": ["fordmaverick.com"],
+      "confidence": "medium",
+      "notes": "Continued production. Same specs as 1975."
+    },
+    {
+      "year": 1977,
+      "make": "Ford",
+      "model": "Maverick",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["BR78-14", "DR78-14"],
+      "staggered": false,
+      "sources": ["fordmaverick.com"],
+      "confidence": "medium",
+      "notes": "Final year of Maverick production. Replaced by Fairmont for 1978."
+    },
+    {
+      "year": 1964,
+      "make": "Ford",
+      "model": "Falcon",
+      "bolt_pattern": "4x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.00-13", "6.50-13"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com", "cargurus.com", "cokertire.com"],
+      "confidence": "high",
+      "notes": "Compact car. 4-lug standard on 6-cyl. V8 models use 5x114.3. Sprint package available."
+    },
+    {
+      "year": 1965,
+      "make": "Ford",
+      "model": "Falcon",
+      "bolt_pattern": "4x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4, "offset": 0 },
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "6.45-14"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com", "cokertire.com"],
+      "confidence": "high",
+      "notes": "4-lug on 6-cyl, 5x114.3 on V8. Futura and Sprint models available."
+    },
+    {
+      "year": 1966,
+      "make": "Ford",
+      "model": "Falcon",
+      "bolt_pattern": "4x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4, "offset": 0 },
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "6.95-14"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com", "cokertire.com"],
+      "confidence": "high",
+      "notes": "4-lug on 6-cyl, 5x114.3 on V8. Futura and Sport Coupe models."
+    },
+    {
+      "year": 1967,
+      "make": "Ford",
+      "model": "Falcon",
+      "bolt_pattern": "4x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4, "offset": 0 },
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "6.95-14"],
+      "staggered": false,
+      "sources": ["fordmuscleforums.com", "cokertire.com"],
+      "confidence": "high",
+      "notes": "4-lug on 6-cyl, 5x114.3 on V8. Similar to Mustang mechanicals."
+    },
+    {
+      "year": 1968,
+      "make": "Ford",
+      "model": "Falcon",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "C78-14"],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "medium",
+      "notes": "Moved to Fairlane platform. 5-lug standard. Limited production."
+    },
+    {
+      "year": 1969,
+      "make": "Ford",
+      "model": "Falcon",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["C78-14", "E78-14"],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "medium",
+      "notes": "Fairlane-based. Limited US production, continued in Australia."
+    },
+    {
+      "year": 1970,
+      "make": "Ford",
+      "model": "Falcon",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["C78-14", "E78-14"],
+      "staggered": false,
+      "sources": ["cokertire.com"],
+      "confidence": "medium",
+      "notes": "Final US production year. Continued as Australian model through 2016."
+    },
+    {
+      "year": 1964,
+      "make": "Mercury",
+      "model": "Comet",
+      "bolt_pattern": "4x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "6.95-14"],
+      "staggered": false,
+      "sources": ["cometcentral.com", "musclecarclub.com", "classicindustries.com"],
+      "confidence": "high",
+      "notes": "Falcon-based. 4-lug on 6-cyl, 5x114.3 on V8. Cyclone package introduced with K-code 289 V8."
+    },
+    {
+      "year": 1965,
+      "make": "Mercury",
+      "model": "Comet",
+      "bolt_pattern": "4x114.3",
+      "hub_bore": 61.5,
+      "oem_wheel_sizes": [
+        { "diameter": 13, "width": 4.5, "offset": 0 },
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-13", "6.95-14"],
+      "staggered": false,
+      "sources": ["cometcentral.com", "musclecarclub.com"],
+      "confidence": "high",
+      "notes": "Falcon-based. 4-lug on 6-cyl, 5x114.3 on V8. Cyclone and Caliente models available."
+    },
+    {
+      "year": 1966,
+      "make": "Mercury",
+      "model": "Comet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.35-14", "7.75-14"],
+      "staggered": false,
+      "sources": ["musclecarclub.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "Moved to Fairlane platform. 5-lug standard. Cyclone GT with 390 V8 available."
+    },
+    {
+      "year": 1967,
+      "make": "Mercury",
+      "model": "Comet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.35-14", "7.75-14", "E70-14"],
+      "staggered": false,
+      "sources": ["musclecarclub.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "Fairlane-based. Last year as Comet Cyclone before split."
+    },
+    {
+      "year": 1968,
+      "make": "Mercury",
+      "model": "Cyclone",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F78-14"],
+      "staggered": false,
+      "sources": ["musclecarclub.com", "horsepowermemories.com"],
+      "confidence": "high",
+      "notes": "Now standalone model (dropped Comet prefix). Torino-based platform. GT and fastback available."
+    },
+    {
+      "year": 1969,
+      "make": "Mercury",
+      "model": "Cyclone",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "F78-14"],
+      "staggered": false,
+      "sources": ["musclecarclub.com", "horsepowermemories.com"],
+      "confidence": "high",
+      "notes": "Cyclone CJ with 428 Cobra Jet. Spoiler II NASCAR homologation special."
+    },
+    {
+      "year": 1970,
+      "make": "Mercury",
+      "model": "Cyclone",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "G70-14"],
+      "staggered": false,
+      "sources": ["musclecarclub.com", "horsepowermemories.com"],
+      "confidence": "high",
+      "notes": "Restyled. Spoiler with 429 V8 (360 hp). GT, Spoiler models. 351 standard on all models."
+    },
+    {
+      "year": 1971,
+      "make": "Mercury",
+      "model": "Cyclone",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F70-14", "G70-14"],
+      "staggered": false,
+      "sources": ["musclecarclub.com", "horsepowermemories.com"],
+      "confidence": "high",
+      "notes": "Final year of Cyclone. 351 V8 standard. GT and Spoiler models. Replaced by Montego GT for 1972."
+    }
+  ],
+  "summary": {
+    "total_researched": 53,
+    "high_confidence": 46,
+    "medium_confidence": 7,
+    "low_confidence": 0,
+    "common_patterns": {
+      "mustang_1965_1973": {
+        "bolt_pattern": "5x114.3 (V8) / 4x114.3 (6-cyl through 1967)",
+        "hub_bore": "61.5mm",
+        "notes": "4-lug discontinued after 1970. Boss models use 15x7 wheels."
+      },
+      "ford_intermediate_1966_1976": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": "70.3mm",
+        "notes": "Fairlane/Torino platform. Same specs for Mercury Cyclone."
+      },
+      "ford_fullsize_1965_1971": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": "70.5mm",
+        "notes": "Galaxie full-size. 15\" wheels standard."
+      },
+      "ford_compact_1964_1977": {
+        "bolt_pattern": "5x114.3 (V8) / 4x114.3 (6-cyl on early models)",
+        "hub_bore": "61.5-70.3mm",
+        "notes": "Falcon and Maverick. Comet shared platforms."
+      }
+    },
+    "sources_used": [
+      "performanceplustire.com",
+      "ecklers.com",
+      "vintage-mustang.com",
+      "mustangforums.com",
+      "fordmuscleforums.com",
+      "tireswheels.org",
+      "cokertire.com",
+      "fordmaverick.com",
+      "hemmings.com",
+      "musclecarclub.com",
+      "cometcentral.com",
+      "horsepowermemories.com",
+      "conceptcarz.com",
+      "7173mustangs.com"
+    ],
+    "banned_sources_avoided": ["wheel-size.com", "simpletire.com", "tirerack.com"]
+  }
+}

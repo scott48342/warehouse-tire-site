@@ -1,0 +1,715 @@
+{
+  "batchId": 12,
+  "processedAt": "2026-04-21T23:46:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "resolved": 35,
+    "invalid": 10,
+    "wrongMake": 5
+  },
+  "results": [
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "srx",
+      "status": "invalid",
+      "reason": "Vehicle does not exist - Cadillac SRX was discontinued after 2016 (replaced by XT5)",
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "sts-v",
+      "status": "invalid",
+      "reason": "Vehicle does not exist - Cadillac STS-V production started in 2006",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "sts-v",
+      "status": "resolved",
+      "tireSizes": [
+        { "position": "front", "size": "255/45R18" },
+        { "position": "rear", "size": "275/40R19" }
+      ],
+      "isStaggered": true,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "sts-v",
+      "status": "resolved",
+      "tireSizes": [
+        { "position": "front", "size": "255/45R18" },
+        { "position": "rear", "size": "275/40R19" }
+      ],
+      "isStaggered": true,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "sts-v",
+      "status": "resolved",
+      "tireSizes": [
+        { "position": "front", "size": "255/45R18" },
+        { "position": "rear", "size": "275/40R19" }
+      ],
+      "isStaggered": true,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "sts-v",
+      "status": "resolved",
+      "tireSizes": [
+        { "position": "front", "size": "255/45R18" },
+        { "position": "rear", "size": "275/40R19" }
+      ],
+      "isStaggered": true,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "vistiq",
+      "status": "invalid",
+      "reason": "Vehicle not yet in database - Only 2026 model year data available",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "vistiq",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "285/45R21", "trims": ["Luxury", "Sport"] },
+        { "size": "295/40R22", "trims": ["Platinum", "Premium Luxury"] },
+        { "size": "305/35R23", "trims": ["Platinum", "Premium Luxury"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Platinum", "Premium Luxury", "Sport"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "status": "resolved",
+      "tireSizes": [
+        { "position": "front", "size": "235/45R19" },
+        { "position": "rear", "size": "255/40R19" }
+      ],
+      "isStaggered": true,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "status": "resolved",
+      "tireSizes": [
+        { "position": "front", "size": "235/45R19" },
+        { "position": "rear", "size": "255/40R19" }
+      ],
+      "isStaggered": true,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "status": "resolved",
+      "tireSizes": [
+        { "position": "front", "size": "235/45R19" },
+        { "position": "rear", "size": "255/40R19" }
+      ],
+      "isStaggered": true,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "status": "resolved",
+      "tireSizes": [
+        { "position": "front", "size": "235/45R19" },
+        { "position": "rear", "size": "255/40R19" }
+      ],
+      "isStaggered": true,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "xt4",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "235/60R18", "trims": ["Luxury", "Premium Luxury", "Sport"] },
+        { "size": "245/45R20", "trims": ["Luxury", "Premium Luxury", "Sport"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Premium Luxury", "Sport"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "xt5",
+      "status": "invalid",
+      "reason": "Vehicle does not exist - Cadillac XT5 production started in 2017",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "xt5",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "235/65R18", "trims": ["Luxury", "Standard"] },
+        { "size": "235/55R20", "trims": ["Luxury", "Platinum", "Premium Luxury"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Platinum", "Premium Luxury", "Standard"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "xt5",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "235/65R18", "trims": ["Luxury"] },
+        { "size": "235/55R20", "trims": ["Luxury", "Premium Luxury", "Sport"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Premium Luxury", "Sport"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "xt5",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "235/65R18", "trims": ["Luxury"] },
+        { "size": "235/55R20", "trims": ["Luxury", "Premium Luxury", "Sport"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Premium Luxury", "Sport"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "xt5",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "235/65R18", "trims": ["Luxury"] },
+        { "size": "235/55R20", "trims": ["Luxury", "Premium Luxury", "Sport"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Premium Luxury", "Sport"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "xt6",
+      "status": "invalid",
+      "reason": "Vehicle does not exist - Cadillac XT6 production started in 2020",
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "xt6",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "235/65R18", "trims": ["Luxury"] },
+        { "size": "235/55R20", "trims": ["Luxury", "Premium Luxury", "Sport"] },
+        { "size": "265/45R21", "trims": ["Premium Luxury", "Sport"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Premium Luxury", "Sport"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "xt6",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "235/65R18", "trims": ["Luxury"] },
+        { "size": "235/55R20", "trims": ["Luxury", "Premium Luxury", "Sport"] },
+        { "size": "265/45R21", "trims": ["Premium Luxury", "Sport"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Premium Luxury", "Sport"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "xt6",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "235/65R18", "trims": ["Luxury"] },
+        { "size": "235/55R20", "trims": ["Luxury", "Premium Luxury", "Sport"] },
+        { "size": "265/45R21", "trims": ["Premium Luxury", "Sport"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Premium Luxury", "Sport"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "xt6",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "235/65R18", "trims": ["Luxury"] },
+        { "size": "235/55R20", "trims": ["Luxury", "Premium Luxury", "Sport"] },
+        { "size": "265/45R21", "trims": ["Premium Luxury", "Sport"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Premium Luxury", "Sport"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "xt6",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "235/65R18", "trims": ["Luxury"] },
+        { "size": "235/55R20", "trims": ["Luxury", "Premium Luxury", "Sport"] },
+        { "size": "265/45R21", "trims": ["Premium Luxury", "Sport"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Luxury", "Premium Luxury", "Sport"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "alero",
+      "status": "wrongMake",
+      "correctMake": "oldsmobile",
+      "reason": "Alero is an Oldsmobile, not Chevrolet",
+      "tireSizes": [
+        { "size": "215/60R15", "trims": ["GL Coupe", "GL Sedan", "GX Coupe", "GX Sedan"] },
+        { "size": "225/50R16", "trims": ["GL Coupe", "GL Sedan", "GLS Coupe", "GLS Sedan"] }
+      ],
+      "isStaggered": false,
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "alero",
+      "status": "wrongMake",
+      "correctMake": "oldsmobile",
+      "reason": "Alero is an Oldsmobile, not Chevrolet",
+      "tireSizes": [
+        { "size": "215/60R15", "trims": ["GL Coupe", "GL Sedan", "GX Coupe", "GX Sedan"] },
+        { "size": "225/50R16", "trims": ["GL Coupe", "GL Sedan", "GLS Coupe", "GLS Sedan"] }
+      ],
+      "isStaggered": false,
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "alero",
+      "status": "wrongMake",
+      "correctMake": "oldsmobile",
+      "reason": "Alero is an Oldsmobile, not Chevrolet",
+      "tireSizes": [
+        { "size": "215/60R15", "trims": ["GL Coupe", "GL Sedan", "GX Coupe", "GX Sedan"] },
+        { "size": "225/50R16", "trims": ["GL Coupe", "GL Sedan", "GLS Coupe", "GLS Sedan"] }
+      ],
+      "isStaggered": false,
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "alero",
+      "status": "wrongMake",
+      "correctMake": "oldsmobile",
+      "reason": "Alero is an Oldsmobile, not Chevrolet",
+      "tireSizes": [
+        { "size": "215/60R15", "trims": ["GL Coupe", "GL Sedan", "GX Coupe", "GX Sedan"] },
+        { "size": "225/50R16", "trims": ["GL Coupe", "GL Sedan", "GLS Coupe", "GLS Sedan"] }
+      ],
+      "isStaggered": false,
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "alero",
+      "status": "wrongMake",
+      "correctMake": "oldsmobile",
+      "reason": "Alero is an Oldsmobile, not Chevrolet",
+      "tireSizes": [
+        { "size": "205/65R15", "trims": ["GL Sedan", "GX Coupe", "GX Sedan"] },
+        { "size": "215/60R15", "trims": ["GL Coupe", "GL Sedan", "GX Coupe", "GX Sedan"] },
+        { "size": "225/50R16", "trims": ["GL Coupe", "GL Sedan", "GLS Coupe", "GLS Sedan"] }
+      ],
+      "isStaggered": false,
+      "missingWheels": true,
+      "missingTires": true
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "astro",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "215/75R15", "trims": ["Base Model"] },
+        { "size": "225/70R15", "trims": ["Base Model"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "astro",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "215/75R15", "trims": ["Base Model"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "astro",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "215/75R15", "trims": ["Base Model"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "astro",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "215/70R16", "trims": ["Base Model"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "astro",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "215/70R16", "trims": ["Base Model"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "astro",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "215/70R16", "trims": ["Base Model"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Base Model"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "265/70R17", "trims": ["LS", "LT"] },
+        { "size": "275/55R20", "trims": ["LT", "LTZ"] },
+        { "size": "265/65R18", "trims": ["Z71"] }
+      ],
+      "isStaggered": false,
+      "trims": ["LS", "LT", "LTZ", "Z71"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "265/70R17", "trims": ["LS", "LT"] },
+        { "size": "275/55R20", "trims": ["LT", "LTZ"] },
+        { "size": "265/65R18", "trims": ["Z71"] }
+      ],
+      "isStaggered": false,
+      "trims": ["LS", "LT", "LTZ", "Z71"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "265/70R17", "trims": ["LS", "LT"] },
+        { "size": "275/55R20", "trims": ["LT", "LTZ"] },
+        { "size": "265/65R18", "trims": ["Z71"] }
+      ],
+      "isStaggered": false,
+      "trims": ["LS", "LT", "LTZ", "Z71"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "265/70R17", "trims": ["LS", "LT"] },
+        { "size": "275/55R20", "trims": ["LS", "LT", "LTZ"] },
+        { "size": "265/65R18", "trims": ["LT Off-Road Package"] }
+      ],
+      "isStaggered": false,
+      "trims": ["LS", "LT", "LT Off-Road Package", "LTZ"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "265/70R17", "trims": ["LS", "LT"] },
+        { "size": "275/55R20", "trims": ["LS", "LT", "LTZ"] },
+        { "size": "265/65R18", "trims": ["Z71"] }
+      ],
+      "isStaggered": false,
+      "trims": ["LS", "LT", "LTZ", "Z71"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "265/70R17", "trims": ["LS", "LT"] },
+        { "size": "275/55R20", "trims": ["LS", "LT", "LTZ"] },
+        { "size": "265/65R18", "trims": ["LT Off-Road Package"] }
+      ],
+      "isStaggered": false,
+      "trims": ["LS", "LT", "LT Off-Road Package", "LTZ"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "265/70R17", "trims": ["Black Diamond LS", "Black Diamond LT"] },
+        { "size": "275/55R20", "trims": ["Black Diamond LS", "Black Diamond LT", "Black Diamond LTZ"] },
+        { "size": "265/65R18", "trims": ["Black Diamond LT Off-Road Package"] }
+      ],
+      "isStaggered": false,
+      "trims": ["Black Diamond LS", "Black Diamond LT", "Black Diamond LT Off-Road Package", "Black Diamond LTZ"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "status": "resolved",
+      "note": "In tiresize.com database as 'Avalanche' with 2wd/4wd variants (not separate 1500 model)",
+      "tireSizes": [
+        { "size": "265/70R16", "trims": ["2wd", "4wd"] },
+        { "size": "265/70R17", "trims": ["2wd", "4wd", "North Face", "Z66 2wd", "Z71 4wd"] }
+      ],
+      "isStaggered": false,
+      "trims": ["2wd", "4wd", "North Face", "Z66 2wd", "Z71 4wd"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "status": "resolved",
+      "note": "In tiresize.com database as 'Avalanche' with 2wd/4wd variants",
+      "tireSizes": [
+        { "size": "265/70R16", "trims": ["2wd", "4wd"] },
+        { "size": "265/70R17", "trims": ["2wd", "4wd", "Z66 2wd", "Z71 4wd"] }
+      ],
+      "isStaggered": false,
+      "trims": ["2wd", "4wd", "Z66 2wd", "Z71 4wd"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "status": "resolved",
+      "note": "In tiresize.com database as 'Avalanche' with 2wd/4wd variants",
+      "tireSizes": [
+        { "size": "265/70R16", "trims": ["2wd", "4wd"] },
+        { "size": "265/70R17", "trims": ["2wd", "4wd", "Z66 2wd", "Z71 4wd"] }
+      ],
+      "isStaggered": false,
+      "trims": ["2wd", "4wd", "Z66 2wd", "Z71 4wd"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "245/75R16", "trims": ["2500 2wd", "2500 4wd"] }
+      ],
+      "isStaggered": false,
+      "trims": ["2500 2wd", "2500 4wd"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "245/75R16", "trims": ["2500 2wd", "2500 4wd"] }
+      ],
+      "isStaggered": false,
+      "trims": ["2500 2wd", "2500 4wd"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "245/75R16", "trims": ["2500 2wd", "2500 4wd"] }
+      ],
+      "isStaggered": false,
+      "trims": ["2500 2wd", "2500 4wd"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "245/75R16", "trims": ["2500 4wd"] }
+      ],
+      "isStaggered": false,
+      "trims": ["2500 4wd"],
+      "missingWheels": false,
+      "missingTires": true
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "status": "resolved",
+      "tireSizes": [
+        { "size": "245/75R16", "trims": ["2500 4wd"] }
+      ],
+      "isStaggered": false,
+      "trims": ["2500 4wd"],
+      "missingWheels": false,
+      "missingTires": true
+    }
+  ],
+  "notes": {
+    "staggeredVehicles": [
+      "Cadillac STS-V (2006-2009): Front 255/45R18, Rear 275/40R19",
+      "Cadillac XLR-V (2006-2009): Front 235/45R19, Rear 255/40R19"
+    ],
+    "dataIssues": [
+      "2017 Cadillac SRX does not exist (discontinued after 2016)",
+      "2005 Cadillac STS-V does not exist (production started 2006)",
+      "2025 Cadillac Vistiq not yet in database (only 2026 available)",
+      "2016 Cadillac XT5 does not exist (production started 2017)",
+      "2019 Cadillac XT6 does not exist (production started 2020)",
+      "Chevrolet Alero entries should be Oldsmobile Alero (wrong make in source data)"
+    ],
+    "allUSVehicles": true
+  }
+}

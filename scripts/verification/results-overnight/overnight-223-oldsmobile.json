@@ -1,0 +1,2045 @@
+[
+  {
+    "id": "e61462e6-e20d-4485-8382-cab32b6b39a7",
+    "year": 1985,
+    "make": "oldsmobile",
+    "model": "442",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      "7Jx15"
+    ],
+    "verifiedTireSizes": [
+      "P215/65R15",
+      "P245/50VR16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "5b7ead95-0cb9-449e-b027-8749b9b7382a",
+    "year": 1986,
+    "make": "oldsmobile",
+    "model": "442",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      "7Jx15"
+    ],
+    "verifiedTireSizes": [
+      "P215/65R15",
+      "P245/50VR16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "ec630fd2-1526-4eaa-9ec8-ec665eeaecb7",
+    "year": 1987,
+    "make": "oldsmobile",
+    "model": "442",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      "7Jx15"
+    ],
+    "verifiedTireSizes": [
+      "P215/65R15",
+      "P245/50VR16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "c02fc89e-34ee-48b6-9acc-d3a8da971d80",
+    "year": 1990,
+    "make": "oldsmobile",
+    "model": "88",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 41,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/75R14"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "01631127-1767-490b-b319-014e98ae0a0d",
+    "year": 1991,
+    "make": "oldsmobile",
+    "model": "88",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 41,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/75R14",
+      "205/70R15",
+      "215/65R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3194b3be-d0fc-43d4-b45d-9ea9e2dd7075",
+    "year": 1992,
+    "make": "oldsmobile",
+    "model": "88",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a834470c-2e10-4220-9b7e-130f5f2ce44d",
+    "year": 1993,
+    "make": "oldsmobile",
+    "model": "88",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "da067020-860a-45c1-a2b4-b9b08212b4ef",
+    "year": 1994,
+    "make": "oldsmobile",
+    "model": "88",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "134df8e5-2adf-4ac4-ad9e-87489b0ded47",
+    "year": 1995,
+    "make": "oldsmobile",
+    "model": "88",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "355a050c-362e-49cf-846c-c8ea86115e03",
+    "year": 1996,
+    "make": "oldsmobile",
+    "model": "88",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "91501913-2627-481c-ab74-3a987e4675f9",
+    "year": 1997,
+    "make": "oldsmobile",
+    "model": "88",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/65R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3426cfa9-c298-44bf-9763-e4145c321315",
+    "year": 1998,
+    "make": "oldsmobile",
+    "model": "88",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/65R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "824c900a-f678-4aa0-8fe1-adc4b3bacc34",
+    "year": 1999,
+    "make": "oldsmobile",
+    "model": "88",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/65R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9d295991-91d8-4ea8-8214-3aa68d99882e",
+    "year": 1990,
+    "make": "oldsmobile",
+    "model": "98",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 41,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/75R14",
+      "205/70R15",
+      "215/65R15",
+      "215/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "233680c8-2197-49b6-bf55-59245472f33f",
+    "year": 1991,
+    "make": "oldsmobile",
+    "model": "98",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/65R15",
+      "215/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0036ae16-ef2e-473c-af9c-9e99fc459501",
+    "year": 1992,
+    "make": "oldsmobile",
+    "model": "98",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f8e2f9e7-3f7d-4890-96df-c458ec290b8f",
+    "year": 1993,
+    "make": "oldsmobile",
+    "model": "98",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "082a264d-a615-4b09-a847-361d263f15a8",
+    "year": 1994,
+    "make": "oldsmobile",
+    "model": "98",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "66b845fa-268d-4205-82d4-87c113f709d1",
+    "year": 1995,
+    "make": "oldsmobile",
+    "model": "98",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8b6bd313-3ad8-4ed1-ba2d-507b53bf7716",
+    "year": 1996,
+    "make": "oldsmobile",
+    "model": "98",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "108b0e99-142b-4ee4-8a57-70800523f3fa",
+    "year": 1995,
+    "make": "oldsmobile",
+    "model": "Aurora",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "84529fee-045e-4057-9e6e-af2097bd8736",
+    "year": 1996,
+    "make": "oldsmobile",
+    "model": "Aurora",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "02b07c75-5f83-4ede-be87-aaffda91f252",
+    "year": 1997,
+    "make": "oldsmobile",
+    "model": "Aurora",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0ea86e29-1dbe-42ae-bae4-78ab002fd3eb",
+    "year": 1998,
+    "make": "oldsmobile",
+    "model": "Aurora",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9d6b8bd0-8393-4e80-a0c0-cb4eecf4ac48",
+    "year": 1999,
+    "make": "oldsmobile",
+    "model": "Aurora",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b7dc8838-0214-4696-8e72-54be1856d2fd",
+    "year": 1995,
+    "make": "oldsmobile",
+    "model": "Bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115; Hub bore corrected from 70.7 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/75R15"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "7843d31a-ff94-4cb4-9480-684ffe535170",
+    "year": 1990,
+    "make": "oldsmobile",
+    "model": "Cutlass Ciera",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x100 to 5x115; Hub bore corrected from 57.1 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 42,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "185/75R14",
+      "195/70R14",
+      "215/60R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "159603f8-8822-427a-a719-fc357060d5d6",
+    "year": 1991,
+    "make": "oldsmobile",
+    "model": "Cutlass Ciera",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x100 to 5x115; Hub bore corrected from 57.1 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 42,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "185/75R14",
+      "195/70R14",
+      "195/75R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "bfb9c51c-b6da-4a2c-9b4b-98f8f29e840a",
+    "year": 1992,
+    "make": "oldsmobile",
+    "model": "Cutlass Ciera",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x100 to 5x115; Hub bore corrected from 57.1 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 42,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "185/75R14",
+      "195/70R14",
+      "195/75R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "aefbc4f6-66a6-4b96-b6f7-8562f6c0698b",
+    "year": 1993,
+    "make": "oldsmobile",
+    "model": "Cutlass Ciera",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x100 to 5x115; Hub bore corrected from 57.1 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 42,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "185/75R14",
+      "195/70R14",
+      "195/75R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d0b7d1ec-eafb-49c3-9d89-2c60cdff4d08",
+    "year": 1994,
+    "make": "oldsmobile",
+    "model": "Cutlass Ciera",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x100 to 5x115; Hub bore corrected from 57.1 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 42,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "185/75R14",
+      "195/75R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "e823ec06-02e4-45c9-9f36-6bcf2e8cf200",
+    "year": 1995,
+    "make": "oldsmobile",
+    "model": "Cutlass Ciera",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x100 to 5x115; Hub bore corrected from 57.1 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 42,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "185/75R14",
+      "195/75R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "717dd024-a0b7-4389-aac4-f561e4ceaf82",
+    "year": 1996,
+    "make": "oldsmobile",
+    "model": "Cutlass Ciera",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x100 to 5x115; Hub bore corrected from 57.1 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 42,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "185/75R14",
+      "195/75R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "2b5ce219-7240-4e39-87a6-86f5055f6516",
+    "year": 1990,
+    "make": "oldsmobile",
+    "model": "Cutlass Supreme",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/75R14",
+      "205/70R15",
+      "215/65R15",
+      "215/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "95981b67-6b45-492c-b1d9-12c8feda257d",
+    "year": 1991,
+    "make": "oldsmobile",
+    "model": "Cutlass Supreme",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/75R14",
+      "205/70R15",
+      "215/65R15",
+      "215/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "aac2b953-5a35-4473-91f9-1232f01b3f65",
+    "year": 1992,
+    "make": "oldsmobile",
+    "model": "Cutlass Supreme",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/65R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c88c38da-3e66-4001-968a-951f202bb4d6",
+    "year": 1993,
+    "make": "oldsmobile",
+    "model": "Cutlass Supreme",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "07ffb76b-6609-40be-a687-4e60a2bae4d8",
+    "year": 1994,
+    "make": "oldsmobile",
+    "model": "Cutlass Supreme",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c0954b53-221a-4815-816a-3603f2503754",
+    "year": 1995,
+    "make": "oldsmobile",
+    "model": "Cutlass Supreme",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "6f4bb811-428f-4ed5-8ed1-3a57b32eb63a",
+    "year": 1996,
+    "make": "oldsmobile",
+    "model": "Cutlass Supreme",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "175eca1f-a2db-4386-bae9-c46c3e748357",
+    "year": 1997,
+    "make": "oldsmobile",
+    "model": "Cutlass Supreme",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "1bbb91b0-1f1b-40a1-9dfa-a1a5ef2907be",
+    "year": 1990,
+    "make": "oldsmobile",
+    "model": "Silhouette",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R14"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d405b21f-87cd-43ab-9bdb-720149003c71",
+    "year": 1991,
+    "make": "oldsmobile",
+    "model": "Silhouette",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R14"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "7f3a015d-7daa-403b-8102-c0ef7c578b56",
+    "year": 1992,
+    "make": "oldsmobile",
+    "model": "Silhouette",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d7f75f3d-e6cd-4205-8282-5fc247821dcb",
+    "year": 1993,
+    "make": "oldsmobile",
+    "model": "Silhouette",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "6e8a385f-82b5-44ad-a75d-0dc44ce51210",
+    "year": 1994,
+    "make": "oldsmobile",
+    "model": "Silhouette",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "7f5716fb-6744-4694-9fef-1d5c887254e3",
+    "year": 1995,
+    "make": "oldsmobile",
+    "model": "Silhouette",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "674365cf-dbd4-4026-b3ab-b1034adc5bb2",
+    "year": 1996,
+    "make": "oldsmobile",
+    "model": "Silhouette",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "69dfb22e-c9f8-4977-92cf-d781d23dab40",
+    "year": 1997,
+    "make": "oldsmobile",
+    "model": "Silhouette",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/70R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "7ab49724-4faa-4cf1-bc57-1726c95741e1",
+    "year": 1998,
+    "make": "oldsmobile",
+    "model": "Silhouette",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/70R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9397d35b-7617-4684-81d8-0b0349fdfb24",
+    "year": 1999,
+    "make": "oldsmobile",
+    "model": "Silhouette",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/70R15",
+      "215/70R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ab01e2fa-e00f-4c76-bd67-13092cee93cc",
+    "year": 1999,
+    "make": "oldsmobile",
+    "model": "alero",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "verifiedTireSizes": [
+      "P215/60R15",
+      "P215/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a78ce384-2792-4d54-b10a-020bb66b8993",
+    "year": 2000,
+    "make": "oldsmobile",
+    "model": "alero",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 41,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "P215/60R15",
+      "P215/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a61f3936-2a2b-4e3b-9ace-78fa3a49551c",
+    "year": 2001,
+    "make": "oldsmobile",
+    "model": "alero",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 41,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "P215/60R15",
+      "P215/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "38587afc-db0a-4754-807e-dbfaa37cd0b7",
+    "year": 2002,
+    "make": "oldsmobile",
+    "model": "alero",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 41,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "P215/60R15",
+      "P215/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "5cdc1ccf-ded3-425d-b1da-826e0f0e105f",
+    "year": 2003,
+    "make": "oldsmobile",
+    "model": "alero",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 41,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "P215/60R15",
+      "P215/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "300b7756-3952-4804-ba73-fa82998b7d81",
+    "year": 2004,
+    "make": "oldsmobile",
+    "model": "alero",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 41,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "P215/60R15",
+      "P215/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "728a1efa-d807-468a-af3f-c003475f07b8",
+    "year": 1991,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115; Hub bore corrected from 70.7 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/75R15"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "2fa8abbb-08aa-464e-ab7b-f4bbbb363aac",
+    "year": 1992,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115; Hub bore corrected from 70.7 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/75R15"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "03cb07b7-ac72-41a1-8569-c529cfbab0dc",
+    "year": 1993,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115; Hub bore corrected from 70.7 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/75R15"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "b0f9090a-5abc-4f4b-8e92-884fb49d8a57",
+    "year": 1994,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115; Hub bore corrected from 70.7 to 70.3",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/75R15"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "2fba5e5f-df34-4ab3-8f8b-a5a411b8c8ee",
+    "year": 1996,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 6x127; Hub bore corrected from 70.7 to 77.8",
+    "verifiedBoltPattern": "6x127",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/70R15"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "ca018543-a779-4cec-b6eb-d88a296db9b8",
+    "year": 1997,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 6x127; Hub bore corrected from 70.7 to 77.8",
+    "verifiedBoltPattern": "6x127",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/70R15"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "5d7c62ff-8fa0-4734-9a2e-5a094ebf7a7c",
+    "year": 1998,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 6x127; Hub bore corrected from 70.7 to 77.8",
+    "verifiedBoltPattern": "6x127",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/70R15"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "77b78643-b582-429c-a53a-c902abcb554a",
+    "year": 1999,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 6x127; Hub bore corrected from 70.7 to 77.8",
+    "verifiedBoltPattern": "6x127",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 31,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/70R15"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "514e4c7e-2eba-409d-a151-de6446c1a427",
+    "year": 2000,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 6x127; Hub bore corrected from 83.1 to 77.8",
+    "verifiedBoltPattern": "6x127",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [
+      "7Jx16"
+    ],
+    "verifiedTireSizes": [
+      "P235/70R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "543195f0-1e1f-4fd3-8d10-8b1504b8a3c2",
+    "year": 2001,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 6x127; Hub bore corrected from 83.1 to 77.8",
+    "verifiedBoltPattern": "6x127",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [
+      "7Jx16"
+    ],
+    "verifiedTireSizes": [
+      "P235/70R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "dbce1f6b-0e5c-4690-a18a-1f8ea2201d23",
+    "year": 2002,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 78.1 to 77.8",
+    "verifiedBoltPattern": "6x127",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [
+      "7Jx17",
+      "8Jx18"
+    ],
+    "verifiedTireSizes": [
+      "P245/65R17",
+      "P255/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9f2df411-c36f-4481-a720-d7bd06c7db05",
+    "year": 2003,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 78.1 to 77.8",
+    "verifiedBoltPattern": "6x127",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [
+      "7Jx17",
+      "8Jx18"
+    ],
+    "verifiedTireSizes": [
+      "P245/65R17",
+      "P255/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0d7c7b48-8c74-471b-b794-2bcfe88f1006",
+    "year": 2004,
+    "make": "oldsmobile",
+    "model": "bravada",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 78.1 to 77.8",
+    "verifiedBoltPattern": "6x127",
+    "verifiedHubBore": "77.8",
+    "verifiedWheelSizes": [
+      "7Jx17",
+      "8Jx18"
+    ],
+    "verifiedTireSizes": [
+      "P245/65R17",
+      "P255/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4d4178df-a3c0-4c2e-aaab-6056917fadd8",
+    "year": 1978,
+    "make": "oldsmobile",
+    "model": "cutlass",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      "6Jx14",
+      "7Jx15"
+    ],
+    "verifiedTireSizes": [
+      "P195/75R14",
+      "P215/65R15",
+      "P245/50R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "ac343b76-5092-4b00-81f7-f609cd17f40c",
+    "year": 1979,
+    "make": "oldsmobile",
+    "model": "cutlass",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      "6Jx14",
+      "7Jx15"
+    ],
+    "verifiedTireSizes": [
+      "P195/75R14",
+      "P215/65R15",
+      "P245/50R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "bf989696-2155-44a8-8673-452149e1e940",
+    "year": 1980,
+    "make": "oldsmobile",
+    "model": "cutlass",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      "6Jx14",
+      "7Jx15"
+    ],
+    "verifiedTireSizes": [
+      "P195/75R14",
+      "P215/65R15",
+      "P245/50R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "59b88e54-3b41-4f05-82f0-a1196e11ea0e",
+    "year": 1981,
+    "make": "oldsmobile",
+    "model": "cutlass",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x115",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      "6Jx14",
+      "7Jx15"
+    ],
+    "verifiedTireSizes": [
+      "P195/75R14",
+      "P215/65R15",
+      "P245/50R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "0e2dfefc-77c6-4fe5-8a4a-840c1dc2e28b",
+    "year": 1982,
+    "make": "oldsmobile",
+    "model": "cutlass",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x115",
+    "verifiedHubBore": "70.3",
+    "verifiedWheelSizes": [
+      "6Jx14",
+      "6Jx15"
+    ],
+    "verifiedTireSizes": [
+      "P185/75R14",
+      "P195/75R14",
+      "P205/70R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  }
+]

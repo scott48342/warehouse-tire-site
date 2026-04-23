@@ -1,0 +1,1109 @@
+{
+  "batchId": "103",
+  "processedAt": "2026-04-21T22:23:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "CL63 AMG": {
+          "front": "255/35R20",
+          "rear": "275/35R20",
+          "staggered": true
+        },
+        "CL65 AMG": {
+          "front": "255/35R20",
+          "rear": "275/35R20",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["Current data shows 255/40R19, 275/35R20, 275/30R21 but OEM is 255/35R20 front + 275/35R20 rear for both trims"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "CL63 AMG": {
+          "front": "255/35R20",
+          "rear": "275/35R20",
+          "staggered": true
+        },
+        "CL65 AMG": {
+          "front": "255/35R20",
+          "rear": "275/35R20",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["Current data shows 255/40R19, 275/35R20, 275/30R21 but OEM is 255/35R20 front + 275/35R20 rear for both trims"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "CL63 AMG": {
+          "front": "255/35R20",
+          "rear": "275/35R20",
+          "staggered": true
+        },
+        "CL65 AMG": {
+          "front": "255/35R20",
+          "rear": "275/35R20",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["Current data shows 255/40R19, 275/35R20, 275/30R21 but OEM is 255/35R20 front + 275/35R20 rear for both trims"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "CL63 AMG": {
+          "front": "255/35R20",
+          "rear": "275/35R20",
+          "staggered": true
+        },
+        "CL65 AMG": {
+          "front": "255/35R20",
+          "rear": "275/35R20",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["Current data shows 255/40R19, 275/35R20, 275/30R21 but OEM is 255/35R20 front + 275/35R20 rear for both trims"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "note": "2007 was transition year - CL55/CL65 ended, CL63 started 2008"
+      },
+      "discrepancies": ["No CL63 AMG available in 2007 - CL63 started 2008. CL55 AMG ended 2006, CL65 had gap year"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "CL55 AMG": {
+          "front": "245/40R19",
+          "rear": "275/35R19",
+          "staggered": true
+        },
+        "CL65 AMG": {
+          "front": "245/40R19",
+          "rear": "275/35R19",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["Current data incorrect. OEM is 245/40R19 front + 275/35R19 rear (19-inch, not 20/21)"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "CL55 AMG": {
+          "options": [
+            {"front": "245/45R18", "rear": "265/40R18", "staggered": true},
+            {"front": "245/40R19", "rear": "275/35R19", "staggered": true}
+          ]
+        },
+        "CL65 AMG": {
+          "front": "245/40R19",
+          "rear": "275/35R19",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["Current data incorrect. OEM is 245/45R18+265/40R18 or 245/40R19+275/35R19 (not 20/21 inch)"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "CL55 AMG": {
+          "front": "245/45R18",
+          "rear": "265/40R18",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["Current data incorrect. OEM is 245/45R18 front + 265/40R18 rear (18-inch only)"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "CL55 AMG": {
+          "front": "245/45R18",
+          "rear": "265/40R18",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["Current data incorrect. OEM is 245/45R18 front + 265/40R18 rear (18-inch only)"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "CL55 AMG": {
+          "front": "245/45R18",
+          "rear": "275/40R18",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["Current data incorrect. OEM is 245/45R18 front + 275/40R18 rear (18-inch only)"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "validatedTireSizes": {
+        "CL55 AMG": {
+          "front": "245/45R18",
+          "rear": "275/40R18",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["Current data incorrect. OEM is 245/45R18 front + 275/40R18 rear (18-inch only)"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"],
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 S AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["Current shows R17/R18/R19 mix. 2020+ CLA250 starts at 18-inch (225/45R18). 17-inch is pre-2020 only"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"],
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 S AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["Current shows R17 but 2020+ CLA starts at 18-inch minimum"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"],
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["Current shows R17 but 2020+ CLA starts at 18-inch minimum"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"],
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["Current shows R17 but 2020+ CLA starts at 18-inch minimum"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"],
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["Current shows R17 but 2020+ CLA starts at 18-inch minimum"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"],
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["Current shows R17 but 2020+ CLA starts at 18-inch minimum. This is second-gen CLA (C118)"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["235/40R18"],
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["205/55R16 not standard OEM for 2019 CLA in US market"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["235/40R18"],
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["205/55R16 not standard OEM for US CLA. 255/30R19 not a standard CLA size"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["235/40R18"],
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["205/55R16 not standard OEM for US CLA"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["235/40R18"],
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["205/55R16 not standard OEM for US CLA"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["225/40R18"],
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["205/55R16 not standard OEM for US CLA"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "cla",
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "235/35R19", "255/30R19"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["225/40R18"],
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["205/55R16 not standard OEM for US CLA - was European market only"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "225/35R19", "245/35R19"],
+      "validatedTireSizes": {
+        "CLA250 Coupe/Sedan": ["205/55R17", "225/45R18", "225/40R19"]
+      },
+      "discrepancies": ["2026 CLA is all-new model. Base starts at 205/55R17. Current 225/45R17 replaced by 205/55R17"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "225/35R19", "245/35R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"]
+      },
+      "discrepancies": ["225/45R17 is not OEM for 2025 CLA - starts at 18-inch"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "225/35R19", "245/35R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"]
+      },
+      "discrepancies": ["225/45R17 is not OEM for 2024 CLA - starts at 18-inch"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "225/35R19", "245/35R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"]
+      },
+      "discrepancies": ["225/45R17 is not OEM for 2023 CLA - starts at 18-inch"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "225/35R19", "245/35R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"]
+      },
+      "discrepancies": ["225/45R17 is not OEM for 2022 CLA - starts at 18-inch"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "225/35R19", "245/35R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"]
+      },
+      "discrepancies": ["225/45R17 is not OEM for 2021 CLA - starts at 18-inch"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18", "225/35R19", "245/35R19"],
+      "validatedTireSizes": {
+        "CLA250 Base/4MATIC": ["225/45R18", "225/40R19"]
+      },
+      "discrepancies": ["225/45R17 is not OEM for 2020+ CLA - starts at 18-inch"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["235/40R18"]
+      },
+      "discrepancies": [],
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["235/40R18"]
+      },
+      "discrepancies": [],
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["235/40R18"]
+      },
+      "discrepancies": [],
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["235/40R18"]
+      },
+      "discrepancies": [],
+      "source": "tiresize.com",
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["225/40R18"]
+      },
+      "discrepancies": ["235/40R18 was added with 2016 Sport package, verify for 2015"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["225/45R17", "225/40R18", "235/40R18"],
+      "validatedTireSizes": {
+        "CLA250 Base": ["225/45R17", "225/40R18"],
+        "CLA250 Sport": ["225/40R18"]
+      },
+      "discrepancies": ["235/40R18 not available in 2014 - was introduced later"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cla-class",
+      "currentTireSizes": ["205/55R16", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "note": "CLA not available in US until 2014. 2013 was European launch year."
+      },
+      "discrepancies": ["CLA not sold in US in 2013 - first US model year was 2014"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 S AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["255/30R20 is not standard OEM for CLA AMG"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 S AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["225/45R18 is not OEM for AMG models. 255/30R20 not standard"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 S AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["225/45R18 is not OEM for AMG models. 255/30R20 not standard"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["225/45R18 is not OEM for AMG models"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["225/45R18 is not OEM for AMG models"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["225/45R18 is not OEM for AMG models"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA35 AMG": ["235/40R18", "245/35R19"],
+        "CLA45 AMG": ["245/40R18", "255/35R19"]
+      },
+      "discrepancies": ["225/45R18 is not OEM for AMG models. New gen CLA AMG started 2020"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["225/45R18 and 255/30R20 not OEM for CLA45 AMG"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["225/45R18 and 255/30R20 not OEM for CLA45 AMG"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["225/45R18 and 255/30R20 not OEM for CLA45 AMG"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["225/45R18 and 255/30R20 not OEM for CLA45 AMG"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["225/45R18 and 255/30R20 not OEM for CLA45 AMG"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "CLA45 AMG": ["235/40R18", "235/35R19"]
+      },
+      "discrepancies": ["225/45R18 and 255/30R20 not OEM for CLA45 AMG"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19", "255/30R20"],
+      "validatedTireSizes": {
+        "note": "CLA45 AMG not available until 2014 in US market"
+      },
+      "discrepancies": ["CLA45 AMG not sold in US in 2013 - first US model year was 2014"],
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "clc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLC 180/200/220/230/350": ["195/60R16", "205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18"]
+      },
+      "discrepancies": ["CLC-Class was European/export market only - not sold in US"],
+      "source": "tirewheelguide.com",
+      "note": "European market vehicle"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "clc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLC 180/200/220/230/350": ["195/60R16", "205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18"]
+      },
+      "discrepancies": ["CLC-Class was European/export market only - not sold in US"],
+      "source": "tirewheelguide.com",
+      "note": "European market vehicle"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "clc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLC 180/200/220/230/350": ["195/60R16", "205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18"]
+      },
+      "discrepancies": ["CLC-Class was European/export market only - not sold in US"],
+      "source": "tirewheelguide.com",
+      "note": "European market vehicle"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "clc-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLC 180/200/220/230/350": ["195/60R16", "205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18"]
+      },
+      "discrepancies": ["CLC-Class was European/export market only - not sold in US"],
+      "source": "tirewheelguide.com",
+      "note": "European market vehicle"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "cle-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLE300 4MATIC": {
+          "options": [
+            {"size": "245/45R18"},
+            {"front": "245/40R19", "rear": "275/35R19", "staggered": true},
+            {"front": "245/35R20", "rear": "275/30R20", "staggered": true}
+          ]
+        },
+        "CLE450 4MATIC": {
+          "options": [
+            {"front": "245/40R19", "rear": "275/35R19", "staggered": true},
+            {"front": "245/35R20", "rear": "275/30R20", "staggered": true}
+          ]
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cle-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLE300 4MATIC": {
+          "options": [
+            {"size": "245/45R18"},
+            {"front": "245/40R19", "rear": "275/35R19", "staggered": true},
+            {"front": "245/35R20", "rear": "275/30R20", "staggered": true}
+          ]
+        },
+        "CLE450 4MATIC": {
+          "options": [
+            {"front": "245/40R19", "rear": "275/35R19", "staggered": true},
+            {"front": "245/35R20", "rear": "275/30R20", "staggered": true}
+          ]
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cle-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLE300 4MATIC": {
+          "options": [
+            {"size": "245/45R18"},
+            {"front": "245/40R19", "rear": "275/35R19", "staggered": true},
+            {"front": "245/35R20", "rear": "275/30R20", "staggered": true}
+          ]
+        },
+        "CLE450 4MATIC": {
+          "options": [
+            {"front": "245/40R19", "rear": "275/35R19", "staggered": true},
+            {"front": "245/35R20", "rear": "275/30R20", "staggered": true}
+          ]
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added. CLE launched 2024 in US"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "cle-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "note": "CLE-Class launched in 2024 in US market - 2023 not available"
+      },
+      "discrepancies": ["CLE-Class not available in 2023 - launched 2024"],
+      "source": "tiresize.com",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "cle-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLE53 AMG": {
+          "front": "265/35R20",
+          "rear": "295/30R20",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "cle-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLE53 AMG": {
+          "front": "265/35R20",
+          "rear": "295/30R20",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "cle-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLE53 AMG": {
+          "front": "265/35R20",
+          "rear": "295/30R20",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added. AMG CLE53 launched 2024"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "note": "CLK-Class production ended 2009 - no 2010 model"
+      },
+      "discrepancies": ["CLK-Class discontinued after 2009 model year - 2010 invalid"],
+      "source": "tiresize.com",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLK350 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added. Last year of CLK"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLK350 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLK350 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLK350 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        },
+        "CLK500 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLK320 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        },
+        "CLK500 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLK320 Coupe/Cabriolet": {
+          "options": [
+            {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+            {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+          ]
+        },
+        "CLK500 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLK320 Coupe": {
+          "options": [
+            {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+            {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+          ]
+        },
+        "CLK320 Cabriolet": ["205/55R16", {"front": "225/45R17", "rear": "245/40R17", "staggered": true}],
+        "CLK500 Coupe": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        },
+        "CLK430 Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLK320 Coupe/Cabriolet Base": "205/55R16",
+        "CLK320 Coupe/Cabriolet Sport": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        },
+        "CLK430 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLK320 Coupe/Cabriolet": "205/55R16",
+        "CLK430 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "clk-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "CLK320 Coupe/Cabriolet": "205/55R16",
+        "CLK430 Coupe/Cabriolet": {
+          "front": "225/45R17",
+          "rear": "245/40R17",
+          "staggered": true
+        }
+      },
+      "discrepancies": ["No current tire sizes - data needs to be added"],
+      "source": "tiresize.com",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "note": "CLK-Class AMG production ended 2009 - no 2010 model"
+      },
+      "discrepancies": ["CLK-Class AMG discontinued after 2009 - 2010 invalid"],
+      "source": "tiresize.com",
+      "status": "INVALID_YEAR"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "note": "CLK63 AMG ended 2008. No CLK AMG models for 2009."
+      },
+      "discrepancies": ["No CLK AMG models were produced for 2009 model year - CLK63 ended 2008"],
+      "source": "tiresize.com",
+      "status": "INVALID_YEAR"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 6,
+    "withDiscrepancies": 54,
+    "needsData": 12,
+    "invalidYear": 3,
+    "keyFindings": [
+      "CL-Class AMG (2001-2011): Current data shows incorrect tire sizes for most years. 2001-2004 used 18-inch wheels, 2005-2006 used 19-inch, 2008-2011 used 20-inch",
+      "CLA/CLA-Class (2014-2019): First-gen uses 17-18 inch wheels. Current data includes 205/55R16 which was European market only",
+      "CLA/CLA-Class (2020+): Second-gen starts at 18-inch minimum - 17-inch sizes in current data are incorrect",
+      "CLA AMG: CLA35 started 2020, CLA45 available since 2014. Current sizes include non-OEM options",
+      "CLC-Class: European market only - not sold in US. Should be flagged or removed for US site",
+      "CLE-Class: New model starting 2024 - no current data exists, needs to be added",
+      "CLK-Class: Missing all tire data. Production ended 2009, so 2010 entries are invalid",
+      "CLK-Class AMG: CLK55 ended 2006, CLK63 ended 2008. 2009-2010 entries are invalid"
+    ]
+  }
+}

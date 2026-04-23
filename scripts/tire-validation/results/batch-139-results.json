@@ -1,0 +1,1178 @@
+{
+  "batchId": "139",
+  "processedAt": "2026-04-21T22:40:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2003,
+      "make": "subaru",
+      "model": "legacy-b4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/55R16", "205/50R17", "215/45R17"],
+      "trims": {
+        "2.0i": "205/55R16",
+        "2.0R": "215/45R17",
+        "2.0GT": "215/45R17",
+        "2.0GT B": "215/45R18",
+        "3.0R": "215/45R17"
+      },
+      "source": "tirewheelguide.com",
+      "notes": "JDM model (BE/BL generation). Multiple OEM sizes depending on trim."
+    },
+    {
+      "year": 2002,
+      "make": "subaru",
+      "model": "legacy-b4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/50R16", "215/45R17"],
+      "trims": {
+        "Base": "205/50R16",
+        "RS": "215/45R17",
+        "RSK": "215/45R17"
+      },
+      "source": "tirewheelguide.com",
+      "notes": "JDM model (BE generation)"
+    },
+    {
+      "year": 2001,
+      "make": "subaru",
+      "model": "legacy-b4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/50R16", "215/45R17"],
+      "trims": {
+        "Base": "205/50R16",
+        "RS": "215/45R17",
+        "RSK": "215/45R17"
+      },
+      "source": "tirewheelguide.com",
+      "notes": "JDM model (BE generation)"
+    },
+    {
+      "year": 2000,
+      "make": "subaru",
+      "model": "legacy-b4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/50R16", "215/45R17"],
+      "trims": {
+        "Base": "205/50R16",
+        "RS": "215/45R17",
+        "RSK": "215/45R17"
+      },
+      "source": "tirewheelguide.com",
+      "notes": "JDM model (BE generation)"
+    },
+    {
+      "year": 2025,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "Model name variant - same specs as Outback. Current sizes CORRECT."
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18",
+        "Wilderness": "225/65R17"
+      },
+      "source": "tiresize.com",
+      "notes": "Model name variant - same specs as Outback. Current sizes CORRECT."
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18",
+        "Wilderness": "225/65R17"
+      },
+      "source": "tiresize.com",
+      "notes": "Current sizes CORRECT."
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18",
+        "Wilderness": "225/65R17"
+      },
+      "source": "tiresize.com",
+      "notes": "Current sizes CORRECT."
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "Current sizes CORRECT."
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "Current sizes CORRECT."
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "2.5i": "225/65R17",
+        "2.5i Premium": "225/65R17",
+        "2.5i Limited": "225/60R18",
+        "2.5i Touring": "225/60R18",
+        "3.6R Limited": "225/60R18",
+        "3.6R Touring": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "2.5i": "225/65R17",
+        "2.5i Premium": "225/65R17",
+        "2.5i Limited": "225/60R18",
+        "2.5i Touring": "225/60R18",
+        "3.6R Limited": "225/60R18",
+        "3.6R Touring": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "2.5i": "225/65R17",
+        "2.5i Premium": "225/65R17",
+        "2.5i Limited": "225/60R18",
+        "2.5i Touring": "225/60R18",
+        "3.6R Limited": "225/60R18",
+        "3.6R Touring": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "2.5i": "225/65R17",
+        "2.5i Premium": "225/65R17",
+        "2.5i Limited": "225/60R18",
+        "3.6R Limited": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "2.5i": "225/65R17",
+        "2.5i Premium": "225/65R17",
+        "2.5i Limited": "225/60R18",
+        "3.6R": "225/65R17",
+        "3.6R Limited": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "2.5i": "215/70R16",
+        "2.5i Premium": "225/60R17",
+        "2.5i Limited": "225/60R17",
+        "3.6R": "225/60R17",
+        "3.6R Limited": "225/60R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "2.5i": "215/70R16",
+        "2.5i Premium": "225/60R17",
+        "2.5i Limited": "225/60R17",
+        "3.6R": "225/60R17",
+        "3.6R Limited": "225/60R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "2.5i": "215/70R16",
+        "2.5i Premium": "225/60R17",
+        "2.5i Limited": "225/60R17",
+        "3.6R": "225/60R17",
+        "3.6R Limited": "225/60R17",
+        "3.6R Premium": "225/60R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "2.5i": "215/70R16",
+        "2.5i Premium": "225/60R17",
+        "2.5i Limited": "225/60R17",
+        "3.6R": "225/60R17",
+        "3.6R Limited": "225/60R17",
+        "3.6R Premium": "225/60R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2010,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "2.5i": "215/70R16",
+        "2.5i Premium": "225/60R17",
+        "2.5i Limited": "225/60R17",
+        "3.6R": "225/60R17",
+        "3.6R Limited": "225/60R17",
+        "3.6R Premium": "225/60R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2009,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "2.5i": "225/60R16",
+        "2.5i Limited": "225/55R17",
+        "2.5i Special Edition": "225/55R17",
+        "2.5 XT Limited": "225/55R17",
+        "3.0 R Limited": "225/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2008,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "2.5i": "225/55R17",
+        "2.5i Limited": "225/55R17",
+        "2.5 XT Limited": "225/55R17",
+        "3.0 R L.L Bean": "225/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2007,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "2.5i Basic": "225/60R16",
+        "2.5i": "225/55R17",
+        "2.5i Limited": "225/55R17",
+        "2.5 XT Limited": "225/55R17",
+        "3.0 R L.L. Bean": "225/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2006,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R17"],
+      "trims": {
+        "2.5i": "225/55R17",
+        "2.5i Limited": "225/55R17",
+        "2.5 XT": "225/55R17",
+        "2.5 XT Limited": "225/55R17",
+        "3.0 R": "225/55R17",
+        "3.0 R VDC Limited": "225/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2005,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "2.5i": "225/60R16",
+        "2.5i Limited": "225/60R16",
+        "2.5 XT": "225/55R17",
+        "2.5 XT Limited": "225/55R17",
+        "3.0 R": "225/55R17",
+        "3.0 R VDC Limited": "225/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2004,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "H6 3.0 Sedan": "225/60R16",
+        "H6 3.0 Wagon": "225/60R16",
+        "L.L. Bean": "225/60R16",
+        "Limited": "225/60R16",
+        "VDC": "225/60R16"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2003,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "H6 3.0 Sedan": "225/60R16",
+        "L.L. Bean": "225/60R16",
+        "Limited": "225/60R16",
+        "VDC": "225/60R16"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2002,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "H6 3.0 Sedan": "225/60R16",
+        "L.L. Bean": "225/60R16",
+        "Limited": "225/60R16",
+        "VDC": "225/60R16"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2001,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "Limited": "225/60R16",
+        "LL Bean": "225/60R16",
+        "VDC": "225/60R16"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2000,
+      "make": "subaru",
+      "model": "legacy-outback",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "Limited": "225/60R16"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "liberty",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R18"],
+      "trims": {
+        "2.5i": "225/50R18",
+        "2.5i Premium": "225/50R18"
+      },
+      "source": "carsguide.com.au",
+      "notes": "Australian market name for Legacy sedan. NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "liberty",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/50R18"],
+      "trims": {
+        "2.5i": "225/50R18",
+        "2.5i Premium": "225/50R18"
+      },
+      "source": "carsguide.com.au",
+      "notes": "Australian market name for Legacy sedan. NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2026,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/65R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "trims": {
+        "Premium": "225/60R18",
+        "Limited": "225/60R18",
+        "Limited XT": "225/55R19",
+        "Touring": "225/60R18",
+        "Touring XT": "225/55R19",
+        "Wilderness": "225/65R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - 245/65R17 not OEM (aftermarket upsize), 225/55R19 is new for 2026"
+    },
+    {
+      "year": 2025,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/65R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18",
+        "Onyx Edition": "225/60R18",
+        "Wilderness": "225/65R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 245/65R17 (not OEM, aftermarket upsize)"
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/65R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18",
+        "Onyx Edition": "225/60R18",
+        "Wilderness": "225/65R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 245/65R17 (not OEM)"
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/65R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18",
+        "Onyx Edition": "225/60R18",
+        "Wilderness": "225/65R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 245/65R17 (not OEM)"
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/65R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18",
+        "Onyx Edition": "225/60R18",
+        "Wilderness": "225/65R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 245/65R17 (not OEM)"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/65R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18",
+        "Onyx Edition XT": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 245/65R17 (not OEM)"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/65R17"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18",
+        "Limited XT": "225/60R18",
+        "Onyx Edition XT": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 245/65R17 (not OEM)"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/60R17", "245/55R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "Base": "225/65R17",
+        "Premium": "225/65R17",
+        "Limited": "225/60R18",
+        "Touring": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "DUPLICATE ENTRY - NEEDS CORRECTION. Remove 245/60R17, 245/55R18 (not OEM)"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/60R17", "245/55R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "2.5i": "225/65R17",
+        "2.5i Premium": "225/65R17",
+        "2.5i Limited": "225/60R18",
+        "2.5i Touring": "225/60R18",
+        "3.6R Limited": "225/60R18",
+        "3.6R Touring": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 245/60R17, 245/55R18 (not OEM)"
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "2.5i": "225/65R17",
+        "2.5i Premium": "225/65R17",
+        "2.5i Limited": "225/60R18",
+        "2.5i Touring": "225/60R18",
+        "3.6R Limited": "225/60R18",
+        "3.6R Touring": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "Current sizes CORRECT."
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "2.5i": "225/65R17",
+        "2.5i Premium": "225/65R17",
+        "2.5i Limited": "225/60R18",
+        "2.5i Touring": "225/60R18",
+        "3.6R Limited": "225/60R18",
+        "3.6R Touring": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "Current sizes CORRECT."
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/60R17", "245/55R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "2.5i": "225/65R17",
+        "2.5i Premium": "225/65R17",
+        "2.5i Limited": "225/60R18",
+        "3.6R Limited": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 245/60R17, 245/55R18 (not OEM)"
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "245/60R17", "245/55R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "2.5i": "225/65R17",
+        "2.5i Premium": "225/65R17",
+        "2.5i Limited": "225/60R18",
+        "3.6R": "225/65R17",
+        "3.6R Limited": "225/60R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 245/60R17, 245/55R18 (not OEM)"
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "2.5i": "215/70R16",
+        "2.5i Premium": "225/60R17",
+        "2.5i Limited": "225/60R17",
+        "3.6R": "225/60R17",
+        "3.6R Limited": "225/60R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 225/65R17, 225/60R18, 225/55R18 (wrong year data)"
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "2.5i": "215/70R16",
+        "2.5i Premium": "225/60R17",
+        "2.5i Limited": "225/60R17",
+        "3.6R": "225/60R17",
+        "3.6R Limited": "225/60R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove wrong sizes"
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "2.5i": "215/70R16",
+        "2.5i Premium": "225/60R17",
+        "2.5i Limited": "225/60R17",
+        "3.6R": "225/60R17",
+        "3.6R Limited": "225/60R17",
+        "3.6R Premium": "225/60R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove wrong sizes"
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "2.5i": "215/70R16",
+        "2.5i Premium": "225/60R17",
+        "2.5i Limited": "225/60R17",
+        "3.6R": "225/60R17",
+        "3.6R Limited": "225/60R17",
+        "3.6R Premium": "225/60R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove wrong sizes"
+    },
+    {
+      "year": 2010,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["225/65R17", "225/60R18", "215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/60R17"],
+      "trims": {
+        "2.5i": "215/70R16",
+        "2.5i Premium": "225/60R17",
+        "2.5i Limited": "225/60R17",
+        "3.6R": "225/60R17",
+        "3.6R Limited": "225/60R17",
+        "3.6R Premium": "225/60R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove wrong sizes"
+    },
+    {
+      "year": 2009,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["215/65R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "2.5i": "225/60R16",
+        "2.5i Limited": "225/55R17",
+        "2.5i Special Edition": "225/55R17",
+        "2.5 XT Limited": "225/55R17",
+        "3.0 R Limited": "225/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Change 215/65R16 to 225/60R16"
+    },
+    {
+      "year": 2008,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["215/65R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "2.5i": "225/55R17",
+        "2.5i Limited": "225/55R17",
+        "2.5 XT Limited": "225/55R17",
+        "3.0 R L.L Bean": "225/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Change 215/65R16 to 225/60R16"
+    },
+    {
+      "year": 2007,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["215/65R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "2.5i Basic": "225/60R16",
+        "2.5i": "225/55R17",
+        "2.5i Limited": "225/55R17",
+        "2.5i L.L. Bean": "225/55R17",
+        "2.5 XT Limited": "225/55R17",
+        "3.0 R L.L. Bean": "225/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Change 215/65R16 to 225/60R16"
+    },
+    {
+      "year": 2006,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["215/65R16", "225/55R17"],
+      "validatedTireSizes": ["225/55R17"],
+      "trims": {
+        "2.5i": "225/55R17",
+        "2.5i Limited": "225/55R17",
+        "2.5 XT": "225/55R17",
+        "2.5 XT Limited": "225/55R17",
+        "3.0 R": "225/55R17",
+        "3.0 R VDC Limited": "225/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 215/65R16 (all trims use 225/55R17)"
+    },
+    {
+      "year": 2005,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["215/65R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16", "225/55R17"],
+      "trims": {
+        "2.5i": "225/60R16",
+        "2.5i Limited": "225/60R16",
+        "2.5 XT": "225/55R17",
+        "2.5 XT Limited": "225/55R17",
+        "3.0 R": "225/55R17",
+        "3.0 R L.L. Bean Edition": "225/55R17",
+        "3.0 R VDC Limited": "225/55R17"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Change 215/65R16 to 225/60R16"
+    },
+    {
+      "year": 2004,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "H6 3.0 Sedan": "225/60R16",
+        "H6 3.0 Wagon": "225/60R16",
+        "L.L. Bean": "225/60R16",
+        "Limited": "225/60R16",
+        "VDC": "225/60R16"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Change 215/60R16 to 225/60R16, remove 225/55R17"
+    },
+    {
+      "year": 2003,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "H6 3.0 Sedan": "225/60R16",
+        "L.L. Bean": "225/60R16",
+        "Limited": "225/60R16",
+        "VDC": "225/60R16"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Change 215/60R16 to 225/60R16, remove 225/55R17"
+    },
+    {
+      "year": 2002,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "H6 3.0 Sedan": "225/60R16",
+        "L.L. Bean": "225/60R16",
+        "Limited": "225/60R16",
+        "VDC": "225/60R16"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Change 215/60R16 to 225/60R16, remove 225/55R17"
+    },
+    {
+      "year": 2001,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "Limited": "225/60R16",
+        "LL Bean": "225/60R16",
+        "VDC": "225/60R16"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Change 215/60R16 to 225/60R16, remove 225/55R17"
+    },
+    {
+      "year": 2000,
+      "make": "subaru",
+      "model": "outback",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": "225/60R16",
+        "Limited": "225/60R16"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Change 215/60R16 to 225/60R16, remove 225/55R17"
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "pleo-custom",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13", "155/65R14"],
+      "trims": {
+        "L": "155/65R13",
+        "R": "155/65R14"
+      },
+      "source": "carfromjapan.com",
+      "notes": "JDM Kei car (rebadged Daihatsu Mira). NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "pleo-custom",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13", "155/65R14"],
+      "trims": {
+        "L": "155/65R13",
+        "R": "155/65R14"
+      },
+      "source": "carfromjapan.com",
+      "notes": "JDM Kei car. NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2011,
+      "make": "subaru",
+      "model": "pleo-custom",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13", "155/65R14"],
+      "trims": {
+        "L": "155/65R13",
+        "R": "155/65R14"
+      },
+      "source": "carfromjapan.com",
+      "notes": "JDM Kei car. NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2010,
+      "make": "subaru",
+      "model": "pleo-custom",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13", "155/65R14"],
+      "trims": {
+        "L": "155/65R13",
+        "R": "155/65R14"
+      },
+      "source": "carfromjapan.com",
+      "notes": "JDM Kei car. NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2003,
+      "make": "subaru",
+      "model": "pleo-nesta",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "G": "155/65R13",
+        "E": "155/65R13",
+        "RG": "155/65R13"
+      },
+      "source": "greeco-channel.com",
+      "notes": "JDM Kei car (first gen Pleo variant). NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2002,
+      "make": "subaru",
+      "model": "pleo-nesta",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "G": "155/65R13",
+        "E": "155/65R13",
+        "RG": "155/65R13"
+      },
+      "source": "greeco-channel.com",
+      "notes": "JDM Kei car. NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2001,
+      "make": "subaru",
+      "model": "pleo-nesta",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "G": "155/65R13",
+        "E": "155/65R13",
+        "RG": "155/65R13"
+      },
+      "source": "greeco-channel.com",
+      "notes": "JDM Kei car. NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2000,
+      "make": "subaru",
+      "model": "pleo-nesta",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "G": "155/65R13",
+        "E": "155/65R13"
+      },
+      "source": "greeco-channel.com",
+      "notes": "JDM Kei car. NEEDS UPDATE - was empty"
+    },
+    {
+      "year": 2026,
+      "make": "subaru",
+      "model": "solterra",
+      "currentTireSizes": ["235/50R20"],
+      "validatedTireSizes": ["235/60R18", "235/50R20"],
+      "trims": {
+        "Premium": "235/60R18",
+        "Limited": "235/50R20",
+        "Limited XT": "235/50R20",
+        "Touring XT": "235/50R20"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - Add 235/60R18 for Premium trim"
+    },
+    {
+      "year": 2025,
+      "make": "subaru",
+      "model": "solterra",
+      "currentTireSizes": ["235/50R20"],
+      "validatedTireSizes": ["235/60R18", "235/50R20"],
+      "trims": {
+        "Premium": "235/60R18",
+        "Limited": "235/50R20",
+        "Touring": "235/50R20",
+        "Touring Onyx Edition": "235/50R20"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - Add 235/60R18 for Premium trim"
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "solterra",
+      "currentTireSizes": ["235/50R20"],
+      "validatedTireSizes": ["235/60R18", "235/50R20"],
+      "trims": {
+        "Premium": "235/60R18",
+        "Limited": "235/50R20",
+        "Touring": "235/50R20"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS UPDATE - Add 235/60R18 for Premium trim"
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "solterra",
+      "currentTireSizes": ["235/60R18", "235/50R20"],
+      "validatedTireSizes": ["235/60R18", "235/50R20"],
+      "trims": {
+        "Premium": "235/60R18",
+        "Limited": "235/50R20",
+        "Touring": "235/50R20"
+      },
+      "source": "tiresize.com",
+      "notes": "Current sizes CORRECT."
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "solterra",
+      "currentTireSizes": ["235/60R18", "235/50R20"],
+      "validatedTireSizes": ["235/60R18", "235/50R20"],
+      "trims": {
+        "Premium": "235/60R18",
+        "Limited": "235/50R20",
+        "Touring": "235/50R20"
+      },
+      "source": "tiresize.com",
+      "notes": "Current sizes CORRECT."
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "tribeca",
+      "currentTireSizes": ["255/55R18", "255/50R19"],
+      "validatedTireSizes": ["255/55R18"],
+      "trims": {
+        "3.6R Limited": "255/55R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 255/50R19 (not OEM, only 255/55R18 for 2014)"
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "tribeca",
+      "currentTireSizes": ["255/55R18", "255/50R19"],
+      "validatedTireSizes": ["255/55R18"],
+      "trims": {
+        "3.6R Limited": "255/55R18"
+      },
+      "source": "tiresize.com",
+      "notes": "NEEDS CORRECTION - Remove 255/50R19 (not OEM, only 255/55R18 for 2013)"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "correctSizes": 12,
+    "needsUpdate": 30,
+    "needsCorrection": 33,
+    "jdmModels": 10,
+    "notes": "Many Outback entries have incorrect sizes (245/65R17 is aftermarket, not OEM). Legacy B4, Pleo Custom, Pleo Nesta are JDM models needing tire data. Tribeca 255/50R19 is not an OEM size. 2000-2004 Outback should be 225/60R16 not 215/60R16."
+  }
+}

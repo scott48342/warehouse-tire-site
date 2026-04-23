@@ -1,0 +1,1068 @@
+{
+  "batchId": "120",
+  "validatedAt": "2026-04-21T22:31:00.000Z",
+  "vehicleCount": 75,
+  "summary": {
+    "validated": 53,
+    "needsReview": 22,
+    "issues": [
+      "Maven (2005-2007): Not sold in US market - Mexico/Latin America only",
+      "Mirage Asti (2000): Japanese/Asian market model only",
+      "Mirage G4 years 2013-2016: Not sold in US until 2017",
+      "Montero years 2007-2021: US market discontinued in 2006 - international market vehicles with different specs"
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "maven",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "trims": [
+        {"name": "Base", "tireSize": "215/55R16"}
+      ],
+      "status": "needs_review",
+      "notes": "Not sold in US market - Mexico/Latin America only. Rebadged L200/Triton pickup."
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "maven",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "trims": [
+        {"name": "Base", "tireSize": "215/55R16"}
+      ],
+      "status": "needs_review",
+      "notes": "Not sold in US market - Mexico/Latin America only."
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "maven",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/55R16"],
+      "trims": [
+        {"name": "Base", "tireSize": "215/55R16"}
+      ],
+      "status": "needs_review",
+      "notes": "Not sold in US market - Mexico/Latin America only."
+    },
+    {
+      "year": 2026,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "175/55R15"},
+        {"name": "BE", "tireSize": "175/55R15"},
+        {"name": "Ralliart", "tireSize": "175/55R15"}
+      ],
+      "status": "valid",
+      "notes": "Current sizes correct based on 2024 data. 2026 model expected to match."
+    },
+    {
+      "year": 2025,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "175/55R15"},
+        {"name": "BE", "tireSize": "175/55R15"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2024,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "175/55R15"},
+        {"name": "BE", "tireSize": "175/55R15"},
+        {"name": "Ralliart", "tireSize": "175/55R15"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2023,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "165/65R14"},
+        {"name": "BE", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "175/55R15"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2022,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "165/65R14"},
+        {"name": "BE", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "175/55R15"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2021,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "175/55R15"},
+        {"name": "GT", "tireSize": "175/55R15"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2020,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "175/55R15"},
+        {"name": "GT", "tireSize": "175/55R15"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2019,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "175/55R15"},
+        {"name": "GT", "tireSize": "175/55R15"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2018,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "165/65R14"},
+        {"name": "GT", "tireSize": "175/55R15"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2017,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "165/65R14"},
+        {"name": "GT", "tireSize": "175/55R15"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2016,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": [
+        {"name": "DE", "tireSize": "165/65R14"},
+        {"name": "ES", "tireSize": "165/65R14"}
+      ],
+      "status": "needs_correction",
+      "notes": "2016 Mirage only had 14\" wheels. 175/55R15 not available until 2017 GT trim."
+    },
+    {
+      "year": 2015,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": [
+        {"name": "DE", "tireSize": "165/65R14"},
+        {"name": "ES", "tireSize": "165/65R14"}
+      ],
+      "status": "needs_correction",
+      "notes": "2015 Mirage only had 14\" wheels. Remove 175/55R15."
+    },
+    {
+      "year": 2014,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": [
+        {"name": "DE", "tireSize": "165/65R14"},
+        {"name": "ES", "tireSize": "165/65R14"}
+      ],
+      "status": "needs_correction",
+      "notes": "2014 Mirage only had 14\" wheels. Remove 175/55R15."
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": [
+        {"name": "Base", "tireSize": "165/65R14"}
+      ],
+      "status": "needs_review",
+      "notes": "2013 Mirage was not sold in US market until late 2013/early 2014 as MY2014."
+    },
+    {
+      "year": 2012,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": [],
+      "trims": [],
+      "status": "invalid",
+      "notes": "2012 Mirage was NOT sold in US market. Gap between 2002 and 2014 MY."
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["175/65R14", "185/65R14"],
+      "trims": [
+        {"name": "DE Coupe", "tireSize": "175/65R14"},
+        {"name": "ES Sedan", "tireSize": "175/65R14"},
+        {"name": "LS Coupe", "tireSize": "185/65R14"},
+        {"name": "LS Sedan", "tireSize": "185/65R14"}
+      ],
+      "status": "needs_correction",
+      "notes": "2001 Mirage used 175/65R14 and 185/65R14, NOT 165/65R14 or 175/55R15."
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "mirage",
+      "currentTireSizes": ["165/65R14", "175/55R15"],
+      "validatedTireSizes": ["175/70R13", "175/65R14", "185/65R14"],
+      "trims": [
+        {"name": "DE Coupe", "tireSize": "175/70R13"},
+        {"name": "DE Sedan", "tireSize": "175/70R13"},
+        {"name": "DE Sedan (alt)", "tireSize": "175/65R14"},
+        {"name": "LS Coupe", "tireSize": "185/65R14"},
+        {"name": "LS Sedan", "tireSize": "185/65R14"}
+      ],
+      "status": "needs_correction",
+      "notes": "2000 Mirage used 13\" and 14\" wheels. Current sizes are wrong."
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "mirage-asti",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/60R14", "195/55R15", "205/45R16"],
+      "trims": [
+        {"name": "Various", "tireSize": "175/65R14 to 205/45R16"}
+      ],
+      "status": "needs_review",
+      "notes": "Japanese market only. Not sold in US. Multiple wheel sizes available."
+    },
+    {
+      "year": 2025,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "175/55R15"},
+        {"name": "SE", "tireSize": "175/55R15"},
+        {"name": "BE", "tireSize": "175/55R15"}
+      ],
+      "status": "needs_addition",
+      "notes": "Same as Mirage hatchback. Add tire sizes."
+    },
+    {
+      "year": 2024,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "175/55R15"},
+        {"name": "SE", "tireSize": "175/55R15"},
+        {"name": "BE", "tireSize": "175/55R15"}
+      ],
+      "status": "needs_addition",
+      "notes": ""
+    },
+    {
+      "year": 2023,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "175/55R15"},
+        {"name": "SE", "tireSize": "175/55R15"},
+        {"name": "BE", "tireSize": "175/55R15"}
+      ],
+      "status": "needs_addition",
+      "notes": ""
+    },
+    {
+      "year": 2022,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "175/55R15"},
+        {"name": "SE", "tireSize": "175/55R15"},
+        {"name": "BE", "tireSize": "175/55R15"}
+      ],
+      "status": "needs_addition",
+      "notes": ""
+    },
+    {
+      "year": 2021,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "175/55R15"},
+        {"name": "SE", "tireSize": "175/55R15"}
+      ],
+      "status": "needs_addition",
+      "notes": ""
+    },
+    {
+      "year": 2020,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "LE", "tireSize": "175/55R15"},
+        {"name": "SE", "tireSize": "175/55R15"}
+      ],
+      "status": "needs_addition",
+      "notes": ""
+    },
+    {
+      "year": 2019,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "175/55R15"}
+      ],
+      "status": "needs_addition",
+      "notes": ""
+    },
+    {
+      "year": 2018,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "175/55R15"}
+      ],
+      "status": "needs_addition",
+      "notes": ""
+    },
+    {
+      "year": 2017,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/65R14", "175/55R15"],
+      "trims": [
+        {"name": "ES", "tireSize": "165/65R14"},
+        {"name": "SE", "tireSize": "175/55R15"}
+      ],
+      "status": "needs_addition",
+      "notes": "First year for Mirage G4 in US market."
+    },
+    {
+      "year": 2016,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "status": "invalid",
+      "notes": "Mirage G4 not sold in US market until 2017."
+    },
+    {
+      "year": 2015,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "status": "invalid",
+      "notes": "Mirage G4 not sold in US market until 2017."
+    },
+    {
+      "year": 2014,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "status": "invalid",
+      "notes": "Mirage G4 not sold in US market until 2017."
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "mirage-g4",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "status": "invalid",
+      "notes": "Mirage G4 not sold in US market until 2017."
+    },
+    {
+      "year": 2021,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/60R18", "265/55R19", "265/50R20"],
+      "trims": [
+        {"name": "Base (intl)", "tireSize": "265/60R18"},
+        {"name": "Mid (intl)", "tireSize": "265/55R19"},
+        {"name": "High (intl)", "tireSize": "265/50R20"}
+      ],
+      "status": "needs_review",
+      "notes": "US Montero discontinued 2006. This is international Montero Sport (Latin America/Asia/Middle East). Current sizes incorrect."
+    },
+    {
+      "year": 2020,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/60R18", "265/55R19", "265/50R20"],
+      "trims": [
+        {"name": "Base (intl)", "tireSize": "265/60R18"},
+        {"name": "Mid (intl)", "tireSize": "265/55R19"},
+        {"name": "High (intl)", "tireSize": "265/50R20"}
+      ],
+      "status": "needs_review",
+      "notes": "International market Montero Sport. Current sizes incorrect."
+    },
+    {
+      "year": 2019,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/60R18", "265/55R19", "265/50R20"],
+      "trims": [
+        {"name": "Base (intl)", "tireSize": "265/60R18"},
+        {"name": "Mid (intl)", "tireSize": "265/55R19"},
+        {"name": "High (intl)", "tireSize": "265/50R20"}
+      ],
+      "status": "needs_review",
+      "notes": "International market Montero Sport."
+    },
+    {
+      "year": 2018,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/60R18", "265/55R19", "265/50R20"],
+      "trims": [
+        {"name": "Base (intl)", "tireSize": "265/60R18"}
+      ],
+      "status": "needs_review",
+      "notes": "International market Montero Sport."
+    },
+    {
+      "year": 2017,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/60R18", "265/55R19", "265/50R20"],
+      "trims": [
+        {"name": "Base (intl)", "tireSize": "265/60R18"}
+      ],
+      "status": "needs_review",
+      "notes": "International market Montero Sport."
+    },
+    {
+      "year": 2016,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/60R18", "265/55R19", "265/50R20"],
+      "trims": [
+        {"name": "Base (intl)", "tireSize": "265/60R18"}
+      ],
+      "status": "needs_review",
+      "notes": "International market Montero Sport."
+    },
+    {
+      "year": 2015,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": [
+        {"name": "GLS", "tireSize": "265/70R16"}
+      ],
+      "status": "needs_review",
+      "notes": "International market vehicle. Limited info available."
+    },
+    {
+      "year": 2014,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": [
+        {"name": "GLS", "tireSize": "265/70R16"}
+      ],
+      "status": "needs_review",
+      "notes": "International market vehicle."
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": [
+        {"name": "GLS", "tireSize": "265/70R16"}
+      ],
+      "status": "needs_review",
+      "notes": "International market vehicle."
+    },
+    {
+      "year": 2012,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": [
+        {"name": "GLS", "tireSize": "265/70R16"}
+      ],
+      "status": "needs_review",
+      "notes": "International market vehicle."
+    },
+    {
+      "year": 2011,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": [
+        {"name": "GLS", "tireSize": "265/70R16"}
+      ],
+      "status": "needs_review",
+      "notes": "International market vehicle."
+    },
+    {
+      "year": 2010,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": [
+        {"name": "GLS", "tireSize": "265/70R16"}
+      ],
+      "status": "needs_review",
+      "notes": "International market vehicle."
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": [
+        {"name": "GLS", "tireSize": "265/70R16"}
+      ],
+      "status": "needs_review",
+      "notes": "International market vehicle."
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": [
+        {"name": "GLS", "tireSize": "265/70R16"}
+      ],
+      "status": "needs_review",
+      "notes": "International market vehicle."
+    },
+    {
+      "year": 2007,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": [
+        {"name": "GLS", "tireSize": "265/70R16"}
+      ],
+      "status": "needs_review",
+      "notes": "International market vehicle. US Montero ended 2006."
+    },
+    {
+      "year": 2006,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "validatedTireSizes": ["265/65R17"],
+      "trims": [
+        {"name": "Limited", "tireSize": "265/65R17"}
+      ],
+      "status": "needs_correction",
+      "notes": "2006 US Montero (Limited only) came with 265/65R17. Remove 265/70R16 and 265/60R18."
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "validatedTireSizes": ["265/65R17"],
+      "trims": [
+        {"name": "Limited", "tireSize": "265/65R17"}
+      ],
+      "status": "needs_correction",
+      "notes": "2005 US Montero (Limited only) came with 265/65R17. Remove 265/70R16 and 265/60R18."
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": [
+        {"name": "Limited", "tireSize": "265/70R16"},
+        {"name": "XLS", "tireSize": "265/70R16"},
+        {"name": "Sport LS", "tireSize": "255/70R16"},
+        {"name": "Sport XLS", "tireSize": "255/70R16"}
+      ],
+      "status": "needs_correction",
+      "notes": "2004 Montero used 265/70R16 (full-size) and 255/70R16 (Sport). Remove 265/65R17 and 265/60R18."
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "validatedTireSizes": ["265/70R16", "255/70R16", "235/75R15"],
+      "trims": [
+        {"name": "20th Anniversary", "tireSize": "265/70R16"},
+        {"name": "Limited", "tireSize": "265/70R16"},
+        {"name": "XLS", "tireSize": "265/70R16"},
+        {"name": "Sport LS", "tireSize": "255/70R16"},
+        {"name": "Sport XLS", "tireSize": "255/70R16"},
+        {"name": "Sport ES", "tireSize": "235/75R15"}
+      ],
+      "status": "needs_correction",
+      "notes": "Remove 265/65R17 and 265/60R18. Add 255/70R16 and 235/75R15 for Sport trims."
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "validatedTireSizes": ["265/70R16", "255/70R16", "235/75R15"],
+      "trims": [
+        {"name": "Limited", "tireSize": "265/70R16"},
+        {"name": "XLS", "tireSize": "265/70R16"},
+        {"name": "Sport LS", "tireSize": "255/70R16"},
+        {"name": "Sport XLS", "tireSize": "255/70R16"},
+        {"name": "Sport ES", "tireSize": "235/75R15"}
+      ],
+      "status": "needs_correction",
+      "notes": "Remove 265/65R17 and 265/60R18. Add 255/70R16 and 235/75R15."
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "265/65R17", "265/60R18"],
+      "validatedTireSizes": ["265/70R16", "255/70R16", "235/75R15"],
+      "trims": [
+        {"name": "Limited", "tireSize": "265/70R16"},
+        {"name": "XLS", "tireSize": "265/70R16"},
+        {"name": "Sport LS", "tireSize": "255/70R16"},
+        {"name": "Sport XLS", "tireSize": "255/70R16"},
+        {"name": "Sport ES", "tireSize": "235/75R15"}
+      ],
+      "status": "needs_correction",
+      "notes": "Remove 265/65R17 and 265/60R18. Add 255/70R16 and 235/75R15."
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "montero",
+      "currentTireSizes": ["265/70R16", "275/55R20"],
+      "validatedTireSizes": ["265/70R15", "255/70R16", "235/75R15"],
+      "trims": [
+        {"name": "Base", "tireSize": "265/70R15"},
+        {"name": "Sport Limited", "tireSize": "255/70R16"},
+        {"name": "Sport XLS", "tireSize": "255/70R16"},
+        {"name": "Sport LS", "tireSize": "235/75R15"},
+        {"name": "Sport ES", "tireSize": "235/75R15"}
+      ],
+      "status": "needs_correction",
+      "notes": "275/55R20 is incorrect. Use 265/70R15, 255/70R16, 235/75R15."
+    },
+    {
+      "year": 2026,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "255/45R20"],
+      "trims": [
+        {"name": "ES", "tireSize": "235/60R18"},
+        {"name": "Trail Edition", "tireSize": "235/60R18"},
+        {"name": "SE", "tireSize": "255/45R20"},
+        {"name": "SEL", "tireSize": "255/45R20"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2025,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "255/45R20"],
+      "trims": [
+        {"name": "ES", "tireSize": "235/60R18"},
+        {"name": "PHEV ES", "tireSize": "235/60R18"},
+        {"name": "SE", "tireSize": "255/45R20"},
+        {"name": "SEL", "tireSize": "255/45R20"},
+        {"name": "PHEV SE", "tireSize": "255/45R20"},
+        {"name": "PHEV SEL", "tireSize": "255/45R20"},
+        {"name": "Platinum Edition", "tireSize": "255/45R20"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2024,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "255/45R20"],
+      "trims": [
+        {"name": "ES", "tireSize": "235/60R18"},
+        {"name": "PHEV ES", "tireSize": "235/60R18"},
+        {"name": "SE", "tireSize": "255/45R20"},
+        {"name": "SEL", "tireSize": "255/45R20"},
+        {"name": "PHEV SE", "tireSize": "255/45R20"},
+        {"name": "PHEV SEL", "tireSize": "255/45R20"},
+        {"name": "Black Edition", "tireSize": "255/45R20"},
+        {"name": "Platinum Edition", "tireSize": "255/45R20"},
+        {"name": "Ralliart", "tireSize": "255/45R20"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2023,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "255/45R20"],
+      "trims": [
+        {"name": "ES", "tireSize": "235/60R18"},
+        {"name": "PHEV ES", "tireSize": "235/60R18"},
+        {"name": "SE", "tireSize": "255/45R20"},
+        {"name": "SEL", "tireSize": "255/45R20"},
+        {"name": "PHEV SE", "tireSize": "255/45R20"},
+        {"name": "PHEV SEL", "tireSize": "255/45R20"},
+        {"name": "Ralliart", "tireSize": "255/45R20"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2022,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "225/55R18", "255/45R20"],
+      "trims": [
+        {"name": "ES", "tireSize": "235/60R18"},
+        {"name": "PHEV LE", "tireSize": "225/55R18"},
+        {"name": "PHEV SEL", "tireSize": "225/55R18"},
+        {"name": "PHEV GT", "tireSize": "225/55R18"},
+        {"name": "SE", "tireSize": "255/45R20"},
+        {"name": "SE Tech", "tireSize": "255/45R20"},
+        {"name": "SEL", "tireSize": "255/45R20"},
+        {"name": "SEL Touring", "tireSize": "255/45R20"}
+      ],
+      "status": "needs_correction",
+      "notes": "Add 225/55R18 for PHEV trims (carried over from previous gen PHEV)."
+    },
+    {
+      "year": 2021,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18", "225/50R19", "235/50R19"],
+      "validatedTireSizes": ["225/55R18"],
+      "trims": [
+        {"name": "PHEV LE", "tireSize": "225/55R18"},
+        {"name": "PHEV SEL", "tireSize": "225/55R18"},
+        {"name": "PHEV GT", "tireSize": "225/55R18"}
+      ],
+      "status": "needs_correction",
+      "notes": "2021 regular Outlander not sold in US (redesign year). Only PHEV available. Remove 215/70R16, 225/50R19, 235/50R19."
+    },
+    {
+      "year": 2020,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18", "225/50R19", "235/50R19"],
+      "validatedTireSizes": ["225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "225/55R18"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "SEL", "tireSize": "225/55R18"},
+        {"name": "SP", "tireSize": "225/55R18"},
+        {"name": "LE", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"},
+        {"name": "PHEV SEL", "tireSize": "225/55R18"},
+        {"name": "PHEV GT", "tireSize": "225/55R18"}
+      ],
+      "status": "needs_correction",
+      "notes": "2020 Outlander all trims used 225/55R18. Remove 215/70R16, 225/50R19, 235/50R19."
+    },
+    {
+      "year": 2019,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": ["225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "225/55R18"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "SEL", "tireSize": "225/55R18"},
+        {"name": "LE", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"},
+        {"name": "PHEV SEL", "tireSize": "225/55R18"},
+        {"name": "PHEV GT", "tireSize": "225/55R18"}
+      ],
+      "status": "needs_correction",
+      "notes": "2019 Outlander all trims used 225/55R18. Remove 215/70R16."
+    },
+    {
+      "year": 2018,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18", "225/50R19"],
+      "validatedTireSizes": ["225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "225/55R18"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "SEL", "tireSize": "225/55R18"},
+        {"name": "LE", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"},
+        {"name": "PHEV SEL", "tireSize": "225/55R18"},
+        {"name": "PHEV GT", "tireSize": "225/55R18"}
+      ],
+      "status": "needs_correction",
+      "notes": "2018 Outlander all trims used 225/55R18. Remove 215/70R16 and 225/50R19."
+    },
+    {
+      "year": 2017,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": ["225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "225/55R18"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "SEL", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"}
+      ],
+      "status": "needs_correction",
+      "notes": "2017 Outlander all trims used 225/55R18. Remove 215/70R16."
+    },
+    {
+      "year": 2016,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": ["225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "225/55R18"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "SEL", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"}
+      ],
+      "status": "needs_correction",
+      "notes": "2016 Outlander all trims used 225/55R18. Remove 215/70R16."
+    },
+    {
+      "year": 2015,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "215/70R16"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2014,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18", "225/50R19"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "215/70R16"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"}
+      ],
+      "status": "needs_correction",
+      "notes": "Remove 225/50R19 - not OEM for 2014."
+    },
+    {
+      "year": 2013,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "215/70R16"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2012,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "215/70R16"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2011,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "215/70R16"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "XLS", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2010,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "215/70R16"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "XLS", "tireSize": "225/55R18"},
+        {"name": "GT", "tireSize": "225/55R18"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2009,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "215/70R16"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "XLS", "tireSize": "225/55R18"}
+      ],
+      "status": "valid",
+      "notes": ""
+    },
+    {
+      "year": 2008,
+      "make": "mitsubishi",
+      "model": "outlander",
+      "currentTireSizes": ["215/70R16", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": [
+        {"name": "ES", "tireSize": "215/70R16"},
+        {"name": "LS", "tireSize": "215/70R16"},
+        {"name": "SE", "tireSize": "225/55R18"},
+        {"name": "XLS", "tireSize": "225/55R18"}
+      ],
+      "status": "valid",
+      "notes": ""
+    }
+  ]
+}

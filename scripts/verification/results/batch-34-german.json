@@ -1,0 +1,436 @@
+{
+  "batch": "batch-34-german",
+  "verifiedAt": "2026-04-23T00:43:00Z",
+  "verifiedBy": "subagent:verify-de-34",
+  "vehicleCount": 11,
+  "summary": {
+    "verified": 11,
+    "flagged": 0,
+    "invalid": 0
+  },
+  "notes": "VW Touareg 2007-2017 spans two generations. Gen 1 (7L): 2007-2010. Gen 2 (7P): 2011-2017. All years share same bolt pattern 5x130 with 71.6mm hub bore. Touareg was discontinued in US after 2017 model year.",
+  "vehicles": [
+    {
+      "year": 2007,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "1st Gen (7L Facelift)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "V6",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "255/60R17"
+        },
+        {
+          "name": "V8",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18",
+          "optionalTireSize": "275/45R19"
+        },
+        {
+          "name": "V10 TDI",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18",
+          "optionalTireSize": "275/45R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "myturbodiesel.com", "shop.eurowise.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "1st Gen (7L Facelift)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "VR6 FSI",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "255/60R17",
+          "optionalWheelSize": "19x9",
+          "optionalTireSize": "275/45R19"
+        },
+        {
+          "name": "V8 FSI",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "275/45R19"
+        },
+        {
+          "name": "V10 TDI",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "275/45R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "myturbodiesel.com", "shop.eurowise.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2009,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "1st Gen (7L Facelift)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "VR6 FSI",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "255/60R17",
+          "optionalWheelSize": "19x9",
+          "optionalTireSize": "275/45R19"
+        },
+        {
+          "name": "V8 FSI",
+          "oemWheelSize": "19x9",
+          "oemTireSize": "275/45R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "myturbodiesel.com", "shop.eurowise.com"],
+      "usMarketValid": true,
+      "notes": "V10 TDI discontinued for US market in 2009"
+    },
+    {
+      "year": 2010,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "1st Gen (7L Facelift)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "TDI",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "255/60R17",
+          "optionalWheelSize": "19x9",
+          "optionalTireSize": "275/45R19",
+          "optionalWheelSize2": "20x9",
+          "optionalTireSize2": "275/40R20"
+        },
+        {
+          "name": "VR6 FSI",
+          "oemWheelSize": "17x7.5",
+          "oemTireSize": "255/60R17",
+          "optionalWheelSize": "19x9",
+          "optionalTireSize": "275/45R19",
+          "optionalWheelSize2": "20x9",
+          "optionalTireSize2": "275/40R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "edmunds.com", "shop.eurowise.com"],
+      "usMarketValid": true,
+      "notes": "Last year of Gen 1 Touareg. 20-inch wheel option added."
+    },
+    {
+      "year": 2011,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "2nd Gen (7P)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "V6 FSI",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18",
+          "optionalWheelSize": "19x8.5",
+          "optionalTireSize": "265/50R19",
+          "optionalWheelSize2": "20x9",
+          "optionalTireSize2": "275/45R20"
+        },
+        {
+          "name": "V6 TDI",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18",
+          "optionalWheelSize": "19x8.5",
+          "optionalTireSize": "265/50R19",
+          "optionalWheelSize2": "20x9",
+          "optionalTireSize2": "275/45R20"
+        },
+        {
+          "name": "Hybrid",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18",
+          "optionalWheelSize": "19x8.5",
+          "optionalTireSize": "265/50R19",
+          "optionalWheelSize2": "20x9",
+          "optionalTireSize2": "275/45R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com", "shop.eurowise.com"],
+      "usMarketValid": true,
+      "notes": "All-new 2nd generation. Hybrid trim introduced."
+    },
+    {
+      "year": 2012,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "2nd Gen (7P)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "V6 Sport",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18"
+        },
+        {
+          "name": "V6 Lux",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        },
+        {
+          "name": "V6 Executive",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        },
+        {
+          "name": "TDI Sport",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18"
+        },
+        {
+          "name": "TDI Lux",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        },
+        {
+          "name": "TDI Executive",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        },
+        {
+          "name": "Hybrid",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "usMarketValid": true,
+      "notes": "Sport/Lux/Executive trim structure introduced"
+    },
+    {
+      "year": 2013,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "2nd Gen (7P)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "V6 Sport",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18"
+        },
+        {
+          "name": "V6 Lux",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        },
+        {
+          "name": "V6 Executive",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        },
+        {
+          "name": "TDI Sport",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18"
+        },
+        {
+          "name": "TDI Lux",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        },
+        {
+          "name": "TDI Executive",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        },
+        {
+          "name": "Hybrid",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "usMarketValid": true
+    },
+    {
+      "year": 2014,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "2nd Gen (7P)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "V6 Sport",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18"
+        },
+        {
+          "name": "V6 Lux",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        },
+        {
+          "name": "V6 Executive",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        },
+        {
+          "name": "TDI Sport",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18"
+        },
+        {
+          "name": "TDI Lux",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        },
+        {
+          "name": "TDI Executive",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        },
+        {
+          "name": "Hybrid",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        },
+        {
+          "name": "R-Line",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        },
+        {
+          "name": "X",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "usMarketValid": true,
+      "notes": "R-Line and X trims added"
+    },
+    {
+      "year": 2015,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "2nd Gen (7P)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "V6 Sport",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18"
+        },
+        {
+          "name": "V6 Lux",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        },
+        {
+          "name": "V6 Executive",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        },
+        {
+          "name": "TDI Sport",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18"
+        },
+        {
+          "name": "TDI Lux",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        },
+        {
+          "name": "TDI Executive",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        },
+        {
+          "name": "Hybrid",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com", "thecarconnection.com"],
+      "usMarketValid": true,
+      "notes": "Last year for TDI diesel in US market due to Dieselgate scandal"
+    },
+    {
+      "year": 2016,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "2nd Gen (7P)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "Sport",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18"
+        },
+        {
+          "name": "Lux",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": "265/50R19"
+        },
+        {
+          "name": "Executive",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "usMarketValid": true,
+      "notes": "Diesel (TDI) and Hybrid trims discontinued. V6 gasoline only."
+    },
+    {
+      "year": 2017,
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "2nd Gen (7P)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {
+          "name": "Sport",
+          "oemWheelSize": "18x8",
+          "oemTireSize": "255/55R18"
+        },
+        {
+          "name": "Wolfsburg",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/45R20"
+        },
+        {
+          "name": "Executive",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "275/40R21"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "usMarketValid": true,
+      "notes": "Final year for Touareg in US market. 21-inch wheels available on Executive. Wolfsburg Edition replaced Lux trim. 3rd Gen Touareg (2018+) was not sold in North America."
+    }
+  ]
+}

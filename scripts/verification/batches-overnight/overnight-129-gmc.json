@@ -1,0 +1,1067 @@
+[
+  {
+    "id": "4ae77ac7-e9d5-4c48-8c32-c8a65a063d82",
+    "year": 2011,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2011]"
+  },
+  {
+    "id": "ad0cfee2-41a2-4892-981b-831c6858a7e3",
+    "year": 2012,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "LT265/70R17",
+      "LT265/65R18",
+      "LT275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2012]"
+  },
+  {
+    "id": "4f55cc31-7c2d-464f-9704-f9b36e5f5be2",
+    "year": 2013,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2013]"
+  },
+  {
+    "id": "183099bd-3e6b-44bf-8204-700ef246b739",
+    "year": 2014,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2014]"
+  },
+  {
+    "id": "e9f28c97-6927-4b35-82b0-15b6d3b283c5",
+    "year": 2015,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [filled from 2015 yukon]"
+  },
+  {
+    "id": "1850421e-1b36-4e20-92f0-af23bb097a1d",
+    "year": 2015,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2018_SIBLING_PLATFORM"
+  },
+  {
+    "id": "fa7ed1a0-5de2-44a3-afea-6c7be01cd124",
+    "year": 2016,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [filled from 2016 yukon]"
+  },
+  {
+    "id": "7878ef09-b84a-4776-b157-bfb41e4283f7",
+    "year": 2016,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2018_SIBLING_PLATFORM"
+  },
+  {
+    "id": "a93288b0-8335-48ef-83a6-626430252040",
+    "year": 2017,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "265/65R18",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2017 yukon]"
+  },
+  {
+    "id": "3a43770a-7909-45e1-8944-b71935591694",
+    "year": 2017,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2018_SIBLING_PLATFORM"
+  },
+  {
+    "id": "1998b7bc-439c-41b7-8542-fc9bbbd3eebe",
+    "year": 2018,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "265/65R18",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2018 yukon]"
+  },
+  {
+    "id": "0b64e262-a01e-4e9d-81b8-fbfb742dc889",
+    "year": 2018,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2018_SIBLING_PLATFORM"
+  },
+  {
+    "id": "57c4f89b-a36b-4366-9b9d-71930c37af08",
+    "year": 2019,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2018_SIBLING_PLATFORM"
+  },
+  {
+    "id": "133ac5a3-13dc-4f69-9bc1-e59e753e40ab",
+    "year": 2019,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [filled from 2019 yukon]"
+  },
+  {
+    "id": "e2c379b2-f357-421b-a926-4bc0de451c4b",
+    "year": 2020,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "265/65R18",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [filled from 2020 yukon]"
+  },
+  {
+    "id": "d8126b47-da3c-4c5e-b41a-4d379b479b3c",
+    "year": 2020,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22"
+    ],
+    "source": "inherited_from_2020_SIBLING_PLATFORM"
+  },
+  {
+    "id": "fb4f83ce-3a52-44d5-a8a0-269fe157dad4",
+    "year": 2021,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2021]"
+  },
+  {
+    "id": "cf4666a9-c019-4bb0-903b-061a02ef102e",
+    "year": 2022,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2022]"
+  },
+  {
+    "id": "2088bc37-6c7d-4eb7-b46f-bc46f8bf7b07",
+    "year": 2023,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 24,
+        "diameter": 18
+      },
+      {
+        "width": 9,
+        "offset": 24,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 28,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/65R18",
+      "275/60R20",
+      "285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2023]"
+  },
+  {
+    "id": "d658720b-030e-433e-8bc9-f87e80ef122e",
+    "year": 2024,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22",
+      "265/65R18",
+      "275/55R20",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2024]"
+  },
+  {
+    "id": "63089d8d-e9f3-4c83-9672-e4a796b98896",
+    "year": 2025,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2025]"
+  },
+  {
+    "id": "806471a0-0c5e-44d4-a1ad-f09947ab726c",
+    "year": 2026,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/60R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2026]"
+  },
+  {
+    "id": "0b554cd5-d8f1-4d69-956b-39600d25f63d",
+    "year": 2021,
+    "make": "gmc",
+    "model": "yukon-xl",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "d": 18,
+        "o": 24,
+        "w": 8.5
+      },
+      {
+        "d": 20,
+        "o": 24,
+        "w": 9
+      },
+      {
+        "d": 22,
+        "o": 28,
+        "w": 9
+      }
+    ],
+    "currentTireSizes": [
+      "275/65R18",
+      "275/60R20",
+      "285/45R22"
+    ],
+    "source": "gap-fix"
+  },
+  {
+    "id": "2d248f10-ecf2-4489-ac47-3bccc0a04b3e",
+    "year": 2022,
+    "make": "gmc",
+    "model": "yukon-xl",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "d": 18,
+        "o": 24,
+        "w": 8.5
+      },
+      {
+        "d": 20,
+        "o": 24,
+        "w": 9
+      },
+      {
+        "d": 22,
+        "o": 28,
+        "w": 9
+      }
+    ],
+    "currentTireSizes": [
+      "275/65R18",
+      "275/60R20",
+      "285/45R22"
+    ],
+    "source": "gap-fix"
+  },
+  {
+    "id": "a001958b-77ed-4bef-a345-6819a001045f",
+    "year": 2023,
+    "make": "gmc",
+    "model": "yukon-xl",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "d": 18,
+        "o": 24,
+        "w": 8.5
+      },
+      {
+        "d": 20,
+        "o": 24,
+        "w": 9
+      },
+      {
+        "d": 22,
+        "o": 28,
+        "w": 9
+      }
+    ],
+    "currentTireSizes": [
+      "275/65R18",
+      "275/60R20",
+      "285/45R22"
+    ],
+    "source": "gap-fix"
+  },
+  {
+    "id": "84821e6c-7057-49ec-9d6a-91d847ed5b5b",
+    "year": 2024,
+    "make": "gmc",
+    "model": "yukon-xl",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "d": 18,
+        "o": 24,
+        "w": 8.5
+      },
+      {
+        "d": 20,
+        "o": 24,
+        "w": 9
+      },
+      {
+        "d": 22,
+        "o": 28,
+        "w": 9
+      }
+    ],
+    "currentTireSizes": [
+      "275/65R18",
+      "275/60R20",
+      "285/45R22"
+    ],
+    "source": "gap-fix"
+  }
+]

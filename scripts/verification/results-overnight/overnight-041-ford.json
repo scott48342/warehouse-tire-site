@@ -1,0 +1,1437 @@
+{
+  "batchId": "overnight-041-ford",
+  "verifiedAt": "2026-04-23T02:24:00.000Z",
+  "summary": {
+    "totalVehicles": 75,
+    "verified": 2,
+    "flagged": 62,
+    "invalid": 11,
+    "verifiedPercent": "2.7%",
+    "flaggedPercent": "82.7%",
+    "invalidPercent": "14.7%"
+  },
+  "criticalFindings": [
+    {
+      "severity": "CRITICAL",
+      "issue": "1997-1998 F-250 entries have wrong bolt pattern (8x170)",
+      "details": "Ford F-250 Super Duty with 8x170 bolt pattern didn't exist until 1999. The 1997-1998 F-250 was either: (1) Old body style with 8x165.1mm, or (2) F-250 Light Duty with 7x150mm / 87.1mm hub bore. All 6 entries for 1997-1998 are INVALID.",
+      "affectedCount": 6,
+      "sources": ["hulkoffsets.com", "jimburkeford.com", "performanceplustire.com"]
+    },
+    {
+      "severity": "HIGH",
+      "issue": "1994-1996 entries have wrong tire sizes (17\"/18\"/20\" on 16\" vehicles)",
+      "details": "The 1994-1996 F-250 only came with 16\" wheels. Batch shows LT245/75R17, LT265/70R17, LT275/70R18, etc. Correct OEM sizes: 215/85R16, 235/85R16, 265/75R16.",
+      "affectedCount": 9,
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "severity": "HIGH",
+      "issue": "1999-2007 Super Duty wheel/tire diameter mismatches",
+      "details": "Most entries show 17\" or 18\" wheel diameters but include tire sizes for 20\" wheels (LT275/65R20, 275/65R20). 1999-2007 Super Duty OEM was primarily 16\"-17\" with some 18\" options introduced around 2005.",
+      "affectedCount": 47,
+      "sources": ["tiresize.com", "hulkoffsets.com"]
+    },
+    {
+      "severity": "MEDIUM",
+      "issue": "Inherited tire data appears to be from later model years",
+      "details": "Source 'generation_inherit' applied later Super Duty tire specs (2011+) retroactively to 1994-2010 models. LT285/75R18 option wasn't available until 2011+ generation.",
+      "affectedCount": 60,
+      "sources": ["tiresize.com"]
+    }
+  ],
+  "referenceData": {
+    "fordF250BoltPatterns": {
+      "1973-1996_OldBody": {
+        "boltPattern": "8x165.1",
+        "hubBore": "124.9",
+        "notes": "Old body F-250 heavy duty"
+      },
+      "1997-1999_LightDuty": {
+        "boltPattern": "7x150",
+        "hubBore": "87.1",
+        "notes": "F-250 Light Duty based on F-150 platform - transitional model"
+      },
+      "1999-present_SuperDuty": {
+        "boltPattern": "8x170",
+        "hubBore": "124.9",
+        "notes": "F-250 Super Duty introduced 1999"
+      }
+    },
+    "correctTireSizes": {
+      "1994-1996": ["215/85R16", "235/85R16", "265/75R16"],
+      "1999_SuperDuty": ["235/85R16", "265/75R16"],
+      "2005_SuperDuty": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"],
+      "2011+_SuperDuty": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R20"]
+    }
+  },
+  "vehicles": [
+    {
+      "id": "fef26403-8171-46f7-a9c4-d9779e205139",
+      "year": 1994,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "expected": ["215/85R16", "235/85R16", "265/75R16"],
+          "found": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R18", "LT275/65R20"],
+          "reason": "1994 F-250 only had 16\" wheels; all listed sizes are for 17-20\" wheels"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "wheelSizesCorrect": true
+    },
+    {
+      "id": "c846b569-e055-45a9-ae1c-84fe322169be",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "expected": ["215/85R16", "235/85R16", "265/75R16"],
+          "found": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R18", "LT275/65R20"],
+          "reason": "1995 F-250 only had 16\" wheels; all listed sizes are for 17-20\" wheels"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "wheelSizesCorrect": true
+    },
+    {
+      "id": "35cb9808-4da4-4fa4-81bd-c419258ddf05",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "expected": ["215/85R16", "235/85R16", "265/75R16"],
+          "found": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R18", "LT275/65R20"],
+          "reason": "1995 F-250 only had 16\" wheels; all listed sizes are for 17-20\" wheels"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "wheelSizesCorrect": true
+    },
+    {
+      "id": "10fd14cd-e1f5-4495-84e7-3e77779e865c",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "expected": ["215/85R16", "235/85R16", "265/75R16"],
+          "found": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R18", "LT275/65R20"],
+          "reason": "1995 F-250 only had 16\" wheels; all listed sizes are for 17-20\" wheels"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "wheelSizesCorrect": true
+    },
+    {
+      "id": "4a2dd612-c9da-48ff-80cf-18f48cc3b4ea",
+      "year": 1995,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "notes": "api_import source has correct 16\" wheel sizes and appropriate tire sizes",
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "wheelSizesCorrect": true,
+      "tireSizesCorrect": true
+    },
+    {
+      "id": "23be8a67-74cf-46ee-935b-a7ae1d3709f8",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "notes": "api_import source has correct 16\" wheel sizes and appropriate tire sizes",
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "wheelSizesCorrect": true,
+      "tireSizesCorrect": true
+    },
+    {
+      "id": "15e07890-6cdd-4fd3-8793-05ab0d268f46",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "expected": ["215/85R16", "235/85R16", "265/75R16"],
+          "found": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R18", "LT275/65R20"],
+          "reason": "1996 F-250 only had 16\" wheels"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "wheelSizesCorrect": true
+    },
+    {
+      "id": "5ea338ae-1c1e-48cc-8107-6611cf4085d1",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "expected": ["215/85R16", "235/85R16", "265/75R16"],
+          "found": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R18", "LT275/65R20"],
+          "reason": "1996 F-250 only had 16\" wheels"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "wheelSizesCorrect": true
+    },
+    {
+      "id": "97e87cde-b03d-4d24-a722-4dfca88aa7f5",
+      "year": 1996,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "expected": ["215/85R16", "235/85R16", "265/75R16"],
+          "found": ["LT245/75R17", "LT265/70R17", "LT275/70R18", "LT275/65R18", "LT275/65R20"],
+          "reason": "1996 F-250 only had 16\" wheels"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "wheelSizesCorrect": true
+    },
+    {
+      "id": "5f3002c4-22e2-430b-b58b-5d78a4e514ed",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "CRITICAL",
+          "expected": "8x165.1 (old body) OR 7x150 (light duty)",
+          "found": "8x170",
+          "reason": "F-250 Super Duty with 8x170 didn't exist until 1999. 1997 F-250 was either old-body HD (8x165.1) or light-duty (7x150)"
+        },
+        {
+          "field": "currentHubBore",
+          "severity": "CRITICAL",
+          "expected": "124.9 (old body) OR 87.1 (light duty)",
+          "found": "124.9",
+          "reason": "If this is light-duty F-250, hub bore should be 87.1mm"
+        }
+      ],
+      "boltPatternCorrect": false,
+      "hubBoreCorrect": "uncertain",
+      "notes": "This vehicle record appears to incorrectly apply Super Duty specs to pre-Super Duty year"
+    },
+    {
+      "id": "7c229648-3646-4d29-a4c9-910b1a4e5951",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "CRITICAL",
+          "expected": "8x165.1 (old body) OR 7x150 (light duty)",
+          "found": "8x170",
+          "reason": "F-250 Super Duty with 8x170 didn't exist until 1999"
+        }
+      ],
+      "boltPatternCorrect": false
+    },
+    {
+      "id": "3cb8737a-73fb-4204-a57e-19970a46af12",
+      "year": 1997,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "CRITICAL",
+          "expected": "8x165.1 (old body) OR 7x150 (light duty)",
+          "found": "8x170",
+          "reason": "F-250 Super Duty with 8x170 didn't exist until 1999"
+        }
+      ],
+      "boltPatternCorrect": false
+    },
+    {
+      "id": "48233cb8-7c06-49ba-b7ac-03dddb8ca26e",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "CRITICAL",
+          "expected": "8x165.1 (old body) OR 7x150 (light duty)",
+          "found": "8x170",
+          "reason": "F-250 Super Duty with 8x170 didn't exist until 1999"
+        }
+      ],
+      "boltPatternCorrect": false
+    },
+    {
+      "id": "9f5d0854-2d07-4c7f-9e0c-a001309cebf0",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "CRITICAL",
+          "expected": "8x165.1 (old body) OR 7x150 (light duty)",
+          "found": "8x170",
+          "reason": "F-250 Super Duty with 8x170 didn't exist until 1999"
+        }
+      ],
+      "boltPatternCorrect": false
+    },
+    {
+      "id": "2ba2507e-aeec-4e2d-b3a8-fad8c3f192ff",
+      "year": 1998,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "currentBoltPattern",
+          "severity": "CRITICAL",
+          "expected": "8x165.1 (old body) OR 7x150 (light duty)",
+          "found": "8x170",
+          "reason": "F-250 Super Duty with 8x170 didn't exist until 1999"
+        }
+      ],
+      "boltPatternCorrect": false
+    },
+    {
+      "id": "641c4412-704c-495e-ae29-330da2577bb0",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentWheelSizes",
+          "severity": "MEDIUM",
+          "expected": "16\" or 17\" for 1999",
+          "found": "7.5x17",
+          "reason": "Wheel diameter plausible but 1999 Super Duty primarily had 16\" OEM"
+        },
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "expected": ["235/85R16", "265/75R16", "245/75R17", "265/70R17"],
+          "found": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+          "reason": "18\" and 20\" tires weren't OEM options in 1999; LT285/75R18 is from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "06212a4c-9071-4899-bfeb-ac83771564bd",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentWheelSizes",
+          "severity": "MEDIUM",
+          "expected": "16\" for 1999 Lariat",
+          "found": "8x18",
+          "reason": "18\" wheels weren't standard on 1999 models"
+        },
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later model years"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "b0f2275b-3cb5-4b59-a82a-94da317bf078",
+      "year": 1999,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains 18\"/20\" tire sizes not available in 1999"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "15cadd91-928a-46e2-9281-d0d5030870a5",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "21eb8c0b-b26d-4409-be7a-fb292cda5dcd",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "337d00e7-8926-41ea-a913-8fb7916a2ca9",
+      "year": 2000,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "cc7210b7-e39c-4a33-95db-f19655d69bbd",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "trim",
+          "severity": "CRITICAL",
+          "reason": "King Ranch trim for F-250 was introduced in 2005, not 2001"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "notes": "King Ranch was only available on F-150 until 2005"
+    },
+    {
+      "id": "5d89bea0-5fca-4e64-80af-36e5b377d858",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "a30c290e-fd73-4b18-acc7-8649c285a552",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "c8c8745a-7e8d-4f99-b1f0-605090ed53f9",
+      "year": 2001,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "d497ebdb-8741-4dae-831f-7be1ab26ae49",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "trim",
+          "severity": "CRITICAL",
+          "reason": "King Ranch trim for F-250 was introduced in 2005, not 2002"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "d916ec78-e7a9-4ed5-9bc3-3b38e7af7060",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "12f8dbc4-8182-4815-a0b8-a8b3a0c575c3",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "ede0f504-c91e-45f7-b7ea-37c464ab25d5",
+      "year": 2002,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "7e2e0622-c555-4379-b535-423de97766ee",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "1ea9dd35-ea53-4866-8de5-b3cd7ccd419f",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "b4f399f7-f89f-4d77-b5f6-e9b5be9a2c20",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "trim",
+          "severity": "CRITICAL",
+          "reason": "King Ranch trim for F-250 was introduced in 2005, not 2003"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "1625bff1-32ce-4709-879a-58965ef7e639",
+      "year": 2003,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "b3e9700e-b540-4850-a83d-fc9ac62874b3",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "65910726-d340-4b53-af65-a2a9c0b056d7",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "19e80f84-362a-4fba-a4d3-fbdc82ea68ba",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "HIGH",
+          "reason": "Contains tire sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "41b64835-a9e0-4a08-8950-a7585161f77a",
+      "year": 2004,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "invalid",
+      "issues": [
+        {
+          "field": "trim",
+          "severity": "CRITICAL",
+          "reason": "King Ranch trim for F-250 was introduced in 2005, not 2004"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "5dd56415-e8f2-4c31-bfb7-45fd64f159b9",
+      "year": 2005,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "expected": ["245/75R17", "265/70R17"],
+          "found": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+          "reason": "Some tire sizes correct, but LT285/75R18 wasn't available until 2011+"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "4b040c8d-c009-402e-88c9-3286f8a458d6",
+      "year": 2005,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Some sizes correct, contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "abc01f0b-06bd-4f81-a05a-b2b0270404de",
+      "year": 2005,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Some sizes correct, contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "1c570737-b133-4967-bf99-2c8101f39634",
+      "year": 2005,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Some sizes correct for first-year King Ranch, contains sizes from later years"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "notes": "2005 was first year of King Ranch for F-250"
+    },
+    {
+      "id": "50931f63-9993-49eb-a810-434da7f517b4",
+      "year": 2006,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "c43b4c2f-3805-43f4-9efc-0ed126baba75",
+      "year": 2006,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "1a2a9670-5f93-436f-9eef-4820d40535b7",
+      "year": 2006,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "46298754-6cbc-4854-9237-e08a1cbc3c83",
+      "year": 2006,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "75bb52fe-0dad-46f9-81e2-a49f40711522",
+      "year": 2007,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "3f7eb449-c4ef-4984-9bf4-d77e487d32be",
+      "year": 2007,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "db9e9642-080f-454b-9484-1a616228e423",
+      "year": 2007,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "9ac3619d-7a2f-480f-8e50-94b43e7aaead",
+      "year": 2007,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains sizes from later generations"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "88a92ae0-9ad0-4b02-8f42-ed2156593d31",
+      "year": 2008,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "6afd0c0b-38bc-49b2-922a-0edb09f2c057",
+      "year": 2008,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "6e1c50c8-8f39-4603-9f15-1a12aaaff17b",
+      "year": 2008,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "d3541d8c-a779-4f7c-95cd-de897cb219e2",
+      "year": 2008,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "94ce4043-5df2-44ff-abe1-1159241d4b48",
+      "year": 2009,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "bf99a136-4b99-4269-96b7-8a9dddf47a7a",
+      "year": 2009,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "b7768d5a-b90c-4a37-8b33-47993a9210d1",
+      "year": 2009,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "74c201e9-2835-4359-956b-4f2c34ebf174",
+      "year": 2009,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "735402af-0cfd-4552-993c-c2d94ff43278",
+      "year": 2010,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "911811ec-0dff-47fe-816c-9fd7a8c0c1b6",
+      "year": 2010,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "b04fcb90-0cae-44e5-8edc-176891f7febb",
+      "year": 2010,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "9fd91418-240e-4d09-9384-fb8dfe1be364",
+      "year": 2010,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "MEDIUM",
+          "reason": "Contains LT285/75R18 from 2011+ generation"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "a82df93f-5f18-46ee-80c5-7db92043144b",
+      "year": 2010,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentWheelSizes",
+          "severity": "LOW",
+          "reason": "Duplicate entry with more detailed wheel data from railway_import"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "notes": "This railway_import entry has better wheel size detail with offset info"
+    },
+    {
+      "id": "e1bc6354-4e66-4e4f-9a35-8d4198519582",
+      "year": 2011,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes - acceptable for 2011+"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "notes": "2011 was a refresh year - tire size data more appropriate for this generation"
+    },
+    {
+      "id": "c87d6dbb-0ada-4176-b9df-9b17d4b6879b",
+      "year": 2011,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "a7f4c966-bea3-4d76-aba7-1f180701cf36",
+      "year": 2011,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "574b5439-5af4-4cf3-862e-ff8f8d3c0d8b",
+      "year": 2011,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Platinum",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true,
+      "notes": "Platinum trim debuted 2011"
+    },
+    {
+      "id": "c75834f2-492b-4873-a81b-7b87173ac6b0",
+      "year": 2011,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "38e5fac5-244d-465d-b58c-507eaebb1b2f",
+      "year": 2011,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentWheelSizes",
+          "severity": "LOW",
+          "reason": "Duplicate entry with railway_import - has good offset data"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "39db7ca3-84f7-47f0-8259-a62b3afd3d5c",
+      "year": 2012,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Platinum",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "b3b2504f-5ae0-4627-a4ad-0c320f7ec6e4",
+      "year": 2012,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "6f0aec1f-7201-4a45-85e6-cc94cf7d2bd1",
+      "year": 2012,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XL",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "f1ebbbeb-e4df-4dda-89e9-463a8216c4a3",
+      "year": 2012,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "95e81c45-8fcb-4df7-a4a2-93f9ea0734c8",
+      "year": 2012,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "e9a3d566-37fe-4c78-8c1b-92ef4c2e4c29",
+      "year": 2012,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "Lariat",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentWheelSizes",
+          "severity": "LOW",
+          "reason": "Duplicate entry with railway_import"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    },
+    {
+      "id": "8cf1c304-0a19-4f9b-b768-5f25dddb942d",
+      "year": 2013,
+      "make": "ford",
+      "model": "f-250",
+      "trim": "XLT",
+      "status": "flagged",
+      "issues": [
+        {
+          "field": "currentTireSizes",
+          "severity": "LOW",
+          "reason": "Mix of OEM and aftermarket sizes"
+        }
+      ],
+      "boltPatternCorrect": true,
+      "hubBoreCorrect": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "action": "DELETE or CORRECT 1997-1998 entries",
+      "details": "These 6 vehicles have impossible 8x170 bolt pattern for their year. Either delete or research whether they should be: (a) Old body F-250 with 8x165.1, or (b) F-250 Light Duty with 7x150/87.1mm hub bore"
+    },
+    {
+      "priority": "CRITICAL",
+      "action": "DELETE King Ranch entries for 2001-2004",
+      "details": "King Ranch trim wasn't available on F-250 until 2005. These 4 entries are invalid."
+    },
+    {
+      "priority": "HIGH",
+      "action": "Fix tire sizes for 1994-1996 vehicles",
+      "details": "Replace current 17-20\" tire sizes with correct 16\" sizes: 215/85R16, 235/85R16, 265/75R16"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Review 'generation_inherit' source logic",
+      "details": "This source is incorrectly applying 2011+ Super Duty tire specs to all prior generations. Each generation needs year-appropriate tire sizes."
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Remove LT285/75R18 from pre-2011 vehicles",
+      "details": "This tire size was introduced with the 2011 refresh and should not appear on 1999-2010 models."
+    },
+    {
+      "priority": "LOW",
+      "action": "Review duplicate Lariat entries (2010, 2011, 2012)",
+      "details": "Each of these years has two Lariat entries with different sources. Consider merging or keeping the railway_import versions which have better wheel offset data."
+    }
+  ],
+  "sourcesUsed": [
+    "hulkoffsets.com/blogs/news/ford-f-250-wheel-bolt-pattern-rim-size-hub-bore-offsets-and-tire-size",
+    "tiresize.com/tires/Ford/F250/",
+    "jimburkeford.com/ford-f-250-bolt-pattern-research/",
+    "performanceplustire.com/Blog/what-do-8x170-wheels-fit-expert-guide-to-bolt-patterns",
+    "inamotors.com/ford-f-250-lug-patterns/"
+  ]
+}

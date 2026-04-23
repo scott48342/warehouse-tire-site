@@ -1,0 +1,804 @@
+{
+  "batchId": "14",
+  "processedAt": "2026-04-21T21:43:00.000Z",
+  "results": [
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/45R19"},
+        {"trim": "530i xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/45R19"},
+        {"trim": "540i xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530e", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19"},
+        {"trim": "530e xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19"},
+        {"trim": "540i", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19"},
+        {"trim": "540i xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19"},
+        {"trim": "M550i xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19", "rearTireSize": "275/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530e", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19"},
+        {"trim": "530e xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19"},
+        {"trim": "540i", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19"},
+        {"trim": "540i xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19"},
+        {"trim": "M550i xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19", "rearTireSize": "275/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530e", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530e xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "M550i xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19", "rearTireSize": "275/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530e iPerformance", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530e xDrive iPerformance", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "M550i xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19", "rearTireSize": "275/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530e iPerformance", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530e xDrive iPerformance", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "M550i xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19", "rearTireSize": "275/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530e iPerformance", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530e xDrive iPerformance", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540d xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "M550i xDrive", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/40R19", "rearTireSize": "275/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "530i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "530i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "540i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "535i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "528i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "528i xDrive", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "535d", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535d xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "535i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "ActiveHybrid 5", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "528i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "528i xDrive", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "535d", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535d xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "535i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "ActiveHybrid 5", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "528i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "528i xDrive", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "535d", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535d xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "535i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "ActiveHybrid 5", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "528i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "528i xDrive", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "535i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "535i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "ActiveHybrid 5", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "528i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "528i xDrive", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "535i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "535i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "ActiveHybrid 5", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "528i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/55R17"},
+        {"trim": "535i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "535i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "535i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "550i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "528i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "528i xDrive", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "535i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "535i xDrive", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "535i xDrive Wagon", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "550i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "535i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "550i xDrive Gran Turismo", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "528i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "528i xDrive", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "535i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "535i xDrive", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "535i xDrive Wagon", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"},
+        {"trim": "550i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 27}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "528i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "528xi", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "535i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "535xi", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "535xi Wagon", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "550i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "525i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "525xi", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "530i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "530xi", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "530xi Wagon", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "550i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "525i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "525xi", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "530i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "530xi", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "530xi Wagon", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "550i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "525i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "530i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "545i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "525i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "530i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"},
+        {"trim": "545i", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 20}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "525i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "525i Sport Wagon", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "530i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "540i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "540i Sport Wagon", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "525i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "525i Sport Wagon", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "530i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "540i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "540i Sport Wagon", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "525i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "525i Sport Wagon", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "530i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "540i", "wheelSize": {"diameter": 17, "width": 8, "offset": 20}, "tireSize": "255/40R17"},
+        {"trim": "540i Sport Wagon", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "5-Series",
+      "trims": [
+        {"trim": "528i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "528i Wagon", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "540i", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"},
+        {"trim": "540i Wagon", "wheelSize": {"diameter": 16, "width": 7, "offset": 20}, "tireSize": "225/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "640i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Gran Turismo", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/45R19"},
+        {"trim": "650i Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "ALPINA B6 xDrive Gran Coupe", "wheelSize": {"diameter": 20, "width": 9, "offset": 25}, "tireSize": "255/35R20", "rearTireSize": "295/30R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "640i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Gran Turismo", "wheelSize": {"diameter": 19, "width": 8, "offset": 30}, "tireSize": "245/45R19"},
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "ALPINA B6 xDrive Gran Coupe", "wheelSize": {"diameter": 20, "width": 9, "offset": 25}, "tireSize": "255/35R20", "rearTireSize": "295/30R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "640i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "ALPINA B6 xDrive Gran Coupe", "wheelSize": {"diameter": 20, "width": 9, "offset": 25}, "tireSize": "255/35R20", "rearTireSize": "295/30R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "640i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/45R19"},
+        {"trim": "650i xDrive Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/45R19"},
+        {"trim": "ALPINA B6 xDrive Gran Coupe", "wheelSize": {"diameter": 20, "width": 9, "offset": 25}, "tireSize": "255/35R20", "rearTireSize": "295/30R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "640i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/45R19"},
+        {"trim": "650i xDrive Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/45R19"},
+        {"trim": "ALPINA B6 xDrive Gran Coupe", "wheelSize": {"diameter": 20, "width": 9, "offset": 25}, "tireSize": "255/35R20", "rearTireSize": "285/30R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "640i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i xDrive Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/45R19"},
+        {"trim": "650i xDrive Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "640i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Gran Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/45R19"},
+        {"trim": "650i xDrive Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Gran Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "640i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "640i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/45R18"},
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Convertible", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"},
+        {"trim": "650i xDrive Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 33}, "tireSize": "245/40R19"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [],
+      "isStaggered": false,
+      "source": "N/A",
+      "confidence": "low",
+      "notes": "No 6-Series production in 2011 (gap between E63/E64 and F12/F13 generations)"
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "650i Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"},
+        {"trim": "650i Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "645Ci Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"},
+        {"trim": "645Ci Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [
+        {"trim": "645Ci Convertible", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"},
+        {"trim": "645Ci Coupe", "wheelSize": {"diameter": 18, "width": 8, "offset": 24}, "tireSize": "245/45R18"}
+      ],
+      "isStaggered": false,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "BMW",
+      "model": "6-Series",
+      "trims": [],
+      "isStaggered": false,
+      "source": "N/A",
+      "confidence": "low",
+      "notes": "No 6-Series production in 2003 (E63/E64 launched in 2004)"
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "7-Series",
+      "trims": [
+        {"trim": "740i", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "740i xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "750e xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "760i xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com (extrapolated from 2024-2025 G70 generation)",
+      "confidence": "medium"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "7-Series",
+      "trims": [
+        {"trim": "740i", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "740i xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "750e xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "760i xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "7-Series",
+      "trims": [
+        {"trim": "740i", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "740i xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "750e xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "760i xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "7-Series",
+      "trims": [
+        {"trim": "740i", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "760i xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "7-Series",
+      "trims": [
+        {"trim": "740i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "740i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "745e xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "750i xDrive", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "M760i xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20", "rearTireSize": "275/35R20"},
+        {"trim": "ALPINA B7 xDrive", "wheelSize": {"diameter": 20, "width": 9, "offset": 25}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "7-Series",
+      "trims": [
+        {"trim": "740i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "740i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "745e xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "750i xDrive", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "M760i xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20", "rearTireSize": "275/35R20"},
+        {"trim": "ALPINA B7 xDrive", "wheelSize": {"diameter": 20, "width": 9, "offset": 25}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "7-Series",
+      "trims": [
+        {"trim": "740i", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "740i xDrive", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "745e xDrive iPerformance", "wheelSize": {"diameter": 18, "width": 8, "offset": 30}, "tireSize": "245/50R18"},
+        {"trim": "750i xDrive", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 25}, "tireSize": "245/45R19"},
+        {"trim": "M760i xDrive", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 25}, "tireSize": "245/40R20", "rearTireSize": "275/35R20"},
+        {"trim": "ALPINA B7 xDrive", "wheelSize": {"diameter": 20, "width": 9, "offset": 25}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "iseecars.com",
+      "confidence": "high"
+    }
+  ]
+}

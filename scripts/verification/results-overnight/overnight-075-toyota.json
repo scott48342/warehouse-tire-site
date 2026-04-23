@@ -1,0 +1,162 @@
+{
+  "batch": "overnight-075-toyota",
+  "verifiedAt": "2025-01-21T05:30:00Z",
+  "vehicleCount": 78,
+  "make": "Toyota",
+  "model": "4Runner",
+  "yearRange": "2011-2020",
+  "generation": "5th Gen (N280)",
+  "summary": {
+    "status": "PASS_WITH_WARNINGS",
+    "fitmentCorrect": true,
+    "trimIssuesFound": true
+  },
+  "fitmentVerification": {
+    "boltPattern": {
+      "current": "6x139.7",
+      "expected": "6x139.7",
+      "status": "CORRECT"
+    },
+    "hubBore": {
+      "current": "106.1",
+      "expected": "106.1",
+      "status": "CORRECT"
+    },
+    "wheelSizes": {
+      "current": ["17x7", "17x7.5", "20x7.5"],
+      "expected": ["17x7", "17x7.5", "20x7.5"],
+      "status": "CORRECT",
+      "notes": "17\" standard on SR5/TRD trims, 20\" on Limited"
+    },
+    "tireSizes": {
+      "current": ["265/70R17", "265/65R17", "245/60R20"],
+      "expected": ["265/70R17", "265/65R17", "245/60R20"],
+      "status": "CORRECT"
+    }
+  },
+  "trimIssues": [
+    {
+      "issue": "TRD_PRO_YEAR_RANGE",
+      "severity": "warning",
+      "description": "TRD Pro trim listed for 2011-2014, but TRD Pro was introduced for 2015 MY",
+      "affectedIds": [
+        "978e2705-97e2-489f-a8db-0b59a6dc28f3",
+        "6aec8dd4-00d9-4e2c-8fd4-e5bad99348c6",
+        "0d170eda-114a-47b9-b459-d247dfeceb03",
+        "e8f9c3e6-a664-4206-bbcc-d931b3769d8f"
+      ],
+      "recommendation": "Remove TRD Pro from 2011-2014 model years"
+    },
+    {
+      "issue": "NIGHTSHADE_YEAR_RANGE",
+      "severity": "warning",
+      "description": "Nightshade package listed for 2011-2018, but was introduced around 2019-2020",
+      "affectedIds": [
+        "9aaa86b2-4a46-4ec4-a02d-35f9ce5a88ca",
+        "cc2320fc-01a6-4541-ae22-08ab6610534f",
+        "1c58ef7e-0245-4338-aa5c-50c2fd73c841",
+        "f5cd1d9a-61af-4615-8d68-12dbc0b50dce",
+        "45815786-ab52-42b7-ab67-c2230ff1bdcd",
+        "c65682fc-4ba0-44e3-bdab-f77fbde118df",
+        "3a6380fc-c2a5-4388-8c19-19fbb6d5caae",
+        "d95381ee-7229-4aae-91ea-24d5a57ea061"
+      ],
+      "recommendation": "Remove Nightshade from 2011-2018 model years"
+    },
+    {
+      "issue": "TRAIL_TRD_OFFROAD_OVERLAP",
+      "severity": "info",
+      "description": "Trail trim was renamed to TRD Off-Road in 2014. Both appear in some years causing redundancy.",
+      "affectedYears": [2012, 2013, 2014, 2015, 2016, 2017],
+      "recommendation": "Use Trail for 2010-2013, TRD Off-Road for 2014+"
+    }
+  ],
+  "dataQualityIssues": [
+    {
+      "issue": "INCONSISTENT_WHEEL_FORMAT",
+      "severity": "minor",
+      "description": "Some wheel sizes use object format {axle, width, offset, diameter} mixed with string format '17x7'",
+      "affectedYears": [2013, 2018, 2019, 2020],
+      "recommendation": "Normalize to consistent string format or all object format"
+    }
+  ],
+  "passedVehicles": 78,
+  "failedVehicles": 0,
+  "vehicleResults": [
+    {"id": "fde0f527-cd03-435d-89de-48c7b45569b7", "year": 2011, "trim": "TRD Off-Road", "fitmentStatus": "PASS"},
+    {"id": "4baa057e-da6b-47a3-b30e-b04e291f5b27", "year": 2011, "trim": "TRD Off-Road Premium", "fitmentStatus": "PASS"},
+    {"id": "9aaa86b2-4a46-4ec4-a02d-35f9ce5a88ca", "year": 2011, "trim": "Nightshade", "fitmentStatus": "PASS", "trimWarning": "NIGHTSHADE_YEAR_RANGE"},
+    {"id": "43869cee-4e41-4515-a381-718265e41faa", "year": 2011, "trim": "Limited", "fitmentStatus": "PASS"},
+    {"id": "978e2705-97e2-489f-a8db-0b59a6dc28f3", "year": 2011, "trim": "TRD Pro", "fitmentStatus": "PASS", "trimWarning": "TRD_PRO_YEAR_RANGE"},
+    {"id": "b3c03801-647e-4cee-b8b7-04af2340aa04", "year": 2012, "trim": "Trail", "fitmentStatus": "PASS"},
+    {"id": "4f12ce49-c395-4869-9773-40623e30089c", "year": 2012, "trim": "SR5", "fitmentStatus": "PASS"},
+    {"id": "d752e4fc-94c9-4671-a8c9-710aeea9b5e7", "year": 2012, "trim": "SR5 Premium", "fitmentStatus": "PASS"},
+    {"id": "cc2320fc-01a6-4541-ae22-08ab6610534f", "year": 2012, "trim": "Nightshade", "fitmentStatus": "PASS", "trimWarning": "NIGHTSHADE_YEAR_RANGE"},
+    {"id": "27bb4d63-6093-4aea-9221-709ed09a9773", "year": 2012, "trim": "TRD Off-Road", "fitmentStatus": "PASS"},
+    {"id": "ce0724ab-f1e3-418d-90dd-bfe78f3308b4", "year": 2012, "trim": "TRD Off-Road Premium", "fitmentStatus": "PASS"},
+    {"id": "6aec8dd4-00d9-4e2c-8fd4-e5bad99348c6", "year": 2012, "trim": "TRD Pro", "fitmentStatus": "PASS", "trimWarning": "TRD_PRO_YEAR_RANGE"},
+    {"id": "c37b368e-cbcb-4d43-b42f-6fa56ccc964b", "year": 2012, "trim": "Limited", "fitmentStatus": "PASS"},
+    {"id": "1c58ef7e-0245-4338-aa5c-50c2fd73c841", "year": 2013, "trim": "Nightshade", "fitmentStatus": "PASS", "trimWarning": "NIGHTSHADE_YEAR_RANGE"},
+    {"id": "e5e5ab01-fdaa-4328-8fed-32e11c096f7e", "year": 2013, "trim": "TRD Off-Road", "fitmentStatus": "PASS"},
+    {"id": "0d170eda-114a-47b9-b459-d247dfeceb03", "year": 2013, "trim": "TRD Pro", "fitmentStatus": "PASS", "trimWarning": "TRD_PRO_YEAR_RANGE"},
+    {"id": "e92837a6-64a1-4b93-be02-2708f67b329a", "year": 2013, "trim": "SR5", "fitmentStatus": "PASS"},
+    {"id": "774b5641-6ff3-47cc-b772-51ecd138b03b", "year": 2013, "trim": "SR5 Premium", "fitmentStatus": "PASS"},
+    {"id": "52d0d819-d1d3-41ae-abb7-55efbb170748", "year": 2013, "trim": "TRD Off-Road Premium", "fitmentStatus": "PASS"},
+    {"id": "912e371a-9b6a-4362-94af-e03a3abcf125", "year": 2013, "trim": "Limited", "fitmentStatus": "PASS"},
+    {"id": "9b00856c-99e1-404a-b271-bd558a537ae8", "year": 2013, "trim": "Trail", "fitmentStatus": "PASS"},
+    {"id": "1318449e-8b1f-467e-8cf9-123e67c18280", "year": 2014, "trim": "SR5", "fitmentStatus": "PASS"},
+    {"id": "3bf8ce4c-6579-4900-a65d-22f5ec8e2623", "year": 2014, "trim": "SR5 Premium", "fitmentStatus": "PASS"},
+    {"id": "aeaeac9d-dc1c-4647-a325-b8d731037adb", "year": 2014, "trim": "Trail", "fitmentStatus": "PASS"},
+    {"id": "ff7addbc-4d96-4b9a-a45b-f13bd24bad4c", "year": 2014, "trim": "TRD Off-Road", "fitmentStatus": "PASS"},
+    {"id": "4befa49b-635f-4868-bdc8-7d34f1eb99d1", "year": 2014, "trim": "TRD Off-Road Premium", "fitmentStatus": "PASS"},
+    {"id": "2b7fccd9-b498-4ca1-9aa5-96e8d76e0ddf", "year": 2014, "trim": "Limited", "fitmentStatus": "PASS"},
+    {"id": "f5cd1d9a-61af-4615-8d68-12dbc0b50dce", "year": 2014, "trim": "Nightshade", "fitmentStatus": "PASS", "trimWarning": "NIGHTSHADE_YEAR_RANGE"},
+    {"id": "e8f9c3e6-a664-4206-bbcc-d931b3769d8f", "year": 2014, "trim": "TRD Pro", "fitmentStatus": "PASS", "trimWarning": "TRD_PRO_YEAR_RANGE"},
+    {"id": "90714802-e8c1-4282-8021-4d23308e053d", "year": 2015, "trim": "SR5 Premium", "fitmentStatus": "PASS"},
+    {"id": "e3b318d7-89d1-4376-8cf4-4f978541b81b", "year": 2015, "trim": "Trail", "fitmentStatus": "PASS"},
+    {"id": "c60a7f29-1b95-47cf-a824-5ef6d0d03bc8", "year": 2015, "trim": "SR5", "fitmentStatus": "PASS"},
+    {"id": "1ecbda3c-5f0e-41fa-9906-de2cdac51b6c", "year": 2015, "trim": "Limited", "fitmentStatus": "PASS"},
+    {"id": "07ee5b72-e1f8-48b5-9cab-f98f4d7f6f06", "year": 2015, "trim": "TRD Off-Road", "fitmentStatus": "PASS"},
+    {"id": "22e503e5-a323-4d3e-917d-9e74edae4769", "year": 2015, "trim": "TRD Off-Road Premium", "fitmentStatus": "PASS"},
+    {"id": "45815786-ab52-42b7-ab67-c2230ff1bdcd", "year": 2015, "trim": "Nightshade", "fitmentStatus": "PASS", "trimWarning": "NIGHTSHADE_YEAR_RANGE"},
+    {"id": "ba5ff968-e201-49f7-bbc5-c822ece64623", "year": 2015, "trim": "TRD Pro", "fitmentStatus": "PASS"},
+    {"id": "323157e5-69f0-498d-816a-bcf901aeb823", "year": 2016, "trim": "SR5", "fitmentStatus": "PASS"},
+    {"id": "b69badbd-4007-490b-9849-3d406e436593", "year": 2016, "trim": "SR5 Premium", "fitmentStatus": "PASS"},
+    {"id": "c65682fc-4ba0-44e3-bdab-f77fbde118df", "year": 2016, "trim": "Nightshade", "fitmentStatus": "PASS", "trimWarning": "NIGHTSHADE_YEAR_RANGE"},
+    {"id": "3cf30661-f7ff-4250-9aa4-9ef7613f157f", "year": 2016, "trim": "Limited", "fitmentStatus": "PASS"},
+    {"id": "6b27571c-5148-4d60-8487-7ae5d4491b02", "year": 2016, "trim": "TRD Pro", "fitmentStatus": "PASS"},
+    {"id": "fc15d461-1e13-4389-ba23-573c3f8fcbd4", "year": 2016, "trim": "TRD Off-Road Premium", "fitmentStatus": "PASS"},
+    {"id": "40dbe6ac-e27a-4004-b417-8ba34e3e6262", "year": 2016, "trim": "TRD Off-Road", "fitmentStatus": "PASS"},
+    {"id": "c712c772-db6e-456f-8fc5-7cb8496afe94", "year": 2016, "trim": "Trail", "fitmentStatus": "PASS"},
+    {"id": "993102db-33c6-405a-bfdd-0e6f42ca41d8", "year": 2017, "trim": "SR5", "fitmentStatus": "PASS"},
+    {"id": "3a6380fc-c2a5-4388-8c19-19fbb6d5caae", "year": 2017, "trim": "Nightshade", "fitmentStatus": "PASS", "trimWarning": "NIGHTSHADE_YEAR_RANGE"},
+    {"id": "e96f1862-a6a5-4240-a5fd-d7fa3aa32a0d", "year": 2017, "trim": "Limited", "fitmentStatus": "PASS"},
+    {"id": "341861a8-dd67-4b5f-bda6-320a8f4664c9", "year": 2017, "trim": "TRD Pro", "fitmentStatus": "PASS"},
+    {"id": "ebc0f817-353c-41d0-b8e1-1eda49c829d2", "year": 2017, "trim": "TRD Off-Road Premium", "fitmentStatus": "PASS"},
+    {"id": "e67cb094-d59c-491e-946b-c72ee4337bb7", "year": 2017, "trim": "TRD Off-Road", "fitmentStatus": "PASS"},
+    {"id": "1cf799ea-c3db-4617-9dc1-8022af82386f", "year": 2017, "trim": "Trail", "fitmentStatus": "PASS"},
+    {"id": "007488d7-a2d7-4c97-a58b-c6b7e88a2850", "year": 2017, "trim": "SR5 Premium", "fitmentStatus": "PASS"},
+    {"id": "9e644a4b-fe9c-4040-9ac9-4a2285eb727b", "year": 2018, "trim": "TRD Off-Road Premium", "fitmentStatus": "PASS"},
+    {"id": "19382fb7-3483-42c6-a6c1-b38ca6084c17", "year": 2018, "trim": "SR5", "fitmentStatus": "PASS"},
+    {"id": "803d2275-07b4-44e9-b9d8-b3453ebcff65", "year": 2018, "trim": "SR5 Premium", "fitmentStatus": "PASS"},
+    {"id": "d95381ee-7229-4aae-91ea-24d5a57ea061", "year": 2018, "trim": "Nightshade", "fitmentStatus": "PASS", "trimWarning": "NIGHTSHADE_YEAR_RANGE"},
+    {"id": "730189ed-2225-4857-8318-2994cd9ccc07", "year": 2018, "trim": "TRD Off-Road", "fitmentStatus": "PASS"},
+    {"id": "cc29ab94-1c28-4cd6-818d-e0573dfdbe22", "year": 2018, "trim": "Limited", "fitmentStatus": "PASS"},
+    {"id": "2700215a-96bb-455f-b0e0-a06ebd499b1d", "year": 2018, "trim": "TRD Pro", "fitmentStatus": "PASS"},
+    {"id": "56c4e428-df4c-49a3-a3a3-e3cb40ee2d15", "year": 2018, "trim": "Trail", "fitmentStatus": "PASS"},
+    {"id": "96a8adfc-9050-4a78-a2fb-ea19e52b66b3", "year": 2019, "trim": "Nightshade", "fitmentStatus": "PASS"},
+    {"id": "853dfbe1-d773-4d54-b0a3-a551e19841d4", "year": 2019, "trim": "SR5 Premium", "fitmentStatus": "PASS"},
+    {"id": "a0de6428-c5ed-476d-a504-bd5ef4b44e6a", "year": 2019, "trim": "SR5", "fitmentStatus": "PASS"},
+    {"id": "bad8f278-2172-4acf-9997-565b6b44f20c", "year": 2019, "trim": "TRD Pro", "fitmentStatus": "PASS"},
+    {"id": "a632a230-d30d-443d-b74b-2ab39b8d8c81", "year": 2019, "trim": "Trail", "fitmentStatus": "PASS"},
+    {"id": "52b1cba5-da45-4e82-b67d-eed4da1d76d7", "year": 2019, "trim": "TRD Off-Road Premium", "fitmentStatus": "PASS"},
+    {"id": "6b0ae64a-08df-4411-82c7-8e2dfcddce0c", "year": 2019, "trim": "Limited", "fitmentStatus": "PASS"},
+    {"id": "33913c76-cacd-4c2d-be26-f70bec5c1cad", "year": 2019, "trim": "TRD Off-Road", "fitmentStatus": "PASS"},
+    {"id": "a3bb99c8-7bcb-41eb-9bae-0ed16add5b1e", "year": 2020, "trim": "SR5 Premium", "fitmentStatus": "PASS"},
+    {"id": "e13df520-bfdd-4a41-8ace-4ef16c40039e", "year": 2020, "trim": "TRD Pro", "fitmentStatus": "PASS"},
+    {"id": "cab279ea-01b5-4ce2-bcee-1ad9ce68120c", "year": 2020, "trim": "Limited", "fitmentStatus": "PASS"},
+    {"id": "8a54a933-a9e1-4c95-a847-f73875b661dd", "year": 2020, "trim": "SR5", "fitmentStatus": "PASS"},
+    {"id": "7eed7451-b843-4850-a28c-8568699cede5", "year": 2020, "trim": "Trail", "fitmentStatus": "PASS"},
+    {"id": "37d16d29-0f0e-459f-8721-836569e2aaee", "year": 2020, "trim": "TRD Off-Road", "fitmentStatus": "PASS"}
+  ]
+}

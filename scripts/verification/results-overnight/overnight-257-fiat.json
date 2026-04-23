@@ -1,0 +1,1242 @@
+[
+  {
+    "id": "a57c98eb-4d94-41b1-8abd-48c05a804510",
+    "year": 2016,
+    "make": "fiat",
+    "model": "124-spider",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x114.3 to 4x98; Hub bore corrected from 67.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "17x7",
+        "tires": [
+          "205/45R17"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "16x6.5",
+        "tires": [
+          "195/50R16"
+        ],
+        "offset": 45
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/45R17",
+      "195/50R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f39cabc0-727c-49d2-8ab0-feaaab3b5b05",
+    "year": 2017,
+    "make": "fiat",
+    "model": "124-spider",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 45
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/40R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "60c9053e-ac4e-46e0-bdba-dc3e2d21a337",
+    "year": 2018,
+    "make": "fiat",
+    "model": "124-spider",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 45
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/40R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4a99fdb7-82bc-41d3-a530-33b31db056ee",
+    "year": 2019,
+    "make": "fiat",
+    "model": "124-spider",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 45
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/40R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8ea9278e-0d8d-4c15-866a-8c9fcfe1fa6d",
+    "year": 2020,
+    "make": "fiat",
+    "model": "124-spider",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "67.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 45
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/40R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "63957544-0af3-4a54-bf86-14c126e79719",
+    "year": 2012,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6.5",
+        "tires": [
+          "195/45R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 35
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/45R16",
+      "205/40R17",
+      "205/40ZR17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "1ebfe5a1-e732-4159-b103-93b40779d627",
+    "year": 2013,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6.5",
+        "tires": [
+          "195/45R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 35
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/45R16",
+      "205/40R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "048dd1e7-5901-497d-b679-ed926d3ea007",
+    "year": 2014,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6.5",
+        "tires": [
+          "195/45R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 35
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/45R16",
+      "205/40R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d8a39034-7120-4f2c-b074-e4efde1befae",
+    "year": 2015,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6.5",
+        "tires": [
+          "195/45R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 35
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/45R16",
+      "205/40R17",
+      "205/40ZR17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "661b50b7-e121-4702-a610-9a55bda80e41",
+    "year": 2016,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6.5",
+        "tires": [
+          "195/45R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 35
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/45R16",
+      "205/40R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "835ce2e4-5b58-4057-8d3d-3fa675173290",
+    "year": 2017,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6.5",
+        "tires": [
+          "195/45R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 35
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/45R16",
+      "205/40R17",
+      "205/40ZR17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "1dd12867-fce2-44fc-94f6-18709315fe5c",
+    "year": 2018,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6.5",
+        "tires": [
+          "195/45R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 35
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/45R16",
+      "205/40R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2a0de233-9711-4531-8f5a-b2268ffdd80d",
+    "year": 2019,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6.5",
+        "tires": [
+          "195/45R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/40R17"
+        ],
+        "offset": 35
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/45R16",
+      "205/40R17",
+      "205/40ZR17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "170db390-c166-4158-9d5c-0120fa9369ad",
+    "year": 2020,
+    "make": "fiat",
+    "model": "500",
+    "trim": "1.4 MultiAir",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/45R16",
+      "205/40ZR17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ee00ba3c-b735-4cf1-a4d9-598e5cc17aec",
+    "year": 2021,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6",
+        "tires": [
+          "195/55R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/45R17"
+        ],
+        "offset": 35
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/55R16",
+      "205/45R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d9fc2cdb-432d-4df4-8ef2-5ce8d1f37f14",
+    "year": 2022,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6",
+        "tires": [
+          "195/55R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/45R17"
+        ],
+        "offset": 35
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/55R16",
+      "205/45R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "7693c090-9d3c-4f97-b007-e2d420368427",
+    "year": 2023,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6",
+        "tires": [
+          "195/55R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/45R17"
+        ],
+        "offset": 35
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/55R16",
+      "205/45R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a143c187-5426-4e39-a991-1751f7e36545",
+    "year": 2024,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6",
+        "tires": [
+          "195/55R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/45R17"
+        ],
+        "offset": 35
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/55R16",
+      "205/45R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "30b559db-7a75-4d3b-abba-0ce3b212b336",
+    "year": 2025,
+    "make": "fiat",
+    "model": "500",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "size": "16x6",
+        "tires": [
+          "195/55R16"
+        ],
+        "offset": 35
+      },
+      {
+        "size": "17x7",
+        "tires": [
+          "205/45R17"
+        ],
+        "offset": 35
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/55R16",
+      "205/45R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "61da0e7e-1594-4460-b352-83d7abc645f8",
+    "year": 2016,
+    "make": "fiat",
+    "model": "500x",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x110 to 4x98; Hub bore corrected from 65.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16",
+      "215/55R17",
+      "215/60R17",
+      "215/55R18",
+      "225/45R18",
+      "225/45R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "6b7ccdce-fc50-41a0-b7a5-6bf35da152bd",
+    "year": 2017,
+    "make": "fiat",
+    "model": "500x",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x110 to 4x98; Hub bore corrected from 65.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16",
+      "215/55R17",
+      "215/60R17",
+      "215/55R18",
+      "225/45R18",
+      "225/45R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "0ad11d82-65c1-4f56-a7e4-09fc84c82d93",
+    "year": 2018,
+    "make": "fiat",
+    "model": "500x",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x110 to 4x98; Hub bore corrected from 65.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16",
+      "215/55R17",
+      "215/60R17",
+      "215/55R18",
+      "225/45R18",
+      "225/45R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "22510842-0255-4035-b0eb-69d830d7f4fd",
+    "year": 2019,
+    "make": "fiat",
+    "model": "500x",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x110 to 4x98; Hub bore corrected from 65.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16",
+      "215/55R17",
+      "215/60R17",
+      "215/55R18",
+      "225/45R18",
+      "225/45R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "09ffbfcf-f94a-4e64-af6d-cd57949f7cc0",
+    "year": 2020,
+    "make": "fiat",
+    "model": "500x",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x110 to 4x98; Hub bore corrected from 65.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16",
+      "215/55R17",
+      "215/60R17",
+      "215/55R18",
+      "225/45R18",
+      "225/45R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d90baea9-b4e2-49b2-9839-9baedd8e6552",
+    "year": 2021,
+    "make": "fiat",
+    "model": "500x",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x110 to 4x98; Hub bore corrected from 65.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16",
+      "215/55R17",
+      "215/60R17",
+      "215/55R18",
+      "225/45R18",
+      "225/45R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "3f600d3d-8174-4593-97e2-7b80e325a62e",
+    "year": 2022,
+    "make": "fiat",
+    "model": "500x",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x110 to 4x98; Hub bore corrected from 65.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16",
+      "215/55R17",
+      "215/60R17",
+      "215/55R18",
+      "225/45R18",
+      "225/45R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "ceda8533-fce4-4884-b136-3171767f16c4",
+    "year": 2023,
+    "make": "fiat",
+    "model": "500x",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x110 to 4x98; Hub bore corrected from 65.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16",
+      "215/55R17",
+      "215/60R17",
+      "215/55R18",
+      "225/45R18",
+      "225/45R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "934443ea-ce71-48a9-813c-89f19ade862c",
+    "year": 2024,
+    "make": "fiat",
+    "model": "500x",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x110 to 4x98; Hub bore corrected from 65.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16",
+      "215/55R17",
+      "215/60R17",
+      "215/55R18",
+      "225/45R18",
+      "225/45R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "c79bf39d-33c6-4bab-9e00-1f63d0db4c7b",
+    "year": 2025,
+    "make": "fiat",
+    "model": "500x",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x110 to 4x98; Hub bore corrected from 65.1 to 58.1",
+    "verifiedBoltPattern": "4x98",
+    "verifiedHubBore": "58.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16",
+      "215/55R17",
+      "215/60R17",
+      "215/55R18",
+      "225/45R18",
+      "225/45R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  }
+]

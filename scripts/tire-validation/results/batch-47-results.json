@@ -1,0 +1,1355 @@
+{
+  "batchId": "47",
+  "processedAt": "2026-04-21T21:58:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2012,
+      "make": "Dodge",
+      "model": "Nitro",
+      "currentTireSizes": ["225/75R16", "235/65R16", "235/65R17", "245/50R20"],
+      "oem": {
+        "trims": {
+          "Heat": { "tires": ["245/50R20"] },
+          "Detonator": { "tires": ["245/50R20"] },
+          "Shock": { "tires": ["245/50R20"] },
+          "SE": { "tires": ["225/75R16", "235/65R17"] },
+          "SXT": { "tires": ["235/65R17", "245/50R20"] }
+        },
+        "allSizes": ["225/75R16", "235/65R17", "245/50R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["235/65R16 not a valid OEM size - should be 235/65R17"]
+      }
+    },
+    {
+      "year": 2011,
+      "make": "Dodge",
+      "model": "Nitro",
+      "currentTireSizes": ["225/75R16", "235/65R16", "235/65R17", "245/50R20"],
+      "oem": {
+        "trims": {
+          "Detonator": { "tires": ["245/50R20"] },
+          "Heat": { "tires": ["245/50R20"] },
+          "R/T": { "tires": ["245/50R20"] },
+          "Shock": { "tires": ["245/50R20"] }
+        },
+        "allSizes": ["245/50R20"],
+        "notes": "2011 only had premium trims with 20\" wheels"
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["225/75R16, 235/65R16, 235/65R17 not valid for 2011 - only 245/50R20 offered"]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Nitro",
+      "currentTireSizes": ["225/75R16", "235/65R16", "235/65R17", "245/50R20"],
+      "oem": {
+        "trims": {
+          "Detonator": { "tires": ["245/50R20"] },
+          "Heat": { "tires": ["245/50R20"] },
+          "SE": { "tires": ["225/75R16", "235/65R17"] },
+          "Shock": { "tires": ["245/50R20"] },
+          "SXT": { "tires": ["235/65R17", "245/50R20"] }
+        },
+        "allSizes": ["225/75R16", "235/65R17", "245/50R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["235/65R16 not a valid OEM size - should be 235/65R17"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Nitro",
+      "currentTireSizes": ["225/75R16", "235/65R16", "235/65R17", "245/50R20"],
+      "oem": {
+        "trims": {
+          "R/T": { "tires": ["245/50R20"] },
+          "SE": { "tires": ["225/75R16", "235/65R17"] },
+          "SLT": { "tires": ["235/65R17", "245/50R20"] }
+        },
+        "allSizes": ["225/75R16", "235/65R17", "245/50R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["235/65R16 not a valid OEM size - should be 235/65R17"]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Nitro",
+      "currentTireSizes": ["225/75R16", "235/65R16", "235/65R17", "245/50R20"],
+      "oem": {
+        "trims": {
+          "R/T": { "tires": ["245/50R20"] },
+          "SLT": { "tires": ["235/65R17", "245/50R20"] },
+          "SXT": { "tires": ["225/75R16", "235/65R17"] }
+        },
+        "allSizes": ["225/75R16", "235/65R17", "245/50R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["235/65R16 not a valid OEM size - should be 235/65R17"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Nitro",
+      "currentTireSizes": ["225/75R16", "235/65R16", "235/65R17", "245/50R20"],
+      "oem": {
+        "trims": {
+          "R/T": { "tires": ["245/50R20"] },
+          "SLT": { "tires": ["235/65R17", "245/50R20"] },
+          "SXT": { "tires": ["225/75R16", "235/65R17"] }
+        },
+        "allSizes": ["225/75R16", "235/65R17", "245/50R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["235/65R16 not a valid OEM size - should be 235/65R17"]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["265/70R17", "275/65R18", "275/60R20", "275/55R20", "285/45R22"],
+      "oem": {
+        "trims": {
+          "ST": { "tires": ["265/70R17"] },
+          "SLT": { "tires": ["265/70R17", "275/60R20"] },
+          "Sport": { "tires": ["275/60R20"] },
+          "Laramie": { "tires": ["275/60R20"] },
+          "TRX": { "tires": ["265/70R17"] },
+          "TRX4 Off-Road": { "tires": ["275/70R17"] }
+        },
+        "allSizes": ["265/70R17", "275/70R17", "275/60R20"],
+        "notes": "4th gen Ram 1500 (2009-2010). 275/65R18, 275/55R20, 285/45R22 are aftermarket sizes."
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["275/65R18, 275/55R20, 285/45R22 not OEM - likely aftermarket/dealer options"]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "ST": { "tires": ["265/70R17"] },
+          "SLT": { "tires": ["265/70R17", "275/60R20"] },
+          "Sport": { "tires": ["275/60R20"] },
+          "Laramie": { "tires": ["275/60R20"] }
+        },
+        "allSizes": ["265/70R17", "275/70R17", "275/60R20"],
+        "notes": "2010 Ram 1500 moved to 17\"/20\" wheels. 16\" sizes from prior gen."
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["245/75R16, 265/75R16 not valid for 2010 4th gen - those are 3rd gen sizes", "275/65R18 not OEM"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "ST": { "tires": ["265/70R17"] },
+          "SLT": { "tires": ["265/70R17"] },
+          "Sport": { "tires": ["275/60R20"] },
+          "Laramie": { "tires": ["275/60R20"] },
+          "TRX": { "tires": ["265/70R17"] },
+          "TRX4 Off-Road": { "tires": ["275/70R17"] }
+        },
+        "allSizes": ["265/70R17", "275/70R17", "275/60R20"],
+        "notes": "2009 was first year of 4th gen. No 16\" options."
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["245/75R16, 265/75R16, 275/65R18 not valid for 2009 4th gen Ram 1500"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["265/70R17", "275/65R18", "275/60R20", "275/55R20", "285/45R22"],
+      "oem": {
+        "trims": {
+          "ST": { "tires": ["265/70R17"] },
+          "SLT": { "tires": ["265/70R17"] },
+          "Sport": { "tires": ["275/60R20"] },
+          "Laramie": { "tires": ["275/60R20"] },
+          "TRX4 Off-Road": { "tires": ["275/70R17"] }
+        },
+        "allSizes": ["265/70R17", "275/70R17", "275/60R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["275/65R18, 275/55R20, 285/45R22 not OEM sizes"]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "MegaCab 2wd": { "tires": ["265/70R17"] },
+          "MegaCab 4wd": { "tires": ["265/70R17"] },
+          "QuadCab 2wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] },
+          "QuadCab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] },
+          "Regular Cab 2wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] },
+          "Regular Cab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"],
+        "notes": "3rd gen (2002-2008). All 17\" and 20\" wheels."
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["245/75R16, 265/75R16 were prior gen (1994-2001)", "275/65R18 not OEM"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "MegaCab 2wd/4wd": { "tires": ["265/70R17"] },
+          "QuadCab 2wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] },
+          "QuadCab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] },
+          "Regular Cab 2wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] },
+          "Regular Cab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["245/75R16, 265/75R16, 275/65R18 not valid for 2007 3rd gen"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "MegaCab 2wd/4wd": { "tires": ["265/70R17"] },
+          "QuadCab 2wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] },
+          "QuadCab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] },
+          "Regular Cab 2wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] },
+          "Regular Cab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["245/75R16, 265/75R16, 275/65R18 not valid for 2006 3rd gen"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] },
+          "QuadCab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] },
+          "Regular Cab 2wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] },
+          "Regular Cab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["245/75R16, 265/75R16, 275/65R18 not OEM for 2005"]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd": { "tires": ["245/70R17", "265/70R17", "275/55R20"] },
+          "QuadCab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] },
+          "Regular Cab 2wd": { "tires": ["245/70R17", "265/70R17", "275/55R20"] },
+          "Regular Cab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17", "275/70R17", "275/55R20", "275/60R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["245/75R16, 265/75R16, 275/65R18 not OEM for 2004 3rd gen"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd": { "tires": ["245/70R17", "265/70R17", "275/55R20"] },
+          "QuadCab 4wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] },
+          "Regular Cab 2wd": { "tires": ["245/70R17", "265/70R17", "275/55R20"] },
+          "Regular Cab 4wd": { "tires": ["245/70R17", "265/70R17", "275/70R17", "275/60R20"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17", "275/70R17", "275/55R20", "275/60R20"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["245/75R16, 265/75R16, 275/65R18 not OEM for 2003"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd": { "tires": ["245/70R17", "265/70R17", "275/55R20"] },
+          "QuadCab 4wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] },
+          "Regular Cab 2wd": { "tires": ["245/70R17", "265/70R17", "275/55R20"] },
+          "Regular Cab 4wd": { "tires": ["245/70R17", "265/70R17", "275/60R20"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17", "275/55R20", "275/60R20"],
+        "notes": "First year of 3rd gen"
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["245/75R16, 265/75R16 were 2nd gen sizes", "275/65R18 not OEM"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "ClubCab 2wd": { "tires": ["225/75R16", "245/75R16"] },
+          "ClubCab 4wd": { "tires": ["245/75R16", "265/75R16", "275/70R17"] },
+          "QuadCab 2wd": { "tires": ["225/75R16", "245/75R16"] },
+          "QuadCab 4wd": { "tires": ["245/75R16", "265/75R16", "275/70R17"] },
+          "Regular Cab 2wd": { "tires": ["225/75R16", "245/75R16"] },
+          "Regular Cab 4wd": { "tires": ["245/75R16", "265/75R16", "275/70R17"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16", "265/75R16", "275/70R17"],
+        "notes": "Last year of 2nd gen"
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["265/70R17, 275/65R18, 275/60R20 not valid for 2001 2nd gen"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "275/65R18", "275/60R20"],
+      "oem": {
+        "trims": {
+          "ClubCab 2wd": { "tires": ["225/75R16", "245/75R16"] },
+          "ClubCab 4wd": { "tires": ["245/75R16", "265/75R16", "275/70R17"] },
+          "QuadCab 2wd": { "tires": ["225/75R16", "245/75R16"] },
+          "QuadCab 4wd": { "tires": ["245/75R16", "265/75R16", "275/70R17"] },
+          "Regular Cab 2wd": { "tires": ["225/75R16", "245/75R16"] },
+          "Regular Cab 4wd": { "tires": ["245/75R16", "265/75R16", "275/70R17"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16", "265/75R16", "275/70R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["265/70R17, 275/65R18, 275/60R20 not valid for 2000 2nd gen"]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "notes": "2010 Ram 2500 was branded as 'Ram' not 'Dodge'. Check under Ram brand."
+        },
+        "allSizes": [],
+        "notes": "Ram brand split from Dodge in 2010. Ram 2500/3500 became Ram trucks."
+      },
+      "validation": {
+        "status": "NO_DATA",
+        "issues": ["2010 Ram HD trucks split to Ram brand - vehicle entry may need update"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "ST 2wd": { "tires": ["245/70R17", "265/70R17"] },
+          "ST 4wd": { "tires": ["245/70R17", "265/70R17"] },
+          "SLT": { "tires": ["265/70R17"] },
+          "Laramie": { "tires": ["265/70R17"] },
+          "Power Wagon": { "tires": ["285/70R17"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17", "285/70R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["215/50R17, 225/55R17, 235/65R17, 245/65R17 are completely wrong - look like car tire sizes, not HD truck tires"]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "MegaCab 2wd/4wd": { "tires": ["265/70R17"] },
+          "QuadCab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["215/50R17, 225/55R17, 235/65R17, 245/65R17 are wrong - these are car sizes"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "MegaCab 2wd/4wd": { "tires": ["265/70R17"] },
+          "QuadCab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["215/50R17, 225/55R17, 235/65R17, 245/65R17 are wrong"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "MegaCab 2wd/4wd": { "tires": ["265/70R17"] },
+          "QuadCab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["215/50R17, 225/55R17, 235/65R17, 245/65R17 are wrong"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["215/50R17, 225/55R17, 235/65R17, 245/65R17 are wrong"]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["215/50R17, 225/55R17, 235/65R17, 245/65R17 are wrong"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/70R17", "265/70R17"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["215/50R17, 225/55R17, 235/65R17, 245/65R17 are wrong - HD trucks need LT-rated tires"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["205/55R16", "215/60R16", "225/60R16", "235/70R16"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] }
+        },
+        "allSizes": ["245/75R16", "265/75R16"],
+        "notes": "2nd gen HD (1994-2002)"
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["205/55R16, 215/60R16, 225/60R16, 235/70R16 completely wrong - appear to be car/sedan sizes"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] }
+        },
+        "allSizes": ["245/75R16", "265/75R16"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All listed sizes wrong - 2002 2nd gen used 16\" wheels"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["205/55R16", "215/60R16", "225/60R16", "235/70R16"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] }
+        },
+        "allSizes": ["245/75R16", "265/75R16"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All sizes wrong - car sizes, not HD truck"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] }
+        },
+        "allSizes": ["245/75R16", "265/75R16"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All sizes wrong - 2001 used 16\" wheels"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["205/55R16", "215/60R16", "225/60R16", "235/70R16"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] }
+        },
+        "allSizes": ["245/75R16", "265/75R16"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All sizes wrong"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "QuadCab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] },
+          "Regular Cab 2wd/4wd": { "tires": ["245/75R16", "265/75R16"] }
+        },
+        "allSizes": ["245/75R16", "265/75R16"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All sizes wrong"]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": [],
+      "oem": {
+        "notes": "2010 Ram 3500 was branded as 'Ram' not 'Dodge'."
+      },
+      "validation": {
+        "status": "NO_DATA",
+        "issues": ["2010 Ram HD trucks split to Ram brand"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "SRW (Single Rear Wheel)": { "tires": ["245/70R17", "265/70R17"] },
+          "DRW (Dually)": { "tires": ["235/80R17"] }
+        },
+        "allSizes": ["245/70R17", "265/70R17", "235/80R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All listed sizes wrong - need LT truck tires"]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "SRW MegaCab/QuadCab/Regular": { "tires": ["265/70R17"] },
+          "DRW (Dually)": { "tires": ["235/80R17"] }
+        },
+        "allSizes": ["265/70R17", "235/80R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["Listed sizes wrong"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "SRW": { "tires": ["265/70R17"] },
+          "DRW": { "tires": ["235/80R17"] }
+        },
+        "allSizes": ["265/70R17", "235/80R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["Listed sizes wrong"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "SRW MegaCab/QuadCab": { "tires": ["265/70R17"] },
+          "DRW": { "tires": ["235/80R17"] }
+        },
+        "allSizes": ["265/70R17", "235/80R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["Listed sizes wrong"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "SRW QuadCab": { "tires": ["265/70R17"] },
+          "DRW": { "tires": ["235/80R17"] }
+        },
+        "allSizes": ["265/70R17", "235/80R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["Listed sizes wrong"]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "SRW QuadCab": { "tires": ["265/70R17"] },
+          "DRW": { "tires": ["235/80R17"] }
+        },
+        "allSizes": ["265/70R17", "235/80R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["Listed sizes wrong"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "SRW QuadCab": { "tires": ["265/70R17"] },
+          "DRW": { "tires": ["235/80R17"] }
+        },
+        "allSizes": ["265/70R17", "235/80R17"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["Listed sizes wrong"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "DRW": { "tires": ["235/85R16"] }
+        },
+        "allSizes": ["235/85R16"],
+        "notes": "2002 3500 only came as DRW with 16\" wheels"
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All sizes wrong - 2002 used 16\" wheels"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["205/55R16", "215/60R16", "225/60R16", "235/70R16"],
+      "oem": {
+        "trims": {
+          "DRW": { "tires": ["235/85R16"] }
+        },
+        "allSizes": ["235/85R16"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All sizes wrong - appear to be passenger car sizes"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["205/55R16", "215/60R16", "225/60R16", "235/70R16"],
+      "oem": {
+        "trims": {
+          "DRW": { "tires": ["235/85R16"] }
+        },
+        "allSizes": ["235/85R16"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All sizes wrong"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "DRW": { "tires": ["235/85R16"] }
+        },
+        "allSizes": ["235/85R16"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All sizes wrong"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["215/50R17", "225/55R17", "235/65R17", "245/65R17", "265/70R17"],
+      "oem": {
+        "trims": {
+          "DRW": { "tires": ["235/85R16"] }
+        },
+        "allSizes": ["235/85R16"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All sizes wrong"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "currentTireSizes": ["205/55R16", "215/60R16", "225/60R16", "235/70R16"],
+      "oem": {
+        "trims": {
+          "DRW": { "tires": ["235/85R16"] }
+        },
+        "allSizes": ["235/85R16"]
+      },
+      "validation": {
+        "status": "MISMATCH",
+        "issues": ["All sizes wrong"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Ram SRT-10",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "Quad Cab": { "tires": ["305/40R22"] },
+          "Regular Cab": { "tires": ["305/40R22"] }
+        },
+        "allSizes": ["305/40R22"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data - should be 305/40R22"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Ram SRT-10",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "Regular Cab": { "tires": ["305/40R22"] },
+          "Quad Cab": { "tires": ["305/40R22"] }
+        },
+        "allSizes": ["305/40R22"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data - should be 305/40R22"]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "Dodge",
+      "model": "Ram SRT-10",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "Regular Cab": { "tires": ["305/40R22"] }
+        },
+        "allSizes": ["305/40R22"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data - should be 305/40R22"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B1500": { "tires": ["235/75R15"] }
+        },
+        "allSizes": ["235/75R15"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data - should be 235/75R15"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B1500": { "tires": ["235/75R15"] }
+        },
+        "allSizes": ["235/75R15"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B1500": { "tires": ["235/75R15"] }
+        },
+        "allSizes": ["235/75R15"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B1500": { "tires": ["235/75R15"] }
+        },
+        "allSizes": ["235/75R15"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Ram Van B2500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B2500": { "tires": ["225/75R16"] },
+          "B2500 Maxi": { "tires": ["225/75R16"] }
+        },
+        "allSizes": ["225/75R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram Van B2500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B2500": { "tires": ["225/75R16"] },
+          "B2500 Maxi": { "tires": ["225/75R16"] }
+        },
+        "allSizes": ["225/75R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram Van B2500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B2500": { "tires": ["225/75R16"] },
+          "B2500 Maxi": { "tires": ["225/75R16"] }
+        },
+        "allSizes": ["225/75R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram Van B2500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B2500": { "tires": ["225/75R16"] },
+          "B2500 Maxi": { "tires": ["225/75R16"] }
+        },
+        "allSizes": ["225/75R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B3500": { "tires": ["225/75R16"] },
+          "B3500 Maxi": { "tires": ["245/75R16"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B3500": { "tires": ["225/75R16"] },
+          "B3500 Maxi": { "tires": ["245/75R16"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B3500": { "tires": ["225/75R16"] },
+          "B3500 Maxi": { "tires": ["245/75R16"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "B3500": { "tires": ["225/75R16"] },
+          "B3500 Maxi": { "tires": ["245/75R16"] }
+        },
+        "allSizes": ["225/75R16", "245/75R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "2500": { "tires": ["225/75R16", "LT245/75R16"] },
+          "3500": { "tires": ["215/85R16"] }
+        },
+        "allSizes": ["225/75R16", "LT245/75R16", "215/85R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "2500": { "tires": ["225/75R16", "LT245/75R16"] },
+          "3500": { "tires": ["215/85R16"] }
+        },
+        "allSizes": ["225/75R16", "LT245/75R16", "215/85R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "2500": { "tires": ["225/75R16", "LT245/75R16"] },
+          "3500": { "tires": ["215/85R16"] }
+        },
+        "allSizes": ["225/75R16", "LT245/75R16", "215/85R16"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "2500": { "tires": ["225/75R16"] },
+          "3500": { "tires": ["195/70R15"] }
+        },
+        "allSizes": ["225/75R16", "195/70R15"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "2500": { "tires": ["225/75R16"] },
+          "3500": { "tires": ["195/70R15"] }
+        },
+        "allSizes": ["225/75R16", "195/70R15"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "2500 118\" WB": { "tires": ["225/70R15"] },
+          "2500 140\"/158\" WB": { "tires": ["225/75R16"] },
+          "3500": { "tires": ["195/70R15"] }
+        },
+        "allSizes": ["225/70R15", "225/75R16", "195/70R15"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "2500": { "tires": ["225/70R15", "225/75R16"] },
+          "3500": { "tires": ["195/70R15"] }
+        },
+        "allSizes": ["225/70R15", "225/75R16", "195/70R15"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "currentTireSizes": [],
+      "oem": {
+        "trims": {
+          "2500": { "tires": ["225/70R15", "225/75R16"] },
+          "3500": { "tires": ["195/70R15"] }
+        },
+        "allSizes": ["225/70R15", "225/75R16", "195/70R15"]
+      },
+      "validation": {
+        "status": "NEEDS_UPDATE",
+        "issues": ["Missing tire data"]
+      }
+    },
+    {
+      "year": 2017,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "oem": {
+        "trims": {
+          "SRT": { "tires": { "front": "275/35R18", "rear": "345/30R19" } },
+          "GTS": { "tires": { "front": "275/35R18", "rear": "345/30R19" } },
+          "ACR": { "tires": { "front": "295/25R19", "rear": "355/30R19" } }
+        },
+        "allSizes": ["275/35R18", "295/25R19", "345/30R19", "355/30R19"],
+        "isStaggered": true
+      },
+      "validation": {
+        "status": "VALID",
+        "notes": "Staggered setup confirmed. ACR has wider track option."
+      }
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "oem": {
+        "trims": {
+          "SRT": { "tires": { "front": "275/35R18", "rear": "345/30R19" } },
+          "GTS": { "tires": { "front": "275/35R18", "rear": "345/30R19" } },
+          "ACR": { "tires": { "front": "295/25R19", "rear": "355/30R19" } }
+        },
+        "allSizes": ["275/35R18", "295/25R19", "345/30R19", "355/30R19"],
+        "isStaggered": true
+      },
+      "validation": {
+        "status": "VALID",
+        "notes": "Staggered setup confirmed"
+      }
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "oem": {
+        "trims": {
+          "SRT": { "tires": { "front": "275/35R18", "rear": "345/30R19" } },
+          "SRT GT": { "tires": { "front": "275/35R18", "rear": "345/30R19" } },
+          "SRT GTS": { "tires": { "front": "275/35R18", "rear": "345/30R19" } },
+          "SRT TA 2.0": { "tires": { "front": "295/25R19", "rear": "355/30R19" } }
+        },
+        "allSizes": ["275/35R18", "295/25R19", "345/30R19", "355/30R19"],
+        "isStaggered": true
+      },
+      "validation": {
+        "status": "VALID",
+        "notes": "Staggered setup confirmed"
+      }
+    },
+    {
+      "year": 2014,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "oem": {
+        "trims": {
+          "SRT": { "tires": { "front": "275/35R18", "rear": "345/30R19" } },
+          "GTS": { "tires": { "front": "275/35R18", "rear": "345/30R19" } }
+        },
+        "allSizes": ["275/35R18", "345/30R19"],
+        "isStaggered": true
+      },
+      "validation": {
+        "status": "VALID",
+        "notes": "Staggered setup confirmed"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "oem": {
+        "trims": {
+          "SRT": { "tires": { "front": "275/35R18", "rear": "345/30R19" } },
+          "GTS": { "tires": { "front": "275/35R18", "rear": "345/30R19" } }
+        },
+        "allSizes": ["275/35R18", "345/30R19"],
+        "isStaggered": true
+      },
+      "validation": {
+        "status": "VALID",
+        "notes": "Staggered setup confirmed - 5th gen Viper (VX I)"
+      }
+    }
+  ],
+  "summary": {
+    "valid": 5,
+    "mismatch": 48,
+    "needsUpdate": 20,
+    "noData": 2,
+    "criticalIssues": [
+      "Ram 2500/3500 (2000-2009) have completely wrong tire sizes - appear to be sedan/car sizes, not HD truck sizes",
+      "Nitro models have 235/65R16 listed but correct size is 235/65R17",
+      "Ram 1500 (2002-2010) mixing generation-specific sizes incorrectly",
+      "Ram Vans, Sprinter, Ram SRT missing all tire data"
+    ]
+  }
+}

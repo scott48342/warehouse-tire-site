@@ -1,0 +1,1320 @@
+{
+  "batchId": "79",
+  "processedAt": "2026-04-21T22:12:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/70R16"],
+      "oemTireSizes": {
+        "Classic": ["225/70R16"],
+        "Limited": ["225/70R16"],
+        "SE": ["215/75R15", "225/75R15"],
+        "Sport": ["225/70R15", "225/75R15"]
+      },
+      "allOemSizes": ["215/75R15", "225/70R15", "225/70R16", "225/75R15"],
+      "validation": "VALID",
+      "notes": "225/70R16 is OEM for Classic/Limited trims"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/70R15", "225/75R15"],
+      "oemTireSizes": {
+        "Classic": ["225/70R16"],
+        "Limited": ["225/70R16"],
+        "SE": ["215/75R15", "225/75R15"],
+        "Sport": ["225/70R15", "225/75R15"]
+      },
+      "allOemSizes": ["215/75R15", "225/70R15", "225/70R16", "225/75R15"],
+      "validation": "VALID",
+      "notes": "Both sizes are OEM for Sport/SE trims"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["215/75R15", "225/75R15"],
+      "oemTireSizes": {
+        "Classic": ["225/70R16"],
+        "Limited": ["225/70R16"],
+        "SE": ["215/75R15", "225/75R15"],
+        "Sport": ["225/70R15", "225/75R15"]
+      },
+      "allOemSizes": ["215/75R15", "225/70R15", "225/70R16", "225/75R15"],
+      "validation": "VALID",
+      "notes": "Both sizes are OEM for SE trim"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "currentTireSizes": ["225/70R16"],
+      "oemTireSizes": {
+        "Classic": ["225/70R16"],
+        "Limited": ["225/70R16"],
+        "SE": ["215/75R15", "225/75R15"],
+        "Sport": ["225/70R15", "225/75R15"]
+      },
+      "allOemSizes": ["215/75R15", "225/70R15", "225/70R16", "225/75R15"],
+      "validation": "VALID",
+      "notes": "225/70R16 is OEM for Classic/Limited trims"
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "235/45R19"],
+      "oemTireSizes": {
+        "Latitude": ["225/60R17"],
+        "Latitude Altitude": ["225/60R17", "225/60R18"],
+        "Limited": ["225/55R18"],
+        "Limited Altitude": ["235/45R19"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "allOemSizes": ["215/65R17", "225/55R18", "225/60R17", "225/60R18", "235/45R19"],
+      "validation": "REVIEW",
+      "notes": "235/55R18 not found in OEM data - may need verification"
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "235/45R19", "215/65R16", "215/60R17"],
+      "oemTireSizes": {
+        "Latitude": ["225/60R17", "225/60R18"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Sport": ["225/60R17"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "allOemSizes": ["215/65R17", "225/55R18", "225/60R17", "225/60R18", "235/45R19"],
+      "validation": "REVIEW",
+      "notes": "235/55R18, 215/65R16, 215/60R17 not found in 2025 OEM data"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "235/45R19", "215/65R16", "215/60R17"],
+      "oemTireSizes": {
+        "Latitude": ["225/60R17", "225/60R18"],
+        "Latitude Lux": ["225/55R18"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Sport": ["225/60R17"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "allOemSizes": ["215/65R17", "225/55R18", "225/60R17", "225/60R18", "235/45R19"],
+      "validation": "REVIEW",
+      "notes": "235/55R18, 215/65R16, 215/60R17 not in OEM data"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "235/45R19", "215/65R16", "215/60R17"],
+      "oemTireSizes": {
+        "Altitude": ["225/55R18"],
+        "High Altitude": ["235/45R19"],
+        "Latitude": ["225/60R17"],
+        "Latitude Lux": ["225/55R18"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Red": ["235/45R19"],
+        "Sport": ["225/60R17"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "allOemSizes": ["215/65R17", "225/55R18", "225/60R17", "235/45R19"],
+      "validation": "REVIEW",
+      "notes": "235/55R18, 215/65R16, 215/60R17 not in 2023 OEM data"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "235/45R19", "215/65R16", "215/60R17"],
+      "oemTireSizes": {
+        "Latitude": ["225/60R17"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Sport": ["225/60R17"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "allOemSizes": ["215/65R17", "225/55R18", "225/60R17", "235/45R19"],
+      "validation": "REVIEW",
+      "notes": "235/55R18, 215/65R16, 215/60R17 not in 2022 OEM data"
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "235/45R19", "215/65R16", "215/60R17"],
+      "oemTireSizes": {
+        "Latitude": ["225/60R17"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Sport": ["225/60R17"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "allOemSizes": ["215/65R17", "225/55R18", "225/60R17", "235/45R19"],
+      "validation": "REVIEW",
+      "notes": "235/55R18, 215/65R16, 215/60R17 not in 2021 OEM data"
+    },
+    {
+      "year": 2020,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "235/45R19", "215/65R16", "215/60R17"],
+      "oemTireSizes": {
+        "Latitude": ["225/60R17"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Sport": ["225/60R17"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "allOemSizes": ["215/65R17", "225/55R18", "225/60R17", "235/45R19"],
+      "validation": "REVIEW",
+      "notes": "235/55R18, 215/65R16, 215/60R17 not in 2020 OEM data"
+    },
+    {
+      "year": 2019,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "235/45R19", "215/65R16", "215/60R17"],
+      "oemTireSizes": {
+        "Latitude": ["225/60R17"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Sport": ["225/60R17"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "allOemSizes": ["215/65R17", "225/55R18", "225/60R17", "235/45R19"],
+      "validation": "REVIEW",
+      "notes": "235/55R18, 215/65R16, 215/60R17 not in 2019 OEM data"
+    },
+    {
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "235/45R19", "215/65R16", "215/60R17"],
+      "oemTireSizes": {
+        "Latitude": ["225/60R17"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Sport": ["225/60R17"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "allOemSizes": ["215/65R17", "225/55R18", "225/60R17", "235/45R19"],
+      "validation": "REVIEW",
+      "notes": "235/55R18, 215/65R16, 215/60R17 not in 2018 OEM data"
+    },
+    {
+      "year": 2017,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "235/45R19", "205/70R16", "215/60R17", "215/55R18", "225/65R16", "235/50R18"],
+      "oemTireSizes": {
+        "75th Anniversary Edition": ["215/65R17"],
+        "High Altitude": ["215/65R17", "225/60R17", "215/55R18"],
+        "Latitude": ["205/70R16", "215/60R17", "215/65R17", "225/60R17", "215/55R18"],
+        "Latitude 2nd Gen": ["225/60R17", "225/55R18"],
+        "Limited 2nd Gen": ["225/55R18", "235/45R19"],
+        "North": ["215/60R17", "215/65R17", "225/60R17"],
+        "Sport": ["205/70R16", "215/60R17", "215/65R17"],
+        "Sport 2nd Gen": ["215/65R16"],
+        "Sport SE": ["215/55R18"],
+        "Trailhawk 2nd Gen": ["215/65R17"]
+      },
+      "allOemSizes": ["205/70R16", "215/55R18", "215/60R17", "215/65R16", "215/65R17", "225/55R18", "225/60R17", "235/45R19"],
+      "validation": "REVIEW",
+      "notes": "235/55R18, 225/65R16, 235/50R18 not in 2017 OEM data"
+    },
+    {
+      "year": 2016,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["205/70R16", "215/60R17", "215/55R18", "225/65R16", "225/60R17", "235/50R18"],
+      "oemTireSizes": {
+        "75th Anniversary": ["215/55R18"],
+        "High Altitude": ["215/65R17", "225/60R17", "215/55R18"],
+        "Latitude": ["205/70R16", "215/60R17", "215/65R17", "225/60R17", "215/55R18"],
+        "North": ["215/60R17", "215/65R17", "225/60R17", "215/55R18"],
+        "Sport": ["205/70R16", "215/65R17"],
+        "Sport SE": ["215/55R18"]
+      },
+      "allOemSizes": ["205/70R16", "215/55R18", "215/60R17", "215/65R17", "225/60R17"],
+      "validation": "REVIEW",
+      "notes": "225/65R16, 235/50R18 not in 2016 OEM data"
+    },
+    {
+      "year": 2015,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["205/70R16", "215/60R17", "215/55R18", "225/65R16", "225/60R17", "235/50R18"],
+      "oemTireSizes": {
+        "High Altitude": ["215/60R17", "215/55R18"],
+        "Latitude": ["205/70R16", "215/60R17", "215/65R17"],
+        "Limited": ["215/55R18"],
+        "North": ["215/60R17", "215/65R17"],
+        "Sport": ["205/70R16", "215/60R17", "215/65R17"]
+      },
+      "allOemSizes": ["205/70R16", "215/55R18", "215/60R17", "215/65R17"],
+      "validation": "REVIEW",
+      "notes": "225/65R16, 225/60R17, 235/50R18 not in 2015 OEM data"
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["205/70R16", "215/60R17", "215/55R18", "225/65R16", "225/60R17", "235/50R18"],
+      "oemTireSizes": {
+        "Latitude": ["205/70R16", "215/60R17", "215/65R17"],
+        "Limited": ["215/65R17", "215/55R18"],
+        "North": ["205/70R16", "215/60R17", "215/65R17"],
+        "Sport": ["205/70R16", "215/60R17", "215/65R17"]
+      },
+      "allOemSizes": ["205/70R16", "215/55R18", "215/60R17", "215/65R17"],
+      "validation": "REVIEW",
+      "notes": "225/65R16, 225/60R17, 235/50R18 not in 2014 OEM data"
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["205/70R16", "215/60R17", "215/55R18", "225/65R16", "225/60R17", "235/50R18"],
+      "oemTireSizes": {
+        "Latitude": ["205/70R16", "215/60R17", "215/65R17"],
+        "Limited": ["215/65R17", "215/55R18"],
+        "Sport": ["205/70R16", "215/60R17", "215/65R17"]
+      },
+      "allOemSizes": ["205/70R16", "215/55R18", "215/60R17", "215/65R17"],
+      "validation": "REVIEW",
+      "notes": "225/65R16, 225/60R17, 235/50R18 not in 2013 OEM data"
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["205/70R16", "215/60R17", "215/55R18", "225/65R16", "225/60R17", "235/50R18"],
+      "oemTireSizes": {
+        "Latitude": ["205/70R16", "215/60R17", "215/65R17"],
+        "Limited": ["215/55R18"],
+        "Sport": ["205/70R16", "215/60R17", "215/65R17"]
+      },
+      "allOemSizes": ["205/70R16", "215/55R18", "215/60R17", "215/65R17"],
+      "validation": "REVIEW",
+      "notes": "225/65R16, 225/60R17, 235/50R18 not in 2012 OEM data"
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["205/70R16", "215/60R17", "215/55R18", "225/65R16", "225/60R17", "235/50R18"],
+      "oemTireSizes": {
+        "Latitude": ["205/70R16", "215/60R17", "215/65R17"],
+        "Limited": ["215/55R18"],
+        "Sport": ["205/70R16", "215/60R17", "215/65R17"]
+      },
+      "allOemSizes": ["205/70R16", "215/55R18", "215/60R17", "215/65R17"],
+      "validation": "REVIEW",
+      "notes": "225/65R16, 225/60R17, 235/50R18 not in 2011 OEM data"
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["205/70R16", "215/60R17", "215/55R18", "235/50R18"],
+      "oemTireSizes": {
+        "Limited": ["215/55R18"],
+        "Sport": ["215/60R17"]
+      },
+      "allOemSizes": ["215/55R18", "215/60R17"],
+      "validation": "REVIEW",
+      "notes": "205/70R16, 235/50R18 not confirmed in 2010 OEM data"
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["205/70R16", "215/60R17", "215/55R18"],
+      "oemTireSizes": {
+        "Limited": ["215/55R18"],
+        "Sport": ["215/60R17"]
+      },
+      "allOemSizes": ["215/55R18", "215/60R17"],
+      "validation": "REVIEW",
+      "notes": "205/70R16 not confirmed in 2009 OEM data"
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["205/70R16", "215/60R17", "215/55R18"],
+      "oemTireSizes": {
+        "Limited": ["215/55R18"],
+        "Sport": ["215/60R17"]
+      },
+      "allOemSizes": ["215/55R18", "215/60R17"],
+      "validation": "REVIEW",
+      "notes": "205/70R16 not confirmed in 2008 OEM data"
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": ["205/70R16", "215/60R17", "215/55R18"],
+      "oemTireSizes": {
+        "Limited": ["215/55R18"],
+        "Sport": ["215/60R17"]
+      },
+      "allOemSizes": ["215/55R18", "215/60R17"],
+      "validation": "REVIEW",
+      "notes": "205/70R16 not confirmed in 2007 OEM data"
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Compass",
+      "currentTireSizes": [],
+      "oemTireSizes": {},
+      "allOemSizes": [],
+      "validation": "NO_DATA",
+      "notes": "2006 Compass not yet in production - model started 2007"
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT255/75R17", "255/70R18", "LT285/65R18", "275/55R20"],
+      "oemTireSizes": {
+        "Mojave": ["285/70R17"],
+        "Mojave X": ["285/70R17"],
+        "Rubicon": ["285/70R17"],
+        "Rubicon X": ["285/70R17"],
+        "Sahara": ["255/70R18"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Willys 41": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/70R18", "255/75R17", "285/70R17"],
+      "validation": "REVIEW",
+      "notes": "LT255/75R17, LT285/65R18, 275/55R20, 255/70R17 need verification"
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R18", "LT285/70R17", "LT255/75R17", "275/55R20"],
+      "oemTireSizes": {
+        "Mojave": ["285/70R17"],
+        "Mojave X": ["285/70R17"],
+        "Nighthawk": ["275/55R20"],
+        "Rubicon": ["285/70R17"],
+        "Rubicon X": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/75R17", "275/55R20", "285/70R17"],
+      "validation": "VALID",
+      "notes": "All sizes match OEM or LT equivalents"
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT255/75R17", "255/70R18", "LT285/65R18", "275/55R20"],
+      "oemTireSizes": {
+        "Mojave": ["285/70R17"],
+        "Mojave X": ["285/70R17"],
+        "Nighthawk": ["275/55R20"],
+        "Rubicon": ["285/70R17"],
+        "Rubicon X": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/75R17", "275/55R20", "285/70R17"],
+      "validation": "REVIEW",
+      "notes": "255/70R17, LT285/65R18 not in standard OEM data"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R18", "LT285/70R17", "LT255/75R17", "275/55R20"],
+      "oemTireSizes": {
+        "Mojave": ["285/70R17"],
+        "Mojave X": ["285/70R17"],
+        "Nighthawk": ["275/55R20"],
+        "Rubicon": ["285/70R17"],
+        "Rubicon X": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/75R17", "275/55R20", "285/70R17"],
+      "validation": "VALID",
+      "notes": "All sizes match OEM or LT equivalents"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT255/75R17", "255/70R18", "LT285/65R18", "275/55R20"],
+      "oemTireSizes": {
+        "Mojave": ["285/70R17"],
+        "Mojave X": ["285/70R17"],
+        "Nighthawk": ["275/55R20"],
+        "Rubicon": ["285/70R17"],
+        "Rubicon X": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/75R17", "275/55R20", "285/70R17"],
+      "validation": "REVIEW",
+      "notes": "255/70R17, LT285/65R18 not in standard OEM data"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT255/75R17", "255/70R18", "LT285/65R18", "275/55R20"],
+      "oemTireSizes": {
+        "Freedom": ["245/75R17"],
+        "High Altitude": ["275/55R20"],
+        "Mojave": ["285/70R17"],
+        "Overland": ["255/70R18"],
+        "Rubicon": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Willys Sport": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/70R18", "255/75R17", "275/55R20", "285/70R17"],
+      "validation": "REVIEW",
+      "notes": "255/70R17, LT285/65R18 not in 2023 OEM data"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R18", "LT285/70R17", "LT255/75R17", "275/55R20"],
+      "oemTireSizes": {
+        "Freedom": ["245/75R17"],
+        "High Altitude": ["275/55R20"],
+        "Mojave": ["285/70R17"],
+        "Overland": ["255/70R18"],
+        "Rubicon": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Willys Sport": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/70R18", "255/75R17", "275/55R20", "285/70R17"],
+      "validation": "VALID",
+      "notes": "All sizes match OEM or LT equivalents"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT255/75R17", "255/70R18", "LT285/65R18", "275/55R20", "LT285/70R17"],
+      "oemTireSizes": {
+        "Altitude": ["245/75R17"],
+        "High Altitude": ["275/55R20"],
+        "Mojave": ["285/70R17"],
+        "Overland": ["255/70R18"],
+        "Rubicon": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Willys Sport": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/70R18", "255/75R17", "275/55R20", "285/70R17"],
+      "validation": "REVIEW",
+      "notes": "255/70R17, LT285/65R18 not in 2022 OEM data"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R18", "LT285/70R17", "LT255/75R17", "275/55R20"],
+      "oemTireSizes": {
+        "Altitude": ["245/75R17"],
+        "High Altitude": ["275/55R20"],
+        "Mojave": ["285/70R17"],
+        "Overland": ["255/70R18"],
+        "Rubicon": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Willys Sport": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/70R18", "255/75R17", "275/55R20", "285/70R17"],
+      "validation": "VALID",
+      "notes": "All sizes match OEM or LT equivalents"
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R18", "LT285/70R17", "LT255/75R17", "275/55R20"],
+      "oemTireSizes": {
+        "80th Anniversary Edition": ["255/70R18"],
+        "High Altitude": ["255/70R18"],
+        "Mojave": ["285/70R17"],
+        "Overland": ["255/70R18"],
+        "Rubicon": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Willys Sport": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/70R18", "255/75R17", "285/70R17"],
+      "validation": "REVIEW",
+      "notes": "275/55R20 not in 2021 OEM data (High Altitude had 255/70R18)"
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT255/75R17", "255/70R18", "LT285/65R18", "275/55R20"],
+      "oemTireSizes": {
+        "80th Anniversary Edition": ["255/70R18"],
+        "High Altitude": ["255/70R18"],
+        "Mojave": ["285/70R17"],
+        "Overland": ["255/70R18"],
+        "Rubicon": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Willys Sport": ["255/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/70R18", "255/75R17", "285/70R17"],
+      "validation": "REVIEW",
+      "notes": "255/70R17, LT285/65R18, 275/55R20 not in 2021 OEM data"
+    },
+    {
+      "year": 2020,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT255/75R17", "255/70R18", "LT285/65R18", "275/55R20", "LT285/70R17"],
+      "oemTireSizes": {
+        "Altitude": ["255/70R18"],
+        "Mojave": ["285/70R17"],
+        "North Edition": ["255/70R18"],
+        "Overland": ["255/70R18"],
+        "Rubicon": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/70R18", "285/70R17"],
+      "validation": "REVIEW",
+      "notes": "255/70R17, LT255/75R17, LT285/65R18, 275/55R20 need verification"
+    },
+    {
+      "year": 2020,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R18", "LT285/70R17", "LT255/75R17", "275/55R20"],
+      "oemTireSizes": {
+        "Altitude": ["255/70R18"],
+        "Mojave": ["285/70R17"],
+        "North Edition": ["255/70R18"],
+        "Overland": ["255/70R18"],
+        "Rubicon": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/70R18", "285/70R17"],
+      "validation": "REVIEW",
+      "notes": "LT255/75R17, 275/55R20 not in 2020 OEM data"
+    },
+    {
+      "year": 2019,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "currentTireSizes": ["245/75R17", "255/70R18", "LT285/70R17", "LT255/75R17", "275/55R20"],
+      "oemTireSizes": {
+        "Overland": ["255/70R18"],
+        "Rubicon": ["285/70R17"],
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "255/70R18", "285/70R17"],
+      "validation": "REVIEW",
+      "notes": "LT255/75R17, 275/55R20 not in 2019 OEM data (launch year)"
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Altitude": ["265/60R18", "265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/50R20"],
+        "Summit": ["265/50R20", "275/45R21"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "265/45R21"],
+      "oemTireSizes": {
+        "Altitude": ["265/60R18", "265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/50R20"],
+        "Summit": ["265/50R20", "275/45R21"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "REVIEW",
+      "notes": "265/45R21 not in standard 2026 OEM data"
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Altitude": ["265/60R18", "265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/50R20"],
+        "Summit": ["265/50R20", "275/45R21"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "265/45R21"],
+      "oemTireSizes": {
+        "Altitude": ["265/60R18", "265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/50R20"],
+        "Summit": ["265/50R20", "275/45R21"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "REVIEW",
+      "notes": "265/45R21 not in standard OEM data"
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "265/55R19", "275/45R21"],
+      "oemTireSizes": {
+        "Altitude": ["265/60R18", "265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/50R20"],
+        "Summit": ["265/50R20", "275/45R21"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2025 OEM data"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "265/55R19", "275/45R21"],
+      "oemTireSizes": {
+        "Altitude": ["265/60R18", "265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/50R20"],
+        "Summit": ["265/50R20", "275/45R21"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2024 OEM data"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Altitude": ["265/60R18", "265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/50R20"],
+        "Summit": ["265/50R20", "275/45R21"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "265/45R21"],
+      "oemTireSizes": {
+        "Altitude": ["265/60R18", "265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/50R20"],
+        "Summit": ["265/50R20", "275/45R21"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "REVIEW",
+      "notes": "265/45R21 not in standard OEM data"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "265/55R19", "275/45R21"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "Summit": ["265/50R20"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2023 OEM data"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "Summit": ["265/50R20"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "265/45R21"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "Summit": ["265/50R20"],
+        "Summit Reserve": ["275/45R21"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "REVIEW",
+      "notes": "265/45R21 not in standard OEM data"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "265/45R21"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "Summit": ["265/50R20"],
+        "Summit Reserve": ["275/45R21"],
+        "Trailhawk": ["265/60R18"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "REVIEW",
+      "notes": "265/45R21 not in standard OEM data"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "265/55R19", "275/45R21"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "Summit": ["265/50R20"],
+        "Summit Reserve": ["275/45R21"],
+        "Trailhawk": ["265/60R18"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2022 OEM data"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "Summit": ["265/50R20"],
+        "Summit Reserve": ["275/45R21"],
+        "Trailhawk": ["265/60R18"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "275/45R21"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "80th Anniversary Edition": ["265/50R20"],
+        "Freedom": ["265/50R20"],
+        "High Altitude": ["265/50R20"],
+        "Laredo E": ["265/60R18"],
+        "Laredo X": ["265/60R18", "265/50R20"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Limited X": ["265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"],
+        "Trackhawk": ["295/45R20"],
+        "Trailhawk": ["265/60R18"]
+      },
+      "allOemSizes": ["265/50R20", "265/60R18", "295/45R20"],
+      "validation": "REVIEW",
+      "notes": "245/70R17 not in 2021 OEM data (WK2 didn't have 17\" on most trims)"
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "245/70R17", "265/50R20", "265/55R19"],
+      "oemTireSizes": {
+        "80th Anniversary Edition": ["265/50R20"],
+        "Freedom": ["265/50R20"],
+        "High Altitude": ["265/50R20"],
+        "Laredo E": ["265/60R18"],
+        "Laredo X": ["265/60R18", "265/50R20"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Limited X": ["265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"],
+        "Trackhawk": ["295/45R20"],
+        "Trailhawk": ["265/60R18"]
+      },
+      "allOemSizes": ["265/50R20", "265/60R18", "295/45R20"],
+      "validation": "REVIEW",
+      "notes": "245/70R17, 265/55R19 not in 2021 OEM data"
+    },
+    {
+      "year": 2020,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "High Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17"],
+        "Laredo E": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Limited X": ["265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"],
+        "Trackhawk": ["295/45R20"],
+        "Trailhawk": ["265/60R18"],
+        "Upland": ["265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2020,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "High Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17"],
+        "Laredo E": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Limited X": ["265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"],
+        "Trackhawk": ["295/45R20"],
+        "Trailhawk": ["265/60R18"],
+        "Upland": ["265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2019,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "High Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17"],
+        "Laredo E": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Limited X": ["265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"],
+        "Trackhawk": ["295/45R20"],
+        "Trailhawk": ["265/60R18"],
+        "Upland": ["265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2019,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "High Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17"],
+        "Laredo E": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Limited X": ["265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"],
+        "Trackhawk": ["295/45R20"],
+        "Trailhawk": ["265/60R18"],
+        "Upland": ["265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "High Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17"],
+        "Laredo E": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Sterling Edition": ["265/50R20"],
+        "Summit": ["265/50R20"],
+        "Trackhawk": ["295/45R20"],
+        "Trailhawk": ["265/60R18"],
+        "Upland": ["265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "245/70R17", "265/55R19"],
+      "oemTireSizes": {
+        "Altitude": ["265/50R20"],
+        "High Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17"],
+        "Laredo E": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Sterling Edition": ["265/50R20"],
+        "Summit": ["265/50R20"],
+        "Trackhawk": ["295/45R20"],
+        "Trailhawk": ["265/60R18"],
+        "Upland": ["265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2018 OEM data"
+    },
+    {
+      "year": 2017,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"],
+        "Trailhawk": ["265/60R18"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2017,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "245/70R17", "265/55R19"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"],
+        "Trailhawk": ["265/60R18"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2017 OEM data"
+    },
+    {
+      "year": 2016,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "245/70R17", "265/55R19"],
+      "oemTireSizes": {
+        "75th Anniversary": ["265/60R18", "265/50R20"],
+        "High Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2016 OEM data"
+    },
+    {
+      "year": 2016,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "75th Anniversary": ["265/60R18", "265/50R20"],
+        "High Altitude": ["265/50R20"],
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2015,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "245/70R17", "265/55R19"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2015 OEM data"
+    },
+    {
+      "year": 2015,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "245/70R17", "265/50R20", "265/55R19"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/60R18", "265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2014 OEM data"
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "265/50R20", "245/70R17", "265/55R19"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/60R18", "265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2014 OEM data"
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17", "265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT": ["295/45R20"],
+        "Summit": ["265/60R18", "265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17"],
+        "Laredo X Package": ["265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "Overland Summit": ["265/50R20"],
+        "SRT8": ["295/45R20"],
+        "Trailhawk": ["265/60R18"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "245/70R17", "265/50R20", "265/55R19"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17"],
+        "Laredo X Package": ["265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "Overland Summit": ["265/50R20"],
+        "SRT8": ["295/45R20"],
+        "Trailhawk": ["265/60R18"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2013 OEM data"
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["245/70R17", "265/60R18", "265/50R20"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17"],
+        "Laredo X Package": ["265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT8": ["295/45R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "VALID",
+      "notes": "All current sizes are OEM"
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "245/70R17", "265/50R20", "265/55R19"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17"],
+        "Laredo X Package": ["265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"],
+        "SRT8": ["295/45R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18", "295/45R20"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2012 OEM data"
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "currentTireSizes": ["265/60R18", "245/70R17", "265/50R20", "265/55R19"],
+      "oemTireSizes": {
+        "Laredo": ["245/70R17"],
+        "Laredo X Package": ["265/60R18"],
+        "Limited": ["265/60R18", "265/50R20"],
+        "Overland": ["265/60R18", "265/50R20"]
+      },
+      "allOemSizes": ["245/70R17", "265/50R20", "265/60R18"],
+      "validation": "REVIEW",
+      "notes": "265/55R19 not in 2011 OEM data"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "valid": 27,
+    "review": 47,
+    "noData": 1,
+    "commonIssues": [
+      "235/55R18 for Compass 2018-2026 needs verification",
+      "265/55R19 for Grand Cherokee appears in DB but not in OEM sources",
+      "265/45R21 for Grand Cherokee needs verification",
+      "LT-prefix sizes are generally OEM for off-road trims (Rubicon, Mojave)",
+      "Some Compass sizes (225/65R16, 235/50R18) may be market-specific"
+    ]
+  }
+}

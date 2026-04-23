@@ -1,0 +1,3363 @@
+[
+  {
+    "id": "9e292b4a-a278-4ec4-89a0-66df05c86079",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 63",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b3acb319-b079-4f35-a10c-2a06cfd9027c",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 350 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d74d95af-0a2c-4693-9957-1577f8ef9024",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "31b951bd-3f4f-4a5a-b24b-c96ae56900ca",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 63 S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "97c1da0d-32c5-4c33-8b61-144045a4cfea",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "bd0dfe51-db87-41c4-b80d-efdced5cd9b7",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 53 4MATIC+",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "1ea5b057-0ca6-4b61-809b-0b25789425a0",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 400 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "1ccccdc0-94ae-4f7d-9071-99ccd7e3b25c",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 350 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2a0538d0-9dc4-4141-8513-9fd6a7e6121e",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 300 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "72e67ddb-ad9b-42ee-8784-a81ed3ef1032",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 53 4MATIC+",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7680112f-0ecc-4db7-b864-0fac9e5f90bc",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 400 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b712f1b7-0006-4543-bbe8-2b75b4261e22",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "1bf563ba-b699-4aa8-ac3c-23464f3250f4",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 63 S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6c40e5f5-1327-4f6d-9ad2-62d56c6de818",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4e56ba34-0e15-4898-8897-525acfd05562",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 450 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2e968f66-cd12-4dcb-a554-1d12debe5f34",
+    "year": 2020,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 63",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "75270b64-c2ce-4059-b84b-f3680bdc8b87",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "60410202-78f3-4d8b-b5cb-489cb254bb41",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "d8c405ba-1003-4824-9773-4567d0b56959",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 400 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "cf1c515d-d90c-4fec-97a3-21cdfdcfb2fd",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 450 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "1864c052-61ce-4017-8b14-e334ec84ef5c",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 53 4MATIC+",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e910cad7-089d-4d57-bff1-0a6c422ce01d",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 350 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "fb293e6d-2787-4085-94f4-87f124313252",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 300 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "eb455dce-6da2-4531-9ab1-c6889a3bba8b",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 63 S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "542c9e69-4ac1-4f89-878f-c43681c74e0a",
+    "year": 2021,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 63",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b3919278-a8f8-4914-adba-134de15b60b0",
+    "year": 2022,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 450 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "fe023fd6-7cd6-4937-a7ad-4c1ec2339cf8",
+    "year": 2022,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 53 4MATIC+",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c043a591-4beb-4928-8a44-32b9f4fafc44",
+    "year": 2022,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7fdc5536-acfd-4ea7-bf9e-96f6d175fe75",
+    "year": 2022,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4f4f74cc-99b1-4b59-baba-a95b6f6cdc9e",
+    "year": 2022,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 300 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "049ddea1-3d96-451f-bef2-7b7840273d11",
+    "year": 2022,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 350 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b1252875-03ca-4f90-a137-3ffdd0f0d54c",
+    "year": 2022,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 63 S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b466bb3c-0f92-4b2c-b678-3dcec5456e04",
+    "year": 2022,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 63",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "89aba513-d903-43fb-aa56-75ed699ed4cb",
+    "year": 2022,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 400 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2bc43607-ace4-47ca-ac97-b06bcb8caebe",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c8b94451-d901-4284-acfc-c98882b6d13a",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c0c0f8cd-ff6b-42c7-9933-3fa374dd6b3f",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 53 4MATIC+",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "bc6f43fe-247c-48c6-b703-fc4ede80ded1",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 63 S",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5277151e-2d18-4d4a-8061-577d5beb1142",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 350 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e3235544-878c-40eb-ad83-5ae8ee595efb",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 63",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2c24b0d4-4b68-46c8-a8d5-6647c146934b",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 400 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a9868eec-e7f8-454e-a86f-a0b98118eaba",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 450 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "cbe6ec54-8000-4819-8967-3e4f7371f259",
+    "year": 2023,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 300 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a06c7ce1-bb10-4f79-b1e6-9a5ce6ebdd6d",
+    "year": 2024,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 450 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "245/40R20",
+      "275/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "8df94c3d-d619-432b-80f2-9c83e9fb57d0",
+    "year": 2024,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21",
+      "285/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "88eab8d8-99a1-4447-af41-83397bdab141",
+    "year": 2024,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 350 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "245/40R20",
+      "275/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "05a9fecf-2ed7-4d27-b5f4-4e3af78bba97",
+    "year": 2024,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 53",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "245/40R20",
+      "275/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c25eeb49-b5d9-41d3-92bc-d2d5a86c91c1",
+    "year": 2025,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "AMG E 53",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "245/40R20",
+      "275/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "0220ef90-2769-491d-bca2-4d11f52068c1",
+    "year": 2025,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 350 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "245/40R20",
+      "275/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ec5afa45-83aa-4839-9d2c-ff66cf28a064",
+    "year": 2025,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E 450 4MATIC",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R18",
+      "245/45R19",
+      "245/40R20",
+      "275/35R20",
+      "265/35R21",
+      "295/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "316cfae2-c6a3-4a80-bde9-0dbd33504bf5",
+    "year": 2025,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21",
+      "285/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4a436386-ea1a-46c3-84bd-b5a28b938cdd",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E63 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      },
+      {
+        "width": 10.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7f4b784a-f869-4a11-9951-9138410c4f5b",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E450",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ae7aa1d8-e19d-4cc1-a64c-d7031fed20b0",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "255/35R20",
+      "285/30R20",
+      "255/35R21",
+      "285/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8b18c950-b62e-4db5-a427-200b33751f10",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E350",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "006c42e2-38fc-4fd9-92bb-eb279bf26081",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E300",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d98133b1-546e-4ddf-8b78-d16cf6e14d0b",
+    "year": 2026,
+    "make": "mercedes",
+    "model": "e-class",
+    "trim": "E53 AMG",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "265/35R20",
+      "295/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "34e031fb-e1f9-422c-bad7-839e0c8fe9a2",
+    "year": 2002,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "01299582-7a2d-4c46-8446-4c1e7fef50d9",
+    "year": 2003,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "2ac012b6-a19a-4067-a940-9ea861b81573",
+    "year": 2004,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "755d50fa-fcaf-4d9d-8f51-d0fddd620ca8",
+    "year": 2005,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ba8e4a2d-ae36-44b0-91bc-0a4b27e9155c",
+    "year": 2006,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "5b04b47a-b4cd-4972-a58e-fe3e13823d5d",
+    "year": 2007,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b9ca818d-91f7-4b24-b7fb-cba752a2d375",
+    "year": 2008,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e4489435-acfb-40eb-adc4-b2ef2e76649e",
+    "year": 2009,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "95c09660-c470-43a6-9313-990fff28d7e2",
+    "year": 2010,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d76240ce-5c49-4433-8216-0f141df69d86",
+    "year": 2011,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4331156b-5c07-4e92-b47c-41089552df08",
+    "year": 2012,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8596eac8-62ff-498e-a18c-23f54704191f",
+    "year": 2013,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b562e45c-187f-4792-8046-6224b5d8f0f1",
+    "year": 2014,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c197b915-6fe5-47d8-8e5a-2f6e15642f28",
+    "year": 2015,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "472e69ff-0444-4595-b563-cabf72c3a16b",
+    "year": 2016,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "45bcb6cf-3a38-44d0-a6ce-cd4c48e35714",
+    "year": 2017,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e9b1541e-ca67-45d2-8dd6-c1c787d364e3",
+    "year": 2018,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "20ca199c-d916-4912-add5-a5edb28533ba",
+    "year": 2019,
+    "make": "mercedes",
+    "model": "e-class-amg",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R18",
+      "255/35R19",
+      "265/35R19",
+      "275/30R20"
+    ],
+    "source": "catalog-gap-fill"
+  }
+]

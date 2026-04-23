@@ -1,0 +1,1043 @@
+{
+  "batchId": "66",
+  "processedAt": "2025-01-27T14:30:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "Accord",
+      "currentTireSizes": ["205/65R16", "225/50R17", "225/45R18", "215/60R16", "235/45R18", "245/40ZR19"],
+      "validatedTireSizes": ["215/60R16", "225/50R17", "235/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "LX-P 4cyl", "tireSize": "215/60R16", "wheelSize": "16"},
+        {"trim": "EX 4cyl/V6", "tireSize": "225/50R17", "wheelSize": "17"},
+        {"trim": "EX-L V6", "tireSize": "235/45R18", "wheelSize": "18"},
+        {"trim": "EX-L V6 6-Speed", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Corrected: Removed 205/65R16 (not OEM), 225/45R18 (incorrect). 245/40ZR19 normalized to 245/40R19"
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "Accord",
+      "currentTireSizes": ["205/60R16", "215/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/65R15", "205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "Value Package 4cyl", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "SE 4cyl", "tireSize": "205/65R15", "wheelSize": "15"},
+        {"trim": "LX/EX 4cyl/V6", "tireSize": "205/60R16", "wheelSize": "16"},
+        {"trim": "EX V6 6-Speed", "tireSize": "215/50R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Missing 15-inch sizes for base trims"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "Accord",
+      "currentTireSizes": ["205/60R16", "215/50R17"],
+      "validatedTireSizes": ["205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "EX 4cyl", "tireSize": "205/60R16", "wheelSize": "16"},
+        {"trim": "EX V6", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "EX V6 6-Speed", "tireSize": "215/50R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "Accord",
+      "currentTireSizes": ["205/60R16", "215/50R17", "205/65R15", "195/65R15", "215/60R16", "215/45ZR18"],
+      "validatedTireSizes": ["195/65R15", "205/65R15", "205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "DX/Value Package", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX 4cyl", "tireSize": "205/65R15", "wheelSize": "15"},
+        {"trim": "EX 4cyl/V6", "tireSize": "205/60R16", "wheelSize": "16"},
+        {"trim": "EX V6 6-Speed", "tireSize": "215/50R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 215/60R16 and 215/45ZR18 (not OEM)"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "Accord",
+      "currentTireSizes": ["205/60R16", "215/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/65R15", "205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "DX 4cyl", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX 4cyl", "tireSize": "205/65R15", "wheelSize": "15"},
+        {"trim": "EX 4cyl/V6", "tireSize": "205/60R16", "wheelSize": "16"},
+        {"trim": "EX V6 6-Speed", "tireSize": "215/50R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Missing 15-inch sizes for base trims"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Accord",
+      "currentTireSizes": ["205/60R16", "215/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/65R15", "205/60R16", "215/50R17"],
+      "trimData": [
+        {"trim": "DX 4cyl", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX 4cyl", "tireSize": "205/65R15", "wheelSize": "15"},
+        {"trim": "EX V6", "tireSize": "205/60R16", "wheelSize": "16"},
+        {"trim": "EX V6 6-Speed", "tireSize": "215/50R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Missing 15-inch sizes for base trims"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Accord",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/60R16"],
+      "trimData": [
+        {"trim": "DX/LX 4cyl", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "EX 4cyl", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "EX V6", "tireSize": "205/60R16", "wheelSize": "16"}
+      ],
+      "status": "validated",
+      "notes": "Corrected: 205/55R16 should be 205/60R16"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Accord",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/60R16"],
+      "trimData": [
+        {"trim": "DX/LX 4cyl", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "EX 4cyl", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "EX V6", "tireSize": "205/60R16", "wheelSize": "16"}
+      ],
+      "status": "validated",
+      "notes": "Corrected: 205/55R16 should be 205/60R16"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Accord",
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/60R16"],
+      "trimData": [
+        {"trim": "DX/LX 4cyl", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "EX 4cyl", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "EX V6", "tireSize": "205/60R16", "wheelSize": "16"}
+      ],
+      "status": "validated",
+      "notes": "Corrected: 205/55R16 should be 205/60R16"
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Accord Crosstour",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "EX", "tireSize": "225/65R17", "wheelSize": "17"},
+        {"trim": "EX-L", "tireSize": "225/60R18", "wheelSize": "18"},
+        {"trim": "EX-L V6", "tireSize": "225/60R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Added missing tire sizes"
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Accord Crosstour",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "EX", "tireSize": "225/65R17", "wheelSize": "17"},
+        {"trim": "EX-L", "tireSize": "225/60R18", "wheelSize": "18"},
+        {"trim": "EX-L V6", "tireSize": "225/60R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Added missing tire sizes"
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Accord Crosstour",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "EX", "tireSize": "225/65R17", "wheelSize": "17"},
+        {"trim": "EX-L V6", "tireSize": "225/60R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Added missing tire sizes"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Accord Crosstour",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "EX", "tireSize": "225/65R17", "wheelSize": "17"},
+        {"trim": "EX-L", "tireSize": "225/60R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Added missing tire sizes"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Accord Crosstour",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "EX", "tireSize": "225/65R17", "wheelSize": "17"},
+        {"trim": "EX-L", "tireSize": "225/60R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Added missing tire sizes"
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "235/45R17", "235/40R18", "265/30R19"],
+      "validatedTireSizes": ["215/55R16", "235/40R18", "265/30R19"],
+      "trimData": [
+        {"trim": "LX/Sport Hybrid", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "Sport/Si", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "265/30R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "235/45R17 not standard OEM for 2026, removed"
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "235/45R17", "235/40R18", "265/30R19"],
+      "validatedTireSizes": ["215/55R16", "235/40R18", "265/30R19"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "Sport/Si", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "265/30R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "235/45R17 not standard OEM for 2025"
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "235/45R17", "235/40R18", "265/30R19", "235/40ZR18"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/40R18", "265/30R19"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "EX/EX-L", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "Sport/Si", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "265/30R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Corrected 17-inch to 215/50R17, normalized 235/40ZR18"
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "235/45R17", "235/40R18", "265/30R19"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/40R18", "265/30R19"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "EX/EX-L", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "Sport Touring", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "265/30R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Corrected 17-inch to 215/50R17"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "235/45R17", "235/40R18", "265/30R19"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/40R18", "265/30R19"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "EX-L", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "Sport/Sport Touring", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "265/30R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Corrected 17-inch to 215/50R17"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "215/50R17", "235/45R17", "235/40R18", "245/30R20"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/40R18", "245/30R20"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "Sport/EX/EX-L/Touring", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "Sport Hatchback/Si", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "245/30R20", "wheelSize": "20"}
+      ],
+      "status": "validated",
+      "notes": "Removed 235/45R17 (not standard OEM)"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "215/50R17", "235/45R17", "235/40R18", "245/30R20", "235/40ZR18"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/40R18", "245/30R20"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "Sport/EX/EX-L/Touring", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "Sport Hatchback/Si", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "245/30R20", "wheelSize": "20"}
+      ],
+      "status": "validated",
+      "notes": "Normalized ZR rating, removed 235/45R17"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/50R17", "235/40ZR18", "215/55R16"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/40R18", "245/30R20"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "Sport/EX/EX-L/Touring", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "Sport Hatchback/Si", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "245/30R20", "wheelSize": "20"}
+      ],
+      "status": "validated",
+      "notes": "Duplicate entry - normalized ZR rating"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "215/50R17", "235/45R17", "235/40R18", "245/30R20"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/40R18", "245/30R20"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "Sport/EX/EX-L/Touring", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "Si", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "245/30R20", "wheelSize": "20"}
+      ],
+      "status": "validated",
+      "notes": "Removed 235/45R17 (not standard OEM)"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/50R17", "235/40ZR18", "215/55R16"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/40R18", "245/30R20"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "Sport/EX/EX-L/Touring", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "Si", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "245/30R20", "wheelSize": "20"}
+      ],
+      "status": "validated",
+      "notes": "Duplicate entry - normalized ZR rating"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "215/50R17", "235/45R17", "235/40R18", "245/30R20"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/40R18", "245/30R20"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "EX/EX-L/Touring", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "Sport Hatchback/Si", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "245/30R20", "wheelSize": "20"}
+      ],
+      "status": "validated",
+      "notes": "Removed 235/45R17 (not standard OEM)"
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "215/50R17", "235/45R17", "235/40R18", "245/30R20", "235/40ZR18"],
+      "validatedTireSizes": ["215/55R16", "215/50R17", "235/40R18", "235/35R19", "245/30R20"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "EX/EX-L/Touring", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "Sport Hatchback/Si", "tireSize": "235/40R18", "wheelSize": "18"},
+        {"trim": "Type R", "tireSize": "235/35R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Type R 2017 uses 235/35R19. Removed 235/45R17, 245/30R20"
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["215/55R16", "215/50R17", "235/45R17", "235/40R18", "245/30R20", "235/40ZR18"],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "EX/EX-L/Touring", "tireSize": "215/50R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "2016 10th gen launch - no Si/Type R. Removed 18/20 inch sizes"
+    },
+    {
+      "year": 2015,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/40R18", "195/65R15", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "trimData": [
+        {"trim": "Hybrid", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX/EX", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "EX-L", "tireSize": "215/45R17", "wheelSize": "17"},
+        {"trim": "Si", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Removed 205/50R17 (not standard OEM)"
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/40R18", "195/65R15", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "trimData": [
+        {"trim": "Hybrid/HF", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX/EX", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "EX-L", "tireSize": "215/45R17", "wheelSize": "17"},
+        {"trim": "Si", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Removed 205/50R17 (not standard OEM)"
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/40R18", "195/65R15", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "trimData": [
+        {"trim": "Hybrid/HF", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX/EX", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "EX-L", "tireSize": "215/45R17", "wheelSize": "17"},
+        {"trim": "Si", "tireSize": "225/40R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Removed 205/50R17 (not standard OEM)"
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/40R18"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "Hybrid/HF", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX/EX", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Si", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/40R18 (9th gen Si uses 215/45R17)"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["205/55R16", "215/45R17"],
+      "validatedTireSizes": ["205/55R16", "215/45R17", "215/40R18"],
+      "trimData": [
+        {"trim": "LX/EX", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Si", "tireSize": "215/45R17", "wheelSize": "17"},
+        {"trim": "Si (optional)", "tireSize": "215/40R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Added optional Si 18-inch size"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["205/55R16", "215/45R17", "195/65R15", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "DX/Hybrid", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX/EX/EX-L", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Si", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 205/50R17 (not standard OEM)"
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["205/55R16", "215/45R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "DX/GX/Hybrid", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX/EX/EX-L", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Si", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Added missing 15-inch size"
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["205/55R16", "215/45R17", "195/65R15", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "DX/GX/Hybrid", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX/EX", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Si", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 205/50R17 (not standard OEM)"
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["205/55R16", "215/45R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "DX/GX/Hybrid", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX/EX", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Si", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Added missing 15-inch size"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["205/55R16", "215/45R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "DX/Hybrid", "tireSize": "195/65R15", "wheelSize": "15"},
+        {"trim": "LX/EX", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "Si", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Added missing 15-inch size"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["185/70R14", "195/60R15", "205/55R16"],
+      "validatedTireSizes": ["185/70R14", "195/60R15", "205/55R16"],
+      "trimData": [
+        {"trim": "DX/GX/Value Package", "tireSize": "185/70R14", "wheelSize": "14"},
+        {"trim": "LX/EX", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "Si", "tireSize": "205/55R16", "wheelSize": "16"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["185/70R14", "195/60R15", "205/55R16"],
+      "validatedTireSizes": ["185/70R14", "195/60R15", "205/55R16"],
+      "trimData": [
+        {"trim": "DX/Value Package", "tireSize": "185/70R14", "wheelSize": "14"},
+        {"trim": "LX/EX", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "Si", "tireSize": "205/55R16", "wheelSize": "16"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["185/70R14", "195/60R15", "205/55R16"],
+      "validatedTireSizes": ["185/70R14", "185/65R15", "195/60R15", "205/55R16"],
+      "trimData": [
+        {"trim": "DX", "tireSize": "185/70R14", "wheelSize": "14"},
+        {"trim": "EX", "tireSize": "185/65R15", "wheelSize": "15"},
+        {"trim": "LX", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "Si", "tireSize": "205/55R16", "wheelSize": "16"}
+      ],
+      "status": "validated",
+      "notes": "Added 185/65R15 for EX trim"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["185/70R14", "195/60R15", "205/55R16"],
+      "validatedTireSizes": ["185/70R14", "185/65R15", "195/60R15"],
+      "trimData": [
+        {"trim": "DX", "tireSize": "185/70R14", "wheelSize": "14"},
+        {"trim": "EX", "tireSize": "185/65R15", "wheelSize": "15"},
+        {"trim": "LX", "tireSize": "185/65R15", "wheelSize": "15"},
+        {"trim": "Si", "tireSize": "195/60R15", "wheelSize": "15"}
+      ],
+      "status": "validated",
+      "notes": "Corrected: 2002 Si uses 195/60R15, not 205/55R16"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["185/70R14", "195/60R15", "205/55R16"],
+      "validatedTireSizes": ["185/70R14", "185/65R15", "195/60R15"],
+      "trimData": [
+        {"trim": "DX", "tireSize": "185/70R14", "wheelSize": "14"},
+        {"trim": "EX", "tireSize": "185/65R15", "wheelSize": "15"},
+        {"trim": "LX", "tireSize": "185/65R15", "wheelSize": "15"},
+        {"trim": "Si", "tireSize": "195/60R15", "wheelSize": "15"}
+      ],
+      "status": "validated",
+      "notes": "Corrected: 2001 Si uses 195/60R15, not 205/55R16"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Civic",
+      "currentTireSizes": ["185/65R14", "195/55R15", "195/60R15"],
+      "validatedTireSizes": ["185/65R14", "195/55R15", "195/60R15"],
+      "trimData": [
+        {"trim": "DX/CX", "tireSize": "185/65R14", "wheelSize": "14"},
+        {"trim": "HX", "tireSize": "195/55R15", "wheelSize": "15"},
+        {"trim": "EX/Si", "tireSize": "195/60R15", "wheelSize": "15"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Clarity",
+      "currentTireSizes": ["235/45R18"],
+      "validatedTireSizes": ["235/45R18"],
+      "trimData": [
+        {"trim": "Plug-In Hybrid/Fuel Cell", "tireSize": "235/45R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Current size matches OEM spec"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Clarity",
+      "currentTireSizes": ["235/45R18"],
+      "validatedTireSizes": ["235/45R18"],
+      "trimData": [
+        {"trim": "Plug-In Hybrid/Electric/Fuel Cell", "tireSize": "235/45R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Current size matches OEM spec"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Clarity",
+      "currentTireSizes": ["235/45R18"],
+      "validatedTireSizes": ["235/45R18"],
+      "trimData": [
+        {"trim": "Plug-In Hybrid/Electric/Fuel Cell", "tireSize": "235/45R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Current size matches OEM spec"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Clarity",
+      "currentTireSizes": ["235/45R18"],
+      "validatedTireSizes": ["235/45R18"],
+      "trimData": [
+        {"trim": "Plug-In Hybrid/Electric/Fuel Cell", "tireSize": "235/45R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Current size matches OEM spec"
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "Clarity",
+      "currentTireSizes": ["235/45R18"],
+      "validatedTireSizes": ["235/45R18"],
+      "trimData": [
+        {"trim": "Fuel Cell", "tireSize": "235/45R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Current size matches OEM spec (2017 was Fuel Cell only)"
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "Clarity",
+      "currentTireSizes": ["235/45R18"],
+      "validatedTireSizes": ["235/45R18"],
+      "trimData": [
+        {"trim": "Fuel Cell", "tireSize": "235/45R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Current size matches OEM spec"
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "235/65R17", "wheelSize": "17"},
+        {"trim": "EX/EX-L/Sport Hybrid", "tireSize": "235/60R18", "wheelSize": "18"},
+        {"trim": "Sport-L/Touring", "tireSize": "235/55R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "235/65R17", "wheelSize": "17"},
+        {"trim": "EX/EX-L/Sport Hybrid", "tireSize": "235/60R18", "wheelSize": "18"},
+        {"trim": "Sport-L/Touring", "tireSize": "235/55R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "235/65R17", "wheelSize": "17"},
+        {"trim": "EX/EX-L/Sport Hybrid", "tireSize": "235/60R18", "wheelSize": "18"},
+        {"trim": "Sport Touring Hybrid", "tireSize": "235/55R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "235/65R17", "wheelSize": "17"},
+        {"trim": "EX/EX-L/Sport Hybrid", "tireSize": "235/60R18", "wheelSize": "18"},
+        {"trim": "Sport Touring Hybrid", "tireSize": "235/55R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trimData": [
+        {"trim": "LX/EX", "tireSize": "235/65R17", "wheelSize": "17"},
+        {"trim": "EX-L/Hybrid EX-L", "tireSize": "235/60R18", "wheelSize": "18"},
+        {"trim": "Touring/Hybrid Touring", "tireSize": "235/55R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trimData": [
+        {"trim": "LX/Special Edition", "tireSize": "235/65R17", "wheelSize": "17"},
+        {"trim": "EX/EX-L/Hybrid", "tireSize": "235/60R18", "wheelSize": "18"},
+        {"trim": "Touring", "tireSize": "235/55R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "235/55ZR19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "235/65R17", "wheelSize": "17"},
+        {"trim": "EX/EX-L/Hybrid", "tireSize": "235/60R18", "wheelSize": "18"},
+        {"trim": "Touring", "tireSize": "235/55R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Normalized 235/55ZR19 to 235/55R19"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "235/65R17", "wheelSize": "17"},
+        {"trim": "EX/EX-L", "tireSize": "235/60R18", "wheelSize": "18"},
+        {"trim": "Touring", "tireSize": "235/55R19", "wheelSize": "19"}
+      ],
+      "status": "validated",
+      "notes": "Current sizes match OEM specs"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "235/65R17", "wheelSize": "17"},
+        {"trim": "EX/EX-L/Touring", "tireSize": "235/60R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Removed 235/55R19 (2018 Touring used 18-inch)"
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "235/65R17", "wheelSize": "17"},
+        {"trim": "EX/EX-L/Touring", "tireSize": "235/60R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Removed 235/55R19 (5th gen launched with 17/18 only)"
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["215/70R16", "225/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "LX (FWD base)", "tireSize": "215/70R16", "wheelSize": "16"},
+        {"trim": "LX/EX/SE", "tireSize": "225/65R17", "wheelSize": "17"},
+        {"trim": "EX-L/Touring", "tireSize": "225/60R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Added 215/70R16 for base LX trim"
+    },
+    {
+      "year": 2015,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["215/70R16", "225/65R17", "225/60R18"],
+      "trimData": [
+        {"trim": "LX (base)", "tireSize": "215/70R16", "wheelSize": "16"},
+        {"trim": "LX/EX", "tireSize": "225/65R17", "wheelSize": "17"},
+        {"trim": "EX-L/Touring", "tireSize": "225/60R18", "wheelSize": "18"}
+      ],
+      "status": "validated",
+      "notes": "Added 215/70R16 for base LX trim"
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["215/70R16", "225/65R17"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/70R16", "wheelSize": "16"},
+        {"trim": "EX/EX-L", "tireSize": "225/65R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/60R18 (4th gen did not have 18-inch option)"
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["215/70R16", "225/65R17"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/70R16", "wheelSize": "16"},
+        {"trim": "EX/EX-L", "tireSize": "225/65R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/60R18 (4th gen did not have 18-inch option)"
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["215/70R16", "225/65R17"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/70R16", "wheelSize": "16"},
+        {"trim": "EX/EX-L", "tireSize": "225/65R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/60R18 (4th gen did not have 18-inch option)"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["215/70R16", "225/65R17"],
+      "trimData": [
+        {"trim": "LX", "tireSize": "215/70R16", "wheelSize": "16"},
+        {"trim": "EX/EX-L/SE", "tireSize": "225/65R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/60R18 (3rd gen max was 17-inch)"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "LX/EX/EX-L", "tireSize": "225/65R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/60R18 (3rd gen all trims used 225/65R17)"
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "LX/EX/EX-L", "tireSize": "225/65R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/60R18 (3rd gen all trims used 225/65R17)"
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "LX/EX/EX-L", "tireSize": "225/65R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/60R18 (3rd gen all trims used 225/65R17)"
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["225/65R17", "225/60R18"],
+      "validatedTireSizes": ["225/65R17"],
+      "trimData": [
+        {"trim": "LX/EX/EX-L", "tireSize": "225/65R17", "wheelSize": "17"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/60R18 (3rd gen launch - all trims 225/65R17)"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": ["215/65R16"],
+      "trimData": [
+        {"trim": "LX/EX/SE", "tireSize": "215/65R16", "wheelSize": "16"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/60R17 (2nd gen all trims used 16-inch)"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": ["215/65R16"],
+      "trimData": [
+        {"trim": "LX/EX/SE", "tireSize": "215/65R16", "wheelSize": "16"}
+      ],
+      "status": "validated",
+      "notes": "Removed 225/60R17 (2nd gen all trims used 16-inch)"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": ["205/70R15"],
+      "trimData": [
+        {"trim": "LX/EX", "tireSize": "205/70R15", "wheelSize": "15"}
+      ],
+      "status": "validated",
+      "notes": "Corrected: 2004 CR-V used 15-inch wheels (205/70R15)"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": ["205/70R15"],
+      "trimData": [
+        {"trim": "LX/EX", "tireSize": "205/70R15", "wheelSize": "15"}
+      ],
+      "status": "validated",
+      "notes": "Corrected: 2003 CR-V used 15-inch wheels (205/70R15)"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["215/65R16", "225/60R17"],
+      "validatedTireSizes": ["205/70R15"],
+      "trimData": [
+        {"trim": "LX/EX", "tireSize": "205/70R15", "wheelSize": "15"}
+      ],
+      "status": "validated",
+      "notes": "Corrected: 2002 CR-V used 15-inch wheels (205/70R15)"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["205/70R15", "215/65R16"],
+      "validatedTireSizes": ["205/70R15"],
+      "trimData": [
+        {"trim": "LX/EX/SE", "tireSize": "205/70R15", "wheelSize": "15"}
+      ],
+      "status": "validated",
+      "notes": "Removed 215/65R16 (1st gen all trims used 15-inch)"
+    }
+  ],
+  "summary": {
+    "totalValidated": 75,
+    "sizesAdded": 23,
+    "sizesRemoved": 31,
+    "sizesModified": 8,
+    "perfectMatch": 19
+  }
+}

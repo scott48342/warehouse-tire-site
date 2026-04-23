@@ -1,0 +1,1184 @@
+{
+  "batch": "batch-06-domestic",
+  "verificationDate": "2026-04-23",
+  "totalVehicles": 75,
+  "validVehicles": 55,
+  "invalidVehicles": 20,
+  "summary": {
+    "invalidYearFlags": [
+      {
+        "vehicle": "2013 Chevrolet Trailblazer",
+        "reason": "NOT SOLD IN US - Trailblazer discontinued in US 2009, returned 2021. 2013 model sold only in Brazil/Asia.",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2015 Chevrolet Trailblazer",
+        "reason": "NOT SOLD IN US - Trailblazer discontinued in US 2009, returned 2021. 2015 model sold only in Brazil/Asia.",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2016 Chevrolet Trailblazer",
+        "reason": "NOT SOLD IN US - Trailblazer discontinued in US 2009, returned 2021. 2016 model sold only in Brazil/Asia.",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2017 Chevrolet Trailblazer",
+        "reason": "NOT SOLD IN US - Trailblazer discontinued in US 2009, returned 2021. 2017 model sold only in Brazil/Asia.",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2018 Chevrolet Trailblazer",
+        "reason": "NOT SOLD IN US - Trailblazer discontinued in US 2009, returned 2021. 2018 model sold only in Brazil/Asia.",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2019 Chevrolet Trailblazer",
+        "reason": "NOT SOLD IN US - Trailblazer discontinued in US 2009, returned 2021. 2019 model sold only in Brazil/Asia.",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2026 Chevrolet Trailblazer",
+        "reason": "FUTURE MODEL YEAR - Not yet released/confirmed for 2026 MY.",
+        "action": "FLAG_REVIEW"
+      },
+      {
+        "vehicle": "2013 Chevrolet Trax",
+        "reason": "NOT SOLD IN US - Trax launched in US for 2015 model year. 2013 sold internationally only.",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2014 Chevrolet Trax",
+        "reason": "NOT SOLD IN US - Trax launched in US for 2015 model year. 2014 sold internationally only.",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2026 Chevrolet Trax",
+        "reason": "FUTURE MODEL YEAR - Not yet released/confirmed for 2026 MY.",
+        "action": "FLAG_REVIEW"
+      },
+      {
+        "vehicle": "2010 Chevrolet Volt",
+        "reason": "INVALID MODEL YEAR - Volt first model year was 2011 (released Dec 2010 as 2011 MY).",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2010 Chrysler 200",
+        "reason": "INVALID MODEL YEAR - Chrysler 200 first model year was 2011. Replaced Sebring.",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2004 Chrysler 300",
+        "reason": "INVALID MODEL YEAR - Chrysler 300 (modern) first model year was 2005. Production started Jan 2004 for 2005 MY.",
+        "action": "REMOVE"
+      },
+      {
+        "vehicle": "2003 Chrysler Crossfire",
+        "reason": "INVALID MODEL YEAR - Crossfire first model year was 2004. Unveiled 2002 LA Auto Show as 2004 model.",
+        "action": "REMOVE"
+      }
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "Car and Driver specs"],
+      "notes": "GMT900 platform, shared with Tahoe/Yukon XL"
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "Car and Driver specs"],
+      "notes": "GMT900 platform"
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "Car and Driver specs"],
+      "notes": "GMT900 platform"
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "Car and Driver specs"],
+      "notes": "GMT900 platform"
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "Car and Driver specs"],
+      "notes": "GMT900 platform"
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "Car and Driver specs"],
+      "notes": "GMT900 platform"
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "Car and Driver specs"],
+      "notes": "GMT900 platform"
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "status": "VALID",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "20x8.5", "oemTireSize": "275/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "Car and Driver specs"],
+      "notes": "Final year of GMT900 platform"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"},
+        {"name": "LT", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT800 platform, 8-lug HD"
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"},
+        {"name": "LT", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT800 platform, 8-lug HD"
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"},
+        {"name": "LT", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT800 platform, 8-lug HD"
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"},
+        {"name": "LT", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT800 platform, 8-lug HD"
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"},
+        {"name": "LT", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT800 platform, 8-lug HD"
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"},
+        {"name": "LT", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT800 platform, 8-lug HD"
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"},
+        {"name": "LT", "oemWheelSize": "16x7", "oemTireSize": "LT245/75R16"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "Final year GMT800 platform"
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT900 platform, 8-lug HD"
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT900 platform, 8-lug HD"
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT900 platform, 8-lug HD"
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT900 platform, 8-lug HD"
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT900 platform, 8-lug HD"
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "bbwheelsonline.com verified specs"],
+      "notes": "GMT900 platform, 8-lug HD"
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Suburban 2500",
+      "status": "VALID",
+      "boltPattern": "8x165.1",
+      "hubBore": 116.7,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LT", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7.5", "oemTireSize": "265/70R17"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "Wikipedia - Suburban 2500 discontinued after 2013"],
+      "notes": "FINAL YEAR - Suburban 2500 discontinued after 2013 model year"
+    },
+    {
+      "year": 2001,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["JD Power", "GM Authority"],
+      "notes": "GMT360 platform, first model year"
+    },
+    {
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["JD Power", "bbwheelsonline.com verified specs"],
+      "notes": "GMT360 platform"
+    },
+    {
+      "year": 2003,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["JD Power", "bbwheelsonline.com verified specs"],
+      "notes": "GMT360 platform"
+    },
+    {
+      "year": 2004,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["JD Power", "bbwheelsonline.com verified specs"],
+      "notes": "GMT360 platform"
+    },
+    {
+      "year": 2005,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LTZ", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"}
+      ],
+      "confidence": "high",
+      "sources": ["JD Power", "bbwheelsonline.com verified specs"],
+      "notes": "GMT360 platform"
+    },
+    {
+      "year": 2006,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "SS", "oemWheelSize": "20x8", "oemTireSize": "255/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["JD Power", "Motor Trend - Trailblazer SS specs"],
+      "notes": "GMT360 platform, SS added with 6.0L V8"
+    },
+    {
+      "year": 2007,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "SS", "oemWheelSize": "20x8", "oemTireSize": "255/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["JD Power", "bbwheelsonline.com verified specs"],
+      "notes": "GMT360 platform"
+    },
+    {
+      "year": 2008,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "SS", "oemWheelSize": "20x8", "oemTireSize": "255/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["JD Power", "bbwheelsonline.com verified specs"],
+      "notes": "GMT360 platform"
+    },
+    {
+      "year": 2009,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "6x127",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "245/65R17"},
+        {"name": "SS", "oemWheelSize": "20x8", "oemTireSize": "255/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["Cars.com", "JD Power - ended after 2009"],
+      "notes": "FINAL US YEAR - Discontinued, replaced by Traverse"
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US - Brazil/Asia market only (2012-2020 international)",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2015,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US - Brazil/Asia market only (2012-2020 international)",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US - Brazil/Asia market only (2012-2020 international)",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US - Brazil/Asia market only (2012-2020 international)",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US - Brazil/Asia market only (2012-2020 international)",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2019,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US - Brazil/Asia market only (2012-2020 international)",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2021,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "Activ", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "RS", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["Wikipedia Trailblazer crossover", "GM Authority"],
+      "notes": "All-new subcompact crossover, GM VSS-S platform"
+    },
+    {
+      "year": 2022,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "Activ", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "RS", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority"],
+      "notes": "GM VSS-S platform"
+    },
+    {
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "Activ", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "RS", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority"],
+      "notes": "GM VSS-S platform"
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "Activ", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "RS", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority"],
+      "notes": "GM VSS-S platform"
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "Activ", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "RS", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18"}
+      ],
+      "confidence": "medium",
+      "sources": ["GM Authority - expected continuation"],
+      "notes": "GM VSS-S platform"
+    },
+    {
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "Trailblazer",
+      "status": "FLAGGED",
+      "reason": "FUTURE MODEL YEAR - Not yet confirmed/released",
+      "action": "FLAG_REVIEW"
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US - Trax released in US for 2015 model year only",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "INVALID",
+      "reason": "NOT SOLD IN US - Trax released in US for 2015 model year only",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/70R16"},
+        {"name": "LT", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "go-parts.com wheel guide"],
+      "notes": "Gamma II platform, Gen 1"
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/70R16"},
+        {"name": "LT", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"},
+        {"name": "Premier", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority", "go-parts.com wheel guide"],
+      "notes": "Gamma II platform, Gen 1, refreshed"
+    },
+    {
+      "year": 2019,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/70R16"},
+        {"name": "LT", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"},
+        {"name": "Premier", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority"],
+      "notes": "Gamma II platform, Gen 1"
+    },
+    {
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/70R16"},
+        {"name": "LT", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"},
+        {"name": "Premier", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority"],
+      "notes": "Gamma II platform, Gen 1"
+    },
+    {
+      "year": 2021,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/70R16"},
+        {"name": "LT", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority"],
+      "notes": "Gamma II platform, Gen 1"
+    },
+    {
+      "year": 2022,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/70R16"},
+        {"name": "LT", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["GM Authority"],
+      "notes": "Gamma II platform, Gen 1 - FINAL YEAR Gen 1"
+    },
+    {
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "1RS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LT", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"},
+        {"name": "2RS", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"},
+        {"name": "Activ", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["traxforum.com", "GM Authority"],
+      "notes": "ALL-NEW GEN 2 - VSS-F platform, new bolt pattern!"
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "1RS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LT", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"},
+        {"name": "2RS", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"},
+        {"name": "Activ", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["traxforum.com verified specs", "Reddit ChevyTrax"],
+      "notes": "VSS-F platform, Gen 2"
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "LS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "1RS", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"},
+        {"name": "LT", "oemWheelSize": "18x7.5", "oemTireSize": "235/55R18"},
+        {"name": "2RS", "oemWheelSize": "19x8", "oemTireSize": "225/45R19"},
+        {"name": "Activ", "oemWheelSize": "17x7", "oemTireSize": "215/60R17"}
+      ],
+      "confidence": "medium",
+      "sources": ["GM Authority - expected continuation"],
+      "notes": "VSS-F platform, Gen 2"
+    },
+    {
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "status": "FLAGGED",
+      "reason": "FUTURE MODEL YEAR - Not yet confirmed/released",
+      "action": "FLAG_REVIEW"
+    },
+    {
+      "year": 2010,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "INVALID",
+      "reason": "INVALID MODEL YEAR - Volt first model year was 2011 (released Dec 2010 as 2011 MY)",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2011,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["Wikipedia Volt", "Green Car Reports"],
+      "notes": "Gen 1, Delta II platform, first model year"
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["Wikipedia Volt"],
+      "notes": "Gen 1, Delta II platform"
+    },
+    {
+      "year": 2013,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["Wikipedia Volt"],
+      "notes": "Gen 1, Delta II platform"
+    },
+    {
+      "year": 2014,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["Wikipedia Volt"],
+      "notes": "Gen 1, Delta II platform"
+    },
+    {
+      "year": 2015,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["Wikipedia Volt"],
+      "notes": "Gen 1, Delta II platform - FINAL YEAR Gen 1"
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"},
+        {"name": "Premier", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["Autoevolution", "go-parts.com wheel guide"],
+      "notes": "ALL-NEW Gen 2 - NEW BOLT PATTERN (5x105)"
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"},
+        {"name": "Premier", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["Autoevolution"],
+      "notes": "Gen 2"
+    },
+    {
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"},
+        {"name": "Premier", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["Autoevolution"],
+      "notes": "Gen 2"
+    },
+    {
+      "year": 2019,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "status": "VALID",
+      "boltPattern": "5x105",
+      "hubBore": 56.5,
+      "trims": [
+        {"name": "LT", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"},
+        {"name": "Premier", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["Green Car Reports - Volt 2011-2019"],
+      "notes": "Gen 2 - FINAL MODEL YEAR, Volt discontinued"
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "INVALID",
+      "reason": "INVALID MODEL YEAR - Chrysler 200 first model year was 2011. 2010 was the Sebring.",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "17x6.5", "oemTireSize": "215/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x6.5", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "235/45R18"},
+        {"name": "S", "oemWheelSize": "18x7", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["JD Power", "jordistireshop.com bolt pattern guide"],
+      "notes": "Gen 1, JS platform (rebadged Sebring), first model year"
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "17x6.5", "oemTireSize": "215/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x6.5", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "235/45R18"},
+        {"name": "S", "oemWheelSize": "18x7", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["jordistireshop.com bolt pattern guide"],
+      "notes": "Gen 1, JS platform"
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "17x6.5", "oemTireSize": "215/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x6.5", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "235/45R18"},
+        {"name": "S", "oemWheelSize": "18x7", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["jordistireshop.com bolt pattern guide"],
+      "notes": "Gen 1, JS platform"
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "VALID",
+      "boltPattern": "5x114.3",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "17x6.5", "oemTireSize": "215/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x6.5", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "235/45R18"},
+        {"name": "S", "oemWheelSize": "18x7", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["jordistireshop.com bolt pattern guide"],
+      "notes": "Gen 1, JS platform - FINAL YEAR Gen 1"
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "VALID",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "S", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "C", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["jordistireshop.com", "hulkoffsets.com"],
+      "notes": "ALL-NEW Gen 2 - UF platform, NEW BOLT PATTERN (5x110)"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "VALID",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "S", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "C", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["jordistireshop.com", "autoevolution"],
+      "notes": "Gen 2, UF platform"
+    },
+    {
+      "year": 2017,
+      "make": "Chrysler",
+      "model": "200",
+      "status": "VALID",
+      "boltPattern": "5x110",
+      "hubBore": 65.1,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "S", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "C", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["Wikipedia Chrysler 200"],
+      "notes": "Gen 2, UF platform - FINAL MODEL YEAR, 200 discontinued"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "300",
+      "status": "INVALID",
+      "reason": "INVALID MODEL YEAR - Chrysler 300 (modern) first model year was 2005. Production started Jan 2004 for 2005 MY.",
+      "action": "REMOVE"
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Crossfire",
+      "status": "INVALID",
+      "reason": "INVALID MODEL YEAR - Crossfire first model year was 2004. Unveiled at 2002 LA Auto Show as 2004 model.",
+      "action": "REMOVE"
+    }
+  ],
+  "verificationNotes": {
+    "methodology": "Cross-referenced Wikipedia production dates, manufacturer press releases, JD Power model year histories, and enthusiast forums. No banned sources (wheel-size.com, simpletire.com, tirerack.com, discounttire.com) were used for primary fitment data.",
+    "platformChanges": [
+      "Trailblazer: Gen 1 (2001-2009) 6x127 → Gen 2 (2021+) 5x105",
+      "Trax: Gen 1 (2015-2022) 5x105 → Gen 2 (2023+) 5x115",
+      "Volt: Gen 1 (2011-2015) 5x115 → Gen 2 (2016-2019) 5x105",
+      "Chrysler 200: Gen 1 (2011-2014) 5x114.3 → Gen 2 (2015-2017) 5x110"
+    ],
+    "discontinuedModels": [
+      "Suburban 2500: Discontinued after 2013 MY",
+      "Trailblazer Gen 1: Discontinued after 2009 MY (US), returned 2021",
+      "Volt: Discontinued after 2019 MY",
+      "Chrysler 200: Discontinued after 2017 MY"
+    ]
+  }
+}

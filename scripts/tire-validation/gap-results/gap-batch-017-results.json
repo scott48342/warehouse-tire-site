@@ -1,0 +1,468 @@
+{
+  "batchId": 17,
+  "researchedAt": "2026-04-21T23:47:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "resolved": 34,
+    "notUS": 8,
+    "invalidYear": 8
+  },
+  "vehicles": [
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "viva",
+      "notUS": true,
+      "notes": "Russia market only - Opel Astra-based vehicle sold through Chevrolet dealers in Russia"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "viva",
+      "notUS": true,
+      "notes": "Russia market only - Opel Astra-based vehicle sold through Chevrolet dealers in Russia"
+    },
+    {
+      "year": 2004,
+      "make": "chrysler",
+      "model": "300c",
+      "invalidYear": true,
+      "notes": "Chrysler 300C first model year was 2005, not 2004"
+    },
+    {
+      "year": 2011,
+      "make": "chrysler",
+      "model": "300c",
+      "tires": [
+        { "trim": "AWD", "sizes": ["235/55R19"] },
+        { "trim": "RWD", "sizes": ["225/60R18", "245/45R20"] }
+      ],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2012,
+      "make": "chrysler",
+      "model": "300c",
+      "tires": [
+        { "trim": "AWD", "sizes": ["235/55R19"] },
+        { "trim": "RWD", "sizes": ["225/60R18", "245/45R20"] }
+      ],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2013,
+      "make": "chrysler",
+      "model": "300c",
+      "tires": [
+        { "trim": "AWD", "sizes": ["235/55R19"] },
+        { "trim": "RWD", "sizes": ["225/60R18", "245/45R20"] }
+      ],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2014,
+      "make": "chrysler",
+      "model": "300c",
+      "tires": [
+        { "trim": "AWD", "sizes": ["235/55R19"] },
+        { "trim": "RWD", "sizes": ["225/60R18", "245/45R20"] }
+      ],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2015,
+      "make": "chrysler",
+      "model": "300c",
+      "tires": [
+        { "trim": "AWD", "sizes": ["235/55R19"] },
+        { "trim": "Platinum AWD", "sizes": ["235/55R19"] },
+        { "trim": "Platinum RWD", "sizes": ["245/45R20"] },
+        { "trim": "RWD", "sizes": ["225/60R18", "245/45R20"] }
+      ],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2016,
+      "make": "chrysler",
+      "model": "300c",
+      "tires": [
+        { "trim": "AWD", "sizes": ["235/55R19"] },
+        { "trim": "Platinum AWD", "sizes": ["235/55R19"] },
+        { "trim": "Platinum RWD", "sizes": ["245/45R20"] },
+        { "trim": "RWD", "sizes": ["225/60R18", "245/45R20"] }
+      ],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2017,
+      "make": "chrysler",
+      "model": "300c",
+      "tires": [
+        { "trim": "AWD", "sizes": ["235/55R19"] },
+        { "trim": "Platinum AWD", "sizes": ["235/55R19"] },
+        { "trim": "Platinum RWD", "sizes": ["245/45R20"] },
+        { "trim": "RWD", "sizes": ["225/60R18", "245/45R20"] }
+      ],
+      "wheelDiameters": [18, 19, 20]
+    },
+    {
+      "year": 2018,
+      "make": "chrysler",
+      "model": "300c",
+      "tires": [
+        { "trim": "RWD", "sizes": ["245/45R20"] }
+      ],
+      "wheelDiameters": [20]
+    },
+    {
+      "year": 2019,
+      "make": "chrysler",
+      "model": "300c",
+      "tires": [
+        { "trim": "RWD", "sizes": ["245/45R20"] }
+      ],
+      "wheelDiameters": [20]
+    },
+    {
+      "year": 2020,
+      "make": "chrysler",
+      "model": "300c",
+      "tires": [
+        { "trim": "RWD", "sizes": ["245/45R20"] }
+      ],
+      "wheelDiameters": [20]
+    },
+    {
+      "year": 2021,
+      "make": "chrysler",
+      "model": "300c",
+      "invalidYear": true,
+      "notes": "300C trim was dropped for 2021 model year in US. Only Touring and 300S trims available."
+    },
+    {
+      "year": 2004,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "invalidYear": true,
+      "notes": "Chrysler 300C SRT-8 first model year was 2005, not 2004"
+    },
+    {
+      "year": 2005,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "tires": [
+        { "trim": "SRT-8", "sizes": ["245/45R20"], "front": "245/45R20", "rear": "255/45R20", "staggered": true }
+      ],
+      "wheelDiameters": [20],
+      "staggered": true
+    },
+    {
+      "year": 2006,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "tires": [
+        { "trim": "SRT-8", "sizes": ["245/45R20"] },
+        { "trim": "SRT-8 Performance Tires", "sizes": ["245/45R20"], "front": "245/45R20", "rear": "255/45R20", "staggered": true }
+      ],
+      "wheelDiameters": [20]
+    },
+    {
+      "year": 2007,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "tires": [
+        { "trim": "SRT-8", "sizes": ["245/45R20"] },
+        { "trim": "SRT-8 Performance Tires", "sizes": ["245/45R20"], "front": "245/45R20", "rear": "255/45R20", "staggered": true }
+      ],
+      "wheelDiameters": [20]
+    },
+    {
+      "year": 2008,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "tires": [
+        { "trim": "SRT8", "sizes": ["245/45R20"] },
+        { "trim": "SRT8 Performance Tires", "sizes": ["245/45R20"], "front": "245/45R20", "rear": "255/45R20", "staggered": true }
+      ],
+      "wheelDiameters": [20]
+    },
+    {
+      "year": 2009,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "tires": [
+        { "trim": "SRT8", "sizes": ["245/45R20"] },
+        { "trim": "SRT8 Performance Tires", "sizes": ["245/45R20"], "front": "245/45R20", "rear": "255/45R20", "staggered": true }
+      ],
+      "wheelDiameters": [20]
+    },
+    {
+      "year": 2010,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "tires": [
+        { "trim": "SRT8", "sizes": ["245/45R20"] },
+        { "trim": "SRT8 Performance Tires", "sizes": ["245/45R20"], "front": "245/45R20", "rear": "255/45R20", "staggered": true }
+      ],
+      "wheelDiameters": [20]
+    },
+    {
+      "year": 2011,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "invalidYear": true,
+      "notes": "2011+ uses 'Chrysler 300 SRT8' model name, not '300C SRT-8'. Different model identifier in 2nd gen."
+    },
+    {
+      "year": 2012,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "invalidYear": true,
+      "notes": "2011+ uses 'Chrysler 300 SRT8' model name, not '300C SRT-8'. Different model identifier in 2nd gen."
+    },
+    {
+      "year": 2013,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "invalidYear": true,
+      "notes": "2011+ uses 'Chrysler 300 SRT8' model name, not '300C SRT-8'. Different model identifier in 2nd gen."
+    },
+    {
+      "year": 2014,
+      "make": "chrysler",
+      "model": "300c-srt-8",
+      "invalidYear": true,
+      "notes": "2011+ uses 'Chrysler 300 SRT8' model name, not '300C SRT-8'. Different model identifier in 2nd gen."
+    },
+    {
+      "year": 2000,
+      "make": "chrysler",
+      "model": "300m",
+      "tires": [
+        { "trim": "Base Model", "sizes": ["225/60R16", "225/55R17"] }
+      ],
+      "wheelDiameters": [16, 17]
+    },
+    {
+      "year": 2001,
+      "make": "chrysler",
+      "model": "300m",
+      "tires": [
+        { "trim": "Base Model", "sizes": ["225/60R16", "225/55R17"] }
+      ],
+      "wheelDiameters": [16, 17]
+    },
+    {
+      "year": 2002,
+      "make": "chrysler",
+      "model": "300m",
+      "tires": [
+        { "trim": "Base Model", "sizes": ["225/60R16", "225/55R17"] },
+        { "trim": "Special Edition", "sizes": ["245/45R18"] }
+      ],
+      "wheelDiameters": [16, 17, 18]
+    },
+    {
+      "year": 2003,
+      "make": "chrysler",
+      "model": "300m",
+      "tires": [
+        { "trim": "Base Model", "sizes": ["225/55R17"] },
+        { "trim": "Special Edition", "sizes": ["245/45R18"] }
+      ],
+      "wheelDiameters": [17, 18]
+    },
+    {
+      "year": 2004,
+      "make": "chrysler",
+      "model": "300m",
+      "tires": [
+        { "trim": "Base Model", "sizes": ["225/55R17"] },
+        { "trim": "Special Edition", "sizes": ["225/55R17", "245/45R18"] }
+      ],
+      "wheelDiameters": [17, 18]
+    },
+    {
+      "year": 2006,
+      "make": "chrysler",
+      "model": "aspen",
+      "invalidYear": true,
+      "notes": "Chrysler Aspen first model year was 2007, not 2006"
+    },
+    {
+      "year": 2007,
+      "make": "chrysler",
+      "model": "aspen",
+      "tires": [
+        { "trim": "Limited 2WD", "sizes": ["265/60R18", "265/50R20"] },
+        { "trim": "Limited 4WD", "sizes": ["265/60R18", "265/50R20"] }
+      ],
+      "wheelDiameters": [18, 20]
+    },
+    {
+      "year": 2008,
+      "make": "chrysler",
+      "model": "aspen",
+      "tires": [
+        { "trim": "Limited 2WD", "sizes": ["265/60R18", "265/50R20"] },
+        { "trim": "Limited 4WD", "sizes": ["265/60R18", "265/50R20"] }
+      ],
+      "wheelDiameters": [18, 20]
+    },
+    {
+      "year": 2009,
+      "make": "chrysler",
+      "model": "aspen",
+      "tires": [
+        { "trim": "Limited 2WD", "sizes": ["265/60R18", "265/50R20"] },
+        { "trim": "Limited 4WD", "sizes": ["265/60R18", "265/50R20"] },
+        { "trim": "Limited Hybrid", "sizes": ["265/60R18"] }
+      ],
+      "wheelDiameters": [18, 20]
+    },
+    {
+      "year": 2000,
+      "make": "chrysler",
+      "model": "cirrus",
+      "tires": [
+        { "trim": "LX", "sizes": ["195/65R15"] },
+        { "trim": "LXi", "sizes": ["195/65R15"] }
+      ],
+      "wheelDiameters": [15]
+    },
+    {
+      "year": 2000,
+      "make": "chrysler",
+      "model": "concorde",
+      "tires": [
+        { "trim": "LX", "sizes": ["205/70R15", "225/60R16"] },
+        { "trim": "LXi", "sizes": ["225/60R16"] }
+      ],
+      "wheelDiameters": [15, 16]
+    },
+    {
+      "year": 2001,
+      "make": "chrysler",
+      "model": "concorde",
+      "tires": [
+        { "trim": "LX", "sizes": ["205/70R15", "225/60R16"] },
+        { "trim": "LXi", "sizes": ["225/60R16"] }
+      ],
+      "wheelDiameters": [15, 16]
+    },
+    {
+      "year": 2002,
+      "make": "chrysler",
+      "model": "concorde",
+      "tires": [
+        { "trim": "Limited", "sizes": ["225/55R17"] },
+        { "trim": "LX", "sizes": ["205/70R15", "225/60R16"] },
+        { "trim": "LXi", "sizes": ["225/60R16", "225/55R17"] }
+      ],
+      "wheelDiameters": [15, 16, 17]
+    },
+    {
+      "year": 2003,
+      "make": "chrysler",
+      "model": "concorde",
+      "tires": [
+        { "trim": "Limited", "sizes": ["225/55R17"] },
+        { "trim": "LX", "sizes": ["225/60R16"] },
+        { "trim": "LXi", "sizes": ["225/60R16", "225/55R17"] }
+      ],
+      "wheelDiameters": [16, 17]
+    },
+    {
+      "year": 2004,
+      "make": "chrysler",
+      "model": "concorde",
+      "tires": [
+        { "trim": "Limited", "sizes": ["225/55R17"] },
+        { "trim": "LX", "sizes": ["225/60R16"] },
+        { "trim": "LXi", "sizes": ["225/60R16", "225/55R17"] }
+      ],
+      "wheelDiameters": [16, 17]
+    },
+    {
+      "year": 2021,
+      "make": "chrysler",
+      "model": "grand-caravan",
+      "notUS": true,
+      "notes": "Chrysler Grand Caravan is Canada-only. US equivalent is Chrysler Voyager or Pacifica."
+    },
+    {
+      "year": 2022,
+      "make": "chrysler",
+      "model": "grand-caravan",
+      "notUS": true,
+      "notes": "Chrysler Grand Caravan is Canada-only. US equivalent is Chrysler Voyager or Pacifica."
+    },
+    {
+      "year": 2023,
+      "make": "chrysler",
+      "model": "grand-caravan",
+      "notUS": true,
+      "notes": "Chrysler Grand Caravan is Canada-only. US equivalent is Chrysler Voyager or Pacifica."
+    },
+    {
+      "year": 2024,
+      "make": "chrysler",
+      "model": "grand-caravan",
+      "notUS": true,
+      "notes": "Chrysler Grand Caravan is Canada-only. US equivalent is Chrysler Voyager or Pacifica."
+    },
+    {
+      "year": 2025,
+      "make": "chrysler",
+      "model": "grand-caravan",
+      "notUS": true,
+      "notes": "Chrysler Grand Caravan is Canada-only. US equivalent is Chrysler Voyager or Pacifica."
+    },
+    {
+      "year": 2026,
+      "make": "chrysler",
+      "model": "grand-caravan",
+      "notUS": true,
+      "notes": "Chrysler Grand Caravan is Canada-only. US equivalent is Chrysler Voyager or Pacifica."
+    },
+    {
+      "year": 2000,
+      "make": "chrysler",
+      "model": "lhs",
+      "tires": [
+        { "trim": "Base Model", "sizes": ["225/55R17"] }
+      ],
+      "wheelDiameters": [17]
+    },
+    {
+      "year": 2001,
+      "make": "chrysler",
+      "model": "lhs",
+      "tires": [
+        { "trim": "Base Model", "sizes": ["225/55R17"] }
+      ],
+      "wheelDiameters": [17]
+    },
+    {
+      "year": 2000,
+      "make": "chrysler",
+      "model": "voyager",
+      "tires": [
+        { "trim": "Base Model", "sizes": ["205/75R14"] },
+        { "trim": "SE", "sizes": ["215/65R15"] }
+      ],
+      "wheelDiameters": [14, 15]
+    },
+    {
+      "year": 2001,
+      "make": "chrysler",
+      "model": "voyager",
+      "tires": [
+        { "trim": "Base Model", "sizes": ["215/70R15"] },
+        { "trim": "LX", "sizes": ["215/70R15"] }
+      ],
+      "wheelDiameters": [15]
+    }
+  ]
+}

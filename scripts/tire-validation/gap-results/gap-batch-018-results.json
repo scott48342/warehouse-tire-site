@@ -1,0 +1,477 @@
+{
+  "batchId": 18,
+  "researchedAt": "2026-04-21T23:49:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 33,
+    "found": 12,
+    "noData": 5,
+    "needsRename": 3
+  },
+  "notes": {
+    "chrysler-voyager": "Voyager was sold in US 2000-2003, then only in Europe 2004-2019. Reintroduced in US as budget Pacifica 2020-2021, discontinued after 2021.",
+    "dodge-caliber-srt": "Model should be 'Caliber' with SRT4 as trim. SRT4 only sold 2007-2009.",
+    "dodge-charger-pursuit": "Pursuit is a police/fleet package, not sold to retail consumers. Not in consumer fitment databases.",
+    "dodge-jc": "JC is the internal platform code for Dodge Journey. Should be renamed to 'journey'.",
+    "dodge-magnum": "Magnum was sold 2005-2008 only. 2004 and 2009 do not exist."
+  },
+  "vehicles": [
+    {
+      "year": 2002,
+      "make": "chrysler",
+      "model": "voyager",
+      "status": "found",
+      "trims": [
+        { "name": "Base Model", "tireSize": "215/70R15" },
+        { "name": "LX", "tireSize": "215/70R15" }
+      ],
+      "wheelDiameter": 15,
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2003,
+      "make": "chrysler",
+      "model": "voyager",
+      "status": "found",
+      "trims": [
+        { "name": "Base Model", "tireSize": "215/70R15" },
+        { "name": "LX", "tireSize": "215/70R15" }
+      ],
+      "wheelDiameter": 15,
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2004,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2005,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2006,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2007,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2008,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2009,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2010,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2011,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2012,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2013,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2014,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2015,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2016,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager was discontinued in US after 2003. 2004-2019 models were European market only."
+    },
+    {
+      "year": 2020,
+      "make": "chrysler",
+      "model": "voyager",
+      "status": "found",
+      "trims": [
+        { "name": "L", "tireSize": "235/65R17" },
+        { "name": "LX", "tireSize": "235/65R17" },
+        { "name": "LXi", "tireSize": "235/65R17" }
+      ],
+      "wheelDiameter": 17,
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2021,
+      "make": "chrysler",
+      "model": "voyager",
+      "status": "found",
+      "trims": [
+        { "name": "L", "tireSize": "235/65R17" },
+        { "name": "LX", "tireSize": "235/65R17" }
+      ],
+      "wheelDiameter": 17,
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2022,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager discontinued after 2021 model year. Page exists on tiresize.com but no trim data available."
+    },
+    {
+      "year": 2023,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager discontinued after 2021 model year."
+    },
+    {
+      "year": 2024,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager discontinued after 2021 model year."
+    },
+    {
+      "year": 2025,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager discontinued after 2021 model year."
+    },
+    {
+      "year": 2026,
+      "make": "chrysler",
+      "model": "voyager",
+      "notUS": true,
+      "reason": "Chrysler Voyager discontinued after 2021 model year."
+    },
+    {
+      "year": 2007,
+      "make": "dodge",
+      "model": "caliber-srt",
+      "status": "found",
+      "recommendedModel": "caliber",
+      "recommendedTrim": "SRT4",
+      "trims": [
+        { "name": "SRT4", "tireSize": "225/45R19" }
+      ],
+      "wheelDiameter": 19,
+      "boltPattern": "5x114.3",
+      "note": "Model name should be 'caliber' with SRT4 as a trim option"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "caliber-srt",
+      "status": "found",
+      "recommendedModel": "caliber",
+      "recommendedTrim": "SRT4",
+      "trims": [
+        { "name": "SRT4", "tireSize": "225/45R19" }
+      ],
+      "wheelDiameter": 19,
+      "boltPattern": "5x114.3",
+      "note": "Model name should be 'caliber' with SRT4 as a trim option"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "caliber-srt",
+      "status": "found",
+      "recommendedModel": "caliber",
+      "recommendedTrim": "SRT4",
+      "trims": [
+        { "name": "SRT4", "tireSize": "225/45R19" }
+      ],
+      "wheelDiameter": 19,
+      "boltPattern": "5x114.3",
+      "note": "Model name should be 'caliber' with SRT4 as a trim option"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "caliber-srt",
+      "notUS": true,
+      "reason": "Dodge Caliber SRT4 was discontinued after 2009. The 2010 Caliber had no SRT4 variant."
+    },
+    {
+      "year": 2011,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale, not in consumer fitment databases."
+    },
+    {
+      "year": 2012,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2013,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2014,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2015,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2016,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2017,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2018,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2019,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2020,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2021,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2022,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2023,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2024,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "notUS": true,
+      "reason": "Charger Pursuit is a police/fleet-only package. Not available for retail sale."
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "intrepid",
+      "status": "found",
+      "trims": [
+        { "name": "Base Model", "tireSize": "225/60R16" },
+        { "name": "ES", "tireSize": "225/60R16" },
+        { "name": "R/T", "tireSize": "225/55R17" }
+      ],
+      "wheelDiameters": [16, 17],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "intrepid",
+      "status": "found",
+      "trims": [
+        { "name": "Base", "tireSize": "225/60R16" },
+        { "name": "ES", "tireSize": "225/60R16" },
+        { "name": "R/T", "tireSize": "225/55R17" }
+      ],
+      "wheelDiameters": [16, 17],
+      "boltPattern": "5x114.3",
+      "note": "Assumed same as 2000/2002 based on generation"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "intrepid",
+      "status": "found",
+      "trims": [
+        { "name": "Base", "tireSize": "225/60R16" },
+        { "name": "ES", "tireSize": "225/60R16" },
+        { "name": "R/T", "tireSize": "225/55R17" }
+      ],
+      "wheelDiameters": [16, 17],
+      "boltPattern": "5x114.3",
+      "note": "Assumed same as 2000 based on generation"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "intrepid",
+      "status": "found",
+      "trims": [
+        { "name": "Base", "tireSize": "225/60R16" },
+        { "name": "ES", "tireSize": "225/60R16" },
+        { "name": "SE", "tireSize": "225/60R16" }
+      ],
+      "wheelDiameter": 16,
+      "boltPattern": "5x114.3",
+      "note": "Assumed based on generation"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "intrepid",
+      "status": "found",
+      "trims": [
+        { "name": "Base", "tireSize": "225/60R16" },
+        { "name": "ES", "tireSize": "225/60R16" },
+        { "name": "SE", "tireSize": "225/60R16" }
+      ],
+      "wheelDiameter": 16,
+      "boltPattern": "5x114.3",
+      "note": "Final year of Intrepid"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "jc",
+      "status": "needsRename",
+      "recommendedModel": "journey",
+      "reason": "JC is the internal platform code for Dodge Journey. This entry should be renamed to 'journey'.",
+      "trims": [
+        { "name": "SE", "tireSize": "225/70R16" },
+        { "name": "SXT FWD", "tireSizes": ["225/65R17", "225/55R19"] },
+        { "name": "SXT AWD", "tireSize": "225/55R19" },
+        { "name": "R/T FWD", "tireSize": "225/55R19" },
+        { "name": "R/T AWD", "tireSize": "225/55R19" }
+      ],
+      "wheelDiameters": [16, 17, 19],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "jc",
+      "status": "needsRename",
+      "recommendedModel": "journey",
+      "reason": "JC is the internal platform code for Dodge Journey. This entry should be renamed to 'journey'.",
+      "trims": [
+        { "name": "SE", "tireSize": "225/70R16" },
+        { "name": "SXT", "tireSizes": ["225/65R17", "225/55R19"] },
+        { "name": "R/T", "tireSize": "225/55R19" }
+      ],
+      "wheelDiameters": [16, 17, 19],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2011,
+      "make": "dodge",
+      "model": "jc",
+      "status": "needsRename",
+      "recommendedModel": "journey",
+      "reason": "JC is the internal platform code for Dodge Journey. This entry should be renamed to 'journey'.",
+      "trims": [
+        { "name": "SE", "tireSizes": ["225/70R16", "225/65R17"] },
+        { "name": "Express", "tireSizes": ["225/70R16", "225/65R17"] },
+        { "name": "Mainstreet", "tireSizes": ["225/65R17", "225/55R19"] },
+        { "name": "SXT", "tireSize": "225/65R17" },
+        { "name": "Crew", "tireSize": "225/55R19" },
+        { "name": "Lux", "tireSize": "225/55R19" },
+        { "name": "R/T", "tireSize": "225/55R19" }
+      ],
+      "wheelDiameters": [16, 17, 19],
+      "boltPattern": "5x114.3"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "magnum",
+      "notUS": true,
+      "reason": "Dodge Magnum production started in 2005. There was no 2004 model year."
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "magnum",
+      "notUS": true,
+      "reason": "Dodge Magnum was discontinued after the 2008 model year. There was no 2009 model."
+    }
+  ]
+}

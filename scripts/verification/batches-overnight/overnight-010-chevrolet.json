@@ -1,0 +1,1903 @@
+[
+  {
+    "id": "5acb72e1-727f-438e-9025-1a99cb2f3a2a",
+    "year": 1996,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Z28",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c3b06cfd-8cf1-44ce-a746-d9f971ebdbf6",
+    "year": 1996,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17",
+      "215/60R16",
+      "235/55R16",
+      "245/50ZR16",
+      "245/45ZR17",
+      "275/40ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "452577e3-c613-4cbd-956f-2e484183dcb3",
+    "year": 1997,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17"
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "16ec3d58-1914-4f99-84db-4afa4c069079",
+    "year": 1997,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Z28",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7f040896-d350-4599-b71a-a90f2d64c25d",
+    "year": 1998,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Z28",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      },
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9aa6d7d0-3b63-4c33-b240-df55e3651f12",
+    "year": 1998,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "da26e0eb-0d81-4ac8-b9fc-d45fc4403f52",
+    "year": 1998,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17"
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "1207dc06-7efa-467a-b24d-5f2ff8a727e7",
+    "year": 1999,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "8Jx16",
+      "9Jx17"
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "545d66b2-cdc8-4da8-8f2c-994699ea0445",
+    "year": 1999,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Z28",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      },
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c800f28a-01f6-4f8d-b021-9944a88d444b",
+    "year": 1999,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "efc139e6-b058-4b57-89ad-18efcad1ced8",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0f0ac743-191d-4bbf-a11f-48ae534c3004",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template [filled from 2000 camaro]"
+  },
+  {
+    "id": "2bee1d4e-a9ac-4961-96c6-e2e26045c218",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Z28",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      },
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dd5548bd-e5f1-4960-873b-292387bb11d8",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Z28",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      },
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e7c674da-7ff5-4a17-bd00-fb5cedb51710",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3449c1f2-52f0-47b9-a334-0ed976284217",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template [filled from 2001 camaro]"
+  },
+  {
+    "id": "2d018d17-5f78-45ae-a19a-0a774940cbff",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Z28",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 16
+      },
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a9a337b9-1f51-4e4b-814e-fcf47882b77e",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "819e6672-18be-4f82-bbb4-14a1290cce10",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P235/55R16",
+      "P245/50ZR16",
+      "P275/40ZR17",
+      "P305/35ZR17"
+    ],
+    "source": "generation_template [filled from 2002 camaro]"
+  },
+  {
+    "id": "168371b6-d1e3-4e63-bc44-44848cf666e0",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "1LE",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "39ec1794-2798-459b-9bcc-f55adc67ce22",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx19",
+      "8Jx20",
+      "9Jx20",
+      "10Jx21",
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "P245/55R18",
+      "P245/45R19",
+      "P245/45R20",
+      "P275/40R20",
+      "P285/35R21",
+      "P305/30R21",
+      "245/55R18",
+      "245/50R19",
+      "245/45ZR20",
+      "275/40ZR20",
+      "245/40R21",
+      "275/35R21"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "09d0aa58-24a2-4bfb-bfcc-5a53e9f5bc73",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1db0ded8-74f5-4cec-8abc-b3025c17f469",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c34b53c8-3175-416e-9baa-b5b25f7173de",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d0d7b5dc-8830-4661-bf98-5e965a269972",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "ZL1",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "76ad3a8b-0163-4ae7-890d-0761aae9a797",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fc8df078-652c-4104-a9de-51fd283f739c",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "1LE",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d267b8b8-4746-4d33-a291-011406f23636",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "ZL1",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bc35c3b2-db53-4613-bd13-f15e8415b2f3",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "15a115a5-03b7-4140-9909-9bc586fdf1fa",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6ff89566-16ec-4fb7-95cc-9ed48041e8bd",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx19",
+      "8Jx20",
+      "9Jx20",
+      "10Jx21",
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "P245/55R18",
+      "P245/45R19",
+      "P245/45R20",
+      "P275/40R20",
+      "P285/35R21",
+      "P305/30R21",
+      "245/55R18",
+      "245/50R19",
+      "245/45ZR20",
+      "275/40ZR20",
+      "245/40R21",
+      "275/35R21"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "5544940b-862d-49aa-90e3-5fe6d22f392e",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2356d51e-6a90-43f6-b99d-9797dc425626",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e8adec79-f67b-4f88-991c-cfb13198f0bf",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "ZL1",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b44c95f8-1737-4d56-a918-783b04fac691",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "1LE",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "414d56e0-c068-43cb-9dd3-ad17c24f9864",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx19",
+      "8Jx20",
+      "9Jx20",
+      "10Jx21",
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "P245/55R18",
+      "P245/45R19",
+      "P245/45R20",
+      "P275/40R20",
+      "P285/35R21",
+      "P305/30R21",
+      "245/55R18",
+      "245/50R19",
+      "245/45ZR20",
+      "275/40ZR20",
+      "245/40R21",
+      "275/35R21"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "7e2dbc57-1837-41f4-af2b-f1148dd2cd47",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9eb9a74b-f274-4748-ba25-08843ee1bb65",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "1LE",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "21357a19-75b4-4f30-92ef-d562534d8013",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2d33aee0-97b7-46e2-b530-f8b753c03df5",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/55R18",
+      "P245/45R19",
+      "P245/45R20",
+      "P275/40R20",
+      "P285/35R21",
+      "P305/30R21"
+    ],
+    "source": "generation_template [filled from 2013 camaro]"
+  },
+  {
+    "id": "0a8b0772-918f-4b69-8e50-9874e03233db",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b63df21a-0202-4acf-81c9-763b8216b376",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "ZL1",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2ff4286f-19dc-4655-a13c-d4359d5a3b9f",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8b9dc785-df64-46f9-9c3f-ce4393e96047",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "P245/55R18",
+      "P245/45R19",
+      "P245/45R20",
+      "P275/40R20",
+      "P285/35R21",
+      "P305/30R21"
+    ],
+    "source": "generation_template [filled from 2014 camaro]"
+  },
+  {
+    "id": "760a8ee3-32f8-444d-808c-05ad19f1cff2",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "1LE",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fe8d12fa-85e3-476a-b4b9-9a0b51b286fd",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Z/28",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 11,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "aac2e0d7-ca0e-464b-9086-45e0526e8209",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "ZL1",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a0b5f0e5-9a05-46c2-928f-9c64963855af",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3daaf557-74de-46a7-9ea6-f02657c39b6f",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b9cce828-9794-499e-9ef2-1a1a544c4702",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a9e54c75-a8f8-4cd5-952a-2330e235b05d",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "1LE",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9929fbc5-51cd-4b41-93b5-619985b15260",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dd1b1674-863e-4304-8fe9-74cde79857e8",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "57ac2941-eaf7-4dae-b850-113fefa04d97",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1217e9e4-23c9-475c-bb7a-a60c5715ee6e",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "ZL1",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 10,
+        "diameter": 20
+      },
+      {
+        "rear": true,
+        "width": 11,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "84edee91-6b3b-46a2-be23-fecc7c8f1bec",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7.5Jx18",
+      "8Jx19",
+      "8Jx20",
+      "9Jx20",
+      "10Jx21",
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 43,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "P245/55R18",
+      "P245/45R19",
+      "P245/45R20",
+      "P275/40R20",
+      "P285/35R21",
+      "P305/30R21",
+      "245/55R18",
+      "245/50R19",
+      "245/45ZR20",
+      "275/40ZR20",
+      "245/40R21",
+      "275/35R21"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "5dd9c7e9-84da-4f33-ac72-9614b1753c84",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Z/28",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 11,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "24d88e08-67df-4bfa-a272-1f81d2cd2d6d",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT1",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "fd437514-4e50-434f-a64c-540e9ff4d109",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT RS Package",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "12cac209-aa4d-4201-9091-2f5e5af2a371",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R18",
+      "245/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "4f11a922-0c02-4368-9a3b-15f260e02386",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "ZL1",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "285/30R20"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/30R20"
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "c9f369e8-f0da-414d-814d-711515028fa4",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "P245/50R18",
+      "P245/40R19",
+      "P275/35R19",
+      "P245/40R20",
+      "P275/35R20",
+      "P285/30R20",
+      "P305/30R20"
+    ],
+    "source": "generation_template [filled from 2016 camaro]"
+  },
+  {
+    "id": "e91b86e9-a6d8-4b6b-9417-11e18213e42f",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "ZL1 1LE Extreme Track",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 11,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "305/30R19"
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "325/30R19"
+      }
+    ],
+    "currentTireSizes": [
+      "305/30R19",
+      "325/30R19"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "80298a06-d5ed-4076-9f38-304774b6b740",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/40R20"
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R20",
+      "275/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "28f8cd87-1c04-46af-8159-3da9dbabfd6d",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS 1LE Track Package",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "285/30R20"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/30R20"
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "377c10af-4277-4072-8c58-ae5428e5e1f2",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R18"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "8bcd641e-b7f4-4cbb-964e-8b1ef1a87e3b",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/40R20"
+      },
+      {
+        "axle": "rear",
+        "width": 10,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R20",
+      "275/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "84d8aeba-eef0-4c1a-bb7e-484f2f99208a",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LS",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R18"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "e4f16e3a-ff44-4853-8b6e-9183b199411c",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "SS 1LE Track Package",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "285/30R20"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/30R20"
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "36ba2b04-beb0-4513-8ae0-540feed68693",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      }
+    ],
+    "currentTireSizes": [
+      "P245/50R18",
+      "P245/40R19",
+      "P275/35R19",
+      "P245/40R20",
+      "P275/35R20",
+      "P285/30R20",
+      "P305/30R20"
+    ],
+    "source": "generation_template [filled from 2017 camaro]"
+  },
+  {
+    "id": "a333a468-0e55-407a-b907-c478e48f38d9",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT RS Package",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "1a62d152-a12d-49d3-bb85-bfe0e2b734df",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "ZL1",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 10,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "285/30R20"
+      },
+      {
+        "axle": "rear",
+        "width": 11,
+        "offset": 30,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/30R20"
+      }
+    ],
+    "currentTireSizes": [
+      "285/30R20",
+      "305/30R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "e15c9e3d-3989-457e-bf01-af458c3aabbf",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT1",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "087c0b67-baf5-49c0-9922-3299656f29b3",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "ZL1 1LE Extreme Track",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 11,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "305/30R19"
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "325/30R19"
+      }
+    ],
+    "currentTireSizes": [
+      "305/30R19",
+      "325/30R19"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "b891370d-0baf-4e96-8908-4b1b52c26c99",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "camaro",
+    "trim": "LT",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "245/50R18"
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/50R18",
+      "245/40R20"
+    ],
+    "source": "tier-a-import"
+  }
+]

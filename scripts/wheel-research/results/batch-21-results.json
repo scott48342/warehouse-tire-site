@@ -1,0 +1,1134 @@
+{
+  "batchId": "21",
+  "processedAt": "2026-04-21T20:59:00Z",
+  "totalVehicles": 75,
+  "successCount": 75,
+  "failureCount": 0,
+  "results": [
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "10x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [17, 18, 19],
+        "wheelWidth": [6.0, 6.75],
+        "offset": [110, 130],
+        "notes": "HD truck with semi-truck wheel specs. DRW (Dual Rear Wheel) configuration standard."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "10x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [17, 18, 19],
+        "wheelWidth": [6.0, 6.75],
+        "offset": [110, 130],
+        "notes": "HD truck with semi-truck wheel specs. DRW (Dual Rear Wheel) configuration standard."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "10x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [17, 18, 19],
+        "wheelWidth": [6.0, 6.75],
+        "offset": [110, 130],
+        "notes": "HD truck with semi-truck wheel specs. DRW (Dual Rear Wheel) configuration standard."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "10x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [17, 18, 19],
+        "wheelWidth": [6.0, 6.75],
+        "offset": [110, 130],
+        "notes": "HD truck with semi-truck wheel specs. DRW (Dual Rear Wheel) configuration standard."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "10x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [17, 18, 19],
+        "wheelWidth": [6.0, 6.75],
+        "offset": [110, 130],
+        "notes": "HD truck P356 generation."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "10x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [17, 18, 19],
+        "wheelWidth": [6.0, 6.75],
+        "offset": [110, 130],
+        "notes": "HD truck P356 generation."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "10x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [17, 18, 19],
+        "wheelWidth": [6.0, 6.75],
+        "offset": [110, 130],
+        "notes": "HD truck P356 generation."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "10x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [17],
+        "wheelWidth": [6.0, 6.5],
+        "offset": [110, 130],
+        "notes": "PHN131 Facelift generation. Transitioned from 8x225 to 10x225."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "10x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [17],
+        "wheelWidth": [6.0, 6.5],
+        "offset": [110, 130],
+        "notes": "PHN131 Facelift generation."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "10x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [17],
+        "wheelWidth": [6.0, 6.5],
+        "offset": [110, 130],
+        "notes": "PHN131 Facelift generation. First year with 10x225 bolt pattern."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "8x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [16],
+        "wheelWidth": [6.0],
+        "offset": [110, 130],
+        "notes": "PHN131 first generation. 8-lug pattern."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "8x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [16],
+        "wheelWidth": [6.0],
+        "offset": [110, 130],
+        "notes": "PHN131 first generation."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "8x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [16],
+        "wheelWidth": [6.0],
+        "offset": [110, 130],
+        "notes": "PHN131 first generation."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "8x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [16],
+        "wheelWidth": [6.0],
+        "offset": [110, 130],
+        "notes": "PHN131 first generation."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "status": "success",
+      "specs": {
+        "boltPattern": "8x225",
+        "centerBore": 170.1,
+        "wheelDiameter": [16],
+        "wheelWidth": [6.0],
+        "offset": [110, 130],
+        "notes": "PHN131 first generation."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "fairlane",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [17],
+        "wheelWidth": [7.5, 8.0],
+        "offset": [36],
+        "notes": "Australian market BF series. Based on Ford Falcon platform."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "fairlane",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [17],
+        "wheelWidth": [7.5, 8.0],
+        "offset": [36],
+        "notes": "Australian market BF series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "fairlane",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [7.0, 7.5, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market BA/BF transition. Both 16\" and 17\" options."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "fairlane",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [7.0, 7.5, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market BA series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "fairlane",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [6.5, 7.5, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market AU II/BA transition."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "fairlane",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [6.5, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market AU II series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "fairlane",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [6.5, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market AU II series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "fairlane",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [6.5, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market AU I/AU II series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "fairmont",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [17, 18],
+        "wheelWidth": [8.0],
+        "offset": [36],
+        "notes": "Australian market BF series. Based on Ford Falcon platform. Final year of production."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "fairmont",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [17, 18],
+        "wheelWidth": [8.0],
+        "offset": [36],
+        "notes": "Australian market BF series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "fairmont",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [17, 18],
+        "wheelWidth": [8.0],
+        "offset": [36],
+        "notes": "Australian market BF series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "fairmont",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [7.0, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market BA/BF series transition."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "fairmont",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [7.0, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market BA series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "fairmont",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [6.5, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market AU II/BA series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "fairmont",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [6.5, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market AU II series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "fairmont",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [6.5, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market AU II series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "fairmont",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.7,
+        "wheelDiameter": [16, 17],
+        "wheelWidth": [6.5, 8.0],
+        "offset": [36, 37],
+        "notes": "Australian market AU series."
+      },
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "festiva",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelDiameter": [13, 14],
+        "wheelWidth": [5.0, 5.5],
+        "offset": [40, 45],
+        "notes": "Australian WF/WQ series. Based on Kia platform. Compact hatchback."
+      },
+      "source": "fordfestiva.com"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "festiva",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelDiameter": [13, 14],
+        "wheelWidth": [5.0, 5.5],
+        "offset": [40, 45],
+        "notes": "Australian WF/WQ series."
+      },
+      "source": "fordfestiva.com"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "festiva",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelDiameter": [13, 14],
+        "wheelWidth": [5.0, 5.5],
+        "offset": [40, 45],
+        "notes": "Australian WF/WQ series."
+      },
+      "source": "fordfestiva.com"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "festiva",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelDiameter": [13, 14],
+        "wheelWidth": [5.0, 5.5],
+        "offset": [40, 45],
+        "notes": "Australian WF/WQ series."
+      },
+      "source": "fordfestiva.com"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "fiesta",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [15, 16, 17],
+        "wheelWidth": [6.0, 7.0],
+        "offset": [38, 52],
+        "notes": "US/European 7th generation. Final year in US market."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "fiesta",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [15, 16, 17],
+        "wheelWidth": [6.0, 7.0],
+        "offset": [38, 52],
+        "notes": "US/European 7th generation."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "fiesta",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [15, 16, 17],
+        "wheelWidth": [6.0, 7.0],
+        "offset": [38, 52],
+        "notes": "6th generation (US market)."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "fiesta",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [15, 16, 17],
+        "wheelWidth": [6.0, 7.0],
+        "offset": [38, 52],
+        "notes": "6th generation (US market)."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "fiesta",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [15, 16, 17],
+        "wheelWidth": [6.0, 7.0],
+        "offset": [38, 52],
+        "notes": "6th generation (US market)."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "fiesta",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [15, 16, 17],
+        "wheelWidth": [6.0, 7.0],
+        "offset": [38, 52],
+        "notes": "6th generation (US market)."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "fiesta",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [15, 16, 17],
+        "wheelWidth": [6.0, 7.0],
+        "offset": [38, 52],
+        "notes": "6th generation (US market)."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "fiesta",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [15, 16, 17],
+        "wheelWidth": [6.0, 7.0],
+        "offset": [38, 52],
+        "notes": "6th generation (US market)."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "fiesta",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [15, 16, 17],
+        "wheelWidth": [6.0, 7.0],
+        "offset": [38, 52],
+        "notes": "6th generation first year in US market."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "fiesta-active",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [6.5, 7.0, 7.5],
+        "offset": [40, 50],
+        "notes": "European crossover variant. Facelifted model. Final year of production."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "fiesta-active",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [6.5, 7.0, 7.5],
+        "offset": [40, 50],
+        "notes": "European crossover variant. Facelifted model."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "fiesta-active",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [6.5, 7.0, 7.5],
+        "offset": [38, 50],
+        "notes": "European crossover variant. Facelift transition year."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "fiesta-active",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [6.5, 7.0, 7.5],
+        "offset": [38, 50],
+        "notes": "European crossover variant."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "fiesta-active",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [6.5, 7.0, 7.5],
+        "offset": [38, 50],
+        "notes": "European crossover variant."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "fiesta-active",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [6.5, 7.0, 7.5],
+        "offset": [38, 50],
+        "notes": "European crossover variant."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "fiesta-active",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [6.5, 7.0, 7.5],
+        "offset": [38, 50],
+        "notes": "European crossover variant. First year of production."
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "fiesta-classic",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14, 15],
+        "wheelWidth": [5.5, 6.0],
+        "offset": [42, 45],
+        "notes": "Indian market variant. Based on previous generation platform."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "fiesta-classic",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14, 15],
+        "wheelWidth": [5.5, 6.0],
+        "offset": [42, 45],
+        "notes": "Indian market variant. Based on previous generation platform."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14, 15],
+        "wheelWidth": [5.5, 6.0],
+        "offset": [42, 45],
+        "notes": "Mexican market variant. Second generation (II)."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14, 15],
+        "wheelWidth": [5.5, 6.0],
+        "offset": [42, 45],
+        "notes": "Mexican market variant. Second generation (II)."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14],
+        "wheelWidth": [5.5],
+        "offset": [42, 45],
+        "notes": "Mexican market variant. First generation (I). Final year."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14],
+        "wheelWidth": [5.5],
+        "offset": [42, 45],
+        "notes": "Mexican market variant. First generation (I)."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14],
+        "wheelWidth": [5.5],
+        "offset": [42, 45],
+        "notes": "Mexican market variant. First generation (I)."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14],
+        "wheelWidth": [5.5],
+        "offset": [42, 45],
+        "notes": "Mexican market variant. First generation (I)."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14],
+        "wheelWidth": [5.5],
+        "offset": [42, 45],
+        "notes": "Mexican market variant. First generation (I)."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14],
+        "wheelWidth": [5.5],
+        "offset": [42, 45],
+        "notes": "Mexican market variant. First generation (I)."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 56.1,
+        "wheelDiameter": [14],
+        "wheelWidth": [5.5],
+        "offset": [42, 45],
+        "notes": "Mexican market variant. First generation (I). First year."
+      },
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "five-hundred",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelDiameter": [17, 18],
+        "wheelWidth": [7.0],
+        "offset": [38, 45],
+        "notes": "D258 platform. Final year - replaced by Taurus in 2008."
+      },
+      "source": "autofiles.com"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "five-hundred",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelDiameter": [17, 18],
+        "wheelWidth": [7.0],
+        "offset": [38, 45],
+        "notes": "D258 platform."
+      },
+      "source": "autofiles.com"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "five-hundred",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 63.4,
+        "wheelDiameter": [17, 18],
+        "wheelWidth": [7.0],
+        "offset": [38, 45],
+        "notes": "D258 platform. First year of production."
+      },
+      "source": "autofiles.com"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "focus",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [7.0, 8.0],
+        "offset": [40, 50],
+        "notes": "Third generation (C346). Final year in US market."
+      },
+      "source": "opplehouse.com"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "focus",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [7.0, 8.0],
+        "offset": [40, 50],
+        "notes": "Third generation (C346)."
+      },
+      "source": "opplehouse.com"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "focus",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [7.0, 8.0],
+        "offset": [40, 50],
+        "notes": "Third generation (C346) facelift."
+      },
+      "source": "opplehouse.com"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "focus",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [7.0, 8.0],
+        "offset": [40, 50],
+        "notes": "Third generation (C346) facelift."
+      },
+      "source": "opplehouse.com"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "focus",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [7.0, 8.0],
+        "offset": [40, 50],
+        "notes": "Third generation (C346)."
+      },
+      "source": "opplehouse.com"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "focus",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [7.0, 8.0],
+        "offset": [40, 50],
+        "notes": "Third generation (C346)."
+      },
+      "source": "opplehouse.com"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "focus",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [7.0, 8.0],
+        "offset": [40, 50],
+        "notes": "Third generation (C346). First year of 5x108 pattern."
+      },
+      "source": "opplehouse.com"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "focus",
+      "status": "success",
+      "specs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [16, 17, 18],
+        "wheelWidth": [7.0, 8.0],
+        "offset": [40, 50],
+        "notes": "Third generation (C346)."
+      },
+      "source": "opplehouse.com"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "focus",
+      "status": "success",
+      "specs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "wheelDiameter": [15, 16, 17],
+        "wheelWidth": [6.0, 7.0],
+        "offset": [38, 52],
+        "notes": "Second generation (C307). Final year with 4-lug pattern before switch to 5x108."
+      },
+      "source": "wheel-size.com"
+    }
+  ]
+}

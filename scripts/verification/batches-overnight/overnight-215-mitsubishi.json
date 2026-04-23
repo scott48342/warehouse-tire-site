@@ -1,0 +1,1534 @@
+[
+  {
+    "id": "d73af3a5-65b3-4e51-8674-d1a7840c20f0",
+    "year": 1998,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.0",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R15",
+      "265/70R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "9424fcf9-92e6-49ec-81ae-ebef7082bb91",
+    "year": 1999,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.0",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R15",
+      "265/70R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "aeea4f20-0d17-4b08-bea5-a7648345a9a1",
+    "year": 2000,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a31e21f9-6bbf-4bf5-ac97-70ae3bf6f6e8",
+    "year": 2001,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.0",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "265/65R17",
+      "265/60R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "ca685e7c-c194-44eb-b774-b022f7a53f55",
+    "year": 2002,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.0",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "265/65R17",
+      "265/60R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "1e7b64ff-0661-41b3-8209-971cc1fce372",
+    "year": 2003,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.0",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "265/65R17",
+      "265/60R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "03aa3098-1f79-4728-bcc9-bc0098d479d4",
+    "year": 2004,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.0",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "265/65R17",
+      "265/60R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "c99e4f7f-23a2-409d-bd11-4878f628ddde",
+    "year": 2005,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.0",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "265/65R17",
+      "265/60R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "df3ea740-3517-4416-8f52-427c538181c6",
+    "year": 2006,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.0",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "265/65R17",
+      "265/60R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "1970991e-5559-40e1-97e5-86b85d7c2e5a",
+    "year": 2007,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b895fc22-6378-408d-b584-261df70a07a3",
+    "year": 2008,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "38c2ab1c-1f2e-405c-8ef2-7a444910c882",
+    "year": 2009,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "00424892-50d5-48d7-9fe4-fa3003f079b7",
+    "year": 2010,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "107bc1fa-cdfe-458a-9c11-b3135e40d252",
+    "year": 2011,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8c9cc33c-9618-4e08-ab64-27141d8f288b",
+    "year": 2012,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ed6849c8-b341-4cd0-b565-2971439aeaff",
+    "year": 2013,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "636fbe5e-75ba-4eec-96fe-099f2c03468d",
+    "year": 2014,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8c950b5b-8ac6-4f1c-98a1-06a672d3fc8f",
+    "year": 2015,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "cb59b18a-9834-48f6-9ffc-0def6b079314",
+    "year": 2016,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d136ed11-f4dd-4a07-b5a9-d8f094b4de44",
+    "year": 2017,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f29c80ac-34a8-4c8c-ab44-b6e97f6ce504",
+    "year": 2018,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "41768781-df72-46dc-ad8b-b52c82ec877a",
+    "year": 2019,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e1e308a0-f7cb-4554-b2b5-b1f8f3bec9c6",
+    "year": 2020,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "702dd728-ad0a-425a-9d9e-6b528412066e",
+    "year": 2021,
+    "make": "mitsubishi",
+    "model": "montero",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R16",
+      "275/55R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "5f8b5425-4ba9-4692-bb0d-37b921eccca4",
+    "year": 2003,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/60R17"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "c0a90d4c-4375-4090-b122-9b04647ce671",
+    "year": 2004,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/60R17"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "7d9c0ee1-4b4f-4bd2-9379-c652c0c61237",
+    "year": 2005,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/60R17"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "e6723ba1-0684-4f93-b69f-31575ca2ffb2",
+    "year": 2006,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/60R17"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "0d63918b-29de-4236-9d8c-e279be6c841b",
+    "year": 2007,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "e8595189-fcf0-4082-b685-df1f9745a914",
+    "year": 2008,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "62556d61-5f28-428d-bd0f-c289f9f67ede",
+    "year": 2009,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "1f29ec90-994c-486a-a111-b43235975878",
+    "year": 2010,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "4540ef72-e75e-4462-960c-dd0f729c5f3c",
+    "year": 2011,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "0c26313f-47bc-4cea-889c-e69604c22d70",
+    "year": 2012,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "bf002adb-add2-4508-8690-26cd7b8148f5",
+    "year": 2013,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "c6d264bf-e658-48ae-b29d-a4af54f4eb58",
+    "year": 2014,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18",
+      "225/50R19"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "8daa7085-7ec6-4099-94c1-66b6b5681efc",
+    "year": 2015,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "dade6b5a-5a71-4215-bf22-9e8c76e9e7ce",
+    "year": 2016,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "1f598e0a-c557-4d11-953a-e4f505babef9",
+    "year": 2017,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "1a2ec9e8-678e-40e6-95b5-ca62563fbbbf",
+    "year": 2018,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18",
+      "225/50R19"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "fdf729d4-9400-4f86-bffe-69080464f9dd",
+    "year": 2019,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "3a13be5c-5cbc-4b35-b28c-9b2b6328f4ce",
+    "year": 2020,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18",
+      "225/50R19",
+      "235/50R19"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "2b16f2de-b39e-40a8-b224-3f38304a0444",
+    "year": 2021,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R16",
+      "225/55R18",
+      "225/50R19",
+      "235/50R19"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "2164e8c7-11ef-4350-85d7-399b477f362a",
+    "year": 2022,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "e1a6a864-844d-42c1-9dbd-8c9c035936d2",
+    "year": 2023,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "f1d64fb0-a5ea-46fe-82cf-fca52e9df627",
+    "year": 2024,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "1c3aaf31-7b30-473f-b35f-2e1ea8dd3d62",
+    "year": 2025,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "9a05cde4-652b-453b-acf9-2a0079579cbf",
+    "year": 2026,
+    "make": "mitsubishi",
+    "model": "outlander",
+    "trim": "ES, SE, SEL, GT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  }
+]

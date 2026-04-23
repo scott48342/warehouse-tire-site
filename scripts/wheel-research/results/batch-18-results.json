@@ -1,0 +1,1148 @@
+{
+  "batchId": "18",
+  "processedAt": "2026-04-21T21:00:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2009,
+      "make": "chrysler",
+      "model": "town-and-country",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 17 },
+        "wheelWidth": { "min": 6.5, "max": 7 },
+        "tireSize": ["225/65R16", "225/65R17"]
+      },
+      "source": "hulkoffsets.com, sizewheeltire.com",
+      "notes": "5th gen RT platform (2008-2016)"
+    },
+    {
+      "year": 2008,
+      "make": "chrysler",
+      "model": "town-and-country",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 17 },
+        "wheelWidth": { "min": 6.5, "max": 7 },
+        "tireSize": ["225/65R16", "225/65R17"]
+      },
+      "source": "hulkoffsets.com, sizewheeltire.com",
+      "notes": "5th gen RT platform (2008-2016)"
+    },
+    {
+      "year": 2007,
+      "make": "chrysler",
+      "model": "town-and-country",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 16 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "215/65R16"]
+      },
+      "source": "hulkoffsets.com, tiresize.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2006,
+      "make": "chrysler",
+      "model": "town-and-country",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 16 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "215/65R16"]
+      },
+      "source": "hulkoffsets.com, tiresize.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2005,
+      "make": "chrysler",
+      "model": "town-and-country",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 16 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "215/65R16"]
+      },
+      "source": "hulkoffsets.com, tiresize.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2004,
+      "make": "chrysler",
+      "model": "town-and-country",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 16 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "215/65R16"]
+      },
+      "source": "hulkoffsets.com, tiresize.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2003,
+      "make": "chrysler",
+      "model": "town-and-country",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 16 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "215/65R16"]
+      },
+      "source": "hulkoffsets.com, tiresize.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2002,
+      "make": "chrysler",
+      "model": "town-and-country",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 16 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "215/65R16"]
+      },
+      "source": "hulkoffsets.com, tiresize.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2001,
+      "make": "chrysler",
+      "model": "town-and-country",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 16 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "215/65R16"]
+      },
+      "source": "hulkoffsets.com, tiresize.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2000,
+      "make": "chrysler",
+      "model": "town-and-country",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 45 },
+        "wheelDiameter": { "min": 15, "max": 16 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "215/65R16"]
+      },
+      "source": "hulkoffsets.com, tiresize.com",
+      "notes": "3rd gen (1996-2000)"
+    },
+    {
+      "year": 2026,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 8 },
+        "tireSize": ["235/65R17", "235/60R18"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "6th gen (2020-present), Pacifica platform"
+    },
+    {
+      "year": 2025,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 8 },
+        "tireSize": ["235/65R17", "235/60R18"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "6th gen (2020-present)"
+    },
+    {
+      "year": 2024,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 8 },
+        "tireSize": ["235/65R17", "235/60R18"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "6th gen (2020-present)"
+    },
+    {
+      "year": 2023,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 8 },
+        "tireSize": ["235/65R17", "235/60R18"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "6th gen (2020-present)"
+    },
+    {
+      "year": 2022,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 8 },
+        "tireSize": ["235/65R17", "235/60R18"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "6th gen (2020-present)"
+    },
+    {
+      "year": 2021,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 8 },
+        "tireSize": ["235/65R17", "235/60R18"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "6th gen (2020-present)"
+    },
+    {
+      "year": 2020,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 50 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 8 },
+        "tireSize": ["235/65R17", "235/60R18"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "6th gen (2020-present)"
+    },
+    {
+      "year": 2016,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 18 },
+        "wheelWidth": { "min": 6.5, "max": 7.5 },
+        "tireSize": ["225/65R16", "235/60R17"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "5th gen (2008-2020), European/international market"
+    },
+    {
+      "year": 2015,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 18 },
+        "wheelWidth": { "min": 6.5, "max": 7.5 },
+        "tireSize": ["225/65R16", "235/60R17"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "5th gen (2008-2020)"
+    },
+    {
+      "year": 2014,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 18 },
+        "wheelWidth": { "min": 6.5, "max": 7.5 },
+        "tireSize": ["225/65R16", "235/60R17"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "5th gen (2008-2020)"
+    },
+    {
+      "year": 2013,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 18 },
+        "wheelWidth": { "min": 6.5, "max": 7.5 },
+        "tireSize": ["225/65R16", "235/60R17"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "5th gen (2008-2020)"
+    },
+    {
+      "year": 2012,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 18 },
+        "wheelWidth": { "min": 6.5, "max": 7.5 },
+        "tireSize": ["225/65R16", "235/60R17"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "5th gen (2008-2020)"
+    },
+    {
+      "year": 2011,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 18 },
+        "wheelWidth": { "min": 6.5, "max": 7.5 },
+        "tireSize": ["225/65R16", "235/60R17"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "5th gen (2008-2020)"
+    },
+    {
+      "year": 2010,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 18 },
+        "wheelWidth": { "min": 6.5, "max": 7.5 },
+        "tireSize": ["225/65R16", "235/60R17"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "5th gen (2008-2020)"
+    },
+    {
+      "year": 2009,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 18 },
+        "wheelWidth": { "min": 6.5, "max": 7.5 },
+        "tireSize": ["225/65R16", "235/60R17"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "5th gen (2008-2020)"
+    },
+    {
+      "year": 2008,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 16, "max": 18 },
+        "wheelWidth": { "min": 6.5, "max": 7.5 },
+        "tireSize": ["225/65R16", "235/60R17"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "5th gen (2008-2020)"
+    },
+    {
+      "year": 2007,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 17 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "225/65R16"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2006,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 17 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "225/65R16"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2005,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 17 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "225/65R16"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2004,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 17 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "225/65R16"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2003,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 17 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "225/65R16"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2002,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 17 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "225/65R16"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2001,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 15, "max": 17 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/70R15", "225/65R16"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "4th gen (2001-2007)"
+    },
+    {
+      "year": 2000,
+      "make": "chrysler",
+      "model": "voyager",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.5,
+        "offset": { "min": 40, "max": 45 },
+        "wheelDiameter": { "min": 15, "max": 16 },
+        "wheelWidth": { "min": 6, "max": 7 },
+        "tireSize": ["215/65R15", "215/60R16"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "3rd gen (1996-2000)"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "caliber-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 40, "max": 42 },
+        "wheelDiameter": { "min": 19, "max": 19 },
+        "wheelWidth": { "min": 7.5, "max": 7.5 },
+        "tireSize": ["225/45R19"]
+      },
+      "source": "hulkoffsets.com, fitmentindustries.com",
+      "notes": "Caliber SRT-4 performance model"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "caliber-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 40, "max": 42 },
+        "wheelDiameter": { "min": 19, "max": 19 },
+        "wheelWidth": { "min": 7.5, "max": 7.5 },
+        "tireSize": ["225/45R19"]
+      },
+      "source": "hulkoffsets.com, fitmentindustries.com",
+      "notes": "Caliber SRT-4 performance model"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "caliber-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 40, "max": 42 },
+        "wheelDiameter": { "min": 19, "max": 19 },
+        "wheelWidth": { "min": 7.5, "max": 7.5 },
+        "tireSize": ["225/45R19"]
+      },
+      "source": "hulkoffsets.com, fitmentindustries.com",
+      "notes": "Caliber SRT-4 performance model"
+    },
+    {
+      "year": 2007,
+      "make": "dodge",
+      "model": "caliber-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "offset": { "min": 40, "max": 42 },
+        "wheelDiameter": { "min": 19, "max": 19 },
+        "wheelWidth": { "min": 7.5, "max": 7.5 },
+        "tireSize": ["225/45R19"]
+      },
+      "source": "hulkoffsets.com, fitmentindustries.com",
+      "notes": "Caliber SRT-4 performance model"
+    },
+    {
+      "year": 2024,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com, ebay.com",
+      "notes": "7th gen Charger Police/Pursuit (2011-2024)"
+    },
+    {
+      "year": 2023,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2022,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2021,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2020,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2019,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2018,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2017,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2016,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2015,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2014,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2013,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2012,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2011,
+      "make": "dodge",
+      "model": "charger-pursuit",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 15, "max": 25 },
+        "wheelDiameter": { "min": 18, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 9 },
+        "tireSize": ["235/55R18", "245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "7th gen Charger Police/Pursuit"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "durango",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 25, "max": 35 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 9 },
+        "tireSize": ["245/70R17", "265/60R18"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "2nd gen HB (2004-2010)"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "intrepid",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.6,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 16, "max": 17 },
+        "wheelWidth": { "min": 7, "max": 7.5 },
+        "tireSize": ["225/60R16", "225/55R17"]
+      },
+      "source": "dodgeforum.com, tirewheelguide.com",
+      "notes": "2nd gen LH platform (1998-2004)"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "intrepid",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.6,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 16, "max": 17 },
+        "wheelWidth": { "min": 7, "max": 7.5 },
+        "tireSize": ["225/60R16", "225/55R17"]
+      },
+      "source": "dodgeforum.com, tirewheelguide.com",
+      "notes": "2nd gen LH platform (1998-2004)"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "intrepid",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.6,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 16, "max": 17 },
+        "wheelWidth": { "min": 7, "max": 7.5 },
+        "tireSize": ["225/60R16", "225/55R17"]
+      },
+      "source": "dodgeforum.com, tirewheelguide.com",
+      "notes": "2nd gen LH platform (1998-2004)"
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "intrepid",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.6,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 16, "max": 17 },
+        "wheelWidth": { "min": 7, "max": 7.5 },
+        "tireSize": ["225/60R16", "225/55R17"]
+      },
+      "source": "dodgeforum.com, tirewheelguide.com",
+      "notes": "2nd gen LH platform (1998-2004)"
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "intrepid",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 71.6,
+        "offset": { "min": 38, "max": 44 },
+        "wheelDiameter": { "min": 16, "max": 17 },
+        "wheelWidth": { "min": 7, "max": 7.5 },
+        "tireSize": ["225/60R16", "225/55R17"]
+      },
+      "source": "dodgeforum.com, tirewheelguide.com",
+      "notes": "2nd gen LH platform (1998-2004)"
+    },
+    {
+      "year": 2011,
+      "make": "dodge",
+      "model": "jc",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "offset": { "min": 35, "max": 40 },
+        "wheelDiameter": { "min": 16, "max": 19 },
+        "wheelWidth": { "min": 6.5, "max": 7 },
+        "tireSize": ["225/65R17", "225/55R19"]
+      },
+      "source": "hulkoffsets.com, dodgejourneyforum.com",
+      "notes": "Dodge Journey (JC platform)"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "jc",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "offset": { "min": 35, "max": 40 },
+        "wheelDiameter": { "min": 16, "max": 19 },
+        "wheelWidth": { "min": 6.5, "max": 7 },
+        "tireSize": ["225/65R17", "225/55R19"]
+      },
+      "source": "hulkoffsets.com, dodgejourneyforum.com",
+      "notes": "Dodge Journey (JC platform)"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "jc",
+      "wheelSpecs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "offset": { "min": 35, "max": 40 },
+        "wheelDiameter": { "min": 16, "max": 19 },
+        "wheelWidth": { "min": 6.5, "max": 7 },
+        "tireSize": ["225/65R17", "225/55R19"]
+      },
+      "source": "hulkoffsets.com, dodgejourneyforum.com",
+      "notes": "Dodge Journey (JC platform)"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "magnum",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 12, "max": 25 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 9.5 },
+        "tireSize": ["215/65R17", "225/60R18", "255/45R20"]
+      },
+      "source": "custommagnums.com, hubcaphaven.com",
+      "notes": "LX platform (2005-2008)"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "magnum",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 12, "max": 25 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 9.5 },
+        "tireSize": ["215/65R17", "225/60R18", "255/45R20"]
+      },
+      "source": "custommagnums.com, hubcaphaven.com",
+      "notes": "LX platform - Note: Magnum production was 2005-2008; 2004 may be concept/pre-production"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 18, "max": 25 },
+        "wheelDiameter": { "min": 20, "max": 20 },
+        "wheelWidth": { "min": 9, "max": 9 },
+        "tireSize": ["245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "Magnum SRT-8 (2006-2008)"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 18, "max": 25 },
+        "wheelDiameter": { "min": 20, "max": 20 },
+        "wheelWidth": { "min": 9, "max": 9 },
+        "tireSize": ["245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "Magnum SRT-8"
+    },
+    {
+      "year": 2007,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 18, "max": 25 },
+        "wheelDiameter": { "min": 20, "max": 20 },
+        "wheelWidth": { "min": 9, "max": 9 },
+        "tireSize": ["245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "Magnum SRT-8"
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x115",
+        "centerBore": 71.6,
+        "offset": { "min": 18, "max": 25 },
+        "wheelDiameter": { "min": 20, "max": 20 },
+        "wheelWidth": { "min": 9, "max": 9 },
+        "tireSize": ["245/45R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "Magnum SRT-8"
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "neon-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 17, "max": 18 },
+        "wheelWidth": { "min": 7, "max": 8 },
+        "tireSize": ["205/50R17", "215/45R17"]
+      },
+      "source": "fitmentindustries.com, dodgeforum.com",
+      "notes": "Neon SRT-4"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "neon-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 17, "max": 18 },
+        "wheelWidth": { "min": 7, "max": 8 },
+        "tireSize": ["205/50R17", "215/45R17"]
+      },
+      "source": "fitmentindustries.com, dodgeforum.com",
+      "notes": "Neon SRT-4"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "neon-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "offset": { "min": 35, "max": 45 },
+        "wheelDiameter": { "min": 17, "max": 18 },
+        "wheelWidth": { "min": 7, "max": 8 },
+        "tireSize": ["205/50R17", "215/45R17"]
+      },
+      "source": "fitmentindustries.com, dodgeforum.com",
+      "notes": "Neon SRT-4"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "ram-1500",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": -25, "max": 0 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 9 },
+        "tireSize": ["265/70R17", "275/60R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "3rd gen (2009-2010) - last Dodge-branded Ram"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "ram-1500",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": -25, "max": 0 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7, "max": 9 },
+        "tireSize": ["265/70R17", "275/60R20"]
+      },
+      "source": "hulkoffsets.com",
+      "notes": "3rd gen (2009-2010)"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "ram-2500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 120.9,
+        "offset": { "min": 25, "max": 45 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 8 },
+        "tireSize": ["265/70R17", "285/70R17"]
+      },
+      "source": "hulkoffsets.com, dodgeforum.com",
+      "notes": "Heavy-duty 8-lug pattern"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "ram-3500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 120.9,
+        "offset": { "min": 25, "max": 45 },
+        "wheelDiameter": { "min": 17, "max": 20 },
+        "wheelWidth": { "min": 7.5, "max": 8 },
+        "tireSize": ["265/70R17", "285/70R17"]
+      },
+      "source": "hulkoffsets.com, dodgeforum.com",
+      "notes": "Heavy-duty 8-lug pattern, SRW (single rear wheel)"
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "ram-srt",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "offset": { "min": 12, "max": 25 },
+        "wheelDiameter": { "min": 20, "max": 22 },
+        "wheelWidth": { "min": 9, "max": 10 },
+        "tireSize": ["275/55R20", "275/50R21", "305/40R22"]
+      },
+      "source": "sizewheeltire.com, tirewheelguide.com",
+      "notes": "Ram SRT-10 with Viper V10 engine"
+    }
+  ],
+  "summary": {
+    "totalProcessed": 75,
+    "successful": 75,
+    "failed": 0,
+    "sources": [
+      "hulkoffsets.com",
+      "tiresize.com",
+      "dodgeforum.com",
+      "fitmentindustries.com",
+      "custommagnums.com",
+      "tirewheelguide.com",
+      "sizewheeltire.com",
+      "dodgejourneyforum.com"
+    ],
+    "bannedSourcesAvoided": ["wheel-size.com", "simpletire.com", "tirerack.com", "discounttire.com"]
+  }
+}

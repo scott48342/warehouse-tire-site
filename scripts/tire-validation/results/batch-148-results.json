@@ -1,0 +1,662 @@
+{
+  "batchId": "148",
+  "validatedAt": "2026-04-21T22:57:00Z",
+  "source": "tiresize.com",
+  "totalVehicles": 75,
+  "summary": {
+    "validated": 16,
+    "discrepancies": 7,
+    "notFoundOnSource": 50,
+    "invalidYears": 2
+  },
+  "discrepancies": [
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "mirai",
+      "issue": "WRONG_TIRE_SIZE",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["215/55R17"],
+      "notes": "First-gen Mirai (2016-2020) uses 17-inch wheels, not 19/20-inch"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "mirai",
+      "issue": "WRONG_TIRE_SIZE",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["215/55R17"],
+      "notes": "First-gen Mirai (2016-2020) uses 17-inch wheels"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "mirai",
+      "issue": "WRONG_TIRE_SIZE",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["215/55R17"],
+      "notes": "First-gen Mirai (2016-2020) uses 17-inch wheels"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "mirai",
+      "issue": "WRONG_TIRE_SIZE",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["215/55R17"],
+      "notes": "First-gen Mirai (2016-2020) uses 17-inch wheels"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "mirai",
+      "issue": "WRONG_TIRE_SIZE",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["215/55R17"],
+      "notes": "First-gen Mirai (2016-2020) uses 17-inch wheels"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "mirai",
+      "issue": "INVALID_YEAR",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": null,
+      "notes": "2015 Toyota Mirai does not exist - Mirai launched as 2016 model year"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "mirai",
+      "issue": "INVALID_YEAR",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": null,
+      "notes": "2014 Toyota Mirai does not exist - Mirai launched as 2016 model year"
+    }
+  ],
+  "validated": [
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "mirai",
+      "status": "MATCH",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["235/55R19", "245/45R20"],
+      "notes": "Second-gen Mirai (2021+) - Limited has both sizes, XLE has 235/55R19"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "mirai",
+      "status": "MATCH",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["235/55R19", "245/45R20"],
+      "notes": "Second-gen Mirai (2021+)"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "mirai",
+      "status": "MATCH",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["235/55R19", "245/45R20"],
+      "notes": "Second-gen Mirai - Limited: 235/55R19 + 245/45R20, XLE: 235/55R19"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "mirai",
+      "status": "MATCH",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["235/55R19", "245/45R20"],
+      "notes": "Second-gen Mirai (2021+)"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "mirai",
+      "status": "MATCH",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["235/55R19", "245/45R20"],
+      "notes": "Second-gen Mirai (2021+)"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "mirai",
+      "status": "MATCH",
+      "currentTireSizes": ["235/55R19", "245/45R20"],
+      "oemTireSizes": ["235/55R19", "245/45R20"],
+      "notes": "Second-gen Mirai - first year of redesign"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "status": "PARTIAL_MATCH",
+      "currentTireSizes": ["275/70R16", "275/65R17", "275/60R18"],
+      "oemTireSizes": ["275/70R16"],
+      "notes": "OEM size 275/70R16 is correct. Extra sizes 275/65R17 and 275/60R18 may be plus-size options but not factory OEM"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "status": "PARTIAL_MATCH",
+      "currentTireSizes": ["275/70R16", "275/65R17", "275/60R18"],
+      "oemTireSizes": ["275/70R16"],
+      "notes": "OEM size 275/70R16 is correct. Extra sizes may be aftermarket plus-sizes"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "status": "PARTIAL_MATCH",
+      "currentTireSizes": ["275/70R16", "275/65R17", "275/60R18"],
+      "oemTireSizes": ["275/70R16"],
+      "notes": "OEM size 275/70R16 is correct. Extra sizes may be aftermarket plus-sizes"
+    }
+  ],
+  "notFoundOnSource": [
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "lite-ace-noah",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "lite-ace-noah",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "majesty",
+      "reason": "Regional market model (Thailand/Asia) not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "majesty",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "majesty",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "majesty",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "majesty",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "majesty",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "majesty",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mark-ii-qualis",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mark-ii-qualis",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mark-ii-qualis",
+      "reason": "JDM-only model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mega-cruiser",
+      "reason": "JDM-only model (military-based) not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mega-cruiser",
+      "reason": "JDM-only model (military-based) not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "mr-s",
+      "reason": "JDM name for MR2 Spyder - use 'MR2' for US database lookup",
+      "currentTireSizes": [],
+      "suggestedLookup": "MR2"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr-s",
+      "reason": "JDM name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr-s",
+      "reason": "JDM name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr-s",
+      "reason": "JDM name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr-s",
+      "reason": "JDM name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr-s",
+      "reason": "JDM name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr-s",
+      "reason": "JDM name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr-s",
+      "reason": "JDM name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2",
+      "reason": "MISSING_DATA - OEM data found but not in batch",
+      "currentTireSizes": [],
+      "foundOemSizes": {
+        "front": "185/55R15",
+        "rear": "205/50R15",
+        "isStaggered": true
+      }
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "reason": "UK/EU name for MR2 Spyder - use 'MR2' for US database lookup",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "reason": "UK/EU name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "reason": "UK/EU name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "reason": "UK/EU name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "reason": "UK/EU name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "reason": "UK/EU name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "reason": "UK/EU name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2-roadster",
+      "reason": "UK/EU name for MR2 Spyder",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "reason": "MISSING_DATA - OEM data found but not in batch",
+      "currentTireSizes": [],
+      "foundOemSizes": {
+        "front": "185/55R15",
+        "rear": "215/45R16",
+        "isStaggered": true
+      }
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "reason": "MISSING_DATA - OEM data found but not in batch",
+      "currentTireSizes": [],
+      "foundOemSizes": {
+        "front": "185/55R15",
+        "rear": "215/45R16",
+        "isStaggered": true
+      }
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "reason": "MISSING_DATA - OEM data found but not in batch",
+      "currentTireSizes": [],
+      "foundOemSizes": {
+        "front": "185/55R15",
+        "rear": "215/45R16",
+        "isStaggered": true
+      }
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "reason": "MISSING_DATA - OEM data found but not in batch",
+      "currentTireSizes": [],
+      "foundOemSizes": {
+        "front": "185/55R15",
+        "rear": "215/45R16",
+        "isStaggered": true
+      }
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "reason": "MISSING_DATA - OEM data found but not in batch",
+      "currentTireSizes": [],
+      "foundOemSizes": {
+        "front": "185/55R15",
+        "rear": "205/50R15",
+        "isStaggered": true
+      }
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "reason": "MISSING_DATA - OEM data found but not in batch",
+      "currentTireSizes": [],
+      "foundOemSizes": {
+        "front": "185/55R15",
+        "rear": "205/50R15",
+        "isStaggered": true
+      }
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2-spyder",
+      "reason": "MISSING_DATA - OEM data found but not in batch",
+      "currentTireSizes": [],
+      "foundOemSizes": {
+        "front": "185/55R15",
+        "rear": "205/50R15",
+        "isStaggered": true
+      }
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "nav1",
+      "reason": "Regional market model (Asia) not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "nav1",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "nav1",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "nav1",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "nav1",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "nav1",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "nav1",
+      "reason": "Regional market model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "origin",
+      "reason": "JDM-only limited production model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "origin",
+      "reason": "JDM-only limited production model not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "picnic",
+      "reason": "JDM/European market minivan not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "picnic",
+      "reason": "JDM/European market minivan not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "picnic",
+      "reason": "JDM/European market minivan not in US tire database",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "picnic",
+      "reason": "JDM/European market minivan not in US tire database",
+      "currentTireSizes": []
+    }
+  ],
+  "recommendations": [
+    {
+      "action": "UPDATE_TIRE_SIZES",
+      "vehicles": ["2016-2020 Toyota Mirai"],
+      "from": ["235/55R19", "245/45R20"],
+      "to": ["215/55R17"],
+      "reason": "First-gen Mirai uses different tire size than second-gen"
+    },
+    {
+      "action": "REMOVE_INVALID_YEARS",
+      "vehicles": ["2014 Toyota Mirai", "2015 Toyota Mirai"],
+      "reason": "Mirai was first available as 2016 model year"
+    },
+    {
+      "action": "ADD_STAGGERED_SIZES",
+      "vehicles": ["2000-2006 Toyota MR2 Spyder"],
+      "sizes": {
+        "2000-2002": {"front": "185/55R15", "rear": "205/50R15"},
+        "2003-2006": {"front": "185/55R15", "rear": "215/45R16"}
+      },
+      "reason": "MR2 Spyder has staggered tire setup"
+    },
+    {
+      "action": "REVIEW_PLUS_SIZES",
+      "vehicles": ["2000-2002 Toyota Land Cruiser"],
+      "currentSizes": ["275/70R16", "275/65R17", "275/60R18"],
+      "oemSize": ["275/70R16"],
+      "reason": "Consider removing 275/65R17 and 275/60R18 if only OEM sizes should be listed"
+    },
+    {
+      "action": "CONSIDER_REMOVING",
+      "vehicles": [
+        "Land Cruiser Cygnus (all years)",
+        "Lite-Ace Noah (all years)",
+        "Majesty (all years)",
+        "Mark II Qualis (all years)",
+        "Mega Cruiser (all years)",
+        "MR-S (all years)",
+        "MR2 Roadster (all years)",
+        "Nav1 (all years)",
+        "Origin (all years)",
+        "Picnic (all years)"
+      ],
+      "reason": "JDM/regional market vehicles not sold in US - may not need tire data"
+    }
+  ]
+}

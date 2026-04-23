@@ -1,0 +1,521 @@
+{
+  "batch": "batch-28-german",
+  "verifiedAt": "2026-04-23T00:45:00Z",
+  "verifiedBy": "claude-opus-4-5",
+  "protocol": "RE-VERIFICATION",
+  "summary": {
+    "totalVehicles": 75,
+    "valid": 58,
+    "invalid": 17,
+    "flaggedYears": {
+      "invalidForUSMarket": 9,
+      "futureModelYear": 8
+    }
+  },
+  "invalidVehicles": [
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "gla-class",
+      "reason": "US_MARKET_NOT_AVAILABLE",
+      "notes": "GLA-Class US market debut was 2015, not 2013"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "gla-class",
+      "reason": "US_MARKET_NOT_AVAILABLE",
+      "notes": "GLA-Class US market debut was 2015, not 2014"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "reason": "US_MARKET_NOT_AVAILABLE",
+      "notes": "GLA 45 AMG US market debut was 2015, not 2014"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glb-class",
+      "reason": "US_MARKET_NOT_AVAILABLE",
+      "notes": "GLB-Class US market debut was 2020, not 2019"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "glc-class-coupe",
+      "reason": "US_MARKET_NOT_AVAILABLE",
+      "notes": "GLC Coupe US market debut was 2017, not 2016"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "glk-class",
+      "reason": "US_MARKET_NOT_AVAILABLE",
+      "notes": "GLK-Class US market debut was 2010, not 2008"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "glk-class",
+      "reason": "US_MARKET_NOT_AVAILABLE",
+      "notes": "GLK-Class US market debut was 2010, not 2009"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gla-class",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2026 model year not yet released/confirmed"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gla-class-amg",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2026 model year not yet released/confirmed"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glb-class",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2026 model year not yet released/confirmed"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glc-class-coupe",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2026 model year not yet released/confirmed"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "gle-class-coupe",
+      "reason": "FUTURE_MODEL_YEAR",
+      "notes": "2026 model year not yet released/confirmed"
+    }
+  ],
+  "verifiedFitments": [
+    {
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "generation": "W463 (2018-2025)",
+      "validYears": [2024, 2025],
+      "boltPattern": "5x130",
+      "hubBore": 84.1,
+      "trims": [
+        {
+          "name": "G 63 AMG",
+          "oemWheelSizes": ["20x9.5", "21x10", "22x10"],
+          "oemTireSizes": ["275/50R20", "295/40R21", "295/35R22"],
+          "offsetRange": "10-30mm"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "notes": "G-Class uses 5x130 bolt pattern (different from other Mercedes SUVs which use 5x112)"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLA-Class",
+      "generation": "X156 (2015-2020)",
+      "validYears": [2015, 2016, 2017, 2018, 2019, 2020],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "GLA 250",
+          "oemWheelSizes": ["17x7", "18x7.5", "19x8"],
+          "oemTireSizes": ["215/60R17", "235/50R18", "235/45R19"],
+          "offsetRange": "35-45mm"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "cars.usnews.com", "jdpower.com"],
+      "notes": "First generation GLA, US debut 2015"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLA-Class",
+      "generation": "H247 (2021-2025)",
+      "validYears": [2021, 2022, 2023, 2024, 2025],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "GLA 250",
+          "oemWheelSizes": ["18x7.5", "19x8"],
+          "oemTireSizes": ["235/55R18", "235/50R19"],
+          "offsetRange": "35-50mm"
+        },
+        {
+          "name": "GLA 250 4MATIC",
+          "oemWheelSizes": ["18x7.5", "19x8"],
+          "oemTireSizes": ["235/55R18", "235/50R19"],
+          "offsetRange": "35-50mm"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "notes": "Second generation GLA on MFA2 platform, taller stance"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLA-Class AMG",
+      "generation": "X156 (2015-2019)",
+      "validYears": [2015, 2016, 2017, 2018, 2019],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "GLA 45 AMG",
+          "oemWheelSizes": ["19x8", "19x8.5", "20x8.5"],
+          "oemTireSizes": ["235/40R19", "235/35R20"],
+          "offsetRange": "42-50mm"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "notes": "First generation GLA AMG, US debut 2015"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLA-Class AMG",
+      "generation": "H247 (2021-2025)",
+      "validYears": [2020, 2021, 2022, 2023, 2024, 2025],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "AMG GLA 35",
+          "oemWheelSizes": ["19x8", "20x8"],
+          "oemTireSizes": ["235/50R19", "235/45R20"],
+          "offsetRange": "41-49mm"
+        },
+        {
+          "name": "AMG GLA 45",
+          "oemWheelSizes": ["19x8", "20x8", "21x8.5"],
+          "oemTireSizes": ["235/50R19", "235/45R20", "245/35R21"],
+          "offsetRange": "38-46mm"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "notes": "Second generation GLA AMG"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLB-Class",
+      "generation": "X247 (2020-2025)",
+      "validYears": [2020, 2021, 2022, 2023, 2024, 2025],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "GLB 250",
+          "oemWheelSizes": ["18x7.5", "19x8"],
+          "oemTireSizes": ["235/55R18", "235/50R19"],
+          "offsetRange": "40-50mm"
+        },
+        {
+          "name": "GLB 250 4MATIC",
+          "oemWheelSizes": ["18x7.5", "19x8", "20x8"],
+          "oemTireSizes": ["235/55R18", "235/50R19", "255/45R20"],
+          "offsetRange": "40-50mm"
+        },
+        {
+          "name": "AMG GLB 35",
+          "oemWheelSizes": ["19x8", "20x8"],
+          "oemTireSizes": ["235/50R19", "255/45R20"],
+          "offsetRange": "30-50mm"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com", "cars.usnews.com"],
+      "notes": "US market debut was 2020 (orders started July 2019, deliveries late 2019 for MY2020)"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLC-Class Coupe",
+      "generation": "C253 (2017-2022)",
+      "validYears": [2017, 2018, 2019, 2020, 2021, 2022],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "GLC 300 Coupe",
+          "oemWheelSizes": ["18x8", "19x8", "20x8.5"],
+          "oemTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "offsetRange": "35-45mm"
+        },
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "oemWheelSizes": ["18x8", "19x8", "20x8.5"],
+          "oemTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "offsetRange": "35-45mm"
+        },
+        {
+          "name": "AMG GLC 43 Coupe",
+          "oemWheelSizes": ["19x8.5", "20x8.5", "21x9"],
+          "oemTireSizes": ["255/45R19", "255/40R20", "255/35R21"],
+          "offsetRange": "20-40mm"
+        },
+        {
+          "name": "AMG GLC 63 Coupe",
+          "oemWheelSizes": ["19x8.5/9.5", "20x8.5/9.5", "21x9/10"],
+          "oemTireSizes": ["255/45R19/275/40R19", "255/40R20/285/35R20", "255/35R21/285/30R21"],
+          "offsetRange": "20-40mm",
+          "staggered": true
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "motortrend.com", "caranddriver.com"],
+      "notes": "US debut was Q1 2017. First generation GLC Coupe"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLC-Class Coupe",
+      "generation": "C254 (2023-2025)",
+      "validYears": [2023, 2024, 2025],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "oemWheelSizes": ["19x8", "20x8.5"],
+          "oemTireSizes": ["235/55R19", "255/45R20"],
+          "offsetRange": "20-35mm"
+        },
+        {
+          "name": "AMG GLC 43 Coupe",
+          "oemWheelSizes": ["20x8.5", "21x9"],
+          "oemTireSizes": ["255/45R20", "255/40R21"],
+          "offsetRange": "20-35mm"
+        },
+        {
+          "name": "AMG GLC 63 S E Performance Coupe",
+          "oemWheelSizes": ["20x8.5/9.5", "21x9/10"],
+          "oemTireSizes": ["255/40R20/285/35R20", "255/35R21/285/30R21"],
+          "offsetRange": "20-35mm",
+          "staggered": true
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "mbusa.com"],
+      "notes": "Second generation GLC Coupe"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLE-Class Coupe",
+      "generation": "C292 (2016-2019)",
+      "validYears": [2016, 2017, 2018, 2019],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "GLE 350d Coupe",
+          "oemWheelSizes": ["19x8.5", "20x9", "21x9"],
+          "oemTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+          "offsetRange": "29-56mm"
+        },
+        {
+          "name": "GLE 400 Coupe",
+          "oemWheelSizes": ["19x8.5", "20x9", "21x9"],
+          "oemTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+          "offsetRange": "29-56mm"
+        },
+        {
+          "name": "AMG GLE 43 Coupe",
+          "oemWheelSizes": ["20x9", "21x9/10"],
+          "oemTireSizes": ["275/45R20", "275/40R21/295/35R21"],
+          "offsetRange": "29-56mm"
+        },
+        {
+          "name": "AMG GLE 63 Coupe",
+          "oemWheelSizes": ["21x9/10", "22x9/10.5"],
+          "oemTireSizes": ["275/40R21/295/35R21", "285/35R22/315/30R22"],
+          "offsetRange": "29-56mm",
+          "staggered": true
+        }
+      ],
+      "confidence": "high",
+      "sources": ["tire-size.net", "tirewheelguide.com"],
+      "notes": "First generation GLE Coupe"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLE-Class Coupe",
+      "generation": "C167 (2020-2025)",
+      "validYears": [2020, 2021, 2022, 2023, 2024, 2025],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "GLE 350 4MATIC Coupe",
+          "oemWheelSizes": ["19x8.5", "20x9", "21x9.5"],
+          "oemTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+          "offsetRange": "40-61mm"
+        },
+        {
+          "name": "GLE 450 4MATIC Coupe",
+          "oemWheelSizes": ["20x9", "21x9.5"],
+          "oemTireSizes": ["275/45R20", "275/40R21"],
+          "offsetRange": "40-61mm"
+        },
+        {
+          "name": "AMG GLE 53 Coupe",
+          "oemWheelSizes": ["20x9", "21x9.5/10.5"],
+          "oemTireSizes": ["275/45R20", "275/40R21/295/35R21"],
+          "offsetRange": "40-61mm"
+        },
+        {
+          "name": "AMG GLE 63 S Coupe",
+          "oemWheelSizes": ["21x9.5/10.5", "22x10/11"],
+          "oemTireSizes": ["275/40R21/295/35R21", "285/35R22/325/30R22"],
+          "offsetRange": "40-61mm",
+          "staggered": true
+        }
+      ],
+      "confidence": "high",
+      "sources": ["mbworld.org", "tirewheelguide.com"],
+      "notes": "Second generation GLE Coupe"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLK-Class",
+      "generation": "X204 (2010-2015)",
+      "validYears": [2010, 2011, 2012, 2013, 2014, 2015],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "GLK 250 BlueTEC",
+          "oemWheelSizes": ["17x7.5", "18x8", "19x8.5"],
+          "oemTireSizes": ["235/60R17", "235/55R18", "235/50R19"],
+          "offsetRange": "35-47mm"
+        },
+        {
+          "name": "GLK 350",
+          "oemWheelSizes": ["17x7.5", "18x8", "19x8.5", "20x8.5"],
+          "oemTireSizes": ["235/60R17", "235/55R18", "235/50R19", "255/45R20"],
+          "offsetRange": "35-47mm"
+        },
+        {
+          "name": "GLK 350 4MATIC",
+          "oemWheelSizes": ["17x7.5", "18x8", "19x8.5", "20x8.5"],
+          "oemTireSizes": ["235/60R17", "235/55R18", "235/50R19", "255/45R20"],
+          "offsetRange": "35-47mm"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "cars.usnews.com", "autoblog.com"],
+      "notes": "US debut was 2010 (2008-2009 were not available in US market)"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "generation": "W163 (1998-2005)",
+      "validYears": [2000, 2001, 2002, 2003, 2004, 2005],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "ML 320",
+          "oemWheelSizes": ["16x7.5", "17x8", "18x8.5"],
+          "oemTireSizes": ["225/75R16", "255/60R17", "275/55R18"],
+          "offsetRange": "46-50mm"
+        },
+        {
+          "name": "ML 350",
+          "oemWheelSizes": ["17x8", "18x8.5"],
+          "oemTireSizes": ["255/60R17", "275/55R18"],
+          "offsetRange": "46-50mm"
+        },
+        {
+          "name": "ML 430",
+          "oemWheelSizes": ["17x8", "18x8.5"],
+          "oemTireSizes": ["255/60R17", "275/55R18"],
+          "offsetRange": "46-50mm"
+        },
+        {
+          "name": "ML 500",
+          "oemWheelSizes": ["17x8", "18x8.5"],
+          "oemTireSizes": ["255/60R17", "275/55R18"],
+          "offsetRange": "46-50mm"
+        },
+        {
+          "name": "ML 55 AMG",
+          "oemWheelSizes": ["18x8.5"],
+          "oemTireSizes": ["275/55R18"],
+          "offsetRange": "46-50mm"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "First generation M-Class (W163). Years 2000-2005 are valid for US. Model years 2006-2007 in batch are W164 generation"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "generation": "W164 (2006-2011)",
+      "validYears": [2006, 2007],
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "trims": [
+        {
+          "name": "ML 350",
+          "oemWheelSizes": ["17x8", "18x8.5", "19x8.5", "20x9"],
+          "oemTireSizes": ["235/65R17", "255/55R18", "265/50R19", "275/45R20"],
+          "offsetRange": "38-48mm"
+        },
+        {
+          "name": "ML 350 4MATIC",
+          "oemWheelSizes": ["17x8", "18x8.5", "19x8.5", "20x9"],
+          "oemTireSizes": ["235/65R17", "255/55R18", "265/50R19", "275/45R20"],
+          "offsetRange": "38-48mm"
+        },
+        {
+          "name": "ML 500",
+          "oemWheelSizes": ["18x8.5", "19x8.5", "20x9"],
+          "oemTireSizes": ["255/55R18", "265/50R19", "275/45R20"],
+          "offsetRange": "38-48mm"
+        },
+        {
+          "name": "ML 63 AMG",
+          "oemWheelSizes": ["19x8.5", "20x9", "21x9.5"],
+          "oemTireSizes": ["265/50R19", "275/45R20", "295/35R21"],
+          "offsetRange": "38-48mm"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Second generation M-Class (W164) for years 2006-2007 in batch"
+    }
+  ],
+  "corrections": [
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "m-class",
+      "correction": "W164_GENERATION",
+      "notes": "2006-2007 M-Class are W164 generation, not W163"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "m-class",
+      "correction": "W164_GENERATION", 
+      "notes": "2006-2007 M-Class are W164 generation, not W163"
+    }
+  ],
+  "criticalFlags": [
+    {
+      "model": "G-Class AMG",
+      "flag": "DIFFERENT_BOLT_PATTERN",
+      "details": "G-Class uses 5x130 bolt pattern and 84.1mm hub bore, NOT 5x112/66.6mm like other Mercedes SUVs"
+    }
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "batch": "batch-42-japanese",
+  "group": "japanese",
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "mirai"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "mirai"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "mirai"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "mirai"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2-roadster"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr2-roadster"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr2-roadster"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr2-roadster"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr2-roadster"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr2-roadster"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr2-roadster"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "mr2-roadster"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "mr2-spyder"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "mr2-spyder"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "mr2-spyder"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "mr2-spyder"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "mr2-spyder"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "mr2-spyder"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "mr2-spyder"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "prius"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "prius"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "prius"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "prius"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "prius-plug-in"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "prius-prime"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "prius-prime"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "prius-prime"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "prius-prime"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "prius-prime"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "prius-prime"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "prius-prime"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "prius-prime"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "prius-v"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "rav4"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "sequoia"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "sequoia"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "sequoia"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "sequoia"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "sequoia"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "sequoia"
+    }
+  ]
+}

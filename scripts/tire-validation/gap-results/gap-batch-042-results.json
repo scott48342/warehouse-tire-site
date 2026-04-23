@@ -1,0 +1,570 @@
+{
+  "batchId": 42,
+  "researchedAt": "2026-04-21T23:56:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 28,
+    "foundSpecs": 14,
+    "missingSpecs": 8
+  },
+  "vehicles": [
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "usModel": "CLK55 AMG",
+      "boltPattern": "5x112",
+      "tires": {
+        "front": "225/45R17",
+        "rear": "245/40R17"
+      },
+      "wheelDiameter": 17,
+      "isStaggered": true,
+      "notes": "CLK55 AMG Coupe/Cabriolet"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "usModel": "CLK55 AMG",
+      "boltPattern": "5x112",
+      "tires": {
+        "front": "225/45R17",
+        "rear": "245/40R17"
+      },
+      "wheelDiameter": 17,
+      "isStaggered": true,
+      "notes": "CLK55 AMG Coupe/Cabriolet"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "usModel": "CLK55 AMG",
+      "boltPattern": "5x112",
+      "tires": {
+        "front": "225/40R18",
+        "rear": "255/35R18"
+      },
+      "wheelDiameter": 18,
+      "isStaggered": true,
+      "notes": "CLK55 AMG Coupe/Cabriolet - upgraded wheels for 2005+"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "usModel": "CLK55 AMG",
+      "boltPattern": "5x112",
+      "tires": {
+        "front": "225/40R18",
+        "rear": "255/35R18"
+      },
+      "wheelDiameter": 18,
+      "isStaggered": true,
+      "notes": "CLK55 AMG Cabriolet (last year)"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "usModel": "CLK63 AMG",
+      "boltPattern": "5x112",
+      "tires": {
+        "front": "225/40R18",
+        "rear": "255/35R18"
+      },
+      "wheelDiameter": 18,
+      "isStaggered": true,
+      "notes": "CLK63 AMG replaced CLK55"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "usModel": "CLK63 AMG",
+      "boltPattern": "5x112",
+      "tires": {
+        "front": "225/40R18",
+        "rear": "255/35R18"
+      },
+      "wheelDiameter": 18,
+      "isStaggered": true,
+      "notes": "CLK63 AMG Cabriolet; Black Series available (265/30R19 F, 285/30R19 R)"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "notUS": true,
+      "reason": "CLK-Class discontinued after 2008 model year in US. Replaced by E-Class Coupe."
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "clk-class-amg",
+      "notUS": true,
+      "reason": "CLK-Class discontinued after 2008 model year in US. Replaced by E-Class Coupe."
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "notUS": true,
+      "reason": "E-Class All-Terrain was Europe-only until 2022. US did not receive this model until 2022 as E450 4MATIC All-Terrain Wagon."
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "notUS": true,
+      "reason": "E-Class All-Terrain was Europe-only until 2022."
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "notUS": true,
+      "reason": "E-Class All-Terrain was Europe-only until 2022."
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "notUS": true,
+      "reason": "E-Class All-Terrain was Europe-only until 2022."
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "notUS": true,
+      "reason": "E-Class All-Terrain was Europe-only until 2022."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "usModel": "E450 4MATIC All-Terrain Wagon",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "245/45R19" },
+        { "size": "245/40R20" }
+      ],
+      "wheelDiameters": [19, 20],
+      "isStaggered": false,
+      "notes": "First year in US market"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "usModel": "E450 4MATIC All-Terrain Wagon",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "245/45R19" },
+        { "size": "245/40R20" }
+      ],
+      "wheelDiameters": [19, 20],
+      "isStaggered": false
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "usModel": "E450 4MATIC All-Terrain Wagon",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R19" },
+        { "size": "255/40R20" },
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "wheelDiameters": [19, 20],
+      "isStaggered": false,
+      "notes": "New generation with wider tires, staggered option available"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "usModel": "E450 4MATIC All-Terrain Wagon",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R19" },
+        { "size": "255/40R20" },
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "wheelDiameters": [19, 20],
+      "isStaggered": false
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "e-class-all-terrain",
+      "usModel": "E450 4MATIC All-Terrain Wagon",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R19" },
+        { "size": "255/40R20" },
+        { "front": "255/40R20", "rear": "285/35R20" }
+      ],
+      "wheelDiameters": [19, 20],
+      "isStaggered": false
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "e-class-amg",
+      "usModel": "Mercedes-AMG E53 Hybrid",
+      "boltPattern": "5x112",
+      "tires": [
+        { "front": "265/40R20", "rear": "295/35R20" },
+        { "front": "265/35R21", "rear": "295/30R21" }
+      ],
+      "wheelDiameters": [20, 21],
+      "isStaggered": true,
+      "notes": "E53 AMG Hybrid Sedan/Wagon available for 2026"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "eqc",
+      "notUS": true,
+      "reason": "Mercedes-Benz EQC was never sold in the United States. Europe and China market only."
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "eqc",
+      "notUS": true,
+      "reason": "Mercedes-Benz EQC was never sold in the United States."
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "eqc",
+      "notUS": true,
+      "reason": "Mercedes-Benz EQC was never sold in the United States."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqc",
+      "notUS": true,
+      "reason": "Mercedes-Benz EQC was never sold in the United States."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqc",
+      "notUS": true,
+      "reason": "Mercedes-Benz EQC was never sold in the United States."
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqe-amg",
+      "notUS": true,
+      "reason": "AMG EQE was not available in US until 2023 model year."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqe-amg",
+      "usModel": "Mercedes-AMG EQE Sedan",
+      "boltPattern": "5x112",
+      "tires": [
+        { "front": "255/35R21", "rear": "285/30R21" }
+      ],
+      "wheelDiameters": [21],
+      "isStaggered": true,
+      "notes": "AMG EQE 43/53 available. Specs based on performance variant of EQE350."
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqe-amg",
+      "usModel": "Mercedes-AMG EQE Sedan",
+      "boltPattern": "5x112",
+      "tires": [
+        { "front": "255/35R21", "rear": "285/30R21" }
+      ],
+      "wheelDiameters": [21],
+      "isStaggered": true
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqe-amg",
+      "usModel": "Mercedes-AMG EQE Sedan",
+      "boltPattern": "5x112",
+      "tires": [
+        { "front": "255/35R21", "rear": "285/30R21" }
+      ],
+      "wheelDiameters": [21],
+      "isStaggered": true
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqe-amg",
+      "usModel": "Mercedes-AMG EQE Sedan",
+      "boltPattern": "5x112",
+      "tires": [
+        { "front": "255/35R21", "rear": "285/30R21" }
+      ],
+      "wheelDiameters": [21],
+      "isStaggered": true,
+      "notes": "Projected based on 2025 specs"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqe-suv",
+      "usModel": "EQE350 SUV / EQE350 4MATIC SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R20" },
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [20, 21],
+      "isStaggered": false
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqe-suv",
+      "usModel": "EQE350 SUV / EQE350 4MATIC SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R20" },
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [20, 21],
+      "isStaggered": false
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqe-suv",
+      "usModel": "EQE350 SUV / EQE350 4MATIC SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R20" },
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [20, 21],
+      "isStaggered": false
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqe-suv",
+      "usModel": "EQE SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R20" },
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [20, 21],
+      "isStaggered": false,
+      "notes": "Projected based on 2025 specs - not yet confirmed on tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqe-suv-amg",
+      "usModel": "Mercedes-AMG EQE SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [21],
+      "isStaggered": false,
+      "notes": "AMG EQE SUV 43/53 - specs not separately listed on tiresize.com, using EQE SUV base"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqe-suv-amg",
+      "usModel": "Mercedes-AMG EQE SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [21],
+      "isStaggered": false
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqe-suv-amg",
+      "usModel": "Mercedes-AMG EQE SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [21],
+      "isStaggered": false
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqe-suv-amg",
+      "usModel": "Mercedes-AMG EQE SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [21],
+      "isStaggered": false,
+      "notes": "Projected based on 2025 specs"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqs-amg",
+      "usModel": "Mercedes-AMG EQS Sedan",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [21],
+      "isStaggered": false,
+      "notes": "AMG EQS 53 4MATIC+ - based on EQS580 4MATIC specs"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqs-amg",
+      "usModel": "Mercedes-AMG EQS Sedan",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R20" },
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [20, 21],
+      "isStaggered": false
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqs-amg",
+      "usModel": "Mercedes-AMG EQS Sedan",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R20" },
+        { "size": "265/40R21" }
+      ],
+      "wheelDiameters": [20, 21],
+      "isStaggered": false
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqs-amg",
+      "usModel": "Mercedes-AMG EQS Sedan",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R20" },
+        { "size": "265/40R21" },
+        { "size": "265/35R22" }
+      ],
+      "wheelDiameters": [20, 21, 22],
+      "isStaggered": false
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqs-amg",
+      "usModel": "Mercedes-AMG EQS Sedan",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "255/45R20" },
+        { "size": "265/40R21" },
+        { "size": "265/35R22" }
+      ],
+      "wheelDiameters": [20, 21, 22],
+      "isStaggered": false,
+      "notes": "Based on EQS580 4MATIC specs"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqs-suv",
+      "notUS": true,
+      "reason": "EQS SUV was not available until 2023 model year in US. Only EQS Sedan was sold in 2022."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqs-suv",
+      "usModel": "EQS450 SUV / EQS450 4MATIC SUV / EQS580 4MATIC SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "265/50R20" },
+        { "size": "275/45R21" },
+        { "front": "275/45R21", "rear": "285/45R21" }
+      ],
+      "wheelDiameters": [20, 21],
+      "isStaggered": false,
+      "notes": "Optional staggered setup available"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqs-suv",
+      "usModel": "EQS450 SUV / EQS450 4MATIC SUV / EQS580 4MATIC SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "275/45R21" },
+        { "front": "275/45R21", "rear": "285/45R21" }
+      ],
+      "wheelDiameters": [21],
+      "isStaggered": false
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqs-suv",
+      "usModel": "EQS450 SUV / EQS450 4MATIC SUV / EQS580 4MATIC SUV",
+      "boltPattern": "5x112",
+      "tires": [
+        { "size": "275/45R21" },
+        { "front": "275/45R21", "rear": "285/45R21" },
+        { "front": "275/40R22", "rear": "285/40R22" }
+      ],
+      "wheelDiameters": [21, 22],
+      "isStaggered": false
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqs-suv",
+      "notUS": true,
+      "reason": "EQS SUV not listed for 2026 on tiresize.com. Only EQS Sedan shown for 2026. May be discontinued or not yet confirmed."
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqt",
+      "notUS": true,
+      "reason": "Mercedes-Benz EQT is a European-market small electric van/MPV. Not sold in the United States."
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqt",
+      "notUS": true,
+      "reason": "Mercedes-Benz EQT is a European-market small electric van/MPV. Not sold in the United States."
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqt",
+      "notUS": true,
+      "reason": "Mercedes-Benz EQT is a European-market small electric van/MPV. Not sold in the United States."
+    }
+  ]
+}

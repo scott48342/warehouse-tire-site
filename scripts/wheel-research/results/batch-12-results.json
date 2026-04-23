@@ -1,0 +1,1342 @@
+{
+  "batchId": "12",
+  "processedAt": "2026-04-21T21:26:00.000Z",
+  "results": [
+    {
+      "year": 2004,
+      "make": "cadillac",
+      "model": "srx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 51},
+          {"diameter": 18, "width": 8, "offset": 51},
+          {"diameter": 20, "width": 8, "offset": 50}
+        ],
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com, wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Same specs as 2005"
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "srx",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 51},
+          {"diameter": 18, "width": 8, "offset": 51},
+          {"diameter": 20, "width": 8, "offset": 50}
+        ],
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com, wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Some trims had optional staggered 20-inch setup"
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "sts-v",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 51},
+          {"diameter": 18, "width": 8.5, "offset": 51},
+          {"diameter": 19, "width": 8.5, "offset": 51},
+          {"diameter": 19, "width": 9.5, "offset": 56}
+        ],
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "isStaggered": true
+      },
+      "source": "tirewheelguide.com, cadillacforums.com",
+      "confidence": "high",
+      "notes": "Staggered setup: Front 18x8.5/19x8.5 ET51, Rear 19x9.5 ET56"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "sts-v",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 51},
+          {"diameter": 19, "width": 8.5, "offset": 51},
+          {"diameter": 19, "width": 9.5, "offset": 56}
+        ],
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "isStaggered": true
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Staggered performance setup"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "sts-v",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 51},
+          {"diameter": 19, "width": 8.5, "offset": 51},
+          {"diameter": 19, "width": 9.5, "offset": 56}
+        ],
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "isStaggered": true
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Staggered performance setup"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "sts-v",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 51},
+          {"diameter": 19, "width": 8.5, "offset": 51},
+          {"diameter": 19, "width": 9.5, "offset": 56},
+          {"diameter": 20, "width": 10, "offset": 45}
+        ],
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "isStaggered": true
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Staggered: F 18x8.5/19x8.5 ET51, R 19x9.5 ET56 or 20x10 ET45"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "sts-v",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 51},
+          {"diameter": 19, "width": 8.5, "offset": 51},
+          {"diameter": 19, "width": 9.5, "offset": 56}
+        ],
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "isStaggered": true
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Final year of STS-V production"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "vistiq",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9.5, "offset": 40},
+          {"diameter": 22, "width": 9.5, "offset": 40},
+          {"diameter": 23, "width": 9.5, "offset": 40}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "cadillac.com, gmauthority.com, cadillacforums.com",
+      "confidence": "high",
+      "notes": "EV platform. Bolt pattern also reported as 6x139.7 by some owners"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "vistiq",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 21, "width": 9.5, "offset": 40},
+          {"diameter": 22, "width": 9.5, "offset": 40},
+          {"diameter": 23, "width": 9.5, "offset": 40}
+        ],
+        "boltPattern": "6x132",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "cadillac.com, caranddriver.com",
+      "confidence": "high",
+      "notes": "21-inch standard, 22-inch Premium Luxury, 23-inch available"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 61},
+          {"diameter": 19, "width": 8.5, "offset": 56},
+          {"diameter": 20, "width": 8, "offset": 55},
+          {"diameter": 20, "width": 9, "offset": 55}
+        ],
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "isStaggered": true
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Staggered: F 19x8 ET61 / R 19x8.5 ET56 or F 20x8 / R 20x9"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 61},
+          {"diameter": 19, "width": 8.5, "offset": 56},
+          {"diameter": 20, "width": 8, "offset": 55},
+          {"diameter": 20, "width": 9, "offset": 55}
+        ],
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "isStaggered": true
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Corvette-based roadster, staggered setup"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 61},
+          {"diameter": 19, "width": 8.5, "offset": 56},
+          {"diameter": 20, "width": 8, "offset": 55},
+          {"diameter": 20, "width": 9, "offset": 55}
+        ],
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "isStaggered": true
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Staggered setup"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 61},
+          {"diameter": 19, "width": 8.5, "offset": 56}
+        ],
+        "boltPattern": "5x120.65",
+        "centerBore": 70.3,
+        "isStaggered": true
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Final year of XLR-V production"
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "xt4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 37},
+          {"diameter": 19, "width": 8, "offset": 37},
+          {"diameter": 20, "width": 8.5, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Compact luxury crossover"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "xt4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 37},
+          {"diameter": 19, "width": 8, "offset": 37},
+          {"diameter": 20, "width": 8.5, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Same specs throughout generation"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "xt4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 37},
+          {"diameter": 19, "width": 8, "offset": 37},
+          {"diameter": 20, "width": 8.5, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Same specs throughout generation"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "xt4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 37},
+          {"diameter": 19, "width": 8, "offset": 37},
+          {"diameter": 20, "width": 8.5, "offset": 37}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Same specs throughout generation"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "xt5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "First generation XT5"
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "xt5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "First generation XT5"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "xt5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Facelift model"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "xt5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Facelift model continues"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "xt5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Facelift model continues"
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "xt6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Three-row crossover"
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "xt6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Multiple wheel options available"
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "xt6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Same specs throughout generation"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "xt6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Same specs throughout generation"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "xt6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Continued production"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "xt6",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Continued production"
+    },
+    {
+      "year": 2000,
+      "make": "oldsmobile",
+      "model": "alero",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 41},
+          {"diameter": 16, "width": 6.5, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com, avtoreference.com",
+      "confidence": "high",
+      "notes": "Oldsmobile, not Chevrolet - same platform as Pontiac Grand Am"
+    },
+    {
+      "year": 2001,
+      "make": "oldsmobile",
+      "model": "alero",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 41},
+          {"diameter": 16, "width": 6.5, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Oldsmobile, not Chevrolet"
+    },
+    {
+      "year": 2002,
+      "make": "oldsmobile",
+      "model": "alero",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 41},
+          {"diameter": 16, "width": 6.5, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Oldsmobile, not Chevrolet"
+    },
+    {
+      "year": 2003,
+      "make": "oldsmobile",
+      "model": "alero",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 41},
+          {"diameter": 16, "width": 6.5, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Oldsmobile, not Chevrolet"
+    },
+    {
+      "year": 2004,
+      "make": "oldsmobile",
+      "model": "alero",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 41},
+          {"diameter": 16, "width": 6.5, "offset": 40}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Final year of Alero production - Oldsmobile brand"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "astro",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 28},
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Full-size van"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "astro",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 28},
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Full-size van"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "astro",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 28},
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Full-size van"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "astro",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Full-size van"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "astro",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Full-size van"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "astro",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Final year of Astro production"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 31},
+          {"diameter": 18, "width": 8, "offset": 31},
+          {"diameter": 20, "width": 8.5, "offset": 31}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com, factorywheelreplacement.com",
+      "confidence": "high",
+      "notes": "Second generation Avalanche"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 31},
+          {"diameter": 18, "width": 8, "offset": 31},
+          {"diameter": 20, "width": 8.5, "offset": 31}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Second generation Avalanche"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 31},
+          {"diameter": 18, "width": 8, "offset": 31},
+          {"diameter": 20, "width": 8.5, "offset": 31}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Second generation Avalanche"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 31},
+          {"diameter": 18, "width": 8, "offset": 31},
+          {"diameter": 20, "width": 8.5, "offset": 31}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Second generation Avalanche"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 31},
+          {"diameter": 18, "width": 8, "offset": 31},
+          {"diameter": 20, "width": 8.5, "offset": 31}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Second generation Avalanche"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 31},
+          {"diameter": 18, "width": 8, "offset": 31},
+          {"diameter": 20, "width": 8.5, "offset": 31}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Second generation Avalanche"
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 31},
+          {"diameter": 18, "width": 8, "offset": 31},
+          {"diameter": 20, "width": 8.5, "offset": 31}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Final year of Avalanche production"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 31},
+          {"diameter": 17, "width": 7.5, "offset": 31},
+          {"diameter": 20, "width": 8.5, "offset": 22}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "First generation 1500 half-ton"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 31},
+          {"diameter": 17, "width": 7.5, "offset": 31},
+          {"diameter": 20, "width": 8.5, "offset": 22}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "First generation 1500 half-ton"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 31},
+          {"diameter": 17, "width": 7.5, "offset": 31},
+          {"diameter": 20, "width": 8.5, "offset": 22}
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 78.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Final year of first generation"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com, wheel-sizes.com",
+      "confidence": "high",
+      "notes": "Heavy duty 3/4-ton version with 8-lug pattern"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Heavy duty 3/4-ton version"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Heavy duty 3/4-ton version"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Heavy duty 3/4-ton version"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 28}
+        ],
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high",
+      "notes": "Final year of Avalanche 2500"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 15, "width": 6, "offset": 45}
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Hatchback variant of Aveo"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 15, "width": 6, "offset": 45}
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Hatchback variant"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 15, "width": 6, "offset": 45}
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Hatchback variant"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 15, "width": 6, "offset": 45}
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Hatchback variant"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 16, "width": 6.5, "offset": 45}
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Hatchback variant"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 16, "width": 6.5, "offset": 45}
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Hatchback variant"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "aveo-u-va",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 15, "width": 6, "offset": 45},
+          {"diameter": 16, "width": 6.5, "offset": 45}
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Final year of this generation"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "blazer",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com, blazerevforum.com",
+      "confidence": "high",
+      "notes": "New generation crossover Blazer"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "blazer",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Crossover Blazer"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "blazer",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Crossover Blazer"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "blazer",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Crossover Blazer"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "blazer",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Crossover Blazer"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "blazer",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Crossover Blazer continues"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "blazer",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "ICE Blazer continues alongside EV version"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "blazer",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 20, "width": 8, "offset": 50},
+          {"diameter": 21, "width": 8.5, "offset": 55}
+        ],
+        "boltPattern": "6x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "ICE Blazer expected to continue"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/BoltEV",
+      "confidence": "high",
+      "notes": "Electric utility vehicle variant of Bolt"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/BoltEV",
+      "confidence": "high",
+      "notes": "Electric utility vehicle"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/BoltEV, chevybolt.org",
+      "confidence": "high",
+      "notes": "Electric utility vehicle"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/BoltEV",
+      "confidence": "high",
+      "notes": "Electric utility vehicle"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "bolt-euv",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/BoltEV",
+      "confidence": "high",
+      "notes": "Final year of Bolt EUV production"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "bolt-ev",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "source": "reddit.com/r/BoltEV",
+      "confidence": "high",
+      "notes": "New generation Bolt EV for 2025"
+    }
+  ]
+}

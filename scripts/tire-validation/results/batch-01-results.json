@@ -1,0 +1,975 @@
+{
+  "batchId": "01",
+  "processedAt": "2026-04-21T21:37:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "adx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 45}, "tireSize": "225/55R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "235/45R19"},
+        {"trim": "A-Spec Advance", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "235/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "acuranews.com",
+      "confidence": "high",
+      "notes": "Official Acura specs - 2025/2026 identical"
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "adx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 45}, "tireSize": "225/55R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "235/45R19"},
+        {"trim": "A-Spec Advance", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "235/45R19"}
+      ],
+      "isStaggered": false,
+      "source": "acuranews.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "cl",
+      "trims": [
+        {"trim": "3.2L Base", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 50}, "tireSize": "205/60R16"},
+        {"trim": "3.2L S", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "acura",
+      "model": "cl",
+      "trims": [
+        {"trim": "3.2L Base", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 50}, "tireSize": "205/60R16"},
+        {"trim": "3.2L S", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "cl",
+      "trims": [
+        {"trim": "3.2L Base", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 50}, "tireSize": "205/60R16"},
+        {"trim": "3.2L S", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "acura",
+      "model": "cl",
+      "trims": [
+        {"trim": "3.2L Base", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 50}, "tireSize": "205/60R16"},
+        {"trim": "3.2L S", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "215/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "medium",
+      "notes": "Inferred from 2001+ data"
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "cl-type-s",
+      "trims": [
+        {"trim": "Type-S", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "acura",
+      "model": "cl-type-s",
+      "trims": [
+        {"trim": "Type-S", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "cl-type-s",
+      "trims": [
+        {"trim": "Type-S", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "225/50R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "Technology", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "Technology", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "Technology Plus", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "AcuraWatch Plus", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "225/40R18"},
+        {"trim": "Special Edition", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "2.0L", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "2.4L", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "2.0L", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "2.4L", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "Hybrid", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "2.0L", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"},
+        {"trim": "2.0L with 17\" wheels", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "2.4L", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"},
+        {"trim": "Hybrid", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        {"trim": "2.0L", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 45}, "tireSize": "205/55R16"},
+        {"trim": "2.0L Premium", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 45}, "tireSize": "215/45R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "2012 was first model year"
+    },
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "integra",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "215/50R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 50}, "tireSize": "235/40R18"},
+        {"trim": "Type-S", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 45}, "tireSize": "265/30R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "integra",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "215/50R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 50}, "tireSize": "235/40R18"},
+        {"trim": "Type-S", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 45}, "tireSize": "265/30R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "acura",
+      "model": "integra",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "215/50R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 50}, "tireSize": "235/40R18"},
+        {"trim": "Type-S", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 45}, "tireSize": "265/30R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "integra",
+      "trims": [
+        {"trim": "Standard", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "215/50R17"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 50}, "tireSize": "235/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Type-S not available in 2023"
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "integra-type-r",
+      "trims": [
+        {"trim": "Type-R", "wheelSize": {"diameter": 15, "width": 6.0, "offset": 50}, "tireSize": "195/55R15"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "acura",
+      "model": "integra-type-r",
+      "trims": [
+        {"trim": "Type-R", "wheelSize": {"diameter": 15, "width": 6.0, "offset": 50}, "tireSize": "195/55R15"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/55R19"},
+        {"trim": "Technology", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "Type-S", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 45}, "tireSize": "275/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/55R19"},
+        {"trim": "Technology", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "Type-S", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 45}, "tireSize": "275/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/55R19"},
+        {"trim": "Technology", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "Type-S", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 45}, "tireSize": "275/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/55R19"},
+        {"trim": "Technology", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "Type-S", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 45}, "tireSize": "275/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/55R19"},
+        {"trim": "Technology", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "255/50R20"},
+        {"trim": "Type-S", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 45}, "tireSize": "275/40R21"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"},
+        {"trim": "Technology", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "245/60R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "245/50R19"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"},
+        {"trim": "Sport Hybrid", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "245/50R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "245/60R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "245/50R19"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"},
+        {"trim": "Sport Hybrid", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "245/50R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "245/60R18"},
+        {"trim": "Base SH-AWD", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "245/60R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "245/50R20"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "245/50R20"},
+        {"trim": "Sport Hybrid", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "245/50R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "245/60R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "245/50R19"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"},
+        {"trim": "Sport Hybrid", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "245/50R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "245/60R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "245/50R19"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "245/60R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "245/50R19"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "245/60R18"},
+        {"trim": "Base AWD", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "245/60R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "245/50R19"},
+        {"trim": "Advance", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 45}, "tireSize": "265/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Advance", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Advance", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Advance", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Advance", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Sport", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Sport", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Technology", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 45}, "tireSize": "255/55R18"},
+        {"trim": "Sport", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"},
+        {"trim": "Touring", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"},
+        {"trim": "Touring", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"},
+        {"trim": "Touring", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"},
+        {"trim": "Touring", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"},
+        {"trim": "Touring", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"},
+        {"trim": "Touring", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 50}, "tireSize": "235/65R17"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Type-S", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 27, "front": true}, "tireSize": "245/35R19", "tireSizeRear": "305/30R20", "wheelSizeRear": {"diameter": 20, "width": 11.0, "offset": 30}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Type-S", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 27, "front": true}, "tireSize": "245/35R19", "tireSizeRear": "305/30R20", "wheelSizeRear": {"diameter": 20, "width": 11.0, "offset": 30}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 27, "front": true}, "tireSize": "245/35R19", "tireSizeRear": "305/30R20", "wheelSizeRear": {"diameter": 20, "width": 11.0, "offset": 30}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 27, "front": true}, "tireSize": "245/35R19", "tireSizeRear": "305/30R20", "wheelSizeRear": {"diameter": 20, "width": 11.0, "offset": 30}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 27, "front": true}, "tireSize": "245/35R19", "tireSizeRear": "305/30R20", "wheelSizeRear": {"diameter": 20, "width": 11.0, "offset": 30}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 27, "front": true}, "tireSize": "245/35R19", "tireSizeRear": "305/30R20", "wheelSizeRear": {"diameter": 20, "width": 11.0, "offset": 30}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 27, "front": true}, "tireSize": "245/35R19", "tireSizeRear": "305/30R20", "wheelSizeRear": {"diameter": 20, "width": 11.0, "offset": 30}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 19, "width": 9.0, "offset": 27, "front": true}, "tireSize": "245/35R19", "tireSizeRear": "295/30R20", "wheelSizeRear": {"diameter": 20, "width": 11.0, "offset": 30}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "2016 had slightly narrower rear tires (295 vs 305)"
+    },
+    {
+      "year": 2005,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 40, "front": true}, "tireSize": "215/40R17", "tireSizeRear": "255/40R17", "wheelSizeRear": {"diameter": 17, "width": 9.0, "offset": 35}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 40, "front": true}, "tireSize": "215/40R17", "tireSizeRear": "255/40R17", "wheelSizeRear": {"diameter": 17, "width": 9.0, "offset": 35}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 40, "front": true}, "tireSize": "215/40R17", "tireSizeRear": "255/40R17", "wheelSizeRear": {"diameter": 17, "width": 9.0, "offset": 35}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 40, "front": true}, "tireSize": "215/40R17", "tireSizeRear": "255/40R17", "wheelSizeRear": {"diameter": 17, "width": 9.0, "offset": 35}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 50, "front": true}, "tireSize": "215/45R16", "tireSizeRear": "245/40R17", "wheelSizeRear": {"diameter": 17, "width": 8.0, "offset": 45}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "acura",
+      "model": "nsx",
+      "trims": [
+        {"trim": "Base", "wheelSize": {"diameter": 16, "width": 6.5, "offset": 50, "front": true}, "tireSize": "215/45R16", "tireSizeRear": "245/40R17", "wheelSizeRear": {"diameter": 17, "width": 8.0, "offset": 45}}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 19, "width": 7.5, "offset": 45}, "tireSize": "235/55R19"},
+        {"trim": "Base SH-AWD", "wheelSize": {"diameter": 19, "width": 7.5, "offset": 45}, "tireSize": "235/55R19"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.0, "offset": 45}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Base SH-AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.0, "offset": 45}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "2025 base uses 18-inch, 2026 base upgraded to 19-inch"
+    },
+    {
+      "year": 2024,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Base SH-AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.0, "offset": 45}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Base SH-AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.0, "offset": 45}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Base SH-AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.0, "offset": 45}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Base SH-AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.0, "offset": 45}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Base SH-AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.0, "offset": 45}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 19, "width": 7.5, "offset": 45}, "tireSize": "235/55R19"},
+        {"trim": "Base SH-AWD", "wheelSize": {"diameter": 19, "width": 7.5, "offset": 45}, "tireSize": "235/55R19"},
+        {"trim": "A-Spec", "wheelSize": {"diameter": 20, "width": 8.0, "offset": 45}, "tireSize": "255/45R20"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "2019 was first year of 3rd gen with 19-inch base wheels"
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        {"trim": "Base FWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"},
+        {"trim": "Base AWD", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 45}, "tireSize": "235/60R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Last year of 2nd gen"
+    }
+  ],
+  "validationSummary": {
+    "totalVehicles": 75,
+    "processedVehicles": 75,
+    "highConfidence": 73,
+    "mediumConfidence": 2,
+    "staggeredVehicles": 14,
+    "dataIssuesFound": [
+      "Acura ADX currentTireSizes include truck sizes (285/75R16, 265/70R17) that are incorrect - should be 225/55R18 and 235/45R19 only",
+      "Acura Integra-Type-R currentTireSizes (195/55R15, 215/45R16) are correct for different wheel options",
+      "Acura NSX currentTireSizes show mixed sizes from different generations - verified staggered setups",
+      "Acura RDX 2019+ uses 235/55R19 not 235/60R18 for non-A-Spec trims",
+      "Acura RDX 2026 upgraded to 235/55R19 on 19-inch wheels for base"
+    ]
+  }
+}

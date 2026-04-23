@@ -1,0 +1,1221 @@
+{
+  "batchId": "90s-batch-13",
+  "completedAt": "2026-04-22T12:45:00.000Z",
+  "results": [
+    {
+      "year": 1992,
+      "make": "BMW",
+      "model": "Z3",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "motortrend.com"],
+      "notes": "BMW Z3 production started in 1995 (1996 model year). No 1992 Z3 exists."
+    },
+    {
+      "year": 1993,
+      "make": "BMW",
+      "model": "Z3",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "motortrend.com"],
+      "notes": "BMW Z3 production started in 1995 (1996 model year). No 1993 Z3 exists."
+    },
+    {
+      "year": 1994,
+      "make": "BMW",
+      "model": "Z3",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "motortrend.com"],
+      "notes": "BMW Z3 production started in 1995 (1996 model year). No 1994 Z3 exists."
+    },
+    {
+      "year": 1995,
+      "make": "BMW",
+      "model": "Z3",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "motortrend.com"],
+      "notes": "BMW Z3 production started Sept 1995 for 1996 model year. 1995 model year does not exist."
+    },
+    {
+      "year": 1996,
+      "make": "BMW",
+      "model": "Z3",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.0, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["225/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com", "automobile-catalog.com"],
+      "notes": "First year Z3. Roadster only with 1.9L 4-cylinder. 16\" wheels standard."
+    },
+    {
+      "year": 1997,
+      "make": "BMW",
+      "model": "Z3",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.0, "offset": 46 },
+          { "diameter": 17, "width": 7.5, "offset": 41, "position": "front" },
+          { "diameter": 17, "width": 8.5, "offset": 41, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "225/45R17", "245/40R17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com", "automobile-catalog.com"],
+      "notes": "1.9L and 2.8L available. 2.8L has optional staggered 17\" setup."
+    },
+    {
+      "year": 1998,
+      "make": "BMW",
+      "model": "Z3",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.0, "offset": 46 },
+          { "diameter": 17, "width": 7.5, "offset": 41, "position": "front" },
+          { "diameter": 17, "width": 8.5, "offset": 41, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "225/45R17", "245/40R17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com", "automobile-catalog.com"],
+      "notes": "Coupe introduced in Jan 1998. 2.8L has optional staggered 17\" setup."
+    },
+    {
+      "year": 1999,
+      "make": "BMW",
+      "model": "Z3",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120",
+        "hub_bore": 72.6,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.0, "offset": 46 },
+          { "diameter": 17, "width": 7.5, "offset": 41, "position": "front" },
+          { "diameter": 17, "width": 8.5, "offset": 41, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["225/50R16", "225/45R17", "245/40R17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tiresize.com", "automobile-catalog.com"],
+      "notes": "Facelifted model. 2.3L and 2.8L available. 2.8L has optional staggered 17\" setup."
+    },
+    {
+      "year": 1990,
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 38 },
+          { "diameter": 14, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com", "vwvortex.com"],
+      "notes": "Mk2 generation. GLI trim has 14\" wheels."
+    },
+    {
+      "year": 1991,
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 38 },
+          { "diameter": 14, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com", "vwvortex.com"],
+      "notes": "Mk2 generation. GLI trim has 14\" wheels."
+    },
+    {
+      "year": 1992,
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com", "vwvortex.com"],
+      "notes": "Final year Mk2. Transition to Mk3 in mid-1992."
+    },
+    {
+      "year": 1993,
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com", "fifteen52.com"],
+      "notes": "Mk3 generation begins. Base has 14\", GL/GLS has optional 15\"."
+    },
+    {
+      "year": 1994,
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com", "fifteen52.com"],
+      "notes": "Mk3 generation."
+    },
+    {
+      "year": 1995,
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com", "fifteen52.com"],
+      "notes": "Mk3 generation."
+    },
+    {
+      "year": 1996,
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com", "fifteen52.com"],
+      "notes": "Mk3 generation. Trek edition available."
+    },
+    {
+      "year": 1997,
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com", "fifteen52.com"],
+      "notes": "Mk3 generation."
+    },
+    {
+      "year": 1998,
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "tiresize.com", "fifteen52.com"],
+      "notes": "Final Mk3 year. Mk4 began later in 1998."
+    },
+    {
+      "year": 1990,
+      "make": "Volkswagen",
+      "model": "Golf",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 38 },
+          { "diameter": 14, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk2 generation."
+    },
+    {
+      "year": 1991,
+      "make": "Volkswagen",
+      "model": "Golf",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.5, "offset": 38 },
+          { "diameter": 14, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk2 generation."
+    },
+    {
+      "year": 1992,
+      "make": "Volkswagen",
+      "model": "Golf",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Final Mk2 year."
+    },
+    {
+      "year": 1993,
+      "make": "Volkswagen",
+      "model": "Golf",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk3 generation begins. VR6 uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1994,
+      "make": "Volkswagen",
+      "model": "Golf",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk3 generation. VR6 uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1995,
+      "make": "Volkswagen",
+      "model": "Golf",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk3 generation. VR6 uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1996,
+      "make": "Volkswagen",
+      "model": "Golf",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk3 generation. VR6 uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1997,
+      "make": "Volkswagen",
+      "model": "Golf",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk3 generation. VR6 uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1998,
+      "make": "Volkswagen",
+      "model": "Golf",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Final Mk3 year. Mk4 began later in 1998."
+    },
+    {
+      "year": 1990,
+      "make": "Volkswagen",
+      "model": "GTI",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk2 generation GTI. 16V trim available."
+    },
+    {
+      "year": 1991,
+      "make": "Volkswagen",
+      "model": "GTI",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk2 generation GTI. 16V trim available."
+    },
+    {
+      "year": 1992,
+      "make": "Volkswagen",
+      "model": "GTI",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Final Mk2 GTI. 16V has optional 15\" wheels."
+    },
+    {
+      "year": 1993,
+      "make": "Volkswagen",
+      "model": "GTI",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk3 GTI. 15\" standard. VR6 GTI uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1994,
+      "make": "Volkswagen",
+      "model": "GTI",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk3 GTI. VR6 GTI uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1995,
+      "make": "Volkswagen",
+      "model": "GTI",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk3 GTI. VR6 GTI uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1996,
+      "make": "Volkswagen",
+      "model": "GTI",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk3 GTI. VR6 GTI uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1997,
+      "make": "Volkswagen",
+      "model": "GTI",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Mk3 GTI. VR6 GTI uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1998,
+      "make": "Volkswagen",
+      "model": "GTI",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["apexwheels.com", "opplehouse.com", "tiresize.com"],
+      "notes": "Final Mk3 GTI. VR6 GTI uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1990,
+      "make": "Volkswagen",
+      "model": "Passat",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "vwvortex.com", "apexwheels.com"],
+      "notes": "B3 generation. 4-cylinder has 4x100. VR6 (later) has 5x100."
+    },
+    {
+      "year": 1991,
+      "make": "Volkswagen",
+      "model": "Passat",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "vwvortex.com", "apexwheels.com"],
+      "notes": "B3 generation. 4-cylinder has 4x100. VR6 (5x100) available later."
+    },
+    {
+      "year": 1992,
+      "make": "Volkswagen",
+      "model": "Passat",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "vwvortex.com", "apexwheels.com"],
+      "notes": "B3 generation. VR6 uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1993,
+      "make": "Volkswagen",
+      "model": "Passat",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "vwvortex.com", "apexwheels.com"],
+      "notes": "B3 generation. Transition to B4. VR6 uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1994,
+      "make": "Volkswagen",
+      "model": "Passat",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "vwvortex.com", "apexwheels.com"],
+      "notes": "B4 generation. 4-cylinder has 4x100. VR6 uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1995,
+      "make": "Volkswagen",
+      "model": "Passat",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "vwvortex.com", "apexwheels.com"],
+      "notes": "B4 generation. 4-cylinder has 4x100. VR6 uses 5x100 bolt pattern."
+    },
+    {
+      "year": 1996,
+      "make": "Volkswagen",
+      "model": "Passat",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "vwvortex.com", "apexwheels.com"],
+      "notes": "B4 generation. 4-cylinder has 4x100. VR6 uses 5x100. B5 (5x112) began in Europe."
+    },
+    {
+      "year": 1997,
+      "make": "Volkswagen",
+      "model": "Passat",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "vwvortex.com", "apexwheels.com"],
+      "notes": "Final B4 year in US. 4-cylinder has 4x100. VR6 uses 5x100. B5 has 5x112."
+    },
+    {
+      "year": 1990,
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["cars.com", "cabby-info.com", "vwvortex.com"],
+      "notes": "VW Cabrio production started 1995. Pre-1995 model was 'Cabriolet' (different model)."
+    },
+    {
+      "year": 1991,
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["cars.com", "cabby-info.com", "vwvortex.com"],
+      "notes": "VW Cabrio production started 1995. Pre-1995 model was 'Cabriolet' (different model)."
+    },
+    {
+      "year": 1992,
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["cars.com", "cabby-info.com", "vwvortex.com"],
+      "notes": "VW Cabrio production started 1995. Pre-1995 model was 'Cabriolet' (different model)."
+    },
+    {
+      "year": 1993,
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["cars.com", "cabby-info.com", "vwvortex.com"],
+      "notes": "VW Cabrio production started 1995. Pre-1995 model was 'Cabriolet' (different model)."
+    },
+    {
+      "year": 1994,
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["cars.com", "cabby-info.com", "vwvortex.com"],
+      "notes": "VW Cabrio production started 1995 (went on sale April 1994 as 1995 MY)."
+    },
+    {
+      "year": 1995,
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "apexwheels.com", "vwvortex.com"],
+      "notes": "First year Cabrio (Mk3 Golf-based). Based in Mexico."
+    },
+    {
+      "year": 1996,
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "apexwheels.com", "vwvortex.com"],
+      "notes": "Mk3 Golf-based Cabrio."
+    },
+    {
+      "year": 1997,
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "apexwheels.com", "vwvortex.com"],
+      "notes": "Mk3 Golf-based Cabrio."
+    },
+    {
+      "year": 1998,
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "apexwheels.com", "vwvortex.com"],
+      "notes": "Mk3 Golf-based Cabrio."
+    },
+    {
+      "year": 1999,
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6.0, "offset": 38 },
+          { "diameter": 15, "width": 6.0, "offset": 38 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "apexwheels.com", "vwvortex.com"],
+      "notes": "Mk3 Golf-based Cabrio. Continued through 2002."
+    },
+    {
+      "year": 1990,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "New Beetle production started 1998. Classic Beetle (different vehicle) ended US sales in 1979."
+    },
+    {
+      "year": 1991,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "New Beetle production started 1998. Classic Beetle not sold in US during 1990s."
+    },
+    {
+      "year": 1992,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "New Beetle production started 1998. Classic Beetle not sold in US during 1990s."
+    },
+    {
+      "year": 1993,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "New Beetle production started 1998. Classic Beetle not sold in US during 1990s."
+    },
+    {
+      "year": 1994,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "New Beetle production started 1998. Classic Beetle not sold in US during 1990s."
+    },
+    {
+      "year": 1995,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "New Beetle production started 1998. Classic Beetle not sold in US during 1990s."
+    },
+    {
+      "year": 1996,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "New Beetle production started 1998. Classic Beetle not sold in US during 1990s."
+    },
+    {
+      "year": 1997,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "New Beetle production started 1998. Classic Beetle not sold in US during 1990s."
+    },
+    {
+      "year": 1998,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "apexwheels.com", "tiresize.com"],
+      "notes": "First year New Beetle (based on Mk4 Golf platform)."
+    },
+    {
+      "year": 1999,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 42 },
+          { "diameter": 17, "width": 7.0, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/55R16", "205/50R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "apexwheels.com", "tiresize.com"],
+      "notes": "New Beetle (Mk4 Golf platform). 17\" option available."
+    },
+    {
+      "year": 1990,
+      "make": "Volvo",
+      "model": "850",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com", "matthewsvolvosite.com"],
+      "notes": "Volvo 850 production started 1991 (1992 model year in US)."
+    },
+    {
+      "year": 1991,
+      "make": "Volvo",
+      "model": "850",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com", "matthewsvolvosite.com"],
+      "notes": "Volvo 850 production started 1991 but 1992 was first US model year."
+    },
+    {
+      "year": 1992,
+      "make": "Volvo",
+      "model": "850",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "medium",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "Limited 1992 US availability. First full year was 1993."
+    },
+    {
+      "year": 1993,
+      "make": "Volvo",
+      "model": "850",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 65.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ipdusa.com", "swedespeed.com", "autoevolution.com"],
+      "notes": "First full US model year for 850."
+    },
+    {
+      "year": 1994,
+      "make": "Volvo",
+      "model": "850",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 65.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ipdusa.com", "swedespeed.com", "autoevolution.com"],
+      "notes": "Turbo version added. 16\" optional on GLT."
+    },
+    {
+      "year": 1995,
+      "make": "Volvo",
+      "model": "850",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 65.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 },
+          { "diameter": 17, "width": 7.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/55R16", "205/50R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ipdusa.com", "swedespeed.com", "matthewsvolvosite.com"],
+      "notes": "T-5R special edition with 17\" wheels. Limited to 1400 units."
+    },
+    {
+      "year": 1996,
+      "make": "Volvo",
+      "model": "850",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 65.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 },
+          { "diameter": 17, "width": 7.0, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/55R16", "205/50R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ipdusa.com", "swedespeed.com", "matthewsvolvosite.com"],
+      "notes": "AWD version added. R model with 17\" wheels."
+    },
+    {
+      "year": 1997,
+      "make": "Volvo",
+      "model": "850",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 65.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["ipdusa.com", "swedespeed.com", "matthewsvolvosite.com"],
+      "notes": "Final 850 model year. Renamed to S70/V70 for 1998."
+    },
+    {
+      "year": 1998,
+      "make": "Volvo",
+      "model": "850",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "matthewsvolvosite.com"],
+      "notes": "850 ended in 1997. Replaced by S70/V70 for 1998."
+    },
+    {
+      "year": 1999,
+      "make": "Volvo",
+      "model": "850",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "matthewsvolvosite.com"],
+      "notes": "850 ended in 1997. Replaced by S70/V70 for 1998."
+    },
+    {
+      "year": 1990,
+      "make": "Volvo",
+      "model": "S70",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "Volvo S70 production started 1997 (1998 model year in US)."
+    },
+    {
+      "year": 1991,
+      "make": "Volvo",
+      "model": "S70",
+      "status": "not_produced",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia.org", "autoevolution.com"],
+      "notes": "Volvo S70 production started 1997 (1998 model year in US)."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 44,
+    "partial": 0,
+    "not_produced": 31,
+    "highConfidence": 74,
+    "mediumConfidence": 1,
+    "needsReview": 0
+  },
+  "notes": {
+    "BMW_Z3": "Production 1996-2002 (US). Bolt pattern 5x120, hub bore 72.6mm. Base has 16\" wheels, 2.8L has optional staggered 17\" setup.",
+    "VW_Jetta_Golf_GTI": "Mk2 (1990-1992): 4x100, 57.1mm hub, 13-14\" wheels. Mk3 (1993-1998): 4x100, 57.1mm hub, 14-15\" wheels. VR6 variants use 5x100.",
+    "VW_Passat": "B3/B4 (1990-1997): 4x100 for 4-cyl, 5x100 for VR6, 57.1mm hub. Note: User provided 5x112 but that's B5 generation (1998+).",
+    "VW_Cabrio": "Production 1995-2002. 4x100, 57.1mm hub. Pre-1995 was called 'Cabriolet' (different model).",
+    "VW_Beetle": "New Beetle production 1998-2010. 5x100, 57.1mm hub. Classic Beetle (1990s Mexico) would be 4x130 but not sold in US.",
+    "Volvo_850": "Production 1993-1997. 5x108, 65.1mm hub. T-5R/R models had 17\" wheels.",
+    "Volvo_S70": "Production 1997-2000 (1998 US model year). Same specs as 850: 5x108, 65.1mm hub."
+  }
+}

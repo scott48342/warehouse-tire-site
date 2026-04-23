@@ -1,0 +1,110 @@
+{
+  "batchId": 59,
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-22T00:02:00.000Z",
+  "vehicles": [
+    {
+      "year": 2024,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "trims": [
+        {
+          "name": "B6 AWD",
+          "boltPattern": "5x108",
+          "centerBore": 63.4,
+          "wheelSpecs": [
+            {
+              "diameter": 19,
+              "width": 7.5,
+              "offset": 50.8,
+              "tireSize": "235/50R19"
+            },
+            {
+              "diameter": 20,
+              "width": 8.0,
+              "offset": 50.8,
+              "tireSize": "245/45R20"
+            },
+            {
+              "diameter": 21,
+              "width": 8.5,
+              "offset": 50.8,
+              "tireSize": "245/40R21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "trims": [
+        {
+          "name": "B6 AWD",
+          "boltPattern": "5x108",
+          "centerBore": 63.4,
+          "wheelSpecs": [
+            {
+              "diameter": 19,
+              "width": 7.5,
+              "offset": 50.8,
+              "tireSize": "235/50R19"
+            },
+            {
+              "diameter": 20,
+              "width": 8.0,
+              "offset": 50.8,
+              "tireSize": "245/45R20"
+            },
+            {
+              "diameter": 21,
+              "width": 8.5,
+              "offset": 50.8,
+              "tireSize": "245/40R21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Volvo",
+      "model": "V90 Cross Country",
+      "notes": "2026 is final model year. Only Ultra trim available. Specs same as 2024-2025. Not yet on tiresize.com but IS sold in US.",
+      "trims": [
+        {
+          "name": "Ultra",
+          "boltPattern": "5x108",
+          "centerBore": 63.4,
+          "wheelSpecs": [
+            {
+              "diameter": 19,
+              "width": 7.5,
+              "offset": 50.8,
+              "tireSize": "235/50R19"
+            },
+            {
+              "diameter": 20,
+              "width": 8.0,
+              "offset": 50.8,
+              "tireSize": "245/45R20"
+            },
+            {
+              "diameter": 21,
+              "width": 8.5,
+              "offset": 50.8,
+              "tireSize": "245/40R21"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "researched": 3,
+    "notUS": 0,
+    "notes": "All 3 Volvo V90 Cross Country vehicles (2024-2026) are sold in the US market. 2026 is the final model year with only Ultra trim available."
+  }
+}

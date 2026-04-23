@@ -1,0 +1,1024 @@
+{
+  "batch": "batch-03-domestic",
+  "verifiedAt": "2026-07-21T12:00:00Z",
+  "summary": {
+    "totalVehicles": 75,
+    "validVehicles": 63,
+    "invalidVehicles": 12,
+    "invalidReasons": {
+      "2001 Escalade": "NO 2001 MODEL YEAR - 1st gen ended 2000, 2nd gen started 2002",
+      "2021-2025 CT6": "CT6 DISCONTINUED IN US after 2020 model year",
+      "2025 Vistiq": "NO 2025 MODEL YEAR - Vistiq launched as 2026 MY only"
+    }
+  },
+  "invalidYears": [
+    {
+      "year": 2001,
+      "make": "cadillac",
+      "model": "escalade",
+      "reason": "1st gen Escalade ended 2000 MY, 2nd gen started 2002 MY. No 2001 Escalade exists.",
+      "confidence": "high",
+      "sources": ["wikipedia.org/wiki/Cadillac_Escalade", "motortrend.com", "gmauthority.com"]
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "ct6",
+      "reason": "CT6 discontinued in US February 2020. Last US model year was 2020.",
+      "confidence": "high",
+      "sources": ["wikipedia.org/wiki/Cadillac_CT6", "caranddriver.com", "gmauthority.com"]
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "ct6",
+      "reason": "CT6 discontinued in US February 2020. Last US model year was 2020.",
+      "confidence": "high",
+      "sources": ["wikipedia.org/wiki/Cadillac_CT6", "caranddriver.com", "gmauthority.com"]
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "ct6",
+      "reason": "CT6 discontinued in US February 2020. Last US model year was 2020.",
+      "confidence": "high",
+      "sources": ["wikipedia.org/wiki/Cadillac_CT6", "caranddriver.com", "gmauthority.com"]
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "ct6",
+      "reason": "CT6 discontinued in US February 2020. Last US model year was 2020.",
+      "confidence": "high",
+      "sources": ["wikipedia.org/wiki/Cadillac_CT6", "caranddriver.com", "gmauthority.com"]
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "ct6",
+      "reason": "CT6 discontinued in US February 2020. Last US model year was 2020.",
+      "confidence": "high",
+      "sources": ["wikipedia.org/wiki/Cadillac_CT6", "caranddriver.com", "gmauthority.com"]
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "vistiq",
+      "reason": "Vistiq launched as 2026 model year only. Went on sale in 2025 but as 2026 MY.",
+      "confidence": "high",
+      "sources": ["wikipedia.org/wiki/Cadillac_Vistiq", "gmauthority.com", "cadillac.com"]
+    }
+  ],
+  "verifiedFitments": [
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT4-V", "oemWheelSize": "18x8.5", "oemTireSize": "235/40R18"},
+        {"name": "CT4-V", "oemWheelSize": "19x8.5", "oemTireSize": "235/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["cadillacvnet.com", "tiresize.com"],
+      "notes": "Alpha platform. First model year."
+    },
+    {
+      "year": 2021,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT4-V", "oemWheelSize": "18x8.5", "oemTireSize": "235/40R18"},
+        {"name": "CT4-V", "oemWheelSize": "19x8.5", "oemTireSize": "235/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["cadillacvnet.com", "tiresize.com"],
+      "notes": "Alpha platform."
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT4-V", "oemWheelSize": "18x8.5", "oemTireSize": "235/40R18"},
+        {"name": "CT4-V Blackwing", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18 F, 275/35R18 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["cadillacvnet.com", "tiresize.com"],
+      "notes": "Blackwing introduced 2022 with staggered setup."
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT4-V", "oemWheelSize": "18x8.5", "oemTireSize": "235/40R18"},
+        {"name": "CT4-V Blackwing", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18 F, 275/35R18 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["cadillacvnet.com", "tiresize.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT4-V", "oemWheelSize": "18x8.5", "oemTireSize": "235/40R18"},
+        {"name": "CT4-V Blackwing", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18 F, 275/35R18 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["cadillacvnet.com", "tiresize.com"],
+      "notes": "Refreshed for 2024."
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT4-V", "oemWheelSize": "18x8.5", "oemTireSize": "235/40R18"},
+        {"name": "CT4-V Blackwing", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18 F, 275/35R18 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com", "tiresize.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT4-V", "oemWheelSize": "18x8.5", "oemTireSize": "235/40R18"},
+        {"name": "CT4-V Blackwing", "oemWheelSize": "18x9/18x9.5", "oemTireSize": "255/35R18 F, 275/35R18 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"],
+      "notes": "Final model year. Production ends June 2026."
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT5",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "Sport", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "gmauthority.com"],
+      "notes": "Alpha platform. Replaced CTS."
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "CT5",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "Sport", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "CT5",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "Sport", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "CT5",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "Sport", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "Premium Luxury Platinum", "oemWheelSize": "20x8.5", "oemTireSize": "255/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "cadillac.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "CT5",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "Sport", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "CT5",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/45R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "Sport", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT5-V", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "gmauthority.com"],
+      "notes": "First CT5-V model year."
+    },
+    {
+      "year": 2021,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT5-V", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT5-V", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "CT5-V Blackwing", "oemWheelSize": "19x10/19x11", "oemTireSize": "275/35R19 F, 305/30R19 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["cadillacvnet.com", "tiresize.com"],
+      "notes": "Blackwing introduced with staggered 19\" setup."
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT5-V", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "CT5-V Blackwing", "oemWheelSize": "19x10/19x11", "oemTireSize": "275/35R19 F, 305/30R19 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["cadillacvnet.com", "tiresize.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT5-V", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "CT5-V Blackwing", "oemWheelSize": "19x10/19x11", "oemTireSize": "275/35R19 F, 305/30R19 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["cadillacvnet.com", "robertbasilcadillac.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT5-V", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "CT5-V Blackwing", "oemWheelSize": "19x10/19x11", "oemTireSize": "275/35R19 F, 305/30R19 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com", "cadillac.com"],
+      "notes": "Blackwing Precision Package available."
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "CT5-V", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19"},
+        {"name": "CT5-V Blackwing", "oemWheelSize": "19x10/19x11", "oemTireSize": "275/35R19 F, 305/30R19 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["cadillac.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "CT6",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8.5", "oemTireSize": "265/40R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8.5", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org/wiki/Cadillac_CT6", "gmauthority.com"],
+      "notes": "First CT6 model year. Omega platform."
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "CT6",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8.5", "oemTireSize": "265/40R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8.5", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "CT6",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8.5", "oemTireSize": "265/40R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8.5", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "CT6",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8.5", "oemTireSize": "265/40R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8.5", "oemTireSize": "265/40R20"},
+        {"name": "V-Sport", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT6",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8.5", "oemTireSize": "265/40R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8.5", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com", "caranddriver.com"],
+      "notes": "FINAL US MODEL YEAR. Production ended February 2020."
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "CT6-V",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "CT6-V", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com", "cadillacsociety.com"],
+      "notes": "4.2L Twin-Turbo Blackwing V8. Limited production (504 units)."
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT6-V",
+      "boltPattern": "5x114.3",
+      "hubBore": 66.1,
+      "trims": [
+        {"name": "CT6-V", "oemWheelSize": "20x9", "oemTireSize": "265/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com", "cadillacsociety.com"],
+      "notes": "FINAL MODEL YEAR. 4.2L Twin-Turbo Blackwing V8. Limited production (411 units)."
+    },
+    {
+      "year": 2010,
+      "make": "Cadillac",
+      "model": "CTS",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x8", "oemTireSize": "235/55R17"},
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"},
+        {"name": "Performance", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["cadillacforums.com", "tiresize.com"],
+      "notes": "2nd generation CTS."
+    },
+    {
+      "year": 2011,
+      "make": "Cadillac",
+      "model": "CTS",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x8", "oemTireSize": "235/55R17"},
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"},
+        {"name": "Performance", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Cadillac",
+      "model": "CTS",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x8", "oemTireSize": "235/55R17"},
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"},
+        {"name": "Performance", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Cadillac",
+      "model": "CTS",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x8", "oemTireSize": "235/55R17"},
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"},
+        {"name": "Performance", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of 2nd generation."
+    },
+    {
+      "year": 2014,
+      "make": "Cadillac",
+      "model": "CTS",
+      "boltPattern": "5x115",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "17x8.5", "oemTireSize": "245/45R17"},
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["selected.pl", "thedriveradviser.com"],
+      "notes": "3rd generation. NEW bolt pattern 5x115."
+    },
+    {
+      "year": 2015,
+      "make": "Cadillac",
+      "model": "CTS",
+      "boltPattern": "5x115",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "17x8.5", "oemTireSize": "245/45R17"},
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "CTS",
+      "boltPattern": "5x115",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "17x8.5", "oemTireSize": "245/45R17"},
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "CTS",
+      "boltPattern": "5x115",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "17x8.5", "oemTireSize": "245/45R17"},
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "CTS",
+      "boltPattern": "5x115",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "17x8.5", "oemTireSize": "245/45R17"},
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "CTS",
+      "boltPattern": "5x115",
+      "hubBore": 66.9,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "17x8.5", "oemTireSize": "245/45R17"},
+        {"name": "Luxury", "oemWheelSize": "18x8.5", "oemTireSize": "245/40R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/35R19"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "cadillacsociety.com"],
+      "notes": "FINAL MODEL YEAR. Replaced by CT5."
+    },
+    {
+      "year": 2000,
+      "make": "Cadillac",
+      "model": "Escalade",
+      "boltPattern": "6x139.7",
+      "hubBore": 78.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x7", "oemTireSize": "265/70R16"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com", "turanfoleycadillac.com"],
+      "notes": "1st generation. Final year before 2001 gap."
+    },
+    {
+      "year": 2004,
+      "make": "Cadillac",
+      "model": "SRX",
+      "boltPattern": "6x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "17x7.5", "oemTireSize": "235/65R17"},
+        {"name": "V8", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"],
+      "notes": "1st generation SRX. Available RWD and AWD."
+    },
+    {
+      "year": 2005,
+      "make": "Cadillac",
+      "model": "SRX",
+      "boltPattern": "6x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "17x7.5", "oemTireSize": "235/65R17"},
+        {"name": "V8", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "STS-V",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "STS-V", "oemWheelSize": "18x8/18x8.5", "oemTireSize": "255/45R18 F, 275/40R18 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com", "cadillacvnet.com"],
+      "notes": "Supercharged 4.4L Northstar V8. Staggered tire setup."
+    },
+    {
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "STS-V",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "STS-V", "oemWheelSize": "18x8/18x8.5", "oemTireSize": "255/45R18 F, 275/40R18 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "STS-V",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "STS-V", "oemWheelSize": "18x8/18x8.5", "oemTireSize": "255/45R18 F, 275/40R18 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Cadillac",
+      "model": "STS-V",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "STS-V", "oemWheelSize": "18x8/18x8.5", "oemTireSize": "255/45R18 F, 275/40R18 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["jdpower.com"],
+      "notes": "FINAL MODEL YEAR."
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "Vistiq",
+      "boltPattern": "6x132",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Premium Luxury", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21"},
+        {"name": "Platinum", "oemWheelSize": "22x9", "oemTireSize": "285/40R22"}
+      ],
+      "confidence": "medium",
+      "sources": ["wheel-size.com", "caranddriver.com", "gmauthority.com"],
+      "notes": "Electric SUV on Ultium platform. ONLY 2026 MY exists (no 2025)."
+    },
+    {
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "XLR-V",
+      "boltPattern": "5x120.65",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "XLR-V", "oemWheelSize": "18x8/19x9", "oemTireSize": "235/50R18 F, 275/40R19 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com", "xlr-net.com"],
+      "notes": "Supercharged 4.4L Northstar V8. Y-body platform (shared with Corvette)."
+    },
+    {
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "XLR-V",
+      "boltPattern": "5x120.65",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "XLR-V", "oemWheelSize": "18x8/19x9", "oemTireSize": "235/50R18 F, 275/40R19 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com", "jdpower.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "XLR-V",
+      "boltPattern": "5x120.65",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "XLR-V", "oemWheelSize": "18x8/19x9", "oemTireSize": "235/50R18 F, 275/40R19 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Cadillac",
+      "model": "XLR-V",
+      "boltPattern": "5x120.65",
+      "hubBore": 70.3,
+      "trims": [
+        {"name": "XLR-V", "oemWheelSize": "18x8/19x9", "oemTireSize": "235/50R18 F, 275/40R19 R", "isStaggered": true}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com", "jdpower.com"],
+      "notes": "FINAL MODEL YEAR. Alcantara headliner added."
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "XT4",
+      "boltPattern": "5x115",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "Sport", "oemWheelSize": "20x8.5", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com", "robertbasilcadillac.com"],
+      "notes": "First XT4 model year."
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "XT4",
+      "boltPattern": "5x115",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "Sport", "oemWheelSize": "20x8.5", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "XT4",
+      "boltPattern": "5x115",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "Sport", "oemWheelSize": "20x8.5", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "XT4",
+      "boltPattern": "5x115",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/60R18"},
+        {"name": "Sport", "oemWheelSize": "20x8.5", "oemTireSize": "245/45R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com", "gmauthority.com"],
+      "notes": "Production ending. Inventory nearly sold out."
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "XT5",
+      "boltPattern": "6x120",
+      "hubBore": 67.0,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "18x8", "oemTireSize": "235/65R18"},
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/65R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"},
+        {"name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com"],
+      "notes": "First XT5 model year. Replaced SRX."
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "XT5",
+      "boltPattern": "6x120",
+      "hubBore": 67.0,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/65R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"},
+        {"name": "Sport", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "XT5",
+      "boltPattern": "6x120",
+      "hubBore": 67.0,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/65R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"},
+        {"name": "Sport", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "XT5",
+      "boltPattern": "6x120",
+      "hubBore": 67.0,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/65R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"},
+        {"name": "Sport", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"],
+      "notes": "Expected to continue through 2026 MY."
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "XT6",
+      "boltPattern": "6x120",
+      "hubBore": 67.0,
+      "trims": [
+        {"name": "Premium Luxury", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"},
+        {"name": "Sport", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["car-bolts.com", "tirewheelguide.com"],
+      "notes": "First XT6 model year."
+    },
+    {
+      "year": 2021,
+      "make": "Cadillac",
+      "model": "XT6",
+      "boltPattern": "6x120",
+      "hubBore": 67.0,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/65R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"},
+        {"name": "Sport", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "XT6",
+      "boltPattern": "6x120",
+      "hubBore": 67.0,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/65R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"},
+        {"name": "Sport", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "XT6",
+      "boltPattern": "6x120",
+      "hubBore": 67.0,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/65R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"},
+        {"name": "Sport", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "XT6",
+      "boltPattern": "6x120",
+      "hubBore": 67.0,
+      "trims": [
+        {"name": "Luxury", "oemWheelSize": "18x8", "oemTireSize": "235/65R18"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8", "oemTireSize": "235/55R20"},
+        {"name": "Sport", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["gmauthority.com"],
+      "notes": "Expected through 2026 MY."
+    },
+    {
+      "year": 2013,
+      "make": "Cadillac",
+      "model": "XTS",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "18x8", "oemTireSize": "245/45R19"},
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"],
+      "notes": "First XTS model year."
+    },
+    {
+      "year": 2014,
+      "make": "Cadillac",
+      "model": "XTS",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "18x8", "oemTireSize": "245/45R19"},
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"},
+        {"name": "Vsport", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Cadillac",
+      "model": "XTS",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "18x8", "oemTireSize": "245/45R19"},
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"},
+        {"name": "Vsport", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "XTS",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "18x8", "oemTireSize": "245/45R19"},
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"},
+        {"name": "Vsport", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "XTS",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "18x8", "oemTireSize": "245/45R19"},
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"},
+        {"name": "Vsport", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"],
+      "notes": "Midcycle refresh."
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "XTS",
+      "boltPattern": "5x120",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Standard", "oemWheelSize": "18x8", "oemTireSize": "245/45R19"},
+        {"name": "Luxury", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19"},
+        {"name": "Premium Luxury", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"},
+        {"name": "Vsport", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20"}
+      ],
+      "confidence": "high",
+      "sources": ["wheel-size.com"]
+    }
+  ]
+}

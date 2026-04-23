@@ -1,0 +1,1218 @@
+{
+  "batchId": "60",
+  "processedAt": "2026-04-21T22:05:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "195/65R16", "205/65R16", "215/75R16"],
+      "trims": {
+        "Base": ["195/70R15", "195/65R16"],
+        "SWB": ["195/70R15"],
+        "MWB": ["205/65R16"],
+        "LWB": ["215/75R16"]
+      },
+      "source": "tirewheelguide.com",
+      "notes": "European market Ford Transit (Mk6) - not sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "195/65R16", "205/65R16", "215/75R16"],
+      "trims": {
+        "Base": ["195/70R15", "195/65R16"],
+        "SWB": ["195/70R15"],
+        "MWB": ["205/65R16"],
+        "LWB": ["215/75R16"]
+      },
+      "source": "tirewheelguide.com",
+      "notes": "European market Ford Transit (Mk6) - not sold in US"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "195/65R16", "205/65R16", "215/75R16"],
+      "trims": {
+        "Base": ["195/70R15", "195/65R16"],
+        "SWB": ["195/70R15"],
+        "MWB": ["205/65R16"],
+        "LWB": ["215/75R16"]
+      },
+      "source": "tirewheelguide.com",
+      "notes": "European market Ford Transit (Mk6) - not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Transit",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "195/65R16", "205/65R16", "215/75R16"],
+      "trims": {
+        "Base": ["195/70R15", "195/65R16"],
+        "SWB": ["195/70R15"],
+        "MWB": ["205/65R16"],
+        "LWB": ["215/75R16"]
+      },
+      "source": "tirewheelguide.com",
+      "notes": "European market Ford Transit (Mk5/6) - not sold in US"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Transit-T8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R16", "215/75R16C"],
+      "trims": {
+        "Base": ["235/65R16"],
+        "Commercial": ["215/75R16C"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Ford Transit T8 variant - international market"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Transit-T8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R16", "215/75R16C"],
+      "trims": {
+        "Base": ["235/65R16"],
+        "Commercial": ["215/75R16C"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Ford Transit T8 variant - international market"
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Transit-T8",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R16", "215/75R16C"],
+      "trims": {
+        "Base": ["235/65R16"],
+        "Commercial": ["215/75R16C"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Ford Transit T8 variant - international market"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Windstar",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15", "215/65R16", "225/60R16"],
+      "trims": {
+        "Cargo Van": ["215/70R15"],
+        "LX": ["215/70R15", "225/60R16"],
+        "SE": ["225/60R16"],
+        "SE Sport": ["225/60R16"],
+        "SEL": ["225/60R16"],
+        "Limited": ["215/65R16"]
+      },
+      "source": "tiresize.com",
+      "notes": "Final year of Ford Windstar production"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Windstar",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trims": {
+        "Cargo Van": ["215/70R15"],
+        "LX": ["215/70R15", "215/65R16"],
+        "SE": ["215/65R16"],
+        "Limited": ["215/65R16"]
+      },
+      "source": "tiresize.com",
+      "notes": ""
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Windstar",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15", "215/65R16"],
+      "trims": {
+        "Cargo Van": ["215/70R15"],
+        "LX": ["215/70R15"],
+        "SE": ["215/65R16"],
+        "Limited": ["215/65R16"]
+      },
+      "source": "tiresize.com",
+      "notes": ""
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Windstar",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/70R15", "215/70R15", "225/60R16"],
+      "trims": {
+        "Base Model": ["205/70R15", "215/70R15"],
+        "Cargo Van": ["215/70R15"],
+        "LX": ["205/70R15", "215/70R15"],
+        "SE": ["215/70R15"],
+        "SEL": ["225/60R16"],
+        "Limited": ["225/60R16"]
+      },
+      "source": "tiresize.com",
+      "notes": ""
+    },
+    {
+      "year": 2018,
+      "make": "Genesis",
+      "model": "EQ900",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19"],
+      "trims": {
+        "3.3T": ["245/50R18"],
+        "3.8": ["245/45R19", "275/40R19"],
+        "5.0": ["245/45R19", "275/40R19"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Korean market equivalent of Genesis G90"
+    },
+    {
+      "year": 2017,
+      "make": "Genesis",
+      "model": "EQ900",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19"],
+      "trims": {
+        "3.3T": ["245/50R18"],
+        "3.8": ["245/45R19", "275/40R19"],
+        "5.0": ["245/45R19", "275/40R19"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Korean market equivalent of Genesis G90"
+    },
+    {
+      "year": 2016,
+      "make": "Genesis",
+      "model": "EQ900",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19"],
+      "trims": {
+        "3.3T": ["245/50R18"],
+        "3.8": ["245/45R19", "275/40R19"],
+        "5.0": ["245/45R19", "275/40R19"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Korean market equivalent of Genesis G90"
+    },
+    {
+      "year": 2015,
+      "make": "Genesis",
+      "model": "EQ900",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "N/A",
+      "notes": "EQ900 not produced in 2015 - model launched late 2015/2016"
+    },
+    {
+      "year": 2026,
+      "make": "Genesis",
+      "model": "G70",
+      "currentTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": ["225/40R19", "255/35R19"],
+      "trims": {
+        "2.5T Standard": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "2.5T Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Prestige Graphite": ["225/40R19 (front)", "255/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "All 2026 trims use staggered 19-inch setup",
+      "isStaggered": true
+    },
+    {
+      "year": 2025,
+      "make": "Genesis",
+      "model": "G70",
+      "currentTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": ["225/40R19", "255/35R19"],
+      "trims": {
+        "2.5T Standard": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "2.5T Sport Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport Advanced": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport Prestige": ["225/40R19 (front)", "255/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "All trims use staggered 19-inch setup",
+      "isStaggered": true
+    },
+    {
+      "year": 2024,
+      "make": "Genesis",
+      "model": "G70",
+      "currentTireSizes": ["225/45R18", "225/40R19", "255/35R19", "225/40ZR19", "255/35ZR19", "225/45ZR18"],
+      "validatedTireSizes": ["225/40R19", "255/35R19"],
+      "trims": {
+        "2.5T Standard": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "2.5T Sport Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport Advanced": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport Prestige": ["225/40R19 (front)", "255/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "All trims use staggered 19-inch setup",
+      "isStaggered": true
+    },
+    {
+      "year": 2023,
+      "make": "Genesis",
+      "model": "G70",
+      "currentTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "2.0T": ["225/45R18"],
+        "2.0T Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "2.0T Sport Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport Advanced": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport Prestige": ["225/40R19 (front)", "255/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Base 2.0T uses 18-inch, others staggered 19-inch",
+      "isStaggered": true
+    },
+    {
+      "year": 2022,
+      "make": "Genesis",
+      "model": "G70",
+      "currentTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "2.0T": ["225/45R18"],
+        "2.0T Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Launch Edition": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport Advanced": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport Prestige": ["225/40R19 (front)", "255/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Base 2.0T uses 18-inch, others staggered 19-inch",
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "Genesis",
+      "model": "G70",
+      "currentTireSizes": ["225/45R18", "225/40R19", "255/35R19", "225/45ZR18", "225/40ZR19", "255/35ZR19"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "2.0T": ["225/45R18"],
+        "2.0T 6-Speed": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "2.0T Elite": ["225/45R18"],
+        "2.0T Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "2.0T Sport": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Elite": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport": ["225/40R19 (front)", "255/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data is accurate",
+      "isStaggered": true
+    },
+    {
+      "year": 2020,
+      "make": "Genesis",
+      "model": "G70",
+      "currentTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "2.0T": ["225/45R18"],
+        "2.0T 6-Speed": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "2.0T Elite": ["225/45R18"],
+        "2.0T Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "2.0T Sport": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Elite": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport": ["225/40R19 (front)", "255/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data is accurate",
+      "isStaggered": true
+    },
+    {
+      "year": 2019,
+      "make": "Genesis",
+      "model": "G70",
+      "currentTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "2.0T": ["225/45R18"],
+        "2.0T 6-Speed": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "2.0T Dynamic": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "2.0T Elite": ["225/45R18"],
+        "2.0T Sport": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Elite": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Prestige": ["225/40R19 (front)", "255/35R19 (rear)"],
+        "3.3T Sport": ["225/40R19 (front)", "255/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "First model year of G70 in US",
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "Genesis",
+      "model": "G70",
+      "currentTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "2.0T": ["225/45R18"],
+        "3.3T": ["225/40R19 (front)", "255/35R19 (rear)"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Korean market launch year",
+      "isStaggered": true
+    },
+    {
+      "year": 2017,
+      "make": "Genesis",
+      "model": "G70",
+      "currentTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "N/A",
+      "notes": "G70 not yet released in 2017 - concept car only"
+    },
+    {
+      "year": 2026,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["245/45R18", "245/40R19", "255/40R20", "275/35R20"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "275/40R19", "245/40R20", "275/35R20"],
+      "trims": {
+        "2.5T": ["245/45R18"],
+        "2.5T Prestige": ["245/40R19"],
+        "2.5T AWD Sport Prestige": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.5T Prestige": ["245/40R20 (front)", "275/35R20 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Higher trims use staggered setup",
+      "isStaggered": true
+    },
+    {
+      "year": 2025,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["245/45R18", "245/40R19", "255/40R20", "275/35R20"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "275/40R19", "245/40R20", "275/35R20"],
+      "trims": {
+        "2.5T": ["245/45R18"],
+        "2.5T Prestige": ["245/40R19"],
+        "2.5T AWD Sport Prestige": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.5T Prestige": ["245/40R20 (front)", "275/35R20 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Higher trims use staggered setup",
+      "isStaggered": true
+    },
+    {
+      "year": 2024,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["245/45R18", "245/40R19", "255/40R20", "275/35R20"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "275/40R19", "245/40R20", "275/35R20"],
+      "trims": {
+        "2.5T": ["245/45R18"],
+        "2.5T Prestige": ["245/40R19"],
+        "2.5T AWD Sport Prestige": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "Electrified": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.5T Prestige": ["245/40R20 (front)", "275/35R20 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data verified accurate",
+      "isStaggered": true
+    },
+    {
+      "year": 2023,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["245/45R18", "245/40R19", "255/40R20", "275/35R20"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "275/40R19", "245/40R20", "275/35R20"],
+      "trims": {
+        "2.5T": ["245/45R18"],
+        "2.5T Prestige": ["245/40R19"],
+        "Electrified": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.5T Prestige": ["245/40R20 (front)", "275/35R20 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data verified accurate",
+      "isStaggered": true
+    },
+    {
+      "year": 2022,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["245/45R18", "245/40R19", "255/40R20", "275/35R20"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "275/40R19", "245/40R20", "275/35R20"],
+      "trims": {
+        "2.5T": ["245/45R18"],
+        "2.5T Prestige": ["245/40R19"],
+        "Electrified": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.5T Prestige": ["245/40R20 (front)", "275/35R20 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data verified accurate",
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["245/45R18", "245/40R19", "255/40R20", "275/35R20", "245/45ZR19", "275/40ZR19", "245/50ZR18", "245/40ZR20", "275/35ZR20"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "275/40R19", "245/40R20", "275/35R20"],
+      "trims": {
+        "2.5T": ["245/45R18"],
+        "2.5T Prestige": ["245/40R19"],
+        "3.5T Prestige": ["245/40R20 (front)", "275/35R20 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Second generation G80 launched",
+      "isStaggered": true
+    },
+    {
+      "year": 2020,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "3.8 AWD": ["245/45R18"],
+        "3.8 RWD": ["245/45R18"],
+        "3.8 Premium AWD": ["245/45R18"],
+        "3.8 Premium RWD": ["245/45R18"],
+        "5.0 AWD": ["245/40R19 (front)", "275/35R19 (rear)"],
+        "5.0 RWD": ["245/40R19 (front)", "275/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "First-gen G80 last year",
+      "isStaggered": true
+    },
+    {
+      "year": 2019,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "3.8 AWD": ["245/45R18"],
+        "3.8 RWD": ["245/45R18"],
+        "3.8 Premium AWD": ["245/45R18"],
+        "3.8 Premium RWD": ["245/45R18"],
+        "5.0 AWD": ["245/40R19 (front)", "275/35R19 (rear)"],
+        "5.0 RWD": ["245/40R19 (front)", "275/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "First-gen G80",
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/40ZR19", "275/35ZR19", "245/35ZR20", "285/30ZR20"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19", "245/35R20", "285/30R20"],
+      "trims": {
+        "3.8 AWD": ["245/45R18"],
+        "3.8 RWD": ["245/45R18"],
+        "3.8 Premium AWD": ["245/45R18"],
+        "3.8 Premium RWD": ["245/45R18"],
+        "3.8 Ultimate AWD": ["245/45R18"],
+        "3.8 Ultimate RWD": ["245/45R18"],
+        "3.3T Sport AWD": ["245/40R19 (front)", "275/35R19 (rear)"],
+        "3.3T Sport RWD": ["245/40R19 (front)", "275/35R19 (rear)"],
+        "5.0 Ultimate AWD": ["245/40R19 (front)", "275/35R19 (rear)"],
+        "5.0 Ultimate RWD": ["245/40R19 (front)", "275/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data is accurate",
+      "isStaggered": true
+    },
+    {
+      "year": 2017,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["225/55R17", "245/45R18", "245/40R19", "245/40ZR19", "275/35ZR19", "245/35ZR20", "285/30ZR20"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "3.8 AWD": ["245/45R18"],
+        "3.8 RWD": ["245/45R18"],
+        "3.8 Premium AWD": ["245/45R18"],
+        "3.8 Premium RWD": ["245/45R18"],
+        "3.8 Ultimate AWD": ["245/45R18"],
+        "3.8 Ultimate RWD": ["245/45R18"],
+        "5.0 Ultimate AWD": ["245/40R19 (front)", "275/35R19 (rear)"],
+        "5.0 Ultimate RWD": ["245/40R19 (front)", "275/35R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "First year as Genesis brand",
+      "isStaggered": true
+    },
+    {
+      "year": 2016,
+      "make": "Genesis",
+      "model": "G80",
+      "currentTireSizes": ["245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "3.8": ["245/45R18"],
+        "5.0": ["245/40R19 (front)", "275/35R19 (rear)"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Sold as Hyundai Genesis before Genesis brand launch",
+      "isStaggered": true
+    },
+    {
+      "year": 2026,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/45R19", "265/40R20", "295/35R20", "265/35R21", "295/30R21"],
+      "validatedTireSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "trims": {
+        "3.5T": ["245/45R20 (front)", "275/40R20 (rear)"],
+        "3.5T E-Supercharger": ["245/40R21 (front)", "275/35R21 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data needs update - R19 sizes incorrect for second-gen",
+      "isStaggered": true
+    },
+    {
+      "year": 2025,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/45R19", "265/40R20", "295/35R20", "265/35R21", "295/30R21"],
+      "validatedTireSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "trims": {
+        "3.5T": ["245/45R20 (front)", "275/40R20 (rear)"],
+        "3.5T E-Supercharger": ["245/40R21 (front)", "275/35R21 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data needs update",
+      "isStaggered": true
+    },
+    {
+      "year": 2024,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/45R19", "265/40R20", "295/35R20", "265/35R21", "295/30R21"],
+      "validatedTireSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "trims": {
+        "3.5T": ["245/45R20 (front)", "275/40R20 (rear)"],
+        "3.5T E-Supercharger": ["245/40R21 (front)", "275/35R21 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data needs update",
+      "isStaggered": true
+    },
+    {
+      "year": 2023,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/45R19", "265/40R20", "295/35R20", "265/35R21", "295/30R21", "245/45R20", "275/40R20", "245/50R19", "245/40ZR21", "275/35ZR21"],
+      "validatedTireSizes": ["245/45R20", "275/40R20", "245/40R21", "275/35R21"],
+      "trims": {
+        "3.5T": ["245/45R20 (front)", "275/40R20 (rear)"],
+        "3.5T E-Supercharger": ["245/40R21 (front)", "275/35R21 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Second-gen G90 uses 20/21-inch wheels only",
+      "isStaggered": true
+    },
+    {
+      "year": 2022,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/50R18", "245/45R19"],
+      "validatedTireSizes": ["245/45R19", "275/40R19"],
+      "trims": {
+        "3.3T AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.3T RWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 RWD": ["245/45R19 (front)", "275/40R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Last year of first-gen G90",
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/50R18", "245/45R19"],
+      "validatedTireSizes": ["245/45R19", "275/40R19"],
+      "trims": {
+        "3.3T AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.3T RWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 RWD": ["245/45R19 (front)", "275/40R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "First-gen G90",
+      "isStaggered": true
+    },
+    {
+      "year": 2020,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/50R18", "245/45R19"],
+      "validatedTireSizes": ["245/45R19", "275/40R19"],
+      "trims": {
+        "3.3T AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.3T RWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 RWD": ["245/45R19 (front)", "275/40R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "First-gen G90",
+      "isStaggered": true
+    },
+    {
+      "year": 2019,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/50R18", "245/45R19"],
+      "validatedTireSizes": ["245/45R19", "275/40R19"],
+      "trims": {
+        "3.3T AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.3T RWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 RWD": ["245/45R19 (front)", "275/40R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "First-gen G90",
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/50R18", "245/45R19", "245/45ZR19", "275/40ZR19", "245/40ZR20", "275/35ZR20", "245/50ZR18"],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19"],
+      "trims": {
+        "3.3T Premium AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.3T Premium RWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 Ultimate AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 Ultimate RWD": ["245/45R19 (front)", "275/40R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data verified",
+      "isStaggered": true
+    },
+    {
+      "year": 2017,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/50R18", "245/45R19"],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19"],
+      "trims": {
+        "3.3T Premium AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "3.3T Premium RWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 Ultimate AWD": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0 Ultimate RWD": ["245/45R19 (front)", "275/40R19 (rear)"]
+      },
+      "source": "tiresize.com",
+      "notes": "First year as Genesis brand",
+      "isStaggered": true
+    },
+    {
+      "year": 2016,
+      "make": "Genesis",
+      "model": "G90",
+      "currentTireSizes": ["245/50R18", "275/35R20", "275/40R19"],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19", "275/35R20"],
+      "trims": {
+        "3.3T": ["245/50R18"],
+        "3.8": ["245/45R19 (front)", "275/40R19 (rear)"],
+        "5.0": ["245/45R19 (front)", "275/40R19 (rear)"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Launch year for G90",
+      "isStaggered": true
+    },
+    {
+      "year": 2026,
+      "make": "Genesis",
+      "model": "GV70",
+      "currentTireSizes": ["235/55R19", "255/45R20", "255/40R21"],
+      "validatedTireSizes": ["235/55R19", "265/45R20", "255/40R21"],
+      "trims": {
+        "2.5T": ["235/55R19"],
+        "2.5T Advanced": ["235/55R19"],
+        "2.5T Select": ["235/55R19"],
+        "2.5T Sport Prestige": ["255/40R21"],
+        "3.5T Sport Advanced": ["235/55R19"],
+        "3.5T Sport Prestige": ["255/40R21"],
+        "Electrified": ["235/55R19", "265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data verified",
+      "isStaggered": false
+    },
+    {
+      "year": 2025,
+      "make": "Genesis",
+      "model": "GV70",
+      "currentTireSizes": ["235/55R19", "255/45R20", "255/40R21", "235/60ZR18", "235/55ZR19", "255/45ZR20", "255/40ZR21"],
+      "validatedTireSizes": ["235/55R19", "265/45R20", "255/40R21"],
+      "trims": {
+        "2.5T": ["235/55R19"],
+        "2.5T Advanced": ["235/55R19"],
+        "2.5T Select": ["235/55R19"],
+        "2.5T Sport Prestige": ["255/40R21"],
+        "3.5T Sport": ["235/55R19"],
+        "3.5T Sport Advanced": ["255/40R21"],
+        "3.5T Sport Prestige": ["255/40R21"],
+        "Electrified": ["265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data verified",
+      "isStaggered": false
+    },
+    {
+      "year": 2024,
+      "make": "Genesis",
+      "model": "GV70",
+      "currentTireSizes": ["235/55R19", "255/45R20", "255/40R21"],
+      "validatedTireSizes": ["235/55R19", "265/45R20", "255/40R21"],
+      "trims": {
+        "2.5T": ["235/55R19"],
+        "2.5T Advanced": ["235/55R19"],
+        "2.5T Select": ["235/55R19"],
+        "2.5T Sport Prestige": ["255/40R21"],
+        "3.5T Sport": ["235/55R19"],
+        "3.5T Sport Advanced": ["255/40R21"],
+        "3.5T Sport Prestige": ["255/40R21"],
+        "Electrified": ["265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data verified",
+      "isStaggered": false
+    },
+    {
+      "year": 2023,
+      "make": "Genesis",
+      "model": "GV70",
+      "currentTireSizes": ["235/55R19", "255/45R20", "255/40R21"],
+      "validatedTireSizes": ["225/60R18", "235/55R19", "265/45R20", "255/40R21"],
+      "trims": {
+        "2.5T": ["225/60R18"],
+        "2.5T Advanced": ["235/55R19"],
+        "2.5T Select": ["235/55R19"],
+        "2.5T Sport Prestige": ["255/40R21"],
+        "3.5T Sport": ["235/55R19"],
+        "3.5T Sport Advanced": ["235/55R19"],
+        "3.5T Sport Prestige": ["255/40R21"],
+        "Electrified": ["265/45R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data is accurate",
+      "isStaggered": false
+    },
+    {
+      "year": 2022,
+      "make": "Genesis",
+      "model": "GV70",
+      "currentTireSizes": ["235/55R19", "255/45R20", "255/40R21", "235/60ZR18", "235/55ZR19", "255/40ZR21", "255/45ZR20"],
+      "validatedTireSizes": ["225/60R18", "235/55R19", "255/45R20", "255/40R21"],
+      "trims": {
+        "2.5T": ["225/60R18"],
+        "2.5T Advanced": ["235/55R19"],
+        "2.5T Select": ["235/55R19"],
+        "2.5T Sport Prestige": ["255/40R21"],
+        "3.5T Sport": ["235/55R19"],
+        "3.5T Sport Advanced": ["235/55R19"],
+        "3.5T Sport Prestige": ["255/40R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data is accurate",
+      "isStaggered": false
+    },
+    {
+      "year": 2021,
+      "make": "Genesis",
+      "model": "GV70",
+      "currentTireSizes": ["235/55R19", "255/45R20"],
+      "validatedTireSizes": ["225/60R18", "235/55R19", "255/45R20", "255/40R21"],
+      "trims": {
+        "2.5T": ["225/60R18"],
+        "2.5T Advanced": ["235/55R19"],
+        "2.5T Select": ["235/55R19"],
+        "2.5T Sport Prestige": ["255/40R21"],
+        "3.5T Sport": ["235/55R19"],
+        "3.5T Sport Advanced": ["235/55R19"],
+        "3.5T Sport Prestige": ["255/40R21"]
+      },
+      "source": "tiresize.com",
+      "notes": "Should include 255/40R21 for Sport Prestige",
+      "isStaggered": false
+    },
+    {
+      "year": 2020,
+      "make": "Genesis",
+      "model": "GV70",
+      "currentTireSizes": ["235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "2.5T": ["235/55R19"],
+        "3.5T": ["255/45R20"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Korean market early launch - limited trim options"
+    },
+    {
+      "year": 2026,
+      "make": "Genesis",
+      "model": "GV80",
+      "currentTireSizes": ["265/45R20", "265/40R21", "265/35R22"],
+      "validatedTireSizes": ["265/55R19", "265/50R20", "265/40R22"],
+      "trims": {
+        "2.5T": ["265/55R19"],
+        "2.5T Advanced": ["265/50R20"],
+        "2.5T Select": ["265/50R20"],
+        "2.5T Prestige": ["265/40R22"],
+        "3.5T Advanced": ["265/50R20"],
+        "3.5T Prestige": ["265/40R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data needs update - should be R19/R20/R22",
+      "isStaggered": false
+    },
+    {
+      "year": 2025,
+      "make": "Genesis",
+      "model": "GV80",
+      "currentTireSizes": ["265/45R20", "265/40R21", "265/35R22"],
+      "validatedTireSizes": ["265/55R19", "265/50R20", "265/40R22"],
+      "trims": {
+        "2.5T": ["265/55R19"],
+        "2.5T Advanced": ["265/50R20"],
+        "2.5T Select": ["265/50R20"],
+        "2.5T Prestige": ["265/40R22"],
+        "3.5T Advanced": ["265/50R20"],
+        "3.5T Prestige": ["265/40R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data needs update",
+      "isStaggered": false
+    },
+    {
+      "year": 2024,
+      "make": "Genesis",
+      "model": "GV80",
+      "currentTireSizes": ["265/45R20", "265/40R21", "265/35R22"],
+      "validatedTireSizes": ["265/55R19", "265/50R20", "265/40R22"],
+      "trims": {
+        "2.5T": ["265/55R19"],
+        "2.5T Advanced": ["265/50R20"],
+        "2.5T Prestige": ["265/40R22"],
+        "3.5T": ["265/50R20"],
+        "3.5T Advanced": ["265/50R20"],
+        "3.5T Prestige": ["265/40R22"],
+        "3.5T Prestige Signature": ["265/40R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data needs update",
+      "isStaggered": false
+    },
+    {
+      "year": 2023,
+      "make": "Genesis",
+      "model": "GV80",
+      "currentTireSizes": ["265/45R20", "265/40R21", "265/35R22", "265/55ZR19", "265/50ZR20", "265/40ZR22", "265/45ZR21"],
+      "validatedTireSizes": ["265/55R19", "265/50R20", "265/40R22"],
+      "trims": {
+        "2.5T": ["265/55R19"],
+        "2.5T Advanced": ["265/50R20"],
+        "2.5T Prestige": ["265/40R22"],
+        "3.5T": ["265/50R20"],
+        "3.5T Advanced": ["265/50R20"],
+        "3.5T Advanced Plus": ["265/50R20"],
+        "3.5T Prestige": ["265/40R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data includes incorrect R21 sizes",
+      "isStaggered": false
+    },
+    {
+      "year": 2022,
+      "make": "Genesis",
+      "model": "GV80",
+      "currentTireSizes": ["265/45R20", "265/40R21", "265/35R22", "265/55ZR19", "265/50ZR20", "265/40ZR22", "265/45ZR21"],
+      "validatedTireSizes": ["265/55R19", "265/50R20", "265/40R22"],
+      "trims": {
+        "2.5T": ["265/55R19"],
+        "2.5T Advanced": ["265/55R19", "265/50R20"],
+        "2.5T Prestige": ["265/40R22"],
+        "3.5T": ["265/50R20"],
+        "3.5T Advanced": ["265/50R20"],
+        "3.5T Advanced Plus": ["265/50R20"],
+        "3.5T Prestige": ["265/40R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data includes incorrect R21 sizes",
+      "isStaggered": false
+    },
+    {
+      "year": 2021,
+      "make": "Genesis",
+      "model": "GV80",
+      "currentTireSizes": ["265/45R20", "265/40R21", "265/35R22"],
+      "validatedTireSizes": ["265/55R19", "265/50R20", "265/40R22"],
+      "trims": {
+        "2.5T": ["265/55R19"],
+        "2.5T Advanced Package": ["265/55R19", "265/50R20"],
+        "2.5T Prestige Package": ["265/40R22"],
+        "3.5T": ["265/50R20"],
+        "3.5T Advanced Package": ["265/50R20"],
+        "3.5T Prestige Package": ["265/40R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "First US model year - current data has incorrect sizes",
+      "isStaggered": false
+    },
+    {
+      "year": 2020,
+      "make": "Genesis",
+      "model": "GV80",
+      "currentTireSizes": ["255/55R19", "275/45R21", "275/40R22"],
+      "validatedTireSizes": ["265/55R19", "265/50R20", "265/40R22"],
+      "trims": {
+        "2.5T": ["265/55R19"],
+        "3.5T": ["265/50R20"],
+        "3.5T Prestige": ["265/40R22"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Korean market launch year - current data incorrect"
+    },
+    {
+      "year": 2001,
+      "make": "Geo",
+      "model": "Metro",
+      "currentTireSizes": ["P155/80R13", "P175/70R14"],
+      "validatedTireSizes": ["155/80R13", "175/70R14"],
+      "trims": {
+        "Base Model": ["155/80R13"],
+        "LSi": ["155/80R13", "175/70R14"]
+      },
+      "source": "tiresize.com",
+      "notes": "Last model year - rebadged as Chevrolet Metro in some markets"
+    },
+    {
+      "year": 2000,
+      "make": "Geo",
+      "model": "Metro",
+      "currentTireSizes": ["P155/80R13", "P175/70R14"],
+      "validatedTireSizes": ["155/80R13", "175/70R14"],
+      "trims": {
+        "Base Model": ["155/80R13"],
+        "LSi": ["155/80R13", "175/70R14"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data verified accurate"
+    },
+    {
+      "year": 2002,
+      "make": "Geo",
+      "model": "Prizm",
+      "currentTireSizes": ["P185/65R14", "P185/65R15"],
+      "validatedTireSizes": ["185/65R14", "185/65R15"],
+      "trims": {
+        "Base": ["185/65R14"],
+        "LSi": ["185/65R15"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Rebadged as Chevrolet Prizm - same platform as Toyota Corolla"
+    },
+    {
+      "year": 2001,
+      "make": "Geo",
+      "model": "Prizm",
+      "currentTireSizes": ["P185/65R14", "P185/65R15"],
+      "validatedTireSizes": ["185/65R14", "185/65R15"],
+      "trims": {
+        "Base": ["185/65R14"],
+        "LSi": ["185/65R15"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Current data verified accurate"
+    },
+    {
+      "year": 2000,
+      "make": "Geo",
+      "model": "Prizm",
+      "currentTireSizes": ["P185/65R14", "P185/65R15"],
+      "validatedTireSizes": ["185/65R14", "185/65R15"],
+      "trims": {
+        "Base": ["185/65R14"],
+        "LSi": ["185/65R15"]
+      },
+      "source": "wheel-size.com",
+      "notes": "Current data verified accurate"
+    },
+    {
+      "year": 2026,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R21"],
+      "validatedTireSizes": ["255/65R18", "265/65R18", "255/55R20", "275/45R22"],
+      "trims": {
+        "AT4": ["265/65R18"],
+        "Elevation": ["255/65R18", "255/55R20", "275/45R22"],
+        "Denali": ["255/55R20", "275/45R22"],
+        "Denali Ultimate": ["275/45R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "Third-gen Acadia - current data has incorrect R21 (should be R22)"
+    },
+    {
+      "year": 2025,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R21"],
+      "validatedTireSizes": ["255/65R18", "265/65R18", "255/55R20", "275/45R22"],
+      "trims": {
+        "AT4": ["265/65R18"],
+        "Elevation": ["255/65R18", "255/55R20", "275/45R22"],
+        "Denali": ["255/55R20", "275/45R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data has incorrect R21 (should be R22)"
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R21"],
+      "validatedTireSizes": ["265/65R18", "255/55R20", "275/45R22"],
+      "trims": {
+        "AT4": ["265/65R18"],
+        "Elevation": ["255/55R20", "275/45R22"],
+        "Denali": ["255/55R20", "275/45R22"]
+      },
+      "source": "tiresize.com",
+      "notes": "Third-gen Acadia redesign - current data incorrect"
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R21", "235/65R18", "235/55R20", "235/60R19"],
+      "validatedTireSizes": ["255/65R17", "235/65R18", "235/55R20"],
+      "trims": {
+        "AT4": ["255/65R17"],
+        "SLE": ["235/65R18", "235/55R20"],
+        "SLT": ["235/65R18", "235/55R20"],
+        "Denali": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "Second-gen final year - current data mostly correct"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R21"],
+      "validatedTireSizes": ["255/65R17", "235/65R18", "235/55R20"],
+      "trims": {
+        "AT4": ["255/65R17"],
+        "SLE": ["235/65R18", "235/55R20"],
+        "SLT": ["235/65R18", "235/55R20"],
+        "Denali": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data incorrect - no 21-inch option"
+    },
+    {
+      "year": 2021,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R21"],
+      "validatedTireSizes": ["255/65R17", "235/65R18", "235/55R20"],
+      "trims": {
+        "AT4": ["255/65R17"],
+        "SLE": ["235/65R18", "235/55R20"],
+        "SLT": ["235/65R18", "235/55R20"],
+        "Elevation Edition": ["235/55R20"],
+        "Denali": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data incorrect - no 21-inch option"
+    },
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R21", "235/65R18", "235/60R19", "235/55R20"],
+      "validatedTireSizes": ["245/65R17", "255/65R17", "235/65R18", "235/55R20"],
+      "trims": {
+        "SL": ["245/65R17"],
+        "AT4": ["255/65R17", "235/55R20"],
+        "SLE": ["235/65R18", "235/55R20"],
+        "SLT": ["235/65R18", "235/55R20"],
+        "Denali": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data has some incorrect sizes"
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R21"],
+      "validatedTireSizes": ["245/65R17", "255/65R17", "235/65R18", "235/55R20"],
+      "trims": {
+        "SL": ["245/65R17"],
+        "All Terrain": ["255/65R17", "235/65R18", "235/55R20"],
+        "SLE": ["245/65R17", "235/65R18", "235/55R20"],
+        "SLT": ["235/65R18", "235/55R20"],
+        "Denali": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data has incorrect sizes"
+    },
+    {
+      "year": 2018,
+      "make": "GMC",
+      "model": "Acadia",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R21"],
+      "validatedTireSizes": ["245/65R17", "235/65R18", "235/55R20"],
+      "trims": {
+        "SL": ["245/65R17"],
+        "All Terrain": ["235/65R18", "235/55R20"],
+        "SLE": ["245/65R17", "235/65R18", "235/55R20"],
+        "SLT": ["235/65R18", "235/55R20"],
+        "Denali": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "notes": "Current data has incorrect sizes"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 74,
+    "notApplicable": 1,
+    "dataCorrections": {
+      "genesisG90_2023_2026": "R19 sizes incorrect - second-gen uses R20/R21 only",
+      "genesisGV80_all": "Current R21 sizes incorrect - should be R22",
+      "gmcAcadia_2018_2022": "R21 sizes incorrect - max is R20",
+      "gmcAcadia_2024_2026": "R21 sizes should be R22",
+      "fordTransit_2000_2003": "European market only - not sold in US",
+      "genesisEQ900_2015": "Model not produced in 2015"
+    }
+  }
+}

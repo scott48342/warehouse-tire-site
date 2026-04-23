@@ -1,0 +1,1152 @@
+{
+  "batchId": "90s-batch-08",
+  "completedAt": "2026-04-22T12:35:00.000Z",
+  "results": [
+    {
+      "year": 1997,
+      "make": "Chevrolet",
+      "model": "Monte Carlo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheel-sizes.com"],
+      "notes": "6th generation W-body. Base trim specs."
+    },
+    {
+      "year": 1998,
+      "make": "Chevrolet",
+      "model": "Monte Carlo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheel-sizes.com"],
+      "notes": "6th generation W-body. Base trim specs."
+    },
+    {
+      "year": 1999,
+      "make": "Chevrolet",
+      "model": "Monte Carlo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wheel-sizes.com"],
+      "notes": "6th generation W-body. Base trim specs."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 1500' name started in 1994. 1990 was the D150 (different vehicle designation)."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 1500' name started in 1994. 1991 was the D150."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 1500' name started in 1994. 1992 was the D150."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 1500' name started in 1994. 1993 was the D150."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 77.8,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). First year of Ram 1500 naming."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 77.8,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE)."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 77.8,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE)."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 77.8,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE)."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 77.8,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE)."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Ram 1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 77.8,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 12 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE)."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 2500' name started in 1994. 1990 was the D250."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 2500' name started in 1994. 1991 was the D250."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 2500' name started in 1994. 1992 was the D250."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 2500' name started in 1994. 1993 was the D250."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Ram 2500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["245/75R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 3500' name started in 1994. 1990 was the D350."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 3500' name started in 1994. 1991 was the D350."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 3500' name started in 1994. 1992 was the D350."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. The 'Ram 3500' name started in 1994. 1993 was the D350."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/85R16", "235/85R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/85R16", "235/85R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/85R16", "235/85R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/85R16", "235/85R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/85R16", "235/85R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Ram 3500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["215/85R16", "235/85R16", "265/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (BR/BE). HD truck with 8-lug pattern."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Dakota",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 10 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "1st generation (DN I). 5-lug model."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Dakota",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "1st generation (DN I). Changed to 6-lug in 1991."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Dakota",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "1st generation (DN I). 6-lug model."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Dakota",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "1st generation (DN I). 6-lug model."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Dakota",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "1st generation (DN I). 6-lug model."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Dakota",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "1st generation (DN I). 6-lug model."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Dakota",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 25 }
+        ],
+        "oem_tire_sizes": ["205/75R15", "215/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "1st generation (DN I). Last year of 1st gen."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Dakota",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 15 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["235/75R15", "255/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (DN II). Bolt pattern maintained."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Dakota",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 15 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["235/75R15", "255/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (DN II)."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Dakota",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 15 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "oem_tire_sizes": ["235/75R15", "255/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "2nd generation (DN II)."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Durango",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Durango debuted in 1998."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Durango",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Durango debuted in 1998."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Durango",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Durango debuted in 1998."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Durango",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Durango debuted in 1998."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Durango",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Durango debuted in 1998."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Durango",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Durango debuted in 1998."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Durango",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Durango debuted in 1998."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Durango",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Durango debuted in 1998. Note: Some sources show 1997 as first year but it was released mid-1997 as a 1998 model."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "Vehicle didn't exist. Dodge Viper debuted in 1992."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "Vehicle didn't exist. Dodge Viper debuted in 1992."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 10, "offset": 50, "position": "front" },
+          { "diameter": 17, "width": 13, "offset": 70, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["275/40ZR17", "335/35ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "1st generation RT/10. STAGGERED fitment - front 275/40ZR17, rear 335/35ZR17. Unique 6-lug bolt pattern."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 10, "offset": 50, "position": "front" },
+          { "diameter": 17, "width": 13, "offset": 70, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["275/40ZR17", "335/35ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "1st generation RT/10. STAGGERED fitment."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 10, "offset": 50, "position": "front" },
+          { "diameter": 17, "width": 13, "offset": 70, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["275/40ZR17", "335/35ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "1st generation RT/10. STAGGERED fitment."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 10, "offset": 50, "position": "front" },
+          { "diameter": 17, "width": 13, "offset": 70, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["275/40ZR17", "335/35ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "1st generation RT/10. STAGGERED fitment."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 10, "offset": 50, "position": "front" },
+          { "diameter": 17, "width": 13, "offset": 70, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["275/40ZR17", "335/35ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "GTS coupe introduced. STAGGERED fitment. Same specs as RT/10."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 10, "offset": 50, "position": "front" },
+          { "diameter": 17, "width": 13, "offset": 70, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["275/40ZR17", "335/35ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "RT/10 and GTS. STAGGERED fitment."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 10, "offset": 50, "position": "front" },
+          { "diameter": 17, "width": 13, "offset": 70, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["275/40ZR17", "335/35ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "RT/10 and GTS. STAGGERED fitment."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Viper",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x114.3",
+        "hub_bore": 71.6,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 10, "offset": 50, "position": "front" },
+          { "diameter": 17, "width": 13, "offset": 70, "position": "rear" }
+        ],
+        "oem_tire_sizes": ["275/40ZR17", "335/35ZR17"],
+        "staggered": true
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "RT/10 and GTS. STAGGERED fitment. Last year of 1st gen."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Neon",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. Dodge Neon debuted in 1995."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Neon",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. Dodge Neon debuted in 1995."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Neon",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. Dodge Neon debuted in 1995."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Neon",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. Dodge Neon debuted in 1995."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Neon",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["dodgeforum.com"],
+      "notes": "Vehicle didn't exist. Dodge Neon debuted in 1995 (as 1995 MY, launched late 1994)."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Neon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/65R14", "185/70R13"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "1st generation. Some base models had 4x100 pattern, but most were 5x100."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Neon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "1st generation."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Neon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "1st generation."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Neon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "1st generation."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Neon",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["dodgeforum.com", "tiresize.com"],
+      "notes": "1st generation. Last year before 2nd gen redesign."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Intrepid",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Intrepid debuted in 1993."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Intrepid",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Intrepid debuted in 1993."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Intrepid",
+      "status": "invalid",
+      "data": null,
+      "confidence": "n/a",
+      "sources": ["hulkoffsets.com"],
+      "notes": "Vehicle didn't exist. Dodge Intrepid debuted in 1993."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Intrepid",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "dodgeforum.com"],
+      "notes": "1st generation LH-body. First year of production."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 41,
+    "partial": 0,
+    "invalid": 34,
+    "highConfidence": 41,
+    "needsReview": 0
+  },
+  "notes": {
+    "invalidVehicles": "34 vehicle/year combinations were invalid because the model didn't exist in those years: Ram 1500/2500/3500 (1990-1993 were D150/D250/D350), Durango (started 1998), Viper (started 1992), Neon (started 1995), Intrepid (started 1993)",
+    "keyFindings": [
+      "Dodge Viper uses 6x114.3 bolt pattern (NOT 5x115 as sometimes reported) with STAGGERED fitment",
+      "Dakota changed from 5x114.3 to 6x114.3 in 1991",
+      "Ram 1500 is 5x139.7, Ram 2500/3500 is 8x165.1 (confirmed for 1994+)",
+      "Neon uses 5x100 with 57.1mm hub bore",
+      "Monte Carlo 1997-1999 uses 5x115 (GM W-body platform)"
+    ],
+    "sourcesUsed": [
+      "hulkoffsets.com (Tier 2 - cross-reference, comprehensive guides)",
+      "dodgeforum.com (Tier 2 - enthusiast forum with verified data)",
+      "tiresize.com (Tier 1 - tire size specs)",
+      "tirewheelguide.com (Tier 2)"
+    ]
+  }
+}

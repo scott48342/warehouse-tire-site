@@ -1,0 +1,1115 @@
+{
+  "batchId": "72",
+  "processedAt": "2026-04-21T22:08:00Z",
+  "source": "tiresize.com, checkeredflaghyundaiworld.com, autopadre.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "palisade",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "INVALID YEAR - Hyundai Palisade was introduced in 2020. No 2019 model exists.",
+      "status": "invalid_year"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "palisade",
+      "currentTireSizes": ["245/45R21", "245/60R18", "245/50R20", "245/55R19"],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "INVALID YEAR - Hyundai Palisade was introduced in 2020. No 2018 model exists.",
+      "status": "invalid_year"
+    },
+    {
+      "year": 2026,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "245/60R18", "255/45R20", "245/45R21"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "XRT", "tireSize": "245/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Calligraphy", "tireSize": "255/45R20", "wheelSize": "20x8.5"},
+        {"trim": "Limited", "tireSize": "245/45R21", "wheelSize": "21x8.5"}
+      ],
+      "notes": "2024+ generation uses 18-21 inch options. 235/65R17 and 235/55R19 NOT found for 2026.",
+      "status": "needs_review"
+    },
+    {
+      "year": 2025,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/60R18", "255/45R20", "245/45R21", "245/60R18"],
+      "validatedTireSizes": ["235/60R18", "245/60R18", "255/45R20", "245/45R21"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "XRT", "tireSize": "245/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Calligraphy", "tireSize": "255/45R20", "wheelSize": "20x8.5"},
+        {"trim": "Limited", "tireSize": "245/45R21", "wheelSize": "21x8.5"}
+      ],
+      "notes": "2024+ generation. Current sizes match OEM specs.",
+      "status": "valid"
+    },
+    {
+      "year": 2025,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "245/60R18", "255/45R20", "245/45R21"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "XRT", "tireSize": "245/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Calligraphy", "tireSize": "255/45R20", "wheelSize": "20x8.5"},
+        {"trim": "Limited", "tireSize": "245/45R21", "wheelSize": "21x8.5"}
+      ],
+      "notes": "2024+ generation. 235/65R17 and 235/55R19 are from older generation - NOT valid for 2025.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/60R18", "255/45R20", "245/45R21", "245/60R18"],
+      "validatedTireSizes": ["235/60R18", "245/60R18", "255/45R20", "245/45R21"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "XRT", "tireSize": "245/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Calligraphy", "tireSize": "255/45R20", "wheelSize": "20x8.5"},
+        {"trim": "Limited", "tireSize": "245/45R21", "wheelSize": "21x8.5"}
+      ],
+      "notes": "New 2024+ generation. Current sizes match validated OEM specs.",
+      "status": "valid"
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "245/60R18", "255/45R20", "245/45R21"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "XRT", "tireSize": "245/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Calligraphy", "tireSize": "255/45R20", "wheelSize": "20x8.5"},
+        {"trim": "Limited", "tireSize": "245/45R21", "wheelSize": "21x8.5"}
+      ],
+      "notes": "2024 is new generation. 235/65R17 and 235/55R19 are from older generation - need removal.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "Hybrid Blue", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "XRT", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Hybrid Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Hybrid SEL Premium", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Plug-In Hybrid Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Plug-In Hybrid SEL", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Calligraphy", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "notes": "All current sizes validated. 2023 is last year of fourth generation.",
+      "status": "valid"
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/60R18", "235/65R17", "235/55R19", "255/55R18", "255/50R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "Hybrid Blue", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "XRT", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Calligraphy", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "notes": "255/55R18 and 255/50R19 not confirmed as OEM sizes - may be invalid.",
+      "status": "needs_review"
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "Hybrid Blue", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Calligraphy", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "notes": "All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Calligraphy", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "notes": "Fourth generation (facelift). All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SEL", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Calligraphy", "tireSize": "255/45R20", "wheelSize": "20x8"}
+      ],
+      "notes": "Fourth generation (facelift). All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/50R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SEL", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SEL Plus", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Ultimate", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited 2.0T", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Ultimate 2.0T", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "XL SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "XL Limited Ultimate", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "255/50R19 and 255/45R20 not confirmed as 2019 OEM sizes - may be invalid.",
+      "status": "needs_review"
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SEL", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited 2.0T", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Ultimate 2.0T", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "255/45R20 not found for 2019 model - may need removal.",
+      "status": "needs_review"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SE Ultimate", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Limited Ultimate", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "255/45R20 not confirmed as 2018 OEM size.",
+      "status": "needs_review"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Limited Ultimate", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "255/45R20 not confirmed as 2017 OEM size. May need 235/65R17 added.",
+      "status": "needs_review"
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "Missing 235/65R17 for base Sport trim.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "GLS", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "GLS", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "Missing 235/65R17 for base Sport trim.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2014,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "GLS", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "Missing 235/65R17 for base Sport trim.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2014,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "GLS", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2013,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "GLS", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Sport 2.0T", "tireSize": "235/55R19", "wheelSize": "19x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "All sizes validated. Third generation.",
+      "status": "valid"
+    },
+    {
+      "year": 2013,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "Sport Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "GLS", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "Missing 235/65R17 for base Sport trim.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2012,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["235/65R17", "235/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/60R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "Second generation. All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2011,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16", "235/65R17", "235/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/60R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "225/70R16 is from 2006 or earlier generation - may be invalid for 2011.",
+      "status": "needs_review"
+    },
+    {
+      "year": 2010,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16", "235/65R17", "235/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/60R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "225/70R16 is from first generation - second gen (2007+) uses 235 width tires.",
+      "status": "needs_review"
+    },
+    {
+      "year": 2009,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16", "235/65R17", "235/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/60R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "225/70R16 is from first generation - second gen uses 235 width.",
+      "status": "needs_review"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16", "235/65R17", "235/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited", "tireSize": "235/60R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "225/70R16 is from first generation (2001-2006).",
+      "status": "needs_review"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16", "235/65R17", "235/60R18"],
+      "validatedTireSizes": ["235/70R16", "235/60R18"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "235/70R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "235/60R18", "wheelSize": "18x7"},
+        {"trim": "Limited", "tireSize": "235/60R18", "wheelSize": "18x7"}
+      ],
+      "notes": "2007 is second generation. GLS uses 235/70R16, not 225/70R16. 235/65R17 is incorrect.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2006,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16"],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "225/70R16", "wheelSize": "16x6.5"},
+        {"trim": "Limited", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "First generation. All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2005,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16"],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "225/70R16", "wheelSize": "16x6.5"},
+        {"trim": "LX", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "First generation. All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2004,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16"],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/70R16", "wheelSize": "16x6.5"},
+        {"trim": "GLS", "tireSize": "225/70R16", "wheelSize": "16x6.5"},
+        {"trim": "LX", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "First generation. All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2003,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16"],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/70R16", "wheelSize": "16x6.5"},
+        {"trim": "GLS", "tireSize": "225/70R16", "wheelSize": "16x6.5"},
+        {"trim": "LX", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "First generation. All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2002,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16"],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/70R16", "wheelSize": "16x6.5"},
+        {"trim": "GLS", "tireSize": "225/70R16", "wheelSize": "16x6.5"},
+        {"trim": "LX", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "First generation. All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2001,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16"],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/70R16", "wheelSize": "16x6.5"},
+        {"trim": "GLS", "tireSize": "225/70R16", "wheelSize": "16x6.5"},
+        {"trim": "LX", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "First generation (debut year). All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2000,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "currentTireSizes": ["225/70R16", "235/65R17"],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "INVALID YEAR - Santa Fe was introduced in 2001 for US market. No 2000 model exists.",
+      "status": "invalid_year"
+    },
+    {
+      "year": 2012,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "Santa Fe Classic is continuation of first-gen Santa Fe (SM platform) sold in some markets. Uses same specs as 2001-2006 Santa Fe.",
+      "status": "valid"
+    },
+    {
+      "year": 2011,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "Santa Fe Classic uses first-gen Santa Fe specs.",
+      "status": "valid"
+    },
+    {
+      "year": 2010,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "Santa Fe Classic uses first-gen Santa Fe specs.",
+      "status": "valid"
+    },
+    {
+      "year": 2009,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "Santa Fe Classic uses first-gen Santa Fe specs.",
+      "status": "valid"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "Santa Fe Classic uses first-gen Santa Fe specs.",
+      "status": "valid"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "santa-fe-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/70R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "225/70R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "Santa Fe Classic uses first-gen Santa Fe specs. First year of Classic badge.",
+      "status": "valid"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "2.4L", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "2.4L Popular", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "2.0T", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "2.0T Ultimate", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "Final year for Santa Fe Sport nameplate (merged into Santa Fe for 2019).",
+      "status": "valid"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "2.4L", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "2.4L Popular", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "2.0T", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "2.0T Ultimate", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "2.4L", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "2.4L Popular", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "2.0T", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "2.0T Ultimate", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "2.4L", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "2.4L Popular", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "2.0T", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "2.0T Ultimate", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2014,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "2.4L", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "2.4L Popular", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "2.0T", "tireSize": "235/60R18", "wheelSize": "18x7.5"},
+        {"trim": "2.0T Ultimate", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2013,
+      "make": "hyundai",
+      "model": "santa-fe-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": [
+        {"trim": "2.4L Base", "tireSize": "235/65R17", "wheelSize": "17x7"},
+        {"trim": "2.0T", "tireSize": "235/55R19", "wheelSize": "19x7.5"}
+      ],
+      "notes": "First year for Santa Fe Sport. All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2003,
+      "make": "hyundai",
+      "model": "santro-zip",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R13", "wheelSize": "13x4.5"}
+      ],
+      "notes": "India market vehicle. Standard tire size is 155/65R13.",
+      "status": "valid"
+    },
+    {
+      "year": 2002,
+      "make": "hyundai",
+      "model": "santro-zip",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R13", "wheelSize": "13x4.5"}
+      ],
+      "notes": "India market vehicle.",
+      "status": "valid"
+    },
+    {
+      "year": 2001,
+      "make": "hyundai",
+      "model": "santro-zip",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R13", "wheelSize": "13x4.5"}
+      ],
+      "notes": "India market vehicle.",
+      "status": "valid"
+    },
+    {
+      "year": 2000,
+      "make": "hyundai",
+      "model": "santro-zip",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R13", "wheelSize": "13x4.5"}
+      ],
+      "notes": "India market vehicle.",
+      "status": "valid"
+    },
+    {
+      "year": 2026,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Blue", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Hybrid SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Limited", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/45R18", "wheelSize": "18x8"},
+        {"trim": "SEL Plus", "tireSize": "245/40R19", "wheelSize": "19x8"},
+        {"trim": "N Line", "tireSize": "245/40R19", "wheelSize": "19x8"}
+      ],
+      "notes": "Eighth generation (DN8). All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2025,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Blue", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Hybrid SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Limited", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/45R18", "wheelSize": "18x8"},
+        {"trim": "SEL Plus", "tireSize": "245/40R19", "wheelSize": "19x8"},
+        {"trim": "N Line", "tireSize": "245/40R19", "wheelSize": "19x8"}
+      ],
+      "notes": "Eighth generation (DN8). All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Blue", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Hybrid SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Limited", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/45R18", "wheelSize": "18x8"},
+        {"trim": "SEL Plus", "tireSize": "245/40R19", "wheelSize": "19x8"},
+        {"trim": "N Line", "tireSize": "245/40R19", "wheelSize": "19x8"}
+      ],
+      "notes": "Eighth generation (DN8). All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Blue", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Hybrid SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Limited", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/45R18", "wheelSize": "18x8"},
+        {"trim": "SEL Plus", "tireSize": "245/40R19", "wheelSize": "19x8"},
+        {"trim": "N Line", "tireSize": "245/40R19", "wheelSize": "19x8"}
+      ],
+      "notes": "Eighth generation (DN8). All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Blue", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Hybrid SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Limited", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/45R18", "wheelSize": "18x8"},
+        {"trim": "SEL Plus", "tireSize": "245/40R19", "wheelSize": "19x8"},
+        {"trim": "N Line", "tireSize": "245/40R19", "wheelSize": "19x8"}
+      ],
+      "notes": "Eighth generation (DN8). All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Blue", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Hybrid SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Limited", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/45R18", "wheelSize": "18x8"},
+        {"trim": "SEL Plus", "tireSize": "235/45R18", "wheelSize": "18x8"},
+        {"trim": "N Line", "tireSize": "245/40R19", "wheelSize": "19x8"}
+      ],
+      "notes": "Eighth generation (DN8). All sizes validated.",
+      "status": "valid"
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Blue", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Hybrid SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Limited", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/45R18", "wheelSize": "18x8"},
+        {"trim": "SEL Plus", "tireSize": "235/45R18", "wheelSize": "18x8"}
+      ],
+      "notes": "First year of eighth generation. 245/40R19 not confirmed for 2020 (N Line added later).",
+      "status": "needs_review"
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Sport", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/45R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited 2.0T", "tireSize": "235/45R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "Final year of seventh generation (LF). 245/40R19 is from eighth gen - not valid for 2019.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SEL", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Sport", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/45R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited 2.0T", "tireSize": "235/45R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "Seventh generation (LF). 245/40R19 not valid for this generation.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Sport", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "235/45R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited 2.0T", "tireSize": "235/45R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "Seventh generation (LF). 245/40R19 not valid for this generation.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Sport", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited 2.0T", "tireSize": "235/45R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "Seventh generation (LF). 245/40R19 not valid for this generation.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "trims": [
+        {"trim": "SE", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Eco", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Hybrid", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "Sport", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Hybrid Limited", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Sport 2.0T", "tireSize": "235/45R18", "wheelSize": "18x7.5"},
+        {"trim": "Limited 2.0T", "tireSize": "235/45R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "First year of seventh generation (LF). 245/40R19 not valid.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2014,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "notes": "Sixth generation (YF). 235/45R18 and 245/40R19 are from newer generations - not valid.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2013,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "notes": "Sixth generation (YF). 235/45R18 and 245/40R19 not valid for this generation.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2012,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "notes": "Sixth generation (YF). 235/45R18 and 245/40R19 not valid.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2011,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["205/65R16", "215/55R17"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "205/65R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "notes": "First year of sixth generation (YF). 235/45R18 and 245/40R19 not valid.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2010,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "215/60R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "notes": "Fifth generation (NF). 205/65R16, 235/45R18, 245/40R19 not valid. Uses 215/60R16 for base.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2009,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "215/60R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "notes": "Fifth generation (NF). Uses 215/60R16 for base, not 205/65R16.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2008,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "215/60R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "215/55R17", "wheelSize": "17x7"}
+      ],
+      "notes": "Fifth generation (NF). Uses 215/60R16 for base.",
+      "status": "needs_correction"
+    },
+    {
+      "year": 2007,
+      "make": "hyundai",
+      "model": "sonata",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "245/40R19"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "225/50R17"],
+      "trims": [
+        {"trim": "GLS", "tireSize": "215/60R16", "wheelSize": "16x6.5"},
+        {"trim": "SE", "tireSize": "215/55R17", "wheelSize": "17x7"},
+        {"trim": "Limited", "tireSize": "225/50R17", "wheelSize": "17x7"}
+      ],
+      "notes": "Fifth generation (NF). Uses different sizes than current data.",
+      "status": "needs_correction"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 38,
+    "needsCorrection": 19,
+    "needsReview": 14,
+    "invalidYear": 4
+  }
+}

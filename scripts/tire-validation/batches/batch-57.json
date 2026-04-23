@@ -1,0 +1,818 @@
+{
+  "batchId": "57",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "maverick",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "maverick",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "maverick",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "maverick",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/65R17",
+        "225/55R18"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "275/35R19 front",
+        "305/35R19 rear"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19 front",
+        "275/40R19 rear"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "275/35R19 front",
+        "305/35R19 rear"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/65R17",
+        "225/55R18"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19 front",
+        "275/40R19 rear"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "305/30R20",
+        "315/30R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/45R18",
+        "255/40R19",
+        "265/35R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "305/30R19",
+        "315/30R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/50R18",
+        "255/40R19",
+        "265/35R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/40R19",
+        "265/40R19",
+        "265/35R20",
+        "305/30R20",
+        "315/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "305/30R19",
+        "315/30R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "305/30R20",
+        "315/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/40R19",
+        "265/40R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/40R19",
+        "265/40R19",
+        "265/35R20",
+        "305/30R20",
+        "315/30R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/40R19",
+        "265/40R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "305/30R20",
+        "315/30R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "305/30R19",
+        "315/30R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/40R19",
+        "265/40R19",
+        "265/35R20",
+        "305/30R20",
+        "315/30R20",
+        "255/40ZR19",
+        "235/50ZR18",
+        "265/35ZR20",
+        "275/40ZR19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "305/30R20",
+        "315/30R20",
+        "255/40ZR19",
+        "235/50ZR18",
+        "265/35ZR20",
+        "275/40ZR19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "305/30R19",
+        "315/30R19",
+        "255/40ZR19",
+        "235/50ZR18",
+        "265/35ZR20",
+        "275/40ZR19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19",
+        "275/40R19",
+        "255/40ZR19",
+        "235/50ZR18",
+        "265/35ZR20",
+        "275/40ZR19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/40R19",
+        "265/40R19",
+        "255/40ZR19",
+        "235/50ZR18",
+        "265/35ZR20",
+        "275/40ZR19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/40R19",
+        "265/40R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "295/35R19",
+        "305/35R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/40R19",
+        "265/40R19",
+        "265/35R20",
+        "305/30R20",
+        "315/30R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "305/30R20",
+        "315/30R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/40R19",
+        "265/40R19",
+        "265/35R20",
+        "305/30R20",
+        "315/30R20",
+        "235/50ZR18",
+        "255/40ZR19",
+        "265/35ZR20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "295/35R19",
+        "305/35R19",
+        "235/55R17",
+        "235/50ZR18",
+        "255/40ZR19",
+        "265/35ZR20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/40R19",
+        "265/40R19",
+        "235/50ZR18",
+        "255/40ZR19",
+        "265/35ZR20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19",
+        "275/40R19",
+        "235/55R17",
+        "235/50ZR18",
+        "255/40ZR19",
+        "265/35ZR20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "295/35R19",
+        "305/35R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/40R19",
+        "265/40R19",
+        "265/35R20",
+        "305/30R20",
+        "315/30R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/40R19",
+        "265/40R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/40R19",
+        "265/40R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/40R19",
+        "265/40R19",
+        "265/35R20",
+        "305/30R20",
+        "315/30R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "295/35R19",
+        "305/35R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "295/35R19",
+        "305/35R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19",
+        "275/40R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/40R19",
+        "265/40R19",
+        "265/35R20",
+        "305/30R20",
+        "315/30R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/40R19",
+        "265/40R19"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/40R19",
+        "265/40R19",
+        "235/50ZR18",
+        "255/40ZR19",
+        "265/35ZR20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/40R19",
+        "275/40R19",
+        "235/55R17",
+        "235/50ZR18",
+        "255/40ZR19",
+        "265/35ZR20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "235/55R17",
+        "255/40R19",
+        "265/40R19",
+        "265/35R20",
+        "305/30R20",
+        "315/30R20",
+        "235/50ZR18",
+        "255/40ZR19",
+        "265/35ZR20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/60R17",
+        "235/50R18",
+        "245/45R19",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/60R17",
+        "235/50R18",
+        "245/45R19",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/60R17",
+        "235/50R18",
+        "245/45R19",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19",
+        "225/60R17",
+        "235/50ZR18",
+        "245/45ZR19",
+        "255/40ZR19"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/60R17",
+        "235/50R18",
+        "245/45R19",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/60R17",
+        "235/50R18",
+        "245/45R19",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19",
+        "225/60R17",
+        "235/50ZR18",
+        "245/45ZR19",
+        "255/40ZR19"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/45R18"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/60R17",
+        "235/50R18",
+        "245/45R19",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/65R16"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/65R16"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/45R18"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/60R17",
+        "235/50R18",
+        "245/45R19",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "255/45R18"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/60R17",
+        "235/50R18",
+        "245/45R19",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/65R16"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/60R17",
+        "235/50R18",
+        "245/45R19",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/65R16"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/65R16"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "215/60R17",
+        "235/50R18",
+        "245/45R19",
+        "255/45R18",
+        "285/40R18",
+        "255/40R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "205/65R15"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "275/40R17"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "mustang",
+      "currentTireSizes": [
+        "225/55R16",
+        "245/45R17"
+      ]
+    }
+  ]
+}

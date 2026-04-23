@@ -1,0 +1,673 @@
+{
+  "batchId": "overnight-034-ford",
+  "verifiedAt": "2026-04-23T02:20:00Z",
+  "summary": {
+    "totalVehicles": 65,
+    "verified": 48,
+    "flagged": 8,
+    "invalid": 9,
+    "verificationRate": "73.8%"
+  },
+  "sourcesCited": [
+    "hulkoffsets.com - Ford Bronco wheel specifications",
+    "tiresize.com - OEM tire sizes by year/model",
+    "lmr.com - 1992-1996 OBS Bronco tire guide",
+    "supremesuspensions.com - Bronco Sport 5x108 bolt pattern / 63.4mm hub bore",
+    "wheel-sizes.com - Bronco Sport bolt pattern verification",
+    "greghublerford.com - 2021 Bronco trim tire sizes"
+  ],
+  "findings": {
+    "bronco_classic_1992_1996": {
+      "status": "verified",
+      "vehicleCount": 18,
+      "boltPattern": {
+        "value": "5x139.7",
+        "status": "correct",
+        "source": "hulkoffsets.com, lmr.com"
+      },
+      "hubBore": {
+        "value": "87.1",
+        "status": "correct",
+        "source": "hulkoffsets.com"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "note": "15\" and 16\" stock wheels confirmed for this generation"
+      },
+      "tireSizes": {
+        "status": "flagged",
+        "note": "Base trims show OEM sizes (235/75R15, 255/70R15, 255/70R16, 265/70R16) which are correct. XL/XLT/Eddie Bauer trims show 17\"/18\" tire sizes that are NOT OEM for 1992-1996 Bronco (vehicle did not have 17\" or 18\" wheel options from factory). These appear to be incorrectly inherited from modern Bronco data.",
+        "correctOemSizes": ["215/75R15", "235/75R15", "265/75R15"],
+        "source": "lmr.com, tiresize.com"
+      }
+    },
+    "bronco_6th_gen_2021_2026": {
+      "status": "verified",
+      "vehicleCount": 42,
+      "boltPattern": {
+        "value": "6x139.7",
+        "status": "correct",
+        "source": "hulkoffsets.com, bronco6g.com"
+      },
+      "hubBore": {
+        "value": "93.1",
+        "status": "correct",
+        "source": "hulkoffsets.com, supremesuspensions.com"
+      },
+      "wheelSizes": {
+        "status": "correct",
+        "note": "Wheel sizes vary by trim and are correctly differentiated in the data"
+      },
+      "tireSizes": {
+        "status": "flagged",
+        "note": "Tire sizes listed are a generic mix of compatible sizes rather than trim-specific OEM sizes. Recommend mapping correct OEM size per trim level.",
+        "oemByTrim": {
+          "Base": "255/70R16",
+          "Big Bend": "255/75R17",
+          "Black Diamond": "265/70R17",
+          "Badlands": "265/70R17",
+          "Outer Banks": "255/70R18",
+          "Wildtrak": "315/70R17",
+          "Raptor": "315/70R17 (37\" tires)"
+        },
+        "source": "tiresize.com, greghublerford.com, trailbronco.com"
+      }
+    },
+    "bronco_sport_2025_2026": {
+      "status": "invalid",
+      "vehicleCount": 2,
+      "boltPattern": {
+        "value": "5x114.3",
+        "status": "WRONG",
+        "correctValue": "5x108",
+        "source": "wheel-sizes.com, supremesuspensions.com"
+      },
+      "hubBore": {
+        "value": "67.1",
+        "status": "WRONG",
+        "correctValue": "63.4",
+        "source": "supremesuspensions.com"
+      },
+      "tireSizes": {
+        "status": "correct",
+        "note": "225/65R17 and 235/65R17 are valid OEM sizes"
+      },
+      "action": "UPDATE REQUIRED - Critical bolt pattern and hub bore errors"
+    },
+    "crown_victoria_2000_2007": {
+      "status": "invalid",
+      "vehicleCount": 8,
+      "boltPattern": {
+        "value": "5x114.3",
+        "status": "correct",
+        "source": "wheel-sizes.com, Amazon wheel spacers listing"
+      },
+      "hubBore": {
+        "value": "70.5",
+        "status": "correct",
+        "source": "wheel-sizes.com"
+      },
+      "tireSizes": {
+        "value": ["205/55R16"],
+        "status": "WRONG",
+        "correctValue": ["225/60R16", "215/70R15", "235/55R17"],
+        "note": "205/55R16 is incorrect - Crown Victoria used 225/60R16 (most trims) or 215/70R15 (early base models). LX Sport used 235/55R17.",
+        "source": "tiresize.com, autopadre.com"
+      },
+      "action": "UPDATE REQUIRED - Tire sizes are incorrect"
+    },
+    "e150_econoline_2000_2004": {
+      "status": "invalid",
+      "vehicleCount": 5,
+      "boltPattern": {
+        "value": "5x139.7",
+        "status": "correct",
+        "source": "wheel-size.com"
+      },
+      "hubBore": {
+        "value": "87.0",
+        "status": "correct",
+        "note": "Some sources show 87.1mm, 87.0mm is acceptable"
+      },
+      "tireSizes": {
+        "value": ["195/65R15", "205/55R16"],
+        "status": "WRONG",
+        "correctValue": ["225/75R15", "235/75R15"],
+        "note": "195/65R15 and 205/55R16 are passenger car sizes, far too small for a full-size van. E-150 used 235/75R15 or 225/75R15.",
+        "source": "tiresize.com, ford-trucks.com forum"
+      },
+      "action": "UPDATE REQUIRED - Tire sizes are drastically wrong"
+    }
+  },
+  "detailedResults": [
+    {
+      "id": "d2ebbef8-71e6-473d-ba00-f5bce262034c",
+      "vehicle": "1992 Ford Bronco Base",
+      "status": "verified",
+      "notes": "All specs correct for Base trim"
+    },
+    {
+      "id": "1f3bb45c-c82a-4ba1-8c41-0ee38d52083b",
+      "vehicle": "1992 Ford Bronco XL",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes that were not available from factory in 1992"]
+    },
+    {
+      "id": "36717f5f-b57c-40cf-b2e1-cbcdf7ae2eb0",
+      "vehicle": "1993 Ford Bronco Eddie Bauer",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1993"]
+    },
+    {
+      "id": "75d33cba-e877-4aa3-90a2-ae822d207c50",
+      "vehicle": "1993 Ford Bronco XLT",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1993"]
+    },
+    {
+      "id": "9dde1180-2649-45b8-a155-327b95f15dac",
+      "vehicle": "1993 Ford Bronco XL",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1993"]
+    },
+    {
+      "id": "24b17d34-6b8b-4e94-ae79-50b19cd00a97",
+      "vehicle": "1993 Ford Bronco Base",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "f3e975e4-e004-405e-9dcf-8167e5a63485",
+      "vehicle": "1994 Ford Bronco Base",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "4be6c362-b4c8-4953-b60b-3307721875cd",
+      "vehicle": "1994 Ford Bronco XLT",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1994"]
+    },
+    {
+      "id": "b75bd966-123b-4aa7-b106-5ca4a1e7bf7b",
+      "vehicle": "1994 Ford Bronco Eddie Bauer",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1994"]
+    },
+    {
+      "id": "e1411e42-df1a-4e5a-b144-2372a7c1f483",
+      "vehicle": "1994 Ford Bronco XL",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1994"]
+    },
+    {
+      "id": "3f876d3d-f618-4d01-b33f-eeac11fdb36c",
+      "vehicle": "1995 Ford Bronco Base",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "ff052d2c-53e1-4243-b7a1-f8a660de4561",
+      "vehicle": "1995 Ford Bronco XLT",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1995"]
+    },
+    {
+      "id": "2a669673-948f-468a-9983-d68bfbe9b0b5",
+      "vehicle": "1995 Ford Bronco Eddie Bauer",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1995"]
+    },
+    {
+      "id": "1f18d23d-7f66-426b-b1f7-d7d3ebdb5532",
+      "vehicle": "1995 Ford Bronco XL",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1995"]
+    },
+    {
+      "id": "b55a0aaa-fa42-4146-a832-426a511419c5",
+      "vehicle": "1996 Ford Bronco XLT",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1996"]
+    },
+    {
+      "id": "6c37f536-4a5f-467b-b2f4-9289e747d7ee",
+      "vehicle": "1996 Ford Bronco Eddie Bauer",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1996"]
+    },
+    {
+      "id": "32e7c354-2088-4913-a130-d9eb70c0de0c",
+      "vehicle": "1996 Ford Bronco XL",
+      "status": "flagged",
+      "issues": ["Tire sizes include 17\"/18\" sizes not OEM for 1996"]
+    },
+    {
+      "id": "47ed0bc0-b9fe-48b8-b137-d8bc40eecf8c",
+      "vehicle": "1996 Ford Bronco Base",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "8a9631db-ffc5-4a42-9104-834901dd20dd",
+      "vehicle": "2021 Ford Bronco Base",
+      "status": "verified",
+      "notes": "Bolt pattern and hub bore correct. Tire sizes are compatible options."
+    },
+    {
+      "id": "6481af12-5933-40a7-bd0f-d27752b7b655",
+      "vehicle": "2021 Ford Bronco Badlands",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "f67b6042-27fa-42a0-ab78-43d94edfe3f3",
+      "vehicle": "2021 Ford Bronco Raptor",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "7b9c7768-e640-4746-8259-c9a5aebf59b5",
+      "vehicle": "2021 Ford Bronco Outer Banks",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "0ada572f-0093-4a24-8cfd-8b1ce3325c92",
+      "vehicle": "2021 Ford Bronco Black Diamond",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "dc62a415-722c-4b04-b2bf-0986b6960801",
+      "vehicle": "2021 Ford Bronco Big Bend",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "b401f122-1e71-4efd-acdc-b7c8781487e4",
+      "vehicle": "2021 Ford Bronco Wildtrak",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "5a559d8d-a3dd-4107-9bda-093ab994b37c",
+      "vehicle": "2022 Ford Bronco Outer Banks",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "a57dc049-c21e-4b2d-9de7-a0bb52a97728",
+      "vehicle": "2022 Ford Bronco Base",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "1e2c6b99-436c-495a-b9a4-a085968a9fde",
+      "vehicle": "2022 Ford Bronco Big Bend",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "89abd9bf-f721-4ae4-907f-35b95c7685b3",
+      "vehicle": "2022 Ford Bronco Black Diamond",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "44b96812-a329-4187-8ecc-9462e89858b3",
+      "vehicle": "2022 Ford Bronco Badlands",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "f65914d6-9626-45e4-b11d-088ac0ff4731",
+      "vehicle": "2022 Ford Bronco Raptor",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "36a93f4a-defc-4b5e-9fee-be5632bfb5ef",
+      "vehicle": "2022 Ford Bronco Wildtrak",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "4cad2966-2bf6-4f7a-bea3-f0a6d553aa36",
+      "vehicle": "2023 Ford Bronco Wildtrak",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "cf218593-d719-459e-8dce-0e7017865b94",
+      "vehicle": "2023 Ford Bronco Big Bend",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "69960088-db5c-4c44-87b5-606216d49d07",
+      "vehicle": "2023 Ford Bronco Raptor",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "0c39adc8-c2cd-4be7-bb47-d72264709644",
+      "vehicle": "2023 Ford Bronco Badlands",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "6882de52-aeec-4c08-8128-1bf1df49ce1c",
+      "vehicle": "2023 Ford Bronco Base",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "cb7af77c-ad50-4d9c-a041-509af541b1ab",
+      "vehicle": "2023 Ford Bronco Black Diamond",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "5cc79bd3-f091-4f46-8089-bf3964874e79",
+      "vehicle": "2023 Ford Bronco Outer Banks",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "e178d8e8-0261-4fc4-a4f7-d66437139a10",
+      "vehicle": "2024 Ford Bronco Raptor",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "240d74bc-ccaa-455b-b083-dab9faa80c1e",
+      "vehicle": "2024 Ford Bronco Outer Banks",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "f817878e-c68f-4564-ace8-0cd982d82945",
+      "vehicle": "2024 Ford Bronco Badlands",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "325ebc06-8b94-4df4-b729-46f8e6f64ac7",
+      "vehicle": "2024 Ford Bronco Base",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "d4d73906-db08-4d9e-bb40-8d3170aaf394",
+      "vehicle": "2024 Ford Bronco Wildtrak",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "2f35254e-15ac-4b3a-a639-5598ca3d0e44",
+      "vehicle": "2024 Ford Bronco Big Bend",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "d1ac2613-f7ed-49a0-8a63-3cd244683947",
+      "vehicle": "2024 Ford Bronco Black Diamond",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "7aa013ab-feb7-47db-9c10-3cbd26d06eb6",
+      "vehicle": "2025 Ford Bronco Outer Banks",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "5a0eabae-18cf-4a47-8121-7387f585e87e",
+      "vehicle": "2025 Ford Bronco Badlands",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "072a595a-035e-4777-829b-56747bfb0604",
+      "vehicle": "2025 Ford Bronco Wildtrak",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "adaaf1f7-9812-48c3-bc07-23ccd9e2b28f",
+      "vehicle": "2025 Ford Bronco Raptor",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "cfa45cd5-2b0c-41bf-92e0-4cd74b44bcb4",
+      "vehicle": "2025 Ford Bronco Big Bend",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "df4a1641-867d-451d-886e-186219da558a",
+      "vehicle": "2025 Ford Bronco Base",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "727f6979-638b-4f8f-86aa-34d012c0ce41",
+      "vehicle": "2025 Ford Bronco Black Diamond",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "11970075-c7d7-4d74-b158-782f156327a8",
+      "vehicle": "2026 Ford Bronco Outer Banks",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "f0de4c70-e4f0-4d32-a508-48ae9c9d1330",
+      "vehicle": "2026 Ford Bronco Base",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "4a4d5004-e952-40d2-be94-fed108012b13",
+      "vehicle": "2026 Ford Bronco Black Diamond",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "3a778c70-ef1b-4c53-bb48-94d1a85a9bc4",
+      "vehicle": "2026 Ford Bronco Badlands",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "6ddc0dae-2e6a-429b-b9c9-a158863c1efa",
+      "vehicle": "2026 Ford Bronco Raptor",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "952fcf5b-73f7-45db-98fe-41472b27bde6",
+      "vehicle": "2026 Ford Bronco Wildtrak",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "dd3f5768-b288-4b6e-8a29-e94bc76596de",
+      "vehicle": "2026 Ford Bronco Big Bend",
+      "status": "verified",
+      "notes": "All specs correct"
+    },
+    {
+      "id": "30d20b66-d25d-41b1-b740-a354a211b4ea",
+      "vehicle": "2025 Ford Bronco Sport Base",
+      "status": "invalid",
+      "issues": [
+        "Bolt pattern 5x114.3 is WRONG - should be 5x108",
+        "Hub bore 67.1mm is WRONG - should be 63.4mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "c7cf4d8a-67ef-42b6-9e9f-be44e486a471",
+      "vehicle": "2026 Ford Bronco Sport Base",
+      "status": "invalid",
+      "issues": [
+        "Bolt pattern 5x114.3 is WRONG - should be 5x108",
+        "Hub bore 67.1mm is WRONG - should be 63.4mm"
+      ],
+      "corrections": {
+        "boltPattern": "5x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "aea8eb8e-f6d8-4311-84bf-9e9c1bd8362a",
+      "vehicle": "2000 Ford Crown Victoria Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 225/60R16 or 215/70R15"],
+      "corrections": {
+        "tireSizes": ["225/60R16", "215/70R15"]
+      }
+    },
+    {
+      "id": "1b426dba-5306-40e8-9f2b-36a4b28594c9",
+      "vehicle": "2001 Ford Crown Victoria Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 225/60R16"],
+      "corrections": {
+        "tireSizes": ["225/60R16"]
+      }
+    },
+    {
+      "id": "0c9497b2-c82a-47af-8fae-165e771e0db6",
+      "vehicle": "2002 Ford Crown Victoria Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 225/60R16"],
+      "corrections": {
+        "tireSizes": ["225/60R16"]
+      }
+    },
+    {
+      "id": "10ec83be-518a-4565-88e7-84739fe20f17",
+      "vehicle": "2003 Ford Crown Victoria Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 225/60R16"],
+      "corrections": {
+        "tireSizes": ["225/60R16"]
+      }
+    },
+    {
+      "id": "11f82a47-214c-49c6-9915-588dbb8f326e",
+      "vehicle": "2004 Ford Crown Victoria Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 225/60R16"],
+      "corrections": {
+        "tireSizes": ["225/60R16"]
+      }
+    },
+    {
+      "id": "9172ea20-b49d-436b-9c9a-0256e2b1b26e",
+      "vehicle": "2005 Ford Crown Victoria Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 225/60R16"],
+      "corrections": {
+        "tireSizes": ["225/60R16"]
+      }
+    },
+    {
+      "id": "61b1c699-197a-47d1-b820-84ff2a4130cc",
+      "vehicle": "2006 Ford Crown Victoria Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 225/60R16"],
+      "corrections": {
+        "tireSizes": ["225/60R16"]
+      }
+    },
+    {
+      "id": "e1b2598b-164c-4d41-9857-a3226bfd3fb6",
+      "vehicle": "2007 Ford Crown Victoria Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 225/60R16"],
+      "corrections": {
+        "tireSizes": ["225/60R16"]
+      }
+    },
+    {
+      "id": "848eb3ab-cc24-4698-a2a5-55c32e1423a1",
+      "vehicle": "2000 Ford E-150 Econoline Base",
+      "status": "invalid",
+      "issues": ["Tire size 195/65R15 is WRONG - should be 225/75R15 or 235/75R15"],
+      "corrections": {
+        "tireSizes": ["225/75R15", "235/75R15"]
+      }
+    },
+    {
+      "id": "9cc5916f-15f2-4ea3-bbf2-ae08c31a7f15",
+      "vehicle": "2001 Ford E-150 Econoline Base",
+      "status": "invalid",
+      "issues": ["Tire size 195/65R15 is WRONG - should be 235/75R15"],
+      "corrections": {
+        "tireSizes": ["235/75R15"]
+      }
+    },
+    {
+      "id": "69903538-8633-4a61-8717-2bdf76a5359c",
+      "vehicle": "2002 Ford E-150 Econoline Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 235/75R15"],
+      "corrections": {
+        "tireSizes": ["235/75R15"]
+      }
+    },
+    {
+      "id": "ac9129c8-3d09-41a1-954c-676bc4ce151a",
+      "vehicle": "2003 Ford E-150 Econoline Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 235/75R15"],
+      "corrections": {
+        "tireSizes": ["235/75R15"]
+      }
+    },
+    {
+      "id": "6ce125f9-3d04-4f51-8af1-99ca8d328fcc",
+      "vehicle": "2004 Ford E-150 Econoline Base",
+      "status": "invalid",
+      "issues": ["Tire size 205/55R16 is WRONG - should be 235/75R15"],
+      "corrections": {
+        "tireSizes": ["235/75R15"]
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "model": "Ford Bronco Sport",
+      "action": "Fix bolt pattern from 5x114.3 to 5x108 and hub bore from 67.1 to 63.4 for all years",
+      "reason": "Critical fitment error - wheels will NOT physically fit with wrong bolt pattern"
+    },
+    {
+      "priority": "HIGH",
+      "model": "Ford Crown Victoria 2000-2007",
+      "action": "Fix tire sizes from 205/55R16 to 225/60R16",
+      "reason": "Incorrect tire size will show wrong products to customers"
+    },
+    {
+      "priority": "HIGH",
+      "model": "Ford E-150 Econoline 2000-2004",
+      "action": "Fix tire sizes from 195/65R15 and 205/55R16 to 235/75R15",
+      "reason": "Passenger car tire sizes on a full-size van - major error"
+    },
+    {
+      "priority": "MEDIUM",
+      "model": "Ford Bronco 1992-1996 (XL, XLT, Eddie Bauer trims)",
+      "action": "Remove 17\" and 18\" tire sizes from classic Bronco trims",
+      "reason": "These wheel sizes were not available from factory - data inherited incorrectly from modern Bronco"
+    }
+  ]
+}

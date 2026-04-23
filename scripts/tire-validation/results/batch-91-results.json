@@ -1,0 +1,251 @@
+{
+  "batchId": "91",
+  "validatedAt": "2026-04-21T23:10:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 75,
+    "validated": 42,
+    "discrepancies": 28,
+    "notFound": 3,
+    "emptyData": 1,
+    "futureModelYear": 1
+  },
+  "criticalIssues": [
+    {
+      "severity": "HIGH",
+      "issue": "LX 2022-2026: All tire sizes WRONG",
+      "details": "Our data shows 265/70R18, 275/55R20, 275/50R22 but OEM is 265/65R18, 265/55R20, 265/50R22. Width and aspect ratio errors throughout.",
+      "affectedVehicles": ["2026 LX", "2025 LX", "2024 LX", "2023 LX", "2022 LX"],
+      "recommendation": "Replace all sizes with: 265/65R18, 265/55R20, 265/50R22"
+    },
+    {
+      "severity": "HIGH", 
+      "issue": "RC 2014-2025: All tire sizes WRONG",
+      "details": "Our data shows 225/45R17, 235/40R18, 255/35R19 but OEM is 235/45R18, 235/40R19, 265/35R19. The RC has staggered fitments for F Sport trims.",
+      "affectedVehicles": ["2024 RC", "2023 RC", "2022 RC", "2021 RC", "2020 RC", "2019 RC", "2018 RC", "2017 RC", "2016 RC", "2015 RC"],
+      "recommendation": "Replace with: 235/45R18, 235/40R19, 265/35R19 (rear F Sport), 255/35R19 (front RC F), 275/35R19 (rear RC F)"
+    },
+    {
+      "severity": "HIGH",
+      "issue": "LX 2000-2007: Wrong tire sizes",
+      "details": "Our data shows 275/60R17, 275/60R18 but OEM for LX 470 is 275/70R16. Completely wrong wheel diameter.",
+      "affectedVehicles": ["2007 LX", "2006 LX", "2005 LX", "2004 LX", "2003 LX", "2002 LX", "2001 LX", "2000 LX"],
+      "recommendation": "Replace with: 275/70R16"
+    },
+    {
+      "severity": "HIGH",
+      "issue": "2014 NX and 2014 RC: Vehicles don't exist",
+      "details": "NX launched in 2015, RC launched in 2015. These model years are invalid.",
+      "affectedVehicles": ["2014 NX", "2014 RC"],
+      "recommendation": "Remove these vehicles from database"
+    },
+    {
+      "severity": "MEDIUM",
+      "issue": "NX 2016-2017: Contains non-OEM sizes",
+      "details": "Our data includes 225/55R19, 245/45ZR20, 245/50R19 which are NOT OEM. OEM is: 225/65R17, 225/60R18, 235/55R18",
+      "affectedVehicles": ["2017 NX", "2016 NX"],
+      "recommendation": "Remove non-OEM sizes: 225/55R19, 245/45ZR20, 245/50R19"
+    },
+    {
+      "severity": "MEDIUM",
+      "issue": "2017 LS: Contains non-OEM size 235/40ZR20",
+      "details": "OEM for 2017 LS is 235/50R18 and 245/45R19 only. The 235/40ZR20 is aftermarket.",
+      "affectedVehicles": ["2017 LS"],
+      "recommendation": "Remove 235/40ZR20"
+    }
+  ],
+  "findings": [
+    {
+      "vehicle": "2021 Lexus LS",
+      "status": "NEEDS_REVIEW",
+      "currentSizes": ["245/50R19", "245/45R20", "245/50ZR19", "245/45ZR20", "275/40ZR20", "275/40R20"],
+      "oemSizes": ["245/50R19", "245/45R20"],
+      "notes": "ZR variants are OK (same size, different speed rating). 275/40R20 may be aftermarket."
+    },
+    {
+      "vehicle": "2018 Lexus LS",
+      "status": "NEEDS_REVIEW", 
+      "currentSizes": ["245/50R19", "245/45R20", "245/50ZR19", "245/45ZR20", "275/40ZR20", "275/40R20"],
+      "oemSizes": ["245/50R19", "245/45R20"],
+      "notes": "New generation (XF50). OEM is 245/50R19 and 245/45R20. The 275/40R20 may be a dealer-installed option."
+    },
+    {
+      "vehicle": "2017 Lexus LS",
+      "status": "DISCREPANCY",
+      "currentSizes": ["235/50R18", "245/45R19", "235/50ZR18", "245/45ZR19", "235/40ZR20"],
+      "oemSizes": ["235/50R18", "245/45R19"],
+      "notes": "235/40ZR20 NOT OEM. Old generation (XF40)."
+    },
+    {
+      "vehicle": "2016-2007 Lexus LS",
+      "status": "OK",
+      "currentSizes": ["235/50R18", "245/45R19"],
+      "oemSizes": ["235/50R18", "245/45R19"],
+      "notes": "Correct OEM sizes."
+    },
+    {
+      "vehicle": "2006-2001 Lexus LS",
+      "status": "OK",
+      "currentSizes": ["225/55R17", "245/45R18"],
+      "oemSizes": ["225/55R17", "245/45R18"],
+      "notes": "Correct for LS 430 generation."
+    },
+    {
+      "vehicle": "2000 Lexus LS",
+      "status": "OK",
+      "currentSizes": ["225/60R16"],
+      "oemSizes": ["225/60R16"],
+      "notes": "Correct for LS 400."
+    },
+    {
+      "vehicle": "2024-2022 Lexus LX",
+      "status": "DISCREPANCY",
+      "currentSizes": ["265/70R18", "275/55R20", "275/50R22"],
+      "oemSizes": ["265/65R18", "265/55R20", "265/50R22"],
+      "notes": "WRONG SIZES! Width should be 265mm on all, aspect ratios wrong on R18."
+    },
+    {
+      "vehicle": "2021-2008 Lexus LX 570",
+      "status": "NEEDS_REVIEW",
+      "currentSizes": ["285/60R18", "285/50R20", "285/45R21"],
+      "oemSizes": ["285/50R20"],
+      "notes": "OEM confirmed as 285/50R20. 285/60R18 may be base, 285/45R21 aftermarket."
+    },
+    {
+      "vehicle": "2007-2000 Lexus LX 470",
+      "status": "DISCREPANCY",
+      "currentSizes": ["275/60R17", "275/60R18"],
+      "oemSizes": ["275/70R16"],
+      "notes": "COMPLETELY WRONG! OEM is 275/70R16 (16 inch wheel). Our data shows 17 and 18 inch."
+    },
+    {
+      "vehicle": "2024 Lexus NX",
+      "status": "DISCREPANCY",
+      "currentSizes": ["235/60R18", "235/50R20", "235/55R19"],
+      "oemSizes": ["235/60R18", "235/50R20"],
+      "notes": "235/55R19 NOT OEM. Remove it."
+    },
+    {
+      "vehicle": "2023-2022 Lexus NX",
+      "status": "OK",
+      "currentSizes": ["235/60R18", "235/50R20"],
+      "oemSizes": ["235/60R18", "235/50R20"],
+      "notes": "Correct for 2nd gen NX."
+    },
+    {
+      "vehicle": "2021-2018 Lexus NX",
+      "status": "MISSING_SIZES",
+      "currentSizes": ["225/65R17", "225/60R18"],
+      "oemSizes": ["225/65R17", "225/60R18", "235/55R18"],
+      "notes": "Missing 235/55R18 (F Sport option)."
+    },
+    {
+      "vehicle": "2017-2016 Lexus NX",
+      "status": "DISCREPANCY",
+      "currentSizes": ["225/65R17", "225/60R18", "235/55R18", "225/55R19", "245/45ZR20", "245/50R19"],
+      "oemSizes": ["225/65R17", "225/60R18", "235/55R18"],
+      "notes": "225/55R19, 245/45ZR20, 245/50R19 are NOT OEM. Remove them."
+    },
+    {
+      "vehicle": "2015 Lexus NX",
+      "status": "OK",
+      "currentSizes": ["225/65R17", "225/60R18"],
+      "oemSizes": ["225/65R17", "225/60R18"],
+      "notes": "First year of NX. Correct sizes."
+    },
+    {
+      "vehicle": "2014 Lexus NX",
+      "status": "NOT_FOUND",
+      "currentSizes": ["225/65R17", "225/60R18", "235/50R20"],
+      "oemSizes": null,
+      "notes": "VEHICLE DOES NOT EXIST! NX launched in 2015."
+    },
+    {
+      "vehicle": "2024 Lexus RC",
+      "status": "DISCREPANCY",
+      "currentSizes": ["225/45R17", "235/40R18", "255/35R19"],
+      "oemSizes": ["235/45R18", "235/40R19", "265/35R19", "255/35R19", "275/35R19"],
+      "notes": "ALL WRONG! No 17\" or 18\" options. RC has staggered fitments. Missing rear sizes."
+    },
+    {
+      "vehicle": "2014 Lexus RC",
+      "status": "NOT_FOUND",
+      "currentSizes": ["225/45R17", "235/40R18", "255/35R19"],
+      "oemSizes": null,
+      "notes": "VEHICLE DOES NOT EXIST! RC launched in 2015."
+    },
+    {
+      "vehicle": "2025 Lexus RC-F",
+      "status": "EMPTY_DATA",
+      "currentSizes": [],
+      "oemSizes": null,
+      "notes": "No tire sizes in our database. May be future model year not yet released."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "action": "Fix LX 2022-2026 tire sizes",
+      "details": "Change from 265/70R18, 275/55R20, 275/50R22 to 265/65R18, 265/55R20, 265/50R22"
+    },
+    {
+      "priority": "CRITICAL",
+      "action": "Fix RC 2015-2025 tire sizes completely",
+      "details": "Replace 225/45R17, 235/40R18, 255/35R19 with correct OEM: 235/45R18, 235/40R19, 265/35R19 (rear). Add staggered fitment data."
+    },
+    {
+      "priority": "CRITICAL",
+      "action": "Fix LX 2000-2007 tire sizes",
+      "details": "Replace 275/60R17, 275/60R18 with correct OEM: 275/70R16"
+    },
+    {
+      "priority": "CRITICAL",
+      "action": "Remove non-existent vehicles",
+      "details": "Delete 2014 NX and 2014 RC from database - these model years don't exist"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Remove non-OEM sizes from NX 2016-2017",
+      "details": "Remove 225/55R19, 245/45ZR20, 245/50R19"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Add missing F Sport sizes to NX 2018-2021",
+      "details": "Add 235/55R18 to all these model years"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Remove aftermarket sizes from LS 2017",
+      "details": "Remove 235/40ZR20"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Review LS 2018-2021 275/40R20 size",
+      "details": "Verify if this is a factory option or aftermarket"
+    },
+    {
+      "priority": "LOW",
+      "action": "Add RC-F tire sizes for 2025",
+      "details": "Add OEM sizes once 2025 RC F data is available: likely 255/35R19 (front), 275/35R19 (rear)"
+    }
+  ],
+  "staggeredFitmentNotes": {
+    "lexusRC": {
+      "FSport": {
+        "front": "235/40R19",
+        "rear": "265/35R19"
+      },
+      "RCF": {
+        "front": "255/35R19",
+        "rear": "275/35R19"
+      }
+    }
+  },
+  "modelYearNotes": {
+    "lexusNX": "Launched 2015 (first model year)",
+    "lexusRC": "Launched 2015 (first model year)", 
+    "lexusLX570": "2008-2021 (replaced by LX 600 in 2022)",
+    "lexusLX600": "2022-present",
+    "lexusLX470": "1998-2007"
+  }
+}

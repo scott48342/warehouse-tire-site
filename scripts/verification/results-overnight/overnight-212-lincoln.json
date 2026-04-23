@@ -1,0 +1,1992 @@
+[
+  {
+    "id": "b5408bfb-6916-4e54-88cb-3410f0093641",
+    "year": 2000,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135 to 6x135",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "11564f7b-32ea-495f-8a6b-aa62204a7dec",
+    "year": 2001,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135 to 6x135",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "65eb81fa-a2d5-492f-a34e-eec0402b16bb",
+    "year": 2002,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135 to 6x135",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "8f9921f1-8403-4ae1-ba30-a79b8e8c9c2f",
+    "year": 2003,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4bda8384-0783-4310-b96a-0501023c9d76",
+    "year": 2004,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "69af78dd-202f-4853-a09e-81a4209032e6",
+    "year": 2005,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "63b2579f-1fce-44f6-adec-24eb0dc7fd9a",
+    "year": 2006,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0bc99fe6-8a21-4421-adc3-7d7a88da2f2d",
+    "year": 2007,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d5f99153-6809-45e3-b374-4da5848b1001",
+    "year": 2008,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "16d66dc1-ebbd-4f63-adaa-47049d1deb92",
+    "year": 2009,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "58ace9f8-afa7-4aa9-817e-cd1cdeb2f588",
+    "year": 2010,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "1d92f4d4-ae30-4f68-84a9-f4e0d03f1fb4",
+    "year": 2011,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "286c965c-b2fc-435f-bdd9-484d191442b6",
+    "year": 2012,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "23469a75-4f7c-4314-a9a6-de38d7bf799e",
+    "year": 2013,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3127dcc9-7a9d-4435-a752-2edf139e02a2",
+    "year": 2014,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "05030097-a9de-4cbb-aecc-8f48fa04ef34",
+    "year": 2015,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "bda4ae9c-ed50-441f-9acf-3e32d01acb5c",
+    "year": 2016,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "94d9edf4-aa01-4225-9548-2920dd5a9f98",
+    "year": 2017,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "451646ce-d2c3-4998-a151-23c7d03951e9",
+    "year": 2018,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2698c00d-7ec5-4ebc-89a9-1a1b2842dde5",
+    "year": 2019,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24",
+      "275/50R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d05dc3ec-5992-4f71-ae3d-a03235ef3e4c",
+    "year": 2020,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "401d3cd0-4afa-4626-a550-8e69ca609c71",
+    "year": 2021,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24",
+      "275/50R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "07941e4a-7933-4cf6-984a-0a6ceede0495",
+    "year": 2022,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24",
+      "275/50R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "60f013cf-b2cf-4d87-b0da-2a0024b6d60e",
+    "year": 2023,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24",
+      "275/50R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "29acd597-fe31-44b2-a778-60ef16506917",
+    "year": 2024,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24",
+      "275/50R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8267cada-08bd-4473-ad0c-669f7ae074bd",
+    "year": 2025,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24",
+      "275/50R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "990061d2-4dad-43ef-93af-a02dc1c1ee2c",
+    "year": 2026,
+    "make": "lincoln",
+    "model": "navigator",
+    "trim": "Standard, Reserve, Black Label",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 24
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/55R20",
+      "285/45R22",
+      "285/40R24"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "fbd4f566-e12a-4f46-b022-cf697ababf84",
+    "year": 1981,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "fa4a0d5b-e772-469b-bdc0-747b45a489b7",
+    "year": 1982,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c6af6167-251e-45f3-a2e1-45679d7a3be8",
+    "year": 1983,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c5d0f157-6841-437b-8593-96c4c94df82c",
+    "year": 1984,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "5b381230-eb9b-4fd3-8b39-083db2c58ae7",
+    "year": 1985,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f02dc410-6a8d-4c85-aa6e-4f4d30522144",
+    "year": 1986,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f362c70c-d2a7-441e-b7d8-68cb5d595d1d",
+    "year": 1987,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3affa7ad-242a-4975-b079-c55f670c9a8f",
+    "year": 1988,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a38c82bc-be62-4765-81f5-d4a6c8895265",
+    "year": 1989,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a768f6ab-b536-4d4c-af69-03bc4e838d91",
+    "year": 2000,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3bc7ab1c-9c67-4a30-9eb9-52c57838970f",
+    "year": 2001,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b2d6e031-8fed-4e4a-b99e-8b5d77582bbe",
+    "year": 2002,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "eb2a6129-7634-409b-af01-0823d5b2de80",
+    "year": 2003,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4df0b130-7e3d-480a-81f4-02f294b24ac7",
+    "year": 2004,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0d21e1b3-2f1e-4a25-ad47-0e208828a3d6",
+    "year": 2005,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "28f48d06-9ba2-4d73-b76d-dc9de801e672",
+    "year": 2006,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "6e544457-6781-4989-af68-61cef0c22307",
+    "year": 2007,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b760e7c8-f18a-443b-890a-827f1d23c764",
+    "year": 2008,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a6ff07d6-aa7d-4789-b987-c5c1d5043de4",
+    "year": 2009,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2f276ff9-8682-459e-bbd0-f823139e219b",
+    "year": 2010,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b09fe298-f43f-4e35-b301-530cf6cd492e",
+    "year": 2011,
+    "make": "lincoln",
+    "model": "town-car",
+    "trim": "Executive, Signature, Signature Limited, Cartier",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 70.6 to 70.5",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "70.5",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  }
+]

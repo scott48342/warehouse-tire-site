@@ -1,0 +1,2201 @@
+[
+  {
+    "id": "16dda23b-70a8-4469-8053-8bcf8c60eaa9",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "King Ranch",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "8f3b8426-be0e-4b61-8db2-f0f248632359",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "7e13066c-1034-4eec-b182-c0d89db8f8e6",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Lightning",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "9779948f-d4c4-4fdf-a3a0-16d984065713",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "XL",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "d9f60bbd-2cd1-447c-b631-ffd49632c99d",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "XLT",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "61b9253d-85c9-402a-98a3-212a5fc8b37a",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Base",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "245/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 34,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "275/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "LT265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "LT265/70R18"
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7c165031-fb83-4472-9c0f-e9d5f2cd80ef",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Lightning",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "607ed1b8-416e-43c1-b796-bce9e7c72302",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Raptor R",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "e571f26a-ff22-4e07-b751-0e6830cdc7e5",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Tremor",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "1fca154d-7c75-4335-8374-a2a7d257a072",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "887337ce-59a8-40a3-a6f7-18d210017fdc",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Limited",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "3632ed14-f9b9-496e-a39c-a1cc8becfde8",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Lariat",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "eef9a75f-5b70-4f64-9c00-2f653a0ed7b0",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "XL",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "245/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 34,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "275/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "LT265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "LT265/70R18"
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "wheelsize"
+  },
+  {
+    "id": "de741e16-3aea-4fc9-a555-24a7e70fe2ff",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "King Ranch",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "9bba1bab-bda4-47b0-a3de-752646cec4da",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/60R18",
+      "275/65R18",
+      "265/70R17",
+      "LT265/70R17",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "772bcaee-393c-4376-8956-9ba4120937a7",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "XL",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "245/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 34,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "275/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "LT265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "LT265/70R18"
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT265/70R18"
+    ],
+    "source": "wheelsize"
+  },
+  {
+    "id": "84160118-7aa8-4f6b-b646-a177c1db5662",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Base",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "245/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 34,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "275/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "LT265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "LT265/70R18"
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b2256302-b8c9-4c45-ac27-f971603ab460",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "020feff8-6559-4e82-a6d4-8213559171fe",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "11413944-1a44-4eae-9a97-dd8599a41c33",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Limited",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "177e0296-a86c-4222-a32c-92fe434078a9",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Tremor",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "59f9512b-94f0-4088-bd85-f6a9f9a40cfc",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "King Ranch",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "d255c4d0-d3aa-45b3-96f6-9e5aadd904c1",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "XLT",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "37801d58-247c-4853-a005-862ba3e5afde",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Lariat",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "c803b4f3-90d4-43d0-bad4-cd5c4c2667eb",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Lightning",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "0569355a-3907-4790-b490-12e754a97b2e",
+    "year": 2024,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Raptor R",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT265/70R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "2496b2b8-796f-45cc-b28f-59353d919f2d",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "XLT",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "b11e81d3-b2bd-4682-9780-928ef024ae7b",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "XL",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "6890df99-adbd-42c0-845a-493625951187",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "a06fc506-b738-41e7-8286-3e467f893d8a",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Base",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "245/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 34,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "275/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "LT265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "LT265/70R18"
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "79862199-5fda-4f15-b811-8b913457ac3a",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Tremor",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "3940bec4-c2a3-4307-a49f-2f72393a65bf",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Lightning",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "1c3c762a-63c0-43ff-8a6f-c0d470776dde",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Raptor R",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "4a1d8e19-c0d0-4678-8112-c768f9e26455",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "e238fcd5-ec3a-43c0-8850-d956276d1d00",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Limited",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "5e3cd567-c661-40b8-9f50-0b55addbeb32",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Lariat",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "7e75a105-6fac-483f-b754-112c54a13523",
+    "year": 2025,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "King Ranch",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "03d0621f-c808-447e-9f2a-4b269c083cec",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Lariat",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "775b2e9b-1ce0-4a0f-a37b-d31e240cb783",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "XLT",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "f92371fa-890d-40ec-a6d0-1e98a094e1b4",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "XL",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "e9356a9d-5be3-4825-9be4-e5d6c6ec4321",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Base",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "245/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 34,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "275/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "LT265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "LT265/70R18"
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8c444aca-0eef-4523-9a6c-425f53c1c6e5",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Raptor R",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "8f2d4d7f-2114-4ba9-ad71-07cad4e58e91",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "King Ranch",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "1c33f0d7-8356-4a33-a8fd-b1c6ba0d265d",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "50f0a96a-0cf8-468a-8302-f93ccb64f878",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Limited",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "4f1b1f80-5ff3-455f-a810-c720286ee72d",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Tremor",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "5d00f95a-c3f8-482f-957a-b40ad8c6d213",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Raptor",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "73033caf-3f0c-4a03-9b6f-71421eb9861d",
+    "year": 2026,
+    "make": "ford",
+    "model": "f-150",
+    "trim": "Lightning",
+    "currentBoltPattern": "6x135",
+    "currentHubBore": "87.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/60R18",
+      "275/65R18",
+      "LT265/70R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_cache-import"
+  },
+  {
+    "id": "1288ce7f-56eb-4ab5-94d4-4b5f666a1bd8",
+    "year": 1988,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "98b76ffb-2eef-4385-89e4-45118e2e629a",
+    "year": 1988,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d1b7c2fa-71c3-4e67-9d82-44a44bd441cb",
+    "year": 1988,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fd6927b5-d600-45f3-9366-432f96c33f67",
+    "year": 1988,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      "16x6",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "LT215/85R16",
+      "LT235/85R16"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "4cdc2113-bb51-4ad4-9fa5-fde1ddabb5e7",
+    "year": 1989,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "56467e9e-c5c3-4134-b20f-d2a2624c6ed0",
+    "year": 1989,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      "16x6",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "LT215/85R16",
+      "LT235/85R16"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "d1e20cb4-ed19-476e-ba42-c7f5e8b35e37",
+    "year": 1989,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "55aa672b-2d7d-486d-9b1a-f4724d28aa1c",
+    "year": 1989,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7ae96b20-8039-4b94-8acf-5668bdccb4de",
+    "year": 1990,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      "7Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "da17312b-30c7-4009-94fa-f1e84c5401e0",
+    "year": 1990,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "087e34f0-ac7b-4a31-9532-cc01146bb532",
+    "year": 1990,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0cbe3fdd-e979-47f9-b008-cb7ff085b109",
+    "year": 1990,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "47a3a88f-ffb0-47d4-9dea-c02d8b250d20",
+    "year": 1991,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      "7Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "a3a3baef-aaa7-463d-9125-838d9b75acbf",
+    "year": 1991,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1da95c39-4a17-414c-afe3-d6d2a3b87355",
+    "year": 1991,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "38e129fe-16ff-4ff9-bf17-97eb7fba7f98",
+    "year": 1991,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4211bc94-91e2-4ee4-b908-92f189775bcc",
+    "year": 1992,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9ac98cbb-3ad6-4e40-94e7-eceba2de9ab3",
+    "year": 1992,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c03eb738-bf7a-4b48-aad5-17dbd219b4d7",
+    "year": 1992,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0829711c-27c9-4d6a-a39d-f519afd3b92c",
+    "year": 1992,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      "7Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "a69cf195-d085-4077-a194-09f698e55a87",
+    "year": 1993,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "63f4dace-cfeb-49bc-b768-98c043cd7a02",
+    "year": 1993,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "87da8e94-1202-4d75-a786-c67d4e7ab078",
+    "year": 1993,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "64b92b47-860c-4781-a583-aa8589886468",
+    "year": 1993,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      "7Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "e20966f9-c02c-460a-8f67-d4a152446451",
+    "year": 1994,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      "7Jx16",
+      "8Jx16"
+    ],
+    "currentTireSizes": [
+      "LT225/75R16",
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "de937671-4e06-454d-ac81-8eb9c1df7176",
+    "year": 1994,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d0aaaa40-88af-4009-9d02-5a8d255702f0",
+    "year": 1994,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R18",
+      "LT275/65R20"
+    ],
+    "source": "generation_inherit"
+  }
+]

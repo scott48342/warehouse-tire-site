@@ -1,0 +1,1534 @@
+[
+  {
+    "id": "42a6fc4a-f735-4589-a591-5a22c10bc196",
+    "year": 1994,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "d47dfc52-1d0e-4bb3-8a01-e7aaea18cabd",
+    "year": 1995,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "dc7223d3-7c59-4b71-a42f-5e9405115a14",
+    "year": 1996,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "7a53e48a-b7f5-471d-ae78-4476e1f0f028",
+    "year": 1997,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "118d9845-eeb1-43b5-93f7-e400d3354b8f",
+    "year": 1998,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "554e5676-1560-41db-a005-4303d76c7166",
+    "year": 1999,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "d8208e8e-8fcb-4eda-bc61-376d92767d8d",
+    "year": 2000,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6.5Jx16",
+      "7Jx17",
+      {
+        "axle": "both",
+        "width": 6,
+        "offset": 51,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/60R16",
+      "P235/55R17"
+    ],
+    "source": "generation_template [filled from 2004 lesabre]"
+  },
+  {
+    "id": "6c86749f-07ea-428b-9cef-ff4206af8e9c",
+    "year": 2001,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6.5Jx16",
+      "7Jx17",
+      {
+        "axle": "both",
+        "width": 6,
+        "offset": 51,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/60R16",
+      "P235/55R17"
+    ],
+    "source": "generation_template [filled from 2000 lesabre]"
+  },
+  {
+    "id": "98d6e5c0-df16-46be-9a48-c7081ee9d686",
+    "year": 2002,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6.5Jx16",
+      "7Jx17",
+      {
+        "axle": "both",
+        "width": 6,
+        "offset": 51,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/60R16",
+      "P235/55R17"
+    ],
+    "source": "generation_template [filled from 2001 lesabre]"
+  },
+  {
+    "id": "9f253159-bd08-4d6d-bcbb-445885dad5de",
+    "year": 2003,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6.5Jx16",
+      "7Jx17",
+      {
+        "axle": "both",
+        "width": 6,
+        "offset": 51,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/60R16",
+      "P235/55R17"
+    ],
+    "source": "generation_template [filled from 2004 lesabre]"
+  },
+  {
+    "id": "33a34b79-21da-4477-9b49-db5753f77863",
+    "year": 2004,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6.5Jx16",
+      "7Jx17",
+      {
+        "axle": "both",
+        "width": 6,
+        "offset": 51,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/60R16",
+      "P235/55R17",
+      "215/70R15",
+      "225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "6dcdff4d-9519-4670-8aee-531e51a312f5",
+    "year": 2005,
+    "make": "buick",
+    "model": "lesabre",
+    "trim": "Custom, Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6.5Jx16",
+      "7Jx17",
+      {
+        "axle": "both",
+        "width": 6,
+        "offset": 51,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P225/60R16",
+      "P235/55R17",
+      "215/70R15",
+      "225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "488154d4-c41f-4812-823c-ed817af0ebd9",
+    "year": 1978,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx14",
+      "7Jx15"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15",
+      "P245/50VR16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "26ca1853-1eff-4e4f-b6e9-4a980d092a63",
+    "year": 1979,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx14",
+      "7Jx15"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15",
+      "P245/50VR16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "33bdeb71-59f7-4844-bec6-025012d80978",
+    "year": 1980,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "14x6"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P205/70R14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "c81cc4cc-c7cf-463a-a9c8-a7f2d35c4c9a",
+    "year": 1981,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "14x6"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P205/70R14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "154e21ad-b6b0-4506-a976-ea58366583b8",
+    "year": 1982,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "14x6",
+      "15x7"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "68b41e6f-c239-42c4-b088-6c5bb3618fa5",
+    "year": 1983,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "14x6",
+      "15x7"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "c5071f73-6144-4fe6-b326-21b288440d0e",
+    "year": 1984,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "14x6",
+      "15x7"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "9c9e5f04-3598-4cf1-a55b-c7507591e745",
+    "year": 1985,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "14x6",
+      "15x7"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "4c8b74d5-19da-4269-bee8-40fa0d3b156e",
+    "year": 1986,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "14x6",
+      "15x7"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "59c7457b-89cc-4617-ad92-b20d8c9e47f0",
+    "year": 1987,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "14x6",
+      "15x7"
+    ],
+    "currentTireSizes": [
+      "P195/75R14",
+      "P215/65R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "ee96c773-f408-40c2-8ab7-a112eca71025",
+    "year": 1988,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P205/70R15",
+      "P225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "fcfd1648-b17b-423f-aff5-c6ad6d0c3bba",
+    "year": 1989,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx15",
+      "6.5Jx16"
+    ],
+    "currentTireSizes": [
+      "P205/70R15",
+      "P225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "0f323a22-1754-4847-b5dd-1392e0d6bfd2",
+    "year": 1990,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R14",
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "c529afb5-1cbb-402e-88f2-94b1f8ea59e5",
+    "year": 1991,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R14",
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "aa604be4-aec6-4bb3-80c1-848d34a43c97",
+    "year": 1992,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R14",
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "04a446ad-20fc-494f-b363-55eb066c4496",
+    "year": 1993,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "7a5de845-5f02-4ee3-b341-7f71ec5c4690",
+    "year": 1994,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "79d5e3ba-1bee-467c-8c47-b8aa4017b940",
+    "year": 1995,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "f729de4f-1d9a-41bd-b60b-6f8ffca55d14",
+    "year": 1996,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "fe4e4d1e-987a-4f8c-a911-28de1dd746dc",
+    "year": 1997,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "52595b9c-cc03-4b7e-864f-af6cb0b8000f",
+    "year": 1998,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R15",
+      "225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "f537347a-bf00-4432-9d55-7b9b5fb9cc48",
+    "year": 1999,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 42,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/70R15",
+      "225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "b633c627-feba-4d46-b039-b1803c4b54f9",
+    "year": 2002,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6.5Jx16",
+      "7Jx17",
+      {
+        "axle": "both",
+        "width": 6,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/60R16",
+      "P225/55R17"
+    ],
+    "source": "generation_template [filled from 2004 regal]"
+  },
+  {
+    "id": "516e4183-f4bc-4789-b008-a3a37387f68f",
+    "year": 2003,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6.5Jx16",
+      "7Jx17",
+      {
+        "axle": "both",
+        "width": 6,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/60R16",
+      "P225/55R17"
+    ],
+    "source": "generation_template [filled from 2004 regal]"
+  },
+  {
+    "id": "4b29411b-9f93-4a70-9af8-71e81c714bc2",
+    "year": 2004,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Sportback, TourX, GS",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6.5Jx16",
+      "7Jx17",
+      {
+        "axle": "both",
+        "width": 6,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P225/60R16",
+      "P225/55R17",
+      "215/70R15",
+      "225/60R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "13a8b836-20e1-4d41-a4f4-313e6999be56",
+    "year": 2005,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "10e11fd2-b2ef-429a-8cea-6c8b59e3c827",
+    "year": 2006,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8212f499-b89e-4ee8-ab4e-4aaf5a2d8fdf",
+    "year": 2007,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b95888ae-3d9d-4e5e-9e5c-5bbbfc38d6bf",
+    "year": 2008,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ea042fe8-8baf-49d7-9fe2-cde602dda609",
+    "year": 2009,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f8b22a0d-fd78-482e-bbf1-9df46911c3de",
+    "year": 2010,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "3675fa24-8d1d-447c-9f9d-67622463509a",
+    "year": 2021,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "50ecc4f2-7954-46cd-8ab0-5148fdb68fa7",
+    "year": 2022,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e0b45bbf-5f76-4010-8d1e-fc78803dcbf3",
+    "year": 2023,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c1cca0a4-964f-46ca-8acd-4d7a0e4cca67",
+    "year": 2024,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e93651a2-c998-46aa-9b25-b236eff21419",
+    "year": 2025,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ecbc97db-fbf4-4835-83f9-d245f99978ff",
+    "year": 2026,
+    "make": "buick",
+    "model": "regal",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d0e6a2b9-513f-4431-a114-276f85b9f164",
+    "year": 2011,
+    "make": "buick",
+    "model": "verano",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/50R17",
+      "235/45R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "cdf32b95-8239-4857-8f28-ae9a182b6ce5",
+    "year": 2018,
+    "make": "buick",
+    "model": "verano",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/50R17",
+      "235/45R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b8a5ca7f-5342-4542-afda-627fea2f3227",
+    "year": 2019,
+    "make": "buick",
+    "model": "verano",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/50R17",
+      "235/45R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a2024995-386a-4eb9-aad9-25fb360c955f",
+    "year": 2020,
+    "make": "buick",
+    "model": "verano",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/50R17",
+      "235/45R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8c27d63b-69f1-49e7-828b-6216ce442a6b",
+    "year": 2021,
+    "make": "buick",
+    "model": "verano",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/50R17",
+      "235/45R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "6bc331cc-2b7f-4aee-a8f0-dc0f8128eb41",
+    "year": 2022,
+    "make": "buick",
+    "model": "verano",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/50R17",
+      "235/45R18"
+    ],
+    "source": "catalog-gap-fill"
+  }
+]

@@ -1,0 +1,3107 @@
+[
+  {
+    "id": "e14c7822-bbe6-4665-b044-0c2b6e53d224",
+    "year": 2021,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M550i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "1edee860-cff2-4afa-954c-59f61a3e18f7",
+    "year": 2021,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M550i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c6347ce8-9202-4dee-87ef-a6bb30b40948",
+    "year": 2021,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M5 Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "acbbd064-0326-4c6e-a1d6-2af796dd4b40",
+    "year": 2021,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "3d9a37e4-8f38-4fd0-8d6d-1ed6568622b7",
+    "year": 2021,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530e xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f271c4f3-61df-4d33-8c05-bfa1eb24c030",
+    "year": 2021,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M5",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f2a398e1-ab29-4341-bea0-3c6e874e11e7",
+    "year": 2021,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "265/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "65f366db-d6ae-40b2-863d-3063bb6e3168",
+    "year": 2021,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "540i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f0daffb6-f613-4d1f-a8a6-2e83a8814eff",
+    "year": 2021,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "1f2bc210-2b9e-4945-b153-bed67f36a2f9",
+    "year": 2022,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "265/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2d7b7c71-291b-4216-945b-3da1ebdbf9e0",
+    "year": 2022,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M5",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "321a5303-0068-405c-928b-0746255355c2",
+    "year": 2022,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M550i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6b07ee8b-624d-494e-aed2-1500681acd09",
+    "year": 2022,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c768cddd-e5c3-4ed6-ba01-013f18dd1619",
+    "year": 2022,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M5 Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6899c181-3a10-46dc-98a8-45349b0f7470",
+    "year": 2022,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M550i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "70ad436e-59b1-405c-9924-a1ccf4532278",
+    "year": 2022,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "540i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "febf44b2-8cd5-41cb-8cc1-5f37c04a0bee",
+    "year": 2022,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530e xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "de549b09-806a-4d70-a9b0-1252951cde68",
+    "year": 2022,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "26e43ed0-1f96-4c42-997d-c55e834c44be",
+    "year": 2023,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "540i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e03bb288-a20f-4eb9-9276-8a93622b9907",
+    "year": 2023,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M5 Competition",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4e38011d-afa4-44d7-a60e-23586c2679ea",
+    "year": 2023,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530e xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ff801bc9-83b4-43a1-9124-bdf048522eed",
+    "year": 2023,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530e",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "41b22ac7-fc46-470f-b253-609ad7bea1a4",
+    "year": 2023,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "9c590b4c-44d6-48ba-ac01-3f66f47f93d8",
+    "year": 2023,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M550i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "629e92cd-4a6f-4351-a32a-137c5b0b42ca",
+    "year": 2023,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M550i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f4eb8744-5603-4206-ab67-0290e93d81e6",
+    "year": 2023,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "265/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "285/30R20",
+      "255/35R21",
+      "285/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "6807adaf-ba6b-4db7-a692-1024bca74d21",
+    "year": 2023,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M5",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2692edc8-ac91-4ecf-9d23-b225571f779b",
+    "year": 2024,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M5",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1f53c652-96e2-4299-b53e-a5a76e4efe27",
+    "year": 2024,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "540i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R21",
+      "285/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "cd56e29b-bfa6-411c-8a3c-66af0fa1d4f2",
+    "year": 2024,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M550i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4f239d9b-de37-490a-9a2b-b8e8db882e36",
+    "year": 2024,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "i5 eDrive40",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R21",
+      "285/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "562bb437-be7d-4c26-b0f6-eef85b0d2a52",
+    "year": 2024,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "i5 xDrive40",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R21",
+      "285/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5bbe59ab-92c7-4163-9f85-62c79a7def2d",
+    "year": 2024,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530e xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 27,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 27,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 30,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55ZR17",
+      "245/40ZR19",
+      "275/35ZR19",
+      "245/35ZR20",
+      "275/30ZR20",
+      "225/55R17",
+      "245/45R18",
+      "245/40R19",
+      "245/45ZR18",
+      "275/40ZR18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "7a9f663c-1397-49dc-b3a3-d923d2d94b87",
+    "year": 2024,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R21",
+      "285/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "8710add1-094b-47d0-8224-10432a29af67",
+    "year": 2024,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "265/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "285/30R20",
+      "255/35R21",
+      "285/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "05728d24-036b-4805-9158-b14a8dc76a87",
+    "year": 2024,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "i5 M60 xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R21",
+      "285/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f21315d9-0e39-4a77-9df9-09c7593ba3bb",
+    "year": 2025,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "i5 M60 xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R21",
+      "285/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e7da101d-f977-476e-a331-f0035e84d57a",
+    "year": 2025,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "i5 eDrive40",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R21",
+      "285/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5a6bb7f3-d267-413d-94d5-634a21b16762",
+    "year": 2025,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "i5 xDrive40",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R21",
+      "285/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "3790715f-fb9f-4d7e-91ed-21f29bd62b67",
+    "year": 2025,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M550i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1c4c6f36-985b-4b47-b2cc-20d0943bca2e",
+    "year": 2025,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "265/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "285/30R20",
+      "255/35R21",
+      "285/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "40089604-b41d-48d0-85b8-40d0677761a7",
+    "year": 2025,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "540i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R21",
+      "285/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "695165c7-384f-4e87-8e80-460966f57c77",
+    "year": 2025,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "530i xDrive",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R21",
+      "285/30R21"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4b4e3a2a-7bf0-4aeb-9fb4-44a8f8fe1e06",
+    "year": 2025,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M5",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a897d105-6ea7-44dd-8d4b-fb63dd40d38b",
+    "year": 2026,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R18",
+      "265/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "285/30R20",
+      "255/35R21",
+      "285/30R21"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2649fb25-aa2f-466c-8554-bc6329d4e7ab",
+    "year": 2026,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M5",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ef316b5d-0f91-4ea0-969f-ee136f2c5aa1",
+    "year": 2026,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M550i",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 19
+      },
+      {
+        "rear": true,
+        "width": 9.5,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ac8842de-5c07-4dcb-b0ff-c2f56f9511cf",
+    "year": 2026,
+    "make": "bmw",
+    "model": "5-series",
+    "trim": "M5",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "275/40R18",
+      "245/40R19",
+      "275/35R19",
+      "245/35R20",
+      "275/30R20",
+      "275/35R20",
+      "285/35R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cee8847b-707d-4e8e-8b34-664f92e2577b",
+    "year": 2003,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 20,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "e8226393-011d-49d2-a1b3-8e05e3312865",
+    "year": 2004,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 20,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "07bba60a-98b1-4cba-8c80-7d5b88b44d81",
+    "year": 2005,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 20,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "23f293d4-a40d-4e86-9fc8-fb554f4ca747",
+    "year": 2006,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 20,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "90c5976b-ebde-4a74-bf42-dafef2c461bf",
+    "year": 2007,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 20,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "d3af9581-d6b2-4387-881c-0e8686bf9bf8",
+    "year": 2008,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 20,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "291a0b4b-49d8-449f-817b-8564b1b00cae",
+    "year": 2009,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 20,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "c0861c9e-834b-4937-8ade-f51e08558a27",
+    "year": 2010,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 20,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "5f4f098b-8c79-49e8-b191-a4ec6faeeb97",
+    "year": 2011,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "78877ad6-6249-4f3c-b3a8-ee65367f6a5d",
+    "year": 2012,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "5618e421-06a3-4184-b24d-12927052c4ed",
+    "year": 2013,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "a7e28850-6559-4c66-ab69-b88dfc072732",
+    "year": 2014,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "21277e8a-c91b-4279-a99e-e708fe174cfb",
+    "year": 2015,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "44c58834-f4d3-4616-9e44-4e30884a3f7c",
+    "year": 2016,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "9c7b386a-d87c-4504-8355-689b8d8530f9",
+    "year": 2017,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "d54bf08c-c3c2-43d9-ab45-127d69323145",
+    "year": 2018,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 30,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "f1da1ac0-fdf4-49d0-aac2-e2c6dcdf54a9",
+    "year": 2019,
+    "make": "bmw",
+    "model": "6-series",
+    "trim": "Base",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 30,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 35,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 35,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "08d04de2-4df3-4fef-8413-b679a8e94e03",
+    "year": 1990,
+    "make": "bmw",
+    "model": "7 Series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 20,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/60R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "a6554f00-b137-490f-906d-e1096d3d3453",
+    "year": 1991,
+    "make": "bmw",
+    "model": "7 Series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 20,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/60R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "845edb43-09ae-48e9-b848-614658ba489f",
+    "year": 1992,
+    "make": "bmw",
+    "model": "7 Series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 20,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/60R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "39834440-8452-462a-a5fa-eeb53032594b",
+    "year": 1993,
+    "make": "bmw",
+    "model": "7 Series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 20,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/60R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "c133e151-8f1c-4448-a311-c006580a47bd",
+    "year": 1994,
+    "make": "bmw",
+    "model": "7 Series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 20,
+        "diameter": 15
+      },
+      {
+        "width": 7.5,
+        "offset": 20,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "225/60R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "b8a8f011-2353-40d5-92f0-e2d82be9177b",
+    "year": 1995,
+    "make": "bmw",
+    "model": "7 Series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 20,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R16",
+      "235/60R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "b2d989b7-7f6b-485d-8470-3690a58a623d",
+    "year": 1996,
+    "make": "bmw",
+    "model": "7 Series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 20,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R16",
+      "235/60R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "7831aad0-c586-4f3e-a0c1-24ccc49e0b8b",
+    "year": 1997,
+    "make": "bmw",
+    "model": "7 Series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 20,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R16",
+      "235/60R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "b6dbffc1-d5c5-4223-8609-1d933b0fa228",
+    "year": 1998,
+    "make": "bmw",
+    "model": "7 Series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 20,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R16",
+      "235/60R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "a436b4a5-739d-40cc-8c59-66b1f936df4f",
+    "year": 1999,
+    "make": "bmw",
+    "model": "7 Series",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 20,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R16",
+      "235/60R16"
+    ],
+    "source": "90s-research-batch"
+  }
+]

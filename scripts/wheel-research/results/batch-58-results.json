@@ -1,0 +1,1223 @@
+{
+  "batchId": "58",
+  "processedAt": "2026-04-21T21:17:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "hilux-surf",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ]
+      },
+      "source": "size-tire.com, bonoss.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "hilux-surf",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ]
+      },
+      "source": "size-tire.com, bonoss.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "hilux-surf",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ]
+      },
+      "source": "size-tire.com, bonoss.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "hilux-surf",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ]
+      },
+      "source": "size-tire.com, bonoss.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "hilux-surf",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 30 },
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "size-tire.com, bonoss.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "hilux-surf",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 30 },
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "size-tire.com, bonoss.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "innova-cross",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com (Innova Crysta base)",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "innova-cross",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com (Innova Crysta base)",
+      "confidence": "medium"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "innova-cross",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com (Innova Crysta base)",
+      "confidence": "medium"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "innova-crysta",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "innova-hycross",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "Innova platform reference",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "innova-hycross",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "Innova platform reference",
+      "confidence": "medium"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "innova-hycross",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "Innova platform reference",
+      "confidence": "medium"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "innova-hycross",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "Innova platform reference",
+      "confidence": "medium"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "innova-zenix",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "Innova platform reference",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "innova-zenix",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "Innova platform reference",
+      "confidence": "medium"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "innova-zenix",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 45 },
+          { "diameter": 18, "width": 7.5, "offset": 45 }
+        ]
+      },
+      "source": "Innova platform reference",
+      "confidence": "medium"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "iq",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 5, "offset": 45 },
+          { "diameter": 16, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "iq",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 5, "offset": 45 },
+          { "diameter": 16, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "iq",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 5, "offset": 45 },
+          { "diameter": 16, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "iq",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 5, "offset": 45 },
+          { "diameter": 16, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "iq",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 5, "offset": 45 },
+          { "diameter": 16, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "iq",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 5, "offset": 45 },
+          { "diameter": 16, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "iq",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 5, "offset": 45 },
+          { "diameter": 16, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "iq",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 5, "offset": 45 },
+          { "diameter": 16, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "iq",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 5, "offset": 45 },
+          { "diameter": 16, "width": 5, "offset": 45 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "jpn-taxi",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "jpn-taxi",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "jpn-taxi",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "jpn-taxi",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "jpn-taxi",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "jpn-taxi",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "jpn-taxi",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "jpn-taxi",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "jpn-taxi",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "options": [
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ]
+      },
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 25 },
+          { "diameter": 20, "width": 8.5, "offset": 60 }
+        ]
+      },
+      "source": "fifteen52.com, size-tire.com (LC300 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 300 series (2021+)"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 25 },
+          { "diameter": 20, "width": 8.5, "offset": 60 }
+        ]
+      },
+      "source": "fifteen52.com, size-tire.com (LC300 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 300 series (2021+)"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 25 },
+          { "diameter": 20, "width": 8.5, "offset": 60 }
+        ]
+      },
+      "source": "fifteen52.com, size-tire.com (LC300 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 300 series (2021+)"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "options": [
+          { "diameter": 18, "width": 7.5, "offset": 25 },
+          { "diameter": 20, "width": 8.5, "offset": 60 }
+        ]
+      },
+      "source": "fifteen52.com, size-tire.com (LC300 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 300 series (2021+)"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8.5, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC200 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 200 series (2007-2021)"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8.5, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC200 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 200 series (2007-2021)"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8.5, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC200 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 200 series (2007-2021)"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC200 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 200 series (2007-2021)"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC200 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 200 series (2007-2021)"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC200 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 200 series (2007-2021)"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC200 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 200 series (2007-2021)"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC200 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 200 series (2007-2021)"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC200 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 200 series (2007-2021)"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC200 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 200 series (2007-2021)"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8.5, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC100/200 transition)",
+      "confidence": "high",
+      "notes": "Land Cruiser 100/200 series transition year"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC100 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 100 series (1998-2007)"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC100 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 100 series (1998-2007)"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC100 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 100 series (1998-2007)"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC100 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 100 series (1998-2007)"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC100 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 100 series (1998-2007)"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC100 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 100 series (1998-2007)"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "size-tire.com (LC100 series)",
+      "confidence": "high",
+      "notes": "Land Cruiser 100 series (1998-2007)"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM version of Lexus LX470"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM version of Lexus LX470"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM version of Lexus LX470"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM version of Lexus LX470"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM version of Lexus LX470"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM version of Lexus LX470"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM version of Lexus LX470"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "land-cruiser-cygnus",
+      "wheelSpecs": {
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "options": [
+          { "diameter": 16, "width": 8, "offset": 60 },
+          { "diameter": 17, "width": 8, "offset": 60 },
+          { "diameter": 18, "width": 8, "offset": 60 }
+        ]
+      },
+      "source": "avtoreference.com",
+      "confidence": "high",
+      "notes": "JDM version of Lexus LX470"
+    }
+  ],
+  "summary": {
+    "modelsResearched": 9,
+    "totalVehicles": 75,
+    "highConfidence": 57,
+    "mediumConfidence": 18,
+    "lowConfidence": 0,
+    "modelBreakdown": {
+      "hilux-surf": {
+        "years": "2000-2005",
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "diameters": [16, 17]
+      },
+      "innova-cross": {
+        "years": "2023-2025",
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "diameters": [17]
+      },
+      "innova-crysta": {
+        "years": "2015-2025",
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "diameters": [16, 17]
+      },
+      "innova-hycross": {
+        "years": "2022-2025",
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "diameters": [17, 18]
+      },
+      "innova-zenix": {
+        "years": "2023-2025",
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "diameters": [17, 18]
+      },
+      "iq": {
+        "years": "2008-2016",
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "diameters": [15, 16]
+      },
+      "jpn-taxi": {
+        "years": "2017-2025",
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "diameters": [15]
+      },
+      "land-cruiser": {
+        "years": "2000-2026",
+        "notes": "LC100 (2000-2007): 5x150/110mm CB; LC200 (2007-2021): 5x150/110mm CB; LC300 (2021+): 6x139.7/106mm CB",
+        "diameters": [16, 17, 18, 20]
+      },
+      "land-cruiser-cygnus": {
+        "years": "2000-2007",
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "diameters": [16, 17, 18],
+        "notes": "JDM version of Lexus LX470"
+      }
+    }
+  }
+}

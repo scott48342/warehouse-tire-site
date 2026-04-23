@@ -1,0 +1,678 @@
+{
+  "batchId": "overnight-052-ford",
+  "verifiedAt": "2026-04-23T02:37:00Z",
+  "summary": {
+    "total": 23,
+    "verified": 7,
+    "flagged": 16,
+    "invalid": 0
+  },
+  "results": [
+    {
+      "id": "eaee4bfe-07bc-43b6-8522-39dc505e61e6",
+      "year": 2020,
+      "make": "ford",
+      "model": "ranger",
+      "status": "verified",
+      "boltPattern": {
+        "value": "6x139.7",
+        "verified": true,
+        "source": "tirewheelguide.com, ranger5g.com forum"
+      },
+      "hubBore": {
+        "value": "93.1",
+        "verified": true,
+        "source": "tirewheelguide.com (Center Bore: 93.1 mm)"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "Confirmed sizes: 16x7 ET55, 17x7.5 ET55, 17x8 ET55, 18x8 ET55, 20x8.5 ET44, 21x9 ET40"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["255/70R16", "265/65R17", "255/65R17", "265/60R18", "265/50R20", "275/45R21"]
+      }
+    },
+    {
+      "id": "d3613a32-cc0a-4925-b74a-6d4c2d6bc9d4",
+      "year": 2021,
+      "make": "ford",
+      "model": "ranger",
+      "status": "verified",
+      "boltPattern": {
+        "value": "6x139.7",
+        "verified": true,
+        "source": "tirewheelguide.com, ranger5g.com forum"
+      },
+      "hubBore": {
+        "value": "93.1",
+        "verified": true,
+        "source": "tirewheelguide.com"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "Same platform as 2020, specs carry over"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["255/70R16", "265/65R17", "255/65R17", "265/60R18", "265/50R20", "275/45R21"]
+      }
+    },
+    {
+      "id": "1201d7d0-69f2-4ab8-95a6-c2ff9420b397",
+      "year": 2022,
+      "make": "ford",
+      "model": "ranger",
+      "status": "verified",
+      "boltPattern": {
+        "value": "6x139.7",
+        "verified": true,
+        "source": "tirewheelguide.com, ranger5g.com forum"
+      },
+      "hubBore": {
+        "value": "93.1",
+        "verified": true,
+        "source": "tirewheelguide.com"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "Same platform as 2020-2021, specs carry over"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["255/70R16", "265/65R17", "255/65R17", "265/60R18", "265/50R20", "275/45R21"]
+      }
+    },
+    {
+      "id": "430af39a-0eaf-4c3f-87ad-7aa2730da3b1",
+      "year": 2023,
+      "make": "ford",
+      "model": "ranger",
+      "status": "verified",
+      "boltPattern": {
+        "value": "6x139.7",
+        "verified": true,
+        "source": "tirewheelguide.com, ranger5g.com forum"
+      },
+      "hubBore": {
+        "value": "93.1",
+        "verified": true,
+        "source": "tirewheelguide.com"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "Last year of Gen IV (2019-2023)"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["255/70R16", "265/65R17", "255/65R17", "265/60R18", "265/50R20", "275/45R21"]
+      }
+    },
+    {
+      "id": "4c20f9cc-64d9-476a-84f8-c53ce2d81831",
+      "year": 2024,
+      "make": "ford",
+      "model": "ranger",
+      "status": "verified",
+      "boltPattern": {
+        "value": "6x139.7",
+        "verified": true,
+        "source": "ranger6g.com forum: '6x139.7 (6x5.5\"), 93.1 center bore'"
+      },
+      "hubBore": {
+        "value": "93.1",
+        "verified": true,
+        "source": "ranger6g.com forum confirms 93.1mm for new generation"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "New Gen VI platform - 17\" and 18\" stock, 16-21\" aftermarket range confirmed"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["265/65R17", "265/70R17", "265/60R18", "265/70R18", "LT285/70R17"]
+      }
+    },
+    {
+      "id": "91749d75-be59-4b42-a6f4-c9cf49ef9260",
+      "year": 2025,
+      "make": "ford",
+      "model": "ranger",
+      "status": "verified",
+      "boltPattern": {
+        "value": "6x139.7",
+        "verified": true,
+        "source": "Same Gen VI platform as 2024"
+      },
+      "hubBore": {
+        "value": "93.1",
+        "verified": true,
+        "source": "Same Gen VI platform as 2024"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "Continuation of Gen VI platform"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["265/65R17", "265/70R17", "265/60R18", "265/70R18", "LT285/70R17"]
+      }
+    },
+    {
+      "id": "a13af37c-fcbd-407a-97f0-85b1838ff7f5",
+      "year": 2026,
+      "make": "ford",
+      "model": "ranger",
+      "status": "verified",
+      "boltPattern": {
+        "value": "6x139.7",
+        "verified": true,
+        "source": "Same Gen VI platform as 2024-2025"
+      },
+      "hubBore": {
+        "value": "93.1",
+        "verified": true,
+        "source": "Same Gen VI platform as 2024-2025"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "Continuation of Gen VI platform"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["265/65R17", "265/70R17", "265/60R18", "265/70R18", "LT285/70R17"]
+      }
+    },
+    {
+      "id": "4b166e08-25a0-4053-bea2-13b6513c376f",
+      "year": 2003,
+      "make": "ford",
+      "model": "sportka",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "4x108",
+        "verified": true,
+        "source": "tirewheelguide.com, kage-uk.com wheel spacers"
+      },
+      "hubBore": {
+        "value": "63.4",
+        "verified": false,
+        "issue": "Hub bore should be 63.3mm, not 63.4mm",
+        "correctedValue": "63.3",
+        "source": "Multiple wheel spacer manufacturers confirm 63.3mm (kage-uk.com, bonoss.com)"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "6x16 ET34 confirmed via StackExchange (part number 3S51-AB)"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["205/55R16"]
+      },
+      "marketNote": "European market only - not sold in North America"
+    },
+    {
+      "id": "78ef0ecd-a712-4cf9-a000-f3743556e167",
+      "year": 2004,
+      "make": "ford",
+      "model": "sportka",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "4x108",
+        "verified": true,
+        "source": "tirewheelguide.com"
+      },
+      "hubBore": {
+        "value": "63.4",
+        "verified": false,
+        "issue": "Hub bore should be 63.3mm, not 63.4mm",
+        "correctedValue": "63.3",
+        "source": "Multiple wheel spacer manufacturers confirm 63.3mm"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "6x16 ET34"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["205/55R16"]
+      },
+      "marketNote": "European market only - not sold in North America"
+    },
+    {
+      "id": "07688d2d-e6c6-4cd0-bf28-4bbf87847127",
+      "year": 2005,
+      "make": "ford",
+      "model": "sportka",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "4x108",
+        "verified": true,
+        "source": "tirewheelguide.com"
+      },
+      "hubBore": {
+        "value": "63.4",
+        "verified": false,
+        "issue": "Hub bore should be 63.3mm, not 63.4mm",
+        "correctedValue": "63.3",
+        "source": "Multiple wheel spacer manufacturers confirm 63.3mm"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "6x16 ET34"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["205/55R16"]
+      },
+      "marketNote": "European market only - not sold in North America"
+    },
+    {
+      "id": "1f5a90ae-f8ee-4886-831c-b6715d13cbaf",
+      "year": 2006,
+      "make": "ford",
+      "model": "sportka",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "4x108",
+        "verified": true,
+        "source": "tirewheelguide.com"
+      },
+      "hubBore": {
+        "value": "63.4",
+        "verified": false,
+        "issue": "Hub bore should be 63.3mm, not 63.4mm",
+        "correctedValue": "63.3",
+        "source": "Multiple wheel spacer manufacturers confirm 63.3mm"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "6x16 ET34"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["205/55R16"]
+      },
+      "marketNote": "European market only - not sold in North America"
+    },
+    {
+      "id": "dbc337dd-19b8-47fa-bc95-78544a2e005a",
+      "year": 2007,
+      "make": "ford",
+      "model": "sportka",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "4x108",
+        "verified": true,
+        "source": "tirewheelguide.com"
+      },
+      "hubBore": {
+        "value": "63.4",
+        "verified": false,
+        "issue": "Hub bore should be 63.3mm, not 63.4mm",
+        "correctedValue": "63.3",
+        "source": "Multiple wheel spacer manufacturers confirm 63.3mm"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "6x16 ET34"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["205/55R16"]
+      },
+      "marketNote": "European market only - not sold in North America"
+    },
+    {
+      "id": "e378b9a6-f008-43ce-a706-65148d8b62ab",
+      "year": 2008,
+      "make": "ford",
+      "model": "sportka",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "4x108",
+        "verified": true,
+        "source": "tirewheelguide.com"
+      },
+      "hubBore": {
+        "value": "63.4",
+        "verified": false,
+        "issue": "Hub bore should be 63.3mm, not 63.4mm",
+        "correctedValue": "63.3",
+        "source": "Multiple wheel spacer manufacturers confirm 63.3mm"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "6x16 ET34"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["205/55R16"]
+      },
+      "marketNote": "European market only - not sold in North America"
+    },
+    {
+      "id": "9fba6635-18b0-46e1-87ac-533539b06315",
+      "year": 2003,
+      "make": "ford",
+      "model": "streetka",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "4x108",
+        "verified": true,
+        "source": "tirewheelguide.com, bonoss.com"
+      },
+      "hubBore": {
+        "value": "63.4",
+        "verified": false,
+        "issue": "Hub bore should be 63.3mm, not 63.4mm",
+        "correctedValue": "63.3",
+        "source": "bonoss.com: 'PCD: 4×108, Center Bore (CB): 63.3, Thread: M12x1.5'"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "6x16 ET37"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["205/55R16"]
+      },
+      "marketNote": "European market only (convertible variant of Ka) - not sold in North America"
+    },
+    {
+      "id": "3b70dd1f-9e08-4722-a833-75b13eee68b1",
+      "year": 2004,
+      "make": "ford",
+      "model": "streetka",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "4x108",
+        "verified": true,
+        "source": "tirewheelguide.com, bonoss.com"
+      },
+      "hubBore": {
+        "value": "63.4",
+        "verified": false,
+        "issue": "Hub bore should be 63.3mm, not 63.4mm",
+        "correctedValue": "63.3",
+        "source": "bonoss.com confirms 63.3mm"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "6x16 ET37"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["205/55R16"]
+      },
+      "marketNote": "European market only - not sold in North America"
+    },
+    {
+      "id": "3e83a0ea-f63c-4e09-9224-c15975235cc0",
+      "year": 2005,
+      "make": "ford",
+      "model": "streetka",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "4x108",
+        "verified": true,
+        "source": "tirewheelguide.com, bonoss.com"
+      },
+      "hubBore": {
+        "value": "63.4",
+        "verified": false,
+        "issue": "Hub bore should be 63.3mm, not 63.4mm",
+        "correctedValue": "63.3",
+        "source": "bonoss.com confirms 63.3mm"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "6x16 ET37"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["205/55R16"]
+      },
+      "marketNote": "European market only - not sold in North America"
+    },
+    {
+      "id": "fb4564df-a83d-4a97-9cc2-0aef1e43c233",
+      "year": 2006,
+      "make": "ford",
+      "model": "streetka",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "4x108",
+        "verified": true,
+        "source": "tirewheelguide.com, bonoss.com"
+      },
+      "hubBore": {
+        "value": "63.4",
+        "verified": false,
+        "issue": "Hub bore should be 63.3mm, not 63.4mm",
+        "correctedValue": "63.3",
+        "source": "bonoss.com confirms 63.3mm"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "6x16 ET37"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["205/55R16"]
+      },
+      "marketNote": "European market only - not sold in North America"
+    },
+    {
+      "id": "29fa948d-dce7-49c2-aa8d-50ca31290cd9",
+      "year": 2020,
+      "make": "ford",
+      "model": "taurus",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "5x114.3",
+        "verified": true,
+        "note": "Consistent with CD4/Mondeo platform used in Middle East market"
+      },
+      "hubBore": {
+        "value": "67.1",
+        "verified": true,
+        "note": "Standard for Ford CD4 platform"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "17\", 19\", 20\" options plausible for this platform"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["235/55R17", "245/45R19", "255/40R20"]
+      },
+      "marketNote": "CRITICAL: Ford Taurus was DISCONTINUED in the US market in 2019. This 2020+ model is MIDDLE EAST/CHINA MARKET ONLY. Consider removing from US-focused catalog or adding market designation.",
+      "recommendation": "Add 'Middle East' market tag or remove from NA catalog"
+    },
+    {
+      "id": "c549e368-2f60-4206-912f-834024258215",
+      "year": 2021,
+      "make": "ford",
+      "model": "taurus",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "5x114.3",
+        "verified": true,
+        "note": "Consistent with CD4/Mondeo platform"
+      },
+      "hubBore": {
+        "value": "67.1",
+        "verified": true,
+        "note": "Standard for Ford CD4 platform"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "17\", 19\", 20\" options"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["235/55R17", "245/45R19", "255/40R20"]
+      },
+      "marketNote": "MIDDLE EAST/CHINA MARKET ONLY - Not sold in North America",
+      "recommendation": "Add 'Middle East' market tag or remove from NA catalog"
+    },
+    {
+      "id": "984a7004-7ef0-44ec-bcd7-99eacc3ee8e7",
+      "year": 2022,
+      "make": "ford",
+      "model": "taurus",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "5x114.3",
+        "verified": true,
+        "note": "Consistent with CD4/Mondeo platform"
+      },
+      "hubBore": {
+        "value": "67.1",
+        "verified": true,
+        "note": "Standard for Ford CD4 platform"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "17\", 19\", 20\" options"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["235/55R17", "245/45R19", "255/40R20"]
+      },
+      "marketNote": "MIDDLE EAST/CHINA MARKET ONLY - Not sold in North America",
+      "recommendation": "Add 'Middle East' market tag or remove from NA catalog"
+    },
+    {
+      "id": "29c55e2d-27cf-4130-8860-7e61f469d2a4",
+      "year": 2023,
+      "make": "ford",
+      "model": "taurus",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "5x114.3",
+        "verified": true,
+        "note": "Consistent with CD4/Mondeo platform"
+      },
+      "hubBore": {
+        "value": "67.1",
+        "verified": true,
+        "note": "Standard for Ford CD4 platform"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "17\", 19\", 20\" options"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["235/55R17", "245/45R19", "255/40R20"]
+      },
+      "marketNote": "MIDDLE EAST/CHINA MARKET ONLY - Not sold in North America",
+      "recommendation": "Add 'Middle East' market tag or remove from NA catalog"
+    },
+    {
+      "id": "9e3b562c-e164-4523-8585-600450712fb8",
+      "year": 2024,
+      "make": "ford",
+      "model": "taurus",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "5x114.3",
+        "verified": true,
+        "note": "Consistent with CD4/Mondeo platform"
+      },
+      "hubBore": {
+        "value": "67.1",
+        "verified": true,
+        "note": "Standard for Ford CD4 platform"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "17\", 19\", 20\" options"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["235/55R17", "245/45R19", "255/40R20"]
+      },
+      "marketNote": "MIDDLE EAST/CHINA MARKET ONLY - Not sold in North America",
+      "recommendation": "Add 'Middle East' market tag or remove from NA catalog"
+    },
+    {
+      "id": "420ec4f3-1f26-4244-8434-87ee2dc32f3a",
+      "year": 2025,
+      "make": "ford",
+      "model": "taurus",
+      "status": "flagged",
+      "boltPattern": {
+        "value": "5x114.3",
+        "verified": true,
+        "note": "Consistent with CD4/Mondeo platform"
+      },
+      "hubBore": {
+        "value": "67.1",
+        "verified": true,
+        "note": "Standard for Ford CD4 platform"
+      },
+      "wheelSizes": {
+        "verified": true,
+        "notes": "17\", 19\", 20\" options; 2025 model adds hybrid variant"
+      },
+      "tireSizes": {
+        "verified": true,
+        "confirmedSizes": ["235/55R17", "245/45R19", "255/40R20"]
+      },
+      "marketNote": "MIDDLE EAST/CHINA MARKET ONLY - Not sold in North America. 2025 introduced hybrid powertrain.",
+      "recommendation": "Add 'Middle East' market tag or remove from NA catalog"
+    }
+  ],
+  "corrections": [
+    {
+      "model": "sportka",
+      "years": "2003-2008",
+      "field": "hubBore",
+      "currentValue": "63.4",
+      "correctedValue": "63.3",
+      "source": "Multiple wheel spacer manufacturers (kage-uk.com, bonoss.com, barbarianracing.co.uk)"
+    },
+    {
+      "model": "streetka",
+      "years": "2003-2006",
+      "field": "hubBore",
+      "currentValue": "63.4",
+      "correctedValue": "63.3",
+      "source": "bonoss.com wheel spacers specify CB: 63.3mm"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "issue": "Ford Taurus 2020-2025 market mismatch",
+      "description": "These model years were NOT sold in North America. The US Taurus was discontinued in 2019. The 2020+ Taurus is sold only in Middle East and China markets.",
+      "action": "Either remove from NA catalog, add 'Middle East' market designation, or add UI warning that this vehicle was not sold in North America"
+    },
+    {
+      "priority": "medium",
+      "issue": "SportKa/StreetKa hub bore correction",
+      "description": "Hub bore listed as 63.4mm but should be 63.3mm per multiple aftermarket sources",
+      "action": "Update hubBore from 63.4 to 63.3 for all SportKa (2003-2008) and StreetKa (2003-2006) entries"
+    },
+    {
+      "priority": "low",
+      "issue": "European-only models in catalog",
+      "description": "SportKa and StreetKa were never sold in North America",
+      "action": "Consider adding 'European market' designation or removing if catalog is NA-focused"
+    }
+  ],
+  "sources": [
+    "tirewheelguide.com",
+    "ranger5g.com forum",
+    "ranger6g.com forum",
+    "kage-uk.com (wheel spacers)",
+    "bonoss.com (wheel spacers)",
+    "barbarianracing.co.uk (wheel spacers)",
+    "mechanics.stackexchange.com",
+    "fordauthority.com",
+    "me.ford.com (Ford Middle East official)"
+  ]
+}

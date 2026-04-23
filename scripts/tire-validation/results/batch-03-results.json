@@ -1,0 +1,1069 @@
+{
+  "batchId": "03",
+  "processedAt": "2026-04-21T21:37:00.000Z",
+  "results": [
+    {
+      "year": 2012,
+      "make": "Acura",
+      "model": "ZDX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"},
+        {"trim": "Advance Package", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Acura",
+      "model": "ZDX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"},
+        {"trim": "Advance Package", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Acura",
+      "model": "ZDX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"},
+        {"trim": "Technology Package", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"},
+        {"trim": "Advance Package", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 45}, "tireSize": "255/50R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Acura",
+      "model": "ZDX",
+      "trims": [],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "low",
+      "notes": "ZDX was not produced in 2009 - first model year was 2010"
+    },
+    {
+      "year": 2020,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trims": [
+        {"trim": "Spider (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Spider (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trims": [
+        {"trim": "Spider (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Spider (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trims": [
+        {"trim": "Coupe (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Coupe (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"},
+        {"trim": "Spider (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Spider (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trims": [
+        {"trim": "Coupe (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Coupe (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"},
+        {"trim": "Spider (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Spider (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trims": [
+        {"trim": "Coupe (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Coupe (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"},
+        {"trim": "Spider (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Spider (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trims": [
+        {"trim": "Coupe (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Coupe (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"},
+        {"trim": "Launch Edition", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"},
+        {"trim": "Spider (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Spider (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trims": [
+        {"trim": "Coupe (17/18)", "wheelSize": {"diameter": 17, "width": 7.0, "offset": 41, "rearDiameter": 18, "rearWidth": 8.0, "rearOffset": 40}, "tireSize": "205/45R17", "rearTireSize": "235/40R18"},
+        {"trim": "Coupe (18/19)", "wheelSize": {"diameter": 18, "width": 7.0, "offset": 41, "rearDiameter": 19, "rearWidth": 8.5, "rearOffset": 40}, "tireSize": "205/40R18", "rearTireSize": "235/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Base Model (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Veloce", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Veloce (staggered)", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34, "rearWidth": 9.0, "rearOffset": 29}, "tireSize": "225/40R19", "rearTireSize": "255/35R19"},
+        {"trim": "Tributo Italiano", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35, "rearWidth": 10.0, "rearOffset": 33}, "tireSize": "245/35R19", "rearTireSize": "285/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Quadrifoglio always staggered; other trims have staggered options"
+    },
+    {
+      "year": 2024,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trims": [
+        {"trim": "Sprint", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 41}, "tireSize": "225/50R17"},
+        {"trim": "Sprint (18\")", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Veloce", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Veloce (staggered)", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34, "rearWidth": 9.0, "rearOffset": 29}, "tireSize": "225/40R19", "rearTireSize": "255/35R19"},
+        {"trim": "Competizione", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35, "rearWidth": 10.0, "rearOffset": 33}, "tireSize": "245/35R19", "rearTireSize": "285/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trims": [
+        {"trim": "Sprint", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 41}, "tireSize": "225/50R17"},
+        {"trim": "Sprint (18\")", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Veloce", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Estrema", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35, "rearWidth": 10.0, "rearOffset": 33}, "tireSize": "245/35R19", "rearTireSize": "285/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trims": [
+        {"trim": "Sprint", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 41}, "tireSize": "225/50R17"},
+        {"trim": "Sprint (18\")", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Veloce", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35, "rearWidth": 10.0, "rearOffset": 33}, "tireSize": "245/35R19", "rearTireSize": "285/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trims": [
+        {"trim": "Sprint", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 41}, "tireSize": "225/50R17"},
+        {"trim": "Sprint (18\")", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Ti Sport", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35, "rearWidth": 10.0, "rearOffset": 33}, "tireSize": "245/35R19", "rearTireSize": "285/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 41}, "tireSize": "225/50R17"},
+        {"trim": "Base Model (18\")", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Sport", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti Sport", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35, "rearWidth": 10.0, "rearOffset": 33}, "tireSize": "245/35R19", "rearTireSize": "285/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 41}, "tireSize": "225/50R17"},
+        {"trim": "Base Model (18\")", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Sport", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti Sport", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "225/40R19"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35, "rearWidth": 10.0, "rearOffset": 33}, "tireSize": "245/35R19", "rearTireSize": "285/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 41}, "tireSize": "225/50R17"},
+        {"trim": "Base Model (18\")", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Sport", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Ti Sport", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34, "rearWidth": 9.0, "rearOffset": 29}, "tireSize": "225/40R19", "rearTireSize": "255/35R19"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35, "rearWidth": 10.0, "rearOffset": 33}, "tireSize": "245/35R19", "rearTireSize": "285/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 41}, "tireSize": "225/50R17"},
+        {"trim": "Base Model (18\")", "wheelSize": {"diameter": 18, "width": 7.5, "offset": 41}, "tireSize": "225/45R18"},
+        {"trim": "Q4", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 41}, "tireSize": "225/50R17"},
+        {"trim": "Q4 (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34, "rearWidth": 9.0, "rearOffset": 29}, "tireSize": "225/40R19", "rearTireSize": "255/35R19"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 35, "rearWidth": 10.0, "rearOffset": 33}, "tireSize": "245/35R19", "rearTireSize": "285/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Base Model (20\")", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Base Model (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 30}, "tireSize": "255/40R21"},
+        {"trim": "Veloce", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Tributo Italiano", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 30}, "tireSize": "255/40R21"},
+        {"trim": "Quadrifoglio (20\")", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32, "rearWidth": 10.0, "rearOffset": 30}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "Quadrifoglio (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 30, "rearWidth": 10.5, "rearOffset": 28}, "tireSize": "255/40R21", "rearTireSize": "285/35R21"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "trims": [
+        {"trim": "Sprint", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 34}, "tireSize": "235/60R18"},
+        {"trim": "Sprint (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti (20\")", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Veloce", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Competizione", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 30}, "tireSize": "255/40R21"},
+        {"trim": "Quadrifoglio (20\")", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32, "rearWidth": 10.0, "rearOffset": 30}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "Quadrifoglio (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 30, "rearWidth": 10.5, "rearOffset": 28}, "tireSize": "255/40R21", "rearTireSize": "285/35R21"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "trims": [
+        {"trim": "Sprint", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 34}, "tireSize": "235/60R18"},
+        {"trim": "Sprint (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti (20\")", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Veloce", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Estrema", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 30}, "tireSize": "255/40R21"},
+        {"trim": "Quadrifoglio (20\")", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32, "rearWidth": 10.0, "rearOffset": 30}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "Quadrifoglio (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 30, "rearWidth": 10.5, "rearOffset": 28}, "tireSize": "255/40R21", "rearTireSize": "285/35R21"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "trims": [
+        {"trim": "Sprint", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 34}, "tireSize": "235/60R18"},
+        {"trim": "Sprint (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti (20\")", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Veloce", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Quadrifoglio (20\")", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32, "rearWidth": 10.0, "rearOffset": 30}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "Quadrifoglio (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 30, "rearWidth": 10.5, "rearOffset": 28}, "tireSize": "255/40R21", "rearTireSize": "285/35R21"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "trims": [
+        {"trim": "Sprint", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 34}, "tireSize": "235/60R18"},
+        {"trim": "Sprint (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti Sport", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Quadrifoglio (20\")", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32, "rearWidth": 10.0, "rearOffset": 30}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"},
+        {"trim": "Quadrifoglio (21\")", "wheelSize": {"diameter": 21, "width": 9.0, "offset": 30, "rearWidth": 10.5, "rearOffset": 28}, "tireSize": "255/40R21", "rearTireSize": "285/35R21"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 34}, "tireSize": "235/60R18"},
+        {"trim": "Base Model (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Sport", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti Sport", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32, "rearWidth": 10.0, "rearOffset": 30}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 34}, "tireSize": "235/60R18"},
+        {"trim": "Base Model (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Sport", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti Sport", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32, "rearWidth": 10.0, "rearOffset": 30}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 34}, "tireSize": "235/60R18"},
+        {"trim": "Base Model (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Sport", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 34}, "tireSize": "235/55R19"},
+        {"trim": "Ti Sport Package", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32}, "tireSize": "255/45R20"},
+        {"trim": "Quadrifoglio", "wheelSize": {"diameter": 20, "width": 8.5, "offset": 32, "rearWidth": 10.0, "rearOffset": 30}, "tireSize": "255/45R20", "rearTireSize": "285/40R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trims": [
+        {"trim": "V8 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "Volante", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trims": [
+        {"trim": "V8 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "Volante", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trims": [
+        {"trim": "V8 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "Volante", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trims": [
+        {"trim": "V8 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "AMR", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "Volante", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trims": [
+        {"trim": "V8 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "AMR", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "Volante", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trims": [
+        {"trim": "V8 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "AMR", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "Volante", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trims": [
+        {"trim": "V8 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "Volante", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trims": [
+        {"trim": "V8 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trims": [
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Aston Martin",
+      "model": "DBX",
+      "trims": [
+        {"trim": "707 (22\")", "wheelSize": {"diameter": 22, "width": 10.0, "offset": 35, "rearWidth": 11.5, "rearOffset": 22}, "tireSize": "285/40R22", "rearTireSize": "325/35R22"},
+        {"trim": "707 (23\")", "wheelSize": {"diameter": 23, "width": 10.5, "offset": 34, "rearWidth": 12.0, "rearOffset": 21}, "tireSize": "285/35R23", "rearTireSize": "325/30R23"},
+        {"trim": "S", "wheelSize": {"diameter": 23, "width": 10.5, "offset": 34, "rearWidth": 12.0, "rearOffset": 21}, "tireSize": "285/35R23", "rearTireSize": "325/30R23"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Aston Martin",
+      "model": "DBX",
+      "trims": [
+        {"trim": "707 (22\")", "wheelSize": {"diameter": 22, "width": 10.0, "offset": 35, "rearWidth": 11.5, "rearOffset": 22}, "tireSize": "285/40R22", "rearTireSize": "325/35R22"},
+        {"trim": "707 (23\")", "wheelSize": {"diameter": 23, "width": 10.5, "offset": 34, "rearWidth": 12.0, "rearOffset": 21}, "tireSize": "285/35R23", "rearTireSize": "325/30R23"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Aston Martin",
+      "model": "DBX",
+      "trims": [
+        {"trim": "707 (22\")", "wheelSize": {"diameter": 22, "width": 10.0, "offset": 35, "rearWidth": 11.5, "rearOffset": 22}, "tireSize": "285/40R22", "rearTireSize": "325/35R22"},
+        {"trim": "707 (23\")", "wheelSize": {"diameter": 23, "width": 10.5, "offset": 34, "rearWidth": 12.0, "rearOffset": 21}, "tireSize": "285/35R23", "rearTireSize": "325/30R23"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Aston Martin",
+      "model": "DBX",
+      "trims": [
+        {"trim": "V8 (22\")", "wheelSize": {"diameter": 22, "width": 10.0, "offset": 35, "rearWidth": 11.5, "rearOffset": 22}, "tireSize": "285/40R22", "rearTireSize": "325/35R22"},
+        {"trim": "V8 (23\")", "wheelSize": {"diameter": 23, "width": 10.5, "offset": 34, "rearWidth": 12.0, "rearOffset": 21}, "tireSize": "285/35R23", "rearTireSize": "325/30R23"},
+        {"trim": "707 (22\")", "wheelSize": {"diameter": 22, "width": 10.0, "offset": 35, "rearWidth": 11.5, "rearOffset": 22}, "tireSize": "285/40R22", "rearTireSize": "325/35R22"},
+        {"trim": "707 (23\")", "wheelSize": {"diameter": 23, "width": 10.5, "offset": 34, "rearWidth": 12.0, "rearOffset": 21}, "tireSize": "285/35R23", "rearTireSize": "325/30R23"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Aston Martin",
+      "model": "DBX",
+      "trims": [
+        {"trim": "V8 (22\")", "wheelSize": {"diameter": 22, "width": 10.0, "offset": 35, "rearWidth": 11.5, "rearOffset": 22}, "tireSize": "285/40R22", "rearTireSize": "325/35R22"},
+        {"trim": "V8 (23\")", "wheelSize": {"diameter": 23, "width": 10.5, "offset": 34, "rearWidth": 12.0, "rearOffset": 21}, "tireSize": "285/35R23", "rearTireSize": "325/30R23"},
+        {"trim": "707 (22\")", "wheelSize": {"diameter": 22, "width": 10.0, "offset": 35, "rearWidth": 11.5, "rearOffset": 22}, "tireSize": "285/40R22", "rearTireSize": "325/35R22"},
+        {"trim": "707 (23\")", "wheelSize": {"diameter": 23, "width": 10.5, "offset": 34, "rearWidth": 12.0, "rearOffset": 21}, "tireSize": "285/35R23", "rearTireSize": "325/30R23"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Aston Martin",
+      "model": "DBX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 22, "width": 10.0, "offset": 35, "rearWidth": 11.5, "rearOffset": 22}, "tireSize": "285/40R22", "rearTireSize": "325/35R22"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Aston Martin",
+      "model": "DBX",
+      "trims": [
+        {"trim": "Base Model", "wheelSize": {"diameter": 22, "width": 10.0, "offset": 35, "rearWidth": 11.5, "rearOffset": 22}, "tireSize": "285/40R22", "rearTireSize": "325/35R22"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "V8 Coupe (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 47, "rearWidth": 11.5, "rearOffset": 57}, "tireSize": "275/35R21", "rearTireSize": "325/30R21"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "V8 Coupe (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 47, "rearWidth": 11.5, "rearOffset": 57}, "tireSize": "275/35R21", "rearTireSize": "325/30R21"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (20\")", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "V8 Coupe (21\")", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 47, "rearWidth": 11.5, "rearOffset": 57}, "tireSize": "275/35R21", "rearTireSize": "325/30R21"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "F1 Edition", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 47, "rearWidth": 11.5, "rearOffset": 57}, "tireSize": "255/35R21", "rearTireSize": "295/30R21"},
+        {"trim": "Roadster", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "F1 Edition", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 47, "rearWidth": 11.5, "rearOffset": 57}, "tireSize": "255/35R21", "rearTireSize": "295/30R21"},
+        {"trim": "Roadster", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "Coupe", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"},
+        {"trim": "F1 Edition", "wheelSize": {"diameter": 21, "width": 9.5, "offset": 47, "rearWidth": 11.5, "rearOffset": 57}, "tireSize": "255/35R21", "rearTireSize": "295/30R21"},
+        {"trim": "Roadster", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8", "wheelSize": {"diameter": 20, "width": 9.0, "offset": 46, "rearWidth": 11.0, "rearOffset": 56}, "tireSize": "255/40R20", "rearTireSize": "295/35R20"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V12 S Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"},
+        {"trim": "V12 S Roadster", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high",
+      "notes": "Final year of previous generation"
+    },
+    {
+      "year": 2017,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V12 S Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"},
+        {"trim": "V12 S Roadster", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V8 Roadster", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V8 S Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V8 S Roadster", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V12 S Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"},
+        {"trim": "V12 S Roadster", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Coupe (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"},
+        {"trim": "V8 GT", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V8 S Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Coupe (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"},
+        {"trim": "V8 S Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Coupe (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"},
+        {"trim": "V8 S Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"},
+        {"trim": "V12 Roadster", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Coupe (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"},
+        {"trim": "V8 S Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Coupe (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"},
+        {"trim": "V8 S Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Coupe (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"},
+        {"trim": "V12 Coupe", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.5, "rearOffset": 63}, "tireSize": "255/35R19", "rearTireSize": "295/30R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Coupe (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"},
+        {"trim": "V8 Roadster (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Roadster (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Coupe (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"},
+        {"trim": "V8 Coupe Sport Pack", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V8 Roadster (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Roadster (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Coupe (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Coupe (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"},
+        {"trim": "V8 Coupe Sport Pack", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"},
+        {"trim": "V8 Roadster (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Roadster (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Standard Model (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Standard Model (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"},
+        {"trim": "V8 Coupe Sport Pack", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "245/40R19", "rearTireSize": "285/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Aston Martin",
+      "model": "Vantage",
+      "trims": [
+        {"trim": "V8 Standard Model (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 42, "rearWidth": 9.5, "rearOffset": 56}, "tireSize": "235/45R18", "rearTireSize": "275/40R18"},
+        {"trim": "V8 Standard Model (19\")", "wheelSize": {"diameter": 19, "width": 8.5, "offset": 44, "rearWidth": 10.0, "rearOffset": 61}, "tireSize": "235/40R19", "rearTireSize": "275/35R19"}
+      ],
+      "isStaggered": true,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "A3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium Plus (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "S Line (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 46}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium Plus (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "S Line (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 46}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium Plus (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "quattro Premium", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "A3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium Plus (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "quattro Premium", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "A3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium Plus (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "quattro Premium", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "quattro Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "A3",
+      "trims": [
+        {"trim": "Premium", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Premium (18\")", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "Premium Plus", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "S Line (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 46}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "A3",
+      "trims": [
+        {"trim": "Sport Premium", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 48}, "tireSize": "205/55R16"},
+        {"trim": "Sport Premium (17\")", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "Sport Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "S Line Premium", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "S Line (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 46}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "A3",
+      "trims": [
+        {"trim": "2.0T FWD Premium", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 48}, "tireSize": "205/55R16"},
+        {"trim": "2.0T FWD Premium (17\")", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "2.0T FWD Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "2.0T quattro Premium", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "S Line (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 46}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "A3",
+      "trims": [
+        {"trim": "2.0T FWD Premium", "wheelSize": {"diameter": 16, "width": 7.0, "offset": 48}, "tireSize": "205/55R16"},
+        {"trim": "2.0T FWD Premium (17\")", "wheelSize": {"diameter": 17, "width": 7.5, "offset": 51}, "tireSize": "225/45R17"},
+        {"trim": "2.0T FWD Premium Plus", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "2.0T quattro Premium", "wheelSize": {"diameter": 18, "width": 8.0, "offset": 46}, "tireSize": "225/40R18"},
+        {"trim": "S Line (19\")", "wheelSize": {"diameter": 19, "width": 8.0, "offset": 46}, "tireSize": "235/35R19"}
+      ],
+      "isStaggered": false,
+      "source": "tiresize.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "processed": 75,
+    "staggeredCount": 53,
+    "nonStaggeredCount": 22,
+    "issues": [
+      {"vehicle": "2009 Acura ZDX", "issue": "ZDX was not produced in 2009 - first model year was 2010"}
+    ]
+  }
+}

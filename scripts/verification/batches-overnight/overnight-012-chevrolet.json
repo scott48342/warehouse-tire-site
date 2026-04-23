@@ -1,0 +1,1907 @@
+[
+  {
+    "id": "a3898bc4-5663-4ee3-bf82-be4f8d6f061a",
+    "year": 1989,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "15x6",
+      "15x7"
+    ],
+    "currentTireSizes": [
+      "205/75R15",
+      "225/70R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "48941394-2651-46ce-a458-1d0952aa2774",
+    "year": 1990,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      "6Jx15",
+      "7Jx15"
+    ],
+    "currentTireSizes": [
+      "P215/75R15",
+      "P225/70R15",
+      "P235/70R15"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "5d396227-43cc-4c93-ba07-28d6fba11d3b",
+    "year": 1991,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16",
+      "8Jx17"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P235/70R15",
+      "P255/50ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "104d191f-df3b-4a35-8026-8b324a657056",
+    "year": 1992,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16",
+      "8Jx17"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P235/70R15",
+      "P255/50ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "f39620e2-9abd-4ba2-ba5d-4474d2725836",
+    "year": 1993,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16",
+      "8Jx17"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P235/70R15",
+      "P255/50ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "477ee60c-8389-4b35-a08f-3f96b15cff60",
+    "year": 1994,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16",
+      "8Jx17"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P235/70R15",
+      "P255/50ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "00aaa403-13ce-46ab-99c7-b4497dc06e7a",
+    "year": 1995,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16",
+      "8Jx17"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P235/70R15",
+      "P255/50ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "6da6ac8e-2a17-44e8-adf0-40101e359d03",
+    "year": 1996,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x127",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16",
+      "8Jx17"
+    ],
+    "currentTireSizes": [
+      "P225/70R15",
+      "P235/70R15",
+      "P255/50ZR17"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "d1ec2584-6c64-4bb9-8acc-b94b78921d85",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 46,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 46,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 46,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/45R18",
+      "245/40ZR19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "76133a1f-12e8-49ff-8335-c092aef8d9b6",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "72079677-d4af-4110-838a-47207f6357e2",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "65d9250d-fd8b-4eee-a6fb-af7741696b9b",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1ddf1d61-9bef-4810-9e90-2afb201e93e0",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "0eb72137-3f53-4a92-a95b-dd73af59c4c3",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "01726e15-63b9-40b2-b072-5facd4c4e870",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "204463eb-77ca-487c-af95-b8ab2527a120",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "caprice",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/50R18",
+      "245/45R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "5f646adb-8d1f-4bac-9dd9-bf3810254177",
+    "year": 1964,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 396",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2a3593c3-4fac-4d0d-9b64-f460020805fa",
+    "year": 1964,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "71d15903-0bc2-4719-9ba6-c97f912590fc",
+    "year": 1964,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "552cd1c5-f597-4e91-b8cc-6b3d42fdf98d",
+    "year": 1964,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "96059f0f-a5e3-4374-a8c6-9d90beac6dcf",
+    "year": 1964,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 11,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "185/75R14",
+      "195/75R14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "5909e2d5-41b9-4922-a10b-6a082d71879f",
+    "year": 1965,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 25,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "185/75R14",
+      "195/75R14",
+      "205/75R14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "4ebef952-17a6-4aa9-8dc4-d43174079ed2",
+    "year": 1965,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "29189511-2615-48b6-bb8a-3f2edee1bbe4",
+    "year": 1965,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "179b55c7-062a-4278-aefb-29ce2fb5dbfe",
+    "year": 1965,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "adc6053a-1800-439f-a8b5-d279cf6934af",
+    "year": 1965,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 396",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f724b893-ab34-4191-9e1c-e7848e2e6c83",
+    "year": 1966,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 396",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f726879b-e00b-4b4f-99d3-e5ac470801cb",
+    "year": 1966,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "85fb7828-89bc-4623-9fbc-010b584bc584",
+    "year": 1966,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 25,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 25,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "205/75R14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "a18e2e0a-20f3-4e6e-b923-81d0e46cb517",
+    "year": 1966,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "973ede07-44e7-40cc-b645-428080e725e3",
+    "year": 1966,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "69b3a4c7-b2d2-4d41-8af6-584d93d4b936",
+    "year": 1967,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0eeb9ee7-5b63-45d7-a296-4207de396253",
+    "year": 1967,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "146fa917-239a-439d-9dc5-f2542a6da64c",
+    "year": 1967,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b0e28e21-b928-47d9-bb47-382fd332d8a1",
+    "year": 1967,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 25,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 22,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "205/75R14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "bdcc94e6-8e80-4192-9ffe-03994510bd7c",
+    "year": 1967,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 396",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4409ef8a-b9ca-4db0-9723-87b6450c85f3",
+    "year": 1968,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6cc9077e-da03-4401-966d-fcb378256029",
+    "year": 1968,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 396",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b67895f6-fdc8-4f52-933b-982d5e650e2d",
+    "year": 1968,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0cf4dde6-5849-4960-acad-40d4151469a1",
+    "year": 1968,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 454",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8e6eac5a-80e1-4c36-b0e2-9152f04c45c1",
+    "year": 1968,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bb2c9333-984d-4066-a8a1-7bdf981cb339",
+    "year": 1968,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 25,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 22,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "205/75R14",
+      "225/70R14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "b350e144-5ca6-40d2-a40e-07c906cedc88",
+    "year": 1969,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "64b25c77-af6c-46c9-a55d-9e349b58d55b",
+    "year": 1969,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 14,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 22,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 10,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "215/70R14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "cfb3a276-011e-48f0-8213-5526bfb96458",
+    "year": 1969,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 454",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "32adf35e-173d-4afa-bf96-cbee0706841e",
+    "year": 1969,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9095b20e-47ed-4923-8211-6ba2ddb881ce",
+    "year": 1969,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "93b975c3-5cd4-4ecf-9906-70da9683977e",
+    "year": 1969,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 396",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "338425ee-9df8-4c43-a89c-462c261f8648",
+    "year": 1970,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3ffeb2cf-872a-422a-ba4e-046a077c5d7c",
+    "year": 1970,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 15,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 22,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 9,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "215/70R14",
+      "235/70R14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "d3cc0372-916e-47ec-ba0d-41630b97b263",
+    "year": 1970,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 454",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7439932b-c6f0-4b37-994a-63b68b7dd456",
+    "year": 1970,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 396",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2d019085-d8b7-43a9-bdde-ba28d4d95b53",
+    "year": 1970,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7948cdbf-28c9-4152-8c9e-7612f888757e",
+    "year": 1970,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4e068ab8-b97c-4e6a-8764-48c2d5a27ffd",
+    "year": 1971,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 15,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 22,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 9,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "215/70R14",
+      "235/60R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "4e12908f-580a-485c-bd35-7b353ca59ee7",
+    "year": 1971,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b68a3a39-0567-4151-aba2-73206b8ff46a",
+    "year": 1971,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "811d70af-a6fa-4e22-827d-efba6207f2b0",
+    "year": 1971,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 454",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8f290be9-ec1a-40cd-8f72-54c8626faaf4",
+    "year": 1971,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "80447598-bacf-4498-b01e-47bb80712f0e",
+    "year": 1971,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 396",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b1ebcc38-eccc-4aeb-8445-3aac59a4ffb1",
+    "year": 1972,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "61950f45-5598-489b-a6af-fac772e76386",
+    "year": 1972,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 15,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 13,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 8,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "195/75R14",
+      "215/70R14",
+      "235/60R15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "dc1be0e4-b272-41d5-bb8a-e0dcf79d40ee",
+    "year": 1972,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 454",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "47eab89a-19bf-4569-b77a-26982168cc57",
+    "year": 1972,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "66f1966f-dc14-447e-b347-cfcb87ce4601",
+    "year": 1972,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS 396",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d8528c3e-9e07-4288-afdc-3b53720fe4b7",
+    "year": 1972,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "SS",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "af55cdd3-f10a-402e-b78b-a2d1e3cabbb2",
+    "year": 1973,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Laguna",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cf7c02d8-89be-410a-824b-172427e29a1c",
+    "year": 1973,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Laguna S-3",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f3ba6004-f459-4efe-9a0f-6b761fbd2ce0",
+    "year": 1973,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f4007e06-53f5-434e-8084-54a5c496acc5",
+    "year": 1973,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "139b1663-9c53-44b8-ab95-ad8be9a7466d",
+    "year": 1973,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu Classic",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5d9a19dd-1668-44ba-8fff-68adaf9b9fb1",
+    "year": 1974,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Laguna S-3",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7da7120a-5c45-416c-869b-6315b7d39890",
+    "year": 1974,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7108969b-b7be-49c6-9ad0-b7941a360cca",
+    "year": 1974,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Laguna",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15",
+      "215/65R15",
+      "225/70R15"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "70cc57d0-5c8d-4bbd-b176-674fdd13f312",
+    "year": 1974,
+    "make": "chevrolet",
+    "model": "chevelle",
+    "trim": "Malibu Classic",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "F70-14",
+      "G70-14",
+      "G70-15",
+      "F60-15",
+      "G60-15",
+      "L60-15",
+      "225/70R14",
+      "235/70R15",
+      "245/60R15",
+      "255/60R15",
+      "275/60R15"
+    ],
+    "source": "generation_inherit"
+  }
+]

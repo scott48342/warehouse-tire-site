@@ -1,0 +1,1291 @@
+{
+  "batchId": "61",
+  "processedAt": "2026-04-21T21:25:00.000Z",
+  "results": [
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Soarer",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7.5, "offset": 50 },
+          { "diameter": 17, "width": 8, "offset": 50 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, JDM reference (Lexus SC equivalent)",
+      "confidence": "medium",
+      "notes": "JDM-only model, Lexus SC equivalent. Shares platform with XV30 series."
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Solara",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 50 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com, factorywheelreplacement.com",
+      "confidence": "high",
+      "notes": "Gen 2 Solara (2004-2008). Camry-based coupe/convertible."
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Solara",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 50 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com, factorywheelreplacement.com",
+      "confidence": "high",
+      "notes": "Gen 2 Solara (2004-2008). Camry-based coupe/convertible."
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Solara",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 50 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com, factorywheelreplacement.com",
+      "confidence": "high",
+      "notes": "Gen 2 Solara (2004-2008). Camry-based coupe/convertible."
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Solara",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 50 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com, factorywheelreplacement.com",
+      "confidence": "high",
+      "notes": "Gen 2 Solara (2004-2008). Camry-based coupe/convertible."
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Solara",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 50 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheelsynergy.com, factorywheelreplacement.com",
+      "confidence": "high",
+      "notes": "Gen 2 Solara (2004-2008). Camry-based coupe/convertible."
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Solara",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "sizemywheels.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 1 Solara (1999-2003). Camry-based coupe/convertible."
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Solara",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "sizemywheels.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 1 Solara (1999-2003). Camry-based coupe/convertible."
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Solara",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "sizemywheels.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 1 Solara (1999-2003). Camry-based coupe/convertible."
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Solara",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "sizemywheels.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 1 Solara (1999-2003). Camry-based coupe/convertible."
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Soluna",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Asian market compact sedan (Thailand/Indonesia). Based on Tercel platform."
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Soluna",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Asian market compact sedan (Thailand/Indonesia). Based on Tercel platform."
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Soluna",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Asian market compact sedan (Thailand/Indonesia). Based on Tercel platform."
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Soluna",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Asian market compact sedan (Thailand/Indonesia). Based on Tercel platform."
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Sprinter",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 40 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM compact sedan/wagon. Corolla-based. Van variant uses 5x114.3."
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Sprinter",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 40 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM compact sedan/wagon. Corolla-based. Van variant uses 5x114.3."
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Sprinter",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 13, "width": 5, "offset": 40 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM compact sedan/wagon. Corolla-based. Van variant uses 5x114.3."
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Sprinter Carib",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM compact wagon. AE111 chassis, Corolla-based."
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Sprinter Carib",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM compact wagon. AE111 chassis, Corolla-based."
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Sprinter Carib",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM compact wagon. AE111 chassis, Corolla-based."
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Sprinter Trueno",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com, sizemywheels.com",
+      "confidence": "high",
+      "notes": "JDM sports coupe. AE111 chassis (1995-2000), final generation."
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Starlet Cross",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "South African market crossover. Yaris Cross rebadge. TNGA-B platform."
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Starlet Cross",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "South African market crossover. Yaris Cross rebadge. TNGA-B platform."
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Supra",
+      "specs": {
+        "wheelSizes": [
+          { "front": { "diameter": 19, "width": 9, "offset": 32 }, "rear": { "diameter": 19, "width": 10, "offset": 40 } }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": true
+      },
+      "source": "curvaconcepts.com, burgertuning.com",
+      "confidence": "high",
+      "notes": "GR Supra A90/J29. BMW Z4 platform. 2.0L: 18x9/18x10, 3.0L: 19x9/19x10 staggered."
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Supra",
+      "specs": {
+        "wheelSizes": [
+          { "front": { "diameter": 19, "width": 9, "offset": 32 }, "rear": { "diameter": 19, "width": 10, "offset": 40 } }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": true
+      },
+      "source": "curvaconcepts.com, burgertuning.com",
+      "confidence": "high",
+      "notes": "GR Supra A90/J29. BMW Z4 platform. 2.0L: 18x9/18x10, 3.0L: 19x9/19x10 staggered."
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Supra",
+      "specs": {
+        "wheelSizes": [
+          { "front": { "diameter": 19, "width": 9, "offset": 32 }, "rear": { "diameter": 19, "width": 10, "offset": 40 } }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": true
+      },
+      "source": "curvaconcepts.com, burgertuning.com",
+      "confidence": "high",
+      "notes": "GR Supra A90/J29. BMW Z4 platform. 2.0L: 18x9/18x10, 3.0L: 19x9/19x10 staggered."
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Supra",
+      "specs": {
+        "wheelSizes": [
+          { "front": { "diameter": 19, "width": 9, "offset": 32 }, "rear": { "diameter": 19, "width": 10, "offset": 40 } }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": true
+      },
+      "source": "curvaconcepts.com, burgertuning.com",
+      "confidence": "high",
+      "notes": "GR Supra A90/J29. BMW Z4 platform. 2.0L: 18x9/18x10, 3.0L: 19x9/19x10 staggered."
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Supra",
+      "specs": {
+        "wheelSizes": [
+          { "front": { "diameter": 19, "width": 9, "offset": 32 }, "rear": { "diameter": 19, "width": 10, "offset": 40 } }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": true
+      },
+      "source": "curvaconcepts.com, burgertuning.com",
+      "confidence": "high",
+      "notes": "GR Supra A90/J29. BMW Z4 platform. 2.0L: 18x9/18x10, 3.0L: 19x9/19x10 staggered."
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Supra",
+      "specs": {
+        "wheelSizes": [
+          { "front": { "diameter": 19, "width": 9, "offset": 32 }, "rear": { "diameter": 19, "width": 10, "offset": 40 } }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": true
+      },
+      "source": "curvaconcepts.com, burgertuning.com",
+      "confidence": "high",
+      "notes": "GR Supra A90/J29. BMW Z4 platform. 2.0L: 18x9/18x10, 3.0L: 19x9/19x10 staggered."
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Supra",
+      "specs": {
+        "wheelSizes": [
+          { "front": { "diameter": 19, "width": 9, "offset": 32 }, "rear": { "diameter": 19, "width": 10, "offset": 40 } }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 66.5,
+        "isStaggered": true
+      },
+      "source": "curvaconcepts.com, burgertuning.com",
+      "confidence": "high",
+      "notes": "GR Supra A90/J29. BMW Z4 platform. 2.0L: 18x9/18x10, 3.0L: 19x9/19x10 staggered."
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 },
+          { "diameter": 18, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "boltPatternAlt": "5x114.3 (2WD)",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, orionmotortech.com, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tacoma. 4WD/PreRunner: 6x139.7, 2WD: 5x114.3. Center bore 106.1mm for 4WD, 60.1mm for 2WD."
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 },
+          { "diameter": 18, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "boltPatternAlt": "5x114.3 (2WD)",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, orionmotortech.com, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tacoma. 4WD/PreRunner: 6x139.7, 2WD: 5x114.3. Center bore 106.1mm for 4WD, 60.1mm for 2WD."
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 },
+          { "diameter": 18, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "boltPatternAlt": "5x114.3 (2WD)",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, orionmotortech.com, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tacoma. 4WD/PreRunner: 6x139.7, 2WD: 5x114.3. Center bore 106.1mm for 4WD, 60.1mm for 2WD."
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 },
+          { "diameter": 18, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "boltPatternAlt": "5x114.3 (2WD)",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, orionmotortech.com, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tacoma (started mid-2005). 4WD/PreRunner: 6x139.7, 2WD: 5x114.3."
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 15 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "boltPattern": "6x139.7",
+        "boltPatternAlt": "5x114.3 (2WD)",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, offroadusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tacoma. 4WD: 6x139.7/106.1mm, 2WD: 5x114.3/60.1mm."
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 15 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "boltPattern": "6x139.7",
+        "boltPatternAlt": "5x114.3 (2WD)",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, offroadusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tacoma. 4WD: 6x139.7/106.1mm, 2WD: 5x114.3/60.1mm."
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 15 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "boltPattern": "6x139.7",
+        "boltPatternAlt": "5x114.3 (2WD)",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, offroadusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tacoma. 4WD: 6x139.7/106.1mm, 2WD: 5x114.3/60.1mm."
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 15 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "boltPattern": "6x139.7",
+        "boltPatternAlt": "5x114.3 (2WD)",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, offroadusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tacoma. 4WD: 6x139.7/106.1mm, 2WD: 5x114.3/60.1mm."
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 7, "offset": 15 },
+          { "diameter": 16, "width": 7, "offset": 15 }
+        ],
+        "boltPattern": "6x139.7",
+        "boltPatternAlt": "5x114.3 (2WD)",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, offroadusa.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tacoma. 4WD: 6x139.7/106.1mm, 2WD: 5x114.3/60.1mm."
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Tamaraw",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 35 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, toyota.com.ph",
+      "confidence": "medium",
+      "notes": "Philippines market utility vehicle. 195R14C tires standard. IMV platform."
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Tamaraw",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 35 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, toyota.com.ph",
+      "confidence": "medium",
+      "notes": "Philippines market utility vehicle. 195R14C tires standard. IMV platform."
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Touring Hiace",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 29 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM minivan (1999-2002). Based on Hiace Regius. Diesel engine."
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Touring Hiace",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 29 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM minivan (1999-2002). Based on Hiace Regius. Diesel engine."
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Touring Hiace",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 29 },
+          { "diameter": 16, "width": 6.5, "offset": 35 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM minivan (1999-2002). Based on Hiace Regius. Diesel engine."
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Town Ace Noah",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM minivan (1996-2001). R40/R50 chassis. Replaced by Voxy/Noah."
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Town Ace Noah",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "JDM minivan (1996-2001). R40/R50 chassis. Replaced by Voxy/Noah."
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 },
+          { "diameter": 22, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 95.2,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, fnwheels.com, tundra3.com",
+      "confidence": "high",
+      "notes": "Gen 3 Tundra (XK70, 2022+). New bolt pattern and smaller center bore vs Gen 2."
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 },
+          { "diameter": 22, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 95.2,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, fnwheels.com, tundra3.com",
+      "confidence": "high",
+      "notes": "Gen 3 Tundra (XK70, 2022+). New bolt pattern and smaller center bore vs Gen 2."
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 },
+          { "diameter": 22, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 95.2,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, fnwheels.com, tundra3.com",
+      "confidence": "high",
+      "notes": "Gen 3 Tundra (XK70, 2022+). New bolt pattern and smaller center bore vs Gen 2."
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 },
+          { "diameter": 22, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 95.2,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, fnwheels.com, tundra3.com",
+      "confidence": "high",
+      "notes": "Gen 3 Tundra (XK70, 2022+). New bolt pattern and smaller center bore vs Gen 2."
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2021). 5x150 bolt pattern unique to this generation."
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2021). 5x150 bolt pattern unique to this generation."
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2021). 5x150 bolt pattern unique to this generation."
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2021). 5x150 bolt pattern unique to this generation."
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2021). 5x150 bolt pattern unique to this generation."
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2021). 5x150 bolt pattern unique to this generation."
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2021). 5x150 bolt pattern unique to this generation."
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra facelift (XK50, 2014-2021). 5x150 bolt pattern."
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 8, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2013). 5x150 bolt pattern."
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 8, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2013). 5x150 bolt pattern."
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 8, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2013). 5x150 bolt pattern."
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 8, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2013). 5x150 bolt pattern."
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 8, "offset": 50 },
+          { "diameter": 18, "width": 8, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "boltPattern": "5x150",
+        "centerBore": 110.1,
+        "isStaggered": false
+      },
+      "source": "hardrockoffroad.com, wheel-size.com",
+      "confidence": "high",
+      "notes": "Gen 2 Tundra (XK50, 2007-2013). 5x150 bolt pattern."
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "thewheelshop.ca, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tundra (XK30/XK40, 2000-2006). 6x139.7 bolt pattern."
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "thewheelshop.ca, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tundra (XK30/XK40, 2000-2006). 6x139.7 bolt pattern."
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "thewheelshop.ca, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tundra (XK30/XK40, 2000-2006). 6x139.7 bolt pattern."
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "thewheelshop.ca, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tundra (XK30/XK40, 2000-2006). 6x139.7 bolt pattern."
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "thewheelshop.ca, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tundra (XK30/XK40, 2000-2006). 6x139.7 bolt pattern."
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "thewheelshop.ca, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tundra (XK30/XK40, 2000-2006). 6x139.7 bolt pattern."
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Tundra",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 30 },
+          { "diameter": 17, "width": 7.5, "offset": 30 }
+        ],
+        "boltPattern": "6x139.7",
+        "centerBore": 106.1,
+        "isStaggered": false
+      },
+      "source": "thewheelshop.ca, fifteen52.com",
+      "confidence": "high",
+      "notes": "Gen 1 Tundra (XK30/XK40, 2000-2006). 6x139.7 bolt pattern."
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Urban Cruiser Taisor",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 43 },
+          { "diameter": 17, "width": 6.5, "offset": 43 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "India market subcompact crossover. Suzuki Fronx rebadge. Based on Baleno platform."
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Urban Cruiser Taisor",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 43 },
+          { "diameter": 17, "width": 6.5, "offset": 43 }
+        ],
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "India market subcompact crossover. Suzuki Fronx rebadge. Based on Baleno platform."
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Venturer",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, Innova platform reference",
+      "confidence": "medium",
+      "notes": "Indonesia market. Premium Innova variant. IMV platform shared with Hilux/Fortuner."
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Venturer",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, Innova platform reference",
+      "confidence": "medium",
+      "notes": "Indonesia market. Premium Innova variant. IMV platform shared with Hilux/Fortuner."
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Venturer",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, Innova platform reference",
+      "confidence": "medium",
+      "notes": "Indonesia market. Premium Innova variant. IMV platform shared with Hilux/Fortuner."
+    }
+  ]
+}

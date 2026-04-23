@@ -1,0 +1,2737 @@
+[
+  {
+    "id": "5efd476b-b8b4-41b2-a7a4-ba6841094615",
+    "year": 1991,
+    "make": "infiniti",
+    "model": "G20",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 4x114.3 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 40,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/60R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "0186d2d7-b3f6-40a0-a2df-e73b933de2d5",
+    "year": 1992,
+    "make": "infiniti",
+    "model": "G20",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 4x114.3 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 40,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/60R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "03a2434a-3422-4c83-805a-f6b411fc9db7",
+    "year": 1993,
+    "make": "infiniti",
+    "model": "G20",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 4x114.3 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 40,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/60R14",
+      "195/65R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "fd453ae3-d351-4ba8-9bae-c447c636d115",
+    "year": 1994,
+    "make": "infiniti",
+    "model": "G20",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 4x114.3 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 40,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/60R14",
+      "195/65R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "9a0a2abe-5141-4f43-b815-34e8ba81ff11",
+    "year": 1995,
+    "make": "infiniti",
+    "model": "G20",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 4x114.3 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 40,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/65R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "0b3286e1-d270-4320-9397-df5c635336fe",
+    "year": 1996,
+    "make": "infiniti",
+    "model": "G20",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 4x114.3 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 40,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/65R14"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "e0e625b4-62b3-4ec4-8eb3-bc79785d710b",
+    "year": 1999,
+    "make": "infiniti",
+    "model": "G20",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 4x114.3 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/60R15",
+      "195/65R15"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "eec48878-5f21-4cf8-a741-ccffee1881d6",
+    "year": 1996,
+    "make": "infiniti",
+    "model": "I30",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/65R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "487a33be-90f8-4127-b92f-8da79e6eab2f",
+    "year": 1997,
+    "make": "infiniti",
+    "model": "I30",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/65R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0db082d9-ac7d-4bec-8c1b-03ea610f10d9",
+    "year": 1998,
+    "make": "infiniti",
+    "model": "I30",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/65R15",
+      "215/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f937938a-f00b-42e8-a77b-c780a3234b7e",
+    "year": 1999,
+    "make": "infiniti",
+    "model": "I30",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/65R15",
+      "215/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "46078b3d-80e4-4f62-9727-40b00c78626a",
+    "year": 1993,
+    "make": "infiniti",
+    "model": "J30",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9615d004-7d14-4ef8-bc9d-bb574b384704",
+    "year": 1994,
+    "make": "infiniti",
+    "model": "J30",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b80c772a-9e77-484e-a3c8-7756ce2d9db4",
+    "year": 1995,
+    "make": "infiniti",
+    "model": "J30",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "33ee5c33-7d4f-4a9a-84b1-918c87828489",
+    "year": 1996,
+    "make": "infiniti",
+    "model": "J30",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8c45f8d7-7ba1-474c-87b5-1ddc5f41599b",
+    "year": 1997,
+    "make": "infiniti",
+    "model": "J30",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ceb596eb-155f-4e4a-a820-4592f3d3d234",
+    "year": 1990,
+    "make": "infiniti",
+    "model": "Q45",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4a5b3f56-4574-4b5c-9e55-779a9681eb8f",
+    "year": 1991,
+    "make": "infiniti",
+    "model": "Q45",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "144b8723-3536-4dba-94cd-f6afd4246a96",
+    "year": 1992,
+    "make": "infiniti",
+    "model": "Q45",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "74c06680-6574-4e1e-a2d6-8b6c616cad92",
+    "year": 1993,
+    "make": "infiniti",
+    "model": "Q45",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "1397ae1d-5eef-44fd-8eab-6c95ab68e3d3",
+    "year": 1994,
+    "make": "infiniti",
+    "model": "Q45",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e03dcf3f-9b22-4e4d-86a4-5a486afe3cb6",
+    "year": 1995,
+    "make": "infiniti",
+    "model": "Q45",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "33cf0e72-e1f6-494c-92f9-21064e37681f",
+    "year": 1996,
+    "make": "infiniti",
+    "model": "Q45",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/65R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "98b990ad-d71f-495a-afca-3dc9289cfe24",
+    "year": 1997,
+    "make": "infiniti",
+    "model": "Q45",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a562e733-1252-437e-b9c2-84c481de3743",
+    "year": 1998,
+    "make": "infiniti",
+    "model": "Q45",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "83a50a2d-aa5d-44a2-a275-5675a91a5196",
+    "year": 1999,
+    "make": "infiniti",
+    "model": "Q45",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "09328957-910b-4793-bd8c-fc4f94ecd8e2",
+    "year": 1997,
+    "make": "infiniti",
+    "model": "QX4",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 6x139.7 to 5x114.3; Hub bore corrected from 100.1 to 66.1",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 20,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/70R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "77d8e68c-fcda-4c22-b1e3-d2024e311fc5",
+    "year": 1998,
+    "make": "infiniti",
+    "model": "QX4",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 6x139.7 to 5x114.3; Hub bore corrected from 100.1 to 66.1",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 20,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/70R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "818f0c29-66b9-4151-911d-a9c39156b45e",
+    "year": 1999,
+    "make": "infiniti",
+    "model": "QX4",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 6x139.7 to 5x114.3; Hub bore corrected from 100.1 to 66.1",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 20,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/70R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d0ba0ea7-4d76-49d5-b868-af7d0c894534",
+    "year": 2014,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4df15c3c-ddbc-489c-9b39-34280a0bd55b",
+    "year": 2015,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b4737fc6-4226-47dd-8fa7-03bce4169409",
+    "year": 2016,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "590632e5-1d9e-4e27-8e8c-bdc584b64f23",
+    "year": 2017,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "5a81fc98-d0cb-4ff3-a391-3e163cb760dd",
+    "year": 2018,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ab485350-3e00-4660-9003-35d13044d2f9",
+    "year": 2019,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 47,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19",
+      "245/40ZR19",
+      "265/35ZR19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "6f607ef3-3f43-4644-9e41-c1f960ee5247",
+    "year": 2020,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "95da8cb8-a61d-4209-90fc-e11c6fdaaac5",
+    "year": 2021,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19",
+      "245/40ZR19",
+      "265/35ZR19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "12148bc5-a9f1-43d3-86e4-08bb406df2ba",
+    "year": 2022,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19",
+      "245/40ZR19",
+      "265/35ZR19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e6c3258b-1e42-48c3-bd27-52a925f3a007",
+    "year": 2023,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19",
+      "245/40ZR19",
+      "265/35ZR19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e07e1ddf-7b4d-4ac6-81bf-8cb8704a466e",
+    "year": 2024,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19",
+      "245/40ZR19",
+      "265/35ZR19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "6079fc5a-9422-4147-b495-88c539d99f59",
+    "year": 2025,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a770c8dd-ff55-4dac-bd09-dcf333b2c870",
+    "year": 2026,
+    "make": "infiniti",
+    "model": "q50",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/40R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9900c244-de9a-4815-a01a-c690e30e6914",
+    "year": 2013,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "verifiedTireSizes": [
+      "225/50R18",
+      "245/40R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "475f67bd-aaf4-4f8a-874a-85e04df7a460",
+    "year": 2014,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 8.5,
+        "offset": 27,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/50R18",
+      "245/40R19",
+      "275/35R19",
+      "225/45ZR19",
+      "245/40ZR19",
+      "245/45R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "afc42bf3-ea04-44f6-91dc-02f55a133d4a",
+    "year": 2015,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 43,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 8.5,
+        "offset": 27,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/50R18",
+      "245/40R19",
+      "275/35R19",
+      "225/45ZR19",
+      "245/40ZR19",
+      "245/45R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "6269a799-7877-4ecd-8330-cb0fcff4fdc3",
+    "year": 2016,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "2.0t",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 47,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/40ZR19",
+      "255/40ZR19",
+      "255/35ZR20",
+      "275/35ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "cc56a148-1e39-4a21-9539-0cc198abd11b",
+    "year": 2017,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R18",
+      "245/40R19",
+      "275/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "52881a6d-84f2-4e48-8755-33d4ea98b39b",
+    "year": 2018,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R18",
+      "245/40R19",
+      "275/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0a2e55e7-5d81-4d4a-aae3-b50c54ccb3c2",
+    "year": 2019,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R18",
+      "245/40R19",
+      "275/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "46a6ca23-e3ff-4ea6-95c5-b5ad03d67bf9",
+    "year": 2020,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R18",
+      "245/40R19",
+      "275/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0e4df62e-b999-403e-88aa-6dc6ce39984e",
+    "year": 2021,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R18",
+      "245/40R19",
+      "275/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0c0e799f-277e-4310-bdc7-e3e60aad9e83",
+    "year": 2022,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "Pure, Luxe, Sensory, Red Sport 400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R18",
+      "245/40R19",
+      "275/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "84a013ae-7b04-4961-9cd2-fc50506dbb52",
+    "year": 2023,
+    "make": "infiniti",
+    "model": "q60",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "verifiedTireSizes": [
+      "225/50R18",
+      "245/40R19",
+      "265/35R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4f3cef73-843a-497e-a352-8c4b5b7f96b0",
+    "year": 2013,
+    "make": "infiniti",
+    "model": "q70",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "265/40R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "41e3b1ec-a9fa-4999-80ff-11913cd1fc63",
+    "year": 2020,
+    "make": "infiniti",
+    "model": "q70",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "265/40R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ff7e59a1-d713-4fc9-991c-e38bff2d6350",
+    "year": 2021,
+    "make": "infiniti",
+    "model": "q70",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R18",
+      "265/40R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8e90705b-e55d-46c2-b2e4-710ad7f207c2",
+    "year": 2008,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R17",
+      "225/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b7d9fa69-f366-4e6a-af17-79df21a62fc2",
+    "year": 2009,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R17",
+      "225/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d0ab6e74-ed52-4b8c-9622-96660e57edbf",
+    "year": 2010,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R17",
+      "225/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "80989b6d-22c0-4a5f-8037-d8f43775db2b",
+    "year": 2011,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R17",
+      "225/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d95d5a80-a7a1-4b00-b853-a4caf1c3cbb6",
+    "year": 2012,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R17",
+      "225/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4c50fd29-a3f3-4e70-876e-ad75f167f344",
+    "year": 2013,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 10,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R17",
+      "225/55R18",
+      "245/45R19",
+      "245/45ZR19",
+      "255/40ZR20",
+      "285/30ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "885657dd-bfec-4194-89bf-03b1f96a9b5c",
+    "year": 2014,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R17",
+      "225/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "acc69776-2c7a-4040-ad84-f87a22a39786",
+    "year": 2015,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 47,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 10,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R17",
+      "225/55R18",
+      "245/45R19",
+      "245/45ZR19",
+      "255/40ZR20",
+      "285/30ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "dd01174e-860d-4c21-baca-d898d4fe7fcb",
+    "year": 2016,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R17",
+      "225/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e82b89aa-fd2c-434d-9d83-2dda2246ce39",
+    "year": 2017,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R17",
+      "225/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "86b89931-8d58-409d-8294-cae9cd4d43d8",
+    "year": 2019,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20",
+      "255/45ZR20",
+      "255/50R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3ce68b00-c6a8-4bd7-9426-c702e25f80fa",
+    "year": 2020,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20",
+      "255/45ZR20",
+      "255/50R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e3e9eddc-333e-4edb-8b57-19e8f22f4400",
+    "year": 2021,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "164c4479-1393-44fd-ac54-082532ed6147",
+    "year": 2022,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "7c36e502-09c7-4876-8894-fef6f2b8f073",
+    "year": 2023,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "55edbb01-79c7-4e40-987b-e639609b6859",
+    "year": 2024,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 39,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20",
+      "255/45ZR20",
+      "255/50R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a225d9bd-2d04-4f1d-8536-9e3f456391fd",
+    "year": 2025,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ad67cb39-dead-4b75-83a3-fffec7a4383c",
+    "year": 2026,
+    "make": "infiniti",
+    "model": "qx50",
+    "trim": "Pure, Luxe, Essential, Sensory, Autograph",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/55R19",
+      "255/45R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0f9700d4-09b4-4781-bd2b-f7006b4f0cd4",
+    "year": 2024,
+    "make": "infiniti",
+    "model": "qx55",
+    "trim": "2.0 VC-Turbo",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "66.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 44,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/45ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  }
+]

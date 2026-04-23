@@ -1,0 +1,1100 @@
+{
+  "batchId": "25",
+  "validatedAt": "2026-04-21T21:48:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "265/65R18", "285/55R19", "285/50R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "Base Model": ["265/65R18", "285/45R22"],
+        "Luxury": ["285/45R22"],
+        "Platinum": ["285/45R22"],
+        "Premium": ["285/45R22"],
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Luxury": ["285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium": ["285/45R22"],
+        "EXT": ["265/65R18", "285/45R22"],
+        "EXT Luxury": ["285/45R22"],
+        "EXT Premium": ["285/45R22"],
+        "Hybrid": ["285/45R22"],
+        "Hybrid Platinum": ["285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated",
+      "notes": "Removed non-OEM sizes (P275/55R20, 285/55R19, 285/50R20)"
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "265/65R18", "285/55R19", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "Base Model": ["265/65R18", "285/45R22"],
+        "Platinum": ["285/45R22"],
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "EXT": ["265/65R18", "285/45R22"],
+        "Hybrid": ["285/45R22"],
+        "Hybrid Platinum": ["285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "Base Model": ["265/65R18", "285/45R22"],
+        "Platinum": ["285/45R22"],
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "EXT": ["265/65R18", "285/45R22"],
+        "Hybrid": ["285/45R22"],
+        "Hybrid Platinum": ["285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "AWD": ["265/65R18", "285/45R22"],
+        "RWD": ["265/65R18", "285/45R22"],
+        "Platinum": ["285/45R22"],
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "EXT": ["265/65R18", "285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "AWD": ["265/65R18", "285/45R22"],
+        "RWD": ["265/65R18", "285/45R22"],
+        "ESV AWD": ["265/65R18", "285/45R22"],
+        "EXT AWD": ["265/65R18", "285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["265/70R17", "265/65R18", "285/55R19", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "2WD": ["265/70R17"],
+        "AWD": ["265/70R17", "275/55R20"],
+        "ESV AWD": ["265/70R17", "275/55R20"],
+        "ESV AWD Platinum": ["275/55R20"],
+        "EXT": ["265/70R17", "275/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "validated",
+      "notes": "Removed non-OEM sizes (265/65R18, 285/55R19, 285/45R22)"
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["P265/65R17", "P265/60R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "2WD": ["265/70R17"],
+        "AWD": ["265/70R17"],
+        "ESV AWD": ["265/70R17", "275/55R20"],
+        "ESV AWD Platinum": ["275/55R20"],
+        "EXT": ["265/70R17", "275/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "validated",
+      "notes": "Corrected to actual OEM sizes"
+    },
+    {
+      "year": 2004,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["P265/65R17", "P265/60R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "AWD": ["265/70R17"],
+        "Base Model": ["265/70R17"],
+        "ESV": ["265/70R17", "275/55R20"],
+        "EXT": ["265/70R17", "275/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2003,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["P265/65R17", "P265/60R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/70R17"],
+      "trims": {
+        "AWD": ["265/70R17"],
+        "Base Model": ["265/70R17"],
+        "ESV": ["265/70R17"],
+        "EXT": ["265/70R17"]
+      },
+      "source": "tiresize.com",
+      "status": "validated",
+      "notes": "2003 only had 265/70R17 as OEM"
+    },
+    {
+      "year": 2002,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["265/70R17", "265/65R18", "285/55R19", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17"],
+      "trims": {
+        "AWD": ["265/70R17"],
+        "Base Model": ["265/70R17"],
+        "EXT": ["265/70R17"]
+      },
+      "source": "tiresize.com",
+      "status": "validated",
+      "notes": "2002 only had 265/70R17 as OEM size"
+    },
+    {
+      "year": 2001,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["255/70R17"],
+      "validatedTireSizes": ["265/70R17"],
+      "trims": {
+        "Base Model": ["265/70R17"]
+      },
+      "source": "tiresize.com",
+      "status": "corrected",
+      "notes": "Current size 255/70R17 appears incorrect; 265/70R17 is OEM"
+    },
+    {
+      "year": 2000,
+      "make": "cadillac",
+      "model": "escalade",
+      "currentTireSizes": ["265/70R16"],
+      "validatedTireSizes": ["265/70R16"],
+      "trims": {
+        "Base Model": ["265/70R16"]
+      },
+      "source": "tiresize.com",
+      "status": "verified"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/50R22", "P285/45R22", "P285/40R24"],
+      "validatedTireSizes": ["275/50R22", "285/45R22", "285/40R24"],
+      "trims": {
+        "Base Model": ["275/50R22", "285/45R22"],
+        "Luxury": ["275/50R22", "285/45R22"],
+        "Platinum Luxury": ["275/50R22", "285/45R22"],
+        "Platinum Sport": ["275/50R22", "285/45R22"],
+        "Sport": ["275/50R22", "285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/50R22", "P285/45R22", "P285/40R24"],
+      "validatedTireSizes": ["275/50R22", "285/45R22", "285/40R24"],
+      "trims": {
+        "ESV Luxury": ["275/50R22"],
+        "ESV Premium Luxury": ["275/50R22"],
+        "ESV Premium Luxury Platinum": ["275/50R22"],
+        "ESV Sport": ["275/50R22"],
+        "ESV Sport Platinum": ["275/50R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/50R22", "P285/45R22", "P285/40R24"],
+      "validatedTireSizes": ["275/50R22", "285/45R22", "285/40R24"],
+      "trims": {
+        "ESV Luxury": ["275/50R22"],
+        "ESV Premium Luxury": ["275/50R22"],
+        "ESV Premium Luxury Platinum": ["275/50R22"],
+        "ESV Sport": ["275/50R22"],
+        "ESV Sport Platinum": ["275/50R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/50R22", "P285/45R22", "P285/40R24"],
+      "validatedTireSizes": ["275/50R22", "285/45R22", "285/40R24"],
+      "trims": {
+        "ESV Luxury": ["275/50R22"],
+        "ESV Premium Luxury": ["275/50R22"],
+        "ESV Premium Luxury Platinum": ["275/50R22"],
+        "ESV Sport": ["275/50R22"],
+        "ESV Sport Platinum": ["275/50R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/50R22", "P285/45R22", "P285/40R24"],
+      "validatedTireSizes": ["275/50R22", "285/45R22", "285/40R24"],
+      "trims": {
+        "ESV Luxury": ["275/50R22"],
+        "ESV Premium Luxury": ["275/50R22"],
+        "ESV Premium Luxury Platinum": ["275/50R22"],
+        "ESV Sport": ["275/50R22"],
+        "ESV Sport Platinum": ["275/50R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/50R22", "P285/45R22", "P285/40R24"],
+      "validatedTireSizes": ["275/50R22"],
+      "trims": {
+        "ESV Luxury": ["275/50R22"],
+        "ESV Premium Luxury": ["275/50R22"],
+        "ESV Premium Luxury Platinum": ["275/50R22"],
+        "ESV Sport": ["275/50R22"],
+        "ESV Sport Platinum": ["275/50R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated",
+      "notes": "2021 ESV only had 275/50R22; 285/45R22 and 285/40R24 are optional/aftermarket"
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["275/55R20", "285/45R22"],
+      "trims": {
+        "ESV": ["275/55R20", "285/45R22"],
+        "ESV Luxury": ["275/55R20", "285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium Luxury": ["275/55R20", "285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "verified"
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["275/55R20", "285/45R22"],
+      "trims": {
+        "ESV": ["275/55R20", "285/45R22"],
+        "ESV Luxury": ["275/55R20", "285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium Luxury": ["275/55R20", "285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "verified"
+    },
+    {
+      "year": 2018,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["275/55R20", "285/45R22"],
+      "trims": {
+        "ESV": ["275/55R20", "285/45R22"],
+        "ESV Luxury": ["275/55R20", "285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium Luxury": ["275/55R20", "285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "verified"
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["275/55R20", "285/45R22"],
+      "trims": {
+        "ESV": ["275/55R20", "285/45R22"],
+        "ESV Luxury": ["275/55R20", "285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium Luxury": ["275/55R20", "285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "verified"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["275/55R20", "285/45R22"],
+      "trims": {
+        "ESV": ["275/55R20", "285/45R22"],
+        "ESV Luxury": ["275/55R20", "285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium": ["275/55R20", "285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "verified"
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["275/55R20", "285/45R22"],
+      "trims": {
+        "ESV": ["275/55R20", "285/45R22"],
+        "ESV Luxury": ["275/55R20", "285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium": ["275/55R20", "285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "verified"
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Luxury": ["285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium": ["285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated",
+      "notes": "Removed P275/55R20 - not OEM for 2014"
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Luxury": ["285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium": ["285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Luxury": ["285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium": ["285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Luxury": ["285/45R22"],
+        "ESV Platinum": ["285/45R22"],
+        "ESV Premium": ["285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Platinum": ["285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Platinum": ["285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "ESV": ["265/65R18", "285/45R22"],
+        "ESV Platinum": ["285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "285/45R22"],
+      "trims": {
+        "ESV AWD": ["265/65R18", "285/45R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R17", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "ESV AWD": ["265/70R17", "275/55R20"],
+        "ESV AWD Platinum": ["275/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R17", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "ESV AWD": ["265/70R17", "275/55R20"],
+        "ESV AWD Platinum": ["275/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2004,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R17", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "ESV": ["265/70R17", "275/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "validated"
+    },
+    {
+      "year": 2003,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "currentTireSizes": ["P265/65R17", "P275/55R20", "P285/45R22"],
+      "validatedTireSizes": ["265/70R17"],
+      "trims": {
+        "ESV": ["265/70R17"]
+      },
+      "source": "tiresize.com",
+      "status": "validated",
+      "notes": "2003 ESV only had 265/70R17"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "escalade-iq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R24", "285/45R24"],
+      "trims": {
+        "Luxury": ["275/50R24"],
+        "Sport": ["285/45R24"]
+      },
+      "source": "web search / wheel-size.com",
+      "status": "added",
+      "notes": "Electric version with 24-inch wheels standard"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "escalade-iq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R24", "285/45R24"],
+      "trims": {
+        "Luxury": ["275/50R24"],
+        "Sport": ["285/45R24"]
+      },
+      "source": "web search / wheel-size.com",
+      "status": "added",
+      "notes": "Electric version with 24-inch wheels standard"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "escalade-iq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R24", "285/45R24"],
+      "trims": {
+        "Luxury": ["275/50R24"],
+        "Sport": ["285/45R24"]
+      },
+      "source": "web search / wheel-size.com",
+      "status": "added",
+      "notes": "Electric version with 24-inch wheels standard"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R22", "285/45R22"],
+      "trims": {
+        "V": ["275/50R22", "285/45R22"]
+      },
+      "source": "tiresize.com / goodyear.com",
+      "status": "added"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R22", "285/45R22"],
+      "trims": {
+        "V": ["275/50R22", "285/45R22"]
+      },
+      "source": "tiresize.com / goodyear.com",
+      "status": "added"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R22", "285/45R22"],
+      "trims": {
+        "V": ["275/50R22", "285/45R22"]
+      },
+      "source": "tiresize.com / goodyear.com",
+      "status": "added"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R22"],
+      "trims": {
+        "V": ["275/50R22"]
+      },
+      "source": "tiresize.com / goodyear.com",
+      "status": "added"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "escalade-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/50R22"],
+      "trims": {
+        "V": ["275/50R22"]
+      },
+      "source": "tiresize.com",
+      "status": "added",
+      "notes": "First year for Escalade-V"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "gt4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "Base": ["235/55R19"],
+        "Premium": ["255/45R20"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market crossover model"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "gt4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "Base": ["235/55R19"],
+        "Premium": ["255/45R20"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market crossover model"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "gt4",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "Base": ["235/55R19"],
+        "Premium": ["255/45R20"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market crossover model"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "lyriq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/50R20", "275/40R22"],
+      "trims": {
+        "Luxury": ["265/50R20", "275/40R22"],
+        "Premium Luxury": ["265/50R20", "275/40R22"],
+        "Premium Sport": ["265/50R20", "275/40R22"],
+        "Signature Luxury": ["275/40R22"],
+        "Signature Sport": ["275/40R22"],
+        "Sport": ["265/50R20", "275/40R22"],
+        "V": ["275/40R22"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "lyriq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/50R20", "275/40R22"],
+      "trims": {
+        "Luxury": ["265/50R20", "275/40R22"],
+        "Sport": ["265/50R20", "275/40R22"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "lyriq",
+      "currentTireSizes": ["265/50R20", "275/40R22", "275/45R21"],
+      "validatedTireSizes": ["265/50R20", "275/40R22"],
+      "trims": {
+        "Luxury": ["265/50R20", "275/40R22"],
+        "Sport": ["265/50R20", "275/40R22"],
+        "Tech": ["265/50R20", "275/40R22"]
+      },
+      "source": "tiresize.com",
+      "status": "validated",
+      "notes": "Removed 275/45R21 - not a standard OEM size"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "lyriq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/50R20", "275/40R22"],
+      "trims": {
+        "Luxury": ["265/50R20", "275/40R22"],
+        "Sport": ["265/50R20", "275/40R22"],
+        "Tech": ["265/50R20", "275/40R22"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "lyriq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/50R20", "275/40R22"],
+      "trims": {
+        "Debut Edition": ["265/50R20", "275/40R22"]
+      },
+      "source": "tiresize.com",
+      "status": "added",
+      "notes": "2022 was limited Debut Edition only"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "lyriq-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/40R22"],
+      "trims": {
+        "V": ["275/40R22"]
+      },
+      "source": "caranddriver.com",
+      "status": "added",
+      "notes": "High-performance version with summer tires"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "lyriq-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/40R22"],
+      "trims": {
+        "V": ["275/40R22"]
+      },
+      "source": "caranddriver.com / wheel-size.com",
+      "status": "added",
+      "notes": "First year for Lyriq-V"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "optiq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R20", "275/45R21"],
+      "trims": {
+        "Luxury": ["245/50R20", "275/45R21"],
+        "Premium Luxury": ["245/50R20", "275/45R21"],
+        "Premium Sport": ["245/50R20", "275/45R21"],
+        "Sport": ["245/50R20", "275/45R21"],
+        "V": ["275/45R21"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "optiq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R20", "275/45R21"],
+      "trims": {
+        "Luxury": ["245/50R20", "275/45R21"],
+        "Sport": ["245/50R20", "275/45R21"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "optiq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R20", "275/45R21"],
+      "trims": {
+        "Base": ["245/50R20", "275/45R21"]
+      },
+      "source": "tiresize.com",
+      "status": "added",
+      "notes": "Entry-level EV crossover"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "optiq",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/50R20", "275/45R21"],
+      "trims": {
+        "Base": ["245/50R20", "275/45R21"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market initially"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "optiq-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/40R21"],
+      "trims": {
+        "V": ["275/40R21"]
+      },
+      "source": "caranddriver.com",
+      "status": "added",
+      "notes": "Performance version with 21-inch wheels"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "optiq-v",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/40R21"],
+      "trims": {
+        "V": ["275/40R21"]
+      },
+      "source": "caranddriver.com",
+      "status": "added",
+      "notes": "First year for Optiq-V"
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "sls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R18", "245/45R19"],
+      "trims": {
+        "3.6L": ["235/50R18", "245/45R19"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market luxury sedan (based on STS)"
+    },
+    {
+      "year": 2012,
+      "make": "cadillac",
+      "model": "sls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R18", "245/45R19"],
+      "trims": {
+        "3.6L": ["235/50R18", "245/45R19"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market luxury sedan"
+    },
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "sls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R18", "245/45R19"],
+      "trims": {
+        "3.6L": ["235/50R18", "245/45R19"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market luxury sedan"
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "sls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R18", "245/45R19"],
+      "trims": {
+        "3.6L": ["235/50R18", "245/45R19"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market luxury sedan"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "sls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R18", "245/45R19"],
+      "trims": {
+        "3.6L": ["235/50R18", "245/45R19"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market luxury sedan"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "sls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R18", "245/45R19"],
+      "trims": {
+        "3.6L": ["235/50R18", "245/45R19"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market luxury sedan"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "sls",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/50R18", "245/45R19"],
+      "trims": {
+        "3.6L": ["235/50R18", "245/45R19"]
+      },
+      "source": "wheel-size.com",
+      "status": "added",
+      "notes": "China-market luxury sedan (first year)"
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "srx",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "N/A",
+      "status": "invalid",
+      "notes": "SRX was discontinued after 2016; replaced by XT5"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "srx",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": ["235/65R18"],
+        "Performance": ["235/55R20"],
+        "Premium": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "srx",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": ["235/65R18"],
+        "Performance": ["235/55R20"],
+        "Premium": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "srx",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": ["235/65R18"],
+        "Performance": ["235/55R20"],
+        "Premium": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "srx",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": ["235/65R18"],
+        "Performance": ["235/55R20"],
+        "Premium": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2012,
+      "make": "cadillac",
+      "model": "srx",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": ["235/65R18"],
+        "Performance": ["235/55R20"],
+        "Premium": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "srx",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "FWD Base": ["235/65R18"],
+        "FWD Luxury": ["235/65R18"],
+        "FWD Performance": ["235/55R20"],
+        "FWD Premium": ["235/55R20"],
+        "AWD Luxury": ["235/65R18"],
+        "AWD Performance": ["235/55R20"],
+        "AWD Premium": ["235/55R20"],
+        "2.8L Turbo AWD Performance": ["235/55R20"],
+        "2.8L Turbo AWD Premium": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "srx",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "3.0L FWD Base": ["235/65R18"],
+        "3.0L FWD Luxury": ["235/65R18"],
+        "3.0L FWD Performance": ["235/55R20"],
+        "3.0L FWD Premium": ["235/65R18", "235/55R20"],
+        "3.0L AWD Luxury": ["235/65R18"],
+        "3.0L AWD Performance": ["235/55R20"],
+        "3.0L AWD Premium": ["235/55R20"],
+        "2.8L Turbo AWD Performance": ["235/55R20"],
+        "2.8L Turbo AWD Premium": ["235/55R20"]
+      },
+      "source": "tiresize.com",
+      "status": "added"
+    }
+  ],
+  "summary": {
+    "verified": 3,
+    "validated": 27,
+    "corrected": 1,
+    "added": 43,
+    "invalid": 1,
+    "total": 75
+  }
+}

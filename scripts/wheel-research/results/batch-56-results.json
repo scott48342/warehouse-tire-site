@@ -1,0 +1,1383 @@
+{
+  "batchId": "56",
+  "processedAt": "2026-04-21T21:17:00Z",
+  "totalVehicles": 75,
+  "successCount": 75,
+  "failureCount": 0,
+  "results": [
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "C-Pod",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 4.0, "offset": 30}
+        ],
+        "tireSizes": ["155/70R13"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Electric kei car - Japan market"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "C-Pod",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 4.0, "offset": 30}
+        ],
+        "tireSizes": ["155/70R13"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Electric kei car - Japan market"
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Calya",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 42}
+        ],
+        "tireSizes": ["175/65R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Indonesia market MPV - Daihatsu platform shared with Agya"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Calya",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 42}
+        ],
+        "tireSizes": ["175/65R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Indonesia market MPV"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Calya",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 42}
+        ],
+        "tireSizes": ["175/65R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Indonesia market MPV"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Calya",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 42}
+        ],
+        "tireSizes": ["175/65R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Indonesia market MPV"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Calya",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 42}
+        ],
+        "tireSizes": ["175/65R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Indonesia market MPV"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Calya",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 42}
+        ],
+        "tireSizes": ["175/65R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Indonesia market MPV"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Calya",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 42}
+        ],
+        "tireSizes": ["175/65R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Indonesia market MPV - Facelift model"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Calya",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 42}
+        ],
+        "tireSizes": ["175/65R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Indonesia market MPV"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Calya",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 42}
+        ],
+        "tireSizes": ["175/65R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Indonesia market MPV"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Calya",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 42}
+        ],
+        "tireSizes": ["175/65R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "Indonesia market MPV - First year"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7.0, "offset": 45},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["205/65R16", "215/55R17", "225/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV50 generation (2011-2016)"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7.0, "offset": 45},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["205/65R16", "215/55R17", "225/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV50 generation (2011-2016)"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7.0, "offset": 45},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["205/65R16", "215/55R17", "225/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV50 generation (2011-2016)"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7.0, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV40 generation (2006-2009)"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7.0, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV40 generation (2006-2009)"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 45},
+          {"diameter": 17, "width": 7.0, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV40 generation (2006-2009)"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50}
+        ],
+        "tireSizes": ["205/65R15", "215/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV30 generation (2001-2006)"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50}
+        ],
+        "tireSizes": ["205/65R15", "215/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV30 generation (2001-2006)"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50}
+        ],
+        "tireSizes": ["205/65R15", "215/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV30 generation (2001-2006)"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50}
+        ],
+        "tireSizes": ["205/65R15", "215/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV30 generation (2001-2006)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["195/70R14", "205/65R15", "205/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV20 generation (1996-2001)"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Camry",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["195/70R14", "205/65R15", "205/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "XV20 generation (1996-2001)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Camry Gracia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["205/65R15", "205/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM XV20 wagon (1999-2001)"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Camry Gracia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["205/65R15", "205/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM XV20 wagon (1999-2001)"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Celica",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6.5, "offset": 39},
+          {"diameter": 17, "width": 7.0, "offset": 39}
+        ],
+        "tireSizes": ["195/60R15", "205/50R16", "215/45R17"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T230 generation (1999-2006) - Final year"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Celica",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6.5, "offset": 39},
+          {"diameter": 17, "width": 7.0, "offset": 39}
+        ],
+        "tireSizes": ["195/60R15", "205/50R16", "215/45R17"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T230 generation (1999-2006)"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Celica",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6.5, "offset": 39},
+          {"diameter": 17, "width": 7.0, "offset": 39}
+        ],
+        "tireSizes": ["195/60R15", "205/50R16", "215/45R17"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T230 generation (1999-2006)"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Celica",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6.5, "offset": 39},
+          {"diameter": 17, "width": 7.0, "offset": 39}
+        ],
+        "tireSizes": ["195/60R15", "205/50R16", "215/45R17"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T230 generation (1999-2006)"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Celica",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6.5, "offset": 39},
+          {"diameter": 17, "width": 7.0, "offset": 39}
+        ],
+        "tireSizes": ["195/60R15", "205/50R16", "215/45R17"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T230 generation (1999-2006)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Celica",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6.5, "offset": 39},
+          {"diameter": 17, "width": 7.0, "offset": 39}
+        ],
+        "tireSizes": ["195/60R15", "205/50R16", "215/45R17"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T230 generation (1999-2006)"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Celica",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6.5, "offset": 39},
+          {"diameter": 16, "width": 6.5, "offset": 39},
+          {"diameter": 17, "width": 7.0, "offset": 39}
+        ],
+        "tireSizes": ["195/60R15", "205/50R16", "215/45R17"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T230 generation (1999-2006)"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Celsior",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.0, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["225/60R16", "225/55R17", "245/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM F30 generation (2000-2006) - Final year, equivalent to Lexus LS430"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Celsior",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.0, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["225/60R16", "225/55R17", "245/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM F30 generation (2000-2006)"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Celsior",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.0, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["225/60R16", "225/55R17", "245/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM F30 generation (2000-2006)"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Celsior",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.0, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["225/60R16", "225/55R17", "245/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM F30 generation (2000-2006)"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Celsior",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.0, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["225/60R16", "225/55R17", "245/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM F30 generation (2000-2006)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Celsior",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.0, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["225/60R16", "225/55R17", "245/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM F30 generation (2000-2006)"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Celsior",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7.0, "offset": 45},
+          {"diameter": 17, "width": 7.5, "offset": 45},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["225/60R16", "225/55R17", "245/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM F30 generation (2000-2006)"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Corolla iM",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["225/45R17", "225/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Final year - replaced by Corolla Hatchback"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Corolla iM",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["225/45R17", "225/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Toyota-badged Scion iM"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Corolla iM",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.0, "offset": 50},
+          {"diameter": 18, "width": 7.5, "offset": 45}
+        ],
+        "tireSizes": ["225/45R17", "225/45R18"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "First year - rebranded from Scion iM"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Corolla Runx",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 39},
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/70R14", "195/60R15", "195/55R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 hatchback (2001-2009)"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Corolla Runx",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 39},
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/70R14", "195/60R15", "195/55R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 hatchback (2001-2009)"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Corolla Runx",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 39},
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/70R14", "195/60R15", "195/55R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 hatchback (2001-2009)"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Corolla Runx",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 39},
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/70R14", "195/60R15", "195/55R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 hatchback (2001-2009)"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Corolla Runx",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 39},
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/70R14", "195/60R15", "195/55R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 hatchback (2001-2009)"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Corolla Runx",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 39},
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/70R14", "195/60R15", "195/55R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 hatchback (2001-2009)"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Corolla Runx",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 39},
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/70R14", "195/60R15", "195/55R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 hatchback (2001-2009)"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Corolla Runx",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 39},
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45},
+          {"diameter": 16, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/70R14", "195/60R15", "195/55R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 hatchback (2001-2009)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Corolla Runx",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 39},
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/70R14", "195/60R15"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 hatchback - First year"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Corolla Spacio",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["185/70R14", "195/60R15"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 MPV - Gen II (2001-2007)"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Corolla Spacio",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["185/70R14", "195/60R15"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 MPV - Gen II (2001-2007)"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Corolla Spacio",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["185/70R14", "195/60R15"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 MPV - Gen II (2001-2007)"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Corolla Spacio",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["185/70R14", "195/60R15"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 MPV - Gen II (2001-2007)"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Corolla Spacio",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["185/70R14", "195/60R15"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 MPV - Gen II (2001-2007)"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Corolla Spacio",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["185/70R14", "195/60R15"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 MPV - Gen II (2001-2007)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Corolla Spacio",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 6.0, "offset": 45},
+          {"diameter": 15, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["185/70R14", "195/60R15"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E120 MPV - Gen II first year (2001-2007)"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Corolla Spacio",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45}
+        ],
+        "tireSizes": ["185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM E110 MPV - Gen I (1997-2001)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Corona Premio",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 14, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM T210 generation (1996-2001) - Final year"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Corona Premio",
+      "specs": {
+        "boltPattern": "5x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 45},
+          {"diameter": 14, "width": 6.0, "offset": 45}
+        ],
+        "tireSizes": ["175/70R14", "185/65R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM T210 generation (1996-2001)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Cresta",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 50},
+          {"diameter": 15, "width": 6.0, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 7.5, "offset": 55}
+        ],
+        "tireSizes": ["185/70R14", "195/65R15", "205/55R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM X100 generation (1996-2001) - Final year"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Cresta",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 50},
+          {"diameter": 15, "width": 6.0, "offset": 50},
+          {"diameter": 16, "width": 6.5, "offset": 50},
+          {"diameter": 16, "width": 7.5, "offset": 55}
+        ],
+        "tireSizes": ["185/70R14", "195/65R15", "205/55R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM X100 generation (1996-2001)"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Duet",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 4.5, "offset": 35},
+          {"diameter": 14, "width": 5.0, "offset": 40}
+        ],
+        "tireSizes": ["145/80R13", "165/70R13", "175/60R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM kei car (1998-2004) - Final year"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Duet",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 4.5, "offset": 35},
+          {"diameter": 14, "width": 5.0, "offset": 40}
+        ],
+        "tireSizes": ["145/80R13", "165/70R13", "175/60R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM kei car (1998-2004)"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Duet",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 4.5, "offset": 35},
+          {"diameter": 14, "width": 5.0, "offset": 40}
+        ],
+        "tireSizes": ["145/80R13", "165/70R13", "175/60R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM kei car (1998-2004)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Duet",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 4.5, "offset": 35},
+          {"diameter": 14, "width": 5.0, "offset": 40}
+        ],
+        "tireSizes": ["145/80R13", "165/70R13", "175/60R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM kei car (1998-2004)"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Duet",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          {"diameter": 13, "width": 4.5, "offset": 35},
+          {"diameter": 14, "width": 5.0, "offset": 40}
+        ],
+        "tireSizes": ["145/80R13", "165/70R13", "175/60R14"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "JDM kei car (1998-2004)"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "E-Z",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 39}
+        ],
+        "tireSizes": ["205/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "China market sedan (2011-2018) - Final year"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "E-Z",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 39}
+        ],
+        "tireSizes": ["205/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "China market sedan (2011-2018)"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "E-Z",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 39}
+        ],
+        "tireSizes": ["205/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "China market sedan (2011-2018)"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "E-Z",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 39}
+        ],
+        "tireSizes": ["205/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "China market sedan (2011-2018)"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "E-Z",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 39}
+        ],
+        "tireSizes": ["205/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "China market sedan (2011-2018)"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "E-Z",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 39}
+        ],
+        "tireSizes": ["205/60R16"],
+        "lugNutSize": "M12x1.5"
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "China market sedan (2011-2018)"
+    }
+  ]
+}

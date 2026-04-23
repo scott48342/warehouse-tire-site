@@ -1,0 +1,2907 @@
+[
+  {
+    "id": "d4651ae3-9d2a-45f0-950e-0eee4e619b7b",
+    "year": 2022,
+    "make": "land-rover",
+    "model": "discovery-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "2e2a2499-6ea4-40a4-9de2-e631065a04c1",
+    "year": 2023,
+    "make": "land-rover",
+    "model": "discovery-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f663a67d-09f4-4628-ab39-ba32bfb7b706",
+    "year": 2024,
+    "make": "land-rover",
+    "model": "discovery-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e50db5d4-3c88-444a-8556-f8e867b8dec0",
+    "year": 2025,
+    "make": "land-rover",
+    "model": "discovery-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c60547f0-e575-4b1f-8baa-f901024f4687",
+    "year": 2026,
+    "make": "land-rover",
+    "model": "discovery-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d215ef89-ed47-45cb-99a8-1da178458fc9",
+    "year": 2002,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/55R19"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/45R20"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "21x9.5",
+        "tires": [
+          "275/40R21"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "22x10",
+        "tires": [
+          "305/35R22"
+        ],
+        "offset": 45
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "d0025335-6d40-4a52-b6d7-a767464641da",
+    "year": 2003,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/55R19"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/45R20"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "21x9.5",
+        "tires": [
+          "275/40R21"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "22x10",
+        "tires": [
+          "305/35R22"
+        ],
+        "offset": 45
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "330458d6-274b-409e-bd71-f43f5645fb10",
+    "year": 2004,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/55R19"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/45R20"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "21x9.5",
+        "tires": [
+          "275/40R21"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "22x10",
+        "tires": [
+          "305/35R22"
+        ],
+        "offset": 45
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "69a6b746-bce1-47e2-865f-60ec1194729a",
+    "year": 2005,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/55R19"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/45R20"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "21x9.5",
+        "tires": [
+          "275/40R21"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "22x10",
+        "tires": [
+          "305/35R22"
+        ],
+        "offset": 45
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "965b7a14-7278-4ca3-81ba-6e5eb46cb163",
+    "year": 2006,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/55R19"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/45R20"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "21x9.5",
+        "tires": [
+          "275/40R21"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "22x10",
+        "tires": [
+          "305/35R22"
+        ],
+        "offset": 45
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "c00e31c8-e335-4f39-9a66-97408d83b8a5",
+    "year": 2007,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/55R19"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/45R20"
+        ],
+        "offset": 53
+      },
+      {
+        "size": "21x9.5",
+        "tires": [
+          "275/40R21"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "22x10",
+        "tires": [
+          "305/35R22"
+        ],
+        "offset": 45
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "6d26a712-0b29-465c-b272-ad7958df48f9",
+    "year": 2008,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "911f329e-4387-4a96-ada0-61c2d3653056",
+    "year": 2009,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "b24d9283-413a-4836-81d2-3b0d0b7fb796",
+    "year": 2010,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "878656c2-de9c-4b5f-b1ff-a4d68c1c9279",
+    "year": 2011,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "44990ab3-2d38-42c6-b668-e5bdd08e45c3",
+    "year": 2012,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "305/35R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "43a13e72-e1db-4cb2-a275-7431f598833b",
+    "year": 2013,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R20",
+      "275/45R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "55186e02-ef49-47bf-b757-eacfc15db07b",
+    "year": 2014,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R20",
+      "275/45R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "93587556-2a05-477a-9032-191c5ca5c216",
+    "year": 2015,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R20",
+      "275/45R21",
+      "275/40R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "e856ad8e-179a-4306-8e35-69f8930bca9b",
+    "year": 2016,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R20",
+      "275/45R21",
+      "275/40R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "935de703-4fe6-408a-b36e-581235f2c050",
+    "year": 2017,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R20",
+      "275/45R21",
+      "275/40R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "e1d30f72-5e2a-451e-82e4-b68c67acad97",
+    "year": 2018,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R20",
+      "275/45R21",
+      "275/40R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "5d852e66-8c90-4bc2-98f6-fda2913a1a0a",
+    "year": 2019,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R20",
+      "275/45R21",
+      "275/40R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "3027eeed-348d-461c-becb-29413152e9eb",
+    "year": 2020,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R20",
+      "275/45R21",
+      "275/40R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "dd41a875-b3fa-46e0-ae5f-c8a89726785c",
+    "year": 2021,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R20",
+      "275/45R21",
+      "275/40R22"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "3e174627-893a-4417-abc4-51d4cc33be26",
+    "year": 2022,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      },
+      {
+        "width": 10,
+        "offset": 45,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R21",
+      "275/50R22",
+      "275/45R23"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "15cd7483-1be5-461e-8d7b-5061267649af",
+    "year": 2023,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      },
+      {
+        "width": 10,
+        "offset": 45,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R21",
+      "275/50R22",
+      "275/45R23"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "7f8e248b-7ec1-48d1-90d1-53d0c3f1fbf5",
+    "year": 2024,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      },
+      {
+        "width": 10,
+        "offset": 45,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R21",
+      "275/50R22",
+      "275/45R23"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "f8d30ca3-e22d-4ac6-9fab-fca1d01629d6",
+    "year": 2025,
+    "make": "land-rover",
+    "model": "range-rover",
+    "trim": "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 21
+      },
+      {
+        "width": 9.5,
+        "offset": 45,
+        "diameter": 22
+      },
+      {
+        "width": 10,
+        "offset": 45,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R21",
+      "275/50R22",
+      "275/45R23"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "07875816-6238-44de-85ac-4d6d4e96620d",
+    "year": 2011,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20",
+      "255/40R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "be06e8b3-2a57-46ea-8f60-3cbf96d3a808",
+    "year": 2012,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8.5",
+        "tires": [
+          "255/45R20"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "6eec76a0-4401-4ea1-a186-bb6e758a90e5",
+    "year": 2013,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8.5",
+        "tires": [
+          "255/45R20"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "8184897d-fb75-4070-9d07-afa7f9b40ac8",
+    "year": 2014,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8.5",
+        "tires": [
+          "255/45R20"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "f8af8884-43bd-4746-a64b-1fece5dd7bab",
+    "year": 2015,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8.5",
+        "tires": [
+          "255/45R20"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "0666a25c-f5f9-4faa-8ac3-954f17dc2966",
+    "year": 2016,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8.5",
+        "tires": [
+          "255/45R20"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "b04001a2-ee9c-47ca-96e8-48b6e6812453",
+    "year": 2017,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8.5",
+        "tires": [
+          "255/45R20"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "578643d2-9760-4349-9c3c-f2636fe823b6",
+    "year": 2018,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8.5",
+        "tires": [
+          "255/45R20"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "1c4ec8a2-3f92-48ce-8406-d4b5cbf57e18",
+    "year": 2019,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8.5",
+        "tires": [
+          "255/45R20"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20",
+      "255/45R20"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "b3c4dc0b-aaef-4145-a80f-5d4441a66ce1",
+    "year": 2020,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "19x8",
+        "tires": [
+          "245/50R19"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "21x8.5",
+        "tires": [
+          "255/40R21"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/50R19",
+      "245/45R20",
+      "255/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "466d6775-63de-4bc9-b1b1-40d96018a3c8",
+    "year": 2021,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "19x8",
+        "tires": [
+          "245/50R19"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "21x8.5",
+        "tires": [
+          "255/40R21"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/50R19",
+      "245/45R20",
+      "255/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "95443ab8-42ef-48e6-9c9b-44787977da69",
+    "year": 2022,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "19x8",
+        "tires": [
+          "245/50R19"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "21x8.5",
+        "tires": [
+          "255/40R21"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/50R19",
+      "245/45R20",
+      "255/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "a97cfaeb-d233-49fb-947f-d9ff6ea19946",
+    "year": 2023,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "19x8",
+        "tires": [
+          "245/50R19"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "21x8.5",
+        "tires": [
+          "255/40R21"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/50R19",
+      "245/45R20",
+      "255/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "d61b1d36-a1ad-4bd9-8bf6-031e551ff2f9",
+    "year": 2024,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "19x8",
+        "tires": [
+          "245/50R19"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "21x8.5",
+        "tires": [
+          "255/40R21"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/50R19",
+      "245/45R20",
+      "255/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "9d5aced1-f246-48e0-bf0a-8ad509086ce9",
+    "year": 2025,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "S, SE, Dynamic SE, Autobiography",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "235/60R18"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "19x8",
+        "tires": [
+          "245/50R19"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "20x8",
+        "tires": [
+          "245/45R20"
+        ],
+        "offset": 45
+      },
+      {
+        "size": "21x8.5",
+        "tires": [
+          "255/40R21"
+        ],
+        "offset": 40
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/50R19",
+      "245/45R20",
+      "255/40R21"
+    ],
+    "source": "api_import"
+  },
+  {
+    "id": "6f843ce8-85da-4a80-b9ef-1b304bbb0052",
+    "year": 2026,
+    "make": "land-rover",
+    "model": "range-rover-evoque",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20",
+      "255/40R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "46952bfc-e8de-4f37-9b83-e9e604a066c6",
+    "year": 2005,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c1f2998e-312e-4fc7-b7d7-52583b080ce3",
+    "year": 2006,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "28f0edd0-99c1-4487-a162-3127e54b3b61",
+    "year": 2007,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d898ee98-eaca-4b52-af17-d6488c7035ce",
+    "year": 2008,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4f3d66c3-fe46-403a-a059-ca22425ca814",
+    "year": 2009,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "2c7ded61-0982-49a3-bf7d-39104b8be583",
+    "year": 2010,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "6e223dea-0f8e-4caf-a33c-f07babf38e24",
+    "year": 2011,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "7f75d6a2-f370-465a-a564-a79242bf1c91",
+    "year": 2012,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b000a7b3-bf1a-4018-b14f-46a1287e38ba",
+    "year": 2013,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f85b5e0d-a3e4-432b-8d45-719e7b8ac205",
+    "year": 2014,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8fc3baf5-6597-4ad5-b3f1-4d78cc4c2880",
+    "year": 2015,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "182fd1ac-2b97-4208-b14c-06a3f18d3f18",
+    "year": 2016,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "efa98d9b-5e4c-4ae1-ba97-6eaa0202825c",
+    "year": 2017,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "83fda7cf-16f7-4b29-a7f8-47ca00ed0ec0",
+    "year": 2018,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "2ae945a9-46ca-4707-a9c9-4b2fae9ff0c9",
+    "year": 2019,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "fcc7f494-6f67-47fb-b27e-dd0338a789f6",
+    "year": 2020,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d426b3a4-6402-44d4-9e5a-9ed645542168",
+    "year": 2021,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b71eab87-04fc-44b6-a113-e15e517dbf82",
+    "year": 2022,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "cc173e24-fadc-4b88-b495-499393913c65",
+    "year": 2023,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "185ba2de-49bc-4ddc-94d0-367fc5f3b487",
+    "year": 2024,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8309e125-21e3-4ffb-ad9f-5817dfafa887",
+    "year": 2025,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f5da772b-36d7-4cde-8426-ee534ab28e1d",
+    "year": 2026,
+    "make": "land-rover",
+    "model": "range-rover-sport",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 23
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R21",
+      "285/40R22",
+      "285/35R23"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "752a1125-7461-4e6f-bb9b-95ab403dff20",
+    "year": 2017,
+    "make": "land-rover",
+    "model": "range-rover-velar",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "285/35R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "fa97065d-dad5-4bbe-9570-f14001db44f4",
+    "year": 2018,
+    "make": "land-rover",
+    "model": "range-rover-velar",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "285/35R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "199e9cd3-52ce-4bfc-b9d9-37f3fb849e34",
+    "year": 2019,
+    "make": "land-rover",
+    "model": "range-rover-velar",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "285/35R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "eef518ae-318f-44df-8c0f-2bc66dad48dc",
+    "year": 2020,
+    "make": "land-rover",
+    "model": "range-rover-velar",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "285/35R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a1fa8b0d-7577-4e90-9ec9-cb3b986e76cc",
+    "year": 2021,
+    "make": "land-rover",
+    "model": "range-rover-velar",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "285/35R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8d901db0-66de-4268-a1db-a4d861ad777e",
+    "year": 2022,
+    "make": "land-rover",
+    "model": "range-rover-velar",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "285/35R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c36fb5aa-2ee9-456c-a615-fd9b5e55c1e2",
+    "year": 2023,
+    "make": "land-rover",
+    "model": "range-rover-velar",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "285/35R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "677f35ed-c212-4848-b5df-1a962d83b155",
+    "year": 2024,
+    "make": "land-rover",
+    "model": "range-rover-velar",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "285/35R22"
+    ],
+    "source": "catalog-gap-fill"
+  }
+]

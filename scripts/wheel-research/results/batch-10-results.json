@@ -1,0 +1,1238 @@
+{
+  "batchId": "10",
+  "results": [
+    {
+      "year": 2019,
+      "make": "Buick",
+      "model": "Regal TourX",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 42},
+          {"diameter": 18, "width": 8.5, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 49}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Buick",
+      "model": "Regal TourX",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 42},
+          {"diameter": 18, "width": 8.5, "offset": 49},
+          {"diameter": 19, "width": 8.5, "offset": 49}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 46},
+          {"diameter": 17, "width": 6.5, "offset": 46}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 46},
+          {"diameter": 17, "width": 6.5, "offset": 46}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 46},
+          {"diameter": 17, "width": 6.5, "offset": 46}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 46},
+          {"diameter": 17, "width": 6.5, "offset": 46}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 46},
+          {"diameter": 17, "width": 6.5, "offset": 46}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 46},
+          {"diameter": 17, "width": 6.5, "offset": 46}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Buick",
+      "model": "Rendezvous",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 46}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "medium"
+    },
+    {
+      "year": 2006,
+      "make": "Buick",
+      "model": "Royaum",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 44},
+          {"diameter": 16, "width": 6.5, "offset": 52}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market Buick Regal variant"
+    },
+    {
+      "year": 2005,
+      "make": "Buick",
+      "model": "Royaum",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 44},
+          {"diameter": 16, "width": 6.5, "offset": 52}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market Buick Regal variant"
+    },
+    {
+      "year": 2004,
+      "make": "Buick",
+      "model": "Royaum",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 44},
+          {"diameter": 16, "width": 6.5, "offset": 52}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market Buick Regal variant"
+    },
+    {
+      "year": 2007,
+      "make": "Buick",
+      "model": "Terraza",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 52}
+        ],
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Buick",
+      "model": "Terraza",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 51}
+        ],
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Buick",
+      "model": "Terraza",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 6.5, "offset": 51}
+        ],
+        "boltPattern": "6x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Verano GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Verano GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "Verano GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2019,
+      "make": "Buick",
+      "model": "Verano GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2018,
+      "make": "Buick",
+      "model": "Verano GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "Verano GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "Verano GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Verano Pro GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Verano Pro GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Verano Pro GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Verano Pro GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Verano Pro GS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 44},
+          {"diameter": 18, "width": 7, "offset": 44}
+        ],
+        "boltPattern": "5x105",
+        "centerBore": 56.6,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "China-market vehicle"
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "ATS-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 9, "offset": 28, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 48, "position": "rear"},
+          {"diameter": 19, "width": 9, "offset": 25, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 45, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "ATS-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 9, "offset": 28, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 48, "position": "rear"},
+          {"diameter": 19, "width": 9, "offset": 25, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 45, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "ATS-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 9, "offset": 28, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 48, "position": "rear"},
+          {"diameter": 19, "width": 9, "offset": 25, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 45, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "ATS-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 9, "offset": 28, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 48, "position": "rear"},
+          {"diameter": 19, "width": 9, "offset": 25, "position": "front"},
+          {"diameter": 19, "width": 9.5, "offset": 45, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Cadillac",
+      "model": "BLS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 41},
+          {"diameter": 17, "width": 7, "offset": 41},
+          {"diameter": 17, "width": 7.5, "offset": 41}
+        ],
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "European-market vehicle"
+    },
+    {
+      "year": 2009,
+      "make": "Cadillac",
+      "model": "BLS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 41},
+          {"diameter": 17, "width": 7, "offset": 41},
+          {"diameter": 17, "width": 7.5, "offset": 41}
+        ],
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "European-market vehicle"
+    },
+    {
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "BLS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 41},
+          {"diameter": 17, "width": 7, "offset": 41},
+          {"diameter": 17, "width": 7.5, "offset": 41}
+        ],
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "European-market vehicle"
+    },
+    {
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "BLS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 41},
+          {"diameter": 17, "width": 7, "offset": 41},
+          {"diameter": 17, "width": 7.5, "offset": 41}
+        ],
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "European-market vehicle"
+    },
+    {
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "BLS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 41},
+          {"diameter": 17, "width": 7, "offset": 41},
+          {"diameter": 17, "width": 7.5, "offset": 41}
+        ],
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "European-market vehicle"
+    },
+    {
+      "year": 2005,
+      "make": "Cadillac",
+      "model": "BLS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 41},
+          {"diameter": 17, "width": 7, "offset": 41}
+        ],
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "European-market vehicle"
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "Celestiq",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 23, "width": 9.5, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Ultra-luxury EV with 23-inch forged wheels"
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "Celestiq",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 23, "width": 9.5, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Ultra-luxury EV with 23-inch forged wheels"
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "Celestiq",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 23, "width": 9.5, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "medium",
+      "notes": "Ultra-luxury EV with 23-inch forged wheels"
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "CT4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "CT4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Cadillac",
+      "model": "CT4",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 35}
+        ],
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 35},
+          {"diameter": 18, "width": 9, "offset": 28, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 48, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT4-V may be square setup"
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 35},
+          {"diameter": 18, "width": 9, "offset": 28, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 48, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT4-V may be square setup"
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 35},
+          {"diameter": 18, "width": 9, "offset": 28, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 48, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT4-V may be square setup"
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 35},
+          {"diameter": 18, "width": 9, "offset": 28, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 48, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT4-V may be square setup"
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 35},
+          {"diameter": 18, "width": 9, "offset": 28, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 48, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT4-V may be square setup"
+    },
+    {
+      "year": 2021,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 35},
+          {"diameter": 18, "width": 9, "offset": 28, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 48, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT4-V may be square setup"
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT4-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 35}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "First year; Blackwing not yet available"
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "CT5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 29},
+          {"diameter": 19, "width": 8.5, "offset": 29}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "CT5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 29},
+          {"diameter": 19, "width": 8.5, "offset": 29}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "CT5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 29},
+          {"diameter": 19, "width": 8.5, "offset": 29}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "CT5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 29},
+          {"diameter": 19, "width": 8.5, "offset": 29}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "CT5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 29},
+          {"diameter": 19, "width": 8.5, "offset": 29}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT5",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 18, "width": 8.5, "offset": 29},
+          {"diameter": 19, "width": 8.5, "offset": 29}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 25},
+          {"diameter": 19, "width": 10, "offset": 20, "position": "front"},
+          {"diameter": 19, "width": 11, "offset": 50, "position": "rear"},
+          {"diameter": 20, "width": 9, "offset": 25, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT5-V may be square"
+    },
+    {
+      "year": 2025,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 25},
+          {"diameter": 19, "width": 10, "offset": 20, "position": "front"},
+          {"diameter": 19, "width": 11, "offset": 50, "position": "rear"},
+          {"diameter": 20, "width": 9, "offset": 25, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT5-V may be square"
+    },
+    {
+      "year": 2024,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 25},
+          {"diameter": 19, "width": 10, "offset": 20, "position": "front"},
+          {"diameter": 19, "width": 11, "offset": 50, "position": "rear"},
+          {"diameter": 20, "width": 9, "offset": 25, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT5-V may be square"
+    },
+    {
+      "year": 2023,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 25},
+          {"diameter": 19, "width": 10, "offset": 20, "position": "front"},
+          {"diameter": 19, "width": 11, "offset": 50, "position": "rear"},
+          {"diameter": 20, "width": 9, "offset": 25, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT5-V may be square"
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 25},
+          {"diameter": 19, "width": 10, "offset": 20, "position": "front"},
+          {"diameter": 19, "width": 11, "offset": 50, "position": "rear"},
+          {"diameter": 20, "width": 9, "offset": 25, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT5-V may be square"
+    },
+    {
+      "year": 2021,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 25},
+          {"diameter": 19, "width": 10, "offset": 20, "position": "front"},
+          {"diameter": 19, "width": 11, "offset": 50, "position": "rear"},
+          {"diameter": 20, "width": 9, "offset": 25, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": true
+      },
+      "confidence": "high",
+      "notes": "Blackwing trim is staggered; base CT5-V may be square"
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT5-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 29},
+          {"diameter": 20, "width": 8.5, "offset": 38}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "First year; Blackwing not yet available"
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "CT6-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 33},
+          {"diameter": 20, "width": 8.5, "offset": 33},
+          {"diameter": 21, "width": 9, "offset": 30}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "CT6-V",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 19, "width": 8.5, "offset": 33},
+          {"diameter": 20, "width": 8.5, "offset": 33},
+          {"diameter": 21, "width": 9, "offset": 30}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Cadillac",
+      "model": "CTS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 42},
+          {"diameter": 17, "width": 8.5, "offset": 32},
+          {"diameter": 18, "width": 8.5, "offset": 32},
+          {"diameter": 19, "width": 8.5, "offset": 34}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "CTS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 42},
+          {"diameter": 17, "width": 8.5, "offset": 32},
+          {"diameter": 18, "width": 8.5, "offset": 32},
+          {"diameter": 19, "width": 8.5, "offset": 34}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "CTS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 42},
+          {"diameter": 17, "width": 8.5, "offset": 32},
+          {"diameter": 18, "width": 8.5, "offset": 32},
+          {"diameter": 19, "width": 8.5, "offset": 34}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Cadillac",
+      "model": "CTS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 42},
+          {"diameter": 17, "width": 8.5, "offset": 32},
+          {"diameter": 18, "width": 8.5, "offset": 32},
+          {"diameter": 19, "width": 8.5, "offset": 34}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Cadillac",
+      "model": "CTS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 42},
+          {"diameter": 17, "width": 8.5, "offset": 32},
+          {"diameter": 18, "width": 8.5, "offset": 32},
+          {"diameter": 19, "width": 8.5, "offset": 34}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Cadillac",
+      "model": "CTS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 42},
+          {"diameter": 17, "width": 8.5, "offset": 32},
+          {"diameter": 18, "width": 8.5, "offset": 32},
+          {"diameter": 19, "width": 8.5, "offset": 34}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Cadillac",
+      "model": "CTS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 48},
+          {"diameter": 18, "width": 8, "offset": 48},
+          {"diameter": 19, "width": 8.5, "offset": 48}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "2nd generation (Sigma II)"
+    },
+    {
+      "year": 2012,
+      "make": "Cadillac",
+      "model": "CTS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 48},
+          {"diameter": 18, "width": 8, "offset": 48},
+          {"diameter": 19, "width": 8.5, "offset": 48}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "2nd generation (Sigma II)"
+    },
+    {
+      "year": 2011,
+      "make": "Cadillac",
+      "model": "CTS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 48},
+          {"diameter": 18, "width": 8, "offset": 48},
+          {"diameter": 19, "width": 8.5, "offset": 48}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "2nd generation (Sigma II)"
+    },
+    {
+      "year": 2010,
+      "make": "Cadillac",
+      "model": "CTS",
+      "specs": {
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 48},
+          {"diameter": 18, "width": 8, "offset": 48},
+          {"diameter": 19, "width": 8.5, "offset": 48}
+        ],
+        "boltPattern": "5x120",
+        "centerBore": 66.9,
+        "isStaggered": false
+      },
+      "confidence": "high",
+      "notes": "2nd generation (Sigma II)"
+    }
+  ],
+  "stats": {
+    "total": 75,
+    "complete": 59,
+    "partial": 16,
+    "failed": 0
+  },
+  "researchNotes": {
+    "chinaMkt": "Buick Verano GS/Pro GS and Royaum are China-market vehicles with limited US data sources",
+    "europeanMkt": "Cadillac BLS was European-market only (2005-2010)",
+    "staggeredVehicles": [
+      "Cadillac ATS-V (all years)",
+      "Cadillac CT4-V Blackwing",
+      "Cadillac CT5-V Blackwing"
+    ],
+    "uniqueBoltPatterns": {
+      "6x115": ["Buick Terraza"],
+      "5x110": ["Cadillac BLS"],
+      "5x105": ["Buick Verano GS", "Buick Verano Pro GS"]
+    }
+  }
+}

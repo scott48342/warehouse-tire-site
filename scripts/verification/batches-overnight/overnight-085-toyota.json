@@ -1,0 +1,2237 @@
+[
+  {
+    "id": "ac58df76-0367-4c68-9a1a-4af548809338",
+    "year": 2022,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "Adventure",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d17e4cf4-29e0-42b8-ba47-0f5203278309",
+    "year": 2022,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "bb40527b-f9d0-4d12-a9b5-0bf042078f4f",
+    "year": 2022,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "c5720de3-0c3e-4ca8-8239-66da0a29dc89",
+    "year": 2022,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "aed3eaa9-ea3b-47f0-9fa9-5cfb53fbbffe",
+    "year": 2022,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "f698e763-c32b-45de-aaa8-a42c3ff9f1b8",
+    "year": 2023,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d74bb9a4-d04e-48e9-94cf-30b25bb0a4e7",
+    "year": 2023,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "90205588-b1a5-4f0a-8273-f8f0235a64f4",
+    "year": 2023,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "Adventure",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d13a1990-6a86-40b8-9e9c-d89bc581361a",
+    "year": 2023,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "840cf9a2-bbe4-42cb-81ca-8976c2f8be9d",
+    "year": 2023,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "b4ff607c-3ecc-4804-8c77-fcd44f290c3f",
+    "year": 2023,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "XLE Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "da2b8e4f-33ad-430f-ac8f-2b148d1c29e7",
+    "year": 2023,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "bf225ab2-9805-42eb-9bf3-507099b90859",
+    "year": 2023,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "55e45454-0657-4d8f-9e32-5b83b322ae17",
+    "year": 2024,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d5ac4a2b-0759-46d2-a7c1-00451db8959a",
+    "year": 2024,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "050a662e-c159-4f3a-b803-55cf0e3007b2",
+    "year": 2024,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "XLE Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "10439e8c-5776-4e13-9877-4f7c113c156c",
+    "year": 2024,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "633a7bff-49e7-46f3-82a0-97175aa99ab1",
+    "year": 2024,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "2430d68a-6412-422e-b63b-47e00c13f80e",
+    "year": 2024,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "b8f2a6b4-a129-4355-b2b7-84f801b9acc0",
+    "year": 2024,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "Adventure",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "df3a55d4-b1c7-462f-9226-f346b657ad91",
+    "year": 2024,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "f584256b-1520-4d3e-97cd-08806c19b70e",
+    "year": 2025,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "Adventure",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "87f46b47-fb2a-40fb-8312-b0ef335aa526",
+    "year": 2025,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d6d8e62a-d466-49d1-89dc-ddf409aa7f48",
+    "year": 2025,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "SE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d6c1cc3f-3f0f-4ddd-8077-4a0b40e93da3",
+    "year": 2025,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "b23841d2-ba58-4da5-8f8d-7d43b64e4cce",
+    "year": 2025,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "XSE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "c7af2ee1-0f5c-4d7f-9a7d-3cfe492c5ed2",
+    "year": 2025,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "LE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "f077aa82-cd0d-4e95-97c1-e745427cabe7",
+    "year": 2025,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "XLE Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "44a21be2-188e-4a9d-95cd-17ef67083635",
+    "year": 2025,
+    "make": "toyota",
+    "model": "rav4",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      "17x7",
+      "18x7.5",
+      "19x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "c002a7cc-40eb-4c28-89cc-be71329efbef",
+    "year": 2020,
+    "make": "toyota",
+    "model": "sequoia",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/65R18",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "5528e690-2c4b-4104-b59c-0e17ca8a3c39",
+    "year": 2020,
+    "make": "toyota",
+    "model": "sequoia",
+    "trim": "TRD Sport",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/65R18",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "57600bfa-e500-4a3b-b7c2-dfe8f8a49f75",
+    "year": 2020,
+    "make": "toyota",
+    "model": "sequoia",
+    "trim": "Limited",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/65R18",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "155ff84f-e237-47cb-92e1-ab79e09fa328",
+    "year": 2020,
+    "make": "toyota",
+    "model": "sequoia",
+    "trim": "Platinum",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/65R18",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "ed050eb5-0de9-4cd2-94db-70077b8c13e5",
+    "year": 2020,
+    "make": "toyota",
+    "model": "sequoia",
+    "trim": "SR5",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "275/65R18",
+      "275/55R20",
+      "285/45R22"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "364e2fec-a0fd-42ff-8960-279907ef6b6b",
+    "year": 2016,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R17",
+      "235/55R18",
+      "235/50R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "bc89f6ed-17de-4041-985e-fbdd079b068c",
+    "year": 2019,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R17",
+      "235/55R18",
+      "235/50R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "ec235daa-35c6-4187-9e12-10a47312bb17",
+    "year": 2020,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R17",
+      "235/55R18",
+      "235/50R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "1a12eb27-2e39-48d0-9f3c-aa90bf940523",
+    "year": 2021,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "generation_inherit_2022"
+  },
+  {
+    "id": "447c89e7-9d58-4762-8c54-032c04646ec0",
+    "year": 2021,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "generation_inherit_2022"
+  },
+  {
+    "id": "46294583-6d39-4e90-9a74-18a2d8a8ef39",
+    "year": 2022,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "manual-import"
+  },
+  {
+    "id": "fa5e5a14-e4c0-4635-b0bf-982c5bf3aa0c",
+    "year": 2022,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "manual-import"
+  },
+  {
+    "id": "96803147-153f-4d46-89e3-d3fc7d622cf2",
+    "year": 2023,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "generation_inherit_2022"
+  },
+  {
+    "id": "abc1ec42-b031-4949-8e79-b407d95d7298",
+    "year": 2023,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "generation_inherit_2022"
+  },
+  {
+    "id": "cded0f02-cc7a-481e-af46-b657ef96df53",
+    "year": 2024,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "generation_inherit_2022"
+  },
+  {
+    "id": "3a6d0a36-22a4-4e17-8d58-f7adea13cd76",
+    "year": 2024,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "generation_inherit_2022"
+  },
+  {
+    "id": "4b87d815-dbee-4acf-9eac-56a1b3b4d480",
+    "year": 2025,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "generation_inherit_2022"
+  },
+  {
+    "id": "105488c9-b6a8-4563-b615-397752ad9c36",
+    "year": 2025,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "generation_inherit_2022"
+  },
+  {
+    "id": "309e18e0-1290-4c09-8af8-b3a780a49763",
+    "year": 2026,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "generation_inherit_2022"
+  },
+  {
+    "id": "877917dd-30af-4c6c-a598-afdae6a8dbe3",
+    "year": 2026,
+    "make": "toyota",
+    "model": "sienna",
+    "trim": "XLE",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R17",
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "generation_inherit_2022"
+  },
+  {
+    "id": "6654cbe5-b290-4791-a132-814aaad3f40c",
+    "year": 2000,
+    "make": "toyota",
+    "model": "soluna",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "6c40081f-9d83-4a97-bca9-96f9f986bd67",
+    "year": 2001,
+    "make": "toyota",
+    "model": "soluna",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "405fb253-2f0b-4dbc-8090-eb29686a8804",
+    "year": 2002,
+    "make": "toyota",
+    "model": "soluna",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "130f0e9c-ee34-408f-9b18-6a375e762b25",
+    "year": 2003,
+    "make": "toyota",
+    "model": "soluna",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "b9691bf5-7110-44ed-ae6e-735c9b809ca6",
+    "year": 1995,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "S-Runner",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "5c7c3291-4d8d-4dcf-89fa-4fa9a161f2e2",
+    "year": 1995,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "aeec727a-632f-41ef-a833-b0e99a952ed3",
+    "year": 1995,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "PreRunner",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "9211b3fd-4b96-4a3a-8e63-d3fc0e2e0135",
+    "year": 1995,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "3946e7fd-7a54-4686-93e0-dabbe2cd6d9e",
+    "year": 1995,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "f951ba55-94b5-46c4-8ab8-49d9a02f38cf",
+    "year": 1996,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "PreRunner",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "3e3cd0a9-8268-44d7-ab6b-efce8f663fe4",
+    "year": 1996,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "341f29a6-15b9-41ba-924c-ce6427c5e0c7",
+    "year": 1996,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "S-Runner",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "e0436d0f-28da-4365-ba95-1e162d978f8c",
+    "year": 1996,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "c6df294b-e118-4d9a-a24e-5c460c0c562c",
+    "year": 1996,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "78c930eb-c245-4bcd-a092-c3585ae62bbb",
+    "year": 1997,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d30cbacb-6d8c-405d-b092-dbb76e086993",
+    "year": 1997,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "5d93efd9-1746-425c-a1b4-fed87b6d1eea",
+    "year": 1997,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "PreRunner",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "a941231b-7d43-4da3-baaf-5c44455298ae",
+    "year": 1997,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "e4a4a01b-5c42-489a-b1b4-b007642cc78f",
+    "year": 1997,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "S-Runner",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "469ef7a0-8226-4455-922b-25349752bdad",
+    "year": 1998,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "PreRunner",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "023d4308-7c64-4f1b-9fe3-a94aa1e37294",
+    "year": 1998,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "eb9fac43-fd9b-4323-b782-fd1ef234cb63",
+    "year": 1998,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "f3e16f5e-27a7-4cbc-9359-34d15c379413",
+    "year": 1998,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "S-Runner",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "8704eecf-2b37-418b-aeb3-cb65b10e9fc7",
+    "year": 1998,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "072a831a-a2d7-4a96-a3fa-d529b378aeca",
+    "year": 1999,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "SR, SR5, TRD Sport, TRD Off-Road, TRD Pro, Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "abd7a496-7fba-42ff-9146-327e2bb60ffa",
+    "year": 1999,
+    "make": "toyota",
+    "model": "tacoma",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "15x7",
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "225/75R15",
+      "235/75R15",
+      "265/70R16"
+    ],
+    "source": "generation_import"
+  }
+]

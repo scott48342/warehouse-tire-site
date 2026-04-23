@@ -1,0 +1,750 @@
+{
+  "batchId": "62",
+  "validatedAt": "2026-04-21T22:04:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17"]},
+        {"trim": "Denali", "tireSizes": ["275/60R20", "275/50R22"]}
+      ],
+      "allValidSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "currentTireSizes": ["255/70R17", "265/65R18", "275/60R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB missing 265/70R17, 275/65R18, 275/50R22"
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17"]},
+        {"trim": "Denali", "tireSizes": ["275/60R20", "275/50R22"]}
+      ],
+      "allValidSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "currentTireSizes": ["255/70R17", "265/65R18", "275/60R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB missing 265/70R17, 275/65R18, 275/50R22"
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Sierra 1500 Limited",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["255/70R17", "265/70R17", "275/60R20", "275/50R22"]},
+        {"trim": "4WD", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"]}
+      ],
+      "allValidSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No tire sizes in DB for this transitional model"
+    },
+    {
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "2WD Crew Cab w/Performance Brake", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "2WD Double Cab w/Performance Brake", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "2WD Reg Cab w/Performance Brake", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Crew Cab w/Performance Brake", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Double Cab w/Performance Brake", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "4WD Reg Cab w/Performance Brake", "tireSizes": ["275/55R20", "285/45R22"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]}
+      ],
+      "allValidSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB has some extras (275/65R18, 275/60R20) not confirmed for 2018"
+    },
+    {
+      "year": 2017,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]}
+      ],
+      "allValidSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB has extras (275/65R18, 275/60R20) not confirmed for 2017"
+    },
+    {
+      "year": 2016,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]}
+      ],
+      "allValidSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB has extras (275/65R18, 275/60R20) not confirmed for 2016"
+    },
+    {
+      "year": 2015,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]}
+      ],
+      "allValidSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB has extras (275/65R18, 275/60R20) not confirmed for 2015"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"]}
+      ],
+      "allValidSizes": ["255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "currentTireSizes": ["265/70R17", "275/65R18", "275/55R20", "285/45R22"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB missing 255/70R17, 265/65R18; has 275/65R18 not confirmed"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "2WD Denali", "tireSizes": ["275/55R20"]},
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Denali", "tireSizes": ["275/55R20"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "Hybrid 2WD", "tireSizes": ["265/65R18"]},
+        {"trim": "Hybrid 4WD", "tireSizes": ["265/65R18"]}
+      ],
+      "allValidSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["265/70R17", "265/65R17", "265/65R18", "275/55R20", "285/45R22"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB has 285/45R22 and 265/65R17 not confirmed; missing 245/70R17"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "2WD Denali", "tireSizes": ["275/55R20"]},
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Denali", "tireSizes": ["275/55R20"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]}
+      ],
+      "allValidSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20", "LT245/70R17", "LT265/70R17"],
+      "status": "MATCH",
+      "notes": "Good coverage, LT sizes are valid alternatives"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "2WD Denali", "tireSizes": ["275/55R20"]},
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Denali", "tireSizes": ["275/55R20"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]}
+      ],
+      "allValidSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20", "LT245/70R17", "LT265/70R17"],
+      "status": "MATCH",
+      "notes": "Good coverage"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "2WD Denali", "tireSizes": ["275/55R20"]},
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Denali", "tireSizes": ["275/55R20"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]}
+      ],
+      "allValidSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["265/70R17", "265/65R17", "265/65R18", "275/55R20", "285/45R22"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has 285/45R22 and 265/65R17 not confirmed; missing 245/70R17"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]}
+      ],
+      "allValidSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["265/70R17", "265/65R17", "265/65R18", "275/55R20", "285/45R22"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has 285/45R22 and 265/65R17 not confirmed; missing 245/70R17"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "C1500 Crew Cab (2WD)", "tireSizes": ["245/70R17", "265/70R17", "275/55R20"]},
+        {"trim": "C1500 Extended Cab (2WD)", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "C1500 Regular Cab (2WD)", "tireSizes": ["245/70R17", "265/70R17", "275/55R20"]},
+        {"trim": "K1500 Crew Cab (4WD)", "tireSizes": ["265/70R17", "275/55R20"]},
+        {"trim": "K1500 Extended Cab (4WD)", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "K1500 Regular Cab (4WD)", "tireSizes": ["245/70R17", "265/70R17", "275/55R20"]},
+        {"trim": "Denali 2WD", "tireSizes": ["265/65R18", "275/55R20"]},
+        {"trim": "Denali 4WD", "tireSizes": ["265/65R18", "275/55R20"]}
+      ],
+      "allValidSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["265/70R17", "265/65R17", "265/65R18", "275/55R20", "285/45R22"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has 285/45R22 and 265/65R17 not confirmed; missing 245/70R17"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "C1500 Crew Cab (2WD)", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "C1500 Extended Cab (2WD)", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "C1500 Regular Cab (2WD)", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "K1500 Crew Cab (4WD)", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "K1500 Extended Cab (4WD)", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]},
+        {"trim": "K1500 Regular Cab (4WD)", "tireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"]}
+      ],
+      "allValidSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20"],
+      "currentTireSizes": ["265/70R17", "265/65R17", "265/65R18", "275/55R20", "285/45R22"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has 285/45R22 and 265/65R17 not confirmed; missing 245/70R17"
+    },
+    {
+      "year": 2007,
+      "make": "GMC",
+      "model": "Sierra 1500 Classic",
+      "trims": [
+        {"trim": "Classic C1500 2WD Crew Cab", "tireSizes": ["245/70R17", "275/55R20"]},
+        {"trim": "Classic C1500 2WD Extended Cab", "tireSizes": ["245/70R17", "275/55R20"]},
+        {"trim": "Classic C1500 2WD Regular Cab", "tireSizes": ["245/70R17"]},
+        {"trim": "Classic K1500 4WD Crew Cab", "tireSizes": ["245/70R17", "265/70R17", "275/55R20"]},
+        {"trim": "Classic K1500 4WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17"]},
+        {"trim": "Classic K1500 4WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17"]},
+        {"trim": "Classic C1500 HD 2WD Crew Cab", "tireSizes": ["245/75R16"]},
+        {"trim": "Classic K1500 HD 4WD Crew Cab", "tireSizes": ["245/75R16"]}
+      ],
+      "allValidSizes": ["245/70R17", "245/75R16", "265/70R17", "275/55R20"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No tire sizes in DB for Classic model"
+    },
+    {
+      "year": 2006,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "C1500 2WD Crew Cab", "tireSizes": ["245/70R17", "275/55R20"]},
+        {"trim": "C1500 2WD Extended Cab", "tireSizes": ["245/70R17", "275/55R20"]},
+        {"trim": "C1500 2WD Regular Cab", "tireSizes": ["245/70R17"]},
+        {"trim": "C1500 HD 2WD Crew Cab", "tireSizes": ["245/75R16"]},
+        {"trim": "K1500 4WD Crew Cab", "tireSizes": ["245/70R17", "265/70R17", "275/55R20"]},
+        {"trim": "K1500 4WD Extended Cab", "tireSizes": ["245/70R17", "265/70R17"]},
+        {"trim": "K1500 4WD Regular Cab", "tireSizes": ["245/70R17", "265/70R17"]},
+        {"trim": "K1500 HD 4WD Crew Cab", "tireSizes": ["245/75R16"]},
+        {"trim": "Denali", "tireSizes": ["265/70R17", "275/55R20"]}
+      ],
+      "allValidSizes": ["245/70R17", "245/75R16", "265/70R17", "275/55R20"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "265/65R17", "265/65R18", "275/55R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has extras like 265/75R16, 265/65R17, 265/65R18 not all confirmed; missing 245/70R17"
+    },
+    {
+      "year": 2005,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "C1500 2WD Crew Cab", "tireSizes": ["245/70R16", "245/70R17"]},
+        {"trim": "C1500 2WD Extended Cab", "tireSizes": ["235/75R16", "245/70R16", "245/70R17"]},
+        {"trim": "C1500 2WD Regular Cab", "tireSizes": ["245/70R16", "245/70R17"]},
+        {"trim": "C1500 HD 2WD Crew Cab", "tireSizes": ["245/75R16"]},
+        {"trim": "K1500 4WD Crew Cab", "tireSizes": ["265/70R17"]},
+        {"trim": "K1500 4WD Extended Cab", "tireSizes": ["245/75R16", "265/70R17"]},
+        {"trim": "K1500 4WD Regular Cab", "tireSizes": ["265/70R17"]},
+        {"trim": "K1500 HD 4WD Crew Cab", "tireSizes": ["245/75R16"]},
+        {"trim": "Denali", "tireSizes": ["265/70R17", "275/55R20"]}
+      ],
+      "allValidSizes": ["235/75R16", "245/70R16", "245/70R17", "245/75R16", "265/70R17", "275/55R20"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "265/65R17", "265/65R18", "275/55R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has sizes like 265/75R16, 265/65R17, 265/65R18 not confirmed; missing 235/75R16, 245/70R16, 245/70R17"
+    },
+    {
+      "year": 2004,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "C1500 Ext Cab (2WD)", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"trim": "C1500 Reg Cab (2WD)", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"trim": "K1500 Ext Cab (4WD)", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "K1500 Reg Cab (4WD)", "tireSizes": ["245/75R16", "265/75R16"]},
+        {"trim": "Denali", "tireSizes": ["265/70R17"]}
+      ],
+      "allValidSizes": ["235/75R16", "245/75R16", "255/70R16", "265/75R16", "265/70R17"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "265/65R17", "265/65R18", "275/55R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has 265/65R17, 265/65R18, 275/55R20 not confirmed for 2004; missing 235/75R16, 255/70R16"
+    },
+    {
+      "year": 2003,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "C1500 Ext Cab (2WD)", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"trim": "C1500 Reg Cab (2WD)", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"trim": "C1500HD Crew", "tireSizes": ["245/75R16"]},
+        {"trim": "K1500 Ext Cab (4WD)", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "K1500 Reg Cab (4WD)", "tireSizes": ["245/75R16", "265/75R16"]},
+        {"trim": "K1500HD Crew", "tireSizes": ["245/75R16"]},
+        {"trim": "Denali", "tireSizes": ["265/70R17"]}
+      ],
+      "allValidSizes": ["235/75R16", "245/75R16", "255/70R16", "265/75R16", "265/70R17"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "265/65R17", "265/65R18", "275/55R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has extras not confirmed for 2003; missing 235/75R16, 255/70R16"
+    },
+    {
+      "year": 2002,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"trim": "4WD", "tireSizes": ["245/75R16", "265/75R16"]},
+        {"trim": "1500HD 2WD", "tireSizes": ["245/75R16"]},
+        {"trim": "1500HD 4WD", "tireSizes": ["245/75R16"]},
+        {"trim": "Denali", "tireSizes": ["265/70R17"]}
+      ],
+      "allValidSizes": ["235/75R16", "245/75R16", "255/70R16", "265/75R16", "265/70R17"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "265/65R17", "265/65R18", "275/55R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has extras not confirmed for 2002; missing 235/75R16, 255/70R16"
+    },
+    {
+      "year": 2001,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"trim": "2WD X-Cab", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"trim": "4WD", "tireSizes": ["245/75R16"]},
+        {"trim": "4WD X-Cab", "tireSizes": ["245/75R16", "265/75R16"]},
+        {"trim": "1500HD", "tireSizes": ["245/75R16"]},
+        {"trim": "C3/Denali", "tireSizes": ["265/70R17"]}
+      ],
+      "allValidSizes": ["235/75R16", "245/75R16", "255/70R16", "265/75R16", "265/70R17"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "265/65R17", "265/65R18", "275/55R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has extras not confirmed for 2001; missing 235/75R16, 255/70R16"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "trims": [
+        {"trim": "2WD", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"trim": "2WD X-Cab", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"trim": "4WD", "tireSizes": ["245/75R16"]},
+        {"trim": "4WD X-Cab", "tireSizes": ["245/75R16", "265/75R16"]}
+      ],
+      "allValidSizes": ["235/75R16", "245/75R16", "255/70R16", "265/75R16"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "265/70R17", "265/65R17", "265/65R18", "275/55R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has extras (265/70R17, 265/65R17, 265/65R18, 275/55R20) not confirmed for 2000; missing 235/75R16, 255/70R16"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Sierra 1500 Limited",
+      "trims": [
+        {"trim": "Limited", "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"]}
+      ],
+      "allValidSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+      "currentTireSizes": [],
+      "status": "MISSING_DATA",
+      "notes": "No tire sizes in DB for 2022 Limited model"
+    },
+    {
+      "year": 2025,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "Pro", "tireSizes": ["245/75R17", "265/70R17", "275/70R18"]},
+        {"trim": "SLE", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "SLT", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "AT4", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "AT4X", "tireSizes": ["305/70R18"]},
+        {"trim": "Denali", "tireSizes": ["275/65R20"]},
+        {"trim": "Denali Ultimate", "tireSizes": ["275/65R20", "265/60R22"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "265/60R22", "275/70R18", "275/65R20", "305/70R18"],
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB missing 245/75R17, 275/70R18, 275/65R20. Note tire sizes use LT prefix for HD trucks"
+    },
+    {
+      "year": 2024,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "Pro", "tireSizes": ["245/75R17", "265/70R17", "275/70R18"]},
+        {"trim": "SLE", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "SLT", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "AT4", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "AT4X", "tireSizes": ["305/70R18"]},
+        {"trim": "Denali", "tireSizes": ["275/65R20"]},
+        {"trim": "Denali Ultimate", "tireSizes": ["275/65R20", "265/60R22"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "265/60R22", "275/70R18", "275/65R20", "305/70R18"],
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB missing 245/75R17, 275/70R18, 275/65R20"
+    },
+    {
+      "year": 2023,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "Pro", "tireSizes": ["245/75R17", "265/70R17", "275/70R18"]},
+        {"trim": "SLE", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "SLT", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "AT4", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "Denali", "tireSizes": ["275/65R20"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB missing 245/75R17, 275/70R18, 275/65R20"
+    },
+    {
+      "year": 2022,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "Pro", "tireSizes": ["245/75R17", "265/70R17", "275/70R18"]},
+        {"trim": "SLE", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "SLT", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "AT4", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "Denali", "tireSizes": ["275/65R20"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB missing 245/75R17, 275/70R18, 275/65R20"
+    },
+    {
+      "year": 2021,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "Base Model", "tireSizes": ["245/75R17", "265/70R17", "275/70R18"]},
+        {"trim": "SLE", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "SLT", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "AT4", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "Denali", "tireSizes": ["275/65R20"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB missing 245/75R17, 275/70R18, 275/65R20"
+    },
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "275/70R18"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB missing 245/75R17, 275/70R18, 275/65R20"
+    },
+    {
+      "year": 2019,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"],
+      "currentTireSizes": ["LT265/70R17", "LT265/60R18", "LT275/65R18", "LT275/60R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "2019 had different wheel package - check DB sizing"
+    },
+    {
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R17", "265/70R18"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Crew Cab All Terrain X", "tireSizes": ["275/65R18"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R17", "265/70R18"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R18", "265/60R20", "275/65R18"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Current DB mostly matches for pre-2020 generation"
+    },
+    {
+      "year": 2017,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R17", "265/70R18"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R17", "265/70R18"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R18", "265/60R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "DB has LT265/70R17 not confirmed by source; missing 265/70R18, 265/60R20"
+    },
+    {
+      "year": 2016,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Double Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R17", "265/70R18"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Double Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R17", "265/70R18"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R18", "265/60R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "DB has LT265/70R17 not confirmed; missing 265/70R18, 265/60R20"
+    },
+    {
+      "year": 2015,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R17", "265/70R18"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R17", "265/70R18"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R18", "265/60R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "DB has LT265/70R17 not confirmed; missing 265/70R18, 265/60R20"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Good coverage for 2014"
+    },
+    {
+      "year": 2013,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Good coverage for 2013"
+    },
+    {
+      "year": 2012,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Good coverage for 2012"
+    },
+    {
+      "year": 2011,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"]}
+      ],
+      "allValidSizes": ["245/75R17", "265/70R17", "265/70R18", "265/60R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Good coverage for 2011"
+    },
+    {
+      "year": 2010,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R16"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R16"]}
+      ],
+      "allValidSizes": ["245/75R16", "265/75R16", "265/70R17"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "status": "MISMATCH",
+      "notes": "2010 was a transitional year - different wheel sizes than DB. Source shows R16 options"
+    },
+    {
+      "year": 2009,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R16"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R16"]}
+      ],
+      "allValidSizes": ["245/75R16", "265/75R16", "265/70R17"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT265/60R18"],
+      "status": "MISMATCH",
+      "notes": "Source shows R16 options for 2009, DB has R17/R18"
+    },
+    {
+      "year": 2008,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trims": [
+        {"trim": "2WD Crew Cab", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "2WD Extended Cab", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "2WD Regular Cab", "tireSizes": ["245/75R16"]},
+        {"trim": "4WD Crew Cab", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "4WD Extended Cab", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"trim": "4WD Regular Cab", "tireSizes": ["245/75R16"]}
+      ],
+      "allValidSizes": ["245/75R16", "265/75R16", "265/70R17"],
+      "currentTireSizes": ["LT245/75R17"],
+      "status": "MISMATCH",
+      "notes": "Source shows R16 options for 2008, DB only has LT245/75R17"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "fullMatch": 2,
+    "partialMatch": 34,
+    "mismatch": 3,
+    "missingData": 3,
+    "keyFindings": [
+      "Sierra 1500 (2019-2020): Missing 265/70R17, 275/65R18, 275/50R22 sizes",
+      "Sierra 1500 (2014-2018): Has unconfirmed 275/65R18 and 275/60R20 in some entries",
+      "Sierra 1500 (2000-2006): Missing base 235/75R16 and 255/70R16 sizes",
+      "Sierra 1500 Classic (2007): No data in DB",
+      "Sierra 1500 Limited (2019, 2022): No data in DB",
+      "Sierra 2500 HD (2020-2025): Current DB using LT prefix sizes - need to add non-LT equivalents for 275/70R18, 275/65R20",
+      "Sierra 2500 HD (2008-2010): Transitional years - had R16 options that DB may be missing"
+    ]
+  }
+}

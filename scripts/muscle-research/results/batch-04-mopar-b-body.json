@@ -1,0 +1,608 @@
+{
+  "batchId": "muscle-mopar-b-body",
+  "description": "Mopar B-body muscle: Charger, Road Runner, GTX, Coronet, Super Bee, Satellite, Belvedere (1965-1971)",
+  "researchDate": "2026-04-22",
+  "platformNotes": {
+    "platform": "Mopar B-body",
+    "years": "1965-1971",
+    "boltPattern": "5x114.3",
+    "boltPatternImperial": "5x4.5\"",
+    "hubBore": 71.1,
+    "lugNutThreadSize": "1/2\"-20 UNF",
+    "notes": "All B-body Mopar share same bolt pattern. Hemi cars often came with 15\" wheels while standard was 14\". Performance models (R/T, Super Bee, Road Runner, GTX) typically got F70-14 wide-oval tires standard."
+  },
+  "sources": [
+    "cokertire.com (OEM tire fitment guide)",
+    "forbbodiesonly.com (B-body forum)",
+    "tirewheelguide.com",
+    "moparts.org",
+    "classicindustries.com"
+  ],
+  "vehicles": [
+    {
+      "year": 1965,
+      "make": "Plymouth",
+      "model": "Belvedere",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14"],
+      "modern_equivalent_tires": ["195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Base model. Use 775-14 with big engine or A/C option."
+    },
+    {
+      "year": 1965,
+      "make": "Plymouth",
+      "model": "Satellite",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14"],
+      "modern_equivalent_tires": ["195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Satellite was Plymouth's mid-level B-body."
+    },
+    {
+      "year": 1966,
+      "make": "Dodge",
+      "model": "Charger",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14"],
+      "modern_equivalent_tires": ["195/75R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "First year Charger. 14x6 wheels available with 440 engine."
+    },
+    {
+      "year": 1966,
+      "make": "Dodge",
+      "model": "Coronet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 }
+      ],
+      "oem_tire_sizes": ["695-14", "735-14", "775-14"],
+      "modern_equivalent_tires": ["195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "6-cylinder got 695-14, V8 got 735-14 standard. 426 Hemi got 775-14."
+    },
+    {
+      "year": 1966,
+      "make": "Plymouth",
+      "model": "Belvedere",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14"],
+      "modern_equivalent_tires": ["195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Same as 1965."
+    },
+    {
+      "year": 1966,
+      "make": "Plymouth",
+      "model": "Satellite",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14"],
+      "modern_equivalent_tires": ["195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Same as 1965."
+    },
+    {
+      "year": 1967,
+      "make": "Dodge",
+      "model": "Charger",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14", "F70-14"],
+      "modern_equivalent_tires": ["195/75R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard: 735-14/775-14. 440 engine: F70-14 (215/70R14)."
+    },
+    {
+      "year": 1967,
+      "make": "Dodge",
+      "model": "Coronet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14", "F70-14"],
+      "modern_equivalent_tires": ["195/75R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "R/T and 440 models got F70-14 tires."
+    },
+    {
+      "year": 1967,
+      "make": "Plymouth",
+      "model": "GTX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "First year GTX. Performance model standard with wide-oval F70-14."
+    },
+    {
+      "year": 1967,
+      "make": "Plymouth",
+      "model": "Belvedere",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14"],
+      "modern_equivalent_tires": ["195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Base model. Use option with big engine."
+    },
+    {
+      "year": 1967,
+      "make": "Plymouth",
+      "model": "Satellite",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14"],
+      "modern_equivalent_tires": ["195/75R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Mid-level B-body."
+    },
+    {
+      "year": 1968,
+      "make": "Dodge",
+      "model": "Charger",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14", "F70-14"],
+      "modern_equivalent_tires": ["195/75R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Iconic '68 redesign. Standard: 735-14/775-14. 440 engine: F70-14."
+    },
+    {
+      "year": 1968,
+      "make": "Dodge",
+      "model": "Coronet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14", "F70-14"],
+      "modern_equivalent_tires": ["195/75R14", "215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "R/T and 440 models got F70-14."
+    },
+    {
+      "year": 1968,
+      "make": "Dodge",
+      "model": "Super Bee",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "First year Super Bee. Dodge's budget muscle based on Coronet. Standard F70-14 wide-ovals."
+    },
+    {
+      "year": 1968,
+      "make": "Plymouth",
+      "model": "Road Runner",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "First year Road Runner. Budget muscle car with standard F70-14 wide-oval tires."
+    },
+    {
+      "year": 1968,
+      "make": "Plymouth",
+      "model": "GTX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Premium muscle car. Standard F70-14."
+    },
+    {
+      "year": 1968,
+      "make": "Plymouth",
+      "model": "Satellite",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14", "F70-15"],
+      "modern_equivalent_tires": ["195/75R14", "215/70R15"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard: 735-14/775-14. 426 Hemi V8: F70-15 on 15x7 wheels."
+    },
+    {
+      "year": 1968,
+      "make": "Plymouth",
+      "model": "Belvedere",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["775-14", "825-14", "F70-15"],
+      "modern_equivalent_tires": ["205/75R14", "215/70R15"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard: 775-14. 426 Hemi V8: F70-15 on 15\" wheels."
+    },
+    {
+      "year": 1969,
+      "make": "Dodge",
+      "model": "Charger",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14", "F70-14", "F70-15"],
+      "modern_equivalent_tires": ["195/75R14", "205/75R14", "215/70R14", "215/70R15"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "6-cyl: 735-14. V8: 775-14/F70-14. 440: F70-14. 426 Hemi: F70-15 on 15\" wheels."
+    },
+    {
+      "year": 1969,
+      "make": "Dodge",
+      "model": "Coronet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14", "F70-14", "F70-15"],
+      "modern_equivalent_tires": ["195/75R14", "205/75R14", "215/70R14", "215/70R15"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Same as Charger. 440: F70-14. 426 Hemi: F70-15."
+    },
+    {
+      "year": 1969,
+      "make": "Dodge",
+      "model": "Super Bee",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard F70-14 wide-oval tires."
+    },
+    {
+      "year": 1969,
+      "make": "Plymouth",
+      "model": "Road Runner",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard F70-14 wide-oval tires. Hemi option used 15\" wheels."
+    },
+    {
+      "year": 1969,
+      "make": "Plymouth",
+      "model": "GTX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Premium muscle car. Standard F70-14."
+    },
+    {
+      "year": 1969,
+      "make": "Plymouth",
+      "model": "Satellite",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14", "F70-15"],
+      "modern_equivalent_tires": ["195/75R14", "205/75R14", "215/70R15"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard series. Hemi option: F70-15."
+    },
+    {
+      "year": 1969,
+      "make": "Plymouth",
+      "model": "Belvedere",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["735-14", "775-14", "F70-15"],
+      "modern_equivalent_tires": ["195/75R14", "205/75R14", "215/70R15"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard: 735-14/775-14. Hemi V8: F70-15."
+    },
+    {
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Charger",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-14", "G78-14", "F70-14"],
+      "modern_equivalent_tires": ["215/70R14", "225/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "225/318/383: F78-14/G78-14. 426/440: F70-14 (215/70R14). Hemi: 15\" option."
+    },
+    {
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Coronet",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-14", "G78-14", "F70-14"],
+      "modern_equivalent_tires": ["215/70R14", "225/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Same as Charger. 426/440: F70-14."
+    },
+    {
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Super Bee",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "383 standard. F70-14 wide-oval tires."
+    },
+    {
+      "year": 1970,
+      "make": "Plymouth",
+      "model": "Road Runner",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard F70-14. Available with 440 Six Pack and 426 Hemi."
+    },
+    {
+      "year": 1970,
+      "make": "Plymouth",
+      "model": "GTX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Premium muscle. Standard F70-14."
+    },
+    {
+      "year": 1970,
+      "make": "Plymouth",
+      "model": "Satellite",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 }
+      ],
+      "oem_tire_sizes": ["F78-14", "G78-14"],
+      "modern_equivalent_tires": ["215/70R14", "225/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard series moved to F78/G78 tires."
+    },
+    {
+      "year": 1970,
+      "make": "Plymouth",
+      "model": "Belvedere",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 }
+      ],
+      "oem_tire_sizes": ["F78-14", "G78-14"],
+      "modern_equivalent_tires": ["215/70R14", "225/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard series. Same as Satellite."
+    },
+    {
+      "year": 1971,
+      "make": "Dodge",
+      "model": "Charger",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "G78-14", "F70-14", "G70-14"],
+      "modern_equivalent_tires": ["215/70R14", "225/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "225: E78-14/F78-14. 318/383: F78-14/G78-14. Super Bee: F70-14. 500/R/T: G70-14 (225/70R14)."
+    },
+    {
+      "year": 1971,
+      "make": "Plymouth",
+      "model": "Road Runner",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F70-14", "F78-14"],
+      "modern_equivalent_tires": ["215/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Standard F70-14/F78-14. Last year of classic Road Runner."
+    },
+    {
+      "year": 1971,
+      "make": "Plymouth",
+      "model": "GTX",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G70-14", "G78-14"],
+      "modern_equivalent_tires": ["225/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "Final year GTX. Upgraded to G70-14 (225/70R14)."
+    },
+    {
+      "year": 1971,
+      "make": "Plymouth",
+      "model": "Satellite",
+      "bolt_pattern": "5x114.3",
+      "hub_bore": 71.1,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5.5, "offset": 5 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "G78-14"],
+      "modern_equivalent_tires": ["215/70R14", "225/70R14"],
+      "staggered": false,
+      "confidence": "high",
+      "notes": "225 eng: E78-14/F78-14. Standard/V8: F78-14/G78-14."
+    }
+  ],
+  "biasToModernConversions": {
+    "735-14": "195/75R14",
+    "775-14": "205/75R14",
+    "825-14": "215/75R14",
+    "855-14": "225/75R14",
+    "E78-14": "195/75R14",
+    "F78-14": "205/75R14",
+    "G78-14": "215/75R14",
+    "H78-14": "225/75R14",
+    "F70-14": "215/70R14",
+    "G70-14": "225/70R14",
+    "G60-14": "245/60R14",
+    "F70-15": "215/70R15",
+    "G60-15": "245/60R15"
+  },
+  "commonUpgrades": {
+    "14inch": {
+      "front": ["215/70R14", "225/70R14"],
+      "rear": ["225/70R14", "245/60R14"],
+      "notes": "14\" tire options limited. 245/60R14 is widest commonly available. B-bodies have huge wheel wells and can accommodate large tires."
+    },
+    "15inch": {
+      "front": ["225/70R15", "235/60R15"],
+      "rear": ["255/60R15", "275/60R15"],
+      "notes": "15x7 front with 4.25\" backspace, 15x8 rear with 4.5\" backspace. 275/60R15 fits with no modifications on most B-bodies."
+    }
+  }
+}

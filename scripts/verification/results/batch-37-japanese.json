@@ -1,0 +1,1111 @@
+{
+  "batch": "batch-37-japanese",
+  "verifiedAt": "2026-04-23T00:27:00Z",
+  "verifier": "subagent:verify-jp-37",
+  "totalVehicles": 75,
+  "validVehicles": 63,
+  "invalidVehicles": 12,
+  "summary": {
+    "invalidModelYears": [
+      {"year": 2019, "make": "mazda", "model": "cx-30", "reason": "CX-30 debuted as 2020 model year"},
+      {"year": 2011, "make": "mazda", "model": "cx-5", "reason": "CX-5 debuted as 2013 model year"},
+      {"year": 2012, "make": "mazda", "model": "cx-5", "reason": "CX-5 debuted as 2013 model year"},
+      {"year": 2022, "make": "mazda", "model": "cx-50", "reason": "CX-50 debuted as 2023 model year"},
+      {"year": 2006, "make": "mazda", "model": "cx-9", "reason": "CX-9 debuted as 2007 model year"},
+      {"year": 2023, "make": "mazda", "model": "cx-90", "reason": "CX-90 debuted as 2024 model year"},
+      {"year": 2003, "make": "mazda", "model": "mazda3", "reason": "Mazda3 debuted as 2004 model year"},
+      {"year": 2020, "make": "mazda", "model": "mx-30", "reason": "MX-30 US market debut was 2022 model year (sold Aug 2021)"},
+      {"year": 2021, "make": "mazda", "model": "mx-30", "reason": "MX-30 US market debut was 2022 model year (sold Aug 2021)"}
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2021,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC 300", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "RC 300 F Sport", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "RC 350 F Sport", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "lexus.com"],
+      "notes": "RC discontinued after 2025 model year"
+    },
+    {
+      "year": 2022,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC 300", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "RC 300 F Sport", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "RC 350 F Sport", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "lexus.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC 300", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "RC 300 F Sport", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "RC 350 F Sport", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "lexus.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC 300", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "RC 300 F Sport", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "RC 350 F Sport", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "lexus.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Lexus",
+      "model": "RC",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC 300", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "RC 350", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "RC 350 F Sport", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "pressroom.lexus.com"],
+      "notes": "Final model year - RC discontinued after 2025"
+    },
+    {
+      "year": 2015,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "notes": "Staggered wheel setup standard"
+    },
+    {
+      "year": 2016,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"},
+        {"name": "RC F Track Edition", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"},
+        {"name": "RC F Fuji Speedway Edition", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"},
+        {"name": "RC F Track Edition", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Lexus",
+      "model": "RC F",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "RC F Final Edition", "oemWheelSize": "19x9 front / 19x10 rear", "oemTireSize": "255/35R19 front / 275/35R19 rear"}
+      ],
+      "isStaggered": true,
+      "confidence": "high",
+      "sources": ["caranddriver.com", "pressroom.lexus.com"],
+      "notes": "Final model year - RC F discontinued after 2025. Final Edition only trim."
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "UX",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "UX 200", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 200 F Sport", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 250h", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 250h F Sport", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "tiresize.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Lexus",
+      "model": "UX",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "UX 200", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 200 F Sport", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 250h", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 250h F Sport", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "tiresize.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Lexus",
+      "model": "UX",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "UX 250h", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 250h F Sport", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"],
+      "notes": "UX200 non-hybrid discontinued for 2023+, now hybrid only as UX300h"
+    },
+    {
+      "year": 2025,
+      "make": "Lexus",
+      "model": "UX",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "UX 300h", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 300h Premium", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 300h F Sport", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 300h F Sport Handling", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Lexus",
+      "model": "UX",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "UX 300h", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 300h Premium", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 300h F Sport", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "UX 300h F Sport Handling", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "s", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "thedriveradviser.com"],
+      "notes": "First generation (GG) 2003-2008"
+    },
+    {
+      "year": 2004,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "s", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "thedriveradviser.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "s", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "thedriveradviser.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "s", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"},
+        {"name": "Mazdaspeed6", "oemWheelSize": "18x7", "oemTireSize": "215/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "s", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"},
+        {"name": "Mazdaspeed6", "oemWheelSize": "18x7", "oemTireSize": "215/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/60R16"},
+        {"name": "s", "oemWheelSize": "17x7", "oemTireSize": "215/50R17"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i Sport", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "i Touring", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "s", "oemWheelSize": "18x7.5", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"],
+      "notes": "Second generation (GH) 2009-2013"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i Sport", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "i Touring", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "s", "oemWheelSize": "18x7.5", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i Sport", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "i Touring", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "s", "oemWheelSize": "18x7.5", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i Sport", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "i Touring", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "s", "oemWheelSize": "18x7.5", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "i Sport", "oemWheelSize": "17x7", "oemTireSize": "225/55R17"},
+        {"name": "i Touring", "oemWheelSize": "17x7", "oemTireSize": "225/55R17"},
+        {"name": "s", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Grand Touring", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"],
+      "notes": "Third generation (GJ) 2014-2021"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Grand Touring", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Grand Touring", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Grand Touring", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Grand Touring", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"},
+        {"name": "Signature", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Grand Touring", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"},
+        {"name": "Signature", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Grand Touring", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"},
+        {"name": "Signature", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x7.5", "oemTireSize": "225/55R17"},
+        {"name": "Grand Touring", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"},
+        {"name": "Carbon Edition", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"},
+        {"name": "Signature", "oemWheelSize": "19x7.5", "oemTireSize": "225/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"],
+      "notes": "Final model year for Mazda6 in North America"
+    },
+    {
+      "year": 2019,
+      "make": "Mazda",
+      "model": "CX-30",
+      "status": "invalid",
+      "reason": "CX-30 debuted as 2020 model year",
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "CX-5",
+      "status": "invalid",
+      "reason": "CX-5 debuted as 2013 model year",
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "CX-5",
+      "status": "invalid",
+      "reason": "CX-5 debuted as 2013 model year",
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "CX-50",
+      "status": "invalid",
+      "reason": "CX-50 debuted as 2023 model year",
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "CX-50",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "2.5 S", "oemWheelSize": "17x7", "oemTireSize": "225/65R17"},
+        {"name": "2.5 S Preferred", "oemWheelSize": "17x7", "oemTireSize": "225/65R17"},
+        {"name": "2.5 S Premium", "oemWheelSize": "19x7.5", "oemTireSize": "225/55R19"},
+        {"name": "2.5 Turbo", "oemWheelSize": "19x7.5", "oemTireSize": "225/55R19"},
+        {"name": "2.5 Turbo Premium Plus", "oemWheelSize": "19x7.5", "oemTireSize": "225/55R19"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "mazdausa.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Mazda",
+      "model": "CX-70",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "3.3 Turbo Preferred", "oemWheelSize": "19x8", "oemTireSize": "265/55R19"},
+        {"name": "3.3 Turbo Premium", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21"},
+        {"name": "3.3 Turbo S Premium Plus", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21"},
+        {"name": "PHEV Premium", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "notes": "First model year for CX-70"
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "CX-70",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "3.3 Turbo Preferred", "oemWheelSize": "19x8", "oemTireSize": "265/55R19"},
+        {"name": "3.3 Turbo Premium", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21"},
+        {"name": "3.3 Turbo S Premium Plus", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21"},
+        {"name": "PHEV Premium", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"]
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "CX-9",
+      "status": "invalid",
+      "reason": "CX-9 debuted as 2007 model year",
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "CX-9",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Grand Touring", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"],
+      "notes": "First generation (TB) 2007-2015"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "CX-9",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Grand Touring", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "CX-9",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Grand Touring", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "CX-9",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Grand Touring", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "CX-9",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Grand Touring", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "CX-9",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Grand Touring", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "CX-9",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Grand Touring", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "CX-9",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "245/60R18"},
+        {"name": "Grand Touring", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["edmunds.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "CX-90",
+      "status": "invalid",
+      "reason": "CX-90 debuted as 2024 model year",
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "CX-90",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "3.3 Turbo Select", "oemWheelSize": "19x8", "oemTireSize": "265/55R19"},
+        {"name": "3.3 Turbo Preferred", "oemWheelSize": "19x8", "oemTireSize": "265/55R19"},
+        {"name": "3.3 Turbo Premium", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21"},
+        {"name": "3.3 Turbo S Premium Plus", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21"},
+        {"name": "PHEV Premium Plus", "oemWheelSize": "21x8.5", "oemTireSize": "275/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "mazdausa.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "status": "invalid",
+      "reason": "Mazda3 debuted as 2004 model year",
+      "confidence": "high",
+      "sources": ["edmunds.com", "caranddriver.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Mazda",
+      "model": "MX-30",
+      "status": "invalid",
+      "reason": "MX-30 debuted in US market as 2022 model year (production started Aug 2021, California only)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "carbuzz.com", "motor1.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "MX-30",
+      "status": "invalid",
+      "reason": "MX-30 debuted in US market as 2022 model year (production started Aug 2021, California only)",
+      "confidence": "high",
+      "sources": ["wikipedia.org", "carbuzz.com", "motor1.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "MX-30",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Premium Plus", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "edmunds.com"],
+      "notes": "First US model year, California only, BEV with 100mi range"
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "MX-30",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Premium Plus", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"},
+        {"name": "R-EV", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com"],
+      "notes": "R-EV (rotary range extender) introduced"
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "MX-30",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "R-EV", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"}
+      ],
+      "confidence": "medium",
+      "sources": ["caranddriver.com"],
+      "notes": "BEV variant discontinued in US"
+    },
+    {
+      "year": 2025,
+      "make": "Mazda",
+      "model": "MX-30",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "R-EV", "oemWheelSize": "18x7", "oemTireSize": "215/55R18"}
+      ],
+      "confidence": "medium",
+      "sources": ["caranddriver.com"]
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "14x6", "oemTireSize": "185/60R14"},
+        {"name": "LS", "oemWheelSize": "15x6", "oemTireSize": "195/50R15"},
+        {"name": "SE", "oemWheelSize": "15x6", "oemTireSize": "195/50R15"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "konigwheels.com"],
+      "notes": "NB generation (1999-2005)"
+    },
+    {
+      "year": 2001,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6", "oemTireSize": "195/50R15"},
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "konigwheels.com"]
+    },
+    {
+      "year": 2002,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6", "oemTireSize": "195/50R15"},
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "konigwheels.com"]
+    },
+    {
+      "year": 2003,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "15x6", "oemTireSize": "195/50R15"},
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"},
+        {"name": "Shinsen", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "konigwheels.com"]
+    },
+    {
+      "year": 2004,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"},
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"},
+        {"name": "Mazdaspeed", "oemWheelSize": "17x7", "oemTireSize": "205/40R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "konigwheels.com"]
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "valid",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"},
+        {"name": "LS", "oemWheelSize": "16x6.5", "oemTireSize": "205/45R16"},
+        {"name": "Mazdaspeed", "oemWheelSize": "17x7", "oemTireSize": "205/40R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "konigwheels.com"],
+      "notes": "Final NB generation year"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"},
+        {"name": "Touring", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"},
+        {"name": "Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "NC generation (2006-2015) - BOLT PATTERN CHANGE to 5x114.3"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"},
+        {"name": "Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"},
+        {"name": "Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"},
+        {"name": "Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"},
+        {"name": "Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "MX-5",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 67.1,
+      "trims": [
+        {"name": "Sport", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"},
+        {"name": "Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"},
+        {"name": "Grand Touring", "oemWheelSize": "17x7", "oemTireSize": "205/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    }
+  ]
+}

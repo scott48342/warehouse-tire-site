@@ -1,0 +1,1059 @@
+{
+  "batchId": "93",
+  "processedAt": "2026-04-21T22:18:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "Continental",
+      "currentTireSizes": ["245/45R19", "245/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "With Security Package": ["225/60R16"],
+        "Without Security Package": ["225/60R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "Current DB has incorrect plus-sizes. OEM is 225/60R16 only for all trims."
+    },
+    {
+      "year": 2026,
+      "make": "Lincoln",
+      "model": "Corsair",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R18", "225/55R19", "245/45R20"],
+      "trims": {
+        "Grand Touring": ["225/55R19", "245/45R20"],
+        "Premiere": ["225/60R18", "225/55R19", "245/45R20"],
+        "Reserve": ["225/55R19", "245/45R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "No current tire sizes in DB. Added OEM data."
+    },
+    {
+      "year": 2025,
+      "make": "Lincoln",
+      "model": "Corsair",
+      "currentTireSizes": ["225/60R18", "235/50R19", "245/45R20", "225/55R19", "245/50R19"],
+      "validatedTireSizes": ["225/60R18", "225/55R19", "245/45R20"],
+      "trims": {
+        "Grand Touring": ["225/55R19", "245/45R20"],
+        "Premiere": ["225/60R18", "225/55R19", "245/45R20"],
+        "Reserve": ["225/55R19", "245/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R19 and 245/50R19 are NOT OEM sizes. Remove them."
+    },
+    {
+      "year": 2024,
+      "make": "Lincoln",
+      "model": "Corsair",
+      "currentTireSizes": ["225/60R18", "235/50R19", "245/45R20", "225/55R19", "245/50R19"],
+      "validatedTireSizes": ["225/60R18", "225/55R19", "245/45R20"],
+      "trims": {
+        "Grand Touring": ["225/55R19", "245/45R20"],
+        "Reserve": ["225/55R19", "245/45R20"],
+        "Standard": ["225/60R18", "225/55R19", "245/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R19 and 245/50R19 are NOT OEM sizes. Remove them."
+    },
+    {
+      "year": 2023,
+      "make": "Lincoln",
+      "model": "Corsair",
+      "currentTireSizes": ["225/60R18", "235/50R19", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "225/55R19", "245/45R20"],
+      "trims": {
+        "Grand Touring": ["225/55R19", "245/45R20"],
+        "Reserve": ["225/55R19", "245/45R20"],
+        "Standard": ["225/60R18", "225/55R19", "245/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R19 is NOT OEM. Should be 225/55R19."
+    },
+    {
+      "year": 2022,
+      "make": "Lincoln",
+      "model": "Corsair",
+      "currentTireSizes": ["225/60R18", "235/50R19", "245/45R20", "225/55R19", "245/50R19"],
+      "validatedTireSizes": ["225/60R18", "225/55R19", "245/45R20"],
+      "trims": {
+        "Grand Touring": ["225/55R19", "245/45R20"],
+        "Reserve": ["225/55R19", "245/45R20"],
+        "Standard": ["225/60R18", "225/55R19", "245/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R19 and 245/50R19 are NOT OEM sizes. Remove them."
+    },
+    {
+      "year": 2021,
+      "make": "Lincoln",
+      "model": "Corsair",
+      "currentTireSizes": ["225/60R18", "235/50R19", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "225/55R19", "245/45R20"],
+      "trims": {
+        "Grand Touring": ["225/55R19", "245/45R20"],
+        "Reserve": ["225/55R19", "245/45R20"],
+        "Standard": ["225/60R18", "225/55R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R19 is NOT OEM. Should be 225/55R19."
+    },
+    {
+      "year": 2020,
+      "make": "Lincoln",
+      "model": "Corsair",
+      "currentTireSizes": ["225/60R18", "235/50R19", "245/45R20"],
+      "validatedTireSizes": ["225/60R18", "225/55R19", "245/45R20"],
+      "trims": {
+        "Reserve": ["225/55R19", "245/45R20"],
+        "Standard": ["225/60R18", "225/55R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R19 is NOT OEM. Should be 225/55R19."
+    },
+    {
+      "year": 2019,
+      "make": "Lincoln",
+      "model": "Corsair",
+      "currentTireSizes": ["225/60R18", "225/55R19", "245/45R20", "245/50R19"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "Lincoln Corsair did NOT exist in 2019. First model year is 2020. This entry should be removed or is mislabeled (possibly MKC data)."
+    },
+    {
+      "year": 2006,
+      "make": "Lincoln",
+      "model": "LS",
+      "currentTireSizes": ["225/55R17", "235/50R18"],
+      "validatedTireSizes": ["235/50R17"],
+      "trims": {
+        "V8": ["235/50R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2006 was final year, V8 only. OEM is 235/50R17 (17-inch), NOT R18."
+    },
+    {
+      "year": 2005,
+      "make": "Lincoln",
+      "model": "LS",
+      "currentTireSizes": ["225/55R17", "235/50R18"],
+      "validatedTireSizes": ["225/55R16", "235/50R17"],
+      "trims": {
+        "V6 Luxury Package": ["225/55R16"],
+        "V6 Premium Package": ["225/55R16"],
+        "V8 Sport": ["235/50R17"],
+        "V8 Ultimate Package": ["235/50R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "Current has R17/R18, OEM is R16/R17. V6 = 16\", V8 = 17\"."
+    },
+    {
+      "year": 2004,
+      "make": "Lincoln",
+      "model": "LS",
+      "currentTireSizes": ["225/55R17", "235/50R18"],
+      "validatedTireSizes": ["225/55R16", "235/50R17"],
+      "trims": {
+        "V6 Luxury Package": ["225/55R16"],
+        "V6 Premium Pkg": ["225/55R16"],
+        "V8 Sport": ["235/50R17"],
+        "V8 Ultimate Pkg": ["235/50R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "Current has R17/R18, OEM is R16/R17."
+    },
+    {
+      "year": 2003,
+      "make": "Lincoln",
+      "model": "LS",
+      "currentTireSizes": ["225/55R17", "235/50R18"],
+      "validatedTireSizes": ["225/55R16", "235/50R17"],
+      "trims": {
+        "V6 Base Model": ["225/55R16"],
+        "V6 Premium Pkg": ["225/55R16"],
+        "V8 Premium Sport": ["235/50R17"],
+        "V8 Sport Pkg": ["235/50R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "Current has R17/R18, OEM is R16/R17."
+    },
+    {
+      "year": 2002,
+      "make": "Lincoln",
+      "model": "LS",
+      "currentTireSizes": ["225/55R17", "235/50R18"],
+      "validatedTireSizes": ["215/60R16", "235/50R17"],
+      "trims": {
+        "V6": ["215/60R16", "235/50R17"],
+        "V6 Premium Pkg": ["235/50R17"],
+        "V6 Sport Pkg": ["235/50R17"],
+        "V8": ["235/50R17"],
+        "V8 Premium Pkg": ["235/50R17"],
+        "V8 Sport Pkg": ["235/50R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "Base V6 has 215/60R16 option. No 18\" OEM option."
+    },
+    {
+      "year": 2001,
+      "make": "Lincoln",
+      "model": "LS",
+      "currentTireSizes": ["225/55R17", "235/50R18"],
+      "validatedTireSizes": ["215/60R16", "235/50R17"],
+      "trims": {
+        "V6": ["215/60R16", "235/50R17"],
+        "V6 Sport Pkg": ["235/50R17"],
+        "V8": ["215/60R16", "235/50R17"],
+        "V8 Sport Pkg": ["235/50R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "No 18\" OEM option. Base has 16\" option."
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "LS",
+      "currentTireSizes": ["225/55R17", "235/50R18"],
+      "validatedTireSizes": ["215/60R16", "235/50R17"],
+      "trims": {
+        "V6": ["215/60R16", "235/50R17"],
+        "V6 Sport Pkg": ["235/50R17"],
+        "V8": ["215/60R16", "235/50R17"],
+        "V8 Sport Pkg": ["235/50R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "No 18\" OEM option. Base has 16\" option."
+    },
+    {
+      "year": 2014,
+      "make": "Lincoln",
+      "model": "Mark LT",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R20", "275/65R18"],
+      "trims": {
+        "4x2": ["275/55R20"],
+        "4x4": ["275/65R18", "275/55R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Mexico-market only (2010-2014 Gen II). Based on F-150 platform."
+    },
+    {
+      "year": 2013,
+      "make": "Lincoln",
+      "model": "Mark LT",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R20", "275/65R18"],
+      "trims": {
+        "4x2": ["275/55R20"],
+        "4x4": ["275/65R18", "275/55R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Mexico-market only."
+    },
+    {
+      "year": 2012,
+      "make": "Lincoln",
+      "model": "Mark LT",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R20", "275/65R18"],
+      "trims": {
+        "4x2": ["275/55R20"],
+        "4x4": ["275/65R18", "275/55R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Mexico-market only."
+    },
+    {
+      "year": 2011,
+      "make": "Lincoln",
+      "model": "Mark LT",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R20", "275/65R18"],
+      "trims": {
+        "4x2": ["275/55R20"],
+        "4x4": ["275/65R18", "275/55R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Mexico-market only."
+    },
+    {
+      "year": 2010,
+      "make": "Lincoln",
+      "model": "Mark LT",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["275/55R20", "275/65R18"],
+      "trims": {
+        "4x2": ["275/55R20"],
+        "4x4": ["275/65R18", "275/55R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Mexico-market only (Gen II start)."
+    },
+    {
+      "year": 2008,
+      "make": "Lincoln",
+      "model": "Mark LT",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "275/65R18", "275/55R20"],
+      "trims": {
+        "4x2": ["265/60R18", "275/55R20"],
+        "4x4": ["275/65R18", "275/55R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Last US-market year of Gen I."
+    },
+    {
+      "year": 2007,
+      "make": "Lincoln",
+      "model": "Mark LT",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "275/65R18", "275/55R20"],
+      "trims": {
+        "4x2": ["265/60R18", "275/55R20"],
+        "4x4": ["275/65R18", "275/55R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "US market."
+    },
+    {
+      "year": 2006,
+      "make": "Lincoln",
+      "model": "Mark LT",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/60R18", "275/65R18", "275/55R20"],
+      "trims": {
+        "4x2": ["265/60R18", "275/55R20"],
+        "4x4": ["275/65R18", "275/55R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "First year of Mark LT."
+    },
+    {
+      "year": 2005,
+      "make": "Lincoln",
+      "model": "Mark LT",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "Lincoln Mark LT did NOT exist in 2005. First model year is 2006. Remove this entry."
+    },
+    {
+      "year": 2020,
+      "make": "Lincoln",
+      "model": "MKC",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "Lincoln MKC ended in 2019. Was replaced by Corsair for 2020. Remove this entry."
+    },
+    {
+      "year": 2019,
+      "make": "Lincoln",
+      "model": "MKC",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/50R18", "235/45R19", "245/45R19", "255/40R20"],
+      "trims": {
+        "Black Label": ["235/45R19", "255/40R20"],
+        "Black Label AWD": ["245/45R19", "255/40R20"],
+        "Reserve": ["235/50R18", "235/45R19"],
+        "Reserve AWD": ["235/50R18", "245/45R19", "255/40R20"],
+        "Select": ["235/50R18"],
+        "Standard": ["235/50R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "Current sizes are close but not exact. 235/55R18 should be 235/50R18. 235/50R19 should be 235/45R19 or 245/45R19."
+    },
+    {
+      "year": 2018,
+      "make": "Lincoln",
+      "model": "MKC",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/50R18", "235/45R19", "245/45R19", "255/40R20"],
+      "trims": {
+        "Black Label": ["235/45R19", "255/40R20"],
+        "Black Label AWD": ["245/45R19", "255/40R20"],
+        "Premiere": ["235/50R18"],
+        "Reserve": ["235/50R18", "235/45R19"],
+        "Reserve AWD": ["235/50R18", "245/45R19", "255/40R20"],
+        "Select": ["235/50R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/55R18 should be 235/50R18. Missing 20\" option."
+    },
+    {
+      "year": 2017,
+      "make": "Lincoln",
+      "model": "MKC",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/50R18", "235/45R19", "245/45R19", "255/40R20"],
+      "trims": {
+        "Premiere": ["235/50R18"],
+        "Reserve": ["235/50R18", "235/45R19"],
+        "Reserve AWD": ["235/50R18", "245/45R19", "255/40R20"],
+        "Select": ["235/50R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/55R18 should be 235/50R18. Missing 20\" option."
+    },
+    {
+      "year": 2016,
+      "make": "Lincoln",
+      "model": "MKC",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/50R18", "235/45R19", "245/45R19", "255/40R20"],
+      "trims": {
+        "Premiere": ["235/50R18"],
+        "Reserve": ["235/50R18", "235/45R19"],
+        "Reserve AWD": ["235/50R18", "245/45R19", "255/40R20"],
+        "Select": ["235/50R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/55R18 should be 235/50R18."
+    },
+    {
+      "year": 2015,
+      "make": "Lincoln",
+      "model": "MKC",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": ["235/50R18", "235/45R19", "245/45R19", "255/40R20"],
+      "trims": {
+        "Premiere": ["235/50R18"],
+        "Reserve": ["235/50R18", "235/45R19"],
+        "Reserve AWD": ["235/50R18", "245/45R19", "255/40R20"],
+        "Select": ["235/50R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/55R18 should be 235/50R18."
+    },
+    {
+      "year": 2014,
+      "make": "Lincoln",
+      "model": "MKC",
+      "currentTireSizes": ["235/55R18", "235/50R19"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "Lincoln MKC started in 2015 model year. 2014 MKC does not exist. Remove this entry."
+    },
+    {
+      "year": 2016,
+      "make": "Lincoln",
+      "model": "MKS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "245/45R20"],
+      "trims": {
+        "3.5L V6 Ecoboost": ["245/45R20"],
+        "3.7L V6 AWD": ["255/45R19", "245/45R20"],
+        "3.7L V6 FWD": ["255/45R19", "245/45R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Final year of MKS."
+    },
+    {
+      "year": 2015,
+      "make": "Lincoln",
+      "model": "MKS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "245/45R20"],
+      "trims": {
+        "3.5L V6 Ecoboost": ["245/45R20"],
+        "3.7L V6 AWD": ["255/45R19", "245/45R20"],
+        "3.7L V6 FWD": ["255/45R19", "245/45R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": ""
+    },
+    {
+      "year": 2014,
+      "make": "Lincoln",
+      "model": "MKS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "245/45R20"],
+      "trims": {
+        "3.5L V6 EcoBoost": ["245/45R20"],
+        "3.7L V6 AWD": ["255/45R19", "245/45R20"],
+        "3.7L V6 FWD": ["255/45R19", "245/45R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": ""
+    },
+    {
+      "year": 2013,
+      "make": "Lincoln",
+      "model": "MKS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "3.5L V6 EcoBoost": ["255/45R19", "245/45R20"],
+        "3.7L V6 AWD": ["235/55R18", "255/45R19"],
+        "3.7L V6 FWD": ["235/55R18", "255/45R19"]
+      },
+      "status": "MISSING_DATA",
+      "notes": ""
+    },
+    {
+      "year": 2012,
+      "make": "Lincoln",
+      "model": "MKS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "AWD 3.5L V6 EcoBoost": ["255/45R19", "245/45R20"],
+        "AWD 3.7L V6": ["235/55R18", "255/45R19", "245/45R20"],
+        "FWD": ["235/55R18", "255/45R19", "245/45R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": ""
+    },
+    {
+      "year": 2011,
+      "make": "Lincoln",
+      "model": "MKS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "AWD 3.5L V6 EcoBoost": ["255/45R19", "245/45R20"],
+        "AWD 3.7L V6": ["235/55R18", "255/45R19", "245/45R20"],
+        "FWD": ["235/55R18", "255/45R19", "245/45R20"]
+      },
+      "status": "MISSING_DATA",
+      "notes": ""
+    },
+    {
+      "year": 2010,
+      "make": "Lincoln",
+      "model": "MKS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R18", "255/45R19", "245/45R20"],
+      "trims": {
+        "AWD 3.5L V6 EcoBoost": ["255/45R19", "245/45R20"],
+        "AWD 3.7L V6": ["235/55R18", "255/45R19"],
+        "FWD": ["235/55R18", "255/45R19"]
+      },
+      "status": "MISSING_DATA",
+      "notes": ""
+    },
+    {
+      "year": 2009,
+      "make": "Lincoln",
+      "model": "MKS",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/55R18", "255/45R19"],
+      "trims": {
+        "AWD": ["235/55R18", "255/45R19"],
+        "FWD": ["235/55R18", "255/45R19"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "First year of MKS."
+    },
+    {
+      "year": 2008,
+      "make": "Lincoln",
+      "model": "MKS",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "Lincoln MKS started in 2009 model year. 2008 MKS does not exist. Remove this entry."
+    },
+    {
+      "year": 2019,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "Reserve": ["235/55R19", "255/45R20"],
+        "Standard": ["235/55R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R18 is NOT OEM. Should be 235/55R19. Last year of MKT."
+    },
+    {
+      "year": 2018,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "Premiere": ["235/55R19"],
+        "Reserve": ["235/55R19", "255/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R18 is NOT OEM. Should be 235/55R19."
+    },
+    {
+      "year": 2017,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "3.5L V6 EcoBoost": ["235/55R19", "255/45R20"],
+        "3.7L V6": ["235/55R19", "255/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R18 is NOT OEM. Should be 235/55R19."
+    },
+    {
+      "year": 2016,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20"],
+      "trims": {
+        "3.5L V6 EcoBoost": ["235/55R19", "255/45R20"],
+        "3.7L V6": ["235/55R19", "255/45R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R18 is NOT OEM. Should be 235/55R19."
+    },
+    {
+      "year": 2015,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20", "265/35R22"],
+      "trims": {
+        "3.5L V6 EcoBoost": ["255/45R20", "265/35R22"],
+        "3.7L V6": ["235/55R19", "255/45R20", "265/35R22"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R18 is NOT OEM. Base is 235/55R19. Missing 22\" option."
+    },
+    {
+      "year": 2014,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20", "265/35R22"],
+      "trims": {
+        "3.5L V6 EcoBoost": ["255/45R20", "265/35R22"],
+        "3.7L V6": ["235/55R19", "255/45R20", "265/35R22"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R18 is NOT OEM. Base is 235/55R19."
+    },
+    {
+      "year": 2013,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20", "265/35R22"],
+      "trims": {
+        "3.5L V6 EcoBoost": ["255/45R20", "265/35R22"],
+        "3.7L V6": ["235/55R19", "255/45R20", "265/35R22"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R18 is NOT OEM."
+    },
+    {
+      "year": 2012,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20", "265/35R22"],
+      "trims": {
+        "3.5L V6 EcoBoost": ["255/45R20", "265/35R22"],
+        "3.7L V6": ["235/55R19", "255/45R20", "265/35R22"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R18 is NOT OEM."
+    },
+    {
+      "year": 2011,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20", "265/35R22"],
+      "trims": {
+        "AWD 3.5L V6 EcoBoost": ["255/45R20", "265/35R22"],
+        "AWD 3.7L V6": ["235/55R19", "255/45R20", "265/35R22"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R18 is NOT OEM."
+    },
+    {
+      "year": 2010,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": ["235/55R19", "255/45R20", "265/35R22"],
+      "trims": {
+        "AWD 3.5L V6 EcoBoost": ["255/45R20", "265/35R22"],
+        "AWD 3.7L V6": ["235/55R19", "255/45R20", "265/35R22"],
+        "FWD": ["235/55R19", "255/45R20", "265/35R22"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R18 is NOT OEM. First year of MKT."
+    },
+    {
+      "year": 2009,
+      "make": "Lincoln",
+      "model": "MKT",
+      "currentTireSizes": ["235/60R18", "255/45R20"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "Lincoln MKT started in 2010 model year. 2009 MKT does not exist. Remove this entry."
+    },
+    {
+      "year": 2018,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20", "265/40R21"],
+      "trims": {
+        "Black Label": ["245/60R18", "245/50R20", "265/40R21"],
+        "Premiere": ["245/60R18"],
+        "Reserve": ["245/60R18", "245/50R20", "265/40R21"],
+        "Select": ["245/60R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM. Should be 265/40R21 for 21\" option. Last year of MKX."
+    },
+    {
+      "year": 2017,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20", "265/40R21"],
+      "trims": {
+        "Premiere": ["245/60R18"],
+        "Reserve": ["245/60R18", "245/50R20", "265/40R21"],
+        "Select": ["245/60R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM. Should be 265/40R21 for 21\" option."
+    },
+    {
+      "year": 2016,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20", "265/40R21"],
+      "trims": {
+        "Premiere": ["245/60R18"],
+        "Reserve": ["245/60R18", "245/50R20", "265/40R21"],
+        "Select": ["245/60R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM. Should be 265/40R21."
+    },
+    {
+      "year": 2015,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20", "265/40R22"],
+      "trims": {
+        "AWD": ["245/60R18", "245/50R20", "265/40R22"],
+        "FWD": ["245/60R18", "245/50R20", "265/40R22"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM. Largest option is 265/40R22."
+    },
+    {
+      "year": 2014,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20", "265/40R22"],
+      "trims": {
+        "AWD": ["245/60R18", "245/50R20", "265/40R22"],
+        "FWD": ["245/60R18", "245/50R20", "265/40R22"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM. Largest option is 265/40R22."
+    },
+    {
+      "year": 2013,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20", "265/40R22"],
+      "trims": {
+        "AWD": ["245/60R18", "245/50R20", "265/40R22"],
+        "FWD": ["245/60R18", "245/50R20", "265/40R22"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM. Largest option is 265/40R22."
+    },
+    {
+      "year": 2012,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "AWD": ["245/60R18", "245/50R20"],
+        "FWD": ["245/60R18", "245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM. No 22\" option in 2012."
+    },
+    {
+      "year": 2011,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "AWD": ["245/60R18", "245/50R20"],
+        "FWD": ["245/60R18", "245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM."
+    },
+    {
+      "year": 2010,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20", "265/40R22"],
+      "trims": {
+        "AWD": ["245/60R18", "245/50R20"],
+        "FWD": ["245/60R18", "245/50R20"],
+        "Sport Pkg": ["265/40R22"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM. Sport Pkg has 265/40R22."
+    },
+    {
+      "year": 2009,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "AWD": ["245/60R18", "245/50R20"],
+        "FWD": ["245/60R18", "245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM."
+    },
+    {
+      "year": 2008,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "AWD": ["245/60R18", "245/50R20"],
+        "FWD": ["245/60R18", "245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/45R20 is NOT OEM."
+    },
+    {
+      "year": 2007,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": {
+        "AWD": ["245/60R18"],
+        "FWD": ["245/60R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "First year of MKX. Only 18\" OEM option. No 20\" or 255/45R20."
+    },
+    {
+      "year": 2006,
+      "make": "Lincoln",
+      "model": "MKX",
+      "currentTireSizes": ["235/60R18", "255/50R20", "265/40R21"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "Lincoln MKX started in 2007 model year. 2006 MKX does not exist. Remove this entry."
+    },
+    {
+      "year": 2020,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "Hybrid": ["245/40R19"],
+        "Reserve": ["245/40R19"],
+        "Standard": ["245/45R18", "245/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R17 is NOT OEM for 2020. Final year of MKZ."
+    },
+    {
+      "year": 2019,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "Hybrid": ["245/45R18", "245/40R19"],
+        "Reserve I": ["245/45R18", "245/40R19"],
+        "Reserve II": ["245/40R19"],
+        "Standard": ["245/45R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R17 is NOT OEM for 2019."
+    },
+    {
+      "year": 2018,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "Black Label": ["245/40R19"],
+        "Hybrid": ["245/45R18", "245/40R19"],
+        "Premiere": ["245/45R18"],
+        "Reserve": ["245/40R19"],
+        "Select": ["245/45R18", "245/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R17 is NOT OEM for 2018."
+    },
+    {
+      "year": 2017,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "Black Label": ["245/40R19"],
+        "Hybrid": ["245/45R18", "245/40R19"],
+        "Premiere": ["245/45R18"],
+        "Reserve": ["245/40R19"],
+        "Select": ["245/45R18", "245/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R17 is NOT OEM for 2017 (refreshed model)."
+    },
+    {
+      "year": 2016,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "2.0L EcoBoost AWD": ["245/45R18", "245/40R19"],
+        "2.0L EcoBoost FWD": ["245/45R18", "245/40R19"],
+        "3.7L V6 AWD": ["245/45R18", "245/40R19"],
+        "3.7L V6 FWD": ["245/45R18", "245/40R19"],
+        "Hybrid": ["245/45R18", "245/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R17 is NOT OEM for 2016."
+    },
+    {
+      "year": 2015,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "2.0L EcoBoost AWD": ["245/45R18", "245/40R19"],
+        "2.0L EcoBoost FWD": ["245/45R18", "245/40R19"],
+        "3.7L V6 AWD": ["245/45R18", "245/40R19"],
+        "3.7L V6 FWD": ["245/45R18", "245/40R19"],
+        "Hybrid": ["245/45R18", "245/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R17 is NOT OEM for 2015."
+    },
+    {
+      "year": 2014,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "2.0L EcoBoost AWD": ["245/45R18", "245/40R19"],
+        "2.0L EcoBoost FWD": ["245/45R18", "245/40R19"],
+        "3.7L V6 AWD": ["245/45R18", "245/40R19"],
+        "3.7L V6 FWD": ["245/45R18", "245/40R19"],
+        "Hybrid": ["245/45R18", "245/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R17 is NOT OEM for 2014 (2nd gen)."
+    },
+    {
+      "year": 2013,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trims": {
+        "2.0L EcoBoost AWD": ["245/45R18", "245/40R19"],
+        "2.0L EcoBoost FWD": ["245/45R18", "245/40R19"],
+        "3.7L V6 AWD": ["245/45R18", "245/40R19"],
+        "3.7L V6 FWD": ["245/45R18", "245/40R19"],
+        "Hybrid": ["245/45R18", "245/40R19"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/50R17 is NOT OEM for 2013 (2nd gen redesign)."
+    },
+    {
+      "year": 2012,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["225/50R17", "225/45R18"],
+      "trims": {
+        "AWD": ["225/50R17", "225/45R18"],
+        "FWD": ["225/50R17", "225/45R18"],
+        "Hybrid": ["225/50R17", "225/45R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "1st gen MKZ. 235/50R17 should be 225/50R17. 245/45R18 should be 225/45R18. No 19\" option."
+    },
+    {
+      "year": 2011,
+      "make": "Lincoln",
+      "model": "MKZ",
+      "currentTireSizes": ["235/50R17", "245/45R18", "245/40R19"],
+      "validatedTireSizes": ["225/50R17", "225/45R18"],
+      "trims": {
+        "AWD": ["225/50R17", "225/45R18"],
+        "FWD": ["225/50R17", "225/45R18"],
+        "Hybrid": ["225/50R17", "225/45R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "1st gen MKZ. No 19\" option."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 0,
+    "mismatch": 58,
+    "missingData": 17,
+    "invalidYear": 6,
+    "sizesToRemove": [
+      "245/45R19 (2000 Continental)",
+      "245/40R20 (2000 Continental)",
+      "265/35R21 (2000 Continental)",
+      "235/50R19 (Corsair all years)",
+      "245/50R19 (Corsair all years)",
+      "235/55R18 (MKC - should be 235/50R18)",
+      "235/50R19 (MKC - should be 235/45R19 or 245/45R19)",
+      "235/60R18 (MKT all years - should be 235/55R19)",
+      "255/45R20 (MKX 2007-2012 - not OEM)",
+      "235/50R17 (MKZ 2013-2020 - not OEM for 2nd gen)"
+    ],
+    "invalidYearEntries": [
+      "2019 Lincoln Corsair (started 2020)",
+      "2005 Lincoln Mark LT (started 2006)",
+      "2020 Lincoln MKC (ended 2019, became Corsair)",
+      "2014 Lincoln MKC (started 2015)",
+      "2008 Lincoln MKS (started 2009)",
+      "2009 Lincoln MKT (started 2010)",
+      "2006 Lincoln MKX (started 2007)"
+    ]
+  }
+}

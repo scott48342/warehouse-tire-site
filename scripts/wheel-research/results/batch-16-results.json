@@ -1,0 +1,1857 @@
+{
+  "batchId": "16",
+  "processedAt": "2026-04-21T20:57:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "ssr",
+      "wheelSpecs": {
+        "isStaggered": true,
+        "front": {
+          "diameter": 19,
+          "width": 8,
+          "offset": 32,
+          "boltPattern": "6x127",
+          "centerBore": 78.3
+        },
+        "rear": {
+          "diameter": 20,
+          "width": 10,
+          "offset": 14,
+          "boltPattern": "6x127",
+          "centerBore": 78.3
+        }
+      },
+      "source": "ssrfanatic.com forum",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "ssr",
+      "wheelSpecs": {
+        "isStaggered": true,
+        "front": {
+          "diameter": 19,
+          "width": 8,
+          "offset": 32,
+          "boltPattern": "6x127",
+          "centerBore": 78.3
+        },
+        "rear": {
+          "diameter": 20,
+          "width": 10,
+          "offset": 14,
+          "boltPattern": "6x127",
+          "centerBore": 78.3
+        }
+      },
+      "source": "ssrfanatic.com forum",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "t-series",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        },
+        "rear": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        }
+      },
+      "source": "commercial truck specs",
+      "confidence": "medium",
+      "notes": "Commercial medium-duty truck - uses commercial wheel sizes, not consumer fitment"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "t-series",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        },
+        "rear": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        }
+      },
+      "source": "commercial truck specs",
+      "confidence": "medium",
+      "notes": "Commercial medium-duty truck"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "t-series",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        },
+        "rear": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        }
+      },
+      "source": "commercial truck specs",
+      "confidence": "medium",
+      "notes": "Commercial medium-duty truck"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "t-series",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        },
+        "rear": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        }
+      },
+      "source": "commercial truck specs",
+      "confidence": "medium",
+      "notes": "Commercial medium-duty truck"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "t-series",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        },
+        "rear": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        }
+      },
+      "source": "commercial truck specs",
+      "confidence": "medium",
+      "notes": "Commercial medium-duty truck"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "t-series",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        },
+        "rear": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        }
+      },
+      "source": "commercial truck specs",
+      "confidence": "medium",
+      "notes": "Commercial medium-duty truck"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "t-series",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        },
+        "rear": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        }
+      },
+      "source": "commercial truck specs",
+      "confidence": "medium",
+      "notes": "Commercial medium-duty truck"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "t-series",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        },
+        "rear": {
+          "diameter": 19.5,
+          "width": 6.75,
+          "offset": null,
+          "boltPattern": "10x225",
+          "centerBore": null
+        }
+      },
+      "source": "commercial truck specs",
+      "confidence": "medium",
+      "notes": "Commercial medium-duty truck"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 45,
+          "boltPattern": "4x114.3",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 45,
+          "boltPattern": "4x114.3",
+          "centerBore": 56.6
+        }
+      },
+      "source": "tirewheelguide.com, Daewoo Rezzo specs",
+      "confidence": "high",
+      "notes": "Rebadged Daewoo Tacuma/Rezzo"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 45,
+          "boltPattern": "4x114.3",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 45,
+          "boltPattern": "4x114.3",
+          "centerBore": 56.6
+        }
+      },
+      "source": "tirewheelguide.com, Daewoo Rezzo specs",
+      "confidence": "high",
+      "notes": "Rebadged Daewoo Tacuma/Rezzo"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 45,
+          "boltPattern": "4x114.3",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 45,
+          "boltPattern": "4x114.3",
+          "centerBore": 56.6
+        }
+      },
+      "source": "tirewheelguide.com, Daewoo Rezzo specs",
+      "confidence": "high",
+      "notes": "Rebadged Daewoo Tacuma/Rezzo"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 45,
+          "boltPattern": "4x114.3",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 45,
+          "boltPattern": "4x114.3",
+          "centerBore": 56.6
+        }
+      },
+      "source": "tirewheelguide.com, Daewoo Rezzo specs",
+      "confidence": "high",
+      "notes": "Rebadged Daewoo Tacuma/Rezzo"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "tacuma",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 45,
+          "boltPattern": "4x114.3",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 45,
+          "boltPattern": "4x114.3",
+          "centerBore": 56.6
+        }
+      },
+      "source": "tirewheelguide.com, Daewoo Rezzo specs",
+      "confidence": "high",
+      "notes": "Rebadged Daewoo Tacuma/Rezzo"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        }
+      },
+      "source": "factorywheelreplacement.com, hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        }
+      },
+      "source": "factorywheelreplacement.com, hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        }
+      },
+      "source": "factorywheelreplacement.com, hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        }
+      },
+      "source": "factorywheelreplacement.com, hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        }
+      },
+      "source": "factorywheelreplacement.com, hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        }
+      },
+      "source": "factorywheelreplacement.com, hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 7,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 7,
+          "offset": 31,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1
+        }
+      },
+      "source": "hubcaphaven.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 18,
+          "width": 7,
+          "offset": 44,
+          "boltPattern": "5x105",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 18,
+          "width": 7,
+          "offset": 44,
+          "boltPattern": "5x105",
+          "centerBore": 56.6
+        }
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China market vehicle"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 18,
+          "width": 7,
+          "offset": 44,
+          "boltPattern": "5x105",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 18,
+          "width": 7,
+          "offset": 44,
+          "boltPattern": "5x105",
+          "centerBore": 56.6
+        }
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China market vehicle"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 18,
+          "width": 7,
+          "offset": 44,
+          "boltPattern": "5x105",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 18,
+          "width": 7,
+          "offset": 44,
+          "boltPattern": "5x105",
+          "centerBore": 56.6
+        }
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China market vehicle"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "tracker-rs",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 18,
+          "width": 7,
+          "offset": 44,
+          "boltPattern": "5x105",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 18,
+          "width": 7,
+          "offset": 44,
+          "boltPattern": "5x105",
+          "centerBore": 56.6
+        }
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium",
+      "notes": "China market vehicle"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "trailblazertalk.com forum",
+      "confidence": "high",
+      "notes": "Also available with 19x8 +43 on RS trim"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "trailblazertalk.com forum",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "trailblazertalk.com forum",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "trailblazertalk.com forum",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "trailblazertalk.com forum",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 43,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "trailblazertalk.com forum, originalwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 50,
+          "boltPattern": "6x127",
+          "centerBore": 77.8
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 50,
+          "boltPattern": "6x127",
+          "centerBore": 77.8
+        }
+      },
+      "source": "avtoreference.com, amazon wheel spacer specs",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 50,
+          "boltPattern": "6x127",
+          "centerBore": 77.8
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 50,
+          "boltPattern": "6x127",
+          "centerBore": 77.8
+        }
+      },
+      "source": "avtoreference.com, amazon wheel spacer specs",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 50,
+          "boltPattern": "6x127",
+          "centerBore": 77.8
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 50,
+          "boltPattern": "6x127",
+          "centerBore": 77.8
+        }
+      },
+      "source": "avtoreference.com, amazon wheel spacer specs",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 50,
+          "boltPattern": "6x127",
+          "centerBore": 77.8
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 50,
+          "boltPattern": "6x127",
+          "centerBore": 77.8
+        }
+      },
+      "source": "avtoreference.com, amazon wheel spacer specs",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 50,
+          "boltPattern": "6x127",
+          "centerBore": 77.8
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 50,
+          "boltPattern": "6x127",
+          "centerBore": 77.8
+        }
+      },
+      "source": "avtoreference.com, amazon wheel spacer specs",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "hubcaphaven.com (Pontiac Montana equivalent)",
+      "confidence": "high",
+      "notes": "Same platform as Pontiac Montana"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "hubcaphaven.com (Pontiac Montana equivalent)",
+      "confidence": "high",
+      "notes": "Same platform as Pontiac Montana"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "hubcaphaven.com (Pontiac Montana equivalent)",
+      "confidence": "high",
+      "notes": "Same platform as Pontiac Montana"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "hubcaphaven.com (Pontiac Montana equivalent)",
+      "confidence": "high",
+      "notes": "Same platform as Pontiac Montana"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "hubcaphaven.com (Pontiac Montana equivalent)",
+      "confidence": "high",
+      "notes": "Same platform as Pontiac Montana"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "hubcaphaven.com (Pontiac Montana equivalent)",
+      "confidence": "high",
+      "notes": "Same platform as Pontiac Montana"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "traverse-limited",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 35,
+          "boltPattern": "6x120",
+          "centerBore": 67
+        },
+        "rear": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 35,
+          "boltPattern": "6x120",
+          "centerBore": 67
+        }
+      },
+      "source": "multiple sources",
+      "confidence": "high",
+      "notes": "Also available with 21 inch wheels"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "trax",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 7,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "traxforum.com",
+      "confidence": "high",
+      "notes": "Also available with 18\" and 19\" wheels on RS trim (+23 offset on 19\")"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "uplander",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 51,
+          "boltPattern": "6x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 51,
+          "boltPattern": "6x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "wheelsynergy.com, partsgeek.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "uplander",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 51,
+          "boltPattern": "6x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 51,
+          "boltPattern": "6x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "wheelsynergy.com, partsgeek.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "uplander",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 51,
+          "boltPattern": "6x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 51,
+          "boltPattern": "6x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "wheelsynergy.com, partsgeek.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "uplander",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 51,
+          "boltPattern": "6x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 51,
+          "boltPattern": "6x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "wheelsynergy.com, partsgeek.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "uplander",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 51,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 51,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "partsgeek.com",
+      "confidence": "high",
+      "notes": "2005 model had 5x115 bolt pattern, changed to 6x115 for 2006+"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "utility",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa Utility specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle based on Opel Corsa Utility"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "utility",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa Utility specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "utility",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa Utility specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "utility",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa Utility specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "utility",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa Utility specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "utility",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa Utility specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle"
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "utility",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa Utility specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "utility",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa Utility specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "utility",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa Utility specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "venture",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "wheelsynergy.com, streetdreams.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "venture",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "wheelsynergy.com, streetdreams.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "venture",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "wheelsynergy.com, streetdreams.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "venture",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "wheelsynergy.com, streetdreams.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "venture",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "wheelsynergy.com, streetdreams.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "venture",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        },
+        "rear": {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 40,
+          "boltPattern": "5x115",
+          "centerBore": 70.3
+        }
+      },
+      "source": "wheelsynergy.com, streetdreams.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "viva",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle based on Opel Corsa"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "viva",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle based on Opel Corsa"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "viva",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle based on Opel Corsa"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "viva",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle based on Opel Corsa"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "viva",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        },
+        "rear": {
+          "diameter": 15,
+          "width": 6,
+          "offset": 39,
+          "boltPattern": "4x100",
+          "centerBore": 56.6
+        }
+      },
+      "source": "Opel Corsa specs",
+      "confidence": "medium",
+      "notes": "South African market vehicle based on Opel Corsa"
+    },
+    {
+      "year": 2021,
+      "make": "chrysler",
+      "model": "300c",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 24,
+          "boltPattern": "5x115",
+          "centerBore": 71.5
+        },
+        "rear": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 24,
+          "boltPattern": "5x115",
+          "centerBore": 71.5
+        }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "chrysler",
+      "model": "300c",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 24,
+          "boltPattern": "5x115",
+          "centerBore": 71.5
+        },
+        "rear": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 24,
+          "boltPattern": "5x115",
+          "centerBore": 71.5
+        }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "chrysler",
+      "model": "300c",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 24,
+          "boltPattern": "5x115",
+          "centerBore": 71.5
+        },
+        "rear": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 24,
+          "boltPattern": "5x115",
+          "centerBore": 71.5
+        }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "chrysler",
+      "model": "300c",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 24,
+          "boltPattern": "5x115",
+          "centerBore": 71.5
+        },
+        "rear": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 24,
+          "boltPattern": "5x115",
+          "centerBore": 71.5
+        }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "chrysler",
+      "model": "300c",
+      "wheelSpecs": {
+        "isStaggered": false,
+        "front": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 24,
+          "boltPattern": "5x115",
+          "centerBore": 71.5
+        },
+        "rear": {
+          "diameter": 20,
+          "width": 8,
+          "offset": 24,
+          "boltPattern": "5x115",
+          "centerBore": 71.5
+        }
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "highConfidence": 60,
+    "mediumConfidence": 15,
+    "lowConfidence": 0,
+    "staggeredSetups": 2,
+    "commercialVehicles": 8,
+    "internationalMarketVehicles": 18
+  }
+}

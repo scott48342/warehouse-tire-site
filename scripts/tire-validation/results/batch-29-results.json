@@ -1,0 +1,932 @@
+{
+  "batchId": "29",
+  "processedAt": "2026-04-21T21:50:00.000Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "caprice",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "Chevrolet Caprice was discontinued in US after 1996. No 2007 model exists in US market. May be international market (Middle East/Australia) where Holden Caprice was rebadged.",
+      "status": "not_sold_in_us"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "caprice",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "Chevrolet Caprice was discontinued in US after 1996. May be international market vehicle.",
+      "status": "not_sold_in_us"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "caprice",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "Chevrolet Caprice was discontinued in US after 1996. May be international market vehicle.",
+      "status": "not_sold_in_us"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "caprice",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "Chevrolet Caprice was discontinued in US after 1996. May be international market vehicle.",
+      "status": "not_sold_in_us"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "caprice",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "Chevrolet Caprice was discontinued in US after 1996. May be international market vehicle.",
+      "status": "not_sold_in_us"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "caprice",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "Chevrolet Caprice was discontinued in US after 1996. May be international market vehicle.",
+      "status": "not_sold_in_us"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "caprice",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "Chevrolet Caprice was discontinued in US after 1996. May be international market vehicle.",
+      "status": "not_sold_in_us"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "caprice",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "notes": "Chevrolet Caprice was discontinued in US after 1996. May be international market vehicle.",
+      "status": "not_sold_in_us"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/85R16", "225/75R16", "235/75R16", "245/75R16", "255/70R16", "265/75R16", "265/70R17", "275/55R20"],
+      "trims": [
+        {"name": "2wd Dually", "tireSizes": ["215/85R16", "225/75R16"]},
+        {"name": "4wd Dually", "tireSizes": ["215/85R16", "225/75R16"]},
+        {"name": "C1500 Ext/Reg", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"name": "C1500HD Crew", "tireSizes": ["245/75R16"]},
+        {"name": "C2500/C2500HD", "tireSizes": ["245/75R16"]},
+        {"name": "C3500", "tireSizes": ["245/75R16"]},
+        {"name": "K1500 4wd Ext/Reg", "tireSizes": ["245/75R16", "265/75R16", "265/70R17"]},
+        {"name": "K1500HD/K2500/K2500HD/K3500 4wd", "tireSizes": ["245/75R16"]},
+        {"name": "SS", "tireSizes": ["275/55R20"]}
+      ],
+      "notes": "Chevy Pickup is legacy name for Silverado platform. Tire sizes from 2003 Silverado.",
+      "status": "validated"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/85R16", "225/75R16", "235/75R16", "245/75R16", "255/70R16", "265/75R16"],
+      "trims": [
+        {"name": "2wd", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"name": "2wd Dually", "tireSizes": ["215/85R16", "225/75R16"]},
+        {"name": "4wd", "tireSizes": ["245/75R16"]},
+        {"name": "4wd X-Cab", "tireSizes": ["245/75R16", "265/75R16"]},
+        {"name": "2500/3500", "tireSizes": ["245/75R16"]}
+      ],
+      "notes": "Chevy Pickup is legacy name for Silverado platform.",
+      "status": "validated"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/85R16", "225/75R16", "235/75R16", "245/75R16", "255/70R16", "265/75R16"],
+      "trims": [
+        {"name": "2wd", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"name": "2wd Dually", "tireSizes": ["215/85R16", "225/75R16"]},
+        {"name": "4wd", "tireSizes": ["245/75R16"]},
+        {"name": "4wd X-Cab", "tireSizes": ["245/75R16", "265/75R16"]},
+        {"name": "2500/3500", "tireSizes": ["245/75R16"]}
+      ],
+      "notes": "Chevy Pickup is legacy name for Silverado platform.",
+      "status": "validated"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "chevy-pickup",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/85R16", "225/75R16", "235/75R16", "245/75R16", "255/70R16", "265/75R16"],
+      "trims": [
+        {"name": "2wd", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"name": "2wd Dually", "tireSizes": ["215/85R16", "225/75R16"]},
+        {"name": "2wd X-Cab", "tireSizes": ["235/75R16", "255/70R16"]},
+        {"name": "4wd", "tireSizes": ["245/75R16"]},
+        {"name": "4wd X-Cab", "tireSizes": ["245/75R16", "265/75R16"]},
+        {"name": "2500/3500", "tireSizes": ["245/75R16"]}
+      ],
+      "notes": "Chevy Pickup is legacy name for Silverado platform.",
+      "status": "validated"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R17", "265/65R18", "275/60R20", "LT285/70R17", "LT275/65R18", "255/55R20", "275/50R22", "LT315/70R17"],
+      "validatedTireSizes": ["255/65R17", "265/60R18", "265/65R18", "275/65R18", "255/55R20", "275/60R20", "275/50R22", "LT285/70R17", "LT315/70R17"],
+      "trims": [
+        {"name": "WT", "tireSizes": ["255/65R17"]},
+        {"name": "LT", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"name": "Z71", "tireSizes": ["265/65R18", "255/55R20"]},
+        {"name": "Trail Boss", "tireSizes": ["265/65R18", "275/65R18", "275/60R20", "275/50R22"]},
+        {"name": "ZR2", "tireSizes": ["LT285/70R17"]},
+        {"name": "ZR2 Bison Edition", "tireSizes": ["LT315/70R17"]}
+      ],
+      "notes": "2026 Colorado (3rd gen). ZR2 Bison has 35-inch tires. 245/75R16 and 265/70R17 not typical for this generation.",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/70R17", "LT275/65R18"]
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "255/55R20", "265/55R19"],
+      "validatedTireSizes": ["255/65R17", "265/60R18", "265/65R18", "255/55R20", "275/60R20", "LT285/70R17"],
+      "trims": [
+        {"name": "WT", "tireSizes": ["255/65R17"]},
+        {"name": "LT", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"name": "Z71", "tireSizes": ["265/65R18", "255/55R20"]},
+        {"name": "Trail Boss", "tireSizes": ["265/65R18", "275/60R20"]},
+        {"name": "ZR2", "tireSizes": ["LT285/70R17"]}
+      ],
+      "notes": "2025 Colorado (3rd gen). 245/75R16 and 265/55R19 may be incorrect.",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/55R19"]
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "255/55R20", "265/55R19"],
+      "validatedTireSizes": ["255/65R17", "265/60R18", "265/65R18", "255/55R20", "275/60R20", "LT285/70R17"],
+      "trims": [
+        {"name": "WT", "tireSizes": ["255/65R17"]},
+        {"name": "LT", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"name": "Z71", "tireSizes": ["265/65R18", "255/55R20"]},
+        {"name": "Trail Boss", "tireSizes": ["265/65R18", "275/60R20"]},
+        {"name": "ZR2", "tireSizes": ["LT285/70R17"]}
+      ],
+      "notes": "2024 Colorado (3rd gen redesign). 245/75R16 and 265/55R19 may be incorrect for this generation.",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/55R19"]
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "265/65R17", "265/55R19", "255/55R20", "275/55R19", "265/50R20", "275/50R20"],
+      "validatedTireSizes": ["255/65R17", "265/60R18", "265/65R18", "275/65R18", "255/55R20", "275/60R20", "275/50R22", "LT285/70R17", "LT315/70R17"],
+      "trims": [
+        {"name": "WT", "tireSizes": ["255/65R17"]},
+        {"name": "LT", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"name": "Z71", "tireSizes": ["265/65R18", "255/55R20"]},
+        {"name": "Trail Boss", "tireSizes": ["265/65R18", "275/65R18", "275/60R20", "275/50R22"]},
+        {"name": "ZR2", "tireSizes": ["LT285/70R17"]},
+        {"name": "ZR2 Bison Edition", "tireSizes": ["LT315/70R17"]}
+      ],
+      "notes": "2023 Colorado is the first year of 3rd generation redesign with new tire size lineup.",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/70R16", "265/65R17", "265/55R19", "275/55R19", "265/50R20", "275/50R20"]
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "265/65R17", "265/55R19", "255/55R20", "275/55R19", "265/50R20", "275/50R20"],
+      "validatedTireSizes": ["265/70R16", "255/65R17", "265/60R18"],
+      "trims": [
+        {"name": "WT", "tireSizes": ["265/70R16"]},
+        {"name": "LT", "tireSizes": ["265/70R16", "255/65R17"]},
+        {"name": "Z71", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"name": "ZR2", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "2022 Colorado (2nd gen). Many current sizes appear incorrect - 245/75R16, 265/65R17, 265/55R19, 255/55R20, 275/55R19, 265/50R20, 275/50R20 are NOT standard OEM.",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/65R17", "265/55R19", "255/55R20", "275/55R19", "265/50R20", "275/50R20"]
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "265/65R17", "265/55R19", "255/55R20", "275/55R19", "265/50R20", "275/50R20"],
+      "validatedTireSizes": ["265/70R16", "255/65R17", "265/60R18"],
+      "trims": [
+        {"name": "WT", "tireSizes": ["265/70R16"]},
+        {"name": "LT", "tireSizes": ["265/70R16", "255/65R17"]},
+        {"name": "Z71", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"name": "ZR2", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "2021 Colorado (2nd gen).",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/65R17", "265/55R19", "255/55R20", "275/55R19", "265/50R20", "275/50R20"]
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "265/65R17", "265/55R19", "255/55R20"],
+      "validatedTireSizes": ["265/70R16", "255/65R17", "265/60R18"],
+      "trims": [
+        {"name": "WT/Base", "tireSizes": ["265/70R16"]},
+        {"name": "LT", "tireSizes": ["265/70R16", "255/65R17"]},
+        {"name": "Z71", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"name": "ZR2", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "2020 Colorado (2nd gen).",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/65R17", "265/55R19", "255/55R20"]
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "265/65R17", "265/55R19", "255/55R20"],
+      "validatedTireSizes": ["265/70R16", "255/65R17", "265/60R18"],
+      "trims": [
+        {"name": "WT/Base", "tireSizes": ["265/70R16"]},
+        {"name": "LT", "tireSizes": ["265/70R16", "255/65R17"]},
+        {"name": "Z71", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"name": "ZR2", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "2019 Colorado (2nd gen).",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/65R17", "265/55R19", "255/55R20"]
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "265/65R17", "265/55R19", "255/55R20"],
+      "validatedTireSizes": ["265/70R16", "255/65R17", "265/60R18"],
+      "trims": [
+        {"name": "WT/Base", "tireSizes": ["265/70R16"]},
+        {"name": "LT", "tireSizes": ["265/70R16", "255/65R17"]},
+        {"name": "Z71", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"name": "ZR2", "tireSizes": ["265/60R18"]}
+      ],
+      "notes": "2018 Colorado (2nd gen).",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/65R17", "265/55R19", "255/55R20"]
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "265/65R17", "265/55R19", "255/55R20"],
+      "validatedTireSizes": ["265/70R16", "255/65R17", "265/60R18"],
+      "trims": [
+        {"name": "WT/Base", "tireSizes": ["265/70R16"]},
+        {"name": "LT", "tireSizes": ["265/70R16", "255/65R17"]},
+        {"name": "Z71", "tireSizes": ["255/65R17", "265/60R18"]}
+      ],
+      "notes": "2017 Colorado (2nd gen). ZR2 trim introduced late 2017.",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/65R17", "265/55R19", "255/55R20"]
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "265/65R17", "265/55R19", "255/55R20"],
+      "validatedTireSizes": ["265/70R16", "255/65R17", "265/60R18"],
+      "trims": [
+        {"name": "WT/Base", "tireSizes": ["265/70R16"]},
+        {"name": "LT", "tireSizes": ["265/70R16", "255/65R17"]},
+        {"name": "Z71", "tireSizes": ["255/65R17", "265/60R18"]}
+      ],
+      "notes": "2016 Colorado (2nd gen).",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/65R17", "265/55R19", "255/55R20"]
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["245/75R16", "255/65R17", "265/60R18", "265/70R16", "265/65R17", "265/55R19", "255/55R20"],
+      "validatedTireSizes": ["265/70R16", "255/65R17", "265/60R18"],
+      "trims": [
+        {"name": "Crew Cab", "tireSizes": ["265/70R16", "255/65R17", "265/60R18"]},
+        {"name": "Extended Cab", "tireSizes": ["265/70R16", "255/65R17", "265/60R18"]}
+      ],
+      "notes": "2015 Colorado (2nd gen debut). First year of redesign.",
+      "status": "validated",
+      "discrepancies": ["245/75R16", "265/65R17", "265/55R19", "255/55R20"]
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["235/75R16", "265/70R17"],
+      "validatedTireSizes": ["235/75R16", "265/70R17"],
+      "trims": [
+        {"name": "Various (Brazil/export only)", "tireSizes": ["235/75R16", "265/70R17"]}
+      ],
+      "notes": "2014 Colorado was NOT sold in US. Only available in international markets (Brazil, etc). Gap year between 1st and 2nd gen.",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["235/75R16", "265/70R17"],
+      "validatedTireSizes": ["235/75R16", "265/70R17"],
+      "trims": [
+        {"name": "Various (Brazil/export only)", "tireSizes": ["235/75R16", "265/70R17"]}
+      ],
+      "notes": "2013 Colorado was NOT sold in US. Only available in international markets.",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17", "215/70R16"],
+      "validatedTireSizes": ["215/70R15", "235/75R15", "245/65R17", "215/70R16"],
+      "trims": [
+        {"name": "WT 2wd Z85", "tireSizes": ["215/70R15", "215/70R16"]},
+        {"name": "LT 2wd/4wd Z85", "tireSizes": ["215/70R15", "235/75R15", "215/70R16"]},
+        {"name": "LT Z71 Off-Road", "tireSizes": ["245/65R17"]},
+        {"name": "LT V8 ZQ8 Sport", "tireSizes": ["245/65R17"]}
+      ],
+      "notes": "2012 Colorado (1st gen final US year).",
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17", "215/70R16"],
+      "validatedTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "trims": [
+        {"name": "WT 2wd Z85", "tireSizes": ["215/70R15"]},
+        {"name": "LT 2wd/4wd Z85", "tireSizes": ["235/75R15"]},
+        {"name": "LT Z71 Off-Road", "tireSizes": ["245/65R17"]},
+        {"name": "LT V8 ZQ8 Sport", "tireSizes": ["245/65R17"]}
+      ],
+      "notes": "2011 Colorado (1st gen).",
+      "status": "validated",
+      "discrepancies": ["215/70R16"]
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17", "215/70R16"],
+      "validatedTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "trims": [
+        {"name": "WT 2wd Z85", "tireSizes": ["215/70R15"]},
+        {"name": "LT 2wd/4wd Z85", "tireSizes": ["235/75R15"]},
+        {"name": "LT Z71 Off-Road", "tireSizes": ["245/65R17"]},
+        {"name": "LT V8 ZQ8 Sport", "tireSizes": ["245/65R17"]}
+      ],
+      "notes": "2010 Colorado (1st gen).",
+      "status": "validated",
+      "discrepancies": ["215/70R16"]
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "trims": [
+        {"name": "WT 2wd Z85", "tireSizes": ["215/70R15"]},
+        {"name": "LT Z85", "tireSizes": ["235/75R15"]},
+        {"name": "LT Z71/ZQ8", "tireSizes": ["245/65R17"]}
+      ],
+      "notes": "2009 Colorado (1st gen).",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "trims": [
+        {"name": "LS 2wd Z85", "tireSizes": ["215/70R15"]},
+        {"name": "LT Z85", "tireSizes": ["235/75R15"]},
+        {"name": "LT Z71", "tireSizes": ["245/65R17"]}
+      ],
+      "notes": "2008 Colorado (1st gen).",
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "trims": [
+        {"name": "LS 2wd Z85/Street Pack", "tireSizes": ["215/70R15"]},
+        {"name": "LT Z85", "tireSizes": ["235/75R15"]},
+        {"name": "LT Z71/ZQ8", "tireSizes": ["245/65R17"]}
+      ],
+      "notes": "2007 Colorado (1st gen).",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "trims": [
+        {"name": "LS 2wd Z85/Street Pack", "tireSizes": ["215/70R15"]},
+        {"name": "LT Z85", "tireSizes": ["235/75R15"]},
+        {"name": "LT Z71/ZQ8/Xtreme", "tireSizes": ["245/65R17"]}
+      ],
+      "notes": "2006 Colorado (1st gen).",
+      "status": "validated"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedTireSizes": ["205/75R15", "225/75R15", "235/75R15", "265/75R15", "235/50R17"],
+      "trims": [
+        {"name": "Z85 Base 2wd Ext/Reg", "tireSizes": ["205/75R15"]},
+        {"name": "Z85 Base 4wd/LS 2wd", "tireSizes": ["225/75R15", "235/75R15"]},
+        {"name": "Z71 Off-Road", "tireSizes": ["265/75R15"]},
+        {"name": "ZQ8 Sport/Xtreme", "tireSizes": ["235/50R17"]}
+      ],
+      "notes": "2005 Colorado (1st gen). Current sizes don't match - 215/70R15 should be 205/75R15, 245/65R17 should be 235/50R17.",
+      "status": "validated",
+      "discrepancies": ["215/70R15", "245/65R17"]
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "colorado",
+      "currentTireSizes": ["215/70R15", "235/75R15", "245/65R17"],
+      "validatedTireSizes": ["205/75R15", "225/75R15", "235/75R15", "265/75R15", "235/50R17"],
+      "trims": [
+        {"name": "Z85 Base 2wd Ext/Reg", "tireSizes": ["205/75R15"]},
+        {"name": "LS Z85 Base 2wd", "tireSizes": ["225/75R15"]},
+        {"name": "Z85 Base 4wd", "tireSizes": ["235/75R15"]},
+        {"name": "Z71 Off-Road", "tireSizes": ["265/75R15"]},
+        {"name": "ZQ8 Sport", "tireSizes": ["235/50R17"]}
+      ],
+      "notes": "2004 Colorado (1st gen debut). Current sizes don't match first generation.",
+      "status": "validated",
+      "discrepancies": ["215/70R15", "245/65R17"]
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/60R14", "185/70R14"],
+      "trims": [
+        {"name": "Base/LS", "tireSizes": ["175/65R14", "185/70R14"]},
+        {"name": "LT", "tireSizes": ["185/60R14"]}
+      ],
+      "notes": "Corsa Classic is South American market vehicle (Brazil, Argentina). Not sold in US.",
+      "status": "international_only"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/60R14", "185/70R14"],
+      "trims": [
+        {"name": "Base/LS", "tireSizes": ["175/65R14", "185/70R14"]},
+        {"name": "LT", "tireSizes": ["185/60R14"]}
+      ],
+      "notes": "Corsa Classic is South American market vehicle. Not sold in US.",
+      "status": "international_only"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/60R14", "185/70R14"],
+      "trims": [
+        {"name": "Base/LS", "tireSizes": ["175/65R14", "185/70R14"]}
+      ],
+      "notes": "Corsa Classic is South American market vehicle. Not sold in US.",
+      "status": "international_only"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/60R14", "185/70R14"],
+      "trims": [],
+      "notes": "Corsa Classic is South American market vehicle. Not sold in US.",
+      "status": "international_only"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/60R14", "185/70R14"],
+      "trims": [],
+      "notes": "Corsa Classic is South American market vehicle. Not sold in US.",
+      "status": "international_only"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/60R14", "185/70R14"],
+      "trims": [],
+      "notes": "Corsa Classic is South American market vehicle. Not sold in US.",
+      "status": "international_only"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/60R14", "185/70R14"],
+      "trims": [],
+      "notes": "Corsa Classic is South American market vehicle. Not sold in US.",
+      "status": "international_only"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "corsa-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/60R14", "185/70R14"],
+      "trims": [],
+      "notes": "Corsa Classic is South American market vehicle. Not sold in US.",
+      "status": "international_only"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/35ZR19", "P305/30ZR20", "P275/30ZR20", "P345/25ZR21"],
+      "validatedTireSizes": ["245/35ZR19", "305/30ZR20", "275/30ZR20", "345/25ZR21"],
+      "trims": [
+        {"name": "Stingray", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/30ZR20", "rear": "345/25ZR21"}, "staggered": true},
+        {"name": "E-Ray", "tireSizes": {"front": "275/30ZR20", "rear": "345/25ZR21"}, "staggered": true}
+      ],
+      "notes": "C8 Corvette. All trims have staggered front/rear sizes.",
+      "status": "validated"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/35ZR19", "P305/30ZR20", "P275/30ZR20", "P345/25ZR21"],
+      "validatedTireSizes": ["245/35ZR19", "305/30ZR20", "275/30ZR20", "345/25ZR21"],
+      "trims": [
+        {"name": "Stingray", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/30ZR20", "rear": "345/25ZR21"}, "staggered": true},
+        {"name": "E-Ray", "tireSizes": {"front": "275/30ZR20", "rear": "345/25ZR21"}, "staggered": true}
+      ],
+      "notes": "C8 Corvette. All trims have staggered front/rear sizes.",
+      "status": "validated"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/35ZR19", "P305/30ZR20", "P275/30ZR20", "P345/25ZR21"],
+      "validatedTireSizes": ["245/35ZR19", "305/30ZR20", "275/30ZR20", "345/25ZR21"],
+      "trims": [
+        {"name": "Stingray", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/30ZR20", "rear": "345/25ZR21"}, "staggered": true},
+        {"name": "E-Ray", "tireSizes": {"front": "275/30ZR20", "rear": "345/25ZR21"}, "staggered": true}
+      ],
+      "notes": "C8 Corvette. All trims have staggered front/rear sizes.",
+      "status": "validated"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/35ZR19", "P305/30ZR20", "P275/30ZR20", "P345/25ZR21", "245/35ZR19", "305/30ZR20"],
+      "validatedTireSizes": ["245/35ZR19", "305/30ZR20", "275/30ZR20", "345/25ZR21"],
+      "trims": [
+        {"name": "Stingray", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/30ZR20", "rear": "345/25ZR21"}, "staggered": true}
+      ],
+      "notes": "C8 Corvette. Z06 introduced 2023.",
+      "status": "validated"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/35ZR19", "P305/30ZR20", "P275/30ZR20", "P345/25ZR21"],
+      "validatedTireSizes": ["245/35ZR19", "305/30ZR20"],
+      "trims": [
+        {"name": "Stingray", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true}
+      ],
+      "notes": "C8 Corvette. No Z06 yet in 2022.",
+      "status": "validated",
+      "discrepancies": ["P275/30ZR20", "P345/25ZR21"]
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/35ZR19", "P305/30ZR20", "P275/30ZR20", "P345/25ZR21"],
+      "validatedTireSizes": ["245/35ZR19", "305/30ZR20"],
+      "trims": [
+        {"name": "Stingray", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true}
+      ],
+      "notes": "C8 Corvette.",
+      "status": "validated",
+      "discrepancies": ["P275/30ZR20", "P345/25ZR21"]
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/35ZR19", "P305/30ZR20", "P275/30ZR20", "P345/25ZR21", "245/35ZR19", "305/30ZR20", "285/30ZR19", "325/25ZR20"],
+      "validatedTireSizes": ["245/35ZR19", "305/30ZR20"],
+      "trims": [
+        {"name": "Stingray", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "305/30ZR20"}, "staggered": true}
+      ],
+      "notes": "C8 Corvette debut year. 285/30ZR19 and 325/25ZR20 appear to be incorrect.",
+      "status": "validated",
+      "discrepancies": ["P275/30ZR20", "P345/25ZR21", "285/30ZR19", "325/25ZR20"]
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P245/35ZR19", "P285/30ZR19", "P285/30ZR20", "P335/25ZR20", "245/35ZR19", "285/30ZR20", "245/40ZR18", "285/35ZR19", "285/30ZR19", "335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "245/35ZR19", "285/30ZR20", "285/30ZR19", "335/25ZR20"],
+      "trims": [
+        {"name": "Stingray Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "285/30ZR20"}, "staggered": true},
+        {"name": "Grand Sport", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true},
+        {"name": "ZR1", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true}
+      ],
+      "notes": "C7 Corvette final year.",
+      "status": "validated"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P245/35ZR19", "P285/30ZR19", "P285/30ZR20", "P335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "245/35ZR19", "285/30ZR20", "285/30ZR19", "335/25ZR20"],
+      "trims": [
+        {"name": "Stingray Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "285/30ZR20"}, "staggered": true},
+        {"name": "Grand Sport", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true},
+        {"name": "ZR1", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true}
+      ],
+      "notes": "C7 Corvette. ZR1 introduced 2018.",
+      "status": "validated"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P245/35ZR19", "P285/30ZR19", "P285/30ZR20", "P335/25ZR20", "245/35ZR19", "285/30ZR20", "245/40ZR18", "285/35ZR19", "285/30ZR19", "335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "245/35ZR19", "285/30ZR20", "285/30ZR19", "335/25ZR20"],
+      "trims": [
+        {"name": "Stingray Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "285/30ZR20"}, "staggered": true},
+        {"name": "Grand Sport", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true}
+      ],
+      "notes": "C7 Corvette.",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P245/35ZR19", "P285/30ZR19", "P285/30ZR20", "P335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "245/35ZR19", "285/30ZR20", "285/30ZR19", "335/25ZR20"],
+      "trims": [
+        {"name": "Stingray Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "285/30ZR20"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true}
+      ],
+      "notes": "C7 Corvette.",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P245/35ZR19", "P285/30ZR19", "P285/30ZR20", "P335/25ZR20", "245/35ZR19", "285/30ZR20", "245/40ZR18", "285/35ZR19", "285/30ZR19", "335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "245/35ZR19", "285/30ZR20", "285/30ZR19", "335/25ZR20"],
+      "trims": [
+        {"name": "Stingray Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "285/30ZR20"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true}
+      ],
+      "notes": "C7 Corvette. Z06 introduced 2015.",
+      "status": "validated"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P245/35ZR19", "P285/30ZR19", "P285/30ZR20", "P335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "245/35ZR19", "285/30ZR20"],
+      "trims": [
+        {"name": "Stingray Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Stingray Z51", "tireSizes": {"front": "245/35ZR19", "rear": "285/30ZR20"}, "staggered": true}
+      ],
+      "notes": "C7 Corvette debut. No Z06 in 2014.",
+      "status": "validated",
+      "discrepancies": ["P285/30ZR19", "P335/25ZR20"]
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P285/35ZR19", "P325/30ZR19", "P335/25ZR20", "245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19", "285/30R19", "335/25R20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19", "285/30ZR19", "335/25ZR20"],
+      "trims": [
+        {"name": "C6 Base/Z51", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Grand Sport", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true},
+        {"name": "ZR1", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true}
+      ],
+      "notes": "C6 Corvette final year.",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P285/35ZR19", "P325/30ZR19", "P335/25ZR20", "245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19", "285/30R19", "335/25R20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19", "285/30ZR19", "335/25ZR20"],
+      "trims": [
+        {"name": "C6 Base/Z51", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Grand Sport", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true},
+        {"name": "ZR1", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true}
+      ],
+      "notes": "C6 Corvette.",
+      "status": "validated"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P285/35ZR19", "P325/30ZR19", "P335/25ZR20", "245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19", "285/30R19", "335/25R20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19", "285/30ZR19", "335/25ZR20"],
+      "trims": [
+        {"name": "C6 Base/Z51", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Grand Sport", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true},
+        {"name": "Z06 Carbon", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true},
+        {"name": "ZR1", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true}
+      ],
+      "notes": "C6 Corvette. Z06 Carbon special edition.",
+      "status": "validated"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P285/35ZR19", "P325/30ZR19", "P335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19", "285/30ZR19", "335/25ZR20"],
+      "trims": [
+        {"name": "C6 Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Grand Sport", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true},
+        {"name": "ZR1", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true}
+      ],
+      "notes": "C6 Corvette. Grand Sport introduced 2010.",
+      "status": "validated"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P285/35ZR19", "P325/30ZR19", "P335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19", "285/30ZR19", "335/25ZR20"],
+      "trims": [
+        {"name": "C6 Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true},
+        {"name": "ZR1", "tireSizes": {"front": "285/30ZR19", "rear": "335/25ZR20"}, "staggered": true}
+      ],
+      "notes": "C6 Corvette. ZR1 introduced 2009.",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P285/35ZR19", "P325/30ZR19", "P335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19"],
+      "trims": [
+        {"name": "C6 Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true}
+      ],
+      "notes": "C6 Corvette.",
+      "status": "validated",
+      "discrepancies": ["P335/25ZR20"]
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P285/35ZR19", "P325/30ZR19", "P335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19"],
+      "trims": [
+        {"name": "C6 Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true}
+      ],
+      "notes": "C6 Corvette.",
+      "status": "validated",
+      "discrepancies": ["P335/25ZR20"]
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P285/35ZR19", "P325/30ZR19", "P335/25ZR20"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19", "275/35ZR18", "325/30ZR19"],
+      "trims": [
+        {"name": "C6 Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true},
+        {"name": "Z06", "tireSizes": {"front": "275/35ZR18", "rear": "325/30ZR19"}, "staggered": true}
+      ],
+      "notes": "C6 Corvette. Z06 introduced 2006.",
+      "status": "validated",
+      "discrepancies": ["P335/25ZR20"]
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "corvette",
+      "currentTireSizes": ["P245/40ZR18", "P285/35ZR19", "P325/30ZR19"],
+      "validatedTireSizes": ["245/40ZR18", "285/35ZR19"],
+      "trims": [
+        {"name": "C6 Base", "tireSizes": {"front": "245/40ZR18", "rear": "285/35ZR19"}, "staggered": true}
+      ],
+      "notes": "C6 Corvette debut year. No Z06 in 2005.",
+      "status": "validated",
+      "discrepancies": ["P325/30ZR19"]
+    }
+  ],
+  "summary": {
+    "validated": 59,
+    "notSoldInUs": 8,
+    "internationalOnly": 8,
+    "withDiscrepancies": 32,
+    "vehiclesNeedingCorrection": [
+      "2000-2007 Chevrolet Caprice - Not sold in US (discontinued 1996, returned 2011 PPV)",
+      "2003-2010 Chevrolet Corsa Classic - South American market only",
+      "2015-2022 Chevrolet Colorado - Many incorrect tire sizes in current data",
+      "2004-2005 Chevrolet Colorado - Current data has wrong tire sizes for 1st gen",
+      "2020-2022 Chevrolet Corvette C8 - Z06 sizes listed before Z06 was available",
+      "2005-2008 Chevrolet Corvette C6 - ZR1 sizes listed before ZR1 was available"
+    ]
+  }
+}

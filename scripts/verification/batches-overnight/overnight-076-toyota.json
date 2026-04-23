@@ -1,0 +1,1711 @@
+[
+  {
+    "id": "324b7c06-a8cc-4dad-a145-e821c0b41372",
+    "year": 2020,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 15,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "c1b0da86-dd13-496a-ae5e-137743afdd76",
+    "year": 2020,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Nightshade",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5",
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 15,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "a92dec01-b173-457e-8ff2-fd12e22c5e8f",
+    "year": 2021,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Nightshade",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "9ac1e53d-afe2-49e1-b5f8-1d6d48c16ffb",
+    "year": 2021,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "e255deb1-896a-4d75-80c9-83bdff31f1cf",
+    "year": 2021,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "SR5 Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "9955b9b3-8044-48bb-bef7-f7dfbe049ba1",
+    "year": 2021,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Trail",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "4c67ffd9-1817-4f02-a9a4-52b644c97707",
+    "year": 2021,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "51fa7e59-1a63-4b4d-b3e2-46cee56f21f5",
+    "year": 2021,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "53907d9f-b8e8-4211-9760-5bb4e57e4200",
+    "year": 2021,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "c93e3b18-df0e-4018-80fe-59c4ef4ab7c2",
+    "year": 2021,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "92b09d5c-6888-4315-8e8f-cd3eabb3add7",
+    "year": 2022,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "2be892a9-d100-4bd7-8274-074d33c1c76e",
+    "year": 2022,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "9fc7bf53-c229-4a8d-b9be-a73d85b15c5f",
+    "year": 2022,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "f10f30bc-59d4-407c-9cc6-ecf434e9cbea",
+    "year": 2022,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "SR5 Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "e09a1b1d-2ddf-4f13-aaaa-3a090625b23c",
+    "year": 2022,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Trail",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "f35351b5-8c5e-423e-8c36-4e82bc74b8fc",
+    "year": 2022,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "84127426-7186-4cf5-8d25-74aaa453a5df",
+    "year": 2022,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "225441e8-b248-4b34-80f5-f5168e97f1ee",
+    "year": 2022,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Nightshade",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "08037b45-edaa-4ac2-9342-16c3fef19565",
+    "year": 2023,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "569679d5-84b4-4601-b7d9-7caeac4093a3",
+    "year": 2023,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "390925e4-8573-477b-abaf-c764f17f6d0c",
+    "year": 2023,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Nightshade",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "aadddbe3-3e8a-45b2-a96a-4e0c4b8b21ef",
+    "year": 2023,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "67b2c42a-a53c-454d-b505-6277d3119372",
+    "year": 2023,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "baad964e-ce76-4198-8346-efc1f1b6da5c",
+    "year": 2023,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "5bf0ae03-1d5d-4616-8058-79af8d6c43bc",
+    "year": 2023,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "SR5 Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "0fd0ab66-bee4-41d5-8b26-6feaef975ae0",
+    "year": 2023,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Trail",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "71412916-29f9-4013-8665-36bd7ab00108",
+    "year": 2024,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "54c9e3e1-47bb-4cf2-b5b5-26b9956b334a",
+    "year": 2024,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "0938d429-c345-4632-a292-a5b065abf7dc",
+    "year": 2024,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "SR5 Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "fd3f9e17-cdf8-47bb-bff8-a4fc5bf17492",
+    "year": 2024,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Trail",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "10898ac1-a5a8-4369-85e2-66760add2a15",
+    "year": 2024,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "946f7e3d-8db0-4d9d-a653-e8c220081fd2",
+    "year": 2024,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "1983c3a2-5ae2-416f-b27b-9e9b0b7a1d88",
+    "year": 2024,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "8c4ee8a3-5d33-4bab-95fa-f0dcd54a533b",
+    "year": 2024,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Nightshade",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7",
+      "17x7.5",
+      "20x7.5"
+    ],
+    "currentTireSizes": [
+      "265/70R17",
+      "265/65R17",
+      "245/60R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "be133f08-06e8-4509-b1a1-8c63f51c3e0d",
+    "year": 2025,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "614b6f72-5fda-4388-9cc6-8b29c0e227ca",
+    "year": 2025,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "a452dda8-7047-465a-b639-e20eac7ebc12",
+    "year": 2025,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "312ff6e3-6edf-4153-bbff-ea76244eefd8",
+    "year": 2025,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "70f6004d-4552-4943-b7d1-73946c0df7d3",
+    "year": 2025,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "afd8ddd7-1e5b-48e9-b413-0946cda579b4",
+    "year": 2025,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Trailhunter",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d574d819-e669-41eb-ae86-8e9b062e868d",
+    "year": 2025,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "a73108ea-4e92-49af-855a-109399daa9fc",
+    "year": 2026,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "03d3638e-5af0-4934-b2b2-0aa49211718c",
+    "year": 2026,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "5b36928d-a885-439a-9026-cd80502163b6",
+    "year": 2026,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "d96bffb9-4575-4eac-8d83-3cabb6e74391",
+    "year": 2026,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Off-Road Premium",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "13112139-e8bc-4a5e-9803-793e77869b8a",
+    "year": 2026,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "83facaa5-a2b4-4c90-8264-09b6cd4c8a2b",
+    "year": 2026,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "Trailhunter",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "84cf5903-d5a9-4383-b172-ffc8adce239e",
+    "year": 2026,
+    "make": "toyota",
+    "model": "4runner",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "17x7.5",
+      "18x7.5"
+    ],
+    "currentTireSizes": [
+      "245/70R17",
+      "265/70R18",
+      "265/60R20",
+      "265/55R20"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "8061419c-4259-49df-9a24-36fa8095995f",
+    "year": 1995,
+    "make": "toyota",
+    "model": "Avalon",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "35fad798-38b2-4f27-b95c-d61906b6e3d0",
+    "year": 1996,
+    "make": "toyota",
+    "model": "Avalon",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "e89a4d54-a75b-46ce-99fd-59fba30719be",
+    "year": 1997,
+    "make": "toyota",
+    "model": "Avalon",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "2ff3fbcf-55d2-4d44-b0d2-87f0083c25c7",
+    "year": 1998,
+    "make": "toyota",
+    "model": "Avalon",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "c26bf3b7-957d-40be-824b-7e921b9e73b0",
+    "year": 1999,
+    "make": "toyota",
+    "model": "Avalon",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "205/65R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "813723ba-7365-4c42-9e1d-8d7dc1c3e2aa",
+    "year": 1990,
+    "make": "toyota",
+    "model": "Camry",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 40,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "185/70R14",
+      "195/70R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "866dc7df-6ae2-4271-a066-d6ab79103aa1",
+    "year": 1991,
+    "make": "toyota",
+    "model": "Camry",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "185/70R14",
+      "195/70R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "b0169868-224d-4fd8-9093-828cb884dd17",
+    "year": 1990,
+    "make": "toyota",
+    "model": "Celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "trim": "GT-R",
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14",
+      "185/70R14",
+      "195/60R14",
+      "205/60R14",
+      "195/60R15",
+      "205/55R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "a782f10d-8a27-4e53-b4c9-de71e5f0ca15",
+    "year": 1991,
+    "make": "toyota",
+    "model": "Celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "trim": "GT-R",
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14",
+      "185/70R14",
+      "195/60R14",
+      "205/60R14",
+      "195/60R15",
+      "205/55R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "7249c38e-9146-448f-97f9-7ac64ec60f1c",
+    "year": 1992,
+    "make": "toyota",
+    "model": "Celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "trim": "GT-R",
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14",
+      "185/70R14",
+      "195/60R14",
+      "205/60R14",
+      "195/60R15",
+      "205/55R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "de36dceb-4e42-4a19-a8d9-f1efcc72ff4a",
+    "year": 1993,
+    "make": "toyota",
+    "model": "Celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "trim": "GT-R",
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14",
+      "185/70R14",
+      "195/60R14",
+      "205/60R14",
+      "195/60R15",
+      "205/55R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "f686f0f8-7caa-40c8-8a0e-e57bc8cf8fdd",
+    "year": 1994,
+    "make": "toyota",
+    "model": "Celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/70R14",
+      "195/60R15",
+      "205/55R15",
+      "205/50R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "1fd522d0-c559-4887-be72-b165ec5c478f",
+    "year": 1995,
+    "make": "toyota",
+    "model": "Celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16
+      },
+      {
+        "trim": "GT-Four",
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/70R14",
+      "195/60R15",
+      "205/55R15",
+      "205/50R16",
+      "215/50R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "287fa331-a6df-4c4e-94d8-75de34259e17",
+    "year": 1996,
+    "make": "toyota",
+    "model": "Celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/70R14",
+      "195/60R15",
+      "205/55R15",
+      "205/50R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "c13966fa-9bd3-4099-8b55-8d7e31566cd7",
+    "year": 1997,
+    "make": "toyota",
+    "model": "Celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/70R14",
+      "195/60R15",
+      "205/55R15",
+      "205/50R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "354cd911-df6a-4f30-a360-d87aa91bc545",
+    "year": 1998,
+    "make": "toyota",
+    "model": "Celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/70R14",
+      "195/60R15",
+      "205/55R15",
+      "205/50R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "2eb55d77-611c-4e44-be7a-eb5955f2a9e1",
+    "year": 1999,
+    "make": "toyota",
+    "model": "Celica",
+    "trim": "Base",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 40,
+        "diameter": 14
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 15
+      },
+      {
+        "width": 6.5,
+        "offset": 40,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/70R14",
+      "195/60R15",
+      "205/55R15",
+      "205/50R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "fb4d321f-fcf6-406c-9ef3-53ee3aecd15f",
+    "year": 1990,
+    "make": "toyota",
+    "model": "Corolla",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 39,
+        "diameter": 13
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "165/80R13",
+      "175/70R13",
+      "185/60R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "1998b72c-033a-447c-b75d-6f15cecbda1d",
+    "year": 1991,
+    "make": "toyota",
+    "model": "Corolla",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 39,
+        "diameter": 13
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "165/80R13",
+      "175/70R13",
+      "185/60R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "36e2af53-0350-4beb-998d-c60f23125a84",
+    "year": 1992,
+    "make": "toyota",
+    "model": "Corolla",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 39,
+        "diameter": 13
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "175/70R13",
+      "185/65R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "25092f00-b8a1-4436-ad47-4aee04889600",
+    "year": 1993,
+    "make": "toyota",
+    "model": "Corolla",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "185/65R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "1636b1a5-d4ff-4323-8ee2-dc29b0ed0287",
+    "year": 1994,
+    "make": "toyota",
+    "model": "Corolla",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "185/65R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "93f07294-429c-4826-bd43-a9572e32cac6",
+    "year": 1995,
+    "make": "toyota",
+    "model": "Corolla",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "185/65R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "9553cc6a-f646-4de1-8d32-1ac0fbb42548",
+    "year": 1996,
+    "make": "toyota",
+    "model": "Corolla",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "185/65R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "f57a93ce-bb6c-4721-8e2a-52d51f75c7d0",
+    "year": 1997,
+    "make": "toyota",
+    "model": "Corolla",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "185/65R14"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "2ae786be-9e53-4e34-809b-11eef52c7ba3",
+    "year": 1998,
+    "make": "toyota",
+    "model": "Corolla",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "185/65R14",
+      "185/65R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "80fee0be-d87b-4ad5-84ac-3222a1b53539",
+    "year": 1999,
+    "make": "toyota",
+    "model": "Corolla",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "185/65R14",
+      "185/65R15"
+    ],
+    "source": "90s-research-batch"
+  }
+]

@@ -1,0 +1,1128 @@
+{
+  "batchId": "116",
+  "validatedAt": "2026-04-21T22:30:00.000Z",
+  "vehicleCount": 75,
+  "summary": {
+    "validated": 75,
+    "issuesFound": 52,
+    "noIssues": 23
+  },
+  "results": [
+    {
+      "year": 2016,
+      "make": "mercedes-benz",
+      "model": "glc",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "trims": [
+        {"name": "GLC300 SUV", "tires": ["235/60R18", "235/55R19", "255/45R20"]},
+        {"name": "GLC300 4MATIC SUV", "tires": ["235/60R18", "235/55R19", "255/45R20"]}
+      ],
+      "status": "VALID",
+      "notes": "All sizes match OEM specifications"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes-benz",
+      "model": "glc-class",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45ZR20", "235/55ZR19", "255/50ZR19", "285/40ZR20"],
+      "validatedTireSizes": ["235/60R18", "235/55R19", "255/45R20", "235/55ZR19", "255/50ZR19", "285/40ZR20"],
+      "trims": [
+        {"name": "GLC300 SUV", "tires": ["235/60R18", "235/55R19", "255/45R20"]},
+        {"name": "GLC300 4MATIC SUV", "tires": ["235/60R18", "235/55R19", "255/45R20"]},
+        {"name": "AMG GLC43 4MATIC", "tires": ["235/55ZR19", "255/50ZR19", "285/40ZR20"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/65R17 not found in OEM data - remove"],
+      "notes": "235/65R17 does not appear on any 2021 GLC trim"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 (21\" wheels)", "tires": ["275/45R21 (F)", "315/40R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["255/50R19 should be 275/55R19", "275/45R20 should be 275/50R20", "275/40R21 should be 275/45R21 (F) / 315/40R21 (R) staggered"],
+      "notes": "Current data uses older W166 sizes; 2020+ W167 has different sizes"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 (21\" wheels)", "tires": ["275/45R21 (F)", "315/40R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["255/50R19 should be 275/55R19", "275/45R20 should be 275/50R20", "275/40R21 should be 275/45R21 (F) / 315/40R21 (R) staggered"],
+      "notes": "Current data uses older W166 sizes; 2020+ W167 has different sizes"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 (21\" wheels)", "tires": ["275/45R21 (F)", "315/40R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["255/50R19 should be 275/55R19", "275/45R20 should be 275/50R20", "275/40R21 should be 275/45R21 (F) / 315/40R21 (R) staggered"],
+      "notes": "Current data uses older W166 sizes; 2020+ W167 has different sizes"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 (21\" wheels)", "tires": ["275/45R21 (F)", "315/40R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["255/50R19 should be 275/55R19", "275/45R20 should be 275/50R20", "275/40R21 should be 275/45R21 (F) / 315/40R21 (R) staggered"],
+      "notes": "Current data uses older W166 sizes; 2020+ W167 has different sizes"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 (21\" wheels)", "tires": ["275/45R21 (F)", "315/40R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["255/50R19 should be 275/55R19", "275/45R20 should be 275/50R20", "275/40R21 should be 275/45R21 (F) / 315/40R21 (R) staggered"],
+      "notes": "Current data uses older W166 sizes; 2020+ W167 has different sizes"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 (21\" wheels)", "tires": ["275/45R21 (F)", "315/40R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["255/50R19 should be 275/55R19", "275/45R20 should be 275/50R20", "275/40R21 should be 275/45R21 (F) / 315/40R21 (R) staggered"],
+      "notes": "Current data uses older W166 sizes; 2020+ W167 has different sizes"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 (21\" wheels)", "tires": ["275/45R21 (F)", "315/40R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["255/50R19 should be 275/55R19", "275/45R20 should be 275/50R20", "275/40R21 should be 275/45R21 (F) / 315/40R21 (R) staggered"],
+      "notes": "2020 is first year of W167 generation with new tire sizes"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["255/50R19", "265/45R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["255/50R19", "265/45R20"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["275/45R20 should be 265/45R20", "275/40R21 not available - remove"],
+      "notes": "2019 is last year of W166 generation; 21\" not standard option"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["255/50R19", "265/45R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["255/50R19", "265/45R20"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["275/45R20 should be 265/45R20", "275/40R21 not available - remove"],
+      "notes": "W166 generation"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["255/50R19", "265/45R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["255/50R19", "265/45R20"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["275/45R20 should be 265/45R20", "275/40R21 not available - remove"],
+      "notes": "W166 generation"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["255/50R19", "265/45R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["255/50R19", "265/45R20"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["275/45R20 should be 265/45R20", "275/40R21 not available - remove"],
+      "notes": "W166 generation - first year of GLE name"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes-benz",
+      "model": "gle",
+      "currentTireSizes": ["255/50R19", "275/45R20", "275/40R21"],
+      "validatedTireSizes": ["255/50R19", "265/45R20"],
+      "trims": [
+        {"name": "GLE350 SUV", "tires": ["255/50R19", "265/45R20"]},
+        {"name": "GLE350 4MATIC SUV", "tires": ["255/50R19", "265/45R20"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["275/45R20 should be 265/45R20", "275/40R21 not available - remove"],
+      "notes": "W166 generation - note: GLE name started mid-2015"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes-benz",
+      "model": "gle-class",
+      "currentTireSizes": ["255/50ZR19", "235/60R18", "265/45ZR20", "265/45R20", "275/50R20", "275/50ZR20", "275/45ZR21", "315/40ZR21", "285/40ZR22", "325/35ZR22"],
+      "validatedTireSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21", "285/40R22", "325/35R22"],
+      "trims": [
+        {"name": "GLE350", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE350 4MATIC", "tires": ["275/55R19", "275/50R20"]},
+        {"name": "GLE450 4MATIC", "tires": ["275/50R20", "275/45R21 (F)", "315/40R21 (R)"]},
+        {"name": "AMG GLE53", "tires": ["275/45R21 (F)", "315/40R21 (R)"]},
+        {"name": "AMG GLE63/63 S", "tires": ["285/40R22 (F)", "325/35R22 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["255/50ZR19 should be 275/55R19", "235/60R18 not OEM for 2022 GLE", "265/45ZR20/265/45R20 should be 275/50R20"],
+      "notes": "W167 generation; multiple AMG variants with staggered options"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "trims": [
+        {"name": "S500 4MATIC Sedan", "tires": ["255/45R19", "255/40R20"]},
+        {"name": "S500 4MATIC (20\" staggered)", "tires": ["255/40R20 (F)", "285/35R20 (R)"], "staggered": true},
+        {"name": "S500 4MATIC (21\" staggered)", "tires": ["255/35R21 (F)", "285/30R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 not available on W223 generation", "265/35R21 should be staggered 255/35R21 (F) / 285/30R21 (R)"],
+      "notes": "W223 generation (2021+) does not offer 18\" wheels"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "trims": [
+        {"name": "S500 4MATIC Sedan", "tires": ["255/45R19", "255/40R20"]},
+        {"name": "S500 4MATIC (20\" staggered)", "tires": ["255/40R20 (F)", "285/35R20 (R)"], "staggered": true},
+        {"name": "S500 4MATIC (21\" staggered)", "tires": ["255/35R21 (F)", "285/30R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 not available on W223 generation", "265/35R21 should be staggered 255/35R21 (F) / 285/30R21 (R)"],
+      "notes": "W223 generation"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "trims": [
+        {"name": "S500 4MATIC Sedan", "tires": ["255/45R19", "255/40R20"]},
+        {"name": "S500 4MATIC (20\" staggered)", "tires": ["255/40R20 (F)", "285/35R20 (R)"], "staggered": true},
+        {"name": "S500 4MATIC (21\" staggered)", "tires": ["255/35R21 (F)", "285/30R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 not available on W223 generation", "265/35R21 should be staggered 255/35R21 (F) / 285/30R21 (R)"],
+      "notes": "W223 generation"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "trims": [
+        {"name": "S500 4MATIC Sedan", "tires": ["255/45R19", "255/40R20"]},
+        {"name": "S500 4MATIC (20\" staggered)", "tires": ["255/40R20 (F)", "285/35R20 (R)"], "staggered": true},
+        {"name": "S500 4MATIC (21\" staggered)", "tires": ["255/35R21 (F)", "285/30R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 not available on W223 generation", "265/35R21 should be staggered 255/35R21 (F) / 285/30R21 (R)"],
+      "notes": "W223 generation"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "trims": [
+        {"name": "S500 4MATIC Sedan", "tires": ["255/45R19", "255/40R20"]},
+        {"name": "S500 4MATIC (20\" staggered)", "tires": ["255/40R20 (F)", "285/35R20 (R)"], "staggered": true},
+        {"name": "S500 4MATIC (21\" staggered)", "tires": ["255/35R21 (F)", "285/30R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 not available on W223 generation", "265/35R21 should be staggered 255/35R21 (F) / 285/30R21 (R)"],
+      "notes": "W223 generation - first full year"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "trims": [
+        {"name": "S500 4MATIC Sedan", "tires": ["255/45R19", "255/40R20"]},
+        {"name": "S500 4MATIC (20\" staggered)", "tires": ["255/40R20 (F)", "285/35R20 (R)"], "staggered": true},
+        {"name": "S500 4MATIC (21\" staggered)", "tires": ["255/35R21 (F)", "285/30R21 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 not available on W223 generation", "265/35R21 should be staggered 255/35R21 (F) / 285/30R21 (R)"],
+      "notes": "W223 generation - first year"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "245/40R20", "275/35R20"],
+      "trims": [
+        {"name": "S450/S560 Sedan", "tires": ["245/45R18"]},
+        {"name": "S450/S560 4MATIC", "tires": ["245/45R18", "255/40R19"]},
+        {"name": "S560 (Sport Package)", "tires": ["245/40R20 (F)", "275/35R20 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 should be 255/40R19", "255/40R20 should be 245/40R20", "265/35R21 not standard - remove"],
+      "notes": "W222 generation - last year"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "245/40R20", "275/35R20"],
+      "trims": [
+        {"name": "S450/S560 Sedan", "tires": ["245/45R18"]},
+        {"name": "S450/S560 4MATIC", "tires": ["245/45R18", "255/40R19"]},
+        {"name": "S560 (Sport Package)", "tires": ["245/40R20 (F)", "275/35R20 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 should be 255/40R19", "255/40R20 should be 245/40R20", "265/35R21 not standard - remove"],
+      "notes": "W222 generation"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "245/40R20", "275/35R20"],
+      "trims": [
+        {"name": "S450/S560 Sedan", "tires": ["245/45R18"]},
+        {"name": "S450/S560 4MATIC", "tires": ["245/45R18", "255/40R19"]},
+        {"name": "S560 (Sport Package)", "tires": ["245/40R20 (F)", "275/35R20 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 should be 255/40R19", "255/40R20 should be 245/40R20", "265/35R21 not standard - remove"],
+      "notes": "W222 generation"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "245/40R20", "275/35R20"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["245/45R18"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18", "255/40R19"]},
+        {"name": "S550 (Sport Package)", "tires": ["245/40R20 (F)", "275/35R20 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 should be 255/40R19", "255/40R20 should be 245/40R20", "265/35R21 not standard - remove"],
+      "notes": "W222 generation facelift"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "245/40R20", "275/35R20"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["245/45R18"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18", "255/40R19"]},
+        {"name": "S550 Coupe 4MATIC", "tires": ["245/45R19 (F)", "275/40R19 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 should be 255/40R19", "255/40R20 should be 245/40R20", "265/35R21 not standard - remove"],
+      "notes": "W222 generation"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "245/40R20", "275/35R20"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["245/45R18"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18", "255/40R19"]},
+        {"name": "S550 Coupe 4MATIC", "tires": ["245/45R19 (F)", "275/40R19 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 should be 255/40R19", "255/40R20 should be 245/40R20", "265/35R21 not standard - remove"],
+      "notes": "W222 generation"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "245/40R20", "275/35R20"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["245/45R18"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18", "255/40R19"]},
+        {"name": "S550 (Sport Package)", "tires": ["245/40R20 (F)", "275/35R20 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 should be 255/40R19", "255/40R20 should be 245/40R20", "265/35R21 not standard - remove"],
+      "notes": "W222 generation - first year"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["225/55R17"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18"]},
+        {"name": "S550 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W221 generation - last year; different sizes than W222"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["225/55R17"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18"]},
+        {"name": "S550 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W221 generation"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["225/55R17"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18"]},
+        {"name": "S550 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W221 generation"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["225/55R17"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18"]},
+        {"name": "S550 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W221 generation"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["225/55R17"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18"]},
+        {"name": "S550 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W221 generation facelift"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["225/55R17"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18"]},
+        {"name": "S550 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W221 generation"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S550 Sedan", "tires": ["225/55R17"]},
+        {"name": "S550 4MATIC", "tires": ["245/45R18"]},
+        {"name": "S550 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W221 generation"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S500 Sedan", "tires": ["225/55R17"]},
+        {"name": "S500 4MATIC", "tires": ["245/45R18"]},
+        {"name": "S500 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W221 generation - first year"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S500 Sedan", "tires": ["225/55R17"]},
+        {"name": "S500 4MATIC", "tires": ["225/55R17", "245/45R18"]},
+        {"name": "S500 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W220 generation - last year"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S500 Sedan", "tires": ["225/55R17"]},
+        {"name": "S500 4MATIC", "tires": ["225/55R17", "245/45R18"]},
+        {"name": "S500 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W220 generation"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "trims": [
+        {"name": "S500 Sedan", "tires": ["225/55R17"]},
+        {"name": "S500 4MATIC", "tires": ["225/55R17", "245/45R18"]},
+        {"name": "S500 (Sport Package)", "tires": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/55R17"],
+      "notes": "W220 generation"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/60R16", "225/55R17", "245/45R18", "275/40R18"],
+      "trims": [
+        {"name": "S500 Sedan", "tires": ["225/60R16", "225/55R17"]},
+        {"name": "S500 (Sport Package)", "tires": ["245/45R18 (F)", "275/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/60R16, 225/55R17"],
+      "notes": "W220 generation"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/60R16", "225/55R17", "245/45R18", "275/40R18"],
+      "trims": [
+        {"name": "S500 Sedan", "tires": ["225/60R16", "225/55R17"]},
+        {"name": "S500 (Sport Package)", "tires": ["245/45R18 (F)", "275/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/60R16, 225/55R17"],
+      "notes": "W220 generation"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes-benz",
+      "model": "s-class",
+      "currentTireSizes": ["245/50R18", "255/45R19", "255/40R20", "265/35R21"],
+      "validatedTireSizes": ["225/60R16", "225/55R17", "245/45R18", "275/40R18"],
+      "trims": [
+        {"name": "S500 Sedan", "tires": ["225/60R16", "225/55R17"]},
+        {"name": "S500 (Sport Package)", "tires": ["245/45R18 (F)", "275/40R18 (R)"], "staggered": true}
+      ],
+      "status": "ISSUE",
+      "issues": ["245/50R18 should be 245/45R18", "255/45R19 not OEM - remove", "255/40R20 not OEM - remove", "265/35R21 not OEM - remove", "Add 225/60R16, 225/55R17"],
+      "notes": "W220 generation"
+    },
+    {
+      "year": 2002,
+      "make": "mercury",
+      "model": "cougar",
+      "currentTireSizes": ["215/65R15", "225/55R16", "215/50R17"],
+      "validatedTireSizes": ["205/60R15", "215/50R16", "215/50R17"],
+      "trims": [
+        {"name": "4cyl", "tires": ["205/60R15", "215/50R16"]},
+        {"name": "V6", "tires": ["205/60R15", "215/50R16"]},
+        {"name": "C2", "tires": ["215/50R16"]},
+        {"name": "XR", "tires": ["215/50R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["215/65R15 should be 205/60R15", "225/55R16 should be 215/50R16"],
+      "notes": "8th generation Cougar (1999-2002)"
+    },
+    {
+      "year": 2001,
+      "make": "mercury",
+      "model": "cougar",
+      "currentTireSizes": ["215/65R15", "225/55R16", "215/50R17"],
+      "validatedTireSizes": ["205/60R15", "215/50R16"],
+      "trims": [
+        {"name": "4cyl", "tires": ["205/60R15", "215/50R16"]},
+        {"name": "V6", "tires": ["205/60R15", "215/50R16"]},
+        {"name": "S", "tires": ["215/50R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["215/65R15 should be 205/60R15", "225/55R16 should be 215/50R16", "215/50R17 not available in 2001 - remove"],
+      "notes": "8th generation Cougar"
+    },
+    {
+      "year": 2000,
+      "make": "mercury",
+      "model": "cougar",
+      "currentTireSizes": ["215/65R15", "225/55R16", "215/50R17"],
+      "validatedTireSizes": ["205/60R15", "215/50R16"],
+      "trims": [
+        {"name": "4cyl", "tires": ["205/60R15", "215/50R16"]},
+        {"name": "V6", "tires": ["205/60R15", "215/50R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["215/65R15 should be 205/60R15", "225/55R16 should be 215/50R16", "215/50R17 not available in 2000 - remove"],
+      "notes": "8th generation Cougar"
+    },
+    {
+      "year": 2011,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R17"],
+      "trims": [
+        {"name": "LS", "tires": ["225/60R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["225/60R16 not standard in 2011 - remove (was 2008 and earlier)", "235/55R17 should be 225/60R17"],
+      "notes": "Final year of Grand Marquis; 17\" standard"
+    },
+    {
+      "year": 2010,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R17"],
+      "trims": [
+        {"name": "LS", "tires": ["225/60R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["225/60R16 not standard in 2010 - remove", "235/55R17 should be 225/60R17"],
+      "notes": "17\" standard starting 2009"
+    },
+    {
+      "year": 2009,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R17"],
+      "trims": [
+        {"name": "LS", "tires": ["225/60R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["225/60R16 not standard in 2009 - remove", "235/55R17 should be 225/60R17"],
+      "notes": "17\" became standard in 2009"
+    },
+    {
+      "year": 2008,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": [
+        {"name": "GS", "tires": ["225/60R16"]},
+        {"name": "LS", "tires": ["225/60R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/55R17 not OEM - remove"],
+      "notes": "Last year with 16\" wheels"
+    },
+    {
+      "year": 2007,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": [
+        {"name": "GS", "tires": ["225/60R16"]},
+        {"name": "LS", "tires": ["225/60R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/55R17 not OEM - remove"],
+      "notes": null
+    },
+    {
+      "year": 2006,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": [
+        {"name": "GS", "tires": ["225/60R16"]},
+        {"name": "LS", "tires": ["225/60R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/55R17 not OEM - remove"],
+      "notes": null
+    },
+    {
+      "year": 2005,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": [
+        {"name": "GS", "tires": ["225/60R16"]},
+        {"name": "LS", "tires": ["225/60R16"]},
+        {"name": "LS Limited Edition", "tires": ["225/60R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/55R17 not OEM - remove"],
+      "notes": null
+    },
+    {
+      "year": 2004,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": [
+        {"name": "GS", "tires": ["225/60R16"]},
+        {"name": "LS", "tires": ["225/60R16"]},
+        {"name": "LS Limited Edition", "tires": ["225/60R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/55R17 not OEM - remove"],
+      "notes": null
+    },
+    {
+      "year": 2003,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": [
+        {"name": "GS", "tires": ["225/60R16"]},
+        {"name": "LS", "tires": ["225/60R16"]},
+        {"name": "LSE", "tires": ["225/60R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/55R17 not OEM - remove"],
+      "notes": null
+    },
+    {
+      "year": 2002,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": [
+        {"name": "GS", "tires": ["225/60R16"]},
+        {"name": "LS", "tires": ["225/60R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/55R17 not OEM - remove"],
+      "notes": null
+    },
+    {
+      "year": 2001,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": [
+        {"name": "GS", "tires": ["225/60R16"]},
+        {"name": "LS", "tires": ["225/60R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/55R17 not OEM - remove"],
+      "notes": null
+    },
+    {
+      "year": 2000,
+      "make": "mercury",
+      "model": "grand-marquis",
+      "currentTireSizes": ["225/60R16", "235/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": [
+        {"name": "GS", "tires": ["225/60R16"]},
+        {"name": "LS", "tires": ["225/60R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/55R17 not OEM - remove"],
+      "notes": null
+    },
+    {
+      "year": 2011,
+      "make": "mercury",
+      "model": "mariner",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16", "225/65R17"],
+      "trims": [
+        {"name": "Base", "tires": ["235/70R16"]},
+        {"name": "Hybrid", "tires": ["235/70R16"]},
+        {"name": "Premier", "tires": ["235/70R16", "225/65R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/65R17 should be 225/65R17"],
+      "notes": "Final year of Mariner"
+    },
+    {
+      "year": 2010,
+      "make": "mercury",
+      "model": "mariner",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16", "225/65R17"],
+      "trims": [
+        {"name": "Base", "tires": ["235/70R16"]},
+        {"name": "Hybrid", "tires": ["235/70R16"]},
+        {"name": "Premier", "tires": ["235/70R16", "225/65R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/65R17 should be 225/65R17"],
+      "notes": null
+    },
+    {
+      "year": 2009,
+      "make": "mercury",
+      "model": "mariner",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16", "225/65R17"],
+      "trims": [
+        {"name": "Base", "tires": ["235/70R16"]},
+        {"name": "Hybrid", "tires": ["235/70R16"]},
+        {"name": "Premier", "tires": ["235/70R16", "225/65R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/65R17 should be 225/65R17"],
+      "notes": null
+    },
+    {
+      "year": 2008,
+      "make": "mercury",
+      "model": "mariner",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16", "225/65R17"],
+      "trims": [
+        {"name": "Base", "tires": ["235/70R16"]},
+        {"name": "Hybrid", "tires": ["235/70R16"]},
+        {"name": "Premier", "tires": ["235/70R16", "225/65R17"]},
+        {"name": "V6", "tires": ["235/70R16", "225/65R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/65R17 should be 225/65R17"],
+      "notes": "Second generation started 2008"
+    },
+    {
+      "year": 2007,
+      "make": "mercury",
+      "model": "mariner",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": [
+        {"name": "Convenience", "tires": ["235/70R16"]},
+        {"name": "Hybrid", "tires": ["235/70R16"]},
+        {"name": "Luxury", "tires": ["235/70R16"]},
+        {"name": "Premier", "tires": ["235/70R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/65R17 not available in 2007 - remove"],
+      "notes": "First generation - all trims use 16\" wheels"
+    },
+    {
+      "year": 2006,
+      "make": "mercury",
+      "model": "mariner",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": [
+        {"name": "Convenience", "tires": ["235/70R16"]},
+        {"name": "Hybrid", "tires": ["235/70R16"]},
+        {"name": "Luxury", "tires": ["235/70R16"]},
+        {"name": "Premier", "tires": ["235/70R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/65R17 not available in 2006 - remove"],
+      "notes": "First generation - all trims use 16\" wheels"
+    },
+    {
+      "year": 2005,
+      "make": "mercury",
+      "model": "mariner",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": [
+        {"name": "Convenience", "tires": ["235/70R16"]},
+        {"name": "Luxury", "tires": ["235/70R16"]},
+        {"name": "Premier", "tires": ["235/70R16"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/65R17 not available in 2005 - remove"],
+      "notes": "First generation - first year; all trims use 16\" wheels"
+    },
+    {
+      "year": 2011,
+      "make": "mercury",
+      "model": "milan",
+      "currentTireSizes": ["205/60R16", "215/50R17", "225/45R18"],
+      "validatedTireSizes": ["205/60R16", "225/50R17", "225/45R18"],
+      "trims": [
+        {"name": "I4", "tires": ["205/60R16"]},
+        {"name": "Hybrid", "tires": ["225/50R17"]},
+        {"name": "V6", "tires": ["225/50R17"]},
+        {"name": "I4 Premier", "tires": ["225/50R17", "225/45R18"]},
+        {"name": "V6 Premier", "tires": ["225/50R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["215/50R17 should be 225/50R17"],
+      "notes": "Final year of Milan"
+    },
+    {
+      "year": 2010,
+      "make": "mercury",
+      "model": "milan",
+      "currentTireSizes": ["205/60R16", "215/50R17", "225/45R18"],
+      "validatedTireSizes": ["205/60R16", "225/50R17", "225/45R18"],
+      "trims": [
+        {"name": "I4", "tires": ["205/60R16"]},
+        {"name": "Hybrid", "tires": ["225/50R17"]},
+        {"name": "V6", "tires": ["225/50R17"]},
+        {"name": "I4 Premier", "tires": ["225/50R17", "225/45R18"]},
+        {"name": "V6 Premier", "tires": ["225/50R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["215/50R17 should be 225/50R17"],
+      "notes": "18\" option added in 2010"
+    },
+    {
+      "year": 2009,
+      "make": "mercury",
+      "model": "milan",
+      "currentTireSizes": ["205/60R16", "215/50R17", "225/45R18"],
+      "validatedTireSizes": ["205/60R16", "225/50R17"],
+      "trims": [
+        {"name": "I4", "tires": ["205/60R16"]},
+        {"name": "V6", "tires": ["205/60R16"]},
+        {"name": "I4 Premier", "tires": ["225/50R17"]},
+        {"name": "V6 Premier", "tires": ["225/50R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["215/50R17 should be 225/50R17", "225/45R18 not available in 2009 - remove"],
+      "notes": null
+    },
+    {
+      "year": 2008,
+      "make": "mercury",
+      "model": "milan",
+      "currentTireSizes": ["205/60R16", "215/50R17", "225/45R18"],
+      "validatedTireSizes": ["205/60R16", "225/50R17"],
+      "trims": [
+        {"name": "I4", "tires": ["205/60R16"]},
+        {"name": "V6", "tires": ["205/60R16"]},
+        {"name": "I4 Premier", "tires": ["225/50R17"]},
+        {"name": "V6 Premier", "tires": ["225/50R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["215/50R17 should be 225/50R17", "225/45R18 not available in 2008 - remove"],
+      "notes": null
+    },
+    {
+      "year": 2007,
+      "make": "mercury",
+      "model": "milan",
+      "currentTireSizes": ["205/60R16", "215/50R17", "225/45R18"],
+      "validatedTireSizes": ["205/60R16", "225/50R17"],
+      "trims": [
+        {"name": "I4", "tires": ["205/60R16"]},
+        {"name": "V6", "tires": ["205/60R16"]},
+        {"name": "I4 Premier", "tires": ["225/50R17"]},
+        {"name": "V6 Premier", "tires": ["225/50R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["215/50R17 should be 225/50R17", "225/45R18 not available in 2007 - remove"],
+      "notes": null
+    },
+    {
+      "year": 2006,
+      "make": "mercury",
+      "model": "milan",
+      "currentTireSizes": ["205/60R16", "215/50R17", "225/45R18"],
+      "validatedTireSizes": ["205/60R16", "225/50R17"],
+      "trims": [
+        {"name": "I4", "tires": ["205/60R16"]},
+        {"name": "V6", "tires": ["205/60R16"]},
+        {"name": "I4 Premier", "tires": ["225/50R17"]},
+        {"name": "V6 Premier", "tires": ["225/50R17"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["215/50R17 should be 225/50R17", "225/45R18 not available in 2006 - remove"],
+      "notes": "First year of Milan"
+    },
+    {
+      "year": 2010,
+      "make": "mercury",
+      "model": "mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["245/65R17", "235/65R18", "255/50R20"],
+      "trims": [
+        {"name": "Base", "tires": ["245/65R17"]},
+        {"name": "Premier V6", "tires": ["235/65R18", "255/50R20"]},
+        {"name": "Premier V8", "tires": ["235/65R18", "255/50R20"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/70R16 not OEM for 2010 - remove", "235/65R17 should be 245/65R17", "245/60R18 should be 235/65R18", "Add 255/50R20 for Premier"],
+      "notes": "Final year of Mountaineer"
+    },
+    {
+      "year": 2009,
+      "make": "mercury",
+      "model": "mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["245/65R17", "235/65R18", "255/50R20"],
+      "trims": [
+        {"name": "Base", "tires": ["245/65R17"]},
+        {"name": "Premier V6", "tires": ["235/65R18", "255/50R20"]},
+        {"name": "Premier V8", "tires": ["235/65R18", "255/50R20"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/70R16 not OEM for 2009 - remove", "235/65R17 should be 245/65R17", "245/60R18 should be 235/65R18", "Add 255/50R20 for Premier"],
+      "notes": null
+    },
+    {
+      "year": 2008,
+      "make": "mercury",
+      "model": "mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["245/65R17", "235/65R18", "255/50R20"],
+      "trims": [
+        {"name": "Base", "tires": ["245/65R17"]},
+        {"name": "Premier V6", "tires": ["235/65R18"]},
+        {"name": "Premier V8", "tires": ["255/50R20"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/70R16 not OEM for 2008 - remove", "235/65R17 should be 245/65R17", "245/60R18 should be 235/65R18", "Add 255/50R20 for Premier V8"],
+      "notes": null
+    },
+    {
+      "year": 2007,
+      "make": "mercury",
+      "model": "mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["245/65R17", "235/65R18"],
+      "trims": [
+        {"name": "Base", "tires": ["245/65R17"]},
+        {"name": "Premier", "tires": ["245/65R17", "235/65R18"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/70R16 not OEM for 2007 - remove", "235/65R17 should be 245/65R17", "245/60R18 should be 235/65R18"],
+      "notes": null
+    },
+    {
+      "year": 2006,
+      "make": "mercury",
+      "model": "mountaineer",
+      "currentTireSizes": ["235/70R16", "235/65R17", "245/60R18"],
+      "validatedTireSizes": ["245/65R17", "235/65R18"],
+      "trims": [
+        {"name": "Base", "tires": ["245/65R17"]},
+        {"name": "Convenience", "tires": ["245/65R17"]},
+        {"name": "Luxury", "tires": ["245/65R17", "235/65R18"]},
+        {"name": "Premier", "tires": ["245/65R17", "235/65R18"]}
+      ],
+      "status": "ISSUE",
+      "issues": ["235/70R16 not OEM for 2006 - remove", "235/65R17 should be 245/65R17", "245/60R18 should be 235/65R18"],
+      "notes": "Third generation (U251) started 2006"
+    }
+  ]
+}

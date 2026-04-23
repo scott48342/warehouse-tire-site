@@ -1,0 +1,1062 @@
+{
+  "batchId": "48",
+  "processedAt": "2026-04-21T21:57:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "validatedTireSizes": {
+        "SRT10 Coupe": { "front": "275/35R18", "rear": "345/30R19" },
+        "SRT10 Roadster": { "front": "275/35R18", "rear": "345/30R19" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true,
+      "notes": "Last year of 4th gen Viper. All trims use same staggered setup."
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "validatedTireSizes": {
+        "SRT10 Coupe": { "front": "275/35R18", "rear": "345/30R19" },
+        "SRT10 Roadster": { "front": "275/35R18", "rear": "345/30R19" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "validatedTireSizes": {
+        "SRT10 Coupe": { "front": "275/35R18", "rear": "345/30R19" },
+        "SRT10 Roadster": { "front": "275/35R18", "rear": "345/30R19" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "validatedTireSizes": {
+        "SRT10 Coupe": { "front": "275/35R18", "rear": "345/30R19" },
+        "SRT10 Roadster": { "front": "275/35R18", "rear": "345/30R19" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "validatedTireSizes": {
+        "SRT10 Coupe": { "front": "275/35R18", "rear": "345/30R19" },
+        "SRT10 Roadster": { "front": "275/35R18", "rear": "345/30R19" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2004,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "validatedTireSizes": {
+        "SRT10 Coupe": { "front": "275/35R18", "rear": "345/30R19" },
+        "SRT10 Convertible": { "front": "275/35R18", "rear": "345/30R19" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "validatedTireSizes": {
+        "SRT10": { "front": "275/35R18", "rear": "345/30R19" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true,
+      "notes": "First year of SRT10 (4th gen). New staggered 18F/19R wheel setup."
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "validatedTireSizes": {
+        "GTS": { "front": "275/40R17", "rear": "335/35R17" },
+        "RT/10": { "front": "275/40R17", "rear": "335/35R17" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": true,
+      "recommendedTireSizes": ["275/40R17", "335/35R17"],
+      "notes": "3rd gen Viper used 17\" wheels, not 18/19. DB has wrong sizes."
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "validatedTireSizes": {
+        "GTS": { "front": "275/40R17", "rear": "335/35R17" },
+        "RT/10": { "front": "275/40R17", "rear": "335/35R17" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": true,
+      "recommendedTireSizes": ["275/40R17", "335/35R17"],
+      "notes": "3rd gen used 17\" wheels F/R."
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Viper",
+      "currentTireSizes": ["275/35R18", "345/30R19"],
+      "validatedTireSizes": {
+        "GTS": { "front": "275/40R17", "rear": "335/35R17" },
+        "RT/10": { "front": "275/40R17", "rear": "335/35R17" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": true,
+      "recommendedTireSizes": ["275/40R17", "335/35R17"],
+      "notes": "3rd gen used 17\" wheels F/R."
+    },
+    {
+      "year": 2018,
+      "make": "Dodge",
+      "model": "Vision",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": { "all": "185/60R15" },
+        "SXT": { "all": "195/55R16" }
+      },
+      "status": "MISSING",
+      "isStaggered": false,
+      "recommendedTireSizes": ["185/60R15", "195/55R16"],
+      "notes": "Rebadged Fiat Grand Siena for Mexico market. DB has no sizes."
+    },
+    {
+      "year": 2017,
+      "make": "Dodge",
+      "model": "Vision",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": { "all": "185/60R15" },
+        "SXT": { "all": "195/55R16" }
+      },
+      "status": "MISSING",
+      "isStaggered": false,
+      "recommendedTireSizes": ["185/60R15", "195/55R16"],
+      "notes": "Mexico market only. Rebadged Fiat Grand Siena."
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Vision",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": { "all": "185/60R15" },
+        "SXT": { "all": "195/55R16" }
+      },
+      "status": "MISSING",
+      "isStaggered": false,
+      "recommendedTireSizes": ["185/60R15", "195/55R16"]
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Vision",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Base": { "all": "185/60R15" },
+        "SXT": { "all": "195/55R16" }
+      },
+      "status": "MISSING",
+      "isStaggered": false,
+      "recommendedTireSizes": ["185/60R15", "195/55R16"]
+    },
+    {
+      "year": 2019,
+      "make": "Ferrari",
+      "model": "488",
+      "currentTireSizes": ["245/35ZR20", "305/30ZR20"],
+      "validatedTireSizes": {
+        "GTB": { "front": "245/35R20", "rear": "305/30R20" },
+        "Spider": { "front": "245/35R20", "rear": "305/30R20" },
+        "Pista": { "front": "245/35R20", "rear": "305/30R20" },
+        "Pista Spider": { "front": "245/35R20", "rear": "305/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true,
+      "notes": "All 488 variants share same tire spec."
+    },
+    {
+      "year": 2018,
+      "make": "Ferrari",
+      "model": "488",
+      "currentTireSizes": ["245/35ZR20", "305/30ZR20"],
+      "validatedTireSizes": {
+        "GTB": { "front": "245/35R20", "rear": "305/30R20" },
+        "Spider": { "front": "245/35R20", "rear": "305/30R20" },
+        "Pista": { "front": "245/35R20", "rear": "305/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2017,
+      "make": "Ferrari",
+      "model": "488",
+      "currentTireSizes": ["245/35ZR20", "305/30ZR20"],
+      "validatedTireSizes": {
+        "GTB": { "front": "245/35R20", "rear": "305/30R20" },
+        "Spider": { "front": "245/35R20", "rear": "305/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2016,
+      "make": "Ferrari",
+      "model": "488",
+      "currentTireSizes": ["245/35ZR20", "305/30ZR20"],
+      "validatedTireSizes": {
+        "GTB": { "front": "245/35R20", "rear": "305/30R20" },
+        "Spider": { "front": "245/35R20", "rear": "305/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2015,
+      "make": "Ferrari",
+      "model": "488",
+      "currentTireSizes": ["245/35ZR20", "305/30ZR20"],
+      "validatedTireSizes": {
+        "GTB": { "front": "245/35R20", "rear": "305/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true,
+      "notes": "First year of 488 GTB."
+    },
+    {
+      "year": 2023,
+      "make": "Ferrari",
+      "model": "F8",
+      "currentTireSizes": ["245/35ZR20", "305/30ZR20"],
+      "validatedTireSizes": {
+        "Spider": { "front": "245/35R20", "rear": "305/30R20" },
+        "Tributo": { "front": "245/35R20", "rear": "305/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2022,
+      "make": "Ferrari",
+      "model": "F8",
+      "currentTireSizes": ["245/35ZR20", "305/30ZR20"],
+      "validatedTireSizes": {
+        "Spider": { "front": "245/35R20", "rear": "305/30R20" },
+        "Tributo": { "front": "245/35R20", "rear": "305/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "Ferrari",
+      "model": "F8",
+      "currentTireSizes": ["245/35ZR20", "305/30ZR20"],
+      "validatedTireSizes": {
+        "Spider": { "front": "245/35R20", "rear": "305/30R20" },
+        "Tributo": { "front": "245/35R20", "rear": "305/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2020,
+      "make": "Ferrari",
+      "model": "F8",
+      "currentTireSizes": ["245/35ZR20", "305/30ZR20"],
+      "validatedTireSizes": {
+        "Spider": { "front": "245/35R20", "rear": "305/30R20" },
+        "Tributo": { "front": "245/35R20", "rear": "305/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true,
+      "notes": "First year of F8."
+    },
+    {
+      "year": 2019,
+      "make": "Ferrari",
+      "model": "F8",
+      "currentTireSizes": ["245/35ZR20", "305/30ZR20"],
+      "validatedTireSizes": {
+        "Tributo": { "front": "245/35R20", "rear": "305/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true,
+      "notes": "F8 debut was late 2019 for 2020 MY. May be mislabeled."
+    },
+    {
+      "year": 2023,
+      "make": "Ferrari",
+      "model": "Portofino",
+      "currentTireSizes": ["245/40ZR19", "285/35ZR19", "245/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "M": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"],
+      "notes": "19\" sizes may be optional. Standard is 20\" wheels. Review 19\" option availability."
+    },
+    {
+      "year": 2022,
+      "make": "Ferrari",
+      "model": "Portofino",
+      "currentTireSizes": ["245/40ZR19", "285/35ZR19", "245/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "M": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"]
+    },
+    {
+      "year": 2021,
+      "make": "Ferrari",
+      "model": "Portofino",
+      "currentTireSizes": ["245/40ZR19", "285/35ZR19", "245/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "M": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"],
+      "notes": "Portofino M replaced base Portofino for 2021+."
+    },
+    {
+      "year": 2020,
+      "make": "Ferrari",
+      "model": "Portofino",
+      "currentTireSizes": ["245/40ZR19", "285/35ZR19", "245/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"]
+    },
+    {
+      "year": 2019,
+      "make": "Ferrari",
+      "model": "Portofino",
+      "currentTireSizes": ["245/40ZR19", "285/35ZR19", "245/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"]
+    },
+    {
+      "year": 2018,
+      "make": "Ferrari",
+      "model": "Portofino",
+      "currentTireSizes": ["245/40ZR19", "285/35ZR19", "245/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"],
+      "notes": "First year of Portofino (California replacement)."
+    },
+    {
+      "year": 2026,
+      "make": "Ferrari",
+      "model": "Roma",
+      "currentTireSizes": ["255/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "245/35R20", "rear": "285/35R20" },
+        "Spider": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"],
+      "notes": "Front should be 245, not 255."
+    },
+    {
+      "year": 2025,
+      "make": "Ferrari",
+      "model": "Roma",
+      "currentTireSizes": ["255/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "245/35R20", "rear": "285/35R20" },
+        "Spider": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"]
+    },
+    {
+      "year": 2024,
+      "make": "Ferrari",
+      "model": "Roma",
+      "currentTireSizes": ["255/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "245/35R20", "rear": "285/35R20" },
+        "Spider": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"]
+    },
+    {
+      "year": 2023,
+      "make": "Ferrari",
+      "model": "Roma",
+      "currentTireSizes": ["255/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "245/35R20", "rear": "285/35R20" },
+        "Spider": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"],
+      "notes": "Spider variant introduced 2023."
+    },
+    {
+      "year": 2022,
+      "make": "Ferrari",
+      "model": "Roma",
+      "currentTireSizes": ["255/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"]
+    },
+    {
+      "year": 2021,
+      "make": "Ferrari",
+      "model": "Roma",
+      "currentTireSizes": ["255/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"]
+    },
+    {
+      "year": 2020,
+      "make": "Ferrari",
+      "model": "Roma",
+      "currentTireSizes": ["255/35ZR20", "285/35ZR20"],
+      "validatedTireSizes": {
+        "Base Model": { "front": "245/35R20", "rear": "285/35R20" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": true,
+      "recommendedTireSizes": ["245/35R20", "285/35R20"],
+      "notes": "First year of Roma."
+    },
+    {
+      "year": 2026,
+      "make": "Ferrari",
+      "model": "SF90",
+      "currentTireSizes": ["255/35ZR20", "315/30ZR20"],
+      "validatedTireSizes": {
+        "Stradale": { "front": "255/35R20", "rear": "315/30R20" },
+        "Spider": { "front": "255/35R20", "rear": "315/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2025,
+      "make": "Ferrari",
+      "model": "SF90",
+      "currentTireSizes": ["255/35ZR20", "315/30ZR20"],
+      "validatedTireSizes": {
+        "Stradale": { "front": "255/35R20", "rear": "315/30R20" },
+        "Spider": { "front": "255/35R20", "rear": "315/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2024,
+      "make": "Ferrari",
+      "model": "SF90",
+      "currentTireSizes": ["255/35ZR20", "315/30ZR20"],
+      "validatedTireSizes": {
+        "Stradale": { "front": "255/35R20", "rear": "315/30R20" },
+        "Spider": { "front": "255/35R20", "rear": "315/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2023,
+      "make": "Ferrari",
+      "model": "SF90",
+      "currentTireSizes": ["255/35ZR20", "315/30ZR20"],
+      "validatedTireSizes": {
+        "Stradale": { "front": "255/35R20", "rear": "315/30R20" },
+        "Spider": { "front": "255/35R20", "rear": "315/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2022,
+      "make": "Ferrari",
+      "model": "SF90",
+      "currentTireSizes": ["255/35ZR20", "315/30ZR20"],
+      "validatedTireSizes": {
+        "Stradale": { "front": "255/35R20", "rear": "315/30R20" },
+        "Spider": { "front": "255/35R20", "rear": "315/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "Ferrari",
+      "model": "SF90",
+      "currentTireSizes": ["255/35ZR20", "315/30ZR20"],
+      "validatedTireSizes": {
+        "Stradale": { "front": "255/35R20", "rear": "315/30R20" },
+        "Spider": { "front": "255/35R20", "rear": "315/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true,
+      "notes": "Spider variant introduced."
+    },
+    {
+      "year": 2020,
+      "make": "Ferrari",
+      "model": "SF90",
+      "currentTireSizes": ["255/35ZR20", "315/30ZR20"],
+      "validatedTireSizes": {
+        "Stradale": { "front": "255/35R20", "rear": "315/30R20" }
+      },
+      "status": "CORRECT",
+      "isStaggered": true,
+      "notes": "First year of SF90 Stradale."
+    },
+    {
+      "year": 2020,
+      "make": "Fiat",
+      "model": "124 Spider",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": {
+        "Classica": { "all": "195/50R16" },
+        "Lusso": { "all": "205/45R17" },
+        "Abarth": { "all": "205/45R17" },
+        "Urbana": { "all": "205/45R17" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": false,
+      "recommendedTireSizes": ["195/50R16", "205/45R17"],
+      "notes": "DB has 205/40R17 but OEM is 205/45R17. Also missing Classica 16\" option."
+    },
+    {
+      "year": 2019,
+      "make": "Fiat",
+      "model": "124 Spider",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": {
+        "Classica": { "all": "195/50R16" },
+        "Lusso": { "all": "205/45R17" },
+        "Abarth": { "all": "205/45R17" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": false,
+      "recommendedTireSizes": ["195/50R16", "205/45R17"]
+    },
+    {
+      "year": 2018,
+      "make": "Fiat",
+      "model": "124 Spider",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": {
+        "Classica": { "all": "195/50R16" },
+        "Lusso": { "all": "205/45R17" },
+        "Abarth": { "all": "205/45R17" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": false,
+      "recommendedTireSizes": ["195/50R16", "205/45R17"]
+    },
+    {
+      "year": 2017,
+      "make": "Fiat",
+      "model": "124 Spider",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": {
+        "Classica": { "all": "195/50R16" },
+        "Lusso": { "all": "205/45R17" },
+        "Abarth": { "all": "205/45R17" }
+      },
+      "status": "INCORRECT",
+      "isStaggered": false,
+      "recommendedTireSizes": ["195/50R16", "205/45R17"]
+    },
+    {
+      "year": 2016,
+      "make": "Fiat",
+      "model": "124 Spider",
+      "currentTireSizes": ["205/45R17", "195/50R16"],
+      "validatedTireSizes": {
+        "Classica": { "all": "195/50R16" },
+        "Lusso": { "all": "205/45R17" },
+        "Abarth": { "all": "205/45R17" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false,
+      "notes": "First year of modern 124 Spider."
+    },
+    {
+      "year": 2025,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/55R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Electric (500e)": { "all": "195/55R16" },
+        "Electric (500e) Optional": { "all": "205/45R17" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false,
+      "notes": "2024+ only electric 500e in North America."
+    },
+    {
+      "year": 2024,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/55R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Electric (500e)": { "all": "195/55R16" },
+        "Electric (500e) Optional": { "all": "205/45R17" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false
+    },
+    {
+      "year": 2023,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/55R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Electric (500e)": { "all": "195/55R16" },
+        "Electric (500e) Optional": { "all": "205/45R17" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false
+    },
+    {
+      "year": 2022,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/55R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Electric (500e)": { "all": "195/55R16" },
+        "Electric (500e) Optional": { "all": "205/45R17" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false
+    },
+    {
+      "year": 2021,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/55R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Electric (500e)": { "all": "195/55R16" },
+        "Electric (500e) Optional": { "all": "205/45R17" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false,
+      "notes": "New-gen electric 500 introduced."
+    },
+    {
+      "year": 2020,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/45R16", "205/40ZR17"],
+      "validatedTireSizes": {
+        "Pop": { "all": "195/45R16" },
+        "Lounge": { "all": "195/45R16" },
+        "Abarth": { "all": "195/45R16" },
+        "Abarth 17\" Optional": { "all": "205/40R17" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false,
+      "notes": "Last year of gas 500 in US."
+    },
+    {
+      "year": 2019,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/45R16", "205/40R17", "205/40ZR17"],
+      "validatedTireSizes": {
+        "Pop": { "all": "195/45R16" },
+        "Lounge": { "all": "195/45R16" },
+        "Abarth": { "all": "195/45R16" },
+        "Abarth 17\" Optional": { "all": "205/40R17" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false
+    },
+    {
+      "year": 2018,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/45R16", "205/40R17"],
+      "validatedTireSizes": {
+        "Pop": { "all": "195/45R16" },
+        "Lounge": { "all": "195/45R16" },
+        "Abarth": { "all": "195/45R16" },
+        "Abarth 17\" Optional": { "all": "205/40R17" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false
+    },
+    {
+      "year": 2017,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/45R16", "205/40R17", "205/40ZR17"],
+      "validatedTireSizes": {
+        "Pop": { "all": "185/55R15" },
+        "Lounge": { "all": "185/55R15" },
+        "Lounge 16\" Optional": { "all": "195/45R16" },
+        "Abarth": { "all": "195/45R16" },
+        "Abarth 17\" Optional": { "all": "205/40R17" }
+      },
+      "status": "INCOMPLETE",
+      "isStaggered": false,
+      "recommendedTireSizes": ["185/55R15", "195/45R16", "205/40R17"],
+      "notes": "DB missing base 15\" option for Pop/Lounge."
+    },
+    {
+      "year": 2016,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/45R16", "205/40R17"],
+      "validatedTireSizes": {
+        "Pop": { "all": "185/55R15" },
+        "Lounge": { "all": "185/55R15" },
+        "Sport": { "all": "195/45R16" },
+        "Abarth": { "all": "195/45R16" },
+        "Abarth 17\" Optional": { "all": "205/40R17" }
+      },
+      "status": "INCOMPLETE",
+      "isStaggered": false,
+      "recommendedTireSizes": ["185/55R15", "195/45R16", "205/40R17"]
+    },
+    {
+      "year": 2015,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/45R16", "205/40R17", "205/40ZR17"],
+      "validatedTireSizes": {
+        "Pop": { "all": "185/55R15" },
+        "Lounge": { "all": "185/55R15" },
+        "Sport": { "all": "195/45R16" },
+        "Turbo": { "all": "195/45R16" },
+        "Abarth": { "all": "195/45R16" },
+        "Abarth 17\" Optional": { "all": "205/40R17" }
+      },
+      "status": "INCOMPLETE",
+      "isStaggered": false,
+      "recommendedTireSizes": ["185/55R15", "195/45R16", "205/40R17"]
+    },
+    {
+      "year": 2014,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/45R16", "205/40R17"],
+      "validatedTireSizes": {
+        "Pop": { "all": "185/55R15" },
+        "Lounge": { "all": "185/55R15" },
+        "Sport": { "all": "195/45R16" },
+        "Abarth": { "all": "195/45R16" },
+        "Abarth 17\" Optional": { "all": "205/40R17" }
+      },
+      "status": "INCOMPLETE",
+      "isStaggered": false,
+      "recommendedTireSizes": ["185/55R15", "195/45R16", "205/40R17"]
+    },
+    {
+      "year": 2013,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/45R16", "205/40R17"],
+      "validatedTireSizes": {
+        "Pop": { "all": "185/55R15" },
+        "Lounge": { "all": "185/55R15" },
+        "Sport": { "all": "195/45R16" },
+        "Turbo": { "all": "195/45R16" },
+        "Abarth": { "all": "195/45R16" },
+        "Abarth 17\" Optional": { "all": "205/40R17" }
+      },
+      "status": "INCOMPLETE",
+      "isStaggered": false,
+      "recommendedTireSizes": ["185/55R15", "195/45R16", "205/40R17"]
+    },
+    {
+      "year": 2012,
+      "make": "Fiat",
+      "model": "500",
+      "currentTireSizes": ["195/45R16", "205/40R17", "205/40ZR17"],
+      "validatedTireSizes": {
+        "Pop": { "all": "185/55R15" },
+        "Gucci": { "all": "185/55R15" },
+        "Lounge": { "all": "185/55R15" },
+        "Sport": { "all": "195/45R16" },
+        "Abarth": { "all": "195/45R16" },
+        "Abarth 17\" Optional": { "all": "205/40R17" }
+      },
+      "status": "INCOMPLETE",
+      "isStaggered": false,
+      "recommendedTireSizes": ["185/55R15", "195/45R16", "205/40R17"],
+      "notes": "First year of Fiat 500 in US. Base trims use 15\" wheels."
+    },
+    {
+      "year": 2025,
+      "make": "Fiat",
+      "model": "500X",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/60R17", "215/55R18", "225/45R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Pop": { "all": "215/60R16" },
+        "Trekking": { "all": "215/60R17" },
+        "Trekking Optional": { "all": "215/55R18" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": false,
+      "notes": "DB has many sizes. 19\" 225/45R19 seems unlikely for 500X. Verify."
+    },
+    {
+      "year": 2024,
+      "make": "Fiat",
+      "model": "500X",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/60R17", "215/55R18", "225/45R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Pop": { "all": "215/60R16" },
+        "Trekking": { "all": "215/60R17" },
+        "Trekking Optional": { "all": "215/55R18" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": false
+    },
+    {
+      "year": 2023,
+      "make": "Fiat",
+      "model": "500X",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/60R17", "215/55R18", "225/45R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Pop": { "all": "215/60R16" },
+        "Trekking": { "all": "215/60R17" },
+        "Trekking Optional": { "all": "215/55R18" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": false
+    },
+    {
+      "year": 2022,
+      "make": "Fiat",
+      "model": "500X",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/60R17", "215/55R18", "225/45R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Pop": { "all": "215/60R16" },
+        "Trekking": { "all": "215/60R17" },
+        "Trekking Optional": { "all": "215/55R18" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": false
+    },
+    {
+      "year": 2021,
+      "make": "Fiat",
+      "model": "500X",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/60R17", "215/55R18", "225/45R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Pop": { "all": "215/60R16" },
+        "Trekking": { "all": "215/60R17" },
+        "Trekking Optional": { "all": "215/55R18" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": false
+    },
+    {
+      "year": 2020,
+      "make": "Fiat",
+      "model": "500X",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/60R17", "215/55R18", "225/45R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Pop": { "all": "215/60R16" },
+        "Trekking": { "all": "215/60R17" },
+        "Trekking Plus": { "all": "215/55R18" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": false
+    },
+    {
+      "year": 2019,
+      "make": "Fiat",
+      "model": "500X",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/60R17", "215/55R18", "225/45R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Pop": { "all": "215/60R17" },
+        "Pop Blue Sky": { "all": "215/60R17" },
+        "Trekking": { "all": "215/60R17" },
+        "Trekking Optional": { "all": "215/55R18" },
+        "Trekking Plus": { "all": "215/60R17" },
+        "Trekking Plus Optional": { "all": "215/55R18" },
+        "Trekking Urbana": { "all": "215/55R18" },
+        "120th Anniversary": { "all": "215/55R18" }
+      },
+      "status": "NEEDS_REVIEW",
+      "isStaggered": false,
+      "notes": "2019 was major refresh. Pop moved to 17\" standard."
+    },
+    {
+      "year": 2018,
+      "make": "Fiat",
+      "model": "500X",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/60R17", "215/55R18", "225/45R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Pop FWD": { "all": "215/60R16" },
+        "Pop AWD": { "all": "215/60R17" },
+        "Lounge FWD": { "all": "215/55R17" },
+        "Lounge FWD Optional": { "all": "225/45R18" },
+        "Lounge AWD": { "all": "215/60R17" },
+        "Lounge AWD Optional": { "all": "215/55R18" },
+        "Trekking FWD": { "all": "215/55R17" },
+        "Trekking FWD Optional": { "all": "225/45R18" },
+        "Trekking AWD": { "all": "215/60R17" },
+        "Trekking AWD Optional": { "all": "215/55R18" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false,
+      "notes": "Extensive trim/drivetrain combos with different sizes."
+    },
+    {
+      "year": 2017,
+      "make": "Fiat",
+      "model": "500X",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/60R17", "215/55R18", "225/45R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Pop FWD": { "all": "215/60R16" },
+        "Pop AWD": { "all": "215/60R17" },
+        "Lounge FWD": { "all": "215/55R17" },
+        "Lounge AWD": { "all": "215/60R17" },
+        "Trekking FWD": { "all": "215/55R17" },
+        "Trekking AWD": { "all": "215/60R17" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false
+    },
+    {
+      "year": 2016,
+      "make": "Fiat",
+      "model": "500X",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/60R17", "215/55R18", "225/45R18", "225/45R19"],
+      "validatedTireSizes": {
+        "Pop": { "all": "215/60R16" },
+        "Easy FWD": { "all": "215/55R17" },
+        "Easy AWD": { "all": "215/60R17" },
+        "Lounge FWD": { "all": "215/55R17" },
+        "Lounge FWD Optional": { "all": "225/45R18" },
+        "Lounge AWD": { "all": "215/60R17" },
+        "Lounge AWD Optional": { "all": "215/55R18" },
+        "Trekking FWD": { "all": "215/55R17" },
+        "Trekking FWD Optional": { "all": "225/45R18" },
+        "Trekking AWD": { "all": "215/60R17" },
+        "Trekking AWD Optional": { "all": "215/55R18" },
+        "Trekking Plus FWD": { "all": "225/45R18" },
+        "Trekking Plus AWD": { "all": "215/55R18" }
+      },
+      "status": "CORRECT",
+      "isStaggered": false,
+      "notes": "First year of 500X in US."
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "Bronco",
+      "currentTireSizes": ["255/75R17", "275/65R18", "285/65R18", "285/70R17", "LT285/70R17", "315/70R17", "LT315/70R17", "LT265/70R17", "255/70R18"],
+      "validatedTireSizes": {
+        "Base": { "all": "255/70R16" },
+        "Big Bend": { "all": "255/75R17" },
+        "Big Bend Optional": { "all": "265/70R17" },
+        "Outer Banks": { "all": "265/70R17" },
+        "Outer Banks Optional": { "all": "255/70R18" },
+        "Badlands": { "all": "285/70R17" },
+        "Heritage": { "all": "315/70R17" },
+        "Sasquatch Package": { "all": "315/70R17" },
+        "Raptor": { "all": "37X12.50R17" }
+      },
+      "status": "INCOMPLETE",
+      "isStaggered": false,
+      "recommendedTireSizes": ["255/70R16", "255/75R17", "265/70R17", "255/70R18", "285/70R17", "315/70R17", "37X12.50R17"],
+      "notes": "DB missing 255/70R16 for Base trim. 2026 data extrapolated from 2025."
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Bronco",
+      "currentTireSizes": ["255/75R17", "275/65R18", "285/65R18", "285/70R17", "LT285/70R17", "315/70R17", "LT315/70R17", "LT265/70R17", "255/70R18"],
+      "validatedTireSizes": {
+        "Base": { "all": "255/70R16" },
+        "Big Bend": { "all": "255/75R17" },
+        "Big Bend Optional": { "all": "265/70R17" },
+        "Outer Banks": { "all": "265/70R17" },
+        "Outer Banks Optional": { "all": "255/70R18" },
+        "Badlands": { "all": "285/70R17" },
+        "Heritage": { "all": "315/70R17" },
+        "Stroppe Edition": { "all": "315/70R17" },
+        "Sasquatch Package": { "all": "315/70R17" },
+        "Raptor": { "all": "37X12.50R17" }
+      },
+      "status": "INCOMPLETE",
+      "isStaggered": false,
+      "recommendedTireSizes": ["255/70R16", "255/75R17", "265/70R17", "255/70R18", "285/70R17", "315/70R17", "37X12.50R17"],
+      "notes": "DB missing 255/70R16 for Base. Some sizes like 275/65R18, 285/65R18 need verification."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "correct": 35,
+    "incorrect": 17,
+    "incomplete": 11,
+    "needsReview": 8,
+    "missing": 4,
+    "issuesByModel": {
+      "Dodge Viper 2000-2002": "Wrong sizes - DB has 4th gen tires on 3rd gen cars. Should be 275/40R17 F, 335/35R17 R",
+      "Dodge Vision 2015-2018": "Missing all tire data. Mexico-market Fiat Grand Siena rebadge. Add 185/60R15, 195/55R16",
+      "Ferrari Roma 2020-2026": "Front tire wrong - DB has 255/35R20, should be 245/35R20",
+      "Fiat 124 Spider 2017-2020": "Wrong aspect ratio - DB has 205/40R17, should be 205/45R17. Also missing 195/50R16 Classica",
+      "Fiat 500 2012-2017": "Missing 185/55R15 for base Pop/Lounge trims",
+      "Fiat 500X": "Has too many sizes. 225/45R19 seems incorrect. FWD/AWD differentiation needed",
+      "Ferrari Portofino": "Has 19\" sizes that may be optional/EU only. Standard is 20\"",
+      "Ford Bronco": "Missing 255/70R16 for Base trim. 37X12.50R17 for Raptor missing"
+    }
+  }
+}

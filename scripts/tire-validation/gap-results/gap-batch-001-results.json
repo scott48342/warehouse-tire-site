@@ -1,0 +1,381 @@
+{
+  "batchId": "001",
+  "completedAt": "2026-04-21T23:45:00.000Z",
+  "source": "tiresize.com",
+  "results": [
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A6 e-tron",
+      "notUS": false,
+      "tireSizes": ["245/50R19", "255/45R20", "255/40R21"],
+      "wheelSizes": ["19", "20", "21"],
+      "notes": "New model just launching globally - specs from search, may need verification when tiresize.com updates"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "A7L",
+      "notUS": true,
+      "reason": "China-only long wheelbase sedan"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "A7L",
+      "notUS": true,
+      "reason": "China-only long wheelbase sedan"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "A7L",
+      "notUS": true,
+      "reason": "China-only long wheelbase sedan"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "A7L",
+      "notUS": true,
+      "reason": "China-only long wheelbase sedan"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["225/55R17", "245/45R18"],
+      "wheelSizes": ["17", "18"],
+      "notes": "Data extrapolated from 2001-2003 generation (D2)"
+    },
+    {
+      "year": 2001,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["225/55R17", "245/45R18"],
+      "wheelSizes": ["17", "18"],
+      "notes": "Data extrapolated from generation (D2)"
+    },
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["225/55R17", "245/45R18"],
+      "wheelSizes": ["17", "18"],
+      "notes": "Data extrapolated from generation (D2)"
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["225/55R17", "245/45R18"],
+      "wheelSizes": ["17", "18"],
+      "notes": "Last year of D2 generation"
+    },
+    {
+      "year": 2004,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["235/55R17", "255/45R18", "255/40R19", "255/35R20", "275/35R20"],
+      "wheelSizes": ["17", "18", "19", "20"],
+      "notes": "D3 generation started"
+    },
+    {
+      "year": 2005,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["235/55R17", "255/45R18", "255/40R19", "255/35R20", "275/35R20"],
+      "wheelSizes": ["17", "18", "19", "20"]
+    },
+    {
+      "year": 2006,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["255/45R18", "255/40R19", "275/35R20"],
+      "wheelSizes": ["18", "19", "20"]
+    },
+    {
+      "year": 2007,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["255/45R18", "255/40R19", "275/35R20"],
+      "wheelSizes": ["18", "19", "20"]
+    },
+    {
+      "year": 2008,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["255/45R18", "255/40R19", "275/35R20"],
+      "wheelSizes": ["18", "19", "20"]
+    },
+    {
+      "year": 2009,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["255/45R18", "255/40R19", "275/35R20"],
+      "wheelSizes": ["18", "19", "20"]
+    },
+    {
+      "year": 2010,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["255/45R18", "255/40R19", "255/45R19", "265/40R20", "275/35R20"],
+      "wheelSizes": ["18", "19", "20"]
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "A8",
+      "tireSizes": ["255/45R19", "265/40R20", "275/35R20"],
+      "wheelSizes": ["19", "20"],
+      "notes": "D4 generation"
+    },
+    {
+      "year": 2001,
+      "make": "Audi",
+      "model": "Allroad",
+      "tireSizes": ["225/55R17", "245/45R18"],
+      "wheelSizes": ["17", "18"],
+      "notes": "First gen C5-based"
+    },
+    {
+      "year": 2002,
+      "make": "Audi",
+      "model": "Allroad",
+      "tireSizes": ["225/55R17", "245/45R18"],
+      "wheelSizes": ["17", "18"]
+    },
+    {
+      "year": 2003,
+      "make": "Audi",
+      "model": "Allroad",
+      "tireSizes": ["225/55R17", "245/45R18"],
+      "wheelSizes": ["17", "18"]
+    },
+    {
+      "year": 2004,
+      "make": "Audi",
+      "model": "Allroad",
+      "tireSizes": ["225/55R17", "245/45R18"],
+      "wheelSizes": ["17", "18"]
+    },
+    {
+      "year": 2005,
+      "make": "Audi",
+      "model": "Allroad",
+      "tireSizes": ["225/55R17", "245/45R18"],
+      "wheelSizes": ["17", "18"],
+      "notes": "Last year of first gen"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "Allroad",
+      "tireSizes": ["245/45R18", "245/40R19"],
+      "wheelSizes": ["18", "19"],
+      "notes": "Second gen based on A4"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "Allroad",
+      "tireSizes": ["245/45R18", "245/40R19"],
+      "wheelSizes": ["18", "19"]
+    },
+    {
+      "year": 2015,
+      "make": "Audi",
+      "model": "Allroad",
+      "tireSizes": ["245/45R18", "245/40R19"],
+      "wheelSizes": ["18", "19"]
+    },
+    {
+      "year": 2016,
+      "make": "Audi",
+      "model": "Allroad",
+      "tireSizes": ["245/45R18", "245/40R19"],
+      "wheelSizes": ["18", "19"],
+      "notes": "Continued similar specs"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "Cabriolet",
+      "notUS": true,
+      "reason": "Audi Cabriolet was discontinued in US after 1998. Model year 2000 does not exist for US market."
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "e-tron S",
+      "tireSizes": ["255/50R20", "265/45R21"],
+      "wheelSizes": ["20", "21"],
+      "notes": "e-tron S is a trim level of e-tron, listed under Sportback for 2020"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "e-tron S",
+      "tireSizes": ["255/50R20", "265/45R21"],
+      "wheelSizes": ["20", "21"]
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "e-tron S",
+      "tireSizes": ["255/50R20", "265/45R21", "285/35R22"],
+      "wheelSizes": ["20", "21", "22"]
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "e-tron S",
+      "tireSizes": ["255/50R20", "265/45R21", "285/35R22"],
+      "wheelSizes": ["20", "21", "22"]
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "Q2L e-tron",
+      "notUS": true,
+      "reason": "China-only compact electric SUV"
+    },
+    {
+      "year": 2020,
+      "make": "Audi",
+      "model": "Q2L e-tron",
+      "notUS": true,
+      "reason": "China-only compact electric SUV"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "Q2L e-tron",
+      "notUS": true,
+      "reason": "China-only compact electric SUV"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "Q2L e-tron",
+      "notUS": true,
+      "reason": "China-only compact electric SUV"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "Q2L e-tron",
+      "notUS": true,
+      "reason": "China-only compact electric SUV"
+    },
+    {
+      "year": 2011,
+      "make": "Audi",
+      "model": "Q3",
+      "notUS": true,
+      "reason": "Q3 was not sold in US until 2015 - Europe only 2011-2014"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "Q3",
+      "notUS": true,
+      "reason": "Q3 was not sold in US until 2015 - Europe only 2011-2014"
+    },
+    {
+      "year": 2013,
+      "make": "Audi",
+      "model": "Q3",
+      "notUS": true,
+      "reason": "Q3 was not sold in US until 2015 - Europe only 2011-2014"
+    },
+    {
+      "year": 2014,
+      "make": "Audi",
+      "model": "Q3",
+      "notUS": true,
+      "reason": "Q3 was not sold in US until 2015 - Europe only 2011-2014"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "Q5 e-tron",
+      "notUS": true,
+      "reason": "China-only electric SUV (different from Q5 Sportback e-tron)"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "Q5 e-tron",
+      "notUS": true,
+      "reason": "China-only electric SUV (different from Q5 Sportback e-tron)"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q5 e-tron",
+      "notUS": true,
+      "reason": "China-only electric SUV (different from Q5 Sportback e-tron)"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "Q6",
+      "notUS": true,
+      "reason": "China-only ICE SUV (different from Q6 e-tron)"
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "Q6",
+      "notUS": true,
+      "reason": "China-only ICE SUV (different from Q6 e-tron)"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q6",
+      "notUS": true,
+      "reason": "China-only ICE SUV (different from Q6 e-tron)"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "Q6",
+      "notUS": true,
+      "reason": "China-only ICE SUV (different from Q6 e-tron)"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q6 e-tron",
+      "tireSizes": ["235/55R19", "255/50R20", "255/45R21"],
+      "wheelSizes": ["19", "20", "21"],
+      "notes": "New model, just arriving in US - specs from official sources"
+    },
+    {
+      "year": 2025,
+      "make": "Audi",
+      "model": "Q6L Sportback e-tron",
+      "notUS": true,
+      "reason": "China-only long wheelbase electric SUV"
+    },
+    {
+      "year": 2005,
+      "make": "Audi",
+      "model": "Q7",
+      "notUS": true,
+      "reason": "Q7 was not sold in US until 2007 - Europe only in 2005/2006"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "withSpecs": 28,
+    "notUSMarket": 22,
+    "notUSReasons": {
+      "chinaOnly": 15,
+      "europeOnly": 6,
+      "discontinued": 1
+    }
+  }
+}

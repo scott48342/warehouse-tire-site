@@ -1,0 +1,381 @@
+{
+  "batch": "batch-25-german",
+  "verifiedAt": "2026-04-23T00:40:00Z",
+  "verifiedBy": "subagent:verify-de-25",
+  "protocol": "RE-VERIFICATION - Independent research, no trust of existing data",
+  "summary": {
+    "totalVehicles": 75,
+    "verified": 66,
+    "flaggedInvalid": 9,
+    "invalidReasons": {
+      "notSoldInUSMarket": 5,
+      "futureModelYear": 0,
+      "modelYearMismatch": 4
+    }
+  },
+  "sources": [
+    "wikipedia.org",
+    "hulkoffsets.com",
+    "caranddriver.com",
+    "edmunds.com",
+    "media.mbusa.com",
+    "carbuzz.com",
+    "motortrend.com"
+  ],
+  "flaggedVehicles": [
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cla-class",
+      "status": "INVALID",
+      "reason": "Not sold in US market. CLA debuted at 2013 Detroit Auto Show but was sold as 2014 model year. US sales began late 2013 for 2014 MY.",
+      "correctModelYear": 2014,
+      "source": "media.mbusa.com, parkplace.com"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cla-class-amg",
+      "status": "INVALID",
+      "reason": "Not sold in US market. CLA 45 AMG US deliveries began November 2013 as 2014 model year vehicle.",
+      "correctModelYear": 2014,
+      "source": "media.mbusa.com"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "cls-class",
+      "status": "INVALID",
+      "reason": "Not sold in US market. CLS C219 debuted in Europe Dec 2003 but US sales began January 2005 as 2006 model year.",
+      "correctModelYear": 2006,
+      "source": "wikipedia.org, jdpower.com"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "cls-class",
+      "status": "INVALID",
+      "reason": "Model year mismatch. CLS sold in US starting Jan 2005 was registered as 2006 model year. No 2005 MY CLS exists for US.",
+      "correctModelYear": 2006,
+      "source": "jdpower.com, carbuzz.com"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "cl-class",
+      "status": "FLAGGED",
+      "reason": "Edge case - CL-Class C215 production started 1999 for 2000 MY. Valid but early year of generation.",
+      "notes": "First year of C215 generation, may have limited trim availability"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "status": "FLAGGED",
+      "reason": "CL 55 AMG (NA V8) and CL 63 AMG available in limited quantities. CL 63 AMG only 26 units made (Nov 2001), not sold in US.",
+      "notes": "CL 55 AMG valid, CL 63 AMG was Europe/Asia only"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "cls-class",
+      "status": "FLAGGED",
+      "reason": "Final year of CLS production (ended Aug 2023). 2022 MY was last full production year for US market.",
+      "notes": "Valid but discontinued model"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "status": "FLAGGED",
+      "reason": "Gap year - W205 C63 ended 2021, W206 C63 S E Performance launched as 2024 MY. 2023 C63 may have been coupe/cabriolet only.",
+      "notes": "Verify trim availability for 2023 MY"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "status": "FLAGGED", 
+      "reason": "Gap year - W205 C63 production wound down. 2022 may have limited availability (coupe/cabriolet only).",
+      "notes": "Verify trim availability for 2022 MY"
+    }
+  ],
+  "verifiedFitments": {
+    "mercedes-c-class-amg": {
+      "validYears": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2024, 2025, 2026],
+      "flaggedYears": [2022, 2023],
+      "generations": {
+        "W204": {
+          "years": "2008-2014 (US: 2008-2015)",
+          "notInBatch": true
+        },
+        "W205": {
+          "years": "2015-2021",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "AMG C43",
+              "oemWheelSizes": ["18x7.5", "18x8.5", "19x7.5", "19x8.5"],
+              "oemTireSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+              "staggered": true
+            },
+            {
+              "name": "AMG C63",
+              "oemWheelSizes": ["18x8", "18x9", "19x8.5", "19x9.5"],
+              "oemTireSizes": ["245/40R18", "265/35R18", "255/35R19", "285/30R19"],
+              "staggered": true
+            },
+            {
+              "name": "AMG C63 S",
+              "oemWheelSizes": ["19x8.5", "19x9.5"],
+              "oemTireSizes": ["255/35R19", "285/30R19"],
+              "staggered": true
+            }
+          ]
+        },
+        "W206": {
+          "years": "2024+",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "AMG C63 S E Performance",
+              "oemWheelSizes": ["19x8.5", "19x9.5", "20x8.5", "20x9.5"],
+              "oemTireSizes": ["255/35R19", "275/30R19", "265/35R20", "275/30R20"],
+              "staggered": true,
+              "notes": "Hybrid powertrain with 2.0L turbo-4"
+            }
+          ]
+        }
+      },
+      "confidence": "high",
+      "sources": ["wikipedia.org", "caranddriver.com", "hulkoffsets.com", "motortrend.com"]
+    },
+    "mercedes-cl-class": {
+      "validYears": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+      "generations": {
+        "C215": {
+          "years": "2000-2006",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "CL 500",
+              "oemWheelSizes": ["18x8.5"],
+              "oemTireSizes": ["245/45R18"]
+            },
+            {
+              "name": "CL 600",
+              "oemWheelSizes": ["18x8.5", "18x9"],
+              "oemTireSizes": ["245/45R18", "275/40R18"]
+            }
+          ]
+        },
+        "C216": {
+          "years": "2007-2014",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "CL 550",
+              "oemWheelSizes": ["18x8.5", "19x8.5", "19x9.5"],
+              "oemTireSizes": ["255/45R18", "255/40R19", "275/35R19"],
+              "staggered": true
+            },
+            {
+              "name": "CL 600",
+              "oemWheelSizes": ["19x8.5", "19x9.5"],
+              "oemTireSizes": ["255/40R19", "275/35R19"],
+              "staggered": true
+            }
+          ]
+        }
+      },
+      "confidence": "high",
+      "sources": ["wikipedia.org", "hulkoffsets.com"],
+      "notes": "CL-Class discontinued after 2014, replaced by S-Class Coupe (C217)"
+    },
+    "mercedes-cl-class-amg": {
+      "validYears": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014],
+      "flaggedYears": [2001],
+      "generations": {
+        "C215": {
+          "years": "2001-2006",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "CL 55 AMG",
+              "oemWheelSizes": ["18x9", "18x9.5"],
+              "oemTireSizes": ["255/45R18", "275/40R18"],
+              "staggered": true,
+              "notes": "NA V8 (2001-02), Supercharged V8 (2003-06)"
+            },
+            {
+              "name": "CL 65 AMG",
+              "oemWheelSizes": ["19x9", "19x10"],
+              "oemTireSizes": ["255/35R19", "275/35R19"],
+              "staggered": true,
+              "years": "2005-2006"
+            }
+          ]
+        },
+        "C216": {
+          "years": "2007-2014",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "CL 63 AMG",
+              "oemWheelSizes": ["19x8.5", "19x9.5", "20x8.5", "20x9.5"],
+              "oemTireSizes": ["255/40R19", "275/35R19", "255/35R20", "275/30R20"],
+              "staggered": true
+            },
+            {
+              "name": "CL 65 AMG",
+              "oemWheelSizes": ["20x9", "20x10"],
+              "oemTireSizes": ["255/35R20", "275/30R20"],
+              "staggered": true
+            }
+          ]
+        }
+      },
+      "confidence": "high",
+      "sources": ["wikipedia.org", "hulkoffsets.com"]
+    },
+    "mercedes-cla-class": {
+      "validYears": [],
+      "invalidYears": [2013],
+      "notes": "Only 2013 was in batch and it's invalid. CLA US market started 2014 MY.",
+      "confidence": "high",
+      "sources": ["media.mbusa.com", "parkplace.com"]
+    },
+    "mercedes-cla-class-amg": {
+      "validYears": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+      "invalidYears": [2013],
+      "generations": {
+        "C117": {
+          "years": "2014-2019",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "CLA 45 AMG",
+              "oemWheelSizes": ["18x7.5", "19x8"],
+              "oemTireSizes": ["235/40R18", "235/35R19"],
+              "staggered": false
+            }
+          ]
+        },
+        "C118": {
+          "years": "2020-2025",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "AMG CLA 35",
+              "oemWheelSizes": ["18x8", "19x8"],
+              "oemTireSizes": ["225/45R18", "225/40R19"],
+              "staggered": false
+            },
+            {
+              "name": "AMG CLA 45",
+              "oemWheelSizes": ["19x8"],
+              "oemTireSizes": ["235/35R19"],
+              "staggered": false
+            },
+            {
+              "name": "AMG CLA 45 S",
+              "oemWheelSizes": ["19x8", "19x8.5"],
+              "oemTireSizes": ["235/35R19", "255/30R19"],
+              "staggered": true
+            }
+          ]
+        },
+        "C118_Gen2": {
+          "years": "2026+",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "AMG CLA 35",
+              "notes": "New generation for 2026"
+            },
+            {
+              "name": "AMG CLA 45 S",
+              "notes": "New generation for 2026"
+            }
+          ],
+          "notes": "All-new 2026 CLA with gas, hybrid, and EV variants"
+        }
+      },
+      "confidence": "high",
+      "sources": ["media.mbusa.com", "edmunds.com", "caranddriver.com"]
+    },
+    "mercedes-cls-class": {
+      "validYears": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+      "invalidYears": [2004, 2005],
+      "generations": {
+        "C219": {
+          "years": "2006-2010 (US)",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "CLS 500 / CLS 550",
+              "oemWheelSizes": ["17x8", "18x8.5", "18x9"],
+              "oemTireSizes": ["245/45R17", "255/40R18", "275/35R18"],
+              "staggered": true
+            }
+          ]
+        },
+        "C218": {
+          "years": "2011-2018",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "CLS 550",
+              "oemWheelSizes": ["18x8.5", "18x9.5", "19x8.5", "19x9.5"],
+              "oemTireSizes": ["255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+              "staggered": true
+            },
+            {
+              "name": "CLS 400",
+              "oemWheelSizes": ["18x8.5", "19x8.5"],
+              "oemTireSizes": ["255/40R18", "255/35R19"],
+              "years": "2015-2017"
+            }
+          ]
+        },
+        "C257": {
+          "years": "2019-2022",
+          "boltPattern": "5x112",
+          "hubBore": 66.6,
+          "trims": [
+            {
+              "name": "CLS 450",
+              "oemWheelSizes": ["19x8", "19x9", "20x8", "20x9"],
+              "oemTireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+              "staggered": true
+            }
+          ],
+          "notes": "CLS discontinued August 2023"
+        }
+      },
+      "confidence": "high",
+      "sources": ["wikipedia.org", "jdpower.com", "carbuzz.com"]
+    }
+  },
+  "commonSpecs": {
+    "allMercedesModels": {
+      "boltPattern": "5x112",
+      "hubBore": 66.6,
+      "lugNutSize": "M12x1.5",
+      "lugNutType": "ball seat"
+    },
+    "confidence": "high",
+    "sources": ["hulkoffsets.com", "hubcentric-rings.com", "kipardoracing.com"]
+  }
+}

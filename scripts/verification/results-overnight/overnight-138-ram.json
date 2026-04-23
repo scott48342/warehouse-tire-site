@@ -1,0 +1,2399 @@
+[
+  {
+    "id": "fcc5da11-00a6-4609-8d57-b9e93f2d7aa1",
+    "year": 2012,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "068dff0c-64eb-44d4-8855-9bf764b6ef30",
+    "year": 2013,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2013 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "10792c3a-7cd1-4f38-b1bc-93afb9181ddb",
+    "year": 2013,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "f254be0e-8da2-443d-8a9a-67dd5c0dd47e",
+    "year": 2013,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2013 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "7a7180ff-c953-4abe-b4c6-dc9bf9260ad0",
+    "year": 2013,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman, Big Horn, Laramie, Limited, Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2013 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "df2df911-b385-46d9-86a7-26ad2323d45d",
+    "year": 2013,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "8cc5c606-12bf-4144-90ca-ad8db4fe5768",
+    "year": 2013,
+    "make": "ram",
+    "model": "3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "981600ab-07a4-433e-a86b-7a63c82d0f91",
+    "year": 2013,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "483a6487-6e24-4586-a734-402abc7570d7",
+    "year": 2013,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2013 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "3df0abae-613f-4203-acfa-80cd6068b58d",
+    "year": 2014,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "79e4c128-7a1a-4aa4-937a-6367a714b644",
+    "year": 2014,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman, Big Horn, Laramie, Limited, Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2014 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "5e6d7d7c-5f87-4f1b-90e7-44582d71b2c5",
+    "year": 2014,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "86cd542c-a51c-45d0-9ab4-48858a05fdc1",
+    "year": 2014,
+    "make": "ram",
+    "model": "3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "23703359-9630-47ac-a3ed-5bf80d662d29",
+    "year": 2014,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2014 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "8435d872-0ca9-401b-a1d2-a90dfea286eb",
+    "year": 2014,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2014 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "abfd2778-517e-407b-a012-a03c0e5b5a7c",
+    "year": 2014,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "25f4cf4d-4828-4f8e-9419-a9ceba10a79d",
+    "year": 2014,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2014 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "9456cbdb-8e61-4809-bc46-6bdf9f08db8c",
+    "year": 2015,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "209fc081-3890-4b11-95c7-b48f57f339e4",
+    "year": 2015,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2015 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "e3452f91-f089-4df2-befa-d6a4d7bf3585",
+    "year": 2015,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2015 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "93bac561-6db8-4d6e-83a3-dfcfb5626f35",
+    "year": 2015,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "5424b03d-2fa7-4285-9e54-2faaece76d5a",
+    "year": 2015,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "b743c852-cdde-4708-aa33-a77483379e93",
+    "year": 2015,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2015 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "feeb55ff-467a-447c-8085-2cddbbb1e927",
+    "year": 2015,
+    "make": "ram",
+    "model": "3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "d39d49d3-16a1-4572-9855-4d37bbda1afd",
+    "year": 2015,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman, Big Horn, Laramie, Limited, Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2015 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "b11dbe71-e6c0-4cca-83fe-55f398496d19",
+    "year": 2016,
+    "make": "ram",
+    "model": "3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "974d1dda-9656-476c-8137-b43a48cd0767",
+    "year": 2016,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman, Big Horn, Laramie, Limited, Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2016 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "26baa085-6954-49e4-b364-6cf9c046eefc",
+    "year": 2016,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2016 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "2aafcbd1-b69c-4844-b954-9c0941e9aa3d",
+    "year": 2016,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2016 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "9c182168-712a-4305-b505-61e9d2d3ac03",
+    "year": 2016,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2016 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "f3f8bd29-8e72-4a61-b2e6-fea26f1515a5",
+    "year": 2016,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2016 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "25caf239-fe9d-44bd-a1df-9f1d6f17b685",
+    "year": 2016,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "b959efd4-4147-40b0-a901-0dc8639c80b2",
+    "year": 2016,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "01a38615-cab0-457a-bf6e-02e6558d2eb1",
+    "year": 2017,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:ram_hd_gen4_2010_2018]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "2546e515-9da9-4e2f-b169-cbd31e7160d1",
+    "year": 2017,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:ram_hd_gen4_2010_2018]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "fb162254-0d5f-4a9f-9942-676a8bc31158",
+    "year": 2017,
+    "make": "ram",
+    "model": "3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "026d3fdc-b4ee-4b30-90a5-a369b916475b",
+    "year": 2017,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:ram_hd_gen4_2010_2018]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "3643a53c-a073-45d0-b97f-33a752e66614",
+    "year": 2017,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:ram_hd_gen4_2010_2018]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "02187183-3053-4ffa-a8f3-e8089d67f13e",
+    "year": 2017,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman, Big Horn, Laramie, Limited, Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:ram_hd_gen4_2010_2018]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "923f827e-048e-42c3-ade9-dab71b8a72d6",
+    "year": 2017,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "1a6cc88d-461f-43ae-9105-882c49d12f84",
+    "year": 2017,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "905527e7-4895-44a8-866b-dd202f8f8a49",
+    "year": 2018,
+    "make": "ram",
+    "model": "3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "bac9c328-c740-4fc7-bd14-e47d2e8c018c",
+    "year": 2018,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "2f0ee3d0-ec5e-4f05-a593-345a75f1baef",
+    "year": 2018,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "032c06b1-91b6-4910-8e13-c7f825bd1448",
+    "year": 2018,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2018 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "9b71d5f6-7207-467c-aa4f-50a402bcf9d7",
+    "year": 2018,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2018 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "d3c48144-0c76-47e8-bcde-acb35fb02d0a",
+    "year": 2018,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman, Big Horn, Laramie, Limited, Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2018 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "b78689df-54e8-42f4-874e-197d4679579b",
+    "year": 2018,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2018 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "6cac4d13-dacd-41fe-a67d-88fcc35c495f",
+    "year": 2018,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [filled from 2018 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "4d3dea47-97cc-4dbb-a568-2f8eac3c5c9d",
+    "year": 2019,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [filled from 2019 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "ea662635-29c2-4253-9062-2da4630bc3b8",
+    "year": 2019,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman, Big Horn, Laramie, Limited, Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [filled from 2019 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "bed36f3e-20b4-437f-9a07-b3a5d0bd5dae",
+    "year": 2019,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [filled from 2019 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "5a6da450-349b-473d-bbbe-6bb30419dc5d",
+    "year": 2019,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [filled from 2019 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "c3dd177c-8409-4e25-9360-dcb610286150",
+    "year": 2019,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [filled from 2019 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "41b6dff6-5dce-425c-ae21-17a2325877fe",
+    "year": 2019,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "a787e525-5fe3-468c-93a5-8658b8030b7e",
+    "year": 2019,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "5a832579-15d3-4c32-891d-24fd119c6276",
+    "year": 2019,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "0a818a43-915b-4d6a-92a5-6a5dcbe7b014",
+    "year": 2020,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "9de2d246-8d1a-4561-9000-d2a772344709",
+    "year": 2020,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "a18293de-6836-47fe-9081-64b0af142811",
+    "year": 2020,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "8f65b0c6-18e6-4aaf-928e-4a9a042347d1",
+    "year": 2020,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [filled from 2020 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "b98ccf39-0171-4caf-a06d-383d2e9764f1",
+    "year": 2020,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [filled from 2020 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "a6f6e4a3-39fb-4a9b-82e6-100b8aad7814",
+    "year": 2020,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [filled from 2020 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "19ddfb01-bf0c-4803-9f4d-e1720b7c0139",
+    "year": 2020,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [filled from 2020 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "1285ba06-342d-4eb5-830e-683fba641698",
+    "year": 2020,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman, Big Horn, Laramie, Limited, Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [filled from 2020 3500]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "aa089944-9098-4da2-b03c-9d5a9bad1f4f",
+    "year": 2021,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [template:ram_hd_gen5_2019_plus]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "2f2edc52-60e7-44f4-aca8-a1fc91f82ca6",
+    "year": 2021,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [template:ram_hd_gen5_2019_plus]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "052976c3-36ee-45c6-a170-23a626764630",
+    "year": 2021,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Big Horn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [template:ram_hd_gen5_2019_plus]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "2d4a8585-c524-431c-81e6-cfb3ece71656",
+    "year": 2021,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Tradesman, Big Horn, Laramie, Limited, Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [template:ram_hd_gen5_2019_plus]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "ac250081-caeb-440e-b006-c6cc95458962",
+    "year": 2021,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 25,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "api_import [template:ram_hd_gen5_2019_plus]",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "44d6ca42-35ac-4ef0-9af5-fc43653e6139",
+    "year": 2021,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Limited Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "d0a06403-5303-498f-b292-e969f76f47d2",
+    "year": 2021,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "ce46cd0d-36a3-4f41-afde-a4ffbebf9cc4",
+    "year": 2021,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "5bedb143-7dfc-4af6-8f30-b758045db152",
+    "year": 2022,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Laramie Longhorn",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  },
+  {
+    "id": "c4a44de5-8291-40c9-b5a2-733af05a4d40",
+    "year": 2022,
+    "make": "ram",
+    "model": "3500",
+    "trim": "Power Wagon",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT275/70R18",
+      "LT285/60R20"
+    ],
+    "source": "merge_consolidation",
+    "status": "verified",
+    "reason": null,
+    "verifiedBoltPattern": "8x165.1",
+    "verifiedHubBore": "121.3",
+    "verifiedWheelSizes": [],
+    "verifiedTireSizes": [],
+    "wheelCount": 0,
+    "isStaggered": false
+  }
+]

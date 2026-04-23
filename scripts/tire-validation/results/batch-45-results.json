@@ -1,0 +1,492 @@
+{
+  "batchId": "45",
+  "processedAt": "2026-04-21T21:57:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2021,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "GT (RWD/AWD)", "tireSizes": ["245/45R20"] },
+        { "trim": "R/T", "tireSizes": ["245/45R20"] },
+        { "trim": "Scat Pack", "tireSizes": ["245/45R20", "275/40R20"] },
+        { "trim": "Scat Pack Wide Body", "tireSizes": ["305/35R20"] },
+        { "trim": "SRT Hellcat Redeye Wide Body", "tireSizes": ["305/35R20"] },
+        { "trim": "SRT Hellcat Wide Body", "tireSizes": ["305/35R20"] },
+        { "trim": "SXT (RWD)", "tireSizes": ["215/65R17", "245/45R20"] },
+        { "trim": "SXT (AWD)", "tireSizes": ["235/55R19", "245/45R20"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R19", "245/45R20", "275/40R20", "305/35R20"]
+    },
+    {
+      "year": 2020,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "GT (RWD/AWD)", "tireSizes": ["245/45R20"] },
+        { "trim": "R/T", "tireSizes": ["245/45R20"] },
+        { "trim": "Scat Pack", "tireSizes": ["245/45R20", "275/40R20"] },
+        { "trim": "Scat Pack Wide Body", "tireSizes": ["305/35R20"] },
+        { "trim": "SRT Hellcat Wide Body", "tireSizes": ["305/35R20"] },
+        { "trim": "SXT (RWD)", "tireSizes": ["215/65R17", "245/45R20"] },
+        { "trim": "SXT (AWD)", "tireSizes": ["235/55R19", "245/45R20"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R19", "245/45R20", "275/40R20", "305/35R20"]
+    },
+    {
+      "year": 2019,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "GT", "tireSizes": ["245/45R20"] },
+        { "trim": "R/T", "tireSizes": ["245/45R20"] },
+        { "trim": "Scat Pack", "tireSizes": ["245/45R20", "275/40R20"] },
+        { "trim": "SRT Hellcat", "tireSizes": ["275/40R20"] },
+        { "trim": "SXT (RWD)", "tireSizes": ["215/65R17", "245/45R20"] },
+        { "trim": "SXT (AWD)", "tireSizes": ["235/55R19"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R19", "245/45R20", "275/40R20"]
+    },
+    {
+      "year": 2018,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "Daytona", "tireSizes": ["245/45R20"] },
+        { "trim": "Daytona 392", "tireSizes": ["275/40R20"] },
+        { "trim": "GT AWD", "tireSizes": ["235/55R19"] },
+        { "trim": "GT Plus AWD", "tireSizes": ["235/55R19"] },
+        { "trim": "R/T", "tireSizes": ["245/45R20"] },
+        { "trim": "R/T Scat Pack", "tireSizes": ["245/45R20", "275/40R20"] },
+        { "trim": "SRT 392", "tireSizes": ["275/40R20"] },
+        { "trim": "SRT Hellcat", "tireSizes": ["275/40R20"] },
+        { "trim": "SXT", "tireSizes": ["215/65R17", "235/55R18", "245/45R20"] },
+        { "trim": "SXT Plus", "tireSizes": ["235/55R18", "245/45R20"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R18", "235/55R19", "245/45R20", "275/40R20"]
+    },
+    {
+      "year": 2017,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "AWD SE", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD SXT", "tireSizes": ["235/55R19"] },
+        { "trim": "Daytona", "tireSizes": ["245/45R20"] },
+        { "trim": "R/T", "tireSizes": ["245/45R20"] },
+        { "trim": "R/T Scat Pack", "tireSizes": ["245/45R20"] },
+        { "trim": "RWD SE", "tireSizes": ["215/65R17", "235/55R18"] },
+        { "trim": "RWD SXT", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "SRT 392", "tireSizes": ["275/40R20"] },
+        { "trim": "SRT Hellcat", "tireSizes": ["275/40R20"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R18", "235/55R19", "245/45R20", "275/40R20"]
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "AWD SE", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD SXT", "tireSizes": ["235/55R19"] },
+        { "trim": "R/T", "tireSizes": ["245/45R20"] },
+        { "trim": "R/T Road And Track Package", "tireSizes": ["245/45R20"] },
+        { "trim": "R/T Scat Pack", "tireSizes": ["245/45R20"] },
+        { "trim": "RWD SE", "tireSizes": ["215/65R17", "235/55R18"] },
+        { "trim": "RWD SXT", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "SRT 392", "tireSizes": ["275/40R20"] },
+        { "trim": "SRT Hellcat", "tireSizes": ["275/40R20"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R18", "235/55R19", "245/45R20", "275/40R20"]
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "AWD R/T Plus", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD SXT", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD SXT Plus", "tireSizes": ["235/55R19"] },
+        { "trim": "R/T", "tireSizes": ["235/55R19"] },
+        { "trim": "R/T Max", "tireSizes": ["235/55R19"] },
+        { "trim": "R/T Road and Track Package", "tireSizes": ["245/45R20"] },
+        { "trim": "RWD R/T Plus", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "RWD SXT", "tireSizes": ["215/65R17", "235/55R18", "245/45R20"] },
+        { "trim": "RWD SXT Plus", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "SE", "tireSizes": ["215/65R17", "235/55R18"] },
+        { "trim": "SRT Hellcat", "tireSizes": ["275/40R20"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R18", "235/55R19", "245/45R20", "275/40R20"]
+    },
+    {
+      "year": 2014,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "AWD R/T", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD R/T Max", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD R/T Plus", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD SXT", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD SXT Plus", "tireSizes": ["235/55R19"] },
+        { "trim": "R/T Road and Track Package", "tireSizes": ["245/45R20"] },
+        { "trim": "RWD R/T", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "RWD R/T Max", "tireSizes": ["245/45R20"] },
+        { "trim": "RWD R/T Plus", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "RWD SXT", "tireSizes": ["215/65R17", "235/55R18", "245/45R20"] },
+        { "trim": "RWD SXT Plus", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "SE", "tireSizes": ["215/65R17", "235/55R18"] },
+        { "trim": "SRT8", "tireSizes": ["245/45R20"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R18", "235/55R19", "245/45R20"]
+    },
+    {
+      "year": 2013,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "AWD R/T", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD R/T Max", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD R/T Plus", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD SXT", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD SXT Plus", "tireSizes": ["235/55R19"] },
+        { "trim": "R/T Road Track Package", "tireSizes": ["245/45R20"] },
+        { "trim": "RWD R/T", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "RWD R/T Max", "tireSizes": ["245/45R20"] },
+        { "trim": "RWD R/T Plus", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "RWD SXT", "tireSizes": ["215/65R17", "235/55R18", "245/45R20"] },
+        { "trim": "RWD SXT Plus", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "SE", "tireSizes": ["215/65R17"] },
+        { "trim": "SRT8", "tireSizes": ["245/45R20"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R18", "235/55R19", "245/45R20"]
+    },
+    {
+      "year": 2012,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "AWD R/T", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD R/T Max", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD R/T Plus", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD SXT", "tireSizes": ["235/55R19"] },
+        { "trim": "AWD SXT Plus", "tireSizes": ["235/55R19"] },
+        { "trim": "R/T Road Track Package", "tireSizes": ["245/45R20"] },
+        { "trim": "RWD R/T", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "RWD R/T Max", "tireSizes": ["245/45R20"] },
+        { "trim": "RWD R/T Plus", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "RWD SXT", "tireSizes": ["215/65R17", "235/55R18", "245/45R20"] },
+        { "trim": "RWD SXT Plus", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "SE", "tireSizes": ["215/65R17"] },
+        { "trim": "SRT8", "tireSizes": ["245/45R20"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R18", "235/55R19", "245/45R20"]
+    },
+    {
+      "year": 2011,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "R/T AWD", "tireSizes": ["235/55R19"] },
+        { "trim": "R/T RWD", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "SE", "tireSizes": ["215/65R17", "235/55R18", "245/45R20"] }
+      ],
+      "allOemSizes": ["215/65R17", "235/55R18", "235/55R19", "245/45R20"]
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "R/T AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "R/T RWD", "tireSizes": ["225/60R18", "245/45R20"] },
+        { "trim": "SE", "tireSizes": ["215/65R17"] },
+        { "trim": "SRT8", "tireSizes": ["245/45R20"] },
+        { "trim": "SRT8 Staggered", "tireSizes": ["245/45R20 (front)", "255/45R20 (rear)"], "staggered": true },
+        { "trim": "SXT AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "SXT RWD", "tireSizes": ["215/65R17", "225/60R18"] }
+      ],
+      "allOemSizes": ["215/65R17", "225/60R18", "245/45R20", "255/45R20"]
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "R/T AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "R/T Daytona", "tireSizes": ["245/45R20"] },
+        { "trim": "R/T RWD", "tireSizes": ["225/60R18", "245/45R20"] },
+        { "trim": "SE", "tireSizes": ["215/65R17"] },
+        { "trim": "SRT8", "tireSizes": ["245/45R20"] },
+        { "trim": "SRT8 Staggered", "tireSizes": ["245/45R20 (front)", "255/45R20 (rear)"], "staggered": true },
+        { "trim": "SXT AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "SXT RWD", "tireSizes": ["215/65R17", "225/60R18"] }
+      ],
+      "allOemSizes": ["215/65R17", "225/60R18", "245/45R20", "255/45R20"]
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "Daytona R/T", "tireSizes": ["245/45R20"] },
+        { "trim": "R/T AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "R/T RWD", "tireSizes": ["225/60R18", "245/45R20"] },
+        { "trim": "SE", "tireSizes": ["215/65R17"] },
+        { "trim": "SE Plus", "tireSizes": ["215/65R17", "225/60R18"] },
+        { "trim": "SRT8", "tireSizes": ["245/45R20"] },
+        { "trim": "SRT8 Staggered", "tireSizes": ["245/45R20 (front)", "255/45R20 (rear)"], "staggered": true },
+        { "trim": "Super Bee", "tireSizes": ["245/45R20 (front)", "255/45R20 (rear)"], "staggered": true },
+        { "trim": "SXT AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "SXT DUB Edition RWD", "tireSizes": ["245/45R20"] },
+        { "trim": "SXT RWD", "tireSizes": ["215/65R17", "225/60R18"] }
+      ],
+      "allOemSizes": ["215/65R17", "225/60R18", "245/45R20", "255/45R20"]
+    },
+    {
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["215/65R17", "225/60R18"] },
+        { "trim": "Daytona RT RWD", "tireSizes": ["245/45R20"] },
+        { "trim": "RT AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "RT RWD", "tireSizes": ["225/60R18", "245/45R20"] },
+        { "trim": "SRT8", "tireSizes": ["245/45R20"] },
+        { "trim": "SRT8 Staggered", "tireSizes": ["245/45R20 (front)", "255/45R20 (rear)"], "staggered": true },
+        { "trim": "SXT AWD", "tireSizes": ["225/60R18"] },
+        { "trim": "SXT RWD", "tireSizes": ["215/65R17", "225/60R18"] }
+      ],
+      "allOemSizes": ["215/65R17", "225/60R18", "245/45R20", "255/45R20"]
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "Daytona R/T", "tireSizes": ["235/55R18"] },
+        { "trim": "R/T", "tireSizes": ["225/60R18"] },
+        { "trim": "R/T Performance Pack", "tireSizes": ["235/55R18"] },
+        { "trim": "SE", "tireSizes": ["215/65R17", "225/60R18"] },
+        { "trim": "SRT8", "tireSizes": ["245/45R20"] },
+        { "trim": "SRT8 Staggered", "tireSizes": ["245/45R20 (front)", "255/45R20 (rear)"], "staggered": true },
+        { "trim": "SXT", "tireSizes": ["215/65R17", "225/60R18"] }
+      ],
+      "allOemSizes": ["215/65R17", "225/60R18", "235/55R18", "245/45R20", "255/45R20"]
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Charger",
+      "trims": [
+        { "trim": "SE/SXT/Base", "tireSizes": ["215/65R17", "225/60R18"] }
+      ],
+      "allOemSizes": ["215/65R17", "225/60R18"],
+      "notes": "Limited production year - 2006 was full production start"
+    },
+    {
+      "year": 2024,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"],
+      "notes": "Police/fleet vehicle - standard 18-inch wheel package"
+    },
+    {
+      "year": 2023,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"]
+    },
+    {
+      "year": 2022,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"]
+    },
+    {
+      "year": 2021,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"]
+    },
+    {
+      "year": 2020,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"]
+    },
+    {
+      "year": 2019,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"]
+    },
+    {
+      "year": 2018,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"],
+      "notes": "Confirmed via Stellantis Fleet documentation"
+    },
+    {
+      "year": 2017,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"]
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"]
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"]
+    },
+    {
+      "year": 2014,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"]
+    },
+    {
+      "year": 2013,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"],
+      "notes": "Listed under regular Charger on tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"],
+      "notes": "Listed under regular Charger on tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "Dodge",
+      "model": "Charger Pursuit",
+      "trims": [
+        { "trim": "Pursuit (Police)", "tireSizes": ["225/60R18"] }
+      ],
+      "allOemSizes": ["225/60R18"],
+      "notes": "First year of modern Charger Pursuit"
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Dart",
+      "trims": [
+        { "trim": "Aero", "tireSizes": ["225/45R17"] },
+        { "trim": "GT", "tireSizes": ["225/40R18"] },
+        { "trim": "Limited", "tireSizes": ["225/45R17"] },
+        { "trim": "SE", "tireSizes": ["205/55R16"] },
+        { "trim": "SXT", "tireSizes": ["205/55R16", "225/45R17"] }
+      ],
+      "allOemSizes": ["205/55R16", "225/45R17", "225/40R18"]
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Dart",
+      "trims": [
+        { "trim": "Aero", "tireSizes": ["225/45R17"] },
+        { "trim": "GT", "tireSizes": ["225/40R18"] },
+        { "trim": "Limited", "tireSizes": ["225/45R17"] },
+        { "trim": "SE", "tireSizes": ["205/55R16"] },
+        { "trim": "SXT", "tireSizes": ["205/55R16", "225/45R17"] }
+      ],
+      "allOemSizes": ["205/55R16", "225/45R17", "225/40R18"]
+    },
+    {
+      "year": 2014,
+      "make": "Dodge",
+      "model": "Dart",
+      "trims": [
+        { "trim": "Aero", "tireSizes": ["225/45R17"] },
+        { "trim": "GT", "tireSizes": ["225/40R18"] },
+        { "trim": "Limited", "tireSizes": ["225/45R17"] },
+        { "trim": "SE", "tireSizes": ["205/55R16"] },
+        { "trim": "SXT", "tireSizes": ["205/55R16", "225/45R17"] }
+      ],
+      "allOemSizes": ["205/55R16", "225/45R17", "225/40R18"]
+    },
+    {
+      "year": 2013,
+      "make": "Dodge",
+      "model": "Dart",
+      "trims": [
+        { "trim": "GT", "tireSizes": ["225/45R17", "225/40R18"] },
+        { "trim": "Limited", "tireSizes": ["225/45R17"] },
+        { "trim": "R/T", "tireSizes": ["225/40R18"] },
+        { "trim": "Ralleye", "tireSizes": ["225/45R17"] },
+        { "trim": "SE", "tireSizes": ["205/55R16"] },
+        { "trim": "SXT", "tireSizes": ["225/45R17"] }
+      ],
+      "allOemSizes": ["205/55R16", "225/45R17", "225/40R18"]
+    }
+  ],
+  "summary": {
+    "chargerYearsProcessed": "2005-2021",
+    "chargerPursuitYearsProcessed": "2011-2024",
+    "dartYearsProcessed": "2013-2016",
+    "keyFindings": {
+      "chargerCommonSizes": ["215/65R17", "225/60R18", "235/55R18", "235/55R19", "245/45R20", "275/40R20", "305/35R20"],
+      "chargerPursuitStandardSize": "225/60R18",
+      "dartCommonSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "staggeredSetups": "SRT8 models (2006-2010) had optional staggered 245/45R20 front, 255/45R20 rear",
+      "widebodySetups": "Widebody trims (2019+) use 305/35R20"
+    }
+  },
+  "validation": {
+    "currentDbSizesNotInOem": {
+      "note": "Sizes in current DB but not found as OEM: 255/50R19, 255/45ZR20, 235/50R20, 245/45ZR20, 265/40R20",
+      "recommendation": "These may be aftermarket or variant sizes - verify against specific trim packages",
+      "195/65R15_dart": "Not found as OEM - Dart minimum is 205/55R16"
+    }
+  }
+}

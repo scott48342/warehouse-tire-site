@@ -1,0 +1,2772 @@
+[
+  {
+    "id": "4a832476-59de-4375-9414-a17ec645c1e9",
+    "year": 2020,
+    "make": "honda",
+    "model": "fit",
+    "trim": "LX/Sport/EX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x100",
+    "verifiedHubBore": "56.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6"
+    ],
+    "verifiedTireSizes": [
+      "185/60R15",
+      "185/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8abc2e5b-702b-4833-9be8-8cd151e80370",
+    "year": 2016,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "15a4edd5-f185-4c5c-be28-02e7fc53b1db",
+    "year": 2017,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "89ec8d96-b292-40a6-a101-11e1295f57b3",
+    "year": 2018,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d671cc5e-5c71-4d5a-89d2-8c2da553caed",
+    "year": 2019,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "31a76cb3-1f07-4591-bdbb-36ef69e08377",
+    "year": 2020,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18",
+      "215/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "18014b70-ba2c-4622-b3d9-829a177b70f7",
+    "year": 2021,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "895f8077-5ea4-4be5-aae1-4a9035fde470",
+    "year": 2022,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18",
+      "215/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "5435e7a3-fe33-41e7-94e4-6395cf7f30d2",
+    "year": 2023,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "842d1c82-9044-41ab-a7ba-f9696496b498",
+    "year": 2024,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18",
+      "215/60R17",
+      "225/55R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "87bf844e-a16d-402b-bfb0-97bb0486a348",
+    "year": 2025,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "094ca529-9daa-4660-9e6c-4474d9956b48",
+    "year": 2026,
+    "make": "honda",
+    "model": "hr-v",
+    "trim": "LX, Sport, EX, EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R17",
+      "225/50R18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d74d1620-c7ec-45ff-8f4c-e58e0cc82e7d",
+    "year": 2018,
+    "make": "honda",
+    "model": "insight",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "185/65R15",
+      "215/50R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3652e42a-3afe-4344-afdf-62dfa6e98589",
+    "year": 2020,
+    "make": "honda",
+    "model": "insight",
+    "trim": "LX, EX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/55R16",
+      "215/50R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "04b036a6-88b1-4cc0-8d41-de04cf7a0be8",
+    "year": 2000,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "EX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ddd585ee-636f-46b8-b0b1-5815908cfce6",
+    "year": 2000,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8306b8d3-fd7d-470d-9ded-02c1f7247d4a",
+    "year": 2000,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "LX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e02bb110-1203-4561-ba8b-9fba315a23c8",
+    "year": 2001,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "LX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f773d4e3-9c68-4bea-b86f-ed969c6ff693",
+    "year": 2001,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e4a2227f-3051-407a-8c3d-14928af686da",
+    "year": 2001,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "EX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e7379c77-c266-428d-8264-ebb8a230e0bb",
+    "year": 2002,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "LX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "ba8539b1-bd89-4585-9a7b-d38e319ab018",
+    "year": 2002,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "EX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "034c3351-5776-4274-b4e3-bc422634666d",
+    "year": 2002,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3d4c6549-b6fa-491a-8fea-352a530cce9c",
+    "year": 2003,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "EX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "35a4ceff-11a5-475f-8c01-61250ba6de31",
+    "year": 2003,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "efc51e68-ed93-4ebb-bcc3-ae210199c943",
+    "year": 2003,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "LX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "44b81859-b1ca-46c2-a813-81c2a7a41941",
+    "year": 2004,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "EX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "bb3d1cf6-3fdf-41c0-a3ec-58f8807ba821",
+    "year": 2004,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "EX-L",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "edbc1b86-d36d-41ff-869f-a28b68226d54",
+    "year": 2004,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "LX",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      "15x6",
+      "16x6.5"
+    ],
+    "verifiedTireSizes": [
+      "215/65R15",
+      "215/60R16",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c864641e-9272-4bee-990d-15fe56244c2c",
+    "year": 2005,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "cd6e43be-07a2-4858-8dc3-119e588491f0",
+    "year": 2006,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "0647c29f-3915-4327-b6df-0dc1f21e68ee",
+    "year": 2007,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "837c2306-0a2f-437d-a4ae-2383c25af712",
+    "year": 2008,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "37e7cf29-3d5d-4655-9764-59c1da9152ba",
+    "year": 2009,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "21e4534f-0ccb-43ff-ac44-e5c3b06e706b",
+    "year": 2010,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "cb778473-1679-488a-a8f5-3d01efd899c7",
+    "year": 2011,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "6e49e9d6-5c27-4468-b6dc-550684b00dc1",
+    "year": 2012,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "3d369586-00be-4431-ac0a-1959230e9306",
+    "year": 2013,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19",
+      "235/65R17",
+      "255/50R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "3f3c1bc8-939d-4f77-b2e7-9cc02629a02a",
+    "year": 2014,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "5b4826f7-642f-4893-a9eb-50e4b49e373d",
+    "year": 2015,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "1f83d7dc-bf50-4152-9da1-4aecb6ef1b2e",
+    "year": 2016,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "44519265-b0bb-4af5-8693-4aa901a6300f",
+    "year": 2017,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f2fffb7a-d93a-4be5-a02d-74c9af840cc7",
+    "year": 2018,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "b4fa11b1-c1f3-4904-8d90-bd24b304b91d",
+    "year": 2019,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "71183bd7-a22a-4954-af90-561844b129d1",
+    "year": 2020,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "79982c84-5328-449d-8b99-1fbec226d3b9",
+    "year": 2021,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "e69d96c9-c838-49c0-a8cb-51999439b0f8",
+    "year": 2022,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "5d1edca3-318d-41b7-82bb-d12bd55cc1be",
+    "year": 2023,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "3c6a0401-bc07-462a-a657-949147e0ce1b",
+    "year": 2024,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "fa42e96c-6014-46b4-8e92-6c6319d68da0",
+    "year": 2025,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "1754b60d-2e3c-4d03-880a-a6213c89fc48",
+    "year": 2026,
+    "make": "honda",
+    "model": "odyssey",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55R19"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "9c682c2e-bf2e-47ea-b1f9-411d30300304",
+    "year": 2019,
+    "make": "honda",
+    "model": "passport",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R20",
+      "265/45R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "b04c0f80-d54d-490d-b586-92933a5c08b2",
+    "year": 2020,
+    "make": "honda",
+    "model": "passport",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R20",
+      "265/45R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "5b36c4a2-7e2e-43d3-bdd6-4e583d2d9112",
+    "year": 2003,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/70R16",
+      "235/65R17"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "bc353a6c-90fa-4000-aac9-f02a78a3b087",
+    "year": 2004,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/70R16",
+      "235/65R17"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f4625a7d-c4aa-4ad4-a7ae-9532d89bd791",
+    "year": 2005,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/70R16",
+      "235/65R17"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "1cee67bf-ab1f-407f-b276-f20ea54c3206",
+    "year": 2006,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/70R16",
+      "235/65R17"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "014e5ec9-95d8-470d-bb5b-8ac9ab2c75dd",
+    "year": 2007,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/70R16",
+      "235/65R17"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "a1fafaad-96fc-4bce-bc20-25a6ca4dfd81",
+    "year": 2008,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/70R16",
+      "235/65R17"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "0c7555cd-1f07-4f2b-bf83-459a96151330",
+    "year": 2009,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "43786276-1378-4a33-a93a-58dd38e6cca2",
+    "year": 2010,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "2e40059b-74c1-4cd0-a171-e178c9a28c99",
+    "year": 2011,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "1b2dd5c1-3964-4e29-909f-b372b845eb63",
+    "year": 2012,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "9983c10e-a508-4003-abe5-2dbd26a1c104",
+    "year": 2013,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 47,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "245/60R18",
+      "235/60R18",
+      "235/65R18",
+      "255/60R17",
+      "255/55R18",
+      "255/50R19",
+      "255/45ZR20",
+      "265/45ZR20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f255867a-f143-4c00-9225-db6365c37cdb",
+    "year": 2014,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "0a2199a9-b358-4c47-a527-ddca2f986a2c",
+    "year": 2015,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R17",
+      "245/60R18"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "c2ba6ea7-4a4b-40dd-8ea1-3b579f076415",
+    "year": 2016,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/60R18",
+      "255/50R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "1c314dd9-c8d1-4397-bf58-dc50dbba1178",
+    "year": 2017,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/60R18",
+      "255/50R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "b8b0566e-a253-4cfc-9fcd-b2acf8e13341",
+    "year": 2018,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/60R18",
+      "255/50R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d8347f8b-2bca-46cd-af3c-92047f73e7fd",
+    "year": 2019,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 10,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/60R18",
+      "255/50R20",
+      "245/50R20",
+      "245/55R19",
+      "265/50R19",
+      "265/45R20",
+      "275/40R21",
+      "285/35ZR22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d1a89203-f21f-4715-a7be-c5618df83c6c",
+    "year": 2020,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 10,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/60R18",
+      "255/50R20",
+      "245/50R20",
+      "245/55R19",
+      "265/50R19",
+      "265/45R20",
+      "275/40R21",
+      "285/35ZR22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "5f2b89ae-0801-4ce6-97e3-c15c6b4cfe1a",
+    "year": 2021,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 10,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/60R18",
+      "255/50R20",
+      "245/50R20",
+      "245/55R19",
+      "265/50R19",
+      "265/45R20",
+      "275/40R21",
+      "285/35ZR22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "29d5e4e5-32cb-4a68-8c0f-6d14c871be0a",
+    "year": 2022,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 10,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/60R18",
+      "255/50R20",
+      "245/50R20",
+      "245/55R19",
+      "265/50R19",
+      "265/45R20",
+      "275/40R21",
+      "285/35ZR22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d1ef7c94-dcc6-439f-8bb3-aa1c75478a5b",
+    "year": 2023,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/60R18",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "34b29603-be6a-46e1-8885-073cdaec346f",
+    "year": 2024,
+    "make": "honda",
+    "model": "pilot",
+    "trim": "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120 to 5x114.3",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "64.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/60R18",
+      "255/50R20",
+      "255/45R21",
+      "255/60R18",
+      "265/60R18"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  }
+]

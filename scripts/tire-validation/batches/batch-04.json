@@ -1,0 +1,842 @@
+{
+  "batchId": "04",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18",
+        "235/35R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18",
+        "235/35R19",
+        "205/55ZR16",
+        "225/45ZR17",
+        "225/40ZR18",
+        "205/50R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18",
+        "235/35R19"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18",
+        "235/35R19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18",
+        "225/45ZR17",
+        "205/50R17",
+        "225/40ZR18"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18",
+        "225/45ZR17",
+        "205/50R17",
+        "225/40ZR18"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "audi",
+      "model": "a3",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "255/35R19",
+        "245/40ZR18",
+        "245/35ZR19",
+        "225/50ZR17"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40ZR18",
+        "245/35ZR19",
+        "225/50ZR17",
+        "245/40R18"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40ZR18",
+        "245/35ZR19",
+        "225/50ZR17",
+        "245/40R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40ZR18",
+        "245/35ZR19",
+        "225/50ZR17",
+        "245/40R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "255/35R19",
+        "245/40ZR18",
+        "245/35ZR19",
+        "225/50ZR17"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "255/35R19",
+        "245/40ZR18",
+        "245/35ZR19",
+        "225/50ZR17"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "255/35R19",
+        "245/40ZR18",
+        "245/35ZR19",
+        "225/50ZR17"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "245/45ZR17",
+        "225/55ZR16",
+        "225/50ZR17",
+        "245/40ZR18",
+        "225/55R16",
+        "255/35ZR19",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "245/35R19"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "245/45ZR17",
+        "225/55ZR16",
+        "225/50ZR17",
+        "245/40ZR18",
+        "225/55R16",
+        "255/35ZR19",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "245/35R19",
+        "225/50ZR17",
+        "225/55ZR16",
+        "245/45ZR17",
+        "245/40ZR18",
+        "225/55R16",
+        "255/35ZR19",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "245/35R19"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "245/35R19"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "245/35R19"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "245/40R18",
+        "245/35R19"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/50R17",
+        "235/45R17",
+        "235/40R18",
+        "235/35R19"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/50R17",
+        "235/45R17",
+        "235/40R18",
+        "235/35R19"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/50R17",
+        "235/45R17",
+        "235/40R18",
+        "235/35R19"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/50R17",
+        "235/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/50R17",
+        "235/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/50R17",
+        "235/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "205/55R16",
+        "225/50R17",
+        "235/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "audi",
+      "model": "a4",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "225/50ZR17",
+        "245/40ZR18",
+        "255/35ZR19",
+        "265/30ZR20",
+        "225/50R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "a5",
+      "currentTireSizes": [
+        "245/45R17",
+        "245/40R18",
+        "255/35R19"
+      ]
+    }
+  ]
+}

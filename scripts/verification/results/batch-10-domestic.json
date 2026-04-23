@@ -1,0 +1,1223 @@
+{
+  "batch": "batch-10-domestic",
+  "verifiedAt": "2026-04-23T00:53:00Z",
+  "totalVehicles": 75,
+  "validCount": 45,
+  "invalidCount": 30,
+  "sources": ["lmr.com", "tirewheelguide.com", "hulkoffsets.com", "mavericktruckclub.com", "wikipedia.org", "ford.com"],
+  "results": [
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17"},
+        {"name": "SEL", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "Limited", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "Limited EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "high",
+      "notes": "Production years 2009-2019"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17"},
+        {"name": "SEL", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "Limited", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "Limited EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "high",
+      "notes": "Production years 2009-2019"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17"},
+        {"name": "SEL", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "Limited", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "Limited EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "high",
+      "notes": "Production years 2009-2019"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Flex",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "17x7.5", "oemTireSize": "235/60R17"},
+        {"name": "SEL", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "Limited", "oemWheelSize": "19x8", "oemTireSize": "235/55R19"},
+        {"name": "Limited EcoBoost", "oemWheelSize": "20x8", "oemTireSize": "255/45R20"}
+      ],
+      "confidence": "high",
+      "notes": "Final model year for Flex"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Focus",
+      "status": "invalid",
+      "invalidReason": "DISCONTINUED_IN_US",
+      "confidence": "high",
+      "notes": "Ford Focus was discontinued in US after 2018 model year. April 2018 announcement ended all passenger cars except Mustang in North America."
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Focus",
+      "status": "invalid",
+      "invalidReason": "DISCONTINUED_IN_US",
+      "confidence": "high",
+      "notes": "Ford Focus was discontinued in US after 2018 model year"
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Focus",
+      "status": "invalid",
+      "invalidReason": "DISCONTINUED_IN_US",
+      "confidence": "high",
+      "notes": "Ford Focus was discontinued in US after 2018 model year"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Focus",
+      "status": "invalid",
+      "invalidReason": "DISCONTINUED_IN_US",
+      "confidence": "high",
+      "notes": "Ford Focus was discontinued in US after 2018 model year"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Focus",
+      "status": "invalid",
+      "invalidReason": "DISCONTINUED_IN_US",
+      "confidence": "high",
+      "notes": "Ford Focus was discontinued in US after 2018 model year. European production also ended Nov 2025."
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Fusion",
+      "status": "invalid",
+      "invalidReason": "MODEL_NOT_YET_PRODUCED",
+      "confidence": "high",
+      "notes": "Ford Fusion first US model year was 2006. Production began August 2005 for 2006 MY."
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Fusion",
+      "status": "invalid",
+      "invalidReason": "MODEL_NOT_YET_PRODUCED",
+      "confidence": "high",
+      "notes": "Ford Fusion first US model year was 2006"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Fusion",
+      "status": "invalid",
+      "invalidReason": "MODEL_NOT_YET_PRODUCED",
+      "confidence": "high",
+      "notes": "Ford Fusion first US model year was 2006"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Fusion",
+      "status": "invalid",
+      "invalidReason": "MODEL_NOT_YET_PRODUCED",
+      "confidence": "high",
+      "notes": "Ford Fusion first US model year was 2006"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "GT",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT",
+          "frontWheelSize": "18x9",
+          "rearWheelSize": "19x11.5",
+          "frontTireSize": "235/45ZR18",
+          "rearTireSize": "315/40ZR19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "First generation modern Ford GT supercar (2005-2006)"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "GT",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT",
+          "frontWheelSize": "18x9",
+          "rearWheelSize": "19x11.5",
+          "frontTireSize": "235/45ZR18",
+          "rearTireSize": "315/40ZR19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Final year of first generation modern Ford GT"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "GT",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT",
+          "frontWheelSize": "20x8.5",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "245/35R20",
+          "rearTireSize": "325/30R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Second generation Ford GT (2017-2022). 3.5L EcoBoost V6, 648hp"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "GT",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT",
+          "frontWheelSize": "20x8.5",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "245/35R20",
+          "rearTireSize": "325/30R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Second generation Ford GT (2017-2022)"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "GT",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT",
+          "frontWheelSize": "20x8.5",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "245/35R20",
+          "rearTireSize": "325/30R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Second generation Ford GT (2017-2022)"
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "GT",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT",
+          "frontWheelSize": "20x8.5",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "245/35R20",
+          "rearTireSize": "325/30R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Second generation Ford GT (2017-2022)"
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "GT",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT",
+          "frontWheelSize": "20x8.5",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "245/35R20",
+          "rearTireSize": "325/30R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Second generation Ford GT (2017-2022)"
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "GT",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT",
+          "frontWheelSize": "20x8.5",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "245/35R20",
+          "rearTireSize": "325/30R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Final model year of second generation Ford GT. Production ended December 2022."
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Maverick",
+      "status": "valid",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "XL", "oemWheelSize": "17x7", "oemTireSize": "225/65R17"},
+        {"name": "XLT", "oemWheelSize": "17x7", "oemTireSize": "225/65R17"},
+        {"name": "Lariat", "oemWheelSize": "18x7", "oemTireSize": "225/60R18"},
+        {"name": "Tremor", "oemWheelSize": "17x7", "oemTireSize": "235/65R17"}
+      ],
+      "confidence": "high",
+      "notes": "Compact pickup (2022-present). Hybrid or 2.0T EcoBoost options."
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "Maverick",
+      "status": "valid",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "XL", "oemWheelSize": "17x7", "oemTireSize": "225/65R17"},
+        {"name": "XLT", "oemWheelSize": "17x7", "oemTireSize": "225/65R17"},
+        {"name": "Lariat", "oemWheelSize": "18x7", "oemTireSize": "225/60R18"},
+        {"name": "Tremor", "oemWheelSize": "17x7", "oemTireSize": "235/65R17"}
+      ],
+      "confidence": "medium",
+      "notes": "2026 MY announced. Specs expected same as 2025."
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "15x7", "oemTireSize": "205/65R15"},
+        {"name": "GT", "oemWheelSize": "17x8", "oemTireSize": "245/45R17"},
+        {"name": "Cobra", "oemWheelSize": "17x8", "oemTireSize": "245/45R17"}
+      ],
+      "confidence": "high",
+      "notes": "SN95 New Edge generation (1999-2004)"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "15x7", "oemTireSize": "205/65R15"},
+        {"name": "GT", "oemWheelSize": "17x8", "oemTireSize": "245/45R17"},
+        {"name": "Cobra", "oemWheelSize": "17x8", "oemTireSize": "245/45R17"},
+        {"name": "Bullitt", "oemWheelSize": "17x8", "oemTireSize": "245/45R17"}
+      ],
+      "confidence": "high",
+      "notes": "SN95 New Edge generation"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "16x7", "oemTireSize": "225/55R16"},
+        {"name": "GT", "oemWheelSize": "17x8", "oemTireSize": "245/45R17"}
+      ],
+      "confidence": "high",
+      "notes": "SN95 New Edge generation"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "16x7", "oemTireSize": "225/55R16"},
+        {"name": "GT", "oemWheelSize": "17x8", "oemTireSize": "245/45R17"},
+        {"name": "Cobra", "oemWheelSize": "17x9", "oemTireSize": "275/40R17"}
+      ],
+      "confidence": "high",
+      "notes": "SN95 New Edge generation. SVT Cobra (Terminator) with 4.6L SC V8"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "16x7", "oemTireSize": "225/55R16"},
+        {"name": "GT", "oemWheelSize": "17x8", "oemTireSize": "245/45R17"},
+        {"name": "Cobra", "oemWheelSize": "17x9", "oemTireSize": "275/40R17"}
+      ],
+      "confidence": "high",
+      "notes": "Final year of SN95 platform"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "16x7", "oemTireSize": "215/65R16"},
+        {"name": "GT", "oemWheelSize": "17x8", "oemTireSize": "235/55R17"}
+      ],
+      "confidence": "high",
+      "notes": "First year S197 platform"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "16x7", "oemTireSize": "215/65R16"},
+        {"name": "GT", "oemWheelSize": "17x8", "oemTireSize": "235/55R17"},
+        {"name": "GT Premium", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"}
+      ],
+      "confidence": "high",
+      "notes": "S197 generation"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "16x7", "oemTireSize": "215/65R16"},
+        {"name": "GT", "oemWheelSize": "17x8", "oemTireSize": "235/55R17"},
+        {"name": "GT Premium", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"}
+      ],
+      "confidence": "high",
+      "notes": "S197 generation"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "16x7", "oemTireSize": "215/65R16"},
+        {"name": "GT", "oemWheelSize": "17x8", "oemTireSize": "235/55R17"},
+        {"name": "GT Premium", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"},
+        {"name": "Bullitt", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"}
+      ],
+      "confidence": "high",
+      "notes": "S197 generation"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "16x7", "oemTireSize": "215/65R16"},
+        {"name": "GT", "oemWheelSize": "17x8", "oemTireSize": "235/55R17"},
+        {"name": "GT Premium", "oemWheelSize": "18x8.5", "oemTireSize": "235/50R18"}
+      ],
+      "confidence": "high",
+      "notes": "Final year of first-gen S197"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Mustang",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "EcoBoost", "oemWheelSize": "18x8", "oemTireSize": "235/50R18"},
+        {"name": "GT", "oemWheelSize": "19x9", "oemTireSize": "255/40R19"},
+        {"name": "Dark Horse", "oemWheelSize": "19x10", "oemTireSize": "285/35R19"}
+      ],
+      "confidence": "high",
+      "notes": "S650 generation (2024-present)"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "Mach 1", "oemWheelSize": "17x8", "oemTireSize": "245/45R17"}
+      ],
+      "confidence": "high",
+      "notes": "New Edge Mach 1 (2003-2004). 4.6L DOHC V8, 305hp"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "trims": [
+        {"name": "Mach 1", "oemWheelSize": "17x8", "oemTireSize": "245/45R17"}
+      ],
+      "confidence": "high",
+      "notes": "Final year New Edge Mach 1"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "status": "invalid",
+      "invalidReason": "MODEL_NOT_YET_PRODUCED",
+      "confidence": "high",
+      "notes": "Modern Mach 1 started 2021 model year. No Mach 1 in 2019."
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "status": "invalid",
+      "invalidReason": "MODEL_NOT_YET_PRODUCED",
+      "confidence": "high",
+      "notes": "Modern Mach 1 started 2021 model year. No Mach 1 in 2020."
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Mach 1",
+          "frontWheelSize": "19x9.5",
+          "rearWheelSize": "19x10",
+          "frontTireSize": "255/40R19",
+          "rearTireSize": "275/40R19"
+        },
+        {
+          "name": "Mach 1 w/Handling Package",
+          "frontWheelSize": "19x10.5",
+          "rearWheelSize": "19x11",
+          "frontTireSize": "305/30R19",
+          "rearTireSize": "305/30R19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "First year S550 Mach 1. 5.0L V8, 480hp"
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Mach 1",
+          "frontWheelSize": "19x9.5",
+          "rearWheelSize": "19x10",
+          "frontTireSize": "255/40R19",
+          "rearTireSize": "275/40R19"
+        },
+        {
+          "name": "Mach 1 w/Handling Package",
+          "frontWheelSize": "19x10.5",
+          "rearWheelSize": "19x11",
+          "frontTireSize": "305/30R19",
+          "rearTireSize": "305/30R19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S550 Mach 1"
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Mach 1",
+          "frontWheelSize": "19x9.5",
+          "rearWheelSize": "19x10",
+          "frontTireSize": "255/40R19",
+          "rearTireSize": "275/40R19"
+        },
+        {
+          "name": "Mach 1 w/Handling Package",
+          "frontWheelSize": "19x10.5",
+          "rearWheelSize": "19x11",
+          "frontTireSize": "305/30R19",
+          "rearTireSize": "305/30R19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Final year S550 Mach 1"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "status": "invalid",
+      "invalidReason": "MODEL_NOT_YET_PRODUCED",
+      "confidence": "high",
+      "notes": "Modern GT350 production: 2015-2020. No GT350 existed 2011-2014."
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "status": "invalid",
+      "invalidReason": "MODEL_NOT_YET_PRODUCED",
+      "confidence": "high",
+      "notes": "Modern GT350 production: 2015-2020. No GT350 existed 2011-2014."
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "status": "invalid",
+      "invalidReason": "MODEL_NOT_YET_PRODUCED",
+      "confidence": "high",
+      "notes": "Modern GT350 production: 2015-2020. No GT350 existed 2011-2014."
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT350",
+          "frontWheelSize": "19x10.5",
+          "rearWheelSize": "19x11",
+          "frontTireSize": "295/35R19",
+          "rearTireSize": "305/35R19"
+        },
+        {
+          "name": "GT350R",
+          "frontWheelSize": "19x11",
+          "rearWheelSize": "19x11.5",
+          "frontTireSize": "305/30R19",
+          "rearTireSize": "315/30R19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S550 GT350. 5.2L Voodoo V8, 526hp flat-plane crank"
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT350",
+          "frontWheelSize": "19x10.5",
+          "rearWheelSize": "19x11",
+          "frontTireSize": "295/35R19",
+          "rearTireSize": "305/35R19"
+        },
+        {
+          "name": "GT350R",
+          "frontWheelSize": "19x11",
+          "rearWheelSize": "19x11.5",
+          "frontTireSize": "305/30R19",
+          "rearTireSize": "315/30R19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S550 GT350"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Mustang Shelby GT350",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT350",
+          "frontWheelSize": "19x10.5",
+          "rearWheelSize": "19x11",
+          "frontTireSize": "295/35R19",
+          "rearTireSize": "305/35R19"
+        },
+        {
+          "name": "GT350R",
+          "frontWheelSize": "19x11",
+          "rearWheelSize": "19x11.5",
+          "frontTireSize": "305/30R19",
+          "rearTireSize": "315/30R19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S550 GT350"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "18x9.5",
+          "rearWheelSize": "18x9.5",
+          "frontTireSize": "255/45R18",
+          "rearTireSize": "285/40R18"
+        }
+      ],
+      "confidence": "high",
+      "notes": "First year S197 GT500. 5.4L SC V8, 500hp"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "18x9.5",
+          "rearWheelSize": "18x9.5",
+          "frontTireSize": "255/45R18",
+          "rearTireSize": "285/40R18"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S197 GT500"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "18x9.5",
+          "rearWheelSize": "18x9.5",
+          "frontTireSize": "255/45R18",
+          "rearTireSize": "285/40R18"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S197 GT500"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "18x9.5",
+          "rearWheelSize": "18x9.5",
+          "frontTireSize": "255/45R18",
+          "rearTireSize": "285/40R18"
+        },
+        {
+          "name": "GT500 (optional)",
+          "frontWheelSize": "19x9.5",
+          "rearWheelSize": "19x9.5",
+          "frontTireSize": "255/40R19",
+          "rearTireSize": "285/35R19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S197 facelift GT500. 540hp"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "19x9.5",
+          "rearWheelSize": "19x9.5",
+          "frontTireSize": "255/40R19",
+          "rearTireSize": "285/35R19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S197 GT500. 550hp"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "19x9.5",
+          "rearWheelSize": "19x9.5",
+          "frontTireSize": "255/40R19",
+          "rearTireSize": "285/35R19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S197 GT500"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "19x9.5",
+          "rearWheelSize": "19x9.5",
+          "frontTireSize": "255/40R19",
+          "rearTireSize": "285/35R19"
+        },
+        {
+          "name": "GT500 (optional 20\")",
+          "frontWheelSize": "20x9.5",
+          "rearWheelSize": "20x9.5",
+          "frontTireSize": "265/35R20",
+          "rearTireSize": "285/35R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S197 GT500. 662hp - most powerful production Mustang until GT500 2020"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "19x9.5",
+          "rearWheelSize": "19x9.5",
+          "frontTireSize": "255/40R19",
+          "rearTireSize": "285/35R19"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Final year S197 GT500"
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "20x11",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "305/30R20",
+          "rearTireSize": "315/30R20"
+        },
+        {
+          "name": "GT500 Carbon Fiber Track Pack",
+          "frontWheelSize": "20x11",
+          "rearWheelSize": "20x11",
+          "frontTireSize": "305/30R20",
+          "rearTireSize": "315/30R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "First year S550 GT500. 5.2L SC V8, 760hp"
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "20x11",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "305/30R20",
+          "rearTireSize": "315/30R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S550 GT500"
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "20x11",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "305/30R20",
+          "rearTireSize": "315/30R20"
+        },
+        {
+          "name": "GT500 Heritage Edition",
+          "frontWheelSize": "20x11",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "305/30R20",
+          "rearTireSize": "315/30R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "S550 GT500"
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Mustang Shelby GT500",
+      "status": "valid",
+      "boltPattern": "5x114.3",
+      "hubBore": 70.5,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "GT500",
+          "frontWheelSize": "20x11",
+          "rearWheelSize": "20x11.5",
+          "frontTireSize": "305/30R20",
+          "rearTireSize": "315/30R20"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Final year S550 GT500"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "SportKa",
+      "status": "invalid",
+      "invalidReason": "NEVER_SOLD_IN_US",
+      "confidence": "high",
+      "notes": "Ford SportKa was sold in Europe only (2003-2008). Never offered in North American market."
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "SportKa",
+      "status": "invalid",
+      "invalidReason": "NEVER_SOLD_IN_US",
+      "confidence": "high",
+      "notes": "Ford SportKa was sold in Europe only (2003-2008)"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "SportKa",
+      "status": "invalid",
+      "invalidReason": "NEVER_SOLD_IN_US",
+      "confidence": "high",
+      "notes": "Ford SportKa was sold in Europe only (2003-2008)"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "SportKa",
+      "status": "invalid",
+      "invalidReason": "NEVER_SOLD_IN_US",
+      "confidence": "high",
+      "notes": "Ford SportKa was sold in Europe only (2003-2008)"
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "SportKa",
+      "status": "invalid",
+      "invalidReason": "NEVER_SOLD_IN_US",
+      "confidence": "high",
+      "notes": "Ford SportKa was sold in Europe only (2003-2008)"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "SportKa",
+      "status": "invalid",
+      "invalidReason": "NEVER_SOLD_IN_US",
+      "confidence": "high",
+      "notes": "Ford SportKa was sold in Europe only (2003-2008)"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "StreetKa",
+      "status": "invalid",
+      "invalidReason": "NEVER_SOLD_IN_US",
+      "confidence": "high",
+      "notes": "Ford StreetKa was sold in Europe only (2003-2006). Designed by Pininfarina, never offered in North American market."
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "StreetKa",
+      "status": "invalid",
+      "invalidReason": "NEVER_SOLD_IN_US",
+      "confidence": "high",
+      "notes": "Ford StreetKa was sold in Europe only (2003-2006)"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "StreetKa",
+      "status": "invalid",
+      "invalidReason": "NEVER_SOLD_IN_US",
+      "confidence": "high",
+      "notes": "Ford StreetKa was sold in Europe only (2003-2006)"
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "StreetKa",
+      "status": "invalid",
+      "invalidReason": "NEVER_SOLD_IN_US",
+      "confidence": "high",
+      "notes": "Ford StreetKa was sold in Europe only (2003-2006)"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "valid",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SE", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SEL", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SES", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "notes": "Fourth generation Taurus (2000-2007)"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "valid",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SE", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SEL", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SES", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "notes": "Fourth generation Taurus"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "valid",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SE", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SEL", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SES", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "notes": "Fourth generation Taurus"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "valid",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SE", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SEL", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SES", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "notes": "Fourth generation Taurus"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "valid",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "LX", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SE", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SEL", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SES", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "notes": "Fourth generation Taurus"
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Taurus",
+      "status": "valid",
+      "boltPattern": "5x108",
+      "hubBore": 63.4,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SEL", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"},
+        {"name": "SE/SEL DOHC", "oemWheelSize": "16x6", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "notes": "Fourth generation Taurus"
+    }
+  ],
+  "summary": {
+    "invalidReasons": {
+      "DISCONTINUED_IN_US": 5,
+      "MODEL_NOT_YET_PRODUCED": 9,
+      "NEVER_SOLD_IN_US": 10
+    },
+    "invalidModels": [
+      "Ford Focus (2019-2025) - Discontinued after 2018 MY",
+      "Ford Fusion (2002-2005) - Didn't exist until 2006",
+      "Ford Mustang Mach 1 (2019-2020) - Modern Mach 1 started 2021",
+      "Ford Mustang Shelby GT350 (2011-2013) - Modern GT350 started 2015",
+      "Ford SportKa (2003-2008) - Europe-only model",
+      "Ford StreetKa (2003-2006) - Europe-only model"
+    ],
+    "validModels": [
+      "Ford Flex (2016-2019)",
+      "Ford GT (2005-2006, 2017-2022)",
+      "Ford Maverick (2025-2026)",
+      "Ford Mustang (2000-2009, 2025)",
+      "Ford Mustang Mach 1 (2003-2004, 2021-2023)",
+      "Ford Mustang Shelby GT350 (2016-2018)",
+      "Ford Mustang Shelby GT500 (2007-2014, 2020-2023)",
+      "Ford Taurus (2000-2005)"
+    ]
+  }
+}

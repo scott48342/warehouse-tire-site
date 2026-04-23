@@ -1,0 +1,1065 @@
+{
+  "batchId": "85",
+  "validatedAt": "2026-04-21T22:15:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "Base": "205/60R16",
+        "EV": "205/60R16",
+        "Plus": ["215/55R17", "235/45R18"],
+        "!": "235/45R18"
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed"
+    },
+    {
+      "year": 2015,
+      "make": "kia",
+      "model": "soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "Base": "205/60R16",
+        "Plus": ["215/55R17", "235/45R18"]
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed"
+    },
+    {
+      "year": 2014,
+      "make": "kia",
+      "model": "soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "trims": {
+        "Base": "205/60R16",
+        "Plus": ["215/55R17", "235/45R18"]
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed"
+    },
+    {
+      "year": 2013,
+      "make": "kia",
+      "model": "soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "235/45R18"],
+      "trims": {
+        "Base Model": "195/65R15",
+        "Plus": "205/55R16",
+        "!": "235/45R18"
+      },
+      "status": "MISMATCH",
+      "notes": "2013 uses 195/65R15, 205/55R16, 235/45R18 - different from 2014+"
+    },
+    {
+      "year": 2012,
+      "make": "kia",
+      "model": "soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R18"],
+      "trims": {
+        "Base Model": "195/65R15",
+        "Plus": "205/55R16",
+        "Sport": "225/45R18"
+      },
+      "status": "MISMATCH",
+      "notes": "2012 uses different sizes: 195/65R15, 205/55R16, 225/45R18"
+    },
+    {
+      "year": 2011,
+      "make": "kia",
+      "model": "soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R18"],
+      "trims": {
+        "Base Model": "195/65R15",
+        "Plus": "205/55R16",
+        "Sport": "225/45R18"
+      },
+      "status": "MISMATCH",
+      "notes": "2011 uses different sizes: 195/65R15, 205/55R16, 225/45R18"
+    },
+    {
+      "year": 2010,
+      "make": "kia",
+      "model": "soul",
+      "currentTireSizes": ["205/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "225/45R18"],
+      "trims": {
+        "Base Model": "195/65R15",
+        "Plus": "205/55R16",
+        "Sport": "225/45R18"
+      },
+      "status": "MISMATCH",
+      "notes": "2010 uses different sizes: 195/65R15, 205/55R16, 225/45R18"
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "soul",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_SOLD_US",
+      "notes": "Soul not sold in US until 2010 model year"
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "soul",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_SOLD_US",
+      "notes": "Soul not sold in US until 2010 model year"
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "spectra-wing",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Spectra Wing - non-US market variant, no OEM data"
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "spectra-wing",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Spectra Wing - non-US market variant, no OEM data"
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "spectra-wing",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Spectra Wing - non-US market variant, no OEM data"
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "spectra-wing",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Spectra Wing - non-US market variant, no OEM data"
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "spectra5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/50R16"],
+      "trims": {
+        "Base": "195/65R15",
+        "SX": "205/50R16"
+      },
+      "status": "MISSING_DATA",
+      "notes": "Spectra5 was US hatchback variant of Spectra"
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "spectra5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/50R16"],
+      "trims": {
+        "Base": "195/65R15",
+        "SX": "205/50R16"
+      },
+      "status": "MISSING_DATA",
+      "notes": "Spectra5 was US hatchback variant of Spectra"
+    },
+    {
+      "year": 2007,
+      "make": "kia",
+      "model": "spectra5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/50R16"],
+      "trims": {
+        "Base": "195/65R15",
+        "SX": "205/50R16"
+      },
+      "status": "MISSING_DATA",
+      "notes": "Spectra5 was US hatchback variant of Spectra"
+    },
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "spectra5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/50R16"],
+      "trims": {
+        "Base": "195/65R15",
+        "SX": "205/50R16"
+      },
+      "status": "MISSING_DATA",
+      "notes": "Spectra5 was US hatchback variant of Spectra"
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "spectra5",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/50R16"],
+      "trims": {
+        "Base": "195/65R15",
+        "SX": "205/50R16"
+      },
+      "status": "MISSING_DATA",
+      "notes": "Spectra5 was US hatchback variant of Spectra"
+    },
+    {
+      "year": 2026,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["235/65R17", "235/55R18", "255/45R19", "235/60R18", "235/55R19", "255/50R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "LX": "235/65R17",
+        "LX Hybrid": "235/65R17",
+        "EX": "235/60R18",
+        "EX Hybrid": "235/60R18",
+        "SX": "235/60R18",
+        "SX Prestige": "235/55R19",
+        "SX Prestige Hybrid": "235/60R18",
+        "X-Line": "235/55R19",
+        "X-Line Plug-In Hybrid": "235/55R19",
+        "X-Pro": "235/65R17",
+        "X-Pro Prestige": "235/65R17"
+      },
+      "status": "MISMATCH",
+      "notes": "2026 has 235/65R17, 235/60R18, 235/55R19 - some sizes in current don't match"
+    },
+    {
+      "year": 2025,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["235/65R17", "235/55R18", "255/45R19", "235/60R18", "235/55R19", "255/50R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "LX": "235/65R17",
+        "LX Hybrid": "235/65R17",
+        "EX": "235/60R18",
+        "EX Hybrid": "235/60R18",
+        "SX": "235/60R18",
+        "SX Prestige": "235/55R19",
+        "SX Prestige Hybrid": "235/60R18",
+        "X-Line": "235/55R19",
+        "X-Line Plug-In Hybrid": "235/55R19",
+        "X-Pro": "235/65R17",
+        "X-Pro Prestige": "235/65R17"
+      },
+      "status": "MISMATCH",
+      "notes": "Several current sizes not validated: 235/55R18, 255/45R19, 255/50R19, 255/45R20"
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["235/65R17", "235/55R18", "255/45R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "LX": "235/65R17",
+        "LX Hybrid": "235/65R17",
+        "EX": "235/60R18",
+        "EX Hybrid": "235/60R18",
+        "SX": "235/60R18",
+        "SX Prestige": "235/55R19",
+        "SX Prestige Hybrid": "235/60R18",
+        "X-Line": "235/55R19",
+        "X-Line Plug-In Hybrid": "235/55R19",
+        "X-Pro": "235/65R17",
+        "X-Pro Prestige": "235/65R17"
+      },
+      "status": "MISMATCH",
+      "notes": "235/55R18 should be 235/60R18, 255/45R19 not standard OEM"
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["235/65R17", "235/55R18", "255/45R19", "235/60R18", "235/55R19", "255/50R19", "255/45R20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18", "235/55R19"],
+      "trims": {
+        "LX": "235/65R17",
+        "LX Hybrid": "235/65R17",
+        "EX": "235/60R18",
+        "EX Hybrid": "235/60R18",
+        "SX": "235/60R18",
+        "SX Prestige": "235/55R19",
+        "SX Prestige Hybrid": "235/60R18",
+        "X-Line": "235/55R19",
+        "X-Line Plug-In Hybrid": "235/55R19",
+        "X-Pro": "235/65R17",
+        "X-Pro Prestige": "235/65R17"
+      },
+      "status": "MISMATCH",
+      "notes": "Multiple sizes in current not matching OEM"
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19", "235/60R18", "235/55R19", "235/65R17", "255/50R19", "255/45R20"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trims": {
+        "LX": "225/60R17",
+        "EX": "225/55R18",
+        "Nightfall Edition": "225/55R18",
+        "SX Turbo": "245/45R19"
+      },
+      "status": "MISMATCH",
+      "notes": "2022 was transition year - first sizes are old gen, others may be new gen overlap"
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trims": {
+        "LX": "225/60R17",
+        "EX": "225/55R18",
+        "S": "225/55R18",
+        "SX Turbo": "245/45R19"
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed"
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trims": {
+        "LX": "225/60R17",
+        "EX": "225/55R18",
+        "S": "225/55R18",
+        "SX Turbo": "245/45R19"
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed"
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trims": {
+        "LX": "225/60R17",
+        "EX": "225/55R18",
+        "SX Turbo": "245/45R19"
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed"
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19", "245/45ZR19", "245/40ZR20"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trims": {
+        "LX": "225/60R17",
+        "EX": "225/55R18",
+        "SX Turbo": "245/45R19"
+      },
+      "status": "MISMATCH",
+      "notes": "245/45ZR19 and 245/40ZR20 not standard OEM sizes"
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45R19", "245/45ZR19", "245/40ZR20"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trims": {
+        "LX": "225/60R17",
+        "EX": "225/55R18",
+        "SX Turbo": "245/45R19"
+      },
+      "status": "MISMATCH",
+      "notes": "245/45ZR19 and 245/40ZR20 not standard OEM sizes"
+    },
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "235/55R18"],
+      "trims": {
+        "LX": "225/60R17",
+        "EX": "235/55R18",
+        "SX": "235/55R18"
+      },
+      "status": "MISMATCH",
+      "notes": "215/70R16 not found for 2016; 225/55R18 should be 235/55R18"
+    },
+    {
+      "year": 2015,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "235/55R18"],
+      "trims": {
+        "LX": "225/60R17",
+        "EX": "235/55R18",
+        "SX": "235/55R18"
+      },
+      "status": "MISMATCH",
+      "notes": "215/70R16 not found for 2015; 225/55R18 should be 235/55R18"
+    },
+    {
+      "year": 2014,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18", "235/55R18", "235/50R19", "255/45R19"],
+      "validatedTireSizes": ["225/60R17", "235/55R18"],
+      "trims": {
+        "LX": "225/60R17",
+        "EX": "235/55R18",
+        "SX": "235/55R18"
+      },
+      "status": "MISMATCH",
+      "notes": "215/70R16, 225/55R18, 235/50R19, 255/45R19 not standard OEM"
+    },
+    {
+      "year": 2013,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18", "235/55R18", "235/50R19"],
+      "validatedTireSizes": ["215/70R16", "225/60R17", "235/55R18"],
+      "trims": {
+        "Base Model": "215/70R16",
+        "LX": ["215/70R16", "225/60R17"],
+        "EX": "235/55R18",
+        "SX": "235/55R18"
+      },
+      "status": "MISMATCH",
+      "notes": "225/55R18 and 235/50R19 not standard OEM"
+    },
+    {
+      "year": 2012,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/60R17", "235/55R18"],
+      "trims": {
+        "Base Model": "215/70R16",
+        "LX": ["215/70R16", "225/60R17"],
+        "EX": "235/55R18",
+        "SX": "235/55R18"
+      },
+      "status": "MISMATCH",
+      "notes": "225/55R18 should be 235/55R18"
+    },
+    {
+      "year": 2011,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/70R16", "225/60R17", "225/55R18"],
+      "validatedTireSizes": ["215/70R16", "225/60R17", "235/55R18"],
+      "trims": {
+        "Base Model": "215/70R16",
+        "LX": ["215/70R16", "225/60R17"],
+        "EX": "235/55R18",
+        "SX": "235/55R18"
+      },
+      "status": "MISMATCH",
+      "notes": "225/55R18 should be 235/55R18"
+    },
+    {
+      "year": 2010,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/65R16", "235/60R17"],
+      "validatedTireSizes": ["215/65R16", "235/60R16", "235/55R17"],
+      "trims": {
+        "LX I4 2WD": "215/65R16",
+        "LX I4 4WD": "215/65R16",
+        "LX V6 2WD": "235/60R16",
+        "LX V6 4WD": "235/60R16",
+        "EX V6 2WD": "235/55R17",
+        "EX V6 4WD": "235/55R17"
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R17 should be 235/55R17; also has 235/60R16 for LX V6"
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/65R16", "235/60R17"],
+      "validatedTireSizes": ["215/65R16", "235/60R16", "235/55R17"],
+      "trims": {
+        "LX I4 2WD": "215/65R16",
+        "LX I4 4WD": "215/65R16",
+        "LX V6 2WD": ["235/60R16", "235/55R17"],
+        "LX V6 4WD": ["235/60R16", "235/55R17"],
+        "EX V6 2WD": "235/60R16",
+        "EX V6 4WD": "235/60R16"
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R17 not found; 235/60R16 and 235/55R17 are OEM"
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/65R16", "235/60R17"],
+      "validatedTireSizes": ["215/65R16", "235/60R16"],
+      "trims": {
+        "LX I4 2WD": "215/65R16",
+        "LX I4 4WD": "215/65R16",
+        "LX V6 2WD": "235/60R16",
+        "LX V6 4WD": "235/60R16",
+        "EX V6 2WD": "235/60R16",
+        "EX V6 4WD": "235/60R16"
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R17 should be 235/60R16"
+    },
+    {
+      "year": 2007,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/65R16", "235/60R17"],
+      "validatedTireSizes": ["215/65R16", "235/60R16"],
+      "trims": {
+        "LX I4 2WD": "215/65R16",
+        "LX I4 4WD": "215/65R16",
+        "LX V6 2WD": "235/60R16",
+        "LX V6 4WD": "235/60R16",
+        "EX V6 2WD": "235/60R16",
+        "EX V6 4WD": "235/60R16"
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R17 should be 235/60R16"
+    },
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/65R16", "235/60R17"],
+      "validatedTireSizes": ["215/65R16", "235/60R16"],
+      "trims": {
+        "LX I4 2WD": ["215/65R16", "235/60R16"],
+        "LX I4 4WD": ["215/65R16", "235/60R16"],
+        "LX V6 2WD": ["215/65R16", "235/60R16"],
+        "LX V6 4WD": ["215/65R16", "235/60R16"],
+        "EX V6 2WD": ["215/65R16", "235/60R16"],
+        "EX V6 4WD": ["215/65R16", "235/60R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R17 should be 235/60R16"
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["215/65R16", "235/60R17"],
+      "validatedTireSizes": ["215/65R16", "235/60R16"],
+      "trims": {
+        "LX 4cyl 2WD": "215/65R16",
+        "LX 4cyl 4WD": "215/65R16",
+        "LX V6 2WD": "235/60R16",
+        "LX V6 4WD": "235/60R16",
+        "EX V6 2WD": "235/60R16",
+        "EX V6 4WD": "235/60R16"
+      },
+      "status": "MISMATCH",
+      "notes": "235/60R17 should be 235/60R16"
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["205/70R15", "215/65R16"],
+      "validatedTireSizes": ["205/70R15", "215/65R16"],
+      "trims": {
+        "Base": "205/70R15",
+        "LX": "215/65R16",
+        "EX": "215/65R16"
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed"
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["205/70R15", "215/65R16"],
+      "validatedTireSizes": ["205/70R15", "215/65R16"],
+      "trims": {
+        "Base": "205/70R15",
+        "EX": "215/65R16"
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed - first gen Sportage"
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["205/75R15", "235/60R16"],
+      "validatedTireSizes": ["205/75R15"],
+      "trims": {
+        "Base": "205/75R15"
+      },
+      "status": "MISMATCH",
+      "notes": "First gen Sportage; 235/60R16 not standard OEM for this year"
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["205/75R15", "235/60R16"],
+      "validatedTireSizes": ["205/75R15"],
+      "trims": {
+        "Base": "205/75R15"
+      },
+      "status": "MISMATCH",
+      "notes": "First gen Sportage; 235/60R16 not standard OEM for this year"
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "sportage",
+      "currentTireSizes": ["205/75R15", "235/60R16"],
+      "validatedTireSizes": ["205/75R15"],
+      "trims": {
+        "Base": "205/75R15"
+      },
+      "status": "MISMATCH",
+      "notes": "First gen Sportage; 235/60R16 not standard OEM for this year"
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "stinger",
+      "currentTireSizes": ["225/45R18", "255/35R19", "255/35R20"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "GT-Line": "225/45R18",
+        "GT1": ["225/45R18", "225/40R19 front/255/35R19 rear"],
+        "GT2": ["225/45R18", "225/40R19 front/255/35R19 rear"]
+      },
+      "status": "MISMATCH",
+      "notes": "Stinger GT has staggered setup; 255/35R20 not standard OEM"
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "stinger",
+      "currentTireSizes": ["225/45R18", "255/35R19", "255/35R20"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "GT-Line": "225/45R18",
+        "GT1": ["225/45R18", "225/40R19 front/255/35R19 rear"],
+        "GT2": ["225/45R18", "225/40R19 front/255/35R19 rear"]
+      },
+      "status": "MISMATCH",
+      "notes": "Stinger GT has staggered setup; 255/35R20 not standard OEM"
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "stinger",
+      "currentTireSizes": ["225/45R18", "255/35R19", "255/35R20"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "GT-Line": "225/45R18",
+        "GT1": ["225/45R18", "225/40R19 front/255/35R19 rear"],
+        "GT2": ["225/45R18", "225/40R19 front/255/35R19 rear"]
+      },
+      "status": "MISMATCH",
+      "notes": "Stinger GT has staggered setup; 255/35R20 not standard OEM"
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "stinger",
+      "currentTireSizes": ["225/45ZR18", "225/40ZR19", "255/35ZR19", "225/50ZR17"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "GT-Line": "225/45R18",
+        "GT1": ["225/45R18", "225/40R19 front/255/35R19 rear"],
+        "GT2": ["225/45R18", "225/40R19 front/255/35R19 rear"]
+      },
+      "status": "MISMATCH",
+      "notes": "225/50ZR17 not standard OEM; ZR speed ratings equivalent"
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "stinger",
+      "currentTireSizes": ["225/45R18", "255/35R19", "255/35R20"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "GT-Line": "225/45R18",
+        "GT": ["225/45R18", "225/40R19 front/255/35R19 rear"],
+        "GT1": ["225/45R18", "225/40R19 front/255/35R19 rear"],
+        "GT2": ["225/45R18", "225/40R19 front/255/35R19 rear"]
+      },
+      "status": "MISMATCH",
+      "notes": "Stinger GT has staggered setup; 255/35R20 not standard OEM"
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "stinger",
+      "currentTireSizes": ["225/45R18", "255/35R19", "255/35R20"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "2.0L": "225/45R18",
+        "Premium": "225/45R18",
+        "GT": ["225/45R18", "225/40R19 front/255/35R19 rear"],
+        "GT1": ["225/45R18", "225/40R19 front/255/35R19 rear"],
+        "GT2": ["225/45R18", "225/40R19 front/255/35R19 rear"]
+      },
+      "status": "MISMATCH",
+      "notes": "Stinger GT has staggered setup; 255/35R20 not standard OEM; front 225/40R19 missing from current"
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "stinger",
+      "currentTireSizes": ["225/45R18", "255/35R19", "255/35R20"],
+      "validatedTireSizes": ["225/45R18", "225/40R19", "255/35R19"],
+      "trims": {
+        "Base": "225/45R18",
+        "GT": ["225/45R18", "225/40R19 front/255/35R19 rear"],
+        "GT1": ["225/45R18", "225/40R19 front/255/35R19 rear"],
+        "GT2": ["225/45R18", "225/40R19 front/255/35R19 rear"]
+      },
+      "status": "MISMATCH",
+      "notes": "Stinger GT has staggered setup; 255/35R20 not standard OEM; front 225/40R19 missing from current"
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "stinger",
+      "currentTireSizes": ["225/45R18", "255/35R19", "255/35R20"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_SOLD_US",
+      "notes": "Stinger not sold in US until 2018 model year"
+    },
+    {
+      "year": 2026,
+      "make": "kia",
+      "model": "telluride",
+      "currentTireSizes": ["245/60R18", "245/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "LX": "245/60R18",
+        "S": "245/50R20",
+        "EX": "245/50R20",
+        "SX": "245/50R20",
+        "SX Prestige": "245/50R20",
+        "X-Line": "245/50R20",
+        "X-Pro": "245/60R18"
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed"
+    },
+    {
+      "year": 2025,
+      "make": "kia",
+      "model": "telluride",
+      "currentTireSizes": ["245/60R18", "245/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "LX": "245/60R18",
+        "S": "245/50R20",
+        "EX": "245/50R20",
+        "SX": "245/50R20",
+        "SX Prestige": "245/50R20",
+        "X-Line": "245/50R20",
+        "X-Pro": "245/60R18"
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed"
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "telluride",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45ZR21", "245/55R19"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "LX": "245/60R18",
+        "S": "245/50R20",
+        "EX": "245/50R20",
+        "EX X-Line": "245/50R20",
+        "SX": "245/50R20",
+        "SX Prestige": "245/50R20",
+        "SX Prestige X-Line": "245/50R20",
+        "SX Prestige X-Pro": "245/50R20",
+        "SX X-Line": "245/50R20",
+        "SX X-Pro": "245/60R18"
+      },
+      "status": "MISMATCH",
+      "notes": "255/45ZR21 and 245/55R19 not standard OEM sizes"
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "telluride",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45ZR21", "245/55R19"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "LX": "245/60R18",
+        "S": "245/50R20",
+        "EX": "245/50R20",
+        "EX X-Line": "245/50R20",
+        "SX": "245/50R20",
+        "SX Prestige": "245/50R20",
+        "SX Prestige X-Line": "245/50R20",
+        "SX Prestige X-Pro": "245/50R20",
+        "SX X-Line": "245/50R20",
+        "SX X-Pro": "245/60R18"
+      },
+      "status": "MISMATCH",
+      "notes": "255/45ZR21 and 245/55R19 not standard OEM sizes"
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "telluride",
+      "currentTireSizes": ["245/60R18", "245/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "LX": "245/60R18",
+        "S": "245/50R20",
+        "EX": ["245/60R18", "245/50R20"],
+        "SX": "245/50R20"
+      },
+      "status": "VALID",
+      "notes": "All sizes confirmed"
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "telluride",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45ZR21", "245/55R19"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "LX": "245/60R18",
+        "S": "245/50R20",
+        "EX": ["245/60R18", "245/50R20"],
+        "SX": "245/50R20"
+      },
+      "status": "MISMATCH",
+      "notes": "DUPLICATE ENTRY - 255/45ZR21 and 245/55R19 not standard OEM"
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "telluride",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45ZR21", "245/55R19"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "LX": "245/60R18",
+        "S": "245/50R20",
+        "EX": ["245/60R18", "245/50R20"],
+        "SX": "245/50R20"
+      },
+      "status": "MISMATCH",
+      "notes": "255/45ZR21 and 245/55R19 not standard OEM sizes"
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "telluride",
+      "currentTireSizes": ["245/60R18", "245/50R20", "255/45ZR21", "245/55R19"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "LX": "245/60R18",
+        "S": "245/50R20",
+        "EX": ["245/60R18", "245/50R20"],
+        "SX": "245/50R20"
+      },
+      "status": "MISMATCH",
+      "notes": "255/45ZR21 and 245/55R19 not standard OEM sizes"
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "telluride",
+      "currentTireSizes": ["245/65R18", "245/60R20"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NOT_SOLD_US",
+      "notes": "Telluride not sold in US until 2020 model year (2019 was concept/pre-production)"
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "tonic",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Stonic (Tonic) not sold in US market - European/Asian model"
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "tonic",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Stonic (Tonic) not sold in US market - European/Asian model"
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "tonic",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Stonic (Tonic) not sold in US market - European/Asian model"
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "tonic",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Stonic (Tonic) not sold in US market - European/Asian model"
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "vigato",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Vigato not sold in US market - international model"
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "visto",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Visto not sold in US market - Korean domestic/Asian model"
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "visto",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Visto not sold in US market - Korean domestic/Asian model"
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "visto",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Visto not sold in US market - Korean domestic/Asian model"
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "visto",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Visto not sold in US market - Korean domestic/Asian model"
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "visto",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "Visto not sold in US market - Korean domestic/Asian model"
+    },
+    {
+      "year": 2006,
+      "make": "kia",
+      "model": "x-trek",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "X-Trek not sold in US market - international model"
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "x-trek",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "X-Trek not sold in US market - international model"
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "x-trek",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "NO_DATA",
+      "notes": "X-Trek not sold in US market - international model"
+    }
+  ],
+  "summary": {
+    "valid": 12,
+    "mismatch": 36,
+    "noData": 19,
+    "notSoldUS": 8,
+    "missingData": 5,
+    "total": 75,
+    "issuesFound": [
+      "Kia Soul 2010-2013: Current DB has wrong sizes (2014+ sizes applied to earlier years)",
+      "Kia Sportage 2005-2010: 235/60R17 should be 235/60R16 or 235/55R17",
+      "Kia Sportage 2011-2016: 225/55R18 should be 235/55R18",
+      "Kia Sportage 2023-2026: Many non-OEM sizes listed (255/45R19, 255/50R19, 255/45R20)",
+      "Kia Stinger all years: Missing staggered front size 225/40R19; 255/35R20 not standard OEM",
+      "Kia Telluride 2020-2024: 255/45ZR21 and 245/55R19 not standard OEM sizes",
+      "Multiple non-US models in database (Tonic, Vigato, Visto, X-Trek, Spectra-Wing)",
+      "Kia Soul 2008-2009 and Stinger 2017 did not exist in US market"
+    ]
+  }
+}

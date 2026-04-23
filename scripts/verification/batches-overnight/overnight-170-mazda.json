@@ -1,0 +1,2806 @@
+[
+  {
+    "id": "f56216e2-07c5-4370-85c4-c1eaccf67d40",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7f88fb6d-0990-44d5-8b98-fa316f861da2",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "8fc6ec10-b2a6-4924-9fe8-ecc7f808a208",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Signature",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "ccd6e883-1595-4db5-a4f9-fc7dad2880fe",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "dc504d0e-d11a-4249-ae63-5f4a892c7738",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "39b7e953-23c2-4d64-9ec1-53233a5bf67c",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "70889ac3-a42c-46f2-b861-bc374b60e6da",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "9f869f24-7c41-4b24-8be6-c6473d41d262",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "5ce33ed6-28d2-4dbe-8d83-676e59d9cad7",
+    "year": 2026,
+    "make": "mazda",
+    "model": "cx-5",
+    "trim": "Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "generation_inherit_2025"
+  },
+  {
+    "id": "7929de7e-9c93-4821-b778-3b7d6c37c953",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ad44e2a3-bbd2-427d-95f1-e8b303ac3243",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Preferred Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20",
+      "245/50R19",
+      "245/45ZR20",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d9cedacd-76c5-487c-b6c1-275a608e1cdd",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20",
+      "245/50R19",
+      "245/45ZR20",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2cf93447-c451-4984-8673-3e92d5f9f707",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo Meridian Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20",
+      "245/50R19",
+      "245/45ZR20",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7ec38ba4-d2a1-442a-8140-7f581ed431f1",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20",
+      "245/50R19",
+      "245/45ZR20",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d6cc1e00-95bb-4b73-a0fc-97f5811dd9d6",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20",
+      "245/50R19",
+      "245/45ZR20",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "9f81bfa9-4fa1-4e79-b5ee-745f371c1f23",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20",
+      "245/50R19",
+      "245/45ZR20",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "1fd42529-28c1-4c43-b6da-a79be6b08688",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20",
+      "245/50R19",
+      "245/45ZR20",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "47111c88-469d-45d7-8a92-fddcaaf719f3",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Select",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20",
+      "245/50R19",
+      "245/45ZR20",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c8a482e3-dd66-4bd0-8f8c-ddf23f03980c",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20",
+      "245/50R19",
+      "245/45ZR20",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "946db6b7-1d87-4f40-b124-867d7ac36c65",
+    "year": 2023,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20",
+      "245/50R19",
+      "245/45ZR20",
+      "225/60R18"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "8f9b2328-2c77-4188-907d-6b75d257e09a",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Preferred Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "83ed26f0-5906-40c1-8466-be7e66472a4a",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "184f383b-a0f5-459a-85ca-ce33cbe7203a",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "71d429ef-4b79-4272-8435-c81e8a00e971",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Select",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "88b93c38-8421-4b5e-a960-d292f1639f68",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ff64f196-021d-48b8-9a82-ede6dbe9015e",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo Meridian Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2e8d5829-c840-4624-bee9-46f03425bded",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "34579291-0c99-486c-a44c-6315dc636cfd",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "eee5fd71-48ec-4ee0-ab32-a9e6cd1e940c",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f0d1415b-a22e-4f8d-86f4-90e7bc4673cd",
+    "year": 2024,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d5c8e09d-3349-4206-851e-4e94c580fd3c",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Select",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d12ec0db-e56c-484c-83ec-20ad7e387a91",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "12a7fedf-f876-42fd-b8e3-a992b113dce9",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "969fc693-1e26-42ac-9a60-d2f524326a77",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo Premium Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "49381391-33ad-4801-88e3-36747077061b",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "43fb3dd5-5d1a-4d36-a2bc-b9761d0bbb81",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Preferred Plus",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "93831f6e-866c-4e82-ba9e-578da7607bfb",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Preferred",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "42d4bab6-0f19-4bdd-a0fd-a7722ef1b36f",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "S Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ef7fb7a4-9c13-40fa-b787-b6782d1066e6",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "59bd01a7-f9e3-48b5-9c3a-39cf659d4d59",
+    "year": 2025,
+    "make": "mazda",
+    "model": "cx-50",
+    "trim": "Turbo Meridian Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/55R19",
+      "235/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "12b5f67f-962f-4762-9508-5bb23163ee7f",
+    "year": 2006,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "255/50R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "63940dc1-086b-49d2-8d6d-5b638b5d69ac",
+    "year": 2014,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "245/60R18",
+      "245/50R20",
+      "245/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "37ac5e5b-faee-41fa-863c-8fbf0262da9a",
+    "year": 2016,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Grand Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "1b89845d-cf85-413c-81ac-40db17ee0d6d",
+    "year": 2016,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "dfe3e954-6216-4783-a6c3-38cf0c26320d",
+    "year": 2016,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2a3d2bf3-aa31-4421-bea0-d9bc98d48f52",
+    "year": 2016,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Signature",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4fc9d62c-524f-403a-b58b-10678aeb767c",
+    "year": 2016,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2aae026d-6a1d-437e-96fb-91e0be6c5805",
+    "year": 2017,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c019e152-04f4-4e82-80b8-f5618ca9a0fc",
+    "year": 2017,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Grand Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "baea0023-dcc9-4a37-b58a-ed2e82e3d128",
+    "year": 2017,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "8c98f576-97cb-4a5f-9cba-e5e641717470",
+    "year": 2017,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "c834c837-b79a-413f-a8ac-d2e839586113",
+    "year": 2017,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Signature",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "96939534-50cd-4de1-b16d-bc80d7ebce65",
+    "year": 2018,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Signature",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "cef7b583-836e-47d7-bfdf-a04671578833",
+    "year": 2018,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Grand Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "d06fa64b-3135-42c5-9712-c010a9a21e5c",
+    "year": 2018,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2b541cf2-442b-4fcb-96b5-d2e3d41fbbef",
+    "year": 2018,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "df8d245e-0bf5-4260-a91b-3b75e5739393",
+    "year": 2018,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "37a55adc-76aa-4c5e-9066-beed51d2f729",
+    "year": 2019,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "ebbd2399-6be7-4d49-be0b-7aab0a205630",
+    "year": 2019,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Signature",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "f428607b-c9bd-4d9c-ae5f-5508d0ab1a29",
+    "year": 2019,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "026365c6-afbf-4470-88b7-22b18b80ddff",
+    "year": 2019,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Grand Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "7ba33ce3-5cee-4b65-81f7-927c85702f85",
+    "year": 2019,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "6b7e0b31-8f7c-4357-b7ed-f6f560fb28cb",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Signature",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2bf990e7-5a31-462e-9f15-f36a7701afeb",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "2257e8b3-f537-45e7-a2a4-32d52423fdd1",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "349b669a-9f5a-4994-98f8-9ae30b20cf11",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Grand Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "e49b530e-68ff-470b-b637-ceae4ff40bf2",
+    "year": 2020,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "60d6a303-b915-45ae-8e3f-f964b39c69d0",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "0e77af31-b23f-4cdb-8b09-badd752ea268",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "a633381c-6ffc-4359-ab94-bb5ed4acfcc3",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Grand Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "95f45587-2868-4b4d-8eb9-b778cbdf075b",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Signature",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "4a9392a0-32fa-48f8-866c-3f77f5acc368",
+    "year": 2021,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "b1cc148f-4a2b-4096-8c47-1af1b1f9bc2c",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "5f34319d-3c47-4f06-bdab-603681ead12d",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Grand Touring",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  },
+  {
+    "id": "71c4e3e9-0262-4154-8cc0-c36b74befc60",
+    "year": 2022,
+    "make": "mazda",
+    "model": "cx-9",
+    "trim": "Carbon Edition",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/60R18",
+      "255/50R20"
+    ],
+    "source": "generation-baseline"
+  }
+]

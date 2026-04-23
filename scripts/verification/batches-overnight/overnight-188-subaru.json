@@ -1,0 +1,2658 @@
+[
+  {
+    "id": "0420acc1-d439-47d3-a182-70061df0535d",
+    "year": 2022,
+    "make": "subaru",
+    "model": "impreza",
+    "trim": "Base, Premium, Sport, Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "205/50R17",
+      "225/40R18",
+      "235/35ZR19"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "d58ae189-6f2f-4fbc-9d97-c35a7e72b60b",
+    "year": 2023,
+    "make": "subaru",
+    "model": "impreza",
+    "trim": "Base, Premium, Sport, Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "205/50R17",
+      "225/40R18",
+      "235/35ZR19"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "a785ff9f-7de1-419b-9973-4e9b0f835e0d",
+    "year": 2024,
+    "make": "subaru",
+    "model": "impreza",
+    "trim": "Base, Premium, Sport, Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "205/50R17",
+      "225/40R18"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "8294682b-6b09-47e5-b909-d5a0e9f17f9f",
+    "year": 2025,
+    "make": "subaru",
+    "model": "impreza",
+    "trim": "Base, Premium, Sport, Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "205/50R17",
+      "225/40R18"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "06e51a22-ab9a-4aaf-94b3-bc3dae2ad1b5",
+    "year": 2026,
+    "make": "subaru",
+    "model": "impreza",
+    "trim": "Base, Premium, Sport, Limited",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "205/50R17",
+      "225/40R18"
+    ],
+    "source": "manual_seed_spec"
+  },
+  {
+    "id": "ff1d5703-8257-4d4e-8c81-83ecd9eb957e",
+    "year": 2014,
+    "make": "subaru",
+    "model": "impreza-wrx-sti",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": "[{\"diameter\":18,\"position\":\"both\"},{\"diameter\":19,\"position\":\"both\"}]",
+    "currentTireSizes": [
+      "245/40R18",
+      "245/35R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "0de4dda3-f498-44b5-b00e-1d9403ec1be7",
+    "year": 1995,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "195/60R15",
+      "205/60R15",
+      "205/55R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5beab260-d183-4a07-89fa-f5f987398995",
+    "year": 1996,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "195/60R15",
+      "205/60R15",
+      "205/55R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "945b8b3a-4831-418c-8f6b-245103f72e17",
+    "year": 1997,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "195/60R15",
+      "205/60R15",
+      "205/55R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "bd4612e8-fbdd-4664-be51-5b1c3c856ea8",
+    "year": 1998,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "195/60R15",
+      "205/60R15",
+      "205/55R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "416af167-bdf4-40e1-bc8e-5e308a331cca",
+    "year": 1999,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "195/60R15",
+      "205/60R15",
+      "205/55R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "593115e3-87f8-4252-91b6-0f20f8373b08",
+    "year": 2000,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8d7985c0-0ff1-4040-aab2-97569c8dedbc",
+    "year": 2001,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7b319261-8569-4c7f-9c25-802e35e1e3e4",
+    "year": 2002,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a7b3453a-e799-4df6-9f29-49c1aa88f655",
+    "year": 2003,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "12e7bf81-f9a8-46d2-be9c-ff3c9cef89ec",
+    "year": 2004,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "83fdddde-44b9-4ae7-ab61-a0e13b2751ee",
+    "year": 2005,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "bd40a702-a526-4c1f-bfaf-7a6fd1e4ddc4",
+    "year": 2006,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "aeaea602-6279-48f1-9fc7-5f5c753cbcef",
+    "year": 2007,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "60d10b7d-3de7-4361-a739-b4767e373fbb",
+    "year": 2008,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "749c417f-c569-4413-bd75-010b46434866",
+    "year": 2009,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17",
+      "225/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "d248d6fc-940a-483b-9c28-9c8a5ace88af",
+    "year": 2010,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "61361d56-9ad6-4360-84b1-059a7c968024",
+    "year": 2011,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b16df30e-96d5-48df-b28f-379ea30e69e3",
+    "year": 2012,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "215/45ZR18",
+      "235/35ZR19",
+      "225/45ZR18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e240af0a-9e65-4ac9-90d3-20b6a88af523",
+    "year": 2013,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "07bd7a8d-8d1f-443b-8fc0-6fd6a648fa73",
+    "year": 2014,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "215/45ZR18",
+      "235/35ZR19",
+      "225/45ZR18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "33278422-6edd-47af-8e3d-7bf67beeaf97",
+    "year": 2015,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "60ad2b5e-15aa-4467-aadf-c4a0836eadcf",
+    "year": 2016,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a3463727-e751-4c09-875a-b642229e3219",
+    "year": 2017,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ad74d976-1fe3-4e8e-8f9d-16da7ad694ee",
+    "year": 2018,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "8d4cc3a8-ce79-426b-a1c4-633b2bcbd0fe",
+    "year": 2019,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18",
+      "245/50R17",
+      "245/45R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "64444aeb-1b3a-4e99-aa17-e248e3df69d3",
+    "year": 2020,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "fe55333c-3c23-4af1-800f-ecce18c22011",
+    "year": 2021,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "1ee65189-0f86-4f78-b1cf-c216efdcc6c3",
+    "year": 2022,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "28703915-4266-4d0c-8ffd-c6efd181798a",
+    "year": 2023,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "2650056f-126e-4042-a08f-182f9db3fa45",
+    "year": 2024,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "4eb4af2a-5cd8-4cf8-8c0d-ef9d75e8c6fc",
+    "year": 2025,
+    "make": "subaru",
+    "model": "legacy",
+    "trim": "Base, Premium, Sport, Limited, Touring XT",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/55R17",
+      "225/50R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "450583bc-773d-457c-a1ae-943b72f8d6e2",
+    "year": 1995,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f660298c-8ad5-4f7f-82ee-d9d3af094a88",
+    "year": 1996,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "5a5b7b75-74cf-45c7-892b-5a9b4a1b86d3",
+    "year": 1997,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "25f31190-196e-42cc-a175-039f6ee24a5f",
+    "year": 1998,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b7a3cedd-6eda-4951-8ddc-393147fb66dc",
+    "year": 1999,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/70R15",
+      "215/60R16"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "a86eb2ef-a714-4729-86ad-6ead5d52cc21",
+    "year": 2000,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/55R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f4bbb0a5-35ba-4eb2-a7c3-b3907e1690d4",
+    "year": 2001,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/55R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "94678459-e77d-40c6-ba6e-95492c3416ea",
+    "year": 2002,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/55R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "9ad1dfbb-5db2-404c-9a6e-5f3a010a6e9d",
+    "year": 2003,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/55R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "95446849-b4ce-4fde-8a6e-32f8e2a2c059",
+    "year": 2004,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/60R16",
+      "225/55R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f23628d6-a5f3-4a3a-9248-58bdd89e6c68",
+    "year": 2005,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/55R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ad5dd795-2e84-4bb1-97dc-603ab2b9dcdd",
+    "year": 2006,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/55R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b4ef094b-c7c3-41cd-b679-32fd511ed513",
+    "year": 2007,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/55R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "c28b5ace-9038-4465-9488-fde4ad4d4280",
+    "year": 2008,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/55R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "bc27a73f-abfe-43ab-8fff-3900dd2cf32c",
+    "year": 2009,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R16",
+      "225/55R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "022aa438-e595-480d-8c16-0225f0b68e24",
+    "year": 2010,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "215/70R16",
+      "225/60R17",
+      "225/55R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "121f6688-afd7-43a0-8684-5dc8c1a633b7",
+    "year": 2011,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "215/70R16",
+      "225/60R17",
+      "225/55R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "da448f75-efcd-499d-b299-75833a0fad4c",
+    "year": 2012,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "215/70R16",
+      "225/60R17",
+      "225/55R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "be5d5d7e-1d48-4db9-9cc1-1f4c890de04b",
+    "year": 2013,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "215/70R16",
+      "225/60R17",
+      "225/55R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e86057af-eb6e-4c87-9b2c-275b83ce89ab",
+    "year": 2014,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "215/70R16",
+      "225/60R17",
+      "225/55R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "0889b7ff-dd26-4b2b-b75c-b6c047873da1",
+    "year": 2015,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "2.5i Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/60R17",
+      "245/55R18"
+    ],
+    "source": "cache-import-fix"
+  },
+  {
+    "id": "cf2b09c6-57ca-40a3-a85e-daf3da1abbdc",
+    "year": 2016,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/60R17",
+      "245/55R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "9ecdcc37-52fe-4bc1-985f-693b5529676c",
+    "year": 2017,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "95d35828-80a4-438b-9aec-c9796cab5bbe",
+    "year": 2018,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "f1ff26a6-9f7d-4d07-9871-878df87ff7b2",
+    "year": 2019,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/60R17",
+      "245/55R18"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "b07cea0f-2a0b-49f3-a858-f143b94c99a6",
+    "year": 2020,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "d4a2a041-82df-435f-9d04-84332c811079",
+    "year": 2020,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Premium",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/60R17",
+      "245/55R18"
+    ],
+    "source": "wheelsize"
+  },
+  {
+    "id": "6476b78a-62ad-4076-9775-f7f848cafcd5",
+    "year": 2021,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "610656a7-2b6a-4ef6-89d0-42ea836e39ef",
+    "year": 2022,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "e9bfaa4a-0fc9-41d8-a424-186bf7568a4c",
+    "year": 2023,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "74df3ae8-71a3-4152-8a0f-5d4c343765f3",
+    "year": 2024,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "7528f997-e56d-40cf-9a54-f54ac674c1e0",
+    "year": 2025,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "225/65R17"
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 51,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "245/60R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 48,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "245/55R18"
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "cd996933-6241-4913-9f79-c5eb050cc1c4",
+    "year": 2026,
+    "make": "subaru",
+    "model": "outback",
+    "trim": "Base, Premium, Limited, Touring, Onyx Edition XT, Wilderness",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "245/65R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "ebdf66ac-5c76-4008-80ca-374414d9610b",
+    "year": 2022,
+    "make": "subaru",
+    "model": "solterra",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "235/50R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "5e393bc5-f08a-46a2-b8b3-4292db6fe8a0",
+    "year": 2002,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "Base, Premium, Limited, GT",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "225/45R17"
+    ],
+    "source": "cache-import"
+  },
+  {
+    "id": "19a7d8e2-be56-4de8-8343-d92d49989a5c",
+    "year": 2002,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7e71079b-a707-44d0-80a5-30213de4f4a7",
+    "year": 2002,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX STI",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9ad0cae0-b362-4777-96ef-aac41a45c74a",
+    "year": 2003,
+    "make": "subaru",
+    "model": "wrx",
+    "trim": "WRX",
+    "currentBoltPattern": "5x100",
+    "currentHubBore": "56.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "235/45R17",
+      "245/40R18"
+    ],
+    "source": "generation_inherit"
+  }
+]

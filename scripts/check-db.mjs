@@ -1,58 +1,33 @@
-import pg from 'pg';
-import dotenv from 'dotenv';
-dotenv.config({ path: '.env.local' });
+import postgres from "postgres";
+import dotenv from "dotenv";
 
-const pool = new pg.Pool({
-  connectionString: process.env.POSTGRES_URL,
-  ssl: { rejectUnauthorized: false }
-});
+dotenv.config({ path: ".env.local" });
 
-async function main() {
-  // Get schema
-  const schema = await pool.query(`
-    SELECT column_name, data_type 
-    FROM information_schema.columns 
-    WHERE table_name = 'accessories' 
-    ORDER BY ordinal_position
-  `);
-  console.log('=== ACCESSORIES TABLE SCHEMA ===');
-  schema.rows.forEach(r => console.log(`  ${r.column_name}: ${r.data_type}`));
+const sql = postgres(process.env.POSTGRES_URL);
 
-  // Get stats
-  const stats = await pool.query(`
-    SELECT 
-      COUNT(*) as total,
-      COUNT(image_url) as with_image,
-      COUNT(NULLIF(image_url, '')) as with_image_nonempty,
-      COUNT(brand) as with_brand,
-      COUNT(category) as with_category
-    FROM accessories
-  `);
-  console.log('\n=== STATS ===');
-  console.log(stats.rows[0]);
+const count = await sql`SELECT COUNT(*) as total FROM vehicle_fitments`;
+console.log('Total rows in vehicle_fitments:', count[0].total);
 
-  // Category breakdown
-  const cats = await pool.query(`
-    SELECT category, COUNT(*) as count 
-    FROM accessories 
-    GROUP BY category 
-    ORDER BY count DESC
-  `);
-  console.log('\n=== CATEGORIES ===');
-  cats.rows.forEach(r => console.log(`  ${r.category}: ${r.count}`));
+const makes = await sql`SELECT DISTINCT make, COUNT(*) as cnt FROM vehicle_fitments GROUP BY make ORDER BY cnt DESC LIMIT 20`;
+console.log('\nTop makes:');
+makes.forEach(m => console.log(`  ${m.make}: ${m.cnt}`));
 
-  // Sample of items with images vs without
-  const sample = await pool.query(`
-    SELECT sku, title, category, 
-           CASE WHEN image_url IS NOT NULL AND image_url != '' THEN 'YES' ELSE 'NO' END as has_image
-    FROM accessories 
-    ORDER BY sku 
-    LIMIT 10
-  `);
-  console.log('\n=== SAMPLE (first 10) ===');
-  sample.rows.forEach(r => console.log(`  ${r.sku}: ${r.has_image} | ${r.category} | ${r.title?.substring(0,40)}`));
+const samples = await sql`SELECT year, make, model FROM vehicle_fitments ORDER BY make, model LIMIT 15`;
+console.log('\nSample rows:');
+samples.forEach(s => console.log(`  ${s.year} ${s.make} ${s.model}`));
 
-  await pool.end();
+// Check for any of the specific models we tried to delete
+const testModels = await sql`
+  SELECT DISTINCT make, model, COUNT(*) as cnt 
+  FROM vehicle_fitments 
+  WHERE model IN ('A7L', 'Q2L e-tron', 'Mufasa', 'Aspire', 'NSX', 'Tuscani', 'JM', 'NF')
+  GROUP BY make, model
+`;
+console.log('\nChecking for specific non-US models:');
+if (testModels.length === 0) {
+  console.log('  None found - database may already be clean or use different source');
+} else {
+  testModels.forEach(m => console.log(`  ${m.make} ${m.model}: ${m.cnt}`));
 }
 
-main().catch(e => { console.error(e); process.exit(1); });
+await sql.end();

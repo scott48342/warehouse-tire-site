@@ -1,0 +1,875 @@
+{
+  "batchId": "102",
+  "processedAt": "2026-04-21T22:22:00Z",
+  "vehicleCount": 75,
+  "source": "tiresize.com, goodyear.com",
+  "results": [
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W205 (2015-2021)",
+      "trims": [
+        {"trim": "C300 Base/Luxury", "tireSizes": ["225/50R17", "225/45R18"]},
+        {"trim": "C300 Sport Package", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true},
+        {"trim": "C350e", "tireSizes": ["225/50R17", "225/45R18"]},
+        {"trim": "C450 AMG", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "issues": ["205/60R16 not OEM for W205", "285/30R19 not OEM", "255/30R20 and 285/25R20 are aftermarket sizes"]
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W205 (2015-2021)",
+      "trims": [
+        {"trim": "C300 4MATIC Base", "tireSizes": ["225/50R17", "225/45R18"]},
+        {"trim": "C300 4MATIC Sport Package", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true},
+        {"trim": "C400 4MATIC", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "245/35R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "245/35R19"],
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "issues": ["205/60R16 not OEM for W205 generation"]
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "C250 Sedan Luxury", "tireSizes": ["225/45R17"]},
+        {"trim": "C250 Sedan Sport", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C250 Coupe", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C300 4MATIC Luxury", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 4MATIC Sport", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C350 4MATIC", "tireSizes": ["225/40R18 (F)", "255/35R18 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19"],
+      "issues": ["205/55R16 is base size for non-US markets", "225/35R19 and 255/30R19 not standard OEM"]
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "C250 Sedan Luxury", "tireSizes": ["225/45R17"]},
+        {"trim": "C250 Sedan Sport", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C300 4MATIC Luxury", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 4MATIC Sport", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19"],
+      "issues": ["205/55R16 possible for base markets", "19-inch sizes not standard OEM"]
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "C250 Sedan Luxury", "tireSizes": ["225/45R17"]},
+        {"trim": "C250 Sedan Sport", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C300 4MATIC Sedan Luxury", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 4MATIC Sedan Sport", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19"],
+      "issues": ["205/55R16 possible for base markets", "19-inch sizes not standard OEM"]
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "C300 Luxury Sedan", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 4MATIC Luxury Sedan", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C300 4MATIC Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C350 Sport", "tireSizes": ["225/40R18 (F)", "255/35R18 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19"],
+      "issues": ["205/55R16 possible for base markets", "19-inch sizes not standard OEM"]
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "C300 Luxury Sedan", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 4MATIC Luxury Sedan", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C300 4MATIC Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C350 Sport", "tireSizes": ["225/40R18 (F)", "255/35R18 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19"],
+      "issues": ["205/55R16 possible for base markets", "19-inch sizes not standard OEM"]
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "C300 Luxury Sedan", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 4MATIC Luxury Sedan", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C300 4MATIC Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C350 Sport", "tireSizes": ["225/40R18 (F)", "255/35R18 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19"],
+      "issues": ["205/55R16 possible for base markets", "19-inch sizes not standard OEM"]
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "C300 Luxury Sedan", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 4MATIC Luxury Sedan", "tireSizes": ["225/45R17"]},
+        {"trim": "C300 Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C300 4MATIC Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18 (F)", "255/35R18 (R)"], "staggered": true},
+        {"trim": "C350 Sport", "tireSizes": ["225/40R18 (F)", "255/35R18 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "currentTireSizes": ["205/55R16", "225/45R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19"],
+      "issues": ["205/55R16 possible for base markets", "19-inch sizes not standard OEM"]
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W203 (2001-2007)",
+      "trims": [
+        {"trim": "C230 Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)", "225/40R18"], "staggered": true},
+        {"trim": "C280 Luxury", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C280 4MATIC", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C350 Sport", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18"],
+      "currentTireSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "issues": ["255/35R18 may be optional package or aftermarket"]
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W203 (2001-2007)",
+      "trims": [
+        {"trim": "C230 Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)"], "staggered": true},
+        {"trim": "C280 Luxury", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C280 4MATIC", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C350 Sport", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17"],
+      "currentTireSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "issues": ["18-inch sizes may be optional package"]
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W203 (2001-2007)",
+      "trims": [
+        {"trim": "C230 Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)"], "staggered": true},
+        {"trim": "C230 Sport Coupe", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)"], "staggered": true},
+        {"trim": "C240 Sedan/Wagon", "tireSizes": ["205/55R16"]},
+        {"trim": "C240 4MATIC", "tireSizes": ["205/55R16"]},
+        {"trim": "C320 Sedan", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C320 4MATIC", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C320 Sport", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17"],
+      "currentTireSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "issues": ["18-inch sizes may be optional package"]
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W203 (2001-2007)",
+      "trims": [
+        {"trim": "C230 Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)"], "staggered": true},
+        {"trim": "C230 Sport Coupe", "tireSizes": ["225/45R17"]},
+        {"trim": "C240 Sedan/Wagon", "tireSizes": ["205/55R16"]},
+        {"trim": "C240 4MATIC", "tireSizes": ["205/55R16"]},
+        {"trim": "C320 Sedan", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C320 4MATIC", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C320 4MATIC Sport", "tireSizes": ["225/45R17"]},
+        {"trim": "C320 Sport Sedan", "tireSizes": ["225/45R17 (F)", "245/40R17 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17"],
+      "currentTireSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "issues": ["18-inch sizes may be optional package"]
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W203 (2001-2007)",
+      "trims": [
+        {"trim": "C230 Coupe", "tireSizes": ["205/55R16", "225/45R17"]},
+        {"trim": "C230 Sport Sedan", "tireSizes": ["225/45R17"]},
+        {"trim": "C240 Sedan/Wagon", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C240 4MATIC", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C320 Sedan/Wagon", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C320 4MATIC", "tireSizes": ["205/55R16", "225/50R16"]},
+        {"trim": "C320 4MATIC Sport", "tireSizes": ["225/45R17"]},
+        {"trim": "C320 Coupe", "tireSizes": ["205/55R16", "225/45R17"]},
+        {"trim": "C320 Sport Sedan", "tireSizes": ["225/45R17"]}
+      ],
+      "validatedSizes": ["205/55R16", "225/50R16", "225/45R17"],
+      "currentTireSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "issues": ["245/40R17 and 18-inch sizes may be optional packages or aftermarket"]
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W203 (2001-2007)",
+      "trims": [
+        {"trim": "C230 Coupe", "tireSizes": ["205/55R16", "225/45R17"]},
+        {"trim": "C240 Sedan", "tireSizes": ["205/55R16"]},
+        {"trim": "C240 Sedan Sport Package", "tireSizes": ["225/50R16"]},
+        {"trim": "C320 Sedan/Wagon", "tireSizes": ["205/55R16"]},
+        {"trim": "C320 Sedan Sport Package", "tireSizes": ["225/50R16"]}
+      ],
+      "validatedSizes": ["205/55R16", "225/50R16", "225/45R17"],
+      "currentTireSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "issues": ["17-inch staggered and 18-inch sizes may be aftermarket"]
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W203 (2001-2007)",
+      "trims": [
+        {"trim": "C240 Base", "tireSizes": ["205/55R16"]},
+        {"trim": "C240 Sport Package", "tireSizes": ["225/50R16"]},
+        {"trim": "C320 Base", "tireSizes": ["205/55R16"]},
+        {"trim": "C320 Sport Package", "tireSizes": ["225/50R16"]}
+      ],
+      "validatedSizes": ["205/55R16", "225/50R16"],
+      "currentTireSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "issues": ["17-inch and 18-inch sizes are aftermarket or later model year options"]
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "c-class",
+      "generation": "W202 (1994-2000)",
+      "trims": [
+        {"trim": "C230 Base", "tireSizes": ["205/60R15", "205/55R16"]},
+        {"trim": "C230 Sport/Special Edition", "tireSizes": ["205/55R16"]},
+        {"trim": "C280", "tireSizes": ["195/65R15", "205/55R16"]}
+      ],
+      "validatedSizes": ["195/65R15", "205/60R15", "205/55R16"],
+      "currentTireSizes": ["195/65R15", "205/60R15", "205/55R16", "225/50R16", "225/45R17"],
+      "issues": ["225/50R16 and 225/45R17 may be aftermarket"]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "c-class-all-terrain",
+      "generation": "S206 (2022-present)",
+      "trims": [
+        {"trim": "C200 4MATIC All-Terrain", "tireSizes": ["245/45R18"]},
+        {"trim": "C220d 4MATIC All-Terrain", "tireSizes": ["245/45R18"]},
+        {"trim": "C300 4MATIC All-Terrain", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["245/45R18"],
+      "currentTireSizes": [],
+      "issues": ["No current tire sizes in database - needs 245/45R18"]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "c-class-all-terrain",
+      "generation": "S206 (2022-present)",
+      "trims": [
+        {"trim": "C200 4MATIC All-Terrain", "tireSizes": ["245/45R18"]},
+        {"trim": "C220d 4MATIC All-Terrain", "tireSizes": ["245/45R18"]},
+        {"trim": "C300 4MATIC All-Terrain", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["245/45R18"],
+      "currentTireSizes": [],
+      "issues": ["No current tire sizes in database - needs 245/45R18"]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "c-class-all-terrain",
+      "generation": "S206 (2022-present)",
+      "trims": [
+        {"trim": "C200 4MATIC All-Terrain", "tireSizes": ["245/45R18"]},
+        {"trim": "C220d 4MATIC All-Terrain", "tireSizes": ["245/45R18"]},
+        {"trim": "C300 4MATIC All-Terrain", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["245/45R18"],
+      "currentTireSizes": [],
+      "issues": ["No current tire sizes in database - needs 245/45R18"]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class-all-terrain",
+      "generation": "S206 (2022-present)",
+      "trims": [
+        {"trim": "C200 4MATIC All-Terrain", "tireSizes": ["245/45R18"]},
+        {"trim": "C220d 4MATIC All-Terrain", "tireSizes": ["245/45R18"]},
+        {"trim": "C300 4MATIC All-Terrain", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["245/45R18"],
+      "currentTireSizes": [],
+      "issues": ["No current tire sizes in database - needs 245/45R18"]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class-all-terrain",
+      "generation": "S206 (2022-present)",
+      "trims": [
+        {"trim": "C200 4MATIC All-Terrain", "tireSizes": ["245/45R18"]},
+        {"trim": "C220d 4MATIC All-Terrain", "tireSizes": ["245/45R18"]},
+        {"trim": "C300 4MATIC All-Terrain", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["245/45R18"],
+      "currentTireSizes": [],
+      "issues": ["No current tire sizes in database - needs 245/45R18"]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W206 (2022-present)",
+      "trims": [
+        {"trim": "AMG C43 Sedan", "tireSizes": ["245/45R18", "245/40R19 (F)", "265/35R19 (R)", "245/35R20 (F)", "265/30R20 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["245/45R18", "245/40R19", "265/35R19", "245/35R20", "265/30R20"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["Current sizes incorrect for W206 - C43 uses 245mm+ front tires", "225/40R18 should be 245/45R18"]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W206 (2022-present)",
+      "trims": [
+        {"trim": "AMG C43 Sedan", "tireSizes": ["245/45R18", "245/40R19 (F)", "265/35R19 (R)", "245/35R20 (F)", "265/30R20 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["245/45R18", "245/40R19", "265/35R19", "245/35R20", "265/30R20"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["Current sizes incorrect for W206 - C43 uses 245mm+ front tires"]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W206 (2022-present)",
+      "trims": [
+        {"trim": "AMG C43 Sedan", "tireSizes": ["245/45R18", "245/40R19 (F)", "265/35R19 (R)", "245/35R20 (F)", "265/30R20 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["245/45R18", "245/40R19", "265/35R19", "245/35R20", "265/30R20"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["Current sizes incorrect for W206 - C43 uses 245mm+ front tires"]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W206 (2022-present)",
+      "trims": [
+        {"trim": "AMG C43 Sedan", "tireSizes": ["245/45R18", "245/40R19 (F)", "265/35R19 (R)", "245/35R20 (F)", "265/30R20 (R)"], "staggered": true},
+        {"trim": "AMG C43 Coupe/Cabriolet", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "245/45R18", "245/40R19", "265/35R19", "245/35R20", "265/30R20"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["Mixed generation - Coupe/Cabriolet uses W205 sizes, Sedan uses W206"]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W205/W206 transition",
+      "trims": [
+        {"trim": "AMG C43 Sedan (W206)", "tireSizes": ["245/45R18", "245/40R19 (F)", "265/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C43 Coupe/Cabriolet (W205)", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "245/45R18", "245/40R19", "265/35R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["Transition year - verify body style"]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W205 (2015-2021)",
+      "trims": [
+        {"trim": "AMG C43 Sedan", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C43 Coupe/Cabriolet", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Sedan", "tireSizes": ["245/40R18 (F)", "265/40R18 (R)", "245/35R19 (F)", "265/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Coupe/Cabriolet", "tireSizes": ["255/40R18 (F)", "285/35R18 (R)", "255/35R19 (F)", "285/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "265/40R18", "245/35R19", "265/35R19", "255/40R18", "285/35R18", "255/35R19", "285/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["255/30R20 not standard - C63 uses up to 285/30R19"]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W205 (2015-2021)",
+      "trims": [
+        {"trim": "AMG C43 Sedan/Coupe/Cabriolet", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Sedan", "tireSizes": ["245/40R18 (F)", "265/40R18 (R)", "245/35R19 (F)", "265/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Coupe/Cabriolet", "tireSizes": ["255/40R18 (F)", "285/35R18 (R)", "255/35R19 (F)", "285/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "265/40R18", "245/35R19", "265/35R19", "255/40R18", "285/35R18", "285/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["255/30R20 not standard OEM"]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W205 (2015-2021)",
+      "trims": [
+        {"trim": "AMG C43", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Sedan", "tireSizes": ["245/40R18 (F)", "265/40R18 (R)", "245/35R19 (F)", "265/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Coupe/Cabriolet", "tireSizes": ["255/40R18 (F)", "285/35R18 (R)", "255/35R19 (F)", "285/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "265/40R18", "245/35R19", "265/35R19", "255/40R18", "285/35R18", "285/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["255/30R20 not standard OEM"]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W205 (2015-2021)",
+      "trims": [
+        {"trim": "AMG C43", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Sedan", "tireSizes": ["245/40R18 (F)", "265/40R18 (R)", "245/35R19 (F)", "265/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Coupe/Cabriolet", "tireSizes": ["255/40R18 (F)", "285/35R18 (R)", "255/35R19 (F)", "285/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "265/40R18", "245/35R19", "265/35R19", "255/40R18", "285/35R18", "285/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["255/30R20 not standard OEM"]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W205 (2015-2021)",
+      "trims": [
+        {"trim": "AMG C43", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Sedan", "tireSizes": ["245/40R18 (F)", "265/40R18 (R)", "245/35R19 (F)", "265/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Coupe/Cabriolet", "tireSizes": ["255/40R18 (F)", "285/35R18 (R)", "255/35R19 (F)", "285/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "265/40R18", "245/35R19", "265/35R19", "255/40R18", "285/35R18", "285/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["255/30R20 not standard OEM"]
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W205 (2015-2021)",
+      "trims": [
+        {"trim": "AMG C450 (pre-C43 rename)", "tireSizes": ["225/45R18 (F)", "245/40R18 (R)", "225/40R19 (F)", "255/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Sedan", "tireSizes": ["245/40R18 (F)", "265/40R18 (R)", "245/35R19 (F)", "265/35R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Coupe Edition 507", "tireSizes": ["235/35R19 (F)", "255/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "265/40R18", "245/35R19", "265/35R19", "235/35R19", "255/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["255/30R20 not standard - C63 Coupe uses 255/30R19"]
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W204 (2008-2014) / W205 transition",
+      "trims": [
+        {"trim": "AMG C63 Coupe Standard (W204)", "tireSizes": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Coupe Edition 507 (W204)", "tireSizes": ["235/35R19 (F)", "255/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["235/40R18", "255/35R18", "235/35R19", "255/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["W204 C63 uses 235mm fronts, not 225mm", "255/30R20 not standard"]
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "AMG C63 Sedan Standard", "tireSizes": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Sedan Edition 507", "tireSizes": ["235/35R19 (F)", "255/30R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Coupe Standard", "tireSizes": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Coupe Edition 507", "tireSizes": ["235/35R19 (F)", "255/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["235/40R18", "255/35R18", "235/35R19", "255/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["W204 C63 uses 235mm fronts, not 225mm"]
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "AMG C63 Coupe", "tireSizes": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Black Series Coupe", "tireSizes": ["255/35R19 (F)", "285/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["235/40R18", "255/35R18", "235/35R19", "255/30R19", "285/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["W204 C63 uses 235mm fronts - Black Series uses 255/285mm"]
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "AMG C63 Coupe", "tireSizes": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 Black Series Coupe", "tireSizes": ["255/35R19 (F)", "285/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["235/40R18", "255/35R18", "235/35R19", "255/30R19", "285/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["W204 C63 uses 235mm fronts"]
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "AMG C63", "tireSizes": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"], "staggered": true},
+        {"trim": "AMG C63 P31 Development Package", "tireSizes": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["235/40R18", "255/35R18", "235/35R19", "255/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["W204 C63 uses 235mm fronts"]
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "AMG C63", "tireSizes": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["235/40R18", "255/35R18", "235/35R19", "255/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["W204 C63 uses 235mm fronts"]
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "AMG C63", "tireSizes": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["235/40R18", "255/35R18", "235/35R19", "255/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["W204 C63 uses 235mm fronts"]
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "generation": "W204 (2008-2014)",
+      "trims": [
+        {"trim": "AMG C63", "tireSizes": ["235/40R18 (F)", "255/35R18 (R)", "235/35R19 (F)", "255/30R19 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["235/40R18", "255/35R18", "235/35R19", "255/30R19"],
+      "currentTireSizes": ["225/40R18", "245/35R19", "255/30R20"],
+      "issues": ["W204 C63 uses 235mm fronts"]
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL550 4MATIC Standard", "tireSizes": ["255/45R18", "255/40R19"]},
+        {"trim": "CL550 4MATIC Sport Package", "tireSizes": ["255/40R19"]},
+        {"trim": "CL550 Sport Package Plus One", "tireSizes": ["255/35R20"]},
+        {"trim": "CL600", "tireSizes": ["255/45R18"]}
+      ],
+      "validatedSizes": ["255/45R18", "255/40R19", "255/35R20"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["275/40R19 and 275/35R20 are staggered rear sizes - standard CL uses square fitment"]
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL550 4MATIC Standard", "tireSizes": ["255/45R18"]},
+        {"trim": "CL550 Sport Package", "tireSizes": ["255/40R19"]},
+        {"trim": "CL550 Sport Package Plus One", "tireSizes": ["255/35R20"]},
+        {"trim": "CL600", "tireSizes": ["255/45R18"]}
+      ],
+      "validatedSizes": ["255/45R18", "255/40R19", "255/35R20"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["275mm rear sizes for staggered - square fitment standard"]
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL550 4MATIC Standard", "tireSizes": ["255/45R18"]},
+        {"trim": "CL550 Sport Package", "tireSizes": ["255/40R19"]},
+        {"trim": "CL550 Sport Package Plus One", "tireSizes": ["255/35R20"]},
+        {"trim": "CL600", "tireSizes": ["255/45R18"]}
+      ],
+      "validatedSizes": ["255/45R18", "255/40R19", "255/35R20"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["275mm rear sizes for staggered - square fitment standard"]
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL550 4MATIC Standard", "tireSizes": ["255/45R18"]},
+        {"trim": "CL550 4MATIC Sport Package", "tireSizes": ["255/40R19"]},
+        {"trim": "CL550 Sport Package Plus One", "tireSizes": ["255/35R20"]},
+        {"trim": "CL600", "tireSizes": ["255/45R18"]}
+      ],
+      "validatedSizes": ["255/45R18", "255/40R19", "255/35R20"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["275mm rear sizes for staggered fitment option"]
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL550 4MATIC Standard", "tireSizes": ["255/45R18", "255/40R19"]},
+        {"trim": "CL550 Sport Package", "tireSizes": ["255/40R19 (F)", "275/40R19 (R)"], "staggered": true},
+        {"trim": "CL600", "tireSizes": ["255/45R18"]}
+      ],
+      "validatedSizes": ["255/45R18", "255/40R19", "275/40R19"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["275/35R20 not standard for 2010"]
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL550 4MATIC", "tireSizes": ["255/45R18", "255/40R19"]},
+        {"trim": "CL550 Non-Staggered", "tireSizes": ["255/45R18"]},
+        {"trim": "CL550 Staggered", "tireSizes": ["255/45R18 (F)", "275/45R18 (R)", "255/40R19 (F)", "275/40R19 (R)"], "staggered": true},
+        {"trim": "CL600", "tireSizes": ["255/45R18"]}
+      ],
+      "validatedSizes": ["255/45R18", "275/45R18", "255/40R19", "275/40R19"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["275/35R20 not standard for 2009"]
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL550 Non-Staggered", "tireSizes": ["255/45R18"]},
+        {"trim": "CL550 Staggered", "tireSizes": ["255/45R18 (F)", "275/45R18 (R)", "255/40R19 (F)", "275/40R19 (R)"], "staggered": true},
+        {"trim": "CL600", "tireSizes": ["255/45R18"]}
+      ],
+      "validatedSizes": ["255/45R18", "275/45R18", "255/40R19", "275/40R19"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["275/35R20 not standard for 2008"]
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL550 Non-Staggered", "tireSizes": ["255/45R18"]},
+        {"trim": "CL550 Staggered", "tireSizes": ["255/45R18 (F)", "275/45R18 (R)", "255/40R19 (F)", "275/40R19 (R)"], "staggered": true},
+        {"trim": "CL600", "tireSizes": ["255/45R18"]}
+      ],
+      "validatedSizes": ["255/45R18", "275/45R18", "255/40R19", "275/40R19"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["275/35R20 not standard for 2007"]
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W215 (2000-2006)",
+      "trims": [
+        {"trim": "CL500 Standard", "tireSizes": ["225/55R17"]},
+        {"trim": "CL500 Appearance Package", "tireSizes": ["245/45R18"]},
+        {"trim": "CL500 Sport Package", "tireSizes": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true},
+        {"trim": "CL600", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["Current sizes wrong for W215 - should be 225/55R17 or 245/45R18 base"]
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W215 (2000-2006)",
+      "trims": [
+        {"trim": "CL500 Standard", "tireSizes": ["225/55R17"]},
+        {"trim": "CL500 Appearance Package", "tireSizes": ["245/45R18"]},
+        {"trim": "CL500 Sport Package", "tireSizes": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true},
+        {"trim": "CL600", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["Current sizes wrong for W215"]
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W215 (2000-2006)",
+      "trims": [
+        {"trim": "CL500 Standard", "tireSizes": ["225/55R17"]},
+        {"trim": "CL500 Appearance Package", "tireSizes": ["245/45R18"]},
+        {"trim": "CL500 Sport Package", "tireSizes": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true},
+        {"trim": "CL600", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["Current sizes wrong for W215"]
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W215 (2000-2006)",
+      "trims": [
+        {"trim": "CL500 Standard", "tireSizes": ["225/55R17"]},
+        {"trim": "CL500 Sport Package", "tireSizes": ["245/45R18 (F)", "265/40R18 (R)"], "staggered": true},
+        {"trim": "CL600", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["Current sizes wrong for W215"]
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W215 (2000-2006)",
+      "trims": [
+        {"trim": "CL500 Standard", "tireSizes": ["225/55R17"]},
+        {"trim": "CL500 Sport Package", "tireSizes": ["245/45R18 (F)", "275/40R18 (R)"], "staggered": true},
+        {"trim": "CL600", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["225/55R17", "245/45R18", "275/40R18"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["Current sizes wrong for W215"]
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W215 (2000-2006)",
+      "trims": [
+        {"trim": "CL500 Standard", "tireSizes": ["225/55R17"]},
+        {"trim": "CL500 Sport Package", "tireSizes": ["245/45R18 (F)", "275/40R18 (R)"], "staggered": true},
+        {"trim": "CL600", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["225/55R17", "245/45R18", "275/40R18"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["Current sizes wrong for W215"]
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "cl-class",
+      "generation": "W215 (2000-2006)",
+      "trims": [
+        {"trim": "CL500 Base", "tireSizes": ["225/55R17"]},
+        {"trim": "CL600", "tireSizes": ["245/45R18"]}
+      ],
+      "validatedSizes": ["225/55R17", "245/45R18"],
+      "currentTireSizes": ["255/45R18", "275/40R19", "275/35R20"],
+      "issues": ["Current sizes wrong for W215"]
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL63 AMG", "tireSizes": ["255/35R20 (F)", "275/35R20 (R)"], "staggered": true},
+        {"trim": "CL65 AMG", "tireSizes": ["255/35R20 (F)", "275/35R20 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["255/35R20", "275/35R20"],
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "issues": ["255/40R19 should be 255/35R20", "275/30R21 not standard OEM"]
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL63 AMG", "tireSizes": ["255/35R20 (F)", "275/35R20 (R)"], "staggered": true},
+        {"trim": "CL65 AMG", "tireSizes": ["255/35R20 (F)", "275/35R20 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["255/35R20", "275/35R20"],
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "issues": ["255/40R19 should be 255/35R20", "275/30R21 not standard OEM"]
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "cl-class-amg",
+      "generation": "W216 (2007-2014)",
+      "trims": [
+        {"trim": "CL63 AMG", "tireSizes": ["255/35R20 (F)", "275/35R20 (R)"], "staggered": true},
+        {"trim": "CL65 AMG", "tireSizes": ["255/35R20 (F)", "275/35R20 (R)"], "staggered": true}
+      ],
+      "validatedSizes": ["255/35R20", "275/35R20"],
+      "currentTireSizes": ["255/40R19", "275/35R20", "275/30R21"],
+      "issues": ["255/40R19 should be 255/35R20", "275/30R21 not standard OEM"]
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "vehiclesWithIssues": 55,
+    "vehiclesValidated": 75,
+    "commonIssues": [
+      "C-Class All-Terrain (2022-2026) missing tire sizes - should have 245/45R18",
+      "C-Class AMG has incorrect front tire widths - W204 C63 uses 235mm fronts, W206 C43 uses 245mm fronts",
+      "CL-Class W215 (2000-2006) has W216 tire sizes incorrectly applied",
+      "20-inch sizes listed for vehicles where 19-inch was max OEM",
+      "Staggered setups not properly indicated in current data"
+    ],
+    "recommendedActions": [
+      "Add 245/45R18 to all C-Class All-Terrain vehicles",
+      "Correct C-Class AMG front tire widths by generation",
+      "Update CL-Class W215 generation to use correct 17/18-inch sizes",
+      "Add staggered fitment flags to appropriate vehicles",
+      "Review 20-inch sizes - many are aftermarket not OEM"
+    ]
+  }
+}

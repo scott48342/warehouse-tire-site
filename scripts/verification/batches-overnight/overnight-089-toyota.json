@@ -1,0 +1,2605 @@
+[
+  {
+    "id": "af7e53d5-4c72-4a33-9bb4-895081367629",
+    "year": 2021,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "1794 Edition",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R18",
+      "275/65R18",
+      "275/55R20",
+      "275/60R20"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "3a451104-eef2-45ad-8d99-f360d1057e59",
+    "year": 2021,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "5x150",
+    "currentHubBore": "110.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R18",
+      "275/65R18",
+      "275/55R20",
+      "275/60R20"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "20381595-1698-47f8-843b-c0d2752d3e74",
+    "year": 2022,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "SR",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "4211a609-fc22-47b5-aea7-75f1b9dbda24",
+    "year": 2022,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Capstone",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "534896a4-8fff-490a-a01e-9ec98d43fb97",
+    "year": 2022,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "3afb837d-01c1-4d1e-b4a7-032890626ab5",
+    "year": 2022,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "8625128e-432f-4593-ac65-f39bfae779e1",
+    "year": 2022,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "1794 Edition",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "5651c3b3-1ef9-4616-8406-0a002390f03f",
+    "year": 2022,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "284fbdde-bb52-4f90-82bf-b3b77c780221",
+    "year": 2022,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "a373a85f-c67a-4c12-897a-33042d5d286d",
+    "year": 2022,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "106.1",
+    "currentWheelSizes": [
+      "18x8",
+      "20x8",
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 60,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 47.5,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 60,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import"
+  },
+  {
+    "id": "362d0d06-5ce2-4071-badf-df7ef641772e",
+    "year": 2023,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "08f523cb-3e61-42c6-9b09-7bc512e16092",
+    "year": 2023,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "15f64b92-2cb8-4f2c-aeed-7cf71663f23b",
+    "year": 2023,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "1794 Edition",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "88bf94a8-efc7-470a-a6ba-d5f482c23445",
+    "year": 2023,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "SR",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "e470d7e9-38a2-4e85-b46c-15cdf2c5e88a",
+    "year": 2023,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "31cb47ad-a9f6-4c31-9d83-6f08555c8539",
+    "year": 2023,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Capstone",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "bfa74cbc-488b-46a0-9251-b7e09560a5cb",
+    "year": 2023,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "1c418562-9ca1-4122-9b30-0ca2d17995ad",
+    "year": 2023,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "44f4ac9a-128e-4168-a95e-46099acff86b",
+    "year": 2024,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "1794 Edition",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "c0329639-44c3-44bd-8a15-9f039f42f3f9",
+    "year": 2024,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "d41df7ac-8900-4783-83f7-58f62282a856",
+    "year": 2024,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "5c491b94-7440-4042-a2a4-b18230e429df",
+    "year": 2024,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "f255ff1b-fb7f-432f-996b-f0c4e3becedb",
+    "year": 2024,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "5acaac1a-d469-4b15-aeff-4fb90d380b34",
+    "year": 2024,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "SR",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "3a964cd3-de9a-4297-9b40-a500e6b290a6",
+    "year": 2024,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "e11bb0da-cd85-484e-a4c0-e9e4193bd319",
+    "year": 2024,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Capstone",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "d6518931-6f5c-4c47-ace5-6228842c4240",
+    "year": 2025,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "aadfb295-6cc1-4391-a2f7-c9d965f7a0c4",
+    "year": 2025,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "1794 Edition",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "78e8e28f-b686-4811-bb44-1f5916ee5013",
+    "year": 2025,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "SR",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "1387b796-d99d-4efa-ae1a-c4836a3d6056",
+    "year": 2025,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "192ff319-1494-492e-a59f-dd1e1f8766d6",
+    "year": 2025,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "f9ff2151-7515-43b5-b141-7b419a27da7b",
+    "year": 2025,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "25170369-da9d-44c2-afaa-4e17d5c7cbcf",
+    "year": 2025,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Capstone",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "1d15325b-27ba-4301-9a03-e12927f383f6",
+    "year": 2025,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "75b9ac88-efe8-4166-a1f0-c94b3e91894f",
+    "year": 2026,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Platinum",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "f58df230-236e-4573-89d4-be02f7792aa5",
+    "year": 2026,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "SR5",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "b6fe36ad-997d-49db-8a6d-6157d48c58b8",
+    "year": 2026,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "SR",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "588f223a-9e90-4d74-9633-4ad9c0f89e60",
+    "year": 2026,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Off-Road",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "ea6e956a-1c15-434f-a653-7ca04ae82c00",
+    "year": 2026,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "1794 Edition",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "decc99a0-1cef-4c6f-a6a6-25e4903d3142",
+    "year": 2026,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Limited",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "e2abb88c-8ba0-4cbc-bcad-c78b687dcfca",
+    "year": 2026,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "TRD Pro",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "763e92c6-3a1f-4990-acb9-ef8b4ddf7a8d",
+    "year": 2026,
+    "make": "toyota",
+    "model": "tundra",
+    "trim": "Capstone",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "95.2",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 60,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 60,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/60R20",
+      "265/70R18",
+      "275/55R20",
+      "285/65R18"
+    ],
+    "source": "generation_import [web_research]"
+  },
+  {
+    "id": "ccf8468a-7aa6-40e0-ab0d-5a332f63838e",
+    "year": 2009,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "245/55R19",
+      "255/45R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "70069988-0efe-4525-91ea-97c7817a288c",
+    "year": 2010,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "245/55R19",
+      "255/45R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a90d27c7-4eb0-4d6a-9bb8-eccd4a6e42c2",
+    "year": 2011,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "245/55R19",
+      "255/45R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4015360d-925f-47a4-a6cc-04e5fc5077a4",
+    "year": 2012,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 35,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/55R19",
+      "245/50R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "175e9dec-5e96-473f-8c4f-2e7769b9b2a9",
+    "year": 2013,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "245/55R19",
+      "255/45R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "a713c8db-a913-42dd-9df6-e56cbaaebd5e",
+    "year": 2014,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "245/55R19",
+      "255/45R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "7f54f539-6525-400e-9efb-c1ce8b2df198",
+    "year": 2015,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "245/55R19",
+      "255/45R21"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "fb424000-1ee3-4659-9f20-0fcc7fe33f42",
+    "year": 2021,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "225/55R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ca0def39-c748-4663-874d-7e1250502fdd",
+    "year": 2022,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 35,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "225/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "13f6d61d-ca1d-405b-ba4a-96cc27d6a39a",
+    "year": 2023,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "225/55R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "e1873b56-0771-442b-bd5d-e6621e8793bd",
+    "year": 2024,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "225/55R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1f2f0a8e-d7b2-4f76-a8d5-6583ced07077",
+    "year": 2025,
+    "make": "toyota",
+    "model": "venza",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "225/55R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "13512cbe-d71f-488d-8687-0700f988eaf8",
+    "year": 2000,
+    "make": "toyota",
+    "model": "vienta",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "60.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 45,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "6596d71e-fbc8-46dd-837f-48449036fbc4",
+    "year": 2017,
+    "make": "toyota",
+    "model": "vios-fs",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "b1e9307d-391e-4264-9e5c-a0a17c607fb6",
+    "year": 2018,
+    "make": "toyota",
+    "model": "vios-fs",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "2700a7b3-1356-4de5-abc6-68ba3fb0f16c",
+    "year": 2019,
+    "make": "toyota",
+    "model": "vios-fs",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "770ee152-0cb9-4ae2-ac42-2c2112ed7fb0",
+    "year": 2020,
+    "make": "toyota",
+    "model": "vios-fs",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "dfab60b6-241f-4354-9ddb-2bcbda05a324",
+    "year": 2021,
+    "make": "toyota",
+    "model": "vios-fs",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "067d02de-c05e-4ece-9fba-025b626eafaf",
+    "year": 2022,
+    "make": "toyota",
+    "model": "vios-fs",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 16,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "185/65R14"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "e92cb995-b317-4c4f-bd47-c6d550ea605f",
+    "year": 2004,
+    "make": "toyota",
+    "model": "xa",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "2d914c03-75d3-4b58-82db-f7a26123ff83",
+    "year": 2005,
+    "make": "toyota",
+    "model": "xa",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "6b6eba29-e246-4498-9fae-47bd28c0bb72",
+    "year": 2006,
+    "make": "toyota",
+    "model": "xa",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "bde11a8e-ad6e-45d9-a8f8-25fb0e3f6fd9",
+    "year": 2007,
+    "make": "toyota",
+    "model": "xa",
+    "trim": "Base",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "eba28b56-cb96-4070-824c-feef861fccb1",
+    "year": 2000,
+    "make": "toyota",
+    "model": "yaris",
+    "trim": "Base/LE/XLE",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 39,
+        "diameter": 14,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "175/65R15"
+    ],
+    "source": "batch7-subcompacts-final [web_research]"
+  },
+  {
+    "id": "edccd30a-87c9-4d0e-b0a3-26dd84efeee6",
+    "year": 2001,
+    "make": "toyota",
+    "model": "yaris",
+    "trim": "Base/LE/XLE",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 39,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "175/65R15"
+    ],
+    "source": "batch7-subcompacts-final [web_research]"
+  },
+  {
+    "id": "d5f44d2e-e303-4497-9c80-f7f8a4cd0014",
+    "year": 2002,
+    "make": "toyota",
+    "model": "yaris",
+    "trim": "Base/LE/XLE",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 39,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "175/65R15"
+    ],
+    "source": "batch7-subcompacts-final [web_research]"
+  },
+  {
+    "id": "857cf5cc-65ed-4311-a314-eb8dbb89816e",
+    "year": 2003,
+    "make": "toyota",
+    "model": "yaris",
+    "trim": "Base/LE/XLE",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 39,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "175/65R15"
+    ],
+    "source": "batch7-subcompacts-final [web_research]"
+  },
+  {
+    "id": "bede38b4-df9f-4a2b-b999-4b94d5bce2cb",
+    "year": 2004,
+    "make": "toyota",
+    "model": "yaris",
+    "trim": "Base/LE/XLE",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 39,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "175/65R15"
+    ],
+    "source": "batch7-subcompacts-final [web_research]"
+  },
+  {
+    "id": "17be6b21-feb5-400a-9338-1bda456effad",
+    "year": 2005,
+    "make": "toyota",
+    "model": "yaris",
+    "trim": "Base/LE/XLE",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 39,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "175/65R15"
+    ],
+    "source": "batch7-subcompacts-final [web_research]"
+  },
+  {
+    "id": "36e7f15d-f631-437d-a4a4-2ca189ec870a",
+    "year": 2006,
+    "make": "toyota",
+    "model": "yaris",
+    "trim": "Base/LE/XLE",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 39,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 46,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R14",
+      "175/65R15"
+    ],
+    "source": "batch7-subcompacts-final [web_research]"
+  },
+  {
+    "id": "f2559e42-15c9-40f4-a5a3-01ceaedf63c5",
+    "year": 2007,
+    "make": "toyota",
+    "model": "yaris",
+    "trim": "Base/LE/XLE",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R15",
+      "185/60R16"
+    ],
+    "source": "batch7-subcompacts-final [web_research]"
+  },
+  {
+    "id": "8dd65caa-7c01-47bb-a64e-fd0af7cbded5",
+    "year": 2008,
+    "make": "toyota",
+    "model": "yaris",
+    "trim": "Base/LE/XLE",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R15",
+      "185/60R16"
+    ],
+    "source": "batch7-subcompacts-final [web_research]"
+  },
+  {
+    "id": "2703021c-37c5-4eb2-a4d6-418b2990d119",
+    "year": 2009,
+    "make": "toyota",
+    "model": "yaris",
+    "trim": "Base/LE/XLE",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "54.1",
+    "currentWheelSizes": [
+      {
+        "width": 5,
+        "offset": 45,
+        "diameter": 14,
+        "position": "both"
+      },
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 15,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "175/65R15",
+      "185/60R16"
+    ],
+    "source": "batch7-subcompacts-final [web_research]"
+  }
+]

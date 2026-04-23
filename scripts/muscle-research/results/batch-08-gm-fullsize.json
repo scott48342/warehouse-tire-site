@@ -1,0 +1,1274 @@
+{
+  "batchId": "muscle-gm-fullsize",
+  "description": "GM full-size and X-body: Impala, Caprice, Nova, Corvette, Grand Prix, Riviera, Toronado",
+  "researchDate": "2026-04-22",
+  "notes": "IMPORTANT: Impala/Caprice bolt pattern CHANGED in 1971 from 5x120.65 to 5x127. Protocol was incorrect for 1964-1970 models.",
+  "vehicles": [
+    {
+      "year": 1964,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 14 },
+        { "diameter": 14, "width": 5.5, "offset": 11 },
+        { "diameter": 15, "width": 6, "offset": 10 }
+      ],
+      "oem_tire_sizes": ["7.50-14", "8.00-14", "8.50-14", "195/80R14", "205/70R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalaforums.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "Generation III B-body (1961-1964). 5x4.75\" bolt pattern, NOT 5x5\"."
+    },
+    {
+      "year": 1965,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.75-14", "8.25-14", "8.55-14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "Generation IV B-body (1965-1970). First year of new body style."
+    },
+    {
+      "year": 1966,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.75-14", "8.25-14", "8.55-14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "Generation IV B-body."
+    },
+    {
+      "year": 1967,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["7.75-14", "8.25-14", "8.55-14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "Generation IV B-body."
+    },
+    {
+      "year": 1968,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-14", "G78-14", "G78-15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "Generation IV B-body."
+    },
+    {
+      "year": 1969,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-14", "G78-14", "G78-15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "Generation IV B-body."
+    },
+    {
+      "year": 1970,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14", "225/75R14", "205/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "Last year of Gen IV B-body. Still uses 5x4.75\" pattern."
+    },
+    {
+      "year": 1971,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-15", "H78-15", "L78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "BOLT PATTERN CHANGE to 5x5\" due to increased vehicle weight (~4,200 lbs). Gen V B-body."
+    },
+    {
+      "year": 1972,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-15", "H78-15", "L78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen V B-body. 5x5\" bolt pattern."
+    },
+    {
+      "year": 1973,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-15", "H78-15", "L78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen V B-body. 5x5\" bolt pattern."
+    },
+    {
+      "year": 1974,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15", "LR78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen V B-body. 5x5\" bolt pattern. Radial tires becoming standard."
+    },
+    {
+      "year": 1975,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15", "LR78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen V B-body. 5x5\" bolt pattern."
+    },
+    {
+      "year": 1976,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15", "LR78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Last year of Gen V B-body full-size. 5x5\" bolt pattern."
+    },
+    {
+      "year": 1965,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["8.25-14", "8.55-14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "First year of Caprice as Impala trim level. Same B-body platform."
+    },
+    {
+      "year": 1966,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["8.25-14", "8.55-14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "Became separate model line. Same B-body platform as Impala."
+    },
+    {
+      "year": 1967,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["8.25-14", "8.55-14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "B-body platform."
+    },
+    {
+      "year": 1968,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-14", "G78-15", "H78-15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "B-body platform."
+    },
+    {
+      "year": 1969,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["F78-14", "G78-15", "H78-15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "B-body platform."
+    },
+    {
+      "year": 1970,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 15, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-15", "H78-15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "impalassforum.com"],
+      "confidence": "high",
+      "notes": "Last year before bolt pattern change."
+    },
+    {
+      "year": 1971,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-15", "H78-15", "L78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "BOLT PATTERN CHANGE to 5x5\". Gen V B-body."
+    },
+    {
+      "year": 1972,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-15", "H78-15", "L78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen V B-body. 5x5\" bolt pattern."
+    },
+    {
+      "year": 1973,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-15", "H78-15", "L78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen V B-body. 5x5\" bolt pattern."
+    },
+    {
+      "year": 1974,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15", "LR78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen V B-body. 5x5\" bolt pattern."
+    },
+    {
+      "year": 1975,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15", "LR78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen V B-body. 5x5\" bolt pattern."
+    },
+    {
+      "year": 1976,
+      "make": "Chevrolet",
+      "model": "Caprice",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.1,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15", "LR78-15"],
+      "staggered": false,
+      "sources": ["impalassforum.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Last year of Gen V full-size B-body."
+    },
+    {
+      "year": 1964,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-14", "7.00-14"],
+      "staggered": false,
+      "sources": ["stevesnovasite.com", "2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "First year of 5-lug X-body (1962-63 were 4-lug). Known as Chevy II Nova."
+    },
+    {
+      "year": 1965,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.50-14", "7.00-14"],
+      "staggered": false,
+      "sources": ["stevesnovasite.com", "2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen I X-body (Chevy II Nova)."
+    },
+    {
+      "year": 1966,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "7.35-14"],
+      "staggered": false,
+      "sources": ["stevesnovasite.com", "2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen II X-body (1966-1967). New body style."
+    },
+    {
+      "year": 1967,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["6.95-14", "7.35-14"],
+      "staggered": false,
+      "sources": ["stevesnovasite.com", "2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen II X-body."
+    },
+    {
+      "year": 1968,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 6.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen III X-body (1968-1974). Popular for 235/60-15 front, 275/60-15 rear aftermarket fitment."
+    },
+    {
+      "year": 1969,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 6.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen III X-body."
+    },
+    {
+      "year": 1970,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "F70-14"],
+      "staggered": false,
+      "sources": ["2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen III X-body. SS models had wider tires."
+    },
+    {
+      "year": 1971,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "F70-14"],
+      "staggered": false,
+      "sources": ["2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen III X-body."
+    },
+    {
+      "year": 1972,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14"],
+      "staggered": false,
+      "sources": ["2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen III X-body."
+    },
+    {
+      "year": 1973,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen III X-body. New front end styling."
+    },
+    {
+      "year": 1974,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["E78-14", "F78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["2quicknovas.com", "tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Last year of Gen III X-body."
+    },
+    {
+      "year": 1975,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 6.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["FR78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen IV X-body (1975-1979). Revised styling."
+    },
+    {
+      "year": 1976,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 6.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["FR78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen IV X-body."
+    },
+    {
+      "year": 1977,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 6.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["FR78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen IV X-body."
+    },
+    {
+      "year": 1978,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 6.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["FR78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen IV X-body."
+    },
+    {
+      "year": 1979,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 6.5, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["FR78-14", "195/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Last year of X-body Nova. Name moved to front-drive X-body Citation platform in 1980."
+    },
+    {
+      "year": 1964,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5.5, "offset": 11 },
+        { "diameter": 15, "width": 6, "offset": 15 }
+      ],
+      "oem_tire_sizes": ["6.70-15", "7.75-15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C2 Sting Ray (1963-1967). Y-body platform."
+    },
+    {
+      "year": 1965,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5.5, "offset": 11 },
+        { "diameter": 15, "width": 6, "offset": 15 }
+      ],
+      "oem_tire_sizes": ["7.75-15", "195/75R15", "205/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C2 Sting Ray. First year of big block option (396ci)."
+    },
+    {
+      "year": 1966,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5.5, "offset": 11 },
+        { "diameter": 15, "width": 6, "offset": 15 }
+      ],
+      "oem_tire_sizes": ["7.75-15", "195/75R15", "205/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C2 Sting Ray. 427ci big block available."
+    },
+    {
+      "year": 1967,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 5.5, "offset": 11 },
+        { "diameter": 15, "width": 6, "offset": 15 }
+      ],
+      "oem_tire_sizes": ["7.75-15", "F70-15", "195/75R15", "205/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "Last year C2. Most sought-after year for collectors."
+    },
+    {
+      "year": 1968,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["F70-15", "205/75R15", "225/70R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "First year C3 (1968-1982). New Mako Shark design."
+    },
+    {
+      "year": 1969,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["F70-15", "205/75R15", "225/70R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. First year of ZL1 all-aluminum 427."
+    },
+    {
+      "year": 1970,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["F70-15", "205/75R15", "225/70R15", "255/60R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. First year of LT-1 350ci high-performance engine."
+    },
+    {
+      "year": 1971,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["F70-15", "205/75R15", "225/70R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. Last year of high compression engines due to emissions."
+    },
+    {
+      "year": 1972,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["F70-15", "GR70-15", "205/75R15", "225/70R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. Horsepower ratings switch to SAE net."
+    },
+    {
+      "year": 1973,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["GR70-15", "205/75R15", "225/70R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. New urethane front bumper."
+    },
+    {
+      "year": 1974,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["GR70-15", "205/75R15", "225/70R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. Last year of big block 454ci engine."
+    },
+    {
+      "year": 1975,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["GR70-15", "205/70R15", "225/70R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. Last year of convertible until 1986."
+    },
+    {
+      "year": 1976,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["GR70-15", "205/70R15", "225/70R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. Coupe only."
+    },
+    {
+      "year": 1977,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["GR70-15", "205/70R15", "225/70R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. Leather interior standard."
+    },
+    {
+      "year": 1978,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["P225/70R15", "P255/60R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. 25th Anniversary Edition. New fastback roofline."
+    },
+    {
+      "year": 1979,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": -2 },
+        { "diameter": 15, "width": 8, "offset": -1 }
+      ],
+      "oem_tire_sizes": ["P225/70R15", "P255/60R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "corvetteforum.com"],
+      "confidence": "high",
+      "notes": "C3. Best-selling Corvette year to date (53,807 units)."
+    },
+    {
+      "year": 1968,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-14", "H78-14"],
+      "staggered": false,
+      "sources": ["thepartsplaceinc.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "A-body based personal luxury. Last year before G-body platform."
+    },
+    {
+      "year": 1969,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-14", "G78-15", "H78-15"],
+      "staggered": false,
+      "sources": ["thepartsplaceinc.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "First year of G-body platform. Bill Mitchell design."
+    },
+    {
+      "year": 1970,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-14", "G78-15", "H78-15"],
+      "staggered": false,
+      "sources": ["thepartsplaceinc.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1971,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-14", "G78-15", "H78-15"],
+      "staggered": false,
+      "sources": ["thepartsplaceinc.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1972,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["G78-14", "GR78-15", "HR78-15"],
+      "staggered": false,
+      "sources": ["thepartsplaceinc.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1973,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15"],
+      "staggered": false,
+      "sources": ["thepartsplaceinc.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "G-body platform. New colonnade styling."
+    },
+    {
+      "year": 1974,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15"],
+      "staggered": false,
+      "sources": ["thepartsplaceinc.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1975,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15"],
+      "staggered": false,
+      "sources": ["thepartsplaceinc.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1976,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15"],
+      "staggered": false,
+      "sources": ["thepartsplaceinc.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1977,
+      "make": "Pontiac",
+      "model": "Grand Prix",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["GR78-15", "HR78-15", "P205/75R15"],
+      "staggered": false,
+      "sources": ["thepartsplaceinc.com", "roadkillcustoms.com"],
+      "confidence": "high",
+      "notes": "Last year of this G-body generation."
+    },
+    {
+      "year": 1966,
+      "make": "Buick",
+      "model": "Riviera",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["8.45-15", "205/75R15", "225/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen II E-body personal luxury (1966-1970). RWD. 5x5\" bolt pattern."
+    },
+    {
+      "year": 1967,
+      "make": "Buick",
+      "model": "Riviera",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["8.45-15", "205/75R15", "225/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen II E-body. Hides headlights in clamshell grille."
+    },
+    {
+      "year": 1968,
+      "make": "Buick",
+      "model": "Riviera",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["8.85-15", "205/75R15", "225/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen II E-body."
+    },
+    {
+      "year": 1969,
+      "make": "Buick",
+      "model": "Riviera",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["8.85-15", "205/75R15", "225/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Gen II E-body."
+    },
+    {
+      "year": 1970,
+      "make": "Buick",
+      "model": "Riviera",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["8.85-15", "H78-15", "205/75R15", "225/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Last year Gen II E-body. Most dramatic styling of generation."
+    },
+    {
+      "year": 1966,
+      "make": "Oldsmobile",
+      "model": "Toronado",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 83 }
+      ],
+      "oem_tire_sizes": ["8.85-15", "205/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "toronado.org"],
+      "confidence": "high",
+      "notes": "Gen I E-body FWD (1966-1970). First GM FWD since 1930s. Motor Trend Car of the Year."
+    },
+    {
+      "year": 1967,
+      "make": "Oldsmobile",
+      "model": "Toronado",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 83 }
+      ],
+      "oem_tire_sizes": ["8.85-15", "205/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "toronado.org"],
+      "confidence": "high",
+      "notes": "Gen I E-body FWD. High offset wheels critical for FWD geometry."
+    },
+    {
+      "year": 1968,
+      "make": "Oldsmobile",
+      "model": "Toronado",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 83 }
+      ],
+      "oem_tire_sizes": ["8.85-15", "205/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "toronado.org"],
+      "confidence": "high",
+      "notes": "Gen I E-body FWD."
+    },
+    {
+      "year": 1969,
+      "make": "Oldsmobile",
+      "model": "Toronado",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 83 }
+      ],
+      "oem_tire_sizes": ["8.85-15", "H78-15", "205/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "toronado.org"],
+      "confidence": "high",
+      "notes": "Gen I E-body FWD."
+    },
+    {
+      "year": 1970,
+      "make": "Oldsmobile",
+      "model": "Toronado",
+      "bolt_pattern": "5x127",
+      "hub_bore": 78.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 6, "offset": 83 }
+      ],
+      "oem_tire_sizes": ["8.85-15", "H78-15", "205/75R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "toronado.org"],
+      "confidence": "high",
+      "notes": "Last year Gen I E-body FWD. GT package added mid-year."
+    }
+  ],
+  "summary": {
+    "total_vehicles": 77,
+    "platforms": {
+      "B-body_1964-1970": {
+        "models": ["Impala", "Caprice"],
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "notes": "CORRECTION: Protocol stated 5x127, but 1964-1970 used 5x120.65"
+      },
+      "B-body_1971-1976": {
+        "models": ["Impala", "Caprice"],
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.1,
+        "notes": "Changed to 5x5\" in 1971 due to increased vehicle weight (~4,200 lbs)"
+      },
+      "X-body": {
+        "models": ["Nova"],
+        "years": "1964-1979",
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "notes": "Consistent throughout production. 1962-1963 were 4-lug."
+      },
+      "Y-body_C2": {
+        "models": ["Corvette"],
+        "years": "1963-1967",
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "notes": "Sting Ray generation"
+      },
+      "Y-body_C3": {
+        "models": ["Corvette"],
+        "years": "1968-1982",
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "notes": "Mako Shark design. Same bolt pattern as C2."
+      },
+      "G-body": {
+        "models": ["Grand Prix"],
+        "years": "1969-1977",
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "notes": "Personal luxury coupe. 1968 was A-body based."
+      },
+      "E-body_Riviera": {
+        "models": ["Riviera"],
+        "years": "1966-1970",
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "notes": "RWD personal luxury. Shares platform with Toronado."
+      },
+      "E-body_Toronado": {
+        "models": ["Toronado"],
+        "years": "1966-1970",
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "notes": "FWD personal luxury. High offset critical for FWD. Motor Trend COTY 1966."
+      }
+    },
+    "data_quality_notes": [
+      "CRITICAL: Protocol stated B-body (Impala/Caprice) uses 5x127 - this is only true for 1971-1976. 1964-1970 used 5x120.65.",
+      "Protocol incorrectly stated Riviera was FWD - it was RWD. Only Toronado was FWD.",
+      "All Corvettes (C2 and C3) use identical 5x120.65, 70.3mm specs.",
+      "Nova X-body maintained consistent specs 1964-1979 despite multiple generation changes."
+    ]
+  }
+}

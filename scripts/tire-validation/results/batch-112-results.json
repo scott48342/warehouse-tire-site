@@ -1,0 +1,1749 @@
+{
+  "batchId": "112",
+  "validatedAt": "2026-04-21T22:27:00.000Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "trims": [
+        {
+          "trim": "S500 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        },
+        {
+          "trim": "S580 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        }
+      ],
+      "currentTireSizes": ["255/50R18", "255/45R19", "285/40R19", "255/40R20", "285/35R20", "265/35R21", "295/30R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "issues": ["255/50R18 not found in OEM data", "285/40R19 appears incorrect", "265/35R21 should be 255/35R21", "295/30R21 should be 285/30R21"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "trims": [
+        {
+          "trim": "S500 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        },
+        {
+          "trim": "S580 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        }
+      ],
+      "currentTireSizes": ["255/50R18", "255/45R19", "285/40R19", "255/40R20", "285/35R20", "265/35R21", "295/30R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "issues": ["255/50R18 not found in OEM data", "285/40R19 appears incorrect", "265/35R21 should be 255/35R21", "295/30R21 should be 285/30R21"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "trims": [
+        {
+          "trim": "S500 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        },
+        {
+          "trim": "S580 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        }
+      ],
+      "currentTireSizes": ["255/50R18", "255/45R19", "285/40R19", "255/40R20", "285/35R20", "265/35R21", "295/30R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "issues": ["255/50R18 not found in OEM data", "285/40R19 appears incorrect"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "trims": [
+        {
+          "trim": "S500 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        },
+        {
+          "trim": "S580 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        }
+      ],
+      "currentTireSizes": ["255/50R18", "255/45R19", "285/40R19", "255/40R20", "285/35R20", "265/35R21", "295/30R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "issues": ["255/50R18 not found in OEM data"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "trims": [
+        {
+          "trim": "S500 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        },
+        {
+          "trim": "S580 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        }
+      ],
+      "currentTireSizes": ["255/50R18", "255/45R19", "285/40R19", "255/40R20", "285/35R20", "265/35R21", "295/30R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "issues": ["255/50R18 not found - W223 starts at 19\""],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "trims": [
+        {
+          "trim": "S500 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        },
+        {
+          "trim": "S580 4MATIC Sedan",
+          "tireSizes": ["255/45R19", "255/40R20"],
+          "staggeredOptions": [
+            {"front": "255/40R20", "rear": "285/35R20"},
+            {"front": "255/35R21", "rear": "285/30R21"}
+          ],
+          "wheelSizes": ["19", "20", "21"]
+        }
+      ],
+      "currentTireSizes": ["255/50R18", "255/45R19", "285/40R19", "255/40R20", "285/35R20", "265/35R21", "295/30R21"],
+      "validatedTireSizes": ["255/45R19", "255/40R20", "285/35R20", "255/35R21", "285/30R21"],
+      "issues": ["2021 was transition year - mix of W222 and W223 production"],
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W222 Facelift",
+      "trims": [
+        {
+          "trim": "S450 4MATIC Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S450 Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S560 4MATIC Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S560 4MATIC Coupe",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        },
+        {
+          "trim": "S560 Cabriolet",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": ["245/55R17", "245/50R18", "255/45R18", "285/40R18", "255/40R19", "285/35R19", "255/35R20", "285/30R20", "255/35R21"],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["245/55R17 not standard for W222", "255/45R18 and 285/40R18 are W222 pre-facelift sizes", "Many sizes appear to be carryover from earlier gen"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W222 Facelift",
+      "trims": [
+        {
+          "trim": "S450 4MATIC Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S560 4MATIC Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S560 Cabriolet",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": ["245/55R17", "245/50R18", "255/45R18", "285/40R18", "255/40R19", "285/35R19", "255/35R20", "285/30R20", "255/35R21"],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["Current data has some W221 carryover sizes"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W222 Facelift",
+      "trims": [
+        {
+          "trim": "S450 4MATIC Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S450 Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S560 4MATIC Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S560 4MATIC Coupe",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        },
+        {
+          "trim": "S560 Cabriolet",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": ["245/55R17", "245/50R18", "255/45R18", "285/40R18", "255/40R19", "285/35R19", "255/35R20", "285/30R20", "255/35R21"],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["Current data includes older W221 sizes"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W222",
+      "trims": [
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 4MATIC Cabriolet",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": ["245/55R17", "245/50R18", "255/45R18", "285/40R18", "255/40R19", "285/35R19", "255/35R20", "285/30R20", "255/35R21"],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["Some sizes in current data are from W221 generation"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W222",
+      "trims": [
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S500 4MATIC Coupe",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": ["245/55R17", "245/50R18", "255/45R18", "285/40R18", "255/40R19", "285/35R19", "255/35R20", "285/30R20", "255/35R21"],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["W221 sizes still present in current data"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W222",
+      "trims": [
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["245/50R18"],
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["245/50R18"],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S500 4MATIC Coupe",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": ["245/55R17", "245/50R18", "255/45R18", "285/40R18", "255/40R19", "285/35R19", "255/35R20", "285/30R20", "255/35R21"],
+      "validatedTireSizes": ["245/50R18", "245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["17\" tires (245/55R17) not available for W222"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W222 (first year)",
+      "trims": [
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["245/50R18"],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["245/50R18"],
+          "wheelSizes": ["18", "19", "20"]
+        }
+      ],
+      "currentTireSizes": ["245/55R17", "245/50R18", "255/45R18", "285/40R18", "255/40R19", "285/35R19", "255/35R20", "285/30R20", "255/35R21"],
+      "validatedTireSizes": ["245/50R18"],
+      "issues": ["2014 data appears to mix W221 (outgoing) and W222 (incoming) sizes", "245/50R18 confirmed for W222, others may be W221"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S350 BlueTEC Sedan",
+          "tireSizes": ["255/45R18"],
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["255/45R18", "255/40R19"],
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["255/45R18"],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": ["235/55R17", "255/45R18", "275/40R18", "255/40R19", "275/35R19", "255/35R20", "275/30R20"],
+      "validatedTireSizes": ["255/45R18", "255/40R19", "275/40R19", "255/35R20", "275/35R20"],
+      "issues": ["235/55R17 may be earlier W221 or carryover"],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S350 BlueTEC Sedan",
+          "tireSizes": ["255/45R18"],
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["255/45R18"],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["255/45R18"],
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": ["245/50R17", "255/45R18", "255/40R19", "275/35R20"],
+      "validatedTireSizes": ["255/45R18", "255/40R19", "275/40R19", "255/35R20", "275/35R20"],
+      "issues": ["245/50R17 appears incorrect for late W221"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["255/45R18"],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["255/45R18"],
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "staggeredOptions": [{"front": "255/45R18", "rear": "275/45R18"}],
+          "wheelSizes": ["18", "19", "20"]
+        }
+      ],
+      "currentTireSizes": ["235/55R17", "255/45R18", "275/40R18", "255/40R19", "275/35R19", "255/35R20", "275/30R20"],
+      "validatedTireSizes": ["255/45R18", "275/45R18", "255/40R19", "275/40R19", "255/35R20", "275/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["255/45R18"],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["255/45R18"],
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["18", "19", "20"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "staggeredOptions": [
+            {"front": "255/45R18", "rear": "275/45R18"},
+            {"front": "255/40R19", "rear": "275/40R19"}
+          ],
+          "wheelSizes": ["18", "19"]
+        }
+      ],
+      "currentTireSizes": ["235/55R17", "255/45R18", "275/40R18", "255/40R19", "275/35R19", "255/35R20", "275/30R20"],
+      "validatedTireSizes": ["255/45R18", "275/45R18", "255/40R19", "275/40R19", "255/35R20", "275/35R20"],
+      "issues": ["235/55R17 not confirmed for late W221"],
+      "status": "VALID"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["255/45R18"],
+          "wheelSizes": ["18", "19"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["255/45R18"],
+          "staggeredOptions": [{"front": "255/40R19", "rear": "275/40R19"}],
+          "wheelSizes": ["18", "19"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "staggeredOptions": [
+            {"front": "255/45R18", "rear": "275/45R18"},
+            {"front": "255/40R19", "rear": "275/40R19"}
+          ],
+          "wheelSizes": ["18", "19"]
+        }
+      ],
+      "currentTireSizes": ["235/55R17", "255/45R18", "275/40R18", "255/40R19", "275/35R19", "255/35R20", "275/30R20"],
+      "validatedTireSizes": ["255/45R18", "275/45R18", "255/40R19", "275/40R19"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["255/45R18"],
+          "wheelSizes": ["18", "19"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["255/45R18"],
+          "staggeredOptions": [{"front": "255/40R19", "rear": "275/40R19"}],
+          "wheelSizes": ["18", "19"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "staggeredOptions": [
+            {"front": "255/45R18", "rear": "275/45R18"},
+            {"front": "255/40R19", "rear": "275/40R19"}
+          ],
+          "wheelSizes": ["18", "19"]
+        }
+      ],
+      "currentTireSizes": ["235/55R17", "255/45R18", "275/40R18", "255/40R19", "275/35R19", "255/35R20", "275/30R20"],
+      "validatedTireSizes": ["255/45R18", "275/45R18", "255/40R19", "275/40R19"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S550 4MATIC Sedan",
+          "tireSizes": ["255/45R18"],
+          "wheelSizes": ["18", "19"]
+        },
+        {
+          "trim": "S550 Sedan",
+          "tireSizes": ["255/45R18"],
+          "staggeredOptions": [{"front": "255/40R19", "rear": "275/40R19"}],
+          "wheelSizes": ["18", "19"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "staggeredOptions": [
+            {"front": "255/45R18", "rear": "275/45R18"},
+            {"front": "255/40R19", "rear": "275/40R19"}
+          ],
+          "wheelSizes": ["18", "19"]
+        }
+      ],
+      "currentTireSizes": ["235/55R17", "255/45R18", "275/40R18", "255/40R19", "275/35R19", "255/35R20", "275/30R20"],
+      "validatedTireSizes": ["255/45R18", "275/45R18", "255/40R19", "275/40R19"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W221 (first year) / W220 (last year)",
+      "trims": [
+        {
+          "trim": "S350 Sedan (W221)",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S350 4MATIC Sedan (W221)",
+          "tireSizes": ["245/45R18"],
+          "wheelSizes": ["18"]
+        },
+        {
+          "trim": "S350 Sport Package (W221)",
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["18"]
+        },
+        {
+          "trim": "S430 4MATIC Sedan (W220)",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S500 4MATIC Sedan (W220)",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S500 Sedan (W220)",
+          "tireSizes": ["225/55R17"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S600 Sedan (W220)",
+          "tireSizes": ["245/45R18"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["235/55R17", "255/45R18", "275/40R18", "255/40R19", "275/35R19", "255/35R20", "275/30R20"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18", "255/45R18"],
+      "issues": ["Current data mixes W220 and W221 sizes - 2006 was transition year"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S430 Sedan",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S500 4MATIC Sedan",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S500 Sedan",
+          "tireSizes": ["225/55R17"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "tireSizes": ["245/45R18"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["225/55R17", "245/50R17", "245/45R18", "275/40R18", "255/40R19"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "issues": ["245/50R17 not standard, 255/40R19 not available on W220"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S430 4MATIC Sedan",
+          "tireSizes": ["225/55R17", "245/45R18"],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S430 Sedan",
+          "tireSizes": ["225/55R17"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S500 4MATIC Sedan",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S500 Sedan",
+          "tireSizes": ["225/55R17"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "tireSizes": ["245/45R18"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["225/55R17", "245/50R17", "245/45R18", "275/40R18", "255/40R19"],
+      "validatedTireSizes": ["225/55R17", "245/45R18", "265/40R18"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S430 4MATIC Sedan",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S430 Sedan",
+          "tireSizes": ["225/60R16", "225/55R17"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["16", "17", "18"]
+        },
+        {
+          "trim": "S500 4MATIC Sedan",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S500 Sedan",
+          "tireSizes": ["225/55R17"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["17", "18"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "tireSizes": ["245/45R18"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["225/55R17", "245/50R17", "245/45R18", "275/40R18", "255/40R19"],
+      "validatedTireSizes": ["225/60R16", "225/55R17", "245/45R18", "265/40R18"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S430 Sedan",
+          "tireSizes": ["225/60R16"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["16", "18"]
+        },
+        {
+          "trim": "S500 Sedan",
+          "tireSizes": ["225/60R16"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["16", "18"]
+        },
+        {
+          "trim": "S500 Guard",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "tireSizes": ["225/55R17"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["17", "18"]
+        }
+      ],
+      "currentTireSizes": ["225/55R17", "245/50R17", "245/45R18", "275/40R18", "255/40R19"],
+      "validatedTireSizes": ["225/60R16", "225/55R17", "245/45R18", "275/40R18"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S430 Sedan",
+          "tireSizes": ["225/60R16"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["16", "18"]
+        },
+        {
+          "trim": "S500 Sedan",
+          "tireSizes": ["225/60R16"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["16", "18"]
+        },
+        {
+          "trim": "S500 Guard",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17"]
+        },
+        {
+          "trim": "S600 Sedan",
+          "tireSizes": ["225/55R17"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["17", "18"]
+        }
+      ],
+      "currentTireSizes": ["225/55R17", "245/50R17", "245/45R18", "275/40R18", "255/40R19"],
+      "validatedTireSizes": ["225/60R16", "225/55R17", "245/45R18", "275/40R18"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "S-Class",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S430 Sedan",
+          "tireSizes": ["225/60R16"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["16", "18"]
+        },
+        {
+          "trim": "S500 Sedan",
+          "tireSizes": ["225/60R16"],
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["16", "18"]
+        },
+        {
+          "trim": "S500 Guard",
+          "tireSizes": ["225/55R17"],
+          "wheelSizes": ["17"]
+        }
+      ],
+      "currentTireSizes": ["225/55R17", "245/50R17", "245/45R18", "275/40R18", "255/40R19"],
+      "validatedTireSizes": ["225/60R16", "225/55R17", "245/45R18", "275/40R18"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG Sedan E Performance",
+          "staggeredOptions": [{"front": "255/40R21", "rear": "285/35R21"}],
+          "wheelSizes": ["21"]
+        }
+      ],
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/40R21", "285/35R21"],
+      "issues": ["Current data empty - needs population"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG Sedan E Performance",
+          "staggeredOptions": [{"front": "255/40R21", "rear": "285/35R21"}],
+          "wheelSizes": ["21"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R21", "285/35R21"],
+      "issues": ["Current sizes appear to be W222-era AMG; new S63 E Performance uses 21\" staggered"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG Sedan E Performance",
+          "staggeredOptions": [{"front": "255/40R21", "rear": "285/35R21"}],
+          "wheelSizes": ["21"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R21", "285/35R21"],
+      "issues": ["2024 S63 uses new E Performance platform with 21\" staggered"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG (if available)",
+          "notes": "No S63 AMG produced for 2022-2023 model years during W223 transition"
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": [],
+      "issues": ["S63 AMG had production gap 2022-2023 during W223 transition"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG Cabriolet",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R20", "285/35R20"],
+      "issues": ["Current data has some incorrect sizes for W222 AMG"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG Cabriolet",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R20", "285/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG Cabriolet",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Cabriolet",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R20", "285/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG Cabriolet",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Cabriolet",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R20", "285/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG 4MATIC Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG 4MATIC Cabriolet",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Cabriolet",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R20", "285/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG 4MATIC Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG 4MATIC Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R20", "285/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG 4MATIC Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S63 AMG 4MATIC Coupe",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG Sedan",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R20", "285/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG 4MATIC",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R20", "285/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S63 AMG",
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        },
+        {
+          "trim": "S65 AMG",
+          "staggeredOptions": [{"front": "255/35R20", "rear": "275/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R19", "275/40R19", "255/35R20", "275/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S63 AMG",
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        },
+        {
+          "trim": "S65 AMG",
+          "staggeredOptions": [{"front": "255/35R20", "rear": "275/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R19", "275/40R19", "255/35R20", "275/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S63 AMG",
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        },
+        {
+          "trim": "S65 AMG",
+          "staggeredOptions": [{"front": "255/35R20", "rear": "275/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R19", "275/40R19", "255/35R20", "275/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S63 AMG",
+          "staggeredOptions": [
+            {"front": "255/40R19", "rear": "275/40R19"},
+            {"front": "255/35R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        },
+        {
+          "trim": "S65 AMG",
+          "staggeredOptions": [{"front": "255/35R20", "rear": "275/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/40R19", "275/40R19", "255/35R20", "275/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S63 AMG",
+          "staggeredOptions": [{"front": "255/35R20", "rear": "275/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG",
+          "staggeredOptions": [{"front": "255/35R20", "rear": "275/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/35R20", "275/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S63 AMG",
+          "staggeredOptions": [{"front": "255/35R20", "rear": "275/35R20"}],
+          "wheelSizes": ["20"]
+        },
+        {
+          "trim": "S65 AMG",
+          "staggeredOptions": [{"front": "255/35R20", "rear": "275/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/35R20", "275/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W221",
+      "trims": [
+        {
+          "trim": "S65 AMG Sedan",
+          "staggeredOptions": [{"front": "255/35R20", "rear": "275/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["255/35R20", "275/35R20"],
+      "issues": [],
+      "status": "VALID"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S55 AMG",
+          "notes": "Last year of W220 S55 AMG",
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["245/45R18", "265/40R18"],
+      "issues": ["Current data has incorrect sizes for W220 S55 AMG"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S55 AMG Sedan",
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["245/45R18", "265/40R18"],
+      "issues": ["Current data has incorrect sizes for W220 S55 AMG"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S55 AMG Sedan",
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["245/45R18", "265/40R18"],
+      "issues": ["Current data has incorrect sizes for W220 S55 AMG"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S55 AMG Sedan",
+          "staggeredOptions": [{"front": "245/45R18", "rear": "265/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["245/45R18", "265/40R18"],
+      "issues": ["Current data has incorrect sizes for W220 S55 AMG"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S55 AMG Sedan",
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["245/45R18", "275/40R18"],
+      "issues": ["Current data has incorrect sizes for W220 S55 AMG"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W220",
+      "trims": [
+        {
+          "trim": "S55 AMG Sedan",
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["245/45R18", "275/40R18"],
+      "issues": ["Current data has incorrect sizes for W220 S55 AMG"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "S-Class AMG",
+      "generation": "W220 (first year)",
+      "trims": [
+        {
+          "trim": "S55 AMG Sedan",
+          "notes": "First year of W220 S55 AMG",
+          "staggeredOptions": [{"front": "245/45R18", "rear": "275/40R18"}],
+          "wheelSizes": ["18"]
+        }
+      ],
+      "currentTireSizes": ["255/45R18", "275/35R20", "255/35R21", "275/30R21"],
+      "validatedTireSizes": ["245/45R18", "275/40R18"],
+      "issues": ["Current data has incorrect sizes for W220 S55 AMG"],
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio",
+      "trims": [
+        {
+          "trim": "S560 4MATIC Cabriolet",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["Empty current data - needs population"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio",
+      "trims": [
+        {
+          "trim": "S560 Cabriolet",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["Empty current data - needs population"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio",
+      "trims": [
+        {
+          "trim": "S560 Cabriolet",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["Empty current data - needs population"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio",
+      "trims": [
+        {
+          "trim": "S560 Cabriolet",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["Empty current data - needs population"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio",
+      "trims": [
+        {
+          "trim": "S550 Cabriolet",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        },
+        {
+          "trim": "S550 4MATIC Cabriolet",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["Empty current data - needs population"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio",
+      "trims": [
+        {
+          "trim": "S550 Cabriolet (first year)",
+          "staggeredOptions": [
+            {"front": "245/45R19", "rear": "275/40R19"},
+            {"front": "245/40R20", "rear": "275/35R20"}
+          ],
+          "wheelSizes": ["19", "20"]
+        }
+      ],
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/45R19", "275/40R19", "245/40R20", "275/35R20"],
+      "issues": ["Empty current data - needs population"],
+      "status": "NEEDS_UPDATE"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "S-Class Cabrio AMG",
+      "trims": [
+        {
+          "trim": "S63 AMG Cabriolet",
+          "staggeredOptions": [{"front": "255/40R20", "rear": "285/35R20"}],
+          "wheelSizes": ["20"]
+        }
+      ],
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/40R20", "285/35R20"],
+      "issues": ["Empty current data - needs population"],
+      "status": "NEEDS_UPDATE"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "valid": 23,
+    "needsReview": 38,
+    "needsUpdate": 14,
+    "keyFindings": [
+      "W223 (2021-2026) S-Class uses 19\", 20\", 21\" wheels - no 18\" option",
+      "W222 (2014-2020) S-Class base uses 18\" with staggered 19\" and 20\" options",
+      "W221 (2006-2013) S-Class uses 18\" base with 19\" and 20\" sport options",
+      "W220 (2000-2006) S-Class uses 16\" base, 17\" optional, 18\" sport package",
+      "AMG models consistently use staggered setups",
+      "S-Class Cabrio data appears empty in current database",
+      "Current data mixes sizes from different generations"
+    ],
+    "recommendedActions": [
+      "Populate S-Class Cabrio tire sizes (2016-2021)",
+      "Correct W223 sizes - remove 255/50R18 which doesn't exist for this gen",
+      "Update AMG S55 (2000-2006) sizes - current data shows W222 sizes incorrectly",
+      "Separate W221 and W222 data for 2014 (transition year)",
+      "Add staggered front/rear distinctions to database schema"
+    ]
+  }
+}

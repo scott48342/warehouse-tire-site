@@ -1,0 +1,456 @@
+{
+  "batchId": 32,
+  "processedAt": "2026-04-21T23:55:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 17,
+    "validUS": 33,
+    "notes": "Many vehicles in this batch have model naming issues. Infiniti used different model names (I35, M35, M45, M37, M56, FX35, G37) that were later simplified or renamed (I, M, Q60, QX70). Q30 was never sold in the US market."
+  },
+  "vehicles": [
+    {
+      "year": 2002,
+      "make": "infiniti",
+      "model": "i",
+      "correctModel": "I35",
+      "tireSize": "215/55R17",
+      "tireSizeAlt": "225/50R17",
+      "wheelDiameter": 17,
+      "notes": "Base: 215/55R17, Sport Pkg: 225/50R17"
+    },
+    {
+      "year": 2003,
+      "make": "infiniti",
+      "model": "i",
+      "correctModel": "I35",
+      "tireSize": "215/55R17",
+      "tireSizeAlt": "225/50R17",
+      "wheelDiameter": 17,
+      "notes": "Base: 215/55R17, Sport Pkg: 225/50R17"
+    },
+    {
+      "year": 2004,
+      "make": "infiniti",
+      "model": "i",
+      "correctModel": "I35",
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17,
+      "notes": "Base Model only in 2004"
+    },
+    {
+      "year": 2002,
+      "make": "infiniti",
+      "model": "m",
+      "notUS": true,
+      "reason": "Infiniti M45 did not exist in US until 2003. 2002 M was Japan-only market."
+    },
+    {
+      "year": 2003,
+      "make": "infiniti",
+      "model": "m",
+      "correctModel": "M45",
+      "tireSize": "235/45R18",
+      "wheelDiameter": 18,
+      "notes": "M45 only for 2003"
+    },
+    {
+      "year": 2004,
+      "make": "infiniti",
+      "model": "m",
+      "correctModel": "M45",
+      "tireSize": "235/45R18",
+      "wheelDiameter": 18,
+      "notes": "M45 only for 2004"
+    },
+    {
+      "year": 2005,
+      "make": "infiniti",
+      "model": "m",
+      "notUS": true,
+      "reason": "No Infiniti M was sold in US in 2005. M45 ended 2004, new M35/M45 started 2006."
+    },
+    {
+      "year": 2006,
+      "make": "infiniti",
+      "model": "m",
+      "correctModel": "M35/M45",
+      "tireSize": "245/45R18",
+      "tireSizeAlt": "245/40R19",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 19,
+      "notes": "Base/Luxury: 245/45R18 (18\"), Sport: 245/40R19 (19\")"
+    },
+    {
+      "year": 2007,
+      "make": "infiniti",
+      "model": "m",
+      "correctModel": "M35/M45",
+      "tireSize": "245/45R18",
+      "tireSizeAlt": "245/40R19",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 19,
+      "notes": "Base/X: 245/45R18 (18\"), Sport: 245/40R19 (19\")"
+    },
+    {
+      "year": 2008,
+      "make": "infiniti",
+      "model": "m",
+      "correctModel": "M35/M45",
+      "tireSize": "245/45R18",
+      "tireSizeAlt": "245/40R19",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 19,
+      "notes": "Base/Luxury/X: 245/45R18 (18\"), Sport: 245/40R19 (19\")"
+    },
+    {
+      "year": 2009,
+      "make": "infiniti",
+      "model": "m",
+      "correctModel": "M35/M45",
+      "tireSize": "245/45R18",
+      "tireSizeAlt": "245/40R19",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 19,
+      "notes": "Base/X: 245/45R18 (18\"), Sport: 245/40R19 (19\")"
+    },
+    {
+      "year": 2010,
+      "make": "infiniti",
+      "model": "m",
+      "correctModel": "M35/M45",
+      "tireSize": "245/45R18",
+      "tireSizeAlt": "245/40R19",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 19,
+      "notes": "Base/X: 245/45R18 (18\"), Sport: 245/40R19 (19\")"
+    },
+    {
+      "year": 2011,
+      "make": "infiniti",
+      "model": "m",
+      "correctModel": "M37/M56",
+      "tireSize": "245/50R18",
+      "tireSizeAlt": "245/40R20",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 20,
+      "notes": "Base/X: 245/50R18 (18\"), Sport: 245/40R20 (20\")"
+    },
+    {
+      "year": 2012,
+      "make": "infiniti",
+      "model": "m",
+      "correctModel": "M37/M56",
+      "tireSize": "245/50R18",
+      "tireSizeAlt": "245/40R20",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 20,
+      "notes": "Base/X: 245/50R18 (18\"), Sport: 245/40R20 (20\")"
+    },
+    {
+      "year": 2013,
+      "make": "infiniti",
+      "model": "m",
+      "correctModel": "M37/M56",
+      "tireSize": "245/50R18",
+      "tireSizeAlt": "245/40R20",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 20,
+      "notes": "Base/X: 245/50R18 (18\"), Sport/X Sport: 245/40R20 (20\")"
+    },
+    {
+      "year": 2014,
+      "make": "infiniti",
+      "model": "m",
+      "notUS": true,
+      "reason": "Infiniti M was renamed to Q70 in 2014. No 'M' model was sold in US for 2014."
+    },
+    {
+      "year": 2015,
+      "make": "infiniti",
+      "model": "q30",
+      "notUS": true,
+      "reason": "Infiniti Q30 was only sold in Europe and select international markets. Never sold in the United States."
+    },
+    {
+      "year": 2016,
+      "make": "infiniti",
+      "model": "q30",
+      "notUS": true,
+      "reason": "Infiniti Q30 was only sold in Europe and select international markets. Never sold in the United States."
+    },
+    {
+      "year": 2017,
+      "make": "infiniti",
+      "model": "q30",
+      "notUS": true,
+      "reason": "Infiniti Q30 was only sold in Europe and select international markets. Never sold in the United States."
+    },
+    {
+      "year": 2018,
+      "make": "infiniti",
+      "model": "q30",
+      "notUS": true,
+      "reason": "Infiniti Q30 was only sold in Europe and select international markets. Never sold in the United States."
+    },
+    {
+      "year": 2019,
+      "make": "infiniti",
+      "model": "q30",
+      "notUS": true,
+      "reason": "Infiniti Q30 was only sold in Europe and select international markets. Never sold in the United States."
+    },
+    {
+      "year": 2020,
+      "make": "infiniti",
+      "model": "q30",
+      "notUS": true,
+      "reason": "Infiniti Q30 was only sold in Europe and select international markets. Never sold in the United States."
+    },
+    {
+      "year": 2021,
+      "make": "infiniti",
+      "model": "q30",
+      "notUS": true,
+      "reason": "Infiniti Q30 was only sold in Europe and select international markets. Never sold in the United States."
+    },
+    {
+      "year": 2000,
+      "make": "infiniti",
+      "model": "q45",
+      "tireSize": "215/60R16",
+      "tireSizeAlt": "225/50R17",
+      "wheelDiameter": 16,
+      "wheelDiameterAlt": 17,
+      "notes": "Base: 215/60R16 (16\"), T pkg: 225/50R17 (17\")"
+    },
+    {
+      "year": 2001,
+      "make": "infiniti",
+      "model": "q45",
+      "tireSize": "215/60R16",
+      "tireSizeAlt": "225/50R17",
+      "wheelDiameter": 16,
+      "wheelDiameterAlt": 17,
+      "notes": "Base: 215/60R16 (16\"), T pkg: 225/50R17 (17\")"
+    },
+    {
+      "year": 2002,
+      "make": "infiniti",
+      "model": "q45",
+      "tireSize": "225/55R17",
+      "tireSizeAlt": "245/45R18",
+      "wheelDiameter": 17,
+      "wheelDiameterAlt": 18,
+      "notes": "Base: 225/55R17 (17\"), Premium/Sport Pkg: 245/45R18 (18\")"
+    },
+    {
+      "year": 2003,
+      "make": "infiniti",
+      "model": "q45",
+      "tireSize": "225/55R17",
+      "tireSizeAlt": "245/45R18",
+      "wheelDiameter": 17,
+      "wheelDiameterAlt": 18,
+      "notes": "Base: 225/55R17 or 245/45R18 (17-18\"), Premium/Sport: 245/45R18 (18\")"
+    },
+    {
+      "year": 2004,
+      "make": "infiniti",
+      "model": "q45",
+      "tireSize": "225/55R17",
+      "tireSizeAlt": "245/45R18",
+      "wheelDiameter": 17,
+      "wheelDiameterAlt": 18,
+      "notes": "Base: 225/55R17 or 245/45R18 (17-18\"), Premium: 245/45R18 (18\")"
+    },
+    {
+      "year": 2005,
+      "make": "infiniti",
+      "model": "q45",
+      "tireSize": "225/55R17",
+      "tireSizeAlt": "245/45R18",
+      "wheelDiameter": 17,
+      "wheelDiameterAlt": 18,
+      "notes": "Base: 225/55R17 or 245/45R18 (17-18\"), Premium: 245/45R18 (18\")"
+    },
+    {
+      "year": 2006,
+      "make": "infiniti",
+      "model": "q45",
+      "tireSize": "225/55R17",
+      "tireSizeAlt": "245/40R19",
+      "wheelDiameter": 17,
+      "wheelDiameterAlt": 19,
+      "notes": "Base/Runflat: 225/55R17 (17\"), Premium: 245/45R18 (18\"), Sport: 245/40R19 (19\")"
+    },
+    {
+      "year": 2013,
+      "make": "infiniti",
+      "model": "q60",
+      "notUS": true,
+      "reason": "In 2013, the coupe was still called Infiniti G37. Q60 naming started in 2014."
+    },
+    {
+      "year": 2023,
+      "make": "infiniti",
+      "model": "q60",
+      "notUS": true,
+      "reason": "Infiniti Q60 was discontinued after 2022. No 2023 model year exists."
+    },
+    {
+      "year": 2004,
+      "make": "infiniti",
+      "model": "qx56",
+      "tireSize": "265/70R18",
+      "wheelDiameter": 18,
+      "notes": "All trims (2WD and 4WD): 265/70R18"
+    },
+    {
+      "year": 2005,
+      "make": "infiniti",
+      "model": "qx56",
+      "tireSize": "265/70R18",
+      "wheelDiameter": 18,
+      "notes": "All trims (2WD and 4WD): 265/70R18"
+    },
+    {
+      "year": 2006,
+      "make": "infiniti",
+      "model": "qx56",
+      "tireSize": "265/70R18",
+      "wheelDiameter": 18,
+      "notes": "All trims (2WD and 4WD): 265/70R18"
+    },
+    {
+      "year": 2007,
+      "make": "infiniti",
+      "model": "qx56",
+      "tireSize": "265/70R18",
+      "wheelDiameter": 18,
+      "notes": "All trims (2WD and 4WD): 265/70R18"
+    },
+    {
+      "year": 2008,
+      "make": "infiniti",
+      "model": "qx56",
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20,
+      "notes": "All trims (2WD and 4WD): 275/60R20"
+    },
+    {
+      "year": 2009,
+      "make": "infiniti",
+      "model": "qx56",
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20,
+      "notes": "All trims (2WD and 4WD): 275/60R20"
+    },
+    {
+      "year": 2010,
+      "make": "infiniti",
+      "model": "qx56",
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20,
+      "notes": "All trims (2WD and 4WD): 275/60R20"
+    },
+    {
+      "year": 2011,
+      "make": "infiniti",
+      "model": "qx56",
+      "tireSize": "275/60R20",
+      "tireSizeAlt": "275/50R22",
+      "wheelDiameter": 20,
+      "wheelDiameterAlt": 22,
+      "notes": "2WD/4WD: 275/60R20 (20\") or 275/50R22 (22\")"
+    },
+    {
+      "year": 2012,
+      "make": "infiniti",
+      "model": "qx56",
+      "tireSize": "275/60R20",
+      "tireSizeAlt": "275/50R22",
+      "wheelDiameter": 20,
+      "wheelDiameterAlt": 22,
+      "notes": "2WD/4WD: 275/60R20 (20\") or 275/50R22 (22\")"
+    },
+    {
+      "year": 2013,
+      "make": "infiniti",
+      "model": "qx56",
+      "tireSize": "275/60R20",
+      "tireSizeAlt": "275/50R22",
+      "wheelDiameter": 20,
+      "wheelDiameterAlt": 22,
+      "notes": "Final year of QX56. Renamed to QX80 for 2014. Same specs as 2012."
+    },
+    {
+      "year": 2013,
+      "make": "infiniti",
+      "model": "qx70",
+      "notUS": true,
+      "reason": "In 2013, this model was still called Infiniti FX35/FX37/FX50. QX70 naming started in 2014."
+    },
+    {
+      "year": 2014,
+      "make": "infiniti",
+      "model": "qx70",
+      "tireSize": "265/60R18",
+      "tireSizeAlt": "265/45R21",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 21,
+      "notes": "3.7/3.7 AWD: 265/60R18 (18\") or 265/50R20 (20\"), 5.0 AWD: 265/45R21 (21\")"
+    },
+    {
+      "year": 2015,
+      "make": "infiniti",
+      "model": "qx70",
+      "tireSize": "265/60R18",
+      "tireSizeAlt": "265/45R21",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 21,
+      "notes": "AWD/RWD: 265/60R18 (18\"), 265/50R20 (20\"), or 265/45R21 (21\")"
+    },
+    {
+      "year": 2016,
+      "make": "infiniti",
+      "model": "qx70",
+      "tireSize": "265/60R18",
+      "tireSizeAlt": "265/45R21",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 21,
+      "notes": "AWD/RWD: 265/60R18 (18\"), 265/50R20 (20\"), or 265/45R21 (21\")"
+    },
+    {
+      "year": 2017,
+      "make": "infiniti",
+      "model": "qx70",
+      "tireSize": "265/60R18",
+      "tireSizeAlt": "265/45R21",
+      "wheelDiameter": 18,
+      "wheelDiameterAlt": 21,
+      "notes": "Final year. AWD/RWD: 265/60R18 (18\"), 265/50R20 (20\"), or 265/45R21 (21\")"
+    },
+    {
+      "year": 2018,
+      "make": "infiniti",
+      "model": "qx70",
+      "notUS": true,
+      "reason": "Infiniti QX70 was discontinued after 2017 model year. No 2018 model exists in the US market."
+    },
+    {
+      "year": 2019,
+      "make": "infiniti",
+      "model": "qx70",
+      "notUS": true,
+      "reason": "Infiniti QX70 was discontinued after 2017 model year. No 2019 model exists in the US market."
+    },
+    {
+      "year": 2020,
+      "make": "infiniti",
+      "model": "qx70",
+      "notUS": true,
+      "reason": "Infiniti QX70 was discontinued after 2017 model year. No 2020 model exists in the US market."
+    }
+  ]
+}

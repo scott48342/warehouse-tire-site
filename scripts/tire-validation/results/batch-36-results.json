@@ -1,0 +1,938 @@
+{
+  "batchId": "36",
+  "processedAt": "2026-04-21T21:52:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "spark-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": { "tireSizes": ["185/55R15"] },
+        "LT": { "tireSizes": ["185/55R15"] }
+      },
+      "isStaggered": false,
+      "notes": "Mexico/South America market variant of Spark M300"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "spark-classic",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "LS": { "tireSizes": ["185/55R15"] },
+        "LT": { "tireSizes": ["185/55R15"] }
+      },
+      "isStaggered": false,
+      "notes": "Mexico/South America market variant of Spark M300"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "spark-ev",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15", "195/55R15"],
+      "trims": {
+        "LT": { "front": "185/55R15", "rear": "195/55R15" }
+      },
+      "isStaggered": true,
+      "notes": "Electric variant with staggered tire setup"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "spark-ev",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15", "195/55R15"],
+      "trims": {
+        "LT": { "front": "185/55R15", "rear": "195/55R15" }
+      },
+      "isStaggered": true,
+      "notes": "Electric variant with staggered tire setup"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "spark-ev",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15", "195/55R15"],
+      "trims": {
+        "LT": { "front": "185/55R15", "rear": "195/55R15" }
+      },
+      "isStaggered": true,
+      "notes": "Electric variant with staggered tire setup"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "spark-gt-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Activ": { "tireSizes": ["185/55R15"] }
+      },
+      "isStaggered": false,
+      "notes": "Colombia/South America market variant"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "spark-gt-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Activ": { "tireSizes": ["185/55R15"] }
+      },
+      "isStaggered": false,
+      "notes": "Colombia/South America market variant"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "spark-gt-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/55R15"],
+      "trims": {
+        "Activ": { "tireSizes": ["185/55R15"] }
+      },
+      "isStaggered": false,
+      "notes": "Colombia/South America market variant"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "ss",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "Sports Sedan": {
+          "option1": { "front": "245/40R19", "rear": "275/35R19" },
+          "option2": { "front": "245/35R20", "rear": "275/30R20" }
+        }
+      },
+      "isStaggered": true,
+      "notes": "Performance sedan with mandatory staggered setup"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "ss",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "Sports Sedan": {
+          "option1": { "front": "245/40R19", "rear": "275/35R19" },
+          "option2": { "front": "245/35R20", "rear": "275/30R20" }
+        }
+      },
+      "isStaggered": true,
+      "notes": "Performance sedan with mandatory staggered setup"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "ss",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19", "245/35R20", "275/30R20"],
+      "trims": {
+        "Sports Sedan": {
+          "option1": { "front": "245/40R19", "rear": "275/35R19" },
+          "option2": { "front": "245/35R20", "rear": "275/30R20" }
+        }
+      },
+      "isStaggered": true,
+      "notes": "Performance sedan with mandatory staggered setup"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "ss",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/40R19", "275/35R19"],
+      "trims": {
+        "Base Model": { "front": "245/40R19", "rear": "275/35R19" },
+        "Sports Sedan": { "front": "245/40R19", "rear": "275/35R19" }
+      },
+      "isStaggered": true,
+      "notes": "Performance sedan with mandatory staggered setup"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "ssr",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "295/40R20"],
+      "trims": {
+        "Base Model": { "front": "255/45R19", "rear": "295/40R20" }
+      },
+      "isStaggered": true,
+      "notes": "Retro pickup truck with staggered 19/20 inch setup"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "ssr",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "295/40R20"],
+      "trims": {
+        "Base Model": { "front": "255/45R19", "rear": "295/40R20" }
+      },
+      "isStaggered": true,
+      "notes": "Retro pickup truck with staggered 19/20 inch setup"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "ssr",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "295/40R20"],
+      "trims": {
+        "Base Model": { "front": "255/45R19", "rear": "295/40R20" }
+      },
+      "isStaggered": true,
+      "notes": "Retro pickup truck with staggered 19/20 inch setup"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "ssr",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/45R19", "295/40R20"],
+      "trims": {
+        "Base Model": { "front": "255/45R19", "rear": "295/40R20" }
+      },
+      "isStaggered": true,
+      "notes": "Retro pickup truck with staggered 19/20 inch setup"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "Z71": { "tireSizes": ["275/60R20"] },
+        "RST": { "tireSizes": ["275/50R22"] },
+        "Premier": { "tireSizes": ["275/60R20", "275/50R22"] },
+        "High Country": { "tireSizes": ["275/50R22"] }
+      },
+      "isStaggered": false,
+      "notes": "Current gen (GMT T1XX). 285/45R22 in current DB not OEM standard - should be 275/50R22"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "Z71": { "tireSizes": ["275/60R20"] },
+        "RST": { "tireSizes": ["275/50R22"] },
+        "Premier": { "tireSizes": ["275/60R20", "275/50R22"] },
+        "High Country": { "tireSizes": ["275/50R22"] }
+      },
+      "isStaggered": false,
+      "notes": "Current gen (GMT T1XX). 285/45R22 in current DB not OEM standard - should be 275/50R22"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22", "275/60R20", "265/65R18", "275/50R22", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "Z71": { "tireSizes": ["275/60R20"] },
+        "RST": { "tireSizes": ["275/50R22"] },
+        "Premier": { "tireSizes": ["275/60R20", "275/50R22"] },
+        "High Country": { "tireSizes": ["275/50R22"] }
+      },
+      "isStaggered": false,
+      "notes": "Current gen (GMT T1XX). 275/55R20 and 285/45R22 in DB are from previous gen - should update to 275/60R20 and 275/50R22"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "Z71": { "tireSizes": ["275/60R20"] },
+        "RST": { "tireSizes": ["275/50R22"] },
+        "Premier": { "tireSizes": ["275/60R20", "275/50R22"] },
+        "High Country": { "tireSizes": ["275/50R22"] }
+      },
+      "isStaggered": false,
+      "notes": "285/45R22 should be 275/50R22 for this gen"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "Z71": { "tireSizes": ["275/60R20"] },
+        "RST": { "tireSizes": ["275/50R22"] },
+        "Premier": { "tireSizes": ["275/60R20", "275/50R22"] },
+        "High Country": { "tireSizes": ["275/50R22"] }
+      },
+      "isStaggered": false,
+      "notes": "285/45R22 should be 275/50R22 for this gen"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/65R18", "P275/60R20", "P285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/60R20", "275/50R22"] },
+        "Z71": { "tireSizes": ["275/60R20"] },
+        "RST": { "tireSizes": ["275/50R22"] },
+        "Premier": { "tireSizes": ["275/60R20", "275/50R22"] },
+        "High Country": { "tireSizes": ["275/50R22"] }
+      },
+      "isStaggered": false,
+      "notes": "First year of GMT T1XX gen. 285/45R22 should be 275/50R22"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["275/55R20", "265/65R18", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "Premier": { "tireSizes": ["275/55R20", "285/45R22"] }
+      },
+      "isStaggered": false,
+      "notes": "Last year of GMT K2UC gen. Current DB correct."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "265/65R18", "275/55R20", "265/70R17", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "Premier": { "tireSizes": ["275/55R20", "285/45R22"] }
+      },
+      "isStaggered": false,
+      "notes": "265/70R17 in DB is incorrect for 2019 - that's from older 2007-2014 gen"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "265/65R18", "275/55R20", "265/70R17", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "Premier": { "tireSizes": ["275/55R20", "285/45R22"] }
+      },
+      "isStaggered": false,
+      "notes": "265/70R17 in DB is incorrect for 2018 - that's from older gen"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/65R18", "P275/55R20", "P285/45R22", "265/65R18", "275/55R20", "265/70R17", "285/45R22"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "Premier": { "tireSizes": ["275/55R20", "285/45R22"] }
+      },
+      "isStaggered": false,
+      "notes": "Premier replaced LTZ trim. 265/70R17 is incorrect for this gen."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["275/55R20", "265/65R18", "285/45R22", "265/70R17"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "LTZ": { "tireSizes": ["275/55R20", "285/45R22"] }
+      },
+      "isStaggered": false,
+      "notes": "265/70R17 is incorrect for K2UC gen (2015+)"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["275/55R20", "265/65R18", "285/45R22", "265/70R17"],
+      "validatedTireSizes": ["265/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "LS": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "LT": { "tireSizes": ["265/65R18", "275/55R20", "285/45R22"] },
+        "LTZ": { "tireSizes": ["275/55R20", "285/45R22"] }
+      },
+      "isStaggered": false,
+      "notes": "First year of K2UC gen. 265/70R17 is incorrect for this gen."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] },
+        "1500 Z71": { "tireSizes": ["265/65R18", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "Last year of GMT900 gen. Current DB correct."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] },
+        "1500 Z71": { "tireSizes": ["265/65R18", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "Current DB correct."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] },
+        "1500 Z71": { "tireSizes": ["265/65R18", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "Current DB correct."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] },
+        "1500 Z71": { "tireSizes": ["265/65R18", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "Current DB correct."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] },
+        "1500 Z71": { "tireSizes": ["265/65R18", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "Current DB correct."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "265/65R18 in DB may be from Z71 package. Verify trim-level availability."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "265/65R18 may be from Z71 or aftermarket. tiresize.com shows only 17/20."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R17", "P265/65R18", "P275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "First year of GMT900. 265/65R18 may need trim verification."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "1500 2wd": { "tireSizes": ["265/70R16", "265/70R17"] },
+        "1500 4wd": { "tireSizes": ["265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "Last year of GMT800. 275/55R20 in DB is incorrect - that's aftermarket or from later gen. OEM is 16/17 inch."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/70R17"],
+      "trims": {
+        "1500 2wd": { "tireSizes": ["245/75R16", "265/70R16", "265/70R17"] },
+        "1500 4wd": { "tireSizes": ["245/75R16", "265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "275/55R20 in DB is incorrect for GMT800. OEM is 16/17 inch only."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "1500 2wd": { "tireSizes": ["265/70R16", "265/70R17"] },
+        "1500 4wd": { "tireSizes": ["265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "275/55R20 in DB is incorrect for GMT800."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/70R17"],
+      "trims": {
+        "2wd": { "tireSizes": ["245/75R16", "265/70R16", "265/70R17"] },
+        "4wd": { "tireSizes": ["265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "275/55R20 in DB is incorrect for GMT800."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "2wd": { "tireSizes": ["265/70R16", "265/70R17"] },
+        "4wd": { "tireSizes": ["265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "275/55R20 in DB is incorrect for GMT800."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/70R17"],
+      "trims": {
+        "2wd": { "tireSizes": ["245/75R16", "265/70R16", "265/70R17"] },
+        "4wd": { "tireSizes": ["245/75R16", "265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "275/55R20 in DB is incorrect for GMT800."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "suburban",
+      "currentTireSizes": ["P265/70R16", "P265/65R17", "P275/55R20"],
+      "validatedTireSizes": ["245/75R16", "265/70R16"],
+      "trims": {
+        "2wd": { "tireSizes": ["245/75R16", "265/70R16"] },
+        "4wd": { "tireSizes": ["245/75R16", "265/70R16"] }
+      },
+      "isStaggered": false,
+      "notes": "First year of GMT800. 265/65R17 and 275/55R20 in DB are incorrect. OEM is 16 inch only."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] },
+        "1500 Z71": { "tireSizes": ["265/65R18", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "285/45R22 in DB is incorrect for GMT900 - that came with 2015+ K2UC gen. Remove."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] },
+        "1500 Z71": { "tireSizes": ["265/65R18", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "285/45R22 is incorrect for GMT900."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] },
+        "1500 Z71": { "tireSizes": ["265/65R18", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "285/45R22 is incorrect for GMT900."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] },
+        "1500 Z71": { "tireSizes": ["265/65R18", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "285/45R22 is incorrect for GMT900."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "265/65R18", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] },
+        "1500 Z71": { "tireSizes": ["265/65R18", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "285/45R22 is incorrect for GMT900."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "285/45R22 is incorrect for GMT900."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "285/45R22 is incorrect for GMT900."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "1500": { "tireSizes": ["265/70R17", "275/55R20"] }
+      },
+      "isStaggered": false,
+      "notes": "First year GMT900. 285/45R22 is incorrect."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "1500 2wd": { "tireSizes": ["265/70R16", "265/70R17"] },
+        "1500 4wd": { "tireSizes": ["265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "GMT800 platform. 275/55R20 and 285/45R22 are incorrect - came with later gens."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/70R17"],
+      "trims": {
+        "1500 2wd": { "tireSizes": ["245/75R16", "265/70R16", "265/70R17"] },
+        "1500 4wd": { "tireSizes": ["245/75R16", "265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "GMT800 platform. 275/55R20 and 285/45R22 are incorrect."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "1500 2wd": { "tireSizes": ["265/70R16", "265/70R17"] },
+        "1500 4wd": { "tireSizes": ["265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "GMT800 platform. 275/55R20 and 285/45R22 are incorrect."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/70R17"],
+      "trims": {
+        "2wd": { "tireSizes": ["245/75R16", "265/70R16", "265/70R17"] },
+        "4wd": { "tireSizes": ["265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "GMT800 platform. 275/55R20 and 285/45R22 are incorrect."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "2wd": { "tireSizes": ["265/70R16", "265/70R17"] },
+        "4wd": { "tireSizes": ["265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "GMT800 platform. 275/55R20 and 285/45R22 are incorrect."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/70R17"],
+      "trims": {
+        "2wd": { "tireSizes": ["245/75R16", "265/70R16", "265/70R17"] },
+        "4wd": { "tireSizes": ["245/75R16", "265/70R16", "265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "GMT800 platform. 275/55R20 and 285/45R22 are incorrect."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "suburban-1500",
+      "currentTireSizes": ["265/70R17", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["245/75R16", "265/70R16"],
+      "trims": {
+        "2wd": { "tireSizes": ["245/75R16", "265/70R16"] },
+        "4wd": { "tireSizes": ["245/75R16", "265/70R16"] }
+      },
+      "isStaggered": false,
+      "notes": "First GMT800 year. 265/70R17, 275/55R20, 285/45R22 are all incorrect for this year."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16", "LT265/70R17"],
+      "trims": {
+        "2500": { "tireSizes": ["245/75R16", "LT265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "Heavy duty 3/4 ton. LT275/70R18 in DB is incorrect - that was not OEM for 2500."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16", "LT265/70R17"],
+      "trims": {
+        "2500": { "tireSizes": ["245/75R16", "LT265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "LT275/70R18 in DB is incorrect."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16", "LT265/70R17"],
+      "trims": {
+        "2500": { "tireSizes": ["245/75R16", "LT265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "LT275/70R18 in DB is incorrect."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16", "LT265/70R17"],
+      "trims": {
+        "2500": { "tireSizes": ["245/75R16", "LT265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "LT275/70R18 in DB is incorrect."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16", "LT265/70R17"],
+      "trims": {
+        "2500": { "tireSizes": ["245/75R16", "LT265/70R17"] }
+      },
+      "isStaggered": false,
+      "notes": "LT275/70R18 in DB is incorrect."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16"],
+      "trims": {
+        "2500": { "tireSizes": ["245/75R16"] }
+      },
+      "isStaggered": false,
+      "notes": "Both LT265/70R17 and LT275/70R18 in DB may be incorrect. tiresize.com shows only 245/75R16."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16"],
+      "trims": {
+        "2500": { "tireSizes": ["245/75R16"] }
+      },
+      "isStaggered": false,
+      "notes": "Both LT265/70R17 and LT275/70R18 in DB may be incorrect."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16"],
+      "trims": {
+        "2500 2wd": { "tireSizes": ["245/75R16"] },
+        "2500 4wd": { "tireSizes": ["245/75R16"] }
+      },
+      "isStaggered": false,
+      "notes": "Both LT265/70R17 and LT275/70R18 in DB are incorrect for GMT800."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16"],
+      "trims": {
+        "2500 2wd": { "tireSizes": ["245/75R16"] },
+        "2500 4wd": { "tireSizes": ["245/75R16"] }
+      },
+      "isStaggered": false,
+      "notes": "Both LT265/70R17 and LT275/70R18 in DB are incorrect."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16"],
+      "trims": {
+        "2500 2wd": { "tireSizes": ["245/75R16"] },
+        "2500 4wd": { "tireSizes": ["245/75R16"] }
+      },
+      "isStaggered": false,
+      "notes": "Both LT265/70R17 and LT275/70R18 in DB are incorrect."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "suburban-2500",
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18"],
+      "validatedTireSizes": ["245/75R16"],
+      "trims": {
+        "2500 2wd": { "tireSizes": ["245/75R16"] },
+        "2500 4wd": { "tireSizes": ["245/75R16"] }
+      },
+      "isStaggered": false,
+      "notes": "Both LT265/70R17 and LT275/70R18 in DB are incorrect."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "staggeredSetups": 9,
+    "nonStaggeredSetups": 66,
+    "issuesFound": {
+      "incorrectSizes": 45,
+      "missingSizes": 16,
+      "extraneousSizes": 38
+    },
+    "keyFindings": [
+      "Spark EV (2014-2016): Staggered setup 185/55R15 front, 195/55R15 rear",
+      "SS (2014-2017): Staggered 245/40R19 front, 275/35R19 rear (or 245/35R20/275/30R20 optional)",
+      "SSR (2003-2006): Staggered 255/45R19 front, 295/40R20 rear",
+      "Suburban 2021+: Changed to 275/60R20 and 275/50R22 (not 275/55R20 and 285/45R22)",
+      "Suburban 2000-2006 (GMT800): Should be 16/17 inch only, not 20 inch",
+      "Suburban 1500 2000-2014 (GMT900): 285/45R22 is incorrect - came with 2015+ gen only",
+      "Suburban 2500: LT275/70R18 in DB is questionable - tiresize.com shows 245/75R16 and LT265/70R17 only",
+      "Spark Classic and Spark GT Activ: Regional variants, all use 185/55R15"
+    ]
+  }
+}

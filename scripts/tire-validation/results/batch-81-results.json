@@ -1,0 +1,1067 @@
+{
+  "batchId": "81",
+  "validatedAt": "2026-04-21T22:11:30Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Patriot",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "trims": {
+        "Sport": ["205/70R16", "215/65R17"],
+        "Limited": ["215/60R17", "215/65R17"],
+        "North Edition": ["205/70R16", "215/60R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "DB has no tire sizes, should have 3 OEM sizes"
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Patriot",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/70R16", "215/60R17", "215/65R17"],
+      "trims": {
+        "Sport": ["205/70R16", "215/65R17"],
+        "Limited": ["215/60R17", "215/65R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "DB has no tire sizes, should have 3 OEM sizes"
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "225/55R18", "235/45R19", "235/55R17"],
+      "trims": {
+        "Sport": ["215/65R16", "215/60R17"],
+        "Latitude": ["215/60R17"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Altitude": ["225/55R18"],
+        "Trailhawk": ["235/55R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17 in DB not found as OEM size. Missing 215/65R17 (Trailhawk alternate), 235/55R17 (Trailhawk). Trailhawk uses 235/55R17 not 215/65R17 on 2023+ facelift"
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "225/55R18", "235/45R19", "235/55R17"],
+      "trims": {
+        "Sport": ["215/65R16", "215/60R17"],
+        "Latitude": ["215/60R17"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Altitude": ["225/55R18"],
+        "Trailhawk": ["235/55R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17 in DB not found as OEM size. Should add 235/55R17 for Trailhawk"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "225/55R18", "235/45R19", "235/55R17"],
+      "trims": {
+        "Sport": ["215/65R16", "215/60R17"],
+        "Latitude": ["215/60R17"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Altitude": ["225/55R18"],
+        "Trailhawk": ["235/55R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17 in DB not found as OEM size. Should add 235/55R17 for Trailhawk"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "225/55R18", "235/45R19", "235/55R17"],
+      "trims": {
+        "Sport": ["215/65R16", "215/60R17"],
+        "Latitude": ["215/60R17"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Altitude": ["225/55R18"],
+        "Trailhawk": ["235/55R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17 in DB not found as OEM. Trailhawk uses 235/55R17"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "225/55R18", "235/45R19"],
+      "trims": {
+        "Sport": ["215/65R16", "215/60R17"],
+        "Latitude": ["215/60R17"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Altitude": ["225/55R18"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17 in DB not found as OEM size. Should add 215/65R17 for Trailhawk"
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "235/45R19"],
+      "trims": {
+        "Sport": ["215/65R16", "215/60R17"],
+        "Latitude": ["215/60R17", "235/45R19"],
+        "Limited": ["215/60R17", "235/45R19"],
+        "Freedom": ["215/60R17"],
+        "80th Anniversary": ["235/45R19"],
+        "Islander": ["235/45R19"],
+        "Jeepster": ["235/45R19"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17 and 225/55R18 in DB not found as 2021 OEM sizes"
+    },
+    {
+      "year": 2020,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "225/55R18", "235/45R19"],
+      "trims": {
+        "Sport": ["215/65R16", "215/60R17"],
+        "Latitude": ["215/60R17", "225/55R18", "235/45R19"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Altitude": ["215/60R17"],
+        "High Altitude": ["235/45R19"],
+        "Upland": ["215/60R17"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17 in DB not found as OEM. Should add 215/65R17 for Trailhawk"
+    },
+    {
+      "year": 2019,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19", "215/65R17", "225/60R17", "235/55R17"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "225/55R18", "235/45R19"],
+      "trims": {
+        "Sport": ["215/65R16", "215/60R17"],
+        "Latitude": ["215/60R17", "225/55R18", "235/45R19"],
+        "Limited": ["225/55R18", "235/45R19"],
+        "Altitude": ["215/60R17"],
+        "High Altitude": ["235/45R19"],
+        "Upland": ["215/60R17"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17, 225/60R17, 235/55R17 in DB not found as OEM sizes"
+    },
+    {
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "225/55R18"],
+      "trims": {
+        "Sport": ["215/65R16"],
+        "Latitude": ["215/65R16", "215/60R17"],
+        "Limited": ["225/55R18"],
+        "Altitude": ["225/55R18"],
+        "Upland": ["215/65R16"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17, 235/45R19 in DB not OEM for 2018"
+    },
+    {
+      "year": 2017,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "225/55R18"],
+      "trims": {
+        "Sport": ["215/65R16"],
+        "Altitude": ["215/65R16", "215/60R17", "225/55R18"],
+        "Latitude": ["215/65R16", "215/60R17", "225/55R18"],
+        "Limited": ["225/55R18"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17, 235/45R19 in DB not OEM for 2017"
+    },
+    {
+      "year": 2016,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "225/55R18"],
+      "trims": {
+        "Sport": ["215/65R16"],
+        "Latitude": ["215/65R16", "215/60R17", "225/55R18"],
+        "Limited": ["225/55R18"],
+        "75th Anniversary": ["225/55R18"],
+        "Dawn of Justice": ["225/55R18"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17, 235/45R19 in DB not OEM for 2016"
+    },
+    {
+      "year": 2015,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": ["215/65R16", "215/60R17", "225/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["215/65R16", "215/60R17", "215/65R17", "225/55R18"],
+      "trims": {
+        "Sport": ["215/65R16"],
+        "Latitude": ["215/65R16", "215/60R17", "225/55R18"],
+        "Limited": ["225/55R18"],
+        "Trailhawk": ["215/65R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/55R17, 235/45R19 in DB not OEM for 2015"
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Renegade",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "Jeep Renegade was not sold in 2014. First model year was 2015. Remove from DB."
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "currentTireSizes": ["275/55R20", "285/45R22"],
+      "validatedTireSizes": ["275/55R20", "285/45R22"],
+      "trims": {
+        "Base Model": ["275/55R20"],
+        "Carbide": ["275/55R20", "285/45R22"],
+        "Series II": ["275/55R20", "285/45R22"],
+        "Series III": ["275/55R20", "285/45R22"]
+      },
+      "status": "VALID",
+      "notes": "Matches OEM data"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "currentTireSizes": ["275/55R20", "285/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "Base Model": ["275/65R18", "275/55R20"],
+        "Carbide": ["275/55R20", "285/45R22"],
+        "Series II": ["275/55R20", "285/45R22"],
+        "Series III": ["275/55R20", "285/45R22"]
+      },
+      "status": "MISSING_SIZE",
+      "notes": "Missing 275/65R18 (Base Model with All-Terrain package)"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "currentTireSizes": ["275/55R20", "285/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "Base Model": ["275/65R18", "275/55R20"],
+        "Carbide": ["275/55R20", "285/45R22"],
+        "Series II": ["275/55R20", "285/45R22"],
+        "Series III": ["275/55R20", "285/45R22"]
+      },
+      "status": "MISSING_SIZE",
+      "notes": "Missing 275/65R18 (Base Model with All-Terrain package)"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "currentTireSizes": ["285/45R22", "275/55R20"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "Series I": ["275/65R18", "275/55R20"],
+        "Series II": ["275/55R20", "285/45R22"],
+        "Series III": ["275/55R20", "285/45R22"],
+        "Carbide": ["285/45R22"]
+      },
+      "status": "MISSING_SIZE",
+      "notes": "Missing 275/65R18 (Series I with All-Terrain package)"
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Wagoneer",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "Jeep Wagoneer was not sold in 2021. First model year was 2022. Remove from DB."
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT285/70R17", "255/70R18", "LT285/65R18", "275/55R20"],
+      "validatedTireSizes": ["245/75R17", "255/70R18", "285/70R17", "315/70R17"],
+      "trims": {
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Sahara": ["255/70R18"],
+        "Willys": ["285/70R17"],
+        "Willys 41": ["285/70R17"],
+        "Rubicon": ["285/70R17"],
+        "Rubicon X": ["285/70R17"],
+        "Moab 392": ["315/70R17"],
+        "Xtreme Tire Package": ["315/70R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "255/70R17, LT285/65R18, 275/55R20 in DB not found as 2026 OEM. Should use 285/70R17 without LT prefix. Add 315/70R17 for Moab/Xtreme."
+    },
+    {
+      "year": 2025,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT285/70R17", "255/70R18", "LT285/65R18", "275/55R20", "LT255/75R17"],
+      "validatedTireSizes": ["245/75R17", "255/75R17", "285/70R17", "315/70R17"],
+      "trims": {
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["285/70R17"],
+        "Rubicon": ["285/70R17"],
+        "Rubicon X": ["285/70R17"],
+        "Rubicon 392": ["315/70R17"],
+        "Xtreme Tire Package": ["315/70R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "Multiple sizes in DB not matching 2025 OEM. 255/70R17, 255/70R18, LT285/65R18, 275/55R20 not standard 2025. Should add 315/70R17 for 392/Xtreme."
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "LT255/75R17", "255/70R18", "275/55R20", "LT285/70R17"],
+      "validatedTireSizes": ["245/75R17", "285/70R17", "315/70R17"],
+      "trims": {
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["285/70R17"],
+        "Rubicon": ["285/70R17"],
+        "Rubicon X": ["285/70R17"],
+        "Xtreme Tire Package": ["315/70R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "255/75R17, 255/70R18, 275/55R20 in DB not matching 2024 JL facelift OEM data"
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT285/70R17", "255/70R18", "LT285/65R18", "275/55R20", "LT255/75R17"],
+      "validatedTireSizes": ["245/75R17", "285/70R17", "315/70R17"],
+      "trims": {
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["285/70R17"],
+        "Rubicon": ["285/70R17"],
+        "Rubicon X": ["285/70R17"],
+        "Xtreme Tire Package": ["315/70R17"]
+      },
+      "status": "DUPLICATE",
+      "notes": "Duplicate entry for 2024 Wrangler - consolidate"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT285/70R17", "255/70R18", "LT285/65R18", "275/55R20", "LT255/75R17"],
+      "validatedTireSizes": ["245/75R17", "255/75R17", "285/70R17"],
+      "trims": {
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Freedom": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Willys Sport": ["255/75R17"],
+        "Rubicon": ["285/70R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "255/70R17, 255/70R18, LT285/65R18, 275/55R20 in DB not matching OEM data for base trims"
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT285/70R17", "255/70R18", "LT285/65R18", "275/55R20", "LT255/75R17"],
+      "validatedTireSizes": ["245/75R17", "255/75R17", "285/70R17"],
+      "trims": {
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Willys Sport": ["255/75R17"],
+        "Rubicon": ["285/70R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "255/70R17, 255/70R18, LT285/65R18, 275/55R20 in DB not standard OEM"
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "LT255/75R17", "255/70R18", "275/55R20", "LT285/70R17"],
+      "validatedTireSizes": ["245/75R17", "255/75R17", "255/70R18", "285/70R17"],
+      "trims": {
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Freedom": ["245/75R17"],
+        "Islander": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Willys Sport": ["255/75R17"],
+        "80th Anniversary Edition": ["255/70R18"],
+        "Rubicon": ["285/70R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "275/55R20 in DB not standard OEM. LT prefix unnecessary in DB."
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT285/70R17", "255/70R18", "LT285/65R18", "275/55R20", "LT255/75R17"],
+      "validatedTireSizes": ["245/75R17", "255/75R17", "255/70R18", "285/70R17"],
+      "trims": {},
+      "status": "DUPLICATE",
+      "notes": "Duplicate entry for 2021 Wrangler - consolidate"
+    },
+    {
+      "year": 2020,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT285/70R17", "255/70R18", "LT285/65R18", "275/55R20"],
+      "validatedTireSizes": ["245/75R17", "255/75R17", "285/70R17"],
+      "trims": {
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Freedom": ["245/75R17"],
+        "Black and Tan": ["245/75R17"],
+        "Willys": ["255/75R17"],
+        "Rubicon": ["285/70R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "255/70R17, 255/70R18, LT285/65R18, 275/55R20 in DB not standard OEM"
+    },
+    {
+      "year": 2020,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "LT255/75R17", "255/70R18", "275/55R20", "LT285/70R17"],
+      "validatedTireSizes": ["245/75R17", "255/75R17", "285/70R17"],
+      "trims": {},
+      "status": "DUPLICATE",
+      "notes": "Duplicate entry for 2020 Wrangler - consolidate"
+    },
+    {
+      "year": 2019,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT285/70R17", "255/70R18", "LT285/65R18", "275/55R20", "LT255/75R17"],
+      "validatedTireSizes": ["245/75R17", "285/70R17"],
+      "trims": {
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Rubicon": ["285/70R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "Many sizes in DB not matching 2019 JL OEM. tiresize.com shows only 245/75R17 and 285/70R17"
+    },
+    {
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["245/75R17", "255/70R17", "LT285/70R17", "255/70R18", "LT285/65R18", "275/55R20", "LT255/75R17"],
+      "validatedTireSizes": ["245/75R17", "285/70R17"],
+      "trims": {
+        "Sport": ["245/75R17"],
+        "Sport S": ["245/75R17"],
+        "Rubicon": ["285/70R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "2018 was JL launch year with limited trims. Many sizes in DB not OEM for 2018."
+    },
+    {
+      "year": 2017,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "LT245/75R16", "245/75R17", "255/75R17", "255/70R18", "LT255/70R18", "245/75R16", "LT265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18"],
+      "trims": {
+        "Sport": ["225/75R16", "245/75R16", "255/75R17"],
+        "Sport S": ["255/75R17"],
+        "Sahara": ["255/70R18"],
+        "Rubicon": ["255/75R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "2017 was final JK year. 265/65R18, 265/55R19, 285/50R20 are aftermarket upfits not OEM"
+    },
+    {
+      "year": 2017,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18", "245/75R17", "265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16", "LT265/70R17"],
+      "validatedTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "DUPLICATE",
+      "notes": "Duplicate entry for 2017 Wrangler"
+    },
+    {
+      "year": 2016,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "LT245/75R16", "245/75R17", "255/75R17", "255/70R18", "LT255/70R18", "245/75R16", "LT265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16", "245/75R17", "255/75R17", "255/70R18"],
+      "trims": {
+        "Sport": ["225/75R16", "245/75R16", "255/75R17"],
+        "Sport S": ["255/75R17"],
+        "75th Anniversary": ["245/75R17"],
+        "Black Bear": ["245/75R17"],
+        "Willys Wheeler": ["255/75R17"],
+        "Sahara": ["255/70R18"],
+        "Rubicon": ["255/75R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "265/65R18, 265/55R19, 285/50R20 in DB are aftermarket not OEM"
+    },
+    {
+      "year": 2016,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18", "245/75R17", "265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16", "LT265/70R17"],
+      "validatedTireSizes": ["225/75R16", "245/75R16", "245/75R17", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "DUPLICATE",
+      "notes": "Duplicate entry for 2016 Wrangler"
+    },
+    {
+      "year": 2015,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "LT245/75R16", "245/75R17", "255/75R17", "255/70R18", "LT255/70R18", "245/75R16", "LT265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18"],
+      "trims": {
+        "Sport": ["225/75R16", "245/75R16", "255/75R17"],
+        "Sahara": ["255/70R18"],
+        "Rubicon": ["255/75R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "265/65R18, 265/55R19, 285/50R20 in DB are aftermarket"
+    },
+    {
+      "year": 2015,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18", "245/75R17", "265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16", "LT265/70R17"],
+      "validatedTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "DUPLICATE",
+      "notes": "Duplicate entry for 2015 Wrangler"
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18", "245/75R17", "265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16", "LT265/70R17"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {
+        "Sport": ["225/75R16", "255/75R17"],
+        "Freedom": ["255/75R17"],
+        "Polar": ["255/70R18"],
+        "Willys Wheeler": ["255/75R17"],
+        "Sahara": ["255/70R18"],
+        "Rubicon": ["255/75R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "265/65R18, 265/55R19, 285/50R20 are aftermarket"
+    },
+    {
+      "year": 2014,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "INVALID_DATA",
+      "notes": "215/75R15, 225/75R15, 30x9.5R15 are TJ sizes not JK. 2014 was JK only - wrong data"
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18", "245/75R17", "265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16", "LT265/70R17"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18", "265/70R17"],
+      "trims": {
+        "Sport": ["225/75R16", "255/75R17"],
+        "Freedom": ["255/75R17"],
+        "Moab": ["255/75R17"],
+        "Sahara": ["255/70R18"],
+        "Rubicon": ["255/75R17"],
+        "Rubicon 10th Anniversary": ["265/70R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "265/65R18, 265/55R19, 285/50R20 are aftermarket"
+    },
+    {
+      "year": 2013,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "INVALID_DATA",
+      "notes": "215/75R15, 225/75R15, 30x9.5R15 are TJ sizes - wrong data for 2013 JK"
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {
+        "Sport": ["225/75R16", "255/75R17"],
+        "Arctic": ["255/75R17"],
+        "Sahara": ["255/70R18"],
+        "Rubicon": ["255/75R17"]
+      },
+      "status": "INVALID_DATA",
+      "notes": "215/75R15, 225/75R15, 30x9.5R15 are TJ sizes - wrong data for 2012 JK"
+    },
+    {
+      "year": 2012,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18", "245/75R17", "265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16", "LT265/70R17"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "DUPLICATE",
+      "notes": "Duplicate entry with aftermarket sizes"
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {
+        "Sport": ["225/75R16", "255/75R17"],
+        "70th Anniversary": ["255/70R18"],
+        "Sahara": ["255/70R18"],
+        "Rubicon": ["255/75R17"]
+      },
+      "status": "INVALID_DATA",
+      "notes": "215/75R15, 225/75R15, 30x9.5R15 are TJ sizes - wrong data for 2011 JK"
+    },
+    {
+      "year": 2011,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18", "245/75R17", "265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "DUPLICATE",
+      "notes": "Duplicate with aftermarket sizes"
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18", "245/75R17", "265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {
+        "Sport": ["225/75R16", "255/75R17"],
+        "Islander": ["255/75R17"],
+        "Mountain": ["255/75R17"],
+        "Sahara": ["255/70R18"],
+        "Rubicon": ["255/75R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "265/65R18, 265/55R19, 285/50R20 are aftermarket"
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "INVALID_DATA",
+      "notes": "215/75R15 etc are TJ sizes - wrong for 2010 JK"
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18", "245/75R17", "265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {
+        "X": ["225/75R16", "255/75R17"],
+        "Sahara": ["255/70R18"],
+        "Rubicon": ["255/75R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "265/65R18, 265/55R19, 285/50R20 are aftermarket"
+    },
+    {
+      "year": 2009,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "INVALID_DATA",
+      "notes": "215/75R15 etc are TJ sizes - wrong for 2009 JK"
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "LT245/75R16", "245/75R17", "255/75R17", "255/70R18", "LT255/70R18"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {
+        "X": ["225/75R16", "255/75R17"],
+        "Sahara": ["255/70R18"],
+        "Rubicon": ["255/75R17"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "245/75R17 not standard OEM for 2008. LT prefix unnecessary."
+    },
+    {
+      "year": 2008,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "INVALID_DATA",
+      "notes": "215/75R15 etc are TJ sizes - wrong for 2008 JK"
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18"],
+      "trims": {
+        "X": ["225/75R16", "245/75R16", "255/75R17"],
+        "Sahara": ["255/75R17", "255/70R18"],
+        "Rubicon": ["255/75R17"]
+      },
+      "status": "INVALID_DATA",
+      "notes": "2007 was JK only (TJ ended 2006). 215/75R15, 225/75R15, 30x9.5R15 are wrong."
+    },
+    {
+      "year": 2007,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18", "245/75R17", "265/70R17", "265/65R18", "265/55R19", "285/50R20", "255/70R16"],
+      "validatedTireSizes": ["225/75R16", "245/75R16", "255/75R17", "255/70R18"],
+      "trims": {},
+      "status": "DUPLICATE",
+      "notes": "Duplicate with aftermarket sizes"
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "245/75R16"],
+      "trims": {
+        "SE": ["215/75R15"],
+        "X": ["215/75R15", "225/75R15"],
+        "Sport": ["225/75R15", "30x9.5R15"],
+        "Rubicon": ["245/75R16"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "2006 was final TJ year. 225/75R16 in DB not standard OEM."
+    },
+    {
+      "year": 2005,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "245/75R16"],
+      "trims": {
+        "SE": ["215/75R15"],
+        "X": ["215/75R15", "225/75R15"],
+        "Sport": ["225/75R15", "30x9.5R15"],
+        "Rocky Mountain": ["30x9.5R15"],
+        "Rubicon": ["245/75R16"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/75R16 in DB not standard TJ OEM"
+    },
+    {
+      "year": 2004,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["205/75R15", "215/75R15", "225/75R15", "30x9.5R15", "245/75R16"],
+      "trims": {
+        "SE": ["205/75R15", "215/75R15", "225/75R15"],
+        "X": ["215/75R15"],
+        "Sport": ["215/75R15", "225/75R15", "30x9.5R15"],
+        "Sahara": ["225/75R15", "30x9.5R15"],
+        "Rubicon": ["245/75R16"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/75R16 in DB not standard TJ OEM. Missing 205/75R15."
+    },
+    {
+      "year": 2003,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["205/75R15", "215/75R15", "225/75R15", "30x9.5R15", "225/70R16", "245/75R16"],
+      "trims": {
+        "SE": ["205/75R15", "215/75R15", "225/75R15"],
+        "X": ["215/75R15"],
+        "Sport": ["215/75R15", "225/75R15", "30x9.5R15"],
+        "Sahara": ["30x9.5R15", "225/70R16"],
+        "Rubicon": ["245/75R16"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/75R16 should be 225/70R16 for Sahara"
+    },
+    {
+      "year": 2002,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["205/75R15", "215/75R15", "225/75R15", "30x9.5R15", "225/70R16"],
+      "trims": {
+        "SE": ["205/75R15", "215/75R15", "225/75R15"],
+        "X": ["215/75R15"],
+        "Sport": ["215/75R15", "225/75R15", "30x9.5R15"],
+        "Sahara": ["30x9.5R15", "225/70R16"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "245/75R16 in DB - Rubicon not available until 2003"
+    },
+    {
+      "year": 2001,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["205/75R15", "215/75R15", "225/75R15", "30x9.5R15", "225/70R16"],
+      "trims": {
+        "SE": ["205/75R15", "215/75R15", "225/75R15"],
+        "Sport": ["215/75R15", "225/75R15", "30x9.5R15"],
+        "Sahara": ["30x9.5R15", "225/70R16"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "245/75R16 in DB - Rubicon not available until 2003"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "currentTireSizes": ["215/75R15", "225/75R15", "30x9.5R15", "225/75R16", "245/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["205/75R15", "215/75R15", "225/75R15", "225/70R15", "30x9.5R15"],
+      "trims": {
+        "SE": ["205/75R15", "215/75R15", "225/75R15"],
+        "Sport": ["215/75R15", "225/75R15", "30x9.5R15"],
+        "Sahara": ["225/70R15", "30x9.5R15"]
+      },
+      "status": "NEEDS_REVIEW",
+      "notes": "225/75R16, 245/75R16 in DB - no 16\" wheels OEM on 2000 TJ. Sahara used 225/70R15."
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "300e",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "UNKNOWN_MODEL",
+      "notes": "Kia 300e not sold in US market. May be Korean market K3 EV or data error. Verify model name."
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "300e",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "UNKNOWN_MODEL",
+      "notes": "Kia 300e not sold in US market. May be Korean market K3 EV or data error."
+    },
+    {
+      "year": 2019,
+      "make": "Kia",
+      "model": "300e",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "UNKNOWN_MODEL",
+      "notes": "Kia 300e not sold in US market."
+    },
+    {
+      "year": 2018,
+      "make": "Kia",
+      "model": "300e",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "UNKNOWN_MODEL",
+      "notes": "Kia 300e not sold in US market."
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "300e",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "UNKNOWN_MODEL",
+      "notes": "Kia 300e not sold in US market."
+    },
+    {
+      "year": 2009,
+      "make": "Kia",
+      "model": "Amanti",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trims": {
+        "Base": ["225/60R16", "235/55R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "DB has no tire sizes. Should have 225/60R16 (base) and 235/55R17 (optional)"
+    },
+    {
+      "year": 2008,
+      "make": "Kia",
+      "model": "Amanti",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trims": {
+        "Base": ["225/60R16", "235/55R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "DB has no tire sizes. Should have 225/60R16 and 235/55R17"
+    },
+    {
+      "year": 2007,
+      "make": "Kia",
+      "model": "Amanti",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16", "235/55R17"],
+      "trims": {
+        "Base": ["225/60R16", "235/55R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "DB has no tire sizes. Should have 225/60R16 and 235/55R17"
+    },
+    {
+      "year": 2006,
+      "make": "Kia",
+      "model": "Amanti",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base": ["225/60R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "DB has no tire sizes. Should have 225/60R16"
+    },
+    {
+      "year": 2005,
+      "make": "Kia",
+      "model": "Amanti",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base": ["225/60R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "DB has no tire sizes. Should have 225/60R16"
+    },
+    {
+      "year": 2004,
+      "make": "Kia",
+      "model": "Amanti",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base": ["225/60R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "DB has no tire sizes. Should have 225/60R16"
+    },
+    {
+      "year": 2003,
+      "make": "Kia",
+      "model": "Avella",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/70R13", "165/70R13", "175/70R13"],
+      "trims": {
+        "Base": ["155/70R13", "165/70R13", "175/70R13"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Kia Avella was Korean market subcompact (not sold in US). May want to remove."
+    },
+    {
+      "year": 2002,
+      "make": "Kia",
+      "model": "Avella",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/70R13", "165/70R13", "175/70R13"],
+      "trims": {
+        "Base": ["155/70R13", "165/70R13", "175/70R13"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Kia Avella was Korean market subcompact (not sold in US). May want to remove."
+    },
+    {
+      "year": 2001,
+      "make": "Kia",
+      "model": "Avella",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/70R13", "165/70R13", "175/70R13"],
+      "trims": {
+        "Base": ["155/70R13", "165/70R13", "175/70R13"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Kia Avella was Korean market subcompact (not sold in US). May want to remove."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 1,
+    "needsReview": 35,
+    "missingData": 11,
+    "missingSize": 3,
+    "invalidYear": 2,
+    "invalidData": 9,
+    "duplicate": 9,
+    "unknownModel": 5,
+    "issues": [
+      "2014 Jeep Renegade - model not available that year (launched 2015)",
+      "2021 Jeep Wagoneer - model not available that year (launched 2022)",
+      "Kia 300e (2017-2021) - not a US market vehicle, verify model name",
+      "Kia Avella (2001-2003) - Korean market only, not sold in US",
+      "Jeep Wrangler has many duplicates and mixed JK/TJ data",
+      "Many Wrangler entries include aftermarket sizes (265/55R19, 285/50R20) as OEM",
+      "Renegade has 225/55R17 in DB which is not an OEM size",
+      "Wagoneer missing 275/65R18 (All-Terrain package)"
+    ]
+  }
+}

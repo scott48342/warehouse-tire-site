@@ -1,0 +1,314 @@
+{
+  "batch": "batch-33-german",
+  "verifiedAt": "2026-04-23T00:45:00Z",
+  "verifiedBy": "re-verification",
+  "summary": {
+    "totalVehicles": 75,
+    "validVehicles": 57,
+    "invalidVehicles": 18,
+    "flaggedIssues": [
+      "Arteon 2024-2025: Production cancelled, 2023 was final US model year",
+      "Arteon SR (all years): Shooting Brake never sold in US market",
+      "Beetle 2011: Gap year - New Beetle ended 2010, new-gen Beetle started 2012",
+      "EuroVan 2004: Invalid - US production ended after 2003 model year",
+      "GLI standalone entries: Should be 'Jetta GLI' not standalone 'GLI'",
+      "ID.4 2020: Invalid - First US model year was 2021",
+      "Routan 2008: Invalid - First model year was 2009"
+    ]
+  },
+  "invalidEntries": [
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "arteon",
+      "reason": "Production cancelled before 2024 model year - 2023 was final US year",
+      "sources": ["motorauthority.com", "caranddriver.com"]
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "arteon",
+      "reason": "Discontinued after 2023 - no 2024 or 2025 US models produced",
+      "sources": ["motorauthority.com", "caranddriver.com"]
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "arteon-sr",
+      "reason": "Arteon Shooting Brake was NEVER sold in US market",
+      "sources": ["motor1.com", "wikipedia.org"]
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "arteon-sr",
+      "reason": "Arteon Shooting Brake was NEVER sold in US market",
+      "sources": ["motor1.com", "wikipedia.org"]
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "arteon-sr",
+      "reason": "Arteon Shooting Brake was NEVER sold in US market",
+      "sources": ["motor1.com", "wikipedia.org"]
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "beetle",
+      "reason": "Gap year - New Beetle ended 2010, redesigned Beetle began 2012",
+      "sources": ["cars.com", "caranddriver.com"]
+    },
+    {
+      "year": 2004,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "reason": "US EuroVan production ended after 2003 model year",
+      "sources": ["wikipedia.org", "consumerguide.com"]
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "gli",
+      "reason": "Standalone 'GLI' model incorrect - should be 'Jetta GLI'",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "gli",
+      "reason": "Standalone 'GLI' model incorrect - should be 'Jetta GLI'",
+      "sources": ["carsforsale.com"]
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "id-4",
+      "reason": "ID.4 first delivered to US customers Q1 2021 - no 2020 US model year",
+      "sources": ["wikipedia.org", "media.vw.com"]
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "routan",
+      "reason": "Routan introduced 2008 FOR 2009 model year - no 2008 MY exists",
+      "sources": ["hallcars.com", "wikipedia.org"]
+    }
+  ],
+  "verifiedVehicles": [
+    {
+      "years": [2020, 2021, 2022, 2023],
+      "make": "Volkswagen",
+      "model": "Arteon",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "SE", "oemWheelSize": "18x8", "oemTireSize": "245/45R18"},
+        {"name": "SEL", "oemWheelSize": "19x8", "oemTireSize": "245/40R19"},
+        {"name": "SEL R-Line", "oemWheelSize": "19x8 or 20x8", "oemTireSize": "245/40R19 or 245/35R20"},
+        {"name": "SEL Premium R-Line", "oemWheelSize": "20x8", "oemTireSize": "245/35R20"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "Discontinued after 2023. FWD and 4Motion available."
+    },
+    {
+      "years": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+      "make": "Volkswagen",
+      "model": "Atlas Cross Sport",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "S/SE", "oemWheelSize": "18x8", "oemTireSize": "245/60R18"},
+        {"name": "SE/SEL", "oemWheelSize": "20x8.5", "oemTireSize": "255/50R20"},
+        {"name": "SEL R-Line/Premium R-Line", "oemWheelSize": "21x8.5", "oemTireSize": "265/45R21"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "vwatlasforum.com"],
+      "notes": "Coupe-style SUV variant of Atlas. 2026 model confirmed available."
+    },
+    {
+      "years": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010],
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "generation": "New Beetle (1998-2010)",
+      "boltPattern": "5x100",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "GL/GLS 2.0", "oemWheelSize": "16x6.5", "oemTireSize": "205/55R16"},
+        {"name": "GLS/GLX 1.8T", "oemWheelSize": "16x6.5 or 17x7", "oemTireSize": "205/55R16 or 225/45R17"},
+        {"name": "Turbo S", "oemWheelSize": "17x7", "oemTireSize": "225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "apexwheels.com"],
+      "notes": "First-gen New Beetle. 5x100 bolt pattern differs from newer VWs."
+    },
+    {
+      "years": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "generation": "A5 Beetle (2012-2019)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.5L Base", "oemWheelSize": "16x7 or 17x7", "oemTireSize": "215/60R16 or 215/55R17"},
+        {"name": "1.8T/2.0T", "oemWheelSize": "17x7 or 18x8", "oemTireSize": "215/55R17 or 235/45R18"},
+        {"name": "R-Line/Dune", "oemWheelSize": "18x8 or 19x8", "oemTireSize": "235/45R18 or 235/40R19"}
+      ],
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "lltek.com"],
+      "notes": "Final generation Beetle. Production ended July 2019."
+    },
+    {
+      "years": [2000, 2001, 2002, 2003],
+      "make": "Volkswagen",
+      "model": "EuroVan",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "GLS", "oemWheelSize": "16x7", "oemTireSize": "205/65R16"},
+        {"name": "MV/Camper", "oemWheelSize": "16x7", "oemTireSize": "205/65R16"}
+      ],
+      "confidence": "medium",
+      "sources": ["wheel-size.com", "gowesty.com"],
+      "notes": "T4 Transporter variant. VR6 engine 1999-2003. Production ended 2003."
+    },
+    {
+      "years": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+      "make": "Volkswagen",
+      "model": "Jetta GLI",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "GLI (2012-2018)", "oemWheelSize": "17x7 or 18x7.5", "oemTireSize": "225/45R17 or 225/40R18"},
+        {"name": "GLI (2019+)", "oemWheelSize": "18x7.5", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "edmunds.com", "vw.com"],
+      "notes": "Performance variant of Jetta. 2019 redesign on MQB platform."
+    },
+    {
+      "years": [2011],
+      "make": "Volkswagen",
+      "model": "Passat",
+      "generation": "B6 Final Year or NMS First Year",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "Komfort/SE", "oemWheelSize": "16x7 or 17x7", "oemTireSize": "215/55R17 or 235/45R17"}
+      ],
+      "confidence": "medium",
+      "sources": ["wikipedia.org", "passatworld.com"],
+      "notes": "2011 was transition year. US NMS model debuted at 2011 Detroit show for 2012 MY. Verify if B6 carryover or early NMS."
+    },
+    {
+      "years": [2008],
+      "make": "Volkswagen",
+      "model": "R32",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "R32", "oemWheelSize": "18x7.5", "oemTireSize": "225/40R18"}
+      ],
+      "confidence": "high",
+      "sources": ["motortrend.com", "tflcar.com", "media.vw.com"],
+      "notes": "Limited edition (5,000 units). DSG only. 2004 and 2008 were only US model years."
+    },
+    {
+      "years": [2006, 2007, 2008, 2009],
+      "make": "Volkswagen",
+      "model": "Rabbit",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {"name": "2.5L 2-door/4-door", "oemWheelSize": "15x6 or 16x6.5", "oemTireSize": "195/65R15 or 205/55R16"},
+        {"name": "S/SE", "oemWheelSize": "16x6.5 or 17x7", "oemTireSize": "205/55R16 or 225/45R17"}
+      ],
+      "confidence": "high",
+      "sources": ["cars.com", "consumerguide.com"],
+      "notes": "Mk5 Golf rebadged as Rabbit for US market 2006-2009. Reverted to Golf name for 2010."
+    },
+    {
+      "years": [2009, 2010, 2011, 2012, 2013, 2014],
+      "make": "Volkswagen",
+      "model": "Routan",
+      "boltPattern": "5x127",
+      "hubBore": 71.5,
+      "trims": [
+        {"name": "S/SE", "oemWheelSize": "16x6.5", "oemTireSize": "225/65R16"},
+        {"name": "SEL/SEL Premium", "oemWheelSize": "17x6.5", "oemTireSize": "225/60R17"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "cars.com"],
+      "notes": "Chrysler-built minivan. Different bolt pattern (5x127) than other VWs. Based on Dodge Grand Caravan/Chrysler Town & Country."
+    },
+    {
+      "years": [2004, 2005, 2006],
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "generation": "First Gen (7L)",
+      "boltPattern": "5x130",
+      "hubBore": 71.6,
+      "trims": [
+        {"name": "V6", "oemWheelSize": "17x7.5", "oemTireSize": "235/65R17"},
+        {"name": "V8", "oemWheelSize": "18x8", "oemTireSize": "255/55R18"},
+        {"name": "V10 TDI", "oemWheelSize": "19x9", "oemTireSize": "275/45R19"}
+      ],
+      "confidence": "high",
+      "sources": ["wikipedia.org", "wheel-size.com", "clubtouareg.com"],
+      "notes": "Shares platform with Porsche Cayenne. 5x130 bolt pattern (same as Porsche). Batch only has 2004-2006 but model ran through 2017 in US."
+    }
+  ],
+  "recommendations": [
+    {
+      "action": "REMOVE",
+      "vehicles": [
+        {"year": 2024, "make": "volkswagen", "model": "arteon"},
+        {"year": 2025, "make": "volkswagen", "model": "arteon"},
+        {"year": 2023, "make": "volkswagen", "model": "arteon-sr"},
+        {"year": 2024, "make": "volkswagen", "model": "arteon-sr"},
+        {"year": 2025, "make": "volkswagen", "model": "arteon-sr"},
+        {"year": 2011, "make": "volkswagen", "model": "beetle"},
+        {"year": 2004, "make": "volkswagen", "model": "eurovan"},
+        {"year": 2020, "make": "volkswagen", "model": "id-4"},
+        {"year": 2008, "make": "volkswagen", "model": "routan"}
+      ],
+      "reason": "Invalid model years for US market"
+    },
+    {
+      "action": "RENAME",
+      "vehicles": [
+        {"year": 2008, "make": "volkswagen", "model": "gli", "correctModel": "jetta-gli"},
+        {"year": 2009, "make": "volkswagen", "model": "gli", "correctModel": "jetta-gli"}
+      ],
+      "reason": "GLI is not a standalone model - should be Jetta GLI"
+    },
+    {
+      "action": "ADD_MISSING_YEARS",
+      "vehicles": [
+        {"make": "volkswagen", "model": "touareg", "missingYears": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]}
+      ],
+      "reason": "Batch only has 2004-2006 but Touareg was sold in US through 2017"
+    },
+    {
+      "action": "ADD_MISSING_YEARS",
+      "vehicles": [
+        {"make": "volkswagen", "model": "id-4", "missingYears": [2021, 2022, 2023, 2024, 2025, 2026]}
+      ],
+      "reason": "ID.4 started 2021 and continues through current 2026 model year"
+    }
+  ],
+  "fitmentSpecs": {
+    "boltPatterns": {
+      "5x100": ["New Beetle (2000-2010)"],
+      "5x112": ["Arteon", "Atlas Cross Sport", "Beetle (2012-2019)", "EuroVan", "Jetta GLI", "Passat", "R32", "Rabbit"],
+      "5x127": ["Routan (Chrysler-based)"],
+      "5x130": ["Touareg (Porsche platform)"]
+    },
+    "hubBores": {
+      "57.1mm": ["Most VW models"],
+      "71.5mm": ["Routan"],
+      "71.6mm": ["Touareg"]
+    }
+  }
+}

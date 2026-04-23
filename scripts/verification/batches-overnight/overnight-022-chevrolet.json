@@ -1,0 +1,2350 @@
+[
+  {
+    "id": "bd84fd9b-996c-47a9-a6fa-3aa6eef46c92",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "RST",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "1003bf0d-16f4-413b-bcc2-9273eb2b1e5d",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "2.7 TurboMax",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "9bf6c2b0-ae1f-4227-ac1a-6bc34ab0ca9d",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "LTZ",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "832e50bf-7ef6-4a95-9670-244ed20f2c22",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "LT Trail Boss",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "59f3ff46-fb74-455b-b0af-f59524fc746b",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "Custom",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "912fdde9-9181-4e58-9b85-852f72848f11",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "LT",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "13aad33b-ddc7-48de-ab28-3157b7ad6d26",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "ZR2",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "f8f409f6-527b-4f18-a609-ba7310a83210",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "cleanup_wheelsize"
+  },
+  {
+    "id": "63a3add6-e23a-475b-858a-c2a61dade303",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "255/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 17,
+        "tireSize": "LT265/70R17"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 18,
+        "tireSize": "LT275/65R18"
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "generation_template [sm-same-year:silverad:2024]"
+  },
+  {
+    "id": "8e389213-e978-4d2b-8ef8-64ca2e83d55e",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "Custom",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "12aca733-01e0-418a-b14d-8531a979ddc0",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "2.7 TurboMax",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20",
+      "275/50R22",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "2786244c-0795-4b03-98c4-702e708061a9",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "LTZ",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "ac9289e8-7fd5-4b0a-98a1-30b4b7a437cf",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "LT Trail Boss",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "2eb018c2-ed5a-447a-81b1-10c0c5409950",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "WT",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "100916c3-8e39-4490-adab-fe05c741e1fc",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "RST",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "3e981ab8-3c32-482d-953a-f63b070c0435",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "generation_template [sm-same-year:silverad:2025]"
+  },
+  {
+    "id": "1c49ad77-f770-4da1-a28b-dc3b36d73d21",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "ZR2",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "359e84d0-5a3d-4440-b543-47c0289e17bc",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "bbeb9511-ef38-482f-8609-de58ceaed3ad",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "LT",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "826eea99-f005-46aa-99eb-c3676820f485",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "WT",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "f99ad8a9-0be2-4da6-874e-c4bec22269da",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "LTZ",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "81752075-34af-40a4-bb65-5c7ef06e2bcf",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "LT Trail Boss",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "790f3a2c-4486-4605-a417-b58533918f01",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "Custom",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "01d74f53-15be-4217-8edf-4e22db11f949",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "generation_template [sm-same-year:silverad:2026]"
+  },
+  {
+    "id": "7efd5089-b9b1-4119-9a59-237a59805f91",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "LT",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "e733eb0f-57f3-4c9f-90e4-58af44552e01",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "ZR2",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "a5ae3356-5287-4901-a614-94baa7718410",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "c55fe991-78af-4309-a8ef-7f79da89eac4",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-1500",
+    "trim": "RST",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/70R17",
+      "265/70R17",
+      "LT265/70R17",
+      "265/65R18",
+      "LT275/65R18",
+      "275/60R20",
+      "275/50R22"
+    ],
+    "source": "cleanup_generation_template"
+  },
+  {
+    "id": "ff685138-e4d9-4ae5-b8fa-38a5fb704787",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "dd900e2a-c922-457f-bff6-132e3ab32e10",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "075fc967-7000-44eb-aeea-f8747cc8ea10",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "689e5af3-3241-455b-b2b3-41a2bb989a9e",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "2fd3c7ff-6ae3-4e96-a1a1-4a5a759e8a9a",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8eff399d-e3c9-4069-8e7b-acc7300a29b7",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4cbe23ab-94f7-43d2-9a54-c459136ecee2",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9edd341b-a288-4195-9695-609e4dbef46e",
+    "year": 2007,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c128db79-5b82-4a7b-87cb-cbd20d472abe",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "16166f10-c6fe-42a3-a15b-5d42cf4c2599",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1e566456-9606-4b46-9ad8-24c6c8e634c1",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f960f3a3-119c-41aa-bd79-a5f4fc1ba86f",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f94faba0-9bd7-4df0-9cfd-7242ff546727",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "d3072f6f-c4ce-454c-bd1c-298702e7ec0d",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "9371809b-803a-40db-8e76-3096e58548b6",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "7f769f93-b8f2-4f2a-96e9-081997ed2425",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8a24f418-96f7-4c6c-a729-b5d7021a8e42",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "23f6e383-03fd-422c-be39-15e38d229c6e",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4d16cb65-ed2e-45ea-87e0-6746c1751181",
+    "year": 2018,
+    "make": "chevrolet",
+    "model": "silverado-2500",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4d637727-afe6-4cf1-9260-85af9e79d189",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LS",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "19ffba0a-3429-4d6e-a752-fcc462b3249f",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "9a6f463f-71ff-4351-9996-7284efb03102",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "8c35fa58-7cfc-4efc-be67-9aed537cef9a",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "5640e47b-e80f-4b41-947d-9be01d195f08",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LS",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "d084c257-31c0-4dfb-a56b-177ccb0e2166",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "9b96cd26-29e7-438f-bf0f-f7d9bb9fa8eb",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LS",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "a7f46bf8-9acc-479a-9277-a338170ba721",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "6172b12b-4d6b-4cd3-9670-ace3747e515c",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "0991f794-1e07-43a2-b90f-6dbe3be09c13",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "201c5974-ba3e-46b3-9563-ecdbd5bb1c85",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "49a502ed-991c-42de-8da3-59c6514807c9",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LS",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "8369ea91-450b-4026-a5b8-4d78bc1d14fd",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "abe12735-635b-4781-9372-42dec8b201d8",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LS",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "1f0574d6-c332-4632-a983-829747640c69",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "058b30c8-37e4-4a88-a3b5-521214486d49",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "8975e04c-fb80-4c02-a2b9-b7f96933ffeb",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "9d272255-4fa5-472a-81c1-27da8b3e7227",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LS",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "aa471199-840b-4d24-8d8d-35d1c92b7a42",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LS",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "7c1a3b6f-c965-4f4d-954a-5acde5d9d9c0",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "d08a98e5-0087-4d4f-a98e-28763d114962",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 28,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/75R16"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen1_1999_2006]"
+  },
+  {
+    "id": "d3e96695-7430-4c8b-8b46-64f3308eaa64",
+    "year": 2007,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.6",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R16",
+      "LT265/70R17"
+    ],
+    "source": "manual_import [filled from 2007 silverado-2500hd]"
+  },
+  {
+    "id": "62d98d10-d24d-40e1-a582-57bd1627d0f3",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LTZ",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 35,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT265/60R18"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen2_2007_2010]"
+  },
+  {
+    "id": "42d0b5b8-3667-41aa-98ff-207216453f8c",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Work Truck",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 35,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen2_2007_2010]"
+  },
+  {
+    "id": "7beb9a2f-c925-4a44-a760-ea2d1b4a6ff8",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "116.7",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 35,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT265/60R18"
+    ],
+    "source": "manual_backfill [template:gm_hd_gen2_2007_2010]"
+  },
+  {
+    "id": "58d3ceb0-fe56-445a-bc44-c0240fe45f2f",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT265/60R18"
+    ],
+    "source": "manual_import [filled from 2009 silverado-2500hd]"
+  },
+  {
+    "id": "ea234d15-b5ac-42c2-9a97-4be9921c7b7c",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT265/60R18"
+    ],
+    "source": "manual_import [filled from 2010 silverado-2500hd]"
+  },
+  {
+    "id": "df8fe482-cf1e-46be-b1a8-4c692590b7e5",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "silverado-2500-hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT265/60R18"
+    ],
+    "source": "manual_import [filled from 2011 silverado-2500hd]"
+  }
+]

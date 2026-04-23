@@ -1,0 +1,1909 @@
+{
+  "batchId": "batch-19-mopar",
+  "completedAt": "2026-04-22T12:58:00.000Z",
+  "researcher": "subagent",
+  "description": "1990s Mopar (Dodge/Chrysler) vehicle fitment data",
+  "results": [
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "Base",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com", "3si.org forums"],
+      "notes": "Mitsubishi 3000GT twin. Base model has 15\" wheels."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "ES",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "originalwheels.com", "3si.org forums"],
+      "notes": "ES trim has 16\" wheels."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "R/T",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 8, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "originalwheels.com", "3si.org forums"],
+      "notes": "R/T (non-turbo) has 16x8 wheels."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "R/T Turbo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 7.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["245/45R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "3si.org forums", "bbwheelsonline.com"],
+      "notes": "R/T Turbo (Twin Turbo) has 17x7.5 wheels. Some sources show 17x8.5. 255/50R17 also OEM option."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "Base",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "notes": "Same as 1991 Base."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "ES",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "1992 ES moved to 15\" wheels (downgrade from 1991)."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "R/T Turbo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 8.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["245/45R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "3si.org forums"],
+      "notes": "R/T Turbo with AWD."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "Base",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "bbwheelsonline.com"],
+      "notes": "Continuation of previous year."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "R/T Turbo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 8.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["245/45R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "3si.org forums"],
+      "notes": "Same as 1992 R/T Turbo."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "Base",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Continuation of previous year."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "R/T Turbo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 8.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["245/45R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "3si.org forums"],
+      "notes": "Same as previous years."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "Base",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Continuation of previous year."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "R/T Turbo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 8.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["245/45R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "3si.org forums"],
+      "notes": "Same as previous years."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "Base",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Final year of production."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Stealth",
+      "submodel": "R/T Turbo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 17, "width": 8.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["245/45R17"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "3si.org forums"],
+      "notes": "Final year of production."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Ram Van B150",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["P215/75R15", "P225/75R15"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["sparetire.com", "allpar.com forums"],
+      "notes": "5x5.5 inch (5x139.7mm) bolt pattern. Light duty van."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Ram Van B250",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 2 }
+        ],
+        "oem_tire_sizes": ["P225/75R15", "P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com", "allpar.com forums", "partsgeek.com"],
+      "notes": "5x5.5 inch bolt pattern. Larger hub bore than typical Chrysler cars."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Ram Van B350",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 2 }
+        ],
+        "oem_tire_sizes": ["P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com", "dodgetalk.com forums"],
+      "notes": "Same bolt pattern as B250. Heavy duty version."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Ram Van B250",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 2 }
+        ],
+        "oem_tire_sizes": ["P225/75R15", "P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com", "allpar.com forums"],
+      "notes": "Continuation of 1990 specs."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Ram Van B250",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 2 }
+        ],
+        "oem_tire_sizes": ["P225/75R15", "P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com", "allpar.com forums"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Ram Van B250",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 2 }
+        ],
+        "oem_tire_sizes": ["P225/75R15", "P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com", "allpar.com forums"],
+      "notes": "Last year of B-series naming."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["P215/75R15", "P225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com", "dodgetalk.com forums"],
+      "notes": "New naming scheme for 1994+. 5x5.5 inch bolt pattern."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Ram Van B2500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 2 }
+        ],
+        "oem_tire_sizes": ["P225/75R15", "P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com", "dodgetalk.com forums"],
+      "notes": "5-lug version. Some HD suspension versions have 8-lug pattern."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["dodgetalk.com forums", "hubcaphaven.com"],
+      "notes": "8x6.5 inch bolt pattern (8x165.1mm). Heavy duty 1-ton version."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["P215/75R15", "P225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com"],
+      "notes": "Continuation of 1994 specs."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Ram Van B2500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 2 }
+        ],
+        "oem_tire_sizes": ["P225/75R15", "P235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com", "dodgetalk.com forums"],
+      "notes": "Continuation of 1994 specs."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["dodgetalk.com forums"],
+      "notes": "Continuation of 1994 specs."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["P215/75R15", "P225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["P215/75R15", "P225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["P215/75R15", "P225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["P215/75R15", "P225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["sparetire.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 121,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["dodgetalk.com forums"],
+      "notes": "Final year of production."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Spirit",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "sizemywheels.com"],
+      "notes": "AA-body platform. Same as Acclaim."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Spirit",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "sizemywheels.com"],
+      "notes": "Continuation of 1990 specs."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Spirit",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "sizemywheels.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Spirit",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "sizemywheels.com"],
+      "notes": "Some trims upgraded to 15\" wheels."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Spirit",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "sizemywheels.com"],
+      "notes": "Continuation of 1993 specs."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Spirit",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "sizemywheels.com"],
+      "notes": "Final year of production."
+    },
+    {
+      "year": 1995,
+      "make": "Dodge",
+      "model": "Avenger",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 16, "width": 6.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bbwheelsonline.com"],
+      "notes": "Based on Mitsubishi Eclipse platform. First year."
+    },
+    {
+      "year": 1996,
+      "make": "Dodge",
+      "model": "Avenger",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 16, "width": 6.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bbwheelsonline.com"],
+      "notes": "Continuation of 1995 specs."
+    },
+    {
+      "year": 1997,
+      "make": "Dodge",
+      "model": "Avenger",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 16, "width": 6.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bbwheelsonline.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1998,
+      "make": "Dodge",
+      "model": "Avenger",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 16, "width": 6.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bbwheelsonline.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1999,
+      "make": "Dodge",
+      "model": "Avenger",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 67.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 46 },
+          { "diameter": 16, "width": 6.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bbwheelsonline.com"],
+      "notes": "Continuation of previous years. First generation ended 2000."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Dynasty",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "hulkoffsets.com"],
+      "notes": "C-body platform. Same as Chrysler Dynasty."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Dynasty",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "hulkoffsets.com"],
+      "notes": "Continuation of 1990 specs."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Dynasty",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14", "P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "hulkoffsets.com"],
+      "notes": "Some LE trims got 15\" wheels."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Dynasty",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14", "P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "hulkoffsets.com"],
+      "notes": "Final year of production."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Monaco",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["P195/65R15", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "originalwheels.com", "consumerguide.com"],
+      "notes": "Based on Eagle Premier. Renault-derived platform. 5x4.25 inch bolt pattern."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Monaco",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["P195/65R15", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "originalwheels.com"],
+      "notes": "Continuation of 1990 specs."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Monaco",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["P195/65R15", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "originalwheels.com"],
+      "notes": "Final year of production."
+    },
+    {
+      "year": 1990,
+      "make": "Dodge",
+      "model": "Colt",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["P155/80R13", "P175/70R13"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bbwheelsonline.com", "feoa.net forums"],
+      "notes": "Mitsubishi Mirage twin. Subcompact."
+    },
+    {
+      "year": 1991,
+      "make": "Dodge",
+      "model": "Colt",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["P155/80R13", "P175/70R13", "P185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bbwheelsonline.com"],
+      "notes": "Some trims got 14\" wheels."
+    },
+    {
+      "year": 1992,
+      "make": "Dodge",
+      "model": "Colt",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["P155/80R13", "P175/70R13", "P185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bbwheelsonline.com"],
+      "notes": "Continuation of 1991 specs."
+    },
+    {
+      "year": 1993,
+      "make": "Dodge",
+      "model": "Colt",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["P155/80R13", "P175/70R13", "P185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bbwheelsonline.com", "feoa.net forums"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1994,
+      "make": "Dodge",
+      "model": "Colt",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 46 }
+        ],
+        "oem_tire_sizes": ["P155/80R13", "P175/70R13", "P185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "bbwheelsonline.com", "feoa.net forums"],
+      "notes": "Final year of US production."
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "LeBaron",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tirewheelguide.com", "originalwheels.com"],
+      "notes": "H-body platform (coupe/convertible). Sedan is J-body."
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "LeBaron",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tirewheelguide.com"],
+      "notes": "Some GTC trims got 15\" wheels."
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "LeBaron",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tirewheelguide.com"],
+      "notes": "Continuation of 1991 specs."
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "LeBaron",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tirewheelguide.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1994,
+      "make": "Chrysler",
+      "model": "LeBaron",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tirewheelguide.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1995,
+      "make": "Chrysler",
+      "model": "LeBaron",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P185/70R14", "P195/70R14", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tirewheelguide.com"],
+      "notes": "Final year of production. GTC convertible only."
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "New Yorker",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "C-body platform. Fifth generation."
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "New Yorker",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "Continuation of 1990 specs."
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "New Yorker",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14", "P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "Fifth Avenue trim available with 15\" wheels."
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "New Yorker",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14", "P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "Last year of C-body generation."
+    },
+    {
+      "year": 1994,
+      "make": "Chrysler",
+      "model": "New Yorker",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P215/65R16", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "partsgeek.com"],
+      "notes": "New LH platform. Major redesign. 5x4.5 inch bolt pattern."
+    },
+    {
+      "year": 1995,
+      "make": "Chrysler",
+      "model": "New Yorker",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P215/65R16", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "partsgeek.com"],
+      "notes": "Continuation of 1994 LH platform specs."
+    },
+    {
+      "year": 1996,
+      "make": "Chrysler",
+      "model": "New Yorker",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P215/65R16", "P225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "partsgeek.com"],
+      "notes": "Final year of production. Name dropped after 1996."
+    },
+    {
+      "year": 1995,
+      "make": "Chrysler",
+      "model": "Cirrus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fastwheelaccessories.com"],
+      "notes": "JA platform (cloud cars). First year."
+    },
+    {
+      "year": 1996,
+      "make": "Chrysler",
+      "model": "Cirrus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fastwheelaccessories.com"],
+      "notes": "Continuation of 1995 specs."
+    },
+    {
+      "year": 1997,
+      "make": "Chrysler",
+      "model": "Cirrus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/60R15", "P205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fastwheelaccessories.com"],
+      "notes": "LXi trim got 16\" wheels."
+    },
+    {
+      "year": 1998,
+      "make": "Chrysler",
+      "model": "Cirrus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/60R15", "P205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fastwheelaccessories.com"],
+      "notes": "Continuation of 1997 specs."
+    },
+    {
+      "year": 1999,
+      "make": "Chrysler",
+      "model": "Cirrus",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/60R15", "P205/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "fastwheelaccessories.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "Dynasty",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "hulkoffsets.com"],
+      "notes": "Same as Dodge Dynasty. C-body platform."
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "Dynasty",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "hulkoffsets.com"],
+      "notes": "Continuation of 1990 specs."
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "Dynasty",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14", "P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "hulkoffsets.com"],
+      "notes": "LE trim available with 15\" wheels."
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "Dynasty",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14", "P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "hulkoffsets.com"],
+      "notes": "Final year of production."
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "Fifth Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "Y-body platform. Based on Dynasty/New Yorker."
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "Fifth Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14", "P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "15\" option available."
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "Fifth Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14", "P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "Continuation of 1991 specs."
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "Fifth Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/70R14", "P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "roadkillcustoms.com"],
+      "notes": "Final year of production."
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "Imperial",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/70R14", "P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "finishlinewheels.com"],
+      "notes": "Y-body platform. Luxury flagship."
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "Imperial",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "finishlinewheels.com"],
+      "notes": "Standard 15\" wheels."
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "Imperial",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "finishlinewheels.com"],
+      "notes": "Continuation of 1991 specs."
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "Imperial",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "finishlinewheels.com"],
+      "notes": "Final year of production."
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/75R14", "P205/70R14", "P205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "2nd generation minivan. AS platform."
+    },
+    {
+      "year": 1990,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/75R14", "P205/70R14", "P205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "Long wheelbase version."
+    },
+    {
+      "year": 1991,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/75R14", "P205/70R14", "P205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "Continuation of 1990 specs."
+    },
+    {
+      "year": 1992,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/75R14", "P205/70R14", "P205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1993,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/75R14", "P205/70R14", "P205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1994,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/75R14", "P205/70R14", "P205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1995,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P195/75R14", "P205/70R14", "P205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "Last year of 2nd generation."
+    },
+    {
+      "year": 1996,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "sparetire.com"],
+      "notes": "3rd generation. New NS platform. Bolt pattern changed to 5x4.5 inch."
+    },
+    {
+      "year": 1996,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "sparetire.com"],
+      "notes": "3rd generation. Same as regular Voyager."
+    },
+    {
+      "year": 1997,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "sparetire.com"],
+      "notes": "Continuation of 1996 specs."
+    },
+    {
+      "year": 1997,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "sparetire.com"],
+      "notes": "Continuation of 1996 specs."
+    },
+    {
+      "year": 1998,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "sparetire.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1998,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "sparetire.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1999,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "sparetire.com"],
+      "notes": "Continuation of previous years."
+    },
+    {
+      "year": 1999,
+      "make": "Chrysler",
+      "model": "Grand Voyager",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 71.5,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P215/70R15", "P215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "sparetire.com"],
+      "notes": "Continuation of previous years."
+    }
+  ],
+  "summary": {
+    "total": 105,
+    "complete": 105,
+    "partial": 0,
+    "failed": 0,
+    "highConfidence": 98,
+    "mediumConfidence": 7,
+    "needsReview": 0
+  },
+  "keyFindings": {
+    "boltPatterns": {
+      "5x114.3": ["Dodge Stealth", "Dodge Avenger", "Chrysler New Yorker (1994+)", "Chrysler Voyager (1996+)"],
+      "5x100": ["Dodge Spirit", "Dodge Dynasty", "Chrysler LeBaron", "Chrysler Cirrus", "Chrysler New Yorker (pre-1994)", "Chrysler Fifth Avenue", "Chrysler Imperial", "Chrysler Voyager (pre-1996)"],
+      "5x108": ["Dodge Monaco"],
+      "5x139.7": ["Dodge Ram Van B-series (5-lug)"],
+      "8x165.1": ["Dodge Ram Van B3500"],
+      "4x100": ["Dodge Colt"]
+    },
+    "hubBores": {
+      "67.1": ["Dodge Stealth", "Dodge Avenger"],
+      "71.5": ["Chrysler New Yorker (LH)", "Chrysler Voyager (1996+)"],
+      "57.1": ["Most Chrysler K/C/AA/J-body cars"],
+      "56.1": ["Dodge Colt"],
+      "63.4": ["Dodge Monaco"],
+      "108": ["Dodge Ram Van 5-lug"],
+      "121": ["Dodge Ram Van 8-lug"]
+    },
+    "platformNotes": {
+      "Stealth": "Mitsubishi 3000GT twin. Performance trims had larger wheels. R/T Turbo has 17x8.5 with 245/45R17.",
+      "Monaco": "Eagle Premier twin. Renault/AMC-derived platform with 5x108 bolt pattern (unusual for Chrysler).",
+      "Colt": "Mitsubishi Mirage twin. 4x100 bolt pattern, common with Japanese subcompacts.",
+      "NewYorker": "Platform changed from C-body (5x100) to LH-body (5x114.3) in 1994.",
+      "Voyager": "Platform changed from AS (5x100) to NS (5x114.3) in 1996.",
+      "RamVan": "B3500 1-ton vans use 8x165.1 (8x6.5\") while lighter models use 5x139.7 (5x5.5\")."
+    }
+  }
+}

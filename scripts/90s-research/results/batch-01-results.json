@@ -1,0 +1,1195 @@
+{
+  "batchId": "90s-batch-01",
+  "completedAt": "2026-04-22T12:25:00.000Z",
+  "results": [
+    {
+      "year": 1990,
+      "make": "Honda",
+      "model": "Accord",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com", "honda-tech.com"],
+      "notes": "4th generation (1990-1993). Changed from 4x100 of previous gen."
+    },
+    {
+      "year": 1991,
+      "make": "Honda",
+      "model": "Accord",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com", "honda-tech.com"],
+      "notes": "4th generation (1990-1993)."
+    },
+    {
+      "year": 1992,
+      "make": "Honda",
+      "model": "Accord",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com", "honda-tech.com"],
+      "notes": "4th generation (1990-1993)."
+    },
+    {
+      "year": 1993,
+      "make": "Honda",
+      "model": "Accord",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/60R15", "205/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com", "honda-tech.com"],
+      "notes": "4th generation (1990-1993). Last year of this gen."
+    },
+    {
+      "year": 1990,
+      "make": "Honda",
+      "model": "Civic",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "4th generation (1988-1991). Base model specs."
+    },
+    {
+      "year": 1991,
+      "make": "Honda",
+      "model": "Civic",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "4th/5th generation transition year."
+    },
+    {
+      "year": 1992,
+      "make": "Honda",
+      "model": "Civic",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14", "195/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "5th generation (1992-1995). VTEC introduced this gen."
+    },
+    {
+      "year": 1993,
+      "make": "Honda",
+      "model": "Civic",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14", "195/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "5th generation (1992-1995)."
+    },
+    {
+      "year": 1994,
+      "make": "Honda",
+      "model": "Civic",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14", "195/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "5th generation (1992-1995)."
+    },
+    {
+      "year": 1995,
+      "make": "Honda",
+      "model": "Civic",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14", "195/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "5th generation (1992-1995). Last year of this gen."
+    },
+    {
+      "year": 1990,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 },
+          { "diameter": 15, "width": 6.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/60R14", "195/55R15", "205/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "honda-tech.com"],
+      "notes": "3rd generation BA series (1987-1991). Si has 15-inch."
+    },
+    {
+      "year": 1991,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 },
+          { "diameter": 15, "width": 6.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["195/60R14", "195/55R15", "205/50R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "honda-tech.com"],
+      "notes": "3rd/4th generation transition. 4th gen started mid-1991 with 4x114.3."
+    },
+    {
+      "year": 1992,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["honda-tech.com", "fitmentindustries.com"],
+      "notes": "4th generation (1992-1996). Changed to 4x114.3 from 4x100."
+    },
+    {
+      "year": 1993,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["honda-tech.com", "fitmentindustries.com"],
+      "notes": "4th generation (1992-1996)."
+    },
+    {
+      "year": 1994,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["honda-tech.com", "fitmentindustries.com"],
+      "notes": "4th generation (1992-1996)."
+    },
+    {
+      "year": 1995,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["honda-tech.com", "fitmentindustries.com"],
+      "notes": "4th generation (1992-1996)."
+    },
+    {
+      "year": 1996,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "oem_tire_sizes": ["195/60R15", "205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["honda-tech.com", "fitmentindustries.com"],
+      "notes": "4th/5th generation overlap year."
+    },
+    {
+      "year": 1997,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["honda-tech.com", "hulkoffsets.com"],
+      "notes": "5th generation (1997-2001). Changed to 5x114.3 bolt pattern."
+    },
+    {
+      "year": 1998,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["honda-tech.com", "hulkoffsets.com"],
+      "notes": "5th generation (1997-2001)."
+    },
+    {
+      "year": 1999,
+      "make": "Honda",
+      "model": "Prelude",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 55 }
+        ],
+        "oem_tire_sizes": ["205/50R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["honda-tech.com", "hulkoffsets.com"],
+      "notes": "5th generation (1997-2001)."
+    },
+    {
+      "year": 1990,
+      "make": "Honda",
+      "model": "CR-V",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "CR-V did not exist in 1990. First introduced in 1997 for US market."
+    },
+    {
+      "year": 1991,
+      "make": "Honda",
+      "model": "CR-V",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "CR-V did not exist in 1991. First introduced in 1997 for US market."
+    },
+    {
+      "year": 1992,
+      "make": "Honda",
+      "model": "CR-V",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "CR-V did not exist in 1992. First introduced in 1997 for US market."
+    },
+    {
+      "year": 1993,
+      "make": "Honda",
+      "model": "CR-V",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "CR-V did not exist in 1993. First introduced in 1997 for US market."
+    },
+    {
+      "year": 1994,
+      "make": "Honda",
+      "model": "CR-V",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "CR-V did not exist in 1994. First introduced in 1997 for US market."
+    },
+    {
+      "year": 1995,
+      "make": "Honda",
+      "model": "CR-V",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "CR-V did not exist in 1995 in US market. JDM version started 1995."
+    },
+    {
+      "year": 1996,
+      "make": "Honda",
+      "model": "CR-V",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "CR-V did not exist in 1996 in US market. First US model was 1997."
+    },
+    {
+      "year": 1990,
+      "make": "Honda",
+      "model": "Odyssey",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Odyssey did not exist in 1990. First introduced in 1995 for US market."
+    },
+    {
+      "year": 1991,
+      "make": "Honda",
+      "model": "Odyssey",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Odyssey did not exist in 1991. First introduced in 1995 for US market."
+    },
+    {
+      "year": 1992,
+      "make": "Honda",
+      "model": "Odyssey",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Odyssey did not exist in 1992. First introduced in 1995 for US market."
+    },
+    {
+      "year": 1993,
+      "make": "Honda",
+      "model": "Odyssey",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Odyssey did not exist in 1993. First introduced in 1995 for US market."
+    },
+    {
+      "year": 1994,
+      "make": "Honda",
+      "model": "Odyssey",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Odyssey did not exist in 1994. First introduced in 1995 for US market."
+    },
+    {
+      "year": 1995,
+      "make": "Honda",
+      "model": "Odyssey",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "1st generation (1995-1998). First year of Odyssey in US."
+    },
+    {
+      "year": 1996,
+      "make": "Honda",
+      "model": "Odyssey",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "1st generation (1995-1998)."
+    },
+    {
+      "year": 1997,
+      "make": "Honda",
+      "model": "Odyssey",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "1st generation (1995-1998)."
+    },
+    {
+      "year": 1998,
+      "make": "Honda",
+      "model": "Odyssey",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.0, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/65R15", "215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "1st generation (1995-1998). Last year of 1st gen."
+    },
+    {
+      "year": 1999,
+      "make": "Honda",
+      "model": "Odyssey",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 64.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/65R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "tirewheelguide.com"],
+      "notes": "2nd generation started 1999. Larger body style."
+    },
+    {
+      "year": 1990,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Passport did not exist in 1990. First introduced in 1994 (rebadged Isuzu Rodeo)."
+    },
+    {
+      "year": 1991,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Passport did not exist in 1991. First introduced in 1994."
+    },
+    {
+      "year": 1992,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Passport did not exist in 1992. First introduced in 1994."
+    },
+    {
+      "year": 1993,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Passport did not exist in 1993. First introduced in 1994."
+    },
+    {
+      "year": 1994,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 107.0,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 10 },
+          { "diameter": 16, "width": 7.0, "offset": 10 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "245/70R16"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["originalwheels.com", "discountedwheelwarehouse.com"],
+      "notes": "Rebadged Isuzu Rodeo. 1st gen (1994-1997). Hub bore needs verification."
+    },
+    {
+      "year": 1995,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 107.0,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 10 },
+          { "diameter": 16, "width": 7.0, "offset": 10 },
+          { "diameter": 16, "width": 7.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "245/70R16"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["originalwheels.com", "discountedwheelwarehouse.com"],
+      "notes": "Rebadged Isuzu Rodeo. 1st gen (1994-1997)."
+    },
+    {
+      "year": 1996,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 107.0,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 10 },
+          { "diameter": 16, "width": 7.0, "offset": 10 },
+          { "diameter": 16, "width": 7.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["225/75R15", "245/70R16"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["originalwheels.com", "discountedwheelwarehouse.com"],
+      "notes": "Rebadged Isuzu Rodeo. 1st gen (1994-1997)."
+    },
+    {
+      "year": 1997,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 107.0,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.0, "offset": 10 },
+          { "diameter": 16, "width": 7.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["245/70R16"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["originalwheels.com", "discountedwheelwarehouse.com"],
+      "notes": "Rebadged Isuzu Rodeo. 1st gen last year."
+    },
+    {
+      "year": 1998,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 107.0,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.0, "offset": 10 }
+        ],
+        "oem_tire_sizes": ["245/70R16", "255/70R16"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["originalwheels.com", "discountedwheelwarehouse.com"],
+      "notes": "2nd gen (1998-2002) started."
+    },
+    {
+      "year": 1999,
+      "make": "Honda",
+      "model": "Passport",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 107.0,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7.0, "offset": 10 }
+        ],
+        "oem_tire_sizes": ["245/70R16", "255/70R16"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["originalwheels.com", "discountedwheelwarehouse.com"],
+      "notes": "2nd gen (1998-2002)."
+    },
+    {
+      "year": 1990,
+      "make": "Honda",
+      "model": "Del Sol",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Del Sol did not exist in 1990. First introduced in 1993 (as Civic del Sol)."
+    },
+    {
+      "year": 1991,
+      "make": "Honda",
+      "model": "Del Sol",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Del Sol did not exist in 1991. First introduced in 1993."
+    },
+    {
+      "year": 1992,
+      "make": "Honda",
+      "model": "Del Sol",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Del Sol did not exist in 1992. First introduced in 1993."
+    },
+    {
+      "year": 1993,
+      "make": "Honda",
+      "model": "Del Sol",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["fitmentindustries.com", "hulkoffsets.com"],
+      "notes": "Civic del Sol 1st year (1993-1997). Based on Civic platform."
+    },
+    {
+      "year": 1994,
+      "make": "Honda",
+      "model": "Del Sol",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 45 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["fitmentindustries.com", "hulkoffsets.com"],
+      "notes": "Civic del Sol (1993-1997)."
+    },
+    {
+      "year": 1995,
+      "make": "Honda",
+      "model": "Del Sol",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["fitmentindustries.com", "hulkoffsets.com"],
+      "notes": "Civic del Sol (1993-1997). VTEC versions had 15-inch option."
+    },
+    {
+      "year": 1996,
+      "make": "Honda",
+      "model": "Del Sol",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["fitmentindustries.com", "hulkoffsets.com"],
+      "notes": "Civic del Sol (1993-1997)."
+    },
+    {
+      "year": 1997,
+      "make": "Honda",
+      "model": "Del Sol",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 56.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["185/60R14", "195/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["fitmentindustries.com", "hulkoffsets.com"],
+      "notes": "Civic del Sol (1993-1997). Last year of production."
+    },
+    {
+      "year": 1998,
+      "make": "Honda",
+      "model": "Del Sol",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Del Sol discontinued after 1997 model year."
+    },
+    {
+      "year": 1999,
+      "make": "Honda",
+      "model": "Del Sol",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Del Sol discontinued after 1997 model year."
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "Camry",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "2nd gen (V20, 1987-1991). US market specs."
+    },
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "Camry",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 40 },
+          { "diameter": 14, "width": 6.0, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["185/70R14", "195/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "2nd gen last year (V20). 3rd gen (V30) started in Japan with 5x114.3."
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "Corolla",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["165/80R13", "175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "6th gen E90 (1988-1992). GT-S has 14-inch."
+    },
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "Corolla",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["165/80R13", "175/70R13", "185/60R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "6th gen E90 (1988-1992)."
+    },
+    {
+      "year": 1992,
+      "make": "Toyota",
+      "model": "Corolla",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 13, "width": 5.0, "offset": 39 },
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/70R13", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "6th gen last year / 7th gen E100 began."
+    },
+    {
+      "year": 1993,
+      "make": "Toyota",
+      "model": "Corolla",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/65R14", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "7th gen E100 (1993-1997)."
+    },
+    {
+      "year": 1994,
+      "make": "Toyota",
+      "model": "Corolla",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/65R14", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "7th gen E100 (1993-1997)."
+    },
+    {
+      "year": 1995,
+      "make": "Toyota",
+      "model": "Corolla",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/65R14", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "7th gen E100 (1993-1997)."
+    },
+    {
+      "year": 1996,
+      "make": "Toyota",
+      "model": "Corolla",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/65R14", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "7th gen E100 (1993-1997)."
+    },
+    {
+      "year": 1997,
+      "make": "Toyota",
+      "model": "Corolla",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/65R14", "185/65R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "7th gen E100 last year."
+    },
+    {
+      "year": 1998,
+      "make": "Toyota",
+      "model": "Corolla",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/65R14", "185/65R14", "185/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "8th gen E110 (1998-2002)."
+    },
+    {
+      "year": 1999,
+      "make": "Toyota",
+      "model": "Corolla",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "4x100",
+        "hub_bore": 54.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 }
+        ],
+        "oem_tire_sizes": ["175/65R14", "185/65R14", "185/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "toyota forums"],
+      "notes": "8th gen E110 (1998-2002)."
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Tacoma did not exist in 1990. First introduced in 1995.5 (mid-year 1995)."
+    },
+    {
+      "year": 1991,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Tacoma did not exist in 1991. First introduced in 1995.5."
+    },
+    {
+      "year": 1992,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Tacoma did not exist in 1992. First introduced in 1995.5."
+    },
+    {
+      "year": 1993,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Tacoma did not exist in 1993. First introduced in 1995.5."
+    },
+    {
+      "year": 1994,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "Tacoma did not exist in 1994. First introduced in 1995.5."
+    },
+    {
+      "year": 1990,
+      "make": "Toyota",
+      "model": "RAV4",
+      "status": "dne",
+      "data": null,
+      "confidence": "high",
+      "sources": ["wikipedia", "manufacturer records"],
+      "notes": "RAV4 did not exist in 1990. First introduced in 1996 for US market."
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "complete": 47,
+    "dne": 28,
+    "partial": 0,
+    "failed": 0,
+    "highConfidence": 41,
+    "mediumConfidence": 6,
+    "needsReview": 6
+  },
+  "notes": {
+    "reviewItems": [
+      "Honda Passport hub bore (107mm) needs verification - based on Isuzu Rodeo specs",
+      "Honda Prelude 1991-1992 transition year - some early 1991 may still be 4x100, late 1991/1992+ is 4x114.3",
+      "Toyota Tacoma has different bolt patterns for 2WD (5x114.3) vs 4WD (6x139.7) - spec recorded is for 4WD"
+    ],
+    "methodology": "Research conducted using approved sources: hulkoffsets.com, tirewheelguide.com, fitmentindustries.com, honda-tech.com, tacomaworld.com, and enthusiast forums. Avoided banned sources (wheel-size.com scraping).",
+    "knownLimitations": "90s data is less complete than modern vehicles. Some offset values are approximations based on common ranges for the era."
+  }
+}

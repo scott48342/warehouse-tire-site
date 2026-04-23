@@ -57,6 +57,7 @@
         "drizzle-kit": "^0.31.10",
         "eslint": "^9",
         "eslint-config-next": "16.1.6",
+        "postgres": "^3.4.9",
         "puppeteer": "^24.40.0",
         "tailwindcss": "^4",
         "ts-jest": "^29.4.9",

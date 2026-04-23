@@ -1,0 +1,386 @@
+{
+  "batchId": 9,
+  "researchedAt": "2026-04-21T23:44:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 50,
+    "foundSpecs": 23,
+    "notUS": 27
+  },
+  "results": [
+    {
+      "year": 2004,
+      "make": "buick",
+      "model": "park-avenue",
+      "wheelSizes": [16, 17],
+      "tireSizes": ["225/60R16", "235/55R17"],
+      "notes": "Base: 16\", Ultra: 17\""
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "park-avenue",
+      "wheelSizes": [16, 17],
+      "tireSizes": ["225/60R16", "235/55R17"],
+      "notes": "Base/Prestige: 16\", Ultra: 17\""
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "park-avenue",
+      "notUS": true,
+      "notes": "Park Avenue discontinued after 2005 in US"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "park-avenue",
+      "notUS": true,
+      "notes": "Park Avenue discontinued after 2005 in US"
+    },
+    {
+      "year": 2008,
+      "make": "buick",
+      "model": "park-avenue",
+      "notUS": true,
+      "notes": "Park Avenue discontinued after 2005 in US"
+    },
+    {
+      "year": 2009,
+      "make": "buick",
+      "model": "park-avenue",
+      "notUS": true,
+      "notes": "Park Avenue discontinued after 2005 in US"
+    },
+    {
+      "year": 2010,
+      "make": "buick",
+      "model": "park-avenue",
+      "notUS": true,
+      "notes": "Park Avenue discontinued after 2005 in US"
+    },
+    {
+      "year": 2011,
+      "make": "buick",
+      "model": "park-avenue",
+      "notUS": true,
+      "notes": "Park Avenue discontinued after 2005 in US"
+    },
+    {
+      "year": 2012,
+      "make": "buick",
+      "model": "park-avenue",
+      "notUS": true,
+      "notes": "Park Avenue discontinued after 2005 in US"
+    },
+    {
+      "year": 2003,
+      "make": "buick",
+      "model": "rainier",
+      "notUS": true,
+      "notes": "Rainier started production in 2004"
+    },
+    {
+      "year": 2004,
+      "make": "buick",
+      "model": "rainier",
+      "wheelSizes": [17],
+      "tireSizes": ["245/65R17", "255/60R17"],
+      "notes": "2WD: both options, 4WD: 255/60R17 only"
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "rainier",
+      "wheelSizes": [17],
+      "tireSizes": ["245/65R17"],
+      "notes": "All trims: 245/65R17"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "rainier",
+      "wheelSizes": [17],
+      "tireSizes": ["245/65R17"],
+      "notes": "All trims: 245/65R17"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "rainier",
+      "wheelSizes": [17],
+      "tireSizes": ["245/65R17"],
+      "notes": "All trims: 245/65R17"
+    },
+    {
+      "year": 2012,
+      "make": "buick",
+      "model": "regal-gs",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "notes": "GS trim of Regal - 19\" standard, 20\" optional"
+    },
+    {
+      "year": 2013,
+      "make": "buick",
+      "model": "regal-gs",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "notes": "GS trim of Regal - 19\" standard, 20\" optional"
+    },
+    {
+      "year": 2014,
+      "make": "buick",
+      "model": "regal-gs",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "notes": "GS trim of Regal - 19\" standard, 20\" optional"
+    },
+    {
+      "year": 2015,
+      "make": "buick",
+      "model": "regal-gs",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "notes": "GS trim of Regal - 19\" standard, 20\" optional"
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "regal-gs",
+      "wheelSizes": [19, 20],
+      "tireSizes": ["245/40R19", "255/35R20"],
+      "notes": "GS trim of Regal - 19\" standard, 20\" optional"
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "regal-gs",
+      "wheelSizes": [19],
+      "tireSizes": ["245/40R19"],
+      "notes": "GS trim of Regal - last year of this generation"
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "regal-gs",
+      "notUS": true,
+      "notes": "Regal GS as separate model not sold in US after 2017. 2018+ Regal was redesigned without GS trim in US market."
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "regal-gs",
+      "notUS": true,
+      "notes": "Regal GS not sold in US - no GS trim available on 2018+ Regal"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "regal-gs",
+      "notUS": true,
+      "notes": "Regal GS not sold in US - Regal discontinued after 2020"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "regal-gs",
+      "notUS": true,
+      "notes": "Regal discontinued in US after 2020"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "regal-gs",
+      "notUS": true,
+      "notes": "Regal discontinued in US after 2020"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "regal-gs",
+      "notUS": true,
+      "notes": "Regal discontinued in US after 2020"
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "regal-tourx",
+      "wheelSizes": [18],
+      "tireSizes": ["235/50R18"],
+      "notes": "All trims: 235/50R18"
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "regal-tourx",
+      "wheelSizes": [18],
+      "tireSizes": ["235/50R18"],
+      "notes": "All trims: 235/50R18"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "regal-tourx",
+      "wheelSizes": [18],
+      "tireSizes": ["235/50R18"],
+      "notes": "All trims: 235/50R18 - last model year"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "regal-tourx",
+      "notUS": true,
+      "notes": "Regal TourX discontinued after 2020"
+    },
+    {
+      "year": 2001,
+      "make": "buick",
+      "model": "rendezvous",
+      "notUS": true,
+      "notes": "Rendezvous started production in 2002"
+    },
+    {
+      "year": 2002,
+      "make": "buick",
+      "model": "rendezvous",
+      "wheelSizes": [16],
+      "tireSizes": ["215/70R16"],
+      "notes": "All trims: 215/70R16"
+    },
+    {
+      "year": 2003,
+      "make": "buick",
+      "model": "rendezvous",
+      "wheelSizes": [16],
+      "tireSizes": ["215/70R16"],
+      "notes": "All trims: 215/70R16"
+    },
+    {
+      "year": 2004,
+      "make": "buick",
+      "model": "rendezvous",
+      "wheelSizes": [16, 17],
+      "tireSizes": ["215/70R16", "225/60R17"],
+      "notes": "Base trims: 16\", Ultra: 17\""
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "rendezvous",
+      "wheelSizes": [16, 17],
+      "tireSizes": ["215/70R16", "225/60R17"],
+      "notes": "CX: 16\", CXL/Ultra: 17\""
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "rendezvous",
+      "wheelSizes": [17],
+      "tireSizes": ["225/60R17"],
+      "notes": "All trims: 225/60R17"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "rendezvous",
+      "wheelSizes": [17],
+      "tireSizes": ["225/60R17"],
+      "notes": "All trims: 225/60R17"
+    },
+    {
+      "year": 2005,
+      "make": "buick",
+      "model": "terraza",
+      "wheelSizes": [17],
+      "tireSizes": ["225/60R17"],
+      "notes": "All trims: 225/60R17"
+    },
+    {
+      "year": 2006,
+      "make": "buick",
+      "model": "terraza",
+      "wheelSizes": [17],
+      "tireSizes": ["225/60R17"],
+      "notes": "All trims: 225/60R17"
+    },
+    {
+      "year": 2007,
+      "make": "buick",
+      "model": "terraza",
+      "wheelSizes": [17],
+      "tireSizes": ["225/60R17"],
+      "notes": "All trims: 225/60R17"
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "verano-gs",
+      "notUS": true,
+      "notes": "Verano GS not sold in US - China-market only trim. US Verano ended 2017, no GS variant."
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "verano-gs",
+      "notUS": true,
+      "notes": "Verano GS not sold in US - China-market only trim"
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "verano-gs",
+      "notUS": true,
+      "notes": "Verano discontinued in US after 2017; GS is China-market only"
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "verano-gs",
+      "notUS": true,
+      "notes": "Verano discontinued in US after 2017; GS is China-market only"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "verano-gs",
+      "notUS": true,
+      "notes": "Verano discontinued in US after 2017; GS is China-market only"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "verano-gs",
+      "notUS": true,
+      "notes": "Verano discontinued in US after 2017; GS is China-market only"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "verano-gs",
+      "notUS": true,
+      "notes": "Verano discontinued in US after 2017; GS is China-market only"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "verano-pro-gs",
+      "notUS": true,
+      "notes": "Verano Pro GS not sold in US - China-market only model"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "verano-pro-gs",
+      "notUS": true,
+      "notes": "Verano Pro GS not sold in US - China-market only model"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "verano-pro-gs",
+      "notUS": true,
+      "notes": "Verano Pro GS not sold in US - China-market only model"
+    }
+  ]
+}

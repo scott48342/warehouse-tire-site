@@ -1,0 +1,1301 @@
+{
+  "batchId": "muscle-gm-a-body",
+  "researchedAt": "2026-04-22T14:00:00Z",
+  "researcher": "subagent:muscle-01-gm-a-body",
+  "summary": {
+    "totalVehicles": 81,
+    "platformNotes": "All 1964-1972 GM A-body share 5x120.65 (5x4.75\") bolt pattern and 70.3mm hub bore. Wheels ranged from 14x5 base to 15x7 performance. Tire codes: F70-14 ≈ 215/70R14, G60-15 ≈ 245/60R15.",
+    "sources": ["chevellestuff.net", "tiresize.com", "tirewheelguide.com", "over-drive-magazine.com", "buickforums.com", "gtoforum.com", "hemmings.com"]
+  },
+  "vehicles": [
+    {
+      "year": 1964,
+      "make": "Chevrolet",
+      "model": "Chevelle",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 11 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "First year Chevelle. Base used 14x5 steel wheels."
+    },
+    {
+      "year": 1965,
+      "make": "Chevrolet",
+      "model": "Chevelle",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "SS396 introduced with larger tire options."
+    },
+    {
+      "year": 1966,
+      "make": "Chevrolet",
+      "model": "Chevelle",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 },
+        { "diameter": 14, "width": 6, "offset": 25 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "SS models got 14x6 wheels. Code XC for base, optional 14x6 JK for HD."
+    },
+    {
+      "year": 1967,
+      "make": "Chevrolet",
+      "model": "Chevelle",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 },
+        { "diameter": 14, "width": 6, "offset": 22 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "SS used 14x6 JJ Rally wheels (code DG). Standard used 14x5 J."
+    },
+    {
+      "year": 1968,
+      "make": "Chevrolet",
+      "model": "Chevelle",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 },
+        { "diameter": 14, "width": 6, "offset": 22 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "New body style. SS396 used F70-14 tires (225/70R14 modern equivalent)."
+    },
+    {
+      "year": 1969,
+      "make": "Chevrolet",
+      "model": "Chevelle",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 14 },
+        { "diameter": 14, "width": 6, "offset": 22 },
+        { "diameter": 14, "width": 7, "offset": 10 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "SS used 14x7 wheels (code YA). F70-14 tires standard on SS."
+    },
+    {
+      "year": 1970,
+      "make": "Chevrolet",
+      "model": "Chevelle",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 15 },
+        { "diameter": 14, "width": 6, "offset": 22 },
+        { "diameter": 14, "width": 7, "offset": 9 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "215/70R14", "235/70R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com", "chevelles.com"],
+      "confidence": "high",
+      "notes": "Peak muscle car year. SS used 14x7 (code AO). SS454 could have G70-14 tires."
+    },
+    {
+      "year": 1971,
+      "make": "Chevrolet",
+      "model": "Chevelle",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 15 },
+        { "diameter": 14, "width": 6, "offset": 22 },
+        { "diameter": 15, "width": 7, "offset": 9 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "SS moved to 15x7 Trans-Am wheels (code AU). Heavy Chevy used 14x6 rally."
+    },
+    {
+      "year": 1972,
+      "make": "Chevrolet",
+      "model": "Chevelle",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 15 },
+        { "diameter": 14, "width": 6, "offset": 13 },
+        { "diameter": 15, "width": 7, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "Last classic Chevelle. SS used 15x7 (code AU)."
+    },
+    {
+      "year": 1964,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 11 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "Malibu was upscale Chevelle trim. Same platform specs."
+    },
+    {
+      "year": 1965,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "Shared platform with Chevelle."
+    },
+    {
+      "year": 1966,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "Shared platform with Chevelle."
+    },
+    {
+      "year": 1967,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 },
+        { "diameter": 14, "width": 6, "offset": 22 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "Optional 14x6 wheels available."
+    },
+    {
+      "year": 1968,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 },
+        { "diameter": 14, "width": 6, "offset": 22 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "New body shared with Chevelle."
+    },
+    {
+      "year": 1969,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 14 },
+        { "diameter": 14, "width": 6, "offset": 22 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "Shared platform with Chevelle."
+    },
+    {
+      "year": 1970,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 15 },
+        { "diameter": 14, "width": 6, "offset": 22 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "Shared platform with Chevelle."
+    },
+    {
+      "year": 1971,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 15 },
+        { "diameter": 14, "width": 6, "offset": 22 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "Shared platform with Chevelle."
+    },
+    {
+      "year": 1972,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 15 },
+        { "diameter": 14, "width": 6, "offset": 13 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "tiresize.com"],
+      "confidence": "high",
+      "notes": "Shared platform with Chevelle."
+    },
+    {
+      "year": 1964,
+      "make": "Chevrolet",
+      "model": "El Camino",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 11 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "classicchevy.com"],
+      "confidence": "high",
+      "notes": "Chevelle-based utility coupe. 7.50/14 bias-ply standard."
+    },
+    {
+      "year": 1965,
+      "make": "Chevrolet",
+      "model": "El Camino",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "classicchevy.com"],
+      "confidence": "high",
+      "notes": "6.95/14 bias-ply standard."
+    },
+    {
+      "year": 1966,
+      "make": "Chevrolet",
+      "model": "El Camino",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "classicchevy.com"],
+      "confidence": "high",
+      "notes": "SS396 option available."
+    },
+    {
+      "year": 1967,
+      "make": "Chevrolet",
+      "model": "El Camino",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 },
+        { "diameter": 14, "width": 6, "offset": 22 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "classicchevy.com"],
+      "confidence": "high",
+      "notes": "SS used 14x6 Rally wheels."
+    },
+    {
+      "year": 1968,
+      "make": "Chevrolet",
+      "model": "El Camino",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 25 },
+        { "diameter": 14, "width": 6, "offset": 22 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net"],
+      "confidence": "high",
+      "notes": "New body style. SS396 used F70-14 tires."
+    },
+    {
+      "year": 1969,
+      "make": "Chevrolet",
+      "model": "El Camino",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 14 },
+        { "diameter": 14, "width": 6, "offset": 22 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net"],
+      "confidence": "high",
+      "notes": "Wagon/El Camino used code YB wheels."
+    },
+    {
+      "year": 1970,
+      "make": "Chevrolet",
+      "model": "El Camino",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 22 },
+        { "diameter": 14, "width": 7, "offset": 9 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "235/70R14"],
+      "staggered": false,
+      "sources": ["chevellestuff.net", "chevelles.com"],
+      "confidence": "high",
+      "notes": "SS El Camino used G70-14 tires (245/70R14 equivalent) on 14x7."
+    },
+    {
+      "year": 1971,
+      "make": "Chevrolet",
+      "model": "El Camino",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 22 },
+        { "diameter": 15, "width": 7, "offset": 9 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["chevellestuff.net"],
+      "confidence": "high",
+      "notes": "SS used 15x7 wheels."
+    },
+    {
+      "year": 1972,
+      "make": "Chevrolet",
+      "model": "El Camino",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 13 },
+        { "diameter": 15, "width": 7, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["chevellestuff.net"],
+      "confidence": "high",
+      "notes": "SS used 15x7 wheels."
+    },
+    {
+      "year": 1964,
+      "make": "Pontiac",
+      "model": "GTO",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 8 },
+        { "diameter": 15, "width": 7, "offset": 12 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14", "225/60R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "gtoforum.com"],
+      "confidence": "high",
+      "notes": "First year GTO. 389 Tri-Power available. Thread: 7/16\"-20 UNF."
+    },
+    {
+      "year": 1965,
+      "make": "Pontiac",
+      "model": "GTO",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 8 },
+        { "diameter": 15, "width": 7, "offset": 12 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14", "225/60R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "gtoforum.com"],
+      "confidence": "high",
+      "notes": "Now standalone model. 389 Tri-Power standard."
+    },
+    {
+      "year": 1966,
+      "make": "Pontiac",
+      "model": "GTO",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 8 },
+        { "diameter": 15, "width": 7, "offset": 12 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "225/60R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "confidence": "high",
+      "notes": "389 upgraded. Standard 205/75R14."
+    },
+    {
+      "year": 1967,
+      "make": "Pontiac",
+      "model": "GTO",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 8 },
+        { "diameter": 14, "width": 7, "offset": 10 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "confidence": "high",
+      "notes": "400 CID standard. Rally II wheels optional."
+    },
+    {
+      "year": 1968,
+      "make": "Pontiac",
+      "model": "GTO",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 8 },
+        { "diameter": 14, "width": 7, "offset": 10 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "gtoforum.com"],
+      "confidence": "high",
+      "notes": "New body. 400 CID. F70-14 optional."
+    },
+    {
+      "year": 1969,
+      "make": "Pontiac",
+      "model": "GTO",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 8 },
+        { "diameter": 14, "width": 7, "offset": 10 }
+      ],
+      "oem_tire_sizes": ["215/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["tiresize.com", "gtoforum.com"],
+      "confidence": "high",
+      "notes": "Judge package introduced. Ram Air IV available."
+    },
+    {
+      "year": 1970,
+      "make": "Pontiac",
+      "model": "GTO",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 7, "offset": 10 },
+        { "diameter": 15, "width": 7, "offset": 12 }
+      ],
+      "oem_tire_sizes": ["215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "gtoforum.com"],
+      "confidence": "high",
+      "notes": "New body. 455 optional. 14x7 or 15x7 Rally II wheels."
+    },
+    {
+      "year": 1971,
+      "make": "Pontiac",
+      "model": "GTO",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 7, "offset": 10 },
+        { "diameter": 15, "width": 7, "offset": 12 }
+      ],
+      "oem_tire_sizes": ["215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "gtoforum.com"],
+      "confidence": "high",
+      "notes": "455 HO standard. Compression lowered for unleaded."
+    },
+    {
+      "year": 1972,
+      "make": "Pontiac",
+      "model": "GTO",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 7, "offset": 10 },
+        { "diameter": 15, "width": 7, "offset": 12 }
+      ],
+      "oem_tire_sizes": ["215/70R14", "235/60R15"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "gtoforum.com"],
+      "confidence": "high",
+      "notes": "Last classic GTO. Now LeMans option package."
+    },
+    {
+      "year": 1964,
+      "make": "Pontiac",
+      "model": "LeMans",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 8 },
+        { "diameter": 14, "width": 6, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "GTO was LeMans option package this year."
+    },
+    {
+      "year": 1965,
+      "make": "Pontiac",
+      "model": "LeMans",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 8 },
+        { "diameter": 14, "width": 6, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Shared platform with GTO."
+    },
+    {
+      "year": 1966,
+      "make": "Pontiac",
+      "model": "LeMans",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 8 },
+        { "diameter": 14, "width": 6, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Base A-body Pontiac."
+    },
+    {
+      "year": 1967,
+      "make": "Pontiac",
+      "model": "LeMans",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 8 },
+        { "diameter": 14, "width": 6, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Base A-body Pontiac."
+    },
+    {
+      "year": 1968,
+      "make": "Pontiac",
+      "model": "LeMans",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 8 },
+        { "diameter": 14, "width": 6, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "New body style."
+    },
+    {
+      "year": 1969,
+      "make": "Pontiac",
+      "model": "LeMans",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 8 },
+        { "diameter": 14, "width": 6, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Base A-body Pontiac."
+    },
+    {
+      "year": 1970,
+      "make": "Pontiac",
+      "model": "LeMans",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 8 },
+        { "diameter": 14, "width": 6, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "New body style."
+    },
+    {
+      "year": 1971,
+      "make": "Pontiac",
+      "model": "LeMans",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 8 },
+        { "diameter": 14, "width": 6, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Base A-body Pontiac."
+    },
+    {
+      "year": 1972,
+      "make": "Pontiac",
+      "model": "LeMans",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 8 },
+        { "diameter": 14, "width": 6, "offset": 8 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "GTO now an option package on LeMans."
+    },
+    {
+      "year": 1965,
+      "make": "Buick",
+      "model": "Skylark",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14"],
+      "staggered": false,
+      "sources": ["buickforums.com", "auto.howstuffworks.com"],
+      "confidence": "high",
+      "notes": "Base A-body Buick. 7.75x14 bias-ply standard."
+    },
+    {
+      "year": 1966,
+      "make": "Buick",
+      "model": "Skylark",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "Base A-body Buick."
+    },
+    {
+      "year": 1967,
+      "make": "Buick",
+      "model": "Skylark",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "Base A-body Buick."
+    },
+    {
+      "year": 1968,
+      "make": "Buick",
+      "model": "Skylark",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "New body style."
+    },
+    {
+      "year": 1969,
+      "make": "Buick",
+      "model": "Skylark",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "Base A-body Buick."
+    },
+    {
+      "year": 1970,
+      "make": "Buick",
+      "model": "Skylark",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["buickforums.com", "over-drive-magazine.com"],
+      "confidence": "high",
+      "notes": "New body style."
+    },
+    {
+      "year": 1971,
+      "make": "Buick",
+      "model": "Skylark",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "Base A-body Buick."
+    },
+    {
+      "year": 1972,
+      "make": "Buick",
+      "model": "Skylark",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "Base A-body Buick."
+    },
+    {
+      "year": 1965,
+      "make": "Buick",
+      "model": "Gran Sport",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["auto.howstuffworks.com", "buickforums.com"],
+      "confidence": "high",
+      "notes": "First year Gran Sport. 401 Nailhead. 7.75x14 oversized tires standard."
+    },
+    {
+      "year": 1966,
+      "make": "Buick",
+      "model": "Gran Sport",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "401 Nailhead last year."
+    },
+    {
+      "year": 1967,
+      "make": "Buick",
+      "model": "Gran Sport",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "New 400 CID engine."
+    },
+    {
+      "year": 1968,
+      "make": "Buick",
+      "model": "GS",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "Renamed to GS. 400 CID. F70-14 optional."
+    },
+    {
+      "year": 1969,
+      "make": "Buick",
+      "model": "GS",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "GS 400 standard."
+    },
+    {
+      "year": 1970,
+      "make": "Buick",
+      "model": "GS",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "215/70R14", "245/60R15"],
+      "staggered": false,
+      "sources": ["buickforums.com", "over-drive-magazine.com", "hemmings.com"],
+      "confidence": "high",
+      "notes": "GS 350 and GS 455 available. G60-15 optional with 15x7 chrome wheels."
+    },
+    {
+      "year": 1970,
+      "make": "Buick",
+      "model": "GSX",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["245/60R15"],
+      "staggered": false,
+      "sources": ["over-drive-magazine.com", "hemmings.com", "autoevolution.com"],
+      "confidence": "high",
+      "notes": "GSX package included G60-15 tires and 15x7 chrome spoke wheels standard. Stage 1 optional."
+    },
+    {
+      "year": 1971,
+      "make": "Buick",
+      "model": "GS",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "215/70R14", "245/60R15"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "GS 350 and GS 455 continued."
+    },
+    {
+      "year": 1971,
+      "make": "Buick",
+      "model": "GSX",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["245/60R15"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "Last year GSX. G60-15 standard."
+    },
+    {
+      "year": 1972,
+      "make": "Buick",
+      "model": "GS",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "215/70R14", "245/60R15"],
+      "staggered": false,
+      "sources": ["buickforums.com"],
+      "confidence": "high",
+      "notes": "Last year GS. Stage 1 still available."
+    },
+    {
+      "year": 1964,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Base A-body Oldsmobile. 442 option package introduced."
+    },
+    {
+      "year": 1965,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Base A-body Oldsmobile."
+    },
+    {
+      "year": 1966,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Base A-body Oldsmobile."
+    },
+    {
+      "year": 1967,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["185/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Base A-body Oldsmobile."
+    },
+    {
+      "year": 1968,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "New body style. 442 now separate model."
+    },
+    {
+      "year": 1969,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com", "over-drive-magazine.com"],
+      "confidence": "high",
+      "notes": "Standard 7.75x14. F70-14 optional."
+    },
+    {
+      "year": 1970,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "New body style."
+    },
+    {
+      "year": 1971,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Base A-body Oldsmobile."
+    },
+    {
+      "year": 1972,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 5, "offset": 0 },
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["195/75R14", "205/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["tirewheelguide.com"],
+      "confidence": "high",
+      "notes": "Base A-body Oldsmobile."
+    },
+    {
+      "year": 1964,
+      "make": "Oldsmobile",
+      "model": "442",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["205/75R14"],
+      "staggered": false,
+      "sources": ["wikipedia.org", "oerparts.com"],
+      "confidence": "high",
+      "notes": "First year 442. Option package on Cutlass. 4-barrel carb, 4-speed, dual exhaust."
+    },
+    {
+      "year": 1965,
+      "make": "Oldsmobile",
+      "model": "442",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["205/75R14"],
+      "staggered": false,
+      "sources": ["w29.boards.net", "oerparts.com"],
+      "confidence": "high",
+      "notes": "400 CID introduced. Still Cutlass option."
+    },
+    {
+      "year": 1966,
+      "make": "Oldsmobile",
+      "model": "442",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["oerparts.com"],
+      "confidence": "high",
+      "notes": "Tri-carb W-30 option available."
+    },
+    {
+      "year": 1967,
+      "make": "Oldsmobile",
+      "model": "442",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "215/70R14"],
+      "staggered": false,
+      "sources": ["oerparts.com"],
+      "confidence": "high",
+      "notes": "W-30 option continued."
+    },
+    {
+      "year": 1968,
+      "make": "Oldsmobile",
+      "model": "442",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 11 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["oerparts.com", "performanceplustire.com", "wikipedia.org"],
+      "confidence": "high",
+      "notes": "Now separate model from Cutlass. 400 CID based on 455 stroke. Super Stock II 14x7 wheels optional."
+    },
+    {
+      "year": 1969,
+      "make": "Oldsmobile",
+      "model": "442",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 6, "offset": 0 },
+        { "diameter": 14, "width": 7, "offset": 11 }
+      ],
+      "oem_tire_sizes": ["205/75R14", "225/70R14"],
+      "staggered": false,
+      "sources": ["oerparts.com", "performanceplustire.com", "over-drive-magazine.com"],
+      "confidence": "high",
+      "notes": "F70-14 4-ply standard on 442. Super Stock II wheels optional."
+    },
+    {
+      "year": 1970,
+      "make": "Oldsmobile",
+      "model": "442",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 7, "offset": 11 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["225/70R14", "245/60R15"],
+      "staggered": false,
+      "sources": ["oerparts.com", "wikipedia.org"],
+      "confidence": "high",
+      "notes": "455 CID available. W-30 option. G60-15 optional."
+    },
+    {
+      "year": 1971,
+      "make": "Oldsmobile",
+      "model": "442",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 7, "offset": 11 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["225/70R14", "245/60R15"],
+      "staggered": false,
+      "sources": ["oerparts.com", "442.com"],
+      "confidence": "high",
+      "notes": "455 standard. W-30 continued."
+    },
+    {
+      "year": 1972,
+      "make": "Oldsmobile",
+      "model": "442",
+      "bolt_pattern": "5x120.65",
+      "hub_bore": 70.3,
+      "oem_wheel_sizes": [
+        { "diameter": 14, "width": 7, "offset": 11 },
+        { "diameter": 15, "width": 7, "offset": 0 }
+      ],
+      "oem_tire_sizes": ["225/70R14", "245/60R15"],
+      "staggered": false,
+      "sources": ["oerparts.com", "442.com"],
+      "confidence": "high",
+      "notes": "Last year as separate model. Returns to Cutlass option in 1973."
+    }
+  ]
+}

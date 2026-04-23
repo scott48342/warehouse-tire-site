@@ -1,0 +1,425 @@
+{
+  "batchId": 36,
+  "processedAt": "2026-04-21T23:54:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 39,
+    "usVehicles": 11
+  },
+  "notes": "Land Rover has different model names in US vs Europe. Discovery 4 = LR4, Discovery 5 = Discovery, Freelander 2 = LR2. Freelander was only sold in US 2002-2005.",
+  "vehicles": [
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "discovery-4",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR4 (2010-2016)"
+    },
+    {
+      "year": 2012,
+      "make": "land-rover",
+      "model": "discovery-4",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR4 (2010-2016)"
+    },
+    {
+      "year": 2013,
+      "make": "land-rover",
+      "model": "discovery-4",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR4 (2010-2016)"
+    },
+    {
+      "year": 2014,
+      "make": "land-rover",
+      "model": "discovery-4",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR4 (2010-2016)"
+    },
+    {
+      "year": 2015,
+      "make": "land-rover",
+      "model": "discovery-4",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR4 (2010-2016)"
+    },
+    {
+      "year": 2016,
+      "make": "land-rover",
+      "model": "discovery-4",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR4 (2010-2016)"
+    },
+    {
+      "year": 2016,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+). 2016 Discovery 5 was not sold in US."
+    },
+    {
+      "year": 2017,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+)"
+    },
+    {
+      "year": 2018,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+)"
+    },
+    {
+      "year": 2019,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+)"
+    },
+    {
+      "year": 2020,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+)"
+    },
+    {
+      "year": 2021,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+)"
+    },
+    {
+      "year": 2022,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+)"
+    },
+    {
+      "year": 2023,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+)"
+    },
+    {
+      "year": 2024,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+)"
+    },
+    {
+      "year": 2025,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+)"
+    },
+    {
+      "year": 2026,
+      "make": "land-rover",
+      "model": "discovery-5",
+      "notUS": true,
+      "notes": "European name. US equivalent is Discovery (2017+)"
+    },
+    {
+      "year": 2000,
+      "make": "land-rover",
+      "model": "freelander",
+      "notUS": true,
+      "notes": "Freelander was only sold in US 2002-2005. 2000 model not available in US."
+    },
+    {
+      "year": 2001,
+      "make": "land-rover",
+      "model": "freelander",
+      "notUS": true,
+      "notes": "Freelander was only sold in US 2002-2005. 2001 model not available in US."
+    },
+    {
+      "year": 2002,
+      "make": "land-rover",
+      "model": "freelander",
+      "tireSizes": ["215/65R16", "225/55R17"],
+      "trims": {
+        "S AWD": "215/65R16",
+        "SE AWD": "225/55R17",
+        "HSE AWD": "225/55R17"
+      }
+    },
+    {
+      "year": 2003,
+      "make": "land-rover",
+      "model": "freelander",
+      "tireSizes": ["215/65R16", "225/55R17"],
+      "trims": {
+        "S AWD": "215/65R16",
+        "SE AWD": "225/55R17",
+        "HSE AWD": "225/55R17"
+      }
+    },
+    {
+      "year": 2004,
+      "make": "land-rover",
+      "model": "freelander",
+      "tireSizes": ["215/65R16", "225/55R17", "235/50R18"],
+      "trims": {
+        "SE AWD": "215/65R16",
+        "SE3 AWD": ["225/55R17", "235/50R18"],
+        "HSE AWD": ["225/55R17", "235/50R18"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "land-rover",
+      "model": "freelander",
+      "tireSizes": ["215/65R16", "225/55R17", "235/50R18"],
+      "trims": {
+        "SE AWD": ["215/65R16", "235/50R18"],
+        "SE3 AWD": ["225/55R17", "235/50R18"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "land-rover",
+      "model": "freelander",
+      "notUS": true,
+      "notes": "Freelander was only sold in US 2002-2005. 2006 model not available in US."
+    },
+    {
+      "year": 2007,
+      "make": "land-rover",
+      "model": "freelander",
+      "notUS": true,
+      "notes": "Freelander was only sold in US 2002-2005. 2007 model not available in US."
+    },
+    {
+      "year": 2006,
+      "make": "land-rover",
+      "model": "freelander-2",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR2 (2008-2015). 2006 Freelander 2 was not sold in US."
+    },
+    {
+      "year": 2007,
+      "make": "land-rover",
+      "model": "freelander-2",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR2 (2008-2015). 2007 Freelander 2 was not sold in US."
+    },
+    {
+      "year": 2008,
+      "make": "land-rover",
+      "model": "freelander-2",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR2 (2008-2015)"
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "freelander-2",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR2 (2008-2015)"
+    },
+    {
+      "year": 2010,
+      "make": "land-rover",
+      "model": "freelander-2",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR2 (2008-2015)"
+    },
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "freelander-2",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR2 (2008-2015)"
+    },
+    {
+      "year": 2012,
+      "make": "land-rover",
+      "model": "freelander-2",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR2 (2008-2015)"
+    },
+    {
+      "year": 2013,
+      "make": "land-rover",
+      "model": "freelander-2",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR2 (2008-2015)"
+    },
+    {
+      "year": 2014,
+      "make": "land-rover",
+      "model": "freelander-2",
+      "notUS": true,
+      "notes": "European name. US equivalent is LR2 (2008-2015)"
+    },
+    {
+      "year": 2007,
+      "make": "land-rover",
+      "model": "lr2",
+      "notUS": true,
+      "notes": "LR2 was sold in US 2008-2015. 2007 model not available in US (tiresize.com shows 2008+)"
+    },
+    {
+      "year": 2008,
+      "make": "land-rover",
+      "model": "lr2",
+      "tireSizes": ["235/60R18"],
+      "trims": {
+        "HSE": "235/60R18",
+        "SE": "235/60R18"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "lr2",
+      "tireSizes": ["235/60R18"],
+      "trims": {
+        "HSE": "235/60R18"
+      }
+    },
+    {
+      "year": 2010,
+      "make": "land-rover",
+      "model": "lr2",
+      "tireSizes": ["235/60R18"],
+      "trims": {
+        "HSE": "235/60R18"
+      }
+    },
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "lr2",
+      "tireSizes": ["235/60R18"],
+      "trims": {
+        "Base Model": "235/60R18",
+        "HSE": "235/60R18",
+        "HSE LUX": "235/60R18"
+      }
+    },
+    {
+      "year": 2012,
+      "make": "land-rover",
+      "model": "lr2",
+      "tireSizes": ["235/60R18"],
+      "trims": {
+        "Base Model": "235/60R18",
+        "HSE": "235/60R18",
+        "HSE LUX": "235/60R18"
+      }
+    },
+    {
+      "year": 2013,
+      "make": "land-rover",
+      "model": "lr2",
+      "notUS": true,
+      "notes": "2013 LR2 not listed on tiresize.com - may not have been sold that year"
+    },
+    {
+      "year": 2014,
+      "make": "land-rover",
+      "model": "lr2",
+      "tireSizes": ["235/60R18"],
+      "trims": {
+        "Base": "235/60R18",
+        "HSE": "235/60R18",
+        "HSE LUX": "235/60R18"
+      }
+    },
+    {
+      "year": 2015,
+      "make": "land-rover",
+      "model": "lr2",
+      "tireSizes": ["235/60R18"],
+      "trims": {
+        "Base": "235/60R18",
+        "HSE": "235/60R18",
+        "HSE LUX": "235/60R18"
+      }
+    },
+    {
+      "year": 2005,
+      "make": "land-rover",
+      "model": "lr3",
+      "tireSizes": ["235/70R17", "255/60R18", "255/55R19"],
+      "trims": {
+        "SE": ["235/70R17", "255/60R18"],
+        "HSE": ["255/60R18", "255/55R19"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "land-rover",
+      "model": "lr3",
+      "tireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "Base Model": "255/60R18",
+        "SE": "255/60R18",
+        "HSE": "255/55R19"
+      }
+    },
+    {
+      "year": 2007,
+      "make": "land-rover",
+      "model": "lr3",
+      "tireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "SE V6": "255/60R18",
+        "SE V8": "255/60R18",
+        "HSE": "255/55R19"
+      }
+    },
+    {
+      "year": 2008,
+      "make": "land-rover",
+      "model": "lr3",
+      "tireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "SE V6": "255/60R18",
+        "SE V8": "255/60R18",
+        "HSE": "255/55R19"
+      }
+    },
+    {
+      "year": 2009,
+      "make": "land-rover",
+      "model": "lr3",
+      "tireSizes": ["255/60R18", "255/55R19"],
+      "trims": {
+        "SE": "255/60R18",
+        "HSE": "255/55R19"
+      }
+    },
+    {
+      "year": 2010,
+      "make": "land-rover",
+      "model": "lr4",
+      "tireSizes": ["255/55R19"],
+      "trims": {
+        "HSE": "255/55R19"
+      }
+    },
+    {
+      "year": 2011,
+      "make": "land-rover",
+      "model": "lr4",
+      "tireSizes": ["255/55R19"],
+      "trims": {
+        "Base": "255/55R19",
+        "HSE": "255/55R19",
+        "HSE LUX": "255/55R19"
+      }
+    }
+  ]
+}

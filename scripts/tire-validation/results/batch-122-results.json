@@ -1,0 +1,1060 @@
+{
+  "batchId": "122",
+  "validatedAt": "2026-04-21T22:31:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2021,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R19"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/40R19"],
+      "trimData": [
+        {"trim": "S", "tireSize": "215/60R16"},
+        {"trim": "SV", "tireSize": "215/55R17"},
+        {"trim": "SL", "tireSize": "215/55R17"},
+        {"trim": "SR", "tireSize": "235/40R19"},
+        {"trim": "Platinum", "tireSize": "235/40R19"},
+        {"trim": "VC-Turbo", "tireSize": "235/40R19"}
+      ],
+      "discrepancies": ["235/45R19 should be 235/40R19"],
+      "status": "corrected"
+    },
+    {
+      "year": 2020,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R19", "235/40R19"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/40R19"],
+      "trimData": [
+        {"trim": "S", "tireSize": "215/60R16"},
+        {"trim": "SV", "tireSize": "215/55R17"},
+        {"trim": "SL", "tireSize": "215/55R17"},
+        {"trim": "SR", "tireSize": "235/40R19"},
+        {"trim": "Platinum", "tireSize": "235/40R19"},
+        {"trim": "VC-Turbo", "tireSize": "235/40R19"}
+      ],
+      "discrepancies": ["235/45R19 is incorrect - should be 235/40R19"],
+      "status": "corrected"
+    },
+    {
+      "year": 2019,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R19"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/40R19"],
+      "trimData": [
+        {"trim": "S", "tireSize": "215/60R16"},
+        {"trim": "SV", "tireSize": "215/55R17"},
+        {"trim": "SL", "tireSize": "215/55R17"},
+        {"trim": "SR", "tireSize": "235/40R19"},
+        {"trim": "Platinum", "tireSize": "235/40R19"}
+      ],
+      "discrepancies": ["235/45R19 should be 235/40R19"],
+      "status": "corrected"
+    },
+    {
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "2.5 S", "tireSize": "215/60R16"},
+        {"trim": "2.5 SV", "tireSize": "215/55R17"},
+        {"trim": "2.5 SL", "tireSize": "215/55R17"},
+        {"trim": "2.5 SR", "tireSize": "235/45R18"},
+        {"trim": "3.5 SL", "tireSize": "235/45R18"},
+        {"trim": "SR Special Edition", "tireSize": "235/45R18"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "2.5", "tireSize": "215/60R16"},
+        {"trim": "2.5 S", "tireSize": "215/60R16"},
+        {"trim": "2.5 SV", "tireSize": "215/55R17"},
+        {"trim": "2.5 SL", "tireSize": "215/55R17"},
+        {"trim": "2.5 SR", "tireSize": "235/45R18"},
+        {"trim": "3.5 SL", "tireSize": "235/45R18"},
+        {"trim": "3.5 SR", "tireSize": "235/45R18"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2016,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "2.5", "tireSize": "215/60R16"},
+        {"trim": "2.5 S", "tireSize": "215/60R16"},
+        {"trim": "2.5 SV", "tireSize": "215/55R17"},
+        {"trim": "2.5 SL", "tireSize": "215/55R17"},
+        {"trim": "2.5 SR", "tireSize": "235/45R18"},
+        {"trim": "3.5 SL", "tireSize": "235/45R18"},
+        {"trim": "3.5 SR", "tireSize": "235/45R18"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2015,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "2.5", "tireSize": "215/60R16"},
+        {"trim": "2.5 S", "tireSize": "215/60R16"},
+        {"trim": "2.5 SV", "tireSize": "215/55R17"},
+        {"trim": "2.5 SL", "tireSize": "215/55R17"},
+        {"trim": "3.5 S", "tireSize": "235/45R18"},
+        {"trim": "3.5 SV", "tireSize": "235/45R18"},
+        {"trim": "3.5 SL", "tireSize": "235/45R18"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2014,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "2.5", "tireSize": "215/60R16"},
+        {"trim": "2.5 S", "tireSize": "215/60R16"},
+        {"trim": "2.5 SV", "tireSize": "215/55R17"},
+        {"trim": "2.5 SL", "tireSize": "215/55R17"},
+        {"trim": "3.5 S", "tireSize": "235/45R18"},
+        {"trim": "3.5 SV", "tireSize": "235/45R18"},
+        {"trim": "3.5 SL", "tireSize": "235/45R18"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2013,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "Coupe 2.5 S", "tireSize": "215/55R17"},
+        {"trim": "Sedan 2.5", "tireSize": "215/60R16"},
+        {"trim": "Sedan 2.5 S", "tireSize": "215/60R16"},
+        {"trim": "Sedan 2.5 SV", "tireSize": "215/55R17"},
+        {"trim": "Sedan 2.5 SL", "tireSize": "215/55R17"},
+        {"trim": "Sedan 3.5 S", "tireSize": "235/45R18"},
+        {"trim": "Sedan 3.5 SV", "tireSize": "235/45R18"},
+        {"trim": "Sedan 3.5 SL", "tireSize": "235/45R18"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2012,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "Coupe 2.5 S", "tireSize": "215/55R17"},
+        {"trim": "Coupe 3.5 SR", "tireSize": "235/45R18"},
+        {"trim": "Sedan 2.5", "tireSize": "215/60R16"},
+        {"trim": "Sedan 2.5 S", "tireSize": "215/60R16"},
+        {"trim": "Sedan 2.5 SL", "tireSize": "215/60R16"},
+        {"trim": "Sedan 3.5 SR", "tireSize": "215/55R17"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "Coupe 2.5 S", "tireSize": "215/55R17"},
+        {"trim": "Coupe 3.5 SR", "tireSize": "235/45R18"},
+        {"trim": "Sedan 2.5", "tireSize": "215/60R16"},
+        {"trim": "Sedan 2.5 S", "tireSize": "215/60R16"},
+        {"trim": "Sedan 2.5 SL", "tireSize": "215/60R16"},
+        {"trim": "Sedan 3.5 SR", "tireSize": "215/55R17"},
+        {"trim": "Sedan Hybrid", "tireSize": "215/60R16"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2010,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "Coupe 2.5 S", "tireSize": "215/55R17"},
+        {"trim": "Coupe 3.5 SR", "tireSize": "235/45R18"},
+        {"trim": "Sedan 2.5", "tireSize": "215/60R16"},
+        {"trim": "Sedan 2.5 S", "tireSize": "215/60R16"},
+        {"trim": "Sedan 2.5 SL", "tireSize": "215/60R16"},
+        {"trim": "Sedan 3.5 SR", "tireSize": "215/55R17"},
+        {"trim": "Sedan Hybrid", "tireSize": "215/60R16"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "Coupe 2.5 S", "tireSize": "215/60R16"},
+        {"trim": "Coupe 3.5 SE", "tireSize": "235/45R18"},
+        {"trim": "Sedan 2.5", "tireSize": "215/60R16"},
+        {"trim": "Sedan 2.5 S", "tireSize": "215/60R16"},
+        {"trim": "Sedan 3.5 SE", "tireSize": "215/55R17"},
+        {"trim": "Sedan 3.5 SL", "tireSize": "215/60R16"},
+        {"trim": "Sedan Hybrid", "tireSize": "215/60R16"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "trimData": [
+        {"trim": "Coupe 2.5 S", "tireSize": "215/60R16"},
+        {"trim": "Coupe 3.5 SE", "tireSize": "215/55R17"},
+        {"trim": "Sedan 2.5", "tireSize": "215/60R16"},
+        {"trim": "Sedan 2.5 S", "tireSize": "215/60R16"},
+        {"trim": "Sedan 3.5 SE", "tireSize": "215/55R17"},
+        {"trim": "Sedan 3.5 SL", "tireSize": "215/60R16"},
+        {"trim": "Sedan Hybrid", "tireSize": "215/60R16"}
+      ],
+      "discrepancies": ["235/45R18 not OEM for 2008 Altima - only available via aftermarket 18\" wheels"],
+      "status": "needs_review"
+    },
+    {
+      "year": 2007,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "235/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17"],
+      "trimData": [
+        {"trim": "2.5", "tireSize": "215/60R16"},
+        {"trim": "2.5 S", "tireSize": "215/60R16"},
+        {"trim": "2.5 SL", "tireSize": "215/60R16"},
+        {"trim": "3.5 SE", "tireSize": "215/55R17"},
+        {"trim": "3.5 SL", "tireSize": "215/60R16"}
+      ],
+      "discrepancies": ["235/45R18 not OEM - max OEM is 17\""],
+      "status": "corrected"
+    },
+    {
+      "year": 2006,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "trimData": [
+        {"trim": "2.5", "tireSize": "215/60R16"},
+        {"trim": "2.5 S", "tireSize": "215/60R16"},
+        {"trim": "3.5 SE", "tireSize": "215/55R17"},
+        {"trim": "3.5 SL", "tireSize": "215/60R16"},
+        {"trim": "SE-R", "tireSize": "225/45R18"}
+      ],
+      "discrepancies": ["215/45R18 should be 225/45R18 (SE-R trim)"],
+      "status": "corrected"
+    },
+    {
+      "year": 2005,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/45R18"],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "trimData": [
+        {"trim": "2.5", "tireSize": "215/60R16"},
+        {"trim": "2.5 S", "tireSize": "215/60R16"},
+        {"trim": "3.5 SE", "tireSize": "215/55R17"},
+        {"trim": "3.5 SL", "tireSize": "215/60R16"},
+        {"trim": "SE-R", "tireSize": "225/45R18"}
+      ],
+      "discrepancies": ["215/45R18 should be 225/45R18 (SE-R trim)"],
+      "status": "corrected"
+    },
+    {
+      "year": 2004,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/45R18"],
+      "validatedTireSizes": ["205/65R16", "215/55R17"],
+      "trimData": [
+        {"trim": "2.5", "tireSize": "205/65R16"},
+        {"trim": "2.5 S", "tireSize": "205/65R16"},
+        {"trim": "2.5 SL", "tireSize": "205/65R16"},
+        {"trim": "3.5 SE", "tireSize": "215/55R17"}
+      ],
+      "discrepancies": ["215/60R16 should be 205/65R16", "215/45R18 not OEM - max OEM is 17\""],
+      "status": "corrected"
+    },
+    {
+      "year": 2003,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/45R18"],
+      "validatedTireSizes": ["205/65R16", "215/55R17"],
+      "trimData": [
+        {"trim": "2.5", "tireSize": "205/65R16"},
+        {"trim": "2.5 S", "tireSize": "205/65R16"},
+        {"trim": "2.5 SL", "tireSize": "205/65R16"},
+        {"trim": "3.5 SE", "tireSize": "215/55R17"}
+      ],
+      "discrepancies": ["215/60R16 should be 205/65R16", "215/45R18 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["215/60R16", "215/55R17", "215/45R18"],
+      "validatedTireSizes": ["205/65R16", "215/55R17"],
+      "trimData": [
+        {"trim": "2.5", "tireSize": "205/65R16"},
+        {"trim": "2.5 S", "tireSize": "205/65R16"},
+        {"trim": "2.5 SL", "tireSize": "205/65R16"},
+        {"trim": "3.5 SE", "tireSize": "215/55R17"}
+      ],
+      "discrepancies": ["215/60R16 should be 205/65R16", "215/45R18 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["195/65R15", "205/60R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/60R15", "205/55R16"],
+      "trimData": [
+        {"trim": "XE", "tireSize": "195/65R15"},
+        {"trim": "GXE", "tireSize": ["195/65R15", "205/60R15"]},
+        {"trim": "SE", "tireSize": "205/55R16"},
+        {"trim": "GLE", "tireSize": "205/55R16"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Altima",
+      "currentTireSizes": ["195/65R15", "205/60R15", "205/55R16"],
+      "validatedTireSizes": ["195/65R15", "205/60R15", "205/55R16"],
+      "trimData": [
+        {"trim": "XE", "tireSize": "195/65R15"},
+        {"trim": "GXE", "tireSize": "205/60R15"},
+        {"trim": "SE", "tireSize": "205/55R16"},
+        {"trim": "GLE", "tireSize": "205/55R16"}
+      ],
+      "discrepancies": [],
+      "status": "verified"
+    },
+    {
+      "year": 2010,
+      "make": "Nissan",
+      "model": "Aprio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "Mexico-market rebadged Renault Logan, not sold in US"
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Aprio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "Mexico-market rebadged Renault Logan, not sold in US"
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "Aprio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "Mexico-market rebadged Renault Logan, not sold in US"
+    },
+    {
+      "year": 2026,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/60R18", "275/60R20", "275/50R22"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/60R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"},
+        {"trim": "Pro-4X", "tireSize": "275/60R20"},
+        {"trim": "Platinum Reserve", "tireSize": "275/50R22"},
+        {"trim": "Nismo", "tireSize": "275/50R22"}
+      ],
+      "discrepancies": ["275/65R18 should be 265/60R18", "275/55R20 not OEM", "285/45R22 should be 275/50R22"],
+      "status": "corrected"
+    },
+    {
+      "year": 2025,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["275/65R18", "275/55R20", "275/60R20", "285/45R22", "265/70R18", "275/50R22"],
+      "validatedTireSizes": ["265/60R18", "275/60R20", "275/50R22"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/60R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"},
+        {"trim": "Pro-4X", "tireSize": "275/60R20"},
+        {"trim": "Platinum Reserve", "tireSize": "275/50R22"}
+      ],
+      "discrepancies": ["275/65R18 and 265/70R18 should be 265/60R18", "275/55R20 not OEM", "285/45R22 should be 275/50R22"],
+      "status": "corrected"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["275/65R18", "275/55R20", "275/60R20", "285/45R22", "265/70R18", "275/50R22"],
+      "validatedTireSizes": ["265/70R18", "275/60R20", "275/50R22"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Midnight Edition", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/50R22"}
+      ],
+      "discrepancies": ["275/65R18 should be 265/70R18", "275/55R20 not OEM", "285/45R22 should be 275/50R22"],
+      "status": "corrected"
+    },
+    {
+      "year": 2023,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/60R20", "275/50R22"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18"},
+        {"trim": "SV", "tireSize": ["265/70R18", "275/60R20"]},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Midnight Edition", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/50R22"}
+      ],
+      "discrepancies": ["275/65R18 should be 265/70R18", "275/55R20 not OEM", "285/45R22 should be 275/50R22"],
+      "status": "corrected"
+    },
+    {
+      "year": 2022,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/60R20", "275/50R22"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18"},
+        {"trim": "SV", "tireSize": ["265/70R18", "275/60R20"]},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Midnight Edition", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/50R22"}
+      ],
+      "discrepancies": ["275/65R18 should be 265/70R18", "275/55R20 not OEM", "285/45R22 should be 275/50R22"],
+      "status": "corrected"
+    },
+    {
+      "year": 2021,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/60R20", "275/50R22"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18"},
+        {"trim": "SV", "tireSize": ["265/70R18", "275/60R20"]},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Midnight Edition", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/50R22"}
+      ],
+      "discrepancies": ["275/65R18 should be 265/70R18", "275/55R20 not OEM", "285/45R22 should be 275/50R22"],
+      "status": "corrected"
+    },
+    {
+      "year": 2020,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/60R20", "275/50R22"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": ["275/60R20", "275/50R22"]},
+        {"trim": "Platinum Reserve", "tireSize": "275/50R22"}
+      ],
+      "discrepancies": ["275/65R18 should be 265/70R18", "275/55R20 not OEM", "285/45R22 should be 275/50R22"],
+      "status": "corrected"
+    },
+    {
+      "year": 2019,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["275/65R18", "275/55R20", "275/60R20", "285/45R22", "265/70R18", "275/50R22"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 should be 265/70R18", "275/55R20, 285/45R22, 275/50R22 not OEM for 2019"],
+      "status": "corrected"
+    },
+    {
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 should be 265/70R18", "275/55R20 and 285/45R22 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 should be 265/70R18", "275/55R20 and 285/45R22 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2016,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["Missing tire sizes - should have 265/70R18 and 275/60R20"],
+      "status": "corrected"
+    },
+    {
+      "year": 2015,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2014,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2013,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2012,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "265/70R18"},
+        {"trim": "SL", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2010,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SE", "tireSize": "265/70R18"},
+        {"trim": "Titanium", "tireSize": "275/60R20"},
+        {"trim": "Platinum", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SE", "tireSize": "265/70R18"},
+        {"trim": "LE", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "SE", "tireSize": "265/70R18"},
+        {"trim": "LE", "tireSize": "275/60R20"}
+      ],
+      "discrepancies": ["275/65R18 not OEM"],
+      "status": "corrected"
+    },
+    {
+      "year": 2007,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "285/70R17"],
+      "trimData": [
+        {"trim": "SE", "tireSize": "265/70R18"},
+        {"trim": "LE", "tireSize": "265/70R18"},
+        {"trim": "SE Off-Road", "tireSize": "285/70R17"}
+      ],
+      "discrepancies": ["275/65R18 not OEM", "275/60R20 not OEM for 2007 - no 20\" option"],
+      "status": "corrected"
+    },
+    {
+      "year": 2006,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "285/70R17"],
+      "trimData": [
+        {"trim": "SE", "tireSize": "265/70R18"},
+        {"trim": "LE", "tireSize": "265/70R18"},
+        {"trim": "SE Off-Road", "tireSize": "285/70R17"}
+      ],
+      "discrepancies": ["275/65R18 not OEM", "275/60R20 not OEM for 2006 - no 20\" option"],
+      "status": "corrected"
+    },
+    {
+      "year": 2005,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "285/70R17"],
+      "trimData": [
+        {"trim": "SE", "tireSize": "265/70R18"},
+        {"trim": "LE", "tireSize": "265/70R18"},
+        {"trim": "SE Off-Road", "tireSize": "285/70R17"}
+      ],
+      "discrepancies": ["275/65R18 not OEM", "275/60R20 not OEM for 2005 - no 20\" option"],
+      "status": "corrected"
+    },
+    {
+      "year": 2004,
+      "make": "Nissan",
+      "model": "Armada",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "285/70R17"],
+      "trimData": [
+        {"trim": "SE", "tireSize": "265/70R18"},
+        {"trim": "LE", "tireSize": "265/70R18"},
+        {"trim": "SE Off-Road", "tireSize": "285/70R17"}
+      ],
+      "discrepancies": ["275/65R18 not OEM", "275/60R20 not OEM for 2004 - no 20\" option"],
+      "status": "corrected"
+    },
+    {
+      "year": 2005,
+      "make": "Nissan",
+      "model": "Avenir",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM (Japan Domestic Market) wagon, not sold in US"
+    },
+    {
+      "year": 2004,
+      "make": "Nissan",
+      "model": "Avenir",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM wagon, not sold in US"
+    },
+    {
+      "year": 2003,
+      "make": "Nissan",
+      "model": "Avenir",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM wagon, not sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "Avenir",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM wagon, not sold in US"
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "Avenir",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM wagon, not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Avenir",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM wagon, not sold in US"
+    },
+    {
+      "year": 2003,
+      "make": "Nissan",
+      "model": "Cefiro",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM/Asia Pacific sedan (sold as Maxima in US)"
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "Cefiro",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM/Asia Pacific sedan"
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "Cefiro",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM/Asia Pacific sedan"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Cefiro",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM/Asia Pacific sedan"
+    },
+    {
+      "year": 2025,
+      "make": "Nissan",
+      "model": "Clipper-EV",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei commercial EV, not sold in US"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Clipper-EV",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei commercial EV, not sold in US"
+    },
+    {
+      "year": 2025,
+      "make": "Nissan",
+      "model": "Clipper-Rio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei minivan, not sold in US"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Clipper-Rio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei minivan, not sold in US"
+    },
+    {
+      "year": 2012,
+      "make": "Nissan",
+      "model": "Clipper-Rio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei minivan, not sold in US"
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "Clipper-Rio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei minivan, not sold in US"
+    },
+    {
+      "year": 2010,
+      "make": "Nissan",
+      "model": "Clipper-Rio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei minivan, not sold in US"
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Clipper-Rio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei minivan, not sold in US"
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "Clipper-Rio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei minivan, not sold in US"
+    },
+    {
+      "year": 2007,
+      "make": "Nissan",
+      "model": "Clipper-Rio",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei minivan, not sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "Datsun",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "Not a valid US model - Datsun brand discontinued in US after 1986"
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "Datsun",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "Not a valid US model"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Datsun",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "Not a valid US model"
+    },
+    {
+      "year": 2020,
+      "make": "Nissan",
+      "model": "Dayz-Roox",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei car, not sold in US"
+    },
+    {
+      "year": 2019,
+      "make": "Nissan",
+      "model": "Dayz-Roox",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei car, not sold in US"
+    },
+    {
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Dayz-Roox",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei car, not sold in US"
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "Dayz-Roox",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "discrepancies": [],
+      "status": "not_us_market",
+      "notes": "JDM kei car, not sold in US"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "verified": 14,
+    "corrected": 31,
+    "needsReview": 1,
+    "notUsMarket": 29,
+    "keyFindings": [
+      "2019-2021 Altima: 235/45R19 incorrect - actual OEM is 235/40R19",
+      "2002-2004 Altima: 215/60R16 incorrect - actual OEM is 205/65R16",
+      "2005-2006 Altima SE-R: 215/45R18 incorrect - actual OEM is 225/45R18",
+      "2007 Altima: No 18\" OEM option - max is 17\" (235/45R18 not available)",
+      "All Armada years: 275/65R18 should be 265/70R18",
+      "All Armada years: 275/55R20 is not an OEM size",
+      "2021+ Armada: 285/45R22 should be 275/50R22",
+      "2004-2007 Armada: No 20\" OEM option - max is 18\" with Off-Road 17\"",
+      "29 vehicles are JDM/non-US market models with no US fitment data"
+    ]
+  }
+}

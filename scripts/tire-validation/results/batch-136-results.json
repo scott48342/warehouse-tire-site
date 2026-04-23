@@ -1,0 +1,1086 @@
+{
+  "batchId": "136",
+  "validatedAt": "2026-04-21T22:37:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2014,
+      "make": "scion",
+      "model": "xb",
+      "currentTireSizes": ["205/55R16", "215/40R18"],
+      "validatedTireSizes": ["205/55R16", "225/45R17"],
+      "trims": {
+        "Base Model": ["205/55R16", "225/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "215/40R18 not OEM. Correct sizes are 205/55R16 (standard) and 225/45R17 (optional)"
+    },
+    {
+      "year": 2013,
+      "make": "scion",
+      "model": "xb",
+      "currentTireSizes": ["205/55R16", "215/40R18"],
+      "validatedTireSizes": ["205/55R16", "225/45R17"],
+      "trims": {
+        "Base Model": ["205/55R16", "225/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "215/40R18 not OEM. Correct sizes are 205/55R16 (standard) and 225/45R17 (optional)"
+    },
+    {
+      "year": 2012,
+      "make": "scion",
+      "model": "xb",
+      "currentTireSizes": ["205/55R16", "215/40R18"],
+      "validatedTireSizes": ["205/55R16", "225/45R17"],
+      "trims": {
+        "Base Model": ["205/55R16", "225/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "215/40R18 not OEM. Correct sizes are 205/55R16 (standard) and 225/45R17 (optional)"
+    },
+    {
+      "year": 2011,
+      "make": "scion",
+      "model": "xb",
+      "currentTireSizes": ["205/55R16", "215/40R18"],
+      "validatedTireSizes": ["205/55R16", "225/45R17"],
+      "trims": {
+        "Base Model": ["205/55R16", "225/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "215/40R18 not OEM. Correct sizes are 205/55R16 (standard) and 225/45R17 (optional)"
+    },
+    {
+      "year": 2010,
+      "make": "scion",
+      "model": "xb",
+      "currentTireSizes": ["205/55R16", "215/40R18"],
+      "validatedTireSizes": ["205/55R16", "225/45R17"],
+      "trims": {
+        "Base Model": ["205/55R16", "225/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "215/40R18 not OEM. Correct sizes are 205/55R16 (standard) and 225/45R17 (optional)"
+    },
+    {
+      "year": 2009,
+      "make": "scion",
+      "model": "xb",
+      "currentTireSizes": ["205/55R16", "215/40R18"],
+      "validatedTireSizes": ["205/55R16", "225/45R17"],
+      "trims": {
+        "Base Model": ["205/55R16", "225/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "215/40R18 not OEM. Correct sizes are 205/55R16 (standard) and 225/45R17 (optional)"
+    },
+    {
+      "year": 2008,
+      "make": "scion",
+      "model": "xb",
+      "currentTireSizes": ["205/55R16", "215/40R18"],
+      "validatedTireSizes": ["205/55R16"],
+      "trims": {
+        "Base Model": ["205/55R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "215/40R18 not OEM. 2008 only had 205/55R16"
+    },
+    {
+      "year": 2006,
+      "make": "scion",
+      "model": "xb",
+      "currentTireSizes": ["185/60R15"],
+      "validatedTireSizes": ["185/60R15"],
+      "trims": {
+        "Base Model": ["185/60R15"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2005,
+      "make": "scion",
+      "model": "xb",
+      "currentTireSizes": ["185/60R15"],
+      "validatedTireSizes": ["185/60R15"],
+      "trims": {
+        "Base Model": ["185/60R15"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2004,
+      "make": "scion",
+      "model": "xb",
+      "currentTireSizes": ["185/60R15"],
+      "validatedTireSizes": ["185/60R15"],
+      "trims": {
+        "Base Model": ["185/60R15"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2026,
+      "make": "subaru",
+      "model": "ascent",
+      "currentTireSizes": ["245/60R18", "255/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "Premium": ["245/60R18"],
+        "Limited": ["245/50R20"],
+        "Limited Bronze": ["245/50R20"],
+        "Onyx Edition Touring": ["245/50R20"],
+        "Touring": ["245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/50R20 not OEM. Correct 20-inch size is 245/50R20"
+    },
+    {
+      "year": 2025,
+      "make": "subaru",
+      "model": "ascent",
+      "currentTireSizes": ["245/60R18", "255/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "Premium": ["245/60R18"],
+        "Bronze Edition": ["245/50R20"],
+        "Limited": ["245/50R20"],
+        "Onyx Edition": ["245/50R20"],
+        "Onyx Edition Touring": ["245/50R20"],
+        "Touring": ["245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/50R20 not OEM. Correct 20-inch size is 245/50R20"
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "ascent",
+      "currentTireSizes": ["245/60R18", "255/50R20", "245/50R20", "245/55R19", "265/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "Base": ["245/60R18"],
+        "Premium": ["245/60R18"],
+        "Limited": ["245/50R20"],
+        "Onyx Edition": ["245/50R20"],
+        "Touring": ["245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/50R20, 245/55R19, 265/45R20 not OEM. Only 245/60R18 and 245/50R20 are factory sizes"
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "ascent",
+      "currentTireSizes": ["245/60R18", "255/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "Base": ["245/60R18"],
+        "Premium": ["245/60R18"],
+        "Limited": ["245/50R20"],
+        "Onyx Edition": ["245/50R20"],
+        "Touring": ["245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/50R20 not OEM. Correct 20-inch size is 245/50R20"
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "ascent",
+      "currentTireSizes": ["245/60R18", "255/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "Base": ["245/60R18"],
+        "Premium": ["245/60R18", "245/50R20"],
+        "Limited": ["245/50R20"],
+        "Onyx Edition": ["245/50R20"],
+        "Touring": ["245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/50R20 not OEM. Correct 20-inch size is 245/50R20"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "ascent",
+      "currentTireSizes": ["245/60R18", "255/50R20", "245/50R20", "245/55R19", "265/45R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "Base": ["245/60R18"],
+        "Premium": ["245/60R18", "245/50R20"],
+        "Limited": ["245/50R20"],
+        "Touring": ["245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/50R20, 245/55R19, 265/45R20 not OEM. Only 245/60R18 and 245/50R20 are factory sizes"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "ascent",
+      "currentTireSizes": ["245/60R18", "255/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "Base": ["245/60R18"],
+        "Premium": ["245/60R18", "245/50R20"],
+        "Limited": ["245/50R20"],
+        "Touring": ["245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/50R20 not OEM. Correct 20-inch size is 245/50R20"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "ascent",
+      "currentTireSizes": ["245/60R18", "255/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": {
+        "Base": ["245/60R18"],
+        "Premium": ["245/60R18", "245/50R20"],
+        "Limited": ["245/50R20"],
+        "Touring": ["245/50R20"]
+      },
+      "status": "MISMATCH",
+      "notes": "255/50R20 not OEM. Correct 20-inch size is 245/50R20"
+    },
+    {
+      "year": 2007,
+      "make": "subaru",
+      "model": "b9-tribeca",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R18"],
+      "trims": {
+        "Base": ["255/55R18"],
+        "Limited": ["255/55R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "No tire sizes in DB. OEM size is 255/55R18"
+    },
+    {
+      "year": 2006,
+      "make": "subaru",
+      "model": "b9-tribeca",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R18"],
+      "trims": {
+        "H6": ["255/55R18"],
+        "Limited": ["255/55R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "No tire sizes in DB. OEM size is 255/55R18"
+    },
+    {
+      "year": 2005,
+      "make": "subaru",
+      "model": "b9-tribeca",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/55R18"],
+      "trims": {
+        "Base": ["255/55R18"],
+        "Limited": ["255/55R18"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "No tire sizes in DB. OEM size is 255/55R18"
+    },
+    {
+      "year": 2007,
+      "make": "subaru",
+      "model": "baja",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "All": ["225/60R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "Baja only made 2003-2006, not 2007. All Baja models use 225/60R16"
+    },
+    {
+      "year": 2006,
+      "make": "subaru",
+      "model": "baja",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Sport AWD": ["225/60R16"],
+        "Turbo AWD": ["225/60R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "Only OEM size is 225/60R16 (not 215/60R16 or 225/55R17)"
+    },
+    {
+      "year": 2005,
+      "make": "subaru",
+      "model": "baja",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Sport AWD": ["225/60R16"],
+        "Turbo AWD": ["225/60R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "Only OEM size is 225/60R16 (not 215/60R16 or 225/55R17)"
+    },
+    {
+      "year": 2004,
+      "make": "subaru",
+      "model": "baja",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Sport": ["225/60R16"],
+        "Turbo": ["225/60R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "Only OEM size is 225/60R16 (not 215/60R16 or 225/55R17)"
+    },
+    {
+      "year": 2003,
+      "make": "subaru",
+      "model": "baja",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "Base Model": ["225/60R16"],
+        "Sport": ["225/60R16"]
+      },
+      "status": "MISMATCH",
+      "notes": "Only OEM size is 225/60R16 (not 215/60R16 or 225/55R17)"
+    },
+    {
+      "year": 2002,
+      "make": "subaru",
+      "model": "baja",
+      "currentTireSizes": ["215/60R16", "225/55R17"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "Baja was produced 2003-2006 only. 2002 model does not exist."
+    },
+    {
+      "year": 2026,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/40R18"],
+      "trims": {
+        "Limited": ["215/40R18"],
+        "tS": ["215/40R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "2026 BRZ uses 18-inch wheels only: 215/40R18. No 17-inch option"
+    },
+    {
+      "year": 2025,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17", "215/40R18"],
+      "trims": {
+        "Premium": ["215/45R17"],
+        "Limited": ["215/40R18"],
+        "tS": ["215/40R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17", "215/40R18"],
+      "trims": {
+        "Premium": ["215/45R17"],
+        "Limited": ["215/40R18"],
+        "tS": ["215/40R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17", "215/40R18"],
+      "trims": {
+        "Premium": ["215/45R17"],
+        "Limited": ["215/40R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17", "215/40R18"],
+      "trims": {
+        "Premium": ["215/45R17"],
+        "Limited": ["215/40R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17", "215/40R18"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "tS": ["215/40R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17", "215/40R18"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "tS": ["215/40R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18", "215/45ZR17", "215/40ZR18", "225/40ZR18", "215/35ZR19", "235/30ZR19"],
+      "validatedTireSizes": ["215/45R17", "215/40R18"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "tS": ["215/40R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "225/40ZR18, 215/35ZR19, 235/30ZR19 are not OEM sizes. Only 215/45R17 and 215/40R18 are factory"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2019 BRZ does not have tS trim. Only 215/45R17 is OEM"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18", "215/45ZR17", "215/40ZR18", "225/40ZR18", "215/35ZR19", "235/30ZR19"],
+      "validatedTireSizes": ["215/45R17"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "All non-17-inch sizes are aftermarket. Only 215/45R17 is OEM for 2019"
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17", "215/40R18"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"],
+        "tS": ["215/40R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2017 BRZ does not have tS trim. Only 215/45R17 is OEM"
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18", "215/45ZR17", "215/40ZR18", "225/40ZR18", "215/35ZR19", "235/30ZR19"],
+      "validatedTireSizes": ["215/45R17"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "All non-17-inch sizes are aftermarket. Only 215/45R17 is OEM for 2017"
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2016 BRZ only uses 215/45R17. No 18-inch OEM option"
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18", "215/45ZR17", "215/40ZR18", "225/40ZR18", "215/35ZR19", "235/30ZR19"],
+      "validatedTireSizes": ["215/45R17"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "All non-17-inch sizes are aftermarket. Only 215/45R17 is OEM for 2016"
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2015 BRZ only uses 215/45R17. No 18-inch OEM option"
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2014 BRZ only uses 215/45R17. No 18-inch OEM option"
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18", "215/45ZR17", "215/40ZR18", "225/40ZR18", "215/35ZR19", "235/30ZR19"],
+      "validatedTireSizes": ["215/45R17"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "All non-17-inch sizes are aftermarket. Only 215/45R17 is OEM for 2013"
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": ["215/45R17"],
+      "trims": {
+        "Limited": ["215/45R17"],
+        "Premium": ["215/45R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "2013 BRZ only uses 215/45R17. No 18-inch OEM option"
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45R17", "215/40R18"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "BRZ launched in 2013. 2012 model does not exist."
+    },
+    {
+      "year": 2012,
+      "make": "subaru",
+      "model": "brz",
+      "currentTireSizes": ["215/45ZR17", "215/40ZR18", "225/40ZR18", "215/35ZR19", "235/30ZR19"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "BRZ launched in 2013. 2012 model does not exist."
+    },
+    {
+      "year": 2026,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Wilderness": ["225/60R17"],
+        "Sport": ["225/55R18"],
+        "Limited": ["225/55R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2025,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Wilderness": ["225/60R17"],
+        "Sport": ["225/55R18"],
+        "Limited": ["225/55R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Wilderness": ["225/60R17"],
+        "Sport": ["225/55R18"],
+        "Limited": ["225/55R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Sport": ["225/60R17"],
+        "Hybrid": ["225/55R18"],
+        "Limited": ["225/55R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Sport": ["225/60R17"],
+        "Hybrid": ["225/55R18"],
+        "Limited": ["225/55R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Sport": ["225/60R17"],
+        "Hybrid": ["225/55R18"],
+        "Limited": ["225/55R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "2.0i": ["225/60R17"],
+        "2.0i Premium": ["225/60R17"],
+        "2.0i Limited": ["225/55R18"],
+        "Hybrid": ["225/55R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "2.0i": ["225/60R17"],
+        "2.0i Premium": ["225/60R17"],
+        "2.0i Limited": ["225/55R18"],
+        "Hybrid": ["225/55R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "2.0i": ["225/60R17"],
+        "2.0i Premium": ["225/60R17"],
+        "2.0i Limited": ["225/55R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/55R17"],
+      "validatedTireSizes": ["225/55R17"],
+      "trims": {
+        "2.0i": ["225/55R17"],
+        "2.0i Premium": ["225/55R17"],
+        "2.0i Limited": ["225/55R17"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/55R17", "225/50R18", "245/45R18"],
+      "validatedTireSizes": ["225/55R17"],
+      "trims": {
+        "2.0i": ["225/55R17"],
+        "2.0i Premium": ["225/55R17"],
+        "2.0i Limited": ["225/55R17"],
+        "Hybrid": ["225/55R17"],
+        "Hybrid Touring": ["225/55R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "225/50R18 and 245/45R18 are not OEM. Only 225/55R17 is factory"
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/55R17", "225/50R18", "245/45R18"],
+      "validatedTireSizes": ["225/55R17"],
+      "trims": {
+        "All": ["225/55R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "225/50R18 and 245/45R18 are not OEM. Only 225/55R17 is factory. Note: Crosstrek was XV Crosstrek in 2015"
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/55R17"],
+      "validatedTireSizes": ["225/55R17"],
+      "trims": {
+        "All": ["225/55R17"]
+      },
+      "status": "VALID",
+      "notes": "Note: Was called XV Crosstrek in 2014"
+    },
+    {
+      "year": 2013,
+      "make": "subaru",
+      "model": "crosstrek",
+      "currentTireSizes": ["225/55R17", "225/50R18", "245/45R18"],
+      "validatedTireSizes": ["225/55R17"],
+      "trims": {
+        "All": ["225/55R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "225/50R18 and 245/45R18 are not OEM. Only 225/55R17 is factory. Note: Was XV Crosstrek in 2013"
+    },
+    {
+      "year": 2026,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/65R17"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "235/50R19", "235/60R17"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Premium Hybrid": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Limited Hybrid": ["225/55R18"],
+        "Sport": ["235/50R19"],
+        "Sport Hybrid": ["235/50R19"],
+        "Touring": ["235/50R19"],
+        "Touring Hybrid": ["235/50R19"],
+        "Wilderness": ["235/60R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/65R17 not OEM. Wilderness uses 235/60R17, Sport/Touring use 235/50R19"
+    },
+    {
+      "year": 2025,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/65R17"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "235/50R19", "235/60R17"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Premium Hybrid": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Limited Hybrid": ["225/55R18"],
+        "Sport": ["235/50R19"],
+        "Sport Hybrid": ["235/50R19"],
+        "Touring": ["235/50R19"],
+        "Touring Hybrid": ["235/50R19"],
+        "Wilderness": ["235/60R17"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/65R17 not OEM. Wilderness uses 235/60R17, Sport/Touring use 235/50R19"
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/65R17"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Wilderness": ["225/60R17"],
+        "Sport": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Touring": ["225/55R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/65R17 not OEM for 2024"
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/65R17"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Wilderness": ["225/60R17"],
+        "Sport": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Touring": ["225/55R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/65R17 not OEM for 2023"
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/65R17"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Wilderness": ["225/60R17"],
+        "Sport": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Touring": ["225/55R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/65R17 not OEM for 2022"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/65R17", "245/50R18", "245/45R19"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Sport": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Touring": ["225/55R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/65R17, 245/50R18, 245/45R19 not OEM"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/65R17"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Sport": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Touring": ["225/55R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/65R17 not OEM"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/65R17"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "Base": ["225/60R17"],
+        "Premium": ["225/60R17"],
+        "Sport": ["225/55R18"],
+        "Limited": ["225/55R18"],
+        "Touring": ["225/55R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/65R17 not OEM"
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45ZR19", "245/50R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "2.5i": ["225/60R17"],
+        "2.5i Black Edition": ["225/60R17"],
+        "2.5i Limited": ["225/60R17"],
+        "2.5i Premium": ["225/60R17"],
+        "2.5i Touring": ["225/55R18"],
+        "2.0XT Premium": ["225/55R18"],
+        "2.0XT Touring": ["225/55R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/45ZR19 and 245/50R18 are not OEM"
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "2.5i": ["225/60R17"],
+        "2.5i Limited": ["225/60R17"],
+        "2.5i Premium": ["225/60R17"],
+        "2.5i Touring": ["225/55R18"],
+        "2.0XT Premium": ["225/55R18"],
+        "2.0XT Touring": ["225/55R18"]
+      },
+      "status": "VALID"
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45ZR19", "245/50R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "2.5i": ["225/60R17"],
+        "2.5i Limited": ["225/60R17"],
+        "2.5i Premium": ["225/60R17"],
+        "2.5i Touring": ["225/55R18"],
+        "2.0XT Premium": ["225/55R18"],
+        "2.0XT Touring": ["225/55R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/45ZR19 and 245/50R18 are not OEM"
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45ZR19", "245/50R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "2.5i": ["225/60R17"],
+        "2.5i Limited": ["225/60R17"],
+        "2.5i Premium": ["225/60R17"],
+        "2.5i Touring": ["225/55R18"],
+        "2.0XT Premium": ["225/55R18"],
+        "2.0XT Touring": ["225/55R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/45ZR19 and 245/50R18 are not OEM"
+    },
+    {
+      "year": 2014,
+      "make": "subaru",
+      "model": "forester",
+      "currentTireSizes": ["225/60R17", "225/55R18", "245/45ZR19", "245/50R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trims": {
+        "2.5i": ["225/60R17"],
+        "2.5i Limited": ["225/60R17"],
+        "2.5i Premium": ["225/60R17"],
+        "2.5i Touring": ["225/60R17"],
+        "2.0XT Premium": ["225/55R18"],
+        "2.0XT Touring": ["225/55R18"]
+      },
+      "status": "MISMATCH",
+      "notes": "245/45ZR19 and 245/50R18 are not OEM"
+    }
+  ],
+  "summary": {
+    "valid": 25,
+    "mismatch": 44,
+    "missing_data": 3,
+    "invalid_year": 3,
+    "total": 75
+  },
+  "recommendations": [
+    {
+      "issue": "Scion xB (2008-2014) has incorrect 215/40R18",
+      "action": "Replace 215/40R18 with 225/45R17 for years 2009-2014. 2008 only has 205/55R16"
+    },
+    {
+      "issue": "Subaru Ascent uses 255/50R20 instead of 245/50R20",
+      "action": "Replace 255/50R20 with 245/50R20 for all Ascent years"
+    },
+    {
+      "issue": "Subaru B9 Tribeca missing tire data",
+      "action": "Add 255/55R18 for 2005-2007 B9 Tribeca"
+    },
+    {
+      "issue": "Subaru Baja has incorrect sizes and invalid 2002/2007 years",
+      "action": "Remove 2002 and 2007 (Baja was 2003-2006). Replace all sizes with 225/60R16"
+    },
+    {
+      "issue": "Subaru BRZ has 2012 year entry that doesn't exist",
+      "action": "Remove 2012 BRZ (launched 2013). For 2013-2017/2019, only 215/45R17 is OEM"
+    },
+    {
+      "issue": "Subaru Crosstrek 2013-2016 has non-OEM 225/50R18 and 245/45R18",
+      "action": "Remove 225/50R18 and 245/45R18 from 2013-2016 Crosstrek"
+    },
+    {
+      "issue": "Subaru Forester has various non-OEM sizes like 245/65R17, 245/45ZR19, 245/50R18",
+      "action": "Remove non-OEM sizes. 2025-2026 Wilderness uses 235/60R17, Sport/Touring uses 235/50R19"
+    }
+  ]
+}

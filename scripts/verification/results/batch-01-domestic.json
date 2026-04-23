@@ -1,0 +1,1062 @@
+{
+  "batch": "batch-01-domestic",
+  "verifiedAt": "2026-04-22T20:50:00.000Z",
+  "vehicleCount": 75,
+  "validCount": 43,
+  "invalidCount": 32,
+  "summary": {
+    "invalidModels": [
+      "Buick Enclave 2007 - First US model year was 2008",
+      "Buick Encore 2012 - First US model year was 2013",
+      "Buick Encore 2023-2026 - Discontinued after 2022 in US",
+      "Buick Envision 2014-2015 - First US model year was 2016",
+      "Buick Envision S 2020-2026 - Model does not exist in US market (China-only variant or data error)",
+      "Buick Electra E5 2023-2026 - Not available in US (China-only, US launch indefinitely delayed)",
+      "Buick LaCrosse 2020-2023 - Discontinued after 2019 in US"
+    ]
+  },
+  "vehicles": [
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "Cascada",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" }
+      ],
+      "alternativeTireSizes": ["225/50R17", "235/55R17", "235/50R18", "245/45R18", "235/45ZR19"],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "goodyear.com", "tiresize.com"],
+      "notes": "First year for US market. Only came with 20-inch wheels as standard."
+    },
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "Cascada",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Sport Touring", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" }
+      ],
+      "alternativeTireSizes": ["225/50R17", "235/55R17", "235/50R18", "245/45R18", "235/45ZR19"],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "Sport Touring trim added for 2017."
+    },
+    {
+      "year": 2018,
+      "make": "Buick",
+      "model": "Cascada",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Sport Touring", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" }
+      ],
+      "alternativeTireSizes": ["225/50R17", "235/55R17", "235/50R18", "245/45R18", "235/45ZR19"],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": null
+    },
+    {
+      "year": 2019,
+      "make": "Buick",
+      "model": "Cascada",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "trims": [
+        { "name": "Base", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Sport Touring", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" }
+      ],
+      "alternativeTireSizes": ["225/50R17", "235/55R17", "235/50R18", "245/45R18", "235/45ZR19"],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "Final model year. Cascada discontinued after 2019."
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Electra E5",
+      "status": "invalid",
+      "reason": "NOT_AVAILABLE_US_MARKET",
+      "notes": "Buick Electra E5 is China-only. US launch was indefinitely delayed in mid-2024. No NHTSA or EPA certification for US."
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Electra E5",
+      "status": "invalid",
+      "reason": "NOT_AVAILABLE_US_MARKET",
+      "notes": "Buick Electra E5 is China-only. US launch was indefinitely delayed in mid-2024."
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Electra E5",
+      "status": "invalid",
+      "reason": "NOT_AVAILABLE_US_MARKET",
+      "notes": "Buick Electra E5 is China-only. No confirmed US availability as of verification date."
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Electra E5",
+      "status": "invalid",
+      "reason": "NOT_AVAILABLE_US_MARKET",
+      "notes": "Buick Electra E5 is China-only. No confirmed US availability."
+    },
+    {
+      "year": 2007,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "invalid",
+      "reason": "MODEL_YEAR_NOT_AVAILABLE_US",
+      "notes": "Buick Enclave first US model year was 2008 (unveiled mid-2007 as 2008 model)."
+    },
+    {
+      "year": 2008,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "valid",
+      "boltPattern": "6x132",
+      "hubBore": 74.5,
+      "generation": "I (2008-2012)",
+      "trims": [
+        { "name": "CX", "oemWheelSize": "18x7.5", "oemTireSize": "255/65R18" },
+        { "name": "CXL", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" }
+      ],
+      "alternativeTireSizes": [],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "First US model year."
+    },
+    {
+      "year": 2009,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "valid",
+      "boltPattern": "6x132",
+      "hubBore": 74.5,
+      "generation": "I (2008-2012)",
+      "trims": [
+        { "name": "CX", "oemWheelSize": "18x7.5", "oemTireSize": "255/65R18" },
+        { "name": "CXL", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "valid",
+      "boltPattern": "6x132",
+      "hubBore": 74.5,
+      "generation": "I (2008-2012)",
+      "trims": [
+        { "name": "CX", "oemWheelSize": "18x7.5", "oemTireSize": "255/65R18" },
+        { "name": "CXL", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "valid",
+      "boltPattern": "6x132",
+      "hubBore": 74.5,
+      "generation": "I (2008-2012)",
+      "trims": [
+        { "name": "CX", "oemWheelSize": "18x7.5", "oemTireSize": "255/65R18" },
+        { "name": "CXL", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "valid",
+      "boltPattern": "6x132",
+      "hubBore": 74.5,
+      "generation": "I (2008-2012)",
+      "trims": [
+        { "name": "Base", "oemWheelSize": "18x7.5", "oemTireSize": "255/65R18" },
+        { "name": "Leather", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" },
+        { "name": "Premium", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "valid",
+      "boltPattern": "6x132",
+      "hubBore": 74.5,
+      "generation": "I Facelift (2013-2017)",
+      "trims": [
+        { "name": "Convenience", "oemWheelSize": "18x7.5", "oemTireSize": "255/65R18" },
+        { "name": "Leather", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" },
+        { "name": "Premium", "oemWheelSize": "20x7.5", "oemTireSize": "255/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2013 refresh added 20-inch wheel option."
+    },
+    {
+      "year": 2014,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "valid",
+      "boltPattern": "6x132",
+      "hubBore": 74.5,
+      "generation": "I Facelift (2013-2017)",
+      "trims": [
+        { "name": "Convenience", "oemWheelSize": "18x7.5", "oemTireSize": "255/65R18" },
+        { "name": "Leather", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" },
+        { "name": "Premium", "oemWheelSize": "20x7.5", "oemTireSize": "255/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "valid",
+      "boltPattern": "6x132",
+      "hubBore": 74.5,
+      "generation": "I Facelift (2013-2017)",
+      "trims": [
+        { "name": "Convenience", "oemWheelSize": "18x7.5", "oemTireSize": "255/65R18" },
+        { "name": "Leather", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" },
+        { "name": "Premium", "oemWheelSize": "20x7.5", "oemTireSize": "255/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "valid",
+      "boltPattern": "6x132",
+      "hubBore": 74.5,
+      "generation": "I Facelift (2013-2017)",
+      "trims": [
+        { "name": "Convenience", "oemWheelSize": "18x7.5", "oemTireSize": "255/65R18" },
+        { "name": "Leather", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" },
+        { "name": "Premium", "oemWheelSize": "20x7.5", "oemTireSize": "255/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "Enclave",
+      "status": "valid",
+      "boltPattern": "6x132",
+      "hubBore": 74.5,
+      "generation": "I Facelift (2013-2017)",
+      "trims": [
+        { "name": "Convenience", "oemWheelSize": "18x7.5", "oemTireSize": "255/65R18" },
+        { "name": "Leather", "oemWheelSize": "19x7.5", "oemTireSize": "255/60R19" },
+        { "name": "Premium", "oemWheelSize": "20x7.5", "oemTireSize": "255/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of first generation. Second gen started 2018 with new bolt pattern (6x120)."
+    },
+    {
+      "year": 2012,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "invalid",
+      "reason": "MODEL_YEAR_NOT_AVAILABLE_US",
+      "notes": "Buick Encore debuted at 2012 NAIAS but first US sales began late 2012 as 2013 model year."
+    },
+    {
+      "year": 2013,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "generation": "I (2013-2016)",
+      "trims": [
+        { "name": "Base", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" }
+      ],
+      "alternativeTireSizes": ["195/70R16", "205/70R16", "215/65R16", "215/60R17", "225/45R19"],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "First US model year."
+    },
+    {
+      "year": 2015,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "generation": "I (2013-2016)",
+      "trims": [
+        { "name": "Base", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" }
+      ],
+      "alternativeTireSizes": ["215/60R17"],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "generation": "I (2013-2016)",
+      "trims": [
+        { "name": "Base", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" }
+      ],
+      "alternativeTireSizes": ["215/60R17"],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "generation": "I Facelift (2017-2022)",
+      "trims": [
+        { "name": "Base", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" },
+        { "name": "Preferred", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" },
+        { "name": "Essence", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2017 facelift."
+    },
+    {
+      "year": 2018,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "generation": "I Facelift (2017-2022)",
+      "trims": [
+        { "name": "Base", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" },
+        { "name": "Preferred", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" },
+        { "name": "Essence", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "generation": "I Facelift (2017-2022)",
+      "trims": [
+        { "name": "Base", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" },
+        { "name": "Preferred", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" },
+        { "name": "Essence", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "generation": "I Facelift (2017-2022)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "generation": "I Facelift (2017-2022)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "valid",
+      "boltPattern": "5x105",
+      "hubBore": 56.6,
+      "generation": "I Facelift (2017-2022)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x7", "oemTireSize": "215/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "gmauthority.com"],
+      "notes": "Final US model year. Discontinued after 2022."
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "invalid",
+      "reason": "MODEL_DISCONTINUED_US",
+      "notes": "Buick Encore was discontinued after 2022 model year in US. Replaced by Envista."
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "invalid",
+      "reason": "MODEL_DISCONTINUED_US",
+      "notes": "Buick Encore was discontinued after 2022 model year in US."
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "invalid",
+      "reason": "MODEL_DISCONTINUED_US",
+      "notes": "Buick Encore was discontinued after 2022 model year in US."
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Encore",
+      "status": "invalid",
+      "reason": "MODEL_DISCONTINUED_US",
+      "notes": "Buick Encore was discontinued after 2022 model year in US."
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "Encore GX",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 56.6,
+      "generation": "I (2020-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "17x7", "oemTireSize": "225/60R17" },
+        { "name": "Select", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" },
+        { "name": "Essence", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "First model year for Encore GX."
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Encore GX",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 56.6,
+      "generation": "I (2020-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "17x7", "oemTireSize": "225/60R17" },
+        { "name": "Select", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" },
+        { "name": "Essence", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Encore GX",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 56.6,
+      "generation": "I (2020-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "17x7", "oemTireSize": "225/60R17" },
+        { "name": "Select", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" },
+        { "name": "Avenir", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Encore GX",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 56.6,
+      "generation": "I Facelift (2024-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "17x7", "oemTireSize": "225/60R17" },
+        { "name": "Sport Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" },
+        { "name": "Avenir", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "2024 refresh with new trims."
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Encore GX",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 56.6,
+      "generation": "I Facelift (2024-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "17x7", "oemTireSize": "225/60R17" },
+        { "name": "Sport Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" },
+        { "name": "Avenir", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Encore GX",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 56.6,
+      "generation": "I Facelift (2024-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "17x7", "oemTireSize": "225/60R17" },
+        { "name": "Sport Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" },
+        { "name": "Avenir", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" }
+      ],
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Specs assumed to carry over from 2025."
+    },
+    {
+      "year": 2014,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "invalid",
+      "reason": "MODEL_YEAR_NOT_AVAILABLE_US",
+      "notes": "Buick Envision was China-only in 2014. First US model year was 2016."
+    },
+    {
+      "year": 2015,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "invalid",
+      "reason": "MODEL_YEAR_NOT_AVAILABLE_US",
+      "notes": "Buick Envision was China-only in 2015. First US model year was 2016."
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "generation": "I (2016-2020)",
+      "trims": [
+        { "name": "1SV/Preferred", "oemWheelSize": "18x7", "oemTireSize": "225/60R18" },
+        { "name": "2SL/Premium", "oemWheelSize": "19x7.5", "oemTireSize": "235/50R19" },
+        { "name": "Premium II", "oemWheelSize": "20x8", "oemTireSize": "245/45R20" }
+      ],
+      "alternativeTireSizes": ["225/65R17"],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "wikipedia.org"],
+      "notes": "First US model year."
+    },
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "generation": "I (2016-2020)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x7", "oemTireSize": "225/60R18" },
+        { "name": "Essence", "oemWheelSize": "19x7.5", "oemTireSize": "235/50R19" },
+        { "name": "Premium", "oemWheelSize": "19x7.5", "oemTireSize": "235/50R19" },
+        { "name": "Premium II", "oemWheelSize": "20x8", "oemTireSize": "245/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "generation": "I (2016-2020)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x7", "oemTireSize": "225/60R18" },
+        { "name": "Essence", "oemWheelSize": "19x7.5", "oemTireSize": "235/50R19" },
+        { "name": "Premium", "oemWheelSize": "19x7.5", "oemTireSize": "235/50R19" },
+        { "name": "Premium II", "oemWheelSize": "20x8", "oemTireSize": "245/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "generation": "I (2016-2020)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x7.5", "oemTireSize": "225/60R18" },
+        { "name": "Essence", "oemWheelSize": "19x7.5", "oemTireSize": "235/50R19" },
+        { "name": "Premium", "oemWheelSize": "19x7.5", "oemTireSize": "235/50R19" },
+        { "name": "Premium II", "oemWheelSize": "20x8", "oemTireSize": "245/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 70.3,
+      "generation": "I (2016-2020)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x7.5", "oemTireSize": "225/60R18" },
+        { "name": "Essence", "oemWheelSize": "19x7.5", "oemTireSize": "235/50R19" },
+        { "name": "Premium", "oemWheelSize": "19x7.5", "oemTireSize": "235/50R19" },
+        { "name": "Avenir", "oemWheelSize": "20x8", "oemTireSize": "245/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Final year of first generation."
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "generation": "II (2021-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x8", "oemTireSize": "235/55R18" },
+        { "name": "Essence", "oemWheelSize": "19x8", "oemTireSize": "235/50R19" },
+        { "name": "Avenir", "oemWheelSize": "20x8.5", "oemTireSize": "245/45R20" }
+      ],
+      "alternativeTireSizes": ["245/50R19"],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"],
+      "notes": "Second generation uses different bolt pattern (5x120 vs 5x115)."
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "generation": "II (2021-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x8", "oemTireSize": "235/55R18" },
+        { "name": "Sport Touring", "oemWheelSize": "19x8", "oemTireSize": "235/50R19" },
+        { "name": "Avenir", "oemWheelSize": "20x8.5", "oemTireSize": "245/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "generation": "II (2021-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x8", "oemTireSize": "235/55R18" },
+        { "name": "Sport Touring", "oemWheelSize": "19x8", "oemTireSize": "235/50R19" },
+        { "name": "Avenir", "oemWheelSize": "20x8.5", "oemTireSize": "245/45R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "generation": "II (2021-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x8", "oemTireSize": "235/55R18" },
+        { "name": "Sport Touring", "oemWheelSize": "19x8", "oemTireSize": "235/50R19" },
+        { "name": "Avenir", "oemWheelSize": "20x8.5", "oemTireSize": "245/45R20" }
+      ],
+      "confidence": "medium",
+      "sources": ["tirewheelguide.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Envision",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 66.9,
+      "generation": "II (2021-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "18x8", "oemTireSize": "235/55R18" },
+        { "name": "Sport Touring", "oemWheelSize": "19x8", "oemTireSize": "235/50R19" },
+        { "name": "Avenir", "oemWheelSize": "20x8.5", "oemTireSize": "245/45R20" }
+      ],
+      "confidence": "medium",
+      "sources": ["buick.com", "tirewheelguide.com"],
+      "notes": "2026 Envision available per buick.com."
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "Envision S",
+      "status": "invalid",
+      "reason": "MODEL_NOT_AVAILABLE_US",
+      "notes": "Buick Envision S does not exist as a separate model in US market. May be a China-only variant or data error. Only standard Envision sold in US."
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "Envision S",
+      "status": "invalid",
+      "reason": "MODEL_NOT_AVAILABLE_US",
+      "notes": "Buick Envision S does not exist as a separate model in US market."
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "Envision S",
+      "status": "invalid",
+      "reason": "MODEL_NOT_AVAILABLE_US",
+      "notes": "Buick Envision S does not exist as a separate model in US market."
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "Envision S",
+      "status": "invalid",
+      "reason": "MODEL_NOT_AVAILABLE_US",
+      "notes": "Buick Envision S does not exist as a separate model in US market."
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Envision S",
+      "status": "invalid",
+      "reason": "MODEL_NOT_AVAILABLE_US",
+      "notes": "Buick Envision S does not exist as a separate model in US market."
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Envision S",
+      "status": "invalid",
+      "reason": "MODEL_NOT_AVAILABLE_US",
+      "notes": "Buick Envision S does not exist as a separate model in US market."
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Envision S",
+      "status": "invalid",
+      "reason": "MODEL_NOT_AVAILABLE_US",
+      "notes": "Buick Envision S does not exist as a separate model in US market."
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "Envista",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 56.6,
+      "generation": "I (2024-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "17x7", "oemTireSize": "225/60R17" },
+        { "name": "Sport Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" },
+        { "name": "Avenir", "oemWheelSize": "19x7.5", "oemTireSize": "245/45R19" }
+      ],
+      "alternativeTireSizes": [],
+      "confidence": "high",
+      "sources": ["tiresize.com", "buick.com"],
+      "notes": "First US model year. Replaces Encore in lineup."
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "Envista",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 56.6,
+      "generation": "I (2024-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "17x7", "oemTireSize": "225/60R17" },
+        { "name": "Sport Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" },
+        { "name": "Avenir", "oemWheelSize": "19x7.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["buick.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Buick",
+      "model": "Envista",
+      "status": "valid",
+      "boltPattern": "5x115",
+      "hubBore": 56.6,
+      "generation": "I (2024-present)",
+      "trims": [
+        { "name": "Preferred", "oemWheelSize": "17x7", "oemTireSize": "225/60R17" },
+        { "name": "Sport Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/55R18" },
+        { "name": "Avenir", "oemWheelSize": "19x7.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "medium",
+      "sources": ["buick.com"],
+      "notes": "Specs assumed to carry over."
+    },
+    {
+      "year": 2010,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.0,
+      "generation": "II (2010-2016)",
+      "trims": [
+        { "name": "CX", "oemWheelSize": "17x7", "oemTireSize": "225/55R17" },
+        { "name": "CXL", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "CXS", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "CXS Touring", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Second generation LaCrosse."
+    },
+    {
+      "year": 2011,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.0,
+      "generation": "II (2010-2016)",
+      "trims": [
+        { "name": "CX", "oemWheelSize": "17x7", "oemTireSize": "225/55R17" },
+        { "name": "CXL", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "CXS", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.0,
+      "generation": "II (2010-2016)",
+      "trims": [
+        { "name": "2.4L", "oemWheelSize": "17x7", "oemTireSize": "225/55R17" },
+        { "name": "3.6L", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "3.6L Touring", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.0,
+      "generation": "II (2010-2016)",
+      "trims": [
+        { "name": "2.4L", "oemWheelSize": "17x7", "oemTireSize": "225/55R17" },
+        { "name": "3.6L", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "3.6L Touring", "oemWheelSize": "19x8.5", "oemTireSize": "245/40R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.0,
+      "generation": "II Facelift (2014-2016)",
+      "trims": [
+        { "name": "2.4L", "oemWheelSize": "17x7", "oemTireSize": "225/55R17" },
+        { "name": "3.6L", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "Premium II", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2014 facelift added 20-inch option."
+    },
+    {
+      "year": 2015,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.0,
+      "generation": "II Facelift (2014-2016)",
+      "trims": [
+        { "name": "2.4L", "oemWheelSize": "17x7", "oemTireSize": "225/55R17" },
+        { "name": "3.6L", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "Premium II", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.0,
+      "generation": "II Facelift (2014-2016)",
+      "trims": [
+        { "name": "2.4L", "oemWheelSize": "17x7", "oemTireSize": "225/55R17" },
+        { "name": "3.6L", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "Premium", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "Premium II", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Sport Touring", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.0,
+      "generation": "III (2017-2019)",
+      "trims": [
+        { "name": "Base/Preferred", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "Essence", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Third generation LaCrosse."
+    },
+    {
+      "year": 2018,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.0,
+      "generation": "III (2017-2019)",
+      "trims": [
+        { "name": "Base/Preferred", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "Essence", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Avenir", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Avenir trim added for 2018."
+    },
+    {
+      "year": 2019,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "valid",
+      "boltPattern": "5x120",
+      "hubBore": 67.0,
+      "generation": "III (2017-2019)",
+      "trims": [
+        { "name": "Base/Preferred", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "Essence", "oemWheelSize": "18x8", "oemTireSize": "235/50R18" },
+        { "name": "Premium", "oemWheelSize": "20x8.5", "oemTireSize": "245/40R20" },
+        { "name": "Avenir", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" },
+        { "name": "Sport Touring", "oemWheelSize": "19x8.5", "oemTireSize": "245/45R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "wikipedia.org"],
+      "notes": "Final US model year. LaCrosse discontinued after 2019 in US (GM restructuring)."
+    },
+    {
+      "year": 2020,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "invalid",
+      "reason": "MODEL_DISCONTINUED_US",
+      "notes": "Buick LaCrosse was discontinued after 2019 model year in US due to GM restructuring. Model continues in China only."
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "invalid",
+      "reason": "MODEL_DISCONTINUED_US",
+      "notes": "Buick LaCrosse was discontinued after 2019 model year in US."
+    },
+    {
+      "year": 2022,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "invalid",
+      "reason": "MODEL_DISCONTINUED_US",
+      "notes": "Buick LaCrosse was discontinued after 2019 model year in US."
+    },
+    {
+      "year": 2023,
+      "make": "Buick",
+      "model": "LaCrosse",
+      "status": "invalid",
+      "reason": "MODEL_DISCONTINUED_US",
+      "notes": "Buick LaCrosse was discontinued after 2019 model year in US."
+    }
+  ]
+}

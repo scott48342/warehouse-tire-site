@@ -1,0 +1,761 @@
+{
+  "batchId": "127",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "185/65R14",
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "185/65R14",
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "185/65R14",
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "185/65R14",
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "185/65R14",
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "185/65R14",
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "sentra",
+      "currentTireSizes": [
+        "185/65R14",
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "skyline-crossover",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "terrano-2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "terrano-2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "terrano-2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "terrano-2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "terrano-2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "terrano-2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "terrano-2",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "terrano-regulus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "terrano-regulus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "terrano-regulus",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22",
+        "275/70R18"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22",
+        "275/70R18"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "275/60R20",
+        "285/45R22"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20",
+        "275/70R18"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "titan",
+      "currentTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "titan-xd",
+      "currentTireSizes": [
+        "275/60R20",
+        "275/65R20",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "titan-xd",
+      "currentTireSizes": [
+        "275/60R20",
+        "275/65R20",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "titan-xd",
+      "currentTireSizes": [
+        "275/60R20",
+        "275/65R20",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "titan-xd",
+      "currentTireSizes": [
+        "275/60R20",
+        "275/65R20",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "titan-xd",
+      "currentTireSizes": [
+        "275/60R20",
+        "275/65R20",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "titan-xd",
+      "currentTireSizes": [
+        "275/60R20",
+        "275/65R20",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "titan-xd",
+      "currentTireSizes": [
+        "275/60R20",
+        "275/65R20",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "titan-xd",
+      "currentTireSizes": [
+        "275/60R20",
+        "275/65R20",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "titan-xd",
+      "currentTireSizes": [
+        "275/60R20",
+        "275/65R20",
+        "LT275/65R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "v-drive",
+      "currentTireSizes": []
+    }
+  ]
+}

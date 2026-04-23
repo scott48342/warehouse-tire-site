@@ -1,0 +1,1169 @@
+{
+  "batchId": "67",
+  "processedAt": "2026-04-21T22:07:00Z",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 75,
+    "issues": 18,
+    "jdmOnlyModels": 4,
+    "corrections": 12
+  },
+  "results": [
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "CR-V",
+      "currentTireSizes": ["205/70R15", "215/65R16"],
+      "validatedTireSizes": ["205/70R15"],
+      "trims": {
+        "EX": { "tireSize": "205/70R15", "wheelSize": "15x6" },
+        "LX": { "tireSize": "205/70R15", "wheelSize": "15x6" },
+        "SE": { "tireSize": "205/70R15", "wheelSize": "15x6" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "215/65R16 is NOT OEM. All 2000 CR-V trims use 205/70R15 only.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "Crosstour",
+      "currentTireSizes": ["225/65R17", "235/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "EX": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX V6": { "tireSize": "225/60R18", "wheelSize": "18x7" },
+        "EX-L": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX-L V6": { "tireSize": "225/60R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "235/60R18 incorrect - OEM is 225/60R18 for V6 models",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "Honda",
+      "model": "Crosstour",
+      "currentTireSizes": ["225/65R17", "235/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "EX": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX V6": { "tireSize": "225/60R18", "wheelSize": "18x7" },
+        "EX-L": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX-L V6": { "tireSize": "225/60R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "235/60R18 incorrect - OEM is 225/60R18 for V6 models",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Crosstour",
+      "currentTireSizes": ["225/65R17", "235/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "EX": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX V6": { "tireSize": "225/60R18", "wheelSize": "18x7" },
+        "EX-L": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX-L V6": { "tireSize": "225/60R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "235/60R18 incorrect - OEM is 225/60R18 for V6 models",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Crosstour",
+      "currentTireSizes": ["225/65R17", "235/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "EX": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX V6": { "tireSize": "225/60R18", "wheelSize": "18x7" },
+        "EX-L": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX-L V6": { "tireSize": "225/60R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "235/60R18 incorrect - OEM is 225/60R18 for V6 models",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Crosstour",
+      "currentTireSizes": ["225/65R17", "235/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "EX": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX V6": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX-L": { "tireSize": "225/65R17", "wheelSize": "17x7" },
+        "EX-L V6": { "tireSize": "225/60R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "235/60R18 incorrect - OEM is 225/60R18; 2012 EX V6 used 17\" wheels",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Crosstour",
+      "currentTireSizes": ["225/65R17", "235/60R18"],
+      "validatedTireSizes": ["225/65R17", "225/60R18"],
+      "trims": {
+        "EX": { "tireSize": "225/65R17", "wheelSize": "17x7.5" },
+        "EX V6": { "tireSize": "225/65R17", "wheelSize": "17x7.5" },
+        "EX-L": { "tireSize": "225/65R17", "wheelSize": "17x7.5" },
+        "EX-L V6": { "tireSize": "225/60R18", "wheelSize": "18x8" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "235/60R18 incorrect - OEM is 225/60R18 for EX-L V6",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Domani",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "195/60R15"],
+      "trims": {
+        "1.5 (GF-MB3)": { "tireSize": "185/65R14", "wheelSize": "14x5.5" },
+        "1.6 (GF-MB4)": { "tireSize": "195/60R15", "wheelSize": "15x6" },
+        "1.6 (GF-MB5)": { "tireSize": "195/60R15", "wheelSize": "15x6" }
+      },
+      "status": "JDM_ONLY",
+      "notes": "JDM model only. Not sold in North America. Consider removing from US database.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Domani",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "195/60R15"],
+      "trims": {
+        "1.5 (GF-MB3)": { "tireSize": "185/65R14", "wheelSize": "14x5.5" },
+        "1.6 (GF-MB4)": { "tireSize": "195/60R15", "wheelSize": "15x6" },
+        "1.6 (GF-MB5)": { "tireSize": "195/60R15", "wheelSize": "15x6" }
+      },
+      "status": "JDM_ONLY",
+      "notes": "JDM model only. Not sold in North America. Consider removing from US database.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "e",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R16", "205/45R17"],
+      "trims": {
+        "EV 134hp": { "tireSize": "185/60R16", "wheelSize": "16x6" },
+        "EV 152hp": { "tireSize": "205/45R17", "wheelSize": "17x6.5" }
+      },
+      "status": "EUROPE_JDM_ONLY",
+      "notes": "Electric vehicle sold in Europe/Japan only. Not available in North America.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "e",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R16", "205/45R17"],
+      "trims": {
+        "EV 134hp": { "tireSize": "185/60R16", "wheelSize": "16x6" },
+        "EV 152hp": { "tireSize": "205/45R17", "wheelSize": "17x6.5" }
+      },
+      "status": "EUROPE_JDM_ONLY",
+      "notes": "Electric vehicle sold in Europe/Japan only. Not available in North America.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "e",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R16", "205/45R17"],
+      "trims": {
+        "EV": { "tireSize": "185/60R16", "wheelSize": "16x6" },
+        "EV Advance": { "tireSize": "205/45R17", "wheelSize": "17x6.5" }
+      },
+      "status": "EUROPE_JDM_ONLY",
+      "notes": "Electric vehicle sold in Europe/Japan only. Not available in North America.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "e",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R16", "205/45R17"],
+      "trims": {
+        "EV": { "tireSize": "185/60R16", "wheelSize": "16x6" },
+        "EV Advance": { "tireSize": "205/45R17", "wheelSize": "17x6.5" }
+      },
+      "status": "EUROPE_JDM_ONLY",
+      "notes": "Electric vehicle sold in Europe/Japan only. Not available in North America.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "e",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/60R16", "205/45R17"],
+      "trims": {
+        "EV": { "tireSize": "185/60R16", "wheelSize": "16x6" },
+        "EV Advance": { "tireSize": "205/45R17", "wheelSize": "17x6.5" }
+      },
+      "status": "EUROPE_JDM_ONLY",
+      "notes": "Electric vehicle sold in Europe/Japan only. Not available in North America.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Element",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "EX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "225/65R17 is NOT OEM. SC trim discontinued for 2011. All 2011 Element use 215/70R16.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Element",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": {
+        "EX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "SC": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "225/65R17 incorrect. SC uses 225/55R18, not 225/65R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "Element",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": {
+        "EX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "SC": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "225/65R17 incorrect. SC uses 225/55R18, not 225/65R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "Element",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": {
+        "EX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "SC": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "225/65R17 incorrect. SC uses 225/55R18, not 225/65R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "Element",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R16", "225/55R18"],
+      "trims": {
+        "EX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "SC": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "225/65R17 incorrect. SC uses 225/55R18, not 225/65R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "Element",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "EX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX-P 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX-P 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "225/65R17 NOT OEM. SC trim not available until 2007.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "Element",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "EX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "225/65R17 NOT OEM. All 2005 Element trims use 215/70R16.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "Element",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "DX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "DX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "LX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "225/65R17 NOT OEM. All 2004 Element trims use 215/70R16.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Element",
+      "currentTireSizes": ["215/70R16", "225/65R17"],
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "DX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "DX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 2WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" },
+        "EX 4WD": { "tireSize": "215/70R16", "wheelSize": "16x6.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "225/65R17 NOT OEM. All 2003 Element trims use 215/70R16.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/55R16", "185/60R15"],
+      "trims": {
+        "LX": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "EX": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "EX-L": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "175/65R15 may be older generation data. 2020+ US Fit uses 185/55R16 or 185/60R15.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["185/55R16"],
+      "validatedTireSizes": ["185/55R16"],
+      "trims": {
+        "All": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct. 2024 Fit (JDM model; US discontinued after 2020) uses 185/55R16.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/55R16", "185/60R15"],
+      "trims": {
+        "Base": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "EX/Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "175/65R15 not accurate for 2023. Should be 185/60R15 for base.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/55R16", "185/60R15"],
+      "trims": {
+        "Base": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "EX/Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "175/65R15 not accurate for 2022. Should be 185/60R15 for base.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["185/55R16", "185/60R15"],
+      "validatedTireSizes": ["185/55R16", "185/60R15"],
+      "trims": {
+        "LX": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "EX/Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes for 2021 Fit.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["185/60R15", "185/55R16"],
+      "validatedTireSizes": ["185/55R16"],
+      "trims": {
+        "LX": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "EX": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "EX-L": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "2020 US Fit: all trims standardized to 185/55R16. 185/60R15 may be carryover.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["185/60R15", "185/55R16"],
+      "validatedTireSizes": ["185/60R15", "185/55R16"],
+      "trims": {
+        "LX": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "EX": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "EX-L": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes for 2019 Fit.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["185/60R15", "185/55R16"],
+      "validatedTireSizes": ["185/60R15", "185/55R16"],
+      "trims": {
+        "LX": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "EX": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "EX-L": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct. 195/50R16 also noted as optional.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["185/60R15", "185/55R16"],
+      "validatedTireSizes": ["185/60R15", "185/55R16"],
+      "trims": {
+        "LX": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "EX": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "EX-L": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["185/60R15", "185/55R16"],
+      "validatedTireSizes": ["185/60R15", "185/55R16"],
+      "trims": {
+        "LX": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "EX": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "EX-L": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["185/60R15", "185/55R16"],
+      "validatedTireSizes": ["185/60R15", "185/55R16"],
+      "trims": {
+        "LX": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "EX": { "tireSize": "185/55R16", "wheelSize": "16x6" },
+        "EX-L": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/65R15"],
+      "trims": {
+        "EV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "2014 US Fit was EV only. Regular Fit skipped to 2015 (3rd gen). 175/65R15, 185/55R16 incorrect.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R15", "185/55R16", "185/65R15"],
+      "trims": {
+        "Base": { "tireSize": "175/65R15", "wheelSize": "15x5.5" },
+        "EV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct. 2013 had Base, EV, and Sport trims.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R15", "185/55R16"],
+      "trims": {
+        "Base": { "tireSize": "175/65R15", "wheelSize": "15x5.5" },
+        "Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R15", "185/55R16"],
+      "trims": {
+        "Base": { "tireSize": "175/65R15", "wheelSize": "15x5.5" },
+        "Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R15", "185/55R16"],
+      "trims": {
+        "Base": { "tireSize": "175/65R15", "wheelSize": "15x5.5" },
+        "Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R15", "185/55R16"],
+      "trims": {
+        "Base": { "tireSize": "175/65R15", "wheelSize": "15x5.5" },
+        "Sport": { "tireSize": "185/55R16", "wheelSize": "16x6" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R14", "195/55R15", "205/45R16"],
+      "trims": {
+        "Base": { "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        "Sport": { "tireSize": "195/55R15", "wheelSize": "15x6" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "2007-2008 US Fit used 14\"/15\" wheels, not 15\"/16\". 175/65R14 base, 195/55R15 Sport.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R14", "195/55R15", "205/45R16"],
+      "trims": {
+        "Base": { "tireSize": "175/65R14", "wheelSize": "14x5.5" },
+        "Sport": { "tireSize": "195/55R15", "wheelSize": "15x6" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "2007 US Fit used 14\"/15\" wheels. 175/65R14 base, 195/55R15 Sport.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R14", "175/65R15"],
+      "trims": {
+        "JDM models": { "tireSize": "175/65R14 or 175/65R15", "wheelSize": "14x5.5 or 15x5.5" }
+      },
+      "status": "JDM_VERIFY",
+      "notes": "2006 Fit not sold in US (arrived 2007). JDM GD used 175/65R14 or 175/65R15.",
+      "source": "car-us.com"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R14", "175/65R15"],
+      "trims": {
+        "JDM models": { "tireSize": "175/65R14 or 175/65R15", "wheelSize": "14x5.5 or 15x5.5" }
+      },
+      "status": "JDM_ONLY",
+      "notes": "Not sold in US. JDM model.",
+      "source": "car-us.com"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R14", "175/65R15"],
+      "trims": {
+        "JDM models": { "tireSize": "175/65R14 or 175/65R15", "wheelSize": "14x5.5 or 15x5.5" }
+      },
+      "status": "JDM_ONLY",
+      "notes": "Not sold in US. JDM model.",
+      "source": "car-us.com"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R14", "175/65R15"],
+      "trims": {
+        "JDM models": { "tireSize": "175/65R14 or 175/65R15", "wheelSize": "14x5.5 or 15x5.5" }
+      },
+      "status": "JDM_ONLY",
+      "notes": "Not sold in US. JDM model.",
+      "source": "car-us.com"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R14", "175/65R15"],
+      "trims": {
+        "JDM models": { "tireSize": "175/65R14 or 175/65R15", "wheelSize": "14x5.5 or 15x5.5" }
+      },
+      "status": "JDM_ONLY",
+      "notes": "Not sold in US. JDM model launched June 2001.",
+      "source": "car-us.com"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Fit",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R14", "175/65R15"],
+      "trims": {
+        "JDM models": { "tireSize": "175/65R14 or 175/65R15", "wheelSize": "14x5.5 or 15x5.5" }
+      },
+      "status": "JDM_ONLY",
+      "notes": "Not sold in US. JDM model launched June 2001.",
+      "source": "car-us.com"
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "FR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trims": {
+        "1.8i BE": { "tireSize": "195/65R15", "wheelSize": "15x6" },
+        "2.2i-CTDi BE": { "tireSize": "205/55R16", "wheelSize": "16x6.5" }
+      },
+      "status": "EUROPE_ONLY",
+      "notes": "European market only. Never sold in North America.",
+      "source": "tire-size.net"
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "FR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trims": {
+        "1.8i BE": { "tireSize": "195/65R15", "wheelSize": "15x6" },
+        "2.2i-CTDi BE": { "tireSize": "205/55R16", "wheelSize": "16x6.5" }
+      },
+      "status": "EUROPE_ONLY",
+      "notes": "European market only. Never sold in North America.",
+      "source": "tire-size.net"
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "FR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trims": {
+        "1.8i BE": { "tireSize": "195/65R15", "wheelSize": "15x6" },
+        "2.2i-CTDi BE": { "tireSize": "205/55R16", "wheelSize": "16x6.5" }
+      },
+      "status": "EUROPE_ONLY",
+      "notes": "European market only. Never sold in North America.",
+      "source": "tire-size.net"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "FR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trims": {
+        "1.7i BE": { "tireSize": "195/65R15", "wheelSize": "15x6" },
+        "2.0i BE": { "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        "2.2i-CTDi BE": { "tireSize": "205/55R16", "wheelSize": "16x6.5" }
+      },
+      "status": "EUROPE_ONLY",
+      "notes": "European market only. Never sold in North America.",
+      "source": "tire-size.net"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "FR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trims": {
+        "1.7i BE": { "tireSize": "195/65R15", "wheelSize": "15x6" },
+        "2.0i BE": { "tireSize": "205/55R16", "wheelSize": "16x6.5" },
+        "2.2i-CTDi BE": { "tireSize": "205/55R16", "wheelSize": "16x6.5" }
+      },
+      "status": "EUROPE_ONLY",
+      "notes": "European market only. Never sold in North America.",
+      "source": "tire-size.net"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "FR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/65R15", "205/55R16"],
+      "trims": {
+        "1.7i BE": { "tireSize": "195/65R15", "wheelSize": "15x6" },
+        "2.0i BE": { "tireSize": "205/55R16", "wheelSize": "16x6.5" }
+      },
+      "status": "EUROPE_ONLY",
+      "notes": "European market only. Never sold in North America.",
+      "source": "tire-size.net"
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18"],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": {
+        "LX": { "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        "EX-L": { "tireSize": "225/55R18", "wheelSize": "18x7" },
+        "Sport": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "3rd gen (2023+) uses 215/60R17 and 225/55R18, not 215/55R17 and 225/50R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18"],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": {
+        "LX": { "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        "EX-L": { "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        "Sport": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "3rd gen uses 215/60R17 and 225/55R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18", "215/60R17", "225/55R18"],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": {
+        "LX": { "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        "EX-L": { "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        "Sport": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "215/55R17, 225/50R18 are 2nd gen sizes. 2024 is 3rd gen: 215/60R17, 225/55R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18"],
+      "validatedTireSizes": ["215/60R17", "225/55R18"],
+      "trims": {
+        "LX": { "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        "EX-L": { "tireSize": "215/60R17", "wheelSize": "17x6.5" },
+        "Sport": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "2023 is 3rd gen. Uses 215/60R17 and 225/55R18, not 2nd gen sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18", "215/60R16"],
+      "validatedTireSizes": ["215/55R17", "225/50R18"],
+      "trims": {
+        "LX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX-L": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "Sport": { "tireSize": "225/50R18", "wheelSize": "18x7.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "215/60R16 not US OEM. 2022 US HR-V: 215/55R17 and 225/50R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18"],
+      "validatedTireSizes": ["215/55R17", "225/50R18"],
+      "trims": {
+        "LX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX-L": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "Sport": { "tireSize": "225/50R18", "wheelSize": "18x7.5" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes for 2021 HR-V.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18", "215/60R16"],
+      "validatedTireSizes": ["215/55R17", "225/50R18"],
+      "trims": {
+        "LX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX-L": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "Sport": { "tireSize": "225/50R18", "wheelSize": "18x7.5" },
+        "Touring": { "tireSize": "215/55R17", "wheelSize": "17x7.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "215/60R16 not US OEM - may be international market size.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18"],
+      "validatedTireSizes": ["215/55R17", "225/50R18"],
+      "trims": {
+        "LX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX-L": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "Sport": { "tireSize": "225/50R18", "wheelSize": "18x7.5" },
+        "Touring": { "tireSize": "215/55R17", "wheelSize": "17x7.5" }
+      },
+      "status": "VERIFIED",
+      "notes": "Correct tire sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18"],
+      "validatedTireSizes": ["215/55R17"],
+      "trims": {
+        "LX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "LX AWD": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX AWD": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX-L": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX-L AWD": { "tireSize": "215/55R17", "wheelSize": "17x7.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "2018 HR-V: all trims used 17\" wheels with 215/55R17. 18\" option not standard until 2019+.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18"],
+      "validatedTireSizes": ["215/55R17"],
+      "trims": {
+        "LX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "LX AWD": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX AWD": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX-L": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX-L AWD": { "tireSize": "215/55R17", "wheelSize": "17x7.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "2016-2018 HR-V used 17\" only. 225/50R18 not OEM for this year.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": ["215/55R17", "225/50R18"],
+      "validatedTireSizes": ["215/55R17"],
+      "trims": {
+        "LX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "LX AWD": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX AWD": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX-L": { "tireSize": "215/55R17", "wheelSize": "17x7.5" },
+        "EX-L AWD": { "tireSize": "215/55R17", "wheelSize": "17x7.5" }
+      },
+      "status": "CORRECTION_NEEDED",
+      "notes": "2016 HR-V used 17\" only. 225/50R18 not OEM for this year.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "trims": {
+        "1.5 i-VTEC": { "tireSize": "215/60R16", "wheelSize": "16x7" },
+        "1.5 i-VTEC (17\")": { "tireSize": "215/55R17", "wheelSize": "17x7" },
+        "1.6 i-DTEC": { "tireSize": "215/55R17", "wheelSize": "17x7" }
+      },
+      "status": "ADD_DATA",
+      "notes": "2015 HR-V launched mid-year. Different specs from 2016+ US models.",
+      "source": "size-tire.com"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/60R16"],
+      "trims": {
+        "1.6i (ABA-GH3)": { "tireSize": "195/70R15", "wheelSize": "15x5.5" },
+        "1.6i (ABA-GH4)": { "tireSize": "205/60R16", "wheelSize": "16x6" }
+      },
+      "status": "JDM_EUROPE_ONLY",
+      "notes": "1st gen HR-V (1999-2006) not sold in North America.",
+      "source": "size-tire.com"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/60R16"],
+      "trims": {
+        "1.6i": { "tireSize": "195/70R15", "wheelSize": "15x5.5" },
+        "1.6i (16\")": { "tireSize": "205/60R16", "wheelSize": "16x6" }
+      },
+      "status": "JDM_EUROPE_ONLY",
+      "notes": "1st gen HR-V not sold in North America.",
+      "source": "size-tire.com"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/60R16"],
+      "trims": {
+        "1.6i": { "tireSize": "195/70R15", "wheelSize": "15x5.5" },
+        "1.6i (16\")": { "tireSize": "205/60R16", "wheelSize": "16x6" }
+      },
+      "status": "JDM_EUROPE_ONLY",
+      "notes": "1st gen HR-V not sold in North America.",
+      "source": "size-tire.com"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/60R16"],
+      "trims": {
+        "1.6i": { "tireSize": "195/70R15", "wheelSize": "15x5.5" },
+        "1.6i (16\")": { "tireSize": "205/60R16", "wheelSize": "16x6" }
+      },
+      "status": "JDM_EUROPE_ONLY",
+      "notes": "1st gen HR-V not sold in North America.",
+      "source": "size-tire.com"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/60R16"],
+      "trims": {
+        "1.6i": { "tireSize": "195/70R15", "wheelSize": "15x5.5" },
+        "1.6i (16\")": { "tireSize": "205/60R16", "wheelSize": "16x6" }
+      },
+      "status": "JDM_EUROPE_ONLY",
+      "notes": "1st gen HR-V not sold in North America.",
+      "source": "size-tire.com"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "205/60R16"],
+      "trims": {
+        "1.6i": { "tireSize": "195/70R15", "wheelSize": "15x5.5" },
+        "1.6i (16\")": { "tireSize": "205/60R16", "wheelSize": "16x6" }
+      },
+      "status": "JDM_EUROPE_ONLY",
+      "notes": "1st gen HR-V not sold in North America.",
+      "source": "size-tire.com"
+    }
+  ],
+  "corrections": [
+    {
+      "vehicle": "2000 Honda CR-V",
+      "action": "REMOVE",
+      "size": "215/65R16",
+      "reason": "Not OEM - all trims use 205/70R15"
+    },
+    {
+      "vehicle": "2011-2016 Honda Crosstour",
+      "action": "REPLACE",
+      "oldSize": "235/60R18",
+      "newSize": "225/60R18",
+      "reason": "OEM is 225/60R18, not 235/60R18"
+    },
+    {
+      "vehicle": "2003-2006, 2011 Honda Element",
+      "action": "REMOVE",
+      "size": "225/65R17",
+      "reason": "Not OEM. Only 215/70R16 (all trims) or 225/55R18 (SC 2007-2010)"
+    },
+    {
+      "vehicle": "2007-2010 Honda Element",
+      "action": "REPLACE",
+      "oldSize": "225/65R17",
+      "newSize": "225/55R18",
+      "reason": "SC trim uses 225/55R18, not 225/65R17"
+    },
+    {
+      "vehicle": "2007-2008 Honda Fit",
+      "action": "REPLACE",
+      "oldSizes": ["175/65R15", "185/55R16"],
+      "newSizes": ["175/65R14", "195/55R15"],
+      "reason": "2007-2008 US Fit used 14/15\" wheels, not 15/16\""
+    },
+    {
+      "vehicle": "2016-2018 Honda HR-V",
+      "action": "REMOVE",
+      "size": "225/50R18",
+      "reason": "18\" not OEM until 2019. 2016-2018 all trims 17\" only"
+    },
+    {
+      "vehicle": "2023-2026 Honda HR-V",
+      "action": "REPLACE",
+      "oldSizes": ["215/55R17", "225/50R18"],
+      "newSizes": ["215/60R17", "225/55R18"],
+      "reason": "3rd gen HR-V has different tire specs from 2nd gen"
+    }
+  ],
+  "flaggedForRemoval": [
+    {
+      "model": "Honda Domani",
+      "years": "2000-2001",
+      "reason": "JDM only - never sold in North America"
+    },
+    {
+      "model": "Honda e",
+      "years": "2020-2024",
+      "reason": "Europe/Japan only - never sold in North America"
+    },
+    {
+      "model": "Honda FR-V",
+      "years": "2004-2009",
+      "reason": "Europe only - never sold in North America"
+    },
+    {
+      "model": "Honda Fit",
+      "years": "2001-2006",
+      "reason": "JDM only - US Fit launched 2007"
+    },
+    {
+      "model": "Honda HR-V (1st gen)",
+      "years": "2001-2006",
+      "reason": "JDM/Europe only - US HR-V launched 2016"
+    }
+  ]
+}

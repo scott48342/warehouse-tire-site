@@ -1,0 +1,1110 @@
+{
+  "batchId": "69",
+  "processedAt": "2026-04-21T22:08:00Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["215/65R15", "215/60R16", "225/60R16"],
+      "validatedTireSizes": ["215/65R16"],
+      "trims": [
+        {"trim": "LX", "tireSize": "215/65R16"},
+        {"trim": "EX", "tireSize": "215/65R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current DB has wrong sizes. OEM is 215/65R16 across all trims."
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["215/65R15", "215/60R16", "225/60R16"],
+      "validatedTireSizes": ["215/65R16"],
+      "trims": [
+        {"trim": "LX", "tireSize": "215/65R16"},
+        {"trim": "EX", "tireSize": "215/65R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Current DB has wrong sizes. OEM is 215/65R16 (Michelin Symmetry)."
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Orthia",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "195/60R15"],
+      "trims": [
+        {"trim": "Base", "tireSize": "185/65R14"},
+        {"trim": "GX-S", "tireSize": "195/60R15"}
+      ],
+      "status": "MISSING",
+      "notes": "JDM-only vehicle. Tire sizes added from specifications."
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Orthia",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "195/60R15"],
+      "trims": [
+        {"trim": "Base", "tireSize": "185/65R14"},
+        {"trim": "GX-S", "tireSize": "195/60R15"}
+      ],
+      "status": "MISSING",
+      "notes": "JDM-only vehicle. Tire sizes added from specifications."
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Orthia",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "195/60R15"],
+      "trims": [
+        {"trim": "Base", "tireSize": "185/65R14"},
+        {"trim": "GX-S", "tireSize": "195/60R15"}
+      ],
+      "status": "MISSING",
+      "notes": "JDM-only vehicle. Tire sizes added from specifications."
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["265/60R18", "275/60R18"],
+      "validatedTireSizes": ["265/60R18", "275/60R18"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "265/60R18"},
+        {"trim": "EX-L", "tireSize": "265/60R18"},
+        {"trim": "TrailSport", "tireSize": "275/60R18"}
+      ],
+      "status": "VALID",
+      "notes": "TrailSport gets 275/60R18 A/T tires."
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["245/60R18", "265/45R20"],
+      "validatedTireSizes": ["245/60R18", "265/45R20"],
+      "trims": [
+        {"trim": "TrailSport", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "265/45R20"},
+        {"trim": "Elite", "tireSize": "265/45R20"}
+      ],
+      "status": "VALID",
+      "notes": "Correct tire sizes for 2022-2025 facelift generation."
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["245/60R18", "265/45R20"],
+      "validatedTireSizes": ["245/60R18", "265/45R20"],
+      "trims": [
+        {"trim": "TrailSport", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "265/45R20"},
+        {"trim": "Elite", "tireSize": "265/45R20"}
+      ],
+      "status": "VALID",
+      "notes": "Verified against Honda Info Center specs."
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["245/60R18", "265/45R20"],
+      "validatedTireSizes": ["245/60R18", "265/45R20"],
+      "trims": [
+        {"trim": "TrailSport", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "265/45R20"},
+        {"trim": "Elite", "tireSize": "265/45R20"}
+      ],
+      "status": "VALID",
+      "notes": "TrailSport uses 18\" wheels, others use 20\"."
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["245/60R18", "265/45R20"],
+      "validatedTireSizes": ["245/60R18", "265/45R20"],
+      "trims": [
+        {"trim": "TrailSport", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "265/45R20"},
+        {"trim": "Elite", "tireSize": "265/45R20"}
+      ],
+      "status": "VALID",
+      "notes": "First year for TrailSport trim."
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["245/60R18", "265/45R20"],
+      "validatedTireSizes": ["245/50R20", "265/45R20"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "245/50R20"},
+        {"trim": "EX-L", "tireSize": "245/50R20"},
+        {"trim": "Touring", "tireSize": "265/45R20"},
+        {"trim": "Elite", "tireSize": "265/45R20"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Should be 245/50R20 not 245/60R18 for base trims."
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["245/50R20", "265/45R20"],
+      "validatedTireSizes": ["245/50R20", "265/45R20"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "245/50R20"},
+        {"trim": "EX-L", "tireSize": "245/50R20"},
+        {"trim": "Touring", "tireSize": "265/45R20"},
+        {"trim": "Elite", "tireSize": "265/45R20"}
+      ],
+      "status": "VALID",
+      "notes": "20\" wheels across all trims, wider tires on Touring/Elite."
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["245/50R20", "265/45R20"],
+      "validatedTireSizes": ["245/50R20", "265/45R20"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "245/50R20"},
+        {"trim": "EX-L", "tireSize": "245/50R20"},
+        {"trim": "Touring", "tireSize": "265/45R20"},
+        {"trim": "Elite", "tireSize": "265/45R20"}
+      ],
+      "status": "VALID",
+      "notes": "First year of 3rd gen Passport. All trims use 20\" wheels."
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["245/60R18", "265/45R20"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": [
+        {"trim": "LX 4WD", "tireSize": "245/70R16"},
+        {"trim": "EX 4WD", "tireSize": "245/70R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2nd gen Passport (Isuzu Rodeo based). Wrong sizes in DB - should be 245/70R16."
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["245/60R18", "265/45R20"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": [
+        {"trim": "LX 4WD", "tireSize": "245/70R16"},
+        {"trim": "EX 4WD", "tireSize": "245/70R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2nd gen Passport. Completely wrong tire sizes in DB."
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Passport",
+      "currentTireSizes": ["245/60R18", "265/45R20"],
+      "validatedTireSizes": ["245/70R16"],
+      "trims": [
+        {"trim": "LX 4WD", "tireSize": "245/70R16"},
+        {"trim": "EX 4WD", "tireSize": "245/70R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "2nd gen Passport facelift. Wrong sizes in DB."
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20", "255/45R21"],
+      "validatedTireSizes": ["245/60R18", "255/50R20", "255/45R21"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "245/60R18"},
+        {"trim": "Sport", "tireSize": "255/50R20"},
+        {"trim": "Touring", "tireSize": "255/50R20"},
+        {"trim": "Elite", "tireSize": "255/50R20"},
+        {"trim": "Black Edition", "tireSize": "255/50R20"},
+        {"trim": "TrailSport", "tireSize": "265/60R18"}
+      ],
+      "status": "PARTIAL",
+      "notes": "Missing 265/60R18 for TrailSport trim. 255/45R21 may be aftermarket."
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20", "255/45R21", "255/60R18", "265/60R18"],
+      "validatedTireSizes": ["245/60R18", "255/50R20", "265/60R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "245/60R18"},
+        {"trim": "Sport", "tireSize": "255/50R20"},
+        {"trim": "Touring", "tireSize": "255/50R20"},
+        {"trim": "Elite", "tireSize": "255/50R20"},
+        {"trim": "TrailSport", "tireSize": "265/60R18"}
+      ],
+      "status": "PARTIAL",
+      "notes": "255/60R18 and 255/45R21 may be non-OEM. TrailSport uses rugged 265/60R18."
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20", "255/45R21", "255/60R18", "265/60R18"],
+      "validatedTireSizes": ["245/60R18", "255/50R20", "265/60R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "245/60R18"},
+        {"trim": "Sport", "tireSize": "255/50R20"},
+        {"trim": "Touring", "tireSize": "255/50R20"},
+        {"trim": "Elite", "tireSize": "255/50R20"},
+        {"trim": "TrailSport", "tireSize": "265/60R18"}
+      ],
+      "status": "PARTIAL",
+      "notes": "4th gen Pilot. 255/45R21 and 255/60R18 not OEM sizes."
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20", "255/45R21"],
+      "validatedTireSizes": ["255/60R18", "255/50R20", "265/60R18"],
+      "trims": [
+        {"trim": "EX-L", "tireSize": "255/60R18"},
+        {"trim": "Sport", "tireSize": "255/50R20"},
+        {"trim": "Touring", "tireSize": "255/50R20"},
+        {"trim": "Elite", "tireSize": "255/50R20"},
+        {"trim": "TrailSport", "tireSize": "265/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "All-new 4th gen. EX-L uses 255/60R18 (not 245/60R18). TrailSport has 265/60R18."
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20", "245/50R20", "245/55R19", "265/50R19", "265/45R20", "275/40R21", "285/35ZR22"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "245/60R18"},
+        {"trim": "Special Edition", "tireSize": "245/50R20"},
+        {"trim": "Touring", "tireSize": "245/50R20"},
+        {"trim": "Elite", "tireSize": "245/50R20"},
+        {"trim": "Black Edition", "tireSize": "245/50R20"},
+        {"trim": "TrailSport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Last 3rd gen year. Many non-OEM sizes in DB (19\", 21\", 22\" options are aftermarket)."
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20", "245/50R20", "245/55R19", "265/50R19", "265/45R20", "275/40R21", "285/35ZR22"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/60R18"},
+        {"trim": "EX", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "245/60R18"},
+        {"trim": "Touring", "tireSize": "245/50R20"},
+        {"trim": "Elite", "tireSize": "245/50R20"},
+        {"trim": "Black Edition", "tireSize": "245/50R20"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is only 245/60R18 and 245/50R20. Other sizes are aftermarket."
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20", "245/50R20", "245/55R19", "265/50R19", "265/45R20", "275/40R21", "285/35ZR22"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/60R18"},
+        {"trim": "EX", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "245/60R18"},
+        {"trim": "Touring", "tireSize": "245/50R20"},
+        {"trim": "Elite", "tireSize": "245/50R20"},
+        {"trim": "Black Edition", "tireSize": "245/50R20"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 18\" or 20\" only. 19\"/21\"/22\" sizes are aftermarket."
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20", "245/50R20", "245/55R19", "265/50R19", "265/45R20", "275/40R21", "285/35ZR22"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/60R18"},
+        {"trim": "EX", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "245/60R18"},
+        {"trim": "Touring", "tireSize": "245/50R20"},
+        {"trim": "Elite", "tireSize": "245/50R20"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM options are 18\" and 20\" only. Aftermarket sizes should be removed."
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/60R18"},
+        {"trim": "EX", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "245/60R18"},
+        {"trim": "Touring", "tireSize": "245/50R20"},
+        {"trim": "Elite", "tireSize": "245/50R20"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Should be 245/50R20 not 255/50R20 for 20\" trims."
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/60R18"},
+        {"trim": "EX", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "245/60R18"},
+        {"trim": "Touring", "tireSize": "245/50R20"},
+        {"trim": "Elite", "tireSize": "245/50R20"}
+      ],
+      "status": "MISMATCH",
+      "notes": "20\" trims use 245/50R20 not 255/50R20."
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["245/60R18", "255/50R20"],
+      "validatedTireSizes": ["245/60R18", "245/50R20"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/60R18"},
+        {"trim": "EX", "tireSize": "245/60R18"},
+        {"trim": "EX-L", "tireSize": "245/60R18"},
+        {"trim": "Touring", "tireSize": "245/50R20"},
+        {"trim": "Elite", "tireSize": "245/50R20"}
+      ],
+      "status": "MISMATCH",
+      "notes": "First year 3rd gen. 20\" trims use 245/50R20."
+    },
+    {
+      "year": 2015,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/65R17", "245/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "235/65R17"},
+        {"trim": "EX", "tireSize": "235/65R17"},
+        {"trim": "EX-L", "tireSize": "235/60R18"},
+        {"trim": "Touring", "tireSize": "235/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "18\" trims use 235/60R18, not 245/60R18."
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/65R17", "245/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "235/65R17"},
+        {"trim": "EX", "tireSize": "235/65R17"},
+        {"trim": "EX-L", "tireSize": "235/60R18"},
+        {"trim": "Touring", "tireSize": "235/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "18\" option is 235/60R18, not 245/60R18."
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/65R17", "245/60R18", "235/60R18", "235/65R18", "255/60R17", "255/55R18", "255/50R19", "255/45ZR20", "265/45ZR20"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "235/65R17"},
+        {"trim": "EX", "tireSize": "235/65R17"},
+        {"trim": "EX-L", "tireSize": "235/60R18"},
+        {"trim": "Touring", "tireSize": "235/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Many aftermarket sizes in DB. OEM is only 235/65R17 and 235/60R18."
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/65R17", "245/60R18"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "235/65R17"},
+        {"trim": "EX", "tireSize": "235/65R17"},
+        {"trim": "EX-L", "tireSize": "235/60R18"},
+        {"trim": "Touring", "tireSize": "235/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "18\" option is 235/60R18, not 245/60R18."
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/65R17", "245/60R18"],
+      "validatedTireSizes": ["245/65R17", "245/60R18"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/65R17"},
+        {"trim": "EX", "tireSize": "245/65R17"},
+        {"trim": "EX-L", "tireSize": "245/65R17"},
+        {"trim": "Touring", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "17\" size is 245/65R17, not 235/65R17."
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/65R17", "245/60R18"],
+      "validatedTireSizes": ["245/65R17"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/65R17"},
+        {"trim": "EX", "tireSize": "245/65R17"},
+        {"trim": "EX-L", "tireSize": "245/65R17"},
+        {"trim": "Touring", "tireSize": "245/65R17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "All 2010 trims use 245/65R17. No 18\" factory option."
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/65R17", "245/60R18"],
+      "validatedTireSizes": ["245/65R17"],
+      "trims": [
+        {"trim": "LX", "tireSize": "245/65R17"},
+        {"trim": "EX", "tireSize": "245/65R17"},
+        {"trim": "EX-L", "tireSize": "245/65R17"},
+        {"trim": "Touring", "tireSize": "245/65R17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "First year 2nd gen. All trims use 245/65R17 on 17\" wheels."
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": [
+        {"trim": "LX", "tireSize": "235/70R16"},
+        {"trim": "EX", "tireSize": "235/70R16"},
+        {"trim": "EX-L", "tireSize": "235/70R16"},
+        {"trim": "Value Package", "tireSize": "235/70R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Last year 1st gen. OEM is 235/70R16 only. 235/65R17 is aftermarket."
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": [
+        {"trim": "LX", "tireSize": "235/70R16"},
+        {"trim": "EX", "tireSize": "235/70R16"},
+        {"trim": "EX-L", "tireSize": "235/70R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 235/70R16 only on 16\" wheels."
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": [
+        {"trim": "LX", "tireSize": "235/70R16"},
+        {"trim": "EX", "tireSize": "235/70R16"},
+        {"trim": "EX-L", "tireSize": "235/70R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 235/70R16. 17\" is aftermarket upgrade."
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": [
+        {"trim": "LX", "tireSize": "235/70R16"},
+        {"trim": "EX", "tireSize": "235/70R16"},
+        {"trim": "EX-L", "tireSize": "235/70R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 235/70R16 only."
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": [
+        {"trim": "LX", "tireSize": "235/70R16"},
+        {"trim": "EX", "tireSize": "235/70R16"},
+        {"trim": "EX-L", "tireSize": "235/70R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 235/70R16 on 16\" alloy wheels."
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Pilot",
+      "currentTireSizes": ["235/70R16", "235/65R17"],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": [
+        {"trim": "LX", "tireSize": "235/70R16"},
+        {"trim": "EX", "tireSize": "235/70R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "First year Pilot. OEM is 235/70R16 only."
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Prelude",
+      "currentTireSizes": ["235/40R19"],
+      "validatedTireSizes": ["235/40R19"],
+      "trims": [
+        {"trim": "Base", "tireSize": "235/40R19"}
+      ],
+      "status": "VALID",
+      "notes": "New Prelude Hybrid. 19\" gloss black alloy wheels standard."
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Prelude",
+      "currentTireSizes": ["195/60R15", "205/50R16", "215/45R17"],
+      "validatedTireSizes": ["235/40R19"],
+      "trims": [
+        {"trim": "Base", "tireSize": "235/40R19"}
+      ],
+      "status": "MISMATCH",
+      "notes": "New gen Prelude (BF1) uses 235/40R19. Old sizes are from defunct 5th gen."
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Prelude",
+      "currentTireSizes": ["195/60R15", "205/50R16", "215/45R17"],
+      "validatedTireSizes": ["205/50R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "205/50R16"},
+        {"trim": "Type SH", "tireSize": "205/50R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "5th gen Prelude OEM is 205/50R16. Other sizes are aftermarket."
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Prelude",
+      "currentTireSizes": ["195/60R15", "205/50R16", "215/45R17"],
+      "validatedTireSizes": ["205/50R16"],
+      "trims": [
+        {"trim": "Base", "tireSize": "205/50R16"},
+        {"trim": "Type SH", "tireSize": "205/50R16"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 205/50R16 on 16\" alloy wheels."
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Prologue",
+      "currentTireSizes": ["255/60R19"],
+      "validatedTireSizes": ["255/60R19", "275/45R21"],
+      "trims": [
+        {"trim": "EX", "tireSize": "255/60R19"},
+        {"trim": "Touring", "tireSize": "255/60R19"},
+        {"trim": "Elite", "tireSize": "275/45R21"}
+      ],
+      "status": "PARTIAL",
+      "notes": "Missing 275/45R21 for Elite trim with 21\" wheels."
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Prologue",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R19", "275/45R21"],
+      "trims": [
+        {"trim": "EX", "tireSize": "255/60R19"},
+        {"trim": "Touring", "tireSize": "255/60R19"},
+        {"trim": "Elite", "tireSize": "275/45R21"}
+      ],
+      "status": "MISSING",
+      "notes": "Electric SUV (Ultium platform). 19\" standard, 21\" on Elite."
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "Prologue",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/60R19", "275/45R21"],
+      "trims": [
+        {"trim": "EX", "tireSize": "255/60R19"},
+        {"trim": "Touring", "tireSize": "255/60R19"},
+        {"trim": "Elite", "tireSize": "275/45R21"}
+      ],
+      "status": "MISSING",
+      "notes": "First year Prologue. 19\" wheels standard, 21\" on Elite."
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "245/60R18"},
+        {"trim": "RTL", "tireSize": "245/60R18"},
+        {"trim": "Black Edition", "tireSize": "245/60R18"},
+        {"trim": "TrailSport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 245/60R18 across all trims. 275/45R20 is not factory."
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "245/60R18"},
+        {"trim": "RTL", "tireSize": "245/60R18"},
+        {"trim": "Black Edition", "tireSize": "245/60R18"},
+        {"trim": "TrailSport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "All 2nd gen Ridgeline trims use 18\" wheels with 245/60R18."
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "245/60R18"},
+        {"trim": "RTL", "tireSize": "245/60R18"},
+        {"trim": "Black Edition", "tireSize": "245/60R18"},
+        {"trim": "TrailSport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 245/60R18. TrailSport has all-terrain tires but same size."
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "245/60R18"},
+        {"trim": "RTL", "tireSize": "245/60R18"},
+        {"trim": "Black Edition", "tireSize": "245/60R18"},
+        {"trim": "TrailSport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "275/45R20 not OEM. All trims use 245/60R18."
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "245/60R18"},
+        {"trim": "RTL", "tireSize": "245/60R18"},
+        {"trim": "Black Edition", "tireSize": "245/60R18"},
+        {"trim": "TrailSport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 245/60R18 on 18\" alloy wheels."
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "245/60R18"},
+        {"trim": "RTL", "tireSize": "245/60R18"},
+        {"trim": "RTL-E", "tireSize": "245/60R18"},
+        {"trim": "Black Edition", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Refreshed 2nd gen. All trims 245/60R18."
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": [
+        {"trim": "Sport", "tireSize": "245/60R18"},
+        {"trim": "RTL", "tireSize": "245/60R18"},
+        {"trim": "RTL-E", "tireSize": "245/60R18"},
+        {"trim": "Black Edition", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 245/60R18 on 18\" wheels."
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/60R18"},
+        {"trim": "Sport", "tireSize": "245/60R18"},
+        {"trim": "RTL", "tireSize": "245/60R18"},
+        {"trim": "RTL-E", "tireSize": "245/60R18"},
+        {"trim": "RTL-T", "tireSize": "245/60R18"},
+        {"trim": "Black Edition", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "All trims use 245/60R18 (Firestone Destination LE2)."
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/60R18"},
+        {"trim": "Sport", "tireSize": "245/60R18"},
+        {"trim": "RTL", "tireSize": "245/60R18"},
+        {"trim": "RTL-E", "tireSize": "245/60R18"},
+        {"trim": "RTL-T", "tireSize": "245/60R18"},
+        {"trim": "Black Edition", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 245/60R18 across all trims."
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/60R18"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/60R18"},
+        {"trim": "RTS", "tireSize": "245/60R18"},
+        {"trim": "Sport", "tireSize": "245/60R18"},
+        {"trim": "RTL", "tireSize": "245/60R18"},
+        {"trim": "RTL-E", "tireSize": "245/60R18"},
+        {"trim": "RTL-T", "tireSize": "245/60R18"},
+        {"trim": "Black Edition", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "First year 2nd gen. All trims 245/60R18."
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "No 2016 Ridgeline in US (gap year). If sold, it was 1st gen with 245/65R17."
+    },
+    {
+      "year": 2015,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "No 2015 Ridgeline (production ended 2014). Wrong data in DB."
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17", "245/60R18"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"},
+        {"trim": "SE", "tireSize": "245/60R18"},
+        {"trim": "Sport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Last year 1st gen. SE/Sport have 18\". 275/45R20 is not OEM."
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17", "245/60R18"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"},
+        {"trim": "Sport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Sport trim has 18\" wheels. 275/45R20 not OEM."
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17", "245/60R18"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"},
+        {"trim": "Sport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Base trims 17\", Sport 18\"."
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17", "245/60R18"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"},
+        {"trim": "Sport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Sport gets 18\", others 17\"."
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17", "245/60R18"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"},
+        {"trim": "Sport", "tireSize": "245/60R18"}
+      ],
+      "status": "MISMATCH",
+      "notes": "275/45R20 not OEM."
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"},
+        {"trim": "RTX", "tireSize": "245/65R17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "All 2009 trims use 245/65R17 on 17\" wheels."
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"},
+        {"trim": "RTX", "tireSize": "245/65R17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 245/65R17 only."
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "OEM is 245/65R17 on 17\" alloy wheels."
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": ["245/60R18", "275/45R20"],
+      "validatedTireSizes": ["245/65R17"],
+      "trims": [
+        {"trim": "RT", "tireSize": "245/65R17"},
+        {"trim": "RTS", "tireSize": "245/65R17"},
+        {"trim": "RTL", "tireSize": "245/65R17"}
+      ],
+      "status": "MISMATCH",
+      "notes": "First year Ridgeline. OEM is 245/65R17 only."
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "Ridgeline",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": [],
+      "status": "NO_DATA",
+      "notes": "Ridgeline launched in 2006 for US market. 2005 model doesn't exist."
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "S-MX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/60R15"],
+      "trims": [
+        {"trim": "Base", "tireSize": "195/60R15"}
+      ],
+      "status": "MISSING",
+      "notes": "JDM-only mini MPV. Tire sizes added."
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "S-MX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/60R15"],
+      "trims": [
+        {"trim": "Base", "tireSize": "195/60R15"}
+      ],
+      "status": "MISSING",
+      "notes": "JDM-only mini MPV."
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "S-MX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/60R15"],
+      "trims": [
+        {"trim": "Base", "tireSize": "195/60R15"}
+      ],
+      "status": "MISSING",
+      "notes": "JDM-only mini MPV."
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "S2000",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "245/40R18"],
+      "validatedTireSizes": ["215/45R17", "245/40R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/45R17 (front) / 245/40R17 (rear)"}
+      ],
+      "status": "MISMATCH",
+      "notes": "S2000 has staggered setup. Front 215/45R17, Rear 245/40R17. 205/55R16 and 245/40R18 are aftermarket."
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "S2000",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "245/40R18"],
+      "validatedTireSizes": ["215/45R17", "245/40R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/45R17 (front) / 245/40R17 (rear)"},
+        {"trim": "CR", "tireSize": "215/45R17 (front) / 245/40R17 (rear)"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Staggered OEM setup. CR (Club Racer) uses same sizes."
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "S2000",
+      "currentTireSizes": ["205/55R16", "215/45R17", "225/45R17", "245/40R18"],
+      "validatedTireSizes": ["215/45R17", "245/40R17"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/45R17 (front) / 245/40R17 (rear)"}
+      ],
+      "status": "MISMATCH",
+      "notes": "Staggered 17\" setup. Other sizes are aftermarket."
+    }
+  ],
+  "summary": {
+    "valid": 8,
+    "mismatch": 54,
+    "partial": 5,
+    "missing": 7,
+    "noData": 1,
+    "totalIssues": 60,
+    "criticalFindings": [
+      "Ridgeline: 275/45R20 incorrectly listed across all years - should be 245/65R17 (2006-2014) or 245/60R18 (2017+)",
+      "Passport 2000-2002: Modern 3rd gen sizes listed for 2nd gen (Isuzu-based) - should be 245/70R16",
+      "Pilot 2016-2022: 20\" trims should be 245/50R20 not 255/50R20",
+      "Pilot 2003-2008: 235/65R17 listed but OEM is 235/70R16 only",
+      "S2000: Staggered setup not properly represented - F:215/45R17 R:245/40R17",
+      "Prologue 2024-2025: Missing all tire data for new EV",
+      "Orthia/S-MX: JDM models missing tire data"
+    ]
+  }
+}

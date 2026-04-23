@@ -1,0 +1,670 @@
+{
+  "batchId": 19,
+  "researchedAt": "2026-04-21",
+  "source": "tiresize.com",
+  "results": [
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "found": true,
+      "tireSizes": {
+        "front": "245/45R20",
+        "rear": "255/45R20"
+      },
+      "isStaggered": true,
+      "wheelDiameter": 20,
+      "notes": "Magnum SRT8 - staggered setup"
+    },
+    {
+      "year": 2007,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "found": true,
+      "tireSizes": {
+        "front": "245/45R20",
+        "rear": "255/45R20"
+      },
+      "isStaggered": true,
+      "wheelDiameter": 20,
+      "notes": "Magnum SRT8 - staggered setup"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "found": true,
+      "tireSizes": {
+        "front": "245/45R20",
+        "rear": "255/45R20"
+      },
+      "isStaggered": true,
+      "wheelDiameter": 20,
+      "notes": "Magnum SRT8 - staggered setup"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "magnum-srt",
+      "found": false,
+      "notUS": true,
+      "notes": "Dodge Magnum discontinued after 2008 model year - vehicle does not exist"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "neon-srt",
+      "found": true,
+      "tireSizes": {
+        "front": "205/50R17",
+        "rear": "205/50R17"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 17,
+      "notes": "Neon SRT4"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "neon-srt",
+      "found": true,
+      "tireSizes": {
+        "front": "205/50R17",
+        "rear": "205/50R17"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 17,
+      "notes": "Neon SRT4"
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "neon-srt",
+      "found": true,
+      "tireSizes": {
+        "front": "205/50R17",
+        "rear": "205/50R17"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 17,
+      "notes": "Neon SRT4"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "ram-2500",
+      "found": true,
+      "tireSizes": {
+        "front": "265/70R17",
+        "rear": "265/70R17"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 17,
+      "notes": "2010 Dodge Ram 2500 - multiple trim options available"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "ram-3500",
+      "found": true,
+      "tireSizes": {
+        "front": "265/70R17",
+        "rear": "265/70R17"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 17,
+      "notes": "2010 Dodge Ram 3500 - SRW non-dually trims"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "ram-srt",
+      "found": true,
+      "tireSizes": {
+        "front": "305/40R22",
+        "rear": "305/40R22"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 22,
+      "notes": "Ram SRT-10 with Viper V10 engine"
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "ram-srt",
+      "found": true,
+      "tireSizes": {
+        "front": "305/40R22",
+        "rear": "305/40R22"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 22,
+      "notes": "Ram SRT-10 with Viper V10 engine"
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "ram-srt",
+      "found": true,
+      "tireSizes": {
+        "front": "305/40R22",
+        "rear": "305/40R22"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 22,
+      "notes": "Ram SRT-10 with Viper V10 engine"
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "ram-van-b1500",
+      "found": true,
+      "tireSizes": {
+        "front": "235/75R15",
+        "rear": "235/75R15"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 15,
+      "notes": "Ram Van/Ram Wagon B1500"
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "ram-van-b1500",
+      "found": true,
+      "tireSizes": {
+        "front": "235/75R15",
+        "rear": "235/75R15"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 15,
+      "notes": "Ram Van/Ram Wagon B1500"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "ram-van-b1500",
+      "found": true,
+      "tireSizes": {
+        "front": "235/75R15",
+        "rear": "235/75R15"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 15,
+      "notes": "Ram Van/Ram Wagon B1500"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "ram-van-b1500",
+      "found": true,
+      "tireSizes": {
+        "front": "235/75R15",
+        "rear": "235/75R15"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 15,
+      "notes": "Ram Van/Ram Wagon B1500"
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "ram-van-b2500",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Ram Van/Ram Wagon B2500"
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "ram-van-b2500",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Ram Van/Ram Wagon B2500"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "ram-van-b2500",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Ram Van/Ram Wagon B2500"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "ram-van-b2500",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Ram Van/Ram Wagon B2500"
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "ram-van-b3500",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Ram Van/Ram Wagon B3500 (Maxi uses 245/75R16)"
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "ram-van-b3500",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Ram Van/Ram Wagon B3500"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "ram-van-b3500",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Ram Van/Ram Wagon B3500"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "ram-van-b3500",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Ram Van/Ram Wagon B3500"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "sprinter",
+      "found": false,
+      "notUS": true,
+      "notes": "Dodge Sprinter not sold in US until 2003/2004 model year - tiresize.com shows data starting 2004"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "sprinter",
+      "found": false,
+      "notUS": true,
+      "notes": "Dodge Sprinter not found on tiresize.com for 2003 - data starts at 2004 MY"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "sprinter",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Sprinter 2500: 225/70R15 or 225/75R16; Sprinter 3500: 195/70R15"
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "sprinter",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Sprinter 2500: 225/70R15 or 225/75R16; Sprinter 3500: 195/70R15"
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "sprinter",
+      "found": true,
+      "tireSizes": {
+        "front": "225/75R16",
+        "rear": "225/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Sprinter 2500: 225/70R15 or 225/75R16; Sprinter 3500: 195/70R15"
+    },
+    {
+      "year": 2007,
+      "make": "dodge",
+      "model": "sprinter",
+      "found": true,
+      "tireSizes": {
+        "front": "245/75R16",
+        "rear": "245/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "2007+ Sprinter redesign. 2500: 245/75R16; 3500: 215/85R16"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "sprinter",
+      "found": true,
+      "tireSizes": {
+        "front": "245/75R16",
+        "rear": "245/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Sprinter 2500: 245/75R16; Sprinter 3500: 215/85R16"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "sprinter",
+      "found": true,
+      "tireSizes": {
+        "front": "245/75R16",
+        "rear": "245/75R16"
+      },
+      "isStaggered": false,
+      "wheelDiameter": 16,
+      "notes": "Sprinter 2500: 245/75R16; Sprinter 3500: 215/85R16. Last year of Dodge Sprinter."
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "275/35R18",
+        "rear": "335/30R18"
+      },
+      "isStaggered": true,
+      "wheelDiameter": 18,
+      "notes": "Viper RT/10 and GTS - staggered tires, same wheel diameter"
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "275/35R18",
+        "rear": "335/30R18"
+      },
+      "isStaggered": true,
+      "wheelDiameter": 18,
+      "notes": "Viper RT/10 and GTS - staggered tires, same wheel diameter"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "275/35R18",
+        "rear": "335/30R18"
+      },
+      "isStaggered": true,
+      "wheelDiameter": 18,
+      "notes": "Viper RT/10 and GTS - staggered tires, same wheel diameter"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "275/35R18",
+        "rear": "345/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "Viper SRT-10 - staggered tires AND wheels (18 front, 19 rear)"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "275/35R18",
+        "rear": "345/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "Viper SRT-10 - staggered tires AND wheels (18 front, 19 rear)"
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "275/35R18",
+        "rear": "345/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "Viper SRT-10 - staggered tires AND wheels (18 front, 19 rear)"
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "275/35R18",
+        "rear": "345/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "Viper SRT-10 - staggered tires AND wheels (18 front, 19 rear)"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "275/35R18",
+        "rear": "345/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "Viper SRT-10 - staggered tires AND wheels (18 front, 19 rear)"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "275/35R18",
+        "rear": "345/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "Viper SRT-10 - staggered tires AND wheels (18 front, 19 rear)"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "275/35R18",
+        "rear": "345/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "Viper SRT-10 - same specs as 2009 (final year of 4th gen)"
+    },
+    {
+      "year": 2013,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "295/30R18",
+        "rear": "355/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "5th gen Viper SRT - staggered tires AND wheels (18 front, 19 rear)"
+    },
+    {
+      "year": 2014,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "295/30R18",
+        "rear": "355/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "5th gen Viper SRT - staggered tires AND wheels (18 front, 19 rear)"
+    },
+    {
+      "year": 2015,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "295/30R18",
+        "rear": "355/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "5th gen Viper SRT - staggered tires AND wheels (18 front, 19 rear)"
+    },
+    {
+      "year": 2016,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "295/30R18",
+        "rear": "355/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "5th gen Viper SRT - staggered tires AND wheels (18 front, 19 rear)"
+    },
+    {
+      "year": 2017,
+      "make": "dodge",
+      "model": "viper",
+      "found": true,
+      "tireSizes": {
+        "front": "295/30R18",
+        "rear": "355/30R19"
+      },
+      "isStaggered": true,
+      "wheelDiameter": {
+        "front": 18,
+        "rear": 19
+      },
+      "notes": "5th gen Viper - final model year, same specs as 2016"
+    },
+    {
+      "year": 2015,
+      "make": "dodge",
+      "model": "vision",
+      "found": false,
+      "notUS": true,
+      "notes": "Dodge Vision not found on tiresize.com - appears to be Mexico-market vehicle only"
+    },
+    {
+      "year": 2016,
+      "make": "dodge",
+      "model": "vision",
+      "found": false,
+      "notUS": true,
+      "notes": "Dodge Vision not found on tiresize.com - appears to be Mexico-market vehicle only"
+    },
+    {
+      "year": 2017,
+      "make": "dodge",
+      "model": "vision",
+      "found": false,
+      "notUS": true,
+      "notes": "Dodge Vision not found on tiresize.com - appears to be Mexico-market vehicle only"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 50,
+    "found": 44,
+    "notFound": 6,
+    "markedNotUS": 6,
+    "staggeredSetups": 18
+  }
+}

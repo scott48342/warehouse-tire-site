@@ -1,0 +1,86 @@
+[
+  {
+    "id": "8ab15f8c-286c-49d1-92f2-18cf1776a001",
+    "year": 2025,
+    "make": "land-rover",
+    "model": "range-rover-velar",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "285/35R22"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "b589faf6-f0d0-43c2-871d-d16b844a96c8",
+    "year": 2026,
+    "make": "land-rover",
+    "model": "range-rover-velar",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "72.6",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 9.5,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "255/55R19",
+      "275/45R20",
+      "275/40R21",
+      "285/35R22"
+    ],
+    "source": "catalog-gap-fill"
+  }
+]

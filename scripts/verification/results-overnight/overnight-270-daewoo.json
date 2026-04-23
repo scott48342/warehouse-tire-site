@@ -1,0 +1,194 @@
+[
+  {
+    "id": "5f2a207f-a1d0-4e1d-94d1-1972dfba6887",
+    "year": 1999,
+    "make": "Daewoo",
+    "model": "Lanos",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 56.1 to 56.6",
+    "verifiedBoltPattern": "4x100",
+    "verifiedHubBore": "56.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 5,
+        "offset": 49,
+        "diameter": 13
+      },
+      {
+        "width": 5.5,
+        "offset": 49,
+        "diameter": 14
+      }
+    ],
+    "verifiedTireSizes": [
+      "175/70R13",
+      "185/60R14"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e2572eee-b3e8-45e2-83b9-38c48ca30faa",
+    "year": 1999,
+    "make": "Daewoo",
+    "model": "Nubira",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "4x114.3",
+    "verifiedHubBore": "56.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 45,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 45,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "185/65R14",
+      "195/55R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "88356a06-7086-488a-9320-63890bbcfdba",
+    "year": 1999,
+    "make": "daewoo",
+    "model": "leganza",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "56.6",
+    "verifiedWheelSizes": [
+      {
+        "width": 6,
+        "offset": 50,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/60R15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e64759b7-043a-4b5a-bf42-2501de884b3c",
+    "year": 2000,
+    "make": "daewoo",
+    "model": "leganza",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 67.1 to 56.6",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "56.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/65R15",
+      "205/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "596190fa-600d-4024-841c-8bfb0a765744",
+    "year": 2001,
+    "make": "daewoo",
+    "model": "leganza",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 67.1 to 56.6",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "56.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/65R15",
+      "205/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b344cf7c-33c4-4460-b779-6de9ea2f0306",
+    "year": 2002,
+    "make": "daewoo",
+    "model": "leganza",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Hub bore corrected from 67.1 to 56.6",
+    "verifiedBoltPattern": "5x114.3",
+    "verifiedHubBore": "56.6",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "front",
+        "width": 6.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/65R15",
+      "205/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  }
+]

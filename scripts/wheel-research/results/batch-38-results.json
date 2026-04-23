@@ -1,0 +1,1187 @@
+{
+  "batchId": "38",
+  "processedAt": "2026-04-21T21:09:00Z",
+  "totalVehicles": 75,
+  "successCount": 75,
+  "failureCount": 0,
+  "results": [
+    {
+      "year": 2001,
+      "make": "Mazda",
+      "model": "Laputa",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheels": [
+          { "diameter": 13, "width": 4.5, "offset": 45 },
+          { "diameter": 14, "width": 5.0, "offset": 45 }
+        ]
+      },
+      "source": "roadkillcustoms.com, wikipedia (Suzuki Kei clone)",
+      "confidence": "medium",
+      "notes": "Rebadged Suzuki Kei (kei car, Japan market only)"
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "Laputa",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheels": [
+          { "diameter": 13, "width": 4.5, "offset": 45 },
+          { "diameter": 14, "width": 5.0, "offset": 45 }
+        ]
+      },
+      "source": "roadkillcustoms.com, wikipedia (Suzuki Kei clone)",
+      "confidence": "medium",
+      "notes": "Rebadged Suzuki Kei (kei car, Japan market only)"
+    },
+    {
+      "year": 2025,
+      "make": "Mazda",
+      "model": "Mazda2-Hybrid",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6.0, "offset": 45 }
+        ]
+      },
+      "source": "Toyota Yaris Hybrid platform specs",
+      "confidence": "high",
+      "notes": "Based on Toyota Yaris Hybrid platform (Europe market)"
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "Mazda2-Hybrid",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6.0, "offset": 45 }
+        ]
+      },
+      "source": "Toyota Yaris Hybrid platform specs",
+      "confidence": "high",
+      "notes": "Based on Toyota Yaris Hybrid platform (Europe market)"
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "Mazda2-Hybrid",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6.0, "offset": 45 }
+        ]
+      },
+      "source": "Toyota Yaris Hybrid platform specs",
+      "confidence": "high",
+      "notes": "Based on Toyota Yaris Hybrid platform (Europe market)"
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "Mazda2-Hybrid",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6.0, "offset": 45 }
+        ]
+      },
+      "source": "Toyota Yaris Hybrid platform specs",
+      "confidence": "high",
+      "notes": "Based on Toyota Yaris Hybrid platform (Europe market)"
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "Mazda2-Hybrid",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheels": [
+          { "diameter": 15, "width": 5.5, "offset": 45 },
+          { "diameter": 16, "width": 6.0, "offset": 45 }
+        ]
+      },
+      "source": "Toyota Yaris Hybrid platform specs",
+      "confidence": "high",
+      "notes": "Based on Toyota Yaris Hybrid platform (Europe market)"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7.0, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "high",
+      "notes": "2nd gen BL (2010-2013)"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7.0, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "high",
+      "notes": "2nd gen BL (2010-2013)"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7.0, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "high",
+      "notes": "2nd gen BL (2010-2013)"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7.0, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "high",
+      "notes": "2nd gen BL (2010-2013)"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7.0, "offset": 50 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "high",
+      "notes": "1st gen BK facelift (2006-2009)"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7.0, "offset": 50 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "high",
+      "notes": "1st gen BK facelift (2006-2009)"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7.0, "offset": 50 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "high",
+      "notes": "1st gen BK facelift (2006-2009)"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7.0, "offset": 50 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "high",
+      "notes": "1st gen BK (2004-2006)"
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7.0, "offset": 50 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "high",
+      "notes": "1st gen BK (2004-2006)"
+    },
+    {
+      "year": 2004,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7.0, "offset": 50 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "high",
+      "notes": "1st gen BK (2004-2006)"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda3-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "Performance version, Europe/Australia market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda3-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "Performance version, Europe/Australia market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda3-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "Performance version, Europe/Australia market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda3-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "Performance version, Europe/Australia market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda3-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "Performance version, 1st gen"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda3-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "Performance version, 1st gen"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda3-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "Performance version, 1st gen"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda3-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "Performance version, 1st gen"
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Mazda5",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 52.5 },
+          { "diameter": 17, "width": 6.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazdas247.com forum, mazda3club.com",
+      "confidence": "high",
+      "notes": "Compact MPV"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda6-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com, redline360.com",
+      "confidence": "high",
+      "notes": "Performance version of Mazda6, Europe/Australia name"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda6-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com, redline360.com",
+      "confidence": "high",
+      "notes": "Performance version of Mazda6, Europe/Australia name"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda6-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com, redline360.com",
+      "confidence": "high",
+      "notes": "Performance version of Mazda6, Europe/Australia name"
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Mazda6-MPS",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com, redline360.com",
+      "confidence": "high",
+      "notes": "Performance version of Mazda6, Europe/Australia name"
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "Mazda6-Ruiyi",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 7.0, "offset": 55 },
+          { "diameter": 17, "width": 7.0, "offset": 55 }
+        ]
+      },
+      "source": "1010tires.com, mazda6club.com",
+      "confidence": "high",
+      "notes": "Chinese market Mazda6 variant"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "Mazda6-Ruiyi",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 7.0, "offset": 55 },
+          { "diameter": 17, "width": 7.0, "offset": 55 }
+        ]
+      },
+      "source": "1010tires.com, mazda6club.com",
+      "confidence": "high",
+      "notes": "Chinese market Mazda6 variant"
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "Mazda6-Ruiyi",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 7.0, "offset": 55 },
+          { "diameter": 17, "width": 7.0, "offset": 55 }
+        ]
+      },
+      "source": "1010tires.com, mazda6club.com",
+      "confidence": "high",
+      "notes": "Chinese market Mazda6 variant"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda6-Ruiyi",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 7.0, "offset": 55 },
+          { "diameter": 17, "width": 7.0, "offset": 55 }
+        ]
+      },
+      "source": "1010tires.com, mazda6club.com",
+      "confidence": "high",
+      "notes": "Chinese market Mazda6 variant"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda6-Ruiyi",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 7.0, "offset": 55 },
+          { "diameter": 17, "width": 7.0, "offset": 55 }
+        ]
+      },
+      "source": "1010tires.com, mazda6club.com",
+      "confidence": "high",
+      "notes": "Chinese market Mazda6 variant"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda6-Ruiyi",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 7.0, "offset": 55 },
+          { "diameter": 17, "width": 7.0, "offset": 55 }
+        ]
+      },
+      "source": "1010tires.com, mazda6club.com",
+      "confidence": "high",
+      "notes": "Chinese market Mazda6 variant"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda6-Ruiyi",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 7.0, "offset": 55 },
+          { "diameter": 17, "width": 7.0, "offset": 55 }
+        ]
+      },
+      "source": "1010tires.com, mazda6club.com",
+      "confidence": "high",
+      "notes": "Chinese market Mazda6 variant"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda6-Ruiyi",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 7.0, "offset": 55 },
+          { "diameter": 17, "width": 7.0, "offset": 55 }
+        ]
+      },
+      "source": "1010tires.com, mazda6club.com",
+      "confidence": "high",
+      "notes": "Chinese market Mazda6 variant"
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets (Hong Kong, Indonesia, Singapore, Malaysia)"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets"
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazda8",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "autofiles.com, wheelssize.com",
+      "confidence": "high",
+      "notes": "MPV rebadged for Asian markets"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazdaspeed-3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "North American performance Mazda3"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazdaspeed-3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "North American performance Mazda3"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazdaspeed-3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "North American performance Mazda3"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazdaspeed-3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "North American performance Mazda3, 2nd gen start"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazdaspeed-3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "North American performance Mazda3, 1st gen"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazdaspeed-3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "North American performance Mazda3, 1st gen"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazdaspeed-3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum, maperformance.com",
+      "confidence": "high",
+      "notes": "North American performance Mazda3, debut year"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazdaspeed-3",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum",
+      "confidence": "medium",
+      "notes": "2006 was released in late model year in some markets"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazdaspeed-6",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 7.5, "offset": 55 },
+          { "diameter": 19, "width": 8.0, "offset": 48 }
+        ]
+      },
+      "source": "tirewheelguide.com, redline360.com, mazda6club.com",
+      "confidence": "high",
+      "notes": "North American performance Mazda6"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazdaspeed-6",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 7.5, "offset": 55 },
+          { "diameter": 19, "width": 8.0, "offset": 48 }
+        ]
+      },
+      "source": "tirewheelguide.com, redline360.com, mazda6club.com",
+      "confidence": "high",
+      "notes": "North American performance Mazda6"
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Mazdaspeed-6",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.0, "offset": 55 },
+          { "diameter": 18, "width": 7.5, "offset": 55 }
+        ]
+      },
+      "source": "tirewheelguide.com, redline360.com",
+      "confidence": "high",
+      "notes": "North American performance Mazda6, debut year"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazdaspeed-Axela",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum (same as Mazdaspeed 3)",
+      "confidence": "high",
+      "notes": "Japanese market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazdaspeed-Axela",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum (same as Mazdaspeed 3)",
+      "confidence": "high",
+      "notes": "Japanese market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "Mazdaspeed-Axela",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum (same as Mazdaspeed 3)",
+      "confidence": "high",
+      "notes": "Japanese market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "Mazdaspeed-Axela",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum (same as Mazdaspeed 3)",
+      "confidence": "high",
+      "notes": "Japanese market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "Mazdaspeed-Axela",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum (same as Mazdaspeed 3)",
+      "confidence": "high",
+      "notes": "Japanese market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "Mazdaspeed-Axela",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum (same as Mazdaspeed 3)",
+      "confidence": "high",
+      "notes": "Japanese market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Mazdaspeed-Axela",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum (same as Mazdaspeed 3)",
+      "confidence": "high",
+      "notes": "Japanese market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Mazdaspeed-Axela",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "mazda3revolution.com forum (same as Mazdaspeed 3)",
+      "confidence": "high",
+      "notes": "Japanese market name for Mazdaspeed 3"
+    },
+    {
+      "year": 2003,
+      "make": "Mazda",
+      "model": "Millenia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 49 },
+          { "diameter": 17, "width": 7.0, "offset": 50 }
+        ]
+      },
+      "source": "wheelsynergy.com, bbwheelsonline.com",
+      "confidence": "high",
+      "notes": "Final year of production, luxury sedan"
+    },
+    {
+      "year": 2002,
+      "make": "Mazda",
+      "model": "Millenia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 49 },
+          { "diameter": 17, "width": 7.0, "offset": 50 }
+        ]
+      },
+      "source": "wheelsynergy.com, bbwheelsonline.com",
+      "confidence": "high",
+      "notes": "Luxury sedan"
+    },
+    {
+      "year": 2001,
+      "make": "Mazda",
+      "model": "Millenia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 49 },
+          { "diameter": 17, "width": 7.0, "offset": 50 }
+        ]
+      },
+      "source": "wheelsynergy.com, bbwheelsonline.com",
+      "confidence": "high",
+      "notes": "Luxury sedan"
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "Millenia",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 49 },
+          { "diameter": 17, "width": 7.0, "offset": 50 }
+        ]
+      },
+      "source": "wheelsynergy.com, bbwheelsonline.com",
+      "confidence": "high",
+      "notes": "Luxury sedan"
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "MX-3",
+      "specs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "wheels": [
+          { "diameter": 14, "width": 5.5, "offset": 45 },
+          { "diameter": 15, "width": 6.0, "offset": 45 }
+        ]
+      },
+      "source": "tirewheelguide.com, roadkillcustoms.com",
+      "confidence": "high",
+      "notes": "Final year of MX-3 in select markets"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "MX-5-Miata",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "apexwheels.com, good-win-racing.com",
+      "confidence": "high",
+      "notes": "NC generation (final year)"
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "MX-5-Miata",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 67.1,
+        "wheels": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7.0, "offset": 45 }
+        ]
+      },
+      "source": "apexwheels.com, good-win-racing.com",
+      "confidence": "high",
+      "notes": "NC generation"
+    }
+  ]
+}

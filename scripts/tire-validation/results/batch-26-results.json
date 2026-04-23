@@ -1,0 +1,884 @@
+{
+  "batchId": "26",
+  "processedAt": "2026-04-21T21:48:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "srx",
+      "validatedTireSizes": ["235/65R17", "255/60R17", "235/60R18", "255/55R18", "255/50R20"],
+      "trims": {
+        "V6 Base/Luxury": {"front": "235/65R17", "rear": "255/60R17", "staggered": true},
+        "V8 Base/Luxury": {"front": "235/60R18", "rear": "255/55R18", "staggered": true},
+        "Sport Package": {"front": "255/50R20", "rear": "255/50R20", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "First-gen SRX uses staggered fitments on V6/V8, square on Sport Package"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "srx",
+      "validatedTireSizes": ["235/65R17", "255/60R17", "235/60R18", "255/55R18", "255/50R20"],
+      "trims": {
+        "V6 Base/Luxury": {"front": "235/65R17", "rear": "255/60R17", "staggered": true},
+        "V8 Base/Luxury": {"front": "235/60R18", "rear": "255/55R18", "staggered": true},
+        "Sport Package": {"front": "255/50R20", "rear": "255/50R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "srx",
+      "validatedTireSizes": ["235/65R17", "255/60R17", "235/60R18", "255/55R18", "255/50R20"],
+      "trims": {
+        "V6 Base/Luxury": {"front": "235/65R17", "rear": "255/60R17", "staggered": true},
+        "V8 Base/Luxury": {"front": "235/60R18", "rear": "255/55R18", "staggered": true},
+        "Sport Package": {"front": "255/50R20", "rear": "255/50R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "srx",
+      "validatedTireSizes": ["235/65R17", "255/60R17", "235/60R18", "255/55R18", "255/50R20"],
+      "trims": {
+        "V6 Base/Luxury": {"front": "235/65R17", "rear": "255/60R17", "staggered": true},
+        "V8 Base/Luxury Performance": {"front": "235/60R18", "rear": "255/55R18", "staggered": true},
+        "Sport Package": {"front": "255/50R20", "rear": "255/50R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "srx",
+      "validatedTireSizes": ["235/65R17", "255/60R17", "235/60R18", "255/55R18"],
+      "trims": {
+        "V6 Base/Luxury": {"front": "235/65R17", "rear": "255/60R17", "staggered": true},
+        "V8 Luxury Performance": {"front": "235/60R18", "rear": "255/55R18", "staggered": true}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "cadillac",
+      "model": "srx",
+      "validatedTireSizes": ["235/65R17", "255/60R17", "235/60R18", "255/55R18"],
+      "trims": {
+        "V6": {"front": "235/65R17", "rear": "255/60R17", "staggered": true},
+        "V8": {"front": "235/60R18", "rear": "255/55R18", "staggered": true}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "sts-v",
+      "validatedTireSizes": ["255/45R18", "275/40R19"],
+      "trims": {
+        "STS-V": {"front": "255/45R18", "rear": "275/40R19", "staggered": true}
+      },
+      "source": "tiresize.com",
+      "notes": "High-performance supercharged V8 with staggered setup"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "sts-v",
+      "validatedTireSizes": ["255/45R18", "275/40R19"],
+      "trims": {
+        "STS-V": {"front": "255/45R18", "rear": "275/40R19", "staggered": true}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "sts-v",
+      "validatedTireSizes": ["255/45R18", "275/40R19"],
+      "trims": {
+        "STS-V": {"front": "255/45R18", "rear": "275/40R19", "staggered": true}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "sts-v",
+      "validatedTireSizes": ["255/45R18", "275/40R19"],
+      "trims": {
+        "STS-V": {"front": "255/45R18", "rear": "275/40R19", "staggered": true}
+      },
+      "source": "tiresize.com",
+      "notes": "First year of STS-V production"
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "sts-v",
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "tiresize.com",
+      "notes": "STS-V was NOT produced in 2005. The STS-V debuted in 2006. Database error - vehicle doesn't exist for this year."
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "vistiq",
+      "validatedTireSizes": ["285/45R21", "295/40R22"],
+      "trims": {
+        "Luxury": {"size": "285/45R21", "staggered": false, "notes": "Self-sealing all-season"},
+        "Sport": {"size": "285/45R21", "staggered": false, "notes": "Self-sealing all-season"},
+        "Premium Luxury": {"size": "295/40R22", "staggered": false}
+      },
+      "source": "johnelwaycadillac.com, gmauthority.com",
+      "notes": "New electric three-row SUV on Ultium platform"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "vistiq",
+      "validatedTireSizes": ["285/45R21", "295/40R22"],
+      "trims": {
+        "Luxury": {"size": "285/45R21", "staggered": false},
+        "Sport": {"size": "285/45R21", "staggered": false},
+        "Premium Luxury": {"size": "295/40R22", "staggered": false}
+      },
+      "source": "johnelwaycadillac.com"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "validatedTireSizes": ["235/45R19", "255/40R19"],
+      "trims": {
+        "XLR-V": {"front": "235/45R19", "rear": "255/40R19", "staggered": true}
+      },
+      "source": "tiresize.com",
+      "notes": "Final year of XLR-V production"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "validatedTireSizes": ["235/45R19", "255/40R19"],
+      "trims": {
+        "XLR-V": {"front": "235/45R19", "rear": "255/40R19", "staggered": true}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "validatedTireSizes": ["235/45R19", "255/40R19"],
+      "trims": {
+        "XLR-V": {"front": "235/45R19", "rear": "255/40R19", "staggered": true}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "xlr-v",
+      "validatedTireSizes": ["235/45R19", "255/40R19"],
+      "trims": {
+        "XLR-V": {"front": "235/45R19", "rear": "255/40R19", "staggered": true}
+      },
+      "source": "tiresize.com",
+      "notes": "First year of XLR-V production"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "xt4",
+      "validatedTireSizes": ["235/60R18", "245/45R20"],
+      "trims": {
+        "Premium Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Sport": {"size": "235/60R18", "optional": "245/45R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "xt4",
+      "validatedTireSizes": ["235/60R18", "245/45R20"],
+      "trims": {
+        "Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Premium Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Sport": {"size": "235/60R18", "optional": "245/45R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "xt4",
+      "validatedTireSizes": ["235/60R18", "245/45R20"],
+      "trims": {
+        "Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Premium Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Sport": {"size": "235/60R18", "optional": "245/45R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "xt4",
+      "validatedTireSizes": ["235/60R18", "245/45R20"],
+      "trims": {
+        "Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Premium Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Sport": {"size": "235/60R18", "optional": "245/45R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "xt4",
+      "validatedTireSizes": ["235/60R18", "245/45R20"],
+      "trims": {
+        "Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Premium Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Sport": {"size": "235/60R18", "optional": "245/45R20", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "Current database shows 235/55R18, 245/50R19 - these are NOT OEM. Correct to 235/60R18, 245/45R20"
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "xt4",
+      "validatedTireSizes": ["235/60R18", "245/45R20"],
+      "trims": {
+        "Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Premium Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Sport": {"size": "235/60R18", "optional": "245/45R20", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "Current database shows 235/55R18, 245/50R19 - these are NOT OEM"
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "xt4",
+      "validatedTireSizes": ["235/60R18", "245/45R20"],
+      "trims": {
+        "Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Premium Luxury": {"size": "235/60R18", "optional": "245/45R20", "staggered": false},
+        "Sport": {"size": "235/60R18", "optional": "245/45R20", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "First year of XT4 production"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "staggered": false},
+        "Sport": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "robertbasilcadillac.com"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "staggered": false},
+        "Sport": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "robertbasilcadillac.com"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "staggered": false},
+        "Sport": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "robertbasilcadillac.com"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20", "235/60R19", "255/50R20", "255/55R19"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "staggered": false},
+        "Sport": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "Current DB has 235/60R19, 255/50R20, 255/55R19 - only 255/50R20 is possibly valid as optional"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "staggered": false},
+        "Sport": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "staggered": false},
+        "Sport": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "staggered": false},
+        "Sport": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "staggered": false},
+        "Sport": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "staggered": false},
+        "Platinum": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Standard/Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "staggered": false},
+        "Platinum": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "xt5",
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trims": {
+        "Base": {"size": "235/65R18", "staggered": false},
+        "Luxury": {"size": "235/55R20", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "First year of XT5 production (replaced SRX)"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "xt6",
+      "validatedTireSizes": ["235/65R18", "235/55R20", "265/45R21"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "optional": "265/45R21", "staggered": false},
+        "Sport": {"size": "235/55R20", "optional": "265/45R21", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "xt6",
+      "validatedTireSizes": ["235/65R18", "235/55R20", "265/45R21"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "optional": "265/45R21", "staggered": false},
+        "Sport": {"size": "235/55R20", "optional": "265/45R21", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "xt6",
+      "validatedTireSizes": ["235/65R18", "235/55R20", "265/45R21"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "optional": "265/45R21", "staggered": false},
+        "Sport": {"size": "235/55R20", "optional": "265/45R21", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "Current DB has 235/60R19, 255/50R20 which are NOT OEM"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "xt6",
+      "validatedTireSizes": ["235/65R18", "235/55R20", "265/45R21"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "optional": "265/45R21", "staggered": false},
+        "Sport": {"size": "235/55R20", "optional": "265/45R21", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "xt6",
+      "validatedTireSizes": ["235/65R18", "235/55R20", "265/45R21"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "optional": "265/45R21", "staggered": false},
+        "Sport": {"size": "235/55R20", "optional": "265/45R21", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "xt6",
+      "validatedTireSizes": ["235/65R18", "235/55R20", "265/45R21"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "optional": "265/45R21", "staggered": false},
+        "Sport": {"size": "235/55R20", "optional": "265/45R21", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "First full year of XT6 production"
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "xt6",
+      "validatedTireSizes": ["235/65R18", "235/55R20", "265/45R21"],
+      "trims": {
+        "Luxury": {"size": "235/65R18", "optional": "235/55R20", "staggered": false},
+        "Premium Luxury": {"size": "235/55R20", "optional": "265/45R21", "staggered": false},
+        "Sport": {"size": "235/55R20", "optional": "265/45R21", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "XT6 launched mid-2019"
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "xts",
+      "validatedTireSizes": ["235/55R18", "245/40R20"],
+      "trims": {
+        "Base/Luxury/Premium Luxury": {"size": "235/55R18", "staggered": false},
+        "Platinum/V-Sport": {"size": "245/40R20", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "Final year of XTS production"
+    },
+    {
+      "year": 2018,
+      "make": "cadillac",
+      "model": "xts",
+      "validatedTireSizes": ["235/55R18", "245/40R20"],
+      "trims": {
+        "Base/Luxury/Premium Luxury": {"size": "235/55R18", "staggered": false},
+        "Platinum/V-Sport": {"size": "245/40R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "xts",
+      "validatedTireSizes": ["235/55R18", "245/40R20"],
+      "trims": {
+        "Base/Luxury/Premium Luxury": {"size": "235/55R18", "staggered": false},
+        "Platinum/V-Sport": {"size": "245/40R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "xts",
+      "validatedTireSizes": ["235/55R18", "245/40R20"],
+      "trims": {
+        "Base/Luxury/Premium Luxury": {"size": "235/55R18", "staggered": false},
+        "Platinum/V-Sport": {"size": "245/40R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "xts",
+      "validatedTireSizes": ["235/55R18", "245/40R20"],
+      "trims": {
+        "Base/Luxury/Premium": {"size": "235/55R18", "staggered": false},
+        "Platinum/V-Sport": {"size": "245/40R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "xts",
+      "validatedTireSizes": ["235/55R18", "245/40R20"],
+      "trims": {
+        "Base/Luxury/Premium": {"size": "235/55R18", "staggered": false},
+        "Platinum/V-Sport": {"size": "245/40R20", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "xts",
+      "validatedTireSizes": ["235/55R18", "245/40R20"],
+      "trims": {
+        "Base/Luxury/Premium": {"size": "235/55R18", "staggered": false},
+        "Platinum": {"size": "245/40R20", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "First year of XTS production"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "alero",
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "N/A",
+      "notes": "DATABASE ERROR: Alero was made by OLDSMOBILE, not Chevrolet. Should be under 'oldsmobile' make. OEM tire size for Oldsmobile Alero was 205/65R16 or 215/55R16."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "alero",
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "N/A",
+      "notes": "DATABASE ERROR: Alero was made by OLDSMOBILE, not Chevrolet."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "alero",
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "N/A",
+      "notes": "DATABASE ERROR: Alero was made by OLDSMOBILE, not Chevrolet."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "alero",
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "N/A",
+      "notes": "DATABASE ERROR: Alero was made by OLDSMOBILE, not Chevrolet."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "alero",
+      "validatedTireSizes": [],
+      "trims": {},
+      "source": "N/A",
+      "notes": "DATABASE ERROR: Alero was made by OLDSMOBILE, not Chevrolet."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "astro",
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "Base/LS/LT": {"size": "215/70R16", "staggered": false}
+      },
+      "source": "autopadre.com, tiresize.com",
+      "notes": "Final year of Astro production"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "astro",
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "Base/LS/LT": {"size": "215/70R16", "staggered": false}
+      },
+      "source": "autopadre.com"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "astro",
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "Base/LS/LT": {"size": "215/70R16", "staggered": false}
+      },
+      "source": "autopadre.com"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "astro",
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "Base/LS/LT": {"size": "215/70R16", "staggered": false}
+      },
+      "source": "autopadre.com"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "astro",
+      "validatedTireSizes": ["215/70R16"],
+      "trims": {
+        "Base/LS/LT": {"size": "215/70R16", "staggered": false}
+      },
+      "source": "autopadre.com"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "astro",
+      "validatedTireSizes": ["215/70R16", "205/75R15"],
+      "trims": {
+        "Base/LS": {"size": "205/75R15", "staggered": false},
+        "LT": {"size": "215/70R16", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "LS/LT": {"size": "265/70R17", "staggered": false},
+        "LTZ/Black Diamond": {"size": "275/55R20", "staggered": false}
+      },
+      "source": "autopadre.com",
+      "notes": "Final year of Avalanche production"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "LS/LT": {"size": "265/70R17", "staggered": false},
+        "LTZ": {"size": "275/55R20", "staggered": false}
+      },
+      "source": "autopadre.com"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "LS/LT": {"size": "265/70R17", "staggered": false},
+        "LTZ": {"size": "275/55R20", "staggered": false}
+      },
+      "source": "autopadre.com"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "LS/LT": {"size": "265/70R17", "staggered": false},
+        "LTZ": {"size": "275/55R20", "staggered": false}
+      },
+      "source": "autopadre.com"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "LS/LT": {"size": "265/70R17", "staggered": false},
+        "LTZ": {"size": "275/55R20", "staggered": false}
+      },
+      "source": "autopadre.com"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "LS/LT": {"size": "265/70R17", "staggered": false},
+        "LTZ": {"size": "275/55R20", "staggered": false}
+      },
+      "source": "autopadre.com"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "avalanche",
+      "validatedTireSizes": ["265/70R17", "275/55R20"],
+      "trims": {
+        "LS/LT": {"size": "265/70R17", "staggered": false},
+        "LTZ": {"size": "275/55R20", "staggered": false}
+      },
+      "source": "autopadre.com",
+      "notes": "Second generation (GMT900) launched"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "validatedTireSizes": ["265/70R16", "265/70R17", "275/55R20"],
+      "trims": {
+        "LS 2WD/4WD": {"size": "265/70R16", "staggered": false},
+        "LT/Z66/Z71": {"size": "265/70R17", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "validatedTireSizes": ["265/70R16", "265/70R17", "275/55R20"],
+      "trims": {
+        "LS 2WD/4WD": {"size": "265/70R16", "staggered": false},
+        "LT/Z66/Z71": {"size": "265/70R17", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "validatedTireSizes": ["265/70R16", "265/70R17", "275/55R20"],
+      "trims": {
+        "2WD": {"size": "265/70R16", "optional": "265/70R17", "staggered": false},
+        "4WD": {"size": "265/70R16", "optional": "265/70R17", "staggered": false},
+        "Z66": {"size": "265/70R17", "staggered": false},
+        "Z71": {"size": "265/70R17", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "275/55R20 is also OEM optional"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "2WD": {"size": "265/70R16", "optional": "265/70R17", "staggered": false},
+        "4WD": {"size": "265/70R16", "optional": "265/70R17", "staggered": false},
+        "Z66": {"size": "265/70R17", "staggered": false},
+        "Z71": {"size": "265/70R17", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "avalanche-1500",
+      "validatedTireSizes": ["265/70R16", "265/70R17"],
+      "trims": {
+        "2WD": {"size": "265/70R16", "optional": "265/70R17", "staggered": false},
+        "4WD": {"size": "265/70R16", "optional": "265/70R17", "staggered": false},
+        "Z66": {"size": "265/70R17", "staggered": false},
+        "Z71": {"size": "265/70R17", "staggered": false},
+        "North Face": {"size": "265/70R17", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "First year of Avalanche production"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "validatedTireSizes": ["245/75R16"],
+      "trims": {
+        "2500 2WD/4WD": {"size": "LT245/75R16", "staggered": false}
+      },
+      "source": "tiresize.com",
+      "notes": "Final year of Avalanche 2500"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "validatedTireSizes": ["245/75R16"],
+      "trims": {
+        "2500 2WD/4WD": {"size": "LT245/75R16", "staggered": false}
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "avalanche-2500",
+      "validatedTireSizes": ["245/75R16"],
+      "trims": {
+        "2500 2WD/4WD": {"size": "LT245/75R16", "staggered": false}
+      },
+      "source": "tiresize.com"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 70,
+    "dataIssues": 6,
+    "issues": [
+      {
+        "type": "WRONG_MAKE",
+        "vehicles": ["2000-2004 Chevrolet Alero"],
+        "description": "Alero was manufactured by Oldsmobile, not Chevrolet. These entries should be corrected to make='oldsmobile'"
+      },
+      {
+        "type": "INVALID_YEAR",
+        "vehicles": ["2005 Cadillac STS-V"],
+        "description": "STS-V production began in 2006. 2005 model year does not exist."
+      }
+    ],
+    "staggeredFitments": [
+      "2004-2009 Cadillac SRX (V6 and V8 trims)",
+      "2006-2009 Cadillac STS-V",
+      "2006-2009 Cadillac XLR-V"
+    ]
+  }
+}

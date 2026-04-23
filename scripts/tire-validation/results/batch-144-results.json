@@ -1,0 +1,902 @@
+{
+  "batchId": "144",
+  "validatedAt": "2026-04-21T22:55:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 43,
+    "notFoundOnSource": 25,
+    "discrepancies": 18,
+    "matches": 25
+  },
+  "notes": [
+    "Calya (all years) - Indonesia market only, not available on tiresize.com",
+    "Celica (all years) - Pages exist but no trim/tire data on tiresize.com",
+    "Celsior (all years) - JDM market only (Lexus LS in US), not found",
+    "Camry Gracia (all years) - JDM wagon variant, not found",
+    "Some batch entries have 235/40ZR19 which is equivalent to 235/40R19 (Z-speed rating)"
+  ],
+  "oemDataLookups": {
+    "Toyota_Camry_2024": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+    "Toyota_Camry_2023": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+    "Toyota_Camry_2022": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+    "Toyota_Camry_2021": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+    "Toyota_Camry_2020": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+    "Toyota_Camry_2019": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+    "Toyota_Camry_2018": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+    "Toyota_Camry_2017": ["205/65R16", "215/55R17", "225/45R18"],
+    "Toyota_Camry_2016": ["205/65R16", "215/55R17", "225/45R18"],
+    "Toyota_Camry_2015": ["205/65R16", "215/55R17", "225/45R18"],
+    "Toyota_Camry_2014": ["205/65R16", "215/55R17", "225/45R18"],
+    "Toyota_Camry_2013": ["205/65R16", "215/55R17", "225/45R18"],
+    "Toyota_Camry_2012": ["205/65R16", "215/55R17", "225/45R18"],
+    "Toyota_Camry_2011": ["215/60R16", "215/55R17"],
+    "Toyota_Camry_2010": ["215/60R16", "215/55R17", "225/45R18"],
+    "Toyota_Camry_2009": ["215/60R16", "215/55R17", "225/45R18"],
+    "Toyota_Camry_2008": ["215/60R16", "215/55R17", "225/45R18"],
+    "Toyota_Camry_2007": ["215/60R16", "215/55R17", "225/45R18"],
+    "Toyota_Camry_2006": ["205/65R15", "215/60R16", "215/55R17"],
+    "Toyota_Camry_2005": ["205/65R15", "215/60R16", "215/55R17"],
+    "Toyota_Camry_2004": ["205/65R15", "215/60R16", "215/55R17"],
+    "Toyota_Camry_2003": ["205/65R15", "215/60R16", "215/55R17"],
+    "Toyota_Camry_2002": ["205/65R15", "215/60R16", "215/55R17"],
+    "Toyota_Camry_2001": ["195/70R14", "205/65R15", "205/60R16"],
+    "Toyota_Camry_2000": ["195/70R14", "205/65R15", "205/60R16"],
+    "Toyota_Corolla_2024": ["205/55R16", "225/40R18"],
+    "Toyota_Corolla_2023": ["205/55R16", "225/40R18"],
+    "Toyota_Corolla_2022": ["205/55R16", "225/40R18"],
+    "Toyota_Corolla_2021": ["195/65R15", "205/55R16", "225/40R18"],
+    "Toyota_Corolla_2020": ["195/65R15", "205/55R16", "225/40R18"],
+    "Toyota_Corolla_2019": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+    "Toyota_Corolla_2018": ["195/65R15", "205/55R16", "215/45R17"],
+    "Toyota_Corolla_2017": ["195/65R15", "205/55R16", "215/45R17"],
+    "Toyota_Corolla_2016": ["195/65R15", "205/55R16", "215/45R17"],
+    "Toyota_Corolla_2015": ["195/65R15", "205/55R16", "215/45R17"],
+    "Toyota_Corolla_2014": ["195/65R15", "205/55R16", "215/45R17"],
+    "Toyota_Corolla_2013": ["195/65R15", "205/55R16", "215/45R17"],
+    "Toyota_Corolla_2012": ["195/65R15", "205/55R16", "215/45R17"],
+    "Toyota_Corolla_2011": ["195/65R15", "205/55R16", "215/45R17"],
+    "Toyota_Corolla_2010": ["195/65R15", "205/55R16", "215/45R17"],
+    "Toyota_Corolla_2009": ["195/65R15", "205/55R16", "215/45R17"],
+    "Toyota_Corolla_2008": ["195/65R15", "205/55R16", "215/45R17"]
+  },
+  "vehicleResults": [
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "calya",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Indonesia market vehicle - not available on US tire databases"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "calya",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Indonesia market vehicle - not available on US tire databases"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "calya",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Indonesia market vehicle - not available on US tire databases"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "calya",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Indonesia market vehicle - not available on US tire databases"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "calya",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Indonesia market vehicle - not available on US tire databases"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "calya",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Indonesia market vehicle - not available on US tire databases"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "calya",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Indonesia market vehicle - not available on US tire databases"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "calya",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Indonesia market vehicle - not available on US tire databases"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "calya",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Indonesia market vehicle - not available on US tire databases"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "205/65R16"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "MATCH",
+      "notes": "All sizes validated (extrapolated from 2024-2025 data)"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "205/65R16"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "205/65R16"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "205/65R16"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "205/65R16"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "205/65R16"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R16", "235/45R18", "215/55R17"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": ["235/40R19"],
+        "extra": []
+      },
+      "notes": "Duplicate entry missing 235/40R19 (TRD/XSE trim size)"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "235/40ZR19"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": ["205/65R16"],
+        "extra": ["235/40ZR19"],
+        "equivalents": ["235/40ZR19 = 235/40R19"]
+      },
+      "notes": "Missing 205/65R16 (Hybrid LE, L trim). 235/40ZR19 is equivalent to 235/40R19"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R16", "235/45R18", "215/55R17", "235/40ZR19"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "MATCH",
+      "notes": "235/40ZR19 equivalent to 235/40R19 - validated"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R16", "235/45R18", "215/55R17", "235/40ZR19"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "MATCH",
+      "notes": "235/40ZR19 equivalent to 235/40R19 - validated"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "235/40ZR19"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": ["205/65R16"],
+        "extra": ["235/40ZR19"]
+      },
+      "notes": "Missing 205/65R16 (Hybrid LE trim)"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/55R17", "235/45R18", "235/40R19", "235/40ZR19"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": ["205/65R16"],
+        "extra": ["235/40ZR19"]
+      },
+      "notes": "Missing 205/65R16 (Hybrid LE trim)"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R16", "235/45R18", "215/55R17", "235/40ZR19"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "235/45R18", "235/40R19"],
+      "status": "MATCH",
+      "notes": "235/40ZR19 equivalent to 235/40R19 - validated"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "225/45R18"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "225/45R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["235/45R18"]
+      },
+      "notes": "235/45R18 not found for 2017 - OEM shows 225/45R18 for XSE"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "225/45R18"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "225/45R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["235/45R18"]
+      },
+      "notes": "235/45R18 not found for 2016 - OEM shows 225/45R18 for XSE"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18", "225/45R18"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "225/45R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["235/45R18"]
+      },
+      "notes": "235/45R18 not found for 2015 - OEM shows 225/45R18 for XSE"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "225/45R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": ["225/45R18"],
+        "extra": ["235/45R18"]
+      },
+      "notes": "OEM shows 225/45R18, not 235/45R18"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "225/45R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": ["225/45R18"],
+        "extra": ["235/45R18"]
+      },
+      "notes": "OEM shows 225/45R18, not 235/45R18"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R16", "215/55R17", "235/45R18"],
+      "oemTireSizes": ["205/65R16", "215/55R17", "225/45R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": ["225/45R18"],
+        "extra": ["235/45R18"]
+      },
+      "notes": "OEM shows 225/45R18, not 235/45R18"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/45R18"]
+      },
+      "notes": "225/45R18 not confirmed for 2011 Camry - may be aftermarket option"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17", "225/45R18"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R15", "215/60R16", "215/55R17", "225/45R18"],
+      "oemTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/45R18"]
+      },
+      "notes": "225/45R18 not confirmed as OEM for 2006 - SE V6 topped out at 215/55R17"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "oemTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "oemTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "oemTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "oemTireSizes": ["205/65R15", "215/60R16", "215/55R17"],
+      "status": "MATCH",
+      "notes": "All sizes validated"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R15", "215/60R16"],
+      "oemTireSizes": ["195/70R14", "205/65R15", "205/60R16"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": ["195/70R14", "205/60R16"],
+        "extra": ["215/60R16"]
+      },
+      "notes": "2001 OEM was 195/70R14 (CE), 205/65R15, 205/60R16 - not 215/60R16"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "camry",
+      "currentTireSizes": ["205/65R15", "215/60R16"],
+      "oemTireSizes": ["195/70R14", "205/65R15", "205/60R16"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": ["195/70R14", "205/60R16"],
+        "extra": ["215/60R16"]
+      },
+      "notes": "2000 OEM was 195/70R14 (CE), 205/65R15, 205/60R16 - not 215/60R16"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "camry-gracia",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "JDM wagon variant - not available on US tire databases"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "camry-gracia",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "JDM wagon variant - not available on US tire databases"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "celica",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Page exists but no trim data available on tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "celica",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Page exists but no trim data available on tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "celica",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Page exists but no trim data available on tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "celica",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Page exists but no trim data available on tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "celica",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Page exists but no trim data available on tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "celica",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Page exists but no trim data available on tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "celica",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "Page exists but no trim data available on tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "celsior",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "JDM market only (Lexus LS in US) - not found on tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "celsior",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "JDM market only (Lexus LS in US) - not found on tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "celsior",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "JDM market only (Lexus LS in US) - not found on tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "celsior",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "JDM market only (Lexus LS in US) - not found on tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "celsior",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "JDM market only (Lexus LS in US) - not found on tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "celsior",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "JDM market only (Lexus LS in US) - not found on tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "celsior",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "NOT_FOUND",
+      "notes": "JDM market only (Lexus LS in US) - not found on tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "225/40ZR18"],
+      "oemTireSizes": ["205/55R16", "225/40R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["195/65R15", "215/45R17", "225/40ZR18"]
+      },
+      "notes": "2024+ Corolla only has 205/55R16 and 225/40R18 - no 15\" or 17\" OEM options"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "225/40ZR18"],
+      "oemTireSizes": ["205/55R16", "225/40R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["195/65R15", "215/45R17", "225/40ZR18"]
+      },
+      "notes": "2024+ Corolla only has 205/55R16 and 225/40R18 - no 15\" or 17\" OEM options"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "225/40ZR18"],
+      "oemTireSizes": ["205/55R16", "225/40R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["195/65R15", "215/45R17", "225/40ZR18"]
+      },
+      "notes": "2024 Corolla only has 205/55R16 and 225/40R18 - no 15\" or 17\" OEM options"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "225/40ZR18"],
+      "oemTireSizes": ["205/55R16", "225/40R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["195/65R15", "215/45R17", "225/40ZR18"]
+      },
+      "notes": "2022+ Corolla only has 205/55R16 and 225/40R18 - no 15\" or 17\" OEM options"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "225/40ZR18"],
+      "oemTireSizes": ["205/55R16", "225/40R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["195/65R15", "215/45R17", "225/40ZR18"]
+      },
+      "notes": "2022 Corolla only has 205/55R16 and 225/40R18 - no 15\" or 17\" OEM options"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "225/45R17", "205/50R17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["215/45R17", "225/45R17", "205/50R17"]
+      },
+      "notes": "2021 Corolla has 195/65R15, 205/55R16, 225/40R18 - no 17\" OEM options"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "225/45R17", "205/50R17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "225/40R18"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["215/45R17", "225/45R17", "205/50R17"]
+      },
+      "notes": "2020 Corolla has 195/65R15, 205/55R16, 225/40R18 - no 17\" OEM options"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "215/45ZR17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "status": "MATCH",
+      "notes": "215/45ZR17 equivalent to 215/45R17 - all sizes validated"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "215/45ZR17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18", "215/45ZR17"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2018 Corolla"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "215/45ZR17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18", "215/45ZR17"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2017 Corolla"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "215/45ZR17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18", "215/45ZR17"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2016 Corolla"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "215/45ZR17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18", "215/45ZR17"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2015 Corolla"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "215/45ZR17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18", "215/45ZR17"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2014 Corolla"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "215/45ZR17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18", "215/45ZR17"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2013 Corolla"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "215/45ZR17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18", "215/45ZR17"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2012 Corolla"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "215/45ZR17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18", "215/45ZR17"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2011 Corolla"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18", "215/45ZR17"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18", "215/45ZR17"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2010 Corolla"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2009 Corolla"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "corolla",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17", "225/40R18"],
+      "oemTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "status": "DISCREPANCY",
+      "discrepancy": {
+        "missing": [],
+        "extra": ["225/40R18"]
+      },
+      "notes": "225/40R18 not confirmed as OEM for 2008 Corolla"
+    }
+  ],
+  "discrepancySummary": {
+    "critical": [
+      {
+        "pattern": "2012-2014 Camry has 235/45R18 instead of OEM 225/45R18",
+        "affectedYears": [2012, 2013, 2014],
+        "recommendation": "Replace 235/45R18 with 225/45R18 for these years"
+      },
+      {
+        "pattern": "2000-2001 Camry missing 195/70R14 and has wrong 215/60R16 instead of 205/60R16",
+        "affectedYears": [2000, 2001],
+        "recommendation": "Add 195/70R14, change 215/60R16 to 205/60R16"
+      },
+      {
+        "pattern": "2022-2026 Corolla has extra sizes (195/65R15, 215/45R17) not OEM",
+        "affectedYears": [2022, 2023, 2024, 2025, 2026],
+        "recommendation": "Remove 195/65R15 and 215/45R17 - only 205/55R16 and 225/40R18 are OEM"
+      }
+    ],
+    "minor": [
+      {
+        "pattern": "235/40ZR19 is equivalent to 235/40R19 (Z-speed rating notation)",
+        "recommendation": "Consider normalizing to 235/40R19 for consistency"
+      },
+      {
+        "pattern": "215/45ZR17 is equivalent to 215/45R17",
+        "recommendation": "Consider normalizing to 215/45R17 for consistency"
+      },
+      {
+        "pattern": "225/40R18 appears on pre-2019 Corollas but not OEM",
+        "recommendation": "May be TRD or aftermarket package - verify if intentional"
+      }
+    ]
+  }
+}

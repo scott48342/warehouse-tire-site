@@ -1,0 +1,2280 @@
+[
+  {
+    "id": "ae4f75c1-0e45-4262-aeb4-407723c8bfc1",
+    "year": 2022,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "70d81502-191d-4114-a845-ac6790105bb1",
+    "year": 2022,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "7b392c83-1b71-4d70-bf8a-a3403449af22",
+    "year": 2022,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "LTZ",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "fdd6f437-5871-4b2e-bc14-0ec8c67e05d6",
+    "year": 2022,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "High Country",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "7ded1f58-f5c4-4a67-ae85-e106410d3ffb",
+    "year": 2022,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "eb693af0-5542-4376-8439-1e8982f4d2c7",
+    "year": 2023,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "Custom",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "2ab18f3a-d61d-44c8-8031-58259304c4fe",
+    "year": 2023,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "High Country",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "0f611d05-9e2a-4254-ac6c-96fe3040a953",
+    "year": 2023,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "c062df02-68b7-4e10-a0d1-f1965c762040",
+    "year": 2023,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "36c27ce1-ecde-44ed-a601-e4963563b4d0",
+    "year": 2023,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "487deade-b37b-49d7-ad2f-4124c2768791",
+    "year": 2023,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "LTZ",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "f0b60385-abfa-4c23-a379-e9667e29cb8a",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "18a88b24-6a7a-4689-a595-9122ed751a1d",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "High Country",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "1868ca7e-5817-4763-bb31-58ae660c23c2",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "2a51ef00-708d-49f4-8f17-0dba6955e1a8",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "Custom",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "cb780e5f-6832-427e-8ba2-f080fb19f67c",
+    "year": 2024,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "5f12309e-b851-4fe2-94fc-fdffc45de9c4",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "High Country",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "c932d43f-ec28-479f-a506-15df965e74d5",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "130afa80-9942-4473-96f8-0cabdaa40aba",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "2916dd31-82ae-4629-bae6-a808dc5c6a18",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "a8d69440-2a32-44b2-81d6-fae9c781b507",
+    "year": 2025,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "Custom",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "14823dae-2903-4ea5-8f32-98271df7fae5",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "LT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "0d3b3ffe-dc1c-45a3-a537-a341abfd5235",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "Custom",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "476c8fa3-24f9-448c-9d1d-db5e59f4290a",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "High Country",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "8664f9be-e97f-49a1-bbd8-c23334804043",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "3bf9c46f-1f99-4d90-8b5b-7caa65749b17",
+    "year": 2026,
+    "make": "chevrolet",
+    "model": "silverado-3500hd",
+    "trim": "WT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]"
+  },
+  {
+    "id": "1ed6c1f2-1984-45bc-8f14-538cab00816b",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 5.5,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/55R15",
+      "195/50R16"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "351c541f-e932-4637-a6eb-1aaf04064482",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 5.5,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/55R15",
+      "195/50R16"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "09a32ac8-a1fd-41cc-bb1d-7753eb7f93d2",
+    "year": 2007,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 5.5,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/55R15",
+      "195/50R16"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "2b3269fb-0147-4802-ada8-b568d24fec56",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 5.5,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/55R15",
+      "195/50R16"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "7fbecc1f-875c-457f-9bce-89abfca19119",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 5.5,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/55R15",
+      "195/50R16"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "0c012e13-7a76-43d8-a71a-2708e2151747",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 5.5,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/55R15",
+      "195/50R16"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "5fb9a042-42e9-40cd-b3e6-4217f51d09cf",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 5.5,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/55R15",
+      "195/50R16"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4f83cb6a-539c-48c7-a601-aa6959e9957b",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 5.5,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/55R15",
+      "195/50R16"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "fe0e4e46-1cf8-4dbb-84bf-b32b6a7d938c",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "LS/LT/ACTIV",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "15x5.5"
+    ],
+    "currentTireSizes": [
+      "185/55R15"
+    ],
+    "source": "batch7-subcompacts-final"
+  },
+  {
+    "id": "3e709f5a-24bd-45c3-b27c-860be50e9bb3",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "LS/LT/ACTIV",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "15x5.5"
+    ],
+    "currentTireSizes": [
+      "185/55R15"
+    ],
+    "source": "batch7-subcompacts-final"
+  },
+  {
+    "id": "c0a2e87e-1e6c-475b-a3e6-00b2a671e5de",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "LS/LT/ACTIV",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "15x5.5"
+    ],
+    "currentTireSizes": [
+      "185/55R15"
+    ],
+    "source": "batch7-subcompacts-final"
+  },
+  {
+    "id": "03270603-152c-41a6-9851-87b8955ea789",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "LS/LT/ACTIV",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "15x5.5"
+    ],
+    "currentTireSizes": [
+      "185/55R15"
+    ],
+    "source": "batch7-subcompacts-final"
+  },
+  {
+    "id": "20633c0d-6f34-450a-b0b8-26033171f85b",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "LS/LT/ACTIV",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "15x5.5"
+    ],
+    "currentTireSizes": [
+      "185/55R15"
+    ],
+    "source": "batch7-subcompacts-final"
+  },
+  {
+    "id": "b3fedf53-5e0c-4589-96d7-8b5fe22daf79",
+    "year": 2018,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "LS/LT/ACTIV",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "15x5.5"
+    ],
+    "currentTireSizes": [
+      "185/55R15"
+    ],
+    "source": "batch7-subcompacts-final"
+  },
+  {
+    "id": "8ca8b27d-a947-4893-83a5-6652b4be0ae1",
+    "year": 2019,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "LS/LT/ACTIV",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "15x5.5"
+    ],
+    "currentTireSizes": [
+      "185/55R15"
+    ],
+    "source": "batch7-subcompacts-final"
+  },
+  {
+    "id": "bae24bbb-1ab7-4501-a122-d9d0cfde5f1c",
+    "year": 2020,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "LS/LT/ACTIV",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "15x5.5"
+    ],
+    "currentTireSizes": [
+      "185/55R15"
+    ],
+    "source": "batch7-subcompacts-final"
+  },
+  {
+    "id": "3700102b-de5b-408b-95a0-dd8298296aa6",
+    "year": 2021,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "LS/LT/ACTIV",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "15x5.5"
+    ],
+    "currentTireSizes": [
+      "185/55R15"
+    ],
+    "source": "batch7-subcompacts-final"
+  },
+  {
+    "id": "00feb69c-a7fd-4b21-9482-8ee8eb87614b",
+    "year": 2022,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "LS/LT/ACTIV",
+    "currentBoltPattern": "4x100",
+    "currentHubBore": "56.6",
+    "currentWheelSizes": [
+      "15x5.5"
+    ],
+    "currentTireSizes": [
+      "185/55R15"
+    ],
+    "source": "batch7-subcompacts-final"
+  },
+  {
+    "id": "587ab7a1-0734-4dda-a54b-60f8d1a6048a",
+    "year": 2023,
+    "make": "chevrolet",
+    "model": "spark",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 5.5,
+        "isStock": true,
+        "diameter": 15
+      },
+      {
+        "axle": "square",
+        "width": 6,
+        "isStock": true,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "185/55R15",
+      "195/50R16"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ebb01393-5dc9-4a06-aac9-e3aa9390db2d",
+    "year": 1992,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "da3f152a-c6f9-4b6d-91b1-78f6058d0981",
+    "year": 1993,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "3c14b201-e035-4f2c-9df1-30ba9f849d3b",
+    "year": 1994,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "3d4fef0f-a821-40ba-be17-b7bdea75c9d1",
+    "year": 1995,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "0c0d2210-7843-406a-88fd-4d98b6ea56cf",
+    "year": 1996,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "80a719a6-39c2-4d51-8791-dbbbfcb406aa",
+    "year": 1997,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "33538cca-2b88-4187-b59f-5d3df8d40ea9",
+    "year": 1998,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "961cc312-9839-42a9-8e3c-e2bbb595a0e9",
+    "year": 1999,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "6325449d-a4bb-4bfa-9923-63b0c40352f4",
+    "year": 2000,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17",
+      "8Jx20",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-near-year:yukon:2002]"
+  },
+  {
+    "id": "3cc6f853-0e15-4d31-a576-337cc9c59062",
+    "year": 2001,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17",
+      "8Jx20",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sm-near-year:suburban:2000]"
+  },
+  {
+    "id": "97d8cedd-520a-4529-9319-444ad1e86cd2",
+    "year": 2002,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17",
+      "8Jx20",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:yukon:2002]"
+  },
+  {
+    "id": "daf13562-b1ac-494b-8b9d-5c593825b973",
+    "year": 2003,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:escalade:2003]"
+  },
+  {
+    "id": "76525d0a-3adb-4c96-94e6-0cb1a6f07526",
+    "year": 2004,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:escalade:2004]"
+  },
+  {
+    "id": "6ee84d66-f565-4f50-b345-5ff42165eb9e",
+    "year": 2005,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:escalade:2005]"
+  },
+  {
+    "id": "d77b5e60-a06b-4394-b83b-904bdf0aa3c0",
+    "year": 2006,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:escalade:2006]"
+  },
+  {
+    "id": "19025264-28ea-4808-8d84-c8f7f706138d",
+    "year": 2007,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2007]"
+  },
+  {
+    "id": "8cc2556c-1841-474c-886e-c3cfd79e856e",
+    "year": 2008,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2008]"
+  },
+  {
+    "id": "99f4b53b-d7e8-4e67-b954-2af9e224a75c",
+    "year": 2009,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2009]"
+  },
+  {
+    "id": "723943b0-1459-474a-a46e-826b7fd3cf80",
+    "year": 2010,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2010]"
+  },
+  {
+    "id": "fc271453-6601-409f-8c87-0f43f74e3727",
+    "year": 2011,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2011]"
+  },
+  {
+    "id": "e713fa9b-b860-4f5c-97e6-859e06a1dc9a",
+    "year": 2012,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2012]"
+  },
+  {
+    "id": "74e4d5d2-f275-4590-9ffd-8e67a121883a",
+    "year": 2013,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2013]"
+  },
+  {
+    "id": "c3912406-985b-4d75-b5e5-5cb2fe492ffd",
+    "year": 2014,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2014]"
+  },
+  {
+    "id": "a6aa27a5-fe18-4649-850f-1e2141069aa7",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22",
+      "265/70R17"
+    ],
+    "source": "inherited_from_2018_SIBLING_PLATFORM"
+  },
+  {
+    "id": "02448264-d007-4cec-8e1b-17ea464ccff5",
+    "year": 2015,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "8.5Jx18",
+      "9Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "265/65R18",
+      "275/55R20",
+      "265/70R17",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "a7826c5e-7c64-4e98-a972-6547db0295da",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22",
+      "265/70R17"
+    ],
+    "source": "inherited_from_2018_SIBLING_PLATFORM"
+  },
+  {
+    "id": "6edad6ee-5873-4e93-8523-ebb8af9ce601",
+    "year": 2016,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "8.5Jx18",
+      "9Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "265/65R18",
+      "275/55R20",
+      "265/70R17",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "d05f7f27-0ac7-4117-b8d7-c98a7d6fe692",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "LS, LT, RST, Z71, Premier, High Country",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "8.5Jx18",
+      "9Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22",
+      "265/65R18",
+      "275/55R20",
+      "265/70R17",
+      "285/45R22"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "f845b0c3-4013-41c7-abfa-e0ba4c1a93d8",
+    "year": 2017,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22",
+      "265/70R17"
+    ],
+    "source": "inherited_from_2018_SIBLING_PLATFORM"
+  },
+  {
+    "id": "06596291-9ef0-445d-8882-e3d74709dfe8",
+    "year": 2018,
+    "make": "chevrolet",
+    "model": "suburban",
+    "trim": "5.3 EcoTec3",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/55R20",
+      "265/65R18",
+      "285/45R22",
+      "265/70R17"
+    ],
+    "source": "inherited_from_2018_SIBLING_PLATFORM"
+  }
+]

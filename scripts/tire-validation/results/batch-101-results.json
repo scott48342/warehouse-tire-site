@@ -1,0 +1,1204 @@
+{
+  "batchId": "101",
+  "processedAt": "2026-04-21T22:22:00.000Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2021,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "245/35R19", "rear": "305/30R20" },
+        "Spider": { "front": "245/35R19", "rear": "305/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "All 720S trims use identical staggered setup"
+    },
+    {
+      "year": 2020,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "245/35R19", "rear": "305/30R20" },
+        "Spider": { "front": "245/35R19", "rear": "305/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "All 720S trims use identical staggered setup"
+    },
+    {
+      "year": 2019,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "245/35R19", "rear": "305/30R20" },
+        "Spider": { "front": "245/35R19", "rear": "305/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "All 720S trims use identical staggered setup"
+    },
+    {
+      "year": 2018,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "245/35R19", "rear": "305/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "2018 720S was Coupe only (Spider introduced 2019)"
+    },
+    {
+      "year": 2017,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": ["245/35ZR19", "305/30ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "245/35R19", "rear": "305/30R20" }
+      },
+      "isStaggered": true,
+      "status": "WARNING",
+      "notes": "720S production started late 2017 - limited data, carried from 2018 specs"
+    },
+    {
+      "year": 2026,
+      "make": "mclaren",
+      "model": "artura",
+      "currentTireSizes": ["235/35ZR19", "295/35ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "235/35R19", "rear": "295/35R20" },
+        "Spider": { "front": "235/35R19", "rear": "295/35R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "All Artura trims use identical staggered setup"
+    },
+    {
+      "year": 2025,
+      "make": "mclaren",
+      "model": "artura",
+      "currentTireSizes": ["235/35ZR19", "295/35ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "235/35R19", "rear": "295/35R20" },
+        "Spider": { "front": "235/35R19", "rear": "295/35R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "All Artura trims use identical staggered setup"
+    },
+    {
+      "year": 2024,
+      "make": "mclaren",
+      "model": "artura",
+      "currentTireSizes": ["235/35ZR19", "295/35ZR20"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "235/35R19", "rear": "295/35R20" },
+        "Spider": { "front": "235/35R19", "rear": "295/35R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "All Artura trims use identical staggered setup"
+    },
+    {
+      "year": 2023,
+      "make": "mclaren",
+      "model": "artura",
+      "currentTireSizes": ["235/35ZR19", "295/35ZR20"],
+      "validatedTireSizes": {
+        "Performance": { "front": "235/35R19", "rear": "295/35R20" },
+        "Standard": { "front": "235/35R19", "rear": "295/35R20" },
+        "Techlux": { "front": "235/35R19", "rear": "295/35R20" },
+        "Vision": { "front": "235/35R19", "rear": "295/35R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "2023 trim names differ but sizes identical"
+    },
+    {
+      "year": 2022,
+      "make": "mclaren",
+      "model": "artura",
+      "currentTireSizes": ["235/35ZR19", "295/35ZR20"],
+      "validatedTireSizes": {
+        "Performance": { "front": "235/35R19", "rear": "295/35R20" },
+        "Standard": { "front": "235/35R19", "rear": "295/35R20" },
+        "Techlux": { "front": "235/35R19", "rear": "295/35R20" },
+        "Vision": { "front": "235/35R19", "rear": "295/35R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "First model year for Artura"
+    },
+    {
+      "year": 2026,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": ["225/35ZR20", "295/30ZR21"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "225/35R20", "rear": "295/30R21" }
+      },
+      "isStaggered": true,
+      "status": "PROJECTED",
+      "notes": "Carried from 2023 specs - 2026 not yet in database"
+    },
+    {
+      "year": 2025,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": ["225/35ZR20", "295/30ZR21"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "225/35R20", "rear": "295/30R21" }
+      },
+      "isStaggered": true,
+      "status": "PROJECTED",
+      "notes": "Carried from 2023 specs - 2025 not yet in database"
+    },
+    {
+      "year": 2024,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": ["225/35ZR20", "295/30ZR21"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "225/35R20", "rear": "295/30R21" }
+      },
+      "isStaggered": true,
+      "status": "PROJECTED",
+      "notes": "Carried from 2023 specs - 2024 not yet in database"
+    },
+    {
+      "year": 2023,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": ["225/35ZR20", "295/30ZR21"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "225/35R20", "rear": "295/30R21" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "McLaren GT Coupe only"
+    },
+    {
+      "year": 2022,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": ["225/35ZR20", "295/30ZR21"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "225/35R20", "rear": "295/30R21" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "McLaren GT Coupe only"
+    },
+    {
+      "year": 2021,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": ["225/35ZR20", "295/30ZR21"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "225/35R20", "rear": "295/30R21" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "McLaren GT Coupe only"
+    },
+    {
+      "year": 2020,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": ["225/35ZR20", "295/30ZR21"],
+      "validatedTireSizes": {
+        "Coupe": { "front": "225/35R20", "rear": "295/30R21" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "First model year for McLaren GT"
+    },
+    {
+      "year": 2019,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": ["225/35ZR20", "295/30ZR21"],
+      "validatedTireSizes": {},
+      "isStaggered": true,
+      "status": "INVALID_YEAR",
+      "notes": "McLaren GT production started 2020 - 2019 does not exist"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A35 4MATIC": { "options": ["235/40R18", "235/35R19"] },
+        "AMG A45 4MATIC+": { "options": ["235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "PROJECTED",
+      "notes": "Square fitment. A35 offers 18\" or 19\"; A45 is 19\" only"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A35 4MATIC": { "options": ["235/40R18", "235/35R19"] },
+        "AMG A45 4MATIC+": { "options": ["235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "PROJECTED",
+      "notes": "Square fitment. A35 offers 18\" or 19\"; A45 is 19\" only"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A35 4MATIC": { "options": ["235/40R18", "235/35R19"] },
+        "AMG A45 4MATIC+": { "options": ["235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "PROJECTED",
+      "notes": "Square fitment. Sizes carried from 2021"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A35 4MATIC": { "options": ["235/40R18", "235/35R19"] },
+        "AMG A45 4MATIC+": { "options": ["235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "PROJECTED",
+      "notes": "Square fitment. Sizes carried from 2021"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A35 4MATIC": { "options": ["235/40R18", "235/35R19"] },
+        "AMG A45 4MATIC+": { "options": ["235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "PROJECTED",
+      "notes": "Square fitment. Limited US availability"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A35 4MATIC": { "options": ["235/40R18", "235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "CONFIRMED",
+      "notes": "A35 only in US market 2021. Current sizes need correction: should be 235/40R18 or 235/35R19"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A35 4MATIC": { "options": ["235/40R18", "235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "CONFIRMED",
+      "notes": "First US model year. Current sizes need correction: should be 235/40R18 or 235/35R19"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A45 (EU)": { "options": ["235/40R18", "235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "WARNING",
+      "notes": "A-Class AMG not available in US until 2020 - EU specs only"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A45 (EU)": { "options": ["235/40R18", "235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "WARNING",
+      "notes": "EU market only (W176). US market had no A-Class AMG"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A45 (EU)": { "options": ["235/40R18", "235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "WARNING",
+      "notes": "EU market only (W176)"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A45 (EU)": { "options": ["235/40R18", "235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "WARNING",
+      "notes": "EU market only (W176)"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A45 (EU)": { "options": ["235/40R18", "235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "WARNING",
+      "notes": "EU market only (W176)"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A45 (EU)": { "options": ["235/40R18", "235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "WARNING",
+      "notes": "EU market only (W176)"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": ["225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "AMG A45 (EU)": { "options": ["235/40R18", "235/35R19"] }
+      },
+      "isStaggered": false,
+      "status": "WARNING",
+      "notes": "First A45 AMG year. EU market only (W176)"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT S": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT C": { "front": "265/35R19", "rear": "305/30R20" },
+        "AMG GT R": { "front": "275/35R19", "rear": "325/30R20" }
+      },
+      "isStaggered": true,
+      "status": "PROJECTED",
+      "notes": "2-door coupe line. Current sizes correct"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT S": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT C": { "front": "265/35R19", "rear": "305/30R20" },
+        "AMG GT R": { "front": "275/35R19", "rear": "325/30R20" }
+      },
+      "isStaggered": true,
+      "status": "PROJECTED",
+      "notes": "2-door coupe line. Current sizes correct"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT S": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT C": { "front": "265/35R19", "rear": "305/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "2024 new generation coupe launched"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT C": { "front": "265/35R19", "rear": "305/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "Last year of first-gen 2-door models"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT C": { "front": "265/35R19", "rear": "305/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "2-door coupe line"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT Roadster": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT C Coupe": { "front": "265/35R19", "rear": "305/30R20" },
+        "AMG GT C Roadster": { "front": "265/35R19", "rear": "305/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "Includes Coupe and Roadster variants"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT Roadster": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT C Coupe": { "front": "265/35R19", "rear": "305/30R20" },
+        "AMG GT C Roadster": { "front": "265/35R19", "rear": "305/30R20" },
+        "AMG GT R Coupe": { "front": "275/35R19", "rear": "325/30R20" },
+        "AMG GT R Roadster": { "front": "275/35R19", "rear": "325/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "Full 2-door lineup including R variants"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT S Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT C Coupe": { "front": "265/35R19", "rear": "305/30R20" },
+        "AMG GT R Coupe": { "front": "275/35R19", "rear": "325/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "2-door coupe line"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT S Coupe": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT C Coupe": { "front": "265/35R19", "rear": "305/30R20" },
+        "AMG GT C Roadster": { "front": "265/35R19", "rear": "305/30R20" },
+        "AMG GT R Coupe": { "front": "275/35R19", "rear": "325/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "2-door lineup"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT Base": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT S": { "front": "265/35R19", "rear": "295/30R20" },
+        "AMG GT C": { "front": "265/35R19", "rear": "305/30R20" },
+        "AMG GT R": { "front": "275/35R19", "rear": "325/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "GT R introduced this year"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT S": { "front": "265/35R19", "rear": "295/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "First US model year - S variant only"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["255/35R19", "295/30R20", "265/35R19", "305/30R20"],
+      "validatedTireSizes": {
+        "AMG GT S": { "front": "265/35R19", "rear": "295/30R20" }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "Launch year (late 2014 production)"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": ["265/35R19", "295/30R20", "325/30R21"],
+      "validatedTireSizes": {},
+      "isStaggered": true,
+      "status": "INVALID_YEAR",
+      "notes": "AMG GT launched late 2014 for 2015 MY - no 2014 models exist"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "AMG GT 43": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 53": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 63": {
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 63 S": {
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        }
+      },
+      "isStaggered": true,
+      "status": "PROJECTED",
+      "notes": "4-Door Coupe. MISSING DATA - needs population. Standard 20\" or 21\" with staggered setup"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "AMG GT 43 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 53 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "4-Door Coupe. MISSING DATA - needs population"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "AMG GT 43 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 53 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "4-Door Coupe. MISSING DATA - needs population"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "AMG GT 43 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 53 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "4-Door Coupe. MISSING DATA - needs population"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "AMG GT 43 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 53 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 63 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 63 S 4-Door Coupe": {
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "4-Door Coupe. MISSING DATA - needs population"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "AMG GT 53 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 63 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 63 S 4-Door Coupe": {
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "4-Door Coupe. MISSING DATA - needs population"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "AMG GT 53 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 63 4-Door Coupe": {
+          "19-inch": { "front": "255/45R19", "rear": "285/40R19" },
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        },
+        "AMG GT 63 S 4-Door Coupe": {
+          "20-inch": { "front": "265/40R20", "rear": "295/35R20" },
+          "21-inch": { "front": "275/35R21", "rear": "315/30R21" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "First model year for 4-Door Coupe. MISSING DATA - needs population"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "isStaggered": true,
+      "status": "INVALID_YEAR",
+      "notes": "AMG GT 4-Door Coupe launched 2019 MY - no 2018 models exist"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "225/35R20", "255/30R20"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["225/50R17", "225/45R18"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C43 AMG": { "front": "225/40R19", "rear": "255/35R19" },
+        "C63 AMG": {
+          "19-inch": { "front": "255/35R19", "rear": "285/30R19" },
+          "20-inch": { "front": "255/30R20", "rear": "285/25R20" }
+        }
+      },
+      "isStaggered": true,
+      "status": "PROJECTED",
+      "notes": "Current sizes comprehensive. Sport trims staggered; base is square"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "225/35R20", "255/30R20"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["225/50R17", "225/45R18"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C43 AMG": { "front": "225/40R19", "rear": "255/35R19" },
+        "C63 AMG": {
+          "19-inch": { "front": "255/35R19", "rear": "285/30R19" },
+          "20-inch": { "front": "255/30R20", "rear": "285/25R20" }
+        }
+      },
+      "isStaggered": true,
+      "status": "PROJECTED",
+      "notes": "Current sizes comprehensive"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "245/35R20", "275/30R20"],
+      "validatedTireSizes": {
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C43 AMG": {
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" },
+          "20-inch": { "front": "245/35R20", "rear": "275/30R20" }
+        }
+      },
+      "isStaggered": true,
+      "status": "PROJECTED",
+      "notes": "Duplicate entry - alternate size config"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "245/35R20", "275/30R20"],
+      "validatedTireSizes": {
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C43 AMG": {
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" },
+          "20-inch": { "front": "245/35R20", "rear": "275/30R20" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W206 generation"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "225/35R20", "255/30R20"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["225/50R17", "225/45R18"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W206 generation - duplicate entry"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "245/35R20", "275/30R20"],
+      "validatedTireSizes": {
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C43 AMG": {
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" },
+          "20-inch": { "front": "245/35R20", "rear": "275/30R20" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W206 generation"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "225/35R20", "255/30R20"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["225/50R17", "225/45R18"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W206 generation - duplicate entry"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19", "245/35R20", "275/30R20"],
+      "validatedTireSizes": {
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "First year W206 generation"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "225/35R20", "255/30R20"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["225/50R17", "225/45R18"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W206 generation - duplicate entry"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["205/60R16", "225/50R17"] },
+        "C300 Sport": {
+          "17-inch": "225/50R17",
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C43 AMG": { "front": "225/40R19", "rear": "255/35R19" },
+        "C63 AMG": {
+          "19-inch": { "front": "255/35R19", "rear": "285/30R19" },
+          "20-inch": { "front": "255/30R20", "rear": "285/25R20" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "Last year W205. Current sizes accurate"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "17-inch": "225/50R17",
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation - duplicate entry"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["205/60R16", "225/50R17"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation - duplicate entry"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "17-inch": "225/50R17",
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["205/60R16", "225/50R17"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C63 AMG": {
+          "19-inch": { "front": "255/35R19", "rear": "285/30R19" },
+          "20-inch": { "front": "255/30R20", "rear": "285/25R20" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation - full lineup"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["205/60R16", "225/50R17"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation - duplicate"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["205/60R16", "225/50R17"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C43 AMG": { "front": "225/40R19", "rear": "255/35R19" },
+        "C63 AMG": {
+          "19-inch": { "front": "255/35R19", "rear": "285/30R19" },
+          "20-inch": { "front": "255/30R20", "rear": "285/25R20" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["205/60R16", "225/50R17"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation - duplicate"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["205/60R16", "225/50R17"] },
+        "C300 4MATIC": { "options": ["225/50R17", "225/45R18"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "validatedTireSizes": {
+        "C300": {
+          "16-inch": "205/60R16",
+          "17-inch": "225/50R17",
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C63 AMG": {
+          "19-inch": { "front": "255/35R19", "rear": "285/30R19" },
+          "20-inch": { "front": "255/30R20", "rear": "285/25R20" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation - full lineup"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["205/60R16", "225/50R17"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C300 4MATIC Sedan": { "options": ["225/50R17", "225/45R18"] }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "255/35R19", "285/30R19", "255/30R20", "285/25R20"],
+      "validatedTireSizes": {
+        "C300": {
+          "16-inch": "205/60R16",
+          "17-inch": "225/50R17",
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C63 AMG": {
+          "19-inch": { "front": "255/35R19", "rear": "285/30R19" },
+          "20-inch": { "front": "255/30R20", "rear": "285/25R20" }
+        }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation - full lineup"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "validatedTireSizes": {
+        "C300 Base": { "options": ["205/60R16", "225/50R17", "225/45R18"] },
+        "C300 Luxury": { "options": ["225/50R17", "225/45R18"] },
+        "C300 Sport": {
+          "18-inch": { "front": "225/45R18", "rear": "245/40R18" },
+          "19-inch": { "front": "225/40R19", "rear": "255/35R19" }
+        },
+        "C300 4MATIC": { "options": ["225/50R17", "225/45R18"] }
+      },
+      "isStaggered": true,
+      "status": "CONFIRMED",
+      "notes": "W205 generation. Current sizes accurate"
+    }
+  ],
+  "summary": {
+    "confirmed": 52,
+    "projected": 14,
+    "warning": 6,
+    "invalid_year": 3,
+    "total": 75
+  },
+  "recommendations": [
+    {
+      "model": "mclaren gt 2019",
+      "action": "REMOVE",
+      "reason": "McLaren GT production started 2020"
+    },
+    {
+      "model": "mercedes amg-gt 2014",
+      "action": "REMOVE",
+      "reason": "AMG GT launched late 2014 for 2015 MY"
+    },
+    {
+      "model": "mercedes amg-gt-4 2018",
+      "action": "REMOVE",
+      "reason": "AMG GT 4-Door launched 2019"
+    },
+    {
+      "model": "mercedes a-class-amg",
+      "action": "UPDATE_SIZES",
+      "reason": "Current 225/45R18 incorrect - should be 235/40R18. Current 235/40R19 incorrect - should be 235/35R19"
+    },
+    {
+      "model": "mercedes amg-gt-4",
+      "action": "POPULATE_DATA",
+      "reason": "All years have empty currentTireSizes - needs 19\"/20\"/21\" staggered options"
+    }
+  ]
+}

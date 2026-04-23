@@ -1,0 +1,431 @@
+{
+  "batchId": 2,
+  "processedAt": "2026-04-21T23:45:00Z",
+  "source": "tiresize.com",
+  "results": [
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "q8-e-tron",
+      "status": "found",
+      "tires": ["255/50R20", "265/45R21"],
+      "wheels": [20, 21],
+      "notes": "Q8 e-tron 2023 uses same specs as 2024"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q8-e-tron",
+      "status": "found",
+      "tires": ["255/50R20", "265/45R21"],
+      "wheels": [20, 21],
+      "notes": "Verified from tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q8-e-tron",
+      "status": "found",
+      "tires": ["255/50R20", "265/45R21"],
+      "wheels": [20, 21],
+      "notes": "Carryover from 2024"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "q8-sportback-e-tron",
+      "status": "found",
+      "tires": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "wheels": [19, 20, 21, 22],
+      "notes": "Sportback variant of Q8 e-tron"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q8-sportback-e-tron",
+      "status": "found",
+      "tires": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "wheels": [19, 20, 21, 22],
+      "notes": "Verified from tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q8-sportback-e-tron",
+      "status": "found",
+      "tires": ["255/55R19", "255/50R20", "265/45R21", "265/40R22"],
+      "wheels": [19, 20, 21, 22],
+      "notes": "Carryover from 2024"
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "rs3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS3 was not sold in US until 2017 model year"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "rs3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS3 was not sold in US until 2017 model year"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "rs3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS3 was not sold in US until 2017 model year"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "rs3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS3 was not sold in US until 2017 model year"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "rs3",
+      "status": "found",
+      "tires": ["235/35R19"],
+      "tiresStaggered": {"front": "255/30R19", "rear": "235/35R19"},
+      "wheels": [19],
+      "notes": "Verified from tiresize.com, optional staggered setup"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "rs3",
+      "status": "found",
+      "tires": ["235/35R19"],
+      "tiresStaggered": {"front": "255/30R19", "rear": "235/35R19"},
+      "wheels": [19],
+      "notes": "Verified from tiresize.com, optional staggered setup"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "rs3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "No 2021 RS3 in US market (model year gap between generations)"
+    },
+    {
+      "year": 2002,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C5 sold in US only as 2003 model year"
+    },
+    {
+      "year": 2003,
+      "make": "audi",
+      "model": "rs6",
+      "status": "found",
+      "tires": ["255/40R18", "255/35R19"],
+      "wheels": [18, 19],
+      "notes": "Verified from tiresize.com - first gen RS6"
+    },
+    {
+      "year": 2004,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C5 sold in US only as 2003 model year"
+    },
+    {
+      "year": 2007,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C6 was never sold in US market"
+    },
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C6 was never sold in US market"
+    },
+    {
+      "year": 2009,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C6 was never sold in US market"
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C6 was never sold in US market"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C7 was never sold in US market"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C7 was never sold in US market"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C7 was never sold in US market"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C7 was never sold in US market"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C7 was never sold in US market"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C7 was never sold in US market"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "rs6",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS6 C7 was never sold in US market"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "rs7",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "RS7 first sold in US as 2014 model year"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "rs7",
+      "status": "found",
+      "tires": ["275/30R21", "285/30R21"],
+      "wheels": [21],
+      "notes": "First year RS7 in US market"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "rs7",
+      "status": "found",
+      "tires": ["275/30R21", "285/30R21"],
+      "wheels": [21],
+      "notes": "RS7 first generation"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "rs7",
+      "status": "found",
+      "tires": ["275/30R21", "285/30R21"],
+      "wheels": [21],
+      "notes": "RS7 first generation"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "rs7",
+      "status": "found",
+      "tires": ["275/30R21", "285/30R21"],
+      "wheels": [21],
+      "notes": "RS7 first generation"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "rs7",
+      "status": "found",
+      "tires": ["275/30R21", "285/30R21"],
+      "wheels": [21],
+      "notes": "RS7 first generation"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "rs7",
+      "status": "found",
+      "tires": ["275/30R21", "285/30R21"],
+      "wheels": [21],
+      "notes": "RS7 last year of first generation"
+    },
+    {
+      "year": 2000,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2001,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2002,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2003,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2006,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2007,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2009,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "s3",
+      "status": "notUS",
+      "notUS": true,
+      "notes": "S3 was not sold in US until 2015 model year"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "s6-e-tron",
+      "status": "notFound",
+      "notes": "New 2024 model, not yet in tiresize.com database. Expected sizes based on platform: 255/45R20, 265/40R21"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "s8l",
+      "status": "found",
+      "tires": ["265/40R20", "265/35R21", "275/35R21"],
+      "wheels": [20, 21],
+      "notes": "Verified from tiresize.com as S8 L trim"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "s8l",
+      "status": "found",
+      "tires": ["265/40R20", "265/35R21", "275/35R21"],
+      "wheels": [20, 21],
+      "notes": "Same specs as 2021 S8 L"
+    }
+  ],
+  "summary": {
+    "total": 50,
+    "found": 17,
+    "notUS": 32,
+    "notFound": 1
+  }
+}

@@ -1,0 +1,1057 @@
+{
+  "batchId": "40",
+  "processedAt": "2026-04-21T21:10:00Z",
+  "totalVehicles": 75,
+  "successCount": 75,
+  "failureCount": 0,
+  "results": [
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "AMG GT 4-Door",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 10, "offset": 35, "position": "front" },
+        { "diameter": 21, "width": 11.5, "offset": 55, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Performance sedan, staggered setup standard",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "AMG GT 4-Door",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 10, "offset": 35, "position": "front" },
+        { "diameter": 21, "width": 11.5, "offset": 55, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Performance sedan, staggered setup standard",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "AMG GT 4-Door",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 10, "offset": 35, "position": "front" },
+        { "diameter": 21, "width": 11, "offset": 50, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Performance sedan, staggered setup standard",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "AMG GT 4-Door",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 10, "offset": 30, "position": "front" },
+        { "diameter": 21, "width": 12, "offset": 50, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "AMG GT 63 S E Performance model introduced",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "AMG GT 4-Door",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 9.5, "offset": 25, "position": "front" },
+        { "diameter": 21, "width": 11.5, "offset": 55, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Staggered OEM setup",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "AMG GT 4-Door",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9.5, "offset": 30, "position": "front" },
+        { "diameter": 21, "width": 11, "offset": 55, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Staggered OEM setup",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "AMG GT 4-Door",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9.5, "offset": 25, "position": "front" },
+        { "diameter": 21, "width": 11, "offset": 50, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "First full year, 20/21 staggered standard",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "AMG GT 4-Door",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 9.5, "offset": 25, "position": "front" },
+        { "diameter": 20, "width": 11, "offset": 50, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Launch year, staggered 19/20 setup",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "C-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 43 }
+      ],
+      "isStaggered": false,
+      "notes": "Wagon variant with raised suspension",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "C-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 43 }
+      ],
+      "isStaggered": false,
+      "notes": "Wagon variant with raised suspension",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "C-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 43 },
+        { "diameter": 19, "width": 8, "offset": 43 }
+      ],
+      "isStaggered": false,
+      "notes": "Wagon variant, 18-19 inch options",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "C-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 43 },
+        { "diameter": 19, "width": 8, "offset": 43 }
+      ],
+      "isStaggered": false,
+      "notes": "Wagon variant, 18-19 inch options",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "C-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 43 },
+        { "diameter": 19, "width": 8, "offset": 43 }
+      ],
+      "isStaggered": false,
+      "notes": "Launch year on W206 platform",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "CLC-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7, "offset": 37 },
+        { "diameter": 17, "width": 7.5, "offset": 37 }
+      ],
+      "isStaggered": false,
+      "notes": "Final year, based on W203 C-Class",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "CLC-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7, "offset": 37 },
+        { "diameter": 17, "width": 7.5, "offset": 37 }
+      ],
+      "isStaggered": false,
+      "notes": "Based on W203 C-Class platform",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "CLC-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7, "offset": 37 },
+        { "diameter": 17, "width": 7.5, "offset": 37 }
+      ],
+      "isStaggered": false,
+      "notes": "Based on W203 C-Class platform",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "CLC-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7, "offset": 37 },
+        { "diameter": 17, "width": 7.5, "offset": 37 }
+      ],
+      "isStaggered": false,
+      "notes": "Launch year, sportback coupe",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "CLE-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 38 },
+        { "diameter": 19, "width": 8.5, "offset": 40 }
+      ],
+      "isStaggered": false,
+      "notes": "Coupe and Cabriolet body styles",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "CLE-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 38 },
+        { "diameter": 19, "width": 8.5, "offset": 40 }
+      ],
+      "isStaggered": false,
+      "notes": "Coupe and Cabriolet body styles",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "CLE-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 38 },
+        { "diameter": 19, "width": 8.5, "offset": 40 }
+      ],
+      "isStaggered": false,
+      "notes": "Replaces C-Class Coupe/Cabriolet",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "CLE-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 38 },
+        { "diameter": 19, "width": 8.5, "offset": 40 }
+      ],
+      "isStaggered": false,
+      "notes": "Launch year, C236 Coupe",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "CLE-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 9, "offset": 30, "position": "front" },
+        { "diameter": 20, "width": 10, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "AMG 53 performance variant",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "CLE-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 9, "offset": 30, "position": "front" },
+        { "diameter": 20, "width": 9.5, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "AMG 53 performance variant",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "CLE-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 9, "offset": 30, "position": "front" },
+        { "diameter": 20, "width": 9.5, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Launch year, CLE 53 AMG",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 35 },
+        { "diameter": 18, "width": 8, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W209 final year",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 35 },
+        { "diameter": 18, "width": 8, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W209 generation",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 35 },
+        { "diameter": 18, "width": 8, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W209 generation",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 35 },
+        { "diameter": 18, "width": 8, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W209 generation",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7.5, "offset": 35 },
+        { "diameter": 17, "width": 7.5, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W209 generation",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7.5, "offset": 35 },
+        { "diameter": 17, "width": 7.5, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W209 generation",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7.5, "offset": 35 },
+        { "diameter": 17, "width": 7.5, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W209 launch year",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7, "offset": 35 },
+        { "diameter": 17, "width": 7.5, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W208/W209 transition year",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7, "offset": 35 },
+        { "diameter": 17, "width": 7.5, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W208 generation",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7, "offset": 35 },
+        { "diameter": 17, "width": 7.5, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W208 generation",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "CLK-Class",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 16, "width": 7, "offset": 35 },
+        { "diameter": 17, "width": 7.5, "offset": 35 }
+      ],
+      "isStaggered": false,
+      "notes": "W208 generation",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 30, "position": "front" },
+        { "diameter": 18, "width": 9, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 63 AMG final year",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 30, "position": "front" },
+        { "diameter": 18, "width": 9, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 63 AMG",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 30, "position": "front" },
+        { "diameter": 18, "width": 9, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 63 AMG",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 30, "position": "front" },
+        { "diameter": 18, "width": 9, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 63 AMG",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 30, "position": "front" },
+        { "diameter": 18, "width": 9, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 55 AMG / CLK 63 AMG",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 30, "position": "front" },
+        { "diameter": 17, "width": 8.5, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 55 AMG",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 30, "position": "front" },
+        { "diameter": 17, "width": 8.5, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 55 AMG W209",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 30, "position": "front" },
+        { "diameter": 17, "width": 8.5, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 55 AMG transition year",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 30, "position": "front" },
+        { "diameter": 17, "width": 8.5, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 55 AMG W208",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 30, "position": "front" },
+        { "diameter": 17, "width": 8.5, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 55 AMG W208",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "CLK-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 30, "position": "front" },
+        { "diameter": 17, "width": 8.5, "offset": 35, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "CLK 55 AMG W208",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "E-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 44 },
+        { "diameter": 20, "width": 9, "offset": 46 }
+      ],
+      "isStaggered": false,
+      "notes": "W214 platform, raised wagon",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "E-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 44 },
+        { "diameter": 20, "width": 9, "offset": 46 }
+      ],
+      "isStaggered": false,
+      "notes": "W214 platform, raised wagon",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "E-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 44 },
+        { "diameter": 20, "width": 9, "offset": 46 }
+      ],
+      "isStaggered": false,
+      "notes": "W214 platform, raised wagon",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "E-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 44 },
+        { "diameter": 20, "width": 9, "offset": 46 }
+      ],
+      "isStaggered": false,
+      "notes": "W213 facelift, raised wagon",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "E-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 44 },
+        { "diameter": 20, "width": 9, "offset": 46 }
+      ],
+      "isStaggered": false,
+      "notes": "W213 platform, raised wagon",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "E-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 44 },
+        { "diameter": 20, "width": 9, "offset": 46 }
+      ],
+      "isStaggered": false,
+      "notes": "W213 platform, raised wagon",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "E-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 44 },
+        { "diameter": 20, "width": 8.5, "offset": 46 }
+      ],
+      "isStaggered": false,
+      "notes": "W213 platform, raised wagon",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "E-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 44 },
+        { "diameter": 20, "width": 8.5, "offset": 46 }
+      ],
+      "isStaggered": false,
+      "notes": "W213 platform, raised wagon",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "E-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 44 },
+        { "diameter": 20, "width": 8.5, "offset": 46 }
+      ],
+      "isStaggered": false,
+      "notes": "W213 platform, raised wagon",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "E-Class All-Terrain",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 44 },
+        { "diameter": 20, "width": 8.5, "offset": 46 }
+      ],
+      "isStaggered": false,
+      "notes": "Launch year on W213 platform",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "E-Class AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9, "offset": 38, "position": "front" },
+        { "diameter": 20, "width": 10, "offset": 44, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "W214 AMG E53/E63",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "EQC",
+      "boltPattern": "5x112",
+      "centerBore": 66.5,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9, "offset": 38 },
+        { "diameter": 21, "width": 9.5, "offset": 40 }
+      ],
+      "isStaggered": false,
+      "notes": "Electric SUV final year",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "EQC",
+      "boltPattern": "5x112",
+      "centerBore": 66.5,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 35 },
+        { "diameter": 20, "width": 9, "offset": 38 }
+      ],
+      "isStaggered": false,
+      "notes": "Electric SUV",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "EQC",
+      "boltPattern": "5x112",
+      "centerBore": 66.5,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 35 },
+        { "diameter": 20, "width": 9, "offset": 38 }
+      ],
+      "isStaggered": false,
+      "notes": "Electric SUV",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "EQC",
+      "boltPattern": "5x112",
+      "centerBore": 66.5,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 35 },
+        { "diameter": 20, "width": 9, "offset": 42 }
+      ],
+      "isStaggered": false,
+      "notes": "First full year EQC",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "EQC",
+      "boltPattern": "5x112",
+      "centerBore": 66.5,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 35 },
+        { "diameter": 20, "width": 9, "offset": 42 }
+      ],
+      "isStaggered": false,
+      "notes": "Launch year for EQC electric SUV",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "EQE AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9.5, "offset": 35, "position": "front" },
+        { "diameter": 21, "width": 11, "offset": 48, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Electric performance sedan",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "EQE AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9.5, "offset": 35, "position": "front" },
+        { "diameter": 21, "width": 11, "offset": 48, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Electric performance sedan",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "EQE AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.5,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9.5, "offset": 35, "position": "front" },
+        { "diameter": 21, "width": 10.5, "offset": 50, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Electric performance sedan",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "EQE AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.5,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9.5, "offset": 35, "position": "front" },
+        { "diameter": 21, "width": 10.5, "offset": 50, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Electric performance sedan",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "EQE AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.5,
+      "wheelSizes": [
+        { "diameter": 19, "width": 9, "offset": 40, "position": "front" },
+        { "diameter": 20, "width": 10, "offset": 48, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Launch year EQE 43/53 AMG",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "EQE SUV",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9, "offset": 38 },
+        { "diameter": 21, "width": 9.5, "offset": 40 }
+      ],
+      "isStaggered": false,
+      "notes": "Electric midsize SUV",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "EQE SUV",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9, "offset": 38 },
+        { "diameter": 21, "width": 9.5, "offset": 40 }
+      ],
+      "isStaggered": false,
+      "notes": "Electric midsize SUV",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "EQE SUV",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 35 },
+        { "diameter": 20, "width": 9, "offset": 38 }
+      ],
+      "isStaggered": false,
+      "notes": "Electric midsize SUV",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "EQE SUV",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 35 },
+        { "diameter": 20, "width": 9, "offset": 38 }
+      ],
+      "isStaggered": false,
+      "notes": "Launch year EQE SUV",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "EQE SUV AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 21, "width": 9.5, "offset": 35, "position": "front" },
+        { "diameter": 22, "width": 10.5, "offset": 42, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Electric performance SUV",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "EQE SUV AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 21, "width": 9.5, "offset": 35, "position": "front" },
+        { "diameter": 22, "width": 10.5, "offset": 42, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Electric performance SUV",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "EQE SUV AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9.5, "offset": 35, "position": "front" },
+        { "diameter": 21, "width": 10, "offset": 40, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Electric performance SUV",
+      "source": "hulkoffsets.com"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "EQE SUV AMG",
+      "boltPattern": "5x112",
+      "centerBore": 66.6,
+      "wheelSizes": [
+        { "diameter": 20, "width": 9.5, "offset": 35, "position": "front" },
+        { "diameter": 21, "width": 10, "offset": 40, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "notes": "Launch year EQE SUV 43/53 AMG",
+      "source": "hulkoffsets.com"
+    }
+  ]
+}

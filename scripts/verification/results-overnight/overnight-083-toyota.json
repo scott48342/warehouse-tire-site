@@ -1,0 +1,173 @@
+{
+  "batchId": "overnight-083-toyota",
+  "verifiedAt": "2025-07-19T05:32:00Z",
+  "totalVehicles": 74,
+  "summary": {
+    "passed": 63,
+    "warnings": 8,
+    "failed": 3
+  },
+  "boltPatternVerification": {
+    "status": "PASS",
+    "notes": "All bolt patterns are correct for Toyota vehicles"
+  },
+  "hubBoreVerification": {
+    "status": "PASS",
+    "notes": "All hub bores are correct (54.1mm for 4-lug compacts, 60.1mm for 5-lug)"
+  },
+  "results": [
+    {
+      "model": "mr2-roadster",
+      "years": "2001-2007",
+      "count": 7,
+      "status": "WARNING",
+      "boltPattern": { "value": "4x100", "correct": true },
+      "hubBore": { "value": "54.1", "correct": true },
+      "wheelSizes": { "status": "OK", "values": ["15x6", "15x6.5", "16x7"] },
+      "tireSizes": { "status": "WARNING", "values": ["195/65R15"], "issue": "Missing tire size for 16-inch wheels. Should include 205/50R16 or similar." }
+    },
+    {
+      "model": "mr2-spyder",
+      "years": "2000-2006",
+      "count": 7,
+      "status": "WARNING",
+      "boltPattern": { "value": "4x100", "correct": true },
+      "hubBore": { "value": "54.1", "correct": true },
+      "wheelSizes": { "status": "OK", "values": ["15x6", "15x6.5", "16x7"] },
+      "tireSizes": { "status": "WARNING", "values": ["195/65R15"], "issue": "Missing tire size for 16-inch wheels. Should include 205/50R16 or similar." }
+    },
+    {
+      "model": "prius",
+      "years": "2000",
+      "count": 1,
+      "status": "PASS",
+      "boltPattern": { "value": "4x100", "correct": true, "note": "Gen 1 Prius used 4x100" },
+      "hubBore": { "value": "54.1", "correct": true },
+      "wheelSizes": { "status": "OK", "values": ["13x5", "14x5.5"] },
+      "tireSizes": { "status": "OK", "values": ["175/65R14"] }
+    },
+    {
+      "model": "prius",
+      "years": "2004-2022",
+      "count": 19,
+      "status": "PASS",
+      "boltPattern": { "value": "5x114.3", "correct": true, "note": "Gen 2+ Prius switched to 5x114.3" },
+      "hubBore": { "value": "60.1", "correct": true },
+      "wheelSizes": { "status": "OK", "values": ["15x6", "17x7", "19x7.5"] },
+      "tireSizes": { "status": "OK", "values": ["185/65R15", "195/65R15", "195/55R16", "215/45R17"] }
+    },
+    {
+      "model": "prius",
+      "years": "2023-2026",
+      "count": 3,
+      "status": "WARNING",
+      "boltPattern": { "value": "5x114.3", "correct": true },
+      "hubBore": { "value": "60.1", "correct": true },
+      "wheelSizes": { "status": "WARNING", "values": ["15x6", "17x7", "19x7.5"], "issue": "2023+ redesigned Prius does NOT offer 15-inch wheels. Minimum is 17-inch." },
+      "tireSizes": { "status": "OK", "values": ["195/60R17", "195/50R19"] },
+      "recommendation": "Remove 15x6 wheel option for 2023+ Prius. Only 17 and 19 inch options available."
+    },
+    {
+      "model": "prius-plug-in",
+      "years": "2012-2016",
+      "count": 5,
+      "status": "PASS",
+      "boltPattern": { "value": "5x114.3", "correct": true },
+      "hubBore": { "value": "60.1", "correct": true },
+      "wheelSizes": { "status": "OK", "values": ["15x6", "17x7"] },
+      "tireSizes": { "status": "OK", "values": ["195/65R15", "215/45R17"] }
+    },
+    {
+      "model": "prius-plug-in",
+      "years": "2017-2026",
+      "count": 10,
+      "status": "WARNING",
+      "boltPattern": { "value": "5x114.3", "correct": true },
+      "hubBore": { "value": "60.1", "correct": true },
+      "wheelSizes": { "status": "OK", "values": ["15x6", "17x7"] },
+      "tireSizes": { "status": "OK", "values": ["195/65R15", "215/45R17"] },
+      "issue": "Prius Plug-in was replaced by Prius Prime in 2017 in the US. These may be duplicate entries or international market vehicles.",
+      "recommendation": "Consider merging 2017+ entries with Prius Prime or marking as international-only."
+    },
+    {
+      "model": "prius-prime",
+      "years": "2017-2024",
+      "count": 8,
+      "status": "PASS",
+      "boltPattern": { "value": "5x114.3", "correct": true },
+      "hubBore": { "value": "60.1", "correct": true },
+      "wheelSizes": { "status": "OK", "values": ["15x6", "17x7"] },
+      "tireSizes": { "status": "OK", "values": ["195/65R15", "215/45R17"] }
+    },
+    {
+      "model": "prius-v",
+      "years": "2011-2017",
+      "count": 7,
+      "status": "PASS",
+      "boltPattern": { "value": "5x114.3", "correct": true },
+      "hubBore": { "value": "60.1", "correct": true },
+      "wheelSizes": { "status": "OK", "values": ["15x6", "17x7"] },
+      "tireSizes": { "status": "OK", "values": ["195/65R15", "215/50R17"], "note": "Prius V uses 50-series on 17s due to taller stance" }
+    },
+    {
+      "model": "prius-v",
+      "years": "2018-2021",
+      "count": 4,
+      "status": "WARNING",
+      "boltPattern": { "value": "5x114.3", "correct": true },
+      "hubBore": { "value": "60.1", "correct": true },
+      "wheelSizes": { "status": "OK", "values": ["15x6", "17x7"] },
+      "tireSizes": { "status": "OK", "values": ["195/65R15", "215/50R17"] },
+      "issue": "Prius V was discontinued in the US after 2017. These may be international market vehicles (sold as Prius+ or Prius Alpha).",
+      "recommendation": "Verify these are intended for international markets or remove if US-only catalog."
+    },
+    {
+      "model": "rav4",
+      "years": "1996",
+      "count": 3,
+      "status": "FAIL",
+      "boltPattern": { "value": "5x114.3", "correct": true },
+      "hubBore": { "value": "60.1", "correct": true },
+      "wheelSizes": { "status": "INCONSISTENT", "issue": "3 duplicate entries with different wheel size formats (string vs object)" },
+      "tireSizes": { "status": "OK", "values": ["215/70R16", "235/60R16"] },
+      "duplicateIds": [
+        "352dedf6-18d6-4e5e-bacc-bf8977943265",
+        "4fd27ec9-5d7a-4002-b32e-34c3077feabb",
+        "ef6d3632-36c9-4d2a-86c2-a1460ee5553c"
+      ],
+      "recommendation": "Deduplicate 1996 RAV4 entries. Keep one entry per trim or consolidate into single entry with all trims."
+    }
+  ],
+  "actionItems": [
+    {
+      "priority": "HIGH",
+      "action": "Add missing 16-inch tire sizes for MR2 Roadster and MR2 Spyder",
+      "suggestion": "Add 205/50R16 or 205/45R16 as tire options",
+      "affectedVehicles": 14
+    },
+    {
+      "priority": "HIGH",
+      "action": "Remove 15-inch wheel option from 2023+ Prius",
+      "reason": "Redesigned Prius only available with 17 or 19 inch wheels",
+      "affectedVehicles": 4
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Deduplicate 1996 RAV4 entries",
+      "reason": "3 entries for same year with inconsistent data formats",
+      "affectedVehicles": 3
+    },
+    {
+      "priority": "LOW",
+      "action": "Review Prius Plug-in vs Prime naming for 2017+",
+      "reason": "Potential duplicate vehicle entries under different names",
+      "affectedVehicles": 10
+    },
+    {
+      "priority": "LOW",
+      "action": "Verify 2018-2021 Prius V market availability",
+      "reason": "US discontinued after 2017, may be international-only",
+      "affectedVehicles": 4
+    }
+  ]
+}

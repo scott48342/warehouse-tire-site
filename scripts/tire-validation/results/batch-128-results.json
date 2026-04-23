@@ -1,0 +1,1190 @@
+{
+  "batchId": "128",
+  "processedAt": "2026-04-21T22:35:00.000Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "v-drive",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R14", "185/60R15", "185/65R15"],
+      "trims": {
+        "Drive": { "tireSize": "175/70R14", "wheelSize": "14x5.5" },
+        "Drive+": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "Sense": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "Mexico/Latin America market vehicle. Based on older Versa platform.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "v-drive",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R14", "185/60R15", "185/65R15"],
+      "trims": {
+        "Drive": { "tireSize": "175/70R14", "wheelSize": "14x5.5" },
+        "Drive+": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "Sense": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "Mexico/Latin America market vehicle.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "v-drive",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R14", "185/60R15", "185/65R15"],
+      "trims": {
+        "Drive": { "tireSize": "175/70R14", "wheelSize": "14x5.5" },
+        "Drive+": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "Sense": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "Mexico/Latin America market vehicle.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "v-drive",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R14", "185/60R15", "185/65R15"],
+      "trims": {
+        "Drive": { "tireSize": "175/70R14", "wheelSize": "14x5.5" },
+        "Drive+": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "Sense": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "Mexico/Latin America market vehicle.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "v-drive",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R14", "185/60R15", "185/65R15"],
+      "trims": {
+        "Drive": { "tireSize": "175/70R14", "wheelSize": "14x5.5" },
+        "Drive+": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "Sense": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "Mexico/Latin America market vehicle.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "v-drive",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R14", "185/60R15", "185/65R15"],
+      "trims": {
+        "Drive": { "tireSize": "175/70R14", "wheelSize": "14x5.5" },
+        "Drive+": { "tireSize": "185/60R15", "wheelSize": "15x5.5" },
+        "Sense": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "Mexico/Latin America market vehicle. First model year.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trims": {
+        "S": { "tireSize": "195/65R15", "wheelSize": "15x5.5", "altSize": "205/55R16" },
+        "SV": { "tireSize": "205/55R16", "wheelSize": "16x6" },
+        "SR": { "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      },
+      "notes": "Current sizes in DB incorrect. 185/65R15 and 195/55R16 are older sizes. 205/45R17 not OEM.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trims": {
+        "S": { "tireSize": "195/65R15", "wheelSize": "15x5.5", "altSize": "205/55R16" },
+        "SV": { "tireSize": "205/55R16", "wheelSize": "16x6" },
+        "SR": { "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      },
+      "notes": "Current sizes in DB incorrect.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trims": {
+        "S": { "tireSize": "195/65R15", "wheelSize": "15x5.5", "altSize": "205/55R16" },
+        "SV": { "tireSize": "205/55R16", "wheelSize": "16x6" },
+        "SR": { "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      },
+      "notes": "Current sizes in DB incorrect.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trims": {
+        "S": { "tireSize": "195/65R15", "wheelSize": "15x5.5", "altSize": "205/55R16" },
+        "SV": { "tireSize": "205/55R16", "wheelSize": "16x6" },
+        "SR": { "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      },
+      "notes": "Current sizes in DB incorrect.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trims": {
+        "S": { "tireSize": "195/65R15", "wheelSize": "15x5.5", "altSize": "205/55R16" },
+        "SV": { "tireSize": "205/55R16", "wheelSize": "16x6" },
+        "SR": { "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      },
+      "notes": "Current sizes in DB incorrect.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16", "205/45R17", "195/65R15", "205/55R16", "205/50R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trims": {
+        "S": { "tireSize": "195/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "205/55R16", "wheelSize": "16x6" },
+        "SR": { "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      },
+      "notes": "DB has mix of old and new sizes. Remove 185/65R15, 195/55R16, 205/45R17.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16", "205/45R17"],
+      "validatedTireSizes": ["195/65R15", "205/55R16", "205/50R17"],
+      "trims": {
+        "S": { "tireSize": "195/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "205/55R16", "wheelSize": "16x6" },
+        "SR": { "tireSize": "205/50R17", "wheelSize": "17x6.5" }
+      },
+      "notes": "2020 was redesign year. Current DB has old pre-refresh sizes.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/65R15"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "185/55R16 not standard OEM for 2019 Versa sedan. All trims used 185/65R15.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "185/55R16", "195/55R16"],
+      "validatedTireSizes": ["185/65R15"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "2018 Versa sedan only used 185/65R15. 185/55R16 and 195/55R16 are Versa Note sizes.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SL": { "tireSize": "195/55R16", "wheelSize": "16x5.5" }
+      },
+      "notes": "185/55R16 incorrect - SL trim uses 195/55R16.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/65R15"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "185/55R16 not OEM for 2016 Versa sedan.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/65R15"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "185/55R16 not OEM for 2015 Versa sedan.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/65R15"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "185/55R16 not OEM for 2014 Versa sedan.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "185/55R16", "195/55R16"],
+      "validatedTireSizes": ["185/65R15"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "tiresize.com shows 205/45R17 but this seems incorrect. Standard size is 185/65R15.",
+      "confidence": "medium",
+      "status": "update_required"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trims": {
+        "Hatchback S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Hatchback SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5", "altSize": "195/55R16" },
+        "Sedan S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "185/55R16 incorrect - should be 195/55R16 for hatchback SL only.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16"],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trims": {
+        "Hatchback S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Hatchback SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5", "altSize": "195/55R16" },
+        "Sedan 1.6": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "Sizes match DB.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16"],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trims": {
+        "Hatchback S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Hatchback SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5", "altSize": "195/55R16" },
+        "Sedan 1.6": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "Sizes match DB.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16"],
+      "validatedTireSizes": ["185/65R15"],
+      "trims": {
+        "Hatchback S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Hatchback SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan 1.6": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "195/55R16 not OEM for 2009. All trims used 185/65R15.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16"],
+      "validatedTireSizes": ["185/65R15"],
+      "trims": {
+        "Hatchback S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Hatchback SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "195/55R16 not OEM for 2008. All trims used 185/65R15.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "versa",
+      "currentTireSizes": ["185/65R15", "195/55R16"],
+      "validatedTireSizes": ["185/65R15"],
+      "trims": {
+        "Hatchback S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Hatchback SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "Sedan SL": { "tireSize": "185/65R15", "wheelSize": "15x5.5" }
+      },
+      "notes": "195/55R16 not OEM for 2007 first-year Versa. All trims used 185/65R15.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "versa-note",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SR": { "tireSize": "195/55R16", "wheelSize": "16x5.5" }
+      },
+      "notes": "Final model year for Versa Note.",
+      "confidence": "high",
+      "status": "new_data"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "versa-note",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SR": { "tireSize": "195/55R16", "wheelSize": "16x5.5" }
+      },
+      "confidence": "high",
+      "status": "new_data"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "versa-note",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SL": { "tireSize": "195/55R16", "wheelSize": "16x5.5" },
+        "SR": { "tireSize": "195/55R16", "wheelSize": "16x5.5" }
+      },
+      "confidence": "high",
+      "status": "new_data"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "versa-note",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5", "altSize": "195/55R16" },
+        "SL": { "tireSize": "195/55R16", "wheelSize": "16x5.5" },
+        "SR": { "tireSize": "185/65R15", "wheelSize": "15x5.5", "altSize": "195/55R16" }
+      },
+      "confidence": "high",
+      "status": "new_data"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "versa-note",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5", "altSize": "195/55R16" },
+        "SL": { "tireSize": "195/55R16", "wheelSize": "16x5.5" },
+        "SR": { "tireSize": "195/55R16", "wheelSize": "16x5.5" }
+      },
+      "confidence": "high",
+      "status": "new_data"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "versa-note",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trims": {
+        "S": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "S Plus": { "tireSize": "185/65R15", "wheelSize": "15x5.5" },
+        "SV": { "tireSize": "185/65R15", "wheelSize": "15x5.5", "altSize": "195/55R16" },
+        "SV with SL Package": { "tireSize": "195/55R16", "wheelSize": "16x5.5" }
+      },
+      "notes": "First model year for Versa Note (hatchback separated from sedan).",
+      "confidence": "high",
+      "status": "new_data"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "versa-note",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "Versa Note was not sold in 2013. First MY was 2014.",
+      "confidence": "high",
+      "status": "invalid_vehicle"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "x-terra",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R17", "265/60R18"],
+      "trims": {
+        "SE": { "tireSize": "255/70R17", "wheelSize": "17x7.5" },
+        "Titanium": { "tireSize": "265/60R18", "wheelSize": "18x7.5" },
+        "Platinum": { "tireSize": "265/60R18", "wheelSize": "18x7.5" }
+      },
+      "notes": "Middle East market SUV (based on Navara platform). Not same as discontinued US Xterra.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "x-terra",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R17", "265/60R18"],
+      "trims": {
+        "SE": { "tireSize": "255/70R17", "wheelSize": "17x7.5" },
+        "Titanium": { "tireSize": "265/60R18", "wheelSize": "18x7.5" },
+        "Platinum": { "tireSize": "265/60R18", "wheelSize": "18x7.5" }
+      },
+      "notes": "Middle East market SUV.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "x-terra",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R17", "265/60R18"],
+      "trims": {
+        "SE": { "tireSize": "255/70R17", "wheelSize": "17x7.5" },
+        "Titanium": { "tireSize": "265/60R18", "wheelSize": "18x7.5" },
+        "Platinum": { "tireSize": "265/60R18", "wheelSize": "18x7.5" }
+      },
+      "notes": "Middle East market SUV.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "x-terra",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R17", "265/60R18"],
+      "trims": {
+        "SE": { "tireSize": "255/70R17", "wheelSize": "17x7.5" },
+        "Titanium": { "tireSize": "265/60R18", "wheelSize": "18x7.5" },
+        "Platinum": { "tireSize": "265/60R18", "wheelSize": "18x7.5" }
+      },
+      "notes": "Middle East market SUV.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "x-terra",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R17", "265/60R18"],
+      "trims": {
+        "SE": { "tireSize": "255/70R17", "wheelSize": "17x7.5" },
+        "Titanium": { "tireSize": "265/60R18", "wheelSize": "18x7.5" },
+        "Platinum": { "tireSize": "265/60R18", "wheelSize": "18x7.5" }
+      },
+      "notes": "Middle East market SUV. First model year for new X-Terra.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "x-trail-x-treme",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "225/55R18"],
+      "trims": {
+        "Base": { "tireSize": "215/65R16", "wheelSize": "16x6.5" },
+        "Premium": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "notes": "International market X-Trail variant. Not sold in US.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "x-trail-x-treme",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "225/55R18"],
+      "trims": {
+        "Base": { "tireSize": "215/65R16", "wheelSize": "16x6.5" },
+        "Premium": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "notes": "International market X-Trail variant.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "x-trail-x-treme",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16", "225/55R18"],
+      "trims": {
+        "Base": { "tireSize": "215/65R16", "wheelSize": "16x6.5" },
+        "Premium": { "tireSize": "225/55R18", "wheelSize": "18x7" }
+      },
+      "notes": "International market X-Trail variant.",
+      "confidence": "medium",
+      "status": "needs_review"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "PRO-4X": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "Final model year. DB has 265/65R17 but 2015 didn't have 17\" wheel option. PRO-4X uses 265/75R16.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "PRO-4X": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "265/65R17 not OEM for 2014. All trims 16\" wheels.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "PRO-4X": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "265/65R17 not OEM for 2013.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "PRO-4X": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "265/65R17 not OEM for 2012.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "PRO-4X": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "265/65R17 not OEM for 2011.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "Off-Road": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "265/65R17 not OEM for 2010.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "Off-Road": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "265/65R17 not OEM for 2009.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "Off-Road": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "265/65R17 not OEM for 2008.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "Off-Road": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "265/65R17 not OEM for 2007.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "X 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "Off-Road": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "265/65R17 not OEM for 2006.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["265/70R16", "265/65R17"],
+      "validatedTireSizes": ["265/70R16", "265/65R17", "265/75R16"],
+      "trims": {
+        "S 2WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "S 4WD": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "SE 2WD": { "tireSize": "265/65R17", "wheelSize": "17x7.5" },
+        "SE 4WD": { "tireSize": "265/65R17", "wheelSize": "17x7.5" },
+        "Off-Road": { "tireSize": "265/75R16", "wheelSize": "16x7" }
+      },
+      "notes": "2005 second-gen Xterra. SE trim had 17\" wheels. Current DB is correct but missing Off-Road size.",
+      "confidence": "high",
+      "status": "partial_match"
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["235/70R15", "265/70R16"],
+      "validatedTireSizes": ["265/70R15", "265/70R16", "265/65R17"],
+      "trims": {
+        "XE 4x2 4cyl": { "tireSize": "265/70R15", "wheelSize": "15x7" },
+        "XE 4x2 V6": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "XE 4x4 V6": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "SE 4x2": { "tireSize": "265/65R17", "wheelSize": "17x7.5" },
+        "SE 4x4": { "tireSize": "265/65R17", "wheelSize": "17x7.5" }
+      },
+      "notes": "DB has 235/70R15 but tiresize.com shows 265/70R15 for 4cyl. SE had 17\" wheels.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["235/70R15", "265/70R16"],
+      "validatedTireSizes": ["235/70R15", "265/70R16"],
+      "trims": {
+        "XE 4x2 4cyl": { "tireSize": "235/70R15", "wheelSize": "15x7" },
+        "XE V6": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "SE": { "tireSize": "265/70R16", "wheelSize": "16x7" }
+      },
+      "notes": "First-gen Xterra. Sizes match DB.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["235/70R15", "265/70R16"],
+      "validatedTireSizes": ["235/70R15", "265/70R16"],
+      "trims": {
+        "XE 4x2 4cyl": { "tireSize": "235/70R15", "wheelSize": "15x7" },
+        "XE V6": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "SE": { "tireSize": "265/70R16", "wheelSize": "16x7" }
+      },
+      "notes": "First-gen Xterra. Sizes match DB.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["235/70R15", "265/70R16"],
+      "validatedTireSizes": ["235/70R15", "265/70R16"],
+      "trims": {
+        "XE 4x2 4cyl": { "tireSize": "235/70R15", "wheelSize": "15x7" },
+        "XE V6": { "tireSize": "265/70R16", "wheelSize": "16x7" },
+        "SE": { "tireSize": "265/70R16", "wheelSize": "16x7" }
+      },
+      "notes": "First-gen Xterra. Sizes match DB.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "xterra",
+      "currentTireSizes": ["235/70R15", "265/70R16"],
+      "validatedTireSizes": ["235/70R15", "265/70R15"],
+      "trims": {
+        "XE 4x2 4cyl": { "tireSize": "235/70R15", "wheelSize": "15x7" },
+        "XE 4x4": { "tireSize": "235/70R15", "wheelSize": "15x7", "altSize": "265/70R15" },
+        "SE 4x2": { "tireSize": "265/70R15", "wheelSize": "15x7" },
+        "SE 4x4": { "tireSize": "265/70R15", "wheelSize": "15x7" }
+      },
+      "notes": "2000 first-year Xterra used 15\" wheels. 265/70R16 not OEM for 2000.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["245/45R18", "275/40R18", "255/40R19", "275/35R19"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "275/35R19"],
+      "trims": {
+        "Sport": { "tireSize": "245/45R18", "wheelSize": "18x9", "isStaggered": false },
+        "Performance": { "frontTireSize": "255/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Heritage Edition": { "frontTireSize": "255/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "255/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "275/40R18 not OEM. Sport is square setup, Performance/Heritage/Nismo are staggered.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["245/45R18", "275/40R18", "255/40R19", "275/35R19"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "275/35R19"],
+      "trims": {
+        "Sport": { "tireSize": "245/45R18", "wheelSize": "18x9", "isStaggered": false },
+        "Performance": { "frontTireSize": "255/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "255/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "275/40R18 not OEM.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["245/45R18", "275/40R18", "255/40R19", "275/35R19"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "275/35R19", "285/35R19"],
+      "trims": {
+        "Sport": { "tireSize": "245/45R18", "wheelSize": "18x9", "isStaggered": false },
+        "Performance": { "frontTireSize": "255/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "255/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "275/40R18 not OEM. Nismo has wider 285/35R19 rear.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["245/45R18", "275/40R18", "255/40R19", "275/35R19"],
+      "validatedTireSizes": ["245/45R18", "255/40R19", "275/35R19"],
+      "trims": {
+        "Sport": { "tireSize": "245/45R18", "wheelSize": "18x9", "isStaggered": false },
+        "Performance": { "frontTireSize": "255/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Proto Spec": { "frontTireSize": "255/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true }
+      },
+      "notes": "275/40R18 not OEM. First year for new Z.",
+      "confidence": "high",
+      "status": "update_required"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "notes": "No 2022 Nissan Z. Gap year between 370Z (ended 2020) and new Z (started 2023).",
+      "confidence": "high",
+      "status": "invalid_vehicle"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "This is 370Z final year. All trims are staggered. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "370Z. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "370Z. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "370Z. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "370Z. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "370Z. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "370Z. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "370Z. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "370Z. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "370Z. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R19", "rearTireSize": "285/35R19", "frontWheelSize": "19x9.5", "rearWheelSize": "19x10.5", "isStaggered": true }
+      },
+      "notes": "370Z. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R18", "245/45R18", "245/40R19", "275/35R19"],
+      "trims": {
+        "Coupe": { "frontTireSize": "225/50R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x9", "isStaggered": true },
+        "Sport": { "frontTireSize": "245/40R19", "rearTireSize": "275/35R19", "frontWheelSize": "19x9", "rearWheelSize": "19x10", "isStaggered": true }
+      },
+      "notes": "370Z first year. DB sizes correct.",
+      "confidence": "high",
+      "status": "verified"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "z",
+      "currentTireSizes": ["225/50R17", "235/50R17", "225/45R18", "245/45R18", "245/40R19", "275/35R19"],
+      "validatedTireSizes": ["225/50R17", "235/50R17", "225/45R18", "245/45R18", "245/40R18", "265/35R19"],
+      "trims": {
+        "Base": { "frontTireSize": "225/50R17", "rearTireSize": "235/50R17", "frontWheelSize": "17x7.5", "rearWheelSize": "17x8", "isStaggered": true },
+        "Enthusiast": { "frontTireSize": "225/50R17", "rearTireSize": "235/50R17", "frontWheelSize": "17x7.5", "rearWheelSize": "17x8", "isStaggered": true },
+        "Touring": { "frontTireSize": "225/45R18", "rearTireSize": "245/45R18", "frontWheelSize": "18x8", "rearWheelSize": "18x8.5", "isStaggered": true },
+        "Track": { "frontTireSize": "245/40R18", "rearTireSize": "265/35R19", "frontWheelSize": "18x8", "rearWheelSize": "19x9", "isStaggered": true },
+        "Nismo": { "frontTireSize": "245/40R18", "rearTireSize": "285/35R18", "frontWheelSize": "18x9", "rearWheelSize": "18x10", "isStaggered": true }
+      },
+      "notes": "350Z final year. 245/40R19 and 275/35R19 in DB incorrect for 350Z - those are 370Z sizes. Track trim has mixed 18/19\" setup.",
+      "confidence": "high",
+      "status": "update_required"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "verified": 19,
+    "updateRequired": 37,
+    "newData": 7,
+    "needsReview": 10,
+    "invalidVehicle": 2,
+    "partialMatch": 1
+  },
+  "keyFindings": [
+    "Nissan Versa 2020+ uses different sizes than pre-2020 (redesign year)",
+    "DB has incorrect/outdated Versa tire sizes mixing old and new gen",
+    "Versa Note data completely missing from DB (2014-2019)",
+    "Xterra 2005-2015 mostly had 16\" wheels only, 265/65R17 was only on early SE trims",
+    "2000 Xterra used 15\" wheels, not 16\"",
+    "Nissan Z (370Z) sizes are largely correct in DB",
+    "New Z (2023+) has 275/40R18 incorrectly in DB - not an OEM size",
+    "2022 Nissan Z does not exist (gap year)",
+    "2008 Z (350Z) has 370Z tire sizes incorrectly mixed in",
+    "V-Drive is Mexico/Latin America market only",
+    "X-Terra (2021+) is Middle East market, different from US Xterra",
+    "X-Trail X-Treme is international market variant"
+  ]
+}

@@ -1,0 +1,1035 @@
+{
+  "batchId": "127",
+  "processedAt": "2026-04-21T22:34:00.000Z",
+  "source": "tiresize.com, tirewheelguide.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": ["205/60R15", "205/55R16", "225/45R17"],
+      "trimData": [
+        {"trim": "2.0", "tireSize": "205/60R15", "wheelSize": "15"},
+        {"trim": "2.0 S", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "2.0 SL", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "2.0 SR", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "SE-R", "tireSize": "225/45R17", "wheelSize": "17"},
+        {"trim": "SE-R Spec V", "tireSize": "225/45R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current has 195/65R15 and 215/45R17, validated shows 205/60R15 and 225/45R17"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2010,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": ["205/60R15", "205/55R16", "225/45R17"],
+      "trimData": [
+        {"trim": "2.0", "tireSize": "205/60R15", "wheelSize": "15"},
+        {"trim": "2.0 S", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "2.0 SL", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "SE-R", "tireSize": "225/45R17", "wheelSize": "17"},
+        {"trim": "SE-R Spec V", "tireSize": "225/45R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current has 195/65R15 and 215/45R17, validated shows 205/60R15 and 225/45R17"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": ["205/60R15", "205/55R16", "225/45R17"],
+      "trimData": [
+        {"trim": "2.0", "tireSize": "205/60R15", "wheelSize": "15"},
+        {"trim": "2.0 S", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "2.0 SL", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "SE-R", "tireSize": "225/45R17", "wheelSize": "17"},
+        {"trim": "SE-R Spec V", "tireSize": "225/45R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current has 195/65R15 and 215/45R17, validated shows 205/60R15 and 225/45R17"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": ["205/60R15", "205/55R16", "225/45R17"],
+      "trimData": [
+        {"trim": "2.0", "tireSize": "205/60R15", "wheelSize": "15"},
+        {"trim": "2.0 S", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "2.0 SL", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "SE-R", "tireSize": "225/45R17", "wheelSize": "17"},
+        {"trim": "SE-R Spec V", "tireSize": "225/45R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current has 195/65R15 and 215/45R17, validated shows 205/60R15 and 225/45R17"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2007,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["195/65R15", "205/55R16", "215/45R17"],
+      "validatedTireSizes": ["205/60R15", "205/55R16", "225/45R17"],
+      "trimData": [
+        {"trim": "2.0", "tireSize": "205/60R15", "wheelSize": "15"},
+        {"trim": "2.0 S", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "2.0 SL", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "SE-R", "tireSize": "225/45R17", "wheelSize": "17"},
+        {"trim": "SE-R Spec V", "tireSize": "225/45R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current has 195/65R15 and 215/45R17, validated shows 205/60R15 and 225/45R17"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2006,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/50R16", "215/45R17"],
+      "validatedTireSizes": ["195/60R15", "195/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "1.8", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "1.8 S", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "1.8 S (opt)", "tireSize": "195/55R16", "wheelSize": "16"},
+        {"trim": "SE-R", "tireSize": "195/55R16", "wheelSize": "16"},
+        {"trim": "SE-R Spec-V", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current has 185/65R14 and 205/50R16 not in validated set"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2005,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/50R16", "215/45R17"],
+      "validatedTireSizes": ["195/60R15", "195/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "1.8", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "1.8 S", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "1.8 S (opt)", "tireSize": "195/55R16", "wheelSize": "16"},
+        {"trim": "SE-R", "tireSize": "195/55R16", "wheelSize": "16"},
+        {"trim": "SE-R Spec-V", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current has 185/65R14 and 205/50R16 not in validated set"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2004,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/50R16", "215/45R17"],
+      "validatedTireSizes": ["185/65R14", "195/60R15", "195/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "1.8", "tireSize": "185/65R14", "wheelSize": "14"},
+        {"trim": "1.8 S", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "1.8 S (opt)", "tireSize": "195/55R16", "wheelSize": "16"},
+        {"trim": "SE-R", "tireSize": "195/55R16", "wheelSize": "16"},
+        {"trim": "SE-R Spec-V", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current has 205/50R16, validated shows 195/55R16 for SE-R"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2003,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/50R16", "215/45R17"],
+      "validatedTireSizes": ["185/65R14", "195/60R15", "195/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "GXE", "tireSize": "185/65R14", "wheelSize": "14"},
+        {"trim": "GXE (opt)", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "XE", "tireSize": "185/65R14", "wheelSize": "14"},
+        {"trim": "SE-R", "tireSize": "195/55R16", "wheelSize": "16"},
+        {"trim": "SE-R Spec-V", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current has 205/50R16, validated shows 195/55R16 for SE-R"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/50R16", "215/45R17"],
+      "validatedTireSizes": ["185/65R14", "195/60R15", "195/55R16", "215/45R17"],
+      "trimData": [
+        {"trim": "GXE", "tireSize": "185/65R14", "wheelSize": "14"},
+        {"trim": "GXE (opt)", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "XE", "tireSize": "185/65R14", "wheelSize": "14"},
+        {"trim": "SE-R", "tireSize": "195/55R16", "wheelSize": "16"},
+        {"trim": "SE-R Spec-V", "tireSize": "215/45R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current has 205/50R16, validated shows 195/55R16 for SE-R"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/50R16", "215/45R17"],
+      "validatedTireSizes": ["185/65R14", "195/60R15", "195/55R16"],
+      "trimData": [
+        {"trim": "GXE", "tireSize": "185/65R14", "wheelSize": "14"},
+        {"trim": "XE", "tireSize": "185/65R14", "wheelSize": "14"},
+        {"trim": "SE", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "SE (opt)", "tireSize": "195/55R16", "wheelSize": "16"}
+      ],
+      "discrepancies": ["Current has 205/50R16 and 215/45R17 - SE-R Spec V not available until 2002"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Sentra",
+      "currentTireSizes": ["185/65R14", "195/60R15", "205/50R16", "215/45R17"],
+      "validatedTireSizes": ["185/65R14", "195/60R15", "195/55R16"],
+      "trimData": [
+        {"trim": "GXE", "tireSize": "185/65R14", "wheelSize": "14"},
+        {"trim": "XE", "tireSize": "185/65R14", "wheelSize": "14"},
+        {"trim": "SE", "tireSize": "195/60R15", "wheelSize": "15"},
+        {"trim": "SE (opt)", "tireSize": "195/55R16", "wheelSize": "16"}
+      ],
+      "discrepancies": ["Current has 205/50R16 and 215/45R17 - SE-R not available in 2000"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2016,
+      "make": "Nissan",
+      "model": "Skyline Crossover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R18", "245/45R19"],
+      "trimData": [
+        {"trim": "370GT", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT FOUR", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT Type P", "tireSize": "245/45R19", "wheelSize": "19"}
+      ],
+      "notes": "JDM model - equivalent to Infiniti EX37 (uses same platform as EX35/EX37)",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2015,
+      "make": "Nissan",
+      "model": "Skyline Crossover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R18", "245/45R19"],
+      "trimData": [
+        {"trim": "370GT", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT FOUR", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT Type P", "tireSize": "245/45R19", "wheelSize": "19"}
+      ],
+      "notes": "JDM model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2014,
+      "make": "Nissan",
+      "model": "Skyline Crossover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R18", "245/45R19"],
+      "trimData": [
+        {"trim": "370GT", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT FOUR", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT Type P", "tireSize": "245/45R19", "wheelSize": "19"}
+      ],
+      "notes": "JDM model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2013,
+      "make": "Nissan",
+      "model": "Skyline Crossover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R18", "245/45R19"],
+      "trimData": [
+        {"trim": "370GT", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT FOUR", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT Type P", "tireSize": "245/45R19", "wheelSize": "19"}
+      ],
+      "notes": "JDM model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2012,
+      "make": "Nissan",
+      "model": "Skyline Crossover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R18", "245/45R19"],
+      "trimData": [
+        {"trim": "370GT", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT FOUR", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT Type P", "tireSize": "245/45R19", "wheelSize": "19"}
+      ],
+      "notes": "JDM model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "Skyline Crossover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/55R18", "245/45R19"],
+      "trimData": [
+        {"trim": "370GT", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT FOUR", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT Type P", "tireSize": "245/45R19", "wheelSize": "19"}
+      ],
+      "notes": "JDM model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2010,
+      "make": "Nissan",
+      "model": "Skyline Crossover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trimData": [
+        {"trim": "370GT", "tireSize": "225/60R17", "wheelSize": "17"},
+        {"trim": "370GT (opt)", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT FOUR", "tireSize": "225/60R17", "wheelSize": "17"}
+      ],
+      "notes": "JDM model - equivalent to Infiniti EX35",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Skyline Crossover",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17", "225/55R18"],
+      "trimData": [
+        {"trim": "370GT", "tireSize": "225/60R17", "wheelSize": "17"},
+        {"trim": "370GT (opt)", "tireSize": "225/55R18", "wheelSize": "18"},
+        {"trim": "370GT FOUR", "tireSize": "225/60R17", "wheelSize": "17"}
+      ],
+      "notes": "JDM model - first year, equivalent to Infiniti EX35",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2006,
+      "make": "Nissan",
+      "model": "Terrano II",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/80R15", "235/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "2.7 TDi", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "3.0 Di", "tireSize": "235/70R16", "wheelSize": "16"}
+      ],
+      "notes": "European market model (R20)",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2005,
+      "make": "Nissan",
+      "model": "Terrano II",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/80R15", "235/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "2.7 TDi", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "3.0 Di", "tireSize": "235/70R16", "wheelSize": "16"}
+      ],
+      "notes": "European market model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2004,
+      "make": "Nissan",
+      "model": "Terrano II",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/80R15", "235/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "2.7 TDi", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "3.0 Di", "tireSize": "235/70R16", "wheelSize": "16"}
+      ],
+      "notes": "European market model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2003,
+      "make": "Nissan",
+      "model": "Terrano II",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/80R15", "235/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "2.7 TDi", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "3.0 Di", "tireSize": "235/70R16", "wheelSize": "16"}
+      ],
+      "notes": "European market model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "Terrano II",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/80R15", "235/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "2.7 TDi", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "3.0 Di", "tireSize": "235/70R16", "wheelSize": "16"}
+      ],
+      "notes": "European market model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "Terrano II",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/80R15", "235/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "2.7 TDi", "tireSize": "215/80R15", "wheelSize": "15"}
+      ],
+      "notes": "European market model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Terrano II",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/80R15", "235/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "215/80R15", "wheelSize": "15"},
+        {"trim": "2.7 TDi", "tireSize": "215/80R15", "wheelSize": "15"}
+      ],
+      "notes": "European market model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2002,
+      "make": "Nissan",
+      "model": "Terrano Regulus",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R16", "255/65R16"],
+      "trimData": [
+        {"trim": "3.2DT (JRR50)", "tireSize": "245/70R16", "wheelSize": "16"},
+        {"trim": "3.3 (JLR50)", "tireSize": "245/70R16", "wheelSize": "16"},
+        {"trim": "3.3 (JLR50) opt", "tireSize": "255/65R16", "wheelSize": "16"}
+      ],
+      "notes": "JDM market model (Japan Domestic)",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2001,
+      "make": "Nissan",
+      "model": "Terrano Regulus",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R16", "255/65R16"],
+      "trimData": [
+        {"trim": "3.2DT (JRR50)", "tireSize": "245/70R16", "wheelSize": "16"},
+        {"trim": "3.3 (JLR50)", "tireSize": "245/70R16", "wheelSize": "16"},
+        {"trim": "3.3 (JLR50) opt", "tireSize": "255/65R16", "wheelSize": "16"}
+      ],
+      "notes": "JDM market model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "Terrano Regulus",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R16", "255/65R16"],
+      "trimData": [
+        {"trim": "3.2DT (JRR50)", "tireSize": "245/70R16", "wheelSize": "16"},
+        {"trim": "3.3 (JLR50)", "tireSize": "245/70R16", "wheelSize": "16"},
+        {"trim": "3.3 (JLR50) opt", "tireSize": "255/65R16", "wheelSize": "16"}
+      ],
+      "notes": "JDM market model",
+      "status": "MISSING_DATA"
+    },
+    {
+      "year": 2026,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current has 275/65R18, 275/55R20, 285/45R22 not in OEM spec"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2025,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current has 17\" options (265/70R17, 275/70R17) - not standard on 2025"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22", "275/70R18"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current has 275/65R18, 275/55R20, 285/45R22 not in OEM spec"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2023,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22", "275/70R18"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current has 275/65R18, 275/55R20, 285/45R22 not in OEM spec"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2022,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current has 275/65R18, 275/55R20, 285/45R22 not in OEM spec"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2021,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current has 17\" options not available in 2021 2nd-gen"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2020,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["2020 refresh - 17\" options may be carryover from early 2020 production"],
+      "status": "REVIEW"
+    },
+    {
+      "year": 2019,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SL (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current has 275/65R18, 275/55R20, 285/45R22 not in OEM spec"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SL (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current has 17\" options not standard on 2nd gen (2017+)"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SL (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current has 275/65R18, 275/55R20, 285/45R22 not in OEM spec"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2016,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "275/60R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SV (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "SL (opt)", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "275/60R20", "wheelSize": "20"}
+      ],
+      "notes": "2016 was transition year - XD launched, regular Titan continued from 2015",
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2015,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20", "275/70R18"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "Crew Cab S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SL", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "Crew Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "King Cab S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"}
+      ],
+      "discrepancies": ["Current has 17\" options - 1st gen ended with 18\" and 20\" only"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2014,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "Crew Cab S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SL", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "Crew Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "King Cab S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"}
+      ],
+      "discrepancies": ["Current has 17\" options not in 2014 spec"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2013,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "Crew Cab S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SL", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "Crew Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "King Cab S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"}
+      ],
+      "discrepancies": ["Current has 17\" options not in 2013 spec"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2012,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "Crew Cab S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SL", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "Crew Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "King Cab S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"}
+      ],
+      "discrepancies": ["Current has 17\" options not in 2012 spec"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "Crew Cab S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SL", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "Crew Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "King Cab S", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab SV", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"}
+      ],
+      "discrepancies": ["Current has 17\" options - 2011 refresh dropped 17\""],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2010,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "Crew Cab XE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab LE", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "Crew Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "King Cab XE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab SE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab LE", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "King Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"}
+      ],
+      "discrepancies": ["Current has 17\" options - 2008+ dropped 17\""],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2009,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "Crew Cab XE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab LE", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "Crew Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "King Cab XE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab SE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab LE", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "King Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"}
+      ],
+      "discrepancies": ["Current has 17\" options - 2008 refresh dropped 17\""],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2008,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["265/70R18", "275/70R18", "275/60R20"],
+      "trimData": [
+        {"trim": "Crew Cab XE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab SE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab LE", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "Crew Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"},
+        {"trim": "King Cab XE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab SE", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab LE", "tireSize": "275/60R20", "wheelSize": "20"},
+        {"trim": "King Cab PRO-4X", "tireSize": "275/70R18", "wheelSize": "18"}
+      ],
+      "notes": "2008 refresh - PRO-4X introduced, base wheel went from 17\" to 18\"",
+      "discrepancies": ["Current has 17\" options - 2008 refresh dropped 17\""],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2007,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["245/75R17", "285/70R17", "265/70R18"],
+      "trimData": [
+        {"trim": "Crew Cab XE", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "Crew Cab SE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "Crew Cab SE (opt)", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab LE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "Crew Cab LE (opt)", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab XE", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "King Cab SE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "King Cab LE", "tireSize": "285/70R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current missing 245/75R17 and 285/70R17, has wrong sizes like 275/70R17"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2006,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["245/75R17", "285/70R17", "265/70R18"],
+      "trimData": [
+        {"trim": "Crew Cab XE", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "Crew Cab SE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "Crew Cab SE (opt)", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab LE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "Crew Cab LE (opt)", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab XE", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "King Cab SE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "King Cab LE", "tireSize": "285/70R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current missing 245/75R17 and 285/70R17, has wrong sizes"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2005,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["245/75R17", "285/70R17", "265/70R18"],
+      "trimData": [
+        {"trim": "Crew Cab XE", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "Crew Cab SE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "Crew Cab SE (opt)", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab LE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "Crew Cab LE (opt)", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab XE", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "King Cab SE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "King Cab LE", "tireSize": "285/70R17", "wheelSize": "17"}
+      ],
+      "discrepancies": ["Current missing 245/75R17 and 285/70R17, has wrong sizes"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2004,
+      "make": "Nissan",
+      "model": "Titan",
+      "currentTireSizes": ["265/70R17", "275/70R17", "265/70R18", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["245/75R17", "285/70R17", "265/70R18"],
+      "trimData": [
+        {"trim": "Crew Cab XE", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "Crew Cab SE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "Crew Cab SE (opt)", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "Crew Cab LE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "Crew Cab LE (opt)", "tireSize": "265/70R18", "wheelSize": "18"},
+        {"trim": "King Cab XE", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "King Cab SE", "tireSize": "285/70R17", "wheelSize": "17"},
+        {"trim": "King Cab LE", "tireSize": "285/70R17", "wheelSize": "17"}
+      ],
+      "notes": "First year of Titan - 17\" standard, 18\" optional",
+      "discrepancies": ["Current missing 245/75R17 and 285/70R17, has wrong sizes"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "currentTireSizes": ["275/60R20", "275/65R20", "LT275/65R20"],
+      "validatedTireSizes": ["LT245/75R17", "LT265/60R20", "LT275/65R18"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "LT245/75R17", "wheelSize": "17"},
+        {"trim": "SV (opt)", "tireSize": "LT265/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "LT275/65R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "LT265/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current P-metric sizes should be LT rated for HD truck"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2023,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "currentTireSizes": ["275/60R20", "275/65R20", "LT275/65R20"],
+      "validatedTireSizes": ["245/75R17", "265/60R20", "275/65R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV (opt)", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/65R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "265/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current missing 17\" and 18\" options, has 275/65R20 not in spec"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2022,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "currentTireSizes": ["275/60R20", "275/65R20", "LT275/65R20"],
+      "validatedTireSizes": ["245/75R17", "265/60R20", "275/65R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV (opt)", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/65R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "265/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current missing 17\" and 18\" options"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2021,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "currentTireSizes": ["275/60R20", "275/65R20", "LT275/65R20"],
+      "validatedTireSizes": ["245/75R17", "265/60R20", "275/65R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV (opt)", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/65R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "265/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current missing 17\" and 18\" options"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2020,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "currentTireSizes": ["275/60R20", "275/65R20", "LT275/65R20"],
+      "validatedTireSizes": ["245/75R17", "265/60R20", "275/65R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV (opt)", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/65R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "265/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current missing 17\" and 18\" options"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2019,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "currentTireSizes": ["275/60R20", "275/65R20", "LT275/65R20"],
+      "validatedTireSizes": ["245/75R17", "265/60R20", "275/65R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV (opt)", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/65R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "265/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current missing 17\" and 18\" options"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "currentTireSizes": ["275/60R20", "275/65R20", "LT275/65R20"],
+      "validatedTireSizes": ["245/75R17", "265/60R20", "275/65R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV (opt)", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/65R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "265/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current missing 17\" and 18\" options"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2017,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "currentTireSizes": ["275/60R20", "275/65R20", "LT275/65R20"],
+      "validatedTireSizes": ["245/75R17", "265/60R20", "275/65R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV (opt)", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/65R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "265/60R20", "wheelSize": "20"}
+      ],
+      "discrepancies": ["Current missing 17\" and 18\" options"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2016,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "currentTireSizes": ["275/60R20", "275/65R20", "LT275/65R20"],
+      "validatedTireSizes": ["245/75R17", "265/60R20", "275/65R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV", "tireSize": "245/75R17", "wheelSize": "17"},
+        {"trim": "SV (opt)", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "265/60R20", "wheelSize": "20"},
+        {"trim": "PRO-4X", "tireSize": "275/65R18", "wheelSize": "18"},
+        {"trim": "Platinum Reserve", "tireSize": "265/60R20", "wheelSize": "20"}
+      ],
+      "notes": "First year of Titan XD (2nd generation)",
+      "discrepancies": ["Current missing 17\" and 18\" options"],
+      "status": "DISCREPANCY"
+    },
+    {
+      "year": 2025,
+      "make": "Nissan",
+      "model": "V-Drive",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/55R16"],
+      "trimData": [
+        {"trim": "Sense", "tireSize": "185/65R15", "wheelSize": "15"},
+        {"trim": "Advance", "tireSize": "195/55R16", "wheelSize": "16"}
+      ],
+      "notes": "Mexico market model - based on previous-gen Versa platform",
+      "status": "MISSING_DATA"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 0,
+    "discrepancies": 55,
+    "missingData": 20,
+    "review": 0,
+    "keyFindings": [
+      "Nissan Sentra 2007-2011: Database has wrong 15\" size (195/65R15 should be 205/60R15) and wrong 17\" size (215/45R17 should be 225/45R17)",
+      "Nissan Sentra 2000-2006: Database includes sizes for SE-R trims that weren't available in all years",
+      "Nissan Titan 2004-2007: Database completely wrong - should have 245/75R17 and 285/70R17 for 1st gen",
+      "Nissan Titan 2008+: Database has spurious 17\" sizes that don't exist after 2008 refresh",
+      "Nissan Titan XD: Database missing 17\" and 18\" wheel options, only has 20\" sizes",
+      "Skyline Crossover, Terrano II, Terrano Regulus, V-Drive: International models have no data in database"
+    ]
+  }
+}

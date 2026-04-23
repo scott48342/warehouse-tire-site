@@ -1,0 +1,3195 @@
+[
+  {
+    "id": "90990fa4-06c9-43ca-9e75-4520e1fc3491",
+    "year": 1992,
+    "make": "jaguar",
+    "model": "XJ220",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 9,
+        "offset": 40,
+        "diameter": 17,
+        "position": "front"
+      },
+      {
+        "width": 13,
+        "offset": 35,
+        "diameter": 18,
+        "position": "rear"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/45ZR17",
+      "345/35ZR18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c2a8eaa7-da86-41be-a50a-99e0f6ef204c",
+    "year": 1993,
+    "make": "jaguar",
+    "model": "XJ220",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 9,
+        "offset": 40,
+        "diameter": 17,
+        "position": "front"
+      },
+      {
+        "width": 13,
+        "offset": 35,
+        "diameter": 18,
+        "position": "rear"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/45ZR17",
+      "345/35ZR18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "466be08b-6cad-4cee-9a03-8b641e0a6d6f",
+    "year": 1994,
+    "make": "jaguar",
+    "model": "XJ220",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 9,
+        "offset": 40,
+        "diameter": 17,
+        "position": "front"
+      },
+      {
+        "width": 13,
+        "offset": 35,
+        "diameter": 18,
+        "position": "rear"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/45ZR17",
+      "345/35ZR18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "95512bcd-f415-4cc7-8161-7dfc3d2c7051",
+    "year": 1990,
+    "make": "jaguar",
+    "model": "XJ6",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "eb09eee4-69f8-4f6b-b8b2-2039374ae4b5",
+    "year": 1991,
+    "make": "jaguar",
+    "model": "XJ6",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "40cae532-703c-4aa7-bca4-09930a32b24e",
+    "year": 1992,
+    "make": "jaguar",
+    "model": "XJ6",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "eaa4fa08-cfba-4260-91bc-9fb8e5380d30",
+    "year": 1993,
+    "make": "jaguar",
+    "model": "XJ6",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "17dcc369-e7c2-4520-8484-b4f9335e7695",
+    "year": 1994,
+    "make": "jaguar",
+    "model": "XJ6",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70R15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "4990739f-75d0-4dc0-bd0b-29a01a2dd5fa",
+    "year": 1995,
+    "make": "jaguar",
+    "model": "XJ6",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "e12f245b-db0f-4edf-b8ac-1f5d25f576e2",
+    "year": 1996,
+    "make": "jaguar",
+    "model": "XJ6",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "be9e27ab-ec28-48a3-8654-256d79a79d23",
+    "year": 1997,
+    "make": "jaguar",
+    "model": "XJ6",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "7b8f9e8b-16c6-4eb0-89ba-88cbb0e10b08",
+    "year": 1998,
+    "make": "jaguar",
+    "model": "XJ8",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 35,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f0160f4d-8106-452f-b6bb-188a5ed55951",
+    "year": 1999,
+    "make": "jaguar",
+    "model": "XJ8",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      },
+      {
+        "width": 7.5,
+        "offset": 35,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/60R16",
+      "235/55R17"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "6e73314b-e8fb-4bb3-9647-a3e6fd6db1bd",
+    "year": 1990,
+    "make": "jaguar",
+    "model": "XJS",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70VR15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "769ce5fb-866c-496b-92d7-2108a0f6665f",
+    "year": 1991,
+    "make": "jaguar",
+    "model": "XJS",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70VR15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f846413c-940c-4d1b-aa2b-4f2cbf93b1b5",
+    "year": 1992,
+    "make": "jaguar",
+    "model": "XJS",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70VR15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "1855e942-76a0-492a-952a-0ba7ba0e9581",
+    "year": 1993,
+    "make": "jaguar",
+    "model": "XJS",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70VR15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "f08e8a5e-2f2c-43f4-a1a5-49cebb7074be",
+    "year": 1994,
+    "make": "jaguar",
+    "model": "XJS",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70VR15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "9f8d2fb8-2c60-4b45-a62a-daf0ba66f6b4",
+    "year": 1995,
+    "make": "jaguar",
+    "model": "XJS",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70VR15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "872e946c-5de0-4603-a19c-5d922c73806f",
+    "year": 1996,
+    "make": "jaguar",
+    "model": "XJS",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 30,
+        "diameter": 15
+      },
+      {
+        "width": 7,
+        "offset": 33,
+        "diameter": 16
+      }
+    ],
+    "verifiedTireSizes": [
+      "215/70VR15",
+      "225/60R16"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d918d507-28a8-421c-8084-99eed8353062",
+    "year": 1997,
+    "make": "jaguar",
+    "model": "XK8",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8,
+        "offset": 35,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 38,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50ZR17",
+      "245/45ZR18"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "bfaf549e-3217-46c2-80a5-6e4b9f0c87fd",
+    "year": 1998,
+    "make": "jaguar",
+    "model": "XK8",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8,
+        "offset": 35,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 38,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50ZR17",
+      "245/45ZR18"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "8d9b5e65-b888-4800-b541-e40e6cfa8961",
+    "year": 1999,
+    "make": "jaguar",
+    "model": "XK8",
+    "trim": "Base",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x120.65 to 5x108; Hub bore corrected from 73.8 to 63.4",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8,
+        "offset": 35,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 38,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50ZR17",
+      "245/45ZR18"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "6c58ccd1-114f-47ea-af5c-766456dd5589",
+    "year": 2017,
+    "make": "jaguar",
+    "model": "e-pace",
+    "trim": "P250",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "235/60R18",
+      "245/45ZR20",
+      "235/55ZR19",
+      "245/45ZR21",
+      "235/65R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f316d882-0bf0-4738-8da1-9026c565b1ed",
+    "year": 2023,
+    "make": "jaguar",
+    "model": "e-pace",
+    "trim": "P250",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/60R18",
+      "235/55ZR19",
+      "245/45ZR20",
+      "225/65R17",
+      "245/45ZR21",
+      "235/65R17"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "deea5715-7b76-4252-94f5-f32503c22d73",
+    "year": 2015,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 45,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "265/45R20",
+      "265/40R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "25d376ca-fce1-472f-b693-cdfa0abe6a47",
+    "year": 2016,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 45,
+        "diameter": 22,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R18",
+      "255/50R19",
+      "265/45R20",
+      "265/40R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4b54b4cc-a456-49ba-a316-a8f4ff3bdcdb",
+    "year": 2017,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Premium, Prestige, R-Dynamic, S, SVR",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "255/50R20",
+      "235/65R18",
+      "255/60R18",
+      "255/55ZR19",
+      "255/50ZR20",
+      "265/40ZR22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "963217f9-e51c-410a-aa9d-da5d0e84fbf7",
+    "year": 2018,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Premium, Prestige, R-Dynamic, S, SVR",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "255/50R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e54b8ed5-2ae8-4520-b519-6ab34dc552f7",
+    "year": 2019,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Premium, Prestige, R-Dynamic, S, SVR",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "255/50R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c0ae06a3-affb-4bdc-be70-25b7e2d4acb6",
+    "year": 2020,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Premium, Prestige, R-Dynamic, S, SVR",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 42,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "255/50R20",
+      "255/45R21",
+      "235/65R18",
+      "255/60R18",
+      "255/55ZR19",
+      "255/50ZR20",
+      "265/40ZR22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2121a470-1094-4b2f-8022-c4ee36e6b65d",
+    "year": 2021,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Premium, Prestige, R-Dynamic, S, SVR",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 42,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9c545a92-9866-4ec7-a542-d800eba0d1dd",
+    "year": 2022,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Premium, Prestige, R-Dynamic, S, SVR",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 42,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "255/50R20",
+      "255/45R21",
+      "235/65R18",
+      "255/55ZR19",
+      "255/50ZR20",
+      "265/45ZR21",
+      "255/60R18",
+      "265/40ZR22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "6fdc527c-3401-40ad-a69b-b7d6d7332f65",
+    "year": 2023,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Premium, Prestige, R-Dynamic, S, SVR",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 42,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0202a243-d685-4252-8983-b2829b37d940",
+    "year": 2024,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Premium, Prestige, R-Dynamic, S, SVR",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 42,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "c5fb78e9-0c5d-4c0f-a1f5-718d6ce9269f",
+    "year": 2025,
+    "make": "jaguar",
+    "model": "f-pace",
+    "trim": "Premium, Prestige, R-Dynamic, S, SVR",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 42,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/55R19",
+      "255/50R20",
+      "255/45R21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "bdd5442c-a15b-423c-b4b0-034d3b68bc55",
+    "year": 2012,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base, S, V8 S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45ZR18",
+      "275/40ZR18",
+      "245/40ZR19",
+      "275/35ZR19",
+      "255/35ZR20",
+      "295/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8ed599c9-5881-45dc-bdf4-ad59b527d6b2",
+    "year": 2014,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "89096cf8-cc88-4ebc-97d3-9f33476e03f1",
+    "year": 2015,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "245/45ZR18",
+      "275/40ZR18",
+      "245/40ZR19",
+      "275/35ZR19",
+      "255/35ZR20",
+      "295/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "af53329e-257b-434e-baad-757ab7a4a568",
+    "year": 2016,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "245/45ZR18",
+      "275/40ZR18",
+      "245/40ZR19",
+      "275/35ZR19",
+      "255/35ZR20",
+      "295/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "90c7bef3-6f7e-4dbd-a46d-975cf7d78aa4",
+    "year": 2017,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "255/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "913f70d7-9359-4e81-b748-cf5a26155fd3",
+    "year": 2018,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "255/35R20",
+      "245/40ZR19",
+      "275/35ZR19",
+      "245/45ZR18",
+      "275/40ZR18",
+      "255/35ZR20",
+      "295/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "0a9a17e9-8a40-4823-a531-a18594b285d4",
+    "year": 2019,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "offset": 45,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "255/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f9940fdf-9211-4104-a2e3-17201c935f95",
+    "year": 2020,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "offset": 45,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/40R19",
+      "255/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "fad6f1e1-c6ed-4ccf-a6f4-ce8b07ded109",
+    "year": 2021,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 38,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/40R19",
+      "255/35R20",
+      "245/45ZR18",
+      "275/40ZR18",
+      "245/40ZR19",
+      "275/35ZR19",
+      "255/35ZR20",
+      "295/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b8f37152-1b05-4bfe-8efb-afecd1652d23",
+    "year": 2022,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "offset": 45,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/40R19",
+      "255/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "8e24f727-7f60-48f8-b327-51d54a64253c",
+    "year": 2023,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "offset": 45,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/40R19",
+      "255/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4acc6f1d-7daa-4684-b911-56d6b7c08406",
+    "year": 2024,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "offset": 45,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 38,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 27,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/40R19",
+      "255/35R20",
+      "245/40ZR19",
+      "275/35ZR19",
+      "255/35ZR20",
+      "295/30ZR20",
+      "245/45ZR18",
+      "275/40ZR18"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "64c660fb-361d-49e2-aaa4-b48780e1de24",
+    "year": 2025,
+    "make": "jaguar",
+    "model": "f-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 45,
+        "diameter": 19
+      },
+      {
+        "width": 9,
+        "offset": 45,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "255/40R19",
+      "255/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "33f5babd-d5b7-4416-b200-be7bab1c4294",
+    "year": 2019,
+    "make": "jaguar",
+    "model": "i-pace",
+    "trim": "EV400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 52.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R18",
+      "245/50R20",
+      "255/40R22",
+      "235/60R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a85bcc55-8f99-4313-8b4e-564c42f9f57c",
+    "year": 2020,
+    "make": "jaguar",
+    "model": "i-pace",
+    "trim": "EV400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 52.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R18",
+      "245/50R20",
+      "255/40R22",
+      "235/60R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "2780d4b4-2c07-480e-8515-1b25d1effb39",
+    "year": 2021,
+    "make": "jaguar",
+    "model": "i-pace",
+    "trim": "EV400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 52.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R18",
+      "245/50R20",
+      "255/40R22",
+      "235/60R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "17496550-6617-40b4-a2fb-adbb22acd3c6",
+    "year": 2022,
+    "make": "jaguar",
+    "model": "i-pace",
+    "trim": "EV400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 52.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R18",
+      "245/50R20",
+      "255/40R22",
+      "235/60R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "b8af1d7f-2c9b-4863-8939-2b68aa81ee31",
+    "year": 2023,
+    "make": "jaguar",
+    "model": "i-pace",
+    "trim": "EV400",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 52.5,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50.5,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "235/65R18",
+      "245/50R20",
+      "255/40R22",
+      "235/60R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "eb832baf-05b6-478b-bed8-2173e614e748",
+    "year": 2025,
+    "make": "jaguar",
+    "model": "i-pace",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "square",
+        "width": 10,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/50R20",
+      "265/40R22"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "38a3398b-47da-4855-86f5-783855068e12",
+    "year": 2001,
+    "make": "jaguar",
+    "model": "x-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 52.5,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 52.5,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 52.5,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 52.5,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 52.5,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 52.5,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 52.5,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "921afb3c-7c18-4364-8e91-3f54cf73dab1",
+    "year": 2009,
+    "make": "jaguar",
+    "model": "x-type",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 52.5,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 52.5,
+        "diameter": 16,
+        "position": "both"
+      },
+      {
+        "width": 6.5,
+        "offset": 52.5,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 52.5,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 52.5,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 7,
+        "offset": 52.5,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 7.5,
+        "offset": 52.5,
+        "diameter": 18,
+        "position": "both"
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/55R16"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e4d2fa9b-47a5-4b40-a37a-de235e82abe3",
+    "year": 2015,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "235/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "da081d2d-ec06-408e-8aa1-77efcccb3424",
+    "year": 2016,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "235/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4860c391-07e9-4319-82d5-02b307f3be15",
+    "year": 2017,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "235/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "e8d63051-1d0f-4163-82cd-0567ce08d2e1",
+    "year": 2018,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "235/40R19"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4000103f-85c3-4ad0-bed6-9a9f3bafc127",
+    "year": 2019,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 42,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "235/40R19",
+      "245/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "1dc43ece-bcc6-4ec9-9ed8-12f7e383449e",
+    "year": 2020,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 42,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/45R18",
+      "235/40R19",
+      "245/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "f52e5cb1-f639-43b0-b273-1a8cb89f5c09",
+    "year": 2021,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 42,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/60R16",
+      "225/50R17",
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "191f36d9-f57e-4836-9b91-4e476f5240cf",
+    "year": 2022,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 42,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/60R16",
+      "225/50R17",
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "6da78811-1388-4c16-89e7-620c2ffec7fa",
+    "year": 2023,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/60R16",
+      "225/50R17",
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "4ea012db-3aa6-4ef5-b55a-9b709394a680",
+    "year": 2024,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 42,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/60R16",
+      "225/50R17",
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "9b7c6f4a-02c2-46dc-8d28-6845c92d86a0",
+    "year": 2025,
+    "make": "jaguar",
+    "model": "xe",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 45,
+        "diameter": 18
+      },
+      {
+        "width": 8,
+        "offset": 42,
+        "diameter": 19
+      },
+      {
+        "width": 8.5,
+        "offset": 42,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "205/60R16",
+      "225/50R17",
+      "245/40R18",
+      "255/35R19",
+      "265/30R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "d508fff8-6de9-4ed3-bf6e-6f6abd60ee13",
+    "year": 2007,
+    "make": "jaguar",
+    "model": "xf",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "255/45R18",
+      "275/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "5f62a372-98ed-4cc7-a5e8-1de7f9b66d8a",
+    "year": 2008,
+    "make": "jaguar",
+    "model": "xf",
+    "trim": "Base",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 9,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "255/45R18",
+      "275/35R20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3ef2bfa3-0cdc-4117-96ad-7dd29fd8d97c",
+    "year": 2010,
+    "make": "jaguar",
+    "model": "xf",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "245/45R18"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/40R19"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/35R20"
+        ],
+        "offset": 49
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "275/35R20",
+      "245/40ZR19",
+      "255/35ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "a874d310-ee98-4995-a676-37eb0f3e1d12",
+    "year": 2011,
+    "make": "jaguar",
+    "model": "xf",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "245/45R18"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/40R19"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/35R20"
+        ],
+        "offset": 49
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 66,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "rear",
+        "width": 10.5,
+        "offset": 62,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "275/35R20",
+      "255/35ZR20",
+      "285/30ZR20",
+      "265/30ZR21",
+      "295/25ZR21"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "1ff1b5b3-46d4-4da2-abff-81c2f1b18a91",
+    "year": 2013,
+    "make": "jaguar",
+    "model": "xf",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "245/45R18"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/40R19"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/35R20"
+        ],
+        "offset": 49
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 66,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "275/35R20",
+      "235/55R17",
+      "245/45ZR18",
+      "245/40ZR19",
+      "255/35ZR20",
+      "285/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "5a295254-6174-41c7-b796-cec9941300f7",
+    "year": 2015,
+    "make": "jaguar",
+    "model": "xf",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "size": "18x8",
+        "tires": [
+          "245/45R18"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/40R19"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/35R20"
+        ],
+        "offset": 49
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "rear",
+        "width": 9.5,
+        "offset": 66,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "245/45R18",
+      "255/40R19",
+      "275/35R20",
+      "235/55R17",
+      "245/45ZR18",
+      "245/40ZR19",
+      "255/35ZR20",
+      "285/30ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "3bbccd8c-e602-413d-a52a-b5619aa9544b",
+    "year": 2016,
+    "make": "jaguar",
+    "model": "xf",
+    "trim": "Premium, Prestige, R-Dynamic, S",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x108",
+    "verifiedHubBore": "63.4",
+    "verifiedWheelSizes": [
+      {
+        "size": "17x7.5",
+        "tires": [
+          "225/55R17"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "18x8",
+        "tires": [
+          "245/45R18"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "19x8.5",
+        "tires": [
+          "255/40R19"
+        ],
+        "offset": 49
+      },
+      {
+        "size": "20x9",
+        "tires": [
+          "275/35R20"
+        ],
+        "offset": 49
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 45,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 49,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/55R17",
+      "245/45R18",
+      "255/40R19",
+      "275/35R20",
+      "245/45ZR18",
+      "245/40ZR19",
+      "255/35ZR20"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  }
+]

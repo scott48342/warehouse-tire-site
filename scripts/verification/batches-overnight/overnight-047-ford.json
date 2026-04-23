@@ -1,0 +1,1549 @@
+[
+  {
+    "id": "7abf4798-43b5-416b-b98d-f44c79a798f0",
+    "year": 2012,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Titanium",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "9d5d7200-de99-4918-9746-7d597bb4f09d",
+    "year": 2012,
+    "make": "ford",
+    "model": "focus",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "15x6"
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "9a7a16fd-e8d7-47d6-825b-87d0aae3e8e8",
+    "year": 2013,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Titanium",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "01d647a6-8890-4e38-859b-00b3ac2268b8",
+    "year": 2013,
+    "make": "ford",
+    "model": "focus",
+    "trim": "ST",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "02cf7924-9111-4215-b931-4b5cd43c6e4c",
+    "year": 2013,
+    "make": "ford",
+    "model": "focus",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/55R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "ff0960e3-cb35-4952-93b4-0141452ed144",
+    "year": 2013,
+    "make": "ford",
+    "model": "focus",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "15x6"
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "8b898500-79dc-4a1d-9e0d-e6a29ce673fa",
+    "year": 2014,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Titanium",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "bdadc7b5-af78-4168-91b0-ddd924ca8f92",
+    "year": 2014,
+    "make": "ford",
+    "model": "focus",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/55R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "578c1848-4d34-44bb-a1b5-faf554138ec5",
+    "year": 2014,
+    "make": "ford",
+    "model": "focus",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "15x6"
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "337fe409-bdb8-44d6-ad96-9255e29671b0",
+    "year": 2014,
+    "make": "ford",
+    "model": "focus",
+    "trim": "ST",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "9a984c1d-0908-4761-9ac2-660ba9b7b796",
+    "year": 2014,
+    "make": "ford",
+    "model": "focus",
+    "trim": "2.0 EcoBoost",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "235/40ZR18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "4b2b1a29-acea-46ae-9fb9-fbb4c89ea899",
+    "year": 2015,
+    "make": "ford",
+    "model": "focus",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "15x6"
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "bc90d6a3-2dda-4f92-9959-68c6623c3853",
+    "year": 2015,
+    "make": "ford",
+    "model": "focus",
+    "trim": "ST",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "764cdcbe-1a74-4ff8-80ff-4d780f4596ab",
+    "year": 2015,
+    "make": "ford",
+    "model": "focus",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/55R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "23aef42f-b1d5-4580-aa7d-d30fe3755f8f",
+    "year": 2015,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Titanium",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "dbbf29b3-5405-4665-9869-86ad0441738f",
+    "year": 2016,
+    "make": "ford",
+    "model": "focus",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/55R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "0e3be9c5-90d9-4914-a5df-bc8f22c1502b",
+    "year": 2016,
+    "make": "ford",
+    "model": "focus",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "15x6"
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "2f74e5bd-08ca-4141-9d16-a9f5d0d4dd9d",
+    "year": 2016,
+    "make": "ford",
+    "model": "focus",
+    "trim": "ST",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "8443502f-6adc-4cdc-bdd9-31411694fa61",
+    "year": 2016,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Titanium",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "300a0e58-1300-4f29-bb40-c802f470c858",
+    "year": 2017,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Titanium",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "d5af8184-fb39-4d36-8fbf-d2e94fa935c3",
+    "year": 2017,
+    "make": "ford",
+    "model": "focus",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "15x6"
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "9795e3aa-deff-459c-888f-d570f0df0b7d",
+    "year": 2017,
+    "make": "ford",
+    "model": "focus",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/55R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "704dd9b4-1b12-4f5d-a867-cb92dc7b6f82",
+    "year": 2017,
+    "make": "ford",
+    "model": "focus",
+    "trim": "ST",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "ab724f7b-dda6-47f3-9fa1-3bec5527b01e",
+    "year": 2018,
+    "make": "ford",
+    "model": "focus",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/55R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "e40f5c25-f796-4fc7-8f73-7673d184e443",
+    "year": 2018,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Titanium",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7",
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "001d13ab-9a47-4b7a-80f2-938323985989",
+    "year": 2018,
+    "make": "ford",
+    "model": "focus",
+    "trim": "ST",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "235/40R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "746de7bf-8a4f-4b57-8ff6-983940c90c6b",
+    "year": 2018,
+    "make": "ford",
+    "model": "focus",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "15x6"
+    ],
+    "currentTireSizes": [
+      "195/65R15"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "30171d5b-76cb-4577-950a-2eab601e18aa",
+    "year": 2019,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f3cc9e49-381f-4f4d-8718-27a76e2a1698",
+    "year": 2020,
+    "make": "ford",
+    "model": "focus",
+    "trim": "1.0 EcoBoost",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 47.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "195/65R16",
+      "215/50R17",
+      "235/45R17"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "1c54eeb9-f49a-49bf-9b73-404c91f70c6b",
+    "year": 2021,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "5816f03e-4de1-439f-a0e6-285473ab887e",
+    "year": 2022,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1ddc9f59-754c-42c8-aa08-bf989953b8c1",
+    "year": 2023,
+    "make": "ford",
+    "model": "focus",
+    "trim": "1.0 EcoBoost",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 47.5,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 45,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "215/50R17",
+      "235/40ZR18",
+      "235/45R17"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "df41689e-eebd-4b0f-bd7e-4466546546bc",
+    "year": 2024,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "df4c54af-4168-4c5d-96db-28f955a89d84",
+    "year": 2025,
+    "make": "ford",
+    "model": "focus",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/50R17",
+      "235/40R18"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "c266ac90-8d9d-4cf0-9ba8-87a2604ed9c3",
+    "year": 2002,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "ae1437cf-d6ec-4e57-9d23-c7f746207b4f",
+    "year": 2003,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "43bf8cf3-d186-4556-b07f-a3fd7e2cbead",
+    "year": 2004,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "1b30c806-6131-4c69-aa36-72f77f02dccc",
+    "year": 2005,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "225/50R17",
+      "235/45R18",
+      "245/40R19"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "8d601422-54a9-4799-bc2c-d78e362a9b08",
+    "year": 2006,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE/Hybrid",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "93912ac9-5a7a-4224-a3a0-e10a240cecb0",
+    "year": 2006,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SEL/Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "095bdcb4-8c07-4399-b26f-189aab057255",
+    "year": 2006,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "16x6.5"
+    ],
+    "currentTireSizes": [
+      "205/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "13378c60-7d62-4589-8255-c8c9ed9173ae",
+    "year": 2007,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "16x6.5"
+    ],
+    "currentTireSizes": [
+      "205/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "1d742f91-3100-4c60-8e52-10351614ee23",
+    "year": 2007,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE/Hybrid",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "6b7b9936-8257-4945-86f6-aac3f627c860",
+    "year": 2007,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SEL/Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "28b40738-83fc-42e5-8b2b-feecb2cf0fcf",
+    "year": 2008,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SEL/Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "eb37a0f3-d6d9-459f-8fca-b722617a59eb",
+    "year": 2008,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "16x6.5"
+    ],
+    "currentTireSizes": [
+      "205/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "87ff2731-78d6-45ee-8044-31f66a796f68",
+    "year": 2008,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE/Hybrid",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "4248e424-0383-4587-bf47-412731e53616",
+    "year": 2009,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SEL/Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "8d3c2b04-529b-4f79-85b3-59159400e41d",
+    "year": 2009,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE/Hybrid",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "ddadd092-9d3b-4615-9c89-8dfa6ed7937a",
+    "year": 2009,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "16x6.5"
+    ],
+    "currentTireSizes": [
+      "205/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "cf3b1a99-384b-4d98-8626-d335775994cb",
+    "year": 2010,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "16x6.5"
+    ],
+    "currentTireSizes": [
+      "205/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "ef681e02-c616-423d-8b0d-43ef3587cd63",
+    "year": 2010,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SEL/Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "a2520699-a759-4119-ade6-9e8fc4aed392",
+    "year": 2010,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE/Hybrid",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "9876c33c-ade3-41c4-889b-a325a2620c35",
+    "year": 2011,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE/Hybrid",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "4978e22b-714e-4552-afbb-549d9849b37a",
+    "year": 2011,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "225/50R17",
+      "225/45R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "33e13231-2a80-4866-b2d7-a134136c69f2",
+    "year": 2011,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "16x6.5"
+    ],
+    "currentTireSizes": [
+      "205/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "16274e03-318c-410b-ac61-09644f8ba5a0",
+    "year": 2011,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SEL/Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "1c98a14e-ae56-4f91-9dd7-0dcd9a87fe76",
+    "year": 2012,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE/Hybrid",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "225/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "c913df01-5ee1-4a46-9783-8bfd44dd303c",
+    "year": 2012,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SEL/Sport",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "18x8"
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "163abd8f-2f3f-4c13-9ecc-37569bff1005",
+    "year": 2012,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "16x6.5"
+    ],
+    "currentTireSizes": [
+      "205/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "c2135a4a-fddf-4d0b-9abc-b905432a0d03",
+    "year": 2012,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 44,
+        "isStock": false,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "205/60R16",
+      "225/50R17",
+      "225/45R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "f532032f-6d36-46ac-8b4b-ad548b5e0b46",
+    "year": 2013,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "0186ed2c-7cba-42c5-8303-885e89647402",
+    "year": 2013,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Titanium/Sport",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8",
+      "19x8.5"
+    ],
+    "currentTireSizes": [
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "0ecd6a8b-5fec-449a-8257-6e57098eeb9a",
+    "year": 2013,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "e6f4b35a-a8e5-4624-b863-69e52079a101",
+    "year": 2014,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "64d5ff5c-e747-4269-bd4a-af7c54e424b0",
+    "year": 2014,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "1d7a562c-6e90-4d31-a430-2a124504912a",
+    "year": 2014,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Titanium/Sport",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8",
+      "19x8.5"
+    ],
+    "currentTireSizes": [
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "2d78591a-d29b-4237-ba3b-7c566ac9df6d",
+    "year": 2015,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "eb0da102-55a1-400c-a497-512908ca88fe",
+    "year": 2015,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Titanium/Sport",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8",
+      "19x8.5"
+    ],
+    "currentTireSizes": [
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "f41e489d-f27d-4ddf-b08a-a62f917a8a31",
+    "year": 2015,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "589dbb4d-959b-4dcd-b5da-58ca799d19d4",
+    "year": 2016,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Titanium/Sport",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8",
+      "19x8.5"
+    ],
+    "currentTireSizes": [
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "99773222-2f2a-46ba-861f-853b11252821",
+    "year": 2016,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "S",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "16x7"
+    ],
+    "currentTireSizes": [
+      "215/60R16"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "190ff8e1-22de-473b-a918-6bfecaec39d8",
+    "year": 2016,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "a0fe90e8-9bc4-4569-942c-87e156fb2cdf",
+    "year": 2017,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "SE",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "17x7.5"
+    ],
+    "currentTireSizes": [
+      "235/50R17"
+    ],
+    "source": "batch2v2-trim-groups"
+  },
+  {
+    "id": "170f3452-094c-42f5-9e8e-96e739425c7b",
+    "year": 2017,
+    "make": "ford",
+    "model": "fusion",
+    "trim": "Titanium/Sport",
+    "currentBoltPattern": "5x108",
+    "currentHubBore": "63.4",
+    "currentWheelSizes": [
+      "18x8",
+      "19x8.5"
+    ],
+    "currentTireSizes": [
+      "235/45R18",
+      "235/40R19"
+    ],
+    "source": "batch2v2-trim-groups"
+  }
+]

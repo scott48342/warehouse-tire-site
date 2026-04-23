@@ -1,0 +1,2353 @@
+[
+  {
+    "id": "633a7236-eca8-46ca-b452-dc92194e086c",
+    "year": 2011,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2011]"
+  },
+  {
+    "id": "fb70b0e9-fcf9-4205-b305-b88d4975210d",
+    "year": 2012,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2012]"
+  },
+  {
+    "id": "fac5fa72-0f7e-4b51-b65e-7406cf09f5a9",
+    "year": 2013,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2013]"
+  },
+  {
+    "id": "0cad328d-2e6d-4123-a245-9675cf69abbc",
+    "year": 2014,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2014]"
+  },
+  {
+    "id": "9947939f-2f22-4e19-9ed7-86ae752fac3e",
+    "year": 2015,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2015]"
+  },
+  {
+    "id": "e37d5b33-d685-4348-956e-99f9c62ca2c8",
+    "year": 2016,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2016]"
+  },
+  {
+    "id": "fea28c2c-bf01-48f1-8003-8ee4e7d2084f",
+    "year": 2017,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2017]"
+  },
+  {
+    "id": "a1a8e166-db53-4359-9430-340747b9bc59",
+    "year": 2018,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2018]"
+  },
+  {
+    "id": "889fe2f7-e3e2-4df2-a0d4-addfa40993a3",
+    "year": 2019,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2019]"
+  },
+  {
+    "id": "c239a1fe-c9c2-42d1-af4d-a5496c1f4b45",
+    "year": 2020,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 27,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2020]"
+  },
+  {
+    "id": "3446d9c8-620d-455a-b38c-d8c4043d3b15",
+    "year": 2021,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/50R22",
+      "P285/45R22",
+      "P285/40R24"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2021]"
+  },
+  {
+    "id": "e5b19e7a-5ed3-440c-a450-11e9fabcc73e",
+    "year": 2022,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/50R22",
+      "P285/45R22",
+      "P285/40R24"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2022]"
+  },
+  {
+    "id": "329b6046-fcc5-4dd9-90d2-b99414bac579",
+    "year": 2023,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/50R22",
+      "P285/45R22",
+      "P285/40R24"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2023]"
+  },
+  {
+    "id": "c8feebf0-4205-46e5-a1b8-fc7deda7e504",
+    "year": 2024,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/50R22",
+      "P285/45R22",
+      "P285/40R24"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2024]"
+  },
+  {
+    "id": "7573c1b5-d66a-4092-989e-afcb3c2d116f",
+    "year": 2025,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/50R22",
+      "P285/45R22",
+      "P285/40R24"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2025]"
+  },
+  {
+    "id": "7abc4309-c4a4-447e-bedf-387c7b10815d",
+    "year": 2026,
+    "make": "cadillac",
+    "model": "escalade-esv",
+    "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/60R20"
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": 26,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "265/65R18"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": true,
+        "diameter": 22,
+        "tireSize": "275/50R22"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 28,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "275/55R20"
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 22,
+        "tireSize": "285/45R22"
+      }
+    ],
+    "currentTireSizes": [
+      "P275/50R22",
+      "P285/45R22",
+      "P285/40R24"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2026]"
+  },
+  {
+    "id": "5d4e13bc-0608-4219-af0e-3369935014f6",
+    "year": 2024,
+    "make": "cadillac",
+    "model": "lyriq",
+    "trim": "Dual Motor",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "74.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "265/50R20",
+      "275/40R22",
+      "275/45R21"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "3e0fed9b-355f-4bb9-a2e0-e2af116be430",
+    "year": 2004,
+    "make": "cadillac",
+    "model": "srx",
+    "trim": "Base",
+    "currentBoltPattern": "6x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 51,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 51,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "1d9d6947-cb90-4cf0-b9d8-699c1655f71c",
+    "year": 2005,
+    "make": "cadillac",
+    "model": "srx",
+    "trim": "Base",
+    "currentBoltPattern": "6x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 51,
+        "diameter": 17,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 51,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "215/55R17"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "e332a583-1f01-46bb-9be0-45f5bd5cc7e0",
+    "year": 2006,
+    "make": "cadillac",
+    "model": "sts-v",
+    "trim": "Base",
+    "currentBoltPattern": "6x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 51,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 51,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 56,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "98eebd44-6280-4bf0-b7fc-5669a55e04b0",
+    "year": 2007,
+    "make": "cadillac",
+    "model": "sts-v",
+    "trim": "Base",
+    "currentBoltPattern": "6x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 51,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 51,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 56,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "c2d7e000-3f8f-40d5-ba57-f9c9b0d10c74",
+    "year": 2008,
+    "make": "cadillac",
+    "model": "sts-v",
+    "trim": "Base",
+    "currentBoltPattern": "6x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 51,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 51,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 56,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 10,
+        "offset": 45,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "1321a154-cacd-4627-a7f6-a5d98386da2c",
+    "year": 2009,
+    "make": "cadillac",
+    "model": "sts-v",
+    "trim": "Base",
+    "currentBoltPattern": "6x115",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8.5,
+        "offset": 51,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 51,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 56,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "225/45R18"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "393e0da0-9b65-47b1-beb3-7ab042f88190",
+    "year": 2025,
+    "make": "cadillac",
+    "model": "vistiq",
+    "trim": "Base",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 40,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 40,
+        "diameter": 22,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 40,
+        "diameter": 23,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "bc793cbf-c83e-475d-a1d2-a5730d8414c1",
+    "year": 2026,
+    "make": "cadillac",
+    "model": "vistiq",
+    "trim": "Base",
+    "currentBoltPattern": "6x132",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "offset": 40,
+        "diameter": 21,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 40,
+        "diameter": 22,
+        "position": "both"
+      },
+      {
+        "width": 9.5,
+        "offset": 40,
+        "diameter": 23,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "265/40R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "56a45c18-c297-4385-8e04-887b3792a272",
+    "year": 2006,
+    "make": "cadillac",
+    "model": "xlr-v",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 61,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 56,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 55,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 55,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/40R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "e4c40311-73ff-40c3-8dc1-45682629395a",
+    "year": 2007,
+    "make": "cadillac",
+    "model": "xlr-v",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 61,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 56,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 55,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 55,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/40R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "2c21a3b3-c450-4e16-8452-d51869a69813",
+    "year": 2008,
+    "make": "cadillac",
+    "model": "xlr-v",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 61,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 56,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 55,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 9,
+        "offset": 55,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/40R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "86a4178f-2f02-4d6a-ad41-45fd6f9d6434",
+    "year": 2009,
+    "make": "cadillac",
+    "model": "xlr-v",
+    "trim": "Base",
+    "currentBoltPattern": "5x120.65",
+    "currentHubBore": "70.3",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 61,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 56,
+        "diameter": 19,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/40R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "f6f52b6a-d2c4-4311-95e9-cad0a2a95cfb",
+    "year": 2019,
+    "make": "cadillac",
+    "model": "xt4",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 37,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 37,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 37,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45ZR20",
+      "235/55R18",
+      "245/50R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "208a0ee0-886a-4f20-8e91-65950d152832",
+    "year": 2020,
+    "make": "cadillac",
+    "model": "xt4",
+    "trim": "2.0T",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45ZR20",
+      "235/55R18",
+      "245/50R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "0ce0cc83-b60d-411e-b75d-9a1d78fdf124",
+    "year": 2021,
+    "make": "cadillac",
+    "model": "xt4",
+    "trim": "2.0T",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45ZR20",
+      "235/55R18",
+      "245/50R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "a083c219-6f55-41d2-bbec-089907f3b689",
+    "year": 2022,
+    "make": "cadillac",
+    "model": "xt4",
+    "trim": "Luxury, Premium Luxury, Sport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 37,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 37,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 37,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20"
+    ],
+    "source": "luxury-gap-fill [web_research]"
+  },
+  {
+    "id": "edf5dcc6-70d6-46b6-945d-46f256a20365",
+    "year": 2023,
+    "make": "cadillac",
+    "model": "xt4",
+    "trim": "Luxury, Premium Luxury, Sport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 37,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 37,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 37,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20"
+    ],
+    "source": "luxury-gap-fill [web_research]"
+  },
+  {
+    "id": "96e710f5-06ea-4e5c-a089-a6d02125086a",
+    "year": 2024,
+    "make": "cadillac",
+    "model": "xt4",
+    "trim": "Luxury, Premium Luxury, Sport",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 37,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 37,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 37,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45R20"
+    ],
+    "source": "luxury-gap-fill [web_research]"
+  },
+  {
+    "id": "03308aad-f6ce-4d96-8fcc-ed257d0e7063",
+    "year": 2025,
+    "make": "cadillac",
+    "model": "xt4",
+    "trim": "2.0T",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 37,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/60R18",
+      "245/45ZR20",
+      "235/55R18",
+      "245/50R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "8c3fd14c-5bdc-4457-9bd4-78a8375c4e51",
+    "year": 2017,
+    "make": "cadillac",
+    "model": "xt5",
+    "trim": "Base",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "1ba5574a-c39f-4084-beba-6bcc9d447bfb",
+    "year": 2018,
+    "make": "cadillac",
+    "model": "xt5",
+    "trim": "2.0T",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "788ddafc-e52a-48da-aa8a-79277292a1b6",
+    "year": 2019,
+    "make": "cadillac",
+    "model": "xt5",
+    "trim": "2.0T",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "2de40784-9149-43ca-b7d5-28abb9e28f83",
+    "year": 2020,
+    "make": "cadillac",
+    "model": "xt5",
+    "trim": "2.0T",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "e4a1f6a5-7e22-46a7-abb8-62846fd424e9",
+    "year": 2021,
+    "make": "cadillac",
+    "model": "xt5",
+    "trim": "2.0T",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "255/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "0910b162-e70f-4b2f-9521-744f34e3e83a",
+    "year": 2022,
+    "make": "cadillac",
+    "model": "xt5",
+    "trim": "2.0T",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "255/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "8a049b7a-df36-4999-a318-d3f5ef630954",
+    "year": 2023,
+    "make": "cadillac",
+    "model": "xt5",
+    "trim": "2.0T",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "255/55R19"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "7594442d-5707-416b-8ed4-90708044b3b0",
+    "year": 2024,
+    "make": "cadillac",
+    "model": "xt5",
+    "trim": "Base",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "255/55R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "e393fc2e-7fc2-4eab-aee8-6f1f8b7a390c",
+    "year": 2025,
+    "make": "cadillac",
+    "model": "xt5",
+    "trim": "Base",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "255/55R19"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "7e1dbf76-6549-4153-a18c-cf547fc62f33",
+    "year": 2026,
+    "make": "cadillac",
+    "model": "xt5",
+    "trim": "Base",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "af8ea4f2-4a7e-4aef-9829-44ed7eb55f7c",
+    "year": 2020,
+    "make": "cadillac",
+    "model": "xt6",
+    "trim": "Base",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 55,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "265/45R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "4ac2e8d1-fec7-4ede-b4a9-595e645782de",
+    "year": 2021,
+    "make": "cadillac",
+    "model": "xt6",
+    "trim": "Base",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 55,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "265/45R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "44716ee4-393c-438a-bf7f-4b2a440e8a2e",
+    "year": 2022,
+    "make": "cadillac",
+    "model": "xt6",
+    "trim": "Base",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 55,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "265/45R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "fe8bc1c7-53a1-43af-9af6-a77795f79fb0",
+    "year": 2023,
+    "make": "cadillac",
+    "model": "xt6",
+    "trim": "2.0T",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 55.5,
+        "isStock": false,
+        "diameter": 21
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "265/45R21"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "2c9a64bb-217d-4093-9986-98e539946bc2",
+    "year": 2024,
+    "make": "cadillac",
+    "model": "xt6",
+    "trim": "Base",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 55,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "265/45R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "7daee69f-060a-4bfd-9c6b-bf73d491e377",
+    "year": 2025,
+    "make": "cadillac",
+    "model": "xt6",
+    "trim": "Base",
+    "currentBoltPattern": "6x120",
+    "currentHubBore": "66.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 18,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 19,
+        "position": "both"
+      },
+      {
+        "width": 8,
+        "offset": 50,
+        "diameter": 20,
+        "position": "both"
+      },
+      {
+        "width": 8.5,
+        "offset": 55,
+        "diameter": 21,
+        "position": "both"
+      }
+    ],
+    "currentTireSizes": [
+      "235/65R18",
+      "235/55R20",
+      "235/60R19",
+      "255/50R20",
+      "265/45R21"
+    ],
+    "source": "catalog-gap-fill [web_research]"
+  },
+  {
+    "id": "7012edc1-40af-4a4d-8d62-c232e944bc52",
+    "year": 2013,
+    "make": "cadillac",
+    "model": "xts",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/40R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4352427d-678a-4b1f-ac93-73c770af6035",
+    "year": 2014,
+    "make": "cadillac",
+    "model": "xts",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/40R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "236ff0eb-211e-43a4-af45-f03bca928ef9",
+    "year": 2015,
+    "make": "cadillac",
+    "model": "xts",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/40R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "f34f6764-742b-44c9-b346-fc809817bed2",
+    "year": 2016,
+    "make": "cadillac",
+    "model": "xts",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/40R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "4c7e7c4f-2b8c-4ca6-ac30-d950f08affc3",
+    "year": 2017,
+    "make": "cadillac",
+    "model": "xts",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/40R20"
+    ],
+    "source": "catalog-gap-fill"
+  },
+  {
+    "id": "fde2a0e3-477a-4ff4-b502-ce878616fa9c",
+    "year": 2018,
+    "make": "cadillac",
+    "model": "xts",
+    "trim": "Base",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "square",
+        "width": 8.5,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/40R20"
+    ],
+    "source": "catalog-gap-fill"
+  }
+]

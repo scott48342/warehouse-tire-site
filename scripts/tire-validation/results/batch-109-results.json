@@ -1,0 +1,1290 @@
+{
+  "batchId": "109",
+  "processedAt": "2026-04-21T22:25:00.000Z",
+  "source": "tiresize.com, tirewheelguide.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "trims": [
+        {
+          "name": "GLC 200 / GLC 220d / GLC 250 / GLC 250d / GLC 300",
+          "tireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+          "staggered": false,
+          "notes": "Base GLC trims, square setup"
+        },
+        {
+          "name": "GLC 300 (Staggered Option)",
+          "tireSizes": ["235/55R19", "255/50R19"],
+          "frontTire": "235/55R19",
+          "rearTire": "255/50R19",
+          "staggered": true,
+          "notes": "Optional staggered setup on 19\" wheels"
+        },
+        {
+          "name": "GLC 300 (20\" Staggered)",
+          "tireSizes": ["255/45R20", "285/40R20"],
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true,
+          "notes": "Optional staggered setup on 20\" AMG wheels"
+        }
+      ],
+      "validatedSizes": ["235/65R17", "235/60R18", "235/55R19", "255/50R19", "255/45R20", "285/40R20"],
+      "wheelSizes": ["17", "18", "19", "20"]
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "GLC-Class",
+      "trims": [
+        {
+          "name": "GLC 200 / GLC 220d / GLC 250 / GLC 250d / GLC 300",
+          "tireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+          "staggered": false,
+          "notes": "First year of X253 generation"
+        }
+      ],
+      "validatedSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "wheelSizes": ["17", "18", "19", "20"],
+      "notes": "GLC launched late 2015 - limited production"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC SUV",
+          "tireSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true,
+          "notes": "20\" standard staggered"
+        },
+        {
+          "name": "AMG GLC 43 4MATIC SUV (21\")",
+          "frontTire": "255/40R21",
+          "rearTire": "285/35R21",
+          "staggered": true,
+          "notes": "21\" optional staggered"
+        },
+        {
+          "name": "AMG GLC 63/63 S",
+          "tireSizes": ["265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+          "frontTire": "265/45R20",
+          "rearTire": "295/40R20",
+          "staggered": true,
+          "notes": "GLC 63 staggered setup"
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC SUV",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 43 4MATIC SUV (21\")",
+          "frontTire": "255/40R21",
+          "rearTire": "285/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC SUV",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 43 4MATIC SUV (21\")",
+          "frontTire": "255/40R21",
+          "rearTire": "285/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC SUV",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 43 4MATIC SUV (21\")",
+          "frontTire": "255/40R21",
+          "rearTire": "285/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC SUV",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 43 4MATIC SUV (21\")",
+          "frontTire": "255/40R21",
+          "rearTire": "285/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC SUV",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 43 4MATIC SUV (21\")",
+          "frontTire": "255/40R21",
+          "rearTire": "285/35R21",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 SUV",
+          "frontTire": "265/45R20",
+          "rearTire": "295/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 S SUV",
+          "frontTire": "265/40R21",
+          "rearTire": "295/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC SUV",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 SUV",
+          "frontTire": "265/45R20",
+          "rearTire": "295/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 SUV (21\")",
+          "frontTire": "265/40R21",
+          "rearTire": "295/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC SUV",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 SUV",
+          "frontTire": "265/45R20",
+          "rearTire": "295/40R20",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC SUV",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 SUV",
+          "frontTire": "265/45R20",
+          "rearTire": "295/40R20",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC SUV",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 43 4MATIC SUV (21\")",
+          "frontTire": "255/40R21",
+          "rearTire": "285/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true,
+      "notes": "First year for AMG GLC 43"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [],
+      "validatedSizes": [],
+      "notes": "AMG GLC not available in 2016 - model did not exist"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "GLC-Class AMG",
+      "trims": [],
+      "validatedSizes": [],
+      "notes": "AMG GLC not available in 2015 - model did not exist"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "tireSizes": ["235/55R19", "255/45R20", "285/40R20"],
+          "staggered": false,
+          "notes": "Square and staggered options"
+        },
+        {
+          "name": "GLC 300 4MATIC Coupe (Staggered 20\")",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["235/55R19", "255/45R20", "285/40R20", "265/40R21"],
+      "wheelSizes": ["19", "20", "21"]
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "tireSizes": ["235/55R19", "255/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["235/55R19", "255/45R20", "285/40R20", "265/40R21"],
+      "wheelSizes": ["19", "20", "21"]
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "tireSizes": ["235/55R19", "255/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["235/55R19", "255/45R20", "265/40R21"],
+      "wheelSizes": ["19", "20", "21"]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "tireSizes": ["235/55R19", "255/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["235/55R19", "255/45R20", "265/40R21"],
+      "wheelSizes": ["19", "20", "21"],
+      "notes": "New C254 generation coupe launched"
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["235/60R18", "235/55R19", "255/45R20", "265/40R21"],
+      "wheelSizes": ["18", "19", "20", "21"]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["235/60R18", "235/55R19", "255/45R20", "265/40R21"],
+      "wheelSizes": ["18", "19", "20", "21"]
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["235/60R18", "235/55R19", "255/45R20", "265/40R21"],
+      "wheelSizes": ["18", "19", "20", "21"]
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelSizes": ["18", "19", "20"]
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelSizes": ["18", "19", "20"]
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [
+        {
+          "name": "GLC 300 4MATIC Coupe",
+          "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelSizes": ["18", "19", "20"],
+      "notes": "First year for GLC Coupe"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe",
+      "trims": [],
+      "validatedSizes": [],
+      "notes": "GLC Coupe not available in 2016 - launched 2017"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC Coupe",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 43 4MATIC Coupe (21\")",
+          "frontTire": "255/40R21",
+          "rearTire": "285/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC Coupe",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 43 4MATIC Coupe (21\")",
+          "frontTire": "255/40R21",
+          "rearTire": "285/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC Coupe",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 43 4MATIC Coupe (21\")",
+          "frontTire": "255/40R21",
+          "rearTire": "285/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC Coupe",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC Coupe",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC Coupe",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 Coupe",
+          "frontTire": "265/45R20",
+          "rearTire": "295/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 S Coupe",
+          "frontTire": "265/40R21",
+          "rearTire": "295/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC Coupe",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 Coupe",
+          "frontTire": "265/45R20",
+          "rearTire": "295/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 S Coupe",
+          "frontTire": "265/40R21",
+          "rearTire": "295/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC Coupe",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 Coupe",
+          "frontTire": "265/45R20",
+          "rearTire": "295/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 S Coupe",
+          "frontTire": "265/40R21",
+          "rearTire": "295/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC Coupe",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 Coupe",
+          "frontTire": "265/45R20",
+          "rearTire": "295/40R20",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLC 63 S Coupe",
+          "frontTire": "265/40R21",
+          "rearTire": "295/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true,
+      "notes": "First year for GLC 63 Coupe"
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [
+        {
+          "name": "AMG GLC 43 4MATIC Coupe",
+          "frontTire": "255/45R20",
+          "rearTire": "285/40R20",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/45R20", "285/40R20", "255/40R21", "285/35R21"],
+      "wheelSizes": ["20", "21"],
+      "isStaggered": true,
+      "notes": "First year for AMG GLC Coupe"
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GLC-Class Coupe AMG",
+      "trims": [],
+      "validatedSizes": [],
+      "notes": "AMG GLC Coupe not available in 2016"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350 4MATIC",
+          "tireSizes": ["275/55R19", "275/50R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 350/450 (21\" Staggered)",
+          "frontTire": "275/45R21",
+          "rearTire": "315/40R21",
+          "staggered": true
+        },
+        {
+          "name": "GLE 450/580 (22\" Staggered)",
+          "frontTire": "285/40R22",
+          "rearTire": "325/35R22",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLE 53",
+          "frontTire": "275/45R21",
+          "rearTire": "315/40R21",
+          "staggered": true
+        },
+        {
+          "name": "AMG GLE 63 S",
+          "frontTire": "285/40R22",
+          "rearTire": "325/35R22",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21", "285/40R22", "325/35R22"],
+      "wheelSizes": ["19", "20", "21", "22"]
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350 4MATIC",
+          "tireSizes": ["275/55R19", "275/50R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 350/450 (21\" Staggered)",
+          "frontTire": "275/45R21",
+          "rearTire": "315/40R21",
+          "staggered": true
+        },
+        {
+          "name": "GLE 450/580 (22\" Staggered)",
+          "frontTire": "285/40R22",
+          "rearTire": "325/35R22",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21", "285/40R22", "325/35R22"],
+      "wheelSizes": ["19", "20", "21", "22"]
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350 4MATIC",
+          "tireSizes": ["275/55R19", "275/50R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 350/450 (21\" Staggered)",
+          "frontTire": "275/45R21",
+          "rearTire": "315/40R21",
+          "staggered": true
+        },
+        {
+          "name": "GLE 450/580 (22\" Staggered)",
+          "frontTire": "285/40R22",
+          "rearTire": "325/35R22",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21", "285/40R22", "325/35R22"],
+      "wheelSizes": ["19", "20", "21", "22"]
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350 4MATIC",
+          "tireSizes": ["275/55R19", "275/50R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 350/450 (21\" Staggered)",
+          "frontTire": "275/45R21",
+          "rearTire": "315/40R21",
+          "staggered": true
+        },
+        {
+          "name": "GLE 450/580 (22\" Staggered)",
+          "frontTire": "285/40R22",
+          "rearTire": "325/35R22",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21", "285/40R22", "325/35R22"],
+      "wheelSizes": ["19", "20", "21", "22"]
+    },
+    {
+      "year": 2022,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350 4MATIC",
+          "tireSizes": ["275/55R19", "275/50R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 350/450 (21\" Staggered)",
+          "frontTire": "275/45R21",
+          "rearTire": "315/40R21",
+          "staggered": true
+        },
+        {
+          "name": "GLE 450/580 (22\" Staggered)",
+          "frontTire": "285/40R22",
+          "rearTire": "325/35R22",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21", "285/40R22", "325/35R22"],
+      "wheelSizes": ["19", "20", "21", "22"]
+    },
+    {
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350 4MATIC",
+          "tireSizes": ["275/55R19", "275/50R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 350/450 (21\" Staggered)",
+          "frontTire": "275/45R21",
+          "rearTire": "315/40R21",
+          "staggered": true
+        },
+        {
+          "name": "GLE 450/580 (22\" Staggered)",
+          "frontTire": "285/40R22",
+          "rearTire": "325/35R22",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21", "285/40R22", "325/35R22"],
+      "wheelSizes": ["19", "20", "21", "22"]
+    },
+    {
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350 4MATIC",
+          "tireSizes": ["275/55R19", "275/50R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 350/450 (21\" Staggered)",
+          "frontTire": "275/45R21",
+          "rearTire": "315/40R21",
+          "staggered": true
+        },
+        {
+          "name": "GLE 450/580 (22\" Staggered)",
+          "frontTire": "285/40R22",
+          "rearTire": "325/35R22",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21", "285/40R22", "325/35R22"],
+      "wheelSizes": ["19", "20", "21", "22"],
+      "notes": "New W167 generation launched"
+    },
+    {
+      "year": 2019,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350/400 (W166 pre-facelift)",
+          "tireSizes": ["255/50R19", "265/45R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 350/400 (Optional 21\")",
+          "frontTire": "265/40R21",
+          "rearTire": "295/35R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["255/55R18", "255/50R19", "265/50R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["18", "19", "20", "21"],
+      "notes": "Last year W166 / First year W167 - two generations available"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350",
+          "tireSizes": ["255/50R19", "265/45R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 43 AMG",
+          "tireSizes": ["265/45R20", "295/40R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 63 AMG",
+          "tireSizes": ["265/45R20", "295/35R21"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/55R18", "255/50R19", "265/50R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["18", "19", "20", "21"]
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350",
+          "tireSizes": ["255/50R19", "265/45R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 43 AMG",
+          "tireSizes": ["265/45R20", "295/40R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/55R18", "255/50R19", "265/50R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["18", "19", "20", "21"]
+    },
+    {
+      "year": 2016,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "GLE 350",
+          "tireSizes": ["255/50R19", "265/45R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 63 AMG",
+          "tireSizes": ["265/45R20", "295/35R21"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/55R18", "255/50R19", "265/50R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["18", "19", "20", "21"],
+      "notes": "First year GLE replaced ML-Class"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350 (pre-GLE rebadge)",
+          "tireSizes": ["255/50R19", "265/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/55R18", "255/50R19", "265/50R19", "265/45R20", "295/40R20", "265/40R21", "295/35R21"],
+      "wheelSizes": ["18", "19", "20", "21"],
+      "notes": "Still sold as ML-Class in early 2015"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350",
+          "tireSizes": ["255/50R19", "265/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/55R18", "255/50R19", "265/50R19", "265/45R20", "295/40R20"],
+      "wheelSizes": ["18", "19", "20"],
+      "notes": "Sold as ML-Class (W166)"
+    },
+    {
+      "year": 2013,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350",
+          "tireSizes": ["255/50R19", "265/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/55R18", "255/50R19", "265/50R19", "265/45R20", "295/40R20"],
+      "wheelSizes": ["18", "19", "20"],
+      "notes": "Sold as ML-Class (W166)"
+    },
+    {
+      "year": 2012,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350",
+          "tireSizes": ["255/50R19", "265/45R20"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/55R18", "255/50R19", "265/50R19", "265/45R20", "295/40R20"],
+      "wheelSizes": ["18", "19", "20"],
+      "notes": "Sold as ML-Class (W166)"
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350",
+          "tireSizes": ["255/60R17", "255/55R18", "255/50R19"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/60R17", "255/55R18", "255/50R19", "275/50R19", "275/45R20", "295/40R20"],
+      "wheelSizes": ["17", "18", "19", "20"],
+      "notes": "W164 generation"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350",
+          "tireSizes": ["255/60R17", "255/55R18", "255/50R19"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/60R17", "255/55R18", "255/50R19", "275/50R19", "275/45R20", "295/40R20"],
+      "wheelSizes": ["17", "18", "19", "20"],
+      "notes": "W164 generation"
+    },
+    {
+      "year": 2009,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350",
+          "tireSizes": ["255/60R17", "255/55R18", "255/50R19"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/60R17", "255/55R18", "255/50R19", "275/50R19", "275/45R20", "295/40R20"],
+      "wheelSizes": ["17", "18", "19", "20"],
+      "notes": "W164 generation"
+    },
+    {
+      "year": 2008,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350",
+          "tireSizes": ["255/60R17", "255/55R18", "255/50R19"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/60R17", "255/55R18", "255/50R19", "275/50R19", "275/45R20", "295/40R20"],
+      "wheelSizes": ["17", "18", "19", "20"],
+      "notes": "W164 generation"
+    },
+    {
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350",
+          "tireSizes": ["255/60R17", "255/55R18", "255/50R19"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/60R17", "255/55R18", "255/50R19", "275/50R19", "275/45R20", "295/40R20"],
+      "wheelSizes": ["17", "18", "19", "20"],
+      "notes": "W164 generation"
+    },
+    {
+      "year": 2006,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350",
+          "tireSizes": ["255/60R17", "255/55R18", "255/50R19"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/60R17", "255/55R18", "255/50R19", "275/50R19", "275/45R20", "295/40R20"],
+      "wheelSizes": ["17", "18", "19", "20"],
+      "notes": "W164 generation"
+    },
+    {
+      "year": 2005,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350 (W163)",
+          "tireSizes": ["255/65R16", "255/55R17", "275/55R17"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/65R16", "255/55R17", "275/55R17", "255/55R18", "275/55R18", "285/45R19"],
+      "wheelSizes": ["16", "17", "18", "19"],
+      "notes": "W163 generation"
+    },
+    {
+      "year": 2004,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350 (W163)",
+          "tireSizes": ["255/65R16", "255/55R17", "275/55R17"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/65R16", "255/55R17", "275/55R17", "255/55R18", "275/55R18", "285/45R19"],
+      "wheelSizes": ["16", "17", "18", "19"],
+      "notes": "W163 generation"
+    },
+    {
+      "year": 2003,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 350 (W163)",
+          "tireSizes": ["255/65R16", "255/55R17", "275/55R17"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/65R16", "255/55R17", "275/55R17", "255/55R18", "275/55R18", "285/45R19"],
+      "wheelSizes": ["16", "17", "18", "19"],
+      "notes": "W163 generation"
+    },
+    {
+      "year": 2002,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 320/500 (W163)",
+          "tireSizes": ["255/65R16", "255/55R17", "275/55R17"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/65R16", "255/55R17", "275/55R17", "255/55R18", "275/55R18", "285/45R19"],
+      "wheelSizes": ["16", "17", "18", "19"],
+      "notes": "W163 generation"
+    },
+    {
+      "year": 2001,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 320/430 (W163)",
+          "tireSizes": ["255/65R16", "255/55R17", "275/55R17"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/65R16", "255/55R17", "275/55R17", "255/55R18", "275/55R18", "285/45R19"],
+      "wheelSizes": ["16", "17", "18", "19"],
+      "notes": "W163 generation"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "GLE",
+      "trims": [
+        {
+          "name": "ML 320/430 (W163)",
+          "tireSizes": ["255/65R16", "255/55R17", "275/55R17"],
+          "staggered": false
+        }
+      ],
+      "validatedSizes": ["255/65R16", "255/55R17", "275/55R17", "255/55R18", "275/55R18", "285/45R19"],
+      "wheelSizes": ["16", "17", "18", "19"],
+      "notes": "W163 generation"
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes",
+      "model": "GLE-Class",
+      "trims": [
+        {
+          "name": "GLE 350 4MATIC",
+          "tireSizes": ["275/55R19", "275/50R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 350/450 (21\" Staggered)",
+          "frontTire": "275/45R21",
+          "rearTire": "315/40R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21", "285/40R22", "325/35R22"],
+      "wheelSizes": ["19", "20", "21", "22"],
+      "notes": "Same as GLE - naming variant"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "GLE-Class",
+      "trims": [
+        {
+          "name": "GLE 350 4MATIC",
+          "tireSizes": ["275/55R19", "275/50R20"],
+          "staggered": false
+        },
+        {
+          "name": "GLE 350/450 (21\" Staggered)",
+          "frontTire": "275/45R21",
+          "rearTire": "315/40R21",
+          "staggered": true
+        }
+      ],
+      "validatedSizes": ["275/55R19", "275/50R20", "275/45R21", "315/40R21", "285/40R22", "325/35R22"],
+      "wheelSizes": ["19", "20", "21", "22"],
+      "notes": "Same as GLE - naming variant"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 75,
+    "withTrimData": 73,
+    "notAvailable": 2,
+    "staggeredSetups": 38,
+    "modelNotes": {
+      "GLC-Class": "Standard GLC SUV - square setups 17-20 inch, staggered options on AMG wheels",
+      "GLC-Class AMG": "GLC 43 (2017+) and GLC 63 (2018-2021) - all staggered setups",
+      "GLC-Class Coupe": "GLC Coupe launched 2017 - same sizes as SUV with some variations",
+      "GLC-Class Coupe AMG": "AMG Coupe variants - all staggered like SUV AMG",
+      "GLE": "2020+ W167 generation has larger tires (19-22 inch), older W166 (18-21 inch)",
+      "GLE-Class": "Same as GLE - duplicate naming convention"
+    }
+  }
+}

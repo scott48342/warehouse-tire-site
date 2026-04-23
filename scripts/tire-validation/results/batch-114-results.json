@@ -1,0 +1,1310 @@
+{
+  "batchId": "114",
+  "processedAt": "2026-04-21T22:27:00Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK300": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "notes": "R172 generation (2012-2016). All trims have staggered fitment.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK250": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        },
+        "SLK350": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "notes": "R172 generation. 205/55R16 not OEM for this generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK250": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        },
+        "SLK350": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "notes": "R172 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK250": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        },
+        "SLK350": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "notes": "R172 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK250": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        },
+        "SLK350": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "notes": "R172 generation first year.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK350": {
+          "Base": {"front": "225/40R18", "rear": "245/35R18", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/40R18", "245/35R18"],
+      "notes": "R171 generation final year. 2011 SLK350 all came with 18\" wheels.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK300": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        },
+        "SLK350": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "notes": "R171 generation. 205/55R16 not available this year.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK300": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        },
+        "SLK350": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "245/35R18"],
+      "notes": "R171 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK280": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        },
+        "SLK350": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17"],
+      "notes": "R171 generation. No 18\" option standard this year.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK280": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        },
+        "SLK350": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17"],
+      "notes": "R171 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK280": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        },
+        "SLK350": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17"],
+      "notes": "R171 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK350": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17"],
+      "notes": "R171 generation first year.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK230": {
+          "Base": {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        },
+        "SLK320": {
+          "Base": {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17"],
+      "notes": "R170 generation final year. 245/40R18 not OEM for this generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK230": {
+          "Base": {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        },
+        "SLK320": {
+          "Base": {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17"],
+      "notes": "R170 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK230": {
+          "Base": {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        },
+        "SLK320": {
+          "Base": {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17"],
+      "notes": "R170 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK230": {
+          "Base": {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        },
+        "SLK320": {
+          "Base": {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17"],
+      "notes": "R170 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "slk-class",
+      "currentTireSizes": ["205/55R16", "225/45R17", "245/40R18"],
+      "validatedTireSizes": {
+        "SLK230": {
+          "Base": {"front": "205/55R16", "rear": "225/50R16", "staggered": true},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "SpecialEdition": {"size": "225/45R17", "staggered": false}
+        }
+      },
+      "recommendedSizes": ["205/55R16", "225/50R16", "225/45R17", "245/40R17"],
+      "notes": "R170 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "235/40R18", "rear": "255/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["235/40R18", "255/35R18"],
+      "notes": "R172 AMG. Note: front is 235/40R18 not 225/40R18. 255/30R19 not OEM.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "235/40R18", "rear": "255/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["235/40R18", "255/35R18"],
+      "notes": "R172 AMG.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "235/40R18", "rear": "255/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["235/40R18", "255/35R18"],
+      "notes": "R172 AMG.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "235/40R18", "rear": "255/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["235/40R18", "255/35R18"],
+      "notes": "R172 AMG first year for SLK55.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/40R18", "245/35R18"],
+      "notes": "R172 AMG. 2012 had slightly narrower tires than 2013+.",
+      "validation": "PARTIAL_MATCH",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/40R18", "245/35R18"],
+      "notes": "R171 AMG. No SLK55 AMG produced 2011-2012 (gap year).",
+      "validation": "NEEDS_VERIFICATION",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/40R18", "245/35R18"],
+      "notes": "R171 AMG final year.",
+      "validation": "PARTIAL_MATCH",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/40R18", "245/35R18"],
+      "notes": "R171 AMG.",
+      "validation": "PARTIAL_MATCH",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/40R18", "245/35R18"],
+      "notes": "R171 AMG.",
+      "validation": "PARTIAL_MATCH",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/40R18", "245/35R18"],
+      "notes": "R171 AMG.",
+      "validation": "PARTIAL_MATCH",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/40R18", "245/35R18"],
+      "notes": "R171 AMG.",
+      "validation": "PARTIAL_MATCH",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK55_AMG": {
+          "Base": {"front": "225/40R18", "rear": "245/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/40R18", "245/35R18"],
+      "notes": "R171 AMG first year.",
+      "validation": "PARTIAL_MATCH",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK32_AMG": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17"],
+      "notes": "R170 AMG (SLK32 AMG). 18\" not standard on R170 AMG.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK32_AMG": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17"],
+      "notes": "R170 AMG (SLK32 AMG).",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {
+        "SLK32_AMG": {
+          "Base": {"front": "225/45R17", "rear": "245/40R17", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17"],
+      "notes": "R170 AMG (SLK32 AMG) first year.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {},
+      "recommendedSizes": [],
+      "notes": "No SLK AMG model for 2001. SLK32 AMG started 2002.",
+      "validation": "NO_DATA",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "mercedes",
+      "model": "slk-class-amg",
+      "currentTireSizes": ["225/40R18", "245/35R18", "255/30R19"],
+      "validatedTireSizes": {},
+      "recommendedSizes": [],
+      "notes": "No SLK AMG model for 2000.",
+      "validation": "NO_DATA",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLR": {
+          "Base": {"front": "245/40R18", "rear": "295/35R18", "staggered": true},
+          "Optional": {"front": "255/35R19", "rear": "295/30R19", "staggered": true}
+        },
+        "SLR_722": {
+          "Base": {"size": "255/35R19", "staggered": false}
+        }
+      },
+      "recommendedSizes": ["245/40R18", "295/35R18", "255/35R19", "295/30R19"],
+      "notes": "Supercar. Final year of production. Staggered fitment required.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLR": {
+          "Base": {"front": "245/40R18", "rear": "295/35R18", "staggered": true},
+          "Optional": {"front": "255/35R19", "rear": "295/30R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["245/40R18", "295/35R18", "255/35R19", "295/30R19"],
+      "notes": "Supercar. Staggered fitment required.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLR": {
+          "Base": {"front": "245/40R18", "rear": "295/35R18", "staggered": true},
+          "Optional": {"front": "255/35R19", "rear": "295/30R19", "staggered": true}
+        },
+        "SLR_722": {
+          "Base": {"front": "255/35R19", "rear": "295/30R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["245/40R18", "295/35R18", "255/35R19", "295/30R19"],
+      "notes": "Supercar. 722 Edition available.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLR": {
+          "Base": {"front": "245/40R18", "rear": "295/35R18", "staggered": true},
+          "Optional": {"front": "255/35R19", "rear": "295/30R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["245/40R18", "295/35R18", "255/35R19", "295/30R19"],
+      "notes": "Supercar.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLR": {
+          "Base": {"front": "245/40R18", "rear": "295/35R18", "staggered": true},
+          "Optional": {"front": "255/35R19", "rear": "295/30R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["245/40R18", "295/35R18", "255/35R19", "295/30R19"],
+      "notes": "Supercar.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLR": {
+          "Base": {"front": "245/40R18", "rear": "295/35R18", "staggered": true},
+          "Optional": {"front": "255/35R19", "rear": "295/30R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["245/40R18", "295/35R18", "255/35R19", "295/30R19"],
+      "notes": "Supercar. First full year.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLR": {
+          "Base": {"front": "245/40R18", "rear": "295/35R18", "staggered": true},
+          "Optional": {"front": "255/35R19", "rear": "295/30R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["245/40R18", "295/35R18", "255/35R19", "295/30R19"],
+      "notes": "Supercar. Launch year.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "slr-mclaren",
+      "currentTireSizes": [],
+      "validatedTireSizes": {},
+      "recommendedSizes": [],
+      "notes": "Pre-production year. Very limited availability.",
+      "validation": "NO_DATA",
+      "source": "N/A"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLS_AMG_GT_Final_Edition": {
+          "Coupe": {"front": "265/35R19", "rear": "295/30R20", "staggered": true},
+          "Roadster": {"front": "265/35R19", "rear": "295/30R20", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["265/35R19", "295/30R20"],
+      "notes": "Final Edition. All SLS have staggered 19/20\" setup.",
+      "validation": "COMPLETE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLS_AMG_GT": {
+          "Coupe": {"front": "265/35R19", "rear": "295/30R20", "staggered": true},
+          "Roadster": {"front": "265/35R19", "rear": "295/30R20", "staggered": true}
+        },
+        "SLS_AMG_Black_Series": {
+          "Coupe": {"front": "275/35R19", "rear": "325/30R20", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["265/35R19", "295/30R20", "275/35R19", "325/30R20"],
+      "notes": "Black Series has wider tires.",
+      "validation": "COMPLETE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLS_AMG": {
+          "Coupe": {"front": "265/35R19", "rear": "295/30R20", "staggered": true},
+          "Roadster": {"front": "265/35R19", "rear": "295/30R20", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["265/35R19", "295/30R20"],
+      "notes": "Staggered 19/20\" setup.",
+      "validation": "COMPLETE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLS_AMG": {
+          "Coupe": {"front": "265/35R19", "rear": "295/30R20", "staggered": true},
+          "Roadster": {"front": "265/35R19", "rear": "295/30R20", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["265/35R19", "295/30R20"],
+      "notes": "Roadster introduced.",
+      "validation": "COMPLETE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLS_AMG": {
+          "Coupe": {"front": "265/35R19", "rear": "295/30R20", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["265/35R19", "295/30R20"],
+      "notes": "First full year. Coupe only.",
+      "validation": "COMPLETE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "sls-class-amg",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "SLS_AMG": {
+          "Coupe": {"front": "265/35R19", "rear": "295/30R20", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["265/35R19", "295/30R20"],
+      "notes": "Launch year (late 2010).",
+      "validation": "COMPLETE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "t-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "T180": {"Base": {"size": "195/65R16", "staggered": false}},
+        "T200": {"Base": {"size": "205/55R17", "staggered": false}}
+      },
+      "recommendedSizes": ["195/65R16", "205/55R17"],
+      "notes": "Europe-only compact MPV. Not sold in USA.",
+      "validation": "COMPLETE",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "t-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "T180": {"Base": {"size": "195/65R16", "staggered": false}},
+        "T200": {"Base": {"size": "205/55R17", "staggered": false}}
+      },
+      "recommendedSizes": ["195/65R16", "205/55R17"],
+      "notes": "Europe-only compact MPV.",
+      "validation": "COMPLETE",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "t-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "T180": {"Base": {"size": "195/65R16", "staggered": false}},
+        "T200": {"Base": {"size": "205/55R17", "staggered": false}}
+      },
+      "recommendedSizes": ["195/65R16", "205/55R17"],
+      "notes": "Europe-only compact MPV.",
+      "validation": "COMPLETE",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "t-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "T180": {"Base": {"size": "195/65R16", "staggered": false}},
+        "T200": {"Base": {"size": "205/55R17", "staggered": false}}
+      },
+      "recommendedSizes": ["195/65R16", "205/55R17"],
+      "notes": "Europe-only compact MPV.",
+      "validation": "COMPLETE",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "t-class",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "T180": {"Base": {"size": "195/65R16", "staggered": false}},
+        "T200": {"Base": {"size": "205/55R17", "staggered": false}}
+      },
+      "recommendedSizes": ["195/65R16", "205/55R17"],
+      "notes": "Europe-only compact MPV. Launch year.",
+      "validation": "COMPLETE",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2005,
+      "make": "mercedes",
+      "model": "vaneo",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Vaneo_1.6": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.6i": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.7_CDI": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.9i": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Optional": {"size": "195/55R15", "staggered": false},
+        "Optional_16": {"size": "195/50R16", "staggered": false}
+      },
+      "recommendedSizes": ["185/60R15", "195/55R15", "195/50R16"],
+      "notes": "Europe-only compact MPV. Final year. Not sold in USA.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2004,
+      "make": "mercedes",
+      "model": "vaneo",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Vaneo_1.6": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.6i": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.7_CDI": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.9i": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Optional": {"size": "195/55R15", "staggered": false},
+        "Optional_16": {"size": "195/50R16", "staggered": false}
+      },
+      "recommendedSizes": ["185/60R15", "195/55R15", "195/50R16"],
+      "notes": "Europe-only compact MPV.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2003,
+      "make": "mercedes",
+      "model": "vaneo",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Vaneo_1.6": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.6i": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.7_CDI": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.9i": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Optional": {"size": "195/55R15", "staggered": false},
+        "Optional_16": {"size": "195/50R16", "staggered": false}
+      },
+      "recommendedSizes": ["185/60R15", "195/55R15", "195/50R16"],
+      "notes": "Europe-only compact MPV.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2002,
+      "make": "mercedes",
+      "model": "vaneo",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Vaneo_1.6": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.6i": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.7_CDI": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Vaneo_1.9i": {"Base": {"size": "185/60R15", "staggered": false}},
+        "Optional": {"size": "195/55R15", "staggered": false},
+        "Optional_16": {"size": "195/50R16", "staggered": false}
+      },
+      "recommendedSizes": ["185/60R15", "195/55R15", "195/50R16"],
+      "notes": "Europe-only compact MPV. Launch year.",
+      "validation": "COMPLETE",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes-benz",
+      "model": "amg-gt",
+      "currentTireSizes": ["265/35ZR19", "295/30ZR19", "265/35ZR20", "295/30ZR20"],
+      "validatedTireSizes": {
+        "AMG_GT_53_4Door": {
+          "19inch": {"front": "255/45R19", "rear": "285/40R19", "staggered": true},
+          "20inch": {"front": "265/40R20", "rear": "295/35R20", "staggered": true},
+          "21inch": {"front": "275/35R21", "rear": "315/30R21", "staggered": true}
+        },
+        "AMG_GT_63_4Door": {
+          "19inch": {"front": "255/45R19", "rear": "285/40R19", "staggered": true},
+          "20inch": {"front": "265/40R20", "rear": "295/35R20", "staggered": true},
+          "21inch": {"front": "275/35R21", "rear": "315/30R21", "staggered": true}
+        },
+        "AMG_GT_63S_4Door": {
+          "20inch": {"front": "265/40R20", "rear": "295/35R20", "staggered": true},
+          "21inch": {"front": "275/35R21", "rear": "315/30R21", "staggered": true}
+        },
+        "AMG_GT_Coupe": {
+          "19inch": {"front": "255/35R19", "rear": "295/30R19", "staggered": true},
+          "19_20inch": {"front": "265/35R19", "rear": "295/30R20", "staggered": true}
+        },
+        "AMG_GT_Roadster": {
+          "19inch": {"front": "255/35R19", "rear": "295/30R19", "staggered": true},
+          "19_20inch": {"front": "265/35R19", "rear": "295/30R20", "staggered": true}
+        },
+        "AMG_GT_C": {
+          "Coupe": {"front": "265/35R19", "rear": "305/30R20", "staggered": true},
+          "Roadster": {"front": "265/35R19", "rear": "305/30R20", "staggered": true}
+        },
+        "AMG_GT_R": {
+          "Coupe": {"front": "275/35R19", "rear": "325/30R20", "staggered": true},
+          "Roadster": {"front": "275/35R19", "rear": "325/30R20", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["255/35R19", "295/30R19", "265/35R19", "295/30R20", "255/45R19", "285/40R19", "265/40R20", "295/35R20", "265/35R19", "305/30R20", "275/35R19", "325/30R20"],
+      "notes": "Multiple body styles and trims. All have staggered fitment. Current sizes partially correct but missing some options.",
+      "validation": "PARTIAL_MATCH",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Luxury": {"size": "225/45R18", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W206 generation. 235/40R19 not OEM - should be staggered 225/40R19 front, 255/35R19 rear.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Luxury": {"size": "225/45R18", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W206 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Luxury": {"size": "225/45R18", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W206 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Luxury": {"size": "225/45R18", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W206 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Luxury": {"size": "225/45R18", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W206 generation first year.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W205 generation final year.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W205 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300_Sedan": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        },
+        "C300_Coupe": {
+          "Base": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "Sport": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W205 generation. Coupe/Cabriolet have different base sizes.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50ZR17", "245/45ZR17", "225/50R17", "225/45R18", "225/45ZR18", "245/40ZR18", "225/40ZR19", "245/35ZR19", "255/35ZR19", "225/35ZR20", "255/30ZR20"],
+      "validatedTireSizes": {
+        "C300_Sedan": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true}
+        },
+        "C43_AMG": {
+          "Base": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "Sport": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        },
+        "C63_AMG": {
+          "Base": {"front": "245/35R19", "rear": "265/35R19", "staggered": true},
+          "S": {"front": "255/35R19", "rear": "285/30R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "245/35R19", "265/35R19", "255/35R19", "285/30R19"],
+      "notes": "DUPLICATE ENTRY - This appears to be C-Class AMG data. 20\" sizes listed are likely aftermarket or special editions.",
+      "validation": "NEEDS_REVIEW",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W205 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Sedan_Base": {"size": "225/50R17", "staggered": false},
+          "Sedan_Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "Coupe_Base": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "Coupe_Sport": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W205 generation. Coupe introduced.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Luxury": {"size": "225/45R18", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W205 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300": {
+          "Base": {"size": "225/50R17", "staggered": false},
+          "Luxury": {"size": "225/45R18", "staggered": false},
+          "Sport": {"front": "225/45R18", "rear": "245/40R18", "staggered": true},
+          "SportPlus": {"front": "225/40R19", "rear": "255/35R19", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"],
+      "notes": "W205 generation first year.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300_4MATIC": {
+          "Luxury": {"size": "225/45R17", "staggered": false},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport_18": {"front": "225/40R18", "rear": "255/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "notes": "W204 generation final year. Different sizes than W205.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300_4MATIC": {
+          "Luxury": {"size": "225/45R17", "staggered": false},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport_18": {"front": "225/40R18", "rear": "255/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "notes": "W204 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300_4MATIC": {
+          "Luxury": {"size": "225/45R17", "staggered": false},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport_18": {"front": "225/40R18", "rear": "255/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "notes": "W204 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "mercedes-benz",
+      "model": "c-class",
+      "currentTireSizes": ["225/50R17", "225/45R18", "235/40R19"],
+      "validatedTireSizes": {
+        "C300_4MATIC": {
+          "Luxury": {"size": "225/45R17", "staggered": false},
+          "Sport": {"front": "225/45R17", "rear": "245/40R17", "staggered": true},
+          "Sport_18": {"front": "225/40R18", "rear": "255/35R18", "staggered": true}
+        }
+      },
+      "recommendedSizes": ["225/45R17", "245/40R17", "225/40R18", "255/35R18"],
+      "notes": "W204 generation.",
+      "validation": "NEEDS_UPDATE",
+      "source": "tiresize.com"
+    }
+  ],
+  "summary": {
+    "validated": 75,
+    "needsUpdate": 43,
+    "partialMatch": 11,
+    "complete": 18,
+    "noData": 3,
+    "keyFindings": [
+      "SLK-Class: R170 (2000-2004) uses staggered 16\" or 17\"; R171 (2005-2011) uses staggered 17\" or 18\"; R172 (2012-2016) uses staggered 17\" or 18\"",
+      "SLK55 AMG (2013-2016): Front is 235/40R18 not 225/40R18 as listed",
+      "SLR McLaren: Staggered 18\" (245/295) or 19\" (255/295) - data was empty, now complete",
+      "SLS AMG: All models use staggered 19\"/20\" setup (265/35R19 front, 295/30R20 rear)",
+      "T-Class: Europe-only model, 195/65R16 or 205/55R17 - data was empty, now complete",
+      "Vaneo: Europe-only model, 185/60R15 base with 15\" and 16\" options - data was empty, now complete",
+      "AMG GT 2020: Multiple trims have different sizes; current data partially correct",
+      "C-Class W204 (2011-2014): Uses 225/45R17 base, not 225/50R17",
+      "C-Class W205/W206 (2015+): 235/40R19 should be staggered 225/40R19 front, 255/35R19 rear"
+    ]
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "batchId": 49,
+  "researchedAt": "2026-04-21T23:59:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 43,
+    "usMarket": 7,
+    "withSpecs": 7
+  },
+  "vehicles": [
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "toppo-bj",
+      "notUS": true,
+      "notes": "JDM kei car - not sold in United States"
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "toppo-bj",
+      "notUS": true,
+      "notes": "JDM kei car - not sold in United States"
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "toppo-bj",
+      "notUS": true,
+      "notes": "JDM kei car - not sold in United States"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "toppo-bj-wide",
+      "notUS": true,
+      "notes": "JDM kei car - not sold in United States"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "toppo-bj-wide",
+      "notUS": true,
+      "notes": "JDM kei car - not sold in United States"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "town-box-wide",
+      "notUS": true,
+      "notes": "JDM kei van - not sold in United States"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "town-box-wide",
+      "notUS": true,
+      "notes": "JDM kei van - not sold in United States"
+    },
+    {
+      "year": 2000,
+      "make": "mitsubishi",
+      "model": "verada",
+      "notUS": true,
+      "notes": "Australian market only - Magna variant"
+    },
+    {
+      "year": 2001,
+      "make": "mitsubishi",
+      "model": "verada",
+      "notUS": true,
+      "notes": "Australian market only - Magna variant"
+    },
+    {
+      "year": 2002,
+      "make": "mitsubishi",
+      "model": "verada",
+      "notUS": true,
+      "notes": "Australian market only - Magna variant"
+    },
+    {
+      "year": 2003,
+      "make": "mitsubishi",
+      "model": "verada",
+      "notUS": true,
+      "notes": "Australian market only - Magna variant"
+    },
+    {
+      "year": 2004,
+      "make": "mitsubishi",
+      "model": "verada",
+      "notUS": true,
+      "notes": "Australian market only - Magna variant"
+    },
+    {
+      "year": 2005,
+      "make": "mitsubishi",
+      "model": "verada",
+      "notUS": true,
+      "notes": "Australian market only - Magna variant"
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "200sx",
+      "notUS": true,
+      "notes": "US 200SX discontinued 1998 - this is international market"
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "200sx",
+      "notUS": true,
+      "notes": "US 200SX discontinued 1998 - this is international market"
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "200sx",
+      "notUS": true,
+      "notes": "US 200SX discontinued 1998 - this is international market"
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "350z",
+      "notUS": false,
+      "trims": [
+        {
+          "trim": "Enthusiast",
+          "tireSize": "225/50R17",
+          "rearTireSize": "235/50R17",
+          "isStaggered": true,
+          "wheelDiameter": 17
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "350z",
+      "notUS": false,
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tireSize": "225/50R17",
+          "rearTireSize": "235/50R17",
+          "isStaggered": true,
+          "wheelDiameter": 17
+        },
+        {
+          "trim": "Enthusiast Coupe",
+          "tireSize": "225/50R17",
+          "rearTireSize": "235/50R17",
+          "isStaggered": true,
+          "wheelDiameter": 17
+        },
+        {
+          "trim": "Track",
+          "tireSize": "245/45R18",
+          "rearTireSize": "245/45R18",
+          "isStaggered": false,
+          "wheelDiameter": 18
+        }
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "350z",
+      "notUS": false,
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tireSize": "225/50R17",
+          "rearTireSize": "235/50R17",
+          "isStaggered": true,
+          "wheelDiameter": 17
+        },
+        {
+          "trim": "Track",
+          "tireSize": "245/45R18",
+          "rearTireSize": "245/45R18",
+          "isStaggered": false,
+          "wheelDiameter": 18
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "350z",
+      "notUS": false,
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tireSize": "225/50R17",
+          "rearTireSize": "235/50R17",
+          "isStaggered": true,
+          "wheelDiameter": 17
+        },
+        {
+          "trim": "Track",
+          "tireSize": "245/45R18",
+          "rearTireSize": "245/45R18",
+          "isStaggered": false,
+          "wheelDiameter": 18
+        }
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "350z",
+      "notUS": false,
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tireSize": "225/50R17",
+          "rearTireSize": "235/50R17",
+          "isStaggered": true,
+          "wheelDiameter": 17
+        },
+        {
+          "trim": "NISMO",
+          "tireSize": "225/45R18",
+          "rearTireSize": "245/45R18",
+          "isStaggered": true,
+          "wheelDiameter": 18
+        },
+        {
+          "trim": "Track",
+          "tireSize": "245/45R18",
+          "rearTireSize": "245/45R18",
+          "isStaggered": false,
+          "wheelDiameter": 18
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "350z",
+      "notUS": false,
+      "trims": [
+        {
+          "trim": "Base Model",
+          "tireSize": "225/50R17",
+          "rearTireSize": "235/50R17",
+          "isStaggered": true,
+          "wheelDiameter": 17
+        },
+        {
+          "trim": "NISMO",
+          "tireSize": "225/45R18",
+          "rearTireSize": "245/45R18",
+          "isStaggered": true,
+          "wheelDiameter": 18
+        },
+        {
+          "trim": "Track",
+          "tireSize": "245/40R18",
+          "rearTireSize": "265/35R19",
+          "isStaggered": true,
+          "wheelDiameter": 18,
+          "rearWheelDiameter": 19
+        }
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "350z",
+      "notUS": true,
+      "notes": "350Z ended US production in 2008, replaced by 370Z in 2009"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "aprio",
+      "notUS": true,
+      "notes": "Mexican market only - rebadged Renault Logan"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "aprio",
+      "notUS": true,
+      "notes": "Mexican market only - rebadged Renault Logan"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "aprio",
+      "notUS": true,
+      "notes": "Mexican market only - rebadged Renault Logan"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "armada",
+      "notUS": false,
+      "trims": [
+        {
+          "trim": "SV",
+          "tireSize": "265/70R18",
+          "isStaggered": false,
+          "wheelDiameter": 18
+        },
+        {
+          "trim": "SL",
+          "tireSize": "275/60R20",
+          "isStaggered": false,
+          "wheelDiameter": 20
+        },
+        {
+          "trim": "Platinum",
+          "tireSize": "275/60R20",
+          "isStaggered": false,
+          "wheelDiameter": 20
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "avenir",
+      "notUS": true,
+      "notes": "JDM wagon - not sold in United States"
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "avenir",
+      "notUS": true,
+      "notes": "JDM wagon - not sold in United States"
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "avenir",
+      "notUS": true,
+      "notes": "JDM wagon - not sold in United States"
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "avenir",
+      "notUS": true,
+      "notes": "JDM wagon - not sold in United States"
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "avenir",
+      "notUS": true,
+      "notes": "JDM wagon - not sold in United States"
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "avenir",
+      "notUS": true,
+      "notes": "JDM wagon - not sold in United States"
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "cefiro",
+      "notUS": true,
+      "notes": "JDM sedan - similar to Infiniti I30 but not sold in US"
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "cefiro",
+      "notUS": true,
+      "notes": "JDM sedan - similar to Infiniti I30 but not sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "cefiro",
+      "notUS": true,
+      "notes": "JDM sedan - similar to Infiniti I30 but not sold in US"
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "cefiro",
+      "notUS": true,
+      "notes": "JDM sedan - similar to Infiniti I30 but not sold in US"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "clipper-ev",
+      "notUS": true,
+      "notes": "JDM kei EV van - not sold in United States"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "clipper-ev",
+      "notUS": true,
+      "notes": "JDM kei EV van - not sold in United States"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "clipper-rio",
+      "notUS": true,
+      "notes": "JDM kei van - not sold in United States"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "clipper-rio",
+      "notUS": true,
+      "notes": "JDM kei van - not sold in United States"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "clipper-rio",
+      "notUS": true,
+      "notes": "JDM kei van - not sold in United States"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "clipper-rio",
+      "notUS": true,
+      "notes": "JDM kei van - not sold in United States"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "clipper-rio",
+      "notUS": true,
+      "notes": "JDM kei van - not sold in United States"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "clipper-rio",
+      "notUS": true,
+      "notes": "JDM kei van - not sold in United States"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "clipper-rio",
+      "notUS": true,
+      "notes": "JDM kei van - not sold in United States"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "clipper-rio",
+      "notUS": true,
+      "notes": "JDM kei van - not sold in United States"
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "datsun",
+      "notUS": true,
+      "notes": "Datsun brand discontinued in US in 1986 - international market only"
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "datsun",
+      "notUS": true,
+      "notes": "Datsun brand discontinued in US in 1986 - international market only"
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "datsun",
+      "notUS": true,
+      "notes": "Datsun brand discontinued in US in 1986 - international market only"
+    }
+  ]
+}

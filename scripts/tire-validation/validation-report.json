@@ -1,0 +1,845 @@
+{
+  "generatedAt": "2026-04-21T23:11:04.871Z",
+  "overallStats": {
+    "totalBatches": 161,
+    "totalVehicles": 2850,
+    "totalValidated": 2403,
+    "totalDiscrepancies": 426,
+    "totalNotFound": 40,
+    "discrepancyRate": "14.9%"
+  },
+  "issueCategories": {
+    "phantomYears": 14,
+    "nonUSVehicles": 5,
+    "wrongSizes": 5,
+    "emptySizes": 2,
+    "generationMismatch": 4,
+    "otherIssues": 11
+  },
+  "detailedFindings": {
+    "phantomYears": [
+      {
+        "batch": "batch-22-results.json",
+        "recommendation": "Remove 24 invalid vehicle years from database (Park Avenue 2006-2012, Regal 2005-2010 & 2021-2026, Rainier 2003, Regal TourX 2021, Regal GS 2021-2023)"
+      },
+      {
+        "batch": "batch-82-results.json",
+        "finding": {
+          "severity": "critical",
+          "type": "wrong_model_year",
+          "count": 5,
+          "vehicles": [
+            {
+              "year": 2021,
+              "make": "kia",
+              "model": "ev6",
+              "issue": "EV6 not sold in US until 2022 model year",
+              "currentTireSizes": [
+                "235/55R19",
+                "255/45R20",
+                "255/40R21"
+              ],
+              "action": "REMOVE - vehicle doesn't exist in US"
+            },
+            {
+              "year": 2023,
+              "make": "kia",
+              "model": "ev9",
+              "issue": "EV9 not sold in US until 2024 model year (empty sizes is correct, but vehicle shouldn't exist)",
+              "currentTireSizes": [],
+              "action": "REMOVE - vehicle doesn't exist in US"
+            },
+            {
+              "year": 2009,
+              "make": "kia",
+              "model": "forte",
+              "issue": "Forte not sold in US until 2010 model year",
+              "currentTireSizes": [],
+              "action": "REMOVE - vehicle doesn't exist in US"
+            },
+            {
+              "year": 2008,
+              "make": "kia",
+              "model": "forte",
+              "issue": "Forte not sold in US until 2010 model year",
+              "currentTireSizes": [],
+              "action": "REMOVE - vehicle doesn't exist in US"
+            },
+            {
+              "year": 2016,
+              "make": "kia",
+              "model": "niro",
+              "issue": "Niro not sold in US until 2017 model year",
+              "currentTireSizes": [
+                "205/60R16",
+                "225/45R18"
+              ],
+              "action": "REMOVE - vehicle doesn't exist in US"
+            }
+          ]
+        }
+      },
+      {
+        "batch": "batch-82-results.json",
+        "recommendation": {
+          "priority": "P0",
+          "action": "REMOVE_VEHICLES",
+          "description": "Remove pre-launch model years: 2021 EV6, 2023 EV9, 2008-2009 Forte, 2016 Niro",
+          "impact": "5 vehicles that don't exist in US market"
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "recommendation": {
+          "priority": "CRITICAL",
+          "action": "Remove non-existent vehicles",
+          "details": "Delete 2014 NX and 2014 RC from database - these model years don't exist"
+        }
+      },
+      {
+        "batch": "batch-117-results.json",
+        "recommendation": "Mercury Sable 2000-2005: Remove 215/55R17 - these years only have 16\" wheels."
+      },
+      {
+        "batch": "batch-117-results.json",
+        "recommendation": "MINI Cooper ALL YEARS: Remove 225/35R18 - not a confirmed OEM size."
+      },
+      {
+        "batch": "batch-136-results.json",
+        "recommendation": {
+          "issue": "Subaru Baja has incorrect sizes and invalid 2002/2007 years",
+          "action": "Remove 2002 and 2007 (Baja was 2003-2006). Replace all sizes with 225/60R16"
+        }
+      },
+      {
+        "batch": "batch-136-results.json",
+        "recommendation": {
+          "issue": "Subaru BRZ has 2012 year entry that doesn't exist",
+          "action": "Remove 2012 BRZ (launched 2013). For 2013-2017/2019, only 215/45R17 is OEM"
+        }
+      },
+      {
+        "batch": "batch-140-results.json",
+        "recommendation": {
+          "priority": "HIGH",
+          "action": "REMOVE",
+          "vehicles": "Subaru WRX-STI 2022-2023",
+          "reason": "Model discontinued after 2021. These years do not exist."
+        }
+      },
+      {
+        "batch": "batch-148-results.json",
+        "recommendation": {
+          "action": "REMOVE_INVALID_YEARS",
+          "vehicles": [
+            "2014 Toyota Mirai",
+            "2015 Toyota Mirai"
+          ],
+          "reason": "Mirai was first available as 2016 model year"
+        }
+      },
+      {
+        "batch": "batch-153-results.json",
+        "recommendation": {
+          "priority": "CRITICAL",
+          "action": "Remove invalid year vehicles",
+          "vehicles": [
+            "2016 Venza",
+            "2020 Venza"
+          ],
+          "reason": "These model years do not exist. Venza was discontinued 2015, reintroduced 2021."
+        }
+      },
+      {
+        "batch": "batch-154-results.json",
+        "recommendation": {
+          "priority": "MEDIUM",
+          "action": "REMOVE_INVALID_BEETLE_YEARS",
+          "description": "Remove Beetle model years 2020-2024 as the model was discontinued in 2019.",
+          "affectedVehicles": 5
+        }
+      },
+      {
+        "batch": "batch-158-results.json",
+        "recommendation": {
+          "category": "volkswagen_touareg",
+          "action": "major_review",
+          "details": "Touareg data appears to be European spec, not US OEM. The Touareg was discontinued in the US after 2017. Years 2018-2026 should likely be removed. Years 2004-2017 need sizes corrected to US spec: 255/55R18, 255/60R17, 265/50R19, 275/45R19, 275/45R20, 275/40R21."
+        }
+      },
+      {
+        "batch": "batch-160-results.json",
+        "recommendation": {
+          "priority": "HIGH",
+          "action": "Remove discontinued model years",
+          "details": "V40 2005, V50 2004/2012, V60 2010-2014, V90 2022-2025 (sedan), XC40 2017-2018 do not exist in North America"
+        }
+      }
+    ],
+    "nonUSVehicles": [
+      {
+        "batch": "batch-82-results.json",
+        "finding": {
+          "severity": "critical",
+          "type": "non_us_market",
+          "count": 13,
+          "vehicles": [
+            {
+              "year": 2000,
+              "make": "kia",
+              "model": "avella",
+              "note": "Not sold in US market - 404 on tiresize.com"
+            },
+            {
+              "year": 2005,
+              "make": "kia",
+              "model": "besta",
+              "note": "Not sold in US market - 404 on tiresize.com"
+            },
+            {
+              "year": 2004,
+              "make": "kia",
+              "model": "besta",
+              "note": "Not sold in US market"
+            },
+            {
+              "year": 2003,
+              "make": "kia",
+              "model": "besta",
+              "note": "Not sold in US market"
+            },
+            {
+              "year": 2002,
+              "make": "kia",
+              "model": "besta",
+              "note": "Not sold in US market"
+            },
+            {
+              "year": 2001,
+              "make": "kia",
+              "model": "besta",
+              "note": "Not sold in US market"
+            },
+            {
+              "year": 2000,
+              "make": "kia",
+              "model": "besta",
+              "note": "Not sold in US market"
+            },
+            {
+              "year": 2002,
+              "make": "kia",
+              "model": "carstar",
+              "note": "Not sold in US market - 404 on tiresize.com"
+            },
+            {
+              "year": 2001,
+              "make": "kia",
+              "model": "carstar",
+              "note": "Not sold in US market"
+            },
+            {
+              "year": 2000,
+              "make": "kia",
+              "model": "carstar",
+              "note": "Not sold in US market"
+            },
+            {
+              "year": 2002,
+              "make": "kia",
+              "model": "enterprise",
+              "note": "Not sold in US market - 404 on tiresize.com"
+            },
+            {
+              "year": 2001,
+              "make": "kia",
+              "model": "enterprise",
+              "note": "Not sold in US market"
+            },
+            {
+              "year": 2000,
+              "make": "kia",
+              "model": "enterprise",
+              "note": "Not sold in US market"
+            }
+          ]
+        }
+      },
+      {
+        "batch": "batch-82-results.json",
+        "recommendation": {
+          "priority": "P0",
+          "action": "REMOVE_VEHICLES",
+          "description": "Remove 13 non-US market vehicles (Avella, Besta, Carstar, Enterprise)",
+          "impact": "These vehicles will never have valid US tire/wheel fitment data"
+        }
+      },
+      {
+        "batch": "batch-121-results.json",
+        "recommendation": "Remove or flag JDM-only vehicles (Toppo BJ, Town Box Wide) - not relevant for US market"
+      },
+      {
+        "batch": "batch-142-results.json",
+        "recommendation": {
+          "priority": "LOW",
+          "action": "Remove 205/55R16 from Toyota 86",
+          "details": "Not a US-spec factory option; may be aftermarket or JDM data",
+          "affectedVehicles": 11
+        }
+      },
+      {
+        "batch": "batch-142-results.json",
+        "recommendation": {
+          "priority": "LOW",
+          "action": "Remove JDM-only models from US database",
+          "details": "Allex, Altezza, Altezza Gita, Aristo were never sold in US market",
+          "affectedVehicles": 22
+        }
+      }
+    ],
+    "wrongSizes": [
+      {
+        "batch": "batch-82-results.json",
+        "finding": {
+          "severity": "high",
+          "type": "missing_oem_sizes",
+          "count": 8,
+          "vehicles": [
+            {
+              "year": 2024,
+              "make": "kia",
+              "model": "ev9",
+              "currentTireSizes": [
+                "255/60R19"
+              ],
+              "oemSizes": [
+                "255/60R19",
+                "275/50R20",
+                "285/45R21"
+              ],
+              "missingSizes": [
+                "275/50R20",
+                "285/45R21"
+              ],
+              "note": "Land trim uses 275/50R20, GT-Line uses 285/45R21"
+            },
+            {
+              "year": 2025,
+              "make": "kia",
+              "model": "ev9",
+              "currentTireSizes": [
+                "255/60R19"
+              ],
+              "oemSizes": [
+                "255/60R19",
+                "275/50R20",
+                "285/45R21"
+              ],
+              "missingSizes": [
+                "275/50R20",
+                "285/45R21"
+              ],
+              "note": "Land trim uses 275/50R20, GT-Line uses 285/45R21"
+            },
+            {
+              "year": 2026,
+              "make": "kia",
+              "model": "ev9",
+              "currentTireSizes": [
+                "255/60R19"
+              ],
+              "oemSizes": [
+                "255/60R19",
+                "275/50R20",
+                "285/45R21"
+              ],
+              "missingSizes": [
+                "275/50R20",
+                "285/45R21"
+              ],
+              "note": "Presumed same as 2024-2025 based on model continuity"
+            },
+            {
+              "year": 2024,
+              "make": "kia",
+              "model": "k5",
+              "currentTireSizes": [
+                "215/55R17",
+                "235/45R18",
+                "245/40R19"
+              ],
+              "oemSizes": [
+                "205/65R16",
+                "235/45R18",
+                "245/40R19"
+              ],
+              "missingSizes": [
+                "205/65R16"
+              ],
+              "wrongSizes": [
+                "215/55R17"
+              ],
+              "note": "LXS trim uses 205/65R16, not 215/55R17"
+            },
+            {
+              "year": 2024,
+              "make": "kia",
+              "model": "niro",
+              "currentTireSizes": [
+                "205/60R16",
+                "225/45R18"
+              ],
+              "oemSizes": [
+                "205/60R16",
+                "215/55R17",
+                "225/45R18"
+              ],
+              "missingSizes": [
+                "215/55R17"
+              ],
+              "note": "EV trim uses 215/55R17"
+            },
+            {
+              "year": 2022,
+              "make": "kia",
+              "model": "ev6",
+              "currentTireSizes": [
+                "235/55R19",
+                "255/45R20",
+                "255/40R21"
+              ],
+              "oemSizes": [
+                "235/55R19",
+                "255/45R20"
+              ],
+              "extraSizes": [
+                "255/40R21"
+              ],
+              "note": "255/40R21 is GT trim, but GT wasn't available until 2023 MY in US"
+            },
+            {
+              "year": 2017,
+              "make": "kia",
+              "model": "niro",
+              "currentTireSizes": [
+                "205/60R16",
+                "225/45R18",
+                "215/55R17"
+              ],
+              "oemSizes": [
+                "205/60R16",
+                "225/45R18"
+              ],
+              "extraSizes": [
+                "215/55R17"
+              ],
+              "note": "215/55R17 not OEM for 2017 Niro - appeared in later years"
+            },
+            {
+              "year": 2022,
+              "make": "kia",
+              "model": "niro",
+              "currentTireSizes": [
+                "205/60R16",
+                "225/45R18",
+                "215/55R17"
+              ],
+              "oemSizes": [
+                "205/60R16",
+                "225/45R18"
+              ],
+              "note": "215/55R17 may be valid for EV variant, needs verification"
+            }
+          ]
+        }
+      },
+      {
+        "batch": "batch-82-results.json",
+        "finding": {
+          "severity": "medium",
+          "type": "wrong_tire_size",
+          "count": 4,
+          "vehicles": [
+            {
+              "year": 2024,
+              "make": "kia",
+              "model": "forte",
+              "currentTireSizes": [
+                "195/65R15",
+                "205/55R16",
+                "225/45R17",
+                "235/40R18"
+              ],
+              "oemSizes": [
+                "195/65R15",
+                "205/55R16",
+                "225/45R17",
+                "225/40R18"
+              ],
+              "issue": "Has 235/40R18, OEM shows 225/40R18 for GT trim",
+              "allYearsAffected": [
+                2019,
+                2020,
+                2021,
+                2022,
+                2023,
+                2024,
+                2025,
+                2026
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2024-2022 Lexus LX",
+          "status": "DISCREPANCY",
+          "currentSizes": [
+            "265/70R18",
+            "275/55R20",
+            "275/50R22"
+          ],
+          "oemSizes": [
+            "265/65R18",
+            "265/55R20",
+            "265/50R22"
+          ],
+          "notes": "WRONG SIZES! Width should be 265mm on all, aspect ratios wrong on R18."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2007-2000 Lexus LX 470",
+          "status": "DISCREPANCY",
+          "currentSizes": [
+            "275/60R17",
+            "275/60R18"
+          ],
+          "oemSizes": [
+            "275/70R16"
+          ],
+          "notes": "COMPLETELY WRONG! OEM is 275/70R16 (16 inch wheel). Our data shows 17 and 18 inch."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2024 Lexus RC",
+          "status": "DISCREPANCY",
+          "currentSizes": [
+            "225/45R17",
+            "235/40R18",
+            "255/35R19"
+          ],
+          "oemSizes": [
+            "235/45R18",
+            "235/40R19",
+            "265/35R19",
+            "255/35R19",
+            "275/35R19"
+          ],
+          "notes": "ALL WRONG! No 17\" or 18\" options. RC has staggered fitments. Missing rear sizes."
+        }
+      }
+    ],
+    "emptySizes": [
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2021-2018 Lexus NX",
+          "status": "MISSING_SIZES",
+          "currentSizes": [
+            "225/65R17",
+            "225/60R18"
+          ],
+          "oemSizes": [
+            "225/65R17",
+            "225/60R18",
+            "235/55R18"
+          ],
+          "notes": "Missing 235/55R18 (F Sport option)."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2025 Lexus RC-F",
+          "status": "EMPTY_DATA",
+          "currentSizes": [],
+          "oemSizes": null,
+          "notes": "No tire sizes in our database. May be future model year not yet released."
+        }
+      }
+    ],
+    "generationMismatch": [
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2018 Lexus LS",
+          "status": "NEEDS_REVIEW",
+          "currentSizes": [
+            "245/50R19",
+            "245/45R20",
+            "245/50ZR19",
+            "245/45ZR20",
+            "275/40ZR20",
+            "275/40R20"
+          ],
+          "oemSizes": [
+            "245/50R19",
+            "245/45R20"
+          ],
+          "notes": "New generation (XF50). OEM is 245/50R19 and 245/45R20. The 275/40R20 may be a dealer-installed option."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2017 Lexus LS",
+          "status": "DISCREPANCY",
+          "currentSizes": [
+            "235/50R18",
+            "245/45R19",
+            "235/50ZR18",
+            "245/45ZR19",
+            "235/40ZR20"
+          ],
+          "oemSizes": [
+            "235/50R18",
+            "245/45R19"
+          ],
+          "notes": "235/40ZR20 NOT OEM. Old generation (XF40)."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2006-2001 Lexus LS",
+          "status": "OK",
+          "currentSizes": [
+            "225/55R17",
+            "245/45R18"
+          ],
+          "oemSizes": [
+            "225/55R17",
+            "245/45R18"
+          ],
+          "notes": "Correct for LS 430 generation."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2023-2022 Lexus NX",
+          "status": "OK",
+          "currentSizes": [
+            "235/60R18",
+            "235/50R20"
+          ],
+          "oemSizes": [
+            "235/60R18",
+            "235/50R20"
+          ],
+          "notes": "Correct for 2nd gen NX."
+        }
+      }
+    ],
+    "otherIssues": [
+      {
+        "batch": "batch-82-results.json",
+        "finding": {
+          "severity": "low",
+          "type": "z_rated_duplicates",
+          "count": 1,
+          "vehicles": [
+            {
+              "year": 2023,
+              "make": "kia",
+              "model": "ev6",
+              "currentTireSizes": [
+                "235/55R19",
+                "255/45R20",
+                "255/40R21",
+                "255/40ZR21",
+                "235/55ZR19",
+                "255/45ZR20"
+              ],
+              "note": "Contains both Z-rated and non-Z-rated versions of same sizes. Z-rating is speed rating, not a different OEM size. Consider normalizing to remove Z variants."
+            }
+          ]
+        }
+      },
+      {
+        "batch": "batch-82-results.json",
+        "finding": {
+          "severity": "info",
+          "type": "duplicate_entries",
+          "count": 12,
+          "note": "Multiple Optima entries for same year (2012-2020) with different tire sizes - likely representing different trim levels. This is acceptable data structure but may need normalization.",
+          "years": [
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ]
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2021 Lexus LS",
+          "status": "NEEDS_REVIEW",
+          "currentSizes": [
+            "245/50R19",
+            "245/45R20",
+            "245/50ZR19",
+            "245/45ZR20",
+            "275/40ZR20",
+            "275/40R20"
+          ],
+          "oemSizes": [
+            "245/50R19",
+            "245/45R20"
+          ],
+          "notes": "ZR variants are OK (same size, different speed rating). 275/40R20 may be aftermarket."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2016-2007 Lexus LS",
+          "status": "OK",
+          "currentSizes": [
+            "235/50R18",
+            "245/45R19"
+          ],
+          "oemSizes": [
+            "235/50R18",
+            "245/45R19"
+          ],
+          "notes": "Correct OEM sizes."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2000 Lexus LS",
+          "status": "OK",
+          "currentSizes": [
+            "225/60R16"
+          ],
+          "oemSizes": [
+            "225/60R16"
+          ],
+          "notes": "Correct for LS 400."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2021-2008 Lexus LX 570",
+          "status": "NEEDS_REVIEW",
+          "currentSizes": [
+            "285/60R18",
+            "285/50R20",
+            "285/45R21"
+          ],
+          "oemSizes": [
+            "285/50R20"
+          ],
+          "notes": "OEM confirmed as 285/50R20. 285/60R18 may be base, 285/45R21 aftermarket."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2024 Lexus NX",
+          "status": "DISCREPANCY",
+          "currentSizes": [
+            "235/60R18",
+            "235/50R20",
+            "235/55R19"
+          ],
+          "oemSizes": [
+            "235/60R18",
+            "235/50R20"
+          ],
+          "notes": "235/55R19 NOT OEM. Remove it."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2017-2016 Lexus NX",
+          "status": "DISCREPANCY",
+          "currentSizes": [
+            "225/65R17",
+            "225/60R18",
+            "235/55R18",
+            "225/55R19",
+            "245/45ZR20",
+            "245/50R19"
+          ],
+          "oemSizes": [
+            "225/65R17",
+            "225/60R18",
+            "235/55R18"
+          ],
+          "notes": "225/55R19, 245/45ZR20, 245/50R19 are NOT OEM. Remove them."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2015 Lexus NX",
+          "status": "OK",
+          "currentSizes": [
+            "225/65R17",
+            "225/60R18"
+          ],
+          "oemSizes": [
+            "225/65R17",
+            "225/60R18"
+          ],
+          "notes": "First year of NX. Correct sizes."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2014 Lexus NX",
+          "status": "NOT_FOUND",
+          "currentSizes": [
+            "225/65R17",
+            "225/60R18",
+            "235/50R20"
+          ],
+          "oemSizes": null,
+          "notes": "VEHICLE DOES NOT EXIST! NX launched in 2015."
+        }
+      },
+      {
+        "batch": "batch-91-results.json",
+        "finding": {
+          "vehicle": "2014 Lexus RC",
+          "status": "NOT_FOUND",
+          "currentSizes": [
+            "225/45R17",
+            "235/40R18",
+            "255/35R19"
+          ],
+          "oemSizes": null,
+          "notes": "VEHICLE DOES NOT EXIST! RC launched in 2015."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,558 @@
+{
+  "batchId": "143",
+  "validatedAt": "2026-04-21T22:55:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 36,
+    "discrepancies": 14,
+    "missingInBatch": 39,
+    "noOemDataAvailable": 25
+  },
+  "oemTireSizes": {
+    "toyota": {
+      "avalon": {
+        "2020": ["215/55R17", "235/45R18", "235/40R19"],
+        "2019": ["215/55R17", "235/45R18", "235/40R19"],
+        "2018": ["215/55R17", "225/45R18"],
+        "2017": ["215/55R17", "225/45R18"],
+        "2016": ["215/55R17", "225/45R18"],
+        "2015": ["215/55R17", "225/45R18"],
+        "2014": ["215/55R17", "225/45R18"],
+        "2013": ["215/55R17", "225/45R18"],
+        "2012": ["215/60R16", "215/55R17"],
+        "2011": ["215/60R16", "215/55R17"],
+        "2010": ["215/60R16", "215/55R17"],
+        "2009": ["215/60R16", "215/55R17"],
+        "2008": ["215/60R16", "215/55R17"],
+        "2007": ["215/60R16", "215/55R17"],
+        "2006": ["215/60R16", "215/55R17"],
+        "2005": ["215/60R16", "215/55R17"],
+        "2004": null,
+        "2003": null,
+        "2002": null,
+        "2001": null,
+        "2000": null
+      },
+      "c-hr": {
+        "2025": null,
+        "2024": null,
+        "2023": null,
+        "2022": ["225/50R18"],
+        "2021": ["215/60R17", "225/50R18"],
+        "2020": ["215/60R17", "225/50R18"],
+        "2019": ["215/60R17", "225/50R18"],
+        "2018": null,
+        "2017": null,
+        "2016": null
+      },
+      "bz4x": {
+        "2026": null,
+        "2025": null,
+        "2024": null,
+        "2023": null,
+        "2022": null
+      },
+      "avensis-verso": {
+        "note": "JDM/International market - not available on tiresize.com"
+      },
+      "blade": {
+        "note": "JDM only - not available on tiresize.com"
+      },
+      "bz": {
+        "note": "Future model - no data available"
+      },
+      "c-pod": {
+        "note": "Japanese microcar - not available on tiresize.com"
+      },
+      "calya": {
+        "note": "Indonesian market - not available on tiresize.com"
+      }
+    }
+  },
+  "discrepancies": [
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17"],
+      "oemTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "issue": "MISSING_SIZES",
+      "missingSizes": ["235/45R18", "235/40R19"],
+      "notes": "2020 Avalon has XLE (17\"), Limited/XSE (18\"), Touring/TRD (19\") trims"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "issue": "MISSING_SIZES",
+      "missingSizes": ["225/45R18"],
+      "notes": "Missing 18\" option for Limited/Touring trims"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "issue": "MISSING_SIZES",
+      "missingSizes": ["225/45R18"],
+      "notes": "Missing 18\" option for Limited/Touring trims"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "issue": "MISSING_SIZES",
+      "missingSizes": ["225/45R18"],
+      "notes": "Missing 18\" option for Limited/Touring trims"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "issue": "MISSING_SIZES",
+      "missingSizes": ["225/45R18"],
+      "notes": "Missing 18\" option for Limited/Touring trims"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "issue": "MISSING_SIZES",
+      "missingSizes": ["225/45R18"],
+      "notes": "Missing 18\" option for Limited trims"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "issue": "MISSING_SIZES",
+      "missingSizes": ["225/45R18"],
+      "notes": "Missing 18\" option for Limited trims"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "issue": "WRONG_SIZE",
+      "extraSizes": ["225/45R18"],
+      "missingSizes": ["215/60R16"],
+      "notes": "225/45R18 NOT an OEM size for 2012 Avalon. OEM is 215/60R16 (Base/XL) and 215/55R17 (Limited/XLS)"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "issue": "WRONG_SIZE",
+      "extraSizes": ["225/45R18"],
+      "missingSizes": ["215/60R16"],
+      "notes": "225/45R18 NOT an OEM size for 2011 Avalon. OEM is 215/60R16 (XL) and 215/55R17"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "issue": "WRONG_SIZE",
+      "extraSizes": ["225/45R18"],
+      "missingSizes": ["215/60R16"],
+      "notes": "225/45R18 NOT an OEM size. Missing 215/60R16 for XL trim"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "issue": "WRONG_SIZE",
+      "extraSizes": ["225/45R18"],
+      "missingSizes": ["215/60R16"],
+      "notes": "225/45R18 NOT an OEM size. Missing 215/60R16 for XL trim"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "issue": "WRONG_SIZE",
+      "extraSizes": ["225/45R18"],
+      "missingSizes": ["215/60R16"],
+      "notes": "225/45R18 NOT an OEM size. Missing 215/60R16"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "issue": "WRONG_SIZE",
+      "extraSizes": ["225/45R18"],
+      "missingSizes": ["215/60R16"],
+      "notes": "225/45R18 NOT an OEM size. Missing 215/60R16"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "issue": "WRONG_SIZE",
+      "extraSizes": ["225/45R18"],
+      "missingSizes": ["215/60R16"],
+      "notes": "225/45R18 NOT an OEM size. Missing 215/60R16"
+    }
+  ],
+  "validated": [
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["235/45R18", "235/40R19"],
+      "oemTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Missing base 215/55R17 but has premium sizes"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17"],
+      "oemTireSizes": ["215/55R17", "235/45R18", "235/40R19"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Has base size only"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/55R17", "225/45R18"],
+      "status": "MATCH"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "status": "WRONG_SIZE",
+      "notes": "Has 205/60R16 but OEM is 215/60R16"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "status": "WRONG_SIZE",
+      "notes": "Has 205/60R16 but OEM is 215/60R16"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "status": "WRONG_SIZE",
+      "notes": "Has 205/60R16 but OEM is 215/60R16"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "status": "WRONG_SIZE",
+      "notes": "Has 205/60R16 but OEM is 215/60R16"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "status": "WRONG_SIZE",
+      "notes": "Has 205/60R16 but OEM is 215/60R16"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "status": "WRONG_SIZE",
+      "notes": "Has 205/60R16 but OEM is 215/60R16"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "status": "WRONG_SIZE",
+      "notes": "Has 205/60R16 but OEM is 215/60R16"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/60R16", "215/55R17"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "status": "WRONG_SIZE",
+      "notes": "Has 205/60R16 but OEM is 215/60R16"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["215/55R17", "225/45R18"],
+      "oemTireSizes": ["215/60R16", "215/55R17"],
+      "status": "WRONG_SIZE",
+      "notes": "225/45R18 is NOT OEM for 2005"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/65R16"],
+      "oemTireSizes": null,
+      "status": "UNABLE_TO_VERIFY",
+      "notes": "No OEM data available on tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/65R16"],
+      "oemTireSizes": null,
+      "status": "UNABLE_TO_VERIFY"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/65R16"],
+      "oemTireSizes": null,
+      "status": "UNABLE_TO_VERIFY"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/65R16"],
+      "oemTireSizes": null,
+      "status": "UNABLE_TO_VERIFY"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "avalon",
+      "currentTireSizes": ["205/65R16"],
+      "oemTireSizes": null,
+      "status": "UNABLE_TO_VERIFY"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "c-hr",
+      "currentTireSizes": ["225/50R18", "215/60R17"],
+      "oemTireSizes": ["215/60R17", "225/50R18"],
+      "status": "MATCH"
+    }
+  ],
+  "missingInBatch": [
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "c-hr",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "EMPTY_AND_NO_OEM_DATA"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "c-hr",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "EMPTY_AND_NO_OEM_DATA"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "c-hr",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "EMPTY_AND_NO_OEM_DATA"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "c-hr",
+      "currentTireSizes": [],
+      "oemTireSizes": ["225/50R18"],
+      "status": "EMPTY_BUT_OEM_EXISTS",
+      "recommendedSizes": ["225/50R18"]
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "c-hr",
+      "currentTireSizes": [],
+      "oemTireSizes": ["215/60R17", "225/50R18"],
+      "status": "EMPTY_BUT_OEM_EXISTS",
+      "recommendedSizes": ["215/60R17", "225/50R18"]
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "c-hr",
+      "currentTireSizes": [],
+      "oemTireSizes": ["215/60R17", "225/50R18"],
+      "status": "EMPTY_BUT_OEM_EXISTS",
+      "recommendedSizes": ["215/60R17", "225/50R18"]
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "c-hr",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "EMPTY_AND_NO_OEM_DATA"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "c-hr",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "EMPTY_AND_NO_OEM_DATA"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "c-hr",
+      "currentTireSizes": [],
+      "oemTireSizes": null,
+      "status": "EMPTY_AND_NO_OEM_DATA"
+    }
+  ],
+  "noDataVehicles": [
+    {"year": 2010, "make": "toyota", "model": "avensis-verso", "note": "JDM/International market"},
+    {"year": 2009, "make": "toyota", "model": "avensis-verso", "note": "JDM/International market"},
+    {"year": 2008, "make": "toyota", "model": "avensis-verso", "note": "JDM/International market"},
+    {"year": 2007, "make": "toyota", "model": "avensis-verso", "note": "JDM/International market"},
+    {"year": 2006, "make": "toyota", "model": "avensis-verso", "note": "JDM/International market"},
+    {"year": 2005, "make": "toyota", "model": "avensis-verso", "note": "JDM/International market"},
+    {"year": 2004, "make": "toyota", "model": "avensis-verso", "note": "JDM/International market"},
+    {"year": 2003, "make": "toyota", "model": "avensis-verso", "note": "JDM/International market"},
+    {"year": 2002, "make": "toyota", "model": "avensis-verso", "note": "JDM/International market"},
+    {"year": 2001, "make": "toyota", "model": "avensis-verso", "note": "JDM/International market"},
+    {"year": 2012, "make": "toyota", "model": "blade", "note": "JDM only"},
+    {"year": 2011, "make": "toyota", "model": "blade", "note": "JDM only"},
+    {"year": 2010, "make": "toyota", "model": "blade", "note": "JDM only"},
+    {"year": 2009, "make": "toyota", "model": "blade", "note": "JDM only"},
+    {"year": 2008, "make": "toyota", "model": "blade", "note": "JDM only"},
+    {"year": 2007, "make": "toyota", "model": "blade", "note": "JDM only"},
+    {"year": 2006, "make": "toyota", "model": "blade", "note": "JDM only"},
+    {"year": 2026, "make": "toyota", "model": "bz", "note": "Future/unreleased model"},
+    {"year": 2026, "make": "toyota", "model": "bz4x", "note": "Future year"},
+    {"year": 2025, "make": "toyota", "model": "bz4x", "note": "No data available"},
+    {"year": 2024, "make": "toyota", "model": "bz4x", "note": "No data available"},
+    {"year": 2023, "make": "toyota", "model": "bz4x", "note": "No data available"},
+    {"year": 2022, "make": "toyota", "model": "bz4x", "note": "No data available"},
+    {"year": 2024, "make": "toyota", "model": "c-pod", "note": "Japanese microcar"},
+    {"year": 2023, "make": "toyota", "model": "c-pod", "note": "Japanese microcar"},
+    {"year": 2022, "make": "toyota", "model": "c-pod", "note": "Japanese microcar"},
+    {"year": 2021, "make": "toyota", "model": "c-pod", "note": "Japanese microcar"},
+    {"year": 2020, "make": "toyota", "model": "c-pod", "note": "Japanese microcar"},
+    {"year": 2025, "make": "toyota", "model": "calya", "note": "Indonesian market"}
+  ],
+  "criticalIssues": [
+    {
+      "severity": "HIGH",
+      "issue": "WRONG_TIRE_SIZE",
+      "description": "2005-2012 Avalon entries with 205/60R16 should be 215/60R16",
+      "affectedVehicles": 8,
+      "recommendation": "Update tire width from 205 to 215 for 16\" wheel option"
+    },
+    {
+      "severity": "HIGH",
+      "issue": "NON_OEM_SIZE_LISTED",
+      "description": "2005-2011 Avalon entries have 225/45R18 which is NOT an OEM size (18\" wasn't available until 2013)",
+      "affectedVehicles": 7,
+      "recommendation": "Remove 225/45R18 from pre-2013 Avalon entries"
+    },
+    {
+      "severity": "MEDIUM",
+      "issue": "MISSING_PREMIUM_SIZES",
+      "description": "2013-2020 Avalon entries missing 18\" and 19\" options for higher trims",
+      "affectedVehicles": 8,
+      "recommendation": "Add trim-specific tire sizes"
+    },
+    {
+      "severity": "MEDIUM",
+      "issue": "EMPTY_C-HR_DATA",
+      "description": "Most C-HR years (2016-2023) have empty tire sizes despite OEM data being available",
+      "affectedVehicles": 9,
+      "recommendation": "Populate C-HR tire sizes: 215/60R17 (LE), 225/50R18 (XLE/Limited)"
+    }
+  ]
+}

@@ -1,0 +1,3446 @@
+{
+  "batchId": "90s-batch-20-gm-luxury",
+  "completedAt": "2026-04-22T12:58:00.000Z",
+  "results": [
+    {
+      "year": 1990,
+      "make": "Cadillac",
+      "model": "DeVille",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FWD C-body platform. Touring trim had 215/60R16."
+    },
+    {
+      "year": 1991,
+      "make": "Cadillac",
+      "model": "DeVille",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Touring trim had 16\" wheels."
+    },
+    {
+      "year": 1992,
+      "make": "Cadillac",
+      "model": "DeVille",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Last year of 4th gen C-body."
+    },
+    {
+      "year": 1993,
+      "make": "Cadillac",
+      "model": "DeVille",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New 5th gen K-body platform."
+    },
+    {
+      "year": 1994,
+      "make": "Cadillac",
+      "model": "DeVille",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Concours had 16\" wheels."
+    },
+    {
+      "year": 1995,
+      "make": "Cadillac",
+      "model": "DeVille",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Concours had 16\" wheels."
+    },
+    {
+      "year": 1996,
+      "make": "Cadillac",
+      "model": "DeVille",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "All trims now 16\" standard."
+    },
+    {
+      "year": 1997,
+      "make": "Cadillac",
+      "model": "DeVille",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "K-body platform."
+    },
+    {
+      "year": 1998,
+      "make": "Cadillac",
+      "model": "DeVille",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "K-body platform."
+    },
+    {
+      "year": 1999,
+      "make": "Cadillac",
+      "model": "DeVille",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Last year of 5th gen."
+    },
+    {
+      "year": 1990,
+      "make": "Cadillac",
+      "model": "Seville",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "STS had 15\" sport wheels."
+    },
+    {
+      "year": 1991,
+      "make": "Cadillac",
+      "model": "Seville",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Last year of 3rd gen K-body."
+    },
+    {
+      "year": 1992,
+      "make": "Cadillac",
+      "model": "Seville",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New 4th gen K-body. All 16\"."
+    },
+    {
+      "year": 1993,
+      "make": "Cadillac",
+      "model": "Seville",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "4th gen K-body."
+    },
+    {
+      "year": 1994,
+      "make": "Cadillac",
+      "model": "Seville",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "SLS and STS trims."
+    },
+    {
+      "year": 1995,
+      "make": "Cadillac",
+      "model": "Seville",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "4th gen K-body."
+    },
+    {
+      "year": 1996,
+      "make": "Cadillac",
+      "model": "Seville",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "4th gen K-body."
+    },
+    {
+      "year": 1997,
+      "make": "Cadillac",
+      "model": "Seville",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Last year of 4th gen."
+    },
+    {
+      "year": 1998,
+      "make": "Cadillac",
+      "model": "Seville",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "5th gen K-body. Wider tires."
+    },
+    {
+      "year": 1999,
+      "make": "Cadillac",
+      "model": "Seville",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "5th gen K-body."
+    },
+    {
+      "year": 1990,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "E-body platform. Touring had sport tires."
+    },
+    {
+      "year": 1991,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Touring Coupe had 16\"."
+    },
+    {
+      "year": 1992,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New generation, all 16\"."
+    },
+    {
+      "year": 1993,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "E-body with Northstar."
+    },
+    {
+      "year": 1994,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "E-body platform."
+    },
+    {
+      "year": 1995,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "E-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "E-body platform."
+    },
+    {
+      "year": 1997,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "E-body platform."
+    },
+    {
+      "year": 1998,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "ESC and ETC trims."
+    },
+    {
+      "year": 1999,
+      "make": "Cadillac",
+      "model": "Eldorado",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "ESC and ETC trims."
+    },
+    {
+      "year": 1990,
+      "make": "Cadillac",
+      "model": "Fleetwood",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FWD C-body. 60 Special had same specs. Brougham was RWD with 5x127."
+    },
+    {
+      "year": 1991,
+      "make": "Cadillac",
+      "model": "Fleetwood",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FWD C-body."
+    },
+    {
+      "year": 1992,
+      "make": "Cadillac",
+      "model": "Fleetwood",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Last year FWD Fleetwood."
+    },
+    {
+      "year": 1993,
+      "make": "Cadillac",
+      "model": "Fleetwood",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "RWD D-body. Different bolt pattern from FWD version."
+    },
+    {
+      "year": 1994,
+      "make": "Cadillac",
+      "model": "Fleetwood",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "RWD D-body."
+    },
+    {
+      "year": 1995,
+      "make": "Cadillac",
+      "model": "Fleetwood",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "RWD D-body with LT1."
+    },
+    {
+      "year": 1996,
+      "make": "Cadillac",
+      "model": "Fleetwood",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year of RWD D-body."
+    },
+    {
+      "year": 1990,
+      "make": "Cadillac",
+      "model": "Allante",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "Pininfarina-designed convertible."
+    },
+    {
+      "year": 1991,
+      "make": "Cadillac",
+      "model": "Allante",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "Pininfarina-designed convertible."
+    },
+    {
+      "year": 1992,
+      "make": "Cadillac",
+      "model": "Allante",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "Northstar engine added."
+    },
+    {
+      "year": 1993,
+      "make": "Cadillac",
+      "model": "Allante",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "Final year."
+    },
+    {
+      "year": 1990,
+      "make": "Cadillac",
+      "model": "Brougham",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "RWD D-body. Different from FWD Fleetwood."
+    },
+    {
+      "year": 1991,
+      "make": "Cadillac",
+      "model": "Brougham",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "RWD D-body."
+    },
+    {
+      "year": 1992,
+      "make": "Cadillac",
+      "model": "Brougham",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year, replaced by RWD Fleetwood."
+    },
+    {
+      "year": 1997,
+      "make": "Cadillac",
+      "model": "Catera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x110",
+        "hub_bore": 65.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "wheelssize.com"],
+      "notes": "Opel Omega platform. Different from other Cadillacs."
+    },
+    {
+      "year": 1998,
+      "make": "Cadillac",
+      "model": "Catera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x110",
+        "hub_bore": 65.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "wheelssize.com"],
+      "notes": "Opel Omega platform."
+    },
+    {
+      "year": 1999,
+      "make": "Cadillac",
+      "model": "Catera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x110",
+        "hub_bore": 65.1,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["225/55R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "wheelssize.com"],
+      "notes": "Opel Omega platform."
+    },
+    {
+      "year": 1990,
+      "make": "Buick",
+      "model": "Century",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1991,
+      "make": "Buick",
+      "model": "Century",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1992,
+      "make": "Buick",
+      "model": "Century",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1993,
+      "make": "Buick",
+      "model": "Century",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1994,
+      "make": "Buick",
+      "model": "Century",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1995,
+      "make": "Buick",
+      "model": "Century",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Buick",
+      "model": "Century",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year A-body."
+    },
+    {
+      "year": 1997,
+      "make": "Buick",
+      "model": "Century",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New W-body platform. Bolt pattern changed!"
+    },
+    {
+      "year": 1998,
+      "make": "Buick",
+      "model": "Century",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1999,
+      "make": "Buick",
+      "model": "Century",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1991,
+      "make": "Buick",
+      "model": "Park Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "C-body platform. Ultra had wider tires."
+    },
+    {
+      "year": 1992,
+      "make": "Buick",
+      "model": "Park Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "16\" option available."
+    },
+    {
+      "year": 1993,
+      "make": "Buick",
+      "model": "Park Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "C-body platform."
+    },
+    {
+      "year": 1994,
+      "make": "Buick",
+      "model": "Park Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "C-body platform."
+    },
+    {
+      "year": 1995,
+      "make": "Buick",
+      "model": "Park Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "C-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Buick",
+      "model": "Park Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Last year of 1st gen."
+    },
+    {
+      "year": 1997,
+      "make": "Buick",
+      "model": "Park Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New G-body platform. All 16\" standard."
+    },
+    {
+      "year": 1998,
+      "make": "Buick",
+      "model": "Park Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1999,
+      "make": "Buick",
+      "model": "Park Avenue",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1990,
+      "make": "Buick",
+      "model": "Riviera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "E-body platform."
+    },
+    {
+      "year": 1991,
+      "make": "Buick",
+      "model": "Riviera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "E-body platform."
+    },
+    {
+      "year": 1992,
+      "make": "Buick",
+      "model": "Riviera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "E-body platform."
+    },
+    {
+      "year": 1993,
+      "make": "Buick",
+      "model": "Riviera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Last year of 7th gen E-body."
+    },
+    {
+      "year": 1995,
+      "make": "Buick",
+      "model": "Riviera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New G-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Buick",
+      "model": "Riviera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1997,
+      "make": "Buick",
+      "model": "Riviera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1998,
+      "make": "Buick",
+      "model": "Riviera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1999,
+      "make": "Buick",
+      "model": "Riviera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year of Riviera."
+    },
+    {
+      "year": 1991,
+      "make": "Buick",
+      "model": "Roadmaster",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["235/70R15", "225/70R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "RWD B-body. Wagon had 225/75R15."
+    },
+    {
+      "year": 1992,
+      "make": "Buick",
+      "model": "Roadmaster",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["235/70R15", "225/70R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "RWD B-body."
+    },
+    {
+      "year": 1993,
+      "make": "Buick",
+      "model": "Roadmaster",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["235/70R15", "225/70R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "RWD B-body."
+    },
+    {
+      "year": 1994,
+      "make": "Buick",
+      "model": "Roadmaster",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["235/70R15", "225/70R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "RWD B-body with LT1."
+    },
+    {
+      "year": 1995,
+      "make": "Buick",
+      "model": "Roadmaster",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["235/70R15", "225/70R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "RWD B-body with LT1."
+    },
+    {
+      "year": 1996,
+      "make": "Buick",
+      "model": "Roadmaster",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["235/70R15", "225/70R15", "225/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year of RWD B-body."
+    },
+    {
+      "year": 1992,
+      "make": "Buick",
+      "model": "Skylark",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tirewheelguide.com"],
+      "notes": "N-body platform."
+    },
+    {
+      "year": 1993,
+      "make": "Buick",
+      "model": "Skylark",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tirewheelguide.com"],
+      "notes": "N-body platform."
+    },
+    {
+      "year": 1994,
+      "make": "Buick",
+      "model": "Skylark",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tirewheelguide.com"],
+      "notes": "N-body platform."
+    },
+    {
+      "year": 1995,
+      "make": "Buick",
+      "model": "Skylark",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tirewheelguide.com"],
+      "notes": "N-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Buick",
+      "model": "Skylark",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tirewheelguide.com"],
+      "notes": "N-body platform."
+    },
+    {
+      "year": 1997,
+      "make": "Buick",
+      "model": "Skylark",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tirewheelguide.com"],
+      "notes": "N-body platform."
+    },
+    {
+      "year": 1998,
+      "make": "Buick",
+      "model": "Skylark",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 43 }
+        ],
+        "oem_tire_sizes": ["205/55R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tirewheelguide.com"],
+      "notes": "Final year of Skylark."
+    },
+    {
+      "year": 1990,
+      "make": "Buick",
+      "model": "LeSabre",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 41 },
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform. Gran Touring had 15\"."
+    },
+    {
+      "year": 1991,
+      "make": "Buick",
+      "model": "LeSabre",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 41 },
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1992,
+      "make": "Buick",
+      "model": "LeSabre",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New H-body. Handling Pkg had 16\"."
+    },
+    {
+      "year": 1993,
+      "make": "Buick",
+      "model": "LeSabre",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1994,
+      "make": "Buick",
+      "model": "LeSabre",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1995,
+      "make": "Buick",
+      "model": "LeSabre",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Buick",
+      "model": "LeSabre",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1997,
+      "make": "Buick",
+      "model": "LeSabre",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1998,
+      "make": "Buick",
+      "model": "LeSabre",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1999,
+      "make": "Buick",
+      "model": "LeSabre",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1990,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R14", "205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform. Gran Sport had 16\"."
+    },
+    {
+      "year": 1991,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R14", "205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1992,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R14", "205/70R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1993,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform. 14\" discontinued."
+    },
+    {
+      "year": 1994,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1995,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1997,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New generation W-body."
+    },
+    {
+      "year": 1998,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1999,
+      "make": "Buick",
+      "model": "Regal",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1990,
+      "make": "Lincoln",
+      "model": "Mark VII",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 24 },
+          { "diameter": 16, "width": 7, "offset": 24 }
+        ],
+        "oem_tire_sizes": ["225/60R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "Fox-body platform. LSC had 16\"."
+    },
+    {
+      "year": 1991,
+      "make": "Lincoln",
+      "model": "Mark VII",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 24 },
+          { "diameter": 16, "width": 7, "offset": 24 }
+        ],
+        "oem_tire_sizes": ["225/60R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "Fox-body platform."
+    },
+    {
+      "year": 1992,
+      "make": "Lincoln",
+      "model": "Mark VII",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x114.3",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 24 },
+          { "diameter": 16, "width": 7, "offset": 24 }
+        ],
+        "oem_tire_sizes": ["225/60R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "bbwheelsonline.com"],
+      "notes": "Final year."
+    },
+    {
+      "year": 1993,
+      "make": "Lincoln",
+      "model": "Mark VIII",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "MN12 platform. Different bolt pattern from Mark VII."
+    },
+    {
+      "year": 1994,
+      "make": "Lincoln",
+      "model": "Mark VIII",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "MN12 platform."
+    },
+    {
+      "year": 1995,
+      "make": "Lincoln",
+      "model": "Mark VIII",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "MN12 platform. LSC trim."
+    },
+    {
+      "year": 1996,
+      "make": "Lincoln",
+      "model": "Mark VIII",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "MN12 platform."
+    },
+    {
+      "year": 1997,
+      "make": "Lincoln",
+      "model": "Mark VIII",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "MN12 platform."
+    },
+    {
+      "year": 1998,
+      "make": "Lincoln",
+      "model": "Mark VIII",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year."
+    },
+    {
+      "year": 1990,
+      "make": "Lincoln",
+      "model": "Continental",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FN9 platform (Taurus-based)."
+    },
+    {
+      "year": 1991,
+      "make": "Lincoln",
+      "model": "Continental",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FN9 platform."
+    },
+    {
+      "year": 1992,
+      "make": "Lincoln",
+      "model": "Continental",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FN9 platform."
+    },
+    {
+      "year": 1993,
+      "make": "Lincoln",
+      "model": "Continental",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FN9 platform."
+    },
+    {
+      "year": 1994,
+      "make": "Lincoln",
+      "model": "Continental",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FN9 platform."
+    },
+    {
+      "year": 1995,
+      "make": "Lincoln",
+      "model": "Continental",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New FN10 platform. All 16\" standard."
+    },
+    {
+      "year": 1996,
+      "make": "Lincoln",
+      "model": "Continental",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FN10 platform."
+    },
+    {
+      "year": 1997,
+      "make": "Lincoln",
+      "model": "Continental",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FN10 platform."
+    },
+    {
+      "year": 1998,
+      "make": "Lincoln",
+      "model": "Continental",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FN10 platform."
+    },
+    {
+      "year": 1999,
+      "make": "Lincoln",
+      "model": "Continental",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x108",
+        "hub_bore": 63.4,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 44 }
+        ],
+        "oem_tire_sizes": ["225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "FN10 platform."
+    },
+    {
+      "year": 1990,
+      "make": "Oldsmobile",
+      "model": "Cutlass Supreme",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/70R15", "215/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform. Multiple wheel options."
+    },
+    {
+      "year": 1991,
+      "make": "Oldsmobile",
+      "model": "Cutlass Supreme",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 40 },
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["195/75R14", "205/70R15", "215/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1992,
+      "make": "Oldsmobile",
+      "model": "Cutlass Supreme",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1993,
+      "make": "Oldsmobile",
+      "model": "Cutlass Supreme",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1994,
+      "make": "Oldsmobile",
+      "model": "Cutlass Supreme",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1995,
+      "make": "Oldsmobile",
+      "model": "Cutlass Supreme",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Oldsmobile",
+      "model": "Cutlass Supreme",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/60R16", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "W-body platform."
+    },
+    {
+      "year": 1997,
+      "make": "Oldsmobile",
+      "model": "Cutlass Supreme",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year of W-body Cutlass Supreme."
+    },
+    {
+      "year": 1997,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New N-body based Cutlass (separate from Supreme)."
+    },
+    {
+      "year": 1998,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "N-body based."
+    },
+    {
+      "year": 1999,
+      "make": "Oldsmobile",
+      "model": "Cutlass",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["215/60R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year."
+    },
+    {
+      "year": 1990,
+      "make": "Oldsmobile",
+      "model": "Cutlass Ciera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/70R14", "215/60R14"],
+        "staggered": false
+      },
+      "confidence": "medium",
+      "sources": ["tiresize.com"],
+      "notes": "A-body platform. Some 1990 models may have 5x115."
+    },
+    {
+      "year": 1991,
+      "make": "Oldsmobile",
+      "model": "Cutlass Ciera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/70R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1992,
+      "make": "Oldsmobile",
+      "model": "Cutlass Ciera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/70R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1993,
+      "make": "Oldsmobile",
+      "model": "Cutlass Ciera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/70R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1994,
+      "make": "Oldsmobile",
+      "model": "Cutlass Ciera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1995,
+      "make": "Oldsmobile",
+      "model": "Cutlass Ciera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "A-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Oldsmobile",
+      "model": "Cutlass Ciera",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 5.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["185/75R14", "195/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Final year of A-body."
+    },
+    {
+      "year": 1990,
+      "make": "Oldsmobile",
+      "model": "88",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 41 }
+        ],
+        "oem_tire_sizes": ["205/75R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1991,
+      "make": "Oldsmobile",
+      "model": "88",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 41 },
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "205/70R15", "215/65R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1992,
+      "make": "Oldsmobile",
+      "model": "88",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "New H-body."
+    },
+    {
+      "year": 1993,
+      "make": "Oldsmobile",
+      "model": "88",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1994,
+      "make": "Oldsmobile",
+      "model": "88",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform. LSS had 16\"."
+    },
+    {
+      "year": 1995,
+      "make": "Oldsmobile",
+      "model": "88",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Oldsmobile",
+      "model": "88",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1997,
+      "make": "Oldsmobile",
+      "model": "88",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1998,
+      "make": "Oldsmobile",
+      "model": "88",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "H-body platform."
+    },
+    {
+      "year": 1999,
+      "make": "Oldsmobile",
+      "model": "88",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year of 88."
+    },
+    {
+      "year": 1990,
+      "make": "Oldsmobile",
+      "model": "98",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 41 },
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/75R14", "205/70R15", "215/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "C-body platform. Touring had 16\"."
+    },
+    {
+      "year": 1991,
+      "make": "Oldsmobile",
+      "model": "98",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/65R15", "215/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "C-body platform."
+    },
+    {
+      "year": 1992,
+      "make": "Oldsmobile",
+      "model": "98",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "C-body platform."
+    },
+    {
+      "year": 1993,
+      "make": "Oldsmobile",
+      "model": "98",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "C-body platform."
+    },
+    {
+      "year": 1994,
+      "make": "Oldsmobile",
+      "model": "98",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "C-body platform."
+    },
+    {
+      "year": 1995,
+      "make": "Oldsmobile",
+      "model": "98",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "C-body platform."
+    },
+    {
+      "year": 1996,
+      "make": "Oldsmobile",
+      "model": "98",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "225/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year of 98."
+    },
+    {
+      "year": 1995,
+      "make": "Oldsmobile",
+      "model": "Aurora",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "G-body platform. Shared with Buick Riviera/Park Avenue."
+    },
+    {
+      "year": 1996,
+      "make": "Oldsmobile",
+      "model": "Aurora",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1997,
+      "make": "Oldsmobile",
+      "model": "Aurora",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1998,
+      "make": "Oldsmobile",
+      "model": "Aurora",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "G-body platform."
+    },
+    {
+      "year": 1999,
+      "make": "Oldsmobile",
+      "model": "Aurora",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 7, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["235/60R16"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["roadkillcustoms.com", "tiresize.com"],
+      "notes": "Final year of 1st gen."
+    },
+    {
+      "year": 1991,
+      "make": "Oldsmobile",
+      "model": "Bravada",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.7,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "GMT330 platform (S-10 Blazer based). 5x4.75 bolt pattern."
+    },
+    {
+      "year": 1992,
+      "make": "Oldsmobile",
+      "model": "Bravada",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.7,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1993,
+      "make": "Oldsmobile",
+      "model": "Bravada",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.7,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1994,
+      "make": "Oldsmobile",
+      "model": "Bravada",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.7,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1995,
+      "make": "Oldsmobile",
+      "model": "Bravada",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.7,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["235/75R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1996,
+      "make": "Oldsmobile",
+      "model": "Bravada",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.7,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "GMT330 platform. Tire size changed."
+    },
+    {
+      "year": 1997,
+      "make": "Oldsmobile",
+      "model": "Bravada",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.7,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1998,
+      "make": "Oldsmobile",
+      "model": "Bravada",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.7,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1999,
+      "make": "Oldsmobile",
+      "model": "Bravada",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.7,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 31 }
+        ],
+        "oem_tire_sizes": ["235/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "tiresize.com"],
+      "notes": "GMT330 platform."
+    },
+    {
+      "year": 1990,
+      "make": "Oldsmobile",
+      "model": "Silhouette",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "U-body minivan platform."
+    },
+    {
+      "year": 1991,
+      "make": "Oldsmobile",
+      "model": "Silhouette",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R14"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "U-body minivan platform."
+    },
+    {
+      "year": 1992,
+      "make": "Oldsmobile",
+      "model": "Silhouette",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "U-body minivan platform. Upgraded to 15\"."
+    },
+    {
+      "year": 1993,
+      "make": "Oldsmobile",
+      "model": "Silhouette",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "U-body minivan platform."
+    },
+    {
+      "year": 1994,
+      "make": "Oldsmobile",
+      "model": "Silhouette",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "U-body minivan platform."
+    },
+    {
+      "year": 1995,
+      "make": "Oldsmobile",
+      "model": "Silhouette",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "U-body minivan platform."
+    },
+    {
+      "year": 1996,
+      "make": "Oldsmobile",
+      "model": "Silhouette",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "U-body minivan platform."
+    },
+    {
+      "year": 1997,
+      "make": "Oldsmobile",
+      "model": "Silhouette",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "U-body minivan platform. GL/GLS had wider tires."
+    },
+    {
+      "year": 1998,
+      "make": "Oldsmobile",
+      "model": "Silhouette",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "U-body minivan platform."
+    },
+    {
+      "year": 1999,
+      "make": "Oldsmobile",
+      "model": "Silhouette",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["205/70R15", "215/70R15"],
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "tiresize.com"],
+      "notes": "U-body minivan platform."
+    }
+  ],
+  "summary": {
+    "total": 186,
+    "complete": 186,
+    "partial": 0,
+    "failed": 0,
+    "highConfidence": 183,
+    "mediumConfidence": 3,
+    "needsReview": 3
+  },
+  "metadata": {
+    "batch_name": "GM Luxury (Cadillac/Buick/Lincoln/Oldsmobile)",
+    "researched_by": "subagent",
+    "notes": [
+      "Cadillac Fleetwood changed from FWD (5x115) to RWD (5x127) in 1993",
+      "Cadillac Catera uses 5x110 (Opel platform) - different from other Cadillacs",
+      "Buick Century changed from 5x100 to 5x115 in 1997 with W-body platform",
+      "Buick Roadmaster uses 5x127 (B-body, shared with Chevy Caprice)",
+      "Lincoln Mark VII uses 5x114.3, Mark VIII uses 5x108 - bolt pattern change",
+      "Lincoln Continental uses 5x108 throughout the 90s",
+      "Oldsmobile Cutlass Ciera uses 5x100 (A-body), Cutlass Supreme uses 5x115 (W-body)",
+      "Oldsmobile Bravada uses 5x120.65 (GMT330 truck platform)",
+      "Hub bores: 70.3mm for most GM luxury FWD, 78.3mm for GM RWD B/D-body, 57.1mm for A-body/N-body, 63.4mm for Ford/Lincoln"
+    ]
+  }
+}

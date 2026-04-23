@@ -1,0 +1,430 @@
+{
+  "batchId": 21,
+  "researchedAt": "2026-04-21T23:50:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "researched": 43,
+    "notUS": 7
+  },
+  "vehicles": [
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "tireSizes": ["225/75R16", "245/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Econoline/2006/E250/",
+      "notes": "E-250 listed under Ford Econoline"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "tireSizes": ["225/75R16", "245/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Econoline/",
+      "notes": "E-250 listed under Ford Econoline"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "tireSizes": ["225/75R16", "245/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Econoline/",
+      "notes": "E-250 listed under Ford Econoline"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "tireSizes": ["225/75R16", "245/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Econoline/",
+      "notes": "E-250 listed under Ford Econoline"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "tireSizes": ["225/75R16", "245/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Econoline/",
+      "notes": "E-250 listed under Ford Econoline"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "tireSizes": ["225/75R16", "245/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Econoline/",
+      "notes": "E-250 listed under Ford Econoline"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "tireSizes": ["225/75R16", "245/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Econoline/",
+      "notes": "E-250 listed under Ford Econoline"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Econoline/",
+      "notes": "E-250 listed under Ford Econoline (no 2013 listed, using 2012/2014 data)"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "e-250-econoline",
+      "tireSizes": ["245/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Econoline/2014/E250/",
+      "notes": "E-250 listed under Ford Econoline"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "escort-zx2",
+      "tireSizes": ["185/65R14"],
+      "wheelDiameters": [14],
+      "source": "tiresize.com/tires/Ford/Escort/2000/ZX2/"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "escort-zx2",
+      "tireSizes": ["185/65R14"],
+      "wheelDiameters": [14],
+      "source": "tiresize.com/tires/Ford/Escort/"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "escort-zx2",
+      "tireSizes": ["185/65R14"],
+      "wheelDiameters": [14],
+      "source": "tiresize.com/tires/Ford/Escort/"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "escort-zx2",
+      "tireSizes": ["185/65R14"],
+      "wheelDiameters": [14],
+      "source": "tiresize.com/tires/Ford/Escort/2003/ZX2/"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "evos",
+      "notUS": true,
+      "reason": "China-only vehicle, not sold in US market",
+      "notes": "404 on tiresize.com - Ford Evos is a China-exclusive crossover"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "evos",
+      "notUS": true,
+      "reason": "China-only vehicle, not sold in US market",
+      "notes": "404 on tiresize.com - Ford Evos is a China-exclusive crossover"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "evos",
+      "notUS": true,
+      "reason": "China-only vehicle, not sold in US market",
+      "notes": "404 on tiresize.com - Ford Evos is a China-exclusive crossover"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "evos",
+      "notUS": true,
+      "reason": "China-only vehicle, not sold in US market",
+      "notes": "404 on tiresize.com - Ford Evos is a China-exclusive crossover"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "excursion",
+      "tireSizes": ["265/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Excursion/2000/"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "excursion",
+      "tireSizes": ["265/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Excursion/"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "excursion",
+      "tireSizes": ["265/75R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Excursion/"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "excursion",
+      "tireSizes": ["265/75R16", "275/65R18"],
+      "wheelDiameters": [16, 18],
+      "source": "tiresize.com/tires/Ford/Excursion/"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "excursion",
+      "tireSizes": ["265/75R16", "275/65R18"],
+      "wheelDiameters": [16, 18],
+      "source": "tiresize.com/tires/Ford/Excursion/"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "excursion",
+      "tireSizes": ["265/75R16", "275/65R18"],
+      "wheelDiameters": [16, 18],
+      "source": "tiresize.com/tires/Ford/Excursion/2005/"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "explorer-sport-trac",
+      "tireSizes": ["235/75R15"],
+      "wheelDiameters": [15],
+      "source": "tiresize.com/tires/Ford/Explorer/2001/Sport-Trac/",
+      "notes": "Gen 1 Sport Trac"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "explorer-sport-trac",
+      "tireSizes": ["235/75R15"],
+      "wheelDiameters": [15],
+      "source": "tiresize.com/tires/Ford/Explorer/",
+      "notes": "Gen 1 Sport Trac"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "explorer-sport-trac",
+      "tireSizes": ["235/75R15"],
+      "wheelDiameters": [15],
+      "source": "tiresize.com/tires/Ford/Explorer/",
+      "notes": "Gen 1 Sport Trac"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "explorer-sport-trac",
+      "tireSizes": ["235/75R15"],
+      "wheelDiameters": [15],
+      "source": "tiresize.com/tires/Ford/Explorer/",
+      "notes": "Gen 1 Sport Trac"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "explorer-sport-trac",
+      "tireSizes": ["235/75R15"],
+      "wheelDiameters": [15],
+      "source": "tiresize.com/tires/Ford/Explorer/",
+      "notes": "Gen 1 Sport Trac - final year of Gen 1"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "explorer-sport-trac",
+      "tireSizes": ["235/70R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Explorer/2007/Sport-Trac-XLT/",
+      "notes": "Gen 2 Sport Trac"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "explorer-sport-trac",
+      "tireSizes": ["235/70R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Explorer/",
+      "notes": "Gen 2 Sport Trac"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "explorer-sport-trac",
+      "tireSizes": ["235/70R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Explorer/",
+      "notes": "Gen 2 Sport Trac"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "explorer-sport-trac",
+      "tireSizes": ["235/70R16"],
+      "wheelDiameters": [16],
+      "source": "tiresize.com/tires/Ford/Explorer/2010/Sport-Trac-XLT/",
+      "notes": "Gen 2 Sport Trac - final year"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5", "245/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Commercial-grade DRW, tiresize.com only has 2008-2010 data. Using typical F-450 specs."
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5", "245/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Commercial-grade DRW, tiresize.com only has 2008-2010 data. Using typical F-450 specs."
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5", "245/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Commercial-grade DRW, tiresize.com only has 2008-2010 data. Using typical F-450 specs."
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5", "245/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Commercial-grade DRW, tiresize.com only has 2008-2010 data. Using typical F-450 specs."
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5", "245/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Commercial-grade DRW, tiresize.com only has 2008-2010 data. Using typical F-450 specs."
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5", "245/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Commercial-grade DRW, tiresize.com only has 2008-2010 data. Using typical F-450 specs."
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5", "245/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Commercial-grade DRW, tiresize.com only has 2008-2010 data. Using typical F-450 specs."
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5", "245/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Commercial-grade DRW, tiresize.com only has 2008-2010 data. Using typical F-450 specs."
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5"],
+      "wheelDiameters": [19.5],
+      "source": "tiresize.com/tires/Ford/F450/2008/"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5"],
+      "wheelDiameters": [19.5],
+      "source": "tiresize.com/tires/Ford/F450/2009/"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5"],
+      "wheelDiameters": [19.5],
+      "source": "tiresize.com/tires/Ford/F450/2010/XL-Crew-Cab-4x2/"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Post-2010, using same specs as 2010 model"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Post-2010, using same specs as 2010 model"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Post-2010, using same specs as 2010 model"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "tireSizes": ["225/70R19.5"],
+      "wheelDiameters": [19.5],
+      "notes": "Post-2010, using same specs as 2010 model"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "fairlane",
+      "notUS": true,
+      "reason": "Australian-market vehicle, not sold in US",
+      "notes": "404 on tiresize.com - The 2000-2007 Ford Fairlane was Australian-exclusive"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "fairlane",
+      "notUS": true,
+      "reason": "Australian-market vehicle, not sold in US",
+      "notes": "404 on tiresize.com - The 2000-2007 Ford Fairlane was Australian-exclusive"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "fairlane",
+      "notUS": true,
+      "reason": "Australian-market vehicle, not sold in US",
+      "notes": "404 on tiresize.com - The 2000-2007 Ford Fairlane was Australian-exclusive"
+    }
+  ]
+}

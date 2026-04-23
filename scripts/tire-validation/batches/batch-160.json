@@ -1,0 +1,719 @@
+{
+  "batchId": "160",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2005,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2011,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2010,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19",
+        "235/45R18",
+        "225/50R17",
+        "245/35ZR20",
+        "245/40ZR19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19",
+        "215/50R17",
+        "235/45ZR17",
+        "235/40ZR18",
+        "235/45ZR18",
+        "235/40ZR19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19",
+        "215/50R17",
+        "235/45ZR17",
+        "235/40ZR18",
+        "235/45ZR18",
+        "235/40ZR19"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19",
+        "215/50R17",
+        "235/45ZR17",
+        "235/40ZR18",
+        "235/45ZR18",
+        "235/40ZR19"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19",
+        "215/55R16",
+        "205/60R16",
+        "215/50R17",
+        "235/45ZR17",
+        "235/40ZR18"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19",
+        "215/55R16",
+        "205/60R16",
+        "215/50R17",
+        "235/45ZR17",
+        "235/40ZR18"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19",
+        "215/55R16",
+        "205/60R16",
+        "215/50R17",
+        "235/45ZR17",
+        "235/40ZR18"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "235/45R17",
+        "235/40R18",
+        "235/40R19",
+        "215/55R16",
+        "205/60R16",
+        "215/50R17",
+        "235/45ZR17",
+        "235/40ZR18"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [
+        "215/55R16",
+        "205/60R16",
+        "215/50R17",
+        "235/45ZR17",
+        "235/40ZR18"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "255/35ZR20",
+        "245/35ZR21",
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": [
+        "245/45R18",
+        "255/40R19",
+        "255/35ZR20",
+        "245/35ZR21",
+        "245/40R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": [
+        "245/45R18",
+        "245/40R19",
+        "255/35R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": [
+        "245/45ZR18",
+        "255/40ZR19",
+        "255/35ZR20",
+        "225/55R17",
+        "245/35ZR21"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": [
+        "245/45R18",
+        "245/40R19",
+        "255/35R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": [
+        "245/45R18",
+        "245/40R19",
+        "255/35R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "255/35ZR20",
+        "245/35ZR21"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": [
+        "225/55R17",
+        "245/45R18",
+        "255/40R19",
+        "255/35ZR20",
+        "245/35ZR21"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": [
+        "235/55R18",
+        "235/50R19",
+        "235/45R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": [
+        "235/55R18",
+        "235/50R19",
+        "235/45R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": [
+        "235/55R18",
+        "235/50R19",
+        "235/45R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": [
+        "235/55R18",
+        "235/50R19",
+        "235/45R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": [
+        "235/60R17",
+        "235/55R18",
+        "235/50R19",
+        "245/45R20",
+        "245/40R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": [
+        "235/50R19",
+        "255/45R19",
+        "235/45R20",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": [
+        "235/50R19",
+        "255/45R19",
+        "235/45R20",
+        "255/40R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": [
+        "235/60R17",
+        "235/55R18",
+        "235/50R19",
+        "245/45R20",
+        "245/40R21"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": [
+        "235/55R18",
+        "235/50R19",
+        "235/45R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": [
+        "235/55R18",
+        "235/50R19",
+        "235/45R20"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/60R18",
+        "235/55R19",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20",
+        "235/60R17",
+        "255/40R21",
+        "265/35R22"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20",
+        "235/60R17",
+        "255/40R21",
+        "265/35R22"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20",
+        "255/40R21",
+        "265/35R22"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20",
+        "255/50R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/55R19",
+        "255/45R20",
+        "255/50R19"
+      ]
+    }
+  ]
+}

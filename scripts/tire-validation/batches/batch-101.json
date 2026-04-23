@@ -1,0 +1,794 @@
+{
+  "batchId": "101",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2021,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": [
+        "245/35ZR19",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": [
+        "245/35ZR19",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": [
+        "245/35ZR19",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": [
+        "245/35ZR19",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mclaren",
+      "model": "720s",
+      "currentTireSizes": [
+        "245/35ZR19",
+        "305/30ZR20"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mclaren",
+      "model": "artura",
+      "currentTireSizes": [
+        "235/35ZR19",
+        "295/35ZR20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mclaren",
+      "model": "artura",
+      "currentTireSizes": [
+        "235/35ZR19",
+        "295/35ZR20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mclaren",
+      "model": "artura",
+      "currentTireSizes": [
+        "235/35ZR19",
+        "295/35ZR20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mclaren",
+      "model": "artura",
+      "currentTireSizes": [
+        "235/35ZR19",
+        "295/35ZR20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mclaren",
+      "model": "artura",
+      "currentTireSizes": [
+        "235/35ZR19",
+        "295/35ZR20"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": [
+        "225/35ZR20",
+        "295/30ZR21"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": [
+        "225/35ZR20",
+        "295/30ZR21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": [
+        "225/35ZR20",
+        "295/30ZR21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": [
+        "225/35ZR20",
+        "295/30ZR21"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": [
+        "225/35ZR20",
+        "295/30ZR21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": [
+        "225/35ZR20",
+        "295/30ZR21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": [
+        "225/35ZR20",
+        "295/30ZR21"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mclaren",
+      "model": "gt",
+      "currentTireSizes": [
+        "225/35ZR20",
+        "295/30ZR21"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "currentTireSizes": [
+        "225/45R18",
+        "235/40R19"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "255/35R19",
+        "295/30R20",
+        "265/35R19",
+        "305/30R20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "currentTireSizes": [
+        "265/35R19",
+        "295/30R20",
+        "325/30R21"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt-4",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "225/35R20",
+        "255/30R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "225/35R20",
+        "255/30R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "245/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "245/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "225/35R20",
+        "255/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "245/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "225/35R20",
+        "255/30R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "245/35R20",
+        "275/30R20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "225/35R20",
+        "255/30R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "255/35R19",
+        "285/30R19",
+        "255/30R20",
+        "285/25R20"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "255/35R19",
+        "285/30R19",
+        "255/30R20",
+        "285/25R20"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "255/35R19",
+        "285/30R19",
+        "255/30R20",
+        "285/25R20"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "255/35R19",
+        "285/30R19",
+        "255/30R20",
+        "285/25R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19",
+        "255/35R19",
+        "285/30R19",
+        "255/30R20",
+        "285/25R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "c-class",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/50R17",
+        "225/45R18",
+        "245/40R18",
+        "225/40R19",
+        "255/35R19"
+      ]
+    }
+  ]
+}

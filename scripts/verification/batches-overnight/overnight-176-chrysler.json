@@ -1,0 +1,2061 @@
+[
+  {
+    "id": "547b5884-135d-4596-bc8f-dbd6f76839e2",
+    "year": 2013,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "08b86a8a-b2fc-4939-a634-264b89f08461",
+    "year": 2013,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300S",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "1364c39f-207c-4d18-aaca-6c6cbe8ad9a8",
+    "year": 2013,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "694dfefd-6f2d-41b8-8355-13168fddf22e",
+    "year": 2013,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "c16fd7d1-3887-4a3e-82d6-1903f1dbfb6c",
+    "year": 2013,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring L",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "4089a510-19ba-41c8-b4ad-eff0a7785fa7",
+    "year": 2013,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "7ae0a05c-ae05-4959-b813-8b6193fe6807",
+    "year": 2013,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "1a4f060a-577e-4952-9289-6b7f6522967f",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring L",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "480a2d91-9c65-42de-8f0c-530cde76d89a",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "22cb6567-0c7d-4b4e-9fe0-3f267e837c65",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "51d84412-e6a3-4720-87c2-6adeecb6c525",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C RWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "20314c6f-e4c9-474c-b140-b76414d47e1b",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "f1bc75ca-da7c-4743-b434-a2f65d402125",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C John Varvatos",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "77c40b21-496c-4e5c-b647-977562b4f063",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "SRT8",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "de18f9e7-9f4c-46f1-8102-176eb6f1ff08",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "a210c978-af3c-4eaf-88ef-5458c6920f84",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300S",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "9f3e7c16-68cf-4dfc-9449-364763ec1fe3",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "57733984-48b1-46c9-ad24-3e5ee7c10d9a",
+    "year": 2014,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Platinum",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "5d73a205-e351-4c9a-99af-5be5372a50c7",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "0fbee4ef-0dfe-45f2-80c5-e570c0bd7908",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "2c99ef22-cfb9-4e9e-bc3c-83ec36492417",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring L",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "c382125e-0c4a-4db1-8e4d-a8faf3de6437",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "b7b807a9-1145-4f47-b890-e71e3d202324",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "c96e0aab-540e-4803-9f05-003dd06273ce",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300S",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "2756ca9f-9d82-44a2-8b81-3d7f6a8e704b",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C RWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "331319eb-3abe-4072-9bba-6ce90d5d4f64",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "40d10a1c-da25-43b2-ab8b-2ce3a8db8ece",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C John Varvatos",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "647b16a1-181f-483a-b00c-5bd9e48d0c31",
+    "year": 2015,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Platinum",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "b21f989c-625d-44e4-9014-7b3140ff24ea",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "cfa2de4e-330e-421f-8bef-707b3d1797b0",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C RWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "fe543ac4-0d4b-4623-95b9-39c8cac81656",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Platinum",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "6a5d5821-1211-410c-bdf2-e6314eb47661",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "0b8daf3a-9a2f-4bd0-a0f1-8569f17e4a4a",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300S",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "be239597-8535-420d-bd64-3779c367d811",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "6170f2ca-bcdc-47b0-bd0f-a4742bec603f",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "25b096bd-105b-4bf5-84b7-91ef4e318be9",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C John Varvatos",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "5ae766c5-7f14-4c5f-b1ee-eac0a71eb34e",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "9cb0acc8-35f6-4a82-816e-216dbb5ff5ed",
+    "year": 2016,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring L",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "8dba1675-900c-40c6-9775-8e32649932ed",
+    "year": 2017,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "d8227b1a-4be0-40ed-88b3-9c680c093847",
+    "year": 2017,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C John Varvatos",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "eba664ab-a897-4ce0-a5ff-f02d187c9007",
+    "year": 2017,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C RWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "7a513f67-7831-4ecc-8065-126283baa7ff",
+    "year": 2017,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Platinum",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "0e1349e9-4f78-4ad6-8ad4-43cc764bf123",
+    "year": 2017,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "8a270678-1fdf-47d7-92f5-00626d56b367",
+    "year": 2017,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "0097bba1-aad3-419c-89e5-12abe5139e19",
+    "year": 2017,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring L",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "becc247b-68a0-4c69-91bd-f2cfd1249d8b",
+    "year": 2017,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300S",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "9adc5695-9446-42dd-9ad0-784269735fdb",
+    "year": 2017,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "0a1fdae7-38b0-472a-aa7b-9dbca643bf13",
+    "year": 2017,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "3da219b2-6dda-48d7-8d3c-51503bae663d",
+    "year": 2018,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300S",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "78f93c43-a146-4f99-afaa-bd704d5c3326",
+    "year": 2018,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C RWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "f318ce47-92fa-4f0d-b990-bb2d77cae5bd",
+    "year": 2018,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "39f03653-a355-44a7-b2eb-ea725729e63e",
+    "year": 2018,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "2e82137d-1916-43cc-8292-baec40b1baf5",
+    "year": 2018,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "8e3f142f-2453-4cfb-ab2e-d493f60a920d",
+    "year": 2018,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring L",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "dc28d223-31f8-4ee1-b768-27b0bc1b75f4",
+    "year": 2018,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "3d8c170b-2703-4754-8a0f-b55f36092622",
+    "year": 2018,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Platinum",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "72450fe9-5490-41cd-8380-0521f7780b1c",
+    "year": 2018,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "12068272-0da2-4053-8f43-73fab75719bd",
+    "year": 2018,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C John Varvatos",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "e4f6566c-d5cc-49f4-9226-4f393003d576",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C RWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "225/60R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "a0df4f57-dd87-4542-a94e-29b5bf5b54f9",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Limited",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.6",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/55R18"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "235/50R19"
+      },
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 19,
+        "tireSize": "245/50R19"
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": 24,
+        "isStock": false,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "235/50R19",
+      "245/50R19",
+      "245/45R20",
+      "225/60R18",
+      "215/65R17"
+    ],
+    "source": "reviewed_from_2020_ADJACENT_YEAR"
+  },
+  {
+    "id": "e1d89b6c-5c8d-4bf6-9098-ed1a33434613",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  },
+  {
+    "id": "92e2ff27-7ab8-4902-b818-371f4fdc8465",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Platinum",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "0a48e6e9-eba5-4004-a641-1237f461b948",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "bc41a28e-ddf1-4061-b53d-24f545a4db91",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300S",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "e3198168-96da-46fa-9866-6b4b5e14a05b",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring L",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "13552164-d730-45e8-a4d2-1ffb6d2edc16",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "2f8ee5d6-0a3a-4212-82ae-de0051b1b94b",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "935f3c26-0bfb-464b-bfe9-5ac676414afd",
+    "year": 2019,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C John Varvatos",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "855086cf-7691-46de-9f45-c12d6abc84be",
+    "year": 2020,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300S",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "2586ae71-2bc9-40bc-860b-4c4fb83b3b06",
+    "year": 2020,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C AWD",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19,
+        "tireSize": "235/55R19"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R19"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "9147ad33-82b2-4fd5-a52e-e0945a02b542",
+    "year": 2020,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "53293ec7-a8b1-4e5f-9b51-4458c650214f",
+    "year": 2020,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 17
+      },
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "b5ee5be4-5943-407e-aa8a-3f7834339ce4",
+    "year": 2020,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "Touring L",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "b80da2d2-1283-4813-b0e5-42cd0666de5f",
+    "year": 2020,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C John Varvatos",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "228579c5-011b-4dca-9592-4c25f543cdac",
+    "year": 2020,
+    "make": "chrysler",
+    "model": "300",
+    "trim": "300C Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/60R18",
+      "235/55R19",
+      "245/45R20"
+    ],
+    "source": "platform_inheritance_ld"
+  }
+]

@@ -1,0 +1,1057 @@
+{
+  "batchId": "overnight-056",
+  "make": "Mercedes-Benz",
+  "model": "C-Class",
+  "verifiedAt": "2026-04-23T02:45:00Z",
+  "sources": [
+    "tiresize.com (C63, C43 tire specs)",
+    "hulkoffsets.com (bolt pattern, hub bore, wheel specs by generation)"
+  ],
+  "summary": {
+    "total": 73,
+    "verified": 40,
+    "flagged": 23,
+    "invalid": 10
+  },
+  "verifiedSpecs": {
+    "boltPattern": "5x112",
+    "hubBore": "66.6",
+    "notes": "All Mercedes C-Class generations (W205 2015-2021, W206 2022+) use 5x112 bolt pattern and 66.6mm hub bore"
+  },
+  "generationSpecs": {
+    "W205_2015-2021": {
+      "oemWheelSizes": ["17", "18", "19"],
+      "aftermarketMax": "20",
+      "offsetRange": "35-50mm"
+    },
+    "W206_2022+": {
+      "oemWheelSizes": ["18", "19", "20"],
+      "aftermarketMax": "21",
+      "offsetRange": "40-48mm"
+    }
+  },
+  "trimSpecificSpecs": {
+    "C300_W205": {
+      "wheelSizes": [17, 18, 19],
+      "tireSizes": {
+        "17": "225/50R17",
+        "18": ["225/45R18", "245/40R18"],
+        "19": ["225/40R19", "255/35R19"]
+      },
+      "staggered": false
+    },
+    "C43_AMG_W205": {
+      "wheelSizes": [18, 19],
+      "tireSizes": {
+        "18": { "front": "225/45R18", "rear": "245/40R18" },
+        "19": { "front": "225/40R19", "rear": "255/35R19" }
+      },
+      "staggered": true
+    },
+    "C43_AMG_W206": {
+      "wheelSizes": [18, 19, 20],
+      "tireSizes": {
+        "18": "245/45R18",
+        "19": { "front": "245/40R19", "rear": "265/35R19" },
+        "20": { "front": "245/35R20", "rear": "265/30R20" }
+      },
+      "staggered": true
+    },
+    "C63_AMG_Sedan_W205": {
+      "wheelSizes": [18, 19],
+      "tireSizes": {
+        "18": { "front": "245/40R18", "rear": "265/40R18" },
+        "19": { "front": "245/35R19", "rear": "265/35R19" }
+      },
+      "staggered": true
+    },
+    "C63_AMG_Coupe_W205": {
+      "wheelSizes": [18, 19],
+      "tireSizes": {
+        "18": { "front": "255/40R18", "rear": "285/35R18" },
+        "19": { "front": "255/35R19", "rear": "285/30R19" }
+      },
+      "staggered": true
+    }
+  },
+  "vehicles": [
+    {
+      "id": "9dec9984-7c7b-40d0-878b-7478e9bae2fe",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63 S",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - AMG C63 S does not come with 16\"/17\" options",
+        "Tire sizes mixed from base C-Class - should be AMG-specific staggered sizes",
+        "Should have: 18\" F:245/40R18 R:265/40R18 or 19\" F:245/35R19 R:265/35R19"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "correctedWheelSizes": [
+        { "axle": "front", "width": 8.5, "diameter": 18 },
+        { "axle": "rear", "width": 9.5, "diameter": 18 },
+        { "axle": "front", "width": 8.5, "diameter": 19 },
+        { "axle": "rear", "width": 10, "diameter": 19 }
+      ],
+      "correctedTireSizes": ["245/40R18", "265/40R18", "245/35R19", "265/35R19"]
+    },
+    {
+      "id": "73bbc348-32ef-436d-8297-f7484865bda0",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 450 AMG 4MATIC",
+      "status": "invalid",
+      "issues": [
+        "C 450 AMG was only sold in 2016 in the US",
+        "This trim does not exist for 2017 model year",
+        "Should be removed or merged with C43 AMG data"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "2f3977ab-19e0-432b-b14b-f14101ca3de4",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 400 4MATIC",
+      "status": "invalid",
+      "issues": [
+        "C 400 4MATIC was not sold in US market for 2017",
+        "Trim does not exist for this year - likely erroneous data"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "baf2ecca-8fc5-487e-bbd8-753e447ce533",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 S AMG",
+      "status": "flagged",
+      "issues": [
+        "Duplicate of 'AMG C 63 S' - same vehicle, different naming convention",
+        "Wheel sizes (8.5x19, 10x19) are correct for C63 S",
+        "Tire sizes inherited from base - should be staggered AMG-specific"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "correctedTireSizes": ["245/35R19", "265/35R19"]
+    },
+    {
+      "id": "7bffde5d-edd1-4590-89c5-30e9ab2058cd",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 AMG",
+      "status": "flagged",
+      "issues": [
+        "Duplicate of 'AMG C 63' - same vehicle, different naming",
+        "Wheel sizes (8x18, 9.5x19) are mostly correct",
+        "Tire sizes inherited from base - should be staggered AMG-specific"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "correctedTireSizes": ["245/40R18", "265/40R18", "245/35R19", "265/35R19"]
+    },
+    {
+      "id": "d8f4c86b-2f0d-4547-af0a-78910e7ac1e1",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "flagged",
+      "issues": [
+        "Duplicate of 'AMG C 43 4MATIC' - same vehicle",
+        "Wheel sizes (8x18, 9x18) are close but tire sizes wrong",
+        "Should have staggered setup: F:225/45R18 R:245/40R18 or F:225/40R19 R:255/35R19"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "correctedTireSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19"]
+    },
+    {
+      "id": "35148694-7622-41ea-868c-b9695176e032",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "notes": "Bolt pattern and hub bore verified. Wheel/tire sizes reasonable for C300 base trim."
+    },
+    {
+      "id": "a53199e6-53b7-4793-95a7-b3625e051fda",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 350e Plug-In Hybrid",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "notes": "Bolt pattern and hub bore verified. Same wheel specs as C300."
+    },
+    {
+      "id": "8bdd827f-7053-480d-ae09-9c73949cdeeb",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - AMG C63 does not come with 16\"/17\" options",
+        "Should have: 18\" only or 18\"/19\" staggered options",
+        "Tire sizes should be AMG-specific staggered"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "correctedWheelSizes": [
+        { "axle": "front", "width": 8.5, "diameter": 18 },
+        { "axle": "rear", "width": 9.5, "diameter": 18 },
+        { "axle": "front", "width": 8.5, "diameter": 19 },
+        { "axle": "rear", "width": 9.5, "diameter": 19 }
+      ],
+      "correctedTireSizes": ["245/40R18", "265/40R18", "245/35R19", "265/35R19"]
+    },
+    {
+      "id": "63bf4def-8fca-40ae-a6e6-9f4f11c68b14",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 43 4MATIC",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - AMG C43 does not come with 16\"/17\" options",
+        "Should only have 18\" and 19\" staggered options",
+        "Tire sizes should be: F:225/45R18 R:245/40R18 or F:225/40R19 R:255/35R19"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "correctedWheelSizes": [
+        { "axle": "front", "width": 8, "diameter": 18 },
+        { "axle": "rear", "width": 9, "diameter": 18 },
+        { "axle": "front", "width": 8, "diameter": 19 },
+        { "axle": "rear", "width": 9, "diameter": 19 }
+      ],
+      "correctedTireSizes": ["225/45R18", "245/40R18", "225/40R19", "255/35R19"]
+    },
+    {
+      "id": "9c0b6fc7-906a-4f92-b724-e75f0b1f43ca",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C300",
+      "status": "flagged",
+      "issues": [
+        "Duplicate of 'C 300' - same vehicle, different naming",
+        "Wheel size (7.5x17) is limited - should include 18\"/19\" options"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "836e5b3a-6099-4a78-a618-7e133aed252c",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "flagged",
+      "issues": [
+        "Duplicate of 'AMG C 43 4MATIC'",
+        "Tire sizes inherited from base - should be staggered"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "c294376b-53ba-4689-b191-57a0abbc3927",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\" which AMG C63 doesn't have"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "755d8fec-0e25-4ad9-9263-401f64727204",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C300",
+      "status": "flagged",
+      "issues": [
+        "Duplicate of 'C 300'",
+        "Limited wheel sizes"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "398bb9ee-5ddd-4d30-850f-00e56980bb4f",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 450 AMG 4MATIC",
+      "status": "invalid",
+      "issues": [
+        "C 450 AMG was only sold in 2016",
+        "Does not exist for 2018 model year"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "0dff100f-4210-48ee-84f3-3de46ad4ffaf",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 AMG",
+      "status": "flagged",
+      "issues": [
+        "Duplicate of 'AMG C 63'",
+        "Tire sizes inherited from base"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "7f89cccb-4adb-4a1f-a6a6-8d078d06a5be",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 S AMG",
+      "status": "flagged",
+      "issues": [
+        "Duplicate of 'AMG C 63 S'",
+        "Tire sizes inherited from base"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "5529d337-9d6c-4197-b016-be5d7f0b2b5c",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63 S",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\" which AMG doesn't have"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "d5e0aaee-95ce-4206-b353-a0354a644d85",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 43 4MATIC",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\" which AMG doesn't have"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "0dcb7abf-c5c6-4708-a621-8f76d5775950",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 400 4MATIC",
+      "status": "invalid",
+      "issues": [
+        "C 400 4MATIC not sold in US for 2018"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "a336393f-e664-4737-affb-d5224308f099",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "notes": "Generic base trim - specs reasonable"
+    },
+    {
+      "id": "118cd188-e73b-45da-bcf1-16474852822e",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300 4MATIC",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "9cdafb71-600a-4378-b7b9-3c26c940c850",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 350e Plug-In Hybrid",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "d54d153d-df78-44e1-8a7d-86988ee47e78",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "b4d84888-aee5-4adc-9539-34b141ab554d",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 350e Plug-In Hybrid",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "0fc87469-08e8-4835-af02-2ac2582ba6dd",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 43 4MATIC",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\""
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "5826bf88-33b1-4ad1-9c8d-8ccc8430ab10",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300 4MATIC",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "5944d1d7-647f-47a7-8df7-8c2543b18d82",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63 S",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\""
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "d51ec926-9e87-46bd-89ed-748c9b412484",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 AMG",
+      "status": "flagged",
+      "issues": [
+        "Duplicate naming"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "e895173e-2f8b-4823-8da2-2f6f6c385d0d",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "8f7b0395-1c15-4b13-a64a-0c959c58572f",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\""
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "a183749e-b5f2-4fb9-ba86-0614ed9001fb",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 450 AMG 4MATIC",
+      "status": "invalid",
+      "issues": [
+        "C 450 AMG only existed in 2016"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "b2c48d4d-19c1-42c0-b376-132fd1e8cbd8",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 400 4MATIC",
+      "status": "invalid",
+      "issues": [
+        "C 400 4MATIC not sold in US for 2019"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "6dbac8e9-c484-4d64-a57b-31d04edb47bd",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "cc71ec00-d981-48df-b04a-5ffd985ec6cc",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 S AMG",
+      "status": "flagged",
+      "issues": [
+        "Duplicate naming"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "a5b4f66d-8892-4924-ac5e-e58e87c296c4",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "flagged",
+      "issues": [
+        "Duplicate naming"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "6f1ffa64-4fe1-4150-8475-da420165d1b0",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C300",
+      "status": "flagged",
+      "issues": [
+        "Duplicate naming"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "0f5a1276-7d18-4b8a-8ed0-2423af886171",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C300",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "c0d166ad-6643-4c63-aa63-00ce3c6edab5",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 S AMG",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "notes": "Wheel sizes (8.5x19, 10x19) correct for staggered C63 S"
+    },
+    {
+      "id": "629bf12a-f746-4852-99c4-0d444c597221",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "notes": "Wheel sizes (8x18, 9x18) correct for staggered C43"
+    },
+    {
+      "id": "5ecfa2df-8e53-4f58-8939-e6562c1dadd0",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "6520e59a-65b7-408a-981e-deec0b35c629",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "a9eda500-859d-4655-b29a-2b47382d5e5a",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 450 AMG 4MATIC",
+      "status": "invalid",
+      "issues": [
+        "C 450 AMG only existed in 2016"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "8a1753bd-d3be-4a30-a0b9-87856c947975",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\""
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "5c4a06d6-0a8e-4e41-9e37-76920cd97317",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300 4MATIC",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "8ea55891-3368-4052-9430-c7d1616536a6",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 350e Plug-In Hybrid",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "46dff7ca-d458-479f-8e2a-546192eae0cc",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63 S",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\""
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "238c7647-ad11-4029-b5b5-de515544cd22",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 400 4MATIC",
+      "status": "invalid",
+      "issues": [
+        "C 400 4MATIC not sold in US"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "c7e37706-1181-4267-ba49-397a6de27631",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 AMG",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "notes": "Wheel sizes reasonable for C63"
+    },
+    {
+      "id": "2821328a-487b-4648-94c2-7af1fea1cef6",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 43 4MATIC",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\""
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "3cdc3e26-28f8-462e-805b-7008c63a9a7f",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63 S",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\""
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "d7ab0508-a3ca-411a-8c03-4e3607eefe6f",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 S AMG",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "dfc115d7-50d9-44a4-a7f0-0eaf8a01fa79",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 350e Plug-In Hybrid",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "60f1aeec-d0cd-4647-870c-aab77f8e82f3",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "5d63de14-216b-4325-835d-6d66f31c7ce4",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "d6618fa9-4ef0-473d-8bca-868e5840ddaa",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 450 AMG 4MATIC",
+      "status": "invalid",
+      "issues": [
+        "C 450 AMG only existed in 2016"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "ff0f5acc-6cc6-407a-875d-5386387058be",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 400 4MATIC",
+      "status": "invalid",
+      "issues": [
+        "C 400 4MATIC not sold in US"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "9183270e-b64f-4f8e-88e2-ab2012d9fbe4",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "3b3d68e8-5a8f-4b32-951b-3455e48d1cce",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 AMG",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "b7f4ecb3-367a-449e-8aee-4ae3d377bd37",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\""
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "d5af97e4-9cb9-42a8-95e9-d0c9d23461c6",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300 4MATIC",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "f0ae5b48-cff2-4163-9f99-9170bd3d6998",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 43 4MATIC",
+      "status": "flagged",
+      "issues": [
+        "Wheel sizes incorrect - includes 16\"/17\""
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "86dd379e-ad7e-48e6-be4a-c167e03a4b09",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C300",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "e53fb97f-c2bd-4235-a4f7-7a7222821df3",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "notes": "W206 generation - wheel sizes (18/19/20) correct"
+    },
+    {
+      "id": "760ba73a-cddb-47a1-8661-9e9b133c723d",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 AMG",
+      "status": "flagged",
+      "issues": [
+        "2022+ C63 is W206 generation with hybrid powertrain",
+        "Now called 'AMG C 63 S E Performance'",
+        "Tire sizes in data reference old W205 generation"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "8feb3b8f-7c2a-4203-9a2c-cd4868fed142",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63 S E Performance",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "notes": "Correct W206 naming and specs"
+    },
+    {
+      "id": "58c24849-7f06-4e4d-b52f-aefa1315f4ea",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 43 4MATIC",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "notes": "W206 generation specs correct"
+    },
+    {
+      "id": "41ab37ef-1790-4f44-b52a-e9608c561ffa",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300 4MATIC",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "1ae2ed2c-2523-4baa-8dab-c9bea57e12f1",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C300",
+      "status": "flagged",
+      "issues": [
+        "Wheel size (7.5x17) incorrect for W206 - should start at 18\"",
+        "W206 does not have 17\" option"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "correctedWheelSizes": [
+        { "axle": "front", "width": 7.5, "diameter": 18 },
+        { "axle": "front", "width": 8, "diameter": 19 },
+        { "axle": "front", "width": 8.5, "diameter": 20 }
+      ]
+    },
+    {
+      "id": "4163977a-3817-4d82-8f51-c5028444d33e",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C63 S AMG",
+      "status": "flagged",
+      "issues": [
+        "Outdated naming - should be 'AMG C 63 S E Performance' for W206"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "d7125a5a-fca0-4348-b53c-cb84ca641206",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C43 AMG",
+      "status": "flagged",
+      "issues": [
+        "Tire sizes reference old W205 specs",
+        "W206 C43 has different tire sizes: 245/45R18, F:245/40R19/R:265/35R19"
+      ],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "a84b4eaf-2d71-4303-a87a-d150cf8ac606",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "Base",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true,
+      "notes": "W206 specs correct - starts at 17\" for base"
+    },
+    {
+      "id": "c2c1206e-8806-4c3d-90cb-8aa34b1c8aa1",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 63 S E Performance",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "abf411ae-8add-427d-9fc6-2997ffda3eb5",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "C 300 4MATIC",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    },
+    {
+      "id": "a5ef7010-947d-479f-aa43-80aa08fc1612",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "c-class",
+      "trim": "AMG C 43 4MATIC",
+      "status": "verified",
+      "issues": [],
+      "boltPatternVerified": true,
+      "hubBoreVerified": true
+    }
+  ],
+  "recommendations": [
+    "Remove invalid trims: C 450 AMG 4MATIC (only sold 2016), C 400 4MATIC (not sold in US)",
+    "Consolidate duplicate trim names: C300/C 300, C63 AMG/AMG C 63, C43 AMG/AMG C 43 4MATIC",
+    "Fix AMG wheel sizes to remove 16\"/17\" options - AMG models start at 18\"",
+    "Update AMG tire sizes to proper staggered specifications",
+    "For W206 (2022+): Ensure wheel sizes start at 18\" minimum for most trims"
+  ]
+}

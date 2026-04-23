@@ -1,0 +1,973 @@
+{
+  "batch": "batch-40-japanese",
+  "verifiedAt": "2026-04-23T00:27:00Z",
+  "summary": {
+    "total": 75,
+    "valid": 36,
+    "invalid": 39,
+    "flaggedForReview": 0
+  },
+  "invalidVehicles": [
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Avalon",
+      "reason": "DISCONTINUED - Avalon production ended August 2022. No 2023+ models exist.",
+      "sources": ["caranddriver.com", "pressroom.toyota.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Avalon",
+      "reason": "DISCONTINUED - Avalon production ended August 2022. No 2023+ models exist.",
+      "sources": ["caranddriver.com", "pressroom.toyota.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Avalon",
+      "reason": "DISCONTINUED - Avalon production ended August 2022. No 2023+ models exist.",
+      "sources": ["caranddriver.com", "pressroom.toyota.com"]
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "bZ4X",
+      "reason": "MODEL NAME CHANGE - 2026+ is called 'Toyota bZ' not 'bZ4X'. Update model name.",
+      "sources": ["pressroom.toyota.com", "toyota.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "C-HR",
+      "reason": "NOT AVAILABLE IN USA - C-HR launched in USA for 2018 model year. 2016 was Japan-only.",
+      "sources": ["caranddriver.com", "wikipedia.org"]
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "C-HR",
+      "reason": "NOT AVAILABLE IN USA - C-HR launched in USA for 2018 model year.",
+      "sources": ["caranddriver.com", "wikipedia.org"]
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "C-HR",
+      "reason": "DISCONTINUED IN USA - C-HR discontinued in North America after 2022. Gen 2 not sold in USA.",
+      "sources": ["caranddriver.com", "motortrend.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "C-HR",
+      "reason": "DISCONTINUED IN USA - C-HR discontinued in North America after 2022.",
+      "sources": ["caranddriver.com", "motortrend.com"]
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "C-HR",
+      "reason": "DISCONTINUED IN USA - C-HR discontinued in North America after 2022.",
+      "sources": ["caranddriver.com", "motortrend.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Corolla Cross",
+      "reason": "NOT AVAILABLE IN USA - Corolla Cross launched in USA as 2022 model (production Sept 2021).",
+      "sources": ["pressroom.toyota.com", "tirewheelguide.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Corolla Cross",
+      "reason": "NOT AVAILABLE IN USA - Corolla Cross launched in USA as 2022 model year.",
+      "sources": ["pressroom.toyota.com", "tirewheelguide.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "E-Z",
+      "reason": "INVALID MODEL - 'Toyota E-Z' does not exist. May be data entry error.",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "E-Z",
+      "reason": "INVALID MODEL - 'Toyota E-Z' does not exist.",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "E-Z",
+      "reason": "INVALID MODEL - 'Toyota E-Z' does not exist.",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "E-Z",
+      "reason": "INVALID MODEL - 'Toyota E-Z' does not exist.",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "E-Z",
+      "reason": "INVALID MODEL - 'Toyota E-Z' does not exist.",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "E-Z",
+      "reason": "INVALID MODEL - 'Toyota E-Z' does not exist.",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "E-Z",
+      "reason": "INVALID MODEL - 'Toyota E-Z' does not exist.",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "E-Z",
+      "reason": "INVALID MODEL - 'Toyota E-Z' does not exist.",
+      "sources": ["toyota.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Etios Valco",
+      "reason": "NOT SOLD IN USA - Etios Valco is Indonesia/India market only. Never sold in North America.",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Etios Valco",
+      "reason": "NOT SOLD IN USA - Etios Valco is Indonesia/India market only.",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Etios Valco",
+      "reason": "NOT SOLD IN USA - Etios Valco is Indonesia/India market only.",
+      "sources": ["wikipedia.org"]
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Etios Valco",
+      "reason": "NOT SOLD IN USA - Etios Valco is Indonesia/India market only.",
+      "sources": ["wikipedia.org"]
+    }
+  ],
+  "verifiedVehicles": [
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "XLS", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "3rd generation (XX30), 2005-2012"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "XLS", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Touring", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "3rd generation (XX30)"
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XL", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "XLS", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "3rd generation (XX30)"
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "3rd generation (XX30)"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "Base", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "Limited", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "Last year of 3rd generation (XX30)"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "4th generation (XX40) starts 2013"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "4th generation (XX40)"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "4th generation (XX40)"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE Plus", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE Premium", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "4th generation (XX40)"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE Plus", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE Premium", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "4th generation (XX40)"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE Plus", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE Premium", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "Touring", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "Limited", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "Last year of 4th generation (XX40)"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x7.5", "oemTireSize": "215/55R17"},
+        {"name": "XSE", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "Touring", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "5th generation (XX50) starts 2019"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x7.5", "oemTireSize": "215/55R17"},
+        {"name": "XSE", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "Touring", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "TRD", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "5th generation (XX50)"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x7.5", "oemTireSize": "215/55R17"},
+        {"name": "XLE AWD", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "XSE", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "XSE Nightshade", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "Touring", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Limited AWD", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "5th generation - AWD added 2021"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Avalon",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x7.5", "oemTireSize": "215/55R17"},
+        {"name": "XLE AWD", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "XSE", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "XSE Nightshade", "oemWheelSize": "19x8", "oemTireSize": "235/40R19"},
+        {"name": "Touring", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"},
+        {"name": "Limited AWD", "oemWheelSize": "18x8", "oemTireSize": "235/45R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "FINAL MODEL YEAR - Production ended August 2022"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "bZ4X",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "XLE AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "Limited AWD", "oemWheelSize": "20x8", "oemTireSize": "235/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["pressroom.toyota.com"],
+      "notes": "First year of bZ4X - Toyota's first BEV SUV"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "bZ4X",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "XLE AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "Limited AWD", "oemWheelSize": "20x8", "oemTireSize": "235/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["pressroom.toyota.com"],
+      "notes": "EA10 generation"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "bZ4X",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "XLE AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "Limited AWD", "oemWheelSize": "20x8", "oemTireSize": "235/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["pressroom.toyota.com"],
+      "notes": "EA10 generation"
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "bZ4X",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE FWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "XLE AWD", "oemWheelSize": "18x7.5", "oemTireSize": "235/60R18"},
+        {"name": "Limited AWD", "oemWheelSize": "20x8", "oemTireSize": "235/50R20"}
+      ],
+      "confidence": "high",
+      "sources": ["pressroom.toyota.com"],
+      "notes": "Last year as 'bZ4X' - renamed to 'bZ' for 2026"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "C-HR",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "XLE", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "XLE Premium", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "First US model year"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "C-HR",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "XLE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "Trim lineup revised"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "C-HR",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "XLE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "Nightshade", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "2020 skipped in batch"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "C-HR",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "XLE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "Limited", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "Nightshade", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["caranddriver.com", "factorywheelreplacement.com"],
+      "notes": "FINAL US MODEL YEAR - Discontinued in North America"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "LE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "XLE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["toyotanation.com", "factorywheelreplacement.com"],
+      "notes": "XV20 generation (1997-2001)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "LE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "XLE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"}
+      ],
+      "confidence": "high",
+      "sources": ["toyotanation.com", "factorywheelreplacement.com"],
+      "notes": "Last XV20 generation"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "XLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["toyotanation.com", "factorywheelreplacement.com"],
+      "notes": "XV30 generation starts (2002-2006)"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "XLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["toyotanation.com", "factorywheelreplacement.com"],
+      "notes": "XV30 generation"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "XLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["toyotanation.com", "factorywheelreplacement.com"],
+      "notes": "XV30 generation"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "15x6", "oemTireSize": "205/65R15"},
+        {"name": "SE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "XLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["toyotanation.com", "factorywheelreplacement.com"],
+      "notes": "XV30 generation"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["toyotanation.com", "factorywheelreplacement.com"],
+      "notes": "XV40 generation starts (2007-2011)"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "CE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["toyotanation.com", "factorywheelreplacement.com"],
+      "notes": "XV40 generation"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"},
+        {"name": "SE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "XLE", "oemWheelSize": "16x6.5", "oemTireSize": "215/60R16"}
+      ],
+      "confidence": "high",
+      "sources": ["toyotanation.com", "factorywheelreplacement.com"],
+      "notes": "XV40 generation"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "L", "oemWheelSize": "16x6.5", "oemTireSize": "205/65R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "205/65R16"},
+        {"name": "SE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "SE V6", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["factorywheelreplacement.com", "toyotanation.com"],
+      "notes": "XV50 generation starts (2012-2017)"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "L", "oemWheelSize": "16x6.5", "oemTireSize": "205/65R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "205/65R16"},
+        {"name": "SE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "SE V6", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["factorywheelreplacement.com", "toyotanation.com"],
+      "notes": "XV50 generation"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Camry",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "L", "oemWheelSize": "16x6.5", "oemTireSize": "205/65R16"},
+        {"name": "LE", "oemWheelSize": "16x6.5", "oemTireSize": "205/65R16"},
+        {"name": "SE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"},
+        {"name": "SE V6", "oemWheelSize": "18x7.5", "oemTireSize": "225/45R18"},
+        {"name": "XLE", "oemWheelSize": "17x7", "oemTireSize": "215/55R17"}
+      ],
+      "confidence": "high",
+      "sources": ["factorywheelreplacement.com", "toyotanation.com"],
+      "notes": "XV50 generation"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Celica",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "GT", "oemWheelSize": "15x6", "oemTireSize": "195/60R15"},
+        {"name": "GT-S", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"}
+      ],
+      "confidence": "high",
+      "sources": ["size-tire.com", "caranddriver.com"],
+      "notes": "7th generation T230 (2000-2005)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Celica",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "GT", "oemWheelSize": "15x6", "oemTireSize": "195/60R15"},
+        {"name": "GT-S", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"}
+      ],
+      "confidence": "high",
+      "sources": ["size-tire.com", "caranddriver.com"],
+      "notes": "7th generation T230"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Celica",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "GT", "oemWheelSize": "15x6", "oemTireSize": "195/60R15"},
+        {"name": "GT-S", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"}
+      ],
+      "confidence": "high",
+      "sources": ["size-tire.com", "caranddriver.com"],
+      "notes": "7th generation T230"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Celica",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "GT", "oemWheelSize": "15x6", "oemTireSize": "195/60R15"},
+        {"name": "GT-S", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"}
+      ],
+      "confidence": "high",
+      "sources": ["size-tire.com", "caranddriver.com"],
+      "notes": "7th generation T230"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Celica",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "GT", "oemWheelSize": "15x6", "oemTireSize": "195/60R15"},
+        {"name": "GT-S", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"}
+      ],
+      "confidence": "high",
+      "sources": ["size-tire.com", "caranddriver.com"],
+      "notes": "7th generation T230"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Celica",
+      "boltPattern": "5x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "GT", "oemWheelSize": "15x6", "oemTireSize": "195/60R15"},
+        {"name": "GT-S", "oemWheelSize": "16x6.5", "oemTireSize": "205/50R16"}
+      ],
+      "confidence": "high",
+      "sources": ["size-tire.com", "caranddriver.com"],
+      "notes": "FINAL MODEL YEAR - Celica discontinued after 2005"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Corolla Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "LE", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "XLE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "pressroom.toyota.com"],
+      "notes": "First US model year (XG10 generation)"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Corolla Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "LE", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "XLE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "SE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "pressroom.toyota.com"],
+      "notes": "XG10 generation"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Corolla Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "LE", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "XLE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "SE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "pressroom.toyota.com"],
+      "notes": "XG10 generation"
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Corolla Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "LE", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "XLE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "SE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "pressroom.toyota.com"],
+      "notes": "XG10 generation"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Corolla Cross",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        {"name": "L", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "LE", "oemWheelSize": "17x6.5", "oemTireSize": "215/60R17"},
+        {"name": "XLE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"},
+        {"name": "SE", "oemWheelSize": "18x7", "oemTireSize": "225/50R18"}
+      ],
+      "confidence": "medium",
+      "sources": ["pressroom.toyota.com"],
+      "notes": "Future model year - specs based on current generation"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Echo",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base 2dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"},
+        {"name": "Base 4dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"}
+      ],
+      "confidence": "high",
+      "sources": ["wheelsynergy.com", "caranddriver.com"],
+      "notes": "First model year (XP10 platform)"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Echo",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base 2dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"},
+        {"name": "Base 4dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"}
+      ],
+      "confidence": "high",
+      "sources": ["wheelsynergy.com", "caranddriver.com"],
+      "notes": "XP10 platform"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Echo",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base 2dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"},
+        {"name": "Base 4dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"}
+      ],
+      "confidence": "high",
+      "sources": ["wheelsynergy.com", "caranddriver.com"],
+      "notes": "XP10 platform"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Echo",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base 2dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"},
+        {"name": "Base 4dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"}
+      ],
+      "confidence": "high",
+      "sources": ["wheelsynergy.com", "caranddriver.com"],
+      "notes": "XP10 platform"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Echo",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base 2dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"},
+        {"name": "Base 4dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"}
+      ],
+      "confidence": "high",
+      "sources": ["wheelsynergy.com", "caranddriver.com"],
+      "notes": "XP10 platform"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Echo",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        {"name": "Base 2dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"},
+        {"name": "Base 4dr", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14"}
+      ],
+      "confidence": "high",
+      "sources": ["wheelsynergy.com", "caranddriver.com"],
+      "notes": "FINAL MODEL YEAR - Echo discontinued, replaced by Yaris"
+    }
+  ]
+}

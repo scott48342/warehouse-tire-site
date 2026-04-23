@@ -1,0 +1,794 @@
+{
+  "batch": "batch-44-japanese",
+  "verifiedAt": "2026-04-23",
+  "verifiedBy": "subagent",
+  "vehicleCount": 58,
+  "validCount": 35,
+  "invalidCount": 23,
+  "sources": ["tiresize.com", "caranddriver.com", "motortrend.com", "toyota.com pressroom", "carbuzz.com", "wikipedia.org", "theyotagarage.com"],
+  
+  "invalidVehicles": [
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "tundra",
+      "reason": "Future model year - not yet released as of April 2026"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "vienta",
+      "reason": "Not sold in US market - Vienta was Australian/Asian market only"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "vios-fs",
+      "reason": "Not sold in US market - Vios is Southeast Asian market only"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "vios-fs",
+      "reason": "Not sold in US market - Vios is Southeast Asian market only"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "vios-fs",
+      "reason": "Not sold in US market - Vios is Southeast Asian market only"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "vios-fs",
+      "reason": "Not sold in US market - Vios is Southeast Asian market only"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "vios-fs",
+      "reason": "Not sold in US market - Vios is Southeast Asian market only"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "vios-fs",
+      "reason": "Not sold in US market - Vios is Southeast Asian market only"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "xa",
+      "reason": "Wrong brand - This is SCION xA (2004-2006), not Toyota. Scion was Toyota's youth brand."
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "xa",
+      "reason": "Wrong brand - This is SCION xA (2004-2006), not Toyota"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "xa",
+      "reason": "Wrong brand - This is SCION xA (2004-2006), not Toyota"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "xa",
+      "reason": "Model year doesn't exist - Scion xA was only sold 2004-2006"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "yaris",
+      "reason": "US Yaris didn't exist until 2007 - 2000 was Toyota Echo in US"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "yaris",
+      "reason": "US Yaris didn't exist until 2007 - 2001 was Toyota Echo in US"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "yaris",
+      "reason": "US Yaris didn't exist until 2007 - 2002 was Toyota Echo in US"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "yaris",
+      "reason": "US Yaris didn't exist until 2007 - 2003 was Toyota Echo in US"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "yaris",
+      "reason": "US Yaris didn't exist until 2007 - 2004 was Toyota Echo in US"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "yaris",
+      "reason": "US Yaris didn't exist until 2007 - 2005 was Toyota Echo in US"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "yaris",
+      "reason": "US Yaris didn't exist until 2007 - Yaris name started with 2007 model year"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "venza",
+      "reason": "Venza was discontinued after 2024 model year - replaced by Crown Signia"
+    }
+  ],
+
+  "verifiedVehicles": [
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "Base/SR5", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Limited/Platinum (20in)", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "motortrend.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "Base/SR5", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "motortrend.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "Base/SR5", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "motortrend.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "Base/SR5", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "motortrend.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum/1794", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "motortrend.com"],
+      "notes": "2014 was a major refresh year"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum/1794", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" },
+        { "name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "motortrend.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum/1794", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" },
+        { "name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum/1794", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" },
+        { "name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "motortrend.com"]
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum/1794", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" },
+        { "name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum/1794", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" },
+        { "name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum/1794", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" },
+        { "name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "2nd Gen (2007-2021)",
+      "boltPattern": "5x150",
+      "hubBore": 110,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "255/70R18" },
+        { "name": "SR5", "oemWheelSize": "18x8", "oemTireSize": "255/70R18 or 275/65R18" },
+        { "name": "Limited", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" },
+        { "name": "1794 Edition", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" },
+        { "name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "TRD Off-Road", "oemWheelSize": "18x8", "oemTireSize": "275/65R18" },
+        { "name": "TRD Sport", "oemWheelSize": "20x8", "oemTireSize": "275/55R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of 2nd generation"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "3rd Gen (2022-present)",
+      "boltPattern": "6x139.7",
+      "hubBore": 95,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "245/75R18" },
+        { "name": "SR5", "oemWheelSize": "18x8 or 20x8", "oemTireSize": "265/70R18 or 265/60R20" },
+        { "name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "265/60R20" },
+        { "name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "265/60R20" },
+        { "name": "1794 Edition", "oemWheelSize": "20x8", "oemTireSize": "265/60R20" },
+        { "name": "Capstone", "oemWheelSize": "22x8", "oemTireSize": "265/50R22" },
+        { "name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "285/65R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "theyotagarage.com", "toyota.com pressroom"]
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "3rd Gen (2022-present)",
+      "boltPattern": "6x139.7",
+      "hubBore": 95,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "245/75R18" },
+        { "name": "SR5", "oemWheelSize": "18x8 or 20x8", "oemTireSize": "265/70R18 or 265/60R20" },
+        { "name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "265/60R20" },
+        { "name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "265/60R20" },
+        { "name": "1794 Edition", "oemWheelSize": "20x8", "oemTireSize": "265/60R20" },
+        { "name": "Capstone", "oemWheelSize": "22x8", "oemTireSize": "265/50R22" },
+        { "name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "285/65R18" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "toyota.com pressroom"]
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Tundra",
+      "generation": "3rd Gen (2022-present)",
+      "boltPattern": "6x139.7",
+      "hubBore": 95,
+      "trims": [
+        { "name": "SR", "oemWheelSize": "18x8", "oemTireSize": "245/75R18" },
+        { "name": "SR5", "oemWheelSize": "18x8 or 20x8", "oemTireSize": "265/70R18 or 265/60R20" },
+        { "name": "Limited", "oemWheelSize": "20x8", "oemTireSize": "265/60R20" },
+        { "name": "Platinum", "oemWheelSize": "20x8", "oemTireSize": "265/60R20" },
+        { "name": "1794 Edition", "oemWheelSize": "20x8", "oemTireSize": "265/60R20" },
+        { "name": "Capstone", "oemWheelSize": "22x8", "oemTireSize": "265/50R22" },
+        { "name": "TRD Pro", "oemWheelSize": "18x8", "oemTireSize": "285/65R18" }
+      ],
+      "confidence": "high",
+      "sources": ["toyota.com pressroom", "wikipedia.org"],
+      "notes": "2025 adds TRD Rally Package on all trims"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Venza",
+      "generation": "1st Gen (2009-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "4-Cylinder", "oemWheelSize": "19x7.5", "oemTireSize": "245/55R19" },
+        { "name": "V6", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Venza",
+      "generation": "1st Gen (2009-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "4-Cylinder", "oemWheelSize": "19x7.5", "oemTireSize": "245/55R19" },
+        { "name": "V6", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Venza",
+      "generation": "1st Gen (2009-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "4-Cylinder", "oemWheelSize": "19x7.5", "oemTireSize": "245/55R19" },
+        { "name": "V6", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "factorywheelreplacement.com"]
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Venza",
+      "generation": "1st Gen (2009-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "LE/XLE", "oemWheelSize": "19x7.5", "oemTireSize": "245/55R19" },
+        { "name": "LE V6/XLE V6", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20" },
+        { "name": "Limited", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Venza",
+      "generation": "1st Gen (2009-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "LE/XLE", "oemWheelSize": "19x7.5", "oemTireSize": "245/55R19" },
+        { "name": "LE V6/XLE V6", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20" },
+        { "name": "Limited", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Venza",
+      "generation": "1st Gen (2009-2015)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "LE/XLE", "oemWheelSize": "19x7.5", "oemTireSize": "245/55R19" },
+        { "name": "LE V6/XLE V6", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20" },
+        { "name": "Limited", "oemWheelSize": "20x7.5", "oemTireSize": "245/50R20" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Last year of 1st gen Venza"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Venza",
+      "generation": "2nd Gen (2021-2024)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "LE", "oemWheelSize": "18x7", "oemTireSize": "225/60R18" },
+        { "name": "XLE", "oemWheelSize": "19x7", "oemTireSize": "225/55R19" },
+        { "name": "Limited", "oemWheelSize": "19x7", "oemTireSize": "225/55R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "2nd gen Venza returned as hybrid-only"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Venza",
+      "generation": "2nd Gen (2021-2024)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "LE", "oemWheelSize": "18x7", "oemTireSize": "225/60R18" },
+        { "name": "XLE", "oemWheelSize": "19x7", "oemTireSize": "225/55R19" },
+        { "name": "Nightshade Edition", "oemWheelSize": "19x7", "oemTireSize": "225/55R19" },
+        { "name": "Limited", "oemWheelSize": "19x7", "oemTireSize": "225/55R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"]
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Venza",
+      "generation": "2nd Gen (2021-2024)",
+      "boltPattern": "5x114.3",
+      "hubBore": 60.1,
+      "trims": [
+        { "name": "LE", "oemWheelSize": "18x7", "oemTireSize": "225/60R18" },
+        { "name": "XLE", "oemWheelSize": "19x7", "oemTireSize": "225/55R19" },
+        { "name": "Nightshade Edition", "oemWheelSize": "19x7", "oemTireSize": "225/55R19" },
+        { "name": "Limited", "oemWheelSize": "19x7", "oemTireSize": "225/55R19" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "Final year of Venza - replaced by Crown Signia for 2025"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "1st Gen US (2007-2011)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Hatchback/Sedan Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14" },
+        { "name": "Hatchback/Sedan (15in opt)", "oemWheelSize": "15x5.5", "oemTireSize": "185/60R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"]
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "1st Gen US (2007-2011)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Hatchback/Sedan Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14" },
+        { "name": "S Hatchback/S Sedan", "oemWheelSize": "15x5.5", "oemTireSize": "185/60R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "1st Gen US (2007-2011)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Liftback Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14" },
+        { "name": "Liftback S", "oemWheelSize": "15x5.5", "oemTireSize": "185/60R15" },
+        { "name": "Sedan Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14" },
+        { "name": "Sedan S", "oemWheelSize": "15x5.5", "oemTireSize": "185/60R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "1st Gen US (2007-2011)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Liftback Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14" },
+        { "name": "Liftback S", "oemWheelSize": "15x5.5", "oemTireSize": "185/60R15" },
+        { "name": "Sedan Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14" },
+        { "name": "Sedan S", "oemWheelSize": "15x5.5", "oemTireSize": "185/60R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "1st Gen US (2007-2011)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "Liftback Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14" },
+        { "name": "Liftback S", "oemWheelSize": "15x5.5", "oemTireSize": "185/60R15" },
+        { "name": "Sedan Base", "oemWheelSize": "14x5.5", "oemTireSize": "175/65R14" },
+        { "name": "Sedan S", "oemWheelSize": "15x5.5", "oemTireSize": "185/60R15" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "2nd Gen US (2012-2018)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "L/LE", "oemWheelSize": "15x5.5", "oemTireSize": "175/65R15" },
+        { "name": "SE", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "2012 redesign"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "2nd Gen US (2012-2018)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "L/LE", "oemWheelSize": "15x5.5", "oemTireSize": "175/65R15" },
+        { "name": "SE", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "2nd Gen US (2012-2018)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "L/LE", "oemWheelSize": "15x5.5", "oemTireSize": "175/65R15" },
+        { "name": "SE", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "2nd Gen US (2012-2018)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "L/LE", "oemWheelSize": "15x5.5", "oemTireSize": "175/65R15" },
+        { "name": "SE", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "2nd Gen US (2012-2018)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "L/LE", "oemWheelSize": "15x5.5", "oemTireSize": "175/65R15" },
+        { "name": "SE", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "2nd Gen US (2012-2018)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "L/LE", "oemWheelSize": "15x5.5", "oemTireSize": "175/65R15" },
+        { "name": "SE", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" },
+        { "name": "iA", "oemWheelSize": "16x5.5", "oemTireSize": "185/60R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"],
+      "notes": "Yaris iA was Mazda2-based"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "2nd Gen US (2012-2018)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "L/LE", "oemWheelSize": "15x5.5", "oemTireSize": "175/65R15" },
+        { "name": "SE", "oemWheelSize": "16x6", "oemTireSize": "195/50R16" },
+        { "name": "iA", "oemWheelSize": "16x5.5", "oemTireSize": "185/60R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com"]
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "3rd Gen US (2019-2020, Mazda2-based)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "L", "oemWheelSize": "15x5.5", "oemTireSize": "185/65R15" },
+        { "name": "LE/XLE", "oemWheelSize": "16x5.5", "oemTireSize": "185/60R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "caranddriver.com"],
+      "notes": "2019 Yaris was Mazda2-based (rebadged)"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Yaris",
+      "generation": "3rd Gen US (2019-2020, Mazda2-based)",
+      "boltPattern": "4x100",
+      "hubBore": 54.1,
+      "trims": [
+        { "name": "L", "oemWheelSize": "15x5.5", "oemTireSize": "185/65R15" },
+        { "name": "LE/XLE", "oemWheelSize": "16x5.5", "oemTireSize": "185/60R16" },
+        { "name": "LE Hatchback/XLE Hatchback", "oemWheelSize": "16x5.5", "oemTireSize": "185/60R16" }
+      ],
+      "confidence": "high",
+      "sources": ["tiresize.com", "motortrend.com", "caranddriver.com"],
+      "notes": "Final year of US Yaris - discontinued June 2020"
+    }
+  ],
+
+  "summary": {
+    "tundra": {
+      "validYears": [2008, 2009, 2010, 2011, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025],
+      "invalidYears": [2026],
+      "notes": "2nd gen (2007-2021) uses 5x150 / 110mm. 3rd gen (2022+) uses 6x139.7 / 95mm. Batch missing 2012, 2013, 2022 which are valid years."
+    },
+    "venza": {
+      "validYears": [2009, 2010, 2011, 2013, 2014, 2015, 2021, 2023, 2024],
+      "invalidYears": [2025],
+      "notes": "1st gen 2009-2015, discontinued 2016-2020, 2nd gen 2021-2024. 2025 Venza replaced by Crown Signia. Batch missing 2012, 2022 which are valid."
+    },
+    "vienta": {
+      "validYears": [],
+      "invalidYears": [2000],
+      "notes": "Never sold in US - Australian/Asian market vehicle only"
+    },
+    "vios-fs": {
+      "validYears": [],
+      "invalidYears": [2017, 2018, 2019, 2020, 2021, 2022],
+      "notes": "Never sold in US - Southeast Asian market vehicle only"
+    },
+    "xa": {
+      "validYears": [],
+      "invalidYears": [2004, 2005, 2006, 2007],
+      "notes": "This is SCION xA, not Toyota. 2004-2006 valid under Scion brand. 2007 doesn't exist."
+    },
+    "yaris": {
+      "validYears": [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
+      "invalidYears": [2000, 2001, 2002, 2003, 2004, 2005, 2006],
+      "notes": "US Yaris started 2007. 2000-2005 was Toyota Echo in US. Discontinued after 2020."
+    }
+  },
+
+  "recommendations": {
+    "removeFromDatabase": [
+      "2026 Toyota Tundra - Future year",
+      "2000 Toyota Vienta - Not US market",
+      "2017-2022 Toyota Vios-FS - Not US market",
+      "2004-2007 Toyota xA - Wrong brand (Scion) or doesn't exist",
+      "2000-2006 Toyota Yaris - Wrong years for US",
+      "2025 Toyota Venza - Discontinued"
+    ],
+    "addToDatabase": [
+      "2004-2006 Scion xA - With 4x100 / 54.1mm specs",
+      "2000-2005 Toyota Echo - Predecessor to Yaris"
+    ],
+    "missingValidYears": [
+      "2012 Toyota Tundra",
+      "2013 Toyota Tundra", 
+      "2022 Toyota Tundra (3rd gen launch)",
+      "2012 Toyota Venza",
+      "2022 Toyota Venza"
+    ]
+  }
+}

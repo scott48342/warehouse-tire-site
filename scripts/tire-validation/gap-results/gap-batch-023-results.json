@@ -1,0 +1,854 @@
+{
+  "batchId": 23,
+  "researchedAt": "2026-04-21T23:50:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "usVehicles": 27,
+    "nonUsVehicles": 21,
+    "invalidYears": 2
+  },
+  "results": [
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "gt",
+      "status": "found",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Base Model",
+          "tireSizes": {
+            "front": "245/35R20",
+            "rear": "325/30R20"
+          },
+          "wheelDiameters": {
+            "front": 20,
+            "rear": 20
+          }
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "gt",
+      "status": "found",
+      "note": "Same specs as 2017 (continuation year)",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Base Model",
+          "tireSizes": {
+            "front": "245/35R20",
+            "rear": "325/30R20"
+          },
+          "wheelDiameters": {
+            "front": 20,
+            "rear": 20
+          }
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "gt",
+      "status": "found",
+      "note": "Same specs as 2017 (continuation year)",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Base Model",
+          "tireSizes": {
+            "front": "245/35R20",
+            "rear": "325/30R20"
+          },
+          "wheelDiameters": {
+            "front": 20,
+            "rear": 20
+          }
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "gt",
+      "status": "found",
+      "note": "Same specs as 2017 (continuation year)",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Base Model",
+          "tireSizes": {
+            "front": "245/35R20",
+            "rear": "325/30R20"
+          },
+          "wheelDiameters": {
+            "front": 20,
+            "rear": 20
+          }
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "gt",
+      "status": "found",
+      "note": "Same specs as 2017 (continuation year)",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Base Model",
+          "tireSizes": {
+            "front": "245/35R20",
+            "rear": "325/30R20"
+          },
+          "wheelDiameters": {
+            "front": 20,
+            "rear": 20
+          }
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "gt",
+      "status": "found",
+      "note": "Same specs as 2017 (continuation year)",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Base Model",
+          "tireSizes": {
+            "front": "245/35R20",
+            "rear": "325/30R20"
+          },
+          "wheelDiameters": {
+            "front": 20,
+            "rear": 20
+          }
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "ka-freestyle",
+      "status": "notUS",
+      "notUS": true,
+      "note": "South American market vehicle - not sold in US"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "ka-freestyle",
+      "status": "notUS",
+      "notUS": true,
+      "note": "South American market vehicle - not sold in US"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "ka-freestyle",
+      "status": "notUS",
+      "notUS": true,
+      "note": "South American market vehicle - not sold in US"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "ka-freestyle",
+      "status": "notUS",
+      "notUS": true,
+      "note": "South American market vehicle - not sold in US"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "ka-freestyle",
+      "status": "notUS",
+      "notUS": true,
+      "note": "South American market vehicle - not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "ltd",
+      "status": "notUS",
+      "notUS": true,
+      "note": "Australian market vehicle - not sold in US"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "ltd",
+      "status": "notUS",
+      "notUS": true,
+      "note": "Australian market vehicle - not sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "ltd",
+      "status": "notUS",
+      "notUS": true,
+      "note": "Australian market vehicle - not sold in US"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "ltd",
+      "status": "notUS",
+      "notUS": true,
+      "note": "Australian market vehicle - not sold in US"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "ltd",
+      "status": "notUS",
+      "notUS": true,
+      "note": "Australian market vehicle - not sold in US"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "ltd",
+      "status": "notUS",
+      "notUS": true,
+      "note": "Australian market vehicle - not sold in US"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "ltd",
+      "status": "notUS",
+      "notUS": true,
+      "note": "Australian market vehicle - not sold in US"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "ltd",
+      "status": "notUS",
+      "notUS": true,
+      "note": "Australian market vehicle - not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "maverick",
+      "status": "notUS",
+      "notUS": true,
+      "note": "European/Australian market vehicle - not the US 2022+ compact pickup"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "maverick",
+      "status": "notUS",
+      "notUS": true,
+      "note": "European/Australian market vehicle - not the US 2022+ compact pickup"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "maverick",
+      "status": "notUS",
+      "notUS": true,
+      "note": "European/Australian market vehicle - not the US 2022+ compact pickup"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "maverick",
+      "status": "notUS",
+      "notUS": true,
+      "note": "European/Australian market vehicle - not the US 2022+ compact pickup"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "maverick",
+      "status": "notUS",
+      "notUS": true,
+      "note": "European/Australian market vehicle - not the US 2022+ compact pickup"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "maverick",
+      "status": "notUS",
+      "notUS": true,
+      "note": "European/Australian market vehicle - not the US 2022+ compact pickup"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "maverick",
+      "status": "notUS",
+      "notUS": true,
+      "note": "European/Australian market vehicle - not the US 2022+ compact pickup"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "maverick",
+      "status": "notUS",
+      "notUS": true,
+      "note": "European/Australian market vehicle - not the US 2022+ compact pickup"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "maverick",
+      "status": "found",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "XL",
+          "tireSizes": ["225/65R17"],
+          "wheelDiameters": [17]
+        },
+        {
+          "name": "XLT",
+          "tireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+          "wheelDiameters": [17, 18]
+        },
+        {
+          "name": "Lariat",
+          "tireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+          "wheelDiameters": [17, 18]
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "maverick",
+      "status": "found",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "XL",
+          "tireSizes": ["225/65R17"],
+          "wheelDiameters": [17]
+        },
+        {
+          "name": "XLT",
+          "tireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+          "wheelDiameters": [17, 18]
+        },
+        {
+          "name": "Lariat",
+          "tireSizes": ["225/65R17", "235/65R17", "225/60R18"],
+          "wheelDiameters": [17, 18]
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "maverick",
+      "status": "found",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "XL",
+          "tireSizes": ["225/65R17"],
+          "wheelDiameters": [17]
+        },
+        {
+          "name": "XLT",
+          "tireSizes": ["225/65R17", "225/55R19"],
+          "wheelDiameters": [17, 19]
+        },
+        {
+          "name": "Lariat",
+          "tireSizes": ["225/55R19"],
+          "wheelDiameters": [19]
+        },
+        {
+          "name": "Tremor",
+          "tireSizes": ["235/65R17"],
+          "wheelDiameters": [17]
+        },
+        {
+          "name": "Lobo",
+          "tireSizes": ["225/55R19"],
+          "wheelDiameters": [19]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "maverick",
+      "status": "found",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "XL",
+          "tireSizes": ["225/65R17"],
+          "wheelDiameters": [17]
+        },
+        {
+          "name": "XLT",
+          "tireSizes": ["225/65R17", "225/55R19"],
+          "wheelDiameters": [17, 19]
+        },
+        {
+          "name": "Lariat",
+          "tireSizes": ["225/55R19"],
+          "wheelDiameters": [19]
+        },
+        {
+          "name": "Tremor",
+          "tireSizes": ["225/65R17"],
+          "wheelDiameters": [17]
+        },
+        {
+          "name": "Lobo",
+          "tireSizes": ["225/55R19"],
+          "wheelDiameters": [19]
+        }
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "mustang-boss-302",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Boss 302",
+          "tireSizes": {
+            "front": "255/40R19",
+            "rear": "285/35R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        },
+        {
+          "name": "Boss 302 Laguna Seca",
+          "tireSizes": {
+            "front": "255/40R19",
+            "rear": "285/35R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "mustang-boss-302",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Boss 302",
+          "tireSizes": {
+            "front": "255/40R19",
+            "rear": "285/35R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        },
+        {
+          "name": "Boss 302 Laguna Seca",
+          "tireSizes": {
+            "front": "255/40R19",
+            "rear": "285/35R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "mustang-cobra",
+      "status": "found",
+      "note": "Listed as 'Cobra R' trim under Ford Mustang - limited edition track car",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Cobra R",
+          "tireSizes": ["265/40R18"],
+          "wheelDiameters": [18]
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "mustang-cobra",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Cobra",
+          "tireSizes": ["245/45R17"],
+          "wheelDiameters": [17]
+        },
+        {
+          "name": "Cobra Convertible",
+          "tireSizes": ["245/45R17"],
+          "wheelDiameters": [17]
+        }
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "mustang-cobra",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com - Terminator Cobra",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Cobra",
+          "tireSizes": ["275/40R17"],
+          "wheelDiameters": [17]
+        },
+        {
+          "name": "Cobra Convertible",
+          "tireSizes": ["275/40R17"],
+          "wheelDiameters": [17]
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "mustang-cobra",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com - Terminator Cobra",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Cobra",
+          "tireSizes": ["275/40R17"],
+          "wheelDiameters": [17]
+        },
+        {
+          "name": "Cobra Convertible",
+          "tireSizes": ["275/40R17"],
+          "wheelDiameters": [17]
+        }
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Mach 1",
+          "tireSizes": ["245/45R17"],
+          "wheelDiameters": [17]
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": false,
+      "trims": [
+        {
+          "name": "Mach 1",
+          "tireSizes": ["245/45R17"],
+          "wheelDiameters": [17]
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "status": "invalid",
+      "note": "ERROR: 2019 Mach 1 does not exist. Mach 1 was only made 2003-2004 and returned in 2021. This is likely a data error in the source."
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "status": "invalid",
+      "note": "ERROR: 2011 Shelby GT350 does not exist. The GT350 didn't return until 2016. Only GT500 existed in 2011."
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "status": "invalid",
+      "note": "ERROR: 2012 Shelby GT350 does not exist. The GT350 didn't return until 2016. Only GT500 existed in 2012."
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "status": "invalid",
+      "note": "ERROR: 2013 Shelby GT350 does not exist. The GT350 didn't return until 2016. Only GT500 existed in 2013."
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Shelby GT350",
+          "tireSizes": {
+            "front": "295/35R19",
+            "rear": "305/35R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        },
+        {
+          "name": "Shelby GT350R",
+          "tireSizes": {
+            "front": "305/30R19",
+            "rear": "315/30R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Shelby GT350",
+          "tireSizes": {
+            "front": "295/35R19",
+            "rear": "305/35R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        },
+        {
+          "name": "Shelby GT350R",
+          "tireSizes": {
+            "front": "305/30R19",
+            "rear": "315/30R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Shelby GT350",
+          "tireSizes": {
+            "front": "295/35R19",
+            "rear": "305/35R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        },
+        {
+          "name": "Shelby GT350R",
+          "tireSizes": {
+            "front": "305/30R19",
+            "rear": "315/30R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        }
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Shelby GT500 Coupe",
+          "tireSizes": {
+            "front": "255/45R18",
+            "rear": "285/40R18"
+          },
+          "wheelDiameters": {
+            "front": 18,
+            "rear": 18
+          }
+        },
+        {
+          "name": "Shelby GT500 Convertible",
+          "tireSizes": {
+            "front": "255/45R18",
+            "rear": "285/40R18"
+          },
+          "wheelDiameters": {
+            "front": 18,
+            "rear": 18
+          }
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Shelby GT500 Coupe",
+          "tireSizes": {
+            "front": "255/45R18",
+            "rear": "285/40R18"
+          },
+          "wheelDiameters": {
+            "front": 18,
+            "rear": 18
+          }
+        },
+        {
+          "name": "Shelby GT500 Convertible",
+          "tireSizes": {
+            "front": "255/45R18",
+            "rear": "285/40R18"
+          },
+          "wheelDiameters": {
+            "front": 18,
+            "rear": 18
+          }
+        },
+        {
+          "name": "Shelby GT500KR",
+          "tireSizes": {
+            "front": "255/45R18",
+            "rear": "285/40R18"
+          },
+          "wheelDiameters": {
+            "front": 18,
+            "rear": 18
+          }
+        }
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang on tiresize.com",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Shelby GT500 Coupe",
+          "tireSizes": {
+            "front": "255/45R18",
+            "rear": "285/40R18"
+          },
+          "wheelDiameters": {
+            "front": 18,
+            "rear": 18
+          }
+        },
+        {
+          "name": "Shelby GT500 Convertible",
+          "tireSizes": {
+            "front": "255/45R18",
+            "rear": "285/40R18"
+          },
+          "wheelDiameters": {
+            "front": 18,
+            "rear": 18
+          }
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "mustang-shelby-gt500",
+      "status": "found",
+      "note": "Listed as trim under Ford Mustang - upgraded to 19\" wheels on Coupe",
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Shelby GT500 Coupe",
+          "tireSizes": {
+            "front": "255/40R19",
+            "rear": "285/35R19"
+          },
+          "wheelDiameters": {
+            "front": 19,
+            "rear": 19
+          }
+        },
+        {
+          "name": "Shelby GT500 Convertible",
+          "tireSizes": {
+            "front": "255/45R18",
+            "rear": "285/40R18"
+          },
+          "wheelDiameters": {
+            "front": 18,
+            "rear": 18
+          }
+        }
+      ]
+    }
+  ]
+}

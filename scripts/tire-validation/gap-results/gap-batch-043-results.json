@@ -1,0 +1,485 @@
+{
+  "batchId": 43,
+  "processedAt": "2026-04-21T23:57:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "notUS": 9,
+    "notFound": 13,
+    "found": 28
+  },
+  "vehicles": [
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqt",
+      "notUS": true,
+      "notes": "Europe-only electric van - not sold in US market"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "eqv",
+      "notUS": true,
+      "notes": "Europe-only electric van - not sold in US market"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "eqv",
+      "notUS": true,
+      "notes": "Europe-only electric van - not sold in US market"
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "eqv",
+      "notUS": true,
+      "notes": "Europe-only electric van - not sold in US market"
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "eqv",
+      "notUS": true,
+      "notes": "Europe-only electric van - not sold in US market"
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "eqv",
+      "notUS": true,
+      "notes": "Europe-only electric van - not sold in US market"
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "eqv",
+      "notUS": true,
+      "notes": "Europe-only electric van - not sold in US market"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "eqv",
+      "notUS": true,
+      "notes": "Europe-only electric van - not sold in US market"
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "g-class",
+      "tiresizeModel": "G550",
+      "tireSizes": ["265/60R18", "275/55R19", "275/50R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x130",
+      "found": true
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "g-class-amg",
+      "tiresizeModel": "G63",
+      "tireSizes": ["275/50R20", "285/45R21", "295/40R22"],
+      "wheelDiameters": [20, 21, 22],
+      "boltPattern": "5x130",
+      "found": true
+    },
+    {
+      "year": 2006,
+      "make": "mercedes",
+      "model": "gl-class",
+      "notFound": true,
+      "notes": "GL-Class (GL450) started production in 2007 - 2006 model year does not exist"
+    },
+    {
+      "year": 2007,
+      "make": "mercedes",
+      "model": "gl-class",
+      "tiresizeModel": "GL450",
+      "tireSizes": ["265/60R18", "275/55R19", "275/50R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2008,
+      "make": "mercedes",
+      "model": "gl-class",
+      "tiresizeModel": "GL450",
+      "tireSizes": ["265/60R18", "275/55R19", "275/50R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2009,
+      "make": "mercedes",
+      "model": "gl-class",
+      "tiresizeModel": "GL450",
+      "tireSizes": ["265/60R18", "275/55R19", "275/50R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2010,
+      "make": "mercedes",
+      "model": "gl-class",
+      "tiresizeModel": "GL450",
+      "tireSizes": ["275/55R19", "275/50R20"],
+      "wheelDiameters": [19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2011,
+      "make": "mercedes",
+      "model": "gl-class",
+      "tiresizeModel": "GL450",
+      "tireSizes": ["275/55R19", "275/50R20"],
+      "wheelDiameters": [19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2012,
+      "make": "mercedes",
+      "model": "gl-class",
+      "tiresizeModel": "GL450",
+      "tireSizes": ["275/55R19", "275/50R20"],
+      "wheelDiameters": [19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "gl-class",
+      "tiresizeModel": "GL450",
+      "tireSizes": ["275/55R19", "275/50R20"],
+      "wheelDiameters": [19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "gl-class",
+      "tiresizeModel": "GL450",
+      "tireSizes": ["275/55R19", "275/50R20"],
+      "wheelDiameters": [19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gl-class",
+      "tiresizeModel": "GL450",
+      "tireSizes": ["275/55R19", "275/50R20"],
+      "wheelDiameters": [19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gl-class",
+      "tiresizeModel": "GL450",
+      "tireSizes": ["275/55R19", "275/50R20"],
+      "wheelDiameters": [19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2013,
+      "make": "mercedes",
+      "model": "gl-class-amg",
+      "notFound": true,
+      "notes": "GL-Class AMG (GL63) started in 2014 - 2013 model year does not exist"
+    },
+    {
+      "year": 2014,
+      "make": "mercedes",
+      "model": "gl-class-amg",
+      "tiresizeModel": "GL63",
+      "tireSizes": ["295/40R21"],
+      "wheelDiameters": [21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "gl-class-amg",
+      "tiresizeModel": "GL63",
+      "tireSizes": ["295/40R21"],
+      "wheelDiameters": [21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "gl-class-amg",
+      "tiresizeModel": "GL63",
+      "tireSizes": ["295/40R21"],
+      "wheelDiameters": [21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "notFound": true,
+      "notes": "GLB-Class AMG (GLB35) started in 2021 - 2019 model year does not exist"
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "notFound": true,
+      "notes": "GLB-Class AMG (GLB35) started in 2021 - 2020 model year does not exist"
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "tiresizeModel": "GLB35",
+      "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "wheelDiameters": [19, 20, 21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "tiresizeModel": "GLB35",
+      "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "wheelDiameters": [19, 20, 21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "tiresizeModel": "GLB35",
+      "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "wheelDiameters": [19, 20, 21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "tiresizeModel": "GLB35",
+      "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "wheelDiameters": [19, 20, 21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "tiresizeModel": "GLB35",
+      "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "wheelDiameters": [19, 20, 21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glb-class-amg",
+      "tiresizeModel": "GLB35",
+      "tireSizes": ["235/50R19", "255/40R20", "255/35R21"],
+      "wheelDiameters": [19, 20, 21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "glc-class",
+      "notFound": true,
+      "notes": "GLC-Class (GLC300) started in 2016 - 2015 model year does not exist"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2020,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2021,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2022,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2023,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2024,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2025,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2026,
+      "make": "mercedes",
+      "model": "glc-class",
+      "tiresizeModel": "GLC300",
+      "tireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "wheelDiameters": [18, 19, 20],
+      "boltPattern": "5x112",
+      "found": true,
+      "notes": "2026 also has 4MATIC Coupe with staggered option: 255/45R20f-285/40R20r"
+    },
+    {
+      "year": 2015,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "notFound": true,
+      "notes": "GLC-Class AMG (GLC43/GLC63) started in 2017 - 2015 model year does not exist"
+    },
+    {
+      "year": 2016,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "notFound": true,
+      "notes": "GLC-Class AMG (GLC43/GLC63) started in 2017 - 2016 model year does not exist"
+    },
+    {
+      "year": 2017,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "tiresizeModel": "GLC-43",
+      "isStaggered": true,
+      "tireSizes": {
+        "option1": {"front": "255/45R20", "rear": "285/40R20"},
+        "option2": {"front": "255/40R21", "rear": "285/35R21"}
+      },
+      "wheelDiameters": [20, 21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2018,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "tiresizeModel": "GLC-43/GLC-63",
+      "isStaggered": true,
+      "tireSizes": {
+        "GLC43_option1": {"front": "255/45R20", "rear": "285/40R20"},
+        "GLC43_option2": {"front": "255/40R21", "rear": "285/35R21"},
+        "GLC63_option1": {"front": "265/45R20", "rear": "295/40R20"},
+        "GLC63_option2": {"front": "265/40R21", "rear": "295/35R21"}
+      },
+      "wheelDiameters": [20, 21],
+      "boltPattern": "5x112",
+      "found": true
+    },
+    {
+      "year": 2019,
+      "make": "mercedes",
+      "model": "glc-class-amg",
+      "tiresizeModel": "GLC-43/GLC-63",
+      "isStaggered": true,
+      "tireSizes": {
+        "GLC43_option1": {"front": "255/45R20", "rear": "285/40R20"},
+        "GLC43_option2": {"front": "255/40R21", "rear": "285/35R21"},
+        "GLC63_option1": {"front": "265/45R20", "rear": "295/40R20"},
+        "GLC63_option2": {"front": "265/40R21", "rear": "295/35R21"}
+      },
+      "wheelDiameters": [20, 21],
+      "boltPattern": "5x112",
+      "found": true
+    }
+  ]
+}

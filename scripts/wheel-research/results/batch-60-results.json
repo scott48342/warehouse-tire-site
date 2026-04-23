@@ -1,0 +1,1245 @@
+{
+  "batchId": "60",
+  "processedAt": "2026-04-21T21:17:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Quantum",
+      "specs": {
+        "boltPattern": "6x130",
+        "centerBore": 75.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 55 },
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ],
+        "notes": "South African market vehicle (HiAce-based minibus). OEM 215/70R16 or 235/65R16 tires."
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Quantum",
+      "specs": {
+        "boltPattern": "6x130",
+        "centerBore": 75.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 55 },
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ],
+        "notes": "South African market vehicle (HiAce-based minibus)."
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Quantum",
+      "specs": {
+        "boltPattern": "6x130",
+        "centerBore": 75.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 55 },
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ],
+        "notes": "South African market vehicle (HiAce-based minibus)."
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Quantum",
+      "specs": {
+        "boltPattern": "6x130",
+        "centerBore": 75.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 55 },
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ],
+        "notes": "South African market vehicle (HiAce-based minibus)."
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Quantum",
+      "specs": {
+        "boltPattern": "6x130",
+        "centerBore": 75.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 55 },
+          { "diameter": 17, "width": 7, "offset": 55 }
+        ],
+        "notes": "South African market vehicle (HiAce-based minibus). VI (H300) generation."
+      },
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 35 },
+          { "diameter": 18, "width": 7, "offset": 35 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "notes": "Fifth generation (XA50) continues. All RAV4 generations use same bolt pattern."
+      },
+      "source": "opplehouse.com, multiple sources",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 45 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ],
+        "notes": "Third generation (XA30). Final year of generation."
+      },
+      "source": "opplehouse.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 45 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ],
+        "notes": "Third generation (XA30)."
+      },
+      "source": "opplehouse.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 45 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ],
+        "notes": "Third generation (XA30)."
+      },
+      "source": "opplehouse.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 6.5, "offset": 45 },
+          { "diameter": 18, "width": 7, "offset": 45 }
+        ],
+        "notes": "Third generation (XA30) debut year."
+      },
+      "source": "opplehouse.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 35 },
+          { "diameter": 17, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Second generation (XA20). Final year of generation."
+      },
+      "source": "opplehouse.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 35 },
+          { "diameter": 17, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Second generation (XA20)."
+      },
+      "source": "opplehouse.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 35 },
+          { "diameter": 17, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Second generation (XA20)."
+      },
+      "source": "opplehouse.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 35 },
+          { "diameter": 17, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Second generation (XA20)."
+      },
+      "source": "opplehouse.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 35 },
+          { "diameter": 17, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "Second generation (XA20) debut year."
+      },
+      "source": "opplehouse.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "RAV4",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 35 },
+          { "diameter": 17, "width": 6.5, "offset": 35 }
+        ],
+        "notes": "First generation (XA10). Final year of first gen."
+      },
+      "source": "opplehouse.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "RAV4 Prime",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7, "offset": 35, "trim": "SE" },
+          { "diameter": 19, "width": 7.5, "offset": 40, "trim": "XSE" }
+        ],
+        "notes": "Plug-in hybrid. SE gets 18\" wheels, XSE gets 19\" wheels."
+      },
+      "source": "reddit.com/r/rav4prime",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "RAV4 Prime",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7, "offset": 35, "trim": "SE" },
+          { "diameter": 19, "width": 7.5, "offset": 40, "trim": "XSE" }
+        ],
+        "notes": "Plug-in hybrid. SE gets 18\" wheels, XSE gets 19\" wheels."
+      },
+      "source": "reddit.com/r/rav4prime",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "RAV4 Prime",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7, "offset": 35, "trim": "SE" },
+          { "diameter": 19, "width": 7.5, "offset": 40, "trim": "XSE" }
+        ],
+        "notes": "Plug-in hybrid. SE gets 18\" wheels, XSE gets 19\" wheels."
+      },
+      "source": "reddit.com/r/rav4prime",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "RAV4 Prime",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7, "offset": 35, "trim": "SE" },
+          { "diameter": 19, "width": 7.5, "offset": 40, "trim": "XSE" }
+        ],
+        "notes": "Plug-in hybrid. SE gets 18\" wheels, XSE gets 19\" wheels."
+      },
+      "source": "reddit.com/r/rav4prime",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "RAV4 Prime",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7, "offset": 35, "trim": "SE" },
+          { "diameter": 19, "width": 7.5, "offset": 40, "trim": "XSE" }
+        ],
+        "notes": "Plug-in hybrid debut year. SE gets 18\" wheels, XSE gets 19\" wheels."
+      },
+      "source": "reddit.com/r/rav4prime",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Rukus",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "Australian market vehicle (rebadged Scion xB). Final year."
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Rukus",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "Australian market vehicle (rebadged Scion xB)."
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Rukus",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "Australian market vehicle (rebadged Scion xB)."
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Rukus",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "Australian market vehicle (rebadged Scion xB)."
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Rukus",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "Australian market vehicle (rebadged Scion xB)."
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Rukus",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 54.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ],
+        "notes": "Australian market vehicle (rebadged Scion xB). Debut year."
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Third generation (XK80). Same platform as 2022+ Tundra."
+      },
+      "source": "fnwheels.com, hardrockoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Third generation (XK80). Same platform as 2022+ Tundra."
+      },
+      "source": "fnwheels.com, hardrockoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Third generation (XK80). Same platform as 2022+ Tundra."
+      },
+      "source": "fnwheels.com, hardrockoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 95.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 7.5, "offset": 60 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Third generation (XK80) debut year. Same platform as 2022+ Tundra."
+      },
+      "source": "fnwheels.com, hardrockoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60) final year. Note: 2022 had both 2nd gen (5x150) early production and 3rd gen (6x139.7) late production."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60) facelift."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60) facelift."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60) facelift debut."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60)."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60)."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60)."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60)."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60)."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60)."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60)."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60)."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60)."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "5x150",
+        "centerBore": 110,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 50 },
+          { "diameter": 20, "width": 8, "offset": 60 }
+        ],
+        "notes": "Second generation (XK60) debut year."
+      },
+      "source": "trailbuiltoffroad.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 8 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ],
+        "notes": "First generation (XK30/XK40). Final year of first gen."
+      },
+      "source": "tireswheels.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 8 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ],
+        "notes": "First generation (XK30/XK40)."
+      },
+      "source": "tireswheels.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 8 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ],
+        "notes": "First generation (XK30/XK40)."
+      },
+      "source": "tireswheels.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 8 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ],
+        "notes": "First generation (XK30/XK40)."
+      },
+      "source": "tireswheels.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 8 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ],
+        "notes": "First generation (XK30/XK40)."
+      },
+      "source": "tireswheels.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 8 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ],
+        "notes": "First generation (XK30/XK40)."
+      },
+      "source": "tireswheels.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Sequoia",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 106,
+        "wheelSizes": [
+          { "diameter": 16, "width": 7, "offset": 8 },
+          { "diameter": 17, "width": 7.5, "offset": 25 }
+        ],
+        "notes": "First generation (XK30/XK40) debut year."
+      },
+      "source": "tireswheels.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7, "offset": 35 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "notes": "Third generation (XL30) facelift."
+      },
+      "source": "siennachat.com, wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7, "offset": 35 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "notes": "Third generation (XL30)."
+      },
+      "source": "siennachat.com, wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7, "offset": 35 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "notes": "Third generation (XL30) facelift."
+      },
+      "source": "siennachat.com, wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7, "offset": 35 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "notes": "Third generation (XL30)."
+      },
+      "source": "siennachat.com, wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7, "offset": 35 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "notes": "Third generation (XL30)."
+      },
+      "source": "siennachat.com, wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7, "offset": 35 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "notes": "Third generation (XL30)."
+      },
+      "source": "siennachat.com, wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 40 },
+          { "diameter": 18, "width": 7, "offset": 35 },
+          { "diameter": 19, "width": 7.5, "offset": 40 }
+        ],
+        "notes": "Third generation (XL30) debut year."
+      },
+      "source": "siennachat.com, wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 45 },
+          { "diameter": 18, "width": 7, "offset": 42 }
+        ],
+        "notes": "Second generation (XL20) final year."
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 45 },
+          { "diameter": 18, "width": 7, "offset": 42 }
+        ],
+        "notes": "Second generation (XL20)."
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 45 },
+          { "diameter": 18, "width": 7, "offset": 42 }
+        ],
+        "notes": "Second generation (XL20)."
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 45 },
+          { "diameter": 18, "width": 7, "offset": 42 }
+        ],
+        "notes": "Second generation (XL20)."
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Second generation (XL20)."
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Second generation (XL20)."
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "Second generation (XL20) debut year."
+      },
+      "source": "wheelsynergy.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "First generation (XL10) final year."
+      },
+      "source": "wheelsynergy.com, siennachat.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "First generation (XL10)."
+      },
+      "source": "wheelsynergy.com, siennachat.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "First generation (XL10)."
+      },
+      "source": "wheelsynergy.com, siennachat.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Sienna",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 45 }
+        ],
+        "notes": "First generation (XL10)."
+      },
+      "source": "wheelsynergy.com, siennachat.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "Soarer",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 45, "position": "front" },
+          { "diameter": 18, "width": 9, "offset": 50, "position": "rear" }
+        ],
+        "isStaggered": true,
+        "notes": "Fourth generation (Z40). Same as Lexus SC430. Staggered OEM fitment. Final year."
+      },
+      "source": "redline360.com (SC430 spacer specs)",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "Soarer",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 45, "position": "front" },
+          { "diameter": 18, "width": 9, "offset": 50, "position": "rear" }
+        ],
+        "isStaggered": true,
+        "notes": "Fourth generation (Z40). Same as Lexus SC430. Staggered OEM fitment."
+      },
+      "source": "redline360.com (SC430 spacer specs)",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "Soarer",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 45, "position": "front" },
+          { "diameter": 18, "width": 9, "offset": 50, "position": "rear" }
+        ],
+        "isStaggered": true,
+        "notes": "Fourth generation (Z40). Same as Lexus SC430. Staggered OEM fitment."
+      },
+      "source": "redline360.com (SC430 spacer specs)",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "Soarer",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 45, "position": "front" },
+          { "diameter": 18, "width": 9, "offset": 50, "position": "rear" }
+        ],
+        "isStaggered": true,
+        "notes": "Fourth generation (Z40). Same as Lexus SC430. Staggered OEM fitment."
+      },
+      "source": "redline360.com (SC430 spacer specs)",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "Soarer",
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 60.1,
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 45, "position": "front" },
+          { "diameter": 18, "width": 9, "offset": 50, "position": "rear" }
+        ],
+        "isStaggered": true,
+        "notes": "Fourth generation (Z40) debut year. Same as Lexus SC430. Staggered OEM fitment."
+      },
+      "source": "redline360.com (SC430 spacer specs)",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "successfulLookups": 75,
+    "failedLookups": 0,
+    "modelsProcessed": [
+      "Toyota Quantum (2019-2023) - South African market, 6x130 bolt pattern",
+      "Toyota RAV4 (2000-2009, 2026) - 5x114.3 bolt pattern, consistent across all generations",
+      "Toyota RAV4 Prime (2020-2024) - PHEV, 5x114.3, 18-19\" wheels",
+      "Toyota Rukus (2010-2015) - Australian market, 5x114.3",
+      "Toyota Sequoia (2001-2026) - Three generations with different bolt patterns",
+      "Toyota Sienna (2000-2018) - 5x114.3 bolt pattern throughout",
+      "Toyota Soarer (2001-2005) - Lexus SC430 equivalent, staggered fitment"
+    ],
+    "notableFindings": [
+      "Toyota Sequoia changed from 6x139.7 (2001-2007) to 5x150 (2008-2021) back to 6x139.7 (2022+)",
+      "Sequoia 2022 may have both patterns depending on production date (transition year)",
+      "Toyota Soarer Z40 has staggered wheel setup like Lexus SC430",
+      "RAV4 has maintained consistent 5x114.3/60.1mm specs across all generations since 1994",
+      "Quantum is a South African market commercial vehicle based on HiAce platform"
+    ]
+  }
+}

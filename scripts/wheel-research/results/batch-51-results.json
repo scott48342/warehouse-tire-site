@@ -1,0 +1,1218 @@
+{
+  "batchId": "51",
+  "processedAt": "2026-04-21T21:15:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2000,
+      "make": "pontiac",
+      "model": "grand-prix",
+      "specs": {
+        "boltPattern": "5x115",
+        "centerBore": 70.3,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 52},
+          {"diameter": 16, "width": 6.5, "offset": 52},
+          {"diameter": 17, "width": 7, "offset": 52},
+          {"diameter": 17, "width": 7.5, "offset": 50}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "W-body II generation (1997-2003). SE/GT/GTP trims."
+      }
+    },
+    {
+      "year": 2006,
+      "make": "pontiac",
+      "model": "gto",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 69.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 48}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "V-body (2004-2006). 2005-2006 came with 18\" standard."
+      }
+    },
+    {
+      "year": 2005,
+      "make": "pontiac",
+      "model": "gto",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 69.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 48}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "V-body (2004-2006). 2005-2006 came with 18\" standard."
+      }
+    },
+    {
+      "year": 2004,
+      "make": "pontiac",
+      "model": "gto",
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBore": 69.6,
+        "wheelSizes": [
+          {"diameter": 17, "width": 8, "offset": 48}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "V-body (2004-2006). 2004 came with 17\" standard."
+      }
+    },
+    {
+      "year": 2010,
+      "make": "pontiac",
+      "model": "solstice",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 55},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8.5, "offset": 50},
+          {"diameter": 20, "width": 8.5, "offset": 50},
+          {"diameter": 20, "width": 9, "offset": 45}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "GM Kappa platform (2006-2010). 2.4L base and 2.0T GXP trims."
+      }
+    },
+    {
+      "year": 2009,
+      "make": "pontiac",
+      "model": "solstice",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 55},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8.5, "offset": 50}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "GM Kappa platform (2006-2010)."
+      }
+    },
+    {
+      "year": 2008,
+      "make": "pontiac",
+      "model": "solstice",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 55},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8.5, "offset": 50}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "GM Kappa platform (2006-2010)."
+      }
+    },
+    {
+      "year": 2007,
+      "make": "pontiac",
+      "model": "solstice",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 55},
+          {"diameter": 19, "width": 8, "offset": 50},
+          {"diameter": 19, "width": 8.5, "offset": 50}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "GM Kappa platform (2006-2010)."
+      }
+    },
+    {
+      "year": 2006,
+      "make": "pontiac",
+      "model": "solstice",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 55}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "GM Kappa platform (2006-2010). First year."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "porsche",
+      "model": "718",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 49, "position": "rear"},
+          {"diameter": 19, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 45, "position": "rear"},
+          {"diameter": 20, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "982 generation (2016+). Boxster/Cayman platform."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "porsche",
+      "model": "718",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 49, "position": "rear"},
+          {"diameter": 19, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 45, "position": "rear"},
+          {"diameter": 20, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "982 generation."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "porsche",
+      "model": "718",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 49, "position": "rear"},
+          {"diameter": 19, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 45, "position": "rear"},
+          {"diameter": 20, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "982 generation."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "porsche",
+      "model": "718",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 49, "position": "rear"},
+          {"diameter": 19, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 45, "position": "rear"},
+          {"diameter": 20, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "982 generation."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "porsche",
+      "model": "718",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 49, "position": "rear"},
+          {"diameter": 19, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 45, "position": "rear"},
+          {"diameter": 20, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "982 generation."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "porsche",
+      "model": "718",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 49, "position": "rear"},
+          {"diameter": 19, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 45, "position": "rear"},
+          {"diameter": 20, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "982 generation."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "porsche",
+      "model": "718",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 49, "position": "rear"},
+          {"diameter": 19, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 45, "position": "rear"},
+          {"diameter": 20, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "982 generation."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "porsche",
+      "model": "718",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 49, "position": "rear"},
+          {"diameter": 19, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 45, "position": "rear"},
+          {"diameter": 20, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "982 generation."
+      }
+    },
+    {
+      "year": 2017,
+      "make": "porsche",
+      "model": "718",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 49, "position": "rear"},
+          {"diameter": 19, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 45, "position": "rear"},
+          {"diameter": 20, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "982 generation. First year of 718 designation."
+      }
+    },
+    {
+      "year": 2016,
+      "make": "porsche",
+      "model": "718",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 18, "width": 9.5, "offset": 49, "position": "rear"},
+          {"diameter": 19, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 45, "position": "rear"},
+          {"diameter": 20, "width": 8, "offset": 57, "position": "front"},
+          {"diameter": 20, "width": 10, "offset": 45, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "982 generation debut."
+      }
+    },
+    {
+      "year": 2016,
+      "make": "porsche",
+      "model": "918",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.5,
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 57, "position": "front"},
+          {"diameter": 21, "width": 10.5, "offset": 55, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "Hybrid hypercar (2013-2016). Staggered 20\" front / 21\" rear."
+      }
+    },
+    {
+      "year": 2015,
+      "make": "porsche",
+      "model": "918",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.5,
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 57, "position": "front"},
+          {"diameter": 21, "width": 10.5, "offset": 55, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "Hybrid hypercar."
+      }
+    },
+    {
+      "year": 2014,
+      "make": "porsche",
+      "model": "918",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.5,
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 57, "position": "front"},
+          {"diameter": 21, "width": 10.5, "offset": 55, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "Hybrid hypercar."
+      }
+    },
+    {
+      "year": 2013,
+      "make": "porsche",
+      "model": "918",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.5,
+        "wheelSizes": [
+          {"diameter": 20, "width": 9, "offset": 57, "position": "front"},
+          {"diameter": 21, "width": 10.5, "offset": 55, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "Hybrid hypercar. First year."
+      }
+    },
+    {
+      "year": 2002,
+      "make": "porsche",
+      "model": "cayenne",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7.5, "offset": 53},
+          {"diameter": 18, "width": 8, "offset": 57},
+          {"diameter": 19, "width": 9, "offset": 60},
+          {"diameter": 20, "width": 9, "offset": 60},
+          {"diameter": 21, "width": 10, "offset": 50}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "9PA first generation (2002-2007). Early release year."
+      }
+    },
+    {
+      "year": 2009,
+      "make": "porsche",
+      "model": "panamera",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 18, "width": 8, "offset": 59, "position": "front"},
+          {"diameter": 18, "width": 9, "offset": 53, "position": "rear"},
+          {"diameter": 19, "width": 9, "offset": 60, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 61, "position": "rear"},
+          {"diameter": 20, "width": 9.5, "offset": 65, "position": "front"},
+          {"diameter": 20, "width": 11, "offset": 68, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "970 first generation (2009-2013)."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "porsche",
+      "model": "taycan",
+      "specs": {
+        "boltPattern": "5x130",
+        "centerBore": 71.6,
+        "wheelSizes": [
+          {"diameter": 19, "width": 8, "offset": 50, "position": "front"},
+          {"diameter": 19, "width": 10, "offset": 47, "position": "rear"},
+          {"diameter": 20, "width": 9, "offset": 54, "position": "front"},
+          {"diameter": 20, "width": 11, "offset": 60, "position": "rear"},
+          {"diameter": 21, "width": 9.5, "offset": 60, "position": "front"},
+          {"diameter": 21, "width": 11.5, "offset": 66, "position": "rear"}
+        ],
+        "lugType": "M14x1.5",
+        "isStaggered": true,
+        "notes": "Electric sports sedan. Facelifted 2024+."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "1000",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40},
+          {"diameter": 18, "width": 7, "offset": 35},
+          {"diameter": 19, "width": 7, "offset": 40}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Toro for Latin America market."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "ram",
+      "model": "1000",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40},
+          {"diameter": 18, "width": 7, "offset": 35}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Toro for Latin America market."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "ram",
+      "model": "1000",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40},
+          {"diameter": 18, "width": 7, "offset": 35}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Toro for Latin America market."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "ram",
+      "model": "1000",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40},
+          {"diameter": 18, "width": 7, "offset": 35}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Toro for Latin America market."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "ram",
+      "model": "1000",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40},
+          {"diameter": 18, "width": 7, "offset": 35}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Toro for Latin America market."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "ram",
+      "model": "1000",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40},
+          {"diameter": 18, "width": 7, "offset": 35}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Toro for Latin America market."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "ram",
+      "model": "1000",
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBore": 65.1,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40},
+          {"diameter": 18, "width": 7, "offset": 35}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Toro for Latin America market. First year."
+      }
+    },
+    {
+      "year": 2008,
+      "make": "ram",
+      "model": "1500",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 17, "width": 8, "offset": 18},
+          {"diameter": 20, "width": 8, "offset": 19},
+          {"diameter": 20, "width": 9, "offset": 25}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "Second generation (2002-2008). Last year before Ram brand split."
+      }
+    },
+    {
+      "year": 2007,
+      "make": "ram",
+      "model": "1500",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 17, "width": 8, "offset": 18},
+          {"diameter": 20, "width": 8, "offset": 19},
+          {"diameter": 20, "width": 9, "offset": 25}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "Second generation (2002-2008)."
+      }
+    },
+    {
+      "year": 2006,
+      "make": "ram",
+      "model": "1500",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 17, "width": 8, "offset": 18},
+          {"diameter": 20, "width": 8, "offset": 19},
+          {"diameter": 20, "width": 9, "offset": 25}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "Second generation (2002-2008)."
+      }
+    },
+    {
+      "year": 2005,
+      "make": "ram",
+      "model": "1500",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 17, "width": 8, "offset": 18},
+          {"diameter": 20, "width": 8, "offset": 19},
+          {"diameter": 20, "width": 9, "offset": 25}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "Second generation (2002-2008)."
+      }
+    },
+    {
+      "year": 2004,
+      "make": "ram",
+      "model": "1500",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 17, "width": 8, "offset": 18},
+          {"diameter": 20, "width": 8, "offset": 19},
+          {"diameter": 20, "width": 9, "offset": 25}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "Second generation (2002-2008)."
+      }
+    },
+    {
+      "year": 2003,
+      "make": "ram",
+      "model": "1500",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 17, "width": 8, "offset": 18},
+          {"diameter": 20, "width": 8, "offset": 19},
+          {"diameter": 20, "width": 9, "offset": 25}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "Second generation (2002-2008)."
+      }
+    },
+    {
+      "year": 2002,
+      "make": "ram",
+      "model": "1500",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 17, "width": 8, "offset": 18},
+          {"diameter": 20, "width": 8, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "Second generation (2002-2008). First year."
+      }
+    },
+    {
+      "year": 2001,
+      "make": "ram",
+      "model": "1500",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 12},
+          {"diameter": 16, "width": 8, "offset": 0},
+          {"diameter": 17, "width": 7, "offset": 12}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "First generation (1994-2001)."
+      }
+    },
+    {
+      "year": 2000,
+      "make": "ram",
+      "model": "1500",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 16, "width": 7, "offset": 12},
+          {"diameter": 16, "width": 8, "offset": 0},
+          {"diameter": 17, "width": 7, "offset": 12}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "First generation (1994-2001)."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "1500-classic",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 20, "width": 8, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "DS/DJ continuation (2019-2024). Final year."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "ram",
+      "model": "1500-classic",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 20, "width": 8, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "DS/DJ continuation (2019-2024)."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "ram",
+      "model": "1500-classic",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 20, "width": 8, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "DS/DJ continuation (2019-2024)."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "ram",
+      "model": "1500-classic",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 20, "width": 8, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "DS/DJ continuation (2019-2024)."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "ram",
+      "model": "1500-classic",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 20, "width": 8, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "DS/DJ continuation (2019-2024)."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "ram",
+      "model": "1500-classic",
+      "specs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 17, "width": 7, "offset": 25},
+          {"diameter": 20, "width": 8, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "DS/DJ continuation (2019-2024). First year of Classic name."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "ram",
+      "model": "1500-trx",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 18, "width": 9, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "High-performance off-road truck. 702 hp supercharged V8."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "1500-trx",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 18, "width": 9, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "High-performance off-road truck."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "ram",
+      "model": "1500-trx",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 18, "width": 9, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "High-performance off-road truck."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "ram",
+      "model": "1500-trx",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 18, "width": 9, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "High-performance off-road truck."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "ram",
+      "model": "1500-trx",
+      "specs": {
+        "boltPattern": "6x139.7",
+        "centerBore": 77.8,
+        "wheelSizes": [
+          {"diameter": 18, "width": 9, "offset": 19}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "High-performance off-road truck. First year."
+      }
+    },
+    {
+      "year": 2002,
+      "make": "ram",
+      "model": "2500",
+      "specs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 121.3,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 44},
+          {"diameter": 17, "width": 8, "offset": 44}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "BR/BE second generation (1994-2002). Heavy duty 8-lug pattern."
+      }
+    },
+    {
+      "year": 2001,
+      "make": "ram",
+      "model": "2500",
+      "specs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 121.3,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 44}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "BR/BE second generation (1994-2002). Heavy duty 8-lug pattern."
+      }
+    },
+    {
+      "year": 2000,
+      "make": "ram",
+      "model": "2500",
+      "specs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 121.3,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 44}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "BR/BE second generation (1994-2002). Heavy duty 8-lug pattern."
+      }
+    },
+    {
+      "year": 2002,
+      "make": "ram",
+      "model": "3500",
+      "specs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 121.3,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 44},
+          {"diameter": 17, "width": 8, "offset": 44}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "BR/BE generation (1994-2002). SRW and DRW share same bolt pattern on this era."
+      }
+    },
+    {
+      "year": 2001,
+      "make": "ram",
+      "model": "3500",
+      "specs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 121.3,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 44}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "BR/BE generation (1994-2002). SRW and DRW share same bolt pattern on this era."
+      }
+    },
+    {
+      "year": 2000,
+      "make": "ram",
+      "model": "3500",
+      "specs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 121.3,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 44}
+        ],
+        "lugType": "M14x1.5",
+        "notes": "BR/BE generation (1994-2002). SRW and DRW share same bolt pattern on this era."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "ram",
+      "model": "c-v",
+      "specs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "Cargo Van based on Dodge Grand Caravan. Final year."
+      }
+    },
+    {
+      "year": 2017,
+      "make": "ram",
+      "model": "c-v",
+      "specs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "Cargo Van based on Dodge Grand Caravan."
+      }
+    },
+    {
+      "year": 2016,
+      "make": "ram",
+      "model": "c-v",
+      "specs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "Cargo Van based on Dodge Grand Caravan."
+      }
+    },
+    {
+      "year": 2015,
+      "make": "ram",
+      "model": "c-v",
+      "specs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "Cargo Van based on Dodge Grand Caravan."
+      }
+    },
+    {
+      "year": 2014,
+      "make": "ram",
+      "model": "c-v",
+      "specs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "Cargo Van based on Dodge Grand Caravan."
+      }
+    },
+    {
+      "year": 2013,
+      "make": "ram",
+      "model": "c-v",
+      "specs": {
+        "boltPattern": "5x127",
+        "centerBore": 71.5,
+        "wheelSizes": [
+          {"diameter": 16, "width": 6.5, "offset": 40},
+          {"diameter": 17, "width": 6.5, "offset": 40}
+        ],
+        "lugType": "M12x1.5",
+        "notes": "Cargo Van based on Dodge Grand Caravan. First year."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "ram",
+      "model": "promaster-rapid",
+      "specs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 35},
+          {"diameter": 15, "width": 6, "offset": 39}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Fiorino for Mexico. Compact cargo van."
+      }
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "promaster-rapid",
+      "specs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 35},
+          {"diameter": 15, "width": 6, "offset": 39}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Fiorino for Mexico. Compact cargo van."
+      }
+    },
+    {
+      "year": 2023,
+      "make": "ram",
+      "model": "promaster-rapid",
+      "specs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 35},
+          {"diameter": 15, "width": 6, "offset": 39}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Fiorino for Mexico. Compact cargo van."
+      }
+    },
+    {
+      "year": 2022,
+      "make": "ram",
+      "model": "promaster-rapid",
+      "specs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 35},
+          {"diameter": 15, "width": 6, "offset": 39}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Fiorino for Mexico. Compact cargo van."
+      }
+    },
+    {
+      "year": 2021,
+      "make": "ram",
+      "model": "promaster-rapid",
+      "specs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 35},
+          {"diameter": 15, "width": 6, "offset": 39}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Fiorino for Mexico. Compact cargo van."
+      }
+    },
+    {
+      "year": 2020,
+      "make": "ram",
+      "model": "promaster-rapid",
+      "specs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 35},
+          {"diameter": 15, "width": 6, "offset": 39}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Fiorino for Mexico. Compact cargo van."
+      }
+    },
+    {
+      "year": 2019,
+      "make": "ram",
+      "model": "promaster-rapid",
+      "specs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 35},
+          {"diameter": 15, "width": 6, "offset": 39}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Fiorino for Mexico. Compact cargo van."
+      }
+    },
+    {
+      "year": 2018,
+      "make": "ram",
+      "model": "promaster-rapid",
+      "specs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 35},
+          {"diameter": 15, "width": 6, "offset": 39}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Fiorino for Mexico. Compact cargo van."
+      }
+    },
+    {
+      "year": 2017,
+      "make": "ram",
+      "model": "promaster-rapid",
+      "specs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "wheelSizes": [
+          {"diameter": 14, "width": 5.5, "offset": 35},
+          {"diameter": 15, "width": 6, "offset": 39}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Fiorino for Mexico. Compact cargo van."
+      }
+    },
+    {
+      "year": 2025,
+      "make": "ram",
+      "model": "v1000",
+      "specs": {
+        "boltPattern": "5x98",
+        "centerBore": 58.1,
+        "wheelSizes": [
+          {"diameter": 15, "width": 6, "offset": 39},
+          {"diameter": 16, "width": 6, "offset": 36},
+          {"diameter": 17, "width": 6.5, "offset": 39}
+        ],
+        "lugType": "M12x1.25",
+        "notes": "Rebadged Fiat Doblò for Latin America. Compact cargo van/MPV."
+      }
+    }
+  ]
+}

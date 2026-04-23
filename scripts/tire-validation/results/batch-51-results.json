@@ -1,0 +1,901 @@
+{
+  "batchId": "51",
+  "processedAt": "2026-04-21T21:59:00.000Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Expedition",
+      "trims": [
+        {"trim": "2wd", "tireSizes": ["255/70R16", "275/60R17"]},
+        {"trim": "4wd", "tireSizes": ["255/70R16", "265/70R17"]},
+        {"trim": "Eddie Bauer 2wd", "tireSizes": ["275/60R17"]},
+        {"trim": "Eddie Bauer 4wd", "tireSizes": ["265/70R17"]}
+      ],
+      "allSizes": ["255/70R16", "265/70R17", "275/60R17"]
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Expedition",
+      "trims": [
+        {"trim": "2wd", "tireSizes": ["255/70R16", "275/60R17"]},
+        {"trim": "4wd", "tireSizes": ["255/70R16", "265/70R17"]},
+        {"trim": "Eddie Bauer 2wd", "tireSizes": ["275/60R17"]},
+        {"trim": "Eddie Bauer 4wd", "tireSizes": ["265/70R17"]}
+      ],
+      "allSizes": ["255/70R16", "265/70R17", "275/60R17"]
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Active", "tireSizes": ["255/65R18"]},
+        {"trim": "Platinum", "tireSizes": ["275/45R21"]},
+        {"trim": "ST", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "ST-Line", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "Tremor", "tireSizes": ["265/65R18"]}
+      ],
+      "allSizes": ["255/65R18", "255/55R20", "265/65R18", "275/45R21"],
+      "note": "2026 trims extrapolated from 2024-2025 data"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Active", "tireSizes": ["255/65R18"]},
+        {"trim": "Platinum", "tireSizes": ["275/45R21"]},
+        {"trim": "ST", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "ST-Line", "tireSizes": ["255/55R20", "275/45R21"]}
+      ],
+      "allSizes": ["255/65R18", "255/55R20", "275/45R21"]
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["255/65R18"]},
+        {"trim": "King Ranch", "tireSizes": ["255/55R20"]},
+        {"trim": "Limited", "tireSizes": ["255/55R20"]},
+        {"trim": "Platinum", "tireSizes": ["275/45R21"]},
+        {"trim": "ST", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "ST-Line", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "Timberline", "tireSizes": ["265/65R18"]},
+        {"trim": "XLT", "tireSizes": ["255/65R18", "255/55R20"]}
+      ],
+      "allSizes": ["255/65R18", "255/55R20", "265/65R18", "275/45R21"]
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["255/65R18"]},
+        {"trim": "King Ranch", "tireSizes": ["255/55R20"]},
+        {"trim": "Limited", "tireSizes": ["255/55R20"]},
+        {"trim": "Platinum", "tireSizes": ["275/45R21"]},
+        {"trim": "ST", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "ST-Line", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "Timberline", "tireSizes": ["265/65R18"]},
+        {"trim": "XLT", "tireSizes": ["255/65R18", "255/55R20"]}
+      ],
+      "allSizes": ["255/65R18", "255/55R20", "265/65R18", "275/45R21"]
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["255/65R18"]},
+        {"trim": "King Ranch", "tireSizes": ["255/55R20"]},
+        {"trim": "Limited", "tireSizes": ["255/55R20"]},
+        {"trim": "Platinum", "tireSizes": ["275/45R21"]},
+        {"trim": "ST", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "ST-Line", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "Timberline", "tireSizes": ["265/65R18"]},
+        {"trim": "XLT", "tireSizes": ["255/65R18", "255/55R20"]}
+      ],
+      "allSizes": ["255/65R18", "255/55R20", "265/65R18", "275/45R21"]
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["255/65R18"]},
+        {"trim": "King Ranch", "tireSizes": ["255/55R20"]},
+        {"trim": "Limited", "tireSizes": ["255/55R20"]},
+        {"trim": "Platinum", "tireSizes": ["275/45R21"]},
+        {"trim": "ST", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "Timberline", "tireSizes": ["265/65R18"]},
+        {"trim": "XLT", "tireSizes": ["255/65R18", "255/55R20"]}
+      ],
+      "allSizes": ["255/65R18", "255/55R20", "265/65R18", "275/45R21"]
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["255/65R18"]},
+        {"trim": "Limited", "tireSizes": ["255/55R20"]},
+        {"trim": "Platinum", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "ST", "tireSizes": ["255/55R20", "275/45R21"]},
+        {"trim": "XLT", "tireSizes": ["255/65R18", "255/55R20"]}
+      ],
+      "allSizes": ["255/65R18", "255/55R20", "275/45R21"]
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["245/60R18"]},
+        {"trim": "Limited", "tireSizes": ["255/50R20"]},
+        {"trim": "Platinum", "tireSizes": ["255/50R20"]},
+        {"trim": "Sport", "tireSizes": ["255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["245/60R18", "255/50R20"]}
+      ],
+      "allSizes": ["245/60R18", "255/50R20"]
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["245/60R18"]},
+        {"trim": "Limited", "tireSizes": ["255/50R20"]},
+        {"trim": "Platinum", "tireSizes": ["255/50R20"]},
+        {"trim": "Sport", "tireSizes": ["255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["245/60R18", "255/50R20"]}
+      ],
+      "allSizes": ["245/60R18", "255/50R20"]
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["245/60R18"]},
+        {"trim": "Limited", "tireSizes": ["255/50R20"]},
+        {"trim": "Platinum", "tireSizes": ["255/50R20"]},
+        {"trim": "Sport", "tireSizes": ["255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["245/60R18", "255/50R20"]}
+      ],
+      "allSizes": ["245/60R18", "255/50R20"]
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["245/60R18"]},
+        {"trim": "Limited", "tireSizes": ["255/50R20"]},
+        {"trim": "Platinum", "tireSizes": ["255/50R20"]},
+        {"trim": "Sport", "tireSizes": ["255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["245/60R18", "255/50R20"]}
+      ],
+      "allSizes": ["245/60R18", "255/50R20"]
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["245/60R18"]},
+        {"trim": "Limited", "tireSizes": ["255/50R20"]},
+        {"trim": "Sport", "tireSizes": ["255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["245/60R18", "255/50R20"]}
+      ],
+      "allSizes": ["245/60R18", "255/50R20"]
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["245/60R18"]},
+        {"trim": "Limited", "tireSizes": ["255/50R20"]},
+        {"trim": "Sport", "tireSizes": ["255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["245/60R18", "255/50R20"]}
+      ],
+      "allSizes": ["245/60R18", "255/50R20"]
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["245/60R18"]},
+        {"trim": "Limited", "tireSizes": ["255/50R20"]},
+        {"trim": "Sport", "tireSizes": ["255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["245/60R18", "255/50R20"]}
+      ],
+      "allSizes": ["245/60R18", "255/50R20"]
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["245/60R18"]},
+        {"trim": "Limited", "tireSizes": ["255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["245/60R18", "255/50R20"]}
+      ],
+      "allSizes": ["245/60R18", "255/50R20"]
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["245/65R17"]},
+        {"trim": "Limited", "tireSizes": ["255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["245/60R18", "255/50R20"]}
+      ],
+      "allSizes": ["245/65R17", "245/60R18", "255/50R20"]
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["245/65R17", "235/65R18", "255/50R20"]},
+        {"trim": "Limited", "tireSizes": ["235/65R18", "255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17", "255/50R20"]},
+        {"trim": "XLT Sport", "tireSizes": ["255/50R20"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17", "235/65R18", "255/50R20"]
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["245/65R17", "235/65R18", "255/50R20"]},
+        {"trim": "Limited", "tireSizes": ["235/65R18", "255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17"]},
+        {"trim": "XLT Sport", "tireSizes": ["255/50R20"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17", "235/65R18", "255/50R20"]
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["245/65R17", "235/65R18", "255/50R20"]},
+        {"trim": "Limited", "tireSizes": ["235/65R18", "255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17", "235/65R18"]},
+        {"trim": "XLT Sport", "tireSizes": ["255/50R20"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17", "235/65R18", "255/50R20"]
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["245/65R17", "235/65R18"]},
+        {"trim": "Limited", "tireSizes": ["235/65R18"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17", "235/65R18"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17", "235/65R18"]
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["245/65R17", "235/65R18"]},
+        {"trim": "Limited", "tireSizes": ["245/65R17", "235/65R18"]},
+        {"trim": "XLS", "tireSizes": ["235/70R16"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17", "235/65R18"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["245/65R17"]},
+        {"trim": "Limited", "tireSizes": ["245/65R17"]},
+        {"trim": "XLS", "tireSizes": ["235/70R16"]},
+        {"trim": "XLS Sport", "tireSizes": ["235/70R16"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17"]},
+        {"trim": "XLT Sport", "tireSizes": ["235/70R16", "245/65R17"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17"]
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["245/65R17"]},
+        {"trim": "Limited", "tireSizes": ["245/65R17"]},
+        {"trim": "NBX", "tireSizes": ["245/65R17"]},
+        {"trim": "XLS", "tireSizes": ["235/70R16"]},
+        {"trim": "XLS Sport", "tireSizes": ["235/70R16"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16"]},
+        {"trim": "XLT Sport", "tireSizes": ["245/65R17"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["245/65R17"]},
+        {"trim": "Limited", "tireSizes": ["245/65R17"]},
+        {"trim": "NBX", "tireSizes": ["245/65R17"]},
+        {"trim": "Sport", "tireSizes": ["235/70R16", "255/70R16"]},
+        {"trim": "XLS", "tireSizes": ["235/70R16"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17", "255/70R16"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["245/70R16", "245/65R17"]},
+        {"trim": "Limited", "tireSizes": ["245/70R16", "245/65R17"]},
+        {"trim": "Sport", "tireSizes": ["235/70R16", "255/70R16"]},
+        {"trim": "XLS", "tireSizes": ["235/70R16"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16"]}
+      ],
+      "allSizes": ["235/70R16", "245/70R16", "245/65R17", "255/70R16"]
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["255/70R16"]},
+        {"trim": "Limited", "tireSizes": ["255/70R16"]},
+        {"trim": "Sport", "tireSizes": ["235/75R15", "235/70R16", "255/70R16"]},
+        {"trim": "XLS", "tireSizes": ["235/75R15"]},
+        {"trim": "XLT", "tireSizes": ["235/75R15", "255/70R16"]}
+      ],
+      "allSizes": ["235/75R15", "235/70R16", "255/70R16"]
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Explorer",
+      "trims": [
+        {"trim": "Eddie Bauer", "tireSizes": ["255/70R16"]},
+        {"trim": "Limited", "tireSizes": ["235/75R15"]},
+        {"trim": "Sport", "tireSizes": ["235/75R15", "255/70R16"]},
+        {"trim": "XL", "tireSizes": ["225/70R15", "235/75R15"]},
+        {"trim": "XL 2-door", "tireSizes": ["225/70R15", "235/75R15"]},
+        {"trim": "XLS", "tireSizes": ["225/70R15", "235/75R15"]},
+        {"trim": "XLT", "tireSizes": ["225/70R15", "235/75R15"]}
+      ],
+      "allSizes": ["225/70R15", "235/75R15", "255/70R16"]
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "trims": [
+        {"trim": "Limited", "tireSizes": ["235/65R18", "255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17", "235/65R18", "255/50R20"]
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "trims": [
+        {"trim": "Adrenalin", "tireSizes": ["255/50R20"]},
+        {"trim": "Limited", "tireSizes": ["235/65R18", "255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17", "235/65R18", "255/50R20"]
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "trims": [
+        {"trim": "Adrenalin", "tireSizes": ["255/50R20"]},
+        {"trim": "Limited", "tireSizes": ["235/65R18", "255/50R20"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17", "235/65R18", "255/50R20"]
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "trims": [
+        {"trim": "Limited", "tireSizes": ["235/65R18"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "245/65R17"]}
+      ],
+      "allSizes": ["235/70R16", "245/65R17", "235/65R18"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "trims": [
+        {"trim": "Adrenalin", "tireSizes": ["255/70R16"]},
+        {"trim": "XLS", "tireSizes": ["235/70R16"]},
+        {"trim": "XLT", "tireSizes": ["235/70R16", "255/70R16"]}
+      ],
+      "allSizes": ["235/70R16", "255/70R16"]
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["235/70R16", "255/70R16"]}
+      ],
+      "allSizes": ["235/70R16", "255/70R16"]
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["235/70R16", "255/70R16"]}
+      ],
+      "allSizes": ["235/70R16", "255/70R16"]
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["235/70R16", "255/70R16"]}
+      ],
+      "allSizes": ["235/70R16", "255/70R16"]
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Explorer Sport Trac",
+      "trims": [
+        {"trim": "Base", "tireSizes": ["235/75R15", "235/70R16", "255/70R16"]},
+        {"trim": "Premium Edition", "tireSizes": ["235/70R16", "255/70R16"]}
+      ],
+      "allSizes": ["235/75R15", "235/70R16", "255/70R16"]
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL 2wd", "tireSizes": ["245/70R17"]},
+        {"trim": "XL 4wd", "tireSizes": ["265/70R17"]},
+        {"trim": "XLT 2wd", "tireSizes": ["265/60R18", "275/60R20"]},
+        {"trim": "XLT 4wd", "tireSizes": ["265/70R17", "265/70R18", "275/65R18", "275/60R20"]},
+        {"trim": "Lariat", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "King Ranch", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "Platinum", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "Raptor", "tireSizes": ["315/70R17", "37X12.50R17"]},
+        {"trim": "Tremor", "tireSizes": ["275/70R18"]},
+        {"trim": "STX", "tireSizes": ["275/60R20"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "265/70R18", "275/65R18", "275/70R18", "275/60R20", "275/50R22", "315/70R17", "37X12.50R17"],
+      "note": "2026 trims extrapolated from 2024-2025 data"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL 2wd", "tireSizes": ["245/70R17"]},
+        {"trim": "XL 4wd", "tireSizes": ["265/70R17"]},
+        {"trim": "XLT 2wd", "tireSizes": ["265/60R18", "275/60R20"]},
+        {"trim": "XLT 4wd", "tireSizes": ["265/70R17", "265/70R18", "275/65R18", "275/60R20"]},
+        {"trim": "Lariat", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "King Ranch", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "Platinum", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "Raptor", "tireSizes": ["315/70R17", "37X12.50R17"]},
+        {"trim": "Tremor", "tireSizes": ["275/70R18"]},
+        {"trim": "STX", "tireSizes": ["275/60R20"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "265/70R18", "275/65R18", "275/70R18", "275/60R20", "275/50R22", "315/70R17", "37X12.50R17"]
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL 2wd", "tireSizes": ["245/70R17"]},
+        {"trim": "XL 4wd", "tireSizes": ["265/70R17"]},
+        {"trim": "XLT 2wd", "tireSizes": ["265/60R18", "275/60R20"]},
+        {"trim": "XLT 4wd", "tireSizes": ["265/70R17", "265/70R18", "275/65R18", "275/60R20"]},
+        {"trim": "Lariat", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "King Ranch", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "Platinum", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "Raptor", "tireSizes": ["315/70R17", "37X12.50R17"]},
+        {"trim": "Tremor", "tireSizes": ["275/70R18"]},
+        {"trim": "STX", "tireSizes": ["275/60R20"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "265/70R18", "275/65R18", "275/70R18", "275/60R20", "275/50R22", "315/70R17", "37X12.50R17"]
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL 2wd", "tireSizes": ["245/70R17"]},
+        {"trim": "XL 4wd", "tireSizes": ["265/70R17"]},
+        {"trim": "XLT 2wd", "tireSizes": ["265/60R18", "275/60R20"]},
+        {"trim": "XLT 4wd", "tireSizes": ["265/70R17", "275/65R18", "275/60R20"]},
+        {"trim": "Lariat", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "King Ranch", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "Platinum", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "Raptor", "tireSizes": ["315/70R17", "37X12.50R17"]},
+        {"trim": "Tremor", "tireSizes": ["275/70R18"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "275/65R18", "275/70R18", "275/60R20", "275/50R22", "315/70R17", "37X12.50R17"]
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL 2wd", "tireSizes": ["245/70R17"]},
+        {"trim": "XL 4wd", "tireSizes": ["265/70R17"]},
+        {"trim": "XLT 2wd", "tireSizes": ["265/60R18", "275/60R20"]},
+        {"trim": "XLT 4wd", "tireSizes": ["265/70R17", "275/65R18", "275/60R20"]},
+        {"trim": "Lariat", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "King Ranch", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "Platinum", "tireSizes": ["275/60R20", "275/50R22"]},
+        {"trim": "Raptor", "tireSizes": ["315/70R17", "37X12.50R17"]},
+        {"trim": "Tremor", "tireSizes": ["275/70R18"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "275/65R18", "275/70R18", "275/60R20", "275/50R22", "315/70R17", "37X12.50R17"]
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL 2wd", "tireSizes": ["245/70R17", "265/60R18", "275/60R20"]},
+        {"trim": "XL 4wd", "tireSizes": ["265/70R17", "275/65R18", "275/60R20"]},
+        {"trim": "XL Heavy-Duty", "tireSizes": ["265/70R18"]},
+        {"trim": "XLT 2wd", "tireSizes": ["245/70R17", "265/60R18", "275/60R20"]},
+        {"trim": "XLT 4wd", "tireSizes": ["265/70R17", "275/65R18", "275/60R20"]},
+        {"trim": "XLT Heavy-Duty", "tireSizes": ["265/70R18"]},
+        {"trim": "Lariat 2wd", "tireSizes": ["265/60R18", "275/60R20"]},
+        {"trim": "Lariat 4wd", "tireSizes": ["275/65R18", "275/60R20"]},
+        {"trim": "King Ranch 2wd", "tireSizes": ["265/60R18", "275/60R20"]},
+        {"trim": "King Ranch 4wd", "tireSizes": ["275/65R18", "275/60R20"]},
+        {"trim": "Platinum", "tireSizes": ["275/60R20"]},
+        {"trim": "Limited", "tireSizes": ["275/50R22"]},
+        {"trim": "Raptor", "tireSizes": ["315/70R17", "37X12.50R17"]},
+        {"trim": "Tremor", "tireSizes": ["275/70R18"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "265/70R18", "275/65R18", "275/70R18", "275/60R20", "275/50R22", "315/70R17", "37X12.50R17"]
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL 2wd", "tireSizes": ["245/70R17", "275/55R20"]},
+        {"trim": "XL 4wd", "tireSizes": ["265/70R17", "275/55R20"]},
+        {"trim": "XL Heavy-Duty", "tireSizes": ["245/70R17", "275/65R18"]},
+        {"trim": "XLT 2wd", "tireSizes": ["245/70R17", "265/60R18", "275/55R20"]},
+        {"trim": "XLT 4wd", "tireSizes": ["265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "XLT Heavy-Duty", "tireSizes": ["245/70R17", "275/65R18"]},
+        {"trim": "Lariat 2wd", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "Lariat 4wd", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Lariat Heavy-Duty", "tireSizes": ["275/65R18"]},
+        {"trim": "King Ranch 2wd", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "King Ranch 4wd", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "King Ranch Heavy-Duty", "tireSizes": ["275/65R18"]},
+        {"trim": "Platinum", "tireSizes": ["275/55R20"]},
+        {"trim": "Limited", "tireSizes": ["275/45R22"]},
+        {"trim": "Raptor", "tireSizes": ["315/70R17"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22", "315/70R17"]
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL 2wd", "tireSizes": ["245/70R17", "275/55R20"]},
+        {"trim": "XL 4wd", "tireSizes": ["265/70R17", "275/55R20"]},
+        {"trim": "XLT 2wd", "tireSizes": ["245/70R17", "265/60R18", "275/55R20"]},
+        {"trim": "XLT 4wd", "tireSizes": ["265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "Lariat 2wd", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "Lariat 4wd", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "King Ranch", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Platinum", "tireSizes": ["275/55R20"]},
+        {"trim": "Limited", "tireSizes": ["275/45R22"]},
+        {"trim": "Raptor", "tireSizes": ["315/70R17"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22", "315/70R17"]
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "2wd Regular Cab", "tireSizes": ["245/70R17"]},
+        {"trim": "2wd SuperCab", "tireSizes": ["245/70R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCrew", "tireSizes": ["245/70R17", "265/60R18", "275/55R20"]},
+        {"trim": "4wd Regular Cab", "tireSizes": ["265/70R17"]},
+        {"trim": "4wd SuperCab", "tireSizes": ["265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCrew", "tireSizes": ["265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd Heavy-Duty SuperCab", "tireSizes": ["245/70R17", "275/65R18"]},
+        {"trim": "4wd Heavy-Duty SuperCrew", "tireSizes": ["245/70R17", "275/65R18"]},
+        {"trim": "Raptor", "tireSizes": ["315/70R17"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "315/70R17"]
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "2wd Regular Cab", "tireSizes": ["245/70R17"]},
+        {"trim": "2wd SuperCab", "tireSizes": ["245/70R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCrew", "tireSizes": ["245/70R17", "265/60R18", "275/55R20"]},
+        {"trim": "4wd Regular Cab", "tireSizes": ["265/70R17"]},
+        {"trim": "4wd SuperCab", "tireSizes": ["265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCrew", "tireSizes": ["265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "Raptor", "tireSizes": ["315/70R17"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "315/70R17"]
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "2wd Regular Cab", "tireSizes": ["245/70R17"]},
+        {"trim": "2wd SuperCab", "tireSizes": ["245/70R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCrew", "tireSizes": ["245/70R17", "265/60R18", "275/55R20"]},
+        {"trim": "4wd Regular Cab", "tireSizes": ["265/70R17"]},
+        {"trim": "4wd SuperCab", "tireSizes": ["265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCrew", "tireSizes": ["265/70R17", "275/65R18", "275/55R20"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "2wd Regular Cab", "tireSizes": ["245/70R17"]},
+        {"trim": "2wd SuperCab", "tireSizes": ["245/70R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCrew", "tireSizes": ["245/70R17", "265/60R18", "275/55R20"]},
+        {"trim": "4wd Regular Cab", "tireSizes": ["265/70R17", "245/70R17"]},
+        {"trim": "4wd SuperCab", "tireSizes": ["265/70R17", "245/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCrew", "tireSizes": ["265/70R17", "245/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd Heavy-Duty SuperCab", "tireSizes": ["275/65R18"]},
+        {"trim": "4wd Heavy-Duty SuperCrew", "tireSizes": ["275/65R18"]}
+      ],
+      "allSizes": ["245/70R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "2wd Regular Cab", "tireSizes": ["235/75R17", "255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCab", "tireSizes": ["235/75R17", "255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCrew", "tireSizes": ["255/65R17", "265/60R18", "275/55R20", "275/45R22"]},
+        {"trim": "4wd Regular Cab", "tireSizes": ["235/75R17", "265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCab", "tireSizes": ["235/75R17", "265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCrew", "tireSizes": ["265/70R17", "275/65R18", "275/55R20", "275/45R22"]},
+        {"trim": "Heavy-Duty Regular Cab", "tireSizes": ["245/75R17"]},
+        {"trim": "Heavy-Duty SuperCab", "tireSizes": ["245/75R17"]},
+        {"trim": "Heavy-Duty SuperCrew", "tireSizes": ["245/75R17"]},
+        {"trim": "SVT Raptor", "tireSizes": ["315/70R17"]}
+      ],
+      "allSizes": ["235/75R17", "245/75R17", "255/65R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22", "315/70R17"]
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "2wd Regular Cab", "tireSizes": ["235/75R17", "255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCab", "tireSizes": ["235/75R17", "255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCrew", "tireSizes": ["255/65R17", "265/60R18", "275/55R20", "275/45R22"]},
+        {"trim": "4wd Regular Cab", "tireSizes": ["235/75R17", "265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCab", "tireSizes": ["235/75R17", "265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCrew", "tireSizes": ["265/70R17", "275/65R18", "275/55R20", "275/45R22"]},
+        {"trim": "Heavy-Duty", "tireSizes": ["245/75R17"]},
+        {"trim": "SVT Raptor", "tireSizes": ["315/70R17"]}
+      ],
+      "allSizes": ["235/75R17", "245/75R17", "255/65R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22", "315/70R17"]
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "2wd Regular Cab", "tireSizes": ["235/75R17", "255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCab", "tireSizes": ["235/75R17", "255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCrew", "tireSizes": ["255/65R17", "265/60R18", "275/55R20", "275/45R22"]},
+        {"trim": "4wd Regular Cab", "tireSizes": ["235/75R17", "265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCab", "tireSizes": ["235/75R17", "265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCrew", "tireSizes": ["265/70R17", "275/65R18", "275/55R20", "275/45R22"]},
+        {"trim": "Heavy-Duty", "tireSizes": ["245/75R17"]},
+        {"trim": "SVT Raptor", "tireSizes": ["315/70R17"]}
+      ],
+      "allSizes": ["235/75R17", "245/75R17", "255/65R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22", "315/70R17"]
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "2wd Regular Cab", "tireSizes": ["235/75R17", "255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCab", "tireSizes": ["235/75R17", "255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "2wd SuperCrew", "tireSizes": ["255/65R17", "265/60R18", "275/55R20", "275/45R22"]},
+        {"trim": "4wd Regular Cab", "tireSizes": ["235/75R17", "265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCab", "tireSizes": ["235/75R17", "265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "4wd SuperCrew", "tireSizes": ["265/70R17", "275/65R18", "275/55R20", "275/45R22"]},
+        {"trim": "Heavy-Duty", "tireSizes": ["245/75R17"]},
+        {"trim": "SVT Raptor", "tireSizes": ["315/70R17"]}
+      ],
+      "allSizes": ["235/75R17", "245/75R17", "255/65R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22", "315/70R17"]
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL 4x2 Regular Cab", "tireSizes": ["235/70R17", "255/65R17"]},
+        {"trim": "XL 4x2 Super Cab", "tireSizes": ["235/70R17", "255/65R17"]},
+        {"trim": "XL 4x2 Super Crew", "tireSizes": ["255/65R17"]},
+        {"trim": "XL 4x4 Regular Cab", "tireSizes": ["235/75R17", "265/70R17"]},
+        {"trim": "XL 4x4 Super Cab", "tireSizes": ["235/75R17", "265/70R17"]},
+        {"trim": "XL 4x4 Super Crew", "tireSizes": ["265/70R17"]},
+        {"trim": "XL Heavy-Duty", "tireSizes": ["245/75R17"]},
+        {"trim": "XLT 4x2 Regular Cab", "tireSizes": ["235/70R17", "255/65R17", "275/55R20"]},
+        {"trim": "XLT 4x2 Super Cab", "tireSizes": ["235/70R17", "255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "XLT 4x2 Super Crew", "tireSizes": ["255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "XLT 4x4 Regular Cab", "tireSizes": ["235/75R17", "265/70R17"]},
+        {"trim": "XLT 4x4 Super Cab", "tireSizes": ["235/75R17", "265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "XLT 4x4 Super Crew", "tireSizes": ["265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "XLT Heavy-Duty", "tireSizes": ["245/75R17"]},
+        {"trim": "STX 4x2 Regular Cab", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"trim": "STX 4x2 Super Cab", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"trim": "STX 4x4 Regular Cab", "tireSizes": ["265/70R17", "275/65R18"]},
+        {"trim": "STX 4x4 Super Cab", "tireSizes": ["265/70R17", "275/65R18"]},
+        {"trim": "FX2 4x2 Super Cab", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "FX2 4x2 Super Crew", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "FX4 4x4 Super Cab", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "FX4 4x4 Super Crew", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Lariat 4x2 Super Cab", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "Lariat 4x2 Super Crew", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "Lariat 4x4 Super Cab", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Lariat 4x4 Super Crew", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "King Ranch 4x2 Super Crew", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "King Ranch 4x4 Super Crew", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Platinum 4x2 Super Crew", "tireSizes": ["275/55R20"]},
+        {"trim": "Platinum 4x4 Super Crew", "tireSizes": ["275/55R20"]},
+        {"trim": "Harley Davidson Super Crew 4x2", "tireSizes": ["275/45R22"]},
+        {"trim": "Harley Davidson Super Crew 4x4", "tireSizes": ["275/45R22"]},
+        {"trim": "SVT Raptor", "tireSizes": ["315/70R17"]}
+      ],
+      "allSizes": ["235/70R17", "235/75R17", "245/75R17", "255/65R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22", "315/70R17"]
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL 2wd", "tireSizes": ["235/70R17", "255/65R17"]},
+        {"trim": "XL 4wd", "tireSizes": ["235/75R17", "265/70R17"]},
+        {"trim": "XLT 2wd", "tireSizes": ["235/70R17", "255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "XLT 4wd", "tireSizes": ["235/75R17", "265/70R17", "275/65R18", "275/55R20"]},
+        {"trim": "FX2", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "FX4", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Lariat", "tireSizes": ["265/60R18", "275/65R18", "275/55R20"]},
+        {"trim": "King Ranch", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Platinum", "tireSizes": ["275/55R20"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/45R22"]}
+      ],
+      "allSizes": ["235/70R17", "235/75R17", "255/65R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22"]
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL Regular Cab 2wd", "tireSizes": ["235/70R17", "255/65R17"]},
+        {"trim": "XL Regular Cab 4wd", "tireSizes": ["235/75R17", "245/70R17", "255/70R17"]},
+        {"trim": "XL Super Cab 2wd", "tireSizes": ["235/70R17", "255/65R17"]},
+        {"trim": "XL Super Cab 4wd", "tireSizes": ["235/75R17", "255/70R17"]},
+        {"trim": "XL Heavy-Duty", "tireSizes": ["245/70R17"]},
+        {"trim": "XLT Regular Cab 2wd", "tireSizes": ["235/70R17", "255/65R17", "265/60R18"]},
+        {"trim": "XLT Regular Cab 4wd", "tireSizes": ["235/75R17", "255/70R17"]},
+        {"trim": "XLT Super Cab 2wd", "tireSizes": ["245/70R17"]},
+        {"trim": "XLT Super Cab 4wd", "tireSizes": ["255/70R17", "275/65R18"]},
+        {"trim": "XLT Super Crew 2wd", "tireSizes": ["255/65R17", "265/60R18", "275/55R20"]},
+        {"trim": "XLT Super Crew 4wd", "tireSizes": ["255/70R17", "275/65R18"]},
+        {"trim": "XLT Heavy-Duty", "tireSizes": ["245/70R17"]},
+        {"trim": "STX Regular Cab 2wd", "tireSizes": ["255/65R17"]},
+        {"trim": "STX Regular Cab 4wd", "tireSizes": ["255/70R17"]},
+        {"trim": "STX Super Cab 2wd", "tireSizes": ["255/65R17", "265/60R18"]},
+        {"trim": "STX Super Cab 4wd", "tireSizes": ["255/70R17", "275/65R18"]},
+        {"trim": "FX4 Regular Cab 4wd", "tireSizes": ["275/65R18"]},
+        {"trim": "FX4 Super Cab 4wd", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "FX4 Super Crew 4wd", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Lariat Super Cab 2wd", "tireSizes": ["265/60R18"]},
+        {"trim": "Lariat Super Cab 4wd", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Lariat Super Crew 2wd", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "Lariat Super Crew 4wd", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "King Ranch Super Crew 2wd", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "King Ranch Super Crew 4wd", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/45R22"]}
+      ],
+      "allSizes": ["235/70R17", "235/75R17", "245/70R17", "255/65R17", "255/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22"]
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["235/70R17", "235/75R17", "255/65R17", "255/70R17"]},
+        {"trim": "XLT", "tireSizes": ["235/70R17", "235/75R17", "255/65R17", "255/70R17", "265/60R18", "275/65R18", "275/55R20"]},
+        {"trim": "STX", "tireSizes": ["255/65R17", "255/70R17", "265/60R18", "275/65R18"]},
+        {"trim": "FX2", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "FX4", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Lariat", "tireSizes": ["265/60R18", "275/65R18", "275/55R20"]},
+        {"trim": "King Ranch", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/45R22"]}
+      ],
+      "allSizes": ["235/70R17", "235/75R17", "255/65R17", "255/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22"]
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["235/70R17", "235/75R17", "255/65R17", "255/70R17"]},
+        {"trim": "XLT", "tireSizes": ["235/70R17", "235/75R17", "255/65R17", "255/70R17", "265/60R18", "275/65R18", "275/55R20"]},
+        {"trim": "STX", "tireSizes": ["255/65R17", "255/70R17", "265/60R18", "275/65R18"]},
+        {"trim": "FX2", "tireSizes": ["265/60R18", "275/55R20"]},
+        {"trim": "FX4", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Lariat", "tireSizes": ["265/60R18", "275/65R18", "275/55R20"]},
+        {"trim": "King Ranch", "tireSizes": ["275/65R18", "275/55R20"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/45R22"]}
+      ],
+      "allSizes": ["235/70R17", "235/75R17", "255/65R17", "255/70R17", "265/60R18", "275/65R18", "275/55R20", "275/45R22"]
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "F-150",
+      "trims": [
+        {"trim": "XL Standard Payload 6-Lug 2wd", "tireSizes": ["235/70R17", "255/65R17"]},
+        {"trim": "XL Standard Payload 6-Lug 4wd", "tireSizes": ["235/75R17", "255/70R17"]},
+        {"trim": "XL Heavy Duty Payload 7-Lug", "tireSizes": ["245/70R17"]},
+        {"trim": "XLT Standard Payload 6-Lug 2wd", "tireSizes": ["235/70R17", "255/65R17"]},
+        {"trim": "XLT Standard Payload 6-Lug 4wd", "tireSizes": ["235/75R17", "255/70R17"]},
+        {"trim": "XLT Heavy Duty Payload 7-Lug", "tireSizes": ["245/70R17"]},
+        {"trim": "STX 2wd", "tireSizes": ["255/65R17"]},
+        {"trim": "STX 4wd", "tireSizes": ["255/70R17"]},
+        {"trim": "FX4", "tireSizes": ["255/70R17", "275/65R18"]},
+        {"trim": "Lariat 2wd", "tireSizes": ["265/60R18"]},
+        {"trim": "Lariat 4wd", "tireSizes": ["265/60R18", "275/65R18"]}
+      ],
+      "allSizes": ["235/70R17", "235/75R17", "245/70R17", "255/65R17", "255/70R17", "265/60R18", "275/65R18"]
+    }
+  ]
+}

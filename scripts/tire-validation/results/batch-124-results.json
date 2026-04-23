@@ -1,0 +1,1095 @@
+{
+  "batchId": "124",
+  "processedAt": "2026-04-21T22:32:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "validatedTireSizes": ["205/55R16", "215/50R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "SL", "tireSize": "215/50R17", "wheelSize": "17"},
+        {"trim": "SV", "tireSize": "205/55R16", "wheelSize": "16"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "validatedTireSizes": ["205/55R16"],
+      "trimData": [
+        {"trim": "SL", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "SV", "tireSize": "205/55R16", "wheelSize": "16"}
+      ],
+      "status": "UPDATED",
+      "notes": "2012 Leaf only came with 16-inch wheels; 17-inch was added in 2013",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": ["205/55R16", "215/50R17"],
+      "validatedTireSizes": ["205/55R16"],
+      "trimData": [
+        {"trim": "SL", "tireSize": "205/55R16", "wheelSize": "16"},
+        {"trim": "SV", "tireSize": "205/55R16", "wheelSize": "16"}
+      ],
+      "status": "UPDATED",
+      "notes": "2011 Leaf only came with 16-inch wheels; 17-inch was added in 2013",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "leaf",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "NOT_AVAILABLE",
+      "notes": "Nissan Leaf first model year was 2011 in US market; 2010 does not exist",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "leopard",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "NOT_AVAILABLE",
+      "notes": "Nissan Leopard (Y33) production ended in 1999; 2000 model does not exist. JDM-only vehicle.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "lucino",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "NOT_AVAILABLE",
+      "notes": "Nissan Lucino production ended in 1999; 2000 model does not exist. JDM-only vehicle based on B14 Sunny/Sentra.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "NOT_AVAILABLE",
+      "notes": "Nissan Maxima was discontinued after 2023 model year. No 2024+ models exist.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "NOT_AVAILABLE",
+      "notes": "Nissan Maxima was discontinued after 2023 model year. No 2024+ models exist.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "NOT_AVAILABLE",
+      "notes": "Nissan Maxima was discontinued after 2023 model year. No 2024+ models exist.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SR", "tireSize": "245/40R19", "wheelSize": "19"},
+        {"trim": "Platinum", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/40ZR19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SR", "tireSize": "245/40R19", "wheelSize": "19"},
+        {"trim": "Platinum", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "notes": "245/40ZR19 is same as 245/40R19 with Z speed rating",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SR", "tireSize": "245/40R19", "wheelSize": "19"},
+        {"trim": "Platinum", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/40ZR19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SR", "tireSize": "245/40R19", "wheelSize": "19"},
+        {"trim": "Platinum", "tireSize": "245/40R19", "wheelSize": "19"},
+        {"trim": "Platinum Reserve", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SR", "tireSize": "245/40R19", "wheelSize": "19"},
+        {"trim": "Platinum", "tireSize": "245/40R19", "wheelSize": "19"},
+        {"trim": "Platinum Reserve", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "Platinum", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SR", "tireSize": "245/40R19", "wheelSize": "19"},
+        {"trim": "SR Midnight", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "Platinum", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SR", "tireSize": "245/40R19", "wheelSize": "19"},
+        {"trim": "SR Midnight", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "Platinum", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "SR", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18"],
+      "validatedTireSizes": [],
+      "trimData": [],
+      "status": "NOT_AVAILABLE",
+      "notes": "No 2015 Maxima exists - 7th gen ended in 2014, 8th gen started in 2016. This model year was skipped.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "3.5 S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV Sport Package", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "3.5 S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV Sport Package", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19", "245/40ZR19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "3.5 S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV Sport Package", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "3.5 S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV Sport Package", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "3.5 S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV Sport Package", "tireSize": "245/40R19", "wheelSize": "19"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["245/45R18", "245/40R19"],
+      "validatedTireSizes": ["245/45R18", "245/40R19"],
+      "trimData": [
+        {"trim": "3.5 S", "tireSize": "245/45R18", "wheelSize": "18"},
+        {"trim": "3.5 SV", "tireSize": "245/45R18", "wheelSize": "18"}
+      ],
+      "status": "CONFIRMED",
+      "notes": "19-inch option available",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["225/55R17", "245/45R18"],
+      "validatedTireSizes": ["225/55R17", "245/45R18"],
+      "trimData": [
+        {"trim": "SL", "tireSize": "225/55R17", "wheelSize": "17"},
+        {"trim": "SE", "tireSize": "245/45R18", "wheelSize": "18"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["225/55R17", "245/45R18"],
+      "validatedTireSizes": ["225/55R17", "245/45R18"],
+      "trimData": [
+        {"trim": "SL", "tireSize": "225/55R17", "wheelSize": "17"},
+        {"trim": "SE", "tireSize": "245/45R18", "wheelSize": "18"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["225/55R17", "245/45R18"],
+      "validatedTireSizes": ["225/55R17", "245/45R18"],
+      "trimData": [
+        {"trim": "SL", "tireSize": "225/55R17", "wheelSize": "17"},
+        {"trim": "SE", "tireSize": "245/45R18", "wheelSize": "18"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["225/55R17", "245/45R18"],
+      "validatedTireSizes": ["225/55R17", "245/45R18"],
+      "trimData": [
+        {"trim": "SL", "tireSize": "225/55R17", "wheelSize": "17"},
+        {"trim": "SE", "tireSize": "245/45R18", "wheelSize": "18"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["225/55R17", "245/45R18"],
+      "validatedTireSizes": ["225/55R17", "245/45R18"],
+      "trimData": [
+        {"trim": "SL", "tireSize": "225/55R17", "wheelSize": "17"},
+        {"trim": "SE", "tireSize": "245/45R18", "wheelSize": "18"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["215/55R16", "225/50R17"],
+      "validatedTireSizes": ["215/55R16", "225/50R17"],
+      "trimData": [
+        {"trim": "GXE", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "GLE", "tireSize": "225/50R17", "wheelSize": "17"},
+        {"trim": "SE", "tireSize": "225/50R17", "wheelSize": "17"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["215/55R16", "225/50R17"],
+      "validatedTireSizes": ["215/55R16", "225/50R17"],
+      "trimData": [
+        {"trim": "GXE", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "GLE", "tireSize": "225/50R17", "wheelSize": "17"},
+        {"trim": "SE", "tireSize": "225/50R17", "wheelSize": "17"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["215/55R16", "225/50R17"],
+      "validatedTireSizes": ["205/65R15", "215/55R16", "225/50R17"],
+      "trimData": [
+        {"trim": "GXE", "tireSize": "205/65R15", "wheelSize": "15"},
+        {"trim": "GXE", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "GLE", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "SE", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "SE", "tireSize": "225/50R17", "wheelSize": "17"},
+        {"trim": "SE 20th Anniversary", "tireSize": "225/50R17", "wheelSize": "17"}
+      ],
+      "status": "UPDATED",
+      "notes": "Added 205/65R15 option for base GXE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "maxima",
+      "currentTireSizes": ["215/55R16", "225/50R17"],
+      "validatedTireSizes": ["205/65R15", "215/55R16", "225/50R17"],
+      "trimData": [
+        {"trim": "GXE", "tireSize": "205/65R15", "wheelSize": "15"},
+        {"trim": "GXE", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "GLE", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "SE", "tireSize": "215/55R16", "wheelSize": "16"},
+        {"trim": "SE", "tireSize": "225/50R17", "wheelSize": "17"}
+      ],
+      "status": "UPDATED",
+      "notes": "Added 205/65R15 option for base GXE",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "micra-active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/60R15"],
+      "trimData": [
+        {"trim": "1.2 Visia", "tireSize": "165/70R14", "wheelSize": "14"},
+        {"trim": "1.2 Acenta", "tireSize": "175/60R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "South African market vehicle. K13 platform.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "micra-active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/60R15"],
+      "trimData": [
+        {"trim": "1.2 Visia", "tireSize": "165/70R14", "wheelSize": "14"},
+        {"trim": "1.2 Acenta", "tireSize": "175/60R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "South African market vehicle. K13 platform.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "micra-active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/60R15"],
+      "trimData": [
+        {"trim": "1.2 Visia", "tireSize": "165/70R14", "wheelSize": "14"},
+        {"trim": "1.2 Acenta", "tireSize": "175/60R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "South African market vehicle. K13 platform.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "micra-active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/60R15"],
+      "trimData": [
+        {"trim": "1.2 Visia", "tireSize": "165/70R14", "wheelSize": "14"},
+        {"trim": "1.2 Acenta", "tireSize": "175/60R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "South African market vehicle. K13 platform.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "micra-active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/60R15"],
+      "trimData": [
+        {"trim": "1.2 Visia", "tireSize": "165/70R14", "wheelSize": "14"},
+        {"trim": "1.2 Acenta", "tireSize": "175/60R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "South African market vehicle. K13 platform.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "micra-active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/60R15"],
+      "trimData": [
+        {"trim": "1.2 Visia", "tireSize": "165/70R14", "wheelSize": "14"},
+        {"trim": "1.2 Acenta", "tireSize": "175/60R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "South African market vehicle. K13 platform.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "micra-active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/60R15"],
+      "trimData": [
+        {"trim": "1.2 Visia", "tireSize": "165/70R14", "wheelSize": "14"},
+        {"trim": "1.2 Acenta", "tireSize": "175/60R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "South African market vehicle. K13 platform.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "micra-active",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/60R15"],
+      "trimData": [
+        {"trim": "1.2 Visia", "tireSize": "165/70R14", "wheelSize": "14"},
+        {"trim": "1.2 Acenta", "tireSize": "175/60R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "South African market vehicle. K13 platform.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "micra-c-c",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/60R15", "175/65R15"],
+      "trimData": [
+        {"trim": "1.6i", "tireSize": "175/60R15", "wheelSize": "15"},
+        {"trim": "1.6i", "tireSize": "175/65R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "European market convertible. K12 platform.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "micra-c-c",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/60R15", "175/65R15"],
+      "trimData": [
+        {"trim": "1.6i", "tireSize": "175/60R15", "wheelSize": "15"},
+        {"trim": "1.6i", "tireSize": "175/65R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "European market convertible. K12 platform.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "micra-c-c",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/60R15", "175/65R15"],
+      "trimData": [
+        {"trim": "1.6i", "tireSize": "175/60R15", "wheelSize": "15"},
+        {"trim": "1.6i", "tireSize": "175/65R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "European market convertible. K12 platform.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "micra-c-c",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/60R15", "175/65R15"],
+      "trimData": [
+        {"trim": "1.6i", "tireSize": "175/60R15", "wheelSize": "15"},
+        {"trim": "1.6i", "tireSize": "175/65R15", "wheelSize": "15"}
+      ],
+      "status": "UPDATED",
+      "notes": "European market convertible. K12 platform.",
+      "source": "tirewheelguide.com"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["255/55R20", "255/50R21"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "255/55R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "255/55R20", "wheelSize": "20"},
+        {"trim": "Platinum", "tireSize": "255/50R21", "wheelSize": "21"}
+      ],
+      "status": "UPDATED",
+      "notes": "2025+ Murano is all-new 4th generation with larger tire sizes",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["255/55R20", "255/50R21"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "255/55R20", "wheelSize": "20"},
+        {"trim": "SL", "tireSize": "255/55R20", "wheelSize": "20"},
+        {"trim": "Platinum", "tireSize": "255/50R21", "wheelSize": "21"}
+      ],
+      "status": "UPDATED",
+      "notes": "2025+ Murano is all-new 4th generation with larger tire sizes",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Midnight Edition", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Midnight Edition", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Midnight Edition", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Midnight Edition", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Midnight Edition", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Midnight Edition", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "Hybrid SL", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "Hybrid Platinum", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "LE", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "CrossCabriolet", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "LE", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "CrossCabriolet", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "LE", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "LE", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "CrossCabriolet", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "LE", "tireSize": "235/55R20", "wheelSize": "20"},
+        {"trim": "CrossCabriolet", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "LE", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "LE", "tireSize": "235/55R20", "wheelSize": "20"}
+      ],
+      "status": "CONFIRMED",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18"],
+      "trimData": [
+        {"trim": "AWD", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "FWD", "tireSize": "235/65R18", "wheelSize": "18"}
+      ],
+      "status": "UPDATED",
+      "notes": "1st gen Murano (2003-2007) only had 18-inch wheels; 2nd gen started 2009",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18"],
+      "trimData": [
+        {"trim": "AWD", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "FWD", "tireSize": "235/65R18", "wheelSize": "18"}
+      ],
+      "status": "UPDATED",
+      "notes": "1st gen Murano (2003-2007) only had 18-inch wheels",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18"],
+      "trimData": [
+        {"trim": "AWD", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "FWD", "tireSize": "235/65R18", "wheelSize": "18"}
+      ],
+      "status": "UPDATED",
+      "notes": "1st gen Murano (2003-2007) only had 18-inch wheels",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18"],
+      "trimData": [
+        {"trim": "AWD", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "FWD", "tireSize": "235/65R18", "wheelSize": "18"}
+      ],
+      "status": "UPDATED",
+      "notes": "1st gen Murano (2003-2007) only had 18-inch wheels",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18"],
+      "trimData": [
+        {"trim": "AWD", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "FWD", "tireSize": "235/65R18", "wheelSize": "18"}
+      ],
+      "status": "UPDATED",
+      "notes": "1st gen Murano (2003-2007) only had 18-inch wheels",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "murano",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18"],
+      "trimData": [
+        {"trim": "AWD", "tireSize": "235/65R18", "wheelSize": "18"},
+        {"trim": "FWD", "tireSize": "235/65R18", "wheelSize": "18"}
+      ],
+      "status": "UPDATED",
+      "notes": "1st gen Murano (2003-2007) only had 18-inch wheels",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "n7",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R19"],
+      "trimData": [
+        {"trim": "510 Air", "tireSize": "225/45R19", "wheelSize": "19"},
+        {"trim": "510 Pro", "tireSize": "225/45R19", "wheelSize": "19"},
+        {"trim": "625 Pro", "tireSize": "225/45R19", "wheelSize": "19"},
+        {"trim": "510 Max", "tireSize": "225/45R19", "wheelSize": "19"},
+        {"trim": "625 Max", "tireSize": "225/45R19", "wheelSize": "19"}
+      ],
+      "status": "UPDATED",
+      "notes": "Chinese market EV sedan. Dongfeng-Nissan joint venture. 19-inch alloy wheels standard.",
+      "source": "gasgoo.com, wheel-size.com"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "n7",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/45R19"],
+      "trimData": [
+        {"trim": "Standard", "tireSize": "225/45R19", "wheelSize": "19"}
+      ],
+      "status": "UPDATED",
+      "notes": "Chinese market EV sedan. Dongfeng-Nissan joint venture. 19-inch alloy wheels standard.",
+      "source": "gasgoo.com, wheel-size.com"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "np300-frontier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R16", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "255/70R16", "wheelSize": "16"},
+        {"trim": "SE", "tireSize": "255/70R16", "wheelSize": "16"},
+        {"trim": "LE", "tireSize": "265/60R18", "wheelSize": "18"},
+        {"trim": "Pro-4X", "tireSize": "265/60R18", "wheelSize": "18"}
+      ],
+      "status": "UPDATED",
+      "notes": "Mexico/Latin America market pickup. Different from US Frontier.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "np300-frontier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R16", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "255/70R16", "wheelSize": "16"},
+        {"trim": "SE", "tireSize": "255/70R16", "wheelSize": "16"},
+        {"trim": "LE", "tireSize": "265/60R18", "wheelSize": "18"},
+        {"trim": "Pro-4X", "tireSize": "265/60R18", "wheelSize": "18"}
+      ],
+      "status": "UPDATED",
+      "notes": "Mexico/Latin America market pickup. Different from US Frontier.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "np300-frontier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R16", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "255/70R16", "wheelSize": "16"},
+        {"trim": "SE", "tireSize": "255/70R16", "wheelSize": "16"},
+        {"trim": "LE", "tireSize": "265/60R18", "wheelSize": "18"}
+      ],
+      "status": "UPDATED",
+      "notes": "Mexico/Latin America market pickup. Different from US Frontier.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "np300-frontier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R16", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "255/70R16", "wheelSize": "16"},
+        {"trim": "SE", "tireSize": "255/70R16", "wheelSize": "16"},
+        {"trim": "LE", "tireSize": "265/60R18", "wheelSize": "18"}
+      ],
+      "status": "UPDATED",
+      "notes": "Mexico/Latin America market pickup. Different from US Frontier.",
+      "source": "wheel-size.com"
+    }
+  ],
+  "summary": {
+    "confirmed": 39,
+    "updated": 29,
+    "notAvailable": 7,
+    "total": 75
+  }
+}

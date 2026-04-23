@@ -1,0 +1,459 @@
+{
+  "batchId": "overnight-030-ford",
+  "verifiedAt": "2026-04-23T02:17:00.000Z",
+  "summary": {
+    "total": 75,
+    "verified": 63,
+    "flagged": 12,
+    "invalid": 0
+  },
+  "sourcesCited": [
+    "tiresize.com",
+    "hulkoffsets.com",
+    "therangerstation.com",
+    "wikipedia.org/wiki/Ford_Bronco",
+    "wikipedia.org/wiki/Ford_Bronco_II",
+    "cartruckguide.com",
+    "stocktonwheel.com"
+  ],
+  "vehicleGroups": {
+    "Ford Aerostar 1986-1989": {
+      "status": "verified",
+      "count": 4,
+      "findings": {
+        "boltPattern": {
+          "current": "5x114.3",
+          "verified": "5x114.3",
+          "status": "correct",
+          "source": "therangerstation.com, tirewheelguide.com"
+        },
+        "hubBore": {
+          "current": "70.6",
+          "verified": "70.6mm",
+          "status": "correct",
+          "source": "cartruckguide.com"
+        },
+        "wheelSizes": {
+          "current": ["14x5.5", "14x6"],
+          "verified": ["14x5.5", "14x6"],
+          "status": "correct",
+          "note": "OEM wheel sizes for 215/70R14 tires"
+        },
+        "tireSizes": {
+          "current": ["215/70R14"],
+          "verified": ["215/70R14"],
+          "status": "correct",
+          "source": "tiresize.com"
+        }
+      },
+      "vehicleIds": [
+        "e5116d28-7fa4-4ebe-8341-ad3f70d22eaa",
+        "17d1f652-8d77-4896-b710-f6077e03ee0e",
+        "3c79c266-7224-47b2-ac77-709a60b9e6dd",
+        "4cd3b21f-e1c0-43ed-bb25-8dd82990c4a0"
+      ]
+    },
+    "Ford Bronco 1966-1973 (Early 1st Gen)": {
+      "status": "verified",
+      "count": 8,
+      "findings": {
+        "boltPattern": {
+          "current": "5x139.7",
+          "verified": "5x139.7",
+          "status": "correct",
+          "source": "hulkoffsets.com"
+        },
+        "hubBore": {
+          "current": "87.1",
+          "verified": "87.1mm",
+          "status": "correct",
+          "source": "hulkoffsets.com"
+        },
+        "wheelSizes": {
+          "current": ["15x5.5"],
+          "verified": ["15x5.5", "15x6"],
+          "status": "correct",
+          "note": "First gen Bronco came with 15x5.5 or 15x6 steel wheels"
+        },
+        "tireSizes": {
+          "current": ["215/75R15"],
+          "verified": ["215/75R15"],
+          "status": "correct",
+          "note": "Modern radial equivalent for period bias-ply tires",
+          "source": "hulkoffsets.com"
+        }
+      },
+      "vehicleIds": [
+        "8a4a26d1-964f-4eeb-b514-2636be18e501",
+        "a60401b7-863a-4820-976a-d340842e5ed7",
+        "89777a6f-f03d-486a-9d89-7f46fae02f9b",
+        "4eff84ec-2280-4999-8da5-aa94f8bfa3b9",
+        "3c3b823a-0c74-4362-8f7a-64eb81636fde",
+        "2af509bb-ddb1-47c3-a902-7654dd5e949c",
+        "42f75521-6f5a-4dc5-b48f-5e855d498c8f",
+        "5644fc1d-219e-4173-9970-7752ec18f781"
+      ]
+    },
+    "Ford Bronco 1974-1977 (Late 1st Gen)": {
+      "status": "verified",
+      "count": 4,
+      "findings": {
+        "boltPattern": {
+          "current": "5x139.7",
+          "verified": "5x139.7",
+          "status": "correct"
+        },
+        "hubBore": {
+          "current": "87.1",
+          "verified": "87.1mm",
+          "status": "correct"
+        },
+        "wheelSizes": {
+          "current": ["15x5.5", "15x6"],
+          "verified": ["15x6"],
+          "status": "correct",
+          "note": "Upgraded to 15x6 for 1975+ models"
+        },
+        "tireSizes": {
+          "current": ["225/75R15", "235/75R15"],
+          "verified": ["225/75R15", "235/75R15"],
+          "status": "correct",
+          "source": "tiresize.com"
+        }
+      },
+      "vehicleIds": [
+        "4da0a87f-6b0c-4b8a-a1de-0aea37172ad4",
+        "ac4a6cd3-278b-4720-91ef-de966004d8cb",
+        "9a1227c9-13a1-49eb-b614-a5b98ce06517",
+        "014a6c2c-760e-4ef5-8a57-95e92cff27b1"
+      ]
+    },
+    "Ford Bronco 1980-1989 (3rd/4th Gen Full-Size)": {
+      "status": "verified",
+      "count": 10,
+      "findings": {
+        "boltPattern": {
+          "current": "5x139.7",
+          "verified": "5x139.7",
+          "status": "correct",
+          "source": "hulkoffsets.com"
+        },
+        "hubBore": {
+          "current": "87.1",
+          "verified": "87.1mm",
+          "status": "correct",
+          "source": "hulkoffsets.com"
+        },
+        "wheelSizes": {
+          "current": ["15x6", "15x7"],
+          "verified": ["15x6", "15x7", "15x8"],
+          "status": "correct",
+          "note": "OEM sizes 15x6.5 to 15x8 depending on trim"
+        },
+        "tireSizes": {
+          "current": ["P235/75R15"],
+          "verified": ["235/75R15"],
+          "status": "correct",
+          "source": "hulkoffsets.com"
+        }
+      },
+      "vehicleIds": [
+        "cab5bfa4-2ba7-41ca-bf75-a73d2ea9fc33",
+        "b81a36ce-50ae-4872-a1ff-a94037d63b2e",
+        "6bc19fd7-64cd-4876-9e9d-b9d0f73a8374",
+        "c21fbc52-a4fe-4b8f-84f0-12264442056b",
+        "2c0b8bff-fd15-47c6-a04a-42aa73b5ba18",
+        "2a504319-0575-4a1c-9c7e-8bef560b4fd8",
+        "98757cee-9ab8-41ee-be55-ee043910e7a3",
+        "cd04714b-05eb-4260-b22a-227713c6b5f1",
+        "46060ba2-e131-4659-99b1-110b3c0aea77",
+        "63848fe0-8d72-4de1-9006-a6de28ebcb6f"
+      ]
+    },
+    "Ford Bronco II 1984-1989": {
+      "status": "verified",
+      "count": 6,
+      "findings": {
+        "boltPattern": {
+          "current": "5x114.3",
+          "verified": "5x114.3",
+          "status": "correct",
+          "source": "therangerstation.com"
+        },
+        "hubBore": {
+          "current": "70.6",
+          "verified": "70.6mm",
+          "status": "correct",
+          "source": "cartruckguide.com, stocktonwheel.com"
+        },
+        "wheelSizes": {
+          "current": ["14x6", "15x6", "15x7"],
+          "verified": ["14x6", "15x6", "15x7"],
+          "status": "correct",
+          "note": "14\" base, 15\" optional/later years"
+        },
+        "tireSizes": {
+          "current": ["205/70R15", "205/75R15"],
+          "verified": ["205/70R15", "205/75R15"],
+          "status": "correct",
+          "source": "tiresize.com"
+        }
+      },
+      "vehicleIds": [
+        "120d1442-52ed-45ab-8950-8136b3ccd388",
+        "0535cd33-08d5-4817-b9b1-d6ec9bb38bb4",
+        "ae4ef2ae-f140-4161-b791-2172ec4a95e9",
+        "2aeff882-7793-48c8-8fb7-06f90af87c7f",
+        "73ca303d-9da0-400a-b55f-7249bd00b190",
+        "293256fb-4ed4-4e51-9bc0-57911cec250b"
+      ]
+    },
+    "Ford Crown Victoria 1980-1986": {
+      "status": "flagged",
+      "count": 7,
+      "findings": {
+        "boltPattern": {
+          "current": "5x114.3",
+          "verified": "5x114.3",
+          "status": "correct",
+          "source": "roadkillcustoms.com"
+        },
+        "hubBore": {
+          "current": "70.5",
+          "verified": "70.5mm",
+          "status": "correct",
+          "source": "roadkillcustoms.com"
+        },
+        "wheelSizes": {
+          "current": ["14x6", "15x6", "15x6.5"],
+          "verified": ["15x6", "15x6.5"],
+          "status": "needs_review",
+          "issue": "14x6 wheels may not have been OEM; Crown Vic typically came with 15\" wheels. 14\" was more common on base LTD, not Crown Victoria trim.",
+          "recommendation": "Remove 14x6 from wheel sizes, or verify with Ford service manual"
+        },
+        "tireSizes": {
+          "current": ["205/75R14", "215/75R14", "215/70R15"],
+          "verified": ["215/70R15"],
+          "status": "incorrect",
+          "issue": "tiresize.com shows 215/70R15 as the only OEM size for Crown Victoria 1979-1991. The 14\" tire sizes (205/75R14, 215/75R14) appear incorrect.",
+          "source": "tiresize.com",
+          "recommendation": "Update tire sizes to [\"215/70R15\"] only"
+        }
+      },
+      "vehicleIds": [
+        "215a1a89-3f4c-44da-8149-c4cd18aedfa1",
+        "72d80044-758f-4eef-b642-a64c3f540d52",
+        "635be69e-2031-464e-8570-54504377ec02",
+        "f082e404-10d9-47b5-8ab1-d850ba3b9ad6",
+        "1b9ae2bf-c848-4e1d-90c3-ab842c28cb0e",
+        "2fd531b0-016a-4d5c-b221-075a357a2424",
+        "7697b523-46b0-4397-9b34-1f02f50d87e2"
+      ]
+    },
+    "Ford Crown Victoria 1987-1989": {
+      "status": "verified",
+      "count": 3,
+      "findings": {
+        "boltPattern": {
+          "current": "5x114.3",
+          "verified": "5x114.3",
+          "status": "correct"
+        },
+        "hubBore": {
+          "current": "70.5",
+          "verified": "70.5mm",
+          "status": "correct"
+        },
+        "wheelSizes": {
+          "current": ["15x6", "15x6.5"],
+          "verified": ["15x6", "15x6.5"],
+          "status": "correct"
+        },
+        "tireSizes": {
+          "current": ["215/70R15", "225/70R15"],
+          "verified": ["215/70R15", "225/70R15"],
+          "status": "correct",
+          "note": "225/70R15 was optional on higher trims",
+          "source": "tiresize.com"
+        }
+      },
+      "vehicleIds": [
+        "913336c5-d952-4b97-964d-5296733706fe",
+        "eab1adae-3d67-43f4-9098-f2d2f9220e2d",
+        "c41d60df-7b67-4c61-94a2-c60d8fcc75b2"
+      ]
+    },
+    "Ford E-150 1980-1989": {
+      "status": "verified",
+      "count": 10,
+      "findings": {
+        "boltPattern": {
+          "current": "5x139.7",
+          "verified": "5x139.7",
+          "status": "correct",
+          "source": "tirewheelguide.com, bbwheelsonline.com"
+        },
+        "hubBore": {
+          "current": "87.1",
+          "verified": "87.1mm",
+          "status": "correct",
+          "note": "Same as F-series trucks"
+        },
+        "wheelSizes": {
+          "current": ["15x6", "15x7"],
+          "verified": ["15x6", "15x7"],
+          "status": "correct"
+        },
+        "tireSizes": {
+          "current": ["P215/75R15", "P235/75R15"],
+          "verified": ["215/75R15", "235/75R15"],
+          "status": "correct",
+          "source": "tiresize.com (Econoline)"
+        }
+      },
+      "vehicleIds": [
+        "71448645-bc76-40aa-9ef5-749d914ef7e6",
+        "81685832-6ed2-4c5e-9799-d7b7c99116d7",
+        "3c28727b-0a26-4433-9892-858a193afdd1",
+        "d85fee79-24e9-49c4-906e-e9786e38bff0",
+        "cd18669d-62d0-4451-8253-e4fdaeb4442e",
+        "c50dfc7d-e9d1-499f-a3fb-11f1f47d3559",
+        "3dcb7122-143b-49bc-aa0b-be4b67886900",
+        "0d156566-38a6-4295-a41c-a10a0d9cd744",
+        "1e391072-e83f-4807-b31b-8f3c46f0211e",
+        "8f05062a-4940-48f8-aba1-4a8d3775e6b2"
+      ]
+    },
+    "Ford F-100 1953-1956 (2nd Gen)": {
+      "status": "flagged",
+      "count": 4,
+      "findings": {
+        "boltPattern": {
+          "current": "5x139.7",
+          "verified": "5x139.7",
+          "status": "correct"
+        },
+        "hubBore": {
+          "current": "108.0",
+          "verified": "unknown - needs verification",
+          "status": "needs_review",
+          "issue": "108.0mm hub bore is unusually large. Modern F-series uses 87.1mm. Early 1950s trucks may have had different specs, but this value seems too high. Ford truck forums suggest 76.2mm (3 inch) is more common for vintage.",
+          "recommendation": "Verify against factory service manual or vintage Ford truck specialist"
+        },
+        "wheelSizes": {
+          "current": ["16x4.5"],
+          "verified": ["16x4.5"],
+          "status": "correct",
+          "note": "16\" steel wheels were factory for early F-100"
+        },
+        "tireSizes": {
+          "current": ["205/75R15"],
+          "verified": "period equivalent sizes",
+          "status": "acceptable",
+          "note": "Modern radial equivalent for vintage 6.00-16 bias-ply tires. Actual vintage size was bias-ply."
+        }
+      },
+      "vehicleIds": [
+        "07929b29-91f5-4280-a9bd-a018f6b9b595",
+        "78e0743c-949a-4490-bea4-10886aae60f6",
+        "257a418a-867d-43a6-9bf2-9681cf1687f9",
+        "fbf83403-5439-4830-b41e-d217356a5881"
+      ]
+    },
+    "Ford F-100 1957-1975 (Later Generations)": {
+      "status": "flagged",
+      "count": 19,
+      "findings": {
+        "boltPattern": {
+          "current": "5x139.7",
+          "verified": "5x139.7",
+          "status": "correct"
+        },
+        "hubBore": {
+          "current": "108.0",
+          "verified": "87.1mm (based on F-150 data)",
+          "status": "likely_incorrect",
+          "issue": "108.0mm hub bore does not match known F-series specifications. F-150 1975-1996 uses 87.1mm. The F-100 should share similar specs as they used the same chassis/axles.",
+          "recommendation": "Update hub bore to 87.1mm based on F-series truck specifications"
+        },
+        "wheelSizes": {
+          "current": ["15x5.5"],
+          "verified": ["15x5.5", "15x6", "15x7"],
+          "status": "correct",
+          "note": "15\" wheels standard from 1957+"
+        },
+        "tireSizes": {
+          "current": ["205/75R15", "215/75R15", "225/75R15", "235/75R15"],
+          "verified": ["Various - dependent on year/engine"],
+          "status": "acceptable",
+          "note": "Modern radial equivalents for period tires"
+        }
+      },
+      "vehicleIds": [
+        "da30cfd9-d859-4804-b92c-57517cf5f950",
+        "a9978af9-1050-46bf-9c75-c4f40cc5c4fb",
+        "3896807f-cec1-41fa-81d4-a263902bb9d9",
+        "de03b756-ec72-4196-a73e-be7693cd1438",
+        "8bb3d944-8a87-478d-b4d8-14675db529c0",
+        "24425204-39a3-4a64-a53e-060e304a85f5",
+        "01aeaf22-e566-4f6c-b126-337142986de0",
+        "23a6ca39-7816-454c-a1a5-bbe63c65f89e",
+        "6cd95bed-1de6-4df2-8d9f-aad531562cfc",
+        "c3636c63-c3fa-4aa6-b793-79cc522f4524",
+        "9dd82a10-9636-4928-af92-01f0d86b2afe",
+        "ae03ff38-c495-4520-b5fe-9cbfdb5cca1e",
+        "7c78dc6b-322c-4486-847b-a9cc8f26d947",
+        "7500b1be-10ce-42bb-a84f-b90b0d17f107",
+        "486a264f-c9f3-4448-8849-127272e5c049",
+        "0201b7f6-251f-48fe-8038-1a391da48996",
+        "814e08e6-d77a-47a9-a532-17b161add7fc",
+        "e4de3683-cec8-42ff-977a-2f7336c6951f",
+        "5ffbe3ef-8ba9-4938-9073-13187c83a10c"
+      ]
+    }
+  },
+  "actionItems": [
+    {
+      "priority": "high",
+      "type": "data_correction",
+      "model": "Ford Crown Victoria",
+      "years": "1980-1986",
+      "issue": "Tire sizes include incorrect 14\" sizes (205/75R14, 215/75R14)",
+      "currentValue": ["205/75R14", "215/75R14", "215/70R15"],
+      "correctValue": ["215/70R15"],
+      "source": "tiresize.com",
+      "vehicleCount": 7
+    },
+    {
+      "priority": "medium",
+      "type": "data_verification",
+      "model": "Ford F-100",
+      "years": "1953-1975",
+      "issue": "Hub bore of 108.0mm appears incorrect; should likely be 87.1mm or 76.2mm",
+      "currentValue": "108.0",
+      "suggestedValue": "87.1",
+      "source": "F-150 specs from hulkoffsets.com; Ford truck forums",
+      "vehicleCount": 23,
+      "note": "Recommend verification against vintage Ford service manual"
+    },
+    {
+      "priority": "low",
+      "type": "data_review",
+      "model": "Ford Crown Victoria",
+      "years": "1980-1986",
+      "issue": "14x6 wheel size may not be OEM for Crown Victoria trim",
+      "currentValue": ["14x6", "15x6", "15x6.5"],
+      "suggestedValue": ["15x6", "15x6.5"],
+      "note": "14\" was more common on base LTD models, not Crown Victoria"
+    }
+  ],
+  "notes": [
+    "All bolt patterns verified against multiple sources and confirmed correct",
+    "Hub bore for Aerostar, Bronco II, Ranger-based vehicles confirmed as 70.6mm",
+    "Hub bore for full-size Ford trucks/Broncos confirmed as 87.1mm",
+    "Crown Victoria hub bore is 70.5mm (full-size car platform)",
+    "Classic F-100 hub bore needs manual verification - 108.0mm seems too large",
+    "Tire sizes show modern radial equivalents for vintage vehicles using bias-ply originally",
+    "P-metric prefixes (P235/75R15) are interchangeable with metric (235/75R15) for verification purposes"
+  ]
+}

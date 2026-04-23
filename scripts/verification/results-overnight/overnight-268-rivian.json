@@ -1,0 +1,449 @@
+[
+  {
+    "id": "33698ca9-60a8-4aee-92bb-419bf03f7c89",
+    "year": 2022,
+    "make": "rivian",
+    "model": "r1s",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135.5 to 6x135; Hub bore corrected from 84.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "diameter": 21
+      },
+      {
+        "width": 10,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "d9b49d09-62ba-4b60-a4e7-83de1f0c4ae9",
+    "year": 2023,
+    "make": "rivian",
+    "model": "r1s",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135.5 to 6x135; Hub bore corrected from 84.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "diameter": 21
+      },
+      {
+        "width": 10,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "73f2fe1a-db7a-4d5d-b21e-4eaee5901d54",
+    "year": 2024,
+    "make": "rivian",
+    "model": "r1s",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135.5 to 6x135; Hub bore corrected from 84.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "diameter": 21
+      },
+      {
+        "width": 10,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22",
+      "275/60R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "5e50ea28-99e3-4faf-a8e0-63a424383a27",
+    "year": 2025,
+    "make": "rivian",
+    "model": "r1s",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135.5 to 6x135; Hub bore corrected from 84.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "diameter": 21
+      },
+      {
+        "width": 10,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "2821d9db-b724-44db-ab7f-6d89bc4a9d9d",
+    "year": 2026,
+    "make": "rivian",
+    "model": "r1s",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135.5 to 6x135; Hub bore corrected from 84.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      },
+      {
+        "width": 9.5,
+        "diameter": 21
+      },
+      {
+        "width": 10,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "a75e8bcd-15a5-494f-a12b-c4358be9e0aa",
+    "year": 2021,
+    "make": "rivian",
+    "model": "r1t",
+    "trim": "Quad",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x139.7 to 6x135; Hub bore corrected from 64.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 48,
+        "isStock": true,
+        "diameter": 22
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 42,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22",
+      "275/60R20"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "4ac60bb9-374e-4994-86a3-962c8519ef77",
+    "year": 2022,
+    "make": "rivian",
+    "model": "r1t",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135.5 to 6x135; Hub bore corrected from 84.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "50b7b2c7-3075-4ad7-ba66-129c97fc73dd",
+    "year": 2023,
+    "make": "rivian",
+    "model": "r1t",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135.5 to 6x135; Hub bore corrected from 84.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "c962f734-350e-402d-a35b-9cba45be5a41",
+    "year": 2024,
+    "make": "rivian",
+    "model": "r1t",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135.5 to 6x135; Hub bore corrected from 84.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "10efea5c-4b66-4b0b-a51d-06fde9b0f99a",
+    "year": 2025,
+    "make": "rivian",
+    "model": "r1t",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135.5 to 6x135; Hub bore corrected from 84.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  },
+  {
+    "id": "720bbb0b-edde-4fee-bccd-a244a39212e6",
+    "year": 2026,
+    "make": "rivian",
+    "model": "r1t",
+    "trim": "1st Gen",
+    "status": "corrected",
+    "reason": "Bolt pattern corrected from 5x135.5 to 6x135; Hub bore corrected from 84.1 to 87.1",
+    "verifiedBoltPattern": "6x135",
+    "verifiedHubBore": "87.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 8.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "front",
+        "width": 9,
+        "offset": null,
+        "isStock": true,
+        "diameter": 21
+      },
+      {
+        "axle": "front",
+        "width": 8,
+        "offset": null,
+        "isStock": true,
+        "diameter": 22
+      }
+    ],
+    "verifiedTireSizes": [
+      "275/65R20",
+      "275/55R21",
+      "275/50R22"
+    ],
+    "sources": [
+      "tiresize.com"
+    ]
+  }
+]

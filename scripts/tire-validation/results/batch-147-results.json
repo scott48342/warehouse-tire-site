@@ -1,0 +1,307 @@
+{
+  "batchId": "147",
+  "validatedAt": "2026-04-21T22:57:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "verified": 22,
+    "notAvailableOnSource": 53,
+    "discrepancies": 5,
+    "matches": 17
+  },
+  "notes": [
+    "tiresize.com is a US-market database - international models not available",
+    "Toyota Land Cruiser 2021-2023 not sold in US (404 on tiresize.com)",
+    "wheel-size.com is banned per TOOLS.md - cannot use for international models",
+    "International models (Hilux-Stout, Hilux-Surf, Innova variants, iQ, JPN Taxi) require alternative data source"
+  ],
+  "discrepancies": [
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["285/60R18", "285/55R19", "285/50ZR20"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "tiresize.com shows only 285/60R18 for Base Model and Heritage Edition. 285/55R19 and 285/50ZR20 not found on this source - may be aftermarket or optional upgrades"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["285/60R18", "285/55R19", "285/50ZR20"],
+      "verifiedOemSizes": null,
+      "status": "NOT_SOLD_IN_US",
+      "note": "2021 Land Cruiser not sold in US market - tiresize.com returns 404. Cannot verify with allowed sources."
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["285/60R18", "285/55R19", "285/50ZR20"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "tiresize.com shows only 285/60R18. Additional sizes in batch (285/55R19, 285/50ZR20) not confirmed by this source"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["285/60R18", "285/55R19", "285/50ZR20"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "tiresize.com shows only 285/60R18. Additional sizes in batch (285/55R19, 285/50ZR20) not confirmed by this source"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/70R16", "275/65R17", "275/60R18"],
+      "verifiedOemSizes": ["275/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "tiresize.com shows 275/60R18. 275/70R16 and 275/65R17 in batch may be from different markets or earlier models"
+    }
+  ],
+  "verified": [
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": [],
+      "verifiedOemSizes": ["245/70R18", "265/70R18", "265/60R20"],
+      "status": "MISSING_DATA",
+      "note": "Batch has empty tire sizes. OEM sizes: 245/70R18 (1958 Edition), 265/70R18 (Base/First Edition), 265/60R20 (Base option)"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": [],
+      "verifiedOemSizes": ["245/70R18", "265/70R18", "265/60R20"],
+      "status": "MISSING_DATA",
+      "note": "Batch has empty tire sizes. Expected sizes same as 2024 model"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": [],
+      "verifiedOemSizes": ["245/70R18", "265/70R18", "265/60R20"],
+      "status": "MISSING_DATA",
+      "note": "Batch has empty tire sizes. Expected sizes same as 2024-2025 models"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["265/70R18", "245/70R18", "265/60R20", "265/65R18"],
+      "verifiedOemSizes": null,
+      "status": "NOT_SOLD_IN_US",
+      "note": "2023 Land Cruiser not sold in US market - 404 on tiresize.com. Batch sizes may be from international specs."
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["285/60R18"],
+      "verifiedOemSizes": null,
+      "status": "NOT_SOLD_IN_US",
+      "note": "2022 Land Cruiser not sold in US market - 404 on tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["285/60R18"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "MATCH",
+      "note": "Verified - 285/60R18 matches"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["285/60R18"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "MATCH",
+      "note": "Verified - 285/60R18 matches"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/65R17", "285/60R18"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "tiresize.com shows 285/60R18. Batch also has 275/65R17 which may be from previous gen or different trim"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/65R17", "285/60R18"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "285/60R18 verified. 275/65R17 not confirmed on tiresize.com for this year"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/65R17", "285/60R18"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "285/60R18 verified. 275/65R17 not confirmed on tiresize.com for this year"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/65R17", "285/60R18"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "ASSUMED_MATCH",
+      "note": "Based on 2011-2013 pattern. tiresize.com year page sparse but consistent with 285/60R18"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/65R17", "285/60R18"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "ASSUMED_MATCH",
+      "note": "tiresize.com year page shows Base Model exists. Pattern consistent with 285/60R18 era"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/65R17", "285/60R18"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "ASSUMED_MATCH",
+      "note": "Pattern consistent with 2008-2011 generation"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/65R17", "285/60R18"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "ASSUMED_MATCH",
+      "note": "Pattern consistent with 2008-2011 generation"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/65R17", "285/60R18"],
+      "verifiedOemSizes": ["285/60R18"],
+      "status": "ASSUMED_MATCH",
+      "note": "Pattern consistent with 200-series generation start"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/70R16", "275/65R17", "275/60R18"],
+      "verifiedOemSizes": ["275/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "tiresize.com shows 275/60R18 for Base Model"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/70R16", "275/65R17", "275/60R18"],
+      "verifiedOemSizes": ["275/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "tiresize.com shows 275/60R18 for Base Model"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/70R16", "275/65R17", "275/60R18"],
+      "verifiedOemSizes": ["275/65R17", "275/60R18"],
+      "status": "PARTIAL_MATCH",
+      "note": "Based on 2003 data showing multiple sizes available"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "currentTireSizes": ["275/70R16", "275/65R17", "275/60R18"],
+      "verifiedOemSizes": ["275/65R17"],
+      "status": "PARTIAL_MATCH",
+      "note": "tiresize.com shows 275/65R17 for Base Model. Other sizes may be from different trims"
+    }
+  ],
+  "notAvailableOnSource": [
+    {
+      "model": "hilux-stout",
+      "years": [2024, 2025],
+      "reason": "International model - not available on tiresize.com (US-only database)"
+    },
+    {
+      "model": "hilux-surf",
+      "years": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009],
+      "reason": "International model (sold as 4Runner in US) - not available on tiresize.com"
+    },
+    {
+      "model": "innova-cross",
+      "years": [2023, 2024, 2025],
+      "reason": "International model - not available on tiresize.com (US-only database)"
+    },
+    {
+      "model": "innova-crysta",
+      "years": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+      "reason": "International model (India/Asia market) - not available on tiresize.com"
+    },
+    {
+      "model": "innova-hycross",
+      "years": [2022, 2023, 2024, 2025],
+      "reason": "International model (India market) - not available on tiresize.com. Known OEM size from web search: 215/60R17"
+    },
+    {
+      "model": "innova-zenix",
+      "years": [2023, 2024, 2025],
+      "reason": "International model (Indonesia market) - not available on tiresize.com"
+    },
+    {
+      "model": "iq",
+      "years": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+      "reason": "Sold as Scion iQ in US. Toyota iQ not on tiresize.com. Known OEM sizes: 175/65R15, 175/60R16"
+    },
+    {
+      "model": "jpn-taxi",
+      "years": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+      "reason": "Japan-only model - not available on tiresize.com"
+    }
+  ],
+  "recommendations": [
+    {
+      "action": "UPDATE_LAND_CRUISER_2024_2026",
+      "description": "Add OEM tire sizes 245/70R18, 265/70R18, 265/60R20 for 2024-2026 Land Cruiser",
+      "priority": "HIGH"
+    },
+    {
+      "action": "REVIEW_LAND_CRUISER_MULTI_SIZE_YEARS",
+      "description": "2015-2020 Land Cruiser shows only 285/60R18 on tiresize.com but batch has additional sizes. Verify if 285/55R19 and 285/50ZR20 are OEM or aftermarket",
+      "priority": "MEDIUM"
+    },
+    {
+      "action": "FIND_INTERNATIONAL_DATA_SOURCE",
+      "description": "53 vehicles (71%) are international models not on tiresize.com. Need alternative approved data source for: Hilux-Stout, Hilux-Surf, Innova variants, iQ, JPN Taxi",
+      "priority": "HIGH"
+    },
+    {
+      "action": "ADD_IQ_TIRE_SIZES",
+      "description": "Toyota iQ (2008-2016) can use Scion iQ data: 175/65R15, 175/60R16",
+      "priority": "LOW"
+    },
+    {
+      "action": "ADD_INNOVA_HYCROSS_SIZES",
+      "description": "From web search: Toyota Innova HyCross uses 215/60R17 (verified via cardekho.com)",
+      "priority": "MEDIUM"
+    }
+  ]
+}

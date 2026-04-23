@@ -1,0 +1,700 @@
+{
+  "batch": "overnight-148-nissan",
+  "processedAt": "2025-07-26T04:30:00Z",
+  "totalVehicles": 51,
+  "summary": {
+    "passed": 48,
+    "warnings": 3,
+    "failed": 0
+  },
+  "results": [
+    {
+      "id": "a035c661-1f6a-4a42-802a-45b1c42db259",
+      "year": 2023,
+      "make": "nissan",
+      "model": "titan-xd",
+      "trim": "Platinum Reserve",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x139.7", "valid": true, "note": "Correct for Titan XD (same as full-size GM trucks)" },
+        "hubBore": { "value": "78.1", "valid": true },
+        "wheelSizes": { "valid": true, "note": "20x8.5 is OEM spec" },
+        "tireSizes": { "valid": true, "note": "275/60R20, 275/65R20, LT275/65R20 all correct" }
+      }
+    },
+    {
+      "id": "0e3d1df8-3f98-47c7-a795-84ff2ae2c30a",
+      "year": 2023,
+      "make": "nissan",
+      "model": "titan-xd",
+      "trim": "SV",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x139.7", "valid": true },
+        "hubBore": { "value": "78.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "615038c4-48ed-424f-84bd-595c588670a0",
+      "year": 2024,
+      "make": "nissan",
+      "model": "titan-xd",
+      "trim": "SV",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x139.7", "valid": true },
+        "hubBore": { "value": "78.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "016e71e3-24f6-45d6-9295-c55565475076",
+      "year": 2024,
+      "make": "nissan",
+      "model": "titan-xd",
+      "trim": "S",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x139.7", "valid": true },
+        "hubBore": { "value": "78.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "3d67498b-c990-4751-ba4a-1d7c2f6f13cd",
+      "year": 2024,
+      "make": "nissan",
+      "model": "titan-xd",
+      "trim": "Platinum Reserve",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x139.7", "valid": true },
+        "hubBore": { "value": "78.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "956b45ff-6dd8-4867-839b-57bf048aa7ed",
+      "year": 2024,
+      "make": "nissan",
+      "model": "titan-xd",
+      "trim": "PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x139.7", "valid": true },
+        "hubBore": { "value": "78.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "5af5badf-c640-4d77-aebb-852498d41fc6",
+      "year": 2007,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x114.3", "valid": true, "note": "Correct for 1st gen Versa (2007-2011)" },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true, "note": "15x6, 16x6.5 OEM options" },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "6c2a70b7-ff4a-4b57-ac91-4bbcec23c13d",
+      "year": 2008,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "2a0ee966-be48-4f1a-b11f-24cb2530e495",
+      "year": 2009,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "796ad49d-c3f8-4a3a-9eb1-1970de3bcb50",
+      "year": 2010,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "fd9765c4-e825-4b3b-8fa2-769eaad7fdb7",
+      "year": 2011,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "85c104d5-501a-49a9-bb26-fb3cb4704d07",
+      "year": 2012,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true, "note": "2nd gen Versa changed to 4x100 (2012+)" },
+        "hubBore": { "value": "59.1", "valid": true, "note": "Hub bore also changed to 59.1" },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "1f260d89-e361-4073-b05f-16351fa8c3ef",
+      "year": 2013,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "1868a7cd-5775-435f-a78f-db32265f8243",
+      "year": 2014,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "b6c1675d-bdfb-4092-9218-b6f31bdeb454",
+      "year": 2015,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "c31695b8-bba2-4526-81ee-8c6af12bfe34",
+      "year": 2016,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "16f212dc-e280-43c2-96a5-848a3cabe992",
+      "year": 2017,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "e69d1276-752e-489e-af9e-4fa53c41b0aa",
+      "year": 2018,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "2df3ffe8-794b-4931-aeb6-a5a4e5b3b1d5",
+      "year": 2019,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "68a15d82-026f-46b6-8d71-4a9c34e51688",
+      "year": 2020,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true, "note": "3rd gen Versa (2020+) keeps 4x100" },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true, "note": "Added 17\" option for SR trim" },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "f767ec37-9688-43ff-aa61-08e606047f63",
+      "year": 2021,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "0d643551-83f7-4a77-ab7f-f43639343a41",
+      "year": 2022,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "4b2e8f18-1439-4655-ac0e-30f6c0e5c260",
+      "year": 2023,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "1750e790-ae00-44d1-8743-83bf413fdf6e",
+      "year": 2024,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "0e757d4d-95e3-4ca5-ad99-4f3081cc3791",
+      "year": 2025,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "47e5fd64-9d9c-46c4-a824-99f2879ae366",
+      "year": 2026,
+      "make": "nissan",
+      "model": "versa",
+      "trim": "S, SV, SR",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "4x100", "valid": true },
+        "hubBore": { "value": "59.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "ec1a11fe-e7be-4faa-8dfa-dd169ac2a9ca",
+      "year": 2000,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true, "note": "Correct for 1st gen Xterra (2000-2004)" },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true, "note": "15x6, 16x6.5 OEM" },
+        "tireSizes": { "valid": true, "note": "235/70R15, 265/70R16 correct" }
+      }
+    },
+    {
+      "id": "59e97648-9f72-4ee3-ad29-15b5a549066d",
+      "year": 2001,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "34bb0634-7176-4b61-8aa8-0cab823b3e83",
+      "year": 2002,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "e83ec7f8-8f4c-4f9b-bd55-00f18d766760",
+      "year": 2003,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "966a1d66-024a-4e69-ae58-5f8d6a527afe",
+      "year": 2004,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "91b5c01a-acd0-4c92-8a14-10596e5da148",
+      "year": 2005,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true, "note": "2nd gen Xterra (2005-2015) keeps same bolt pattern" },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true, "note": "Upgraded to 16x6.5, 17x7 for 2nd gen" },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "e2d44477-ed66-4b5e-95c0-7bafe5e46ed5",
+      "year": 2006,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "8ae0faf8-730b-4843-8787-d0d3b07e5d36",
+      "year": 2007,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "2e3308df-3bd1-4c14-b1d9-415d9986baa3",
+      "year": 2008,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "58d75dc9-7b43-4603-aa8c-e074530e8034",
+      "year": 2009,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "98a108ef-6511-4a7b-9d44-262a6f10cb3b",
+      "year": 2010,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "2495a392-bbca-44b5-b5c7-108447b261c7",
+      "year": 2011,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "b2184ac0-8bf5-4ca1-b52d-c13b6395f5a2",
+      "year": 2012,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "935a5409-53e7-4389-8981-bd4b56f34447",
+      "year": 2013,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "608743f5-4b1b-49af-a89b-ffd627e552ee",
+      "year": 2014,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "a725bec0-84ab-4857-bb23-19fa3b9e6048",
+      "year": 2015,
+      "make": "nissan",
+      "model": "xterra",
+      "trim": "X, S, SE, Off-Road, PRO-4X",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "6x114.3", "valid": true, "note": "Final year for Xterra" },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true },
+        "tireSizes": { "valid": true }
+      }
+    },
+    {
+      "id": "6516ff01-3494-42cb-b39a-8ca6e8dd4148",
+      "year": 2023,
+      "make": "nissan",
+      "model": "z",
+      "trim": "Sport, Performance, NISMO",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "5x114.3", "valid": true, "note": "Correct for Z (RZ34)" },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true, "note": "Staggered: 18x8 front, 19x10 rear - CORRECT" },
+        "tireSizes": { "valid": true, "note": "245/45R18 front, 275/35R19 rear standard" },
+        "isStaggered": true
+      }
+    },
+    {
+      "id": "54f9acc4-a549-4fa1-9deb-b37db3be6a4c",
+      "year": 2024,
+      "make": "nissan",
+      "model": "z",
+      "trim": "Sport, Performance, NISMO",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "5x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true, "note": "Staggered: 18x8 front, 19x10 rear" },
+        "tireSizes": { "valid": true },
+        "isStaggered": true
+      }
+    },
+    {
+      "id": "e384e760-065b-4d41-b4a1-0600a7d8510c",
+      "year": 2025,
+      "make": "nissan",
+      "model": "z",
+      "trim": "Sport, Performance, NISMO",
+      "status": "PASS",
+      "validation": {
+        "boltPattern": { "value": "5x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": true, "note": "Staggered: 18x8 front, 19x10 rear" },
+        "tireSizes": { "valid": true },
+        "isStaggered": true
+      }
+    },
+    {
+      "id": "1e23d15a-f343-4a06-b9f9-c5ab6da47cdf",
+      "year": 2026,
+      "make": "nissan",
+      "model": "z",
+      "trim": "Sport, Performance, NISMO",
+      "status": "WARNING",
+      "validation": {
+        "boltPattern": { "value": "5x114.3", "valid": true },
+        "hubBore": { "value": "66.1", "valid": true },
+        "wheelSizes": { "valid": false, "note": "WARNING: Shows 18x7.5, 19x8 but Z is staggered with different front/rear diameters (18F/19R). Data may be incomplete." },
+        "tireSizes": { "valid": true },
+        "isStaggered": true
+      },
+      "warning": "2026 Z wheel data appears to lose staggered diameter configuration. Expected 18\" front, 19\" rear with different widths. Current data shows both as front axle only."
+    }
+  ],
+  "modelNotes": {
+    "titan-xd": {
+      "generations": "2016-present (single generation)",
+      "boltPattern": "6x139.7 - shared with GM full-size trucks",
+      "notes": "Heavy-duty variant of Titan, uses Cummins diesel option through 2024"
+    },
+    "versa": {
+      "generations": [
+        { "years": "2007-2011", "gen": "1st", "boltPattern": "4x114.3", "hubBore": "66.1" },
+        { "years": "2012-2019", "gen": "2nd", "boltPattern": "4x100", "hubBore": "59.1" },
+        { "years": "2020-present", "gen": "3rd", "boltPattern": "4x100", "hubBore": "59.1" }
+      ],
+      "notes": "Bolt pattern changed from 4x114.3 to 4x100 in 2012 model year"
+    },
+    "xterra": {
+      "generations": [
+        { "years": "2000-2004", "gen": "1st", "wheels": "15\", 16\"" },
+        { "years": "2005-2015", "gen": "2nd", "wheels": "16\", 17\"" }
+      ],
+      "discontinued": 2015,
+      "notes": "Built on Nissan F-Alpha platform shared with Frontier and Pathfinder"
+    },
+    "z": {
+      "generations": "2023-present (RZ34)",
+      "staggered": true,
+      "stock_setup": {
+        "front": "18x9 with 245/45R18 or 255/40R19",
+        "rear": "19x10 with 275/35R19 or 285/35R19"
+      },
+      "notes": "All Z models come with staggered wheel setup from factory. Performance and NISMO trims have wider options."
+    }
+  },
+  "warnings": [
+    {
+      "vehicleId": "1e23d15a-f343-4a06-b9f9-c5ab6da47cdf",
+      "issue": "2026 Nissan Z wheel data incomplete - missing staggered rear wheel spec",
+      "recommendation": "Update to show 18\" front, 19\" rear with proper staggered widths"
+    }
+  ]
+}

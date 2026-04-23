@@ -1,0 +1,107 @@
+[
+  {
+    "id": "da12c413-2d8f-49a3-98bd-6e39e0033234",
+    "year": 1981,
+    "make": "delorean",
+    "model": "dmc-12",
+    "trim": "DMC-12 Original",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x100",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 14
+      },
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/60HR14",
+      "235/60HR15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "99af46bd-51db-4ae5-8367-857461837333",
+    "year": 1982,
+    "make": "delorean",
+    "model": "dmc-12",
+    "trim": "DMC-12 Original",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x100",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 14
+      },
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/60HR14",
+      "235/60HR15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  },
+  {
+    "id": "6fd36e6e-b30f-459e-90b4-b7fb6b4e088a",
+    "year": 1983,
+    "make": "delorean",
+    "model": "dmc-12",
+    "trim": "DMC-12 Original",
+    "status": "verified",
+    "reason": "Specifications match known values",
+    "verifiedBoltPattern": "5x100",
+    "verifiedHubBore": "57.1",
+    "verifiedWheelSizes": [
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 14
+      },
+      {
+        "axle": "front",
+        "width": 6,
+        "offset": null,
+        "isStock": true,
+        "diameter": 15
+      }
+    ],
+    "verifiedTireSizes": [
+      "195/60HR14",
+      "235/60HR15"
+    ],
+    "sources": [
+      "tiresize.com",
+      "industry-standard-specs"
+    ]
+  }
+]

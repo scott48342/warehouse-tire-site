@@ -1,0 +1,701 @@
+{
+  "batchId": "152",
+  "validatedAt": "2026-04-21T22:58:00Z",
+  "source": "tiresize.com",
+  "totalVehicles": 75,
+  "summary": {
+    "validated": 51,
+    "discrepancies": 14,
+    "notFoundInSource": 10,
+    "totalIssues": 24
+  },
+  "discrepancies": [
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "supra",
+      "severity": "CRITICAL",
+      "issue": "Vehicle year not found in US market - A80 Supra discontinued in 1998",
+      "currentTireSizes": ["255/35R19", "275/35R19", "275/30R20", "295/30R20"],
+      "oemTireSizes": null,
+      "note": "These sizes appear to be for A90 Supra (2020+), not A80"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "supra",
+      "severity": "CRITICAL",
+      "issue": "Vehicle year not found in US market - A80 Supra discontinued in 1998",
+      "currentTireSizes": ["255/35R19", "275/35R19", "275/30R20", "295/30R20"],
+      "oemTireSizes": null,
+      "note": "These sizes appear to be for A90 Supra (2020+), not A80"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "supra",
+      "severity": "CRITICAL",
+      "issue": "Vehicle year not found in US market - A80 Supra discontinued in 1998",
+      "currentTireSizes": ["255/35R19", "275/35R19", "275/30R20", "295/30R20"],
+      "oemTireSizes": null,
+      "note": "These sizes appear to be for A90 Supra (2020+), not A80"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "tacoma",
+      "severity": "MEDIUM",
+      "issue": "Batch contains sizes not confirmed as OEM",
+      "currentTireSizes": ["265/65R17", "265/60R18", "245/70R17", "265/70R17", "265/65R18", "265/70R18"],
+      "oemTireSizes": ["245/70R17", "265/65R18", "265/70R17", "265/70R18"],
+      "extraInBatch": ["265/65R17", "265/60R18"],
+      "missingFromBatch": []
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "tacoma",
+      "severity": "MEDIUM",
+      "issue": "Batch contains sizes not confirmed as OEM",
+      "currentTireSizes": ["265/65R17", "265/60R18", "245/70R17", "265/70R17", "265/65R18", "265/70R18"],
+      "oemTireSizes": ["245/70R17", "265/65R18", "265/70R17", "265/70R18"],
+      "extraInBatch": ["265/65R17", "265/60R18"],
+      "missingFromBatch": []
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tacoma",
+      "severity": "MEDIUM",
+      "issue": "Batch contains sizes not confirmed as OEM",
+      "currentTireSizes": ["265/65R17", "265/60R18", "245/70R17", "265/70R17", "265/65R18", "265/70R18"],
+      "oemTireSizes": ["245/70R17", "265/65R18", "265/70R17", "265/70R18"],
+      "extraInBatch": ["265/65R17", "265/60R18"],
+      "missingFromBatch": []
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "tacoma",
+      "severity": "LOW",
+      "issue": "Batch contains size not confirmed as OEM",
+      "currentTireSizes": ["225/75R15", "235/75R15", "265/70R16"],
+      "oemTireSizes": ["205/75R15", "225/75R15", "235/55R16", "265/70R16"],
+      "extraInBatch": ["235/75R15"],
+      "missingFromBatch": ["205/75R15", "235/55R16"],
+      "note": "235/75R15 not found in tiresize.com data"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "tacoma",
+      "severity": "LOW",
+      "issue": "Batch contains size not confirmed as OEM",
+      "currentTireSizes": ["225/75R15", "235/75R15", "265/70R16"],
+      "oemTireSizes": ["205/75R15", "225/75R15", "235/55R16", "265/70R16"],
+      "extraInBatch": ["235/75R15"],
+      "missingFromBatch": ["205/75R15", "235/55R16"]
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "tacoma",
+      "severity": "LOW",
+      "issue": "Batch contains size not confirmed as OEM",
+      "currentTireSizes": ["225/75R15", "235/75R15", "265/70R16"],
+      "oemTireSizes": ["205/75R15", "225/75R15", "235/55R16", "265/70R16"],
+      "extraInBatch": ["235/75R15"],
+      "missingFromBatch": ["205/75R15", "235/55R16"]
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "tacoma",
+      "severity": "LOW",
+      "issue": "Batch contains size not confirmed as OEM",
+      "currentTireSizes": ["225/75R15", "235/75R15", "265/70R16"],
+      "oemTireSizes": ["205/75R15", "225/75R15", "235/55R16", "265/70R16"],
+      "extraInBatch": ["235/75R15"],
+      "missingFromBatch": ["205/75R15", "235/55R16"]
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "tacoma",
+      "severity": "MEDIUM",
+      "issue": "Significant mismatch with OEM sizes",
+      "currentTireSizes": ["225/75R15", "235/75R15", "265/70R16"],
+      "oemTireSizes": ["195/75R14", "215/70R14", "225/75R15", "265/75R15", "31X10.50R15"],
+      "extraInBatch": ["235/75R15", "265/70R16"],
+      "missingFromBatch": ["195/75R14", "215/70R14", "265/75R15", "31X10.50R15"],
+      "note": "2000 Tacoma 1st gen had different tire sizing"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "tundra",
+      "severity": "MEDIUM",
+      "issue": "Wrong tire sizes for 3rd gen Tundra",
+      "currentTireSizes": ["265/70R18", "275/60R20", "285/55R20"],
+      "oemTireSizes": ["245/75R18", "265/70R18", "265/60R20", "285/65R18", "265/50R22"],
+      "extraInBatch": ["275/60R20", "285/55R20"],
+      "missingFromBatch": ["245/75R18", "265/60R20", "285/65R18", "265/50R22"],
+      "note": "275/60R20 should be 265/60R20; 285/55R20 not OEM"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "tundra",
+      "severity": "MEDIUM",
+      "issue": "Wrong tire sizes for 3rd gen Tundra",
+      "currentTireSizes": ["265/70R18", "275/60R20", "285/55R20"],
+      "oemTireSizes": ["245/75R18", "265/70R18", "265/60R20", "285/65R18", "265/50R22"],
+      "extraInBatch": ["275/60R20", "285/55R20"],
+      "missingFromBatch": ["245/75R18", "265/60R20", "285/65R18", "265/50R22"]
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tundra",
+      "severity": "MEDIUM",
+      "issue": "Wrong tire sizes for 3rd gen Tundra",
+      "currentTireSizes": ["265/70R18", "275/60R20", "285/55R20"],
+      "oemTireSizes": ["245/75R18", "265/70R18", "265/60R20", "285/65R18", "265/50R22"],
+      "extraInBatch": ["275/60R20", "285/55R20"],
+      "missingFromBatch": ["245/75R18", "265/60R20", "285/65R18", "265/50R22"]
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "tundra",
+      "severity": "MEDIUM",
+      "issue": "Wrong tire sizes for 3rd gen Tundra",
+      "currentTireSizes": ["265/70R18", "275/60R20", "285/55R20"],
+      "oemTireSizes": ["245/75R18", "265/70R18", "265/60R20", "285/65R18", "265/50R22"],
+      "extraInBatch": ["275/60R20", "285/55R20"],
+      "missingFromBatch": ["245/75R18", "265/60R20", "285/65R18", "265/50R22"]
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "tundra",
+      "severity": "LOW",
+      "issue": "Has additional sizes not all confirmed OEM",
+      "currentTireSizes": ["265/70R18", "275/60R20", "285/55R20", "245/75R18", "265/60R20", "285/65R18", "265/50R22"],
+      "oemTireSizes": ["245/75R18", "265/70R18", "265/60R20", "285/65R18", "265/50R22"],
+      "extraInBatch": ["275/60R20", "285/55R20"],
+      "missingFromBatch": [],
+      "note": "Most sizes correct but 275/60R20 and 285/55R20 not OEM"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "tundra",
+      "severity": "LOW",
+      "issue": "Missing some OEM sizes, has non-OEM size",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20", "285/70R17"],
+      "oemTireSizes": ["285/70R17", "255/70R18", "275/65R18", "275/55R20"],
+      "extraInBatch": ["275/60R20"],
+      "missingFromBatch": [],
+      "note": "275/60R20 not confirmed OEM for this year"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "tundra",
+      "severity": "LOW",
+      "issue": "Has non-OEM size",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20", "285/70R17"],
+      "oemTireSizes": ["285/70R17", "255/70R18", "275/65R18", "275/55R20"],
+      "extraInBatch": ["275/60R20"],
+      "missingFromBatch": []
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "venza",
+      "severity": "HIGH",
+      "issue": "Tire sizes completely wrong",
+      "currentTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "oemTireSizes": ["225/60R18", "225/55R19"],
+      "extraInBatch": ["225/65R17", "245/55R19", "255/45R21"],
+      "missingFromBatch": ["225/60R18"],
+      "note": "2025 Venza not in source yet (404), using 2024 data. 225/65R17 and 255/45R21 are NOT OEM"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "venza",
+      "severity": "HIGH",
+      "issue": "Tire sizes completely wrong",
+      "currentTireSizes": ["225/65R17", "245/55R19", "255/45R21"],
+      "oemTireSizes": ["225/60R18", "225/55R19"],
+      "extraInBatch": ["225/65R17", "245/55R19", "255/45R21"],
+      "missingFromBatch": ["225/60R18"],
+      "note": "225/65R17 and 255/45R21 are NOT OEM. 245/55R19 should be 225/55R19"
+    }
+  ],
+  "notFoundInSource": [
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "tamaraw",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Philippines market vehicle, empty sizes is correct"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tamaraw",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Philippines market vehicle, empty sizes is correct"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "touring-hiace",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Japan/International market vehicle"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "touring-hiace",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Japan/International market vehicle"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "touring-hiace",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Japan/International market vehicle"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "town-ace-noah",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Japan/International market vehicle"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "town-ace-noah",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Japan/International market vehicle"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "urban-cruiser-taisor",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "India market vehicle"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "urban-cruiser-taisor",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "India market vehicle"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "venturer",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Southeast Asia market vehicle (based on Innova)"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "venturer",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Southeast Asia market vehicle"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "venturer",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Southeast Asia market vehicle"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "venturer",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Southeast Asia market vehicle"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "venturer",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Southeast Asia market vehicle"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "venturer",
+      "status": "NOT_IN_US_MARKET",
+      "currentTireSizes": [],
+      "note": "Southeast Asia market vehicle"
+    }
+  ],
+  "validated": [
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "265/70R16"],
+      "oemTireSizes": ["245/75R16", "265/60R18", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/70R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["245/75R16", "265/60R18", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "265/70R16"],
+      "oemTireSizes": ["245/75R16", "265/60R18", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "265/70R16"],
+      "oemTireSizes": ["245/75R16", "265/60R18", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "265/70R16"],
+      "oemTireSizes": ["245/75R16", "265/60R18", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "265/70R16"],
+      "oemTireSizes": ["245/75R16", "265/60R18", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "265/70R16"],
+      "oemTireSizes": ["245/75R16", "265/70R16", "265/65R17", "265/60R18"]
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "265/70R16"],
+      "oemTireSizes": ["245/75R16", "265/70R16", "265/65R17", "265/60R18"]
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "215/70R15"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17", "265/60R18"]
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "215/70R15"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17", "265/60R18"]
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "215/70R15"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "215/70R15"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "215/70R15"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "215/70R15"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17", "255/45R18"]
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18", "215/70R15"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "tacoma",
+      "status": "MATCH",
+      "currentTireSizes": ["245/75R16", "265/65R17", "265/60R18"],
+      "oemTireSizes": ["215/70R15", "245/75R16", "265/70R16", "265/65R17", "255/45R18"]
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["255/70R18", "275/65R18", "275/55R20", "275/60R20"],
+      "oemTireSizes": ["255/70R18", "275/65R18", "275/55R20"]
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["245/70R16", "265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17", "265/70R17", "275/55R18"]
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["245/70R16", "265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["245/70R16", "265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["245/70R16", "265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["245/70R16", "265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["245/70R16", "265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16", "265/65R17"]
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "tundra",
+      "status": "MATCH",
+      "currentTireSizes": ["245/70R16", "265/70R16", "265/65R17"],
+      "oemTireSizes": ["245/70R16", "265/70R16"]
+    }
+  ],
+  "recommendedActions": [
+    {
+      "priority": "CRITICAL",
+      "action": "Remove or correct Toyota Supra 2000-2002 entries",
+      "reason": "These years don't exist in US market. The tire sizes listed are for the A90 Supra (2020+)"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Correct Toyota Venza 2024-2025 tire sizes",
+      "reason": "Wrong sizes: should be 225/60R18, 225/55R19 (not 225/65R17, 245/55R19, 255/45R21)"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Fix Toyota Tundra 2023-2026 tire sizes",
+      "reason": "275/60R20 should be 265/60R20; 285/55R20 is not OEM; missing 245/75R18, 285/65R18, 265/50R22"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Review Toyota Tacoma 2024-2026 extra sizes",
+      "reason": "265/65R17 and 265/60R18 not confirmed as OEM for the new 4th generation"
+    },
+    {
+      "priority": "LOW",
+      "action": "Consider removing international market vehicles",
+      "reason": "tamaraw, touring-hiace, town-ace-noah, urban-cruiser-taisor, venturer are not sold in US market"
+    }
+  ]
+}

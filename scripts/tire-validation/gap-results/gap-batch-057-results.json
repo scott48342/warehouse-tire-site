@@ -1,0 +1,506 @@
+{
+  "batchId": 57,
+  "researchedAt": "2026-04-22T00:02:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 50,
+    "usVehiclesFound": 26,
+    "nonUsVehicles": 24,
+    "notes": "Several vehicles are international-only models. RAV4 Prime exists under RAV4 model. Toyota xA is sold as Scion xA in US. Jetta GLI is under Jetta. Golf SportWagen only exists 2016-2019 as separate model. Arteon SR is not a US variant."
+  },
+  "vehicles": [
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "rav4-prime",
+      "found": true,
+      "correctModel": "RAV4",
+      "correctMake": "Toyota",
+      "trims": [
+        {"name": "Prime SE", "tireSize": "225/60R18"},
+        {"name": "Prime XSE", "tireSize": "235/55R19"}
+      ],
+      "notes": "Listed as RAV4 trims, not separate model"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "rav4-prime",
+      "found": true,
+      "correctModel": "RAV4",
+      "correctMake": "Toyota",
+      "trims": [
+        {"name": "Prime SE", "tireSize": "225/60R18"},
+        {"name": "Prime XSE", "tireSize": "235/55R19"}
+      ],
+      "notes": "Listed as RAV4 trims, not separate model"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "soluna",
+      "notUS": true,
+      "found": false,
+      "notes": "Southeast Asia only (Thailand/Indonesia). Not sold in US market."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "soluna",
+      "notUS": true,
+      "found": false,
+      "notes": "Southeast Asia only (Thailand/Indonesia). Not sold in US market."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "soluna",
+      "notUS": true,
+      "found": false,
+      "notes": "Southeast Asia only (Thailand/Indonesia). Not sold in US market."
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "soluna",
+      "notUS": true,
+      "found": false,
+      "notes": "Southeast Asia only (Thailand/Indonesia). Not sold in US market."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "sprinter",
+      "notUS": true,
+      "found": false,
+      "notes": "Japan domestic market only. Sprinter nameplate ended in 2000."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "sprinter",
+      "notUS": true,
+      "found": false,
+      "notes": "Japan domestic market only. Model discontinued after 2000."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "sprinter",
+      "notUS": true,
+      "found": false,
+      "notes": "Japan domestic market only. Model discontinued after 2000."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "sprinter-carib",
+      "notUS": true,
+      "found": false,
+      "notes": "Japan domestic market only. Station wagon variant of Sprinter."
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "sprinter-carib",
+      "notUS": true,
+      "found": false,
+      "notes": "Japan domestic market only. Model discontinued."
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "sprinter-carib",
+      "notUS": true,
+      "found": false,
+      "notes": "Japan domestic market only. Model discontinued."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "sprinter-trueno",
+      "notUS": true,
+      "found": false,
+      "notes": "Japan domestic market only. Sportier Sprinter variant (AE111 series)."
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "urban-cruiser-taisor",
+      "notUS": true,
+      "found": false,
+      "notes": "India market only. Subcompact crossover launched 2024."
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "urban-cruiser-taisor",
+      "notUS": true,
+      "found": false,
+      "notes": "India market only. Subcompact crossover."
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "vienta",
+      "notUS": true,
+      "found": false,
+      "notes": "Australia/New Zealand only. Rebadged Camry V6 for Australian market."
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "vios-fs",
+      "notUS": true,
+      "found": false,
+      "notes": "Southeast Asia only (Philippines, Thailand, etc.). Subcompact sedan."
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "vios-fs",
+      "notUS": true,
+      "found": false,
+      "notes": "Southeast Asia only. Subcompact sedan."
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "vios-fs",
+      "notUS": true,
+      "found": false,
+      "notes": "Southeast Asia only. Subcompact sedan."
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "vios-fs",
+      "notUS": true,
+      "found": false,
+      "notes": "Southeast Asia only. Subcompact sedan."
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "vios-fs",
+      "notUS": true,
+      "found": false,
+      "notes": "Southeast Asia only. Subcompact sedan."
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "vios-fs",
+      "notUS": true,
+      "found": false,
+      "notes": "Southeast Asia only. Subcompact sedan."
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "xa",
+      "found": true,
+      "correctModel": "xA",
+      "correctMake": "Scion",
+      "trims": [
+        {"name": "Base Model", "tireSize": "185/60R15"}
+      ],
+      "notes": "Sold as Scion xA in US market (Toyota's youth brand)"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "xa",
+      "found": true,
+      "correctModel": "xA",
+      "correctMake": "Scion",
+      "trims": [
+        {"name": "Base Model", "tireSize": "185/60R15"}
+      ],
+      "notes": "Sold as Scion xA in US market"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "xa",
+      "found": true,
+      "correctModel": "xA",
+      "correctMake": "Scion",
+      "trims": [
+        {"name": "Base Model", "tireSize": "185/60R15"}
+      ],
+      "notes": "Sold as Scion xA in US market. Last model year."
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "xa",
+      "found": false,
+      "notes": "Scion xA was discontinued after 2006. No 2007 model year."
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "arteon-sr",
+      "found": true,
+      "correctModel": "Arteon",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "SE R-Line", "tireSize": "245/45R18"},
+        {"name": "SEL R-Line", "tireSize": ["245/40R19", "245/35R20"]},
+        {"name": "SEL Premium R-Line", "tireSize": "245/35R20"}
+      ],
+      "notes": "No 'Arteon SR' variant in US. Use standard Arteon data. All US trims are R-Line."
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "arteon-sr",
+      "found": true,
+      "correctModel": "Arteon",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "SE R-Line", "tireSize": "245/45R18"},
+        {"name": "SEL R-Line", "tireSize": ["245/40R19", "245/35R20"]},
+        {"name": "SEL Premium R-Line", "tireSize": "245/35R20"}
+      ],
+      "notes": "No 'Arteon SR' variant in US. Use standard Arteon data."
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "arteon-sr",
+      "found": true,
+      "correctModel": "Arteon",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "SE R-Line", "tireSize": "245/45R18"},
+        {"name": "SEL R-Line", "tireSize": ["245/40R19", "245/35R20"]},
+        {"name": "SEL Premium R-Line", "tireSize": "245/35R20"}
+      ],
+      "notes": "No 'Arteon SR' variant in US. Use standard Arteon data."
+    },
+    {
+      "year": 2025,
+      "make": "volkswagen",
+      "model": "arteon-sr",
+      "found": false,
+      "notes": "VW Arteon discontinued after 2024 in US market."
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "atlas",
+      "found": false,
+      "notes": "Atlas 2017 not found on tiresize.com. First US model year may have been late 2017/2018."
+    },
+    {
+      "year": 2026,
+      "make": "volkswagen",
+      "model": "atlas-cross-sport",
+      "found": true,
+      "correctModel": "Atlas Cross Sport",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "SE", "tireSize": "245/60R18"},
+        {"name": "SE with Technology", "tireSize": "255/50R20"},
+        {"name": "SEL", "tireSize": "255/50R20"},
+        {"name": "SEL R-Line", "tireSize": "255/50R20"},
+        {"name": "SEL Premium R-Line", "tireSize": "265/45R21"}
+      ],
+      "notes": "Full data available"
+    },
+    {
+      "year": 2000,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "found": true,
+      "correctModel": "Eurovan",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "Base Model", "tireSize": "205/65R15"},
+        {"name": "Camper", "tireSize": "195/70R15"}
+      ],
+      "notes": "Full data available"
+    },
+    {
+      "year": 2001,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "found": true,
+      "correctModel": "Eurovan",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "Camper", "tireSize": "225/60R16"},
+        {"name": "GLS", "tireSize": "225/60R16"},
+        {"name": "MV Weekender", "tireSize": "225/60R16"}
+      ],
+      "notes": "Full data available"
+    },
+    {
+      "year": 2002,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "found": true,
+      "correctModel": "Eurovan",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "Camper", "tireSize": "225/60R16"},
+        {"name": "GLS", "tireSize": "225/60R16"},
+        {"name": "MV Weekender", "tireSize": "225/60R16"}
+      ],
+      "notes": "Full data available"
+    },
+    {
+      "year": 2003,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "found": true,
+      "correctModel": "Eurovan",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "Camper", "tireSize": "225/60R16"},
+        {"name": "GLS", "tireSize": "225/60R16"},
+        {"name": "MV Weekender", "tireSize": "225/60R16"}
+      ],
+      "notes": "Full data available. Last year of US Eurovan."
+    },
+    {
+      "year": 2004,
+      "make": "volkswagen",
+      "model": "eurovan",
+      "found": false,
+      "notes": "Eurovan discontinued in US after 2003."
+    },
+    {
+      "year": 2008,
+      "make": "volkswagen",
+      "model": "gli",
+      "found": true,
+      "correctModel": "Jetta",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "GLI", "tireSize": ["225/45R17", "225/40R18"]}
+      ],
+      "notes": "GLI is a Jetta trim, not separate model"
+    },
+    {
+      "year": 2009,
+      "make": "volkswagen",
+      "model": "gli",
+      "found": true,
+      "correctModel": "Jetta",
+      "correctMake": "Volkswagen",
+      "notes": "GLI is a Jetta trim. 2009 Jetta has SportWagen variant with GLI not listed separately."
+    },
+    {
+      "year": 2010,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "found": false,
+      "notes": "Golf SportWagen as separate model started 2015 in US. 2010 was Jetta SportWagen."
+    },
+    {
+      "year": 2011,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "found": false,
+      "notes": "No Golf SportWagen in 2011. Use Jetta SportWagen."
+    },
+    {
+      "year": 2012,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "found": false,
+      "notes": "No Golf SportWagen in 2012. Use Jetta SportWagen."
+    },
+    {
+      "year": 2013,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "found": false,
+      "notes": "No Golf SportWagen in 2013. Use Jetta SportWagen."
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "found": false,
+      "notes": "Golf SportWagen 2015 not found. May have started mid-2015 or been listed differently."
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "found": true,
+      "correctModel": "Golf SportWagen",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "S", "tireSize": "195/65R15"},
+        {"name": "SE", "tireSize": "225/45R17"},
+        {"name": "SEL", "tireSize": "225/40R18"}
+      ],
+      "notes": "Full data available"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "found": true,
+      "correctModel": "Golf SportWagen",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "S", "tireSize": "195/65R15"},
+        {"name": "S 4Motion", "tireSize": "205/55R16"},
+        {"name": "SE", "tireSize": "225/45R17"},
+        {"name": "SEL", "tireSize": "225/40R18"}
+      ],
+      "notes": "Full data available"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "found": true,
+      "correctModel": "Golf SportWagen",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "S", "tireSize": "195/65R15"},
+        {"name": "S 4Motion", "tireSize": "205/55R16"},
+        {"name": "SE", "tireSize": "225/45R17"},
+        {"name": "SEL", "tireSize": "225/40R18"}
+      ],
+      "notes": "Full data available"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "golf-sportwagen",
+      "found": true,
+      "correctModel": "Golf SportWagen",
+      "correctMake": "Volkswagen",
+      "trims": [
+        {"name": "S", "tireSize": "195/65R15"},
+        {"name": "S 4Motion", "tireSize": "205/55R16"},
+        {"name": "SE", "tireSize": "225/45R17"}
+      ],
+      "notes": "Full data available. Last model year for US Golf SportWagen."
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "id-4-crozz",
+      "notUS": true,
+      "found": false,
+      "notes": "ID.4 Crozz is China-only variant (SAIC-VW joint venture). US has standard ID.4."
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "id-4-crozz",
+      "notUS": true,
+      "found": false,
+      "notes": "ID.4 Crozz is China-only variant. US has standard ID.4."
+    }
+  ]
+}

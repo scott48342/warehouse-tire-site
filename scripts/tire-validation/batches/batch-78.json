@@ -1,0 +1,723 @@
+{
+  "batchId": "78",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2007,
+      "make": "jaguar",
+      "model": "xf",
+      "currentTireSizes": [
+        "225/55R17",
+        "255/45R18",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "jaguar",
+      "model": "xfl",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2024,
+      "make": "jaguar",
+      "model": "xfl",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2023,
+      "make": "jaguar",
+      "model": "xfl",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "xfl",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "xfl",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "xfl",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2022,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/45R18",
+        "275/35R20",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/45R18",
+        "275/35R20",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/45R18",
+        "275/35R20",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/50R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "235/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "235/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "235/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "235/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "235/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "235/55R17",
+        "245/45R18",
+        "255/40R19",
+        "275/35R20"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/45R18",
+        "275/35R20",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/45R18",
+        "275/35R20",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/45R18",
+        "275/35R20",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "jaguar",
+      "model": "xj",
+      "currentTireSizes": [
+        "245/45R18",
+        "275/35R20",
+        "275/30R21"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2014,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2013,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2012,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2011,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2010,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2009,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2007,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2006,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "jaguar",
+      "model": "xk",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19",
+        "245/65R17"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/60R18",
+        "225/65R17"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/60R18",
+        "225/65R17",
+        "245/65R17"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "245/65R17"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19",
+        "235/50ZR19",
+        "215/60R17"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19",
+        "235/50ZR19",
+        "215/60R17"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19",
+        "235/50ZR19",
+        "215/60R17"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19",
+        "235/50ZR19",
+        "215/60R17"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19",
+        "225/50R19",
+        "235/45R20",
+        "215/60R17"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19",
+        "225/50R19",
+        "235/45R20",
+        "215/60R17"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19",
+        "225/50R19",
+        "235/45R20",
+        "215/60R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19",
+        "225/50R19",
+        "235/45R20",
+        "215/60R17"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/65R17",
+        "225/60R17",
+        "225/55R18",
+        "245/55R18",
+        "245/45R19",
+        "225/50R19",
+        "235/45R20",
+        "215/60R17"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "235/65R17",
+        "235/60R18",
+        "235/70R16",
+        "245/50R20"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/75R16",
+        "235/65R17",
+        "235/60R18",
+        "235/70R16",
+        "245/50R20"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/75R16",
+        "235/65R17",
+        "235/60R18",
+        "235/70R16",
+        "245/50R20"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/75R16",
+        "235/65R17",
+        "235/60R18",
+        "235/70R16",
+        "245/50R20"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/75R16",
+        "235/65R17"
+      ]
+    },
+    {
+      "year": 2008,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/75R16",
+        "235/65R17"
+      ]
+    },
+    {
+      "year": 2007,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "215/75R16",
+        "225/75R16",
+        "235/65R17"
+      ]
+    },
+    {
+      "year": 2006,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "215/75R16",
+        "225/75R16",
+        "235/65R17"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "215/75R16",
+        "225/75R16",
+        "235/65R17"
+      ]
+    },
+    {
+      "year": 2004,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "215/75R16",
+        "225/75R16",
+        "235/65R17"
+      ]
+    },
+    {
+      "year": 2003,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "215/75R16",
+        "225/75R16",
+        "235/65R17"
+      ]
+    },
+    {
+      "year": 2002,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "215/75R16",
+        "225/75R16",
+        "235/65R17"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "215/75R15",
+        "225/75R15"
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "jeep",
+      "model": "cherokee",
+      "currentTireSizes": [
+        "225/70R15",
+        "225/75R15"
+      ]
+    }
+  ]
+}

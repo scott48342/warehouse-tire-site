@@ -1,0 +1,822 @@
+{
+  "batchId": "overnight-053-mercedes-benz",
+  "verifiedAt": "2025-07-18T04:30:00Z",
+  "verifiedBy": "subagent:overnight-053-fix",
+  "summary": {
+    "total": 77,
+    "verified": 62,
+    "flagged": 14,
+    "invalid": 1
+  },
+  "sources": [
+    "hulkoffsets.com - Mercedes wheel fitment guides",
+    "stocktonwheel.com - Mercedes bolt pattern reference",
+    "kipardoracing.com - Mercedes B2B fitment guide",
+    "wikipedia.org - Mercedes A-Class and AMG GT articles"
+  ],
+  "knownSpecs": {
+    "mercedesBoltPattern": "5x112",
+    "mercedesHubBore": "66.6",
+    "aClassUSAvailability": "2019+ (W177 generation)",
+    "amgGTUSAvailability": "2016+ (2015 global launch, 2016 US model year)"
+  },
+  "results": [
+    {
+      "id": "b1055f29-d0aa-4668-96e1-7bb710db92fc",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "A-Class was not sold in USA until 2019 (W177 generation)",
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "recommendation": "DELETE - vehicle did not exist in US market"
+    },
+    {
+      "id": "629507b3-81b1-4fb6-a9ac-2764fc374057",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "A-Class was not sold in USA until 2019 (W177 generation)",
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "recommendation": "DELETE - vehicle did not exist in US market"
+    },
+    {
+      "id": "aca8e04f-7e2e-43b3-9110-591421785ca9",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "A-Class was not sold in USA until 2019 (W177 generation)",
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "recommendation": "DELETE - vehicle did not exist in US market"
+    },
+    {
+      "id": "571a6132-4e44-4239-8991-b3984bdaa7e8",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "A-Class was not sold in USA until 2019 (W177 generation)",
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "recommendation": "DELETE - vehicle did not exist in US market"
+    },
+    {
+      "id": "6cadff3a-32d5-420f-841b-e2cb7a483889",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "A-Class was not sold in USA until 2019 (W177 generation)",
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "recommendation": "DELETE - vehicle did not exist in US market"
+    },
+    {
+      "id": "7ccbe748-886a-4227-9f79-7b29d4034e8d",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "A-Class was not sold in USA until 2019 (W177 generation)",
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "recommendation": "DELETE - vehicle did not exist in US market"
+    },
+    {
+      "id": "8c747469-1990-41f2-8b2f-aa53c4afe132",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "recommendation": "UPDATE specs to correct Mercedes values"
+    },
+    {
+      "id": "f63f47e6-e204-461c-ae70-3671ece79729",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "recommendation": "UPDATE specs to correct Mercedes values"
+    },
+    {
+      "id": "2b291eca-feb6-45a5-a184-d72e6f684cda",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "recommendation": "UPDATE specs to correct Mercedes values"
+    },
+    {
+      "id": "3d336e91-8e97-4539-ac37-34f14df76235",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "recommendation": "UPDATE specs to correct Mercedes values"
+    },
+    {
+      "id": "aa277acb-23cc-4624-95c2-e0da88c69a4c",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "recommendation": "UPDATE specs to correct Mercedes values"
+    },
+    {
+      "id": "5cd488cf-82ec-4028-a3e8-b0bb8588fc5b",
+      "year": 2024,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6",
+        "Note: A-Class discontinued in US after 2022 - verify if 2024 exists"
+      ],
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "recommendation": "UPDATE specs OR DELETE if model discontinued"
+    },
+    {
+      "id": "e07bad9d-4461-406e-b3eb-fd0c95de558e",
+      "year": 2025,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6",
+        "Note: A-Class discontinued in US after 2022 - verify if 2025 exists"
+      ],
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "recommendation": "UPDATE specs OR DELETE if model discontinued"
+    },
+    {
+      "id": "e8f15aa4-0abf-4ed5-9135-05c2052b7fb1",
+      "year": 2026,
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "trim": "Base",
+      "status": "flagged",
+      "issues": [
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6",
+        "Note: A-Class discontinued in US after 2022 - verify if 2026 exists"
+      ],
+      "correctedData": {
+        "boltPattern": "5x112",
+        "hubBore": "66.6"
+      },
+      "recommendation": "UPDATE specs OR DELETE if model discontinued"
+    },
+    {
+      "id": "29500b03-39cc-4439-88d4-f73274fbdbc0",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "invalid",
+      "issues": [
+        "AMG GT production started 2015, US model year 2016 first",
+        "Bolt pattern incorrect: 5x114.3 should be 5x112",
+        "Hub bore incorrect: 67.1 should be 66.6"
+      ],
+      "recommendation": "DELETE - vehicle did not exist"
+    },
+    {
+      "id": "888bf083-ff4f-46fc-8c9e-fb783b94ee0a",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6). GT R introduced 2016 but inherited specs are valid."
+    },
+    {
+      "id": "c371cefe-b018-42dd-8c69-7c6f19506b58",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6). Staggered setup 19F/20R confirmed."
+    },
+    {
+      "id": "6179c1ea-c6be-4e01-873a-802c5db0750f",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "verified",
+      "notes": "Specs correct. Note: Black Series introduced later but generation specs apply."
+    },
+    {
+      "id": "6ce38859-1ecd-4fca-bc7b-8dd323a12453",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "577fc038-9981-43a0-bcc0-9d03a66d081b",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "0f58818b-8202-4666-b8df-919b81051c8b",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "6f184086-23b3-4bf9-8403-a7eb9db34302",
+      "year": 2015,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "ff1db3d0-8d43-4303-bd22-4ec6d7c4827a",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6). Staggered setup confirmed."
+    },
+    {
+      "id": "07b264aa-4b82-4125-a185-a2eafdf58e47",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "aedfb64d-4fce-44ff-814a-dfcb04e26210",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "42bc5694-846b-4394-a2da-8a6888109dcb",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "a0261f3b-160f-4697-ad07-e88002291694",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "136d23c1-826b-4f7f-8c73-7681ae35b63b",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "06461a5f-b7ab-48a5-a777-cb082366b6db",
+      "year": 2016,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "8688b2bc-8cde-4f57-9db6-64dbaad13d20",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "a431f8ae-2bdd-4ee0-934c-4673f9b429e0",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "5fe6519c-18ea-48e3-8ed4-21fae3980b46",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "53e2c243-552e-48e6-8c51-16aa6a9a5dc5",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6). Staggered setup confirmed."
+    },
+    {
+      "id": "1c2df1bb-b0de-438b-8a63-619caaa253c4",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "d7af3092-c9cf-4225-85ab-0c442cdb847a",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "f7847958-37ab-4f77-b0bf-845b437de0f8",
+      "year": 2017,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "b2aab88a-87f0-47fd-b101-a7d7abe9c420",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "a7ac0e0c-120d-4d44-ba67-b3ac5181dc5a",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "6876700b-c6e1-4302-9d51-1328d4ddb0c3",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "b50cedeb-146b-47aa-a341-70894c53cadf",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "77f6f39f-6519-4f9a-86c9-62b14dc1ba4a",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "f2f428a8-5de3-4178-a822-e5b0b17c27af",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "44ba9de0-666f-44e1-9c4b-d41de0bd773f",
+      "year": 2018,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6). Staggered setup confirmed."
+    },
+    {
+      "id": "897b753e-61cb-406a-8a96-9e2952eb9dda",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "2d762bbb-5d57-4e69-80af-0dee3e6951cf",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "d9e4500f-f09c-45aa-bfd7-e164ff3c373b",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "0f97487e-74aa-4cf0-af94-16c8be894c07",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "6b4ddb1f-8358-4d3d-bb49-f5b12fa289f4",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "e063d355-a8e3-4cf8-90b9-fc4782e9130b",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "7c5a0fce-0784-48aa-928b-39b06a90cb25",
+      "year": 2019,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6). Staggered setup confirmed."
+    },
+    {
+      "id": "da962c53-b6ff-4707-9938-a6795c91a4e1",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "26f9c3ef-5acd-47b2-9879-14dddd079087",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "9599237b-a912-4391-8754-b6f77c2c2b73",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "66df2aa8-bfa3-4601-9413-06de49e89a4c",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "80c1aadf-c1ce-42e4-9006-335e0f968f28",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6). Staggered setup confirmed."
+    },
+    {
+      "id": "e12c057f-72ca-4db4-a306-3d31cc20cd18",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "65fb8507-e23c-476c-80a6-e748d5ffc098",
+      "year": 2020,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "75239d5e-785a-4cee-bfaf-4dc6030475f8",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6). Staggered setup confirmed."
+    },
+    {
+      "id": "85ef5ea8-b802-429f-bf4f-7ea51c42a974",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "a3463da3-a2a8-4fdd-abe1-d45073bc400c",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "be34356f-f6fe-4eb9-9feb-46b45bfe5b7c",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "5fea340b-4639-4427-9955-d2de9474c7bc",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "e5a0fc6d-97de-43c0-a33b-c2a4614c02a2",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "de4151d0-0f52-49a8-a526-f5c97e71ac63",
+      "year": 2021,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "f68ccc20-17c4-4e3f-bd8f-5ab1e5a89db9",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "588094f7-2015-4c46-b8de-377eb751dbf0",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R Pro",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "a452a952-c31d-43ed-9938-93e8977052d9",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "c8b0feab-cda2-4fcc-9ad3-eb8cf601135d",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "8f314e68-883e-4d8c-9458-4f809030baba",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "f3024d9f-7353-40ca-8274-70a812e57b8d",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "b6a30784-b887-4f99-999f-05e4426f6633",
+      "year": 2022,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6). Staggered setup confirmed."
+    },
+    {
+      "id": "23b408c1-21c5-409d-862b-8af2f660a829",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT R",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "d6b3361d-07db-4e82-918d-3da67a2b53c0",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    },
+    {
+      "id": "2d9663e7-7801-49ee-851c-cdcdddee0f59",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "Base",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6). Staggered setup confirmed."
+    },
+    {
+      "id": "88b220ed-9005-4f4f-aa6f-a532d50f4cd1",
+      "year": 2023,
+      "make": "mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT Black Series",
+      "status": "verified",
+      "notes": "Specs correct (5x112, 66.6)."
+    }
+  ],
+  "actionItems": [
+    {
+      "priority": "HIGH",
+      "action": "DELETE",
+      "count": 7,
+      "description": "Remove 6 A-Class AMG entries (2013-2018) and 1 AMG GT 2014 - vehicles did not exist in US market"
+    },
+    {
+      "priority": "HIGH",
+      "action": "UPDATE",
+      "count": 8,
+      "description": "Fix A-Class AMG (2019-2026) bolt pattern from 5x114.3 to 5x112 and hub bore from 67.1 to 66.6"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "VERIFY",
+      "count": 3,
+      "description": "Confirm A-Class AMG 2024-2026 model years exist (A-Class may have been discontinued after 2022)"
+    }
+  ]
+}

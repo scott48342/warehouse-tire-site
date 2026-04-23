@@ -1,0 +1,1115 @@
+{
+  "batchId": "overnight-046-ford",
+  "verifiedAt": "2026-04-23T02:25:00Z",
+  "summary": {
+    "total": 63,
+    "verified": 35,
+    "flagged": 0,
+    "invalid": 28
+  },
+  "findings": {
+    "criticalIssues": [
+      {
+        "issue": "F-450 Super Duty 2006-2014 has completely wrong fitment data",
+        "description": "Batch shows 5x114.3 bolt pattern (passenger car pattern) for a heavy-duty commercial truck. Correct pattern is 10x225mm with 170.1mm hub bore. This data is dangerous and unusable.",
+        "affectedCount": 9,
+        "severity": "critical"
+      },
+      {
+        "issue": "Ford Fiesta 2000-2010 not sold in US market",
+        "description": "Fiesta was not available in US from 2000-2010. It returned as 2011 model year. These entries represent non-existent vehicles for US market. Additionally, fitment specs shown (5x114.3, 67.1mm) are wrong even for European models (should be 4x108, 63.4mm).",
+        "affectedCount": 11,
+        "severity": "critical"
+      },
+      {
+        "issue": "Ford Fiesta 2020-2024 discontinued in US",
+        "description": "Fiesta was discontinued in US after 2019 model year. These vehicles don't exist in US market. Fitment specs are also incorrect.",
+        "affectedCount": 5,
+        "severity": "critical"
+      },
+      {
+        "issue": "Ford Flex 2008 model year does not exist",
+        "description": "Ford Flex production started in late 2008 for 2009 model year. There is no 2008 Flex. Additionally, hub bore shown (67.1mm) is incorrect - should be 63.4mm.",
+        "affectedCount": 1,
+        "severity": "critical"
+      }
+    ],
+    "notes": [
+      "F-450 2015-2026 entries have correct commercial truck fitment data",
+      "F-450 2026 may be a future model year - verify when released",
+      "Ford Focus 2000-2012 entries all have correct fitment data",
+      "Focus 4x108 (2000-2011) and 5x108 (2012+) patterns are properly differentiated"
+    ]
+  },
+  "vehicles": [
+    {
+      "id": "15092c66-3ed4-42a5-baa3-e89268dabe72",
+      "year": 2006,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Completely wrong bolt pattern. Data shows 5x114.3 (passenger car). F-450 uses 10x225mm commercial truck pattern.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1",
+        "source": "hulkoffsets.com, Ford specs"
+      }
+    },
+    {
+      "id": "2544290f-cb1e-427b-8e4b-85df0ff63e1b",
+      "year": 2007,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Completely wrong bolt pattern. Data shows 5x114.3 (passenger car). F-450 uses 10x225mm commercial truck pattern.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1",
+        "source": "hulkoffsets.com, Ford specs"
+      }
+    },
+    {
+      "id": "7a0c725f-fa8d-46ae-a2f0-598034c08c45",
+      "year": 2008,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Completely wrong bolt pattern. Data shows 5x114.3 (passenger car). F-450 uses 10x225mm commercial truck pattern.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1",
+        "source": "hulkoffsets.com, Ford specs"
+      }
+    },
+    {
+      "id": "4e00d573-067a-46da-8e3d-8f81f2fd6f71",
+      "year": 2009,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Completely wrong bolt pattern. Data shows 5x114.3 (passenger car). F-450 uses 10x225mm commercial truck pattern.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1",
+        "source": "hulkoffsets.com, Ford specs"
+      }
+    },
+    {
+      "id": "a1c6bd93-6344-4c6a-bb71-35cfd1f4d3ec",
+      "year": 2010,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Completely wrong bolt pattern. Data shows 5x114.3 (passenger car). F-450 uses 10x225mm commercial truck pattern.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1",
+        "source": "hulkoffsets.com, Ford specs"
+      }
+    },
+    {
+      "id": "d8c7a119-cb4b-4295-a8fa-81175a479a2b",
+      "year": 2011,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Completely wrong bolt pattern. Data shows 5x114.3 (passenger car). F-450 uses 10x225mm commercial truck pattern.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1",
+        "source": "hulkoffsets.com, Ford specs"
+      }
+    },
+    {
+      "id": "70907cd4-3e37-44a5-bc17-d082a5721662",
+      "year": 2012,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Completely wrong bolt pattern. Data shows 5x114.3 (passenger car). F-450 uses 10x225mm commercial truck pattern.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1",
+        "source": "hulkoffsets.com, Ford specs"
+      }
+    },
+    {
+      "id": "29655f64-c9cf-463a-8ce1-ae4148605de1",
+      "year": 2013,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Completely wrong bolt pattern. Data shows 5x114.3 (passenger car). F-450 uses 10x225mm commercial truck pattern.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1",
+        "source": "hulkoffsets.com, Ford specs"
+      }
+    },
+    {
+      "id": "507a0878-f5bb-4104-a521-bb8816a16601",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Completely wrong bolt pattern. Data shows 5x114.3 (passenger car). F-450 uses 10x225mm commercial truck pattern.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1",
+        "source": "hulkoffsets.com, Ford specs"
+      }
+    },
+    {
+      "id": "b9b47f76-f59b-4d37-942a-bb0bb76fcd9a",
+      "year": 2015,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore. Wheel/tire sizes appropriate for HD truck.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1",
+        "wheelSizes": ["17\"", "19.5\""],
+        "tireSizes": ["225/70R19.5", "265/70R17"]
+      },
+      "source": "hulkoffsets.com - F-450 Generation III/IV specs"
+    },
+    {
+      "id": "9ca2302c-27f1-4bd4-81ab-8202265cfcf9",
+      "year": 2016,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "id": "54c323e6-ef62-49ce-94f0-031abd669e26",
+      "year": 2017,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "id": "8795ea7d-75fd-4250-866b-97216e8ad8fb",
+      "year": 2018,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "id": "72be21cf-0829-4c7f-bd71-8faf0af2de0a",
+      "year": 2019,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "id": "f416f71c-830a-471f-b258-890ae88d6056",
+      "year": 2020,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "id": "b7b6d680-587d-44df-9765-14e675951e4e",
+      "year": 2021,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "id": "e2ff4735-d774-45c8-a950-8d1d82a88542",
+      "year": 2022,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "id": "8def3f70-747d-4366-9d94-c5953d3f471f",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "id": "b8f0c09a-2ae3-46c0-b5c3-585f7aaedcb2",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "id": "ca1ca61c-5e66-4278-b2f0-458533a31856",
+      "year": 2025,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Correct commercial truck bolt pattern and hub bore.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com"
+    },
+    {
+      "id": "07989d89-66b4-4489-ac60-550efeb7ac1b",
+      "year": 2026,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "trim": "Base",
+      "status": "verified",
+      "reason": "Specs consistent with current generation. Note: 2026 model year may be speculative.",
+      "verifiedSpecs": {
+        "boltPattern": "10x225",
+        "hubBore": "170.1"
+      },
+      "source": "hulkoffsets.com (extrapolated from 2023-2025)"
+    },
+    {
+      "id": "59a4cd6a-6f7d-4c2d-9cb4-cd42790ea781",
+      "year": 2000,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. Vehicle does not exist for US market. Also, specs are wrong - Fiesta uses 4x108 bolt pattern with 63.4mm hub bore, not 5x114.3/67.1mm.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4",
+        "note": "European market only 2000-2010",
+        "source": "hulkoffsets.com, Wikipedia"
+      }
+    },
+    {
+      "id": "c0bdf8f7-2298-4088-be06-c9716591c4e2",
+      "year": 2001,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. Specs also incorrect.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "659934f1-c016-41f7-8671-0975fcb2d898",
+      "year": 2002,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. Specs also incorrect.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "80c83e1b-c611-4d6d-8baf-764d7ea63786",
+      "year": 2003,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. Specs also incorrect.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "e5ed8e9f-40e4-4928-91a4-a33fb18bf7ac",
+      "year": 2004,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. Specs also incorrect.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "05696420-08d3-4d33-9e8c-351fc59d6434",
+      "year": 2005,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. Specs also incorrect.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "23a27d80-7ae4-4280-b380-1be7ae5242ab",
+      "year": 2006,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. Specs also incorrect.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "ae07c1f4-3b7f-48d6-96d7-e4bcf94435fb",
+      "year": 2007,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. Specs also incorrect.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "1c9b3fb8-406b-4c6c-b4f9-5052cc92c2d6",
+      "year": 2008,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. Specs also incorrect.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "cab111ea-70fe-423e-829b-62bf40bb8a0e",
+      "year": 2009,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. Specs also incorrect.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "b2e10cbd-0982-4953-b682-daa0330bf6c2",
+      "year": 2010,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was NOT sold in US market 2000-2010. US sales began with 2011 model year. Specs also incorrect.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "fb82b2a1-1924-4aca-8284-8a3683e40c23",
+      "year": 2020,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was discontinued in US after 2019 model year. Vehicle does not exist. Specs also incorrect (should be 4x108, 63.4mm).",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "6e56c509-8d3b-42ca-912c-3fabc141b407",
+      "year": 2021,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was discontinued in US after 2019 model year. Vehicle does not exist.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "f7d4f131-82c9-4be3-80fb-da2c7595f5aa",
+      "year": 2022,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was discontinued in US after 2019 model year. Vehicle does not exist.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "098a1362-7576-410d-8952-72305cc76d70",
+      "year": 2023,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was discontinued in US after 2019 model year. Vehicle does not exist.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "eaedca87-5630-4086-a1f5-58660cc0e599",
+      "year": 2024,
+      "make": "ford",
+      "model": "fiesta",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Fiesta was discontinued in US after 2019 model year. Vehicle does not exist.",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      }
+    },
+    {
+      "id": "a80c305d-b0aa-4e3a-9d7f-bc8f1ba62714",
+      "year": 2008,
+      "make": "ford",
+      "model": "flex",
+      "trim": "Base",
+      "status": "invalid",
+      "reason": "Ford Flex production began in late 2008 for 2009 model year. 2008 model year does not exist. Also hub bore is wrong (67.1mm vs correct 63.4mm).",
+      "currentData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "67.1"
+      },
+      "correctData": {
+        "boltPattern": "5x114.3",
+        "hubBore": "63.4",
+        "firstModelYear": 2009,
+        "lastModelYear": 2019,
+        "source": "fordflex.net forum, wheel-sizes.com"
+      }
+    },
+    {
+      "id": "937aa47f-1de7-4b10-a9b6-e99f3463d9c5",
+      "year": 2000,
+      "make": "ford",
+      "model": "focus",
+      "trim": "LX",
+      "status": "verified",
+      "reason": "Bolt pattern 4x108 and hub bore 63.4mm are correct for first-gen Focus. Wheel/tire sizes appropriate.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4",
+        "wheelSize": "14x5.5",
+        "tireSize": "185/65R14"
+      },
+      "source": "tiresize.com, hulkoffsets.com"
+    },
+    {
+      "id": "485b74d4-215d-463d-aaec-2d39be4aebd0",
+      "year": 2000,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE/ZX3/ZX5",
+      "status": "verified",
+      "reason": "Correct specs for first-gen Focus SE trim.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4",
+        "wheelSize": "15x6",
+        "tireSize": "195/60R15"
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "id": "f37ac596-4b58-47b9-8ce6-c5a06ddc98eb",
+      "year": 2000,
+      "make": "ford",
+      "model": "focus",
+      "trim": "ZTS/SES/ST",
+      "status": "verified",
+      "reason": "Correct specs for first-gen Focus sport trims.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4",
+        "wheelSize": "16x6.5",
+        "tireSize": "205/50R16"
+      },
+      "source": "tiresize.com"
+    },
+    {
+      "id": "d7b64114-bef9-4e0c-aec5-095ea1b5a61b",
+      "year": 2001,
+      "make": "ford",
+      "model": "focus",
+      "trim": "LX",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "3143c99a-273a-4b9d-b065-f8920c837029",
+      "year": 2001,
+      "make": "ford",
+      "model": "focus",
+      "trim": "ZTS/SES/ST",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "e1590720-4db6-4158-8b19-c8161bc91737",
+      "year": 2001,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE/ZX3/ZX5",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "ad7c2558-9b9c-43fd-8e18-71c7b1f1ade2",
+      "year": 2002,
+      "make": "ford",
+      "model": "focus",
+      "trim": "ZTS/SES/ST",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "36851f2d-a55b-4cdb-b866-68d99207cf74",
+      "year": 2002,
+      "make": "ford",
+      "model": "focus",
+      "trim": "LX",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "58af969a-4dd4-443f-9076-01351e6e2dca",
+      "year": 2002,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE/ZX3/ZX5",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "54e7e3bd-ae3d-4f28-8e14-bbc9e8a2e57f",
+      "year": 2003,
+      "make": "ford",
+      "model": "focus",
+      "trim": "ZTS/SES/ST",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "a3c49b80-23de-4386-a33b-b794f70de9d8",
+      "year": 2003,
+      "make": "ford",
+      "model": "focus",
+      "trim": "LX",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "302eaab5-e2b3-40af-9675-cf9fd9570dc6",
+      "year": 2003,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE/ZX3/ZX5",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "82151ffe-9aea-4093-8cec-9bfaa6edb41b",
+      "year": 2004,
+      "make": "ford",
+      "model": "focus",
+      "trim": "LX",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "d09541b2-cf4d-4243-b3ac-ef6ef8c28338",
+      "year": 2004,
+      "make": "ford",
+      "model": "focus",
+      "trim": "ZTS/SES/ST",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "867c2e8a-82b8-4918-81ec-369b6ce3c08d",
+      "year": 2004,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE/ZX3/ZX5",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "464e8042-216b-4c30-ae9f-7cc965cac3b3",
+      "year": 2005,
+      "make": "ford",
+      "model": "focus",
+      "trim": "LX",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "c5e7b79e-3603-4209-8682-beeed72ac268",
+      "year": 2005,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE/ZX3/ZX5",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "7dac5dd8-8e3c-409e-92c2-3d45f0e5853f",
+      "year": 2005,
+      "make": "ford",
+      "model": "focus",
+      "trim": "ZTS/SES/ST",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "22df4550-4128-4958-ada6-5bd3f4c5e5bd",
+      "year": 2006,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE/ZX3/ZX5",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "981ce7c6-39f1-43b3-8605-aa16fe9be1fb",
+      "year": 2006,
+      "make": "ford",
+      "model": "focus",
+      "trim": "ZTS/SES/ST",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "7b6a2773-7e21-4e61-a564-4b0313e486ae",
+      "year": 2006,
+      "make": "ford",
+      "model": "focus",
+      "trim": "LX",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "fb4d6d38-8b59-481b-9253-7739c3312d32",
+      "year": 2007,
+      "make": "ford",
+      "model": "focus",
+      "trim": "LX",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "9a958bf7-a2e6-4edd-84be-85c88352a17b",
+      "year": 2007,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE/ZX3/ZX5",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "b38f42fb-3883-4a1c-a23f-598773a7b42c",
+      "year": 2007,
+      "make": "ford",
+      "model": "focus",
+      "trim": "ZTS/SES/ST",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "aac9e9e9-6666-4ff2-a051-952a0baf78dd",
+      "year": 2008,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SES",
+      "status": "verified",
+      "reason": "Correct specs for second-gen Focus (2008-2011 still uses 4x108).",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "b4198419-2e26-4c55-bcea-6585b2f91fe8",
+      "year": 2008,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "7c16879d-e8ee-435c-be9e-59074013b070",
+      "year": 2008,
+      "make": "ford",
+      "model": "focus",
+      "trim": "S",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "9fbda06e-bdba-443c-b25b-1eecee8774be",
+      "year": 2009,
+      "make": "ford",
+      "model": "focus",
+      "trim": "S",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "74afdb57-c42d-4853-9c3d-7661597ca93d",
+      "year": 2009,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SES",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "715c03c1-98f8-4220-b392-4f8df0e9b38d",
+      "year": 2009,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "9aac5bd0-656a-4d74-9bbe-0a7ad382fef4",
+      "year": 2010,
+      "make": "ford",
+      "model": "focus",
+      "trim": "S",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "f87c2503-a59e-4237-b182-3b06b36bbba0",
+      "year": 2010,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "15c925d7-c28c-46d1-9b69-6ad2cc2afaf3",
+      "year": 2010,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SES",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "65d33610-401b-4004-a1bb-3da11d92fc71",
+      "year": 2011,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE",
+      "status": "verified",
+      "reason": "Correct specs. Last year of second-gen Focus with 4x108.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "53110c7d-11ff-46e1-bd06-141d6858a025",
+      "year": 2011,
+      "make": "ford",
+      "model": "focus",
+      "trim": "S",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "6d84aa93-25a6-44ee-8d73-447a92985832",
+      "year": 2011,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SES",
+      "status": "verified",
+      "reason": "Correct specs.",
+      "verifiedSpecs": {
+        "boltPattern": "4x108",
+        "hubBore": "63.4"
+      }
+    },
+    {
+      "id": "921bf1a3-0027-4fb3-9913-ba9c913811a1",
+      "year": 2012,
+      "make": "ford",
+      "model": "focus",
+      "trim": "SE",
+      "status": "verified",
+      "reason": "Correct specs. Third-gen Focus (2012+) switched to 5x108 bolt pattern.",
+      "verifiedSpecs": {
+        "boltPattern": "5x108",
+        "hubBore": "63.4",
+        "wheelSize": "16x7",
+        "tireSize": "215/55R16"
+      },
+      "source": "tiresize.com, wheel-size.com"
+    }
+  ],
+  "sourcesUsed": [
+    "hulkoffsets.com - Ford F-450 wheel specifications",
+    "hulkoffsets.com - Ford Fiesta wheel specifications",
+    "fordflex.net - Ford Flex owner forums",
+    "wheel-sizes.com - Bolt pattern database",
+    "Wikipedia - Ford Fiesta production history",
+    "Ford.com - Fiesta discontinuation notice",
+    "US News - Ford Fiesta 2019 last model year",
+    "performance.ford.com - Fiesta history"
+  ]
+}

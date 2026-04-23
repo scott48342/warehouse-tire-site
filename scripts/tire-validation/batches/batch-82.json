@@ -1,0 +1,679 @@
+{
+  "batchId": "82",
+  "totalBatches": 161,
+  "vehicleCount": 75,
+  "vehicles": [
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "avella",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2005,
+      "make": "kia",
+      "model": "besta",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2004,
+      "make": "kia",
+      "model": "besta",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2003,
+      "make": "kia",
+      "model": "besta",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "besta",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "besta",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "besta",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "carstar",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "carstar",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "carstar",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2002,
+      "make": "kia",
+      "model": "enterprise",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2001,
+      "make": "kia",
+      "model": "enterprise",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2000,
+      "make": "kia",
+      "model": "enterprise",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "kia",
+      "model": "ev6",
+      "currentTireSizes": [
+        "235/55R19",
+        "255/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "kia",
+      "model": "ev6",
+      "currentTireSizes": [
+        "235/55R19",
+        "255/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "ev6",
+      "currentTireSizes": [
+        "235/55R19",
+        "255/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "ev6",
+      "currentTireSizes": [
+        "235/55R19",
+        "255/45R20",
+        "255/40R21",
+        "255/40ZR21",
+        "235/55ZR19",
+        "255/45ZR20"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "ev6",
+      "currentTireSizes": [
+        "235/55R19",
+        "255/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "ev6",
+      "currentTireSizes": [
+        "235/55R19",
+        "255/45R20",
+        "255/40R21"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "kia",
+      "model": "ev9",
+      "currentTireSizes": [
+        "255/60R19"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "kia",
+      "model": "ev9",
+      "currentTireSizes": [
+        "255/60R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "ev9",
+      "currentTireSizes": [
+        "255/60R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "ev9",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2026,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17",
+        "235/40R18",
+        "225/40ZR18",
+        "235/35ZR19",
+        "225/45ZR17",
+        "205/50ZR17",
+        "225/35ZR19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "225/45R17",
+        "235/40R18"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17",
+        "205/50R17"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17",
+        "205/50R17"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2011,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2010,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/45R17"
+      ]
+    },
+    {
+      "year": 2009,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2008,
+      "make": "kia",
+      "model": "forte",
+      "currentTireSizes": []
+    },
+    {
+      "year": 2025,
+      "make": "kia",
+      "model": "k5",
+      "currentTireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "245/40R19"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "k5",
+      "currentTireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "245/40R19"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "k5",
+      "currentTireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "245/40R19"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "k5",
+      "currentTireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "245/40R19"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "k5",
+      "currentTireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "245/40R19"
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "niro",
+      "currentTireSizes": [
+        "205/60R16",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "215/55R17",
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "205/65R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "205/65R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "215/55R17",
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "215/55R17",
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "205/65R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "215/55R17",
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "205/65R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "215/55R17",
+        "235/45R18"
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "205/65R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "205/65R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "205/65R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ]
+    },
+    {
+      "year": 2013,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "205/65R16",
+        "215/55R17"
+      ]
+    },
+    {
+      "year": 2012,
+      "make": "kia",
+      "model": "optima",
+      "currentTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1350 @@
+{
+  "batchId": "63",
+  "processedAt": "2026-04-21T21:30:00.000Z",
+  "results": [
+    {
+      "year": 2022,
+      "make": "Volkswagen",
+      "model": "Arteon SR",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 38 },
+          { "diameter": 17, "width": 7.5, "offset": 40 },
+          { "diameter": 18, "width": 8, "offset": 40 },
+          { "diameter": 19, "width": 8, "offset": 40 },
+          { "diameter": 20, "width": 8, "offset": 40 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Chinese market Arteon variant. Same specs as standard Arteon."
+    },
+    {
+      "year": 2017,
+      "make": "Volkswagen",
+      "model": "Atlas",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 34 },
+          { "diameter": 20, "width": 8, "offset": 34 },
+          { "diameter": 21, "width": 9, "offset": 34 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "First model year for Atlas. Thread size M14x1.5."
+    },
+    {
+      "year": 2026,
+      "make": "Volkswagen",
+      "model": "Atlas Cross Sport",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 18, "width": 8, "offset": 34 },
+          { "diameter": 20, "width": 8, "offset": 34 },
+          { "diameter": 21, "width": 9, "offset": 34 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "oakvillevolkswagen.com",
+      "confidence": "high",
+      "notes": "Atlas-based coupe-style SUV. Same platform specs as Atlas."
+    },
+    {
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "specs": {
+        "wheelSizes": [],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "N/A",
+      "confidence": "low",
+      "notes": "INVALID YEAR - Beetle production ended 2019. Use 2019 specs if needed: 16x6.5 ET44 to 20x8 ET48."
+    },
+    {
+      "year": 2023,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "specs": {
+        "wheelSizes": [],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "N/A",
+      "confidence": "low",
+      "notes": "INVALID YEAR - Beetle production ended 2019. Use 2019 specs if needed."
+    },
+    {
+      "year": 2022,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "specs": {
+        "wheelSizes": [],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "N/A",
+      "confidence": "low",
+      "notes": "INVALID YEAR - Beetle production ended 2019. Use 2019 specs if needed."
+    },
+    {
+      "year": 2021,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "specs": {
+        "wheelSizes": [],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "N/A",
+      "confidence": "low",
+      "notes": "INVALID YEAR - Beetle production ended 2019. Use 2019 specs if needed."
+    },
+    {
+      "year": 2020,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "specs": {
+        "wheelSizes": [],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "N/A",
+      "confidence": "low",
+      "notes": "INVALID YEAR - Beetle production ended 2019. Use 2019 specs if needed."
+    },
+    {
+      "year": 2015,
+      "make": "Volkswagen",
+      "model": "Clasico",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Mexican market Jetta Classic (MK4 based). Thread size M14x1.5."
+    },
+    {
+      "year": 2014,
+      "make": "Volkswagen",
+      "model": "Clasico",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Mexican market Jetta Classic (MK4 based)."
+    },
+    {
+      "year": 2013,
+      "make": "Volkswagen",
+      "model": "Clasico",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Mexican market Jetta Classic (MK4 based)."
+    },
+    {
+      "year": 2012,
+      "make": "Volkswagen",
+      "model": "Clasico",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Mexican market Jetta Classic (MK4 based)."
+    },
+    {
+      "year": 2011,
+      "make": "Volkswagen",
+      "model": "Clasico",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Mexican market Jetta Classic (MK4 based)."
+    },
+    {
+      "year": 2018,
+      "make": "Volkswagen",
+      "model": "Cross Lavida",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 46 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market crossover based on Lavida. PQ25 platform."
+    },
+    {
+      "year": 2017,
+      "make": "Volkswagen",
+      "model": "Cross Lavida",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 46 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market crossover based on Lavida."
+    },
+    {
+      "year": 2016,
+      "make": "Volkswagen",
+      "model": "Cross Lavida",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 46 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market crossover based on Lavida."
+    },
+    {
+      "year": 2015,
+      "make": "Volkswagen",
+      "model": "Cross Lavida",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 46 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market crossover based on Lavida."
+    },
+    {
+      "year": 2014,
+      "make": "Volkswagen",
+      "model": "Cross Lavida",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 46 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market crossover based on Lavida."
+    },
+    {
+      "year": 2018,
+      "make": "Volkswagen",
+      "model": "Cross Santana",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market crossover based on Santana. PQ25 platform."
+    },
+    {
+      "year": 2017,
+      "make": "Volkswagen",
+      "model": "Cross Santana",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market crossover based on Santana."
+    },
+    {
+      "year": 2016,
+      "make": "Volkswagen",
+      "model": "Cross Santana",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 6.5, "offset": 45 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market crossover based on Santana."
+    },
+    {
+      "year": 2004,
+      "make": "Volkswagen",
+      "model": "Eurovan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 51 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 15, "width": 7, "offset": 35 },
+          { "diameter": 16, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 7, "offset": 49 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T4 platform. Thread size M14x1.5."
+    },
+    {
+      "year": 2003,
+      "make": "Volkswagen",
+      "model": "Eurovan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 51 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 15, "width": 7, "offset": 35 },
+          { "diameter": 16, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 7, "offset": 49 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T4 platform."
+    },
+    {
+      "year": 2002,
+      "make": "Volkswagen",
+      "model": "Eurovan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 51 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 15, "width": 7, "offset": 35 },
+          { "diameter": 16, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 7, "offset": 49 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T4 platform."
+    },
+    {
+      "year": 2001,
+      "make": "Volkswagen",
+      "model": "Eurovan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 51 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 15, "width": 7, "offset": 35 },
+          { "diameter": 16, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 7, "offset": 49 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T4 platform."
+    },
+    {
+      "year": 2000,
+      "make": "Volkswagen",
+      "model": "Eurovan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 14, "width": 5.5, "offset": 51 },
+          { "diameter": 15, "width": 6, "offset": 55 },
+          { "diameter": 15, "width": 7, "offset": 35 },
+          { "diameter": 16, "width": 6, "offset": 53 },
+          { "diameter": 16, "width": 7, "offset": 49 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "T4 platform."
+    },
+    {
+      "year": 2009,
+      "make": "Volkswagen",
+      "model": "GLI",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 54 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "MK5 Jetta GLI. Performance variant with sportier wheel options."
+    },
+    {
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "GLI",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 7, "offset": 54 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "MK5 Jetta GLI."
+    },
+    {
+      "year": 2019,
+      "make": "Volkswagen",
+      "model": "Golf SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 43 },
+          { "diameter": 16, "width": 6, "offset": 48 },
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 6, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 49 },
+          { "diameter": 17, "width": 7.5, "offset": 48 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Final model year for Golf SportWagen. MQB platform."
+    },
+    {
+      "year": 2018,
+      "make": "Volkswagen",
+      "model": "Golf SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 43 },
+          { "diameter": 16, "width": 6, "offset": 48 },
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 6, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 49 },
+          { "diameter": 17, "width": 7.5, "offset": 48 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "MQB platform."
+    },
+    {
+      "year": 2017,
+      "make": "Volkswagen",
+      "model": "Golf SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 43 },
+          { "diameter": 16, "width": 6, "offset": 48 },
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 6, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 49 },
+          { "diameter": 17, "width": 7.5, "offset": 48 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "MQB platform."
+    },
+    {
+      "year": 2016,
+      "make": "Volkswagen",
+      "model": "Golf SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 43 },
+          { "diameter": 16, "width": 6, "offset": 48 },
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 6, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 49 },
+          { "diameter": 17, "width": 7.5, "offset": 48 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "MQB platform."
+    },
+    {
+      "year": 2015,
+      "make": "Volkswagen",
+      "model": "Golf SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 43 },
+          { "diameter": 16, "width": 6, "offset": 48 },
+          { "diameter": 16, "width": 6.5, "offset": 46 },
+          { "diameter": 17, "width": 6, "offset": 48 },
+          { "diameter": 17, "width": 7, "offset": 49 },
+          { "diameter": 17, "width": 7.5, "offset": 48 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "First year on MQB platform."
+    },
+    {
+      "year": 2013,
+      "make": "Volkswagen",
+      "model": "Golf SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "PQ35 platform (MK6 generation)."
+    },
+    {
+      "year": 2012,
+      "make": "Volkswagen",
+      "model": "Golf SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "PQ35 platform (MK6 generation)."
+    },
+    {
+      "year": 2011,
+      "make": "Volkswagen",
+      "model": "Golf SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "PQ35 platform (MK6 generation)."
+    },
+    {
+      "year": 2010,
+      "make": "Volkswagen",
+      "model": "Golf SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "First year for Golf SportWagen (replaced Jetta SportWagen)."
+    },
+    {
+      "year": 2025,
+      "make": "Volkswagen",
+      "model": "ID.4 Crozz",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 45 },
+          { "diameter": 20, "width": 8, "offset": 45 },
+          { "diameter": 21, "width": 8.5, "offset": 40 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, evsportline.com",
+      "confidence": "high",
+      "notes": "Chinese market ID.4 variant. MEB platform."
+    },
+    {
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "ID.4 Crozz",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 45 },
+          { "diameter": 20, "width": 8, "offset": 45 },
+          { "diameter": 21, "width": 8.5, "offset": 40 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, evsportline.com",
+      "confidence": "high",
+      "notes": "Chinese market ID.4 variant. MEB platform."
+    },
+    {
+      "year": 2023,
+      "make": "Volkswagen",
+      "model": "ID.4 Crozz",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 45 },
+          { "diameter": 20, "width": 8, "offset": 45 },
+          { "diameter": 21, "width": 8.5, "offset": 40 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, evsportline.com",
+      "confidence": "high",
+      "notes": "Chinese market ID.4 variant. MEB platform."
+    },
+    {
+      "year": 2022,
+      "make": "Volkswagen",
+      "model": "ID.4 Crozz",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 45 },
+          { "diameter": 20, "width": 8, "offset": 45 },
+          { "diameter": 21, "width": 8.5, "offset": 40 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, evsportline.com",
+      "confidence": "high",
+      "notes": "Chinese market ID.4 variant. MEB platform."
+    },
+    {
+      "year": 2021,
+      "make": "Volkswagen",
+      "model": "ID.4 Crozz",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 45 },
+          { "diameter": 20, "width": 8, "offset": 45 },
+          { "diameter": 21, "width": 8.5, "offset": 40 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com, evsportline.com",
+      "confidence": "high",
+      "notes": "First year for ID.4 CROZZ in China. MEB platform."
+    },
+    {
+      "year": 2026,
+      "make": "Volkswagen",
+      "model": "ID.Unyx",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 45 },
+          { "diameter": 20, "width": 8, "offset": 45 },
+          { "diameter": 21, "width": 8.5, "offset": 40 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market EV. MEB platform with 800V system. Limited spec data available."
+    },
+    {
+      "year": 2025,
+      "make": "Volkswagen",
+      "model": "ID.Unyx",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 45 },
+          { "diameter": 20, "width": 8, "offset": 45 },
+          { "diameter": 21, "width": 8.5, "offset": 40 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market EV. MEB platform."
+    },
+    {
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "ID.Unyx",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 19, "width": 8, "offset": 45 },
+          { "diameter": 20, "width": 8, "offset": 45 },
+          { "diameter": 21, "width": 8.5, "offset": 40 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market EV. MEB platform."
+    },
+    {
+      "year": 2009,
+      "make": "Volkswagen",
+      "model": "Jetta City",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Canadian market budget Jetta based on MK4. Thread size M14x1.5."
+    },
+    {
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "Jetta City",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Canadian market budget Jetta based on MK4."
+    },
+    {
+      "year": 2007,
+      "make": "Volkswagen",
+      "model": "Jetta City",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 38 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Canadian market budget Jetta based on MK4."
+    },
+    {
+      "year": 2009,
+      "make": "Volkswagen",
+      "model": "Jetta King",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market sedan. MK4 derived (PQ34 platform)."
+    },
+    {
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "Jetta King",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market sedan. MK4 derived."
+    },
+    {
+      "year": 2007,
+      "make": "Volkswagen",
+      "model": "Jetta King",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market sedan. MK4 derived."
+    },
+    {
+      "year": 2006,
+      "make": "Volkswagen",
+      "model": "Jetta King",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market sedan. MK4 derived."
+    },
+    {
+      "year": 2005,
+      "make": "Volkswagen",
+      "model": "Jetta King",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market sedan. MK4 derived."
+    },
+    {
+      "year": 2004,
+      "make": "Volkswagen",
+      "model": "Jetta King",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "boltPattern": "5x100",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market sedan. MK4 derived."
+    },
+    {
+      "year": 2012,
+      "make": "Volkswagen",
+      "model": "Jetta Pioneer",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market sedan. MK5 derived (PQ35 platform)."
+    },
+    {
+      "year": 2011,
+      "make": "Volkswagen",
+      "model": "Jetta Pioneer",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market sedan. MK5 derived."
+    },
+    {
+      "year": 2010,
+      "make": "Volkswagen",
+      "model": "Jetta Pioneer",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "medium",
+      "notes": "Chinese market sedan. MK5 derived."
+    },
+    {
+      "year": 2014,
+      "make": "Volkswagen",
+      "model": "Jetta SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "Final year before Golf SportWagen naming. PQ35 platform."
+    },
+    {
+      "year": 2013,
+      "make": "Volkswagen",
+      "model": "Jetta SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "PQ35 platform."
+    },
+    {
+      "year": 2012,
+      "make": "Volkswagen",
+      "model": "Jetta SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "PQ35 platform."
+    },
+    {
+      "year": 2011,
+      "make": "Volkswagen",
+      "model": "Jetta SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "PQ35 platform."
+    },
+    {
+      "year": 2010,
+      "make": "Volkswagen",
+      "model": "Jetta SportWagen",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 },
+          { "diameter": 18, "width": 7.5, "offset": 51 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "wheel-size.com",
+      "confidence": "high",
+      "notes": "PQ35 platform."
+    },
+    {
+      "year": 2011,
+      "make": "Volkswagen",
+      "model": "Passat",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 42 },
+          { "diameter": 16, "width": 7, "offset": 45 },
+          { "diameter": 17, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7.5, "offset": 47 },
+          { "diameter": 18, "width": 8, "offset": 44 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "B7 generation. Thread size M14x1.5."
+    },
+    {
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "R32",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 17, "width": 6, "offset": 48.5 },
+          { "diameter": 18, "width": 7.5, "offset": 51 },
+          { "diameter": 19, "width": 8.5, "offset": 45 },
+          { "diameter": 20, "width": 9, "offset": 42 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "MK5 Golf-based performance model. 3.2L VR6 AWD. Thread size M14x1.5."
+    },
+    {
+      "year": 2009,
+      "make": "Volkswagen",
+      "model": "Rabbit",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 15, "width": 6.5, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "US market name for Golf MK5. 2.5L I5 engine. Thread size M14x1.5."
+    },
+    {
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "Rabbit",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 15, "width": 6.5, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "US market name for Golf MK5."
+    },
+    {
+      "year": 2007,
+      "make": "Volkswagen",
+      "model": "Rabbit",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 15, "width": 6.5, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "US market name for Golf MK5."
+    },
+    {
+      "year": 2006,
+      "make": "Volkswagen",
+      "model": "Rabbit",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 15, "width": 6, "offset": 47 },
+          { "diameter": 15, "width": 6.5, "offset": 50 },
+          { "diameter": 16, "width": 6, "offset": 50 },
+          { "diameter": 16, "width": 6.5, "offset": 50 },
+          { "diameter": 17, "width": 7, "offset": 54 }
+        ],
+        "boltPattern": "5x112",
+        "centerBore": 57.1,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "US market name for Golf MK5. First year."
+    },
+    {
+      "year": 2014,
+      "make": "Volkswagen",
+      "model": "Routan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Chrysler Town & Country rebadge. Thread size M12x1.5. Last model year."
+    },
+    {
+      "year": 2013,
+      "make": "Volkswagen",
+      "model": "Routan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Chrysler Town & Country rebadge."
+    },
+    {
+      "year": 2012,
+      "make": "Volkswagen",
+      "model": "Routan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Chrysler Town & Country rebadge."
+    },
+    {
+      "year": 2011,
+      "make": "Volkswagen",
+      "model": "Routan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Chrysler Town & Country rebadge."
+    },
+    {
+      "year": 2010,
+      "make": "Volkswagen",
+      "model": "Routan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Chrysler Town & Country rebadge."
+    },
+    {
+      "year": 2009,
+      "make": "Volkswagen",
+      "model": "Routan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Chrysler Town & Country rebadge."
+    },
+    {
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "Routan",
+      "specs": {
+        "wheelSizes": [
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 6.5, "offset": 40 }
+        ],
+        "boltPattern": "5x127",
+        "centerBore": 71.6,
+        "isStaggered": false
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high",
+      "notes": "Chrysler Town & Country rebadge. First model year."
+    }
+  ]
+}

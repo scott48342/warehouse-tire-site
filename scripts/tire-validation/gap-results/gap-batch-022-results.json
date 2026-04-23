@@ -1,0 +1,475 @@
+{
+  "batchId": 22,
+  "researchedAt": "2026-04-21T23:50:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "usVehicles": 17,
+    "nonUsVehicles": 33
+  },
+  "vehicles": [
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "fairlane",
+      "notUS": true,
+      "notes": "Australian market vehicle (2003-2007). US Fairlane ended 1970."
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "fairlane",
+      "notUS": true,
+      "notes": "Australian market vehicle (2003-2007). US Fairlane ended 1970."
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "fairlane",
+      "notUS": true,
+      "notes": "Australian market vehicle (2003-2007). US Fairlane ended 1970."
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "fairlane",
+      "notUS": true,
+      "notes": "Australian market vehicle (2003-2007). US Fairlane ended 1970."
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "fairlane",
+      "notUS": true,
+      "notes": "Australian market vehicle (2003-2007). US Fairlane ended 1970."
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "fairmont",
+      "notUS": true,
+      "notes": "Australian market vehicle (1999-2008). US Fairmont ended 1983."
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "fairmont",
+      "notUS": true,
+      "notes": "Australian market vehicle (1999-2008). US Fairmont ended 1983."
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "fairmont",
+      "notUS": true,
+      "notes": "Australian market vehicle (1999-2008). US Fairmont ended 1983."
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "fairmont",
+      "notUS": true,
+      "notes": "Australian market vehicle (1999-2008). US Fairmont ended 1983."
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "fairmont",
+      "notUS": true,
+      "notes": "Australian market vehicle (1999-2008). US Fairmont ended 1983."
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "fairmont",
+      "notUS": true,
+      "notes": "Australian market vehicle (1999-2008). US Fairmont ended 1983."
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "fairmont",
+      "notUS": true,
+      "notes": "Australian market vehicle (1999-2008). US Fairmont ended 1983."
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "fairmont",
+      "notUS": true,
+      "notes": "Australian market vehicle (1999-2008). US Fairmont ended 1983."
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "fairmont",
+      "notUS": true,
+      "notes": "Australian market vehicle (1999-2008). US Fairmont ended 1983."
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "festiva",
+      "notUS": true,
+      "notes": "International market vehicle. US Festiva ended 1993."
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "festiva",
+      "notUS": true,
+      "notes": "International market vehicle. US Festiva ended 1993."
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "festiva",
+      "notUS": true,
+      "notes": "International market vehicle. US Festiva ended 1993."
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "festiva",
+      "notUS": true,
+      "notes": "International market vehicle. US Festiva ended 1993."
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "fiesta-classic",
+      "notUS": true,
+      "notes": "Indian market vehicle. Not sold in US."
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "fiesta-classic",
+      "notUS": true,
+      "notes": "Indian market vehicle. Not sold in US."
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "notUS": true,
+      "notes": "Mexican/Latin American market vehicle. Not sold in US."
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "notUS": true,
+      "notes": "Mexican/Latin American market vehicle. Not sold in US."
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "notUS": true,
+      "notes": "Mexican/Latin American market vehicle. Not sold in US."
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "notUS": true,
+      "notes": "Mexican/Latin American market vehicle. Not sold in US."
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "notUS": true,
+      "notes": "Mexican/Latin American market vehicle. Not sold in US."
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "notUS": true,
+      "notes": "Mexican/Latin American market vehicle. Not sold in US."
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "notUS": true,
+      "notes": "Mexican/Latin American market vehicle. Not sold in US."
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "notUS": true,
+      "notes": "Mexican/Latin American market vehicle. Not sold in US."
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "fiesta-ikon",
+      "notUS": true,
+      "notes": "Mexican/Latin American market vehicle. Not sold in US."
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "five-hundred",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Limited", "tireSize": "225/55R18", "wheelDiameter": 18 },
+          { "name": "SE", "tireSize": "215/60R17", "wheelDiameter": 17 },
+          { "name": "SEL", "tireSize": "215/60R17", "wheelDiameter": 17 }
+        ]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "five-hundred",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Limited", "tireSize": "225/55R18", "wheelDiameter": 18 },
+          { "name": "SE", "tireSize": "215/60R17", "wheelDiameter": 17 },
+          { "name": "SEL", "tireSize": "215/60R17", "wheelDiameter": 17 }
+        ]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "five-hundred",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Limited", "tireSize": "225/55R18", "wheelDiameter": 18 },
+          { "name": "SE", "tireSize": "215/60R17", "wheelDiameter": 17 },
+          { "name": "SEL", "tireSize": "215/60R17", "wheelDiameter": 17 }
+        ]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "focus-c-max",
+      "notUS": true,
+      "notes": "European market vehicle. US C-Max started 2013."
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "focus-c-max",
+      "notUS": true,
+      "notes": "European market vehicle. US C-Max started 2013."
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "focus-c-max",
+      "notUS": true,
+      "notes": "European market vehicle. US C-Max started 2013."
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "focus-c-max",
+      "notUS": true,
+      "notes": "European market vehicle. US C-Max started 2013."
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "focus-c-max",
+      "notUS": true,
+      "notes": "European market vehicle. US C-Max started 2013."
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "focus-electric",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Electric", "tireSize": "225/50R17", "wheelDiameter": 17 }
+        ]
+      },
+      "notes": "Part of Focus model line on tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "focus-electric",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Electric", "tireSize": "225/50R17", "wheelDiameter": 17 }
+        ]
+      },
+      "notes": "Part of Focus model line on tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "focus-electric",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Electric", "tireSize": "225/50R17", "wheelDiameter": 17 }
+        ]
+      },
+      "notes": "Part of Focus model line on tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "focus-electric",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Electric", "tireSize": "225/50R17", "wheelDiameter": 17 }
+        ]
+      },
+      "notes": "Part of Focus model line on tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "focus-electric",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Electric", "tireSize": "225/50R17", "wheelDiameter": 17 }
+        ]
+      },
+      "notes": "Part of Focus model line on tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "focus-electric",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Electric", "tireSize": "225/50R17", "wheelDiameter": 17 }
+        ]
+      },
+      "notes": "Part of Focus model line on tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "focus-electric",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Electric", "tireSize": "225/50R17", "wheelDiameter": 17 }
+        ]
+      },
+      "notes": "2018 was last year for Focus Electric. Same specs as prior years."
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "freestar",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Cargo", "tireSize": "235/60R16", "wheelDiameter": 16 },
+          { "name": "Limited", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] },
+          { "name": "S", "tireSizes": ["225/60R16", "235/60R16"], "wheelDiameters": [16] },
+          { "name": "SE", "tireSize": "225/60R16", "wheelDiameter": 16 },
+          { "name": "SEL", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] },
+          { "name": "SES", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] }
+        ]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "freestar",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Cargo", "tireSize": "235/60R16", "wheelDiameter": 16 },
+          { "name": "Limited", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] },
+          { "name": "S", "tireSizes": ["225/60R16", "235/60R16"], "wheelDiameters": [16] },
+          { "name": "SE", "tireSize": "225/60R16", "wheelDiameter": 16 },
+          { "name": "SEL", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] },
+          { "name": "SES", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] }
+        ]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "freestar",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Cargo", "tireSize": "235/60R16", "wheelDiameter": 16 },
+          { "name": "Limited", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] },
+          { "name": "S", "tireSizes": ["225/60R16", "235/60R16"], "wheelDiameters": [16] },
+          { "name": "SE", "tireSize": "225/60R16", "wheelDiameter": 16 },
+          { "name": "SEL", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] },
+          { "name": "SES", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] }
+        ]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "freestar",
+      "notUS": false,
+      "tireSpecs": {
+        "trims": [
+          { "name": "Cargo", "tireSize": "235/60R16", "wheelDiameter": 16 },
+          { "name": "Limited", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] },
+          { "name": "S", "tireSizes": ["225/60R16", "235/60R16"], "wheelDiameters": [16] },
+          { "name": "SE", "tireSize": "225/60R16", "wheelDiameter": 16 },
+          { "name": "SEL", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] },
+          { "name": "SES", "tireSizes": ["235/60R16", "235/55R17"], "wheelDiameters": [16, 17] }
+        ]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "gt",
+      "notUS": false,
+      "isStaggered": true,
+      "tireSpecs": {
+        "trims": [
+          {
+            "name": "Base Model",
+            "frontTireSize": "235/45R18",
+            "rearTireSize": "315/40R19",
+            "frontWheelDiameter": 18,
+            "rearWheelDiameter": 19
+          }
+        ]
+      },
+      "notes": "Staggered fitment supercar"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "gt",
+      "notUS": false,
+      "isStaggered": true,
+      "tireSpecs": {
+        "trims": [
+          {
+            "name": "Base Model",
+            "frontTireSize": "235/45R18",
+            "rearTireSize": "315/40R19",
+            "frontWheelDiameter": 18,
+            "rearWheelDiameter": 19
+          }
+        ]
+      },
+      "notes": "Staggered fitment supercar"
+    }
+  ]
+}

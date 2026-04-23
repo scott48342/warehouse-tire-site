@@ -1,0 +1,1171 @@
+{
+  "batchId": "19",
+  "processedAt": "2026-04-21T20:58:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Ram SRT-10",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "options": [
+          { "diameter": 22, "width": 10, "offset": 25 }
+        ]
+      },
+      "source": "supremesuspensions.com, bbwheelsonline.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Dodge",
+      "model": "Ram SRT-10",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 77.8,
+        "options": [
+          { "diameter": 22, "width": 10, "offset": 25 }
+        ]
+      },
+      "source": "supremesuspensions.com, bbwheelsonline.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 108,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 22 },
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 108,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 22 },
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 108,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 22 },
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram Van B1500",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 108,
+        "options": [
+          { "diameter": 15, "width": 7, "offset": 22 },
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Ram Van B2500",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 108,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram Van B2500",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 108,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram Van B2500",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 108,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram Van B2500",
+      "wheelSpecs": {
+        "boltPattern": "5x139.7",
+        "centerBore": 108,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 25 }
+        ]
+      },
+      "source": "wheel-sizes.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 40 }
+        ]
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 40 }
+        ]
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 40 }
+        ]
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Ram Van B3500",
+      "wheelSpecs": {
+        "boltPattern": "8x165.1",
+        "centerBore": 117,
+        "options": [
+          { "diameter": 16, "width": 6, "offset": 40 }
+        ]
+      },
+      "source": "hulkoffsets.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "wheelSpecs": {
+        "boltPattern": "6x130",
+        "centerBore": 84,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 62 }
+        ]
+      },
+      "source": "wheelssize.com, benzworld.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "wheelSpecs": {
+        "boltPattern": "6x130",
+        "centerBore": 84,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 62 }
+        ]
+      },
+      "source": "wheelssize.com, benzworld.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "wheelSpecs": {
+        "boltPattern": "6x130",
+        "centerBore": 84,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 62 }
+        ]
+      },
+      "source": "wheelssize.com, benzworld.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "wheelSpecs": {
+        "boltPattern": "6x130",
+        "centerBore": 84,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 62 }
+        ]
+      },
+      "source": "wheelssize.com, benzworld.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "wheelSpecs": {
+        "boltPattern": "6x130",
+        "centerBore": 84,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 62 }
+        ]
+      },
+      "source": "wheelssize.com, benzworld.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "wheelSpecs": {
+        "boltPattern": "6x130",
+        "centerBore": 84,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 62 }
+        ]
+      },
+      "source": "wheelssize.com, benzworld.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "wheelSpecs": {
+        "boltPattern": "6x130",
+        "centerBore": 84,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 62 }
+        ]
+      },
+      "source": "wheelssize.com, benzworld.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Sprinter",
+      "wheelSpecs": {
+        "boltPattern": "6x130",
+        "centerBore": 84,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 62 }
+        ]
+      },
+      "source": "wheelssize.com, benzworld.org",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 18, "width": 10, "offset": 50 },
+          { "position": "rear", "diameter": 19, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 17, "width": 10, "offset": 55 },
+          { "position": "rear", "diameter": 18, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 17, "width": 10, "offset": 55 },
+          { "position": "rear", "diameter": 18, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "Viper",
+      "wheelSpecs": {
+        "boltPattern": "6x114.3",
+        "centerBore": 71.5,
+        "isStaggered": true,
+        "options": [
+          { "position": "front", "diameter": 17, "width": 10, "offset": 55 },
+          { "position": "rear", "diameter": 18, "width": 13, "offset": 65 }
+        ]
+      },
+      "source": "wheelssize.com, tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Dodge",
+      "model": "Vision",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "notes": "Mexican market vehicle based on Hyundai Accent platform",
+      "source": "curbsideclassic.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2017,
+      "make": "Dodge",
+      "model": "Vision",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "notes": "Mexican market vehicle based on Hyundai Accent platform",
+      "source": "curbsideclassic.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Vision",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "notes": "Mexican market vehicle based on Hyundai Accent platform",
+      "source": "curbsideclassic.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Vision",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "notes": "Mexican market vehicle based on Hyundai Accent platform",
+      "source": "curbsideclassic.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2020,
+      "make": "Fiat",
+      "model": "124 Spider",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "hubcaphaven.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "Fiat",
+      "model": "124 Spider",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "hubcaphaven.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Fiat",
+      "model": "124 Spider",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "hubcaphaven.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "Fiat",
+      "model": "124 Spider",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "hubcaphaven.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Fiat",
+      "model": "124 Spider",
+      "wheelSpecs": {
+        "boltPattern": "4x100",
+        "centerBore": 54.1,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 45 },
+          { "diameter": 17, "width": 7, "offset": 45 }
+        ]
+      },
+      "source": "hubcaphaven.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Fiat",
+      "model": "500",
+      "wheelSpecs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6, "offset": 41 },
+          { "diameter": 17, "width": 6.5, "offset": 41 }
+        ]
+      },
+      "notes": "Electric 500e model",
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Fiat",
+      "model": "500",
+      "wheelSpecs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6, "offset": 41 },
+          { "diameter": 17, "width": 6.5, "offset": 41 }
+        ]
+      },
+      "notes": "Electric 500e model",
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Fiat",
+      "model": "500",
+      "wheelSpecs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6, "offset": 41 },
+          { "diameter": 17, "width": 6.5, "offset": 41 }
+        ]
+      },
+      "notes": "Electric 500e model",
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Fiat",
+      "model": "500",
+      "wheelSpecs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6, "offset": 41 },
+          { "diameter": 17, "width": 6.5, "offset": 41 }
+        ]
+      },
+      "notes": "Electric 500e model",
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Fiat",
+      "model": "500",
+      "wheelSpecs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6, "offset": 41 },
+          { "diameter": 17, "width": 6.5, "offset": 41 }
+        ]
+      },
+      "notes": "Electric 500e model",
+      "source": "avtoreference.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "Fiat",
+      "model": "500",
+      "wheelSpecs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "Fiat",
+      "model": "500",
+      "wheelSpecs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "Fiat",
+      "model": "500",
+      "wheelSpecs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "Fiat",
+      "model": "500",
+      "wheelSpecs": {
+        "boltPattern": "4x98",
+        "centerBore": 58.1,
+        "options": [
+          { "diameter": 15, "width": 6, "offset": 35 },
+          { "diameter": 16, "width": 6.5, "offset": 40 },
+          { "diameter": 17, "width": 7, "offset": 42 }
+        ]
+      },
+      "source": "originalwheels.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "Bronco Sport",
+      "wheelSpecs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 47.5 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "Bronco Sport",
+      "wheelSpecs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 47.5 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Bronco Sport",
+      "wheelSpecs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 47.5 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "Bronco Sport",
+      "wheelSpecs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 47.5 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Bronco Sport",
+      "wheelSpecs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 47.5 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "Bronco Sport",
+      "wheelSpecs": {
+        "boltPattern": "5x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 17, "width": 7, "offset": 47.5 },
+          { "diameter": 18, "width": 7.5, "offset": 52.5 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Classic",
+      "wheelSpecs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 14, "width": 5.5, "offset": 47.5 },
+          { "diameter": 15, "width": 6, "offset": 47.5 }
+        ]
+      },
+      "notes": "India market vehicle based on Ford Fiesta",
+      "source": "hulkoffsets.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "Classic",
+      "wheelSpecs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 14, "width": 5.5, "offset": 47.5 },
+          { "diameter": 15, "width": 6, "offset": 47.5 }
+        ]
+      },
+      "notes": "India market vehicle based on Ford Fiesta",
+      "source": "hulkoffsets.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "Classic",
+      "wheelSpecs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 14, "width": 5.5, "offset": 47.5 },
+          { "diameter": 15, "width": 6, "offset": 47.5 }
+        ]
+      },
+      "notes": "India market vehicle based on Ford Fiesta",
+      "source": "hulkoffsets.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "Classic",
+      "wheelSpecs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 14, "width": 5.5, "offset": 47.5 },
+          { "diameter": 15, "width": 6, "offset": 47.5 }
+        ]
+      },
+      "notes": "India market vehicle based on Ford Fiesta",
+      "source": "hulkoffsets.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Contour",
+      "wheelSpecs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 14, "width": 5.5, "offset": 47.5 },
+          { "diameter": 15, "width": 6, "offset": 49.5 },
+          { "diameter": 15, "width": 6.5, "offset": 47.5 },
+          { "diameter": 16, "width": 6.5, "offset": 49.5 }
+        ]
+      },
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "Cougar",
+      "wheelSpecs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 47 }
+        ]
+      },
+      "notes": "Mercury Cougar (Ford Cougar in Europe)",
+      "source": "wheelsamerica.com, ebay.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "Cougar",
+      "wheelSpecs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 47 }
+        ]
+      },
+      "notes": "Mercury Cougar (Ford Cougar in Europe)",
+      "source": "wheelsamerica.com, ebay.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "Cougar",
+      "wheelSpecs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 47 }
+        ]
+      },
+      "notes": "Mercury Cougar (Ford Cougar in Europe)",
+      "source": "wheelsamerica.com, ebay.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "Cougar",
+      "wheelSpecs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 47 }
+        ]
+      },
+      "notes": "Mercury Cougar (Ford Cougar in Europe)",
+      "source": "wheelsamerica.com, ebay.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Cougar",
+      "wheelSpecs": {
+        "boltPattern": "4x108",
+        "centerBore": 63.4,
+        "options": [
+          { "diameter": 16, "width": 6.5, "offset": 47 }
+        ]
+      },
+      "notes": "Mercury Cougar (Ford Cougar in Europe)",
+      "source": "wheelsamerica.com, ebay.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.6,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 44 },
+          { "diameter": 17, "width": 7, "offset": 44 }
+        ]
+      },
+      "source": "originalwheels.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.6,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 44 },
+          { "diameter": 17, "width": 7, "offset": 44 }
+        ]
+      },
+      "source": "originalwheels.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.6,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 44 },
+          { "diameter": 17, "width": 7, "offset": 44 }
+        ]
+      },
+      "source": "originalwheels.com, detroitwheelandtire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "Crown Victoria",
+      "wheelSpecs": {
+        "boltPattern": "5x114.3",
+        "centerBore": 70.6,
+        "options": [
+          { "diameter": 16, "width": 7, "offset": 44 },
+          { "diameter": 17, "width": 7, "offset": 44 }
+        ]
+      },
+      "source": "originalwheels.com, detroitwheelandtire.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalProcessed": 75,
+    "highConfidence": 67,
+    "mediumConfidence": 8,
+    "lowConfidence": 0,
+    "staggeredSetups": 15,
+    "uniqueBoltPatterns": [
+      "4x98",
+      "4x100",
+      "4x108",
+      "5x108",
+      "5x114.3",
+      "5x139.7",
+      "6x114.3",
+      "6x130",
+      "8x165.1"
+    ]
+  }
+}

@@ -1,0 +1,2136 @@
+[
+  {
+    "id": "4cd1d4f3-d71e-47d2-a5b8-3ad4a0722120",
+    "year": 2013,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3062b8b9-bdad-4387-a040-0cbb918d0bf9",
+    "year": 2013,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2e5c1c40-a684-4a93-87ee-4d2483a76aa6",
+    "year": 2013,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f63821e2-e416-4bef-aa74-880dca6c69ed",
+    "year": 2013,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Platinum",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1e704e31-f5dd-41ce-a1e5-f827c76f1eb4",
+    "year": 2013,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20",
+      "LT245/75R17"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "c027e7b1-b1e0-45b9-8d7f-be74ad5b45a4",
+    "year": 2014,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "33e5bd7c-65d9-4e03-af47-7d2a5a2afe74",
+    "year": 2014,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20",
+      "LT245/75R17"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "5047dfc1-41c7-4c73-9c79-e1e893d072ed",
+    "year": 2014,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2ddff4f2-412c-4ff7-af92-31ce68a3bf96",
+    "year": 2014,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9b307cd9-c6aa-4ab8-8641-568050968640",
+    "year": 2014,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a0f5fe5b-6382-4f76-9eea-bd117136d46a",
+    "year": 2014,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Platinum",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "13995246-ac92-4463-bb65-319d7474a668",
+    "year": 2015,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20",
+      "LT245/75R17"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "58e9afe5-d5be-47e1-8bcf-f9dad87214c2",
+    "year": 2015,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8f3c6108-5e04-48f9-ba01-7a65c61eccd4",
+    "year": 2015,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "682c39d2-0666-4323-bcbd-2d5df0bb7aed",
+    "year": 2015,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "bd9db6ca-4e98-454c-abf7-2c792d24b3c2",
+    "year": 2015,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Platinum",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "998c75e5-804e-4b9b-a6c7-e4dd05a72434",
+    "year": 2015,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3db70275-b974-49bf-8a10-db3e03d322a0",
+    "year": 2016,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Platinum",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4cf12069-bc4c-48ed-b44e-0a49af5d497f",
+    "year": 2016,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": false,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20",
+      "LT245/75R17"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "50ef1884-543c-4502-9833-9707d602790e",
+    "year": 2016,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5156fed9-5adf-49d5-b0dc-938829894d43",
+    "year": 2016,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ee4149c8-8a0e-4c6b-8aaa-5b3a415b4e37",
+    "year": 2016,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "eea034b1-77e7-40c7-b568-46bd1fc7ed56",
+    "year": 2016,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c5d3d8a6-535d-435e-b854-1543d59ae20c",
+    "year": 2017,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1677f6c5-1bf6-4100-9ce0-63af84f15fb5",
+    "year": 2017,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Platinum",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e4381157-2f4f-4939-ad85-6685a8987571",
+    "year": 2017,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a0947797-e036-41a7-a1df-aaf535f467c3",
+    "year": 2017,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e0f5a6d3-8247-46e3-be76-4cfcd05ba369",
+    "year": 2017,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "eaa89d34-91cb-4cb0-bdf2-be55d304973a",
+    "year": 2017,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Tremor",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a7904ce7-eaa9-464f-9448-10a32e265e26",
+    "year": 2017,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Limited",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a0aef7ed-ee8a-4aaf-b690-4639560993d7",
+    "year": 2017,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "8dd9adfd-266f-47dd-8e2a-05b6a69ff94b",
+    "year": 2018,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "96d4312c-bcaf-448a-9cdd-98966f01a0bb",
+    "year": 2018,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e5ed7cac-4453-44ac-8d2d-60e41352aa14",
+    "year": 2018,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8365f65d-aa2d-4427-a843-4dead3786cb0",
+    "year": 2018,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "77522ac6-229d-471a-87e9-0253ba1cbea1",
+    "year": 2018,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Platinum",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "eeacee70-df63-4033-b6f1-c70ef9802ea0",
+    "year": 2018,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Limited",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ca6b1e48-46f0-4539-bb97-0e02df14e280",
+    "year": 2018,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "7d78aba2-f5be-4913-8277-5c589f188e77",
+    "year": 2018,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Tremor",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1edce613-8280-446a-a39e-7fb5c6e7c93c",
+    "year": 2019,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "15097b03-087c-448f-ad85-1b194357238e",
+    "year": 2019,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Tremor",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0029fb64-b83d-4175-9d00-2217725d4c61",
+    "year": 2019,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Limited",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2802bdc5-0af2-42e4-8313-3c3dd7f8219c",
+    "year": 2019,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Platinum",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5eba6e00-267b-4f7e-872c-306f823d4dbc",
+    "year": 2019,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a6e28759-994e-4f32-b895-181a406fa2e5",
+    "year": 2019,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "00bd04ed-000f-4e16-9b6d-ed3ce2eea725",
+    "year": 2019,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "0afd7e0f-efc6-4389-a4dc-714a8b7e502a",
+    "year": 2019,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "163456d2-1979-4675-b1e4-fbff2b71eb7a",
+    "year": 2020,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "38f072fc-427b-4903-96e7-0664da15bb68",
+    "year": 2020,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Limited",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e358ee13-2357-4d7f-935c-047f8b5d1bd2",
+    "year": 2020,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Tremor",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "88d6a891-26f2-454d-9e59-c9bec47c75ea",
+    "year": 2020,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "0912fde3-f581-489a-84a0-302066cdc2c1",
+    "year": 2020,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Platinum",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5ecccb23-b0be-4303-92de-fb211b9c4130",
+    "year": 2020,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1357ea7d-9050-48ca-8541-bb608a2b8829",
+    "year": 2020,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6827746c-ee93-4ee3-b15e-1370f4b3cde5",
+    "year": 2020,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2f6938b3-13a0-470c-9815-94746b985a83",
+    "year": 2021,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "cbd1dc6f-2c2f-43d5-aeac-38efadc520f6",
+    "year": 2021,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Limited",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c9ee375f-0a86-4c68-821c-29129d1c067c",
+    "year": 2021,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Platinum",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "81d2c7d3-6db2-4c88-aa5a-8a0b442717e4",
+    "year": 2021,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Tremor",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "e5b986a1-4b7d-48b1-85e0-8736f7ff1f62",
+    "year": 2021,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "6e1a115b-57c1-4e12-b614-ae30cbd66714",
+    "year": 2021,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4bba8c28-5bdd-4600-b987-ad4fff5af629",
+    "year": 2021,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1d6373bc-587b-4512-9681-577355d50f8e",
+    "year": 2021,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8025971a-7a00-4115-bd47-702622c29732",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ece2ed60-9eb5-4864-acad-3c96224d04ce",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Limited",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7b74fe1c-8210-42ed-9943-359dc5863b0c",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 40,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "railway_import"
+  },
+  {
+    "id": "04da0aa4-8b29-4736-abb0-167477d0b188",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Platinum",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2f087336-1a39-4512-ae0a-f5c0e9fb68a4",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7596923e-e6b8-487e-a75c-296f2fe23f18",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XLT",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "90d4a7f1-8fcb-4b14-bdb5-4ca0fbe9f112",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a0155f41-77a6-4d92-aea6-a5dc35f6dd56",
+    "year": 2022,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Tremor",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "08d67eee-2f48-423b-8383-66a587162ba5",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "King Ranch",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "591a16fa-e14e-4aef-bd85-3af8b5aa5cf7",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Limited",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "68b33e6a-cda3-436c-9c0b-00e8e75eb007",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "XL",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1fe0271c-8498-4c41-a8f7-5c38cd24dcc0",
+    "year": 2023,
+    "make": "ford",
+    "model": "f-250",
+    "trim": "Lariat",
+    "currentBoltPattern": "8x170",
+    "currentHubBore": "124.9",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/70R18",
+      "LT275/65R20",
+      "275/65R20",
+      "LT245/75R17",
+      "LT265/70R17",
+      "LT275/65R18",
+      "LT275/70R18",
+      "LT285/75R18"
+    ],
+    "source": "generation_inherit"
+  }
+]

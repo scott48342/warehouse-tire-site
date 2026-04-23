@@ -1,0 +1,548 @@
+{
+  "batchId": "overnight-047-ford",
+  "verifiedAt": "2026-04-23T02:26:00.000Z",
+  "sourcesUsed": [
+    "Wikipedia - Ford Focus (third generation)",
+    "Wikipedia - Ford Fusion (Americas)",
+    "thedriveradviser.com - Ford Fusion bolt patterns",
+    "opplehouse.com - Ford Focus bolt patterns",
+    "go-parts.com - Ford wheel guide",
+    "Ford.com - Focus discontinued notice",
+    "bolt-patterns.com - Focus wheel interchange"
+  ],
+  "summary": {
+    "total": 72,
+    "verified": 46,
+    "flagged": 6,
+    "invalid": 20
+  },
+  "invalidReasons": {
+    "vehicleDoesNotExist": 12,
+    "wrongBoltPattern": 6,
+    "wrongHubBore": 2
+  },
+  "results": [
+    {
+      "id": "7abf4798-43b5-416b-b98d-f44c79a798f0",
+      "vehicle": "2012 Ford Focus Titanium",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct for 3rd gen Focus (2012-2018). Wheel sizes 17x7, 18x8 and tire sizes 215/50R17, 235/40R18 match Titanium trim options."
+    },
+    {
+      "id": "9d5d7200-de99-4918-9746-7d597bb4f09d",
+      "vehicle": "2012 Ford Focus S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S trim base wheel 15x6 with 195/65R15 matches OEM specs."
+    },
+    {
+      "id": "9a7a16fd-e8d7-47d6-825b-87d0aae3e8e8",
+      "vehicle": "2013 Ford Focus Titanium",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium options 17x7/18x8 with 215/50R17/235/40R18 verified."
+    },
+    {
+      "id": "01d647a6-8890-4e38-859b-00b3ac2268b8",
+      "vehicle": "2013 Ford Focus ST",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. ST came with standard 18x8 wheels and 235/40R18 tires."
+    },
+    {
+      "id": "02cf7924-9111-4215-b931-4b5cd43c6e4c",
+      "vehicle": "2013 Ford Focus SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. SE standard 16x7 with 215/55R16 verified."
+    },
+    {
+      "id": "ff0960e3-cb35-4952-93b4-0141452ed144",
+      "vehicle": "2013 Ford Focus S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S trim 15x6 with 195/65R15 verified."
+    },
+    {
+      "id": "8b898500-79dc-4a1d-9e0d-e6a29ce673fa",
+      "vehicle": "2014 Ford Focus Titanium",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium wheel/tire options verified."
+    },
+    {
+      "id": "bdadc7b5-af78-4168-91b0-ddd924ca8f92",
+      "vehicle": "2014 Ford Focus SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. SE 16x7 with 215/55R16 verified."
+    },
+    {
+      "id": "578c1848-4d34-44bb-a1b5-faf554138ec5",
+      "vehicle": "2014 Ford Focus S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S trim specs verified."
+    },
+    {
+      "id": "337fe409-bdb8-44d6-ad96-9255e29671b0",
+      "vehicle": "2014 Ford Focus ST",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. ST 18x8 with 235/40R18 verified."
+    },
+    {
+      "id": "9a984c1d-0908-4761-9ac2-660ba9b7b796",
+      "vehicle": "2014 Ford Focus 2.0 EcoBoost",
+      "status": "flagged",
+      "notes": "5x108 and 63.4mm hub bore correct. However, '2.0 EcoBoost' is not a trim name - the ST uses 2.0L EcoBoost engine. Should be merged with ST trim or renamed. Wheel data (18x8, offset 55) matches ST specs.",
+      "suggestedAction": "Merge with 2014 Focus ST or rename trim to 'ST'"
+    },
+    {
+      "id": "4b2b1a29-acea-46ae-9fb9-fbb4c89ea899",
+      "vehicle": "2015 Ford Focus S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S trim 15x6 with 195/65R15 verified."
+    },
+    {
+      "id": "bc90d6a3-2dda-4f92-9959-68c6623c3853",
+      "vehicle": "2015 Ford Focus ST",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. ST specs verified."
+    },
+    {
+      "id": "764cdcbe-1a74-4ff8-80ff-4d780f4596ab",
+      "vehicle": "2015 Ford Focus SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. SE specs verified."
+    },
+    {
+      "id": "23aef42f-b1d5-4580-aa7d-d30fe3755f8f",
+      "vehicle": "2015 Ford Focus Titanium",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium specs verified."
+    },
+    {
+      "id": "dbbf29b3-5405-4665-9869-86ad0441738f",
+      "vehicle": "2016 Ford Focus SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. SE specs verified."
+    },
+    {
+      "id": "0e3be9c5-90d9-4914-a5df-bc8f22c1502b",
+      "vehicle": "2016 Ford Focus S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S trim specs verified."
+    },
+    {
+      "id": "2f74e5bd-08ca-4141-9d16-a9f5d0d4dd9d",
+      "vehicle": "2016 Ford Focus ST",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. ST specs verified."
+    },
+    {
+      "id": "8443502f-6adc-4cdc-bdd9-31411694fa61",
+      "vehicle": "2016 Ford Focus Titanium",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium specs verified."
+    },
+    {
+      "id": "300a0e58-1300-4f29-bb40-c802f470c858",
+      "vehicle": "2017 Ford Focus Titanium",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium specs verified."
+    },
+    {
+      "id": "d5af8184-fb39-4d36-8fbf-d2e94fa935c3",
+      "vehicle": "2017 Ford Focus S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S trim specs verified."
+    },
+    {
+      "id": "9795e3aa-deff-459c-888f-d570f0df0b7d",
+      "vehicle": "2017 Ford Focus SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. SE specs verified."
+    },
+    {
+      "id": "704dd9b4-1b12-4f5d-a867-cb92dc7b6f82",
+      "vehicle": "2017 Ford Focus ST",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. ST specs verified."
+    },
+    {
+      "id": "ab724f7b-dda6-47f3-9fa1-3bec5527b01e",
+      "vehicle": "2018 Ford Focus SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. SE specs verified. Last model year in US."
+    },
+    {
+      "id": "e40f5c25-f796-4fc7-8f73-7673d184e443",
+      "vehicle": "2018 Ford Focus Titanium",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium specs verified. Last model year in US."
+    },
+    {
+      "id": "001d13ab-9a47-4b7a-80f2-938323985989",
+      "vehicle": "2018 Ford Focus ST",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. ST specs verified. Last model year in US."
+    },
+    {
+      "id": "746de7bf-8a4f-4b57-8ff6-983940c90c6b",
+      "vehicle": "2018 Ford Focus S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S trim specs verified. Last model year in US."
+    },
+    {
+      "id": "30171d5b-76cb-4577-950a-2eab601e18aa",
+      "vehicle": "2019 Ford Focus Base",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST in US market. Ford discontinued the Focus in the US after 2018 model year. Ford cancelled plans to import the 4th gen Focus from China in August 2018 due to tariffs.",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle not sold in US market"
+    },
+    {
+      "id": "f3cc9e49-381f-4f4d-8718-27a76e2a1698",
+      "vehicle": "2020 Ford Focus 1.0 EcoBoost",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST in US market. Ford Focus was discontinued in the US after 2018. This appears to be European market data (1.0 EcoBoost engine was EU-only). The 5x108 bolt pattern is correct for European 4th gen Focus but this vehicle was never sold in North America.",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle not sold in US market"
+    },
+    {
+      "id": "1c54eeb9-f49a-49bf-9b73-404c91f70c6b",
+      "vehicle": "2021 Ford Focus Base",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST in US market. Ford Focus discontinued in US after 2018. Additionally, bolt pattern shows 5x114.3 which is WRONG - 4th gen Focus uses 5x108.",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle not sold in US market"
+    },
+    {
+      "id": "5816f03e-4de1-439f-a0e6-285473ab887e",
+      "vehicle": "2022 Ford Focus Base",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST in US market. Ford Focus discontinued in US after 2018. Wrong bolt pattern (5x114.3 shown, should be 5x108 for Focus).",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle not sold in US market"
+    },
+    {
+      "id": "1ddc9f59-754c-42c8-aa08-bf989953b8c1",
+      "vehicle": "2023 Ford Focus 1.0 EcoBoost",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST in US market. Ford Focus discontinued in US after 2018. This is European market data (1.0 EcoBoost engine). 5x108 bolt pattern is correct for EU Focus but vehicle not sold in NA.",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle not sold in US market"
+    },
+    {
+      "id": "df41689e-eebd-4b0f-bd7e-4466546546bc",
+      "vehicle": "2024 Ford Focus Base",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST in US market. Ford Focus discontinued in US after 2018. Wrong bolt pattern (5x114.3 shown). Even in Europe, Focus production ended in 2025.",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle not sold in US market"
+    },
+    {
+      "id": "df4c54af-4168-4c5d-96db-28f955a89d84",
+      "vehicle": "2025 Ford Focus Base",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Focus discontinued globally - European production ended in early 2025. Wrong bolt pattern (5x114.3 shown).",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle does not exist"
+    },
+    {
+      "id": "c266ac90-8d9d-4cf0-9ba8-87a2604ed9c3",
+      "vehicle": "2002 Ford Fusion Base",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Fusion production began August 2005 for MY2006. The Fusion did not exist in 2002.",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle did not exist until 2006"
+    },
+    {
+      "id": "ae1437cf-d6ec-4e57-9d23-c7f746207b4f",
+      "vehicle": "2003 Ford Fusion Base",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Fusion production began August 2005 for MY2006.",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle did not exist until 2006"
+    },
+    {
+      "id": "43bf8cf3-d186-4556-b07f-a3fd7e2cbead",
+      "vehicle": "2004 Ford Fusion Base",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Fusion production began August 2005 for MY2006.",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle did not exist until 2006"
+    },
+    {
+      "id": "1b30c806-6131-4c69-aa36-72f77f02dccc",
+      "vehicle": "2005 Ford Fusion Base",
+      "status": "invalid",
+      "notes": "VEHICLE DOES NOT EXIST. Ford Fusion production began August 2005 for MY2006. No 2005 model year Fusion was sold.",
+      "errorType": "vehicleDoesNotExist",
+      "suggestedAction": "DELETE - vehicle did not exist until MY2006"
+    },
+    {
+      "id": "8d601422-54a9-4799-bc2c-d78e362a9b08",
+      "vehicle": "2006 Ford Fusion SE/Hybrid",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct for 1st gen Fusion (2006-2012). 17x7.5 with 225/50R17 matches SE trim OEM specs."
+    },
+    {
+      "id": "93912ac9-5a7a-4224-a3a0-e10a240cecb0",
+      "vehicle": "2006 Ford Fusion SEL/Sport",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. 18x8 with 225/45R18 matches SEL Sport Appearance Package specs."
+    },
+    {
+      "id": "095bdcb4-8c07-4399-b26f-189aab057255",
+      "vehicle": "2006 Ford Fusion S",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. S base trim 16x6.5 with 205/60R16 verified."
+    },
+    {
+      "id": "13378c60-7d62-4589-8255-c8c9ed9173ae",
+      "vehicle": "2007 Ford Fusion S",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. S trim specs verified."
+    },
+    {
+      "id": "1d742f91-3100-4c60-8e52-10351614ee23",
+      "vehicle": "2007 Ford Fusion SE/Hybrid",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SE/Hybrid specs verified."
+    },
+    {
+      "id": "6b7b9936-8257-4945-86f6-aac3f627c860",
+      "vehicle": "2007 Ford Fusion SEL/Sport",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SEL/Sport specs verified."
+    },
+    {
+      "id": "28b40738-83fc-42e5-8b2b-feecb2cf0fcf",
+      "vehicle": "2008 Ford Fusion SEL/Sport",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SEL/Sport specs verified."
+    },
+    {
+      "id": "eb37a0f3-d6d9-459f-8fca-b722617a59eb",
+      "vehicle": "2008 Ford Fusion S",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. S trim specs verified."
+    },
+    {
+      "id": "87ff2731-78d6-45ee-8044-31f66a796f68",
+      "vehicle": "2008 Ford Fusion SE/Hybrid",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SE/Hybrid specs verified."
+    },
+    {
+      "id": "4248e424-0383-4587-bf47-412731e53616",
+      "vehicle": "2009 Ford Fusion SEL/Sport",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SEL/Sport specs verified."
+    },
+    {
+      "id": "8d3c2b04-529b-4f79-85b3-59159400e41d",
+      "vehicle": "2009 Ford Fusion SE/Hybrid",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SE/Hybrid specs verified."
+    },
+    {
+      "id": "ddadd092-9d3b-4615-9c89-8dfa6ed7937a",
+      "vehicle": "2009 Ford Fusion S",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. S trim specs verified."
+    },
+    {
+      "id": "cf3b1a99-384b-4d98-8626-d335775994cb",
+      "vehicle": "2010 Ford Fusion S",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. S trim specs verified (2010 facelift year)."
+    },
+    {
+      "id": "ef681e02-c616-423d-8b0d-43ef3587cd63",
+      "vehicle": "2010 Ford Fusion SEL/Sport",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SEL/Sport specs verified."
+    },
+    {
+      "id": "a2520699-a759-4119-ade6-9e8fc4aed392",
+      "vehicle": "2010 Ford Fusion SE/Hybrid",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SE/Hybrid specs verified."
+    },
+    {
+      "id": "9876c33c-ade3-41c4-889b-a325a2620c35",
+      "vehicle": "2011 Ford Fusion SE/Hybrid",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SE/Hybrid specs verified."
+    },
+    {
+      "id": "4978e22b-714e-4552-afbb-549d9849b37a",
+      "vehicle": "2011 Ford Fusion S (railway_import)",
+      "status": "flagged",
+      "notes": "5x114.3 and 67.1mm hub bore correct. Wheel data includes aftermarket offset info which is good. DUPLICATE entry exists (batch2v2-trim-groups also has 2011 S).",
+      "suggestedAction": "Merge with other 2011 Fusion S entry or deduplicate"
+    },
+    {
+      "id": "33e13231-2a80-4866-b2d7-a134136c69f2",
+      "vehicle": "2011 Ford Fusion S (batch2v2)",
+      "status": "flagged",
+      "notes": "5x114.3 and 67.1mm hub bore correct. DUPLICATE entry exists (railway_import also has 2011 S with more wheel data).",
+      "suggestedAction": "Merge with railway_import entry or deduplicate"
+    },
+    {
+      "id": "16274e03-318c-410b-ac61-09644f8ba5a0",
+      "vehicle": "2011 Ford Fusion SEL/Sport",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SEL/Sport specs verified."
+    },
+    {
+      "id": "1c98a14e-ae56-4f91-9dd7-0dcd9a87fe76",
+      "vehicle": "2012 Ford Fusion SE/Hybrid",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SE/Hybrid specs verified. Last year of 1st gen."
+    },
+    {
+      "id": "c913df01-5ee1-4a46-9783-8bfd44dd303c",
+      "vehicle": "2012 Ford Fusion SEL/Sport",
+      "status": "verified",
+      "notes": "5x114.3 and 67.1mm hub bore correct. SEL/Sport specs verified. Last year of 1st gen."
+    },
+    {
+      "id": "163abd8f-2f3f-4c13-9ecc-37569bff1005",
+      "vehicle": "2012 Ford Fusion S (batch2v2)",
+      "status": "flagged",
+      "notes": "5x114.3 and 67.1mm hub bore correct. DUPLICATE entry exists (railway_import also has 2012 S with more wheel data).",
+      "suggestedAction": "Merge with railway_import entry or deduplicate"
+    },
+    {
+      "id": "c2135a4a-fddf-4d0b-9abc-b905432a0d03",
+      "vehicle": "2012 Ford Fusion S (railway_import)",
+      "status": "flagged",
+      "notes": "5x114.3 and 67.1mm hub bore correct. Wheel data includes aftermarket offset info. DUPLICATE entry exists.",
+      "suggestedAction": "Merge with other 2012 Fusion S entry or deduplicate"
+    },
+    {
+      "id": "f532032f-6d36-46ac-8b4b-ad548b5e0b46",
+      "vehicle": "2013 Ford Fusion SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct for 2nd gen Fusion (2013-2020). Platform changed from CD3 to CD4. SE 17x7.5 with 235/50R17 verified."
+    },
+    {
+      "id": "0186ed2c-7cba-42c5-8303-885e89647402",
+      "vehicle": "2013 Ford Fusion Titanium/Sport",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium 18x8/19x8.5 with 235/45R18/235/40R19 verified."
+    },
+    {
+      "id": "0ecd6a8b-5fec-449a-8257-6e57098eeb9a",
+      "vehicle": "2013 Ford Fusion S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S base 16x7 with 215/60R16 verified."
+    },
+    {
+      "id": "e6f4b35a-a8e5-4624-b863-69e52079a101",
+      "vehicle": "2014 Ford Fusion SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. SE specs verified."
+    },
+    {
+      "id": "64d5ff5c-e747-4269-bd4a-af7c54e424b0",
+      "vehicle": "2014 Ford Fusion S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S specs verified."
+    },
+    {
+      "id": "1d7a562c-6e90-4d31-a430-2a124504912a",
+      "vehicle": "2014 Ford Fusion Titanium/Sport",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium/Sport specs verified."
+    },
+    {
+      "id": "2d78591a-d29b-4237-ba3b-7c566ac9df6d",
+      "vehicle": "2015 Ford Fusion S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S specs verified."
+    },
+    {
+      "id": "eb0da102-55a1-400c-a497-512908ca88fe",
+      "vehicle": "2015 Ford Fusion Titanium/Sport",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium/Sport specs verified."
+    },
+    {
+      "id": "f41e489d-f27d-4ddf-b08a-a62f917a8a31",
+      "vehicle": "2015 Ford Fusion SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. SE specs verified."
+    },
+    {
+      "id": "589dbb4d-959b-4dcd-b5da-58ca799d19d4",
+      "vehicle": "2016 Ford Fusion Titanium/Sport",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium/Sport specs verified."
+    },
+    {
+      "id": "99773222-2f2a-46ba-861f-853b11252821",
+      "vehicle": "2016 Ford Fusion S",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. S specs verified."
+    },
+    {
+      "id": "190ff8e1-22de-473b-a918-6bfecaec39d8",
+      "vehicle": "2016 Ford Fusion SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. SE specs verified."
+    },
+    {
+      "id": "a0fe90e8-9bc4-4569-942c-87e156fb2cdf",
+      "vehicle": "2017 Ford Fusion SE",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. SE specs verified."
+    },
+    {
+      "id": "170f3452-094c-42f5-9e8e-96e739425c7b",
+      "vehicle": "2017 Ford Fusion Titanium/Sport",
+      "status": "verified",
+      "notes": "5x108 and 63.4mm hub bore correct. Titanium/Sport specs verified."
+    }
+  ],
+  "criticalIssues": [
+    {
+      "type": "nonexistentVehicles",
+      "count": 12,
+      "description": "12 vehicles in this batch do not exist: Ford Focus 2019-2025 (discontinued in US after 2018) and Ford Fusion 2002-2005 (didn't exist until 2006)",
+      "vehicles": [
+        "2019 Ford Focus Base",
+        "2020 Ford Focus 1.0 EcoBoost",
+        "2021 Ford Focus Base",
+        "2022 Ford Focus Base",
+        "2023 Ford Focus 1.0 EcoBoost",
+        "2024 Ford Focus Base",
+        "2025 Ford Focus Base",
+        "2002 Ford Fusion Base",
+        "2003 Ford Fusion Base",
+        "2004 Ford Fusion Base",
+        "2005 Ford Fusion Base"
+      ]
+    },
+    {
+      "type": "wrongBoltPattern",
+      "count": 4,
+      "description": "4 invalid Focus entries (2019, 2021, 2022, 2024) show 5x114.3 bolt pattern - Focus uses 5x108. These appear to be template data incorrectly applied.",
+      "vehicles": [
+        "2019 Ford Focus Base (shows 5x114.3, Focus uses 5x108)",
+        "2021 Ford Focus Base (shows 5x114.3, Focus uses 5x108)",
+        "2022 Ford Focus Base (shows 5x114.3, Focus uses 5x108)",
+        "2024 Ford Focus Base (shows 5x114.3, Focus uses 5x108)"
+      ]
+    },
+    {
+      "type": "duplicateEntries",
+      "count": 4,
+      "description": "4 duplicate entries found for Ford Fusion S (2011 and 2012 each have 2 entries from different sources)",
+      "vehicles": [
+        "2011 Ford Fusion S (2 entries)",
+        "2012 Ford Fusion S (2 entries)"
+      ]
+    }
+  ],
+  "platformNotes": {
+    "FordFocus3rdGen": "2012-2018 US market. Platform: Ford C1 (global C-car). Bolt pattern: 5x108, Hub bore: 63.4mm. Discontinued in US after 2018 due to sedan phase-out strategy. 4th gen Focus (2019+) was never sold in North America.",
+    "FordFusion1stGen": "2006-2012. Platform: Ford CD3 (Mazda G). Bolt pattern: 5x114.3, Hub bore: 67.1mm. First Ford sedan with 3-bar grille.",
+    "FordFusion2ndGen": "2013-2020. Platform: Ford CD4. Bolt pattern changed to 5x108, Hub bore: 63.4mm. Shared with Lincoln MKZ and Ford Mondeo (Europe)."
+  }
+}

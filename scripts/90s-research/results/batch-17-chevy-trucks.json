@@ -1,0 +1,690 @@
+{
+  "batchId": "90s-batch-17-chevy-trucks",
+  "completedAt": "2026-04-22T12:58:00.000Z",
+  "results": [
+    {
+      "year_range": "1990-1993",
+      "make": "Chevrolet",
+      "model": "S10",
+      "submodel": "2WD",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 35 },
+          { "diameter": 15, "width": 7, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["P195/75R14", "P205/75R15", "P215/75R15"],
+        "thread_size": "M12x1.5",
+        "torque_spec_nm": 129,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["vehiclefixation.com", "chevroletforum.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First generation S10 2WD. Consistent 5x120.65 throughout."
+    },
+    {
+      "year_range": "1990-1993",
+      "make": "Chevrolet",
+      "model": "S10",
+      "submodel": "4WD",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P205/75R15", "P215/75R15", "P235/75R15"],
+        "thread_size": "M12x1.5",
+        "torque_spec_nm": 129,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["vehiclefixation.com", "chevroletforum.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First gen S10 4WD uses 6-lug pattern. Switched to 5-lug in 1994."
+    },
+    {
+      "year_range": "1994-1999",
+      "make": "Chevrolet",
+      "model": "S10",
+      "submodel": "2WD/4WD",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 35 },
+          { "diameter": 16, "width": 7, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["P205/75R15", "P215/75R15", "P235/55R16", "P235/60R16"],
+        "thread_size": "M12x1.5",
+        "torque_spec_nm": 129,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["vehiclefixation.com", "chevroletforum.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second gen S10. Both 2WD and 4WD use 5x120.65 from 1994+."
+    },
+    {
+      "year_range": "1990-1993",
+      "make": "Chevrolet",
+      "model": "S10 Blazer",
+      "submodel": "2WD",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["P205/75R15", "P215/75R15"],
+        "thread_size": "M12x1.5",
+        "torque_spec_nm": 129,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["vehiclefixation.com", "chevroletforum.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "S10 Blazer 2WD shares specs with S10 pickup."
+    },
+    {
+      "year_range": "1990-1993",
+      "make": "Chevrolet",
+      "model": "S10 Blazer",
+      "submodel": "4WD",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 6 }
+        ],
+        "oem_tire_sizes": ["P215/75R15", "P235/75R15"],
+        "thread_size": "M12x1.5",
+        "torque_spec_nm": 129,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["vehiclefixation.com", "stocktonwheel.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First gen S10 Blazer 4WD uses 6-lug pattern."
+    },
+    {
+      "year_range": "1994-1999",
+      "make": "Chevrolet",
+      "model": "S10 Blazer",
+      "submodel": "2WD/4WD",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x120.65",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 7, "offset": 35 },
+          { "diameter": 16, "width": 7, "offset": 35 }
+        ],
+        "oem_tire_sizes": ["P205/75R15", "P215/75R15", "P235/70R15", "P235/70R16"],
+        "thread_size": "M12x1.5",
+        "torque_spec_nm": 129,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["vehiclefixation.com", "chevroletforum.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second gen Blazer. Both 2WD and 4WD use 5x120.65."
+    },
+    {
+      "year_range": "1990-1997",
+      "make": "Chevrolet",
+      "model": "Tracker",
+      "status": "DNE",
+      "notes": "Sold as Geo Tracker until 1997. Chevrolet Tracker started in 1998."
+    },
+    {
+      "year_range": "1998-1999",
+      "make": "Chevrolet",
+      "model": "Tracker",
+      "submodel": "All",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x139.7",
+        "hub_bore": 108.2,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 5.5, "offset": 5 },
+          { "diameter": 16, "width": 6, "offset": 22 }
+        ],
+        "oem_tire_sizes": ["195/75R15", "205/75R15", "205/70R15", "215/70R16"],
+        "thread_size": "M12x1.25",
+        "torque_spec_nm": 95,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "wheel-sizes.com", "pirate4x4.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Rebadged Geo Tracker/Suzuki Sidekick. Large 108mm center bore is unique."
+    },
+    {
+      "year_range": "1990-1999",
+      "make": "Chevrolet",
+      "model": "C2500",
+      "submodel": "2WD 3/4 Ton",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 116.7,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16", "LT265/75R16"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 190,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["vehiclefixation.com", "gmt400.com", "buytruckwheels.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "8-lug pattern consistent throughout 1990s. Same specs as K2500."
+    },
+    {
+      "year_range": "1990-1999",
+      "make": "Chevrolet",
+      "model": "K2500",
+      "submodel": "4WD 3/4 Ton",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 116.7,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16", "LT265/75R16"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 190,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["vehiclefixation.com", "gmt400.com", "buytruckwheels.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "8-lug 4WD 3/4 ton. Pattern did not change until 2011."
+    },
+    {
+      "year_range": "1990-1999",
+      "make": "Chevrolet",
+      "model": "C3500",
+      "submodel": "2WD 1 Ton SRW",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 116.7,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16", "LT265/75R16"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 190,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["vehiclefixation.com", "buytruckwheels.com", "sizemywheels.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Single rear wheel 1-ton. Same 8x165.1 as 2500 series."
+    },
+    {
+      "year_range": "1990-1999",
+      "make": "Chevrolet",
+      "model": "C3500",
+      "submodel": "2WD 1 Ton DRW",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 116.7,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 127 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 190,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["buytruckwheels.com", "gmt400.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Dually 1-ton. Same 8x165.1 pattern but different offset for dually wheels."
+    },
+    {
+      "year_range": "1990-1999",
+      "make": "Chevrolet",
+      "model": "K3500",
+      "submodel": "4WD 1 Ton SRW",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 116.7,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["LT245/75R16", "LT265/75R16"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 190,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["vehiclefixation.com", "buytruckwheels.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "4WD Single rear wheel 1-ton."
+    },
+    {
+      "year_range": "1990-1999",
+      "make": "Chevrolet",
+      "model": "K3500",
+      "submodel": "4WD 1 Ton DRW",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 116.7,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 127 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 190,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["buytruckwheels.com", "gmt400.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "4WD Dually 1-ton."
+    },
+    {
+      "year_range": "1990-1994",
+      "make": "Chevrolet",
+      "model": "Astro",
+      "submodel": "2WD",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 0 },
+          { "diameter": 15, "width": 7, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["P205/75R15", "P215/70R15", "P215/75R15"],
+        "thread_size": "1/2\"-20",
+        "torque_spec_nm": 140,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["astrosafari.com", "jeepforum.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First gen Astro 2WD. Uses 5x5\" (5x127) bolt pattern."
+    },
+    {
+      "year_range": "1990-1994",
+      "make": "Chevrolet",
+      "model": "Astro",
+      "submodel": "AWD",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 15, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["P215/70R15", "P215/75R15"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 140,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["astrosafari.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "First gen Astro AWD uses 6-lug pattern."
+    },
+    {
+      "year_range": "1995-1999",
+      "make": "Chevrolet",
+      "model": "Astro",
+      "submodel": "2WD",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 0 },
+          { "diameter": 15, "width": 7, "offset": 0 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["P205/75R15", "P215/70R15", "P215/75R15", "P225/70R15"],
+        "thread_size": "1/2\"-20",
+        "torque_spec_nm": 140,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["astrosafari.com", "jeepforum.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second gen Astro 2WD continues 5x127."
+    },
+    {
+      "year_range": "1995-1999",
+      "make": "Chevrolet",
+      "model": "Astro",
+      "submodel": "AWD",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 15, "width": 7, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["P215/70R15", "P215/75R15", "P225/70R15"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 140,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["astrosafari.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Second gen Astro AWD."
+    },
+    {
+      "year_range": "1990-1995",
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "status": "DNE",
+      "notes": "Express van started in 1996. G-Series was sold 1990-1995."
+    },
+    {
+      "year_range": "1996-1999",
+      "make": "Chevrolet",
+      "model": "Express 1500",
+      "submodel": "Passenger/Cargo",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "6x139.7",
+        "hub_bore": 78.1,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["P225/75R15", "P235/75R15", "P245/75R16"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 140,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "chevroletforum.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Express 1500 replaced G10/G20. Most use 6x139.7. Some early 1500s used 5x127."
+    },
+    {
+      "year_range": "1990-1995",
+      "make": "Chevrolet",
+      "model": "Express 2500",
+      "status": "DNE",
+      "notes": "Express van started in 1996."
+    },
+    {
+      "year_range": "1996-1999",
+      "make": "Chevrolet",
+      "model": "Express 2500",
+      "submodel": "Cargo/Passenger",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 116.7,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 190,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com", "hubcaphaven.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Express 2500/3500 use 8-lug 8x165.1 pattern."
+    },
+    {
+      "year_range": "1990-1995",
+      "make": "Chevrolet",
+      "model": "Express 3500",
+      "status": "DNE",
+      "notes": "Express van started in 1996."
+    },
+    {
+      "year_range": "1996-1999",
+      "make": "Chevrolet",
+      "model": "Express 3500",
+      "submodel": "Cargo/Passenger",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 116.7,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6.5, "offset": 28 },
+          { "diameter": 16, "width": 7, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 190,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["hulkoffsets.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Express 3500 heavy duty. Same 8x165.1 as 2500."
+    },
+    {
+      "year_range": "1990-1995",
+      "make": "Chevrolet",
+      "model": "G10 Van",
+      "submodel": "All",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 0 },
+          { "diameter": 15, "width": 6.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["P205/75R15", "P215/75R15", "P225/75R15"],
+        "thread_size": "1/2\"-20",
+        "torque_spec_nm": 140,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tirewheelguide.com", "partsgeek.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "G10 1/2 ton van. Replaced by Express 1500 in 1996."
+    },
+    {
+      "year_range": "1990-1995",
+      "make": "Chevrolet",
+      "model": "G20 Van",
+      "submodel": "All",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x127",
+        "hub_bore": 78.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 0 },
+          { "diameter": 15, "width": 6.5, "offset": 0 }
+        ],
+        "oem_tire_sizes": ["P225/75R15", "P235/75R15"],
+        "thread_size": "1/2\"-20",
+        "torque_spec_nm": 140,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tiresize.com", "tirewheelguide.com", "vanlivingforum.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "G20 3/4 ton van. Standard tire was 225/75R15."
+    },
+    {
+      "year_range": "1990-1995",
+      "make": "Chevrolet",
+      "model": "G30 Van",
+      "submodel": "All",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "8x165.1",
+        "hub_bore": 116.7,
+        "oem_wheel_sizes": [
+          { "diameter": 16, "width": 6, "offset": 28 },
+          { "diameter": 16, "width": 6.5, "offset": 28 }
+        ],
+        "oem_tire_sizes": ["LT225/75R16", "LT245/75R16", "7.50-16LT"],
+        "thread_size": "M14x1.5",
+        "torque_spec_nm": 190,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["partsgeek.com", "buytruckwheels.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "G30 1-ton van. Uses 8-lug pattern like HD trucks."
+    },
+    {
+      "year_range": "1996-1999",
+      "make": "Chevrolet",
+      "model": "G10 Van",
+      "status": "DNE",
+      "notes": "G-Series discontinued after 1995. Replaced by Express."
+    },
+    {
+      "year_range": "1996-1999",
+      "make": "Chevrolet",
+      "model": "G20 Van",
+      "status": "DNE",
+      "notes": "G-Series discontinued after 1995. Replaced by Express."
+    },
+    {
+      "year_range": "1996-1999",
+      "make": "Chevrolet",
+      "model": "G30 Van",
+      "status": "DNE",
+      "notes": "G-Series discontinued after 1995. Replaced by Express."
+    },
+    {
+      "year_range": "1990-1996",
+      "make": "Chevrolet",
+      "model": "Lumina APV",
+      "submodel": "All",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x115",
+        "hub_bore": 70.3,
+        "oem_wheel_sizes": [
+          { "diameter": 15, "width": 6, "offset": 40 },
+          { "diameter": 16, "width": 6.5, "offset": 40 }
+        ],
+        "oem_tire_sizes": ["P205/70R15", "P205/65R15", "P205/65R16"],
+        "thread_size": "M12x1.5",
+        "torque_spec_nm": 140,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "wheelsynergy.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Lumina APV minivan. Also sold as Pontiac Trans Sport, Olds Silhouette."
+    },
+    {
+      "year_range": "1997-1999",
+      "make": "Chevrolet",
+      "model": "Lumina APV",
+      "status": "DNE",
+      "notes": "Lumina APV discontinued after 1996. Replaced by Venture in 1997."
+    },
+    {
+      "year_range": "1990-1996",
+      "make": "Chevrolet",
+      "model": "Beretta",
+      "submodel": "All",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42 },
+          { "diameter": 16, "width": 6.5, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["P195/70R14", "P205/60R15", "P215/60R15", "P205/55R16"],
+        "thread_size": "M12x1.5",
+        "torque_spec_nm": 120,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["tireswheels.org", "tirewheelguide.com", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Beretta coupe. Z26 trim had 16\" wheels. Discontinued after 1996."
+    },
+    {
+      "year_range": "1997-1999",
+      "make": "Chevrolet",
+      "model": "Beretta",
+      "status": "DNE",
+      "notes": "Beretta discontinued after 1996 model year."
+    },
+    {
+      "year_range": "1990-1996",
+      "make": "Chevrolet",
+      "model": "Corsica",
+      "submodel": "All",
+      "status": "complete",
+      "data": {
+        "bolt_pattern": "5x100",
+        "hub_bore": 57.1,
+        "oem_wheel_sizes": [
+          { "diameter": 14, "width": 6, "offset": 42 },
+          { "diameter": 15, "width": 6, "offset": 42 }
+        ],
+        "oem_tire_sizes": ["P185/75R14", "P195/70R14", "P195/65R15", "P205/60R15"],
+        "thread_size": "M12x1.5",
+        "torque_spec_nm": 120,
+        "staggered": false
+      },
+      "confidence": "high",
+      "sources": ["bbwheelsonline.com", "chevelles.net", "roadkillcustoms.com"],
+      "verifiedBy": "cross-reference",
+      "notes": "Corsica sedan. Same platform as Beretta. Discontinued after 1996."
+    },
+    {
+      "year_range": "1997-1999",
+      "make": "Chevrolet",
+      "model": "Corsica",
+      "status": "DNE",
+      "notes": "Corsica discontinued after 1996 model year."
+    }
+  ],
+  "summary": {
+    "total_entries": 35,
+    "complete": 26,
+    "partial": 0,
+    "dne": 9,
+    "highConfidence": 26,
+    "needsReview": 0
+  },
+  "notes": [
+    "S10 4WD bolt pattern changed from 6x139.7 to 5x120.65 in 1994 model year",
+    "G-Series vans (G10/G20/G30) discontinued after 1995, replaced by Express",
+    "Express vans started production in 1996",
+    "Chevrolet Tracker started 1998 (was Geo Tracker 1989-1997)",
+    "Beretta and Corsica both discontinued after 1996 model year",
+    "Lumina APV discontinued after 1996, replaced by Venture",
+    "All 8-lug trucks/vans in 1990s use 8x165.1 - GM changed to 8x180 in 2011",
+    "Astro AWD uses different bolt pattern (6x139.7) than 2WD (5x127)"
+  ]
+}

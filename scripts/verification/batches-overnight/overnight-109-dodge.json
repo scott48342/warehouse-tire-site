@@ -1,0 +1,1671 @@
+[
+  {
+    "id": "1814467b-493c-406d-9d10-96165db759ae",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "abda2f36-13bb-4bac-9674-a8f57ac83c52",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2c605d8a-16a8-4fbb-b489-c71af5adc743",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "ST",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "082f52a1-67b6-4952-a477-606c5767ba9d",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 12,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "5b67a471-62d5-48ae-b307-fe50411cd7ab",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7804eb32-c436-44c4-aaa5-a4933ad7d9a8",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d3ca3413-6a9a-4753-8434-15990f3a9887",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b522b10c-c473-4e5b-9b99-2a56c993ac28",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "ST",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6a816b3c-18c2-45bf-8937-1e7da36c3f70",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 12,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "699e7951-3674-40de-bc3d-1ff355a97585",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dbda7ecb-d976-4597-8fb9-af4c965b6344",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 12,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "2c2005e7-55b3-4c0f-8f64-37c3b8922e9f",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "83766917-b81a-4135-bf9a-f3ff6a8bfb17",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5314f018-43cc-4c14-9f00-a7ab4f86d0a7",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "64a79c3a-e739-476a-bb35-db124e9118db",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "ST",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b198a6bc-4b59-4a47-b61c-2947c701f6a7",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4cd2c590-a4e8-4251-b490-ac21d1bca158",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "09cc847b-d2e3-4aff-9497-e261f8224a2f",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "27be01dd-d300-481b-a0d5-dd9d709ccac0",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 12,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "22cac7dc-bca3-42cc-9838-3e37b4cac4fc",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "ST",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "61472a3a-4425-48ad-9046-2006cc80ad44",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "SLT",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a9fee8e7-cea5-4c7a-bc9e-81f8dac2891f",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "offset": 12,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "fb76b980-3b60-4196-8d66-6fca78cb1c30",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Sport",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4dda6854-16ce-4ebe-9d51-cd15d9fe49a3",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "Laramie",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d83abba4-4504-46e8-87ff-552f89c43c63",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 1500",
+    "trim": "ST",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "77.8",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16",
+      "265/70R17",
+      "275/65R18",
+      "275/60R20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d94384d1-2f34-4225-8f6e-0efff0b1bd2d",
+    "year": 1994,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 25,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "766f93ee-76ed-493f-a934-269bb710dc6f",
+    "year": 1994,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "121b4ded-bfd5-4590-a9d8-836d267a36d6",
+    "year": 1994,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "20be2811-69f5-432c-88b6-e68679e290a6",
+    "year": 1994,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "98c6e382-8c03-4ec2-91d4-09b23150b612",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "de294ab2-464e-460e-acb9-083a0a4d50da",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "4b8df0e5-7fef-4778-b49e-321b82cece1f",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "07d5dbd2-7d5d-47ba-a202-1f09b0678a53",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 25,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "15bf2f10-3943-4650-ae4c-a827e1c9384e",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "331b3f50-60eb-4d8f-8e71-a97b693ac445",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1d9a08b8-7b56-447c-b248-31ce1e4da7c1",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 25,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "f892e7ba-01a9-4e12-a807-6d379a60d866",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "dff59378-fc8a-4ffc-8a25-144f2e806a7d",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fc55a74f-29ac-4b4d-a9de-fe89749e0384",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 25,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "d76c9f86-a4af-44b9-b8f4-08a1beb624d9",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "9ed6938a-ba16-4ba8-bf2d-c05324344594",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f4c4e1ec-77fd-47db-a129-e572044cd740",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fab01495-f911-472d-8775-13003a1f93b6",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 25,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "26990cdf-1b1b-499f-9ce7-a152fa212e3f",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c0a26214-5d65-472d-bd2c-ba06f54f138e",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "26c82e94-1925-489d-b041-c3a68e16d348",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c8ce9df9-9bc7-4cfc-a480-8e53fada417a",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6c8838a2-8fb7-4ffa-b531-fef71fb57f06",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "c7864605-936c-47c6-a34f-a45938306c5b",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 2500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 25,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "245/75R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "9f5c0da1-97c5-4d04-a5f3-6023cd722311",
+    "year": 1994,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2e44b5c7-127c-40f3-a85c-49d6fc020349",
+    "year": 1994,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 15,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/85R16",
+      "235/85R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "3ce178c2-1a11-4284-ab85-6788a1006af1",
+    "year": 1994,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "d6a22a32-43a0-4612-9a69-420334917426",
+    "year": 1994,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "94408d2a-9c76-401e-84bd-64492484a95d",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "075312a0-c4f3-4996-a669-5646a7a6e11f",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "1f1aedaa-d7c1-4e53-b065-a24f2cd6dc94",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "095231d7-cb89-4792-b9fa-109a7ce6b936",
+    "year": 1995,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 15,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/85R16",
+      "235/85R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "d74de0d1-8dfe-476f-b046-d18cb0dcdf1b",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 15,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/85R16",
+      "235/85R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "b4abeae1-78fe-4b95-b636-d358aae185ed",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "77cbcd0f-f4b9-4676-a52d-467fcff5856b",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2d8e01ce-c035-4592-9a80-27d83761fccb",
+    "year": 1996,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "535f68fe-b19f-4d1f-83de-01ffec6b29f2",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 15,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/85R16",
+      "235/85R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "d645c569-40d9-4445-997f-8daf73167cfb",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "b91cef11-1fe4-4d41-b38e-3528c0609c49",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "009bdcee-407b-42bc-a472-938a5afc2a36",
+    "year": 1997,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "6510de79-e68e-4931-b396-6d99346218f7",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "8fd3efed-7e6a-4552-a6c5-5b37bb636340",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 15,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/85R16",
+      "235/85R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "b88c1265-3e98-42c4-9105-f2d444cb5384",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "93c30777-640b-4707-add1-0ec5a73e0b0c",
+    "year": 1998,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5aabbe06-9ea5-4834-b239-f07b6414112d",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "ST",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "84aca4b3-4cc0-49fa-a7e4-3e0713b854e8",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "SLT",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "205/55R16",
+      "215/60R16",
+      "225/60R16",
+      "235/70R16"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "2fda55da-be50-4dbf-abfd-a77b1c39b765",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Base",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 15,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "215/85R16",
+      "235/85R16",
+      "265/75R16"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "b5e9925d-87cd-489a-9453-dd04d96dc11a",
+    "year": 1999,
+    "make": "dodge",
+    "model": "Ram 3500",
+    "trim": "Laramie",
+    "currentBoltPattern": "8x165.1",
+    "currentHubBore": "121.3",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 17
+      }
+    ],
+    "currentTireSizes": [
+      "215/50R17",
+      "225/55R17",
+      "235/65R17",
+      "245/65R17",
+      "265/70R17"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "978d60cf-8b1f-4921-8649-3641432c5f0b",
+    "year": 1990,
+    "make": "dodge",
+    "model": "Ram Van B150",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "108.0",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P215/75R15",
+      "P225/75R15"
+    ],
+    "source": "90s-research-batch"
+  },
+  {
+    "id": "fd2de32d-ec27-4222-90f9-4c34a606657e",
+    "year": 1994,
+    "make": "dodge",
+    "model": "Ram Van B1500",
+    "trim": "Base",
+    "currentBoltPattern": "5x139.7",
+    "currentHubBore": "108.0",
+    "currentWheelSizes": [
+      {
+        "width": 6.5,
+        "offset": 0,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "P215/75R15",
+      "P225/75R15"
+    ],
+    "source": "90s-research-batch"
+  }
+]

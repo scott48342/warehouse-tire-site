@@ -1,0 +1,1180 @@
+{
+  "batchId": "125",
+  "processedAt": "2026-04-21T22:35:00Z",
+  "source": "tiresize.com, tirewheelguide.com, manufacturer data",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "np300-frontier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R16", "255/60R18"],
+      "trimData": [
+        {"trim": "2.5 MPi (Mexico/LatAm)", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.5 TD (Mexico/LatAm)", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.3 dCi (LatAm)", "tireSize": "255/60R18", "wheelSize": "18x7"},
+        {"trim": "2.5 TD HO (Mexico)", "tireSize": "255/60R18", "wheelSize": "18x7"}
+      ],
+      "notes": "Latin America/Mexico market pickup. Base trims use 15\" steel wheels (195/R15 commercial).",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "np300-frontier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R16", "255/60R18"],
+      "trimData": [
+        {"trim": "2.5 MPi", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.5 TD", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.3 dCi", "tireSize": "255/60R18", "wheelSize": "18x7"}
+      ],
+      "notes": "Latin America/Mexico market pickup.",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "np300-frontier",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R16", "255/60R18"],
+      "trimData": [
+        {"trim": "2.5 MPi", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.5 TD", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.3 dCi", "tireSize": "255/60R18", "wheelSize": "18x7"}
+      ],
+      "notes": "Latin America/Mexico market pickup. First year of NP300 Frontier generation.",
+      "status": "validated"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "np300-navara",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R16", "255/65R17", "255/60R18"],
+      "trimData": [
+        {"trim": "2.3 dCi (EU 161hp)", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.3 dCi (EU 161hp)", "tireSize": "255/65R17", "wheelSize": "17x7"},
+        {"trim": "2.3 dCi (EU 161hp)", "tireSize": "255/60R18", "wheelSize": "18x7"},
+        {"trim": "2.3 dCi (EU 188hp)", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.3 dCi (EU 188hp)", "tireSize": "255/60R18", "wheelSize": "18x7"},
+        {"trim": "2.5 MPi (AU)", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.5 MPi (AU)", "tireSize": "255/65R17", "wheelSize": "17x7"},
+        {"trim": "2.5 MPi (AU)", "tireSize": "255/60R18", "wheelSize": "18x7"}
+      ],
+      "notes": "International market (Europe, Australia, Asia). D23 generation. Base trims may use 205/R16 commercial tires.",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "np300-navara",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R16", "255/65R17", "255/60R18"],
+      "trimData": [
+        {"trim": "2.3 dCi", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.3 dCi", "tireSize": "255/65R17", "wheelSize": "17x7"},
+        {"trim": "2.3 dCi", "tireSize": "255/60R18", "wheelSize": "18x7"}
+      ],
+      "notes": "International market (Europe, Australia, Asia). D23 generation.",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "np300-navara",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/70R16", "255/65R17", "255/60R18"],
+      "trimData": [
+        {"trim": "2.3 dCi", "tireSize": "255/70R16", "wheelSize": "16x7"},
+        {"trim": "2.3 dCi", "tireSize": "255/65R17", "wheelSize": "17x7"},
+        {"trim": "2.3 dCi", "tireSize": "255/60R18", "wheelSize": "18x7"}
+      ],
+      "notes": "International market (Europe, Australia, Asia). D23 generation launched 2014/2015.",
+      "status": "validated"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/70R14"],
+      "trimData": [
+        {"trim": "DX", "tireSize": "165/70R14", "wheelSize": "14x5"},
+        {"trim": "VE", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert LX", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert GX", "tireSize": "175/70R14", "wheelSize": "14x5.5"}
+      ],
+      "notes": "Japan-only commercial van. Y12 generation facelift (2016-2021). Based on AD Expert platform.",
+      "status": "validated"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/70R14"],
+      "trimData": [
+        {"trim": "DX", "tireSize": "165/70R14", "wheelSize": "14x5"},
+        {"trim": "VE", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert LX", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert GX", "tireSize": "175/70R14", "wheelSize": "14x5.5"}
+      ],
+      "notes": "Japan-only commercial van. Y12 generation facelift.",
+      "status": "validated"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/70R14"],
+      "trimData": [
+        {"trim": "DX", "tireSize": "165/70R14", "wheelSize": "14x5"},
+        {"trim": "VE", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert LX", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert GX", "tireSize": "175/70R14", "wheelSize": "14x5.5"}
+      ],
+      "notes": "Japan-only commercial van. Y12 generation facelift.",
+      "status": "validated"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/70R14"],
+      "trimData": [
+        {"trim": "DX", "tireSize": "165/70R14", "wheelSize": "14x5"},
+        {"trim": "VE", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert LX", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert GX", "tireSize": "175/70R14", "wheelSize": "14x5.5"}
+      ],
+      "notes": "Japan-only commercial van. Y12 generation facelift.",
+      "status": "validated"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/70R14"],
+      "trimData": [
+        {"trim": "DX", "tireSize": "165/70R14", "wheelSize": "14x5"},
+        {"trim": "VE", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert LX", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert GX", "tireSize": "175/70R14", "wheelSize": "14x5.5"}
+      ],
+      "notes": "Japan-only commercial van. Y12 generation facelift.",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "nv150-ad",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R14", "175/70R14"],
+      "trimData": [
+        {"trim": "DX", "tireSize": "165/70R14", "wheelSize": "14x5"},
+        {"trim": "VE", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert LX", "tireSize": "175/70R14", "wheelSize": "14x5.5"},
+        {"trim": "Expert GX", "tireSize": "175/70R14", "wheelSize": "14x5.5"}
+      ],
+      "notes": "Japan-only commercial van. Y12 generation facelift started 2016.",
+      "status": "validated"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "nv1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market full-size cargo/passenger van. Final year of production.",
+      "status": "validated"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "nv1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market full-size cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "nv1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market full-size cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "nv1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market full-size cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "nv1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market full-size cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "nv1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market full-size cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "nv1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market full-size cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "nv1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market full-size cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "nv1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market full-size cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "nv1500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market full-size cargo/passenger van. First year of production.",
+      "status": "validated"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "nv2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 3/4-ton cargo van. Final year of production.",
+      "status": "validated"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "nv2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 3/4-ton cargo van.",
+      "status": "validated"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "nv2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 3/4-ton cargo van.",
+      "status": "validated"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "nv2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 3/4-ton cargo van.",
+      "status": "validated"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "nv2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 3/4-ton cargo van.",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "nv2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 3/4-ton cargo van.",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "nv2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 3/4-ton cargo van.",
+      "status": "validated"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "nv2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 3/4-ton cargo van.",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "nv2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 3/4-ton cargo van.",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "nv2500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 3/4-ton cargo van. First year of production.",
+      "status": "validated"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "nv3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R17"],
+      "trimData": [
+        {"trim": "HD SL", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/75R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 1-ton cargo/passenger van. Final year. Uses LT-rated tires.",
+      "status": "validated"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "nv3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/75R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/75R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 1-ton cargo/passenger van. Uses LT-rated tires.",
+      "status": "validated"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "nv3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17", "245/75R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD S", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/75R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 1-ton cargo/passenger van. Two tire size options available.",
+      "status": "validated"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "nv3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17", "245/75R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD S", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/75R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 1-ton cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "nv3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17", "245/75R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD S", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/75R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 1-ton cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "nv3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17", "245/75R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD S", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/75R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 1-ton cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "nv3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17", "245/75R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD S", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/75R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 1-ton cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "nv3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17", "245/75R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD S", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/75R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 1-ton cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "nv3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17", "245/75R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD S", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/75R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 1-ton cargo/passenger van.",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "nv3500",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R17", "245/75R17"],
+      "trimData": [
+        {"trim": "HD S", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD S", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SL", "tireSize": "245/75R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "HD SV", "tireSize": "245/75R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "US market heavy-duty 1-ton cargo/passenger van. First year of production.",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "paladin",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R16", "265/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "245/70R16", "wheelSize": "16x7"},
+        {"trim": "3.3i", "tireSize": "265/70R16", "wheelSize": "16x7"}
+      ],
+      "notes": "China-only market. Based on Nissan Xterra/Terrano platform. Last year of production.",
+      "status": "validated"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "paladin",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R16", "265/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "245/70R16", "wheelSize": "16x7"},
+        {"trim": "3.3i", "tireSize": "265/70R16", "wheelSize": "16x7"}
+      ],
+      "notes": "China-only market. Based on Nissan Xterra/Terrano platform.",
+      "status": "validated"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "paladin",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R16", "265/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "245/70R16", "wheelSize": "16x7"},
+        {"trim": "3.3i", "tireSize": "265/70R16", "wheelSize": "16x7"}
+      ],
+      "notes": "China-only market. Based on Nissan Xterra/Terrano platform.",
+      "status": "validated"
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "paladin",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R16", "265/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "245/70R16", "wheelSize": "16x7"},
+        {"trim": "3.3i", "tireSize": "265/70R16", "wheelSize": "16x7"}
+      ],
+      "notes": "China-only market. Based on Nissan Xterra/Terrano platform.",
+      "status": "validated"
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "paladin",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/70R16", "265/70R16"],
+      "trimData": [
+        {"trim": "2.4i", "tireSize": "245/70R16", "wheelSize": "16x7"},
+        {"trim": "3.3i", "tireSize": "265/70R16", "wheelSize": "16x7"}
+      ],
+      "notes": "China-only market. Based on Nissan Xterra/Terrano platform. First year of production.",
+      "status": "validated"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["255/60R18", "255/50R20", "255/55R20"],
+      "validatedTireSizes": ["255/60R18", "255/50R20", "265/60R18"],
+      "trimData": [
+        {"trim": "SL", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SV", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "Platinum", "tireSize": "255/50R20", "wheelSize": "20x8"},
+        {"trim": "Rock Creek", "tireSize": "265/60R18", "wheelSize": "18x8"}
+      ],
+      "notes": "Current R53 generation. 255/55R20 in existing data should be 255/50R20 (Platinum trim). Rock Creek uses 265/60R18 AT tires.",
+      "status": "validated",
+      "corrections": ["Remove 255/55R20 - incorrect size", "Add 265/60R18 for Rock Creek trim"]
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["255/60R18", "255/50R20", "255/55R20"],
+      "validatedTireSizes": ["255/60R18", "255/50R20", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SV", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SL", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SL", "tireSize": "255/50R20", "wheelSize": "20x8"},
+        {"trim": "Platinum", "tireSize": "255/50R20", "wheelSize": "20x8"},
+        {"trim": "Rock Creek", "tireSize": "265/60R18", "wheelSize": "18x8"}
+      ],
+      "notes": "Current R53 generation. 255/55R20 in existing data is incorrect.",
+      "status": "validated",
+      "corrections": ["Remove 255/55R20 - not OEM", "Add 265/60R18 for Rock Creek"]
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["255/60R18", "255/50R20", "255/55R20"],
+      "validatedTireSizes": ["255/60R18", "255/50R20", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SV", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SL", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SL", "tireSize": "255/50R20", "wheelSize": "20x8"},
+        {"trim": "Platinum", "tireSize": "255/50R20", "wheelSize": "20x8"},
+        {"trim": "Rock Creek", "tireSize": "265/60R18", "wheelSize": "18x8"}
+      ],
+      "notes": "R53 generation. Rock Creek uses Toyo Open Country AT III.",
+      "status": "validated",
+      "corrections": ["Remove 255/55R20", "Add 265/60R18 for Rock Creek"]
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["255/60R18", "255/50R20", "255/55R20"],
+      "validatedTireSizes": ["255/60R18", "255/50R20", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SV", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SL", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SL", "tireSize": "255/50R20", "wheelSize": "20x8"},
+        {"trim": "Platinum", "tireSize": "255/50R20", "wheelSize": "20x8"},
+        {"trim": "Rock Creek", "tireSize": "265/60R18", "wheelSize": "18x8"}
+      ],
+      "notes": "R53 generation. Rock Creek trim added 2023.",
+      "status": "validated",
+      "corrections": ["Remove 255/55R20", "Add 265/60R18 for Rock Creek"]
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["255/60R18", "255/50R20", "255/55R20"],
+      "validatedTireSizes": ["255/60R18", "255/50R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SV", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SL", "tireSize": "255/60R18", "wheelSize": "18x8"},
+        {"trim": "SL", "tireSize": "255/50R20", "wheelSize": "20x8"},
+        {"trim": "Platinum", "tireSize": "255/50R20", "wheelSize": "20x8"}
+      ],
+      "notes": "First year of R53 generation. Complete redesign.",
+      "status": "validated",
+      "corrections": ["Remove 255/55R20 - not OEM for 2022"]
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/65R18", "235/55R20", "235/60R19"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20x7.5"}
+      ],
+      "notes": "Final year of R52 generation (2013-2021).",
+      "status": "validated",
+      "corrections": ["Remove 235/60R19 - not OEM for this generation"]
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20", "255/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "255/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "255/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20x7.5"},
+        {"trim": "Rock Creek Edition", "tireSize": "255/60R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "R52 generation. Rock Creek Edition added.",
+      "status": "validated",
+      "corrections": ["Add 255/60R18 for Rock Creek Edition and optional packages"]
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20", "255/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "255/60R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "255/60R18", "wheelSize": "18x7.5"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20x7.5"},
+        {"trim": "Rock Creek Edition", "tireSize": "255/60R18", "wheelSize": "18x7.5"}
+      ],
+      "notes": "R52 generation. Rock Creek Edition introduced.",
+      "status": "validated",
+      "corrections": ["Add 255/60R18 for Rock Creek Edition"]
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "Midnight Edition", "tireSize": "235/55R20", "wheelSize": "20x7.5"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20x7.5"}
+      ],
+      "notes": "R52 generation.",
+      "status": "validated"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "Midnight Edition", "tireSize": "235/55R20", "wheelSize": "20x7.5"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20x7.5"}
+      ],
+      "notes": "R52 generation mid-cycle refresh.",
+      "status": "validated"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20x7.5"}
+      ],
+      "notes": "R52 generation.",
+      "status": "validated"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20x7.5"}
+      ],
+      "notes": "R52 generation.",
+      "status": "validated"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SL Premium", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20x7.5"},
+        {"trim": "Platinum Premium", "tireSize": "235/55R20", "wheelSize": "20x7.5"},
+        {"trim": "Hybrid SV", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "Hybrid SL", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "Hybrid Platinum", "tireSize": "235/55R20", "wheelSize": "20x7.5"}
+      ],
+      "notes": "R52 generation. Hybrid variant available.",
+      "status": "validated"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/65R18", "235/55R20"],
+      "validatedTireSizes": ["235/65R18", "235/55R20"],
+      "trimData": [
+        {"trim": "S", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SV", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "SL", "tireSize": "235/65R18", "wheelSize": "18x7.5"},
+        {"trim": "Platinum", "tireSize": "235/55R20", "wheelSize": "20x7.5"}
+      ],
+      "notes": "First year of R52 generation. Complete redesign to unibody crossover.",
+      "status": "validated"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["265/70R16", "265/65R17", "255/55R18", "255/50R20", "245/75R16", "265/75R16"],
+      "validatedTireSizes": ["245/75R16", "265/65R17", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "Silver Edition", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "LE", "tireSize": "265/60R18", "wheelSize": "18x8"},
+        {"trim": "LE V8", "tireSize": "265/60R18", "wheelSize": "18x8"}
+      ],
+      "notes": "Final year of R51 generation (body-on-frame).",
+      "status": "validated",
+      "corrections": ["265/70R16 and 255/55R18 may be aftermarket or incorrect", "255/50R20 and 265/75R16 need verification"]
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["265/70R16", "265/65R17", "255/55R18", "255/50R20"],
+      "validatedTireSizes": ["245/75R16", "265/65R17", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "Silver Edition", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "SV", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "LE", "tireSize": "265/60R18", "wheelSize": "18x8"},
+        {"trim": "LE V8", "tireSize": "265/60R18", "wheelSize": "18x8"}
+      ],
+      "notes": "R51 generation. 265/70R16, 255/55R18, 255/50R20 in existing data may be incorrect.",
+      "status": "validated",
+      "corrections": ["Verify 265/70R16 - may not be OEM", "255/55R18 and 255/50R20 appear incorrect"]
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["265/70R16", "265/65R17", "255/55R18", "255/50R20"],
+      "validatedTireSizes": ["245/75R16", "265/65R17", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "S FE Plus", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "SE", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "LE", "tireSize": "265/60R18", "wheelSize": "18x8"},
+        {"trim": "LE V8", "tireSize": "265/60R18", "wheelSize": "18x8"}
+      ],
+      "notes": "R51 generation.",
+      "status": "validated",
+      "corrections": ["265/70R16, 255/55R18, 255/50R20 in existing data may not be OEM"]
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["265/70R16", "265/65R17", "255/55R18", "255/50R20"],
+      "validatedTireSizes": ["245/75R16", "265/75R16", "265/65R17", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "SE Off-Road", "tireSize": "265/75R16", "wheelSize": "16x7"},
+        {"trim": "SE", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "LE", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "SE V8", "tireSize": "265/60R18", "wheelSize": "18x8"},
+        {"trim": "LE V8", "tireSize": "265/60R18", "wheelSize": "18x8"}
+      ],
+      "notes": "R51 generation.",
+      "status": "validated",
+      "corrections": ["265/70R16, 255/55R18, 255/50R20 may not be correct OEM sizes"]
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["265/70R16", "265/65R17", "255/55R18", "255/50R20"],
+      "validatedTireSizes": ["245/75R16", "265/75R16", "265/65R17", "265/60R18"],
+      "trimData": [
+        {"trim": "S", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "SE Off-Road", "tireSize": "265/75R16", "wheelSize": "16x7"},
+        {"trim": "SE", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "LE", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "SE V8", "tireSize": "265/60R18", "wheelSize": "18x8"},
+        {"trim": "LE V8", "tireSize": "265/60R18", "wheelSize": "18x8"}
+      ],
+      "notes": "R51 generation.",
+      "status": "validated",
+      "corrections": ["265/70R16, 255/55R18, 255/50R20 appear incorrect in existing data"]
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["265/70R16", "265/65R17", "255/55R18", "255/50R20"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/75R16", "265/65R17"],
+      "trimData": [
+        {"trim": "S 2WD", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "S 4WD", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "SE 2WD", "tireSize": "265/70R16", "wheelSize": "16x7"},
+        {"trim": "SE 4WD", "tireSize": "265/70R16", "wheelSize": "16x7"},
+        {"trim": "SE Off-Road", "tireSize": "265/75R16", "wheelSize": "16x7"},
+        {"trim": "LE 2WD", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "LE 4WD", "tireSize": "265/65R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "R51 generation.",
+      "status": "validated",
+      "corrections": ["255/55R18 and 255/50R20 not OEM for 2007"]
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["265/70R16", "265/65R17", "255/55R18", "255/50R20"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/75R16", "265/65R17"],
+      "trimData": [
+        {"trim": "XE 2WD", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "XE 4WD", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "SE 2WD", "tireSize": "265/70R16", "wheelSize": "16x7"},
+        {"trim": "SE 4WD", "tireSize": "265/70R16", "wheelSize": "16x7"},
+        {"trim": "SE Off-Road", "tireSize": "265/75R16", "wheelSize": "16x7"},
+        {"trim": "LE 2WD", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "LE 4WD", "tireSize": "265/65R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "R51 generation.",
+      "status": "validated",
+      "corrections": ["255/55R18 and 255/50R20 not OEM for 2006"]
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["265/70R16", "265/65R17", "255/55R18", "255/50R20"],
+      "validatedTireSizes": ["245/75R16", "265/70R16", "265/75R16", "265/65R17"],
+      "trimData": [
+        {"trim": "XE 2WD", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "XE 4WD", "tireSize": "245/75R16", "wheelSize": "16x7"},
+        {"trim": "SE 2WD", "tireSize": "265/70R16", "wheelSize": "16x7"},
+        {"trim": "SE 4WD", "tireSize": "265/70R16", "wheelSize": "16x7"},
+        {"trim": "SE Off-Road", "tireSize": "265/75R16", "wheelSize": "16x7"},
+        {"trim": "LE 2WD", "tireSize": "265/65R17", "wheelSize": "17x7.5"},
+        {"trim": "LE 4WD", "tireSize": "265/65R17", "wheelSize": "17x7.5"}
+      ],
+      "notes": "First year of R51 generation.",
+      "status": "validated",
+      "corrections": ["255/55R18 and 255/50R20 not OEM for 2005"]
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/70R15", "255/65R16", "265/65R17"],
+      "validatedTireSizes": ["255/65R16", "245/65R17"],
+      "trimData": [
+        {"trim": "SE 2WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "SE 4WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "LE 2WD", "tireSize": "245/65R17", "wheelSize": "17x7"},
+        {"trim": "LE 4WD", "tireSize": "245/65R17", "wheelSize": "17x7"}
+      ],
+      "notes": "Final year of R50 generation.",
+      "status": "validated",
+      "corrections": ["235/70R15 may not be accurate for 2004", "265/65R17 should be 245/65R17"]
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/70R15", "255/65R16", "265/65R17"],
+      "validatedTireSizes": ["255/65R16", "245/65R17"],
+      "trimData": [
+        {"trim": "SE 2WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "SE 4WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "LE 2WD", "tireSize": "245/65R17", "wheelSize": "17x7"},
+        {"trim": "LE 4WD", "tireSize": "245/65R17", "wheelSize": "17x7"}
+      ],
+      "notes": "R50 generation.",
+      "status": "validated",
+      "corrections": ["235/70R15 may not be accurate", "265/65R17 should be 245/65R17"]
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/70R15", "255/65R16", "265/65R17"],
+      "validatedTireSizes": ["255/65R16", "245/65R17"],
+      "trimData": [
+        {"trim": "SE 2WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "SE 4WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "LE 2WD", "tireSize": "245/65R17", "wheelSize": "17x7"},
+        {"trim": "LE 4WD", "tireSize": "245/65R17", "wheelSize": "17x7"}
+      ],
+      "notes": "R50 generation.",
+      "status": "validated",
+      "corrections": ["235/70R15 may not be accurate", "265/65R17 should be 245/65R17"]
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/70R15", "255/65R16", "265/65R17"],
+      "validatedTireSizes": ["245/70R16", "255/65R16"],
+      "trimData": [
+        {"trim": "XE 2WD", "tireSize": "245/70R16", "wheelSize": "16x7"},
+        {"trim": "XE 4WD", "tireSize": "245/70R16", "wheelSize": "16x7"},
+        {"trim": "SE 2WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "SE 4WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "LE 2WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "LE 4WD", "tireSize": "255/65R16", "wheelSize": "16x7"}
+      ],
+      "notes": "R50 generation.",
+      "status": "validated",
+      "corrections": ["235/70R15 not standard for 2001", "265/65R17 not OEM for 2001"]
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "pathfinder",
+      "currentTireSizes": ["235/70R15", "255/65R16", "265/65R17"],
+      "validatedTireSizes": ["245/70R16", "255/65R16"],
+      "trimData": [
+        {"trim": "XE 2WD", "tireSize": "245/70R16", "wheelSize": "16x7"},
+        {"trim": "XE 4WD", "tireSize": "245/70R16", "wheelSize": "16x7"},
+        {"trim": "SE 2WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "SE 4WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "LE 2WD", "tireSize": "255/65R16", "wheelSize": "16x7"},
+        {"trim": "LE 4WD", "tireSize": "255/65R16", "wheelSize": "16x7"}
+      ],
+      "notes": "R50 generation. First year of redesigned Pathfinder.",
+      "status": "validated",
+      "corrections": ["235/70R15 and 265/65R17 not OEM for 2000"]
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "platina",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14"],
+      "trimData": [
+        {"trim": "1.6 (All)", "tireSize": "175/65R14", "wheelSize": "14x5.5"}
+      ],
+      "notes": "Mexico/Latin America market only. Based on Renault Clio platform (LB). Final year of production.",
+      "status": "validated"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 75,
+    "withCorrections": 19,
+    "newTireSizes": 42,
+    "internationalModels": {
+      "np300-frontier": "Latin America/Mexico pickup (2015-2017)",
+      "np300-navara": "Europe/Australia/Asia pickup (2015-2017)",
+      "nv150-ad": "Japan-only commercial van (2016-2021)",
+      "paladin": "China-only SUV based on Xterra (2004-2013)",
+      "platina": "Mexico-only sedan based on Renault Clio (2002-2010)"
+    },
+    "keyFindings": [
+      "NV1500/NV2500/NV3500 all use 17\" wheels with 245/70R17 or 245/75R17 tires",
+      "Pathfinder R53 (2022+) uses 255/60R18 (base) or 255/50R20 (Platinum), with Rock Creek using 265/60R18",
+      "Pathfinder R52 (2013-2021) uses 235/65R18 (base) or 235/55R20 (Platinum)",
+      "Pathfinder 2005-2012 existing data contained multiple errors (255/55R18, 255/50R20 not OEM)",
+      "NP300 variants use 6x114.3 bolt pattern with 16-18\" wheel options",
+      "International models (Paladin, Platina, NV150 AD) have limited US tire availability"
+    ]
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "batchId": "82",
+  "validatedAt": "2026-04-21T23:10:00Z",
+  "summary": {
+    "total": 75,
+    "validated": 44,
+    "discrepancies": 17,
+    "notFound": 14
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "type": "non_us_market",
+      "count": 13,
+      "vehicles": [
+        { "year": 2000, "make": "kia", "model": "avella", "note": "Not sold in US market - 404 on tiresize.com" },
+        { "year": 2005, "make": "kia", "model": "besta", "note": "Not sold in US market - 404 on tiresize.com" },
+        { "year": 2004, "make": "kia", "model": "besta", "note": "Not sold in US market" },
+        { "year": 2003, "make": "kia", "model": "besta", "note": "Not sold in US market" },
+        { "year": 2002, "make": "kia", "model": "besta", "note": "Not sold in US market" },
+        { "year": 2001, "make": "kia", "model": "besta", "note": "Not sold in US market" },
+        { "year": 2000, "make": "kia", "model": "besta", "note": "Not sold in US market" },
+        { "year": 2002, "make": "kia", "model": "carstar", "note": "Not sold in US market - 404 on tiresize.com" },
+        { "year": 2001, "make": "kia", "model": "carstar", "note": "Not sold in US market" },
+        { "year": 2000, "make": "kia", "model": "carstar", "note": "Not sold in US market" },
+        { "year": 2002, "make": "kia", "model": "enterprise", "note": "Not sold in US market - 404 on tiresize.com" },
+        { "year": 2001, "make": "kia", "model": "enterprise", "note": "Not sold in US market" },
+        { "year": 2000, "make": "kia", "model": "enterprise", "note": "Not sold in US market" }
+      ]
+    },
+    {
+      "severity": "critical",
+      "type": "wrong_model_year",
+      "count": 5,
+      "vehicles": [
+        {
+          "year": 2021,
+          "make": "kia",
+          "model": "ev6",
+          "issue": "EV6 not sold in US until 2022 model year",
+          "currentTireSizes": ["235/55R19", "255/45R20", "255/40R21"],
+          "action": "REMOVE - vehicle doesn't exist in US"
+        },
+        {
+          "year": 2023,
+          "make": "kia",
+          "model": "ev9",
+          "issue": "EV9 not sold in US until 2024 model year (empty sizes is correct, but vehicle shouldn't exist)",
+          "currentTireSizes": [],
+          "action": "REMOVE - vehicle doesn't exist in US"
+        },
+        {
+          "year": 2009,
+          "make": "kia",
+          "model": "forte",
+          "issue": "Forte not sold in US until 2010 model year",
+          "currentTireSizes": [],
+          "action": "REMOVE - vehicle doesn't exist in US"
+        },
+        {
+          "year": 2008,
+          "make": "kia",
+          "model": "forte",
+          "issue": "Forte not sold in US until 2010 model year",
+          "currentTireSizes": [],
+          "action": "REMOVE - vehicle doesn't exist in US"
+        },
+        {
+          "year": 2016,
+          "make": "kia",
+          "model": "niro",
+          "issue": "Niro not sold in US until 2017 model year",
+          "currentTireSizes": ["205/60R16", "225/45R18"],
+          "action": "REMOVE - vehicle doesn't exist in US"
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "type": "missing_oem_sizes",
+      "count": 8,
+      "vehicles": [
+        {
+          "year": 2024,
+          "make": "kia",
+          "model": "ev9",
+          "currentTireSizes": ["255/60R19"],
+          "oemSizes": ["255/60R19", "275/50R20", "285/45R21"],
+          "missingSizes": ["275/50R20", "285/45R21"],
+          "note": "Land trim uses 275/50R20, GT-Line uses 285/45R21"
+        },
+        {
+          "year": 2025,
+          "make": "kia",
+          "model": "ev9",
+          "currentTireSizes": ["255/60R19"],
+          "oemSizes": ["255/60R19", "275/50R20", "285/45R21"],
+          "missingSizes": ["275/50R20", "285/45R21"],
+          "note": "Land trim uses 275/50R20, GT-Line uses 285/45R21"
+        },
+        {
+          "year": 2026,
+          "make": "kia",
+          "model": "ev9",
+          "currentTireSizes": ["255/60R19"],
+          "oemSizes": ["255/60R19", "275/50R20", "285/45R21"],
+          "missingSizes": ["275/50R20", "285/45R21"],
+          "note": "Presumed same as 2024-2025 based on model continuity"
+        },
+        {
+          "year": 2024,
+          "make": "kia",
+          "model": "k5",
+          "currentTireSizes": ["215/55R17", "235/45R18", "245/40R19"],
+          "oemSizes": ["205/65R16", "235/45R18", "245/40R19"],
+          "missingSizes": ["205/65R16"],
+          "wrongSizes": ["215/55R17"],
+          "note": "LXS trim uses 205/65R16, not 215/55R17"
+        },
+        {
+          "year": 2024,
+          "make": "kia",
+          "model": "niro",
+          "currentTireSizes": ["205/60R16", "225/45R18"],
+          "oemSizes": ["205/60R16", "215/55R17", "225/45R18"],
+          "missingSizes": ["215/55R17"],
+          "note": "EV trim uses 215/55R17"
+        },
+        {
+          "year": 2022,
+          "make": "kia",
+          "model": "ev6",
+          "currentTireSizes": ["235/55R19", "255/45R20", "255/40R21"],
+          "oemSizes": ["235/55R19", "255/45R20"],
+          "extraSizes": ["255/40R21"],
+          "note": "255/40R21 is GT trim, but GT wasn't available until 2023 MY in US"
+        },
+        {
+          "year": 2017,
+          "make": "kia",
+          "model": "niro",
+          "currentTireSizes": ["205/60R16", "225/45R18", "215/55R17"],
+          "oemSizes": ["205/60R16", "225/45R18"],
+          "extraSizes": ["215/55R17"],
+          "note": "215/55R17 not OEM for 2017 Niro - appeared in later years"
+        },
+        {
+          "year": 2022,
+          "make": "kia",
+          "model": "niro",
+          "currentTireSizes": ["205/60R16", "225/45R18", "215/55R17"],
+          "oemSizes": ["205/60R16", "225/45R18"],
+          "note": "215/55R17 may be valid for EV variant, needs verification"
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "type": "wrong_tire_size",
+      "count": 4,
+      "vehicles": [
+        {
+          "year": 2024,
+          "make": "kia",
+          "model": "forte",
+          "currentTireSizes": ["195/65R15", "205/55R16", "225/45R17", "235/40R18"],
+          "oemSizes": ["195/65R15", "205/55R16", "225/45R17", "225/40R18"],
+          "issue": "Has 235/40R18, OEM shows 225/40R18 for GT trim",
+          "allYearsAffected": [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+        }
+      ]
+    },
+    {
+      "severity": "low",
+      "type": "z_rated_duplicates",
+      "count": 1,
+      "vehicles": [
+        {
+          "year": 2023,
+          "make": "kia",
+          "model": "ev6",
+          "currentTireSizes": ["235/55R19", "255/45R20", "255/40R21", "255/40ZR21", "235/55ZR19", "255/45ZR20"],
+          "note": "Contains both Z-rated and non-Z-rated versions of same sizes. Z-rating is speed rating, not a different OEM size. Consider normalizing to remove Z variants."
+        }
+      ]
+    },
+    {
+      "severity": "info",
+      "type": "duplicate_entries",
+      "count": 12,
+      "note": "Multiple Optima entries for same year (2012-2020) with different tire sizes - likely representing different trim levels. This is acceptable data structure but may need normalization.",
+      "years": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    }
+  ],
+  "validated_ok": [
+    { "year": 2024, "make": "kia", "model": "ev6", "status": "✓", "sizes": ["235/55R19", "255/45R20", "255/40R21"] },
+    { "year": 2023, "make": "kia", "model": "ev6", "status": "✓", "note": "sizes match, Z-rated variants are acceptable" },
+    { "year": 2025, "make": "kia", "model": "ev6", "status": "✓", "sizes": ["235/55R19", "255/45R20", "255/40R21"] },
+    { "year": 2026, "make": "kia", "model": "ev6", "status": "✓", "note": "presumed same as 2024-2025" },
+    { "year": 2010, "make": "kia", "model": "forte", "status": "✓", "sizes": ["195/65R15", "205/55R16", "215/45R17"] },
+    { "year": 2011, "make": "kia", "model": "forte", "status": "✓" },
+    { "year": 2012, "make": "kia", "model": "forte", "status": "✓" },
+    { "year": 2020, "make": "kia", "model": "optima", "status": "✓", "sizes": ["205/65R16", "215/55R17", "235/45R18"] },
+    { "year": 2012, "make": "kia", "model": "optima", "status": "✓", "sizes": ["205/65R16", "215/55R17", "225/45R18"] }
+  ],
+  "recommendations": [
+    {
+      "priority": "P0",
+      "action": "REMOVE_VEHICLES",
+      "description": "Remove 13 non-US market vehicles (Avella, Besta, Carstar, Enterprise)",
+      "impact": "These vehicles will never have valid US tire/wheel fitment data"
+    },
+    {
+      "priority": "P0",
+      "action": "REMOVE_VEHICLES",
+      "description": "Remove pre-launch model years: 2021 EV6, 2023 EV9, 2008-2009 Forte, 2016 Niro",
+      "impact": "5 vehicles that don't exist in US market"
+    },
+    {
+      "priority": "P1",
+      "action": "ADD_SIZES",
+      "description": "Add missing EV9 sizes: 275/50R20 and 285/45R21 for all EV9 years (2024-2026)",
+      "impact": "Customers with Land and GT-Line trims can't find correct tires"
+    },
+    {
+      "priority": "P1",
+      "action": "CORRECT_SIZE",
+      "description": "Change Forte GT tire size from 235/40R18 to 225/40R18 for 2019-2026 models",
+      "impact": "Wrong tire size being recommended for Forte GT owners"
+    },
+    {
+      "priority": "P2",
+      "action": "ADD_SIZE",
+      "description": "Add 205/65R16 to K5 (all years) - missing base LXS trim size",
+      "impact": "Base K5 LXS customers can't find correct tires"
+    },
+    {
+      "priority": "P2",
+      "action": "ADD_SIZE",
+      "description": "Add 215/55R17 to Niro 2023-2026 for EV trim",
+      "impact": "Niro EV customers may not find correct tire size"
+    },
+    {
+      "priority": "P3",
+      "action": "NORMALIZE_Z_RATINGS",
+      "description": "Consider removing Z-rated duplicates (235/55ZR19 vs 235/55R19) - Z is a speed rating, not a different size",
+      "impact": "Data cleanliness, avoids customer confusion"
+    },
+    {
+      "priority": "P3",
+      "action": "REMOVE_EXTRA_SIZE",
+      "description": "Remove 255/40R21 from 2022 EV6 - GT trim not available until 2023",
+      "impact": "Prevents recommending wrong tire for 2022 models"
+    }
+  ]
+}

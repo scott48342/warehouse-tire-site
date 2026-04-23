@@ -1,0 +1,939 @@
+{
+  "batchId": "43",
+  "processedAt": "2026-04-21T21:55:00.000Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "trims": [
+        { "trim": "Cargo", "tireSize": "225/65R16" },
+        { "trim": "Limited", "tireSize": "225/65R17" },
+        { "trim": "LX", "tireSize": "225/65R16" },
+        { "trim": "Touring", "tireSizes": ["225/65R16", "225/65R17"] }
+      ],
+      "allSizes": ["225/65R16", "225/65R17"],
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "status": "VALID"
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "trims": [
+        { "trim": "Cargo", "tireSize": "225/65R16" },
+        { "trim": "Limited", "tireSize": "225/65R17" },
+        { "trim": "LX", "tireSize": "225/65R16" },
+        { "trim": "Touring", "tireSizes": ["225/65R16", "225/65R17"] }
+      ],
+      "allSizes": ["225/65R16", "225/65R17"],
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "status": "VALID"
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["215/70R15", "215/65R16"] },
+        { "trim": "Limited", "tireSize": "215/65R16" },
+        { "trim": "LX", "tireSize": "215/70R15" },
+        { "trim": "Touring", "tireSize": "215/65R16" }
+      ],
+      "allSizes": ["215/70R15", "215/65R16"],
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/65R16, 225/65R17 but OEM is 215/70R15, 215/65R16"
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "trims": [
+        { "trim": "Base Model", "tireSizes": ["215/70R15", "215/65R16"] },
+        { "trim": "Limited", "tireSize": "215/65R16" },
+        { "trim": "LX", "tireSize": "215/70R15" },
+        { "trim": "Touring", "tireSize": "215/65R16" }
+      ],
+      "allSizes": ["215/70R15", "215/65R16"],
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/65R16, 225/65R17 but OEM is 215/70R15, 215/65R16"
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "trims": [
+        { "trim": "Base Model", "tireSize": "215/70R15" },
+        { "trim": "Limited", "tireSize": "215/65R16" },
+        { "trim": "LX", "tireSize": "215/70R15" },
+        { "trim": "Touring", "tireSize": "215/65R16" }
+      ],
+      "allSizes": ["215/70R15", "215/65R16"],
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/65R16, 225/65R17 but OEM is 215/70R15, 215/65R16"
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "trims": [
+        { "trim": "Base Model", "tireSize": "215/70R15" },
+        { "trim": "EX", "tireSize": "215/65R16" },
+        { "trim": "Limited", "tireSize": "215/65R16" },
+        { "trim": "Limited AWD", "tireSize": "215/65R16" },
+        { "trim": "LX", "tireSize": "215/70R15" },
+        { "trim": "Touring", "tireSize": "215/65R16" },
+        { "trim": "Touring Platinum", "tireSize": "215/65R16" }
+      ],
+      "allSizes": ["215/70R15", "215/65R16"],
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/65R16, 225/65R17 but OEM is 215/70R15, 215/65R16"
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "trims": [
+        { "trim": "Base Model", "tireSize": "215/70R15" },
+        { "trim": "EL", "tireSize": "215/70R15" },
+        { "trim": "EX", "tireSize": "215/65R16" },
+        { "trim": "Limited", "tireSize": "215/65R16" },
+        { "trim": "Limited AWD", "tireSize": "215/65R16" },
+        { "trim": "LX", "tireSizes": ["215/70R15", "215/65R16"] },
+        { "trim": "LXI", "tireSize": "215/65R16" },
+        { "trim": "LXI AWD", "tireSize": "215/65R16" }
+      ],
+      "allSizes": ["215/70R15", "215/65R16"],
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/65R16, 225/65R17 but OEM is 215/70R15, 215/65R16"
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "trims": [
+        { "trim": "EX", "tireSizes": ["215/70R15", "215/65R16"] },
+        { "trim": "Limited", "tireSize": "215/65R16" },
+        { "trim": "Limited AWD", "tireSize": "215/65R16" },
+        { "trim": "LX", "tireSize": "215/70R15" },
+        { "trim": "LX AWD", "tireSize": "215/70R15" },
+        { "trim": "LXi", "tireSize": "215/65R16" },
+        { "trim": "LXI AWD", "tireSize": "215/65R16" }
+      ],
+      "allSizes": ["215/70R15", "215/65R16"],
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/65R16, 225/65R17 but OEM is 215/70R15, 215/65R16"
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "trims": [
+        { "trim": "EX", "tireSizes": ["215/70R15", "215/65R16"] },
+        { "trim": "Limited", "tireSize": "215/65R16" },
+        { "trim": "Limited AWD", "tireSize": "215/65R16" },
+        { "trim": "LX", "tireSize": "215/70R15" },
+        { "trim": "LX AWD", "tireSize": "215/70R15" },
+        { "trim": "LXi", "tireSize": "215/65R16" },
+        { "trim": "LXI AWD", "tireSize": "215/65R16" }
+      ],
+      "allSizes": ["215/70R15", "215/65R16"],
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/65R16, 225/65R17 but OEM is 215/70R15, 215/65R16"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "trims": [
+        { "trim": "AWD", "tireSize": "215/65R16" },
+        { "trim": "Limited", "tireSize": "215/65R16" },
+        { "trim": "Limited AWD", "tireSize": "215/65R16" },
+        { "trim": "LX", "tireSize": "215/70R15" },
+        { "trim": "LXi", "tireSize": "215/65R16" }
+      ],
+      "allSizes": ["215/70R15", "215/65R16"],
+      "currentTireSizes": ["225/65R16", "225/65R17"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/65R16, 225/65R17 but OEM is 215/70R15, 215/65R16"
+    },
+    {
+      "year": 2026,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "Base Model", "tireSize": "235/65R17" }
+      ],
+      "allSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 235/65R17"
+    },
+    {
+      "year": 2025,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "Base Model", "tireSize": "235/65R17" }
+      ],
+      "allSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 235/65R17"
+    },
+    {
+      "year": 2024,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "Fleet", "tireSize": "235/65R17" }
+      ],
+      "allSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 235/65R17"
+    },
+    {
+      "year": 2023,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "Fleet", "tireSize": "235/65R17" }
+      ],
+      "allSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 235/65R17"
+    },
+    {
+      "year": 2022,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "Fleet", "tireSize": "235/65R17" }
+      ],
+      "allSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 235/65R17"
+    },
+    {
+      "year": 2021,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "L", "tireSize": "235/65R17" },
+        { "trim": "LX", "tireSize": "235/65R17" }
+      ],
+      "allSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 235/65R17"
+    },
+    {
+      "year": 2020,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "L", "tireSize": "235/65R17" },
+        { "trim": "LX", "tireSize": "235/65R17" },
+        { "trim": "LXi", "tireSize": "235/65R17" }
+      ],
+      "allSizes": ["235/65R17"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 235/65R17"
+    },
+    {
+      "year": 2016,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2015,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2014,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2012,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2011,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2010,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2009,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2008,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2007,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2006,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2005,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2004,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Chrysler Voyager was not sold 2004-2019. Model did not exist this year."
+    },
+    {
+      "year": 2003,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "Base Model", "tireSize": "215/70R15" },
+        { "trim": "LX", "tireSize": "215/70R15" }
+      ],
+      "allSizes": ["215/70R15"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 215/70R15"
+    },
+    {
+      "year": 2002,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "Base Model", "tireSize": "215/70R15" },
+        { "trim": "LX", "tireSize": "215/70R15" }
+      ],
+      "allSizes": ["215/70R15"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 215/70R15"
+    },
+    {
+      "year": 2001,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "Base Model", "tireSize": "215/70R15" },
+        { "trim": "LX", "tireSize": "215/70R15" }
+      ],
+      "allSizes": ["215/70R15"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 215/70R15"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Voyager",
+      "trims": [
+        { "trim": "Base Model", "tireSize": "205/75R14" },
+        { "trim": "SE", "tireSize": "215/65R15" }
+      ],
+      "allSizes": ["205/75R14", "215/65R15"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes, should be 205/75R14, 215/65R15"
+    },
+    {
+      "year": 2002,
+      "make": "Daewoo",
+      "model": "Leganza",
+      "trims": [
+        { "trim": "CDX", "tireSize": "205/60R15" },
+        { "trim": "SE", "tireSize": "205/60R15" }
+      ],
+      "allSizes": ["205/60R15"],
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 195/65R15, 205/55R16 but OEM is 205/60R15"
+    },
+    {
+      "year": 2001,
+      "make": "Daewoo",
+      "model": "Leganza",
+      "trims": [
+        { "trim": "CDX", "tireSize": "205/60R15" },
+        { "trim": "SE", "tireSize": "205/60R15" },
+        { "trim": "SX", "tireSize": "205/60R15" }
+      ],
+      "allSizes": ["205/60R15"],
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 195/65R15, 205/55R16 but OEM is 205/60R15"
+    },
+    {
+      "year": 2000,
+      "make": "Daewoo",
+      "model": "Leganza",
+      "trims": [
+        { "trim": "CDX", "tireSize": "205/60R15" },
+        { "trim": "SE", "tireSize": "205/60R15" },
+        { "trim": "SX", "tireSize": "205/60R15" }
+      ],
+      "allSizes": ["205/60R15"],
+      "currentTireSizes": ["195/65R15", "205/55R16"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 195/65R15, 205/55R16 but OEM is 205/60R15"
+    },
+    {
+      "year": 2020,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "Crossroad", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSize": "225/65R17" }
+      ],
+      "allSizes": ["225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/55R17 but OEM is 225/65R17"
+    },
+    {
+      "year": 2019,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "Crossroad", "tireSize": "225/55R19" },
+        { "trim": "GT", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSizes": ["225/65R17", "225/55R19"] }
+      ],
+      "allSizes": ["225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/55R17 but OEM is 225/65R17"
+    },
+    {
+      "year": 2018,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "Crossroad", "tireSize": "225/55R19" },
+        { "trim": "GT", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSize": "225/65R17" },
+        { "trim": "SXT", "tireSizes": ["225/65R17", "225/55R19"] }
+      ],
+      "allSizes": ["225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/55R17 but OEM is 225/65R17"
+    },
+    {
+      "year": 2017,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "Crossroad", "tireSize": "225/55R19" },
+        { "trim": "GT", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSize": "225/65R17" },
+        { "trim": "SXT", "tireSizes": ["225/65R17", "225/55R19"] }
+      ],
+      "allSizes": ["225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/55R17 but OEM is 225/65R17"
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "Crossroad", "tireSize": "225/55R19" },
+        { "trim": "R/T", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSize": "225/65R17" },
+        { "trim": "SXT", "tireSizes": ["225/65R17", "225/55R19"] }
+      ],
+      "allSizes": ["225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/55R17 but OEM is 225/65R17"
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "American Value Package", "tireSize": "225/65R17" },
+        { "trim": "Crossroad", "tireSize": "225/55R19" },
+        { "trim": "Limited", "tireSize": "225/55R19" },
+        { "trim": "R/T", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSize": "225/65R17" },
+        { "trim": "SXT", "tireSizes": ["225/65R17", "225/55R19"] },
+        { "trim": "SXT Plus", "tireSizes": ["225/65R17", "225/55R19"] }
+      ],
+      "allSizes": ["225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/55R17 but OEM is 225/65R17"
+    },
+    {
+      "year": 2014,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "American Value Package", "tireSize": "225/65R17" },
+        { "trim": "Limited", "tireSize": "225/55R19" },
+        { "trim": "R/T", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSize": "225/65R17" },
+        { "trim": "SXT", "tireSize": "225/65R17" }
+      ],
+      "allSizes": ["225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has 225/55R17 but OEM is 225/65R17"
+    },
+    {
+      "year": 2013,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "American Value Package", "tireSize": "225/70R16" },
+        { "trim": "Canada Value Package", "tireSize": "225/65R17" },
+        { "trim": "Crew", "tireSize": "225/55R19" },
+        { "trim": "R/T", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSizes": ["225/70R16", "225/65R17"] },
+        { "trim": "SXT", "tireSizes": ["225/65R17", "225/55R19"] }
+      ],
+      "allSizes": ["225/70R16", "225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB missing 225/70R16, 225/65R17 - OEM sizes include 16-inch option"
+    },
+    {
+      "year": 2012,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "American Value Package", "tireSizes": ["225/70R16", "225/65R17"] },
+        { "trim": "Canada Value Package", "tireSizes": ["225/70R16", "225/65R17"] },
+        { "trim": "Crew", "tireSize": "225/55R19" },
+        { "trim": "R/T", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSizes": ["225/70R16", "225/65R17"] },
+        { "trim": "SXT", "tireSizes": ["225/65R17", "225/55R19"] }
+      ],
+      "allSizes": ["225/70R16", "225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB missing 225/70R16, 225/65R17 - OEM sizes include 16-inch option"
+    },
+    {
+      "year": 2011,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "Crew", "tireSize": "225/55R19" },
+        { "trim": "Express", "tireSizes": ["225/70R16", "225/65R17"] },
+        { "trim": "Lux", "tireSize": "225/55R19" },
+        { "trim": "Mainstreet", "tireSizes": ["225/65R17", "225/55R19"] },
+        { "trim": "R/T", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSizes": ["225/70R16", "225/65R17"] },
+        { "trim": "SXT", "tireSize": "225/65R17" }
+      ],
+      "allSizes": ["225/70R16", "225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB missing 225/70R16, 225/65R17"
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "RT AWD", "tireSize": "225/55R19" },
+        { "trim": "RT FWD", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSize": "225/70R16" },
+        { "trim": "SXT AWD", "tireSize": "225/55R19" },
+        { "trim": "SXT FWD", "tireSizes": ["225/65R17", "225/55R19"] }
+      ],
+      "allSizes": ["225/70R16", "225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB missing 225/70R16, 225/65R17"
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Journey",
+      "trims": [
+        { "trim": "RT AWD", "tireSize": "225/55R19" },
+        { "trim": "RT FWD", "tireSize": "225/55R19" },
+        { "trim": "SE", "tireSize": "225/70R16" },
+        { "trim": "SXT AWD", "tireSize": "225/55R19" },
+        { "trim": "SXT FWD", "tireSizes": ["225/65R17", "225/55R19"] }
+      ],
+      "allSizes": ["225/70R16", "225/65R17", "225/55R19"],
+      "currentTireSizes": ["225/55R17", "225/55R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB missing 225/70R16, 225/65R17"
+    },
+    {
+      "year": 2012,
+      "make": "Dodge",
+      "model": "Caliber",
+      "trims": [
+        { "trim": "SE", "tireSizes": ["205/70R15", "215/60R17"] },
+        { "trim": "SXT", "tireSize": "215/60R17" },
+        { "trim": "SXT Plus", "tireSize": "215/55R18" }
+      ],
+      "allSizes": ["205/70R15", "215/60R17", "215/55R18"],
+      "currentTireSizes": ["195/65R15", "215/55R17", "215/50R17", "215/45R18", "225/40R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has wrong sizes. OEM is 205/70R15, 215/60R17, 215/55R18"
+    },
+    {
+      "year": 2011,
+      "make": "Dodge",
+      "model": "Caliber",
+      "trims": [
+        { "trim": "Express", "tireSizes": ["205/70R15", "215/60R17"] },
+        { "trim": "Heat", "tireSize": "215/55R18" },
+        { "trim": "Mainstreet", "tireSize": "215/60R17" },
+        { "trim": "Rush", "tireSize": "215/55R18" },
+        { "trim": "Uptown", "tireSizes": ["215/60R17", "215/55R18"] }
+      ],
+      "allSizes": ["205/70R15", "215/60R17", "215/55R18"],
+      "currentTireSizes": ["195/65R15", "215/55R17", "215/50R17", "215/45R18", "225/40R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has wrong sizes. OEM is 205/70R15, 215/60R17, 215/55R18"
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Caliber",
+      "trims": [
+        { "trim": "Express", "tireSizes": ["205/70R15", "215/60R17"] },
+        { "trim": "Heat", "tireSize": "215/55R18" },
+        { "trim": "Mainstreet", "tireSize": "215/60R17" },
+        { "trim": "R/T", "tireSize": "215/55R18" },
+        { "trim": "Rush", "tireSize": "215/55R18" },
+        { "trim": "SE", "tireSize": "205/70R15" },
+        { "trim": "SXT", "tireSize": "215/60R17" },
+        { "trim": "SXT Sport", "tireSize": "215/55R18" },
+        { "trim": "Uptown", "tireSize": "215/60R17" }
+      ],
+      "allSizes": ["205/70R15", "215/60R17", "215/55R18"],
+      "currentTireSizes": ["195/65R15", "215/55R17", "215/50R17", "215/45R18", "225/40R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has wrong sizes. OEM is 205/70R15, 215/60R17, 215/55R18"
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Caliber",
+      "trims": [
+        { "trim": "R/T", "tireSize": "215/55R18" },
+        { "trim": "SE", "tireSizes": ["205/70R15", "215/60R17"] },
+        { "trim": "SRT4", "tireSize": "225/45R19" },
+        { "trim": "SXT", "tireSize": "215/60R17" },
+        { "trim": "SXT Sport", "tireSize": "215/60R17" }
+      ],
+      "allSizes": ["205/70R15", "215/60R17", "215/55R18", "225/45R19"],
+      "currentTireSizes": ["195/65R15", "215/55R17", "215/50R17", "215/45R18", "225/40R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has wrong sizes. OEM is 205/70R15, 215/60R17, 215/55R18, 225/45R19"
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Caliber",
+      "trims": [
+        { "trim": "R/T", "tireSize": "215/55R18" },
+        { "trim": "SE", "tireSize": "205/70R15" },
+        { "trim": "SRT4", "tireSize": "225/45R19" },
+        { "trim": "SXT", "tireSize": "215/60R17" },
+        { "trim": "SXT Sport", "tireSize": "215/60R17" }
+      ],
+      "allSizes": ["205/70R15", "215/60R17", "215/55R18", "225/45R19"],
+      "currentTireSizes": ["195/65R15", "215/55R17", "215/50R17", "215/45R18", "225/40R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has wrong sizes. OEM is 205/70R15, 215/60R17, 215/55R18, 225/45R19"
+    },
+    {
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Caliber",
+      "trims": [
+        { "trim": "R/T", "tireSize": "215/55R18" },
+        { "trim": "SE", "tireSize": "205/70R15" },
+        { "trim": "SRT4", "tireSize": "225/45R19" },
+        { "trim": "SXT", "tireSize": "215/60R17" },
+        { "trim": "SXT Sport", "tireSize": "215/60R17" }
+      ],
+      "allSizes": ["205/70R15", "215/60R17", "215/55R18", "225/45R19"],
+      "currentTireSizes": ["195/65R15", "215/55R17", "215/50R17", "215/45R18", "225/40R19"],
+      "status": "MISMATCH",
+      "notes": "Current DB has wrong sizes. OEM is 205/70R15, 215/60R17, 215/55R18, 225/45R19"
+    },
+    {
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Caliber",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": ["205/65R15", "215/60R17", "225/50R18"],
+      "status": "INVALID_VEHICLE",
+      "notes": "Dodge Caliber production started in 2007. 2006 model does not exist."
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Caliber SRT4",
+      "trims": [
+        { "trim": "SRT4", "tireSize": "225/45R19" }
+      ],
+      "allSizes": ["225/45R19"],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Caliber SRT4 ended in 2009. 2010 model does not exist. Last year was 2009."
+    },
+    {
+      "year": 2009,
+      "make": "Dodge",
+      "model": "Caliber SRT4",
+      "trims": [
+        { "trim": "SRT4", "tireSize": "225/45R19" }
+      ],
+      "allSizes": ["225/45R19"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes. Caliber SRT4 uses 225/45R19"
+    },
+    {
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Caliber SRT4",
+      "trims": [
+        { "trim": "SRT4", "tireSize": "225/45R19" }
+      ],
+      "allSizes": ["225/45R19"],
+      "currentTireSizes": [],
+      "status": "MISSING_IN_DB",
+      "notes": "DB has no tire sizes. Caliber SRT4 uses 225/45R19"
+    },
+    {
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Caliber SRT4",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": [],
+      "status": "INVALID_VEHICLE",
+      "notes": "Caliber SRT4 started in 2008. 2007 model does not exist."
+    },
+    {
+      "year": 2024,
+      "make": "Dodge",
+      "model": "Challenger",
+      "trims": [],
+      "allSizes": [],
+      "currentTireSizes": ["215/65R17", "235/55R18", "245/45R18", "245/45R20", "275/40R20", "305/35R20"],
+      "status": "INVALID_VEHICLE",
+      "notes": "Dodge Challenger discontinued after 2023. 2024 model does not exist."
+    },
+    {
+      "year": 2023,
+      "make": "Dodge",
+      "model": "Challenger",
+      "trims": [
+        { "trim": "GT", "tireSize": "245/45R20" },
+        { "trim": "R/T", "tireSizes": ["245/45R20", "275/40R20"] },
+        { "trim": "R/T Scat Pack", "tireSizes": ["245/45R20", "275/40R20"] },
+        { "trim": "R/T Scat Pack Wide Body", "tireSize": "305/35R20" },
+        { "trim": "SRT Hellcat Jailbreak", "tireSize": "305/35R20" },
+        { "trim": "SRT Hellcat Redeye Jailbreak", "tireSize": "305/35R20" },
+        { "trim": "SRT Hellcat Redeye Wide Body Jailbreak", "tireSize": "305/35R20" },
+        { "trim": "SRT Hellcat Wide Body Jailbreak", "tireSize": "305/35R20" },
+        { "trim": "SRT Super Stock", "tireSize": "315/40R18" },
+        { "trim": "SXT", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "SXT AWD", "tireSizes": ["235/55R19", "245/45R20"] }
+      ],
+      "allSizes": ["235/55R18", "235/55R19", "245/45R20", "275/40R20", "305/35R20", "315/40R18"],
+      "currentTireSizes": ["245/45R20", "275/40R20"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Multiple entries in batch for same vehicle. Full OEM range includes 235/55R18-19, 245/45R20, 275/40R20, 305/35R20, 315/40R18"
+    },
+    {
+      "year": 2022,
+      "make": "Dodge",
+      "model": "Challenger",
+      "trims": [
+        { "trim": "GT", "tireSize": "245/45R20" },
+        { "trim": "R/T", "tireSizes": ["245/45R20", "275/40R20"] },
+        { "trim": "R/T Scat Pack", "tireSizes": ["245/45R20", "275/40R20"] },
+        { "trim": "R/T Scat Pack Wide Body", "tireSize": "305/35R20" },
+        { "trim": "SRT Hellcat", "tireSize": "275/40R20" },
+        { "trim": "SRT Hellcat Redeye", "tireSize": "275/40R20" },
+        { "trim": "SRT Hellcat Redeye Wide Body", "tireSize": "305/35R20" },
+        { "trim": "SRT Hellcat Wide Body", "tireSize": "305/35R20" },
+        { "trim": "SRT Jailbreak", "tireSize": "305/35R20" },
+        { "trim": "SRT Super Stock", "tireSize": "315/40R18" },
+        { "trim": "SXT", "tireSizes": ["235/55R18", "245/45R20"] },
+        { "trim": "SXT AWD", "tireSizes": ["235/55R19", "245/45R20"] }
+      ],
+      "allSizes": ["235/55R18", "235/55R19", "245/45R20", "275/40R20", "305/35R20", "315/40R18"],
+      "currentTireSizes": ["315/40R18"],
+      "status": "PARTIAL_MATCH",
+      "notes": "Multiple entries in batch for same vehicle. Full OEM range includes 235/55R18-19, 245/45R20, 275/40R20, 305/35R20, 315/40R18"
+    }
+  ],
+  "summary": {
+    "valid": 2,
+    "mismatch": 24,
+    "missingInDb": 13,
+    "invalidVehicle": 17,
+    "partialMatch": 2,
+    "totalIssues": 56
+  },
+  "corrections": [
+    {
+      "category": "Chrysler Town & Country 2000-2007",
+      "issue": "Sizes changed from 215/70R15 & 215/65R16 to 225/65R16 & 225/65R17 in 2008 refresh",
+      "action": "Update 2000-2007 to use 215/70R15, 215/65R16 instead of 225/65R16, 225/65R17"
+    },
+    {
+      "category": "Chrysler Voyager 2004-2019",
+      "issue": "Vehicle did not exist these years",
+      "action": "Remove these vehicles from database - Voyager was only 2000-2003 and 2020+"
+    },
+    {
+      "category": "Chrysler Voyager 2000-2003, 2020-2026",
+      "issue": "Missing tire sizes",
+      "action": "Add correct sizes: 2000 (205/75R14, 215/65R15), 2001-2003 (215/70R15), 2020-2026 (235/65R17)"
+    },
+    {
+      "category": "Daewoo Leganza 2000-2002",
+      "issue": "Wrong tire sizes",
+      "action": "Replace 195/65R15, 205/55R16 with 205/60R15"
+    },
+    {
+      "category": "Dodge Journey 2009-2020",
+      "issue": "Missing 225/65R17 and 225/70R16, has incorrect 225/55R17",
+      "action": "Replace 225/55R17 with 225/65R17, add 225/70R16 for older years"
+    },
+    {
+      "category": "Dodge Caliber 2007-2012",
+      "issue": "Wrong tire sizes throughout",
+      "action": "Update to OEM: 205/70R15, 215/60R17, 215/55R18, 225/45R19 (SRT4)"
+    },
+    {
+      "category": "Dodge Caliber 2006",
+      "issue": "Vehicle did not exist",
+      "action": "Remove - Caliber started 2007"
+    },
+    {
+      "category": "Dodge Caliber SRT4",
+      "issue": "Only existed 2008-2009",
+      "action": "Remove 2007, 2010. Add 225/45R19 for 2008-2009"
+    },
+    {
+      "category": "Dodge Challenger 2024",
+      "issue": "Vehicle does not exist",
+      "action": "Remove - Challenger discontinued after 2023"
+    },
+    {
+      "category": "Dodge Challenger 2022-2023",
+      "issue": "Incomplete size ranges",
+      "action": "Full range: 235/55R18-19, 245/45R20, 275/40R20, 305/35R20, 315/40R18"
+    }
+  ]
+}

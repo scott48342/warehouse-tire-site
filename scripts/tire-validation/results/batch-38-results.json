@@ -1,0 +1,1136 @@
+{
+  "batchId": "38",
+  "processedAt": "2026-04-21T21:54:00Z",
+  "source": "tiresize.com, tire-size.net, tirewheelguide.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/65R17", "245/60R18", "255/50R20"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["245/65R17", "245/60R18"]},
+        {"trim": "LT", "tireSizes": ["245/65R17", "245/60R18"]},
+        {"trim": "SS AWD", "tireSizes": ["255/50R20"]},
+        {"trim": "SS RWD", "tireSizes": ["255/50R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "Current DB sizes are WRONG - appear to be new gen Trailblazer (2021+) sizes. OEM 1st gen uses 17-20 inch wheels."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/65R17", "245/60R18", "255/50R20"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["245/65R17", "245/60R18"]},
+        {"trim": "LT", "tireSizes": ["245/65R17", "245/60R18"]},
+        {"trim": "SS AWD", "tireSizes": ["255/50R20"]},
+        {"trim": "SS RWD", "tireSizes": ["255/50R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "Current DB sizes are WRONG - appear to be new gen Trailblazer (2021+) sizes."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["235/75R16", "245/65R17", "255/50R20"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["235/75R16", "245/65R17"]},
+        {"trim": "LT", "tireSizes": ["235/75R16", "245/65R17"]},
+        {"trim": "SS", "tireSizes": ["255/50R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "Current DB sizes are WRONG - appear to be new gen Trailblazer (2021+) sizes."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["235/75R16", "245/65R17", "255/50R20"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["235/75R16", "245/65R17"]},
+        {"trim": "LT", "tireSizes": ["235/75R16", "245/65R17"]},
+        {"trim": "EXT LS", "tireSizes": ["245/65R17"]},
+        {"trim": "EXT LT", "tireSizes": ["245/65R17"]},
+        {"trim": "SS", "tireSizes": ["255/50R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "Current DB sizes are WRONG - appear to be new gen Trailblazer (2021+) sizes."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["235/75R16", "245/65R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["235/75R16", "245/65R17"]},
+        {"trim": "LT", "tireSizes": ["235/75R16", "245/65R17"]},
+        {"trim": "EXT LS", "tireSizes": ["245/65R17"]},
+        {"trim": "EXT LT", "tireSizes": ["245/65R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Current DB sizes are WRONG - appear to be new gen Trailblazer (2021+) sizes."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["245/70R16"]},
+        {"trim": "LT", "tireSizes": ["245/70R16"]},
+        {"trim": "North Face", "tireSizes": ["245/65R17"]},
+        {"trim": "EXT LS", "tireSizes": ["245/65R17"]},
+        {"trim": "EXT LT", "tireSizes": ["245/65R17"]},
+        {"trim": "EXT North Face", "tireSizes": ["245/65R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Current DB sizes are WRONG - appear to be new gen Trailblazer (2021+) sizes."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["245/70R16"]},
+        {"trim": "LT", "tireSizes": ["245/70R16"]},
+        {"trim": "LTZ", "tireSizes": ["245/65R17"]},
+        {"trim": "North Face", "tireSizes": ["245/65R17"]},
+        {"trim": "EXT LS", "tireSizes": ["245/65R17"]},
+        {"trim": "EXT LT", "tireSizes": ["245/65R17"]},
+        {"trim": "EXT North Face", "tireSizes": ["245/65R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Current DB sizes are WRONG - appear to be new gen Trailblazer (2021+) sizes."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["245/70R16"]},
+        {"trim": "LT", "tireSizes": ["245/70R16"]},
+        {"trim": "LTZ", "tireSizes": ["245/65R17"]},
+        {"trim": "North Face", "tireSizes": ["245/65R17"]},
+        {"trim": "EXT LT", "tireSizes": ["245/65R17"]},
+        {"trim": "EXT North Face", "tireSizes": ["245/65R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Current DB sizes are WRONG - appear to be new gen Trailblazer (2021+) sizes."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "currentTireSizes": ["215/55R17", "225/55R18", "235/45R19"],
+      "validatedTireSizes": ["245/70R16", "245/65R17"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["245/70R16"]},
+        {"trim": "LTZ", "tireSizes": ["245/65R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Current DB sizes are WRONG - 2001 was 1st year of 1st gen Trailblazer. Similar to 2002."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/65R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["245/65R17"]},
+        {"trim": "LT", "tireSizes": ["245/65R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data in DB. TrailBlazer EXT was extended wheelbase version."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/65R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["245/65R17"]},
+        {"trim": "LT", "tireSizes": ["245/65R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data in DB."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/65R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["245/65R17"]},
+        {"trim": "LT", "tireSizes": ["245/65R17"]},
+        {"trim": "North Face", "tireSizes": ["245/65R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data in DB."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/65R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["245/65R17"]},
+        {"trim": "LT", "tireSizes": ["245/65R17"]},
+        {"trim": "North Face", "tireSizes": ["245/65R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data in DB."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "trailblazer-ext",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/65R17"],
+      "trimData": [
+        {"trim": "LT", "tireSizes": ["245/65R17"]},
+        {"trim": "North Face", "tireSizes": ["245/65R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data in DB."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R15", "245/70R16"],
+      "trimData": [
+        {"trim": "2.3L", "tireSizes": ["205/65R15"]},
+        {"trim": "3.4L V6", "tireSizes": ["245/70R16"]},
+        {"trim": "3.4L V6 AWD", "tireSizes": ["245/70R16"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. Trans Sport was Mexican/EU market Pontiac Montana rebadge."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R15", "245/70R16"],
+      "trimData": [
+        {"trim": "2.3L", "tireSizes": ["205/65R15"]},
+        {"trim": "3.4L V6", "tireSizes": ["245/70R16"]},
+        {"trim": "3.4L V6 AWD", "tireSizes": ["245/70R16"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R15", "245/70R16"],
+      "trimData": [
+        {"trim": "2.3L", "tireSizes": ["205/65R15"]},
+        {"trim": "3.4L V6", "tireSizes": ["245/70R16"]},
+        {"trim": "3.4L V6 AWD", "tireSizes": ["245/70R16"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R15", "245/70R16"],
+      "trimData": [
+        {"trim": "2.3L", "tireSizes": ["205/65R15"]},
+        {"trim": "3.4L V6", "tireSizes": ["245/70R16"]},
+        {"trim": "3.4L V6 AWD", "tireSizes": ["245/70R16"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R15", "245/70R16"],
+      "trimData": [
+        {"trim": "2.3L", "tireSizes": ["205/65R15"]},
+        {"trim": "3.4L V6", "tireSizes": ["245/70R16"]},
+        {"trim": "3.4L V6 AWD", "tireSizes": ["245/70R16"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "trans-sport",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["205/65R15", "215/60R15", "245/70R16"],
+      "trimData": [
+        {"trim": "2.3L", "tireSizes": ["205/65R15"]},
+        {"trim": "3.4L V6", "tireSizes": ["245/70R16"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R22"],
+      "validatedTireSizes": ["255/65R18", "255/55R20", "275/45R22", "265/65R18"],
+      "trimData": [
+        {"trim": "LT", "tireSizes": ["255/65R18", "255/55R20", "275/45R22"]},
+        {"trim": "RS", "tireSizes": ["275/45R22"]},
+        {"trim": "High Country", "tireSizes": ["275/45R22"]},
+        {"trim": "Z71", "tireSizes": ["265/65R18"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 245/60R18 but should be 255/65R18. Also missing Z71 size 265/65R18."
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R22"],
+      "validatedTireSizes": ["255/65R18", "255/55R20", "275/45R22", "265/65R18"],
+      "trimData": [
+        {"trim": "LT", "tireSizes": ["255/65R18", "255/55R20", "275/45R22"]},
+        {"trim": "RS", "tireSizes": ["275/45R22"]},
+        {"trim": "High Country", "tireSizes": ["275/45R22"]},
+        {"trim": "Z71", "tireSizes": ["265/65R18"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 245/60R18 but should be 255/65R18. Also missing Z71 size 265/65R18."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R22"],
+      "validatedTireSizes": ["255/65R18", "255/55R20", "275/45R22", "265/65R18"],
+      "trimData": [
+        {"trim": "Limited", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LS", "tireSizes": ["255/65R18", "255/55R20", "275/45R22"]},
+        {"trim": "LT", "tireSizes": ["255/65R18", "255/55R20", "275/45R22"]},
+        {"trim": "RS", "tireSizes": ["275/45R22"]},
+        {"trim": "Z71", "tireSizes": ["265/65R18"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 245/60R18 but should be 255/65R18. Also missing Z71 size 265/65R18."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R22"],
+      "validatedTireSizes": ["255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "Premier", "tireSizes": ["255/55R20"]},
+        {"trim": "RS", "tireSizes": ["255/55R20"]},
+        {"trim": "High Country", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 245/60R18 and 275/45R22 but 2023 model only had 18 and 20 inch options."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R22"],
+      "validatedTireSizes": ["255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "Premier", "tireSizes": ["255/55R20"]},
+        {"trim": "RS", "tireSizes": ["255/55R20"]},
+        {"trim": "High Country", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 245/60R18 and 275/45R22 but 2018-2023 Traverse only had 18 and 20 inch options."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R22"],
+      "validatedTireSizes": ["255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "L", "tireSizes": ["255/65R18"]},
+        {"trim": "LS", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "Premier", "tireSizes": ["255/55R20"]},
+        {"trim": "RS", "tireSizes": ["255/55R20"]},
+        {"trim": "High Country", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 245/60R18 and 275/45R22 which are incorrect for this model year."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R22"],
+      "validatedTireSizes": ["255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "L", "tireSizes": ["255/65R18"]},
+        {"trim": "LS", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "Premier", "tireSizes": ["255/55R20"]},
+        {"trim": "RS", "tireSizes": ["255/55R20"]},
+        {"trim": "High Country", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 245/60R18 and 275/45R22 which are incorrect."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R22", "255/65R18", "255/60R19"],
+      "validatedTireSizes": ["255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "L", "tireSizes": ["255/65R18"]},
+        {"trim": "LS", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "Premier", "tireSizes": ["255/55R20"]},
+        {"trim": "RS", "tireSizes": ["255/55R20"]},
+        {"trim": "High Country", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB has extra incorrect sizes. 255/65R18 correct, 255/55R20 correct. Remove others."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["245/60R18", "255/55R20", "275/45R22"],
+      "validatedTireSizes": ["255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "L", "tireSizes": ["255/65R18"]},
+        {"trim": "LS", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "Premier", "tireSizes": ["255/55R20"]},
+        {"trim": "RS", "tireSizes": ["255/55R20"]},
+        {"trim": "High Country", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "2018 was Gen 2 redesign. DB shows 245/60R18 and 275/45R22 which are incorrect."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedTireSizes": ["245/70R17", "255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["245/70R17", "255/65R18"]},
+        {"trim": "LS Base", "tireSizes": ["245/70R17"]},
+        {"trim": "LT", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "Premier", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "Last year of Gen 1. DB shows 255/55R19 and 255/50R20 which don't match OEM spec. Should be 245/70R17, 255/65R18, 255/55R20."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedTireSizes": ["245/70R17", "255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS AWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LS FWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LT AWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT FWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LTZ AWD", "tireSizes": ["255/55R20"]},
+        {"trim": "LTZ FWD", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 255/55R19 and 255/50R20 which don't match OEM spec. Missing 245/70R17 for LS."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20", "245/70R17", "255/55R20"],
+      "validatedTireSizes": ["245/70R17", "255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS AWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LS FWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LT AWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT FWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LTZ AWD", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 255/55R19 and 255/50R20 which don't match OEM spec. 245/70R17 and 255/55R20 are correct."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedTireSizes": ["245/70R17", "255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS AWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LS FWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LT AWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT FWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LTZ AWD", "tireSizes": ["255/55R20"]},
+        {"trim": "LTZ FWD", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 255/55R19 and 255/50R20 which don't exist as OEM sizes. Missing 245/70R17 for LS."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20", "245/70R17", "255/55R20"],
+      "validatedTireSizes": ["245/70R17", "255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS AWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LS FWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LT AWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT FWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LTZ AWD", "tireSizes": ["255/55R20"]},
+        {"trim": "LTZ FWD", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 255/55R19 and 255/50R20 which don't exist as OEM sizes."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedTireSizes": ["245/70R17", "255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS AWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LS FWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LT AWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT FWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LTZ AWD", "tireSizes": ["255/55R20"]},
+        {"trim": "LTZ FWD", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 255/55R19 and 255/50R20 which don't exist as OEM sizes. Missing 245/70R17 for LS."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedTireSizes": ["245/70R17", "255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS AWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LS FWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LT AWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT FWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LTZ AWD", "tireSizes": ["255/55R20"]},
+        {"trim": "LTZ FWD", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 255/55R19 and 255/50R20 which don't exist as OEM sizes."
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedTireSizes": ["245/70R17", "255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS AWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LS FWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LT AWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT FWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LTZ AWD", "tireSizes": ["255/55R20"]},
+        {"trim": "LTZ FWD", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 255/55R19 and 255/50R20 which don't exist as OEM sizes."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "traverse",
+      "currentTireSizes": ["255/65R18", "255/55R19", "255/50R20"],
+      "validatedTireSizes": ["245/70R17", "255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "LS AWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LS FWD", "tireSizes": ["245/70R17"]},
+        {"trim": "LT AWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LT FWD", "tireSizes": ["255/65R18", "255/55R20"]},
+        {"trim": "LTZ AWD", "tireSizes": ["255/55R20"]},
+        {"trim": "LTZ FWD", "tireSizes": ["255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows 255/55R19 and 255/50R20 which don't exist as OEM sizes. First year of Traverse."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "traverse-limited",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["255/65R18", "255/55R20"],
+      "trimData": [
+        {"trim": "Limited", "tireSizes": ["255/65R18", "255/55R20"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. Traverse Limited is a sub-model of 2024 Traverse."
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["225/55R18", "225/60R17"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["225/60R17"]},
+        {"trim": "LT", "tireSizes": ["225/60R17"]},
+        {"trim": "ACTIV", "tireSizes": ["225/55R18"]},
+        {"trim": "RS", "tireSizes": ["225/55R18", "245/45R19"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB missing RS trim size 245/45R19."
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["225/60R17"]},
+        {"trim": "LT", "tireSizes": ["225/60R17"]},
+        {"trim": "ACTIV", "tireSizes": ["225/55R18"]},
+        {"trim": "RS", "tireSizes": ["225/55R18", "245/45R19"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB shows old Gen 1 sizes (205/70R16, 215/55R18). 2024+ is Gen 2 with larger wheels."
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["225/60R17", "225/55R18", "245/45R19"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["225/60R17"]},
+        {"trim": "LT", "tireSizes": ["225/60R17"]},
+        {"trim": "ACTIV", "tireSizes": ["225/55R18"]},
+        {"trim": "RS", "tireSizes": ["225/55R18", "245/45R19"]}
+      ],
+      "discrepancy": true,
+      "notes": "2024 is all-new Gen 2. DB shows old Gen 1 sizes - needs complete update."
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16", "215/55R18"]}
+      ],
+      "discrepancy": false,
+      "notes": "Last year of Gen 1. DB sizes correct but missing 2023 was final year before redesign."
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16", "215/55R18"]}
+      ],
+      "discrepancy": false,
+      "notes": "DB sizes correct."
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16", "215/55R18"]}
+      ],
+      "discrepancy": false,
+      "notes": "DB sizes correct."
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16", "215/55R18"]},
+        {"trim": "Premier", "tireSizes": ["215/55R18"]}
+      ],
+      "discrepancy": false,
+      "notes": "DB sizes correct."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16", "215/55R18"]},
+        {"trim": "Premier", "tireSizes": ["215/55R18"]}
+      ],
+      "discrepancy": false,
+      "notes": "DB sizes correct."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18", "215/60R17", "215/65R16"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16", "215/55R18"]},
+        {"trim": "Premier", "tireSizes": ["215/55R18"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB has extra sizes (215/60R17, 215/65R16) that don't appear to be OEM for this year."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16"]},
+        {"trim": "Premier", "tireSizes": ["215/55R18"]}
+      ],
+      "discrepancy": false,
+      "notes": "DB sizes correct."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16"]},
+        {"trim": "LTZ", "tireSizes": ["215/55R18"]}
+      ],
+      "discrepancy": false,
+      "notes": "DB sizes correct."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/65R16", "215/55R18", "215/60R17"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16"]},
+        {"trim": "LTZ", "tireSizes": ["215/55R18"]}
+      ],
+      "discrepancy": true,
+      "notes": "DB has extra sizes (215/65R16, 215/60R17) that don't appear to be OEM."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16"]},
+        {"trim": "LTZ", "tireSizes": ["215/55R18"]}
+      ],
+      "discrepancy": false,
+      "notes": "DB sizes correct. First year of Trax in US."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "trax",
+      "currentTireSizes": ["205/70R16", "215/55R18"],
+      "validatedTireSizes": ["205/70R16", "215/55R18"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["205/70R16"]},
+        {"trim": "LT", "tireSizes": ["205/70R16"]},
+        {"trim": "LTZ", "tireSizes": ["215/55R18"]}
+      ],
+      "discrepancy": false,
+      "notes": "DB sizes correct. Note: 2013 Trax was only available in some markets, not US."
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "uplander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["225/60R17"]},
+        {"trim": "LT", "tireSizes": ["225/60R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. All Uplander models use same size."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "uplander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["225/60R17"]},
+        {"trim": "LT", "tireSizes": ["225/60R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "uplander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17"],
+      "trimData": [
+        {"trim": "LS", "tireSizes": ["225/60R17"]},
+        {"trim": "LT", "tireSizes": ["225/60R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "uplander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["225/60R17"]},
+        {"trim": "LS", "tireSizes": ["225/60R17"]},
+        {"trim": "LT", "tireSizes": ["225/60R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "uplander",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["225/60R17"],
+      "trimData": [
+        {"trim": "Base", "tireSizes": ["225/60R17"]},
+        {"trim": "LS", "tireSizes": ["225/60R17"]},
+        {"trim": "LT", "tireSizes": ["225/60R17"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. Uplander replaced Venture for 2005."
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "utility",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/60R15"],
+      "trimData": [
+        {"trim": "1.4i", "tireSizes": ["185/70R14"]},
+        {"trim": "1.8i", "tireSizes": ["195/60R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. South African market vehicle (Opel Corsa utility rebadge)."
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "utility",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/60R15"],
+      "trimData": [
+        {"trim": "1.4i", "tireSizes": ["185/70R14"]},
+        {"trim": "1.8i", "tireSizes": ["195/60R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. South African market vehicle."
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "utility",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/60R15"],
+      "trimData": [
+        {"trim": "1.4i", "tireSizes": ["185/70R14"]},
+        {"trim": "1.8i", "tireSizes": ["195/60R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. South African market vehicle."
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "utility",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/60R15"],
+      "trimData": [
+        {"trim": "1.4i", "tireSizes": ["185/70R14"]},
+        {"trim": "1.8i", "tireSizes": ["195/60R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. South African market vehicle."
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "utility",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/60R15"],
+      "trimData": [
+        {"trim": "1.4i", "tireSizes": ["185/70R14"]},
+        {"trim": "1.8i", "tireSizes": ["195/60R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. South African market vehicle."
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "utility",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/60R15"],
+      "trimData": [
+        {"trim": "1.4i", "tireSizes": ["185/70R14"]},
+        {"trim": "1.8i", "tireSizes": ["195/60R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. South African market vehicle."
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "utility",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/60R15"],
+      "trimData": [
+        {"trim": "1.4i", "tireSizes": ["185/70R14"]},
+        {"trim": "1.8i", "tireSizes": ["195/60R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. South African market vehicle."
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "utility",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/60R15"],
+      "trimData": [
+        {"trim": "1.4i", "tireSizes": ["185/70R14"]},
+        {"trim": "1.8i", "tireSizes": ["195/60R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. South African market vehicle."
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "utility",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "195/60R15"],
+      "trimData": [
+        {"trim": "1.4i", "tireSizes": ["185/70R14"]},
+        {"trim": "1.8i", "tireSizes": ["195/60R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. South African market vehicle."
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "venture",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimData": [
+        {"trim": "Base Model", "tireSizes": ["215/70R15", "225/60R16"]},
+        {"trim": "LS", "tireSizes": ["215/70R15", "225/60R16"]},
+        {"trim": "LT", "tireSizes": ["215/70R15", "225/60R16"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. Last year of Venture (replaced by Uplander)."
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "venture",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimData": [
+        {"trim": "AWD", "tireSizes": ["225/60R16"]},
+        {"trim": "Base Model", "tireSizes": ["215/70R15"]},
+        {"trim": "LS", "tireSizes": ["215/70R15"]},
+        {"trim": "LT", "tireSizes": ["215/70R15", "225/60R16"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "venture",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15", "225/60R16"],
+      "trimData": [
+        {"trim": "AWD", "tireSizes": ["225/60R16"]},
+        {"trim": "Base Model", "tireSizes": ["215/70R15"]},
+        {"trim": "LS", "tireSizes": ["215/70R15"]},
+        {"trim": "LT", "tireSizes": ["215/70R15"]},
+        {"trim": "Plus", "tireSizes": ["215/70R15"]},
+        {"trim": "Warner Bros", "tireSizes": ["215/70R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "venture",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15", "215/60R16"],
+      "trimData": [
+        {"trim": "AWD", "tireSizes": ["215/60R16"]},
+        {"trim": "Base Model", "tireSizes": ["215/70R15"]},
+        {"trim": "LS", "tireSizes": ["215/70R15"]},
+        {"trim": "LT", "tireSizes": ["215/70R15"]},
+        {"trim": "Plus", "tireSizes": ["215/70R15"]},
+        {"trim": "Warner Bros", "tireSizes": ["215/70R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "venture",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15"],
+      "trimData": [
+        {"trim": "Base Model", "tireSizes": ["215/70R15"]},
+        {"trim": "LS", "tireSizes": ["215/70R15"]},
+        {"trim": "LT", "tireSizes": ["215/70R15"]},
+        {"trim": "Plus", "tireSizes": ["215/70R15"]},
+        {"trim": "Warner Bros", "tireSizes": ["215/70R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "venture",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/70R15"],
+      "trimData": [
+        {"trim": "Base Model", "tireSizes": ["215/70R15"]},
+        {"trim": "LS", "tireSizes": ["215/70R15"]},
+        {"trim": "LT", "tireSizes": ["215/70R15"]},
+        {"trim": "Plus", "tireSizes": ["215/70R15"]},
+        {"trim": "Warner Bros", "tireSizes": ["215/70R15"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data."
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "viva",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/60R15", "205/50R16"],
+      "trimData": [
+        {"trim": "1.8i", "tireSizes": ["185/65R15", "195/60R15", "205/50R16"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. Russian market vehicle (Opel Astra rebadge)."
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "viva",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/60R15", "205/50R16"],
+      "trimData": [
+        {"trim": "1.8i", "tireSizes": ["185/65R15", "195/60R15", "205/50R16"]}
+      ],
+      "discrepancy": true,
+      "notes": "Missing tire data. Russian market vehicle (Opel Astra rebadge)."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "withDiscrepancies": 63,
+    "withoutDiscrepancies": 12,
+    "majorIssues": [
+      "TrailBlazer 2001-2009: Current DB has completely WRONG tire sizes (new gen sizes instead of original)",
+      "TrailBlazer EXT: All years missing tire data",
+      "Trans Sport: All years missing tire data",
+      "Traverse 2009-2023: DB shows non-existent 255/55R19 and 255/50R20 sizes",
+      "Traverse 2018-2023: DB shows 245/60R18 but should be 255/65R18",
+      "Traverse 2024-2026: Missing Z71 trim size 265/65R18",
+      "Trax 2024-2025: DB shows old Gen 1 sizes instead of new Gen 2 sizes",
+      "Uplander: All years missing tire data",
+      "Utility: All years missing tire data (South African market)",
+      "Venture: All years missing tire data",
+      "Viva: All years missing tire data (Russian market)"
+    ],
+    "recommendedActions": [
+      "UPDATE TrailBlazer 2001-2009 to correct OEM sizes (245/70R16, 245/65R17, 245/60R18, 255/50R20)",
+      "ADD TrailBlazer EXT tire sizes (245/65R17)",
+      "ADD Trans Sport tire sizes (205/65R15, 215/60R15, 245/70R16)",
+      "FIX Traverse Gen 1 (2009-2017) to use 245/70R17, 255/65R18, 255/55R20",
+      "FIX Traverse Gen 2 (2018-2023) to use 255/65R18 (not 245/60R18)",
+      "FIX Traverse Gen 3 (2024+) - add Z71 size 265/65R18",
+      "UPDATE Trax 2024-2025 to Gen 2 sizes (225/60R17, 225/55R18, 245/45R19)",
+      "ADD Uplander tire sizes (225/60R17)",
+      "CONSIDER: Remove or mark Utility as non-US market (South Africa only)",
+      "ADD Venture tire sizes (215/70R15, 215/60R16, 225/60R16)",
+      "CONSIDER: Remove or mark Viva as non-US market (Russia only)"
+    ]
+  }
+}

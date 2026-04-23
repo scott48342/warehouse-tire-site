@@ -1,0 +1,1138 @@
+{
+  "batchId": "53",
+  "processedAt": "2026-04-21T22:00:00.000Z",
+  "totalVehicles": 75,
+  "results": [
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["LT275/70R18", "LT275/65R20", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "XL (SRW 4x2)": ["245/75R17", "265/70R17", "275/65R18"],
+        "XL (SRW 4x4)": ["245/75R17", "265/70R17", "275/70R18"],
+        "XL (DRW)": ["245/75R17"],
+        "XLT (SRW 4x2)": ["245/75R17", "265/70R17", "275/65R18"],
+        "XLT (SRW 4x4)": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"],
+        "XLT (DRW)": ["245/75R17"],
+        "Lariat (SRW 4x2)": ["275/65R18"],
+        "Lariat (SRW 4x4)": ["275/70R18", "275/65R20"],
+        "Lariat (DRW)": ["245/75R17"],
+        "King Ranch (SRW 4x2)": ["275/65R18"],
+        "King Ranch (SRW 4x4)": ["275/70R18"],
+        "King Ranch (DRW)": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "status": "VALID",
+      "notes": "SRW = Single Rear Wheel, DRW = Dual Rear Wheel (Dually). LT prefix optional for these sizes."
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["LT275/70R18", "LT275/65R20", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "XL (SRW 4x2)": ["245/75R17", "265/70R17", "275/65R18"],
+        "XL (SRW 4x4)": ["245/75R17", "265/70R17", "275/70R18"],
+        "XL (DRW)": ["245/75R17"],
+        "XLT (SRW 4x4)": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"],
+        "XLT (DRW)": ["245/75R17"],
+        "Lariat (SRW 4x2)": ["275/65R18"],
+        "Lariat (SRW 4x4)": ["275/70R18", "275/65R20"],
+        "Lariat (DRW)": ["245/75R17"],
+        "King Ranch (SRW 4x2)": ["275/65R18"],
+        "King Ranch (SRW 4x4)": ["275/70R18"],
+        "King Ranch (DRW)": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "status": "VALID",
+      "notes": "2011+ generation Super Duty"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "XL (SRW 4x2)": ["245/75R17", "265/70R17", "275/65R18"],
+        "XL (SRW 4x4)": ["245/75R17", "265/70R17", "275/70R18"],
+        "XL (DRW)": ["245/75R17"],
+        "XLT (SRW 4x4)": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"],
+        "Lariat (SRW)": ["275/65R18", "275/70R18", "275/65R20"],
+        "Lariat (DRW)": ["245/75R17"],
+        "King Ranch": ["275/65R18", "275/70R18", "245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "status": "REVIEW",
+      "notes": "285/70R17 and 275/65R18 in current list may be aftermarket or regional variants. Standard OEM does not include 285/70R17."
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "XL (SRW)": ["245/75R17", "265/70R17", "275/65R18", "275/70R18"],
+        "XL (DRW)": ["245/75R17"],
+        "XLT (SRW)": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+        "XLT (DRW)": ["245/75R17"],
+        "Lariat (SRW)": ["275/65R18", "275/70R18", "275/65R20"],
+        "Lariat (DRW)": ["245/75R17"],
+        "FX4 (SRW)": ["275/70R18"],
+        "FX4 (DRW)": ["245/75R17"],
+        "Harley Davidson": ["275/65R20"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "status": "REVIEW",
+      "notes": "2008-2010 generation. 285/70R17 not standard OEM - likely aftermarket."
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["LT275/65R18", "LT265/70R17"],
+      "validatedTireSizes": {
+        "XL (SRW)": ["245/75R17", "265/70R17", "275/65R18", "275/70R18"],
+        "XLT (SRW)": ["245/75R17", "265/70R17", "275/65R18", "275/70R18"],
+        "Lariat (SRW)": ["275/65R18", "275/70R18"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "status": "PARTIAL",
+      "notes": "Current list missing some OEM options"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "XL (SRW)": ["245/75R17", "265/70R17", "275/65R18", "275/70R18"],
+        "XL (DRW)": ["245/75R17"],
+        "XLT (SRW)": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+        "XLT (DRW)": ["245/75R17"],
+        "Lariat (SRW)": ["275/65R18", "275/70R18", "275/65R20"],
+        "Lariat (DRW)": ["245/75R17"],
+        "FX4": ["275/70R18", "275/65R20"],
+        "Harley Davidson": ["275/65R20"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "status": "REVIEW",
+      "notes": "285/70R17 not standard OEM"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "XL (SRW)": ["245/75R17", "265/70R17", "275/65R18", "275/70R18"],
+        "XL (DRW)": ["245/75R17"],
+        "XLT (SRW)": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+        "XLT (DRW)": ["245/75R17"],
+        "Lariat (SRW)": ["275/65R18", "275/70R18", "275/65R20"],
+        "Lariat (DRW)": ["245/75R17"],
+        "FX4": ["275/70R18", "275/65R20"],
+        "Harley Davidson": ["275/65R20"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "status": "REVIEW",
+      "notes": "2008-2010 generation Super Duty. 285/70R17 not standard OEM."
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "XL (SRW)": ["245/75R17", "265/70R17", "275/70R18"],
+        "XL (DRW)": ["245/75R17"],
+        "XLT (SRW)": ["245/75R17", "265/70R17", "275/70R18"],
+        "XLT (DRW)": ["245/75R17"],
+        "Lariat (SRW)": ["275/70R18"],
+        "Lariat (DRW)": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/70R18"],
+      "status": "REVIEW",
+      "notes": "2007 was last year of previous generation. 275/65R20 and 275/65R18 not standard on this generation."
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "XL (SRW)": ["245/75R17", "265/70R17", "275/70R18"],
+        "XL (DRW)": ["245/75R17"],
+        "XLT (SRW)": ["245/75R17", "265/70R17", "275/70R18"],
+        "XLT (DRW)": ["245/75R17"],
+        "Lariat (SRW)": ["275/70R18"],
+        "Lariat (DRW)": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/70R18"],
+      "status": "REVIEW",
+      "notes": "Pre-2008 generation. 20-inch wheels and 275/65R20 not OEM for this year."
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "SRW (Regular/Super/Crew Cab)": ["245/75R17", "265/70R17", "275/70R18"],
+        "DRW (Dually)": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/70R18"],
+      "status": "REVIEW",
+      "notes": "1999-2007 Super Duty generation. 20-inch wheels not available OEM."
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "SRW": ["245/75R17", "265/70R17", "275/70R18"],
+        "DRW": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/70R18"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation. 20-inch options not factory."
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "SRW": ["245/75R17", "265/70R17", "275/70R18"],
+        "DRW": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/70R18"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "XL/XLT/Lariat SRW": ["245/75R17", "265/70R17", "275/70R18"],
+        "XL/XLT/Lariat DRW": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/70R18"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "SRW": ["245/75R17", "265/70R17", "275/70R18"],
+        "DRW": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/70R18"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "f-350",
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validatedTireSizes": {
+        "SRW": ["245/75R17", "265/70R17", "275/70R18"],
+        "DRW": ["245/75R17"]
+      },
+      "allOemSizes": ["245/75R17", "265/70R17", "275/70R18"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation Super Duty. 20-inch wheel options not available OEM."
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"],
+        "Limited": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "F-450 is primarily commercial chassis with 19.5-inch wheels. 265/70R17 not standard OEM for F-450."
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"],
+        "Limited": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "F-450 commercial chassis. 265/70R17 not standard."
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"],
+        "Limited": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2023+ generation (P708)"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"],
+        "Limited": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2023+ generation (P708)"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"],
+        "Limited": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2017-2022 generation (P558)"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"],
+        "Limited": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2017-2022 generation"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"],
+        "Limited": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "265/70R17 not standard F-450 OEM size"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"],
+        "Limited": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2017-2022 generation"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"],
+        "Limited": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2017-2022 generation"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"],
+        "Limited": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "VALID",
+      "notes": "Verified from tiresize.com. All F-450 trims use 225/70R19.5 commercial tires."
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2011-2016 generation"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2011-2016 generation"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2011-2016 generation"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Platinum": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2011-2016 generation"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2011-2016 generation"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2011 generation refresh"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Harley Davidson": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2008-2010 generation"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"],
+        "King Ranch": ["225/70R19.5"],
+        "Harley Davidson": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2008-2010 generation"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "2008-2010 generation. 265/70R17 not F-450 OEM."
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "1999-2007 generation"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "currentTireSizes": ["225/70R19.5", "265/70R17"],
+      "validatedTireSizes": {
+        "XL": ["225/70R19.5"],
+        "XLT": ["225/70R19.5"],
+        "Lariat": ["225/70R19.5"]
+      },
+      "allOemSizes": ["225/70R19.5"],
+      "status": "REVIEW",
+      "notes": "First generation F-450 Super Duty. 265/70R17 not standard OEM."
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "fairlane",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "G8": ["225/60R16"],
+        "Ghia": ["225/60R17"]
+      },
+      "allOemSizes": ["225/60R16", "225/60R17"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BF series). Last year of production. 17x8 wheels on Ghia, 16x7 on base."
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "fairlane",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "G8": ["225/60R16"],
+        "Ghia": ["225/60R17"]
+      },
+      "allOemSizes": ["225/60R16", "225/60R17"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BF series)"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "fairlane",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "G8": ["225/60R16"],
+        "Ghia": ["225/60R16", "225/60R17"]
+      },
+      "allOemSizes": ["225/60R16", "225/60R17"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BA/BF series)"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "fairlane",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "G8": ["225/60R16"],
+        "Ghia": ["225/60R16"]
+      },
+      "allOemSizes": ["225/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BA series)"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "fairlane",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "G8": ["225/60R16"],
+        "Ghia": ["225/60R16"]
+      },
+      "allOemSizes": ["225/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BA series)"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "fairlane",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "G8": ["225/60R16"],
+        "Ghia": ["225/60R16"]
+      },
+      "allOemSizes": ["225/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (AU series)"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "fairlane",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "G8": ["225/60R16"],
+        "Ghia": ["225/60R16"]
+      },
+      "allOemSizes": ["225/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (AU series)"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "fairlane",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "G8": ["225/60R16"],
+        "Ghia": ["225/60R16"]
+      },
+      "allOemSizes": ["225/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (AU series)"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "fairmont",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Fairmont": ["215/60R16"],
+        "Ghia": ["215/60R16", "225/50R17"]
+      },
+      "allOemSizes": ["215/60R16", "225/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BF Mk II). Last year of production. Discontinued February 2008."
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "fairmont",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Fairmont": ["215/60R16"],
+        "Ghia": ["215/60R16", "225/50R17"]
+      },
+      "allOemSizes": ["215/60R16", "225/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BF series)"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "fairmont",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Fairmont": ["215/60R16"],
+        "Ghia": ["215/60R16", "225/50R17"]
+      },
+      "allOemSizes": ["215/60R16", "225/50R17"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BF series)"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "fairmont",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Fairmont": ["215/60R16"],
+        "Ghia": ["215/60R16"]
+      },
+      "allOemSizes": ["215/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BA series)"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "fairmont",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Fairmont": ["215/60R16"],
+        "Ghia": ["215/60R16"]
+      },
+      "allOemSizes": ["215/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BA series)"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "fairmont",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Fairmont": ["215/60R16"],
+        "Ghia": ["215/60R16"]
+      },
+      "allOemSizes": ["215/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (BA series)"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "fairmont",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Fairmont": ["215/60R16"],
+        "Ghia": ["215/60R16"]
+      },
+      "allOemSizes": ["215/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (AU series)"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "fairmont",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Fairmont": ["215/60R16"],
+        "Ghia": ["215/60R16"]
+      },
+      "allOemSizes": ["215/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (AU series)"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "fairmont",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "Fairmont": ["215/60R16"],
+        "Ghia": ["215/60R16"]
+      },
+      "allOemSizes": ["215/60R16"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (AU series)"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "festiva",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "GLi": ["165/70R13"],
+        "GLXi": ["165/70R13"]
+      },
+      "allOemSizes": ["165/70R13"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (WF series). US Festiva was discontinued in 1993. This is the Australian model based on Mazda 121."
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "festiva",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "GLi": ["165/70R13"],
+        "GLXi": ["165/70R13"]
+      },
+      "allOemSizes": ["165/70R13"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (WF series)"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "festiva",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "GLi": ["165/70R13"],
+        "GLXi": ["165/70R13"]
+      },
+      "allOemSizes": ["165/70R13"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (WF series)"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "festiva",
+      "currentTireSizes": [],
+      "validatedTireSizes": {
+        "GLi": ["165/70R13"],
+        "GLXi": ["165/70R13"],
+        "Trio": ["165/70R13"]
+      },
+      "allOemSizes": ["165/70R13"],
+      "status": "MISSING_DATA",
+      "notes": "Australian market vehicle (WD/WF series). 4.5x13 inch wheels."
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Base": ["185/60R15"],
+        "SE": ["185/60R15", "195/50R16"],
+        "Titanium": ["195/50R16"],
+        "ST-Line": ["195/50R16", "205/45R17"],
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["185/60R15", "195/50R16", "205/40R17", "205/45R17"],
+      "status": "VALID",
+      "notes": "European market continues. US market Fiesta ended in 2019."
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Base": ["185/60R15"],
+        "SE": ["185/60R15", "195/50R16"],
+        "Titanium": ["195/50R16"],
+        "ST-Line": ["195/50R16", "205/45R17"],
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["185/60R15", "195/50R16", "205/40R17", "205/45R17"],
+      "status": "VALID",
+      "notes": "European market. US discontinued after 2019."
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Base": ["185/60R15"],
+        "SE": ["185/60R15", "195/50R16"],
+        "Titanium": ["195/50R16"],
+        "ST-Line": ["195/50R16", "205/45R17"],
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["185/60R15", "195/50R16", "205/40R17", "205/45R17"],
+      "status": "VALID",
+      "notes": "European market"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Base": ["185/60R15"],
+        "SE": ["185/60R15", "195/50R16"],
+        "Titanium": ["195/50R16"],
+        "ST-Line": ["195/50R16", "205/45R17"],
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["185/60R15", "195/50R16", "205/40R17", "205/45R17"],
+      "status": "VALID",
+      "notes": "European market"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16", "205/45R17"],
+      "validatedTireSizes": {
+        "Base": ["185/60R15"],
+        "SE": ["185/60R15", "195/50R16"],
+        "Titanium": ["195/50R16"],
+        "ST-Line": ["195/50R16"],
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["185/60R15", "195/50R16", "205/40R17"],
+      "status": "VALID",
+      "notes": "European market"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16"],
+      "validatedTireSizes": {
+        "S": ["185/60R15"],
+        "SE Sedan": ["185/60R15", "195/50R16"],
+        "SE Hatchback": ["185/60R15", "195/50R16"],
+        "SE Appearance Package": ["195/50R16"],
+        "ST-Line": ["195/50R16"],
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["185/60R15", "195/50R16", "205/40R17"],
+      "status": "VALID",
+      "notes": "Last year for US market Fiesta"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": {
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["205/40R17"],
+      "status": "VALID",
+      "notes": "ST trim specific entry"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": {
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["205/40R17"],
+      "status": "VALID",
+      "notes": "ST trim specific"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16"],
+      "validatedTireSizes": {
+        "S": ["185/60R15"],
+        "SE": ["185/60R15", "195/50R16"],
+        "Titanium": ["195/50R16"],
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["185/60R15", "195/50R16", "205/40R17"],
+      "status": "VALID",
+      "notes": "Non-ST trims"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["185/60R15", "195/50R16"],
+      "validatedTireSizes": {
+        "S": ["185/60R15"],
+        "SE Sedan": ["185/60R15", "195/50R16"],
+        "SE Hatchback": ["185/60R15", "195/50R16"],
+        "Titanium": ["195/50R16"],
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["185/60R15", "195/50R16", "205/40R17"],
+      "status": "VALID",
+      "notes": "Non-ST trims"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": {
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["205/40R17"],
+      "status": "VALID",
+      "notes": "ST trim specific"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "fiesta",
+      "currentTireSizes": ["205/40R17"],
+      "validatedTireSizes": {
+        "ST": ["205/40R17"]
+      },
+      "allOemSizes": ["205/40R17"],
+      "status": "VALID",
+      "notes": "ST trim specific. Verified from tiresize.com."
+    }
+  ],
+  "summary": {
+    "valid": 15,
+    "review": 43,
+    "partial": 1,
+    "missingData": 16,
+    "validationNotes": [
+      "Ford F-350: 2000-2007 generation has 17/18\" options; 2008+ adds 20\" options. DRW (Dually) models consistently use 245/75R17.",
+      "Ford F-450 Super Duty: Primarily 225/70R19.5 commercial tires across all years. 265/70R17 in current data is not standard OEM for F-450.",
+      "Ford Fairlane/Fairmont/Festiva: Australian market vehicles - not sold in US. Data populated for completeness.",
+      "Ford Fiesta: US market ended 2019. European market continues with similar sizing."
+    ]
+  }
+}

@@ -1,0 +1,881 @@
+{
+  "batchId": "52",
+  "processedAt": "2026-04-21T21:59:00Z",
+  "source": "tiresize.com, iseecars.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "F-150",
+      "generation": "10th Gen Heritage/New Body",
+      "trims": [
+        {"trim": "Heritage 2WD/4WD", "tireSizes": ["235/70R16", "245/75R16", "255/70R16", "265/70R16", "265/70R17", "275/60R17"]},
+        {"trim": "FX4 (4WD)", "tireSizes": ["255/70R17", "275/65R18"]},
+        {"trim": "STX Reg Cab 2WD", "tireSizes": ["255/65R17"]},
+        {"trim": "STX Reg Cab 4WD", "tireSizes": ["255/70R17"]},
+        {"trim": "STX Super Cab 2WD", "tireSizes": ["255/65R17"]},
+        {"trim": "STX Super Cab 4WD", "tireSizes": ["255/70R17"]},
+        {"trim": "XL Reg Cab 2WD 6-Lug", "tireSizes": ["235/70R17", "255/65R17"]},
+        {"trim": "XL Reg Cab 2WD 7-Lug HD", "tireSizes": ["245/70R17"]},
+        {"trim": "XL Reg Cab 4WD 6-Lug", "tireSizes": ["235/75R17", "255/70R17"]},
+        {"trim": "XL Reg Cab 4WD 7-Lug HD", "tireSizes": ["245/70R17"]},
+        {"trim": "XLT 6-Lug 2WD", "tireSizes": ["235/70R17", "255/65R17"]},
+        {"trim": "XLT 6-Lug 4WD", "tireSizes": ["235/75R17", "255/70R17"]},
+        {"trim": "XLT 7-Lug HD", "tireSizes": ["245/70R17"]},
+        {"trim": "Lariat Super Cab 2WD", "tireSizes": ["265/60R18"]},
+        {"trim": "Lariat Super Cab 4WD", "tireSizes": ["265/60R18", "275/65R18"]},
+        {"trim": "Lariat Super Crew 2WD", "tireSizes": ["265/60R18"]},
+        {"trim": "Lariat Super Crew 4WD", "tireSizes": ["265/60R18", "275/65R18"]},
+        {"trim": "Lightning", "tireSizes": ["295/45R18"]}
+      ],
+      "allOemSizes": ["235/70R16", "235/70R17", "235/75R17", "245/70R17", "245/75R16", "255/65R17", "255/70R16", "255/70R17", "265/60R18", "265/70R16", "265/70R17", "275/60R17", "275/65R18", "295/45R18"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "255/70R17", "265/70R17", "255/70R17", "265/70R17", "265/60R18", "275/65R18", "275/55R20", "LT245/75R16", "LT245/70R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "2004 had two body styles: Heritage (old body) and new 11th gen. Heritage uses 16-17\" wheels, new body uses 17-18\". Missing 235/70R17, 235/75R17 from current; 275/55R20 is upgrade size not OEM."
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "F-150",
+      "generation": "10th Gen",
+      "trims": [
+        {"trim": "Reg Cab 2WD", "tireSizes": ["235/70R16", "245/75R16", "255/70R16", "275/60R17"]},
+        {"trim": "Reg Cab 4WD", "tireSizes": ["235/70R16", "245/75R16", "255/70R16", "265/70R17"]},
+        {"trim": "Super Cab 2WD", "tireSizes": ["235/70R16", "245/75R16", "255/70R16", "275/60R17"]},
+        {"trim": "Super Cab 4WD", "tireSizes": ["235/70R16", "245/75R16", "255/70R16", "265/70R16", "265/70R17", "275/60R17"]},
+        {"trim": "Super Cab 2WD King", "tireSizes": ["275/60R17"]},
+        {"trim": "Super Cab 4WD King", "tireSizes": ["245/75R16", "265/70R17"]},
+        {"trim": "Super Cab Lariat 2WD", "tireSizes": ["275/60R17", "265/70R17"]},
+        {"trim": "Super Cab Lariat 4WD", "tireSizes": ["245/75R16", "265/70R17"]},
+        {"trim": "Super Crew 2WD", "tireSizes": ["255/70R16", "265/70R17"]},
+        {"trim": "Super Crew 4WD", "tireSizes": ["255/70R16", "265/70R17"]},
+        {"trim": "Super Crew King/Lariat 2WD", "tireSizes": ["275/60R17"]},
+        {"trim": "Super Crew King/Lariat 4WD", "tireSizes": ["265/70R17"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/45R20"]},
+        {"trim": "Lightning", "tireSizes": ["295/45R18"]}
+      ],
+      "allOemSizes": ["235/70R16", "245/75R16", "255/70R16", "265/70R16", "265/70R17", "275/45R20", "275/60R17", "295/45R18"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "255/70R17", "265/70R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "Missing 235/70R16 (base), 275/60R17 (King/Lariat options). 265/75R16 is not standard OEM - may be replacement size. 255/70R17 not standard for 2003."
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "F-150",
+      "generation": "10th Gen",
+      "trims": [
+        {"trim": "Reg Cab 2WD XL/XLT", "tireSizes": ["235/70R16", "245/75R16", "255/70R16", "275/60R17"]},
+        {"trim": "Reg Cab 4WD XL/XLT", "tireSizes": ["235/70R16", "245/75R16", "255/70R16", "265/70R17"]},
+        {"trim": "Super Cab 2WD XL/XLT", "tireSizes": ["235/70R16", "255/70R16"]},
+        {"trim": "Super Cab 2WD King", "tireSizes": ["275/60R17"]},
+        {"trim": "Super Cab 2WD Lariat", "tireSizes": ["245/75R16", "265/70R17", "275/60R17"]},
+        {"trim": "Super Cab 4WD XL/XLT", "tireSizes": ["235/70R16", "245/75R16", "255/70R16"]},
+        {"trim": "Super Cab 4WD King", "tireSizes": ["245/75R16", "265/70R17"]},
+        {"trim": "Super Crew 2WD XLT", "tireSizes": ["255/70R16", "265/70R17"]},
+        {"trim": "Super Crew 2WD King/Lariat", "tireSizes": ["275/60R17"]},
+        {"trim": "Super Crew 4WD", "tireSizes": ["255/70R16", "265/70R17"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/45R20"]},
+        {"trim": "Lightning", "tireSizes": ["295/45R18"]}
+      ],
+      "allOemSizes": ["235/70R16", "245/75R16", "255/70R16", "265/70R17", "275/45R20", "275/60R17", "295/45R18"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "255/70R17", "265/70R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "255/70R17 not standard OEM for 2002. 265/75R16 not OEM - possibly replacement."
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "F-150",
+      "generation": "10th Gen",
+      "trims": [
+        {"trim": "Reg Cab 2WD", "tireSizes": ["235/70R16"]},
+        {"trim": "Reg Cab 4WD", "tireSizes": ["235/70R16", "255/70R16"]},
+        {"trim": "Super Cab 2WD", "tireSizes": ["235/70R16", "245/75R16", "255/70R16"]},
+        {"trim": "Super Cab 4WD", "tireSizes": ["235/70R16", "245/75R16", "255/70R16"]},
+        {"trim": "Supercrew 2WD", "tireSizes": ["255/70R16", "245/75R16", "265/70R17"]},
+        {"trim": "Supercrew 4WD", "tireSizes": ["255/70R16", "265/70R17"]},
+        {"trim": "Flareside 4WD", "tireSizes": ["255/70R16", "265/70R17"]},
+        {"trim": "XL 2WD/4WD Pick-up", "tireSizes": ["235/70R16"]},
+        {"trim": "XLT 2WD Pick-up", "tireSizes": ["235/70R16", "245/75R16", "255/70R16", "275/60R17"]},
+        {"trim": "XLT 4WD Pick-up", "tireSizes": ["235/70R16", "255/70R16", "265/70R17"]},
+        {"trim": "Lariat 2WD", "tireSizes": ["275/60R17"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["245/75R16", "265/70R17"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/45R20"]},
+        {"trim": "Lightning", "tireSizes": ["295/45R18"]}
+      ],
+      "allOemSizes": ["235/70R16", "245/75R16", "255/70R16", "265/70R17", "275/45R20", "275/60R17", "295/45R18"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "255/70R17", "265/70R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "255/70R17 and 265/75R16 not standard OEM for 2001. Missing base 235/70R16."
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "F-150",
+      "generation": "10th Gen",
+      "trims": [
+        {"trim": "Reg Cab 2WD", "tireSizes": ["235/70R16", "255/70R16"]},
+        {"trim": "Reg Cab 4WD", "tireSizes": ["235/70R16", "245/75R16"]},
+        {"trim": "Super Cab 2WD", "tireSizes": ["235/70R16", "245/75R16", "255/70R16"]},
+        {"trim": "Super Cab 4WD", "tireSizes": ["235/70R16", "245/75R16", "255/70R16"]},
+        {"trim": "Flareside 4WD", "tireSizes": ["235/70R16", "245/75R16", "255/70R16", "265/70R17"]},
+        {"trim": "XL 2WD Pick-up", "tireSizes": ["235/70R16", "245/75R16", "255/70R16"]},
+        {"trim": "XL 4WD Pick-up", "tireSizes": ["235/70R16", "245/75R16"]},
+        {"trim": "XLT 2WD Pick-up", "tireSizes": ["235/70R16", "255/70R16"]},
+        {"trim": "XLT 4WD Pick-up", "tireSizes": ["235/70R16", "255/70R16", "265/70R17"]},
+        {"trim": "Lariat 2WD", "tireSizes": ["275/60R17"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["245/75R16", "265/70R17"]},
+        {"trim": "NasEdition", "tireSizes": ["255/70R16"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/45R20"]},
+        {"trim": "Lightning", "tireSizes": ["295/45R18"]}
+      ],
+      "allOemSizes": ["235/70R16", "245/75R16", "255/70R16", "265/70R17", "275/45R20", "275/60R17", "295/45R18"],
+      "currentTireSizes": ["245/75R16", "265/75R16", "255/70R17", "265/70R17"],
+      "validation": "PARTIAL_MATCH",
+      "notes": "255/70R17 and 265/75R16 not standard OEM for 2000. Missing base 235/70R16."
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "5th Gen Super Duty",
+      "trims": [
+        {"trim": "XL (all cabs)", "tireSizes": ["LT245/75R17"]},
+        {"trim": "XLT (all cabs)", "tireSizes": ["LT275/65R18"]},
+        {"trim": "Lariat 4x2", "tireSizes": ["LT275/65R18"]},
+        {"trim": "Lariat 4x4", "tireSizes": ["LT275/65R18"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R20"]},
+        {"trim": "Platinum", "tireSizes": ["LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT275/65R18", "LT275/65R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18", "LT275/65R20", "275/70R18", "275/65R20"],
+      "validation": "GOOD_MATCH",
+      "notes": "Core OEM sizes present. LT265/70R17, LT275/70R18, LT285/75R18 may be optional/package sizes."
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "5th Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17"]},
+        {"trim": "XLT", "tireSizes": ["LT275/65R18"]},
+        {"trim": "Lariat", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R20"]},
+        {"trim": "Platinum", "tireSizes": ["LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Comprehensive coverage. LT285/75R18 is Tremor package option."
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "5th Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17"]},
+        {"trim": "XLT", "tireSizes": ["LT275/65R18"]},
+        {"trim": "Lariat 4x4", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R20"]},
+        {"trim": "Platinum", "tireSizes": ["LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Same as 2025. Comprehensive coverage."
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18"]},
+        {"trim": "Lariat 4x4", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R20"]},
+        {"trim": "Platinum", "tireSizes": ["LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20", "275/70R18", "275/65R20", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage. Two entries in batch represent different config levels."
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18"]},
+        {"trim": "Lariat 4x4", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R20"]},
+        {"trim": "Platinum", "tireSizes": ["LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20", "275/70R18", "275/65R20", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2022."
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18"]},
+        {"trim": "Lariat 4x4", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R18", "LT275/65R20"]},
+        {"trim": "Platinum", "tireSizes": ["LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20", "275/70R18", "275/65R20", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2021."
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL 2WD/4WD", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18"]},
+        {"trim": "Lariat 2WD", "tireSizes": ["LT275/65R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R18", "LT275/65R20"]},
+        {"trim": "Platinum", "tireSizes": ["LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Two entries represent different trim level configs."
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R18", "LT275/65R20"]},
+        {"trim": "Platinum/Limited", "tireSizes": ["LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2019."
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R18", "LT275/65R20"]},
+        {"trim": "Platinum/Limited", "tireSizes": ["LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2018."
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R18", "LT275/65R20"]},
+        {"trim": "Platinum", "tireSizes": ["LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "First year of 4th gen Super Duty refresh."
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R18", "LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Last year of 3rd gen. Good coverage."
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R18", "LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18", "LT275/65R20", "LT245/75R17", "275/70R18", "275/65R20", "LT275/65R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2015."
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R18", "LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2014."
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["LT265/70R17", "LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["LT275/65R18", "LT275/65R20"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2013."
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL 2WD/4WD", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT 2WD", "tireSizes": ["245/75R17", "265/70R17", "275/65R18"]},
+        {"trim": "XLT 4WD", "tireSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"]},
+        {"trim": "Lariat 2WD", "tireSizes": ["275/65R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["275/65R18", "275/70R18", "275/65R20"]},
+        {"trim": "King Ranch 2WD", "tireSizes": ["275/65R18"]},
+        {"trim": "King Ranch 4WD", "tireSizes": ["275/65R18", "275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["LT265/70R17", "LT275/70R18", "LT275/65R20", "LT245/75R17", "275/70R18", "275/65R20", "LT275/65R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage. Non-LT sizes are passenger equivalent."
+    },
+    {
+      "year": 2011,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL 2WD/4WD", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT 2WD", "tireSizes": ["245/75R17", "265/70R17", "275/65R18"]},
+        {"trim": "XLT 4WD", "tireSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"]},
+        {"trim": "Lariat 2WD", "tireSizes": ["275/65R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["275/65R18", "275/70R18", "275/65R20"]},
+        {"trim": "King Ranch 2WD", "tireSizes": ["275/65R18"]},
+        {"trim": "King Ranch 4WD", "tireSizes": ["275/65R18", "275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "First year of P473 generation."
+    },
+    {
+      "year": 2010,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "2nd Gen Super Duty",
+      "trims": [
+        {"trim": "XL 2WD/4WD", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT 2WD", "tireSizes": ["245/75R17", "265/70R17", "275/65R18"]},
+        {"trim": "XLT 4WD", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "Lariat 2WD", "tireSizes": ["275/65R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "FX4", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "Cabela's", "tireSizes": ["275/70R18"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Last year of 2nd gen. Good coverage."
+    },
+    {
+      "year": 2009,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "2nd Gen Super Duty",
+      "trims": [
+        {"trim": "XL 2WD/4WD", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT 2WD", "tireSizes": ["245/75R17", "265/70R17", "275/65R18"]},
+        {"trim": "XLT 4WD", "tireSizes": ["265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "Lariat 2WD", "tireSizes": ["275/65R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "FX4", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2009."
+    },
+    {
+      "year": 2008,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "2nd Gen Super Duty",
+      "trims": [
+        {"trim": "XL 2WD/4WD", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT 2WD", "tireSizes": ["265/70R17", "275/65R18"]},
+        {"trim": "XLT 4WD", "tireSizes": ["265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "Lariat 2WD", "tireSizes": ["275/65R18"]},
+        {"trim": "Lariat 4WD", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "FX4", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2008."
+    },
+    {
+      "year": 2007,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "2nd Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["265/70R17", "275/65R18", "275/70R18"]},
+        {"trim": "Lariat", "tireSizes": ["275/65R18", "275/70R18", "275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["275/65R18", "275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2007."
+    },
+    {
+      "year": 2006,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "2nd Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["265/70R17", "275/65R18", "275/70R18"]},
+        {"trim": "Lariat", "tireSizes": ["275/65R18", "275/70R18", "275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["275/65R18", "275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2006."
+    },
+    {
+      "year": 2005,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "2nd Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["265/70R17", "275/65R18", "275/70R18"]},
+        {"trim": "Lariat", "tireSizes": ["275/65R18", "275/70R18", "275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["275/65R18", "275/65R20"]},
+        {"trim": "Harley Davidson", "tireSizes": ["275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2005."
+    },
+    {
+      "year": 2004,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "2nd Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["265/70R17", "275/65R18", "275/70R18"]},
+        {"trim": "Lariat", "tireSizes": ["275/65R18", "275/70R18", "275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["275/65R18", "275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2004."
+    },
+    {
+      "year": 2003,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "2nd Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["265/70R17", "275/65R18", "275/70R18"]},
+        {"trim": "Lariat", "tireSizes": ["275/65R18", "275/70R18", "275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["275/65R18", "275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2003."
+    },
+    {
+      "year": 2002,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "2nd Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["265/70R17", "275/65R18", "275/70R18"]},
+        {"trim": "Lariat", "tireSizes": ["275/65R18", "275/70R18", "275/65R20"]},
+        {"trim": "King Ranch", "tireSizes": ["275/65R18", "275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2002."
+    },
+    {
+      "year": 2001,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "2nd Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["265/70R17", "275/65R18", "275/70R18"]},
+        {"trim": "Lariat", "tireSizes": ["275/65R18", "275/70R18", "275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2001."
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "F-250",
+      "generation": "1st Gen Super Duty",
+      "trims": [
+        {"trim": "XL", "tireSizes": ["245/75R17", "265/70R17"]},
+        {"trim": "XLT", "tireSizes": ["265/70R17", "275/65R18", "275/70R18"]},
+        {"trim": "Lariat", "tireSizes": ["275/65R18", "275/70R18", "275/65R20"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "275/65R20", "LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT285/75R18"],
+      "validation": "GOOD_MATCH",
+      "notes": "First year of new Super Duty platform."
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "5th Gen Super Duty",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat 4x4 (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "Platinum (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17", "LT285/70R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20", "LT285/70R17"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good SRW coverage. DRW sizes included."
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "5th Gen Super Duty",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat 4x4 (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "Platinum (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17", "LT285/70R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20", "LT285/70R17"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2025."
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "5th Gen Super Duty",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat 4x4 (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "Platinum (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17", "LT285/70R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20", "LT285/70R17"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2024."
+    },
+    {
+      "year": 2023,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["LT275/65R18", "LT245/75R17", "LT265/70R17", "LT275/70R18", "275/70R18", "LT275/65R20", "LT285/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Two entries represent SRW vs DRW configs."
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2022."
+    },
+    {
+      "year": 2021,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "Platinum (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2021."
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL 2WD (SRW)", "tireSizes": ["245/75R17", "265/70R17", "275/65R18"]},
+        {"trim": "XL 4WD (SRW)", "tireSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18"]},
+        {"trim": "XLT 2WD (SRW)", "tireSizes": ["275/65R18"]},
+        {"trim": "XLT 4WD (SRW)", "tireSizes": ["275/65R18", "275/70R18", "285/75R18", "275/65R20"]},
+        {"trim": "Lariat 2WD (SRW)", "tireSizes": ["275/65R18"]},
+        {"trim": "Lariat 4WD (SRW)", "tireSizes": ["275/65R18", "275/70R18", "285/75R18", "275/65R20"]},
+        {"trim": "King Ranch 2WD (SRW)", "tireSizes": ["275/65R18"]},
+        {"trim": "King Ranch 4WD (SRW)", "tireSizes": ["275/65R18", "275/70R18", "285/75R18", "275/65R20"]},
+        {"trim": "Platinum (SRW)", "tireSizes": ["275/65R20"]},
+        {"trim": "Limited (SRW)", "tireSizes": ["275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["245/75R17"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "285/75R18", "275/65R20"],
+      "currentTireSizes": ["LT275/65R18", "LT245/75R17", "LT265/70R17", "LT275/70R18", "275/70R18", "LT275/65R20", "LT285/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage. 285/75R18 is Tremor package option."
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["LT245/75R17", "275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Two entries represent different config levels."
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2018."
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "4th Gen Super Duty",
+      "trims": [
+        {"trim": "2WD Regular Cab (SRW)", "tireSizes": ["245/75R17", "265/70R17", "275/65R18"]},
+        {"trim": "2WD Single Rear Wheel Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "275/65R18"]},
+        {"trim": "4WD Single Rear Wheel Crew Cab", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "4WD Single Rear Wheel Regular Cab", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "4WD Single Rear Wheel Super Cab", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["245/75R17"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["LT245/75R17", "275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "First year of 4th gen Super Duty."
+    },
+    {
+      "year": 2016,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Last year of 3rd gen."
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "King Ranch (SRW)", "tireSizes": ["LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2015."
+    },
+    {
+      "year": 2014,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["LT275/70R18", "LT275/65R20", "LT245/75R17", "LT265/70R17", "275/70R18", "LT275/65R18", "LT285/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2014."
+    },
+    {
+      "year": 2013,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL (SRW)", "tireSizes": ["LT245/75R17", "LT265/70R17"]},
+        {"trim": "XLT (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18"]},
+        {"trim": "Lariat (SRW)", "tireSizes": ["LT275/65R18", "LT275/70R18", "LT275/65R20"]},
+        {"trim": "DRW (Dually)", "tireSizes": ["LT245/75R17"]}
+      ],
+      "allOemSizes": ["LT245/75R17", "LT265/70R17", "LT275/65R18", "LT275/70R18", "LT275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "Good coverage for 2013."
+    },
+    {
+      "year": 2012,
+      "make": "Ford",
+      "model": "F-350",
+      "generation": "3rd Gen Super Duty (P473)",
+      "trims": [
+        {"trim": "XL 2WD (SRW)", "tireSizes": ["245/75R17", "265/70R17", "275/65R18"]},
+        {"trim": "XL 4WD (SRW)", "tireSizes": ["245/75R17", "265/70R17", "275/70R18"]},
+        {"trim": "XLT 2WD (SRW)", "tireSizes": ["245/75R17", "265/70R17", "275/65R18"]},
+        {"trim": "XLT 4WD (SRW)", "tireSizes": ["245/75R17", "265/70R17", "275/70R18", "275/65R20"]},
+        {"trim": "Lariat 2WD (SRW)", "tireSizes": ["275/65R18"]},
+        {"trim": "Lariat 4WD (SRW)", "tireSizes": ["275/70R18", "275/65R20"]},
+        {"trim": "King Ranch 2WD (SRW)", "tireSizes": ["275/65R18"]},
+        {"trim": "King Ranch 4WD (SRW)", "tireSizes": ["275/70R18"]},
+        {"trim": "All DRW (Dually)", "tireSizes": ["245/75R17"]}
+      ],
+      "allOemSizes": ["245/75R17", "265/70R17", "275/65R18", "275/70R18", "275/65R20"],
+      "currentTireSizes": ["275/70R18", "LT275/65R20", "LT275/70R18", "LT275/65R18", "LT285/70R17", "LT245/75R17", "LT265/70R17"],
+      "validation": "GOOD_MATCH",
+      "notes": "First year of P473 generation."
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "goodMatch": 70,
+    "partialMatch": 5,
+    "mismatch": 0,
+    "validationRate": "93.3%",
+    "notes": [
+      "F-150 (2000-2004): 10th gen uses primarily 16-17\" wheels. Current data missing base 235/70R16 size.",
+      "F-250 Super Duty: All years show good coverage with LT-rated truck tires on 17-20\" wheels.",
+      "F-350 Super Duty: SRW and DRW configurations have different tire requirements. DRW uses 245/75R17.",
+      "285/75R18 and 285/70R17 are Tremor/off-road package sizes, not standard OEM.",
+      "LT285/75R18 appearing in current data is specialty package size."
+    ]
+  }
+}

@@ -1,0 +1,608 @@
+{
+  "batchId": 33,
+  "processedAt": "2026-04-21T23:54:00Z",
+  "source": "tiresize.com",
+  "summary": {
+    "total": 50,
+    "withSpecs": 33,
+    "notUS": 13,
+    "invalidYear": 4
+  },
+  "vehicles": [
+    {
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "tireSizes": ["225/55R16", "235/50R17"],
+      "trims": {
+        "V6": ["225/55R16", "235/50R17"],
+        "V6 Sport Pkg": ["235/50R17"],
+        "V8": ["225/55R16", "235/50R17"],
+        "V8 Sport Pkg": ["235/50R17"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "tireSizes": ["225/55R16", "235/50R17"],
+      "trims": {
+        "V6": ["225/55R16", "235/50R17"],
+        "V6 Sport Pkg": ["235/50R17"],
+        "V8": ["225/55R16", "235/50R17"],
+        "V8 Sport Pkg": ["235/50R17"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "tireSizes": ["225/55R16", "235/50R17", "245/40R18", "275/35R18"],
+      "trims": {
+        "V6": ["225/55R16", "235/50R17"],
+        "V6 Sport Pkg": ["235/50R17"],
+        "V8": ["225/55R16", "235/50R17"],
+        "V8 Sport Pkg": ["235/50R17"],
+        "R": { "front": "245/40R18", "rear": "275/35R18", "staggered": true }
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "tireSizes": ["225/55R16", "235/50R17", "245/40R18", "275/35R18"],
+      "trims": {
+        "V6": ["225/55R16", "235/50R17"],
+        "V6 Sport Pkg": ["235/50R17"],
+        "V8": ["225/55R16", "235/50R17"],
+        "V8 Sport Pkg": ["235/50R17"],
+        "R": { "front": "245/40R18", "rear": "275/35R18", "staggered": true }
+      }
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "tireSizes": ["225/55R16", "235/50R17", "245/40R18", "275/35R18"],
+      "trims": {
+        "V6": ["225/55R16", "235/50R17"],
+        "V6 Sport Pkg": ["235/50R17"],
+        "V8": ["235/50R17"],
+        "V8 Sport Pkg": ["235/50R17"],
+        "R": { "front": "245/40R18", "rear": "275/35R18", "staggered": true }
+      }
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "tireSizes": ["235/50R17", "245/40R18", "275/35R18"],
+      "trims": {
+        "V6": ["235/50R17"],
+        "V6 Sport Package": ["245/40R18"],
+        "V8": ["235/50R17"],
+        "V8 Sport Package": ["245/40R18"],
+        "R": { "front": "245/40R18", "rear": "275/35R18", "staggered": true }
+      }
+    },
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "tireSizes": ["235/50R17", "245/40R18", "275/35R18"],
+      "trims": {
+        "3.0": ["235/50R17", "245/40R18"],
+        "4.2": ["235/50R17", "245/40R18"],
+        "4.2 VDP Edition": ["235/50R17"],
+        "Sport Package": ["245/40R18"],
+        "R": { "front": "245/40R18", "rear": "275/35R18", "staggered": true }
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "tireSizes": ["235/50R17", "245/40R18", "275/35R18", "245/35R19", "275/30R19"],
+      "trims": {
+        "3.0": ["235/50R17", "245/40R18"],
+        "4.2": ["235/50R17", "245/40R18"],
+        "VDP": ["235/50R17"],
+        "Sport Package": ["245/40R18"],
+        "R": [
+          { "front": "245/40R18", "rear": "275/35R18", "staggered": true },
+          { "front": "245/35R19", "rear": "275/30R19", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "S-Type",
+      "tireSizes": ["235/50R17", "245/40R18", "275/35R18", "245/35R19", "275/30R19"],
+      "trims": {
+        "3.0": ["235/50R17", "245/40R18"],
+        "4.2": ["235/50R17", "245/40R18"],
+        "VDP": ["235/50R17"],
+        "Sport Package": ["245/40R18"],
+        "R": [
+          { "front": "245/40R18", "rear": "275/35R18", "staggered": true },
+          { "front": "245/35R19", "rear": "275/30R19", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "notFound": true,
+      "notes": "X-Type launched as 2002 model year in US. 2001 model year does not exist."
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "tireSizes": ["205/55R16", "225/45R17"],
+      "trims": {
+        "2.5 V6": ["205/55R16"],
+        "2.5 V6 SPORT": ["225/45R17"],
+        "3.0 V6": ["205/55R16", "225/45R17"],
+        "3.0 V6 SPORT": ["205/55R16", "225/45R17"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "trims": {
+        "2.5 V6": ["205/55R16", "225/45R17", "225/40R18"],
+        "2.5 V6 SPORT": ["225/45R17", "225/40R18"],
+        "3.0 V6": ["205/55R16", "225/45R17", "225/40R18"],
+        "3.0 V6 SPORT": ["205/55R16", "225/45R17"]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "trims": {
+        "2.5 V6": ["205/55R16"],
+        "3.0 V6": ["225/45R17", "225/40R18"],
+        "3.0 V6 SPORT": ["225/45R17", "225/40R18"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "trims": {
+        "2.5 V6 Sedan": ["205/55R16"],
+        "3.0 V6 Sedan Base Model": ["225/45R17", "225/40R18"],
+        "3.0 V6 Sedan Sport Package": ["225/45R17", "225/40R18"],
+        "3.0 V6 Wagon": ["225/45R17", "225/40R18"],
+        "3.0 VDP Edition": ["225/45R17"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "trims": {
+        "3.0 Sedan": ["205/55R16", "225/45R17"],
+        "3.0 Sport": ["225/45R17", "225/40R18"],
+        "3.0 V6 Wagon": ["225/45R17", "225/40R18"],
+        "3.0 VDP Edition": ["225/45R17", "225/40R18"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "trims": {
+        "3.0 Sedan": ["205/55R16", "225/45R17", "225/40R18"],
+        "3.0 V6 Wagon": ["225/45R17", "225/40R18"]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "tireSizes": ["205/55R16", "225/45R17", "225/40R18"],
+      "trims": {
+        "3.0 Sedan": ["205/55R16", "225/45R17", "225/40R18"],
+        "3.0 V6 Wagon": ["225/45R17", "225/40R18"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "Jaguar",
+      "model": "X-Type",
+      "notFound": true,
+      "notes": "X-Type production ended 2008. 2009 model year does not exist in US market."
+    },
+    {
+      "year": 2019,
+      "make": "Jaguar",
+      "model": "XEL",
+      "notUS": true,
+      "notes": "XEL is China-only long wheelbase version of XE. Not sold in US market."
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "XEL",
+      "notUS": true,
+      "notes": "XEL is China-only long wheelbase version of XE. Not sold in US market."
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "XEL",
+      "notUS": true,
+      "notes": "XEL is China-only long wheelbase version of XE. Not sold in US market."
+    },
+    {
+      "year": 2022,
+      "make": "Jaguar",
+      "model": "XEL",
+      "notUS": true,
+      "notes": "XEL is China-only long wheelbase version of XE. Not sold in US market."
+    },
+    {
+      "year": 2023,
+      "make": "Jaguar",
+      "model": "XEL",
+      "notUS": true,
+      "notes": "XEL is China-only long wheelbase version of XE. Not sold in US market."
+    },
+    {
+      "year": 2024,
+      "make": "Jaguar",
+      "model": "XEL",
+      "notUS": true,
+      "notes": "XEL is China-only long wheelbase version of XE. Not sold in US market."
+    },
+    {
+      "year": 2025,
+      "make": "Jaguar",
+      "model": "XEL",
+      "notUS": true,
+      "notes": "XEL is China-only long wheelbase version of XE. Not sold in US market."
+    },
+    {
+      "year": 2020,
+      "make": "Jaguar",
+      "model": "XFL",
+      "notUS": true,
+      "notes": "XFL is China-only long wheelbase version of XF. Not sold in US market."
+    },
+    {
+      "year": 2021,
+      "make": "Jaguar",
+      "model": "XFL",
+      "notUS": true,
+      "notes": "XFL is China-only long wheelbase version of XF. Not sold in US market."
+    },
+    {
+      "year": 2022,
+      "make": "Jaguar",
+      "model": "XFL",
+      "notUS": true,
+      "notes": "XFL is China-only long wheelbase version of XF. Not sold in US market."
+    },
+    {
+      "year": 2023,
+      "make": "Jaguar",
+      "model": "XFL",
+      "notUS": true,
+      "notes": "XFL is China-only long wheelbase version of XF. Not sold in US market."
+    },
+    {
+      "year": 2024,
+      "make": "Jaguar",
+      "model": "XFL",
+      "notUS": true,
+      "notes": "XFL is China-only long wheelbase version of XF. Not sold in US market."
+    },
+    {
+      "year": 2025,
+      "make": "Jaguar",
+      "model": "XFL",
+      "notUS": true,
+      "notes": "XFL is China-only long wheelbase version of XF. Not sold in US market."
+    },
+    {
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "XK",
+      "altModel": "XK8",
+      "tireSizes": ["245/50R17", "245/45R18", "255/45R18"],
+      "trims": {
+        "Base Model": ["245/50R17", { "front": "245/45R18", "rear": "255/45R18", "staggered": true }]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "Jaguar",
+      "model": "XK",
+      "altModel": "XK8",
+      "tireSizes": ["245/50R17", "245/45R18", "255/45R18"],
+      "trims": {
+        "Base Model": ["245/50R17", { "front": "245/45R18", "rear": "255/45R18", "staggered": true }]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "Jaguar",
+      "model": "XK",
+      "altModel": "XK8",
+      "tireSizes": ["245/50R17", "245/45R18", "255/45R18"],
+      "trims": {
+        "Convertible": ["245/50R17", { "front": "245/45R18", "rear": "255/45R18", "staggered": true }],
+        "Coupe": ["245/50R17", { "front": "245/45R18", "rear": "255/45R18", "staggered": true }]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "Jaguar",
+      "model": "XK",
+      "altModel": "XK8",
+      "tireSizes": ["245/45R18", "255/45R18", "245/40R19", "255/40R19"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "255/40R19", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "255/40R19", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "Jaguar",
+      "model": "XK",
+      "altModel": "XK8",
+      "tireSizes": ["245/45R18", "255/45R18", "245/40R19", "255/40R19"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "255/40R19", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "255/40R19", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "Jaguar",
+      "model": "XK",
+      "altModel": "XK8",
+      "tireSizes": ["245/45R18", "255/45R18", "245/40R19", "255/40R19"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "255/40R19", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "255/40R19", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "Jaguar",
+      "model": "XK",
+      "altModel": "XK8",
+      "tireSizes": ["245/45R18", "255/45R18", "245/40R19", "255/40R19"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "255/40R19", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "255/40R19", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "Jaguar",
+      "model": "XK",
+      "tireSizes": ["245/45R18", "255/45R18", "245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "Jaguar",
+      "model": "XK",
+      "tireSizes": ["245/45R18", "255/45R18", "245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/45R18", "rear": "255/45R18", "staggered": true },
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "Jaguar",
+      "model": "XK",
+      "tireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "Jaguar",
+      "model": "XK",
+      "tireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2011,
+      "make": "Jaguar",
+      "model": "XK",
+      "tireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2012,
+      "make": "Jaguar",
+      "model": "XK",
+      "tireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2013,
+      "make": "Jaguar",
+      "model": "XK",
+      "tireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Touring Convertible": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Touring Coupe": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2014,
+      "make": "Jaguar",
+      "model": "XK",
+      "tireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Touring Convertible": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Touring Coupe": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2015,
+      "make": "Jaguar",
+      "model": "XK",
+      "tireSizes": ["245/40R19", "275/35R19", "255/35R20", "285/30R20"],
+      "trims": {
+        "Convertible": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ],
+        "Coupe": [
+          { "front": "245/40R19", "rear": "275/35R19", "staggered": true },
+          { "front": "255/35R20", "rear": "285/30R20", "staggered": true }
+        ]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "Jeep",
+      "model": "Compass",
+      "notFound": true,
+      "notes": "Jeep Compass first production year was 2007. 2006 model year does not exist."
+    },
+    {
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "notFound": true,
+      "notes": "Grand Wagoneer was reintroduced as 2022 model year. 2021 model year does not exist."
+    },
+    {
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "tireSizes": ["275/55R20", "285/45R22"],
+      "trims": {
+        "Series I": ["275/55R20"],
+        "Series II": ["285/45R22"],
+        "Series III": ["285/45R22"],
+        "Obsidian": ["285/45R22"]
+      }
+    }
+  ]
+}

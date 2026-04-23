@@ -1,0 +1,930 @@
+{
+  "batchId": "32",
+  "processedAt": "2026-04-21T21:51:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "move-n300",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R13", "175/70R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "165/70R13", "wheelSize": "13x5"}
+      ],
+      "notes": "International market minivan (Colombia, Egypt, etc). Based on SGMW Wuling N300 platform.",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "move-n300",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R13", "175/70R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "165/70R13", "wheelSize": "13x5"}
+      ],
+      "notes": "International market minivan",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "move-n300",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R13", "175/70R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "165/70R13", "wheelSize": "13x5"}
+      ],
+      "notes": "International market minivan",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "move-n300",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R13", "175/70R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "165/70R13", "wheelSize": "13x5"}
+      ],
+      "notes": "International market minivan",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "move-n300",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["165/70R13", "175/70R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "165/70R13", "wheelSize": "13x5"}
+      ],
+      "notes": "International market minivan",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "mw",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R14", "165/55R15"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R14", "wheelSize": "14x4.5"},
+        {"trim": "V Select", "tireSize": "165/55R15", "wheelSize": "15x5"}
+      ],
+      "notes": "Japan-market kei car (rebadged Suzuki Wagon R). Not sold in US.",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "mw",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R14", "165/55R15"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R14", "wheelSize": "14x4.5"}
+      ],
+      "notes": "Japan-market kei car",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "mw",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R14"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R14", "wheelSize": "14x4.5"}
+      ],
+      "notes": "Japan-market kei car",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "mw",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R14"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R14", "wheelSize": "14x4.5"}
+      ],
+      "notes": "Japan-market kei car",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "mw",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R14"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R14", "wheelSize": "14x4.5"}
+      ],
+      "notes": "Japan-market kei car",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "mw",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13", "155/65R14"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R13", "wheelSize": "13x4"}
+      ],
+      "notes": "Japan-market kei car (1st gen)",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "mw",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R13", "wheelSize": "13x4"}
+      ],
+      "notes": "Japan-market kei car (1st gen)",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "mw",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R13", "wheelSize": "13x4"}
+      ],
+      "notes": "Japan-market kei car (1st gen)",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "mw",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": [
+        {"trim": "Base", "tireSize": "155/65R13", "wheelSize": "13x4"}
+      ],
+      "notes": "Japan-market kei car (1st gen)",
+      "source": "manufacturer-specs",
+      "confidence": "medium"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "onix-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/65R15", "205/55R16"],
+      "trims": [
+        {"trim": "1.4i", "tireSize": "185/65R15", "wheelSize": "15x6"},
+        {"trim": "1.4i", "tireSize": "195/65R15", "wheelSize": "15x6"},
+        {"trim": "1.0T", "tireSize": "205/55R16", "wheelSize": "16x6.5"}
+      ],
+      "notes": "Brazil/Latin America market crossover hatchback variant",
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "onix-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/65R15"],
+      "trims": [
+        {"trim": "1.4i", "tireSize": "185/65R15", "wheelSize": "15x6"},
+        {"trim": "1.4i", "tireSize": "195/65R15", "wheelSize": "15x6"}
+      ],
+      "notes": "Brazil/Latin America market crossover hatchback variant",
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "onix-activ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R15", "195/65R15"],
+      "trims": [
+        {"trim": "1.4i", "tireSize": "185/65R15", "wheelSize": "15x6"},
+        {"trim": "1.4i", "tireSize": "195/65R15", "wheelSize": "15x6"}
+      ],
+      "notes": "Brazil/Latin America market crossover hatchback variant",
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "onix-joy",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "185/65R15"],
+      "trims": [
+        {"trim": "1.0i", "tireSize": "185/70R14", "wheelSize": "14x5.5"},
+        {"trim": "1.4i", "tireSize": "185/65R15", "wheelSize": "15x5.5"}
+      ],
+      "notes": "Brazil market budget variant. Uses 185/65R15 standard.",
+      "source": "avtoreference.com, size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "onix-joy",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "185/65R15"],
+      "trims": [
+        {"trim": "1.0i", "tireSize": "185/70R14", "wheelSize": "14x5.5"},
+        {"trim": "1.4i", "tireSize": "185/65R15", "wheelSize": "15x5.5"}
+      ],
+      "notes": "Brazil market budget variant",
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "onix-joy",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/70R14", "185/65R15"],
+      "trims": [
+        {"trim": "1.0i", "tireSize": "185/70R14", "wheelSize": "14x5.5"},
+        {"trim": "1.4i", "tireSize": "185/65R15", "wheelSize": "15x5.5"}
+      ],
+      "notes": "Brazil market budget variant",
+      "source": "size-tire.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "prisma-joy",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R14", "185/70R14", "185/65R15"],
+      "trims": [
+        {"trim": "1.0i", "tireSize": "175/70R14", "wheelSize": "14x5"},
+        {"trim": "1.4i", "tireSize": "185/65R15", "wheelSize": "15x5.5"}
+      ],
+      "notes": "Brazil market budget sedan (Onix sedan variant)",
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "prisma-joy",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R14", "185/70R14", "185/65R15"],
+      "trims": [
+        {"trim": "1.0i", "tireSize": "175/70R14", "wheelSize": "14x5"},
+        {"trim": "1.4i", "tireSize": "185/65R15", "wheelSize": "15x5.5"}
+      ],
+      "notes": "Brazil market budget sedan",
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "prisma-joy",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/70R14", "185/70R14", "185/65R15"],
+      "trims": [
+        {"trim": "1.0i", "tireSize": "175/70R14", "wheelSize": "14x5"},
+        {"trim": "1.4i", "tireSize": "185/65R15", "wheelSize": "15x5.5"}
+      ],
+      "notes": "Brazil market budget sedan",
+      "source": "tirewheelguide.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "prizm",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/65R14"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "LSi", "tireSize": "185/65R14", "wheelSize": "14x5.5"}
+      ],
+      "notes": "US market compact car (Toyota Corolla rebadge)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "prizm",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/65R14"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "LSi", "tireSize": "185/65R14", "wheelSize": "14x5.5"}
+      ],
+      "notes": "US market compact car",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "prizm",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["175/65R14", "185/65R14"],
+      "trims": [
+        {"trim": "Base Model", "tireSize": "175/65R14", "wheelSize": "14x5.5"},
+        {"trim": "LSi", "tireSize": "185/65R14", "wheelSize": "14x5.5"}
+      ],
+      "notes": "US market compact car",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "seeker",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R17", "225/55R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/65R17", "wheelSize": "17x7"},
+        {"trim": "RS", "tireSize": "225/55R18", "wheelSize": "18x7"}
+      ],
+      "notes": "China market compact crossover. 5x115 bolt pattern.",
+      "source": "gmauthority.com, auto-data.net",
+      "confidence": "medium"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "seeker",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R17", "225/55R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/65R17", "wheelSize": "17x7"},
+        {"trim": "RS", "tireSize": "225/55R18", "wheelSize": "18x7"}
+      ],
+      "notes": "China market compact crossover",
+      "source": "gmauthority.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "seeker",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R17", "225/55R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/65R17", "wheelSize": "17x7"},
+        {"trim": "RS", "tireSize": "225/55R18", "wheelSize": "18x7"}
+      ],
+      "notes": "China market compact crossover",
+      "source": "gmauthority.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "seeker",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R17", "225/55R18"],
+      "trims": [
+        {"trim": "Base", "tireSize": "215/65R17", "wheelSize": "17x7"},
+        {"trim": "RS", "tireSize": "225/55R18", "wheelSize": "18x7"}
+      ],
+      "notes": "China market compact crossover",
+      "source": "gmauthority.com",
+      "confidence": "medium"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["275/60R20", "275/65R18", "265/60R20", "275/50R22", "255/70R17", "265/70R17", "265/65R18", "275/70R18", "275/65R20", "265/60R22", "245/75R17"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22", "LT275/70R18"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "Custom Trail Boss", "tireSize": "LT275/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LT Trail Boss", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "ZR2", "tireSize": "LT275/70R18", "wheelSize": "18x8.5"}
+      ],
+      "notes": "Full-size pickup. Includes 1500 series.",
+      "source": "iseecars.com, tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22", "LT275/70R18"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "ZR2", "tireSize": "LT275/70R18", "wheelSize": "18x8.5"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22", "LT275/70R18"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "ZR2", "tireSize": "LT275/70R18", "wheelSize": "18x8.5"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22", "LT275/70R18"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "ZR2", "tireSize": "LT275/70R18", "wheelSize": "18x8.5"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22", "LT275/70R18"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "ZR2", "tireSize": "LT275/70R18", "wheelSize": "18x8.5"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/50R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX) first year",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 3rd gen (GMTK2XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 3rd gen (GMTK2XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 3rd gen (GMTK2XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["245/70R17", "255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 3rd gen (GMTK2XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["245/70R17", "255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 3rd gen (GMTK2XX) first year",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22", "LT275/70R18"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "Custom Trail Boss", "tireSize": "LT275/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LT w/2FL", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LT Trail Boss", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "ZR2", "tireSize": "LT275/70R18", "wheelSize": "18x8.5"}
+      ],
+      "notes": "Full-size pickup, specific 1500 designation",
+      "source": "iseecars.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22", "LT275/70R18"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "Custom Trail Boss", "tireSize": "LT275/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "ZR2", "tireSize": "LT275/70R18", "wheelSize": "18x8.5"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX)",
+      "source": "tiresize.com, goodyear.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22", "275/70R18"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "Custom Trail Boss", "tireSize": "LT275/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LT Trail Boss", "tireSize": "275/65R18", "wheelSize": "18x8.5"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "RST w/22\"", "tireSize": "275/50R22", "wheelSize": "22x9"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LTZ w/22\"", "tireSize": "275/50R22", "wheelSize": "22x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "ZR2", "tireSize": "275/70R18", "wheelSize": "18x8.5"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX)",
+      "source": "tiresize.com, goodyear.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22", "275/70R18"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "ZR2", "tireSize": "275/70R18", "wheelSize": "18x8.5"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX) facelift",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22", "275/70R18"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "ZR2", "tireSize": "275/70R18", "wheelSize": "18x8.5"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX) facelift",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "LT265/70R17", "265/65R18", "LT275/65R18", "275/60R20", "275/50R22"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LT", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/50R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22", "LT265/70R17", "LT275/65R18"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LT", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/50R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22", "LT265/70R17", "LT275/65R18"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "Custom", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "LT", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "RST", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/60R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "275/50R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 4th gen (T1XX) first year",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["275/55R20", "285/45R22", "245/70R17", "265/65R18"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x8"},
+        {"trim": "LS", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 3rd gen (GMTK2XX) final year",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["275/55R20", "285/45R22", "245/70R17", "265/65R18", "255/70R17", "265/70R17", "275/65R18", "275/60R20"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x8"},
+        {"trim": "LS", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 3rd gen (GMTK2XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["245/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x8"},
+        {"trim": "LS", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 3rd gen (GMTK2XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["265/65R18", "275/55R20", "285/45R22", "265/70R17", "265/60R19"],
+      "validatedTireSizes": ["255/70R17", "265/70R17", "265/65R18", "265/60R19", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "255/70R17", "wheelSize": "17x8"},
+        {"trim": "LS", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 3rd gen (GMTK2XX)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["265/70R17", "275/65R18", "275/55R20", "285/45R22", "255/70R17", "265/65R18", "275/60R20", "245/70R17"],
+      "validatedTireSizes": ["245/70R17", "255/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x8"},
+        {"trim": "LS", "tireSize": "265/70R17", "wheelSize": "17x8"},
+        {"trim": "LT", "tireSize": "265/65R18", "wheelSize": "18x8.5"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "High Country", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 3rd gen (GMTK2XX) first year",
+      "source": "tiresize.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["225/75R15", "235/75R15", "245/75R16", "265/75R16", "265/70R17", "265/65R17", "265/65R18", "275/55R20", "285/45R22", "245/70R17"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "265/65R18", "275/55R20", "285/45R22"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "LS", "tireSize": "265/70R17", "wheelSize": "17x7.5"},
+        {"trim": "LT", "tireSize": "265/65R18", "wheelSize": "18x8"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "LTZ w/22\"", "tireSize": "285/45R22", "wheelSize": "22x9"}
+      ],
+      "notes": "Full-size pickup 2nd gen (GMT900) final year",
+      "source": "tiresize.com, 1010tires.com",
+      "confidence": "high"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/55R20", "265/60R19", "225/75R15", "235/75R15", "245/75R16", "265/75R16"],
+      "validatedTireSizes": ["245/70R17", "265/70R17", "265/65R18", "265/60R19", "275/55R20"],
+      "trims": [
+        {"trim": "WT", "tireSize": "245/70R17", "wheelSize": "17x7.5"},
+        {"trim": "LS", "tireSize": "265/70R17", "wheelSize": "17x7.5"},
+        {"trim": "LT", "tireSize": "265/65R18", "wheelSize": "18x8"},
+        {"trim": "LTZ", "tireSize": "275/55R20", "wheelSize": "20x9"},
+        {"trim": "Hybrid", "tireSize": "265/60R19", "wheelSize": "19x8"}
+      ],
+      "notes": "Full-size pickup 2nd gen (GMT900)",
+      "source": "tiresize.com",
+      "confidence": "high"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "highConfidence": 61,
+    "mediumConfidence": 14,
+    "lowConfidence": 0,
+    "internationalMarket": 14,
+    "usMarket": 61
+  },
+  "notes": "Batch includes several international market vehicles (Move-N300 for Latin America, MW for Japan, Onix/Prisma for Brazil, Seeker for China) which are not sold in US market. Silverado data is comprehensive from tiresize.com with trim-level differentiation."
+}

@@ -1,0 +1,1341 @@
+{
+  "batchId": "overnight-113-dodge",
+  "processedAt": "2025-07-20T04:30:00Z",
+  "totalVehicles": 75,
+  "summary": {
+    "validated": 18,
+    "corrected": 41,
+    "flagged": 16,
+    "issues": [
+      "Classic 1970s Chargers had incorrect modern tire sizes - corrected to period-appropriate sizes",
+      "1980s L-body Chargers had wrong bolt pattern (5x100) - corrected to 4x100",
+      "Hub bore inconsistencies on 1970s B-body Chargers - standardized to 71.1mm",
+      "Some entries had generation_inherit tire sizes from wrong generation"
+    ]
+  },
+  "results": [
+    {
+      "id": "0ab5786a-10d2-4ad1-b0d9-368ce962c3e6",
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["F70-15", "G70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "B-body muscle car. R/T came with 15\" wheels. Modern equivalent tires added."
+    },
+    {
+      "id": "29f141ed-9a48-4007-b4f8-d576f936c2e3",
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "440 Six Pack",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["F70-15", "G70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "High-performance variant with 440 Six Pack engine."
+    },
+    {
+      "id": "ee37326f-6823-4ff1-a7e5-b9776aa02ad8",
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "validated",
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 5.5, "offset": 5, "diameter": 14},
+          {"width": 6, "offset": 0, "diameter": 14},
+          {"width": 7, "offset": 0, "diameter": 15}
+        ],
+        "currentTireSizes": ["F78-14", "G78-14", "F70-14", "205/75R14", "215/75R14", "225/70R15"]
+      },
+      "notes": "Source 80s-research-batch already had correct vintage sizes."
+    },
+    {
+      "id": "064d432a-6fdd-4370-af38-45f10ec91b6e",
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Daytona",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["F70-15", "G70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "Aero warrior variant. Very rare for 1970."
+    },
+    {
+      "id": "42e1bb8d-e632-47f1-9267-5782bf739870",
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "duplicate",
+      "duplicateOf": "0ab5786a-10d2-4ad1-b0d9-368ce962c3e6",
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["F70-15", "G70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "Duplicate entry for 1970 Charger R/T"
+    },
+    {
+      "id": "3d50b452-ca32-4f88-845f-06d269e47636",
+      "year": 1970,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Hemi",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["F70-15", "G70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "426 Hemi variant. Same fitment as R/T."
+    },
+    {
+      "id": "2e7b9dfe-3137-4b02-bb84-e6b6c90bffd9",
+      "year": 1971,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "validated",
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 5.5, "offset": 5, "diameter": 14},
+          {"width": 6, "offset": 0, "diameter": 14}
+        ],
+        "currentTireSizes": ["E78-14", "F78-14", "G78-14", "F70-14", "G70-14", "195/75R14", "205/75R14", "215/75R14"]
+      },
+      "notes": "Source 80s-research-batch had correct vintage sizes. Added modern equivalents."
+    },
+    {
+      "id": "0302851c-0e1d-48cd-b7cf-84b07a289a53",
+      "year": 1971,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["F78-14", "G78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "Special Edition luxury trim with 14\" wheels."
+    },
+    {
+      "id": "63657610-1be8-4f50-80b9-e24bf28f61a7",
+      "year": 1971,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["F70-15", "G70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "Last year for classic R/T."
+    },
+    {
+      "id": "48810ba6-5114-4275-b2f1-6bdf72837df7",
+      "year": 1971,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Super Bee",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["F70-15", "G70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "Super Bee moved to Charger platform for 1971."
+    },
+    {
+      "id": "5b984963-53af-4e89-a5cb-ae5295dc3595",
+      "year": 1972,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Super Bee",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["F70-15", "G70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "Last year for Super Bee."
+    },
+    {
+      "id": "87921029-d19d-4054-966d-57e8ba419f8f",
+      "year": 1972,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["F78-14", "G78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "Luxury-oriented SE trim."
+    },
+    {
+      "id": "21e14f35-6edb-48bb-a864-051193629d67",
+      "year": 1972,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["F78-14", "G78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "Base model with standard 14\" wheels."
+    },
+    {
+      "id": "4f2aa8e9-c095-4bd3-b204-dd1d4a4d3577",
+      "year": 1972,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "trim_verification_needed",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["F70-15", "G70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "R/T was discontinued after 1971. Verify if this trim existed in 1972."
+    },
+    {
+      "id": "bb49eece-c14c-45cf-9d0f-d6dee12e078c",
+      "year": 1973,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["F78-14", "G78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "Redesigned for 1973 with new body style."
+    },
+    {
+      "id": "57ed29ec-8dd7-4e0d-b29f-fda9ca31c389",
+      "year": 1973,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["F78-14", "G78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "SE remained top trim for 1973."
+    },
+    {
+      "id": "c890c46f-00fc-400c-90e3-72c8c4c8c923",
+      "year": 1973,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "trim_does_not_exist",
+      "validated": null,
+      "notes": "R/T was NOT offered in 1973. Should be removed or reclassified."
+    },
+    {
+      "id": "8142d267-c4ca-4ce9-8c45-7038b9dcd32b",
+      "year": 1973,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Super Bee",
+      "status": "flagged",
+      "flag": "trim_does_not_exist",
+      "validated": null,
+      "notes": "Super Bee was NOT offered in 1973. Should be removed or reclassified."
+    },
+    {
+      "id": "58515426-e420-4e23-951b-c71d0fbb34cd",
+      "year": 1974,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "trim_does_not_exist",
+      "validated": null,
+      "notes": "R/T was NOT offered in 1974. Should be removed or reclassified."
+    },
+    {
+      "id": "bf8d09ff-bdab-4948-9955-bc3711221656",
+      "year": 1974,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Super Bee",
+      "status": "flagged",
+      "flag": "trim_does_not_exist",
+      "validated": null,
+      "notes": "Super Bee was NOT offered in 1974. Should be removed or reclassified."
+    },
+    {
+      "id": "27624c9a-2d03-466c-aa39-7a5b97478ceb",
+      "year": 1974,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["F78-14", "G78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "Standard Charger for 1974."
+    },
+    {
+      "id": "066742a5-94aa-4493-b93d-0ebba27210bc",
+      "year": 1974,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["F78-14", "G78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "Luxury SE trim."
+    },
+    {
+      "id": "e9dba2be-a26e-4ce1-9a5c-d68ddc613b20",
+      "year": 1975,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["FR78-14", "GR78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "1975 models used radial tires as standard."
+    },
+    {
+      "id": "b0344831-0b3a-4bb1-bcd4-7f0c33b7f5ca",
+      "year": 1975,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["FR78-14", "GR78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "Standard 1975 Charger."
+    },
+    {
+      "id": "f37a1450-992e-4252-a8c0-9d49cb25c241",
+      "year": 1975,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Daytona",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["GR70-15", "HR70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "Daytona package returned as appearance package."
+    },
+    {
+      "id": "0db3aa5c-6378-4b30-b547-a88460f4a8df",
+      "year": 1976,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["FR78-14", "GR78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "1976 Charger SE."
+    },
+    {
+      "id": "7358ce36-fd49-4ebf-96ef-b4ed693e3949",
+      "year": 1976,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Daytona",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["GR70-15", "HR70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "Daytona appearance package."
+    },
+    {
+      "id": "ac65a491-b221-479b-aaac-9b0048a7615f",
+      "year": 1976,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["FR78-14", "GR78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "Standard 1976 Charger."
+    },
+    {
+      "id": "09fc69e2-25b8-4449-8540-8d535902ff12",
+      "year": 1977,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["FR78-14", "GR78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "Standard 1977 Charger."
+    },
+    {
+      "id": "93d14e2d-b654-4020-a1ed-e7f3f77e3698",
+      "year": 1977,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Daytona",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["GR70-15", "HR70-15", "225/70R15", "235/70R15"]
+      },
+      "notes": "Daytona appearance package."
+    },
+    {
+      "id": "a045c35a-6f42-427d-b311-946be4f16f7a",
+      "year": 1977,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["FR78-14", "GR78-14", "205/75R14", "215/75R14"]
+      },
+      "notes": "1977 Charger SE."
+    },
+    {
+      "id": "fa8f13e5-a0aa-4d2c-89c1-297836cd4529",
+      "year": 1978,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["FR78-14", "GR78-14", "P205/75R14", "P215/75R14"]
+      },
+      "notes": "Last year of B-body based Charger."
+    },
+    {
+      "id": "6a61d9e3-b3ec-4717-a811-db933ecd29f3",
+      "year": 1978,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 14, "offset": 0}
+        ],
+        "currentTireSizes": ["FR78-14", "GR78-14", "P205/75R14", "P215/75R14"]
+      },
+      "notes": "Final year for classic Charger."
+    },
+    {
+      "id": "f77dd84d-72c1-40e0-97c1-137c1a4ef3b3",
+      "year": 1978,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Daytona",
+      "status": "corrected",
+      "corrections": ["hubBore: 67.1→71.1", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "5x114.3",
+        "currentHubBore": "71.1",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 15, "offset": 0}
+        ],
+        "currentTireSizes": ["GR70-15", "HR70-15", "P225/70R15", "P235/70R15"]
+      },
+      "notes": "Last Daytona package on classic Charger."
+    },
+    {
+      "id": "b9909067-1ed7-4322-92f2-f88e07041f75",
+      "year": 1981,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "trim_verification_needed",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5.5, "diameter": 14, "offset": 40}
+        ],
+        "currentTireSizes": ["P185/70R14", "P195/70R14"]
+      },
+      "notes": "L-body FWD hatchback. Verify if R/T trim existed in 1981."
+    },
+    {
+      "id": "5e11f378-f501-44f0-af2b-bdf5f8c4eff7",
+      "year": 1981,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Shelby",
+      "status": "flagged",
+      "flag": "trim_does_not_exist",
+      "validated": null,
+      "notes": "Shelby Charger did not exist until 1983. Should be removed."
+    },
+    {
+      "id": "53d1274f-ade5-4408-bb6b-87d2b15c7e9c",
+      "year": 1981,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5, "diameter": 13, "offset": 40}
+        ],
+        "currentTireSizes": ["P165/80R13", "P175/80R13"]
+      },
+      "notes": "L-body FWD hatchback based on Omni."
+    },
+    {
+      "id": "9070aefe-3096-4f05-8588-13fc4e8d0283",
+      "year": 1982,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Shelby",
+      "status": "flagged",
+      "flag": "trim_does_not_exist",
+      "validated": null,
+      "notes": "Shelby Charger did not exist until 1983. Should be removed."
+    },
+    {
+      "id": "4e8a7d7d-58b5-4a98-a789-2ae452dd1d18",
+      "year": 1982,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "trim_verification_needed",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5.5, "diameter": 14, "offset": 40}
+        ],
+        "currentTireSizes": ["P185/70R14", "P195/70R14"]
+      },
+      "notes": "Verify if R/T trim existed in 1982 L-body."
+    },
+    {
+      "id": "f5dd8393-f92e-402c-a072-6a4dab392a1e",
+      "year": 1982,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5, "diameter": 13, "offset": 40}
+        ],
+        "currentTireSizes": ["P165/80R13", "P175/80R13"]
+      },
+      "notes": "L-body FWD hatchback."
+    },
+    {
+      "id": "3210ea9c-40ff-4ce7-8e57-a0a82e2c6ae7",
+      "year": 1983,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5, "diameter": 13, "offset": 40}
+        ],
+        "currentTireSizes": ["P165/80R13", "P175/80R13"]
+      },
+      "notes": "L-body FWD hatchback."
+    },
+    {
+      "id": "3bdd124e-64ec-4f45-a2fc-302d73181ec3",
+      "year": 1983,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Shelby",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 15, "offset": 35}
+        ],
+        "currentTireSizes": ["P195/60R15", "P205/60R15"]
+      },
+      "notes": "First year Shelby Charger with Carroll Shelby performance package."
+    },
+    {
+      "id": "2ca9bcd7-e6a0-4fd5-864d-1bb7fc0d8351",
+      "year": 1983,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "trim_verification_needed",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5.5, "diameter": 14, "offset": 40}
+        ],
+        "currentTireSizes": ["P185/70R14", "P195/70R14"]
+      },
+      "notes": "Verify if R/T trim existed in 1983 L-body."
+    },
+    {
+      "id": "423f258b-df9b-484e-9b1a-3f2c9932727c",
+      "year": 1984,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "trim_verification_needed",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5.5, "diameter": 14, "offset": 40}
+        ],
+        "currentTireSizes": ["P185/70R14", "P195/70R14"]
+      },
+      "notes": "Verify if R/T trim existed in 1984 L-body."
+    },
+    {
+      "id": "8f69c785-a19c-4c95-a760-a948daef56d3",
+      "year": 1984,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5, "diameter": 13, "offset": 40}
+        ],
+        "currentTireSizes": ["P165/80R13", "P175/80R13"]
+      },
+      "notes": "L-body FWD hatchback."
+    },
+    {
+      "id": "6ecfb257-a7a0-4721-8085-3cffb7cfef84",
+      "year": 1984,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Shelby",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 15, "offset": 35}
+        ],
+        "currentTireSizes": ["P195/60R15", "P205/60R15"]
+      },
+      "notes": "Shelby Charger with turbo 2.2L engine."
+    },
+    {
+      "id": "0083f40b-78fa-4e1a-9ce3-f023b0c2a5fe",
+      "year": 1985,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "trim_verification_needed",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5.5, "diameter": 14, "offset": 40}
+        ],
+        "currentTireSizes": ["P185/70R14", "P195/70R14"]
+      },
+      "notes": "Verify if R/T trim existed in 1985 L-body."
+    },
+    {
+      "id": "0b35d142-5330-4215-82ed-ff6bff15eddd",
+      "year": 1985,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5, "diameter": 13, "offset": 40}
+        ],
+        "currentTireSizes": ["P165/80R13", "P175/80R13"]
+      },
+      "notes": "L-body FWD hatchback."
+    },
+    {
+      "id": "d736af19-f7c7-48f3-83c0-aa58e87a6234",
+      "year": 1985,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Shelby",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 15, "offset": 35}
+        ],
+        "currentTireSizes": ["P195/60R15", "P205/60R15"]
+      },
+      "notes": "Shelby Charger with turbo 2.2L engine."
+    },
+    {
+      "id": "de2d05f5-7490-4a53-b99a-2c0766a49979",
+      "year": 1986,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "trim_verification_needed",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5.5, "diameter": 14, "offset": 40}
+        ],
+        "currentTireSizes": ["P185/70R14", "P195/70R14"]
+      },
+      "notes": "Verify if R/T trim existed in 1986 L-body."
+    },
+    {
+      "id": "7c24fd49-0668-4c90-a1bc-5183591ec682",
+      "year": 1986,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5, "diameter": 13, "offset": 40}
+        ],
+        "currentTireSizes": ["P165/80R13", "P175/80R13"]
+      },
+      "notes": "L-body FWD hatchback."
+    },
+    {
+      "id": "b4761a10-c3fb-4318-9389-da0227dbb8a2",
+      "year": 1986,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Shelby",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 15, "offset": 35}
+        ],
+        "currentTireSizes": ["P195/60R15", "P205/60R15"]
+      },
+      "notes": "Shelby Charger with turbo 2.2L engine."
+    },
+    {
+      "id": "ff6e9de2-766f-4b6a-ad43-c22f91e77f50",
+      "year": 1987,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "flagged",
+      "flag": "trim_verification_needed",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5.5, "diameter": 14, "offset": 40}
+        ],
+        "currentTireSizes": ["P185/70R14", "P195/70R14"]
+      },
+      "notes": "Last year of L-body Charger. Verify if R/T trim existed."
+    },
+    {
+      "id": "b9340326-7133-4fcc-a08a-faf75e6f7c0f",
+      "year": 1987,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Shelby",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 6, "diameter": 15, "offset": 35}
+        ],
+        "currentTireSizes": ["P195/60R15", "P205/60R15"]
+      },
+      "notes": "Final year Shelby Charger. Also offered as GLHS variant."
+    },
+    {
+      "id": "ffa4a0a6-fe31-4c34-879b-5da282a53ec5",
+      "year": 1987,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "corrected",
+      "corrections": ["boltPattern: 5x100→4x100", "tireSizes: replaced modern sizes with era-appropriate"],
+      "validated": {
+        "currentBoltPattern": "4x100",
+        "currentHubBore": "57.1",
+        "currentWheelSizes": [
+          {"width": 5, "diameter": 13, "offset": 40}
+        ],
+        "currentTireSizes": ["P165/80R13", "P175/80R13"]
+      },
+      "notes": "Final year L-body Charger."
+    },
+    {
+      "id": "ac18e061-07e2-402a-83ae-8059c88aff3f",
+      "year": 2005,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "validated",
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"axle": "square", "width": 7, "isStock": true, "diameter": 17},
+          {"axle": "square", "width": 7.5, "isStock": true, "diameter": 18}
+        ],
+        "currentTireSizes": ["215/65R17", "225/60R18"]
+      },
+      "notes": "LX platform sedan. First year of modern Charger revival."
+    },
+    {
+      "id": "279ffcd0-60e6-404e-959b-cc2c41bbde6b",
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "validated",
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"axle": "front", "width": 7, "offset": null, "isStock": true, "diameter": 17},
+          {"axle": "front", "width": 7.5, "offset": null, "isStock": true, "diameter": 18},
+          {"axle": "front", "width": 8.5, "offset": null, "isStock": true, "diameter": 20}
+        ],
+        "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "245/45R20"]
+      },
+      "notes": "LX platform with multiple wheel size options."
+    },
+    {
+      "id": "19b74104-b6a8-48bf-9556-63573b7161f8",
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SRT8",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 9, "diameter": 20, "offset": 20}
+        ],
+        "currentTireSizes": ["245/45R20"]
+      },
+      "notes": "SRT8 with 6.1L Hemi. Standard 20\" wheels."
+    },
+    {
+      "id": "47ba3d9c-e3b0-41ba-bdea-e02df4d94d4a",
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Daytona R/T",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 8, "diameter": 20, "offset": 24}
+        ],
+        "currentTireSizes": ["245/45R20"]
+      },
+      "notes": "Daytona R/T with standard 20\" wheels and 5.7L Hemi."
+    },
+    {
+      "id": "ceee9b42-e821-422d-9d8b-aa3aef83f53d",
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 7.5, "diameter": 18, "offset": 24},
+          {"width": 8, "diameter": 20, "offset": 24}
+        ],
+        "currentTireSizes": ["225/55R18", "235/55R18", "245/45R20"]
+      },
+      "notes": "R/T with 5.7L Hemi. 18\" standard, 20\" optional."
+    },
+    {
+      "id": "0051a2e2-52d2-4d0e-b72a-8483f1494bab",
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 17, "offset": 24}
+        ],
+        "currentTireSizes": ["215/65R17", "225/60R17"]
+      },
+      "notes": "Base SE with 2.7L V6 and 17\" wheels."
+    },
+    {
+      "id": "c685fb89-38bc-4c36-9d19-26159f49e3ec",
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SRT8 Super Bee",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 9, "diameter": 20, "offset": 20}
+        ],
+        "currentTireSizes": ["245/45R20"]
+      },
+      "notes": "SRT8 Super Bee special edition."
+    },
+    {
+      "id": "50c12a34-624f-4e8d-aac8-3a06a76a0449",
+      "year": 2006,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SXT",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 7.5, "diameter": 18, "offset": 24}
+        ],
+        "currentTireSizes": ["225/55R18", "235/55R18"]
+      },
+      "notes": "SXT with 3.5L V6 and 18\" wheels."
+    },
+    {
+      "id": "627c7ec6-0cf9-497b-b667-41a9eeeb0da1",
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SRT8",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 9, "diameter": 20, "offset": 20}
+        ],
+        "currentTireSizes": ["245/45R20"]
+      },
+      "notes": "SRT8 with 6.1L Hemi."
+    },
+    {
+      "id": "533b175d-e865-474f-993d-6543c64bbc98",
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SXT",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 7.5, "diameter": 18, "offset": 24}
+        ],
+        "currentTireSizes": ["225/55R18", "235/55R18"]
+      },
+      "notes": "SXT with 3.5L V6."
+    },
+    {
+      "id": "de73829c-b9bd-4ed6-a310-c3e293feb5cf",
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 7.5, "diameter": 18, "offset": 24},
+          {"width": 8, "diameter": 20, "offset": 24}
+        ],
+        "currentTireSizes": ["225/55R18", "235/55R18", "245/45R20"]
+      },
+      "notes": "R/T with 5.7L Hemi."
+    },
+    {
+      "id": "d2ae8fb0-e751-4d58-a8e3-6e4574537d47",
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Daytona R/T",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 8, "diameter": 20, "offset": 24}
+        ],
+        "currentTireSizes": ["245/45R20"]
+      },
+      "notes": "Daytona R/T special edition."
+    },
+    {
+      "id": "6d3efc06-c399-4c46-902e-536573d06e07",
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 17, "offset": 24}
+        ],
+        "currentTireSizes": ["215/65R17", "225/60R17"]
+      },
+      "notes": "Base SE trim."
+    },
+    {
+      "id": "9a45940b-9f58-4ab3-9e48-49400a08e717",
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Base",
+      "status": "validated",
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"axle": "front", "width": 7, "offset": null, "isStock": true, "diameter": 17},
+          {"axle": "front", "width": 7.5, "offset": null, "isStock": true, "diameter": 18},
+          {"axle": "front", "width": 8.5, "offset": null, "isStock": true, "diameter": 20}
+        ],
+        "currentTireSizes": ["215/65R17", "225/60R17", "225/55R18", "235/55R18", "245/45R20"]
+      },
+      "notes": "Generation template entry - covers multiple wheel options."
+    },
+    {
+      "id": "bc389ad1-04e7-4075-b8ef-7f0bc30c8931",
+      "year": 2007,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SRT8 Super Bee",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 9, "diameter": 20, "offset": 20}
+        ],
+        "currentTireSizes": ["245/45R20"]
+      },
+      "notes": "SRT8 Super Bee special edition."
+    },
+    {
+      "id": "5df556a6-7023-4d46-b2c8-a136835bfd1a",
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SE",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 7, "diameter": 17, "offset": 24}
+        ],
+        "currentTireSizes": ["215/65R17", "225/60R17"]
+      },
+      "notes": "Base SE trim."
+    },
+    {
+      "id": "a4e6d664-9b53-46c8-9b56-fbc656a6b1ec",
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SRT8 Super Bee",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 9, "diameter": 20, "offset": 20}
+        ],
+        "currentTireSizes": ["245/45R20"]
+      },
+      "notes": "SRT8 Super Bee special edition."
+    },
+    {
+      "id": "fdd185e7-f903-4b49-945b-285b5ee6a99e",
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "Daytona R/T",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 8, "diameter": 20, "offset": 24}
+        ],
+        "currentTireSizes": ["245/45R20"]
+      },
+      "notes": "Daytona R/T special edition."
+    },
+    {
+      "id": "ac49fabf-b11e-4af9-a60d-164134191a70",
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "R/T",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 7.5, "diameter": 18, "offset": 24},
+          {"width": 8, "diameter": 20, "offset": 24}
+        ],
+        "currentTireSizes": ["225/55R18", "235/55R18", "245/45R20"]
+      },
+      "notes": "R/T with 5.7L Hemi."
+    },
+    {
+      "id": "00a42060-7df3-49fd-a888-bb467eaedd0a",
+      "year": 2008,
+      "make": "Dodge",
+      "model": "Charger",
+      "trim": "SXT",
+      "status": "corrected",
+      "corrections": ["tireSizes: replaced inherited sizes with trim-appropriate sizes"],
+      "validated": {
+        "currentBoltPattern": "5x115",
+        "currentHubBore": "71.5",
+        "currentWheelSizes": [
+          {"width": 7.5, "diameter": 18, "offset": 24}
+        ],
+        "currentTireSizes": ["225/55R18", "235/55R18"]
+      },
+      "notes": "SXT with 3.5L V6."
+    }
+  ]
+}

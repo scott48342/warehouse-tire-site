@@ -1,0 +1,878 @@
+{
+  "batchId": "160",
+  "make": "Volvo",
+  "validatedAt": "2026-04-21T23:15:00.000Z",
+  "source": "tiresize.com",
+  "summary": {
+    "totalVehicles": 75,
+    "validated": 57,
+    "notFoundOnSource": 18,
+    "discrepancies": 26,
+    "matches": 31
+  },
+  "discrepancyTypes": {
+    "missingSizes": 22,
+    "extraSizes": 8,
+    "emptyInBatch": 24
+  },
+  "results": [
+    {
+      "year": 2005,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V40 was discontinued in 2004 in North America - 2005 not found on tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["195/60R15", "215/50R16"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["195/60R15", "215/50R16"]
+      }
+    },
+    {
+      "year": 2003,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["195/60R15", "215/50R16"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["195/60R15", "215/50R16"]
+      }
+    },
+    {
+      "year": 2002,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["195/60R15"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["195/60R15"]
+      }
+    },
+    {
+      "year": 2001,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["195/60R15"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["195/60R15"]
+      }
+    },
+    {
+      "year": 2000,
+      "make": "volvo",
+      "model": "v40",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["195/60R15"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["195/60R15"]
+      }
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": [],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V50 was discontinued in 2011 in North America - 2012 not found on tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["205/50R17"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["205/50R17"]
+      }
+    },
+    {
+      "year": 2010,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["205/50R17", "215/45R18"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["205/50R17", "215/45R18"]
+      }
+    },
+    {
+      "year": 2009,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["205/50R17"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["205/50R17"]
+      }
+    },
+    {
+      "year": 2008,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["205/55R16", "205/50R17"]
+      }
+    },
+    {
+      "year": 2007,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["205/55R16", "205/50R17"]
+      }
+    },
+    {
+      "year": 2006,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["205/55R16", "205/50R17"]
+      }
+    },
+    {
+      "year": 2005,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["205/55R16", "205/50R17"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["205/55R16", "205/50R17"]
+      }
+    },
+    {
+      "year": 2004,
+      "make": "volvo",
+      "model": "v50",
+      "currentTireSizes": [],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V50 started in 2005 in North America - 2004 not found on tiresize.com"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": [],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "2026 V60 not yet available on tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19"],
+      "sourceTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R17", "235/40R18"],
+        "inSourceNotBatch": ["235/45R18"],
+        "notes": "2025 V60 only shows B5 and T8 trims with 235/45R18 and 235/40R19"
+      }
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19"],
+      "sourceTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R17", "235/40R18"],
+        "inSourceNotBatch": ["235/45R18"],
+        "notes": "Current trims B5 and Recharge T8 only show 235/45R18 and 235/40R19"
+      }
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19"],
+      "sourceTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R17", "235/40R18"],
+        "inSourceNotBatch": ["235/45R18"]
+      }
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19"],
+      "sourceTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R17", "235/40R18"],
+        "inSourceNotBatch": ["235/45R18"]
+      }
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "235/45R18", "225/50R17", "245/35ZR20", "245/40ZR19"],
+      "sourceTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R17", "235/40R18", "225/50R17", "245/35ZR20", "245/40ZR19"],
+        "notes": "Batch has extra sizes not shown on tiresize.com for 2021"
+      }
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19"],
+      "sourceTireSizes": ["235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R17", "235/40R18"],
+        "inSourceNotBatch": ["235/45R18"]
+      }
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19"],
+      "sourceTireSizes": ["225/50R17", "235/45R18", "235/40R19"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R17", "235/40R18"],
+        "inSourceNotBatch": ["225/50R17", "235/45R18"]
+      }
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19"],
+      "sourceTireSizes": ["235/40R18", "235/40R19", "235/50R18", "235/45R19", "245/30R20", "235/45R18"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R17"],
+        "inSourceNotBatch": ["235/50R18", "235/45R19", "245/30R20", "235/45R18"]
+      }
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "215/50R17", "235/45ZR17", "235/40ZR18", "235/45ZR18", "235/40ZR19"],
+      "sourceTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "235/50R18", "235/45R19", "245/35R20", "235/45R18"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45ZR17", "235/40ZR18", "235/45ZR18", "235/40ZR19"],
+        "inSourceNotBatch": ["235/50R18", "235/45R19", "245/35R20"],
+        "notes": "Batch uses ZR designation which is equivalent to R rating"
+      }
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "215/50R17", "235/45ZR17", "235/40ZR18", "235/45ZR18", "235/40ZR19"],
+      "sourceTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "235/50R18", "235/45R19", "245/35R20", "235/45R18"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45ZR17", "235/40ZR18", "235/45ZR18", "235/40ZR19"],
+        "inSourceNotBatch": ["235/50R18", "235/45R19", "245/35R20"]
+      }
+    },
+    {
+      "year": 2015,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "215/50R17", "235/45ZR17", "235/40ZR18", "235/45ZR18", "235/40ZR19"],
+      "sourceTireSizes": ["215/50R17", "235/45R17", "235/40R18", "235/40R19", "235/50R18", "235/45R19", "245/35R20", "235/45R18"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45ZR17", "235/40ZR18", "235/45ZR18", "235/40ZR19"],
+        "inSourceNotBatch": ["235/50R18", "235/45R19", "245/35R20"]
+      }
+    },
+    {
+      "year": 2014,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "215/55R16", "205/60R16", "215/50R17", "235/45ZR17", "235/40ZR18"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V60 S60-based model started 2015 in NA. 2014 shows S60 data on tiresize.com, not V60"
+    },
+    {
+      "year": 2013,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "215/55R16", "205/60R16", "215/50R17", "235/45ZR17", "235/40ZR18"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V60 not available 2013 in North America on tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "215/55R16", "205/60R16", "215/50R17", "235/45ZR17", "235/40ZR18"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V60 not available 2012 in North America on tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["235/45R17", "235/40R18", "235/40R19", "215/55R16", "205/60R16", "215/50R17", "235/45ZR17", "235/40ZR18"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V60 not available 2011 in North America on tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "volvo",
+      "model": "v60",
+      "currentTireSizes": ["215/55R16", "205/60R16", "215/50R17", "235/45ZR17", "235/40ZR18"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V60 was not sold in North America until 2015"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": [],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V90 sedan discontinued, only V90 Cross Country continues"
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": [],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V90 sedan discontinued after 2021"
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": ["245/45R18", "255/40R19", "255/35ZR20", "245/35ZR21", "245/40R20"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V90 sedan discontinued after 2021"
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": ["245/45R18", "255/40R19", "255/35ZR20", "245/35ZR21", "245/40R20"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V90 sedan discontinued after 2021"
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "sourceTireSizes": ["255/40R19", "255/35R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["245/45R18", "245/40R19"],
+        "inSourceNotBatch": ["255/40R19"]
+      }
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": ["245/45ZR18", "255/40ZR19", "255/35ZR20", "225/55R17", "245/35ZR21"],
+      "sourceTireSizes": ["255/40R19", "255/35R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["245/45ZR18", "225/55R17", "245/35ZR21"],
+        "notes": "V90 2020 shows limited sizes on tiresize.com"
+      }
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "sourceTireSizes": ["255/40R19", "255/35R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["245/45R18", "245/40R19"],
+        "inSourceNotBatch": ["255/40R19"]
+      }
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": ["245/45R18", "245/40R19", "255/35R20"],
+      "sourceTireSizes": ["255/40R19", "255/35R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["245/45R18", "245/40R19"],
+        "inSourceNotBatch": ["255/40R19"]
+      }
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": ["225/55R17", "245/45R18", "255/40R19", "255/35ZR20", "245/35ZR21"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V90 2017 not found on tiresize.com for North America"
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "v90",
+      "currentTireSizes": ["225/55R17", "245/45R18", "255/40R19", "255/35ZR20", "245/35ZR21"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V90 not available in North America until 2017/2018"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "2026 not yet available on tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["235/50R19", "245/45R20", "245/40R21"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["235/50R19", "245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["235/50R19", "245/45R20", "245/40R21"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["235/50R19", "245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["235/50R19", "245/45R20", "245/40R21"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["235/50R19", "245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["235/50R19", "245/45R20", "245/40R21"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["235/50R19", "245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["235/50R19", "245/45R20", "245/40R21"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["235/50R19", "245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["235/50R19", "245/45R20", "245/40R21"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["235/50R19", "245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["235/55R18", "235/50R19", "245/45R20", "245/40R21"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["235/55R18", "235/50R19", "245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": ["235/55R18", "235/50R19", "245/45R20", "245/40R21"],
+      "status": "MISSING_DATA",
+      "discrepancies": {
+        "missingSizes": ["235/55R18", "235/50R19", "245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V90 Cross Country started 2018 in North America"
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "v90-cross-country",
+      "currentTireSizes": [],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "V90 Cross Country not available until 2018"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "sourceTireSizes": ["235/55R18", "235/50R19", "245/45R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R20"],
+        "inSourceNotBatch": ["245/45R20"]
+      }
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "sourceTireSizes": ["235/55R18", "235/50R19", "245/45R20", "245/40R21"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R20"],
+        "inSourceNotBatch": ["245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "sourceTireSizes": ["235/55R18", "235/50R19", "245/45R20", "245/40R21", "255/45R19", "255/40R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R20"],
+        "inSourceNotBatch": ["245/45R20", "245/40R21", "255/45R19", "255/40R20"],
+        "notes": "Missing staggered Recharge sizes (255/45R19, 255/40R20)"
+      }
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "sourceTireSizes": ["235/55R18", "235/50R19", "245/45R20", "255/45R19", "255/40R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R20"],
+        "inSourceNotBatch": ["245/45R20", "255/45R19", "255/40R20"]
+      }
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": ["235/60R17", "235/55R18", "235/50R19", "245/45R20", "245/40R21"],
+      "sourceTireSizes": ["235/55R18", "235/50R19", "245/45R20", "245/40R21", "255/45R19", "255/40R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/60R17"],
+        "inSourceNotBatch": ["255/45R19", "255/40R20"]
+      }
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": ["235/50R19", "255/45R19", "235/45R20", "255/40R20"],
+      "sourceTireSizes": ["235/55R18", "235/50R19", "245/45R20", "245/40R21", "255/45R19", "255/40R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/45R20"],
+        "inSourceNotBatch": ["235/55R18", "245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": ["235/50R19", "255/45R19", "235/45R20", "255/40R20"],
+      "sourceTireSizes": ["235/55R18", "235/50R19", "245/45R20", "245/40R21"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["255/45R19", "235/45R20", "255/40R20"],
+        "inSourceNotBatch": ["235/55R18", "245/45R20", "245/40R21"]
+      }
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": ["235/60R17", "235/55R18", "235/50R19", "245/45R20", "245/40R21"],
+      "sourceTireSizes": ["235/55R18", "235/50R19", "245/45R20", "245/40R21"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/60R17"]
+      }
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "XC40 started 2019 in North America"
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "xc40",
+      "currentTireSizes": ["235/55R18", "235/50R19", "235/45R20"],
+      "sourceTireSizes": [],
+      "status": "NOT_FOUND",
+      "notes": "XC40 not available until 2019"
+    },
+    {
+      "year": 2026,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/60R18", "235/55R19", "255/45R20"],
+      "sourceTireSizes": ["235/60R18", "235/55R19", "255/45R20", "255/40R21", "265/35R22"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inSourceNotBatch": ["255/40R21", "265/35R22"]
+      }
+    },
+    {
+      "year": 2025,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20", "235/60R17", "255/40R21", "265/35R22"],
+      "sourceTireSizes": ["235/60R18", "235/55R19", "255/45R20", "255/40R21", "265/35R22"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17", "235/60R17"]
+      }
+    },
+    {
+      "year": 2024,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20", "235/60R17", "255/40R21", "265/35R22"],
+      "sourceTireSizes": ["235/60R18", "235/55R19", "255/45R20", "255/40R21", "265/35R22"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17", "235/60R17"]
+      }
+    },
+    {
+      "year": 2023,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "sourceTireSizes": ["235/60R18", "235/55R19", "255/45R20", "255/40R21", "265/35R22"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17"],
+        "inSourceNotBatch": ["255/40R21", "265/35R22"]
+      }
+    },
+    {
+      "year": 2022,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "sourceTireSizes": ["235/60R18", "235/55R19", "255/45R20", "255/40R21", "265/35R22"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17"],
+        "inSourceNotBatch": ["255/40R21", "265/35R22"]
+      }
+    },
+    {
+      "year": 2021,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "sourceTireSizes": ["235/60R18", "235/55R19", "255/45R20", "255/40R21", "265/35R22"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17"],
+        "inSourceNotBatch": ["255/40R21", "265/35R22"]
+      }
+    },
+    {
+      "year": 2020,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "sourceTireSizes": ["235/60R18", "235/55R19", "255/45R20", "255/40R21", "265/35R22"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17"],
+        "inSourceNotBatch": ["255/40R21", "265/35R22"]
+      }
+    },
+    {
+      "year": 2019,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "sourceTireSizes": ["235/60R18", "235/55R19", "255/45R20", "255/40R21", "265/35R22"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17"],
+        "inSourceNotBatch": ["255/40R21", "265/35R22"]
+      }
+    },
+    {
+      "year": 2018,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20", "255/40R21", "265/35R22"],
+      "sourceTireSizes": ["235/60R18", "235/55R19", "255/45R20", "255/40R21", "265/35R22"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17"]
+      }
+    },
+    {
+      "year": 2017,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20", "255/50R19"],
+      "sourceTireSizes": ["235/60R18", "255/45R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17", "235/55R19", "255/50R19"]
+      }
+    },
+    {
+      "year": 2016,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20"],
+      "sourceTireSizes": ["235/60R18", "255/45R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17", "235/55R19"]
+      }
+    },
+    {
+      "year": 2015,
+      "make": "volvo",
+      "model": "xc60",
+      "currentTireSizes": ["235/65R17", "235/60R18", "235/55R19", "255/45R20", "255/50R19"],
+      "sourceTireSizes": ["235/60R18", "255/45R20"],
+      "status": "DISCREPANCY",
+      "discrepancies": {
+        "inBatchNotSource": ["235/65R17", "235/55R19", "255/50R19"]
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Remove discontinued model years",
+      "details": "V40 2005, V50 2004/2012, V60 2010-2014, V90 2022-2025 (sedan), XC40 2017-2018 do not exist in North America"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Add missing V90 Cross Country tire sizes",
+      "details": "All V90 Cross Country years (2018-2025) have empty tire arrays but should have 235/50R19, 245/45R20, 245/40R21"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Add missing V40 tire sizes",
+      "details": "V40 2000-2004 should have 195/60R15, and 2003-2004 should also have 215/50R16"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Add missing V50 tire sizes",
+      "details": "V50 2005-2011 should have 205/55R16, 205/50R17 and optionally 215/45R18 for R-Design"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Update XC40 tire sizes",
+      "details": "Add staggered Recharge sizes (255/45R19, 255/40R20) and fix 235/45R20 → 245/45R20 discrepancy"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Add XC60 21/22 inch sizes",
+      "details": "Missing 255/40R21 and 265/35R22 for 2018+ XC60 trims"
+    },
+    {
+      "priority": "LOW",
+      "action": "Normalize ZR designations",
+      "details": "Consider normalizing 235/45ZR17 → 235/45R17 etc. ZR is equivalent to high-speed R rating"
+    },
+    {
+      "priority": "LOW",
+      "action": "Update V60 2019+ sizes",
+      "details": "Current V60 (2019+) generation uses 235/45R18 and 235/40R19, not older 235/45R17, 235/40R18"
+    }
+  ]
+}

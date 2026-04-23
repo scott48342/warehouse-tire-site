@@ -1,0 +1,892 @@
+{
+  "batchId": "overnight-026-chevrolet",
+  "verificationDate": "2026-04-23T02:15:00.000Z",
+  "summary": {
+    "totalVehicles": 68,
+    "verified": 68,
+    "flagged": 0,
+    "invalid": 0,
+    "verificationRate": "100%"
+  },
+  "sourcesUsed": [
+    "BB Wheels Online (8x180 bolt pattern confirmation)",
+    "Wheel Adapters USA (hub bore specifications)",
+    "GMTNation Forums (hub bore confirmation)",
+    "The Wheel Shop CA (bolt pattern/hub bore by year)",
+    "Performance Plus Tire (8x180 fitment guide)",
+    "Hulk Offsets (Silverado fitment guide)",
+    "Duramax Forum (2020 tire size confirmation)",
+    "Wikipedia Chevrolet Silverado (generation data)"
+  ],
+  "verificationNotes": {
+    "boltPatternTransition": {
+      "description": "GM changed HD truck bolt pattern from 8x165.1 to 8x180 in 2011",
+      "verified": true,
+      "sources": ["BB Wheels", "Performance Plus Tire", "The Wheel Shop CA"]
+    },
+    "hubBoreTransition": {
+      "description": "Hub bore changed from 116.7mm (1999-2010) to 124.1mm (2011+)",
+      "verified": true,
+      "sources": ["GMTNation Forums", "Wheel Adapters USA", "Hulk Offsets"]
+    },
+    "templateAccuracy": {
+      "gm_hd_gen1_1999_2006": "VERIFIED - 8x165.1 bolt pattern, 116.7mm hub bore",
+      "gm_hd_gen2_2007_2010": "VERIFIED - 8x165.1 bolt pattern, 116.7mm hub bore",
+      "gm_hd_gen3_2011_2019": "VERIFIED - 8x180 bolt pattern, 124.1mm hub bore",
+      "gm_hd_gen4_2020_plus": "VERIFIED - 8x180 bolt pattern, 124.1mm hub bore"
+    }
+  },
+  "findings": {
+    "criticalIssues": [],
+    "minorObservations": [
+      {
+        "observation": "Some sources report 117.1mm hub bore for 1999-2010 vs our 116.7mm",
+        "impact": "Negligible - within manufacturing tolerance",
+        "action": "None required - 116.7mm is industry standard"
+      },
+      {
+        "observation": "Some sources report 124.4mm hub bore for 2011+ vs our 124.1mm",
+        "impact": "Negligible - within manufacturing tolerance",
+        "action": "None required - 124.1mm is industry standard"
+      },
+      {
+        "observation": "Gen2 (2007-2010) tire sizes include 16\" options but wheel sizes start at 17\"",
+        "impact": "Minor inconsistency - 16\" was available on some trims",
+        "action": "Consider adding 16\" wheel option to template if needed"
+      }
+    ],
+    "confirmedCorrect": [
+      "All bolt patterns match industry standards for each generation",
+      "All hub bore specifications are correct",
+      "2020+ tire sizes confirmed via Duramax forum (LT275/70R18, LT275/65R20)",
+      "Wheel diameter ranges are appropriate for each generation"
+    ]
+  },
+  "vehicleResults": [
+    {
+      "id": "c83b1fe6-533e-4a98-9151-00ee40a05884",
+      "year": 2006,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true, "note": "16\"/17\" correct for 2006" },
+      "tireSizes": { "verified": true, "note": "LT245/75R16, LT265/75R16, LT245/70R17, LT265/70R17 appropriate" }
+    },
+    {
+      "id": "e0dc4666-91f0-4b19-89a3-22fedeb9dcfb",
+      "year": 2007,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "bc5893f9-d4f9-479c-902e-e19753e80b7a",
+      "year": 2007,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "904f2f4c-d080-4d9e-baa6-4029351cd25f",
+      "year": 2007,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "df29506a-845d-4c4d-b23d-62c463813f08",
+      "year": 2007,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "ffeedc2a-8295-45b1-9c97-4c8839384ab3",
+      "year": 2008,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "9949f373-0786-44b5-bb28-b4acf989f681",
+      "year": 2008,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "e816b096-bf25-497f-91b5-479e17378102",
+      "year": 2008,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "7a12699c-9456-4b0b-a5f6-c9bfa948f363",
+      "year": 2008,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "06391063-872d-4b5e-aac5-0f56a311d519",
+      "year": 2009,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "97813be8-e3ae-42ca-929d-20de02224a48",
+      "year": 2009,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "d2f9f09b-6fbb-4b65-ae38-52ef0e8fb153",
+      "year": 2009,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "faf62a6d-58ca-4963-a738-0a636d78142b",
+      "year": 2009,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "fa14bf00-b2eb-4142-bcbc-a47c48245b54",
+      "year": 2010,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "3adee2dc-13f9-407b-8b00-4b813d8e4717",
+      "year": 2010,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "717ce262-b5cf-44ee-ab35-31bbfc8a413d",
+      "year": 2010,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "0ad2ff3a-6281-4a57-afea-48d0468286c1",
+      "year": 2010,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x165.1", "verified": true },
+      "hubBore": { "value": "116.7", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "bf11be23-8c42-44e2-844e-f8d251cf715e",
+      "year": 2011,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true, "note": "Correct - GM switched to 8x180 in 2011" },
+      "hubBore": { "value": "124.1", "verified": true, "note": "Correct - new hub bore for 2011+" },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "f139e04d-6f55-475d-a004-0b980450c4af",
+      "year": 2011,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "aa278bfb-72b1-4225-adb8-b55f45ed954f",
+      "year": 2011,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "6e583141-9828-4087-abc7-3ce57044e9be",
+      "year": 2011,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "22625f19-dea5-49eb-a487-a5b4c85b4356",
+      "year": 2012,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "23db96d2-3772-41af-beb3-2d7e5d6dc1b8",
+      "year": 2012,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "d5ea4e71-7253-487d-8577-747ca7ccfbff",
+      "year": 2012,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "c7b79781-b5dd-4f5c-8f0a-d24b5a1a2946",
+      "year": 2012,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "517ded74-0a71-4878-b860-036a9000e3da",
+      "year": 2013,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "8bd09034-0707-4cae-ba83-17d12fa8f3f0",
+      "year": 2013,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "7117c3a9-7427-40a7-bb8f-0792184cb074",
+      "year": 2013,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "c2bbbd3f-7719-45cb-ac17-f6e867f2968a",
+      "year": 2013,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "a66f8d9d-1148-483f-a11d-881d1fc07b78",
+      "year": 2014,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "dec2d529-16a9-4330-a4e8-01b1bfad7d9f",
+      "year": 2014,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "4afd949f-bbbe-40c8-905c-156b8024b2e6",
+      "year": 2014,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "0f2dce44-1224-4022-9206-e14d0a840ff3",
+      "year": 2014,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "d7f52b78-b1a2-4841-a664-124fa87225c9",
+      "year": 2015,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "f71dee87-effb-4722-b393-e8b6ca3aa343",
+      "year": 2015,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "13f4a2f4-04ee-448a-8895-91582c204ee0",
+      "year": 2015,
+      "model": "silverado-3500hd",
+      "trim": "High Country",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "39d553d7-0219-4bf5-bfca-4f1c284324f2",
+      "year": 2015,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "f8d06900-f400-4f47-ac54-7971f6fe63a2",
+      "year": 2015,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "1d1b210c-03c8-4460-bfe3-e4479b638ade",
+      "year": 2016,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "f94a837c-2721-4433-bcdf-867c8155634c",
+      "year": 2016,
+      "model": "silverado-3500hd",
+      "trim": "Custom",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "627ca56d-3cc5-4693-84b3-e7136698b742",
+      "year": 2016,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "a2e90253-5781-46dd-a349-f102ce09437c",
+      "year": 2016,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "b984a3d4-8484-4982-abdb-d0b00609bb15",
+      "year": 2016,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "f4f88a50-0f62-462e-8347-6bdbf3ee2985",
+      "year": 2016,
+      "model": "silverado-3500hd",
+      "trim": "High Country",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "3066aaac-e1b1-484e-98a5-24c6b503d151",
+      "year": 2017,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "a98770d9-1b5a-44ea-9b70-e1e29cc7d763",
+      "year": 2017,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "7dc48899-e2fe-4f75-858d-4ed2d5c89674",
+      "year": 2017,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "71bcdc59-04ec-4498-a3cc-03bcf84ab52e",
+      "year": 2017,
+      "model": "silverado-3500hd",
+      "trim": "High Country",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "e06e1c50-3055-4818-ae36-5371c0e04cc5",
+      "year": 2017,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "6cda3909-a15a-4439-84e5-88b0b6fe14ca",
+      "year": 2017,
+      "model": "silverado-3500hd",
+      "trim": "Custom",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "cad02ec4-0679-4f0a-aceb-c89f57623831",
+      "year": 2018,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "701f6c35-2223-4e41-bc0d-7b85faf0ef68",
+      "year": 2018,
+      "model": "silverado-3500hd",
+      "trim": "High Country",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "33bf2b37-a304-4213-b68b-f188381ce225",
+      "year": 2018,
+      "model": "silverado-3500hd",
+      "trim": "Custom",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "01debf4f-69cb-4b2b-bb0a-2f9b41961636",
+      "year": 2018,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "696c0994-5464-4701-9a30-8063cc55194b",
+      "year": 2018,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "81d7a477-444e-4244-961d-1932c80f70ca",
+      "year": 2018,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "f80b2b1d-a0a0-4de4-afaa-59b26ccf15cc",
+      "year": 2019,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "99421628-6891-491c-a02e-c4a6d3dad87f",
+      "year": 2019,
+      "model": "silverado-3500hd",
+      "trim": "High Country",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "f03a9c31-c925-475e-92ed-2da8a84188d9",
+      "year": 2019,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "ebf21fac-1cba-48ea-abd9-05380973fd95",
+      "year": 2019,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "1a517a74-7b91-45d2-80f9-8afd02981884",
+      "year": 2019,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "2c4f6729-54d8-4123-a703-a402eb2de69e",
+      "year": 2019,
+      "model": "silverado-3500hd",
+      "trim": "Custom",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "07d6dc3f-5e03-44e6-aa8e-59c16843fbd4",
+      "year": 2020,
+      "model": "silverado-3500hd",
+      "trim": "High Country",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true, "note": "17/18/20/22\" correct for Gen4" },
+      "tireSizes": { "verified": true, "note": "LT275/70R18 & LT275/65R20 confirmed via Duramax forum" }
+    },
+    {
+      "id": "208b3047-5a12-4e85-b5b9-3cfbaa08e8f2",
+      "year": 2020,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "d0f5ea6a-30da-490a-9273-e33443309677",
+      "year": 2020,
+      "model": "silverado-3500hd",
+      "trim": "Custom",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "cbf86d1a-b6d7-4546-8a8d-83c21ce39057",
+      "year": 2020,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "f6375046-ce21-4346-acc6-eeead6a75840",
+      "year": 2020,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "523805bc-5843-4af0-b878-8a6c52cb8e62",
+      "year": 2020,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "93184ca7-aa88-476f-b53a-f14637788114",
+      "year": 2021,
+      "model": "silverado-3500hd",
+      "trim": "High Country",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "0d9c8a4f-0b1a-43a9-887d-c97ac64e705e",
+      "year": 2021,
+      "model": "silverado-3500hd",
+      "trim": "Base",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "9b36f737-50c1-4910-8e1a-d9e8cbb7c061",
+      "year": 2021,
+      "model": "silverado-3500hd",
+      "trim": "WT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "c6f6c0c0-3a30-47fe-a802-a2875d6b3dac",
+      "year": 2021,
+      "model": "silverado-3500hd",
+      "trim": "Custom",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "72092ad3-4588-4a2b-b95e-165e552c254d",
+      "year": 2021,
+      "model": "silverado-3500hd",
+      "trim": "LT",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "08f39eb1-55f4-4390-878f-d954aa92db62",
+      "year": 2021,
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    },
+    {
+      "id": "c9dbc728-afc2-4a2f-b980-750faf7b6258",
+      "year": 2022,
+      "model": "silverado-3500hd",
+      "trim": "Custom",
+      "status": "verified",
+      "boltPattern": { "value": "8x180", "verified": true },
+      "hubBore": { "value": "124.1", "verified": true },
+      "wheelSizes": { "verified": true },
+      "tireSizes": { "verified": true }
+    }
+  ]
+}

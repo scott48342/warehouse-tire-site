@@ -1,0 +1,516 @@
+{
+  "batch": "batch-17-german",
+  "verifiedAt": "2026-04-23T00:38:00.000Z",
+  "verifiedBy": "subagent:verify-de-17",
+  "summary": {
+    "totalVehicles": 75,
+    "validUSMarket": 63,
+    "invalidUSMarket": 12,
+    "flaggedForReview": 0
+  },
+  "invalidEntries": [
+    {
+      "year": 2008,
+      "make": "audi",
+      "model": "q5",
+      "reason": "US market Q5 started 2009 model year. 2008 was Europe-only.",
+      "source": "carbuzz.com, autoevolution.com"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "e-tron-s",
+      "reason": "e-tron S arrived in US as 2022 model year (fall 2021 delivery). 2020 was Europe-only.",
+      "source": "electrek.co, media.audiusa.com"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "e-tron-s",
+      "reason": "e-tron S arrived in US as 2022 model year (fall 2021 delivery). 2021 was Europe-only.",
+      "source": "electrek.co, media.audiusa.com"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q6-e-tron",
+      "reason": "Q6 e-tron arrived in US as 2025 model year (late 2024 delivery). No 2024 US model.",
+      "source": "kbb.com, caranddriver.com, media.audiusa.com"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q6l-sportback-e-tron",
+      "reason": "Q6L Sportback e-tron is China-only model. 'L' denotes long-wheelbase China-specific variant. Not sold in US.",
+      "source": "electrive.com, audi-mediacenter.com, carscoops.com"
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "rs5",
+      "reason": "RS5 arrived in US as 2013 model year. 2010-2012 were Europe-only.",
+      "source": "carbuzz.com, exoticcarhacks.com"
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "rs5",
+      "reason": "RS5 arrived in US as 2013 model year. 2010-2012 were Europe-only.",
+      "source": "carbuzz.com, exoticcarhacks.com"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "rs5",
+      "reason": "RS5 arrived in US as 2013 model year. 2010-2012 were Europe-only.",
+      "source": "carbuzz.com, exoticcarhacks.com"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "rs3",
+      "reason": "RS3 was not produced for US market in 2021. Gap between gen 1 (2017-2020) and gen 2 (2022+).",
+      "source": "cars.com, carbuzz.com"
+    },
+    {
+      "year": 2007,
+      "make": "audi",
+      "model": "r8",
+      "reason": "VALID - R8 launched in US in 2007, but marking for review: some sources show 2008 as first US model year",
+      "flaggedOnly": true,
+      "source": "carbuzz.com, autoevolution.com"
+    }
+  ],
+  "verifiedVehicles": [
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "e-tron S",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "285/45R20"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "21x10.5",
+          "oemTireSize": "285/40R21"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["electrek.co", "media.audiusa.com", "hulkoffsets.com"],
+      "notes": "Three-motor performance variant. Wider body than standard e-tron. First US model year."
+    },
+    {
+      "year": 2023,
+      "make": "Audi",
+      "model": "e-tron S",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "285/45R20"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "21x10.5",
+          "oemTireSize": "285/40R21"
+        }
+      ],
+      "confidence": "high",
+      "sources": ["media.audiusa.com", "edmunds.com"],
+      "notes": "Last year before rebrand to Q8 e-tron."
+    },
+    {
+      "yearRange": "2016-2018",
+      "make": "Audi",
+      "model": "Q3",
+      "generation": "First Gen (8U)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium",
+          "oemWheelSize": "17x7",
+          "oemTireSize": "235/55R17"
+        },
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "18x7",
+          "oemTireSize": "235/50R18"
+        },
+        {
+          "name": "Prestige",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "235/45R19"
+        }
+      ],
+      "validYears": [2016, 2017, 2018],
+      "confidence": "high",
+      "sources": ["car-bolts.com", "tiresize.com"],
+      "notes": "First gen Q3 for US market. Based on MQB platform."
+    },
+    {
+      "yearRange": "2019-2024",
+      "make": "Audi",
+      "model": "Q3",
+      "generation": "Second Gen (F3)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Premium",
+          "oemWheelSize": "18x7",
+          "oemTireSize": "235/55R18"
+        },
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "19x7.5",
+          "oemTireSize": "235/50R19"
+        },
+        {
+          "name": "S Line",
+          "oemWheelSize": "20x8",
+          "oemTireSize": "255/40R20"
+        }
+      ],
+      "validYears": [2019, 2020, 2021, 2022, 2023, 2024],
+      "confidence": "high",
+      "sources": ["car-bolts.com", "tiresize.com"],
+      "notes": "Second gen Q3. Larger than predecessor."
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "Q3",
+      "generation": "Third Gen",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "trims": [
+        {
+          "name": "Base",
+          "oemWheelSize": "18x7.5",
+          "oemTireSize": "235/55R18"
+        }
+      ],
+      "confidence": "medium",
+      "sources": ["jdpower.com"],
+      "notes": "Complete redesign for 2026. Confirmed for US market."
+    },
+    {
+      "yearRange": "2025-2026",
+      "make": "Audi",
+      "model": "Q6 e-tron",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Premium",
+          "oemWheelSize": "19x8",
+          "oemTireSize": "255/55R19"
+        },
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "20x8.5",
+          "oemTireSize": "255/50R20"
+        },
+        {
+          "name": "Prestige/SQ6",
+          "oemWheelSize": "21x9",
+          "oemTireSize": "255/45R21"
+        }
+      ],
+      "validYears": [2025, 2026],
+      "confidence": "high",
+      "sources": ["kbb.com", "media.audiusa.com", "caranddriver.com"],
+      "notes": "PPE platform. First US deliveries late 2024 as 2025 MY."
+    },
+    {
+      "yearRange": "2019-2026",
+      "make": "Audi",
+      "model": "Q8",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Premium",
+          "oemWheelSize": "21x9",
+          "oemTireSize": "285/45R21"
+        },
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "22x10",
+          "oemTireSize": "285/40R22"
+        },
+        {
+          "name": "SQ8/RSQ8",
+          "oemWheelSize": "22x10.5",
+          "oemTireSize": "295/35R22"
+        }
+      ],
+      "validYears": [2019, 2020, 2022, 2023, 2024, 2025, 2026],
+      "confidence": "high",
+      "sources": ["audiusa.com", "hulkoffsets.com", "usnews.com"],
+      "notes": "Flagship SUV coupe. Note: 2021 Q8 not in batch but would be valid."
+    },
+    {
+      "yearRange": "2023-2025",
+      "make": "Audi",
+      "model": "Q8 e-tron",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Premium",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "255/55R20"
+        },
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "265/45R21"
+        },
+        {
+          "name": "Prestige/SQ8 e-tron",
+          "oemWheelSize": "22x10",
+          "oemTireSize": "285/40R22"
+        }
+      ],
+      "validYears": [2023, 2024, 2025],
+      "confidence": "high",
+      "sources": ["media.audiusa.com", "caranddriver.com"],
+      "notes": "Rebrand of e-tron SUV as Q8 e-tron starting 2023."
+    },
+    {
+      "yearRange": "2023-2025",
+      "make": "Audi",
+      "model": "Q8 Sportback e-tron",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Premium",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "255/55R20"
+        },
+        {
+          "name": "Premium Plus",
+          "oemWheelSize": "21x9.5",
+          "oemTireSize": "265/45R21"
+        },
+        {
+          "name": "Prestige/SQ8 Sportback",
+          "oemWheelSize": "22x10",
+          "oemTireSize": "285/40R22"
+        }
+      ],
+      "validYears": [2023, 2024, 2025],
+      "confidence": "high",
+      "sources": ["media.audiusa.com"],
+      "notes": "Sportback variant of Q8 e-tron."
+    },
+    {
+      "yearRange": "2007-2015",
+      "make": "Audi",
+      "model": "R8",
+      "generation": "First Gen (Type 42)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "4.2 V8",
+          "oemWheelSize": {
+            "front": "18x8.5",
+            "rear": "18x10.5"
+          },
+          "oemTireSize": {
+            "front": "235/40R18",
+            "rear": "285/35R18"
+          }
+        },
+        {
+          "name": "5.2 V10",
+          "oemWheelSize": {
+            "front": "19x8.5",
+            "rear": "19x11"
+          },
+          "oemTireSize": {
+            "front": "235/35R19",
+            "rear": "295/30R19"
+          }
+        }
+      ],
+      "validYears": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+      "confidence": "high",
+      "sources": ["carbuzz.com", "extremewheels.com", "tiresize.com"],
+      "notes": "Mid-engine supercar. Staggered setup required. 2007 may be Europe-only launch year - flagged for manual verification."
+    },
+    {
+      "yearRange": "2016-2023",
+      "make": "Audi",
+      "model": "R8",
+      "generation": "Second Gen (Type 4S)",
+      "boltPattern": "5x112",
+      "hubBore": {
+        "front": 57.1,
+        "rear": 66.5
+      },
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "V10",
+          "oemWheelSize": {
+            "front": "19x8.5",
+            "rear": "19x11"
+          },
+          "oemTireSize": {
+            "front": "245/35R19",
+            "rear": "295/35R19"
+          }
+        },
+        {
+          "name": "V10 Plus/Performance",
+          "oemWheelSize": {
+            "front": "20x8.5",
+            "rear": "20x11"
+          },
+          "oemTireSize": {
+            "front": "245/30R20",
+            "rear": "305/30R20"
+          }
+        }
+      ],
+      "validYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+      "confidence": "high",
+      "sources": ["carbuzz.com", "tiresize.com", "autoevolution.com"],
+      "notes": "Second gen R8. Different hub bore front vs rear. 2023 was final production year."
+    },
+    {
+      "yearRange": "2017-2020",
+      "make": "Audi",
+      "model": "RS3",
+      "generation": "First Gen US (8V)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x8",
+          "oemTireSize": {
+            "front": "255/30R19",
+            "rear": "235/35R19"
+          }
+        }
+      ],
+      "validYears": [2017, 2018, 2019, 2020],
+      "confidence": "high",
+      "sources": ["tiresize.com", "cars.com"],
+      "notes": "US only received sedan variant. Staggered tire setup. 2.5L 5-cylinder."
+    },
+    {
+      "yearRange": "2022-2026",
+      "make": "Audi",
+      "model": "RS3",
+      "generation": "Second Gen US (8Y)",
+      "boltPattern": "5x112",
+      "hubBore": 57.1,
+      "isStaggered": true,
+      "trims": [
+        {
+          "name": "Sedan",
+          "oemWheelSize": "19x8.5",
+          "oemTireSize": {
+            "front": "265/30R19",
+            "rear": "245/35R19"
+          }
+        }
+      ],
+      "validYears": [2022, 2023, 2024, 2025, 2026],
+      "confidence": "high",
+      "sources": ["tiresize.com", "audiusa.com", "caranddriver.com"],
+      "notes": "Redesigned RS3 with torque splitter rear diff. Still sedan-only for US. 2021 gap between generations."
+    },
+    {
+      "yearRange": "2013-2017",
+      "make": "Audi",
+      "model": "RS5",
+      "generation": "First Gen US (B8)",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/30R20"
+        },
+        {
+          "name": "Cabriolet",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/30R20"
+        }
+      ],
+      "validYears": [2013, 2014, 2015, 2016, 2017],
+      "confidence": "high",
+      "sources": ["carbuzz.com", "autoevolution.com"],
+      "notes": "First gen RS5 for US market. 4.2L V8 naturally aspirated."
+    },
+    {
+      "yearRange": "2018-2025",
+      "make": "Audi",
+      "model": "RS5",
+      "generation": "Second Gen (B9)",
+      "boltPattern": "5x112",
+      "hubBore": 66.5,
+      "trims": [
+        {
+          "name": "Coupe",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/30R20"
+        },
+        {
+          "name": "Sportback",
+          "oemWheelSize": "20x9",
+          "oemTireSize": "275/30R20"
+        }
+      ],
+      "validYears": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+      "confidence": "high",
+      "sources": ["carbuzz.com", "autoevolution.com", "exoticcarhacks.com"],
+      "notes": "2.9L twin-turbo V6. Sportback added for second gen."
+    }
+  ],
+  "auditNotes": {
+    "commonSpecs": {
+      "allAudi": {
+        "boltPattern": "5x112",
+        "lugType": "lug bolts (not lug nuts)",
+        "threadSize": "M14x1.5 (most models)",
+        "torqueSpec": "110-140 ft-lb depending on model"
+      },
+      "hubBoreVariations": {
+        "standard": "57.1mm (A3, Q3, RS3, early R8)",
+        "larger": "66.5mm (Q8, e-tron models, RS5, late R8 rear)"
+      }
+    },
+    "usMarketLaunchDelays": {
+      "pattern": "German vehicles often launch 1-2 model years later in US vs Europe",
+      "examples": [
+        "Q5: Europe 2008, US 2009",
+        "RS5: Europe 2010, US 2013",
+        "e-tron S: Europe 2020, US 2022",
+        "Q6 e-tron: Europe 2024, US 2025"
+      ]
+    },
+    "chinaOnlyModels": {
+      "note": "'L' suffix typically indicates China long-wheelbase variant",
+      "examples": ["Q6L e-tron", "Q6L Sportback e-tron", "A6L", "A4L"]
+    }
+  }
+}

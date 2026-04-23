@@ -1,0 +1,5513 @@
+[
+  {
+    "id": "ebf12acb-c06d-49e2-badf-c4b86706d2ea",
+    "year": 2020,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:09.131Z"
+  },
+  {
+    "id": "68f67b0b-2c92-425e-b6d3-e91ab14cd35e",
+    "year": 2020,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:09.375Z"
+  },
+  {
+    "id": "372b12a4-b35d-48a8-8900-4b74f3efd2ed",
+    "year": 2020,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:09.602Z"
+  },
+  {
+    "id": "d992e68a-8ab1-4f8e-a5a2-95a68c2b7a8a",
+    "year": 2021,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:09.838Z"
+  },
+  {
+    "id": "f9142c3c-91c4-4e1f-8bb6-e0e3ba1a0c2b",
+    "year": 2021,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:10.059Z"
+  },
+  {
+    "id": "539cb420-2471-452c-9a15-c513774c06ac",
+    "year": 2021,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "AT4",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:10.284Z"
+  },
+  {
+    "id": "de63ff34-350d-45f8-b950-f262472f3592",
+    "year": 2021,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:10.531Z"
+  },
+  {
+    "id": "9b04c269-9ea5-4e28-90f0-3911dca37f4c",
+    "year": 2021,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:10.786Z"
+  },
+  {
+    "id": "006f36b1-bd49-4f0d-8171-c9e9a20c17d0",
+    "year": 2022,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:11.022Z"
+  },
+  {
+    "id": "98ee0688-4783-475e-a22b-e6eeafa183c0",
+    "year": 2022,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "AT4",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:11.242Z"
+  },
+  {
+    "id": "2b21eba7-2a3e-4dcc-abb4-03d63cb5de68",
+    "year": 2022,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:11.476Z"
+  },
+  {
+    "id": "3ad21a02-955f-46f7-9e4f-1a7ae3f4fa3a",
+    "year": 2022,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:11.693Z"
+  },
+  {
+    "id": "c288d3f3-010e-4d16-9ef5-02fc7a174568",
+    "year": 2022,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Pro",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:11.925Z"
+  },
+  {
+    "id": "d3159fb5-04e9-433e-a156-f995d1b86683",
+    "year": 2022,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:12.167Z"
+  },
+  {
+    "id": "8dc634e5-9af4-4269-9c45-c771900ce8fe",
+    "year": 2023,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "AT4",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:12.387Z"
+  },
+  {
+    "id": "74680317-4103-43d3-be21-ce0686624271",
+    "year": 2023,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:12.612Z"
+  },
+  {
+    "id": "2836cf15-e720-4874-8c6b-3898dc7e104f",
+    "year": 2023,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:12.847Z"
+  },
+  {
+    "id": "cbd350dc-f921-4b5b-a22a-58a9ab7427d5",
+    "year": 2023,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:13.075Z"
+  },
+  {
+    "id": "3c03964a-11cb-479d-8a82-dc1bdda0b112",
+    "year": 2023,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:13.276Z"
+  },
+  {
+    "id": "b7e91543-cade-4f4d-aaf3-a7cf1b2d2bc6",
+    "year": 2023,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Pro",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:13.518Z"
+  },
+  {
+    "id": "43932495-85d8-46f2-b6cc-efab13ed7820",
+    "year": 2024,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Pro",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:13.771Z"
+  },
+  {
+    "id": "8db0ed28-911a-4be2-98fe-2291befbbe6f",
+    "year": 2024,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "AT4",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:14.009Z"
+  },
+  {
+    "id": "9a472813-35ce-46d8-87af-375c363a2a65",
+    "year": 2024,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:14.212Z"
+  },
+  {
+    "id": "8df122de-ef0a-4f99-a89e-d15c21bc2e7a",
+    "year": 2024,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:14.433Z"
+  },
+  {
+    "id": "4703baca-6a37-4a23-8c73-9529c4ad6462",
+    "year": 2024,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:14.651Z"
+  },
+  {
+    "id": "95ee840c-95a2-4aa3-b6ff-b018feac60fd",
+    "year": 2024,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:14.878Z"
+  },
+  {
+    "id": "660e2b01-416b-44e8-b54a-1cbc7f3cf317",
+    "year": 2025,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:15.100Z"
+  },
+  {
+    "id": "2a10d90a-13d3-48d6-91fd-53af448cb9a3",
+    "year": 2025,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Pro",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:15.322Z"
+  },
+  {
+    "id": "b940f15a-ef56-4793-94c8-d84f6deb57ed",
+    "year": 2025,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "AT4",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:15.522Z"
+  },
+  {
+    "id": "d26dc5d9-4c37-488d-b462-f7a0478ed9d3",
+    "year": 2025,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:15.756Z"
+  },
+  {
+    "id": "6a1cbbf0-ba5d-40f6-98a2-677c1c51d13e",
+    "year": 2025,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:15.981Z"
+  },
+  {
+    "id": "307bbe41-9b7c-4003-a97b-d1e63c9e9c71",
+    "year": 2025,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:16.230Z"
+  },
+  {
+    "id": "c11b51d5-779b-484b-8d73-6ff1d7d7fbb9",
+    "year": 2026,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLT",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:16.451Z"
+  },
+  {
+    "id": "034366ea-5069-45c8-92c9-69ff28013374",
+    "year": 2026,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Pro",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:16.686Z"
+  },
+  {
+    "id": "c1b0a62f-2e3d-4a00-8049-95220d59fa32",
+    "year": 2026,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Base",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:16.893Z"
+  },
+  {
+    "id": "2656e637-56d2-4498-8618-e6acd0376f25",
+    "year": 2026,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "AT4",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:17.128Z"
+  },
+  {
+    "id": "e3e0eb57-1b29-4a02-a34f-6691758b48ae",
+    "year": 2026,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "SLE",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:17.338Z"
+  },
+  {
+    "id": "b503cb3d-3af2-47f7-8c77-02d0061a8bd1",
+    "year": 2026,
+    "make": "gmc",
+    "model": "sierra-3500hd",
+    "trim": "Denali",
+    "currentBoltPattern": "8x180",
+    "currentHubBore": "124.1",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "offset": 28,
+        "diameter": 17
+      },
+      {
+        "width": 8,
+        "offset": 44,
+        "diameter": 18
+      },
+      {
+        "width": 8.5,
+        "offset": 47,
+        "diameter": 20
+      },
+      {
+        "width": 9,
+        "offset": 47,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "api_import [template:gm_hd_gen4_2020_plus]",
+    "status": "verified",
+    "verifiedBoltPattern": "8x180",
+    "verifiedHubBore": 124.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": 28,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": 44,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 47,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "LT245/70R17",
+      "LT265/70R18",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "wheelCount": 368,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:17.552Z"
+  },
+  {
+    "id": "3c37c4f4-fe9c-4384-a4a0-cb8e7a80af4b",
+    "year": 2009,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "Base",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      {
+        "axle": "square",
+        "width": 7,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "square",
+        "width": 8,
+        "isStock": true,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "235/55R19",
+      "235/50R20"
+    ],
+    "source": "catalog-gap-fill",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "235/55R19",
+      "235/50R20"
+    ],
+    "wheelCount": 1826,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:17.875Z"
+  },
+  {
+    "id": "71cf1a8e-23c6-4c94-8dd5-8d5c644118db",
+    "year": 2010,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": 67.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "wheelCount": 588,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:18.088Z"
+  },
+  {
+    "id": "487a0a1c-03d9-49ea-8852-942dd6e12dd9",
+    "year": 2011,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": 67.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "wheelCount": 588,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:18.317Z"
+  },
+  {
+    "id": "d4bd1634-5dd4-491f-a3fe-7f58eb8bde71",
+    "year": 2012,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "235/55R18",
+      "235/60R17"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": 67.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19",
+      "235/55R18",
+      "235/60R17"
+    ],
+    "wheelCount": 588,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:18.542Z"
+  },
+  {
+    "id": "b38d3498-f1b1-4c4d-8cbe-c1971e7bdd89",
+    "year": 2013,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": 67.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "wheelCount": 588,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:18.776Z"
+  },
+  {
+    "id": "db38a61a-22f7-4cc1-b2d4-3a95e306ef31",
+    "year": 2014,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": 67.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "wheelCount": 588,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:19.011Z"
+  },
+  {
+    "id": "19dede0d-dbdc-463c-b86e-f3e6adf801d4",
+    "year": 2015,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": 67.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "wheelCount": 588,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:19.227Z"
+  },
+  {
+    "id": "f8e9aa5a-399c-4302-8f57-f8dcd77aa9fd",
+    "year": 2016,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": 67.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "wheelCount": 588,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:19.451Z"
+  },
+  {
+    "id": "c2c2a65c-ec80-4dcc-b58e-7b8222fb9a22",
+    "year": 2017,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x120",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x120",
+    "verifiedHubBore": 67.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/55R19"
+    ],
+    "wheelCount": 588,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:19.687Z"
+  },
+  {
+    "id": "f2a59c50-1ba7-4f88-a95f-6af5acf07cf1",
+    "year": 2018,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": 66.5,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "wheelCount": 662,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:19.949Z"
+  },
+  {
+    "id": "65620139-b9b8-457c-a8ba-4a8c156badc3",
+    "year": 2019,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": 66.5,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "wheelCount": 662,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:20.194Z"
+  },
+  {
+    "id": "7aa69ae1-7006-4799-8f4a-922e964357a6",
+    "year": 2020,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": 66.5,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "wheelCount": 662,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:20.421Z"
+  },
+  {
+    "id": "8c31e82c-e4b5-4699-abd1-0d1663500bb6",
+    "year": 2021,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": 66.5,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "wheelCount": 662,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:20.653Z"
+  },
+  {
+    "id": "671593f1-9caf-4dd6-84a7-ee8b3e0bccd0",
+    "year": 2022,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": 66.5,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "wheelCount": 662,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:20.880Z"
+  },
+  {
+    "id": "cacc76a6-9667-4fee-b169-52398d9cd67a",
+    "year": 2023,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": 66.5,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "wheelCount": 662,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:21.116Z"
+  },
+  {
+    "id": "0f8e35d6-01a2-4624-829a-22c5e320c241",
+    "year": 2024,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": 66.5,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "wheelCount": 662,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:21.354Z"
+  },
+  {
+    "id": "9a7b74d8-10da-4cf9-9ac1-7612d61d915a",
+    "year": 2025,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": 66.5,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "wheelCount": 662,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:21.592Z"
+  },
+  {
+    "id": "68e47d7a-9bdc-406c-9a16-94cbb6d85eea",
+    "year": 2026,
+    "make": "gmc",
+    "model": "terrain",
+    "trim": "SL, SLE, SLT, AT4, Denali",
+    "currentBoltPattern": "5x112",
+    "currentHubBore": "66.5",
+    "currentWheelSizes": [
+      "7Jx17",
+      "7Jx18",
+      "7.5Jx19"
+    ],
+    "currentTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "5x112",
+    "verifiedHubBore": 66.5,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+    ],
+    "wheelCount": 662,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:21.855Z"
+  },
+  {
+    "id": "424ef5a2-7432-4136-8557-641deed326e1",
+    "year": 1992,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 15,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "wheelCount": 1816,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:22.116Z"
+  },
+  {
+    "id": "61d39d72-6f8e-4d15-8c66-cb849823956e",
+    "year": 1993,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 15,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "wheelCount": 1816,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:22.367Z"
+  },
+  {
+    "id": "acfa02d2-97b5-4a68-8dc2-8d77748a0c33",
+    "year": 1994,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 15,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "wheelCount": 1816,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:22.619Z"
+  },
+  {
+    "id": "4cb3c763-150b-4e55-be82-a347b5487074",
+    "year": 1995,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 15,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "wheelCount": 1816,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:22.855Z"
+  },
+  {
+    "id": "0bee1ad6-e680-440b-a993-b5536173e444",
+    "year": 1996,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 15,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "wheelCount": 1816,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:23.105Z"
+  },
+  {
+    "id": "d4bc19ae-fba9-448f-a22f-67ed3abcffa5",
+    "year": 1997,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 15,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "wheelCount": 1816,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:23.347Z"
+  },
+  {
+    "id": "afc18e25-a164-4c32-8c60-46615077924c",
+    "year": 1998,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 15,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "wheelCount": 1816,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:23.613Z"
+  },
+  {
+    "id": "1b418c29-609e-4e95-9ec1-05326756ccc5",
+    "year": 1999,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx15",
+      "7Jx16"
+    ],
+    "currentTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 15,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      }
+    ],
+    "verifiedTireSizes": [
+      "P235/75R15",
+      "P245/75R16",
+      "P265/70R16"
+    ],
+    "wheelCount": 1816,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:23.880Z"
+  },
+  {
+    "id": "e8cbc1d9-0f15-487d-ae23-dc8cb29a4cd7",
+    "year": 2000,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17",
+      "8Jx20",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:suburban:2000]",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 6.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:24.134Z"
+  },
+  {
+    "id": "7238f148-9e8f-465f-9882-d2759e4d2b55",
+    "year": 2001,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17",
+      "8Jx20",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:suburban:2001]",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 6.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:24.562Z"
+  },
+  {
+    "id": "ed188414-bf05-4435-8bc5-4c1ccb9acda1",
+    "year": 2002,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7Jx16",
+      "7.5Jx17",
+      "8Jx20",
+      {
+        "axle": "both",
+        "width": 6.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 16
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20",
+      "LT265/70R16",
+      "LT245/75R16"
+    ],
+    "source": "generation_template",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 16,
+        "width": 7,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 16,
+        "width": 6.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20",
+      "LT265/70R16",
+      "LT245/75R16"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:24.822Z"
+  },
+  {
+    "id": "0ea6327a-1e17-482e-8125-eb6d3510495a",
+    "year": 2003,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:suburban:2003]",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 8.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:25.091Z"
+  },
+  {
+    "id": "be1eff92-8e57-4f03-b575-cf11aa363079",
+    "year": 2004,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:suburban:2004]",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 8.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:25.345Z"
+  },
+  {
+    "id": "bbc602c4-e247-4faa-a970-7f71bb33198c",
+    "year": 2005,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:suburban:2005]",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 8.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:25.590Z"
+  },
+  {
+    "id": "cead964e-090d-4d41-afac-4ad051537381",
+    "year": 2006,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8Jx20",
+      "9Jx22",
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "source": "generation_template [sib-same-year:suburban:2006]",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 19,
+        "width": 8.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R16",
+      "P265/65R17",
+      "P275/55R20"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:25.837Z"
+  },
+  {
+    "id": "3711b7fe-296f-4d28-926b-d67e92b9a6f3",
+    "year": 2007,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2007]",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:26.092Z"
+  },
+  {
+    "id": "cdc1b632-04b4-46e8-bc76-fcf7eec9a30a",
+    "year": 2008,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2008]",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:26.337Z"
+  },
+  {
+    "id": "6d16c43d-0524-4492-81c0-7689a0ab8db8",
+    "year": 2009,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2009]",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:26.605Z"
+  },
+  {
+    "id": "168694af-c298-4460-a2b7-3c0eb32524b4",
+    "year": 2010,
+    "make": "gmc",
+    "model": "yukon",
+    "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "currentBoltPattern": "6x139.7",
+    "currentHubBore": "78.1",
+    "currentWheelSizes": [
+      "7.5Jx17",
+      "8Jx18",
+      "8.5Jx20",
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 31,
+        "isStock": false,
+        "diameter": 22
+      }
+    ],
+    "currentTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "source": "generation_template [sib-same-year:tahoe:2010]",
+    "status": "verified",
+    "verifiedBoltPattern": "6x139.7",
+    "verifiedHubBore": 78.1,
+    "verifiedWheelSizes": [
+      {
+        "diameter": 17,
+        "width": 7.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 18,
+        "width": 8,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 20,
+        "width": 8.5,
+        "offset": null,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": true
+      },
+      {
+        "diameter": 22,
+        "width": 9,
+        "offset": 31,
+        "tireSize": null,
+        "axle": "both",
+        "isStock": false
+      }
+    ],
+    "verifiedTireSizes": [
+      "P265/70R17",
+      "P265/65R18",
+      "P275/55R20",
+      "P285/45R22"
+    ],
+    "wheelCount": 1739,
+    "fitmentConfidence": "high",
+    "verifiedAt": "2026-04-23T02:05:26.861Z"
+  }
+]

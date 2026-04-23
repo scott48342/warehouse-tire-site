@@ -1,0 +1,1195 @@
+{
+  "batchId": "50",
+  "processedAt": "2026-04-21T21:58:00Z",
+  "source": "tiresize.com",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "trims": {
+        "E350": ["225/75R16", "245/75R16"]
+      },
+      "status": "VALID",
+      "notes": "Commercial van, LT prefix for light truck tires"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "trims": {
+        "E350": ["225/75R16", "245/75R16"]
+      },
+      "status": "VALID",
+      "notes": "Commercial van, LT prefix for light truck tires"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "trims": {
+        "E350": ["225/75R16", "245/75R16"]
+      },
+      "status": "VALID",
+      "notes": "Commercial van, LT prefix for light truck tires"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "trims": {
+        "E350": ["225/75R16", "245/75R16"]
+      },
+      "status": "VALID",
+      "notes": "Commercial van, LT prefix for light truck tires"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": {
+        "E350": ["245/75R16"]
+      },
+      "status": "REVIEW",
+      "notes": "2002 E350 only shows 245/75R16; 225/75R16 may be E250"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": {
+        "E350": ["245/75R16"]
+      },
+      "status": "REVIEW",
+      "notes": "2001 E350 only shows 245/75R16; 225/75R16 may be E250"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "e-350-econoline",
+      "currentTireSizes": ["LT225/75R16", "LT245/75R16"],
+      "validatedTireSizes": ["LT245/75R16"],
+      "trims": {
+        "E350": ["245/75R16"]
+      },
+      "status": "REVIEW",
+      "notes": "2000 E350 only shows 245/75R16; 225/75R16 may be E250"
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "trims": {
+        "Active": ["225/65R17"],
+        "Platinum": ["225/55R19"],
+        "Plug-in Hybrid": ["225/60R18"],
+        "ST-Line": ["225/60R18"],
+        "ST-Line Elite": ["225/55R19"],
+        "ST-Line Select": ["225/60R18", "225/55R19"]
+      },
+      "status": "UPDATE",
+      "notes": "235/55R19 should be 225/55R19"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "trims": {
+        "Active": ["225/65R17"],
+        "Platinum": ["225/55R19"],
+        "Plug-in Hybrid": ["225/60R18"],
+        "ST-Line": ["225/60R18"],
+        "ST-Line Elite": ["225/55R19"],
+        "ST-Line Select": ["225/60R18", "225/55R19"]
+      },
+      "status": "UPDATE",
+      "notes": "235/55R19 should be 225/55R19"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "trims": {
+        "Active": ["225/65R17"],
+        "Base": ["225/65R17"],
+        "Platinum": ["225/55R19"],
+        "Plug-in Hybrid": ["225/60R18"],
+        "ST-Line": ["225/60R18"],
+        "ST-Line Elite": ["225/55R19"],
+        "ST-Line Select": ["225/60R18", "225/55R19"]
+      },
+      "status": "UPDATE",
+      "notes": "235/55R19 should be 225/55R19"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "trims": {
+        "Active": ["225/65R17"],
+        "Base": ["225/65R17"],
+        "Platinum": ["225/55R19"],
+        "Plug-in Hybrid": ["225/60R18"],
+        "ST-Line": ["225/60R18"],
+        "ST-Line Elite": ["225/55R19"],
+        "ST-Line Select": ["225/60R18", "225/55R19"]
+      },
+      "status": "UPDATE",
+      "notes": "235/55R19 should be 225/55R19"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19", "225/55R19", "245/45R20"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "trims": {
+        "S": ["225/65R17"],
+        "SE": ["225/65R17"],
+        "SE Sport Package": ["225/55R19"],
+        "SEL": ["225/60R18", "225/55R19"],
+        "Titanium": ["225/55R19"],
+        "Plug-in Hybrid": ["225/60R18"]
+      },
+      "status": "UPDATE",
+      "notes": "235/55R19 and 245/45R20 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "trims": {
+        "S": ["225/65R17"],
+        "SE": ["225/65R17"],
+        "SE Sport Package": ["225/55R19"],
+        "SEL": ["225/60R18", "225/55R19"],
+        "Titanium": ["225/55R19"],
+        "Plug-in Hybrid": ["225/60R18"]
+      },
+      "status": "UPDATE",
+      "notes": "235/55R19 should be 225/55R19"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["225/65R17", "225/60R18", "235/55R19"],
+      "validatedTireSizes": ["225/65R17", "225/60R18", "225/55R19"],
+      "trims": {
+        "S": ["225/65R17"],
+        "SE": ["225/65R17"],
+        "SE Sport Package": ["225/55R19"],
+        "SEL": ["225/60R18", "225/55R19"],
+        "Titanium": ["225/55R19"],
+        "Plug-in Hybrid": ["225/60R18"]
+      },
+      "status": "UPDATE",
+      "notes": "235/55R19 should be 225/55R19"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "trims": {
+        "S": ["235/55R17"],
+        "SE": ["235/55R17", "235/45R19"],
+        "SEL": ["235/55R17", "235/50R18", "235/45R19"],
+        "Titanium": ["235/50R18", "235/45R19"]
+      },
+      "status": "VALID",
+      "notes": null
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "trims": {
+        "S": ["235/55R17"],
+        "SE": ["235/55R17", "235/50R18", "235/45R19"],
+        "SEL": ["235/55R17", "235/50R18", "235/45R19"],
+        "Titanium": ["235/50R18", "235/45R19"]
+      },
+      "status": "VALID",
+      "notes": null
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "trims": {
+        "S": ["235/55R17", "235/50R18"],
+        "SE": ["235/55R17", "235/50R18", "235/45R19"],
+        "Titanium": ["235/50R18", "235/45R19"]
+      },
+      "status": "VALID",
+      "notes": null
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "trims": {
+        "S": ["235/55R17", "235/50R18"],
+        "SE": ["235/55R17", "235/50R18", "235/45R19"],
+        "Titanium": ["235/50R18", "235/45R19"]
+      },
+      "status": "VALID",
+      "notes": null
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "trims": {
+        "S": ["235/55R17", "235/50R18"],
+        "SE": ["235/55R17", "235/50R18", "235/45R19"],
+        "Titanium": ["235/50R18", "235/45R19"]
+      },
+      "status": "VALID",
+      "notes": null
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "trims": {
+        "S": ["235/55R17", "235/50R18"],
+        "SE": ["235/55R17", "235/50R18", "235/45R19"],
+        "Titanium": ["235/50R18", "235/45R19"]
+      },
+      "status": "VALID",
+      "notes": null
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "validatedTireSizes": ["235/55R17", "235/50R18", "235/45R19"],
+      "trims": {
+        "S": ["235/55R17"],
+        "SE": ["235/55R17", "235/50R18"],
+        "SEL": ["235/50R18"],
+        "Titanium": ["235/50R18", "235/45R19"]
+      },
+      "status": "VALID",
+      "notes": null
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/70R16", "235/60R17", "225/65R17", "215/70R16"],
+      "validatedTireSizes": ["235/70R16", "225/65R17"],
+      "trims": {
+        "XLS": ["235/70R16"],
+        "XLT": ["235/70R16", "225/65R17"],
+        "XLT V6": ["235/70R16", "225/65R17"],
+        "Limited": ["235/70R16", "225/65R17"],
+        "Hybrid": ["235/70R16"],
+        "Hybrid Limited": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "235/60R17 and 215/70R16 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/70R16", "235/60R17"],
+      "validatedTireSizes": ["235/70R16", "225/65R17"],
+      "trims": {
+        "XLS": ["235/70R16"],
+        "XLT": ["235/70R16", "225/65R17"],
+        "XLT V6": ["235/70R16", "225/65R17"],
+        "Limited": ["235/70R16", "225/65R17"],
+        "Hybrid": ["235/70R16"],
+        "Hybrid Limited": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "235/60R17 should be 225/65R17"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/70R16", "235/60R17", "225/65R17", "215/70R16"],
+      "validatedTireSizes": ["235/70R16", "225/65R17"],
+      "trims": {
+        "XLS": ["235/70R16"],
+        "XLT": ["235/70R16", "225/65R17"],
+        "XLT V6": ["235/70R16", "225/65R17"],
+        "Limited": ["235/70R16", "225/65R17"],
+        "Hybrid": ["235/70R16", "225/65R17"],
+        "Hybrid Limited": ["235/70R16", "225/65R17"]
+      },
+      "status": "UPDATE",
+      "notes": "235/60R17 and 215/70R16 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/70R16", "235/60R17"],
+      "validatedTireSizes": ["235/70R16", "225/65R17"],
+      "trims": {
+        "XLS": ["235/70R16"],
+        "XLT": ["235/70R16", "225/65R17"],
+        "XLT V6": ["235/70R16", "225/65R17"],
+        "Limited": ["235/70R16", "225/65R17"],
+        "Hybrid": ["235/70R16", "225/65R17"]
+      },
+      "status": "UPDATE",
+      "notes": "235/60R17 should be 225/65R17"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/70R16", "235/60R17"],
+      "validatedTireSizes": ["235/70R16", "225/65R17"],
+      "trims": {
+        "XLS": ["235/70R16"],
+        "XLT": ["235/70R16"],
+        "XLT V6": ["235/70R16", "225/65R17"],
+        "Limited": ["235/70R16", "225/65R17"],
+        "Hybrid": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "235/60R17 should be 225/65R17"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["215/70R15", "235/70R16", "215/70R16", "225/65R17"],
+      "validatedTireSizes": ["225/75R15", "235/70R16"],
+      "trims": {
+        "XLS": ["225/75R15"],
+        "XLT": ["235/70R16"],
+        "XLT Sport": ["235/70R16"],
+        "Limited": ["235/70R16"],
+        "Hybrid": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "215/70R15, 215/70R16, 225/65R17 not confirmed - should be 225/75R15, 235/70R16"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["215/70R15", "235/70R16"],
+      "validatedTireSizes": ["225/75R15", "235/70R16"],
+      "trims": {
+        "XLS": ["225/75R15"],
+        "XLT": ["235/70R16"],
+        "XLT Sport": ["235/70R16"],
+        "Limited": ["235/70R16"],
+        "Hybrid": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "215/70R15 should be 225/75R15"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["215/70R15", "235/70R16"],
+      "validatedTireSizes": ["225/75R15", "235/70R16"],
+      "trims": {
+        "XLS": ["225/75R15", "235/70R16"],
+        "XLT": ["235/70R16"],
+        "XLT Sport": ["235/70R16"],
+        "Limited": ["235/70R16"],
+        "Hybrid": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "215/70R15 should be 225/75R15"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["215/70R15", "235/70R16"],
+      "validatedTireSizes": ["225/70R15", "235/70R16"],
+      "trims": {
+        "XLS": ["225/70R15"],
+        "XLS 4x4": ["235/70R16"],
+        "XLT": ["235/70R16"],
+        "Limited": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "215/70R15 should be 225/70R15"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["215/70R15", "235/70R16"],
+      "validatedTireSizes": ["225/70R15", "235/70R16"],
+      "trims": {
+        "XLS": ["225/70R15"],
+        "XLS 4x4": ["235/70R16"],
+        "XLT": ["235/70R16"],
+        "Limited": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "215/70R15 should be 225/70R15"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["215/70R15", "235/70R16"],
+      "validatedTireSizes": ["225/70R15", "235/70R16"],
+      "trims": {
+        "XLS": ["225/70R15"],
+        "XLT": ["225/70R15"],
+        "XLT V6": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "215/70R15 should be 225/70R15"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["235/70R16"],
+      "validatedTireSizes": ["225/70R15", "235/70R16"],
+      "trims": {
+        "XLS": ["225/70R15"],
+        "XLT": ["225/70R15"],
+        "XLT V6": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "Missing 225/70R15 for base trims"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["215/70R15", "235/70R16"],
+      "validatedTireSizes": ["225/70R15", "235/70R16"],
+      "trims": {
+        "XLS": ["225/70R15"],
+        "XLT": ["225/70R15"],
+        "XLT V6": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "215/70R15 should be 225/70R15"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["225/70R15"],
+      "validatedTireSizes": ["225/70R15", "235/70R16"],
+      "trims": {
+        "XLS": ["225/70R15"],
+        "XLT": ["225/70R15"],
+        "XLT V6": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "Missing 235/70R16 for V6 trims"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "escape",
+      "currentTireSizes": ["225/70R15"],
+      "validatedTireSizes": ["225/70R15", "235/70R16"],
+      "trims": {
+        "XLS": ["225/70R15"],
+        "XLT": ["225/70R15"],
+        "XLT V6": ["235/70R16"]
+      },
+      "status": "UPDATE",
+      "notes": "2001 was first model year - 2000 may be incorrect; if valid, missing 235/70R16"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "escort-zx2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "185/60R15"],
+      "trims": {
+        "ZX2": ["185/65R14", "185/60R15"]
+      },
+      "status": "MISSING",
+      "notes": "Add tire sizes: 185/65R14, 185/60R15"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "escort-zx2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "185/60R15"],
+      "trims": {
+        "ZX2": ["185/65R14", "185/60R15"]
+      },
+      "status": "MISSING",
+      "notes": "Add tire sizes: 185/65R14, 185/60R15"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "escort-zx2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "185/60R15"],
+      "trims": {
+        "ZX2": ["185/65R14", "185/60R15"]
+      },
+      "status": "MISSING",
+      "notes": "Add tire sizes: 185/65R14, 185/60R15"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "escort-zx2",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14", "185/60R15", "205/55R15"],
+      "trims": {
+        "ZX2": ["185/65R14", "185/60R15"],
+        "ZX2 S/R": ["205/55R15"]
+      },
+      "status": "MISSING",
+      "notes": "Add tire sizes: 185/65R14, 185/60R15, 205/55R15 (S/R trim)"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "evos",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "SKIP",
+      "notes": "China-only market vehicle - not sold in US/Canada. Limited fitment data available."
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "evos",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "SKIP",
+      "notes": "China-only market vehicle - not sold in US/Canada. Limited fitment data available."
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "evos",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "SKIP",
+      "notes": "China-only market vehicle - not sold in US/Canada. Limited fitment data available."
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "evos",
+      "currentTireSizes": [],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "SKIP",
+      "notes": "China-only market vehicle - not sold in US/Canada. Limited fitment data available."
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "excursion",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/75R16", "275/65R18"],
+      "trims": {
+        "XLS": ["265/75R16"],
+        "XLT": ["265/75R16"],
+        "Eddie Bauer": ["265/75R16", "275/65R18"],
+        "Limited": ["265/75R16", "275/65R18"]
+      },
+      "status": "MISSING",
+      "notes": "Add tire sizes: 265/75R16, 275/65R18 (Eddie Bauer/Limited)"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "excursion",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/75R16"],
+      "trims": {
+        "XLS": ["265/75R16"],
+        "XLT": ["265/75R16"],
+        "Eddie Bauer": ["265/75R16"],
+        "Limited": ["265/75R16"],
+        "Limited Premium": ["265/75R16"]
+      },
+      "status": "MISSING",
+      "notes": "Add tire size: 265/75R16"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "excursion",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/75R16"],
+      "trims": {
+        "XLT": ["265/75R16"],
+        "Eddie Bauer": ["265/75R16"],
+        "Limited": ["265/75R16"]
+      },
+      "status": "MISSING",
+      "notes": "Add tire size: 265/75R16"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "excursion",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/75R16"],
+      "trims": {
+        "XLT": ["265/75R16"],
+        "Limited": ["265/75R16"],
+        "Limited Premium": ["265/75R16"]
+      },
+      "status": "MISSING",
+      "notes": "Add tire size: 265/75R16"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "excursion",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/75R16"],
+      "trims": {
+        "XLT": ["265/75R16"],
+        "Limited": ["265/75R16"]
+      },
+      "status": "MISSING",
+      "notes": "Add tire size: 265/75R16"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "excursion",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["265/75R16"],
+      "trims": {
+        "XLT": ["265/75R16"],
+        "Limited": ["265/75R16"]
+      },
+      "status": "MISSING",
+      "notes": "Add tire size: 265/75R16"
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/60R20", "275/50R22", "285/40R24", "275/70R18"],
+      "trims": {
+        "Active": ["265/70R18", "275/60R20"],
+        "Active Max": ["265/70R18", "275/60R20"],
+        "King Ranch": ["275/50R22"],
+        "King Ranch Max": ["275/50R22"],
+        "Platinum": ["275/60R20", "275/50R22", "285/40R24"],
+        "Platinum Max": ["275/60R20", "275/50R22", "285/40R24"],
+        "Tremor": ["275/70R18"]
+      },
+      "status": "UPDATE",
+      "notes": "2026 has new tire sizes - 275/65R18, 275/55R20, 285/55R20, 285/45R22 are old gen"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/55R20", "285/45R22", "275/60R20", "LT275/70R18", "275/50R22", "285/40R24"],
+      "validatedTireSizes": ["265/70R18", "275/60R20", "275/50R22", "285/40R24", "275/70R18"],
+      "trims": {
+        "Active": ["265/70R18", "275/60R20"],
+        "Active Max": ["265/70R18", "275/60R20"],
+        "King Ranch": ["275/50R22"],
+        "King Ranch Max": ["275/50R22"],
+        "Platinum": ["275/60R20", "275/50R22", "285/40R24"],
+        "Platinum Max": ["275/60R20", "275/50R22", "285/40R24"],
+        "Tremor": ["275/70R18"]
+      },
+      "status": "UPDATE",
+      "notes": "2025 refreshed model - remove old 275/65R18, 275/55R20, 285/55R20, 285/45R22"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "XL STX": ["275/65R18"],
+        "XLT": ["275/65R18", "275/55R20"],
+        "XLT Max": ["275/65R18", "275/55R20"],
+        "Limited": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited Max": ["275/65R18", "275/55R20", "285/45R22"],
+        "King Ranch": ["285/45R22"],
+        "King Ranch Max": ["285/45R22"],
+        "Platinum": ["285/45R22"],
+        "Platinum Max": ["285/45R22"],
+        "Timberline": ["265/70R18"]
+      },
+      "status": "UPDATE",
+      "notes": "285/55R20 not confirmed as OEM - may be aftermarket. Remove."
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "XL STX": ["275/65R18"],
+        "XLT": ["275/65R18", "275/55R20"],
+        "XLT Max": ["275/65R18", "275/55R20"],
+        "Limited": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited Max": ["275/65R18", "275/55R20", "285/45R22"],
+        "King Ranch": ["285/45R22"],
+        "King Ranch Max": ["285/45R22"],
+        "Platinum": ["285/45R22"],
+        "Platinum Max": ["285/45R22"],
+        "Timberline": ["265/70R18"]
+      },
+      "status": "UPDATE",
+      "notes": "285/55R20 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/55R20", "285/45R22"],
+      "validatedTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "XL STX": ["275/65R18"],
+        "XLT": ["275/65R18", "275/55R20"],
+        "XLT Max": ["275/65R18", "275/55R20"],
+        "Limited": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited Max": ["275/65R18", "275/55R20", "285/45R22"],
+        "King Ranch": ["285/45R22"],
+        "King Ranch Max": ["285/45R22"],
+        "Platinum": ["285/45R22"],
+        "Platinum Max": ["285/45R22"],
+        "Timberline": ["265/70R18"]
+      },
+      "status": "UPDATE",
+      "notes": "285/55R20 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/55R20", "285/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "XL STX": ["275/65R18"],
+        "XLT": ["275/65R18", "275/55R20"],
+        "XLT Max": ["275/65R18", "275/55R20"],
+        "Limited": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited Max": ["275/65R18", "275/55R20", "285/45R22"],
+        "King Ranch": ["285/45R22"],
+        "King Ranch Max": ["285/45R22"],
+        "Platinum": ["285/45R22"],
+        "Platinum Max": ["285/45R22"]
+      },
+      "status": "UPDATE",
+      "notes": "265/70R18 and 285/55R20 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/55R20", "285/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "XLT": ["275/65R18", "275/55R20"],
+        "XLT Max": ["275/65R18", "275/55R20"],
+        "Limited": ["275/65R18", "275/55R20", "285/45R22"],
+        "Limited Max": ["275/65R18", "275/55R20", "285/45R22"],
+        "King Ranch": ["285/45R22"],
+        "King Ranch Max": ["285/45R22"],
+        "Platinum": ["285/45R22"],
+        "Platinum Max": ["285/45R22"]
+      },
+      "status": "UPDATE",
+      "notes": "265/70R18 and 285/55R20 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/55R20", "285/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "XLT": ["275/65R18", "275/55R20"],
+        "XLT Max": ["275/65R18", "275/55R20"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Limited Max": ["275/55R20", "285/45R22"],
+        "Platinum": ["285/45R22"],
+        "Platinum Max": ["285/45R22"]
+      },
+      "status": "UPDATE",
+      "notes": "265/70R18 and 285/55R20 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R18", "275/65R18", "275/55R20", "285/55R20", "285/45R22"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "XLT": ["275/65R18", "275/55R20"],
+        "XLT Max": ["275/65R18", "275/55R20"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "Limited Max": ["275/55R20", "285/45R22"],
+        "Platinum": ["285/45R22"],
+        "Platinum Max": ["285/45R22"]
+      },
+      "status": "UPDATE",
+      "notes": "265/70R18 and 285/55R20 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "XLT": ["275/65R18", "275/55R20"],
+        "EL XLT": ["275/65R18", "275/55R20"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "EL Limited": ["275/55R20", "285/45R22"],
+        "King Ranch": ["275/55R20", "285/45R22"],
+        "EL King Ranch": ["275/55R20", "285/45R22"],
+        "Platinum": ["275/55R20", "285/45R22"],
+        "EL Platinum": ["275/55R20", "285/45R22"]
+      },
+      "status": "UPDATE",
+      "notes": "265/70R17 and 265/65R18 are older gen. Add 285/45R22 for higher trims."
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "XLT": ["275/65R18", "275/55R20"],
+        "EL XLT": ["275/65R18", "275/55R20"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "EL Limited": ["275/55R20", "285/45R22"],
+        "King Ranch": ["275/55R20", "285/45R22"],
+        "EL King Ranch": ["275/55R20", "285/45R22"],
+        "Platinum": ["275/55R20", "285/45R22"],
+        "EL Platinum": ["275/55R20", "285/45R22"]
+      },
+      "status": "UPDATE",
+      "notes": "265/70R17 and 265/65R18 are older gen. Add 285/45R22 for higher trims."
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20"],
+      "validatedTireSizes": ["275/65R18", "275/55R20", "285/45R22"],
+      "trims": {
+        "XLT": ["275/65R18", "275/55R20"],
+        "EL XLT": ["275/65R18", "275/55R20"],
+        "Limited": ["275/55R20", "285/45R22"],
+        "EL Limited": ["275/55R20", "285/45R22"],
+        "King Ranch": ["275/55R20", "285/45R22"],
+        "EL King Ranch": ["275/55R20", "285/45R22"],
+        "Platinum": ["275/55R20", "285/45R22"],
+        "EL Platinum": ["275/55R20", "285/45R22"]
+      },
+      "status": "UPDATE",
+      "notes": "265/70R17 and 265/65R18 are older gen. Add 285/45R22 for higher trims."
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "275/65R18", "275/55R20"],
+      "trims": {
+        "XLT": ["275/65R18", "275/55R20"],
+        "EL XLT": ["275/65R18", "275/55R20"],
+        "Limited": ["275/55R20"],
+        "EL Limited": ["275/55R20"],
+        "King Ranch": ["275/55R20"],
+        "EL King Ranch": ["275/55R20"]
+      },
+      "status": "UPDATE",
+      "notes": "265/65R18 not confirmed - remove"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20"],
+      "validatedTireSizes": ["275/65R18", "275/55R20"],
+      "trims": {
+        "XLT": ["275/65R18", "275/55R20"],
+        "EL XLT": ["275/65R18", "275/55R20"],
+        "Limited": ["275/55R20"],
+        "EL Limited": ["275/55R20"],
+        "King Ranch": ["275/55R20"],
+        "EL King Ranch": ["275/55R20"]
+      },
+      "status": "UPDATE",
+      "notes": "265/70R17 and 265/65R18 not confirmed for 2013 - remove"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20", "255/70R18"],
+      "validatedTireSizes": ["265/70R17", "275/65R18", "275/55R20"],
+      "trims": {
+        "XL": ["265/70R17"],
+        "XLT": ["275/65R18", "275/55R20"],
+        "EL XL": ["275/65R18", "275/55R20"],
+        "EL XLT": ["275/65R18", "275/55R20"],
+        "Limited": ["275/55R20"],
+        "EL Limited": ["275/55R20"],
+        "King Ranch": ["275/55R20"],
+        "EL King Ranch": ["275/55R20"]
+      },
+      "status": "UPDATE",
+      "notes": "265/65R18 and 255/70R18 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20", "255/70R18"],
+      "validatedTireSizes": ["265/70R17", "275/65R18", "275/55R20"],
+      "trims": {
+        "XL": ["265/70R17"],
+        "XLT": ["275/65R18", "275/55R20"],
+        "EL XL": ["275/65R18", "275/55R20"],
+        "EL XLT": ["275/65R18", "275/55R20"],
+        "Limited": ["275/55R20"],
+        "EL Limited": ["275/55R20"],
+        "King Ranch": ["275/55R20"],
+        "EL King Ranch": ["275/55R20"]
+      },
+      "status": "UPDATE",
+      "notes": "265/65R18 and 255/70R18 not confirmed as OEM - remove"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "255/70R18", "275/55R20"],
+      "trims": {
+        "XLT": ["265/70R17", "255/70R18"],
+        "EL XLT": ["265/70R17", "255/70R18"],
+        "Eddie Bauer": ["265/70R17", "255/70R18", "275/55R20"],
+        "EL Eddie Bauer": ["255/70R18", "275/55R20"],
+        "Limited": ["255/70R18", "275/55R20"],
+        "EL Limited": ["255/70R18", "275/55R20"],
+        "King Ranch": ["255/70R18", "275/55R20"],
+        "EL King Ranch": ["255/70R18", "275/55R20"]
+      },
+      "status": "UPDATE",
+      "notes": "265/65R18 should be 255/70R18; 275/65R18 not confirmed - remove"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "255/70R18", "275/55R20"],
+      "trims": {
+        "XLT": ["265/70R17", "255/70R18"],
+        "EL XLT": ["265/70R17", "255/70R18"],
+        "Eddie Bauer": ["265/70R17", "255/70R18", "275/55R20"],
+        "EL Eddie Bauer": ["255/70R18", "275/55R20"],
+        "Limited": ["255/70R18", "275/55R20"],
+        "EL Limited": ["255/70R18", "275/55R20"],
+        "King Ranch": ["255/70R18", "275/55R20"],
+        "EL King Ranch": ["255/70R18", "275/55R20"]
+      },
+      "status": "UPDATE",
+      "notes": "265/65R18 should be 255/70R18; 275/65R18 not confirmed - remove"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "255/70R18", "275/55R20"],
+      "trims": {
+        "XLT": ["265/70R17", "255/70R18"],
+        "EL XLT": ["265/70R17", "255/70R18"],
+        "Eddie Bauer": ["265/70R17", "255/70R18", "275/55R20"],
+        "EL Eddie Bauer": ["255/70R18", "275/55R20"],
+        "Limited": ["255/70R18", "275/55R20"],
+        "EL Limited": ["255/70R18", "275/55R20"],
+        "King Ranch": ["255/70R18", "275/55R20"],
+        "EL King Ranch": ["255/70R18", "275/55R20"],
+        "Funkmaster Flex Edition": ["275/55R20"]
+      },
+      "status": "UPDATE",
+      "notes": "265/65R18 should be 255/70R18; 275/65R18 not confirmed - remove"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["265/70R17", "265/65R18", "275/65R18", "275/55R20"],
+      "validatedTireSizes": ["265/70R17", "255/70R18", "275/55R20"],
+      "trims": {
+        "XLT": ["265/70R17", "255/70R18"],
+        "EL XLT": ["265/70R17", "255/70R18"],
+        "Eddie Bauer": ["265/70R17", "255/70R18", "275/55R20"],
+        "EL Eddie Bauer": ["255/70R18", "275/55R20"],
+        "Limited": ["255/70R18", "275/55R20"],
+        "EL Limited": ["255/70R18", "275/55R20"]
+      },
+      "status": "UPDATE",
+      "notes": "265/65R18 should be 255/70R18; 275/65R18 not confirmed - remove"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18"],
+      "validatedTireSizes": ["265/70R17"],
+      "trims": {
+        "XLS": ["265/70R17"],
+        "XLT": ["265/70R17"],
+        "XLT Sport": ["265/70R17"],
+        "Eddie Bauer": ["265/70R17"],
+        "King Ranch": ["265/70R17"],
+        "Limited": ["265/70R17"]
+      },
+      "status": "UPDATE",
+      "notes": "2006 only used 265/70R17. Remove 255/70R17, 265/65R18, 275/65R18"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18"],
+      "validatedTireSizes": ["265/70R17"],
+      "trims": {
+        "XLS": ["265/70R17"],
+        "XLT": ["265/70R17"],
+        "XLT NBX": ["265/70R17"],
+        "XLT Sport": ["265/70R17"],
+        "Eddie Bauer": ["265/70R17"],
+        "Limited": ["265/70R17"]
+      },
+      "status": "UPDATE",
+      "notes": "2005 only used 265/70R17. Remove 255/70R17, 265/65R18, 275/65R18"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18"],
+      "validatedTireSizes": ["265/70R17"],
+      "trims": {
+        "XLS": ["265/70R17"],
+        "XLT": ["265/70R17"],
+        "XLT NBX": ["265/70R17"],
+        "Sport": ["265/70R17"],
+        "Eddie Bauer": ["265/70R17"]
+      },
+      "status": "UPDATE",
+      "notes": "2004 only used 265/70R17. Remove 255/70R17, 265/65R18, 275/65R18"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18"],
+      "validatedTireSizes": ["265/70R17"],
+      "trims": {
+        "XLT": ["265/70R17"],
+        "XLT FX4": ["265/70R17"],
+        "Eddie Bauer": ["265/70R17"]
+      },
+      "status": "UPDATE",
+      "notes": "2003 only used 265/70R17. Remove 255/70R17, 265/65R18, 275/65R18"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "expedition",
+      "currentTireSizes": ["255/70R16", "265/70R16", "255/65R17", "265/70R17"],
+      "validatedTireSizes": ["255/70R16", "265/70R17", "275/60R17"],
+      "trims": {
+        "2wd": ["255/70R16", "275/60R17"],
+        "4wd": ["255/70R16", "265/70R17"],
+        "Eddie Bauer 2wd": ["275/60R17"],
+        "Eddie Bauer 4wd": ["265/70R17"]
+      },
+      "status": "UPDATE",
+      "notes": "265/70R16 not confirmed; 255/65R17 should be 275/60R17"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 8,
+    "update": 49,
+    "missing": 10,
+    "review": 3,
+    "skip": 4,
+    "duplicates": 1
+  },
+  "issues": [
+    "Ford Escape 2020-2026: 235/55R19 in DB should be 225/55R19",
+    "Ford Escape 2008-2012: 235/60R17 in DB should be 225/65R17",
+    "Ford Escape 2001-2007: 215/70R15 in DB should be 225/70R15 or 225/75R15 depending on year",
+    "Ford Escort ZX2: All years missing tire sizes - add 185/65R14, 185/60R15",
+    "Ford Evos: China-only model - recommend removing from US database or flagging",
+    "Ford Excursion: All years missing tire sizes - add 265/75R16 (and 275/65R18 for 2005)",
+    "Ford Expedition 2003-2006: Only 265/70R17 - remove other sizes",
+    "Ford Expedition 2007-2010: 265/65R18 should be 255/70R18",
+    "Ford Expedition 2018-2021: 265/70R18 and 285/55R20 not OEM - remove",
+    "Ford Expedition 2025-2026: New platform with different sizes - major update needed"
+  ]
+}

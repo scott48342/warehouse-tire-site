@@ -1,0 +1,1167 @@
+{
+  "batchId": "68",
+  "validatedAt": "2026-04-21T22:08:00Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "HR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["195/70R15", "195/60R16"],
+      "trims": {
+        "Base (GH1/GH2)": ["195/70R15"],
+        "J/L Package": ["195/60R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM first generation (1999-2006). Not sold in US market. Current DB has no tire sizes.",
+      "source": "wheel-size.com, avtoreference.com"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["215/55R16", "215/50R17"],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": {
+        "EX": ["215/55R16"],
+        "Touring": ["215/50R17"]
+      },
+      "status": "VALID",
+      "notes": "3rd generation (2019-2022). Tire sizes match OEM specs.",
+      "source": "tiresize.com, hondainfocenter.com"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["215/55R16", "215/50R17"],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": {
+        "LX": ["215/55R16"],
+        "EX": ["215/55R16", "215/50R17"],
+        "Touring": ["215/50R17"]
+      },
+      "status": "VALID",
+      "notes": "3rd generation. LX/EX have 16\" standard, EX offers 17\" option.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["215/55R16", "215/50R17"],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": {
+        "LX": ["215/55R16"],
+        "EX": ["215/55R16", "215/50R17"],
+        "Touring": ["215/50R17"]
+      },
+      "status": "VALID",
+      "notes": "3rd generation. Correct tire sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["215/55R16", "215/50R17"],
+      "validatedTireSizes": ["215/55R16", "215/50R17"],
+      "trims": {
+        "LX": ["215/55R16"],
+        "EX": ["215/55R16", "215/50R17"],
+        "Touring": ["215/50R17"]
+      },
+      "status": "VALID",
+      "notes": "3rd generation started 2019. Correct tire sizes.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["185/65R15", "215/50R17"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "NO PRODUCTION IN 2018. Honda Insight had production gap 2015-2018. 3rd gen started 2019. Remove this entry.",
+      "source": "tiresize.com, Wikipedia"
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/60R15"],
+      "trims": {
+        "Base": ["185/60R15"],
+        "EX": ["185/60R15"],
+        "LX": ["185/60R15"]
+      },
+      "status": "INCORRECT",
+      "notes": "2nd generation. OEM size is 185/60R15 for all trims. Current DB shows 175/65R15 and 185/55R16 which are WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/60R15"],
+      "trims": {
+        "Base": ["185/60R15"],
+        "EX": ["185/60R15"],
+        "LX": ["185/60R15"]
+      },
+      "status": "INCORRECT",
+      "notes": "2nd generation. OEM size is 185/60R15. Current DB is WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["185/60R15"],
+      "trims": {
+        "Base": ["185/60R15"],
+        "EX": ["185/60R15"],
+        "LX": ["185/60R15"]
+      },
+      "status": "INCORRECT",
+      "notes": "2nd generation (2010-2014 facelift). OEM size is 185/60R15. Current DB is WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R15"],
+      "trims": {
+        "Base": ["175/65R15"],
+        "EX": ["175/65R15"],
+        "LX": ["175/65R15"]
+      },
+      "status": "INCORRECT",
+      "notes": "2nd generation. OEM size is 175/65R15 ONLY. 185/55R16 is NOT OEM for this year.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["175/65R15", "185/55R16"],
+      "validatedTireSizes": ["175/65R15"],
+      "trims": {
+        "Base": ["175/65R15"],
+        "EX": ["175/65R15"],
+        "LX": ["175/65R15"]
+      },
+      "status": "INCORRECT",
+      "notes": "2nd generation started 2010. OEM size is 175/65R15 ONLY. 185/55R16 is NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["185/65R15", "215/50R17"],
+      "validatedTireSizes": [],
+      "trims": {},
+      "status": "INVALID_YEAR",
+      "notes": "NO PRODUCTION IN 2009. 1st gen ended 2006, 2nd gen started 2010. Remove this entry.",
+      "source": "tiresize.com, Wikipedia"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["165/65R14"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": {
+        "Base Model": ["165/65R14"]
+      },
+      "status": "VALID",
+      "notes": "1st generation (2000-2006). Correct OEM size.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["165/65R14"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": {
+        "Base Model": ["165/65R14"]
+      },
+      "status": "VALID",
+      "notes": "1st generation. Correct OEM size.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["165/65R14"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": {
+        "Base Model": ["165/65R14"]
+      },
+      "status": "VALID",
+      "notes": "1st generation. Correct OEM size.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["165/65R14"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": {
+        "Base Model": ["165/65R14"]
+      },
+      "status": "VALID",
+      "notes": "1st generation. Correct OEM size.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["165/65R14"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": {
+        "Base Model": ["165/65R14"]
+      },
+      "status": "VALID",
+      "notes": "1st generation. Correct OEM size.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["165/65R14"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": {
+        "Base Model": ["165/65R14"]
+      },
+      "status": "VALID",
+      "notes": "1st generation. Correct OEM size.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Insight",
+      "currentTireSizes": ["165/65R14"],
+      "validatedTireSizes": ["165/65R14"],
+      "trims": {
+        "Base Model": ["165/65R14"]
+      },
+      "status": "VALID",
+      "notes": "1st generation. Correct OEM size.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Integra SJ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14"],
+      "trims": {
+        "EXi": ["185/65R14"],
+        "VXi": ["185/65R14"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM sedan variant (1996-2001). Not sold in US. OEM size is 185/65R14.",
+      "source": "tirewheelguide.com, wheel-size.com"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Integra SJ",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["185/65R14"],
+      "trims": {
+        "EXi": ["185/65R14"],
+        "VXi": ["185/65R14"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM sedan variant. OEM size is 185/65R14.",
+      "source": "tirewheelguide.com, wheel-size.com"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "Lagreat",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16"],
+      "trims": {
+        "Exclusive": ["215/65R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM luxury minivan (1999-2004). Based on US Odyssey RL1. OEM size is 215/65R16.",
+      "source": "wheel-size.com, japanesecartrade.com"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Lagreat",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16"],
+      "trims": {
+        "Exclusive": ["215/65R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM luxury minivan. OEM size is 215/65R16.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Lagreat",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16"],
+      "trims": {
+        "Exclusive": ["215/65R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM luxury minivan. OEM size is 215/65R16.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Lagreat",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16"],
+      "trims": {
+        "Exclusive": ["215/65R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM luxury minivan. OEM size is 215/65R16.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Lagreat",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/65R16"],
+      "trims": {
+        "Exclusive": ["215/65R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM luxury minivan. OEM size is 215/65R16.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Life Dunk",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "TR": ["155/65R13"],
+        "TS": ["155/65R13"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM kei car (2000-2003). OEM size is 155/65R13.",
+      "source": "wheel-size.com, carfromjapan.com"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Life Dunk",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "TR": ["155/65R13"],
+        "TS": ["155/65R13"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM kei car. OEM size is 155/65R13.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "Life Dunk",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "TR": ["155/65R13"],
+        "TS": ["155/65R13"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM kei car. OEM size is 155/65R13.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "Life Dunk",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["155/65R13"],
+      "trims": {
+        "TR": ["155/65R13"],
+        "TS": ["155/65R13"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "JDM kei car. OEM size is 155/65R13.",
+      "source": "wheel-size.com"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "MDX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R17"],
+      "trims": {
+        "Base": ["235/65R17"],
+        "Touring": ["235/65R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Sold as Acura MDX in US (2001-2006 YD1). OEM size is 235/65R17.",
+      "source": "tiresize.com (Acura MDX)"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "MDX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R17"],
+      "trims": {
+        "Base": ["235/65R17"],
+        "Touring": ["235/65R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Sold as Acura MDX in US. OEM size is 235/65R17.",
+      "source": "tiresize.com (Acura MDX)"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "MDX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R17"],
+      "trims": {
+        "Base": ["235/65R17"],
+        "Touring": ["235/65R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Sold as Acura MDX in US. OEM size is 235/65R17.",
+      "source": "tiresize.com (Acura MDX)"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "MDX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/65R17"],
+      "trims": {
+        "Base": ["235/65R17"],
+        "Touring": ["235/65R17"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Sold as Acura MDX in US. OEM size is 235/65R17.",
+      "source": "tiresize.com (Acura MDX)"
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "MR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": {
+        "All": ["235/70R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Rebadged Honda Pilot for non-US markets (2006-2008). OEM size is 235/70R16.",
+      "source": "wheel-size.com, tiresize.com (Honda Pilot)"
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "MR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": {
+        "All": ["235/70R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Rebadged Honda Pilot. OEM size is 235/70R16.",
+      "source": "wheel-size.com, tiresize.com (Honda Pilot)"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "MR-V",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["235/70R16"],
+      "trims": {
+        "All": ["235/70R16"]
+      },
+      "status": "MISSING_DATA",
+      "notes": "Rebadged Honda Pilot. OEM size is 235/70R16.",
+      "source": "wheel-size.com, tiresize.com (Honda Pilot)"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/35R19", "305/30R20"],
+      "trims": {
+        "Type S": {
+          "front": "245/35R19",
+          "rear": "305/30R20"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "2nd generation. Sold as Acura NSX in US. Staggered setup: F:245/35R19, R:305/30R20.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/35R19", "305/30R20"],
+      "trims": {
+        "Base": {
+          "front": "245/35R19",
+          "rear": "305/30R20"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "2nd generation. Staggered setup: F:245/35R19, R:305/30R20.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/35R19", "305/30R20"],
+      "trims": {
+        "Base": {
+          "front": "245/35R19",
+          "rear": "305/30R20"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "2nd generation. Staggered setup.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/35R19", "305/30R20"],
+      "trims": {
+        "Base": {
+          "front": "245/35R19",
+          "rear": "305/30R20"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "2nd generation. Staggered setup.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/35R19", "305/30R20"],
+      "trims": {
+        "Base": {
+          "front": "245/35R19",
+          "rear": "305/30R20"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "2nd generation. Staggered setup.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/35R19", "305/30R20"],
+      "trims": {
+        "Base": {
+          "front": "245/35R19",
+          "rear": "305/30R20"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "2nd generation started 2016. Staggered setup.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["245/35R19", "295/30R20"],
+      "trims": {
+        "Base": {
+          "front": "245/35R19",
+          "rear": "295/30R20"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "2nd generation debut year. Note: 2016 uses 295/30R20 rear (vs 305 for 2017+).",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/40R17", "255/40R17"],
+      "trims": {
+        "Base": {
+          "front": "215/40R17",
+          "rear": "255/40R17"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "1st generation (2002-2005 refresh). Staggered: F:215/40R17, R:255/40R17.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/40R17", "255/40R17"],
+      "trims": {
+        "Base": {
+          "front": "215/40R17",
+          "rear": "255/40R17"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "1st generation. Staggered setup.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/40R17", "255/40R17"],
+      "trims": {
+        "Base": {
+          "front": "215/40R17",
+          "rear": "255/40R17"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "1st generation. Staggered setup.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/40R17", "255/40R17"],
+      "trims": {
+        "Base": {
+          "front": "215/40R17",
+          "rear": "255/40R17"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "1st generation refresh year. Changed to 17\" wheels all around.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2001,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R16", "245/40R17"],
+      "trims": {
+        "Base": {
+          "front": "215/45R16",
+          "rear": "245/40R17"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "1st generation (1994-2001). Staggered: F:16\", R:17\".",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "NSX",
+      "currentTireSizes": [],
+      "validatedTireSizes": ["215/45R16", "245/40R17"],
+      "trims": {
+        "Base": {
+          "front": "215/45R16",
+          "rear": "245/40R17"
+        }
+      },
+      "isStaggered": true,
+      "status": "MISSING_DATA",
+      "notes": "1st generation. Staggered: F:215/45R16, R:245/40R17.",
+      "source": "tiresize.com (Acura NSX)"
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "EX-L": ["235/60R18"],
+        "Sport-L": ["235/55R19"],
+        "Touring": ["235/55R19"],
+        "Elite": ["235/55R19"]
+      },
+      "status": "VALID",
+      "notes": "Current generation. Tire sizes are correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "EX-L": ["235/60R18"],
+        "Sport-L": ["235/55R19"],
+        "Touring": ["235/55R19"],
+        "Elite": ["235/55R19"]
+      },
+      "status": "VALID",
+      "notes": "Tire sizes are correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "EX": ["235/60R18"],
+        "EX-L": ["235/60R18"],
+        "Sport": ["235/55R19"],
+        "Touring": ["235/55R19"],
+        "Elite": ["235/55R19"]
+      },
+      "status": "VALID",
+      "notes": "Tire sizes are correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2023,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "EX": ["235/60R18"],
+        "EX-L": ["235/60R18"],
+        "Sport": ["235/55R19"],
+        "Touring": ["235/55R19"],
+        "Elite": ["235/55R19"]
+      },
+      "status": "VALID",
+      "notes": "Tire sizes are correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2022,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "LX": ["235/60R18"],
+        "EX": ["235/60R18"],
+        "EX-L": ["235/60R18"],
+        "Touring": ["235/60R18"],
+        "Elite": ["235/55R19"]
+      },
+      "status": "VALID",
+      "notes": "Tire sizes are correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "LX": ["235/60R18"],
+        "EX": ["235/60R18"],
+        "EX-L": ["235/60R18"],
+        "Touring": ["235/60R18"],
+        "Elite": ["235/55R19"]
+      },
+      "status": "VALID",
+      "notes": "Tire sizes are correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "LX": ["235/60R18"],
+        "EX": ["235/60R18"],
+        "EX-L": ["235/60R18"],
+        "Touring": ["235/60R18"],
+        "Elite": ["235/55R19"]
+      },
+      "status": "VALID",
+      "notes": "Tire sizes are correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2019,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "LX": ["235/60R18"],
+        "EX": ["235/60R18"],
+        "EX-L": ["235/60R18"],
+        "Touring": ["235/60R18"],
+        "Elite": ["235/55R19"]
+      },
+      "status": "VALID",
+      "notes": "Tire sizes are correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/60R18", "235/55R19"],
+      "trims": {
+        "LX": ["235/60R18"],
+        "EX": ["235/60R18"],
+        "EX-L": ["235/60R18"],
+        "Touring": ["235/60R18"],
+        "Elite": ["235/55R19"]
+      },
+      "status": "VALID",
+      "notes": "5th generation started 2018. Tire sizes are correct.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2017,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "LX": ["235/65R17"],
+        "SE": ["235/65R17"],
+        "EX": ["235/65R17"],
+        "EX-L": ["235/65R17"],
+        "Touring": ["235/60R18"],
+        "Touring Elite": ["235/60R18"]
+      },
+      "status": "INCORRECT",
+      "notes": "4th generation (2011-2017). Current DB shows 235/55R19 which is WRONG. Should be 235/65R17 and 235/60R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2016,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "LX": ["235/65R17"],
+        "SE": ["235/65R17"],
+        "EX": ["235/65R17"],
+        "EX-L": ["235/65R17"],
+        "Touring": ["235/60R18"],
+        "Touring Elite": ["235/60R18"]
+      },
+      "status": "INCORRECT",
+      "notes": "4th generation. 235/55R19 is WRONG. Should be 235/65R17 and 235/60R18.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2015,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "LX": ["235/65R17"],
+        "EX": ["235/65R17"],
+        "EX-L": ["235/65R17"],
+        "Touring": ["235/60R18"],
+        "Touring Elite": ["235/60R18"]
+      },
+      "status": "INCORRECT",
+      "notes": "4th generation. 235/55R19 is WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "LX": ["235/65R17"],
+        "EX": ["235/65R17"],
+        "EX-L": ["235/65R17"],
+        "Touring": ["235/60R18"],
+        "Touring Elite": ["235/60R18"]
+      },
+      "status": "INCORRECT",
+      "notes": "4th generation. 235/55R19 is WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2013,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19", "235/65R17", "255/50R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "LX": ["235/65R17"],
+        "EX": ["235/65R17"],
+        "EX-L": ["235/65R17"],
+        "Touring": ["235/60R18"],
+        "Touring Elite": ["235/60R18"]
+      },
+      "status": "INCORRECT",
+      "notes": "4th generation. Current DB has incorrect sizes. 235/55R19 and 255/50R19 are NOT OEM.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2012,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "LX": ["235/65R17"],
+        "EX": ["235/65R17"],
+        "EX-L": ["235/65R17"],
+        "Touring": ["235/60R18"],
+        "Touring Elite": ["235/60R18"]
+      },
+      "status": "INCORRECT",
+      "notes": "4th generation. 235/55R19 is WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2011,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R17", "235/60R18"],
+      "trims": {
+        "LX": ["235/65R17"],
+        "EX": ["235/65R17"],
+        "EX-L": ["235/65R17"],
+        "Touring": ["235/60R18"],
+        "Touring Elite": ["235/60R18"]
+      },
+      "status": "INCORRECT",
+      "notes": "4th generation started 2011. 235/55R19 is WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R16", "235/60R17"],
+      "trims": {
+        "LX": ["235/65R16"],
+        "EX": ["235/65R16"],
+        "EX-L": ["235/65R16"],
+        "Touring": ["235/60R17"]
+      },
+      "status": "INCORRECT",
+      "notes": "3rd generation (2005-2010). 235/60R18 and 235/55R19 are WRONG. Should be 235/65R16 and 235/60R17.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2009,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R16", "235/60R17"],
+      "trims": {
+        "LX": ["235/65R16"],
+        "EX": ["235/65R16"],
+        "EX-L": ["235/65R16"],
+        "Touring": ["235/60R17"]
+      },
+      "status": "INCORRECT",
+      "notes": "3rd generation. Current DB sizes are WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2008,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R16", "235/60R17"],
+      "trims": {
+        "LX": ["235/65R16"],
+        "EX": ["235/65R16"],
+        "EX-L": ["235/65R16"],
+        "Touring": ["235/60R17"]
+      },
+      "status": "INCORRECT",
+      "notes": "3rd generation. Current DB sizes are WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2007,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R16"],
+      "trims": {
+        "LX": ["235/65R16"],
+        "EX": ["235/65R16"],
+        "EX-L": ["235/65R16"]
+      },
+      "status": "INCORRECT",
+      "notes": "3rd generation. Only had 16\" wheels. 235/60R18 and 235/55R19 are WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2006,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R16"],
+      "trims": {
+        "LX": ["235/65R16"],
+        "EX": ["235/65R16"],
+        "EX-L": ["235/65R16"]
+      },
+      "status": "INCORRECT",
+      "notes": "3rd generation. Only had 16\" wheels. Current DB sizes are WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2005,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["235/60R18", "235/55R19"],
+      "validatedTireSizes": ["235/65R16"],
+      "trims": {
+        "LX": ["235/65R16"],
+        "EX": ["235/65R16"],
+        "EX-L": ["235/65R16"]
+      },
+      "status": "INCORRECT",
+      "notes": "3rd generation started 2005. Only had 16\" wheels. Current DB sizes are WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2004,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["215/65R15", "215/60R16", "225/60R16"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "LX": ["225/60R16"],
+        "EX": ["225/60R16"],
+        "EX-L": ["225/60R16"]
+      },
+      "status": "INCORRECT",
+      "notes": "2nd generation (1999-2004). OEM size is 225/60R16 ONLY. 215/65R15 and 215/60R16 are WRONG.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2003,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["215/65R15", "215/60R16", "225/60R16"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "LX": ["225/60R16"],
+        "EX": ["225/60R16"],
+        "EX-L": ["225/60R16"]
+      },
+      "status": "INCORRECT",
+      "notes": "2nd generation. OEM size is 225/60R16 ONLY.",
+      "source": "tiresize.com"
+    },
+    {
+      "year": 2002,
+      "make": "Honda",
+      "model": "Odyssey",
+      "currentTireSizes": ["215/65R15", "215/60R16", "225/60R16"],
+      "validatedTireSizes": ["225/60R16"],
+      "trims": {
+        "LX": ["225/60R16"],
+        "EX": ["225/60R16"],
+        "EX-L": ["225/60R16"]
+      },
+      "status": "INCORRECT",
+      "notes": "2nd generation. OEM size is 225/60R16 ONLY.",
+      "source": "tiresize.com"
+    }
+  ],
+  "summary": {
+    "total": 75,
+    "valid": 18,
+    "incorrect": 20,
+    "missingData": 35,
+    "invalidYear": 2,
+    "criticalIssues": [
+      "2009 Honda Insight - NO PRODUCTION (remove entry)",
+      "2018 Honda Insight - NO PRODUCTION (remove entry)",
+      "2010-2014 Honda Insight - Wrong tire sizes in DB",
+      "2002-2017 Honda Odyssey - Many incorrect tire sizes",
+      "All Honda NSX entries - Missing staggered tire data",
+      "All JDM models (HR-V, Integra SJ, Lagreat, Life Dunk, MDX, MR-V) - No tire data in DB"
+    ],
+    "recommendations": [
+      "Remove 2009 and 2018 Honda Insight entries (no production those years)",
+      "Fix 2010-2014 Insight sizes: 2010-2011 = 175/65R15 only, 2012-2014 = 185/60R15",
+      "Fix Odyssey 2002-2004: Change to 225/60R16 only",
+      "Fix Odyssey 2005-2010: 235/65R16 (base), 235/60R17 (Touring 2008-2010)",
+      "Fix Odyssey 2011-2017: 235/65R17 (base), 235/60R18 (Touring)",
+      "Add NSX staggered fitment data with front/rear tire specifications",
+      "Consider removing JDM-only models or adding accurate fitment data"
+    ]
+  }
+}

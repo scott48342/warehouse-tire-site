@@ -1,0 +1,1001 @@
+{
+  "batchId": "37",
+  "processedAt": "2026-04-21T21:07:00.000Z",
+  "vehicleCount": 75,
+  "results": [
+    {
+      "year": 2014,
+      "make": "Lincoln",
+      "model": "MKS",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 44 },
+        { "diameter": 20, "width": 8, "offset": 39 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "Ford D3 platform shared with Taurus/Flex"
+    },
+    {
+      "year": 2013,
+      "make": "Lincoln",
+      "model": "MKS",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 44 },
+        { "diameter": 20, "width": 8, "offset": 39 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "Ford D3 platform shared with Taurus/Flex"
+    },
+    {
+      "year": 2012,
+      "make": "Lincoln",
+      "model": "MKS",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 44 },
+        { "diameter": 20, "width": 8, "offset": 39 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "Ford D3 platform shared with Taurus/Flex"
+    },
+    {
+      "year": 2011,
+      "make": "Lincoln",
+      "model": "MKS",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 44 },
+        { "diameter": 19, "width": 8, "offset": 44 },
+        { "diameter": 20, "width": 8, "offset": 39 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "Ford D3 platform shared with Taurus/Flex"
+    },
+    {
+      "year": 2010,
+      "make": "Lincoln",
+      "model": "MKS",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 44 },
+        { "diameter": 19, "width": 8, "offset": 44 },
+        { "diameter": 20, "width": 8, "offset": 39 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "Ford D3 platform shared with Taurus/Flex"
+    },
+    {
+      "year": 2009,
+      "make": "Lincoln",
+      "model": "MKS",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 44 },
+        { "diameter": 19, "width": 8, "offset": 44 },
+        { "diameter": 20, "width": 8, "offset": 39 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "Ford D3 platform shared with Taurus/Flex"
+    },
+    {
+      "year": 2008,
+      "make": "Lincoln",
+      "model": "MKS",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 44 },
+        { "diameter": 19, "width": 8, "offset": 44 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "First model year, Ford D3 platform"
+    },
+    {
+      "year": 2026,
+      "make": "Lincoln",
+      "model": "Nautilus",
+      "boltPattern": "5x114.3",
+      "centerBore": 70.5,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 60 },
+        { "diameter": 20, "width": 8, "offset": 60 },
+        { "diameter": 21, "width": 8, "offset": 60 },
+        { "diameter": 22, "width": 8.5, "offset": 60 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "Generation II, available in 2.0T and 2.0T HEV"
+    },
+    {
+      "year": 2025,
+      "make": "Lincoln",
+      "model": "Z-Zephyr",
+      "boltPattern": "5x114.3",
+      "centerBore": 70.5,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 50 },
+        { "diameter": 19, "width": 8.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "China market only, Lincoln Z/Zephyr nameplate"
+    },
+    {
+      "year": 2024,
+      "make": "Lincoln",
+      "model": "Z-Zephyr",
+      "boltPattern": "5x114.3",
+      "centerBore": 70.5,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 50 },
+        { "diameter": 19, "width": 8.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "China market only, facelift model"
+    },
+    {
+      "year": 2023,
+      "make": "Lincoln",
+      "model": "Z-Zephyr",
+      "boltPattern": "5x114.3",
+      "centerBore": 70.5,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 50 },
+        { "diameter": 19, "width": 8.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "China market only"
+    },
+    {
+      "year": 2022,
+      "make": "Lincoln",
+      "model": "Z-Zephyr",
+      "boltPattern": "5x114.3",
+      "centerBore": 70.5,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8, "offset": 50 },
+        { "diameter": 19, "width": 8.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "China market only, first model year"
+    },
+    {
+      "year": 2006,
+      "make": "Lincoln",
+      "model": "Zephyr",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7.5, "offset": 44 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "Ford CD3 platform, rebadged as MKZ after 2006"
+    },
+    {
+      "year": 2024,
+      "make": "Lucid",
+      "model": "Air",
+      "boltPattern": "5x120",
+      "centerBore": 64.1,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 40 },
+        { "diameter": 21, "width": 9, "offset": 40 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "EV luxury sedan, various trims including Pure, Touring, Grand Touring"
+    },
+    {
+      "year": 2023,
+      "make": "Lucid",
+      "model": "Air",
+      "boltPattern": "5x120",
+      "centerBore": 64.1,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8.5, "offset": 40 },
+        { "diameter": 21, "width": 9, "offset": 40 }
+      ],
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "EV luxury sedan"
+    },
+    {
+      "year": 2024,
+      "make": "Lucid",
+      "model": "Gravity",
+      "boltPattern": "5x120",
+      "centerBore": 64.1,
+      "wheelSizes": [
+        { "diameter": 22, "width": 9.5, "offset": 44, "position": "front" },
+        { "diameter": 22, "width": 10, "offset": 51, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "EV SUV, staggered wheel setup"
+    },
+    {
+      "year": 2022,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 20, "width": 8.5, "offset": 52, "position": "front" },
+        { "diameter": 20, "width": 10.5, "offset": 55, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "Final year of first generation before new MC20-based generation"
+    },
+    {
+      "year": 2021,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 20, "width": 8.5, "offset": 52, "position": "front" },
+        { "diameter": 20, "width": 10.5, "offset": 55, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "Limited production year"
+    },
+    {
+      "year": 2020,
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 20, "width": 8.5, "offset": 52, "position": "front" },
+        { "diameter": 20, "width": 10.5, "offset": 55, "position": "rear" }
+      ],
+      "isStaggered": true,
+      "lugNuts": { "threadSize": "M14x1.5", "count": 5 },
+      "notes": "First generation M145 platform"
+    },
+    {
+      "year": 2002,
+      "make": "Mazda",
+      "model": "121",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 13, "width": 5, "offset": 45 },
+        { "diameter": 14, "width": 5.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "DW generation, subcompact, not sold in US"
+    },
+    {
+      "year": 2001,
+      "make": "Mazda",
+      "model": "121",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 13, "width": 5, "offset": 45 },
+        { "diameter": 14, "width": 5.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "DW generation, not sold in US"
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "121",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 13, "width": 5, "offset": 45 },
+        { "diameter": 14, "width": 5.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "DW generation, not sold in US"
+    },
+    {
+      "year": 2002,
+      "make": "Mazda",
+      "model": "626",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 15, "width": 6, "offset": 50 },
+        { "diameter": 16, "width": 6.5, "offset": 42 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "GF platform, final production year"
+    },
+    {
+      "year": 2001,
+      "make": "Mazda",
+      "model": "626",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 15, "width": 6, "offset": 50 },
+        { "diameter": 16, "width": 6.5, "offset": 42 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "GF platform"
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "626",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 15, "width": 6, "offset": 50 },
+        { "diameter": 16, "width": 6.5, "offset": 42 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "GF platform"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "Allegro",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 14, "width": 5.5, "offset": 45 },
+        { "diameter": 15, "width": 6, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "Latin America market version of Protegé/323"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Allegro",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 14, "width": 5.5, "offset": 45 },
+        { "diameter": 15, "width": 6, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "Latin America market"
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Allegro",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 14, "width": 5.5, "offset": 45 },
+        { "diameter": 15, "width": 6, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "Latin America market"
+    },
+    {
+      "year": 2004,
+      "make": "Mazda",
+      "model": "Allegro",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 14, "width": 5.5, "offset": 45 },
+        { "diameter": 15, "width": 6, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "Latin America market"
+    },
+    {
+      "year": 2003,
+      "make": "Mazda",
+      "model": "Allegro",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 14, "width": 5.5, "offset": 45 },
+        { "diameter": 15, "width": 6, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "Latin America market"
+    },
+    {
+      "year": 2002,
+      "make": "Mazda",
+      "model": "Allegro",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 14, "width": 5.5, "offset": 45 },
+        { "diameter": 15, "width": 6, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "Latin America market"
+    },
+    {
+      "year": 2001,
+      "make": "Mazda",
+      "model": "Allegro",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 14, "width": 5.5, "offset": 45 },
+        { "diameter": 15, "width": 6, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "Latin America market"
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "Allegro",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 14, "width": 5.5, "offset": 45 },
+        { "diameter": 15, "width": 6, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 4 },
+      "notes": "Latin America market"
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "CX-30 EV",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 18, "width": 7, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market EV version of CX-30"
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "CX-30 EV",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 18, "width": 7, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market EV"
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "CX-30 EV",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 18, "width": 7, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market EV"
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "CX-30 EV",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 18, "width": 7, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market EV, first model year"
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "CX-4",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 50 },
+        { "diameter": 19, "width": 7, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market only coupe-SUV"
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "CX-4",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 50 },
+        { "diameter": 19, "width": 7, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market only"
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "CX-4",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 50 },
+        { "diameter": 19, "width": 7, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market only"
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "CX-4",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 50 },
+        { "diameter": 19, "width": 7, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market only"
+    },
+    {
+      "year": 2020,
+      "make": "Mazda",
+      "model": "CX-4",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 50 },
+        { "diameter": 19, "width": 7, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market only, facelift model"
+    },
+    {
+      "year": 2019,
+      "make": "Mazda",
+      "model": "CX-4",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 50 },
+        { "diameter": 19, "width": 7, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market only"
+    },
+    {
+      "year": 2018,
+      "make": "Mazda",
+      "model": "CX-4",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 50 },
+        { "diameter": 19, "width": 7, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market only"
+    },
+    {
+      "year": 2017,
+      "make": "Mazda",
+      "model": "CX-4",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 50 },
+        { "diameter": 19, "width": 7, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market only"
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "CX-4",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 50 },
+        { "diameter": 19, "width": 7, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "China market only, first model year"
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "CX-50",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 18, "width": 7, "offset": 45 },
+        { "diameter": 19, "width": 7.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "Compact crossover SUV"
+    },
+    {
+      "year": 2016,
+      "make": "Mazda",
+      "model": "CX-7",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 18, "width": 7.5, "offset": 50 },
+        { "diameter": 19, "width": 8.5, "offset": 55 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "ER platform, some markets only"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "CX-7",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 18, "width": 7.5, "offset": 50 },
+        { "diameter": 19, "width": 8.5, "offset": 55 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "ER platform"
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "CX-7",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 18, "width": 7.5, "offset": 50 },
+        { "diameter": 19, "width": 8.5, "offset": 55 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "ER platform"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "CX-7",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 18, "width": 7.5, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "ER platform, final US model year"
+    },
+    {
+      "year": 2011,
+      "make": "Mazda",
+      "model": "CX-7",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 18, "width": 7.5, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "ER platform"
+    },
+    {
+      "year": 2010,
+      "make": "Mazda",
+      "model": "CX-7",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 18, "width": 7.5, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "ER platform, refreshed model"
+    },
+    {
+      "year": 2009,
+      "make": "Mazda",
+      "model": "CX-7",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 18, "width": 7.5, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "ER platform"
+    },
+    {
+      "year": 2008,
+      "make": "Mazda",
+      "model": "CX-7",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 18, "width": 7.5, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "ER platform"
+    },
+    {
+      "year": 2007,
+      "make": "Mazda",
+      "model": "CX-7",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 18, "width": 7.5, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "ER platform, first full US model year"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "CX-7",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 18, "width": 7.5, "offset": 50 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "ER platform, first model year (late 2006)"
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "CX-70",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 45 },
+        { "diameter": 21, "width": 8.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KJ platform, two-row midsize SUV"
+    },
+    {
+      "year": 2025,
+      "make": "Mazda",
+      "model": "CX-70",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 45 },
+        { "diameter": 21, "width": 8.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KJ platform"
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "CX-70",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 19, "width": 8, "offset": 45 },
+        { "diameter": 21, "width": 8.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KJ platform, first model year"
+    },
+    {
+      "year": 2025,
+      "make": "Mazda",
+      "model": "CX-8",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 19, "width": 7.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KG platform, Japan/Asia/Australia market"
+    },
+    {
+      "year": 2024,
+      "make": "Mazda",
+      "model": "CX-8",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 19, "width": 7.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KG platform, Japan/Asia/Australia market"
+    },
+    {
+      "year": 2023,
+      "make": "Mazda",
+      "model": "CX-8",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 19, "width": 7.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KG platform"
+    },
+    {
+      "year": 2022,
+      "make": "Mazda",
+      "model": "CX-8",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 19, "width": 7.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KG platform"
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "CX-8",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 19, "width": 7.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KG platform"
+    },
+    {
+      "year": 2020,
+      "make": "Mazda",
+      "model": "CX-8",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 19, "width": 7.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KG platform"
+    },
+    {
+      "year": 2019,
+      "make": "Mazda",
+      "model": "CX-8",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 19, "width": 7.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KG platform"
+    },
+    {
+      "year": 2018,
+      "make": "Mazda",
+      "model": "CX-8",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 19, "width": 7.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KG platform"
+    },
+    {
+      "year": 2017,
+      "make": "Mazda",
+      "model": "CX-8",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 17, "width": 7, "offset": 45 },
+        { "diameter": 19, "width": 7.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KG platform, first model year"
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "CX-90",
+      "boltPattern": "5x114.3",
+      "centerBore": 67.1,
+      "wheelSizes": [
+        { "diameter": 18, "width": 8.5, "offset": 45 },
+        { "diameter": 19, "width": 8.5, "offset": 45 },
+        { "diameter": 21, "width": 9.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.5", "count": 5 },
+      "notes": "KK platform, three-row flagship SUV"
+    },
+    {
+      "year": 2006,
+      "make": "Mazda",
+      "model": "Laputa",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 13, "width": 4.5, "offset": 45 },
+        { "diameter": 14, "width": 4.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.25", "count": 4 },
+      "notes": "Kei car based on Suzuki Kei, Japan market only"
+    },
+    {
+      "year": 2005,
+      "make": "Mazda",
+      "model": "Laputa",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 13, "width": 4.5, "offset": 45 },
+        { "diameter": 14, "width": 4.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.25", "count": 4 },
+      "notes": "Kei car based on Suzuki Kei, Japan market only"
+    },
+    {
+      "year": 2004,
+      "make": "Mazda",
+      "model": "Laputa",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 13, "width": 4.5, "offset": 45 },
+        { "diameter": 14, "width": 4.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.25", "count": 4 },
+      "notes": "Kei car based on Suzuki Kei, Japan market only"
+    },
+    {
+      "year": 2003,
+      "make": "Mazda",
+      "model": "Laputa",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 13, "width": 4.5, "offset": 45 },
+        { "diameter": 14, "width": 4.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.25", "count": 4 },
+      "notes": "Kei car based on Suzuki Kei, Japan market only"
+    },
+    {
+      "year": 2002,
+      "make": "Mazda",
+      "model": "Laputa",
+      "boltPattern": "4x100",
+      "centerBore": 54.1,
+      "wheelSizes": [
+        { "diameter": 13, "width": 4.5, "offset": 45 },
+        { "diameter": 14, "width": 4.5, "offset": 45 }
+      ],
+      "lugNuts": { "threadSize": "M12x1.25", "count": 4 },
+      "notes": "Kei car based on Suzuki Kei, Japan market only"
+    }
+  ],
+  "summary": {
+    "totalVehicles": 75,
+    "processed": 75,
+    "withStaggeredSetup": 4,
+    "marketNotes": {
+      "chinaOnly": ["Lincoln Z-Zephyr", "Mazda CX-4", "Mazda CX-30 EV"],
+      "japanOnly": ["Mazda Laputa", "Mazda CX-8"],
+      "latinAmericaOnly": ["Mazda Allegro"],
+      "notSoldInUS": ["Mazda 121"]
+    }
+  }
+}

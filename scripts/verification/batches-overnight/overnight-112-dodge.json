@@ -1,0 +1,2886 @@
+[
+  {
+    "id": "8ce50c03-ac32-400d-8ef1-b54195425670",
+    "year": 2019,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/55R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 25,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/45R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "78f62bda-573c-42b7-98ea-b86ad70509a8",
+    "year": 2019,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 25,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20",
+      "235/55R18",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "a43b92a3-d4d0-4a9c-b1be-888d020e968a",
+    "year": 2019,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 25,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20",
+      "235/55R18",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "8a367fa4-1056-4cea-82b5-0a383f15a74d",
+    "year": 2019,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 25,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "1c71cf75-7808-4f67-a4e7-3d5708194acd",
+    "year": 2019,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 25,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/40R20",
+      "235/55R18",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "f8c0759e-6073-4d67-ae7a-ff2f4fc1c408",
+    "year": 2019,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Redeye",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 25,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20",
+      "235/55R18",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "fb8cf01e-5e89-4553-9c00-309d39fb903f",
+    "year": 2019,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 25,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20",
+      "235/55R18",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "ab2f813b-8e10-47ea-857d-0f2f68d183e8",
+    "year": 2019,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "GT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 25,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R18",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "15c63900-0089-41c4-ab04-1cca90e3440f",
+    "year": 2020,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "GT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "ec594d2f-ec8c-48d2-9b7c-d65a5081a25d",
+    "year": 2020,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "0ed181ce-9b26-4bec-a9de-dccfcf2ee36b",
+    "year": 2020,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Super Stock",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "315/40R18"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "315/40R18",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "5d305717-eda0-4298-b479-e06ff872777e",
+    "year": 2020,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "ccb92f60-4c94-4af5-9de1-5fafe42d861c",
+    "year": 2020,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "7182f25f-1943-450e-93c6-76dbeb6ad172",
+    "year": 2020,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/55R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "471b5510-4a6a-4b47-85a7-142af864c5b2",
+    "year": 2020,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "dcaac25a-011f-45b2-856a-505ad1677e3e",
+    "year": 2020,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Redeye",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "f567ebc7-1924-4ae0-8661-5276d217cd0b",
+    "year": 2020,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "2bc2e0f4-84ac-4ffa-aca4-c75b66df56c8",
+    "year": 2020,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "c18a835f-1cee-48d0-b653-0007645d6445",
+    "year": 2021,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/55R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "e81bd857-f326-4567-8867-ad2d8bee669b",
+    "year": 2021,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Redeye",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "e8cc1ea6-985c-4569-b9fb-8a91b464ae1c",
+    "year": 2021,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "GT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "d5d0ea8a-6c1c-4a64-a524-9ac187bcb8ce",
+    "year": 2021,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "85336156-2a7e-4521-91d5-d4b820fdb097",
+    "year": 2021,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "2dad8821-e985-45b3-92c4-57fc5a8c1616",
+    "year": 2021,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "76046f39-fc56-489d-accf-b6b39d0dcd13",
+    "year": 2021,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "930293f8-bf73-4af8-8627-146751d97269",
+    "year": 2021,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Super Stock",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "315/40R18"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "315/40R18",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "3831dd25-e042-421f-8e40-d44f25fc912c",
+    "year": 2021,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "9070e8b9-ba19-4631-ad62-5d19f2549edf",
+    "year": 2021,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": true,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 19
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 55,
+        "isStock": false,
+        "diameter": 20
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "offset": 50,
+        "isStock": false,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20",
+      "235/55R19",
+      "255/50R19",
+      "235/50R20",
+      "245/45ZR20",
+      "255/45ZR20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "a53068de-0df5-4f93-9f1d-fc302ed89587",
+    "year": 2022,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "a02bb29a-e7fa-492c-bb17-d8e9a32fd2a2",
+    "year": 2022,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "7bfd6dcd-dc8f-430b-8f51-2c5340156651",
+    "year": 2022,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "87453e8a-a7a6-4919-bbf2-0eb35ac3895a",
+    "year": 2022,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "275/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "63ece4fa-605e-43bc-b273-af25f16fb579",
+    "year": 2022,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Redeye",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "3acbc9b1-d9c3-452c-af43-2566c0dc83f4",
+    "year": 2022,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "8f2323bc-2f76-4109-8fda-cf9e2e84f18f",
+    "year": 2022,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "248f766e-644a-4cc5-b47f-1dbc6070bbc6",
+    "year": 2022,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "GT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "912c99c5-a7ae-41fc-9692-9e06b955857a",
+    "year": 2022,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Super Stock",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "315/40R18"
+      }
+    ],
+    "currentTireSizes": [
+      "315/40R18"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "06580fb4-5625-421b-a061-614a1e2053c3",
+    "year": 2022,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/55R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "1667a505-3cef-4b6f-9e8a-02c37291b604",
+    "year": 2023,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Super Stock",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "315/40R18"
+      }
+    ],
+    "currentTireSizes": [
+      "315/40R18"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "973ff0b5-f570-4e6e-96eb-cdafaa1c4b1c",
+    "year": 2023,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 18,
+        "tireSize": "235/55R18"
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "235/55R18",
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "54505dec-97d9-41cc-a2a3-9ae9d842678f",
+    "year": 2023,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "f52c1ee2-e1eb-4cd0-be11-b478e96d4efa",
+    "year": 2023,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 9.5,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "275/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "a5c03606-ff3b-4f1a-b866-d02a9c0c66e0",
+    "year": 2023,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "GT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "c4e5748d-0de9-4bb6-9428-3413f9633c39",
+    "year": 2023,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "3b52da76-5352-4a52-8b5b-7f89ef4ec9b5",
+    "year": 2023,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Redeye",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "a3abb8ac-aeba-4129-9a7d-0df8a1b33aae",
+    "year": 2023,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 11,
+        "offset": 18,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "2722fbfb-e139-4027-a5b9-a325d10c6365",
+    "year": 2023,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "3221b073-af88-4511-b0c4-ec3ae71be2ad",
+    "year": 2023,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "both",
+        "width": 8,
+        "offset": 24,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "245/45R20"
+      },
+      {
+        "axle": "both",
+        "width": 9,
+        "offset": 21,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "275/40R20"
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "275/40R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "296d847f-16e9-44c9-b4e1-f2077ddc5cfd",
+    "year": 2024,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "Base",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "axle": "front",
+        "width": 7.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 17,
+        "tireSize": "215/65R17"
+      },
+      {
+        "axle": "rear",
+        "width": 11.5,
+        "offset": null,
+        "isStock": true,
+        "diameter": 20,
+        "tireSize": "305/35R20"
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "generation_template"
+  },
+  {
+    "id": "3341905b-78e7-495e-a8a1-3aead658c195",
+    "year": 2024,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9.5,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "93984bba-708d-481b-bbb6-a71501143960",
+    "year": 2024,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 11,
+        "diameter": 20,
+        "staggered": true
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "21495e4a-65f9-48a1-b692-10c80566501b",
+    "year": 2024,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Hellcat Widebody",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 11,
+        "diameter": 20,
+        "staggered": true
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "63ab9838-d86d-40fc-af7a-48be61ace212",
+    "year": 2024,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SRT Demon 170",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 11,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "da51fac4-39aa-46e8-be07-0ba23ad4e18c",
+    "year": 2024,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T Scat Pack",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 9,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "55532a86-cc47-485c-8a48-60272ccaf09e",
+    "year": 2024,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "f582375e-0ab9-4a9b-b6bf-39d0156191ba",
+    "year": 2024,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "GT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 19
+      },
+      {
+        "width": 8,
+        "diameter": 20
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "29ce3a09-8147-4917-b12b-27feb71c5503",
+    "year": 2024,
+    "make": "dodge",
+    "model": "challenger",
+    "trim": "SXT",
+    "currentBoltPattern": "5x115",
+    "currentHubBore": "71.5",
+    "currentWheelSizes": [
+      {
+        "width": 7.5,
+        "diameter": 18
+      }
+    ],
+    "currentTireSizes": [
+      "215/65R17",
+      "235/55R18",
+      "245/45R18",
+      "245/45R20",
+      "275/40R20",
+      "305/35R20"
+    ],
+    "source": "tier-a-import"
+  },
+  {
+    "id": "2a23707b-32ff-4d79-b36d-68be08f1e4a3",
+    "year": 1966,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "426 Hemi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "030f1146-dbfe-4775-bd71-055097864811",
+    "year": 1966,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "3c2f2a9e-1146-4bf7-9fde-6c8389f905fc",
+    "year": 1966,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 5,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "735-14",
+      "775-14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "2b00a9f2-f898-4113-88d8-11df4ab7c52d",
+    "year": 1967,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 6,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "fa992ac5-4aad-4694-bbca-b4e0c1976d45",
+    "year": 1967,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "426 Hemi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 5,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "735-14",
+      "775-14",
+      "F70-14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "3d29b392-648a-4e1b-a787-f6094762536c",
+    "year": 1967,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "946c53d0-c350-46d8-82c1-5f1564f2d638",
+    "year": 1968,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "440 Six Pack",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "5a5f3e21-1d47-4b07-9783-61cbb2d8d2b3",
+    "year": 1968,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Hemi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "689863a7-5a89-4614-b0f1-c6578a697291",
+    "year": 1968,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Daytona",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f1ef0eaf-fbe8-4b7c-81cc-cee425c82097",
+    "year": 1968,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "f95c40d6-c5e6-40b1-ba9b-38c019a1d953",
+    "year": 1968,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "7857e1f5-c498-4d94-8a0a-a05c20af94fa",
+    "year": 1968,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 5,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 14
+      }
+    ],
+    "currentTireSizes": [
+      "735-14",
+      "775-14",
+      "F70-14"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "56637e4a-fbaa-45b7-81bb-e3881db2e732",
+    "year": 1969,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Hemi",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "27f461b0-d53e-42c3-9826-072c03a52e48",
+    "year": 1969,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "75cb52b6-f6a5-46ea-85e0-982b121f8581",
+    "year": 1969,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Base",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "71.1",
+    "currentWheelSizes": [
+      {
+        "width": 5.5,
+        "offset": 5,
+        "diameter": 14
+      },
+      {
+        "width": 6,
+        "offset": 0,
+        "diameter": 14
+      },
+      {
+        "width": 7,
+        "offset": 0,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "735-14",
+      "775-14",
+      "F70-14",
+      "F70-15"
+    ],
+    "source": "80s-research-batch"
+  },
+  {
+    "id": "e00bc062-5fbd-40c2-92c1-de172e56c81e",
+    "year": 1969,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "Daytona",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "ba4b3ea6-9068-44bc-af00-1a5e47439a91",
+    "year": 1969,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "440 Six Pack",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  },
+  {
+    "id": "a35d9340-dc3d-4e79-b7f5-8fe4975279a8",
+    "year": 1969,
+    "make": "dodge",
+    "model": "charger",
+    "trim": "R/T",
+    "currentBoltPattern": "5x114.3",
+    "currentHubBore": "67.1",
+    "currentWheelSizes": [
+      {
+        "width": 7,
+        "diameter": 15
+      }
+    ],
+    "currentTireSizes": [
+      "245/45R20",
+      "235/55R19",
+      "255/50R19",
+      "255/45ZR20",
+      "235/50R20",
+      "245/45ZR20"
+    ],
+    "source": "generation_inherit"
+  }
+]
